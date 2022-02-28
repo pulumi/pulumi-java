@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetTaskDefinitionArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="taskDefinition", required=true)
-    private final String taskDefinition;
+      private final String taskDefinition;
 
     public String getTaskDefinition() {
         return this.taskDefinition;

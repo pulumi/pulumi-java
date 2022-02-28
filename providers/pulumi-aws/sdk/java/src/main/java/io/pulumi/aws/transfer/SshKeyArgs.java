@@ -4,7 +4,7 @@
 package io.pulumi.aws.transfer;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body", required=true)
-    private final Input<String> body;
+      private final Input<String> body;
 
     public Input<String> getBody() {
         return this.body;
@@ -29,7 +29,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverId", required=true)
-    private final Input<String> serverId;
+      private final Input<String> serverId;
 
     public Input<String> getServerId() {
         return this.serverId;
@@ -40,7 +40,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-    private final Input<String> userName;
+      private final Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
      * 
      */
     @InputImport(name="vpcEndpointId")
-    private final @Nullable Input<String> vpcEndpointId;
+      private final @Nullable Input<String> vpcEndpointId;
 
     public Input<String> getVpcEndpointId() {
         return this.vpcEndpointId == null ? Input.empty() : this.vpcEndpointId;
@@ -30,7 +30,7 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
      * 
      */
     @InputImport(name="vpcEndpointServiceId")
-    private final @Nullable Input<String> vpcEndpointServiceId;
+      private final @Nullable Input<String> vpcEndpointServiceId;
 
     public Input<String> getVpcEndpointServiceId() {
         return this.vpcEndpointServiceId == null ? Input.empty() : this.vpcEndpointServiceId;
@@ -41,7 +41,7 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
      * 
      */
     @InputImport(name="vpcEndpointState")
-    private final @Nullable Input<String> vpcEndpointState;
+      private final @Nullable Input<String> vpcEndpointState;
 
     public Input<String> getVpcEndpointState() {
         return this.vpcEndpointState == null ? Input.empty() : this.vpcEndpointState;

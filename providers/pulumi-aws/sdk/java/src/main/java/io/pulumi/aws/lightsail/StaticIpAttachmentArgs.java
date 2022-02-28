@@ -4,7 +4,7 @@
 package io.pulumi.aws.lightsail;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class StaticIpAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceName", required=true)
-    private final Input<String> instanceName;
+      private final Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName;
@@ -29,7 +29,7 @@ public final class StaticIpAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="staticIpName", required=true)
-    private final Input<String> staticIpName;
+      private final Input<String> staticIpName;
 
     public Input<String> getStaticIpName() {
         return this.staticIpName;

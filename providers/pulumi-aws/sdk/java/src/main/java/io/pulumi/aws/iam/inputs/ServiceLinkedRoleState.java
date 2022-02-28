@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="awsServiceName")
-    private final @Nullable Input<String> awsServiceName;
+      private final @Nullable Input<String> awsServiceName;
 
     public Input<String> getAwsServiceName() {
         return this.awsServiceName == null ? Input.empty() : this.awsServiceName;
@@ -42,7 +42,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="createDate")
-    private final @Nullable Input<String> createDate;
+      private final @Nullable Input<String> createDate;
 
     public Input<String> getCreateDate() {
         return this.createDate == null ? Input.empty() : this.createDate;
@@ -53,7 +53,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="customSuffix")
-    private final @Nullable Input<String> customSuffix;
+      private final @Nullable Input<String> customSuffix;
 
     public Input<String> getCustomSuffix() {
         return this.customSuffix == null ? Input.empty() : this.customSuffix;
@@ -64,7 +64,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -75,7 +75,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -86,7 +86,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -97,7 +97,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -108,7 +108,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -119,7 +119,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="uniqueId")
-    private final @Nullable Input<String> uniqueId;
+      private final @Nullable Input<String> uniqueId;
 
     public Input<String> getUniqueId() {
         return this.uniqueId == null ? Input.empty() : this.uniqueId;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetRepositoryImageScanningConfiguration extends io.pulumi.res
      * 
      */
     @InputImport(name="scanOnPush", required=true)
-    private final Boolean scanOnPush;
+      private final Boolean scanOnPush;
 
     public Boolean getScanOnPush() {
         return this.scanOnPush;

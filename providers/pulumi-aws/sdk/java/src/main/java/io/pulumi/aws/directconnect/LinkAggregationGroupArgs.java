@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="connectionId")
-    private final @Nullable Input<String> connectionId;
+      private final @Nullable Input<String> connectionId;
 
     public Input<String> getConnectionId() {
         return this.connectionId == null ? Input.empty() : this.connectionId;
@@ -32,7 +32,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="connectionsBandwidth", required=true)
-    private final Input<String> connectionsBandwidth;
+      private final Input<String> connectionsBandwidth;
 
     public Input<String> getConnectionsBandwidth() {
         return this.connectionsBandwidth;
@@ -43,7 +43,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="forceDestroy")
-    private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Input<Boolean> forceDestroy;
 
     public Input<Boolean> getForceDestroy() {
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
@@ -54,7 +54,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -65,7 +65,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -76,7 +76,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="providerName")
-    private final @Nullable Input<String> providerName;
+      private final @Nullable Input<String> providerName;
 
     public Input<String> getProviderName() {
         return this.providerName == null ? Input.empty() : this.providerName;
@@ -87,7 +87,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

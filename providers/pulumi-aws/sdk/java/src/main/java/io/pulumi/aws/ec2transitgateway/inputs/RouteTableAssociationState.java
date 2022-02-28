@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -30,7 +30,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+      private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -41,7 +41,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="transitGatewayAttachmentId")
-    private final @Nullable Input<String> transitGatewayAttachmentId;
+      private final @Nullable Input<String> transitGatewayAttachmentId;
 
     public Input<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId == null ? Input.empty() : this.transitGatewayAttachmentId;
@@ -52,7 +52,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="transitGatewayRouteTableId")
-    private final @Nullable Input<String> transitGatewayRouteTableId;
+      private final @Nullable Input<String> transitGatewayRouteTableId;
 
     public Input<String> getTransitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId == null ? Input.empty() : this.transitGatewayRouteTableId;

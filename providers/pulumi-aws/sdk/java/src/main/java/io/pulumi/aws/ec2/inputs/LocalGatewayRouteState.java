@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destinationCidrBlock")
-    private final @Nullable Input<String> destinationCidrBlock;
+      private final @Nullable Input<String> destinationCidrBlock;
 
     public Input<String> getDestinationCidrBlock() {
         return this.destinationCidrBlock == null ? Input.empty() : this.destinationCidrBlock;
@@ -30,7 +30,7 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="localGatewayRouteTableId")
-    private final @Nullable Input<String> localGatewayRouteTableId;
+      private final @Nullable Input<String> localGatewayRouteTableId;
 
     public Input<String> getLocalGatewayRouteTableId() {
         return this.localGatewayRouteTableId == null ? Input.empty() : this.localGatewayRouteTableId;
@@ -41,7 +41,7 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="localGatewayVirtualInterfaceGroupId")
-    private final @Nullable Input<String> localGatewayVirtualInterfaceGroupId;
+      private final @Nullable Input<String> localGatewayVirtualInterfaceGroupId;
 
     public Input<String> getLocalGatewayVirtualInterfaceGroupId() {
         return this.localGatewayVirtualInterfaceGroupId == null ? Input.empty() : this.localGatewayVirtualInterfaceGroupId;

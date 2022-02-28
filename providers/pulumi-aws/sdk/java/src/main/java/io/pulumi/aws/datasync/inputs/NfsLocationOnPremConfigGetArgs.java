@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NfsLocationOnPremConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="agentArns", required=true)
-    private final Input<List<String>> agentArns;
+      private final Input<List<String>> agentArns;
 
     public Input<List<String>> getAgentArns() {
         return this.agentArns;

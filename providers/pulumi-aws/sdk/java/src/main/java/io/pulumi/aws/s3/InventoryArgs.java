@@ -7,7 +7,7 @@ import io.pulumi.aws.s3.inputs.InventoryDestinationArgs;
 import io.pulumi.aws.s3.inputs.InventoryFilterArgs;
 import io.pulumi.aws.s3.inputs.InventoryScheduleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -35,7 +35,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<InventoryDestinationArgs> destination;
+      private final Input<InventoryDestinationArgs> destination;
 
     public Input<InventoryDestinationArgs> getDestination() {
         return this.destination;
@@ -46,7 +46,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -57,7 +57,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<InventoryFilterArgs> filter;
+      private final @Nullable Input<InventoryFilterArgs> filter;
 
     public Input<InventoryFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -68,7 +68,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includedObjectVersions", required=true)
-    private final Input<String> includedObjectVersions;
+      private final Input<String> includedObjectVersions;
 
     public Input<String> getIncludedObjectVersions() {
         return this.includedObjectVersions;
@@ -79,7 +79,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -90,7 +90,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optionalFields")
-    private final @Nullable Input<List<String>> optionalFields;
+      private final @Nullable Input<List<String>> optionalFields;
 
     public Input<List<String>> getOptionalFields() {
         return this.optionalFields == null ? Input.empty() : this.optionalFields;
@@ -101,7 +101,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final Input<InventoryScheduleArgs> schedule;
+      private final Input<InventoryScheduleArgs> schedule;
 
     public Input<InventoryScheduleArgs> getSchedule() {
         return this.schedule;

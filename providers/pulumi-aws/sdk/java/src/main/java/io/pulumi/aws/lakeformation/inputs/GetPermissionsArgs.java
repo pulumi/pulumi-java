@@ -7,7 +7,7 @@ import io.pulumi.aws.lakeformation.inputs.GetPermissionsDataLocation;
 import io.pulumi.aws.lakeformation.inputs.GetPermissionsDatabase;
 import io.pulumi.aws.lakeformation.inputs.GetPermissionsTable;
 import io.pulumi.aws.lakeformation.inputs.GetPermissionsTableWithColumns;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable String catalogId;
+      private final @Nullable String catalogId;
 
     public Optional<String> getCatalogId() {
         return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
@@ -35,7 +35,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="catalogResource")
-    private final @Nullable Boolean catalogResource;
+      private final @Nullable Boolean catalogResource;
 
     public Optional<Boolean> getCatalogResource() {
         return this.catalogResource == null ? Optional.empty() : Optional.ofNullable(this.catalogResource);
@@ -46,7 +46,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataLocation")
-    private final @Nullable GetPermissionsDataLocation dataLocation;
+      private final @Nullable GetPermissionsDataLocation dataLocation;
 
     public Optional<GetPermissionsDataLocation> getDataLocation() {
         return this.dataLocation == null ? Optional.empty() : Optional.ofNullable(this.dataLocation);
@@ -57,7 +57,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="database")
-    private final @Nullable GetPermissionsDatabase database;
+      private final @Nullable GetPermissionsDatabase database;
 
     public Optional<GetPermissionsDatabase> getDatabase() {
         return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
@@ -68,7 +68,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="principal", required=true)
-    private final String principal;
+      private final String principal;
 
     public String getPrincipal() {
         return this.principal;
@@ -79,7 +79,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="table")
-    private final @Nullable GetPermissionsTable table;
+      private final @Nullable GetPermissionsTable table;
 
     public Optional<GetPermissionsTable> getTable() {
         return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
@@ -90,7 +90,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tableWithColumns")
-    private final @Nullable GetPermissionsTableWithColumns tableWithColumns;
+      private final @Nullable GetPermissionsTableWithColumns tableWithColumns;
 
     public Optional<GetPermissionsTableWithColumns> getTableWithColumns() {
         return this.tableWithColumns == null ? Optional.empty() : Optional.ofNullable(this.tableWithColumns);

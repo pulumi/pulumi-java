@@ -8,7 +8,7 @@ import io.pulumi.aws.ec2.enums.InstanceType;
 import io.pulumi.aws.ec2.enums.Tenancy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="availabilityZone", required=true)
-    private final Input<String> availabilityZone;
+      private final Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone;
@@ -37,7 +37,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ebsOptimized")
-    private final @Nullable Input<Boolean> ebsOptimized;
+      private final @Nullable Input<Boolean> ebsOptimized;
 
     public Input<Boolean> getEbsOptimized() {
         return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
@@ -48,7 +48,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="endDate")
-    private final @Nullable Input<String> endDate;
+      private final @Nullable Input<String> endDate;
 
     public Input<String> getEndDate() {
         return this.endDate == null ? Input.empty() : this.endDate;
@@ -59,7 +59,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="endDateType")
-    private final @Nullable Input<String> endDateType;
+      private final @Nullable Input<String> endDateType;
 
     public Input<String> getEndDateType() {
         return this.endDateType == null ? Input.empty() : this.endDateType;
@@ -70,7 +70,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ephemeralStorage")
-    private final @Nullable Input<Boolean> ephemeralStorage;
+      private final @Nullable Input<Boolean> ephemeralStorage;
 
     public Input<Boolean> getEphemeralStorage() {
         return this.ephemeralStorage == null ? Input.empty() : this.ephemeralStorage;
@@ -81,7 +81,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceCount", required=true)
-    private final Input<Integer> instanceCount;
+      private final Input<Integer> instanceCount;
 
     public Input<Integer> getInstanceCount() {
         return this.instanceCount;
@@ -92,7 +92,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceMatchCriteria")
-    private final @Nullable Input<String> instanceMatchCriteria;
+      private final @Nullable Input<String> instanceMatchCriteria;
 
     public Input<String> getInstanceMatchCriteria() {
         return this.instanceMatchCriteria == null ? Input.empty() : this.instanceMatchCriteria;
@@ -103,7 +103,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instancePlatform", required=true)
-    private final Input<Either<String,InstancePlatform>> instancePlatform;
+      private final Input<Either<String,InstancePlatform>> instancePlatform;
 
     public Input<Either<String,InstancePlatform>> getInstancePlatform() {
         return this.instancePlatform;
@@ -114,7 +114,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final Input<Either<String,InstanceType>> instanceType;
+      private final Input<Either<String,InstanceType>> instanceType;
 
     public Input<Either<String,InstanceType>> getInstanceType() {
         return this.instanceType;
@@ -125,7 +125,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="outpostArn")
-    private final @Nullable Input<String> outpostArn;
+      private final @Nullable Input<String> outpostArn;
 
     public Input<String> getOutpostArn() {
         return this.outpostArn == null ? Input.empty() : this.outpostArn;
@@ -136,7 +136,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -147,7 +147,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tenancy")
-    private final @Nullable Input<Either<String,Tenancy>> tenancy;
+      private final @Nullable Input<Either<String,Tenancy>> tenancy;
 
     public Input<Either<String,Tenancy>> getTenancy() {
         return this.tenancy == null ? Input.empty() : this.tenancy;

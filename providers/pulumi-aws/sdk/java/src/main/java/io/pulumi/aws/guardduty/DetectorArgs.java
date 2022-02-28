@@ -5,7 +5,7 @@ package io.pulumi.aws.guardduty;
 
 import io.pulumi.aws.guardduty.inputs.DetectorDatasourcesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasources")
-    private final @Nullable Input<DetectorDatasourcesArgs> datasources;
+      private final @Nullable Input<DetectorDatasourcesArgs> datasources;
 
     public Input<DetectorDatasourcesArgs> getDatasources() {
         return this.datasources == null ? Input.empty() : this.datasources;
@@ -33,7 +33,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+      private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -44,7 +44,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="findingPublishingFrequency")
-    private final @Nullable Input<String> findingPublishingFrequency;
+      private final @Nullable Input<String> findingPublishingFrequency;
 
     public Input<String> getFindingPublishingFrequency() {
         return this.findingPublishingFrequency == null ? Input.empty() : this.findingPublishingFrequency;
@@ -55,7 +55,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

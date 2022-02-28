@@ -7,7 +7,7 @@ import io.pulumi.aws.glue.inputs.JobCommandArgs;
 import io.pulumi.aws.glue.inputs.JobExecutionPropertyArgs;
 import io.pulumi.aws.glue.inputs.JobNotificationPropertyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command", required=true)
-    private final Input<JobCommandArgs> command;
+      private final Input<JobCommandArgs> command;
 
     public Input<JobCommandArgs> getCommand() {
         return this.command;
@@ -37,7 +37,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connections")
-    private final @Nullable Input<List<String>> connections;
+      private final @Nullable Input<List<String>> connections;
 
     public Input<List<String>> getConnections() {
         return this.connections == null ? Input.empty() : this.connections;
@@ -48,7 +48,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultArguments")
-    private final @Nullable Input<Map<String,String>> defaultArguments;
+      private final @Nullable Input<Map<String,String>> defaultArguments;
 
     public Input<Map<String,String>> getDefaultArguments() {
         return this.defaultArguments == null ? Input.empty() : this.defaultArguments;
@@ -59,7 +59,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -70,7 +70,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionProperty")
-    private final @Nullable Input<JobExecutionPropertyArgs> executionProperty;
+      private final @Nullable Input<JobExecutionPropertyArgs> executionProperty;
 
     public Input<JobExecutionPropertyArgs> getExecutionProperty() {
         return this.executionProperty == null ? Input.empty() : this.executionProperty;
@@ -81,7 +81,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="glueVersion")
-    private final @Nullable Input<String> glueVersion;
+      private final @Nullable Input<String> glueVersion;
 
     public Input<String> getGlueVersion() {
         return this.glueVersion == null ? Input.empty() : this.glueVersion;
@@ -92,7 +92,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxCapacity")
-    private final @Nullable Input<Double> maxCapacity;
+      private final @Nullable Input<Double> maxCapacity;
 
     public Input<Double> getMaxCapacity() {
         return this.maxCapacity == null ? Input.empty() : this.maxCapacity;
@@ -103,7 +103,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRetries")
-    private final @Nullable Input<Integer> maxRetries;
+      private final @Nullable Input<Integer> maxRetries;
 
     public Input<Integer> getMaxRetries() {
         return this.maxRetries == null ? Input.empty() : this.maxRetries;
@@ -114,7 +114,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -125,7 +125,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nonOverridableArguments")
-    private final @Nullable Input<Map<String,String>> nonOverridableArguments;
+      private final @Nullable Input<Map<String,String>> nonOverridableArguments;
 
     public Input<Map<String,String>> getNonOverridableArguments() {
         return this.nonOverridableArguments == null ? Input.empty() : this.nonOverridableArguments;
@@ -136,7 +136,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationProperty")
-    private final @Nullable Input<JobNotificationPropertyArgs> notificationProperty;
+      private final @Nullable Input<JobNotificationPropertyArgs> notificationProperty;
 
     public Input<JobNotificationPropertyArgs> getNotificationProperty() {
         return this.notificationProperty == null ? Input.empty() : this.notificationProperty;
@@ -147,7 +147,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfWorkers")
-    private final @Nullable Input<Integer> numberOfWorkers;
+      private final @Nullable Input<Integer> numberOfWorkers;
 
     public Input<Integer> getNumberOfWorkers() {
         return this.numberOfWorkers == null ? Input.empty() : this.numberOfWorkers;
@@ -158,7 +158,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -169,7 +169,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityConfiguration")
-    private final @Nullable Input<String> securityConfiguration;
+      private final @Nullable Input<String> securityConfiguration;
 
     public Input<String> getSecurityConfiguration() {
         return this.securityConfiguration == null ? Input.empty() : this.securityConfiguration;
@@ -180,7 +180,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -191,7 +191,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<Integer> timeout;
+      private final @Nullable Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -202,7 +202,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerType")
-    private final @Nullable Input<String> workerType;
+      private final @Nullable Input<String> workerType;
 
     public Input<String> getWorkerType() {
         return this.workerType == null ? Input.empty() : this.workerType;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -30,7 +30,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -53,7 +53,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetKeyArn")
-    private final @Nullable Input<String> targetKeyArn;
+      private final @Nullable Input<String> targetKeyArn;
 
     public Input<String> getTargetKeyArn() {
         return this.targetKeyArn == null ? Input.empty() : this.targetKeyArn;
@@ -64,7 +64,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetKeyId")
-    private final @Nullable Input<String> targetKeyId;
+      private final @Nullable Input<String> targetKeyId;
 
     public Input<String> getTargetKeyId() {
         return this.targetKeyId == null ? Input.empty() : this.targetKeyId;

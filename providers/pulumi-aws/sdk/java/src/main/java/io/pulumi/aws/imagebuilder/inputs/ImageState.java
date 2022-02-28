@@ -6,7 +6,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 import io.pulumi.aws.imagebuilder.inputs.ImageImageTestsConfigurationGetArgs;
 import io.pulumi.aws.imagebuilder.inputs.ImageOutputResourceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -35,7 +35,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dateCreated")
-    private final @Nullable Input<String> dateCreated;
+      private final @Nullable Input<String> dateCreated;
 
     public Input<String> getDateCreated() {
         return this.dateCreated == null ? Input.empty() : this.dateCreated;
@@ -46,7 +46,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distributionConfigurationArn")
-    private final @Nullable Input<String> distributionConfigurationArn;
+      private final @Nullable Input<String> distributionConfigurationArn;
 
     public Input<String> getDistributionConfigurationArn() {
         return this.distributionConfigurationArn == null ? Input.empty() : this.distributionConfigurationArn;
@@ -57,7 +57,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enhancedImageMetadataEnabled")
-    private final @Nullable Input<Boolean> enhancedImageMetadataEnabled;
+      private final @Nullable Input<Boolean> enhancedImageMetadataEnabled;
 
     public Input<Boolean> getEnhancedImageMetadataEnabled() {
         return this.enhancedImageMetadataEnabled == null ? Input.empty() : this.enhancedImageMetadataEnabled;
@@ -68,7 +68,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageRecipeArn")
-    private final @Nullable Input<String> imageRecipeArn;
+      private final @Nullable Input<String> imageRecipeArn;
 
     public Input<String> getImageRecipeArn() {
         return this.imageRecipeArn == null ? Input.empty() : this.imageRecipeArn;
@@ -79,7 +79,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageTestsConfiguration")
-    private final @Nullable Input<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration;
+      private final @Nullable Input<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration;
 
     public Input<ImageImageTestsConfigurationGetArgs> getImageTestsConfiguration() {
         return this.imageTestsConfiguration == null ? Input.empty() : this.imageTestsConfiguration;
@@ -90,7 +90,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="infrastructureConfigurationArn")
-    private final @Nullable Input<String> infrastructureConfigurationArn;
+      private final @Nullable Input<String> infrastructureConfigurationArn;
 
     public Input<String> getInfrastructureConfigurationArn() {
         return this.infrastructureConfigurationArn == null ? Input.empty() : this.infrastructureConfigurationArn;
@@ -101,7 +101,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -112,7 +112,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osVersion")
-    private final @Nullable Input<String> osVersion;
+      private final @Nullable Input<String> osVersion;
 
     public Input<String> getOsVersion() {
         return this.osVersion == null ? Input.empty() : this.osVersion;
@@ -123,7 +123,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputResources")
-    private final @Nullable Input<List<ImageOutputResourceGetArgs>> outputResources;
+      private final @Nullable Input<List<ImageOutputResourceGetArgs>> outputResources;
 
     public Input<List<ImageOutputResourceGetArgs>> getOutputResources() {
         return this.outputResources == null ? Input.empty() : this.outputResources;
@@ -134,7 +134,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable Input<String> platform;
+      private final @Nullable Input<String> platform;
 
     public Input<String> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -145,7 +145,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -156,7 +156,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -167,7 +167,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

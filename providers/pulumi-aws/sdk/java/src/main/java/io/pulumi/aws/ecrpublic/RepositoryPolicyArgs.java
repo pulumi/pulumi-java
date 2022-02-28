@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecrpublic;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class RepositoryPolicyArgs extends io.pulumi.resources.ResourceArgs
     public static final RepositoryPolicyArgs Empty = new RepositoryPolicyArgs();
 
     @InputImport(name="policy", required=true)
-    private final Input<String> policy;
+      private final Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy;
@@ -25,7 +25,7 @@ public final class RepositoryPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="repositoryName", required=true)
-    private final Input<String> repositoryName;
+      private final Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName;

@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyHeadersConfigHeadersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class OriginRequestPolicyHeadersConfigArgs extends io.pulumi.resour
     public static final OriginRequestPolicyHeadersConfigArgs Empty = new OriginRequestPolicyHeadersConfigArgs();
 
     @InputImport(name="headerBehavior")
-    private final @Nullable Input<String> headerBehavior;
+      private final @Nullable Input<String> headerBehavior;
 
     public Input<String> getHeaderBehavior() {
         return this.headerBehavior == null ? Input.empty() : this.headerBehavior;
     }
 
     @InputImport(name="headers")
-    private final @Nullable Input<OriginRequestPolicyHeadersConfigHeadersArgs> headers;
+      private final @Nullable Input<OriginRequestPolicyHeadersConfigHeadersArgs> headers;
 
     public Input<OriginRequestPolicyHeadersConfigHeadersArgs> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;

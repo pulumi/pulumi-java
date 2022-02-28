@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class VpcEndpointSubnetAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -29,7 +29,7 @@ public final class VpcEndpointSubnetAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vpcEndpointId", required=true)
-    private final Input<String> vpcEndpointId;
+      private final Input<String> vpcEndpointId;
 
     public Input<String> getVpcEndpointId() {
         return this.vpcEndpointId;

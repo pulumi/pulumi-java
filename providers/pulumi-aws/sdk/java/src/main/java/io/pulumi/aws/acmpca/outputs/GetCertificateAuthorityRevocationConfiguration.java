@@ -4,7 +4,7 @@
 package io.pulumi.aws.acmpca.outputs;
 
 import io.pulumi.aws.acmpca.outputs.GetCertificateAuthorityRevocationConfigurationCrlConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 

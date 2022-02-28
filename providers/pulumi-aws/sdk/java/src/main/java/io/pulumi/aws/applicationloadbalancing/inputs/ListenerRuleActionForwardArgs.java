@@ -6,7 +6,7 @@ package io.pulumi.aws.applicationloadbalancing.inputs;
 import io.pulumi.aws.applicationloadbalancing.inputs.ListenerRuleActionForwardStickinessArgs;
 import io.pulumi.aws.applicationloadbalancing.inputs.ListenerRuleActionForwardTargetGroupArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ListenerRuleActionForwardArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="stickiness")
-    private final @Nullable Input<ListenerRuleActionForwardStickinessArgs> stickiness;
+      private final @Nullable Input<ListenerRuleActionForwardStickinessArgs> stickiness;
 
     public Input<ListenerRuleActionForwardStickinessArgs> getStickiness() {
         return this.stickiness == null ? Input.empty() : this.stickiness;
@@ -32,7 +32,7 @@ public final class ListenerRuleActionForwardArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="targetGroups", required=true)
-    private final Input<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups;
+      private final Input<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups;
 
     public Input<List<ListenerRuleActionForwardTargetGroupArgs>> getTargetGroups() {
         return this.targetGroups;

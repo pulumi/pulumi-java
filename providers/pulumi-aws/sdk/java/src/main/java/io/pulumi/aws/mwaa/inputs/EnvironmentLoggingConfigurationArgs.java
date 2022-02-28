@@ -9,7 +9,7 @@ import io.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationTaskLogsArgs;
 import io.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationWebserverLogsArgs;
 import io.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationWorkerLogsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dagProcessingLogs")
-    private final @Nullable Input<EnvironmentLoggingConfigurationDagProcessingLogsArgs> dagProcessingLogs;
+      private final @Nullable Input<EnvironmentLoggingConfigurationDagProcessingLogsArgs> dagProcessingLogs;
 
     public Input<EnvironmentLoggingConfigurationDagProcessingLogsArgs> getDagProcessingLogs() {
         return this.dagProcessingLogs == null ? Input.empty() : this.dagProcessingLogs;
@@ -34,7 +34,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="schedulerLogs")
-    private final @Nullable Input<EnvironmentLoggingConfigurationSchedulerLogsArgs> schedulerLogs;
+      private final @Nullable Input<EnvironmentLoggingConfigurationSchedulerLogsArgs> schedulerLogs;
 
     public Input<EnvironmentLoggingConfigurationSchedulerLogsArgs> getSchedulerLogs() {
         return this.schedulerLogs == null ? Input.empty() : this.schedulerLogs;
@@ -45,7 +45,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="taskLogs")
-    private final @Nullable Input<EnvironmentLoggingConfigurationTaskLogsArgs> taskLogs;
+      private final @Nullable Input<EnvironmentLoggingConfigurationTaskLogsArgs> taskLogs;
 
     public Input<EnvironmentLoggingConfigurationTaskLogsArgs> getTaskLogs() {
         return this.taskLogs == null ? Input.empty() : this.taskLogs;
@@ -56,7 +56,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="webserverLogs")
-    private final @Nullable Input<EnvironmentLoggingConfigurationWebserverLogsArgs> webserverLogs;
+      private final @Nullable Input<EnvironmentLoggingConfigurationWebserverLogsArgs> webserverLogs;
 
     public Input<EnvironmentLoggingConfigurationWebserverLogsArgs> getWebserverLogs() {
         return this.webserverLogs == null ? Input.empty() : this.webserverLogs;
@@ -67,7 +67,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="workerLogs")
-    private final @Nullable Input<EnvironmentLoggingConfigurationWorkerLogsArgs> workerLogs;
+      private final @Nullable Input<EnvironmentLoggingConfigurationWorkerLogsArgs> workerLogs;
 
     public Input<EnvironmentLoggingConfigurationWorkerLogsArgs> getWorkerLogs() {
         return this.workerLogs == null ? Input.empty() : this.workerLogs;

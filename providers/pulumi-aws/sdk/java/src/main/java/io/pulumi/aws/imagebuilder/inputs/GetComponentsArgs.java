@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.GetComponentsFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetComponentsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetComponentsFilter> filters;
+      private final @Nullable List<GetComponentsFilter> filters;
 
     public List<GetComponentsFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -32,7 +32,7 @@ public final class GetComponentsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable String owner;
+      private final @Nullable String owner;
 
     public Optional<String> getOwner() {
         return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);

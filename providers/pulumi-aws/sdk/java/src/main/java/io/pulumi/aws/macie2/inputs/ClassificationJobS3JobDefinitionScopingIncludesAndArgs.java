@@ -6,7 +6,7 @@ package io.pulumi.aws.macie2.inputs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndArgs extend
      * 
      */
     @InputImport(name="simpleScopeTerm")
-    private final @Nullable Input<ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs> simpleScopeTerm;
+      private final @Nullable Input<ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs> simpleScopeTerm;
 
     public Input<ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs> getSimpleScopeTerm() {
         return this.simpleScopeTerm == null ? Input.empty() : this.simpleScopeTerm;
@@ -31,7 +31,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndArgs extend
      * 
      */
     @InputImport(name="tagScopeTerm")
-    private final @Nullable Input<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermArgs> tagScopeTerm;
+      private final @Nullable Input<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermArgs> tagScopeTerm;
 
     public Input<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermArgs> getTagScopeTerm() {
         return this.tagScopeTerm == null ? Input.empty() : this.tagScopeTerm;

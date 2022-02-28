@@ -4,7 +4,7 @@
 package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BudgetActionDefinitionScpActionDefinitionArgs extends io.pulu
      * 
      */
     @InputImport(name="policyId", required=true)
-    private final Input<String> policyId;
+      private final Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId;
@@ -30,7 +30,7 @@ public final class BudgetActionDefinitionScpActionDefinitionArgs extends io.pulu
      * 
      */
     @InputImport(name="targetIds", required=true)
-    private final Input<List<String>> targetIds;
+      private final Input<List<String>> targetIds;
 
     public Input<List<String>> getTargetIds() {
         return this.targetIds;

@@ -5,7 +5,7 @@ package io.pulumi.aws.macie2.outputs;
 
 import io.pulumi.aws.macie2.outputs.ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTerm;
 import io.pulumi.aws.macie2.outputs.ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

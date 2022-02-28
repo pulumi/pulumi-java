@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * 
      */
     @InputImport(name="amiTags", required=true)
-    private final Map<String,String> amiTags;
+      private final Map<String,String> amiTags;
 
     public Map<String,String> getAmiTags() {
         return this.amiTags;
@@ -31,7 +31,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -42,7 +42,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * 
      */
     @InputImport(name="kmsKeyId", required=true)
-    private final String kmsKeyId;
+      private final String kmsKeyId;
 
     public String getKmsKeyId() {
         return this.kmsKeyId;
@@ -53,7 +53,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * 
      */
     @InputImport(name="launchPermissions", required=true)
-    private final List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions;
+      private final List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions;
 
     public List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> getLaunchPermissions() {
         return this.launchPermissions;
@@ -64,7 +64,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -75,7 +75,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * 
      */
     @InputImport(name="targetAccountIds", required=true)
-    private final List<String> targetAccountIds;
+      private final List<String> targetAccountIds;
 
     public List<String> getTargetAccountIds() {
         return this.targetAccountIds;

@@ -8,8 +8,8 @@ import io.pulumi.aws.ec2.TransitGatewayPeeringAttachmentAccepterArgs;
 import io.pulumi.aws.ec2.inputs.TransitGatewayPeeringAttachmentAccepterState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -121,6 +121,21 @@ public class TransitGatewayPeeringAttachmentAccepter extends io.pulumi.resources
         return this.transitGatewayId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TransitGatewayPeeringAttachmentAccepter(String name) {
+        this(name, TransitGatewayPeeringAttachmentAccepterArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TransitGatewayPeeringAttachmentAccepter(String name, TransitGatewayPeeringAttachmentAccepterArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

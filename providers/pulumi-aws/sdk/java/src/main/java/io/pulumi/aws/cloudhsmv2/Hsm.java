@@ -8,8 +8,8 @@ import io.pulumi.aws.cloudhsmv2.HsmArgs;
 import io.pulumi.aws.cloudhsmv2.inputs.HsmState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -128,6 +128,21 @@ public class Hsm extends io.pulumi.resources.CustomResource {
         return this.subnetId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Hsm(String name) {
+        this(name, HsmArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Hsm(String name, HsmArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

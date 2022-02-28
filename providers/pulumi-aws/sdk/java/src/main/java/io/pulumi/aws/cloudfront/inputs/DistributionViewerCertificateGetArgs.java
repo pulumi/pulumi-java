@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="acmCertificateArn")
-    private final @Nullable Input<String> acmCertificateArn;
+      private final @Nullable Input<String> acmCertificateArn;
 
     public Input<String> getAcmCertificateArn() {
         return this.acmCertificateArn == null ? Input.empty() : this.acmCertificateArn;
@@ -36,7 +36,7 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="cloudfrontDefaultCertificate")
-    private final @Nullable Input<Boolean> cloudfrontDefaultCertificate;
+      private final @Nullable Input<Boolean> cloudfrontDefaultCertificate;
 
     public Input<Boolean> getCloudfrontDefaultCertificate() {
         return this.cloudfrontDefaultCertificate == null ? Input.empty() : this.cloudfrontDefaultCertificate;
@@ -49,7 +49,7 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="iamCertificateId")
-    private final @Nullable Input<String> iamCertificateId;
+      private final @Nullable Input<String> iamCertificateId;
 
     public Input<String> getIamCertificateId() {
         return this.iamCertificateId == null ? Input.empty() : this.iamCertificateId;
@@ -71,14 +71,14 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minimumProtocolVersion")
-    private final @Nullable Input<String> minimumProtocolVersion;
+      private final @Nullable Input<String> minimumProtocolVersion;
 
     public Input<String> getMinimumProtocolVersion() {
         return this.minimumProtocolVersion == null ? Input.empty() : this.minimumProtocolVersion;
     }
 
     @InputImport(name="sslSupportMethod")
-    private final @Nullable Input<String> sslSupportMethod;
+      private final @Nullable Input<String> sslSupportMethod;
 
     public Input<String> getSslSupportMethod() {
         return this.sslSupportMethod == null ? Input.empty() : this.sslSupportMethod;

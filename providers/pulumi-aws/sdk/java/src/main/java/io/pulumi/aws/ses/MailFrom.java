@@ -8,8 +8,8 @@ import io.pulumi.aws.ses.MailFromArgs;
 import io.pulumi.aws.ses.inputs.MailFromState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -74,6 +74,21 @@ public class MailFrom extends io.pulumi.resources.CustomResource {
         return this.mailFromDomain;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public MailFrom(String name) {
+        this(name, MailFromArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public MailFrom(String name, MailFromArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

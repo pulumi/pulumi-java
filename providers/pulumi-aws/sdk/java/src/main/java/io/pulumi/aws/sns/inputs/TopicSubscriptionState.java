@@ -4,7 +4,7 @@
 package io.pulumi.aws.sns.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="confirmationTimeoutInMinutes")
-    private final @Nullable Input<Integer> confirmationTimeoutInMinutes;
+      private final @Nullable Input<Integer> confirmationTimeoutInMinutes;
 
     public Input<Integer> getConfirmationTimeoutInMinutes() {
         return this.confirmationTimeoutInMinutes == null ? Input.empty() : this.confirmationTimeoutInMinutes;
@@ -43,7 +43,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="confirmationWasAuthenticated")
-    private final @Nullable Input<Boolean> confirmationWasAuthenticated;
+      private final @Nullable Input<Boolean> confirmationWasAuthenticated;
 
     public Input<Boolean> getConfirmationWasAuthenticated() {
         return this.confirmationWasAuthenticated == null ? Input.empty() : this.confirmationWasAuthenticated;
@@ -54,7 +54,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="deliveryPolicy")
-    private final @Nullable Input<String> deliveryPolicy;
+      private final @Nullable Input<String> deliveryPolicy;
 
     public Input<String> getDeliveryPolicy() {
         return this.deliveryPolicy == null ? Input.empty() : this.deliveryPolicy;
@@ -65,7 +65,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<String> endpoint;
+      private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -76,7 +76,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="endpointAutoConfirms")
-    private final @Nullable Input<Boolean> endpointAutoConfirms;
+      private final @Nullable Input<Boolean> endpointAutoConfirms;
 
     public Input<Boolean> getEndpointAutoConfirms() {
         return this.endpointAutoConfirms == null ? Input.empty() : this.endpointAutoConfirms;
@@ -87,7 +87,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filterPolicy")
-    private final @Nullable Input<String> filterPolicy;
+      private final @Nullable Input<String> filterPolicy;
 
     public Input<String> getFilterPolicy() {
         return this.filterPolicy == null ? Input.empty() : this.filterPolicy;
@@ -98,7 +98,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -109,7 +109,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pendingConfirmation")
-    private final @Nullable Input<Boolean> pendingConfirmation;
+      private final @Nullable Input<Boolean> pendingConfirmation;
 
     public Input<Boolean> getPendingConfirmation() {
         return this.pendingConfirmation == null ? Input.empty() : this.pendingConfirmation;
@@ -120,7 +120,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -131,7 +131,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rawMessageDelivery")
-    private final @Nullable Input<Boolean> rawMessageDelivery;
+      private final @Nullable Input<Boolean> rawMessageDelivery;
 
     public Input<Boolean> getRawMessageDelivery() {
         return this.rawMessageDelivery == null ? Input.empty() : this.rawMessageDelivery;
@@ -142,7 +142,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="redrivePolicy")
-    private final @Nullable Input<String> redrivePolicy;
+      private final @Nullable Input<String> redrivePolicy;
 
     public Input<String> getRedrivePolicy() {
         return this.redrivePolicy == null ? Input.empty() : this.redrivePolicy;
@@ -153,7 +153,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subscriptionRoleArn")
-    private final @Nullable Input<String> subscriptionRoleArn;
+      private final @Nullable Input<String> subscriptionRoleArn;
 
     public Input<String> getSubscriptionRoleArn() {
         return this.subscriptionRoleArn == null ? Input.empty() : this.subscriptionRoleArn;
@@ -164,7 +164,7 @@ public final class TopicSubscriptionState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;

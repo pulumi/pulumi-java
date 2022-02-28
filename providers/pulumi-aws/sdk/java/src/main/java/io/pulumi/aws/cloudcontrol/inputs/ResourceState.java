@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudcontrol.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     public static final ResourceState Empty = new ResourceState();
 
     @InputImport(name="desiredState")
-    private final @Nullable Input<String> desiredState;
+      private final @Nullable Input<String> desiredState;
 
     public Input<String> getDesiredState() {
         return this.desiredState == null ? Input.empty() : this.desiredState;
     }
 
     @InputImport(name="properties")
-    private final @Nullable Input<String> properties;
+      private final @Nullable Input<String> properties;
 
     public Input<String> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -33,7 +33,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -44,7 +44,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<String> schema;
+      private final @Nullable Input<String> schema;
 
     public Input<String> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -55,7 +55,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeName")
-    private final @Nullable Input<String> typeName;
+      private final @Nullable Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName == null ? Input.empty() : this.typeName;
@@ -66,7 +66,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeVersionId")
-    private final @Nullable Input<String> typeVersionId;
+      private final @Nullable Input<String> typeVersionId;
 
     public Input<String> getTypeVersionId() {
         return this.typeVersionId == null ? Input.empty() : this.typeVersionId;

@@ -5,7 +5,7 @@ package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.aws.batch.inputs.SchedulingPolicyFairSharePolicyShareDistributionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class SchedulingPolicyFairSharePolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="computeReservation")
-    private final @Nullable Input<Integer> computeReservation;
+      private final @Nullable Input<Integer> computeReservation;
 
     public Input<Integer> getComputeReservation() {
         return this.computeReservation == null ? Input.empty() : this.computeReservation;
     }
 
     @InputImport(name="shareDecaySeconds")
-    private final @Nullable Input<Integer> shareDecaySeconds;
+      private final @Nullable Input<Integer> shareDecaySeconds;
 
     public Input<Integer> getShareDecaySeconds() {
         return this.shareDecaySeconds == null ? Input.empty() : this.shareDecaySeconds;
@@ -39,7 +39,7 @@ public final class SchedulingPolicyFairSharePolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="shareDistributions")
-    private final @Nullable Input<List<SchedulingPolicyFairSharePolicyShareDistributionArgs>> shareDistributions;
+      private final @Nullable Input<List<SchedulingPolicyFairSharePolicyShareDistributionArgs>> shareDistributions;
 
     public Input<List<SchedulingPolicyFairSharePolicyShareDistributionArgs>> getShareDistributions() {
         return this.shareDistributions == null ? Input.empty() : this.shareDistributions;

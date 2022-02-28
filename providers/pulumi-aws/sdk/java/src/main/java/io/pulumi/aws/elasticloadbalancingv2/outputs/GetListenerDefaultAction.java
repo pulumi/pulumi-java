@@ -8,7 +8,7 @@ import io.pulumi.aws.elasticloadbalancingv2.outputs.GetListenerDefaultActionAuth
 import io.pulumi.aws.elasticloadbalancingv2.outputs.GetListenerDefaultActionFixedResponse;
 import io.pulumi.aws.elasticloadbalancingv2.outputs.GetListenerDefaultActionForward;
 import io.pulumi.aws.elasticloadbalancingv2.outputs.GetListenerDefaultActionRedirect;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

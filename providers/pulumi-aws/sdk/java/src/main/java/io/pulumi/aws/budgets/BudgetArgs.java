@@ -6,7 +6,7 @@ package io.pulumi.aws.budgets;
 import io.pulumi.aws.budgets.inputs.BudgetCostTypesArgs;
 import io.pulumi.aws.budgets.inputs.BudgetNotificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -34,7 +34,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="budgetType", required=true)
-    private final Input<String> budgetType;
+      private final Input<String> budgetType;
 
     public Input<String> getBudgetType() {
         return this.budgetType;
@@ -45,7 +45,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="costFilters")
-    private final @Nullable Input<Map<String,String>> costFilters;
+      private final @Nullable Input<Map<String,String>> costFilters;
 
     public Input<Map<String,String>> getCostFilters() {
         return this.costFilters == null ? Input.empty() : this.costFilters;
@@ -56,7 +56,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="costTypes")
-    private final @Nullable Input<BudgetCostTypesArgs> costTypes;
+      private final @Nullable Input<BudgetCostTypesArgs> costTypes;
 
     public Input<BudgetCostTypesArgs> getCostTypes() {
         return this.costTypes == null ? Input.empty() : this.costTypes;
@@ -67,7 +67,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limitAmount", required=true)
-    private final Input<String> limitAmount;
+      private final Input<String> limitAmount;
 
     public Input<String> getLimitAmount() {
         return this.limitAmount;
@@ -78,7 +78,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limitUnit", required=true)
-    private final Input<String> limitUnit;
+      private final Input<String> limitUnit;
 
     public Input<String> getLimitUnit() {
         return this.limitUnit;
@@ -89,7 +89,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -100,7 +100,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -111,7 +111,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notifications")
-    private final @Nullable Input<List<BudgetNotificationArgs>> notifications;
+      private final @Nullable Input<List<BudgetNotificationArgs>> notifications;
 
     public Input<List<BudgetNotificationArgs>> getNotifications() {
         return this.notifications == null ? Input.empty() : this.notifications;
@@ -122,7 +122,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timePeriodEnd")
-    private final @Nullable Input<String> timePeriodEnd;
+      private final @Nullable Input<String> timePeriodEnd;
 
     public Input<String> getTimePeriodEnd() {
         return this.timePeriodEnd == null ? Input.empty() : this.timePeriodEnd;
@@ -133,7 +133,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timePeriodStart")
-    private final @Nullable Input<String> timePeriodStart;
+      private final @Nullable Input<String> timePeriodStart;
 
     public Input<String> getTimePeriodStart() {
         return this.timePeriodStart == null ? Input.empty() : this.timePeriodStart;
@@ -144,7 +144,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeUnit", required=true)
-    private final Input<String> timeUnit;
+      private final Input<String> timeUnit;
 
     public Input<String> getTimeUnit() {
         return this.timeUnit;

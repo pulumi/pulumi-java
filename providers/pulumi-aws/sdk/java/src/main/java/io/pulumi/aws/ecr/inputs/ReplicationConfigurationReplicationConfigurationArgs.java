@@ -5,7 +5,7 @@ package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class ReplicationConfigurationReplicationConfigurationArgs extends 
      * 
      */
     @InputImport(name="rule", required=true)
-    private final Input<ReplicationConfigurationReplicationConfigurationRuleArgs> rule;
+      private final Input<ReplicationConfigurationReplicationConfigurationRuleArgs> rule;
 
     public Input<ReplicationConfigurationReplicationConfigurationRuleArgs> getRule() {
         return this.rule;

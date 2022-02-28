@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecLoggingAccessLogArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class VirtualGatewaySpecLoggingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accessLog")
-    private final @Nullable Input<VirtualGatewaySpecLoggingAccessLogArgs> accessLog;
+      private final @Nullable Input<VirtualGatewaySpecLoggingAccessLogArgs> accessLog;
 
     public Input<VirtualGatewaySpecLoggingAccessLogArgs> getAccessLog() {
         return this.accessLog == null ? Input.empty() : this.accessLog;

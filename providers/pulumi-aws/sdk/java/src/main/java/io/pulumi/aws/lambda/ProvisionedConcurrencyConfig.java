@@ -8,8 +8,8 @@ import io.pulumi.aws.lambda.ProvisionedConcurrencyConfigArgs;
 import io.pulumi.aws.lambda.inputs.ProvisionedConcurrencyConfigState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -73,6 +73,21 @@ public class ProvisionedConcurrencyConfig extends io.pulumi.resources.CustomReso
         return this.qualifier;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ProvisionedConcurrencyConfig(String name) {
+        this(name, ProvisionedConcurrencyConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ProvisionedConcurrencyConfig(String name, ProvisionedConcurrencyConfigArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

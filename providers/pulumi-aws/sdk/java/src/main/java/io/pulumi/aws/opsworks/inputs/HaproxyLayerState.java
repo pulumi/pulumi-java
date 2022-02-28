@@ -6,7 +6,7 @@ package io.pulumi.aws.opsworks.inputs;
 import io.pulumi.aws.opsworks.inputs.HaproxyLayerCloudwatchConfigurationGetArgs;
 import io.pulumi.aws.opsworks.inputs.HaproxyLayerEbsVolumeGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -36,7 +36,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoAssignElasticIps")
-    private final @Nullable Input<Boolean> autoAssignElasticIps;
+      private final @Nullable Input<Boolean> autoAssignElasticIps;
 
     public Input<Boolean> getAutoAssignElasticIps() {
         return this.autoAssignElasticIps == null ? Input.empty() : this.autoAssignElasticIps;
@@ -47,7 +47,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoAssignPublicIps")
-    private final @Nullable Input<Boolean> autoAssignPublicIps;
+      private final @Nullable Input<Boolean> autoAssignPublicIps;
 
     public Input<Boolean> getAutoAssignPublicIps() {
         return this.autoAssignPublicIps == null ? Input.empty() : this.autoAssignPublicIps;
@@ -58,28 +58,28 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoHealing")
-    private final @Nullable Input<Boolean> autoHealing;
+      private final @Nullable Input<Boolean> autoHealing;
 
     public Input<Boolean> getAutoHealing() {
         return this.autoHealing == null ? Input.empty() : this.autoHealing;
     }
 
     @InputImport(name="cloudwatchConfiguration")
-    private final @Nullable Input<HaproxyLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration;
+      private final @Nullable Input<HaproxyLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration;
 
     public Input<HaproxyLayerCloudwatchConfigurationGetArgs> getCloudwatchConfiguration() {
         return this.cloudwatchConfiguration == null ? Input.empty() : this.cloudwatchConfiguration;
     }
 
     @InputImport(name="customConfigureRecipes")
-    private final @Nullable Input<List<String>> customConfigureRecipes;
+      private final @Nullable Input<List<String>> customConfigureRecipes;
 
     public Input<List<String>> getCustomConfigureRecipes() {
         return this.customConfigureRecipes == null ? Input.empty() : this.customConfigureRecipes;
     }
 
     @InputImport(name="customDeployRecipes")
-    private final @Nullable Input<List<String>> customDeployRecipes;
+      private final @Nullable Input<List<String>> customDeployRecipes;
 
     public Input<List<String>> getCustomDeployRecipes() {
         return this.customDeployRecipes == null ? Input.empty() : this.customDeployRecipes;
@@ -90,7 +90,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customInstanceProfileArn")
-    private final @Nullable Input<String> customInstanceProfileArn;
+      private final @Nullable Input<String> customInstanceProfileArn;
 
     public Input<String> getCustomInstanceProfileArn() {
         return this.customInstanceProfileArn == null ? Input.empty() : this.customInstanceProfileArn;
@@ -101,7 +101,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customJson")
-    private final @Nullable Input<String> customJson;
+      private final @Nullable Input<String> customJson;
 
     public Input<String> getCustomJson() {
         return this.customJson == null ? Input.empty() : this.customJson;
@@ -112,28 +112,28 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customSecurityGroupIds")
-    private final @Nullable Input<List<String>> customSecurityGroupIds;
+      private final @Nullable Input<List<String>> customSecurityGroupIds;
 
     public Input<List<String>> getCustomSecurityGroupIds() {
         return this.customSecurityGroupIds == null ? Input.empty() : this.customSecurityGroupIds;
     }
 
     @InputImport(name="customSetupRecipes")
-    private final @Nullable Input<List<String>> customSetupRecipes;
+      private final @Nullable Input<List<String>> customSetupRecipes;
 
     public Input<List<String>> getCustomSetupRecipes() {
         return this.customSetupRecipes == null ? Input.empty() : this.customSetupRecipes;
     }
 
     @InputImport(name="customShutdownRecipes")
-    private final @Nullable Input<List<String>> customShutdownRecipes;
+      private final @Nullable Input<List<String>> customShutdownRecipes;
 
     public Input<List<String>> getCustomShutdownRecipes() {
         return this.customShutdownRecipes == null ? Input.empty() : this.customShutdownRecipes;
     }
 
     @InputImport(name="customUndeployRecipes")
-    private final @Nullable Input<List<String>> customUndeployRecipes;
+      private final @Nullable Input<List<String>> customUndeployRecipes;
 
     public Input<List<String>> getCustomUndeployRecipes() {
         return this.customUndeployRecipes == null ? Input.empty() : this.customUndeployRecipes;
@@ -144,7 +144,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="drainElbOnShutdown")
-    private final @Nullable Input<Boolean> drainElbOnShutdown;
+      private final @Nullable Input<Boolean> drainElbOnShutdown;
 
     public Input<Boolean> getDrainElbOnShutdown() {
         return this.drainElbOnShutdown == null ? Input.empty() : this.drainElbOnShutdown;
@@ -155,7 +155,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsVolumes")
-    private final @Nullable Input<List<HaproxyLayerEbsVolumeGetArgs>> ebsVolumes;
+      private final @Nullable Input<List<HaproxyLayerEbsVolumeGetArgs>> ebsVolumes;
 
     public Input<List<HaproxyLayerEbsVolumeGetArgs>> getEbsVolumes() {
         return this.ebsVolumes == null ? Input.empty() : this.ebsVolumes;
@@ -166,7 +166,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elasticLoadBalancer")
-    private final @Nullable Input<String> elasticLoadBalancer;
+      private final @Nullable Input<String> elasticLoadBalancer;
 
     public Input<String> getElasticLoadBalancer() {
         return this.elasticLoadBalancer == null ? Input.empty() : this.elasticLoadBalancer;
@@ -177,7 +177,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthcheckMethod")
-    private final @Nullable Input<String> healthcheckMethod;
+      private final @Nullable Input<String> healthcheckMethod;
 
     public Input<String> getHealthcheckMethod() {
         return this.healthcheckMethod == null ? Input.empty() : this.healthcheckMethod;
@@ -188,7 +188,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthcheckUrl")
-    private final @Nullable Input<String> healthcheckUrl;
+      private final @Nullable Input<String> healthcheckUrl;
 
     public Input<String> getHealthcheckUrl() {
         return this.healthcheckUrl == null ? Input.empty() : this.healthcheckUrl;
@@ -199,7 +199,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="installUpdatesOnBoot")
-    private final @Nullable Input<Boolean> installUpdatesOnBoot;
+      private final @Nullable Input<Boolean> installUpdatesOnBoot;
 
     public Input<Boolean> getInstallUpdatesOnBoot() {
         return this.installUpdatesOnBoot == null ? Input.empty() : this.installUpdatesOnBoot;
@@ -210,7 +210,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceShutdownTimeout")
-    private final @Nullable Input<Integer> instanceShutdownTimeout;
+      private final @Nullable Input<Integer> instanceShutdownTimeout;
 
     public Input<Integer> getInstanceShutdownTimeout() {
         return this.instanceShutdownTimeout == null ? Input.empty() : this.instanceShutdownTimeout;
@@ -221,7 +221,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -232,7 +232,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackId")
-    private final @Nullable Input<String> stackId;
+      private final @Nullable Input<String> stackId;
 
     public Input<String> getStackId() {
         return this.stackId == null ? Input.empty() : this.stackId;
@@ -243,7 +243,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statsEnabled")
-    private final @Nullable Input<Boolean> statsEnabled;
+      private final @Nullable Input<Boolean> statsEnabled;
 
     public Input<Boolean> getStatsEnabled() {
         return this.statsEnabled == null ? Input.empty() : this.statsEnabled;
@@ -254,7 +254,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statsPassword")
-    private final @Nullable Input<String> statsPassword;
+      private final @Nullable Input<String> statsPassword;
 
     public Input<String> getStatsPassword() {
         return this.statsPassword == null ? Input.empty() : this.statsPassword;
@@ -265,7 +265,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statsUrl")
-    private final @Nullable Input<String> statsUrl;
+      private final @Nullable Input<String> statsUrl;
 
     public Input<String> getStatsUrl() {
         return this.statsUrl == null ? Input.empty() : this.statsUrl;
@@ -276,7 +276,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statsUser")
-    private final @Nullable Input<String> statsUser;
+      private final @Nullable Input<String> statsUser;
 
     public Input<String> getStatsUser() {
         return this.statsUser == null ? Input.empty() : this.statsUser;
@@ -287,7 +287,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemPackages")
-    private final @Nullable Input<List<String>> systemPackages;
+      private final @Nullable Input<List<String>> systemPackages;
 
     public Input<List<String>> getSystemPackages() {
         return this.systemPackages == null ? Input.empty() : this.systemPackages;
@@ -298,7 +298,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -309,7 +309,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -320,7 +320,7 @@ public final class HaproxyLayerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useEbsOptimizedInstances")
-    private final @Nullable Input<Boolean> useEbsOptimizedInstances;
+      private final @Nullable Input<Boolean> useEbsOptimizedInstances;
 
     public Input<Boolean> getUseEbsOptimizedInstances() {
         return this.useEbsOptimizedInstances == null ? Input.empty() : this.useEbsOptimizedInstances;

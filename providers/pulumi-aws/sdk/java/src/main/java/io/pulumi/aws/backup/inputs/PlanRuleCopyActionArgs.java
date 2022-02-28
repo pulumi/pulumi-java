@@ -5,7 +5,7 @@ package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.aws.backup.inputs.PlanRuleCopyActionLifecycleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PlanRuleCopyActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destinationVaultArn", required=true)
-    private final Input<String> destinationVaultArn;
+      private final Input<String> destinationVaultArn;
 
     public Input<String> getDestinationVaultArn() {
         return this.destinationVaultArn;
@@ -31,7 +31,7 @@ public final class PlanRuleCopyActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="lifecycle")
-    private final @Nullable Input<PlanRuleCopyActionLifecycleArgs> lifecycle;
+      private final @Nullable Input<PlanRuleCopyActionLifecycleArgs> lifecycle;
 
     public Input<PlanRuleCopyActionLifecycleArgs> getLifecycle() {
         return this.lifecycle == null ? Input.empty() : this.lifecycle;

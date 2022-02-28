@@ -5,7 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.aws.emr.inputs.ClusterStepHadoopJarStepGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class ClusterStepGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionOnFailure", required=true)
-    private final Input<String> actionOnFailure;
+      private final Input<String> actionOnFailure;
 
     public Input<String> getActionOnFailure() {
         return this.actionOnFailure;
@@ -30,7 +30,7 @@ public final class ClusterStepGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hadoopJarStep", required=true)
-    private final Input<ClusterStepHadoopJarStepGetArgs> hadoopJarStep;
+      private final Input<ClusterStepHadoopJarStepGetArgs> hadoopJarStep;
 
     public Input<ClusterStepHadoopJarStepGetArgs> getHadoopJarStep() {
         return this.hadoopJarStep;
@@ -41,7 +41,7 @@ public final class ClusterStepGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

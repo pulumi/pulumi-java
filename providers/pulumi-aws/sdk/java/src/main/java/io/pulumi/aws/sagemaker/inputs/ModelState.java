@@ -8,7 +8,7 @@ import io.pulumi.aws.sagemaker.inputs.ModelInferenceExecutionConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.ModelPrimaryContainerGetArgs;
 import io.pulumi.aws.sagemaker.inputs.ModelVpcConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -37,7 +37,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containers")
-    private final @Nullable Input<List<ModelContainerGetArgs>> containers;
+      private final @Nullable Input<List<ModelContainerGetArgs>> containers;
 
     public Input<List<ModelContainerGetArgs>> getContainers() {
         return this.containers == null ? Input.empty() : this.containers;
@@ -48,7 +48,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableNetworkIsolation")
-    private final @Nullable Input<Boolean> enableNetworkIsolation;
+      private final @Nullable Input<Boolean> enableNetworkIsolation;
 
     public Input<Boolean> getEnableNetworkIsolation() {
         return this.enableNetworkIsolation == null ? Input.empty() : this.enableNetworkIsolation;
@@ -59,7 +59,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionRoleArn")
-    private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
@@ -70,7 +70,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inferenceExecutionConfig")
-    private final @Nullable Input<ModelInferenceExecutionConfigGetArgs> inferenceExecutionConfig;
+      private final @Nullable Input<ModelInferenceExecutionConfigGetArgs> inferenceExecutionConfig;
 
     public Input<ModelInferenceExecutionConfigGetArgs> getInferenceExecutionConfig() {
         return this.inferenceExecutionConfig == null ? Input.empty() : this.inferenceExecutionConfig;
@@ -81,7 +81,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -92,7 +92,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryContainer")
-    private final @Nullable Input<ModelPrimaryContainerGetArgs> primaryContainer;
+      private final @Nullable Input<ModelPrimaryContainerGetArgs> primaryContainer;
 
     public Input<ModelPrimaryContainerGetArgs> getPrimaryContainer() {
         return this.primaryContainer == null ? Input.empty() : this.primaryContainer;
@@ -103,7 +103,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -114,7 +114,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -125,7 +125,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-    private final @Nullable Input<ModelVpcConfigGetArgs> vpcConfig;
+      private final @Nullable Input<ModelVpcConfigGetArgs> vpcConfig;
 
     public Input<ModelVpcConfigGetArgs> getVpcConfig() {
         return this.vpcConfig == null ? Input.empty() : this.vpcConfig;

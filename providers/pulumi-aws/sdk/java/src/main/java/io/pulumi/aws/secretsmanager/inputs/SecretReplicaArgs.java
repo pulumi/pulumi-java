@@ -4,7 +4,7 @@
 package io.pulumi.aws.secretsmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SecretReplicaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -30,7 +30,7 @@ public final class SecretReplicaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastAccessedDate")
-    private final @Nullable Input<String> lastAccessedDate;
+      private final @Nullable Input<String> lastAccessedDate;
 
     public Input<String> getLastAccessedDate() {
         return this.lastAccessedDate == null ? Input.empty() : this.lastAccessedDate;
@@ -41,7 +41,7 @@ public final class SecretReplicaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
@@ -52,7 +52,7 @@ public final class SecretReplicaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -63,7 +63,7 @@ public final class SecretReplicaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statusMessage")
-    private final @Nullable Input<String> statusMessage;
+      private final @Nullable Input<String> statusMessage;
 
     public Input<String> getStatusMessage() {
         return this.statusMessage == null ? Input.empty() : this.statusMessage;

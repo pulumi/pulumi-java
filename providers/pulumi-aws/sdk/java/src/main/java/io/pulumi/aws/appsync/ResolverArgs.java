@@ -7,7 +7,7 @@ import io.pulumi.aws.appsync.inputs.ResolverCachingConfigArgs;
 import io.pulumi.aws.appsync.inputs.ResolverPipelineConfigArgs;
 import io.pulumi.aws.appsync.inputs.ResolverSyncConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -34,7 +34,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cachingConfig")
-    private final @Nullable Input<ResolverCachingConfigArgs> cachingConfig;
+      private final @Nullable Input<ResolverCachingConfigArgs> cachingConfig;
 
     public Input<ResolverCachingConfigArgs> getCachingConfig() {
         return this.cachingConfig == null ? Input.empty() : this.cachingConfig;
@@ -45,7 +45,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSource")
-    private final @Nullable Input<String> dataSource;
+      private final @Nullable Input<String> dataSource;
 
     public Input<String> getDataSource() {
         return this.dataSource == null ? Input.empty() : this.dataSource;
@@ -56,7 +56,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="field", required=true)
-    private final Input<String> field;
+      private final Input<String> field;
 
     public Input<String> getField() {
         return this.field;
@@ -67,7 +67,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -78,7 +78,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxBatchSize")
-    private final @Nullable Input<Integer> maxBatchSize;
+      private final @Nullable Input<Integer> maxBatchSize;
 
     public Input<Integer> getMaxBatchSize() {
         return this.maxBatchSize == null ? Input.empty() : this.maxBatchSize;
@@ -89,7 +89,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineConfig")
-    private final @Nullable Input<ResolverPipelineConfigArgs> pipelineConfig;
+      private final @Nullable Input<ResolverPipelineConfigArgs> pipelineConfig;
 
     public Input<ResolverPipelineConfigArgs> getPipelineConfig() {
         return this.pipelineConfig == null ? Input.empty() : this.pipelineConfig;
@@ -100,7 +100,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestTemplate")
-    private final @Nullable Input<String> requestTemplate;
+      private final @Nullable Input<String> requestTemplate;
 
     public Input<String> getRequestTemplate() {
         return this.requestTemplate == null ? Input.empty() : this.requestTemplate;
@@ -111,7 +111,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseTemplate")
-    private final @Nullable Input<String> responseTemplate;
+      private final @Nullable Input<String> responseTemplate;
 
     public Input<String> getResponseTemplate() {
         return this.responseTemplate == null ? Input.empty() : this.responseTemplate;
@@ -122,7 +122,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncConfig")
-    private final @Nullable Input<ResolverSyncConfigArgs> syncConfig;
+      private final @Nullable Input<ResolverSyncConfigArgs> syncConfig;
 
     public Input<ResolverSyncConfigArgs> getSyncConfig() {
         return this.syncConfig == null ? Input.empty() : this.syncConfig;
@@ -133,7 +133,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

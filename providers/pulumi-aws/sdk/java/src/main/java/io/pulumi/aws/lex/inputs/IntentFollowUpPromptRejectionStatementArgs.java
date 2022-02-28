@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.IntentFollowUpPromptRejectionStatementMessageArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IntentFollowUpPromptRejectionStatementArgs extends io.pulumi.
      * 
      */
     @InputImport(name="messages", required=true)
-    private final Input<List<IntentFollowUpPromptRejectionStatementMessageArgs>> messages;
+      private final Input<List<IntentFollowUpPromptRejectionStatementMessageArgs>> messages;
 
     public Input<List<IntentFollowUpPromptRejectionStatementMessageArgs>> getMessages() {
         return this.messages;
@@ -36,7 +36,7 @@ public final class IntentFollowUpPromptRejectionStatementArgs extends io.pulumi.
      * 
      */
     @InputImport(name="responseCard")
-    private final @Nullable Input<String> responseCard;
+      private final @Nullable Input<String> responseCard;
 
     public Input<String> getResponseCard() {
         return this.responseCard == null ? Input.empty() : this.responseCard;

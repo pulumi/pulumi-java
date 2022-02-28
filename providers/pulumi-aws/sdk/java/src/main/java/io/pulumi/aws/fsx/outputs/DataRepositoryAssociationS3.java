@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx.outputs;
 
 import io.pulumi.aws.fsx.outputs.DataRepositoryAssociationS3AutoExportPolicy;
 import io.pulumi.aws.fsx.outputs.DataRepositoryAssociationS3AutoImportPolicy;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

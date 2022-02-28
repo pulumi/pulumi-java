@@ -18,7 +18,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementSizeConstraintStatementGetA
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementSqliMatchStatementGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementXssMatchStatementGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -32,7 +32,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="andStatement")
-    private final @Nullable Input<WebAclRuleStatementAndStatementGetArgs> andStatement;
+      private final @Nullable Input<WebAclRuleStatementAndStatementGetArgs> andStatement;
 
     public Input<WebAclRuleStatementAndStatementGetArgs> getAndStatement() {
         return this.andStatement == null ? Input.empty() : this.andStatement;
@@ -43,7 +43,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="byteMatchStatement")
-    private final @Nullable Input<WebAclRuleStatementByteMatchStatementGetArgs> byteMatchStatement;
+      private final @Nullable Input<WebAclRuleStatementByteMatchStatementGetArgs> byteMatchStatement;
 
     public Input<WebAclRuleStatementByteMatchStatementGetArgs> getByteMatchStatement() {
         return this.byteMatchStatement == null ? Input.empty() : this.byteMatchStatement;
@@ -54,7 +54,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="geoMatchStatement")
-    private final @Nullable Input<WebAclRuleStatementGeoMatchStatementGetArgs> geoMatchStatement;
+      private final @Nullable Input<WebAclRuleStatementGeoMatchStatementGetArgs> geoMatchStatement;
 
     public Input<WebAclRuleStatementGeoMatchStatementGetArgs> getGeoMatchStatement() {
         return this.geoMatchStatement == null ? Input.empty() : this.geoMatchStatement;
@@ -65,7 +65,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ipSetReferenceStatement")
-    private final @Nullable Input<WebAclRuleStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
+      private final @Nullable Input<WebAclRuleStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
 
     public Input<WebAclRuleStatementIpSetReferenceStatementGetArgs> getIpSetReferenceStatement() {
         return this.ipSetReferenceStatement == null ? Input.empty() : this.ipSetReferenceStatement;
@@ -76,7 +76,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="labelMatchStatement")
-    private final @Nullable Input<WebAclRuleStatementLabelMatchStatementGetArgs> labelMatchStatement;
+      private final @Nullable Input<WebAclRuleStatementLabelMatchStatementGetArgs> labelMatchStatement;
 
     public Input<WebAclRuleStatementLabelMatchStatementGetArgs> getLabelMatchStatement() {
         return this.labelMatchStatement == null ? Input.empty() : this.labelMatchStatement;
@@ -87,7 +87,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="managedRuleGroupStatement")
-    private final @Nullable Input<WebAclRuleStatementManagedRuleGroupStatementGetArgs> managedRuleGroupStatement;
+      private final @Nullable Input<WebAclRuleStatementManagedRuleGroupStatementGetArgs> managedRuleGroupStatement;
 
     public Input<WebAclRuleStatementManagedRuleGroupStatementGetArgs> getManagedRuleGroupStatement() {
         return this.managedRuleGroupStatement == null ? Input.empty() : this.managedRuleGroupStatement;
@@ -98,7 +98,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="notStatement")
-    private final @Nullable Input<WebAclRuleStatementNotStatementGetArgs> notStatement;
+      private final @Nullable Input<WebAclRuleStatementNotStatementGetArgs> notStatement;
 
     public Input<WebAclRuleStatementNotStatementGetArgs> getNotStatement() {
         return this.notStatement == null ? Input.empty() : this.notStatement;
@@ -109,7 +109,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="orStatement")
-    private final @Nullable Input<WebAclRuleStatementOrStatementGetArgs> orStatement;
+      private final @Nullable Input<WebAclRuleStatementOrStatementGetArgs> orStatement;
 
     public Input<WebAclRuleStatementOrStatementGetArgs> getOrStatement() {
         return this.orStatement == null ? Input.empty() : this.orStatement;
@@ -120,7 +120,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="rateBasedStatement")
-    private final @Nullable Input<WebAclRuleStatementRateBasedStatementGetArgs> rateBasedStatement;
+      private final @Nullable Input<WebAclRuleStatementRateBasedStatementGetArgs> rateBasedStatement;
 
     public Input<WebAclRuleStatementRateBasedStatementGetArgs> getRateBasedStatement() {
         return this.rateBasedStatement == null ? Input.empty() : this.rateBasedStatement;
@@ -131,7 +131,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="regexPatternSetReferenceStatement")
-    private final @Nullable Input<WebAclRuleStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
+      private final @Nullable Input<WebAclRuleStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
 
     public Input<WebAclRuleStatementRegexPatternSetReferenceStatementGetArgs> getRegexPatternSetReferenceStatement() {
         return this.regexPatternSetReferenceStatement == null ? Input.empty() : this.regexPatternSetReferenceStatement;
@@ -142,7 +142,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ruleGroupReferenceStatement")
-    private final @Nullable Input<WebAclRuleStatementRuleGroupReferenceStatementGetArgs> ruleGroupReferenceStatement;
+      private final @Nullable Input<WebAclRuleStatementRuleGroupReferenceStatementGetArgs> ruleGroupReferenceStatement;
 
     public Input<WebAclRuleStatementRuleGroupReferenceStatementGetArgs> getRuleGroupReferenceStatement() {
         return this.ruleGroupReferenceStatement == null ? Input.empty() : this.ruleGroupReferenceStatement;
@@ -153,7 +153,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sizeConstraintStatement")
-    private final @Nullable Input<WebAclRuleStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
+      private final @Nullable Input<WebAclRuleStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
 
     public Input<WebAclRuleStatementSizeConstraintStatementGetArgs> getSizeConstraintStatement() {
         return this.sizeConstraintStatement == null ? Input.empty() : this.sizeConstraintStatement;
@@ -164,7 +164,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sqliMatchStatement")
-    private final @Nullable Input<WebAclRuleStatementSqliMatchStatementGetArgs> sqliMatchStatement;
+      private final @Nullable Input<WebAclRuleStatementSqliMatchStatementGetArgs> sqliMatchStatement;
 
     public Input<WebAclRuleStatementSqliMatchStatementGetArgs> getSqliMatchStatement() {
         return this.sqliMatchStatement == null ? Input.empty() : this.sqliMatchStatement;
@@ -175,7 +175,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="xssMatchStatement")
-    private final @Nullable Input<WebAclRuleStatementXssMatchStatementGetArgs> xssMatchStatement;
+      private final @Nullable Input<WebAclRuleStatementXssMatchStatementGetArgs> xssMatchStatement;
 
     public Input<WebAclRuleStatementXssMatchStatementGetArgs> getXssMatchStatement() {
         return this.xssMatchStatement == null ? Input.empty() : this.xssMatchStatement;

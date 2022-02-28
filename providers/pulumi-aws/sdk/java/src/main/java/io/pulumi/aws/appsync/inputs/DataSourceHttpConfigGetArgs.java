@@ -5,7 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.aws.appsync.inputs.DataSourceHttpConfigAuthorizationConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="authorizationConfig")
-    private final @Nullable Input<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig;
+      private final @Nullable Input<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig;
 
     public Input<DataSourceHttpConfigAuthorizationConfigGetArgs> getAuthorizationConfig() {
         return this.authorizationConfig == null ? Input.empty() : this.authorizationConfig;
@@ -31,7 +31,7 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final Input<String> endpoint;
+      private final Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint;

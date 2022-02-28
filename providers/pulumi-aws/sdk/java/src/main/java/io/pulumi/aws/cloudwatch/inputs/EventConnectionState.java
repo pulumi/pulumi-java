@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="authParameters")
-    private final @Nullable Input<EventConnectionAuthParametersGetArgs> authParameters;
+      private final @Nullable Input<EventConnectionAuthParametersGetArgs> authParameters;
 
     public Input<EventConnectionAuthParametersGetArgs> getAuthParameters() {
         return this.authParameters == null ? Input.empty() : this.authParameters;
@@ -42,7 +42,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="authorizationType")
-    private final @Nullable Input<String> authorizationType;
+      private final @Nullable Input<String> authorizationType;
 
     public Input<String> getAuthorizationType() {
         return this.authorizationType == null ? Input.empty() : this.authorizationType;
@@ -53,7 +53,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -64,7 +64,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -75,7 +75,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="secretArn")
-    private final @Nullable Input<String> secretArn;
+      private final @Nullable Input<String> secretArn;
 
     public Input<String> getSecretArn() {
         return this.secretArn == null ? Input.empty() : this.secretArn;

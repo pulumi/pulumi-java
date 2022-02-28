@@ -6,7 +6,7 @@ package io.pulumi.aws.globalaccelerator;
 import io.pulumi.aws.globalaccelerator.inputs.EndpointGroupEndpointConfigurationArgs;
 import io.pulumi.aws.globalaccelerator.inputs.EndpointGroupPortOverrideArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointConfigurations")
-    private final @Nullable Input<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations;
+      private final @Nullable Input<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations;
 
     public Input<List<EndpointGroupEndpointConfigurationArgs>> getEndpointConfigurations() {
         return this.endpointConfigurations == null ? Input.empty() : this.endpointConfigurations;
@@ -35,7 +35,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointGroupRegion")
-    private final @Nullable Input<String> endpointGroupRegion;
+      private final @Nullable Input<String> endpointGroupRegion;
 
     public Input<String> getEndpointGroupRegion() {
         return this.endpointGroupRegion == null ? Input.empty() : this.endpointGroupRegion;
@@ -46,7 +46,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckIntervalSeconds")
-    private final @Nullable Input<Integer> healthCheckIntervalSeconds;
+      private final @Nullable Input<Integer> healthCheckIntervalSeconds;
 
     public Input<Integer> getHealthCheckIntervalSeconds() {
         return this.healthCheckIntervalSeconds == null ? Input.empty() : this.healthCheckIntervalSeconds;
@@ -57,7 +57,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckPath")
-    private final @Nullable Input<String> healthCheckPath;
+      private final @Nullable Input<String> healthCheckPath;
 
     public Input<String> getHealthCheckPath() {
         return this.healthCheckPath == null ? Input.empty() : this.healthCheckPath;
@@ -69,7 +69,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckPort")
-    private final @Nullable Input<Integer> healthCheckPort;
+      private final @Nullable Input<Integer> healthCheckPort;
 
     public Input<Integer> getHealthCheckPort() {
         return this.healthCheckPort == null ? Input.empty() : this.healthCheckPort;
@@ -80,7 +80,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckProtocol")
-    private final @Nullable Input<String> healthCheckProtocol;
+      private final @Nullable Input<String> healthCheckProtocol;
 
     public Input<String> getHealthCheckProtocol() {
         return this.healthCheckProtocol == null ? Input.empty() : this.healthCheckProtocol;
@@ -91,7 +91,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="listenerArn", required=true)
-    private final Input<String> listenerArn;
+      private final Input<String> listenerArn;
 
     public Input<String> getListenerArn() {
         return this.listenerArn;
@@ -102,7 +102,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portOverrides")
-    private final @Nullable Input<List<EndpointGroupPortOverrideArgs>> portOverrides;
+      private final @Nullable Input<List<EndpointGroupPortOverrideArgs>> portOverrides;
 
     public Input<List<EndpointGroupPortOverrideArgs>> getPortOverrides() {
         return this.portOverrides == null ? Input.empty() : this.portOverrides;
@@ -113,7 +113,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thresholdCount")
-    private final @Nullable Input<Integer> thresholdCount;
+      private final @Nullable Input<Integer> thresholdCount;
 
     public Input<Integer> getThresholdCount() {
         return this.thresholdCount == null ? Input.empty() : this.thresholdCount;
@@ -124,7 +124,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficDialPercentage")
-    private final @Nullable Input<Double> trafficDialPercentage;
+      private final @Nullable Input<Double> trafficDialPercentage;
 
     public Input<Double> getTrafficDialPercentage() {
         return this.trafficDialPercentage == null ? Input.empty() : this.trafficDialPercentage;

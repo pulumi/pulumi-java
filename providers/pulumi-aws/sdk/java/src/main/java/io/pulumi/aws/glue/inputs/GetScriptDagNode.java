@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.GetScriptDagNodeArg;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GetScriptDagNode extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="args", required=true)
-    private final List<GetScriptDagNodeArg> args;
+      private final List<GetScriptDagNodeArg> args;
 
     public List<GetScriptDagNodeArg> getArgs() {
         return this.args;
@@ -33,7 +33,7 @@ public final class GetScriptDagNode extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -44,7 +44,7 @@ public final class GetScriptDagNode extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lineNumber")
-    private final @Nullable Integer lineNumber;
+      private final @Nullable Integer lineNumber;
 
     public Optional<Integer> getLineNumber() {
         return this.lineNumber == null ? Optional.empty() : Optional.ofNullable(this.lineNumber);
@@ -55,7 +55,7 @@ public final class GetScriptDagNode extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nodeType", required=true)
-    private final String nodeType;
+      private final String nodeType;
 
     public String getNodeType() {
         return this.nodeType;

@@ -9,8 +9,8 @@ import io.pulumi.aws.s3.inputs.BucketOwnershipControlsState;
 import io.pulumi.aws.s3.outputs.BucketOwnershipControlsRule;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -59,6 +59,21 @@ public class BucketOwnershipControls extends io.pulumi.resources.CustomResource 
         return this.rule;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public BucketOwnershipControls(String name) {
+        this(name, BucketOwnershipControlsArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public BucketOwnershipControls(String name, BucketOwnershipControlsArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

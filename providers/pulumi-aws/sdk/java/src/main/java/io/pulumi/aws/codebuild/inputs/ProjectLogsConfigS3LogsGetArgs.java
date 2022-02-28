@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ProjectLogsConfigS3LogsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bucketOwnerAccess")
-    private final @Nullable Input<String> bucketOwnerAccess;
+      private final @Nullable Input<String> bucketOwnerAccess;
 
     public Input<String> getBucketOwnerAccess() {
         return this.bucketOwnerAccess == null ? Input.empty() : this.bucketOwnerAccess;
@@ -31,7 +31,7 @@ public final class ProjectLogsConfigS3LogsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="encryptionDisabled")
-    private final @Nullable Input<Boolean> encryptionDisabled;
+      private final @Nullable Input<Boolean> encryptionDisabled;
 
     public Input<Boolean> getEncryptionDisabled() {
         return this.encryptionDisabled == null ? Input.empty() : this.encryptionDisabled;
@@ -42,7 +42,7 @@ public final class ProjectLogsConfigS3LogsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -53,7 +53,7 @@ public final class ProjectLogsConfigS3LogsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

@@ -6,7 +6,7 @@ package io.pulumi.aws.ssm.inputs;
 import io.pulumi.aws.ssm.inputs.DocumentAttachmentsSourceGetArgs;
 import io.pulumi.aws.ssm.inputs.DocumentParameterGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +19,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     public static final DocumentState Empty = new DocumentState();
 
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -30,7 +30,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attachmentsSources")
-    private final @Nullable Input<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources;
+      private final @Nullable Input<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources;
 
     public Input<List<DocumentAttachmentsSourceGetArgs>> getAttachmentsSources() {
         return this.attachmentsSources == null ? Input.empty() : this.attachmentsSources;
@@ -41,7 +41,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -52,7 +52,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdDate")
-    private final @Nullable Input<String> createdDate;
+      private final @Nullable Input<String> createdDate;
 
     public Input<String> getCreatedDate() {
         return this.createdDate == null ? Input.empty() : this.createdDate;
@@ -63,7 +63,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultVersion")
-    private final @Nullable Input<String> defaultVersion;
+      private final @Nullable Input<String> defaultVersion;
 
     public Input<String> getDefaultVersion() {
         return this.defaultVersion == null ? Input.empty() : this.defaultVersion;
@@ -74,7 +74,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -85,7 +85,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentFormat")
-    private final @Nullable Input<String> documentFormat;
+      private final @Nullable Input<String> documentFormat;
 
     public Input<String> getDocumentFormat() {
         return this.documentFormat == null ? Input.empty() : this.documentFormat;
@@ -96,7 +96,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentType")
-    private final @Nullable Input<String> documentType;
+      private final @Nullable Input<String> documentType;
 
     public Input<String> getDocumentType() {
         return this.documentType == null ? Input.empty() : this.documentType;
@@ -107,7 +107,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentVersion")
-    private final @Nullable Input<String> documentVersion;
+      private final @Nullable Input<String> documentVersion;
 
     public Input<String> getDocumentVersion() {
         return this.documentVersion == null ? Input.empty() : this.documentVersion;
@@ -118,7 +118,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hash")
-    private final @Nullable Input<String> hash;
+      private final @Nullable Input<String> hash;
 
     public Input<String> getHash() {
         return this.hash == null ? Input.empty() : this.hash;
@@ -129,7 +129,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hashType")
-    private final @Nullable Input<String> hashType;
+      private final @Nullable Input<String> hashType;
 
     public Input<String> getHashType() {
         return this.hashType == null ? Input.empty() : this.hashType;
@@ -140,7 +140,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestVersion")
-    private final @Nullable Input<String> latestVersion;
+      private final @Nullable Input<String> latestVersion;
 
     public Input<String> getLatestVersion() {
         return this.latestVersion == null ? Input.empty() : this.latestVersion;
@@ -151,7 +151,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -162,7 +162,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable Input<String> owner;
+      private final @Nullable Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner == null ? Input.empty() : this.owner;
@@ -173,7 +173,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<DocumentParameterGetArgs>> parameters;
+      private final @Nullable Input<List<DocumentParameterGetArgs>> parameters;
 
     public Input<List<DocumentParameterGetArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -184,7 +184,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<Map<String,String>> permissions;
+      private final @Nullable Input<Map<String,String>> permissions;
 
     public Input<Map<String,String>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -195,7 +195,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformTypes")
-    private final @Nullable Input<List<String>> platformTypes;
+      private final @Nullable Input<List<String>> platformTypes;
 
     public Input<List<String>> getPlatformTypes() {
         return this.platformTypes == null ? Input.empty() : this.platformTypes;
@@ -206,7 +206,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaVersion")
-    private final @Nullable Input<String> schemaVersion;
+      private final @Nullable Input<String> schemaVersion;
 
     public Input<String> getSchemaVersion() {
         return this.schemaVersion == null ? Input.empty() : this.schemaVersion;
@@ -217,7 +217,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -228,7 +228,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -239,7 +239,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -250,7 +250,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetType")
-    private final @Nullable Input<String> targetType;
+      private final @Nullable Input<String> targetType;
 
     public Input<String> getTargetType() {
         return this.targetType == null ? Input.empty() : this.targetType;
@@ -261,7 +261,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionName")
-    private final @Nullable Input<String> versionName;
+      private final @Nullable Input<String> versionName;
 
     public Input<String> getVersionName() {
         return this.versionName == null ? Input.empty() : this.versionName;

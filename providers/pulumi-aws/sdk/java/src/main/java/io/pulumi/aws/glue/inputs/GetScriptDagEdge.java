@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetScriptDagEdge extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -30,7 +30,7 @@ public final class GetScriptDagEdge extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="target", required=true)
-    private final String target;
+      private final String target;
 
     public String getTarget() {
         return this.target;
@@ -41,7 +41,7 @@ public final class GetScriptDagEdge extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetParameter")
-    private final @Nullable String targetParameter;
+      private final @Nullable String targetParameter;
 
     public Optional<String> getTargetParameter() {
         return this.targetParameter == null ? Optional.empty() : Optional.ofNullable(this.targetParameter);

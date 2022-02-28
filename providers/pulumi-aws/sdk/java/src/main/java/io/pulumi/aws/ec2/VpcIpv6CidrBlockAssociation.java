@@ -8,8 +8,8 @@ import io.pulumi.aws.ec2.VpcIpv6CidrBlockAssociationArgs;
 import io.pulumi.aws.ec2.inputs.VpcIpv6CidrBlockAssociationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -89,6 +89,21 @@ public class VpcIpv6CidrBlockAssociation extends io.pulumi.resources.CustomResou
         return this.vpcId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VpcIpv6CidrBlockAssociation(String name) {
+        this(name, VpcIpv6CidrBlockAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VpcIpv6CidrBlockAssociation(String name, VpcIpv6CidrBlockAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

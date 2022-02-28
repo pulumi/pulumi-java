@@ -4,7 +4,7 @@
 package io.pulumi.aws.chime.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class VoiceConnectorStreamingState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dataRetention")
-    private final @Nullable Input<Integer> dataRetention;
+      private final @Nullable Input<Integer> dataRetention;
 
     public Input<Integer> getDataRetention() {
         return this.dataRetention == null ? Input.empty() : this.dataRetention;
@@ -33,7 +33,7 @@ public final class VoiceConnectorStreamingState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -44,7 +44,7 @@ public final class VoiceConnectorStreamingState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="streamingNotificationTargets")
-    private final @Nullable Input<List<String>> streamingNotificationTargets;
+      private final @Nullable Input<List<String>> streamingNotificationTargets;
 
     public Input<List<String>> getStreamingNotificationTargets() {
         return this.streamingNotificationTargets == null ? Input.empty() : this.streamingNotificationTargets;
@@ -55,7 +55,7 @@ public final class VoiceConnectorStreamingState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="voiceConnectorId")
-    private final @Nullable Input<String> voiceConnectorId;
+      private final @Nullable Input<String> voiceConnectorId;
 
     public Input<String> getVoiceConnectorId() {
         return this.voiceConnectorId == null ? Input.empty() : this.voiceConnectorId;

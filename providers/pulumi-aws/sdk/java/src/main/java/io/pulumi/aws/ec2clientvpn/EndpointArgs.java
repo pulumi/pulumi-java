@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2clientvpn;
 import io.pulumi.aws.ec2clientvpn.inputs.EndpointAuthenticationOptionArgs;
 import io.pulumi.aws.ec2clientvpn.inputs.EndpointConnectionLogOptionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationOptions", required=true)
-    private final Input<List<EndpointAuthenticationOptionArgs>> authenticationOptions;
+      private final Input<List<EndpointAuthenticationOptionArgs>> authenticationOptions;
 
     public Input<List<EndpointAuthenticationOptionArgs>> getAuthenticationOptions() {
         return this.authenticationOptions;
@@ -35,7 +35,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCidrBlock", required=true)
-    private final Input<String> clientCidrBlock;
+      private final Input<String> clientCidrBlock;
 
     public Input<String> getClientCidrBlock() {
         return this.clientCidrBlock;
@@ -46,7 +46,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionLogOptions", required=true)
-    private final Input<EndpointConnectionLogOptionsArgs> connectionLogOptions;
+      private final Input<EndpointConnectionLogOptionsArgs> connectionLogOptions;
 
     public Input<EndpointConnectionLogOptionsArgs> getConnectionLogOptions() {
         return this.connectionLogOptions;
@@ -57,7 +57,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -68,7 +68,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable Input<List<String>> dnsServers;
+      private final @Nullable Input<List<String>> dnsServers;
 
     public Input<List<String>> getDnsServers() {
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
@@ -79,7 +79,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfServicePortal")
-    private final @Nullable Input<String> selfServicePortal;
+      private final @Nullable Input<String> selfServicePortal;
 
     public Input<String> getSelfServicePortal() {
         return this.selfServicePortal == null ? Input.empty() : this.selfServicePortal;
@@ -90,7 +90,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverCertificateArn", required=true)
-    private final Input<String> serverCertificateArn;
+      private final Input<String> serverCertificateArn;
 
     public Input<String> getServerCertificateArn() {
         return this.serverCertificateArn;
@@ -101,7 +101,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="splitTunnel")
-    private final @Nullable Input<Boolean> splitTunnel;
+      private final @Nullable Input<Boolean> splitTunnel;
 
     public Input<Boolean> getSplitTunnel() {
         return this.splitTunnel == null ? Input.empty() : this.splitTunnel;
@@ -112,7 +112,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -123,7 +123,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transportProtocol")
-    private final @Nullable Input<String> transportProtocol;
+      private final @Nullable Input<String> transportProtocol;
 
     public Input<String> getTransportProtocol() {
         return this.transportProtocol == null ? Input.empty() : this.transportProtocol;

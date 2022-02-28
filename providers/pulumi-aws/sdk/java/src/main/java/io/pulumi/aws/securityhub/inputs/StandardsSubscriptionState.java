@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class StandardsSubscriptionState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="standardsArn")
-    private final @Nullable Input<String> standardsArn;
+      private final @Nullable Input<String> standardsArn;
 
     public Input<String> getStandardsArn() {
         return this.standardsArn == null ? Input.empty() : this.standardsArn;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accessGroupId")
-    private final @Nullable Input<String> accessGroupId;
+      private final @Nullable Input<String> accessGroupId;
 
     public Input<String> getAccessGroupId() {
         return this.accessGroupId == null ? Input.empty() : this.accessGroupId;
@@ -31,7 +31,7 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="authorizeAllGroups")
-    private final @Nullable Input<Boolean> authorizeAllGroups;
+      private final @Nullable Input<Boolean> authorizeAllGroups;
 
     public Input<Boolean> getAuthorizeAllGroups() {
         return this.authorizeAllGroups == null ? Input.empty() : this.authorizeAllGroups;
@@ -42,7 +42,7 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientVpnEndpointId", required=true)
-    private final Input<String> clientVpnEndpointId;
+      private final Input<String> clientVpnEndpointId;
 
     public Input<String> getClientVpnEndpointId() {
         return this.clientVpnEndpointId;
@@ -53,7 +53,7 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -64,7 +64,7 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetNetworkCidr", required=true)
-    private final Input<String> targetNetworkCidr;
+      private final Input<String> targetNetworkCidr;
 
     public Input<String> getTargetNetworkCidr() {
         return this.targetNetworkCidr;

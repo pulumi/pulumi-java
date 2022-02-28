@@ -4,7 +4,7 @@
 package io.pulumi.aws.inputs;
 
 import io.pulumi.aws.inputs.GetAvailabilityZoneFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GetAvailabilityZoneArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="allAvailabilityZones")
-    private final @Nullable Boolean allAvailabilityZones;
+      private final @Nullable Boolean allAvailabilityZones;
 
     public Optional<Boolean> getAllAvailabilityZones() {
         return this.allAvailabilityZones == null ? Optional.empty() : Optional.ofNullable(this.allAvailabilityZones);
@@ -33,7 +33,7 @@ public final class GetAvailabilityZoneArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetAvailabilityZoneFilter> filters;
+      private final @Nullable List<GetAvailabilityZoneFilter> filters;
 
     public List<GetAvailabilityZoneFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -44,7 +44,7 @@ public final class GetAvailabilityZoneArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -55,7 +55,7 @@ public final class GetAvailabilityZoneArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -66,7 +66,7 @@ public final class GetAvailabilityZoneArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="zoneId")
-    private final @Nullable String zoneId;
+      private final @Nullable String zoneId;
 
     public Optional<String> getZoneId() {
         return this.zoneId == null ? Optional.empty() : Optional.ofNullable(this.zoneId);

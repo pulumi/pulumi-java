@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TopicRuleElasticsearchArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final Input<String> endpoint;
+      private final Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint;
@@ -29,7 +29,7 @@ public final class TopicRuleElasticsearchArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -40,7 +40,7 @@ public final class TopicRuleElasticsearchArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="index", required=true)
-    private final Input<String> index;
+      private final Input<String> index;
 
     public Input<String> getIndex() {
         return this.index;
@@ -51,7 +51,7 @@ public final class TopicRuleElasticsearchArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -62,7 +62,7 @@ public final class TopicRuleElasticsearchArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

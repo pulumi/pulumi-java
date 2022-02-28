@@ -6,7 +6,7 @@ package io.pulumi.aws.servicecatalog;
 import io.pulumi.aws.servicecatalog.inputs.ProvisionedProductProvisioningParameterArgs;
 import io.pulumi.aws.servicecatalog.inputs.ProvisionedProductStackSetProvisioningPreferencesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="acceptLanguage")
-    private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Input<String> acceptLanguage;
 
     public Input<String> getAcceptLanguage() {
         return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
@@ -35,7 +35,7 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ignoreErrors")
-    private final @Nullable Input<Boolean> ignoreErrors;
+      private final @Nullable Input<Boolean> ignoreErrors;
 
     public Input<Boolean> getIgnoreErrors() {
         return this.ignoreErrors == null ? Input.empty() : this.ignoreErrors;
@@ -46,7 +46,7 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="notificationArns")
-    private final @Nullable Input<List<String>> notificationArns;
+      private final @Nullable Input<List<String>> notificationArns;
 
     public Input<List<String>> getNotificationArns() {
         return this.notificationArns == null ? Input.empty() : this.notificationArns;
@@ -68,7 +68,7 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pathId")
-    private final @Nullable Input<String> pathId;
+      private final @Nullable Input<String> pathId;
 
     public Input<String> getPathId() {
         return this.pathId == null ? Input.empty() : this.pathId;
@@ -79,7 +79,7 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pathName")
-    private final @Nullable Input<String> pathName;
+      private final @Nullable Input<String> pathName;
 
     public Input<String> getPathName() {
         return this.pathName == null ? Input.empty() : this.pathName;
@@ -90,7 +90,7 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="productId")
-    private final @Nullable Input<String> productId;
+      private final @Nullable Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId == null ? Input.empty() : this.productId;
@@ -101,7 +101,7 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="productName")
-    private final @Nullable Input<String> productName;
+      private final @Nullable Input<String> productName;
 
     public Input<String> getProductName() {
         return this.productName == null ? Input.empty() : this.productName;
@@ -112,7 +112,7 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="provisioningArtifactId")
-    private final @Nullable Input<String> provisioningArtifactId;
+      private final @Nullable Input<String> provisioningArtifactId;
 
     public Input<String> getProvisioningArtifactId() {
         return this.provisioningArtifactId == null ? Input.empty() : this.provisioningArtifactId;
@@ -123,7 +123,7 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="provisioningArtifactName")
-    private final @Nullable Input<String> provisioningArtifactName;
+      private final @Nullable Input<String> provisioningArtifactName;
 
     public Input<String> getProvisioningArtifactName() {
         return this.provisioningArtifactName == null ? Input.empty() : this.provisioningArtifactName;
@@ -134,7 +134,7 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="provisioningParameters")
-    private final @Nullable Input<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters;
+      private final @Nullable Input<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters;
 
     public Input<List<ProvisionedProductProvisioningParameterArgs>> getProvisioningParameters() {
         return this.provisioningParameters == null ? Input.empty() : this.provisioningParameters;
@@ -145,7 +145,7 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="retainPhysicalResources")
-    private final @Nullable Input<Boolean> retainPhysicalResources;
+      private final @Nullable Input<Boolean> retainPhysicalResources;
 
     public Input<Boolean> getRetainPhysicalResources() {
         return this.retainPhysicalResources == null ? Input.empty() : this.retainPhysicalResources;
@@ -156,7 +156,7 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stackSetProvisioningPreferences")
-    private final @Nullable Input<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences;
+      private final @Nullable Input<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences;
 
     public Input<ProvisionedProductStackSetProvisioningPreferencesArgs> getStackSetProvisioningPreferences() {
         return this.stackSetProvisioningPreferences == null ? Input.empty() : this.stackSetProvisioningPreferences;
@@ -167,7 +167,7 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

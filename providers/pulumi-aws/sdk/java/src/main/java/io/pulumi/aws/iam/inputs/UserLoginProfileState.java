@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryptedPassword")
-    private final @Nullable Input<String> encryptedPassword;
+      private final @Nullable Input<String> encryptedPassword;
 
     public Input<String> getEncryptedPassword() {
         return this.encryptedPassword == null ? Input.empty() : this.encryptedPassword;
@@ -32,7 +32,7 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyFingerprint")
-    private final @Nullable Input<String> keyFingerprint;
+      private final @Nullable Input<String> keyFingerprint;
 
     public Input<String> getKeyFingerprint() {
         return this.keyFingerprint == null ? Input.empty() : this.keyFingerprint;
@@ -43,7 +43,7 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="passwordLength")
-    private final @Nullable Input<Integer> passwordLength;
+      private final @Nullable Input<Integer> passwordLength;
 
     public Input<Integer> getPasswordLength() {
         return this.passwordLength == null ? Input.empty() : this.passwordLength;
@@ -54,7 +54,7 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="passwordResetRequired")
-    private final @Nullable Input<Boolean> passwordResetRequired;
+      private final @Nullable Input<Boolean> passwordResetRequired;
 
     public Input<Boolean> getPasswordResetRequired() {
         return this.passwordResetRequired == null ? Input.empty() : this.passwordResetRequired;
@@ -65,7 +65,7 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="pgpKey")
-    private final @Nullable Input<String> pgpKey;
+      private final @Nullable Input<String> pgpKey;
 
     public Input<String> getPgpKey() {
         return this.pgpKey == null ? Input.empty() : this.pgpKey;
@@ -76,7 +76,7 @@ public final class UserLoginProfileState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="user")
-    private final @Nullable Input<String> user;
+      private final @Nullable Input<String> user;
 
     public Input<String> getUser() {
         return this.user == null ? Input.empty() : this.user;

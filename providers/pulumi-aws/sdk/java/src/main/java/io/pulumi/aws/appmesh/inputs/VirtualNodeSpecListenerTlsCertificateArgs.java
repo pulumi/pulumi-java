@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsCertificateAcmArgs
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsCertificateFileArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsCertificateSdsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class VirtualNodeSpecListenerTlsCertificateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="acm")
-    private final @Nullable Input<VirtualNodeSpecListenerTlsCertificateAcmArgs> acm;
+      private final @Nullable Input<VirtualNodeSpecListenerTlsCertificateAcmArgs> acm;
 
     public Input<VirtualNodeSpecListenerTlsCertificateAcmArgs> getAcm() {
         return this.acm == null ? Input.empty() : this.acm;
@@ -32,7 +32,7 @@ public final class VirtualNodeSpecListenerTlsCertificateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="file")
-    private final @Nullable Input<VirtualNodeSpecListenerTlsCertificateFileArgs> file;
+      private final @Nullable Input<VirtualNodeSpecListenerTlsCertificateFileArgs> file;
 
     public Input<VirtualNodeSpecListenerTlsCertificateFileArgs> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -43,7 +43,7 @@ public final class VirtualNodeSpecListenerTlsCertificateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="sds")
-    private final @Nullable Input<VirtualNodeSpecListenerTlsCertificateSdsArgs> sds;
+      private final @Nullable Input<VirtualNodeSpecListenerTlsCertificateSdsArgs> sds;
 
     public Input<VirtualNodeSpecListenerTlsCertificateSdsArgs> getSds() {
         return this.sds == null ? Input.empty() : this.sds;

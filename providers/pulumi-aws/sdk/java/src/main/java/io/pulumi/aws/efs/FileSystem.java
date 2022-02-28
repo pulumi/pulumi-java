@@ -10,8 +10,8 @@ import io.pulumi.aws.efs.outputs.FileSystemLifecyclePolicy;
 import io.pulumi.aws.efs.outputs.FileSystemSizeInByte;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -267,6 +267,21 @@ public class FileSystem extends io.pulumi.resources.CustomResource {
         return this.throughputMode;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public FileSystem(String name) {
+        this(name, FileSystemArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public FileSystem(String name, @Nullable FileSystemArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -6,7 +6,7 @@ package io.pulumi.aws.signer;
 import io.pulumi.aws.signer.inputs.SigningJobDestinationArgs;
 import io.pulumi.aws.signer.inputs.SigningJobSourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<SigningJobDestinationArgs> destination;
+      private final Input<SigningJobDestinationArgs> destination;
 
     public Input<SigningJobDestinationArgs> getDestination() {
         return this.destination;
@@ -33,7 +33,7 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreSigningJobFailure")
-    private final @Nullable Input<Boolean> ignoreSigningJobFailure;
+      private final @Nullable Input<Boolean> ignoreSigningJobFailure;
 
     public Input<Boolean> getIgnoreSigningJobFailure() {
         return this.ignoreSigningJobFailure == null ? Input.empty() : this.ignoreSigningJobFailure;
@@ -44,7 +44,7 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final Input<String> profileName;
+      private final Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName;
@@ -55,7 +55,7 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<SigningJobSourceArgs> source;
+      private final Input<SigningJobSourceArgs> source;
 
     public Input<SigningJobSourceArgs> getSource() {
         return this.source;

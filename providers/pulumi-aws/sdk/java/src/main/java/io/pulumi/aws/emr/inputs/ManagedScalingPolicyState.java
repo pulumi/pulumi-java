@@ -5,7 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.aws.emr.inputs.ManagedScalingPolicyComputeLimitGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ManagedScalingPolicyState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clusterId")
-    private final @Nullable Input<String> clusterId;
+      private final @Nullable Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId == null ? Input.empty() : this.clusterId;
@@ -32,7 +32,7 @@ public final class ManagedScalingPolicyState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="computeLimits")
-    private final @Nullable Input<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits;
+      private final @Nullable Input<List<ManagedScalingPolicyComputeLimitGetArgs>> computeLimits;
 
     public Input<List<ManagedScalingPolicyComputeLimitGetArgs>> getComputeLimits() {
         return this.computeLimits == null ? Input.empty() : this.computeLimits;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dbClusterIdentifier")
-    private final @Nullable String dbClusterIdentifier;
+      private final @Nullable String dbClusterIdentifier;
 
     public Optional<String> getDbClusterIdentifier() {
         return this.dbClusterIdentifier == null ? Optional.empty() : Optional.ofNullable(this.dbClusterIdentifier);
@@ -32,7 +32,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dbClusterSnapshotIdentifier")
-    private final @Nullable String dbClusterSnapshotIdentifier;
+      private final @Nullable String dbClusterSnapshotIdentifier;
 
     public Optional<String> getDbClusterSnapshotIdentifier() {
         return this.dbClusterSnapshotIdentifier == null ? Optional.empty() : Optional.ofNullable(this.dbClusterSnapshotIdentifier);
@@ -44,7 +44,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="includePublic")
-    private final @Nullable Boolean includePublic;
+      private final @Nullable Boolean includePublic;
 
     public Optional<Boolean> getIncludePublic() {
         return this.includePublic == null ? Optional.empty() : Optional.ofNullable(this.includePublic);
@@ -57,7 +57,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="includeShared")
-    private final @Nullable Boolean includeShared;
+      private final @Nullable Boolean includeShared;
 
     public Optional<Boolean> getIncludeShared() {
         return this.includeShared == null ? Optional.empty() : Optional.ofNullable(this.includeShared);
@@ -68,7 +68,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="mostRecent")
-    private final @Nullable Boolean mostRecent;
+      private final @Nullable Boolean mostRecent;
 
     public Optional<Boolean> getMostRecent() {
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
@@ -81,7 +81,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="snapshotType")
-    private final @Nullable String snapshotType;
+      private final @Nullable String snapshotType;
 
     public Optional<String> getSnapshotType() {
         return this.snapshotType == null ? Optional.empty() : Optional.ofNullable(this.snapshotType);
@@ -92,7 +92,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

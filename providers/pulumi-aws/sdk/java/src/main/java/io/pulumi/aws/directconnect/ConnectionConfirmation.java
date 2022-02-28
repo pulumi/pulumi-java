@@ -8,8 +8,8 @@ import io.pulumi.aws.directconnect.ConnectionConfirmationArgs;
 import io.pulumi.aws.directconnect.inputs.ConnectionConfirmationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -36,6 +36,21 @@ public class ConnectionConfirmation extends io.pulumi.resources.CustomResource {
         return this.connectionId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ConnectionConfirmation(String name) {
+        this(name, ConnectionConfirmationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ConnectionConfirmation(String name, ConnectionConfirmationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

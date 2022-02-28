@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="nonKeyAttributes")
-    private final @Nullable Input<List<String>> nonKeyAttributes;
+      private final @Nullable Input<List<String>> nonKeyAttributes;
 
     public Input<List<String>> getNonKeyAttributes() {
         return this.nonKeyAttributes == null ? Input.empty() : this.nonKeyAttributes;
@@ -48,7 +48,7 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="projectionType", required=true)
-    private final Input<String> projectionType;
+      private final Input<String> projectionType;
 
     public Input<String> getProjectionType() {
         return this.projectionType;
@@ -59,7 +59,7 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rangeKey", required=true)
-    private final Input<String> rangeKey;
+      private final Input<String> rangeKey;
 
     public Input<String> getRangeKey() {
         return this.rangeKey;

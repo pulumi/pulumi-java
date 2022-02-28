@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito;
 
 import io.pulumi.aws.cognito.inputs.IdentityPoolRoleAttachmentRoleMappingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="identityPoolId", required=true)
-    private final Input<String> identityPoolId;
+      private final Input<String> identityPoolId;
 
     public Input<String> getIdentityPoolId() {
         return this.identityPoolId;
@@ -33,7 +33,7 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="roleMappings")
-    private final @Nullable Input<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings;
+      private final @Nullable Input<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings;
 
     public Input<List<IdentityPoolRoleAttachmentRoleMappingArgs>> getRoleMappings() {
         return this.roleMappings == null ? Input.empty() : this.roleMappings;
@@ -44,7 +44,7 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="roles", required=true)
-    private final Input<Map<String,String>> roles;
+      private final Input<Map<String,String>> roles;
 
     public Input<Map<String,String>> getRoles() {
         return this.roles;

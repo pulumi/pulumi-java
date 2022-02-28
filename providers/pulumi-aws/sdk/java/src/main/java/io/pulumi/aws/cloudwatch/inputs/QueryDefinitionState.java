@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="logGroupNames")
-    private final @Nullable Input<List<String>> logGroupNames;
+      private final @Nullable Input<List<String>> logGroupNames;
 
     public Input<List<String>> getLogGroupNames() {
         return this.logGroupNames == null ? Input.empty() : this.logGroupNames;
@@ -31,7 +31,7 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="queryDefinitionId")
-    private final @Nullable Input<String> queryDefinitionId;
+      private final @Nullable Input<String> queryDefinitionId;
 
     public Input<String> getQueryDefinitionId() {
         return this.queryDefinitionId == null ? Input.empty() : this.queryDefinitionId;
@@ -53,7 +53,7 @@ public final class QueryDefinitionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="queryString")
-    private final @Nullable Input<String> queryString;
+      private final @Nullable Input<String> queryString;
 
     public Input<String> getQueryString() {
         return this.queryString == null ? Input.empty() : this.queryString;

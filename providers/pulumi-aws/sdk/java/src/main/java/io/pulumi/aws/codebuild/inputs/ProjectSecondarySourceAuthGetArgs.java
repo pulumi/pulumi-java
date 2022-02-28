@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ProjectSecondarySourceAuthGetArgs extends io.pulumi.resources
      */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     @InputImport(name="resource")
-    private final @Nullable Input<String> resource;
+      private final @Nullable Input<String> resource;
 
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public Input<String> getResource() {
@@ -39,7 +39,7 @@ public final class ProjectSecondarySourceAuthGetArgs extends io.pulumi.resources
      */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public Input<String> getType() {

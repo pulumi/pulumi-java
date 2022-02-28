@@ -5,7 +5,7 @@ package io.pulumi.aws.chime;
 
 import io.pulumi.aws.chime.inputs.VoiceConnectorOrganizationRouteArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class VoiceConnectorOrganizationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -33,7 +33,7 @@ public final class VoiceConnectorOrganizationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="routes", required=true)
-    private final Input<List<VoiceConnectorOrganizationRouteArgs>> routes;
+      private final Input<List<VoiceConnectorOrganizationRouteArgs>> routes;
 
     public Input<List<VoiceConnectorOrganizationRouteArgs>> getRoutes() {
         return this.routes;
@@ -44,7 +44,7 @@ public final class VoiceConnectorOrganizationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="voiceConnectorId", required=true)
-    private final Input<String> voiceConnectorId;
+      private final Input<String> voiceConnectorId;
 
     public Input<String> getVoiceConnectorId() {
         return this.voiceConnectorId;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="additionalMasterSecurityGroups")
-    private final @Nullable Input<String> additionalMasterSecurityGroups;
+      private final @Nullable Input<String> additionalMasterSecurityGroups;
 
     public Input<String> getAdditionalMasterSecurityGroups() {
         return this.additionalMasterSecurityGroups == null ? Input.empty() : this.additionalMasterSecurityGroups;
@@ -31,7 +31,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="additionalSlaveSecurityGroups")
-    private final @Nullable Input<String> additionalSlaveSecurityGroups;
+      private final @Nullable Input<String> additionalSlaveSecurityGroups;
 
     public Input<String> getAdditionalSlaveSecurityGroups() {
         return this.additionalSlaveSecurityGroups == null ? Input.empty() : this.additionalSlaveSecurityGroups;
@@ -42,7 +42,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="emrManagedMasterSecurityGroup")
-    private final @Nullable Input<String> emrManagedMasterSecurityGroup;
+      private final @Nullable Input<String> emrManagedMasterSecurityGroup;
 
     public Input<String> getEmrManagedMasterSecurityGroup() {
         return this.emrManagedMasterSecurityGroup == null ? Input.empty() : this.emrManagedMasterSecurityGroup;
@@ -53,7 +53,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="emrManagedSlaveSecurityGroup")
-    private final @Nullable Input<String> emrManagedSlaveSecurityGroup;
+      private final @Nullable Input<String> emrManagedSlaveSecurityGroup;
 
     public Input<String> getEmrManagedSlaveSecurityGroup() {
         return this.emrManagedSlaveSecurityGroup == null ? Input.empty() : this.emrManagedSlaveSecurityGroup;
@@ -64,7 +64,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instanceProfile", required=true)
-    private final Input<String> instanceProfile;
+      private final Input<String> instanceProfile;
 
     public Input<String> getInstanceProfile() {
         return this.instanceProfile;
@@ -75,7 +75,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable Input<String> keyName;
+      private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -86,7 +86,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceAccessSecurityGroup")
-    private final @Nullable Input<String> serviceAccessSecurityGroup;
+      private final @Nullable Input<String> serviceAccessSecurityGroup;
 
     public Input<String> getServiceAccessSecurityGroup() {
         return this.serviceAccessSecurityGroup == null ? Input.empty() : this.serviceAccessSecurityGroup;
@@ -97,7 +97,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -108,7 +108,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;

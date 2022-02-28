@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TaskDefinitionEphemeralStorageArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sizeInGib", required=true)
-    private final Input<Integer> sizeInGib;
+      private final Input<Integer> sizeInGib;
 
     public Input<Integer> getSizeInGib() {
         return this.sizeInGib;

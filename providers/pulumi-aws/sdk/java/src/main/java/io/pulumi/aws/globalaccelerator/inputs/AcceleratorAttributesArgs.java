@@ -4,7 +4,7 @@
 package io.pulumi.aws.globalaccelerator.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AcceleratorAttributesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="flowLogsEnabled")
-    private final @Nullable Input<Boolean> flowLogsEnabled;
+      private final @Nullable Input<Boolean> flowLogsEnabled;
 
     public Input<Boolean> getFlowLogsEnabled() {
         return this.flowLogsEnabled == null ? Input.empty() : this.flowLogsEnabled;
@@ -31,7 +31,7 @@ public final class AcceleratorAttributesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="flowLogsS3Bucket")
-    private final @Nullable Input<String> flowLogsS3Bucket;
+      private final @Nullable Input<String> flowLogsS3Bucket;
 
     public Input<String> getFlowLogsS3Bucket() {
         return this.flowLogsS3Bucket == null ? Input.empty() : this.flowLogsS3Bucket;
@@ -42,7 +42,7 @@ public final class AcceleratorAttributesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="flowLogsS3Prefix")
-    private final @Nullable Input<String> flowLogsS3Prefix;
+      private final @Nullable Input<String> flowLogsS3Prefix;
 
     public Input<String> getFlowLogsS3Prefix() {
         return this.flowLogsS3Prefix == null ? Input.empty() : this.flowLogsS3Prefix;

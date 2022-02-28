@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs extend
      * 
      */
     @InputImport(name="forwardWhenQueryArgProfileIsUnknown", required=true)
-    private final Input<Boolean> forwardWhenQueryArgProfileIsUnknown;
+      private final Input<Boolean> forwardWhenQueryArgProfileIsUnknown;
 
     public Input<Boolean> getForwardWhenQueryArgProfileIsUnknown() {
         return this.forwardWhenQueryArgProfileIsUnknown;
@@ -31,7 +31,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs extend
      * 
      */
     @InputImport(name="queryArgProfiles")
-    private final @Nullable Input<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles;
+      private final @Nullable Input<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> queryArgProfiles;
 
     public Input<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs> getQueryArgProfiles() {
         return this.queryArgProfiles == null ? Input.empty() : this.queryArgProfiles;

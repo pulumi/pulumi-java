@@ -8,7 +8,7 @@ import io.pulumi.aws.glue.inputs.ClassifierGrokClassifierArgs;
 import io.pulumi.aws.glue.inputs.ClassifierJsonClassifierArgs;
 import io.pulumi.aws.glue.inputs.ClassifierXmlClassifierArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="csvClassifier")
-    private final @Nullable Input<ClassifierCsvClassifierArgs> csvClassifier;
+      private final @Nullable Input<ClassifierCsvClassifierArgs> csvClassifier;
 
     public Input<ClassifierCsvClassifierArgs> getCsvClassifier() {
         return this.csvClassifier == null ? Input.empty() : this.csvClassifier;
@@ -34,7 +34,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grokClassifier")
-    private final @Nullable Input<ClassifierGrokClassifierArgs> grokClassifier;
+      private final @Nullable Input<ClassifierGrokClassifierArgs> grokClassifier;
 
     public Input<ClassifierGrokClassifierArgs> getGrokClassifier() {
         return this.grokClassifier == null ? Input.empty() : this.grokClassifier;
@@ -45,7 +45,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jsonClassifier")
-    private final @Nullable Input<ClassifierJsonClassifierArgs> jsonClassifier;
+      private final @Nullable Input<ClassifierJsonClassifierArgs> jsonClassifier;
 
     public Input<ClassifierJsonClassifierArgs> getJsonClassifier() {
         return this.jsonClassifier == null ? Input.empty() : this.jsonClassifier;
@@ -56,7 +56,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xmlClassifier")
-    private final @Nullable Input<ClassifierXmlClassifierArgs> xmlClassifier;
+      private final @Nullable Input<ClassifierXmlClassifierArgs> xmlClassifier;
 
     public Input<ClassifierXmlClassifierArgs> getXmlClassifier() {
         return this.xmlClassifier == null ? Input.empty() : this.xmlClassifier;

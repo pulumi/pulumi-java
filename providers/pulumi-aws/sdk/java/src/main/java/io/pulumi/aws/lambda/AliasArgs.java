@@ -5,7 +5,7 @@ package io.pulumi.aws.lambda;
 
 import io.pulumi.aws.lambda.inputs.AliasRoutingConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionName", required=true)
-    private final Input<String> functionName;
+      private final Input<String> functionName;
 
     public Input<String> getFunctionName() {
         return this.functionName;
@@ -42,7 +42,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionVersion", required=true)
-    private final Input<String> functionVersion;
+      private final Input<String> functionVersion;
 
     public Input<String> getFunctionVersion() {
         return this.functionVersion;
@@ -53,7 +53,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -64,7 +64,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingConfig")
-    private final @Nullable Input<AliasRoutingConfigArgs> routingConfig;
+      private final @Nullable Input<AliasRoutingConfigArgs> routingConfig;
 
     public Input<AliasRoutingConfigArgs> getRoutingConfig() {
         return this.routingConfig == null ? Input.empty() : this.routingConfig;

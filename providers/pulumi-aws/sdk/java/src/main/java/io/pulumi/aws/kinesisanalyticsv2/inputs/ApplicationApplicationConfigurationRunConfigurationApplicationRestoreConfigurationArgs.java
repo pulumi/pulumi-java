@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
      * 
      */
     @InputImport(name="applicationRestoreType")
-    private final @Nullable Input<String> applicationRestoreType;
+      private final @Nullable Input<String> applicationRestoreType;
 
     public Input<String> getApplicationRestoreType() {
         return this.applicationRestoreType == null ? Input.empty() : this.applicationRestoreType;
@@ -30,7 +30,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
      * 
      */
     @InputImport(name="snapshotName")
-    private final @Nullable Input<String> snapshotName;
+      private final @Nullable Input<String> snapshotName;
 
     public Input<String> getSnapshotName() {
         return this.snapshotName == null ? Input.empty() : this.snapshotName;

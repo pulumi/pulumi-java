@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTraffic
      * 
      */
     @InputImport(name="listenerArns", required=true)
-    private final Input<List<String>> listenerArns;
+      private final Input<List<String>> listenerArns;
 
     public Input<List<String>> getListenerArns() {
         return this.listenerArns;

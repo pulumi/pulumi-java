@@ -6,7 +6,7 @@ package io.pulumi.aws.emr;
 import io.pulumi.aws.emr.inputs.InstanceFleetInstanceTypeConfigArgs;
 import io.pulumi.aws.emr.inputs.InstanceFleetLaunchSpecificationsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterId", required=true)
-    private final Input<String> clusterId;
+      private final Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId;
@@ -34,7 +34,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceTypeConfigs")
-    private final @Nullable Input<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs;
+      private final @Nullable Input<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs;
 
     public Input<List<InstanceFleetInstanceTypeConfigArgs>> getInstanceTypeConfigs() {
         return this.instanceTypeConfigs == null ? Input.empty() : this.instanceTypeConfigs;
@@ -45,7 +45,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchSpecifications")
-    private final @Nullable Input<InstanceFleetLaunchSpecificationsArgs> launchSpecifications;
+      private final @Nullable Input<InstanceFleetLaunchSpecificationsArgs> launchSpecifications;
 
     public Input<InstanceFleetLaunchSpecificationsArgs> getLaunchSpecifications() {
         return this.launchSpecifications == null ? Input.empty() : this.launchSpecifications;
@@ -56,7 +56,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetOnDemandCapacity")
-    private final @Nullable Input<Integer> targetOnDemandCapacity;
+      private final @Nullable Input<Integer> targetOnDemandCapacity;
 
     public Input<Integer> getTargetOnDemandCapacity() {
         return this.targetOnDemandCapacity == null ? Input.empty() : this.targetOnDemandCapacity;
@@ -78,7 +78,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetSpotCapacity")
-    private final @Nullable Input<Integer> targetSpotCapacity;
+      private final @Nullable Input<Integer> targetSpotCapacity;
 
     public Input<Integer> getTargetSpotCapacity() {
         return this.targetSpotCapacity == null ? Input.empty() : this.targetSpotCapacity;

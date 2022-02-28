@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ProvisionedConcurrencyConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="functionName", required=true)
-    private final Input<String> functionName;
+      private final Input<String> functionName;
 
     public Input<String> getFunctionName() {
         return this.functionName;
@@ -30,7 +30,7 @@ public final class ProvisionedConcurrencyConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="provisionedConcurrentExecutions", required=true)
-    private final Input<Integer> provisionedConcurrentExecutions;
+      private final Input<Integer> provisionedConcurrentExecutions;
 
     public Input<Integer> getProvisionedConcurrentExecutions() {
         return this.provisionedConcurrentExecutions;
@@ -41,7 +41,7 @@ public final class ProvisionedConcurrencyConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="qualifier", required=true)
-    private final Input<String> qualifier;
+      private final Input<String> qualifier;
 
     public Input<String> getQualifier() {
         return this.qualifier;

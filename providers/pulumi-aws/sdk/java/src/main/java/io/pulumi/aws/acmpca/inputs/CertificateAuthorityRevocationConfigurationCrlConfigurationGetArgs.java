@@ -4,7 +4,7 @@
 package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
      * 
      */
     @InputImport(name="customCname")
-    private final @Nullable Input<String> customCname;
+      private final @Nullable Input<String> customCname;
 
     public Input<String> getCustomCname() {
         return this.customCname == null ? Input.empty() : this.customCname;
@@ -32,7 +32,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -43,7 +43,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
      * 
      */
     @InputImport(name="expirationInDays", required=true)
-    private final Input<Integer> expirationInDays;
+      private final Input<Integer> expirationInDays;
 
     public Input<Integer> getExpirationInDays() {
         return this.expirationInDays;
@@ -54,7 +54,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
      * 
      */
     @InputImport(name="s3BucketName")
-    private final @Nullable Input<String> s3BucketName;
+      private final @Nullable Input<String> s3BucketName;
 
     public Input<String> getS3BucketName() {
         return this.s3BucketName == null ? Input.empty() : this.s3BucketName;
@@ -65,7 +65,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
      * 
      */
     @InputImport(name="s3ObjectAcl")
-    private final @Nullable Input<String> s3ObjectAcl;
+      private final @Nullable Input<String> s3ObjectAcl;
 
     public Input<String> getS3ObjectAcl() {
         return this.s3ObjectAcl == null ? Input.empty() : this.s3ObjectAcl;

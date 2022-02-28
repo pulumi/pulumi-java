@@ -5,7 +5,7 @@ package io.pulumi.aws.dlm.inputs;
 
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class LifecyclePolicyPolicyDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceTypes", required=true)
-    private final Input<List<String>> resourceTypes;
+      private final Input<List<String>> resourceTypes;
 
     public Input<List<String>> getResourceTypes() {
         return this.resourceTypes;
@@ -32,7 +32,7 @@ public final class LifecyclePolicyPolicyDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="schedules", required=true)
-    private final Input<List<LifecyclePolicyPolicyDetailsScheduleArgs>> schedules;
+      private final Input<List<LifecyclePolicyPolicyDetailsScheduleArgs>> schedules;
 
     public Input<List<LifecyclePolicyPolicyDetailsScheduleArgs>> getSchedules() {
         return this.schedules;
@@ -43,7 +43,7 @@ public final class LifecyclePolicyPolicyDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="targetTags", required=true)
-    private final Input<Map<String,String>> targetTags;
+      private final Input<Map<String,String>> targetTags;
 
     public Input<Map<String,String>> getTargetTags() {
         return this.targetTags;

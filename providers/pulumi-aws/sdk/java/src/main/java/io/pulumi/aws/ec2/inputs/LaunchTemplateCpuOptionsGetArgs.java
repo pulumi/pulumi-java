@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class LaunchTemplateCpuOptionsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="coreCount")
-    private final @Nullable Input<Integer> coreCount;
+      private final @Nullable Input<Integer> coreCount;
 
     public Input<Integer> getCoreCount() {
         return this.coreCount == null ? Input.empty() : this.coreCount;
@@ -31,7 +31,7 @@ public final class LaunchTemplateCpuOptionsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="threadsPerCore")
-    private final @Nullable Input<Integer> threadsPerCore;
+      private final @Nullable Input<Integer> threadsPerCore;
 
     public Input<Integer> getThreadsPerCore() {
         return this.threadsPerCore == null ? Input.empty() : this.threadsPerCore;

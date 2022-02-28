@@ -5,7 +5,7 @@ package io.pulumi.aws.storagegateway;
 
 import io.pulumi.aws.storagegateway.inputs.FileSystemAssociationCacheAttributesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="auditDestinationArn")
-    private final @Nullable Input<String> auditDestinationArn;
+      private final @Nullable Input<String> auditDestinationArn;
 
     public Input<String> getAuditDestinationArn() {
         return this.auditDestinationArn == null ? Input.empty() : this.auditDestinationArn;
@@ -32,7 +32,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cacheAttributes")
-    private final @Nullable Input<FileSystemAssociationCacheAttributesArgs> cacheAttributes;
+      private final @Nullable Input<FileSystemAssociationCacheAttributesArgs> cacheAttributes;
 
     public Input<FileSystemAssociationCacheAttributesArgs> getCacheAttributes() {
         return this.cacheAttributes == null ? Input.empty() : this.cacheAttributes;
@@ -43,7 +43,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="gatewayArn", required=true)
-    private final Input<String> gatewayArn;
+      private final Input<String> gatewayArn;
 
     public Input<String> getGatewayArn() {
         return this.gatewayArn;
@@ -54,7 +54,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="locationArn", required=true)
-    private final Input<String> locationArn;
+      private final Input<String> locationArn;
 
     public Input<String> getLocationArn() {
         return this.locationArn;
@@ -65,7 +65,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -76,7 +76,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,7 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;

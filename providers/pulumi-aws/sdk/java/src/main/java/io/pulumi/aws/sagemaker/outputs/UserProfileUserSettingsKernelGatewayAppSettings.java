@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.UserProfileUserSettingsKernelGatewayAppSettingsCustomImage;
 import io.pulumi.aws.sagemaker.outputs.UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpec;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

@@ -8,8 +8,8 @@ import io.pulumi.aws.elasticache.UserGroupArgs;
 import io.pulumi.aws.elasticache.inputs.UserGroupState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -92,6 +92,21 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
         return this.userIds;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public UserGroup(String name) {
+        this(name, UserGroupArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public UserGroup(String name, UserGroupArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

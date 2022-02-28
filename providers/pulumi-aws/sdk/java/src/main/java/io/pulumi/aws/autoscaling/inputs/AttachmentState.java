@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="albTargetGroupArn")
-    private final @Nullable Input<String> albTargetGroupArn;
+      private final @Nullable Input<String> albTargetGroupArn;
 
     public Input<String> getAlbTargetGroupArn() {
         return this.albTargetGroupArn == null ? Input.empty() : this.albTargetGroupArn;
@@ -30,7 +30,7 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingGroupName")
-    private final @Nullable Input<String> autoscalingGroupName;
+      private final @Nullable Input<String> autoscalingGroupName;
 
     public Input<String> getAutoscalingGroupName() {
         return this.autoscalingGroupName == null ? Input.empty() : this.autoscalingGroupName;
@@ -41,7 +41,7 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elb")
-    private final @Nullable Input<String> elb;
+      private final @Nullable Input<String> elb;
 
     public Input<String> getElb() {
         return this.elb == null ? Input.empty() : this.elb;

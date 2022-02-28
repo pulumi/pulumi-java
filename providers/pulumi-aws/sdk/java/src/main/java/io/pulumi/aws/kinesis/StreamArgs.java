@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis;
 
 import io.pulumi.aws.kinesis.inputs.StreamStreamModeDetailsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -35,7 +35,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionType")
-    private final @Nullable Input<String> encryptionType;
+      private final @Nullable Input<String> encryptionType;
 
     public Input<String> getEncryptionType() {
         return this.encryptionType == null ? Input.empty() : this.encryptionType;
@@ -46,7 +46,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enforceConsumerDeletion")
-    private final @Nullable Input<Boolean> enforceConsumerDeletion;
+      private final @Nullable Input<Boolean> enforceConsumerDeletion;
 
     public Input<Boolean> getEnforceConsumerDeletion() {
         return this.enforceConsumerDeletion == null ? Input.empty() : this.enforceConsumerDeletion;
@@ -57,7 +57,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -68,7 +68,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -79,7 +79,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPeriod")
-    private final @Nullable Input<Integer> retentionPeriod;
+      private final @Nullable Input<Integer> retentionPeriod;
 
     public Input<Integer> getRetentionPeriod() {
         return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;
@@ -91,7 +91,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shardCount")
-    private final @Nullable Input<Integer> shardCount;
+      private final @Nullable Input<Integer> shardCount;
 
     public Input<Integer> getShardCount() {
         return this.shardCount == null ? Input.empty() : this.shardCount;
@@ -102,7 +102,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shardLevelMetrics")
-    private final @Nullable Input<List<String>> shardLevelMetrics;
+      private final @Nullable Input<List<String>> shardLevelMetrics;
 
     public Input<List<String>> getShardLevelMetrics() {
         return this.shardLevelMetrics == null ? Input.empty() : this.shardLevelMetrics;
@@ -113,7 +113,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamModeDetails")
-    private final @Nullable Input<StreamStreamModeDetailsArgs> streamModeDetails;
+      private final @Nullable Input<StreamStreamModeDetailsArgs> streamModeDetails;
 
     public Input<StreamStreamModeDetailsArgs> getStreamModeDetails() {
         return this.streamModeDetails == null ? Input.empty() : this.streamModeDetails;
@@ -124,7 +124,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

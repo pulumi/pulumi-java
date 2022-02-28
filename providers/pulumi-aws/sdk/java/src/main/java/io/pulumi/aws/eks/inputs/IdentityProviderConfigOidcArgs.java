@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final Input<String> clientId;
+      private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
@@ -31,7 +31,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="groupsClaim")
-    private final @Nullable Input<String> groupsClaim;
+      private final @Nullable Input<String> groupsClaim;
 
     public Input<String> getGroupsClaim() {
         return this.groupsClaim == null ? Input.empty() : this.groupsClaim;
@@ -42,7 +42,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="groupsPrefix")
-    private final @Nullable Input<String> groupsPrefix;
+      private final @Nullable Input<String> groupsPrefix;
 
     public Input<String> getGroupsPrefix() {
         return this.groupsPrefix == null ? Input.empty() : this.groupsPrefix;
@@ -53,7 +53,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="identityProviderConfigName", required=true)
-    private final Input<String> identityProviderConfigName;
+      private final Input<String> identityProviderConfigName;
 
     public Input<String> getIdentityProviderConfigName() {
         return this.identityProviderConfigName;
@@ -64,7 +64,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="issuerUrl", required=true)
-    private final Input<String> issuerUrl;
+      private final Input<String> issuerUrl;
 
     public Input<String> getIssuerUrl() {
         return this.issuerUrl;
@@ -75,7 +75,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="requiredClaims")
-    private final @Nullable Input<Map<String,String>> requiredClaims;
+      private final @Nullable Input<Map<String,String>> requiredClaims;
 
     public Input<Map<String,String>> getRequiredClaims() {
         return this.requiredClaims == null ? Input.empty() : this.requiredClaims;
@@ -86,7 +86,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="usernameClaim")
-    private final @Nullable Input<String> usernameClaim;
+      private final @Nullable Input<String> usernameClaim;
 
     public Input<String> getUsernameClaim() {
         return this.usernameClaim == null ? Input.empty() : this.usernameClaim;
@@ -97,7 +97,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="usernamePrefix")
-    private final @Nullable Input<String> usernamePrefix;
+      private final @Nullable Input<String> usernamePrefix;
 
     public Input<String> getUsernamePrefix() {
         return this.usernamePrefix == null ? Input.empty() : this.usernamePrefix;

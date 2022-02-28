@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.GetDomainAutoTuneOptionMaintenanceScheduleDuration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule extends io.pulumi.
      * 
      */
     @InputImport(name="cronExpressionForRecurrence", required=true)
-    private final String cronExpressionForRecurrence;
+      private final String cronExpressionForRecurrence;
 
     public String getCronExpressionForRecurrence() {
         return this.cronExpressionForRecurrence;
@@ -30,7 +30,7 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule extends io.pulumi.
      * 
      */
     @InputImport(name="durations", required=true)
-    private final List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations;
+      private final List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations;
 
     public List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> getDurations() {
         return this.durations;
@@ -41,7 +41,7 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule extends io.pulumi.
      * 
      */
     @InputImport(name="startAt", required=true)
-    private final String startAt;
+      private final String startAt;
 
     public String getStartAt() {
         return this.startAt;

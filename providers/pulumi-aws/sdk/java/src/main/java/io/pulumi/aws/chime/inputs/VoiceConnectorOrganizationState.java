@@ -5,7 +5,7 @@ package io.pulumi.aws.chime.inputs;
 
 import io.pulumi.aws.chime.inputs.VoiceConnectorOrganizationRouteGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class VoiceConnectorOrganizationState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -33,7 +33,7 @@ public final class VoiceConnectorOrganizationState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="routes")
-    private final @Nullable Input<List<VoiceConnectorOrganizationRouteGetArgs>> routes;
+      private final @Nullable Input<List<VoiceConnectorOrganizationRouteGetArgs>> routes;
 
     public Input<List<VoiceConnectorOrganizationRouteGetArgs>> getRoutes() {
         return this.routes == null ? Input.empty() : this.routes;
@@ -44,7 +44,7 @@ public final class VoiceConnectorOrganizationState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="voiceConnectorId")
-    private final @Nullable Input<String> voiceConnectorId;
+      private final @Nullable Input<String> voiceConnectorId;
 
     public Input<String> getVoiceConnectorId() {
         return this.voiceConnectorId == null ? Input.empty() : this.voiceConnectorId;

@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.outputs.RouteSpecHttpRouteAction;
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttpRouteMatch;
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttpRouteRetryPolicy;
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttpRouteTimeout;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

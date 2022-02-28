@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="certificateArn", required=true)
-    private final Input<String> certificateArn;
+      private final Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn;
@@ -31,7 +31,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="endpointType", required=true)
-    private final Input<String> endpointType;
+      private final Input<String> endpointType;
 
     public Input<String> getEndpointType() {
         return this.endpointType;
@@ -42,7 +42,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="hostedZoneId")
-    private final @Nullable Input<String> hostedZoneId;
+      private final @Nullable Input<String> hostedZoneId;
 
     public Input<String> getHostedZoneId() {
         return this.hostedZoneId == null ? Input.empty() : this.hostedZoneId;
@@ -53,7 +53,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="securityPolicy", required=true)
-    private final Input<String> securityPolicy;
+      private final Input<String> securityPolicy;
 
     public Input<String> getSecurityPolicy() {
         return this.securityPolicy;
@@ -64,7 +64,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="targetDomainName")
-    private final @Nullable Input<String> targetDomainName;
+      private final @Nullable Input<String> targetDomainName;
 
     public Input<String> getTargetDomainName() {
         return this.targetDomainName == null ? Input.empty() : this.targetDomainName;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterClientAuthenticationTlsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="certificateAuthorityArns")
-    private final @Nullable Input<List<String>> certificateAuthorityArns;
+      private final @Nullable Input<List<String>> certificateAuthorityArns;
 
     public Input<List<String>> getCertificateAuthorityArns() {
         return this.certificateAuthorityArns == null ? Input.empty() : this.certificateAuthorityArns;

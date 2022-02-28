@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForward
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigArgs;
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
      * 
      */
     @InputImport(name="cookiesConfig", required=true)
-    private final Input<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigArgs> cookiesConfig;
+      private final Input<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigArgs> cookiesConfig;
 
     public Input<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigArgs> getCookiesConfig() {
         return this.cookiesConfig;
@@ -33,7 +33,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
      * 
      */
     @InputImport(name="enableAcceptEncodingBrotli")
-    private final @Nullable Input<Boolean> enableAcceptEncodingBrotli;
+      private final @Nullable Input<Boolean> enableAcceptEncodingBrotli;
 
     public Input<Boolean> getEnableAcceptEncodingBrotli() {
         return this.enableAcceptEncodingBrotli == null ? Input.empty() : this.enableAcceptEncodingBrotli;
@@ -44,7 +44,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
      * 
      */
     @InputImport(name="enableAcceptEncodingGzip")
-    private final @Nullable Input<Boolean> enableAcceptEncodingGzip;
+      private final @Nullable Input<Boolean> enableAcceptEncodingGzip;
 
     public Input<Boolean> getEnableAcceptEncodingGzip() {
         return this.enableAcceptEncodingGzip == null ? Input.empty() : this.enableAcceptEncodingGzip;
@@ -55,7 +55,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
      * 
      */
     @InputImport(name="headersConfig", required=true)
-    private final Input<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigArgs> headersConfig;
+      private final Input<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigArgs> headersConfig;
 
     public Input<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigArgs> getHeadersConfig() {
         return this.headersConfig;
@@ -66,7 +66,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
      * 
      */
     @InputImport(name="queryStringsConfig", required=true)
-    private final Input<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs> queryStringsConfig;
+      private final Input<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs> queryStringsConfig;
 
     public Input<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs> getQueryStringsConfig() {
         return this.queryStringsConfig;

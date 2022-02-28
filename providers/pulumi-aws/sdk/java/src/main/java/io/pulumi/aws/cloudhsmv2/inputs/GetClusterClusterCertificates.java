@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudhsmv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,35 +13,35 @@ public final class GetClusterClusterCertificates extends io.pulumi.resources.Inv
     public static final GetClusterClusterCertificates Empty = new GetClusterClusterCertificates();
 
     @InputImport(name="awsHardwareCertificate", required=true)
-    private final String awsHardwareCertificate;
+      private final String awsHardwareCertificate;
 
     public String getAwsHardwareCertificate() {
         return this.awsHardwareCertificate;
     }
 
     @InputImport(name="clusterCertificate", required=true)
-    private final String clusterCertificate;
+      private final String clusterCertificate;
 
     public String getClusterCertificate() {
         return this.clusterCertificate;
     }
 
     @InputImport(name="clusterCsr", required=true)
-    private final String clusterCsr;
+      private final String clusterCsr;
 
     public String getClusterCsr() {
         return this.clusterCsr;
     }
 
     @InputImport(name="hsmCertificate", required=true)
-    private final String hsmCertificate;
+      private final String hsmCertificate;
 
     public String getHsmCertificate() {
         return this.hsmCertificate;
     }
 
     @InputImport(name="manufacturerHardwareCertificate", required=true)
-    private final String manufacturerHardwareCertificate;
+      private final String manufacturerHardwareCertificate;
 
     public String getManufacturerHardwareCertificate() {
         return this.manufacturerHardwareCertificate;

@@ -5,7 +5,7 @@ package io.pulumi.aws.codecommit.inputs;
 
 import io.pulumi.aws.codecommit.inputs.TriggerTriggerGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationId")
-    private final @Nullable Input<String> configurationId;
+      private final @Nullable Input<String> configurationId;
 
     public Input<String> getConfigurationId() {
         return this.configurationId == null ? Input.empty() : this.configurationId;
@@ -32,14 +32,14 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryName")
-    private final @Nullable Input<String> repositoryName;
+      private final @Nullable Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName == null ? Input.empty() : this.repositoryName;
     }
 
     @InputImport(name="triggers")
-    private final @Nullable Input<List<TriggerTriggerGetArgs>> triggers;
+      private final @Nullable Input<List<TriggerTriggerGetArgs>> triggers;
 
     public Input<List<TriggerTriggerGetArgs>> getTriggers() {
         return this.triggers == null ? Input.empty() : this.triggers;

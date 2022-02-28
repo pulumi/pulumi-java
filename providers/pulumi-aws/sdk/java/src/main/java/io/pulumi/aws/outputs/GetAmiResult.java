@@ -6,7 +6,7 @@ package io.pulumi.aws.outputs;
 import io.pulumi.aws.outputs.GetAmiBlockDeviceMapping;
 import io.pulumi.aws.outputs.GetAmiFilter;
 import io.pulumi.aws.outputs.GetAmiProductCode;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

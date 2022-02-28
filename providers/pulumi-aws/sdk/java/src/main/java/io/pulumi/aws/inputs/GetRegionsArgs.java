@@ -4,7 +4,7 @@
 package io.pulumi.aws.inputs;
 
 import io.pulumi.aws.inputs.GetRegionsFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allRegions")
-    private final @Nullable Boolean allRegions;
+      private final @Nullable Boolean allRegions;
 
     public Optional<Boolean> getAllRegions() {
         return this.allRegions == null ? Optional.empty() : Optional.ofNullable(this.allRegions);
@@ -32,7 +32,7 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetRegionsFilter> filters;
+      private final @Nullable List<GetRegionsFilter> filters;
 
     public List<GetRegionsFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;

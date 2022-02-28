@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataRetentionInHours")
-    private final @Nullable Input<Integer> dataRetentionInHours;
+      private final @Nullable Input<Integer> dataRetentionInHours;
 
     public Input<Integer> getDataRetentionInHours() {
         return this.dataRetentionInHours == null ? Input.empty() : this.dataRetentionInHours;
@@ -32,7 +32,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+      private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
@@ -43,7 +43,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -54,7 +54,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mediaType")
-    private final @Nullable Input<String> mediaType;
+      private final @Nullable Input<String> mediaType;
 
     public Input<String> getMediaType() {
         return this.mediaType == null ? Input.empty() : this.mediaType;
@@ -66,7 +66,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

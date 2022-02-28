@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BotAssociationLexBotGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="lexRegion")
-    private final @Nullable Input<String> lexRegion;
+      private final @Nullable Input<String> lexRegion;
 
     public Input<String> getLexRegion() {
         return this.lexRegion == null ? Input.empty() : this.lexRegion;
@@ -30,7 +30,7 @@ public final class BotAssociationLexBotGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

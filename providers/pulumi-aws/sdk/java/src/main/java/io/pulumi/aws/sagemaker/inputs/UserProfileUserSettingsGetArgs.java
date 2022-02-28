@@ -8,7 +8,7 @@ import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsKernelGatewayAppSet
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsSharingSettingsGetArgs;
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsTensorBoardAppSettingsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class UserProfileUserSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="executionRole", required=true)
-    private final Input<String> executionRole;
+      private final Input<String> executionRole;
 
     public Input<String> getExecutionRole() {
         return this.executionRole;
@@ -35,7 +35,7 @@ public final class UserProfileUserSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="jupyterServerAppSettings")
-    private final @Nullable Input<UserProfileUserSettingsJupyterServerAppSettingsGetArgs> jupyterServerAppSettings;
+      private final @Nullable Input<UserProfileUserSettingsJupyterServerAppSettingsGetArgs> jupyterServerAppSettings;
 
     public Input<UserProfileUserSettingsJupyterServerAppSettingsGetArgs> getJupyterServerAppSettings() {
         return this.jupyterServerAppSettings == null ? Input.empty() : this.jupyterServerAppSettings;
@@ -46,7 +46,7 @@ public final class UserProfileUserSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="kernelGatewayAppSettings")
-    private final @Nullable Input<UserProfileUserSettingsKernelGatewayAppSettingsGetArgs> kernelGatewayAppSettings;
+      private final @Nullable Input<UserProfileUserSettingsKernelGatewayAppSettingsGetArgs> kernelGatewayAppSettings;
 
     public Input<UserProfileUserSettingsKernelGatewayAppSettingsGetArgs> getKernelGatewayAppSettings() {
         return this.kernelGatewayAppSettings == null ? Input.empty() : this.kernelGatewayAppSettings;
@@ -57,7 +57,7 @@ public final class UserProfileUserSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -68,7 +68,7 @@ public final class UserProfileUserSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sharingSettings")
-    private final @Nullable Input<UserProfileUserSettingsSharingSettingsGetArgs> sharingSettings;
+      private final @Nullable Input<UserProfileUserSettingsSharingSettingsGetArgs> sharingSettings;
 
     public Input<UserProfileUserSettingsSharingSettingsGetArgs> getSharingSettings() {
         return this.sharingSettings == null ? Input.empty() : this.sharingSettings;
@@ -79,7 +79,7 @@ public final class UserProfileUserSettingsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tensorBoardAppSettings")
-    private final @Nullable Input<UserProfileUserSettingsTensorBoardAppSettingsGetArgs> tensorBoardAppSettings;
+      private final @Nullable Input<UserProfileUserSettingsTensorBoardAppSettingsGetArgs> tensorBoardAppSettings;
 
     public Input<UserProfileUserSettingsTensorBoardAppSettingsGetArgs> getTensorBoardAppSettings() {
         return this.tensorBoardAppSettings == null ? Input.empty() : this.tensorBoardAppSettings;

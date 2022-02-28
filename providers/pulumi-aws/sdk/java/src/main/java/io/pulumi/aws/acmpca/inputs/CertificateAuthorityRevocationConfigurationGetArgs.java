@@ -5,7 +5,7 @@ package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class CertificateAuthorityRevocationConfigurationGetArgs extends io
      * 
      */
     @InputImport(name="crlConfiguration")
-    private final @Nullable Input<CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs> crlConfiguration;
+      private final @Nullable Input<CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs> crlConfiguration;
 
     public Input<CertificateAuthorityRevocationConfigurationCrlConfigurationGetArgs> getCrlConfiguration() {
         return this.crlConfiguration == null ? Input.empty() : this.crlConfiguration;

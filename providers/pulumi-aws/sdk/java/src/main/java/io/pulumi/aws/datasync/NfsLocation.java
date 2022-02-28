@@ -10,8 +10,8 @@ import io.pulumi.aws.datasync.outputs.NfsLocationMountOptions;
 import io.pulumi.aws.datasync.outputs.NfsLocationOnPremConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -139,6 +139,21 @@ public class NfsLocation extends io.pulumi.resources.CustomResource {
         return this.uri;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public NfsLocation(String name) {
+        this(name, NfsLocationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public NfsLocation(String name, NfsLocationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

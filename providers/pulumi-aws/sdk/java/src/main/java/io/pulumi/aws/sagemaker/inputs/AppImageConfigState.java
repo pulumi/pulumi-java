@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appImageConfigName")
-    private final @Nullable Input<String> appImageConfigName;
+      private final @Nullable Input<String> appImageConfigName;
 
     public Input<String> getAppImageConfigName() {
         return this.appImageConfigName == null ? Input.empty() : this.appImageConfigName;
@@ -32,7 +32,7 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -43,7 +43,7 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kernelGatewayImageConfig")
-    private final @Nullable Input<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig;
+      private final @Nullable Input<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig;
 
     public Input<AppImageConfigKernelGatewayImageConfigGetArgs> getKernelGatewayImageConfig() {
         return this.kernelGatewayImageConfig == null ? Input.empty() : this.kernelGatewayImageConfig;
@@ -54,7 +54,7 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -65,7 +65,7 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="controlId")
-    private final @Nullable Input<String> controlId;
+      private final @Nullable Input<String> controlId;
 
     public Input<String> getControlId() {
         return this.controlId == null ? Input.empty() : this.controlId;
@@ -31,7 +31,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="controlStatus")
-    private final @Nullable Input<String> controlStatus;
+      private final @Nullable Input<String> controlStatus;
 
     public Input<String> getControlStatus() {
         return this.controlStatus == null ? Input.empty() : this.controlStatus;
@@ -42,7 +42,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="controlStatusUpdatedAt")
-    private final @Nullable Input<String> controlStatusUpdatedAt;
+      private final @Nullable Input<String> controlStatusUpdatedAt;
 
     public Input<String> getControlStatusUpdatedAt() {
         return this.controlStatusUpdatedAt == null ? Input.empty() : this.controlStatusUpdatedAt;
@@ -53,7 +53,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -64,7 +64,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disabledReason")
-    private final @Nullable Input<String> disabledReason;
+      private final @Nullable Input<String> disabledReason;
 
     public Input<String> getDisabledReason() {
         return this.disabledReason == null ? Input.empty() : this.disabledReason;
@@ -75,7 +75,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="relatedRequirements")
-    private final @Nullable Input<List<String>> relatedRequirements;
+      private final @Nullable Input<List<String>> relatedRequirements;
 
     public Input<List<String>> getRelatedRequirements() {
         return this.relatedRequirements == null ? Input.empty() : this.relatedRequirements;
@@ -86,7 +86,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="remediationUrl")
-    private final @Nullable Input<String> remediationUrl;
+      private final @Nullable Input<String> remediationUrl;
 
     public Input<String> getRemediationUrl() {
         return this.remediationUrl == null ? Input.empty() : this.remediationUrl;
@@ -97,7 +97,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="severityRating")
-    private final @Nullable Input<String> severityRating;
+      private final @Nullable Input<String> severityRating;
 
     public Input<String> getSeverityRating() {
         return this.severityRating == null ? Input.empty() : this.severityRating;
@@ -108,7 +108,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="standardsControlArn")
-    private final @Nullable Input<String> standardsControlArn;
+      private final @Nullable Input<String> standardsControlArn;
 
     public Input<String> getStandardsControlArn() {
         return this.standardsControlArn == null ? Input.empty() : this.standardsControlArn;
@@ -119,7 +119,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;

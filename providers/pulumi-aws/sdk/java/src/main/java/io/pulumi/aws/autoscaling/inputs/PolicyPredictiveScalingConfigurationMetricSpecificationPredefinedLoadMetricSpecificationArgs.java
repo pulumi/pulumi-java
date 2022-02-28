@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
      * 
      */
     @InputImport(name="predefinedMetricType", required=true)
-    private final Input<String> predefinedMetricType;
+      private final Input<String> predefinedMetricType;
 
     public Input<String> getPredefinedMetricType() {
         return this.predefinedMetricType;
@@ -29,7 +29,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
      * 
      */
     @InputImport(name="resourceLabel", required=true)
-    private final Input<String> resourceLabel;
+      private final Input<String> resourceLabel;
 
     public Input<String> getResourceLabel() {
         return this.resourceLabel;

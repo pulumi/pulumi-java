@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticloadbalancing;
 
 import io.pulumi.aws.elasticloadbalancing.inputs.LoadBalancerPolicyPolicyAttributeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LoadBalancerPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="loadBalancerName", required=true)
-    private final Input<String> loadBalancerName;
+      private final Input<String> loadBalancerName;
 
     public Input<String> getLoadBalancerName() {
         return this.loadBalancerName;
@@ -32,7 +32,7 @@ public final class LoadBalancerPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyAttributes")
-    private final @Nullable Input<List<LoadBalancerPolicyPolicyAttributeArgs>> policyAttributes;
+      private final @Nullable Input<List<LoadBalancerPolicyPolicyAttributeArgs>> policyAttributes;
 
     public Input<List<LoadBalancerPolicyPolicyAttributeArgs>> getPolicyAttributes() {
         return this.policyAttributes == null ? Input.empty() : this.policyAttributes;
@@ -43,7 +43,7 @@ public final class LoadBalancerPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyName", required=true)
-    private final Input<String> policyName;
+      private final Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName;
@@ -54,7 +54,7 @@ public final class LoadBalancerPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyTypeName", required=true)
-    private final Input<String> policyTypeName;
+      private final Input<String> policyTypeName;
 
     public Input<String> getPolicyTypeName() {
         return this.policyTypeName;

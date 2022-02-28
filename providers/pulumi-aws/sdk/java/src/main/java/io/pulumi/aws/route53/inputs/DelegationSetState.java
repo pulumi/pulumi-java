@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameServers")
-    private final @Nullable Input<List<String>> nameServers;
+      private final @Nullable Input<List<String>> nameServers;
 
     public Input<List<String>> getNameServers() {
         return this.nameServers == null ? Input.empty() : this.nameServers;
@@ -44,7 +44,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="referenceName")
-    private final @Nullable Input<String> referenceName;
+      private final @Nullable Input<String> referenceName;
 
     public Input<String> getReferenceName() {
         return this.referenceName == null ? Input.empty() : this.referenceName;

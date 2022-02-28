@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVpcCidrBlockAssociation extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="associationId", required=true)
-    private final String associationId;
+      private final String associationId;
 
     public String getAssociationId() {
         return this.associationId;
@@ -28,7 +28,7 @@ public final class GetVpcCidrBlockAssociation extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="cidrBlock", required=true)
-    private final String cidrBlock;
+      private final String cidrBlock;
 
     public String getCidrBlock() {
         return this.cidrBlock;
@@ -40,7 +40,7 @@ public final class GetVpcCidrBlockAssociation extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;

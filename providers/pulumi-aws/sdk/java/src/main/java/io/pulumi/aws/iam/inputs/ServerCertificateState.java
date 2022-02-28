@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="certificateBody")
-    private final @Nullable Input<String> certificateBody;
+      private final @Nullable Input<String> certificateBody;
 
     public Input<String> getCertificateBody() {
         return this.certificateBody == null ? Input.empty() : this.certificateBody;
@@ -45,7 +45,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="certificateChain")
-    private final @Nullable Input<String> certificateChain;
+      private final @Nullable Input<String> certificateChain;
 
     public Input<String> getCertificateChain() {
         return this.certificateChain == null ? Input.empty() : this.certificateChain;
@@ -56,7 +56,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="expiration")
-    private final @Nullable Input<String> expiration;
+      private final @Nullable Input<String> expiration;
 
     public Input<String> getExpiration() {
         return this.expiration == null ? Input.empty() : this.expiration;
@@ -68,7 +68,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -80,7 +80,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -94,7 +94,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -105,7 +105,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privateKey")
-    private final @Nullable Input<String> privateKey;
+      private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
@@ -116,7 +116,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -127,7 +127,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -138,7 +138,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="uploadDate")
-    private final @Nullable Input<String> uploadDate;
+      private final @Nullable Input<String> uploadDate;
 
     public Input<String> getUploadDate() {
         return this.uploadDate == null ? Input.empty() : this.uploadDate;

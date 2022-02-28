@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PeeringAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="peerAccountId")
-    private final @Nullable Input<String> peerAccountId;
+      private final @Nullable Input<String> peerAccountId;
 
     public Input<String> getPeerAccountId() {
         return this.peerAccountId == null ? Input.empty() : this.peerAccountId;
@@ -31,7 +31,7 @@ public final class PeeringAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="peerRegion")
-    private final @Nullable Input<String> peerRegion;
+      private final @Nullable Input<String> peerRegion;
 
     public Input<String> getPeerRegion() {
         return this.peerRegion == null ? Input.empty() : this.peerRegion;
@@ -42,7 +42,7 @@ public final class PeeringAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="peerTransitGatewayId")
-    private final @Nullable Input<String> peerTransitGatewayId;
+      private final @Nullable Input<String> peerTransitGatewayId;
 
     public Input<String> getPeerTransitGatewayId() {
         return this.peerTransitGatewayId == null ? Input.empty() : this.peerTransitGatewayId;
@@ -53,7 +53,7 @@ public final class PeeringAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -64,7 +64,7 @@ public final class PeeringAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -75,7 +75,7 @@ public final class PeeringAttachmentState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="transitGatewayId")
-    private final @Nullable Input<String> transitGatewayId;
+      private final @Nullable Input<String> transitGatewayId;
 
     public Input<String> getTransitGatewayId() {
         return this.transitGatewayId == null ? Input.empty() : this.transitGatewayId;

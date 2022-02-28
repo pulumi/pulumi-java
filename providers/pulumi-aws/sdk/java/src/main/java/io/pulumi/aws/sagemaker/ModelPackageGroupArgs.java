@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="modelPackageGroupDescription")
-    private final @Nullable Input<String> modelPackageGroupDescription;
+      private final @Nullable Input<String> modelPackageGroupDescription;
 
     public Input<String> getModelPackageGroupDescription() {
         return this.modelPackageGroupDescription == null ? Input.empty() : this.modelPackageGroupDescription;
@@ -31,7 +31,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="modelPackageGroupName", required=true)
-    private final Input<String> modelPackageGroupName;
+      private final Input<String> modelPackageGroupName;
 
     public Input<String> getModelPackageGroupName() {
         return this.modelPackageGroupName;
@@ -42,7 +42,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.outputs;
 
 import io.pulumi.aws.servicecatalog.outputs.GetLaunchPathsSummaryConstraintSummary;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

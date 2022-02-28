@@ -6,7 +6,7 @@ package io.pulumi.aws.efs.inputs;
 import io.pulumi.aws.efs.inputs.FileSystemLifecyclePolicyGetArgs;
 import io.pulumi.aws.efs.inputs.FileSystemSizeInByteGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -37,7 +37,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZoneId")
-    private final @Nullable Input<String> availabilityZoneId;
+      private final @Nullable Input<String> availabilityZoneId;
 
     public Input<String> getAvailabilityZoneId() {
         return this.availabilityZoneId == null ? Input.empty() : this.availabilityZoneId;
@@ -48,7 +48,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZoneName")
-    private final @Nullable Input<String> availabilityZoneName;
+      private final @Nullable Input<String> availabilityZoneName;
 
     public Input<String> getAvailabilityZoneName() {
         return this.availabilityZoneName == null ? Input.empty() : this.availabilityZoneName;
@@ -62,7 +62,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationToken")
-    private final @Nullable Input<String> creationToken;
+      private final @Nullable Input<String> creationToken;
 
     public Input<String> getCreationToken() {
         return this.creationToken == null ? Input.empty() : this.creationToken;
@@ -73,7 +73,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsName")
-    private final @Nullable Input<String> dnsName;
+      private final @Nullable Input<String> dnsName;
 
     public Input<String> getDnsName() {
         return this.dnsName == null ? Input.empty() : this.dnsName;
@@ -84,7 +84,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encrypted")
-    private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Input<Boolean> encrypted;
 
     public Input<Boolean> getEncrypted() {
         return this.encrypted == null ? Input.empty() : this.encrypted;
@@ -95,7 +95,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -106,7 +106,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifecyclePolicy")
-    private final @Nullable Input<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy;
+      private final @Nullable Input<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy;
 
     public Input<FileSystemLifecyclePolicyGetArgs> getLifecyclePolicy() {
         return this.lifecyclePolicy == null ? Input.empty() : this.lifecyclePolicy;
@@ -117,7 +117,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfMountTargets")
-    private final @Nullable Input<Integer> numberOfMountTargets;
+      private final @Nullable Input<Integer> numberOfMountTargets;
 
     public Input<Integer> getNumberOfMountTargets() {
         return this.numberOfMountTargets == null ? Input.empty() : this.numberOfMountTargets;
@@ -128,7 +128,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -139,7 +139,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="performanceMode")
-    private final @Nullable Input<String> performanceMode;
+      private final @Nullable Input<String> performanceMode;
 
     public Input<String> getPerformanceMode() {
         return this.performanceMode == null ? Input.empty() : this.performanceMode;
@@ -150,7 +150,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisionedThroughputInMibps")
-    private final @Nullable Input<Double> provisionedThroughputInMibps;
+      private final @Nullable Input<Double> provisionedThroughputInMibps;
 
     public Input<Double> getProvisionedThroughputInMibps() {
         return this.provisionedThroughputInMibps == null ? Input.empty() : this.provisionedThroughputInMibps;
@@ -161,7 +161,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeInBytes")
-    private final @Nullable Input<List<FileSystemSizeInByteGetArgs>> sizeInBytes;
+      private final @Nullable Input<List<FileSystemSizeInByteGetArgs>> sizeInBytes;
 
     public Input<List<FileSystemSizeInByteGetArgs>> getSizeInBytes() {
         return this.sizeInBytes == null ? Input.empty() : this.sizeInBytes;
@@ -172,7 +172,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -183,7 +183,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -194,7 +194,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="throughputMode")
-    private final @Nullable Input<String> throughputMode;
+      private final @Nullable Input<String> throughputMode;
 
     public Input<String> getThroughputMode() {
         return this.throughputMode == null ? Input.empty() : this.throughputMode;

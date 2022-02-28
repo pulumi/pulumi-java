@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="computeTypesAlloweds")
-    private final @Nullable Input<List<String>> computeTypesAlloweds;
+      private final @Nullable Input<List<String>> computeTypesAlloweds;
 
     public Input<List<String>> getComputeTypesAlloweds() {
         return this.computeTypesAlloweds == null ? Input.empty() : this.computeTypesAlloweds;
@@ -32,7 +32,7 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maximumBuildsAllowed")
-    private final @Nullable Input<Integer> maximumBuildsAllowed;
+      private final @Nullable Input<Integer> maximumBuildsAllowed;
 
     public Input<Integer> getMaximumBuildsAllowed() {
         return this.maximumBuildsAllowed == null ? Input.empty() : this.maximumBuildsAllowed;

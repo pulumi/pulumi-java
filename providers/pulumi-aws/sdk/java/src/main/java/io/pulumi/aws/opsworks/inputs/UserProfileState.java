@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowSelfManagement")
-    private final @Nullable Input<Boolean> allowSelfManagement;
+      private final @Nullable Input<Boolean> allowSelfManagement;
 
     public Input<Boolean> getAllowSelfManagement() {
         return this.allowSelfManagement == null ? Input.empty() : this.allowSelfManagement;
@@ -31,7 +31,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshPublicKey")
-    private final @Nullable Input<String> sshPublicKey;
+      private final @Nullable Input<String> sshPublicKey;
 
     public Input<String> getSshPublicKey() {
         return this.sshPublicKey == null ? Input.empty() : this.sshPublicKey;
@@ -42,7 +42,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshUsername")
-    private final @Nullable Input<String> sshUsername;
+      private final @Nullable Input<String> sshUsername;
 
     public Input<String> getSshUsername() {
         return this.sshUsername == null ? Input.empty() : this.sshUsername;
@@ -53,7 +53,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userArn")
-    private final @Nullable Input<String> userArn;
+      private final @Nullable Input<String> userArn;
 
     public Input<String> getUserArn() {
         return this.userArn == null ? Input.empty() : this.userArn;

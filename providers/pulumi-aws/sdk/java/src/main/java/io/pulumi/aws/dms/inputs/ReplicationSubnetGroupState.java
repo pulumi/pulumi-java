@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
     public static final ReplicationSubnetGroupState Empty = new ReplicationSubnetGroupState();
 
     @InputImport(name="replicationSubnetGroupArn")
-    private final @Nullable Input<String> replicationSubnetGroupArn;
+      private final @Nullable Input<String> replicationSubnetGroupArn;
 
     public Input<String> getReplicationSubnetGroupArn() {
         return this.replicationSubnetGroupArn == null ? Input.empty() : this.replicationSubnetGroupArn;
@@ -28,7 +28,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="replicationSubnetGroupDescription")
-    private final @Nullable Input<String> replicationSubnetGroupDescription;
+      private final @Nullable Input<String> replicationSubnetGroupDescription;
 
     public Input<String> getReplicationSubnetGroupDescription() {
         return this.replicationSubnetGroupDescription == null ? Input.empty() : this.replicationSubnetGroupDescription;
@@ -39,7 +39,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="replicationSubnetGroupId")
-    private final @Nullable Input<String> replicationSubnetGroupId;
+      private final @Nullable Input<String> replicationSubnetGroupId;
 
     public Input<String> getReplicationSubnetGroupId() {
         return this.replicationSubnetGroupId == null ? Input.empty() : this.replicationSubnetGroupId;
@@ -50,7 +50,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -61,7 +61,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -72,7 +72,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -83,7 +83,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

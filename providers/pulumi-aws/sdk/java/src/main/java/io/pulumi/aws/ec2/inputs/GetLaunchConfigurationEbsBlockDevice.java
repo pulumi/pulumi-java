@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * 
      */
     @InputImport(name="deleteOnTermination", required=true)
-    private final Boolean deleteOnTermination;
+      private final Boolean deleteOnTermination;
 
     public Boolean getDeleteOnTermination() {
         return this.deleteOnTermination;
@@ -30,7 +30,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final String deviceName;
+      private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
@@ -41,7 +41,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * 
      */
     @InputImport(name="encrypted", required=true)
-    private final Boolean encrypted;
+      private final Boolean encrypted;
 
     public Boolean getEncrypted() {
         return this.encrypted;
@@ -52,7 +52,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * 
      */
     @InputImport(name="iops", required=true)
-    private final Integer iops;
+      private final Integer iops;
 
     public Integer getIops() {
         return this.iops;
@@ -63,7 +63,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * 
      */
     @InputImport(name="noDevice", required=true)
-    private final Boolean noDevice;
+      private final Boolean noDevice;
 
     public Boolean getNoDevice() {
         return this.noDevice;
@@ -74,7 +74,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * 
      */
     @InputImport(name="snapshotId", required=true)
-    private final String snapshotId;
+      private final String snapshotId;
 
     public String getSnapshotId() {
         return this.snapshotId;
@@ -85,7 +85,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * 
      */
     @InputImport(name="throughput", required=true)
-    private final Boolean throughput;
+      private final Boolean throughput;
 
     public Boolean getThroughput() {
         return this.throughput;
@@ -96,7 +96,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * 
      */
     @InputImport(name="volumeSize", required=true)
-    private final Integer volumeSize;
+      private final Integer volumeSize;
 
     public Integer getVolumeSize() {
         return this.volumeSize;
@@ -107,7 +107,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * 
      */
     @InputImport(name="volumeType", required=true)
-    private final String volumeType;
+      private final String volumeType;
 
     public String getVolumeType() {
         return this.volumeType;

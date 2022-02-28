@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisGetArgs extends io.
      * 
      */
     @InputImport(name="dataExport", required=true)
-    private final Input<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> dataExport;
+      private final Input<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> dataExport;
 
     public Input<AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs> getDataExport() {
         return this.dataExport;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="defaultEmailOption")
-    private final @Nullable Input<String> defaultEmailOption;
+      private final @Nullable Input<String> defaultEmailOption;
 
     public Input<String> getDefaultEmailOption() {
         return this.defaultEmailOption == null ? Input.empty() : this.defaultEmailOption;
@@ -30,7 +30,7 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="emailMessage")
-    private final @Nullable Input<String> emailMessage;
+      private final @Nullable Input<String> emailMessage;
 
     public Input<String> getEmailMessage() {
         return this.emailMessage == null ? Input.empty() : this.emailMessage;
@@ -41,7 +41,7 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="emailMessageByLink")
-    private final @Nullable Input<String> emailMessageByLink;
+      private final @Nullable Input<String> emailMessageByLink;
 
     public Input<String> getEmailMessageByLink() {
         return this.emailMessageByLink == null ? Input.empty() : this.emailMessageByLink;
@@ -52,7 +52,7 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="emailSubject")
-    private final @Nullable Input<String> emailSubject;
+      private final @Nullable Input<String> emailSubject;
 
     public Input<String> getEmailSubject() {
         return this.emailSubject == null ? Input.empty() : this.emailSubject;
@@ -63,7 +63,7 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="emailSubjectByLink")
-    private final @Nullable Input<String> emailSubjectByLink;
+      private final @Nullable Input<String> emailSubjectByLink;
 
     public Input<String> getEmailSubjectByLink() {
         return this.emailSubjectByLink == null ? Input.empty() : this.emailSubjectByLink;
@@ -74,7 +74,7 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="smsMessage")
-    private final @Nullable Input<String> smsMessage;
+      private final @Nullable Input<String> smsMessage;
 
     public Input<String> getSmsMessage() {
         return this.smsMessage == null ? Input.empty() : this.smsMessage;

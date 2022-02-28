@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.DistributionTrustedKeyGroupItemArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DistributionTrustedKeyGroupArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -32,7 +32,7 @@ public final class DistributionTrustedKeyGroupArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="items")
-    private final @Nullable Input<List<DistributionTrustedKeyGroupItemArgs>> items;
+      private final @Nullable Input<List<DistributionTrustedKeyGroupItemArgs>> items;
 
     public Input<List<DistributionTrustedKeyGroupItemArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;

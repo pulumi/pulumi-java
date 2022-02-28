@@ -7,7 +7,7 @@ import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersAu
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersLambdaParameters;
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters;
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

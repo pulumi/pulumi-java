@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.outputs;
 
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationReferenceDataSourcesS3;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationReferenceDataSourcesSchema;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

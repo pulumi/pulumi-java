@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicequotas.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetServiceQuotaArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="quotaCode")
-    private final @Nullable String quotaCode;
+      private final @Nullable String quotaCode;
 
     public Optional<String> getQuotaCode() {
         return this.quotaCode == null ? Optional.empty() : Optional.ofNullable(this.quotaCode);
@@ -30,7 +30,7 @@ public final class GetServiceQuotaArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="quotaName")
-    private final @Nullable String quotaName;
+      private final @Nullable String quotaName;
 
     public Optional<String> getQuotaName() {
         return this.quotaName == null ? Optional.empty() : Optional.ofNullable(this.quotaName);
@@ -41,7 +41,7 @@ public final class GetServiceQuotaArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceCode", required=true)
-    private final String serviceCode;
+      private final String serviceCode;
 
     public String getServiceCode() {
         return this.serviceCode;

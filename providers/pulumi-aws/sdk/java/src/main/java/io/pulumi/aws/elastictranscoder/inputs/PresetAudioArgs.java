@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PresetAudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audioPackingMode")
-    private final @Nullable Input<String> audioPackingMode;
+      private final @Nullable Input<String> audioPackingMode;
 
     public Input<String> getAudioPackingMode() {
         return this.audioPackingMode == null ? Input.empty() : this.audioPackingMode;
@@ -30,7 +30,7 @@ public final class PresetAudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitRate")
-    private final @Nullable Input<String> bitRate;
+      private final @Nullable Input<String> bitRate;
 
     public Input<String> getBitRate() {
         return this.bitRate == null ? Input.empty() : this.bitRate;
@@ -41,7 +41,7 @@ public final class PresetAudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channels")
-    private final @Nullable Input<String> channels;
+      private final @Nullable Input<String> channels;
 
     public Input<String> getChannels() {
         return this.channels == null ? Input.empty() : this.channels;
@@ -52,7 +52,7 @@ public final class PresetAudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="codec")
-    private final @Nullable Input<String> codec;
+      private final @Nullable Input<String> codec;
 
     public Input<String> getCodec() {
         return this.codec == null ? Input.empty() : this.codec;
@@ -63,7 +63,7 @@ public final class PresetAudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sampleRate")
-    private final @Nullable Input<String> sampleRate;
+      private final @Nullable Input<String> sampleRate;
 
     public Input<String> getSampleRate() {
         return this.sampleRate == null ? Input.empty() : this.sampleRate;

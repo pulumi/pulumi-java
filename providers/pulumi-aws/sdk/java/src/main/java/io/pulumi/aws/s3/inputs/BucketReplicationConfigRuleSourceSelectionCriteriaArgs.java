@@ -6,7 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaArgs extend
      * 
      */
     @InputImport(name="replicaModifications")
-    private final @Nullable Input<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> replicaModifications;
+      private final @Nullable Input<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> replicaModifications;
 
     public Input<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> getReplicaModifications() {
         return this.replicaModifications == null ? Input.empty() : this.replicaModifications;
@@ -31,7 +31,7 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaArgs extend
      * 
      */
     @InputImport(name="sseKmsEncryptedObjects")
-    private final @Nullable Input<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
+      private final @Nullable Input<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
 
     public Input<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> getSseKmsEncryptedObjects() {
         return this.sseKmsEncryptedObjects == null ? Input.empty() : this.sseKmsEncryptedObjects;

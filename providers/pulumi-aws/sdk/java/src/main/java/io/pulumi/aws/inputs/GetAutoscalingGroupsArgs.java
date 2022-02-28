@@ -4,7 +4,7 @@
 package io.pulumi.aws.inputs;
 
 import io.pulumi.aws.inputs.GetAutoscalingGroupsFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class GetAutoscalingGroupsArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetAutoscalingGroupsFilter> filters;
+      private final @Nullable List<GetAutoscalingGroupsFilter> filters;
 
     public List<GetAutoscalingGroupsFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;

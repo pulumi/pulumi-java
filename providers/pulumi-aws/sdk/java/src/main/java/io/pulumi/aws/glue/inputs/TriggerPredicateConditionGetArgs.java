@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="crawlState")
-    private final @Nullable Input<String> crawlState;
+      private final @Nullable Input<String> crawlState;
 
     public Input<String> getCrawlState() {
         return this.crawlState == null ? Input.empty() : this.crawlState;
@@ -30,7 +30,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="crawlerName")
-    private final @Nullable Input<String> crawlerName;
+      private final @Nullable Input<String> crawlerName;
 
     public Input<String> getCrawlerName() {
         return this.crawlerName == null ? Input.empty() : this.crawlerName;
@@ -41,7 +41,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="jobName")
-    private final @Nullable Input<String> jobName;
+      private final @Nullable Input<String> jobName;
 
     public Input<String> getJobName() {
         return this.jobName == null ? Input.empty() : this.jobName;
@@ -52,7 +52,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logicalOperator")
-    private final @Nullable Input<String> logicalOperator;
+      private final @Nullable Input<String> logicalOperator;
 
     public Input<String> getLogicalOperator() {
         return this.logicalOperator == null ? Input.empty() : this.logicalOperator;
@@ -63,7 +63,7 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;

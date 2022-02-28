@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.DefaultSecurityGroupEgressGetArgs;
 import io.pulumi.aws.ec2.inputs.DefaultSecurityGroupIngressGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -35,7 +35,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="egress")
-    private final @Nullable Input<List<DefaultSecurityGroupEgressGetArgs>> egress;
+      private final @Nullable Input<List<DefaultSecurityGroupEgressGetArgs>> egress;
 
     public Input<List<DefaultSecurityGroupEgressGetArgs>> getEgress() {
         return this.egress == null ? Input.empty() : this.egress;
@@ -57,7 +57,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ingress")
-    private final @Nullable Input<List<DefaultSecurityGroupIngressGetArgs>> ingress;
+      private final @Nullable Input<List<DefaultSecurityGroupIngressGetArgs>> ingress;
 
     public Input<List<DefaultSecurityGroupIngressGetArgs>> getIngress() {
         return this.ingress == null ? Input.empty() : this.ingress;
@@ -68,7 +68,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -79,14 +79,14 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
     }
 
     @InputImport(name="revokeRulesOnDelete")
-    private final @Nullable Input<Boolean> revokeRulesOnDelete;
+      private final @Nullable Input<Boolean> revokeRulesOnDelete;
 
     public Input<Boolean> getRevokeRulesOnDelete() {
         return this.revokeRulesOnDelete == null ? Input.empty() : this.revokeRulesOnDelete;
@@ -97,7 +97,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -108,7 +108,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -119,7 +119,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

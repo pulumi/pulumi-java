@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
@@ -32,7 +32,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="delimiter")
-    private final @Nullable String delimiter;
+      private final @Nullable String delimiter;
 
     public Optional<String> getDelimiter() {
         return this.delimiter == null ? Optional.empty() : Optional.ofNullable(this.delimiter);
@@ -43,7 +43,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encodingType")
-    private final @Nullable String encodingType;
+      private final @Nullable String encodingType;
 
     public Optional<String> getEncodingType() {
         return this.encodingType == null ? Optional.empty() : Optional.ofNullable(this.encodingType);
@@ -54,7 +54,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fetchOwner")
-    private final @Nullable Boolean fetchOwner;
+      private final @Nullable Boolean fetchOwner;
 
     public Optional<Boolean> getFetchOwner() {
         return this.fetchOwner == null ? Optional.empty() : Optional.ofNullable(this.fetchOwner);
@@ -65,7 +65,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxKeys")
-    private final @Nullable Integer maxKeys;
+      private final @Nullable Integer maxKeys;
 
     public Optional<Integer> getMaxKeys() {
         return this.maxKeys == null ? Optional.empty() : Optional.ofNullable(this.maxKeys);
@@ -76,7 +76,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable String prefix;
+      private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
@@ -87,7 +87,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startAfter")
-    private final @Nullable String startAfter;
+      private final @Nullable String startAfter;
 
     public Optional<String> getStartAfter() {
         return this.startAfter == null ? Optional.empty() : Optional.ofNullable(this.startAfter);

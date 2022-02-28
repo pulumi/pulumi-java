@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
      * 
      */
     @InputImport(name="claim", required=true)
-    private final Input<String> claim;
+      private final Input<String> claim;
 
     public Input<String> getClaim() {
         return this.claim;
@@ -29,7 +29,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
      * 
      */
     @InputImport(name="matchType", required=true)
-    private final Input<String> matchType;
+      private final Input<String> matchType;
 
     public Input<String> getMatchType() {
         return this.matchType;
@@ -40,7 +40,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -51,7 +51,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

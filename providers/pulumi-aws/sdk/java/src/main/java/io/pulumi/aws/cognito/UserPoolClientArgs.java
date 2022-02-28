@@ -6,7 +6,7 @@ package io.pulumi.aws.cognito;
 import io.pulumi.aws.cognito.inputs.UserPoolClientAnalyticsConfigurationArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolClientTokenValidityUnitsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessTokenValidity")
-    private final @Nullable Input<Integer> accessTokenValidity;
+      private final @Nullable Input<Integer> accessTokenValidity;
 
     public Input<Integer> getAccessTokenValidity() {
         return this.accessTokenValidity == null ? Input.empty() : this.accessTokenValidity;
@@ -35,7 +35,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedOauthFlows")
-    private final @Nullable Input<List<String>> allowedOauthFlows;
+      private final @Nullable Input<List<String>> allowedOauthFlows;
 
     public Input<List<String>> getAllowedOauthFlows() {
         return this.allowedOauthFlows == null ? Input.empty() : this.allowedOauthFlows;
@@ -46,7 +46,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedOauthFlowsUserPoolClient")
-    private final @Nullable Input<Boolean> allowedOauthFlowsUserPoolClient;
+      private final @Nullable Input<Boolean> allowedOauthFlowsUserPoolClient;
 
     public Input<Boolean> getAllowedOauthFlowsUserPoolClient() {
         return this.allowedOauthFlowsUserPoolClient == null ? Input.empty() : this.allowedOauthFlowsUserPoolClient;
@@ -57,7 +57,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedOauthScopes")
-    private final @Nullable Input<List<String>> allowedOauthScopes;
+      private final @Nullable Input<List<String>> allowedOauthScopes;
 
     public Input<List<String>> getAllowedOauthScopes() {
         return this.allowedOauthScopes == null ? Input.empty() : this.allowedOauthScopes;
@@ -68,7 +68,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analyticsConfiguration")
-    private final @Nullable Input<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration;
+      private final @Nullable Input<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration;
 
     public Input<UserPoolClientAnalyticsConfigurationArgs> getAnalyticsConfiguration() {
         return this.analyticsConfiguration == null ? Input.empty() : this.analyticsConfiguration;
@@ -79,7 +79,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="callbackUrls")
-    private final @Nullable Input<List<String>> callbackUrls;
+      private final @Nullable Input<List<String>> callbackUrls;
 
     public Input<List<String>> getCallbackUrls() {
         return this.callbackUrls == null ? Input.empty() : this.callbackUrls;
@@ -90,7 +90,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRedirectUri")
-    private final @Nullable Input<String> defaultRedirectUri;
+      private final @Nullable Input<String> defaultRedirectUri;
 
     public Input<String> getDefaultRedirectUri() {
         return this.defaultRedirectUri == null ? Input.empty() : this.defaultRedirectUri;
@@ -101,7 +101,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableTokenRevocation")
-    private final @Nullable Input<Boolean> enableTokenRevocation;
+      private final @Nullable Input<Boolean> enableTokenRevocation;
 
     public Input<Boolean> getEnableTokenRevocation() {
         return this.enableTokenRevocation == null ? Input.empty() : this.enableTokenRevocation;
@@ -112,7 +112,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="explicitAuthFlows")
-    private final @Nullable Input<List<String>> explicitAuthFlows;
+      private final @Nullable Input<List<String>> explicitAuthFlows;
 
     public Input<List<String>> getExplicitAuthFlows() {
         return this.explicitAuthFlows == null ? Input.empty() : this.explicitAuthFlows;
@@ -123,7 +123,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="generateSecret")
-    private final @Nullable Input<Boolean> generateSecret;
+      private final @Nullable Input<Boolean> generateSecret;
 
     public Input<Boolean> getGenerateSecret() {
         return this.generateSecret == null ? Input.empty() : this.generateSecret;
@@ -134,7 +134,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idTokenValidity")
-    private final @Nullable Input<Integer> idTokenValidity;
+      private final @Nullable Input<Integer> idTokenValidity;
 
     public Input<Integer> getIdTokenValidity() {
         return this.idTokenValidity == null ? Input.empty() : this.idTokenValidity;
@@ -145,7 +145,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logoutUrls")
-    private final @Nullable Input<List<String>> logoutUrls;
+      private final @Nullable Input<List<String>> logoutUrls;
 
     public Input<List<String>> getLogoutUrls() {
         return this.logoutUrls == null ? Input.empty() : this.logoutUrls;
@@ -156,7 +156,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -167,7 +167,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preventUserExistenceErrors")
-    private final @Nullable Input<String> preventUserExistenceErrors;
+      private final @Nullable Input<String> preventUserExistenceErrors;
 
     public Input<String> getPreventUserExistenceErrors() {
         return this.preventUserExistenceErrors == null ? Input.empty() : this.preventUserExistenceErrors;
@@ -178,7 +178,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readAttributes")
-    private final @Nullable Input<List<String>> readAttributes;
+      private final @Nullable Input<List<String>> readAttributes;
 
     public Input<List<String>> getReadAttributes() {
         return this.readAttributes == null ? Input.empty() : this.readAttributes;
@@ -189,7 +189,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="refreshTokenValidity")
-    private final @Nullable Input<Integer> refreshTokenValidity;
+      private final @Nullable Input<Integer> refreshTokenValidity;
 
     public Input<Integer> getRefreshTokenValidity() {
         return this.refreshTokenValidity == null ? Input.empty() : this.refreshTokenValidity;
@@ -200,7 +200,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportedIdentityProviders")
-    private final @Nullable Input<List<String>> supportedIdentityProviders;
+      private final @Nullable Input<List<String>> supportedIdentityProviders;
 
     public Input<List<String>> getSupportedIdentityProviders() {
         return this.supportedIdentityProviders == null ? Input.empty() : this.supportedIdentityProviders;
@@ -211,7 +211,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenValidityUnits")
-    private final @Nullable Input<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits;
+      private final @Nullable Input<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits;
 
     public Input<UserPoolClientTokenValidityUnitsArgs> getTokenValidityUnits() {
         return this.tokenValidityUnits == null ? Input.empty() : this.tokenValidityUnits;
@@ -222,7 +222,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userPoolId", required=true)
-    private final Input<String> userPoolId;
+      private final Input<String> userPoolId;
 
     public Input<String> getUserPoolId() {
         return this.userPoolId;
@@ -233,7 +233,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeAttributes")
-    private final @Nullable Input<List<String>> writeAttributes;
+      private final @Nullable Input<List<String>> writeAttributes;
 
     public Input<List<String>> getWriteAttributes() {
         return this.writeAttributes == null ? Input.empty() : this.writeAttributes;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetEngineVersionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="engine", required=true)
-    private final String engine;
+      private final String engine;
 
     public String getEngine() {
         return this.engine;
@@ -31,7 +31,7 @@ public final class GetEngineVersionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameterGroupFamily")
-    private final @Nullable String parameterGroupFamily;
+      private final @Nullable String parameterGroupFamily;
 
     public Optional<String> getParameterGroupFamily() {
         return this.parameterGroupFamily == null ? Optional.empty() : Optional.ofNullable(this.parameterGroupFamily);
@@ -42,7 +42,7 @@ public final class GetEngineVersionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="preferredVersions")
-    private final @Nullable List<String> preferredVersions;
+      private final @Nullable List<String> preferredVersions;
 
     public List<String> getPreferredVersions() {
         return this.preferredVersions == null ? List.of() : this.preferredVersions;
@@ -53,7 +53,7 @@ public final class GetEngineVersionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+      private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);

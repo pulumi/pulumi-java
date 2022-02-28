@@ -4,7 +4,7 @@
 package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class JobDefinitionTimeoutArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="attemptDurationSeconds")
-    private final @Nullable Input<Integer> attemptDurationSeconds;
+      private final @Nullable Input<Integer> attemptDurationSeconds;
 
     public Input<Integer> getAttemptDurationSeconds() {
         return this.attemptDurationSeconds == null ? Input.empty() : this.attemptDurationSeconds;

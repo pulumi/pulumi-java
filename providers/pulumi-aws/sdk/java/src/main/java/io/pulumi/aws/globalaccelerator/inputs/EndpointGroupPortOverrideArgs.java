@@ -4,7 +4,7 @@
 package io.pulumi.aws.globalaccelerator.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class EndpointGroupPortOverrideArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="endpointPort", required=true)
-    private final Input<Integer> endpointPort;
+      private final Input<Integer> endpointPort;
 
     public Input<Integer> getEndpointPort() {
         return this.endpointPort;
@@ -29,7 +29,7 @@ public final class EndpointGroupPortOverrideArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="listenerPort", required=true)
-    private final Input<Integer> listenerPort;
+      private final Input<Integer> listenerPort;
 
     public Input<Integer> getListenerPort() {
         return this.listenerPort;

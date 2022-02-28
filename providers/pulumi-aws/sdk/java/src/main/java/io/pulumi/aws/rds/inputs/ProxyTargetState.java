@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbClusterIdentifier")
-    private final @Nullable Input<String> dbClusterIdentifier;
+      private final @Nullable Input<String> dbClusterIdentifier;
 
     public Input<String> getDbClusterIdentifier() {
         return this.dbClusterIdentifier == null ? Input.empty() : this.dbClusterIdentifier;
@@ -31,7 +31,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbInstanceIdentifier")
-    private final @Nullable Input<String> dbInstanceIdentifier;
+      private final @Nullable Input<String> dbInstanceIdentifier;
 
     public Input<String> getDbInstanceIdentifier() {
         return this.dbInstanceIdentifier == null ? Input.empty() : this.dbInstanceIdentifier;
@@ -42,7 +42,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbProxyName")
-    private final @Nullable Input<String> dbProxyName;
+      private final @Nullable Input<String> dbProxyName;
 
     public Input<String> getDbProxyName() {
         return this.dbProxyName == null ? Input.empty() : this.dbProxyName;
@@ -53,7 +53,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<String> endpoint;
+      private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -64,7 +64,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -75,7 +75,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rdsResourceId")
-    private final @Nullable Input<String> rdsResourceId;
+      private final @Nullable Input<String> rdsResourceId;
 
     public Input<String> getRdsResourceId() {
         return this.rdsResourceId == null ? Input.empty() : this.rdsResourceId;
@@ -86,7 +86,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetArn")
-    private final @Nullable Input<String> targetArn;
+      private final @Nullable Input<String> targetArn;
 
     public Input<String> getTargetArn() {
         return this.targetArn == null ? Input.empty() : this.targetArn;
@@ -97,7 +97,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetGroupName")
-    private final @Nullable Input<String> targetGroupName;
+      private final @Nullable Input<String> targetGroupName;
 
     public Input<String> getTargetGroupName() {
         return this.targetGroupName == null ? Input.empty() : this.targetGroupName;
@@ -108,7 +108,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trackedClusterId")
-    private final @Nullable Input<String> trackedClusterId;
+      private final @Nullable Input<String> trackedClusterId;
 
     public Input<String> getTrackedClusterId() {
         return this.trackedClusterId == null ? Input.empty() : this.trackedClusterId;
@@ -119,7 +119,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

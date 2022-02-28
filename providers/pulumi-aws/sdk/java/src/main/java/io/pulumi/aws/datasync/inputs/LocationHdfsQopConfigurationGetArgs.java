@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class LocationHdfsQopConfigurationGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dataTransferProtection")
-    private final @Nullable Input<String> dataTransferProtection;
+      private final @Nullable Input<String> dataTransferProtection;
 
     public Input<String> getDataTransferProtection() {
         return this.dataTransferProtection == null ? Input.empty() : this.dataTransferProtection;
@@ -30,7 +30,7 @@ public final class LocationHdfsQopConfigurationGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="rpcProtection")
-    private final @Nullable Input<String> rpcProtection;
+      private final @Nullable Input<String> rpcProtection;
 
     public Input<String> getRpcProtection() {
         return this.rpcProtection == null ? Input.empty() : this.rpcProtection;

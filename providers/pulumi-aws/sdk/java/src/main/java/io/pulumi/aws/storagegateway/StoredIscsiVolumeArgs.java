@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="diskId", required=true)
-    private final Input<String> diskId;
+      private final Input<String> diskId;
 
     public Input<String> getDiskId() {
         return this.diskId;
@@ -32,7 +32,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="gatewayArn", required=true)
-    private final Input<String> gatewayArn;
+      private final Input<String> gatewayArn;
 
     public Input<String> getGatewayArn() {
         return this.gatewayArn;
@@ -43,7 +43,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kmsEncrypted")
-    private final @Nullable Input<Boolean> kmsEncrypted;
+      private final @Nullable Input<Boolean> kmsEncrypted;
 
     public Input<Boolean> getKmsEncrypted() {
         return this.kmsEncrypted == null ? Input.empty() : this.kmsEncrypted;
@@ -54,7 +54,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kmsKey")
-    private final @Nullable Input<String> kmsKey;
+      private final @Nullable Input<String> kmsKey;
 
     public Input<String> getKmsKey() {
         return this.kmsKey == null ? Input.empty() : this.kmsKey;
@@ -65,7 +65,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="networkInterfaceId", required=true)
-    private final Input<String> networkInterfaceId;
+      private final Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId;
@@ -76,7 +76,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="preserveExistingData", required=true)
-    private final Input<Boolean> preserveExistingData;
+      private final Input<Boolean> preserveExistingData;
 
     public Input<Boolean> getPreserveExistingData() {
         return this.preserveExistingData;
@@ -87,7 +87,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snapshotId")
-    private final @Nullable Input<String> snapshotId;
+      private final @Nullable Input<String> snapshotId;
 
     public Input<String> getSnapshotId() {
         return this.snapshotId == null ? Input.empty() : this.snapshotId;
@@ -98,7 +98,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -109,7 +109,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetName", required=true)
-    private final Input<String> targetName;
+      private final Input<String> targetName;
 
     public Input<String> getTargetName() {
         return this.targetName;

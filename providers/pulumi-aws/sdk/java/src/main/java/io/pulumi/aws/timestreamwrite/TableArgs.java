@@ -6,7 +6,7 @@ package io.pulumi.aws.timestreamwrite;
 import io.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesArgs;
 import io.pulumi.aws.timestreamwrite.inputs.TableRetentionPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -33,7 +33,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="magneticStoreWriteProperties")
-    private final @Nullable Input<TableMagneticStoreWritePropertiesArgs> magneticStoreWriteProperties;
+      private final @Nullable Input<TableMagneticStoreWritePropertiesArgs> magneticStoreWriteProperties;
 
     public Input<TableMagneticStoreWritePropertiesArgs> getMagneticStoreWriteProperties() {
         return this.magneticStoreWriteProperties == null ? Input.empty() : this.magneticStoreWriteProperties;
@@ -44,7 +44,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionProperties")
-    private final @Nullable Input<TableRetentionPropertiesArgs> retentionProperties;
+      private final @Nullable Input<TableRetentionPropertiesArgs> retentionProperties;
 
     public Input<TableRetentionPropertiesArgs> getRetentionProperties() {
         return this.retentionProperties == null ? Input.empty() : this.retentionProperties;
@@ -55,7 +55,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+      private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;
@@ -66,7 +66,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetInstanceTypeOfferingFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetInstanceTypeOfferingArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetInstanceTypeOfferingFilter> filters;
+      private final @Nullable List<GetInstanceTypeOfferingFilter> filters;
 
     public List<GetInstanceTypeOfferingFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -32,7 +32,7 @@ public final class GetInstanceTypeOfferingArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="locationType")
-    private final @Nullable String locationType;
+      private final @Nullable String locationType;
 
     public Optional<String> getLocationType() {
         return this.locationType == null ? Optional.empty() : Optional.ofNullable(this.locationType);
@@ -43,7 +43,7 @@ public final class GetInstanceTypeOfferingArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="preferredInstanceTypes")
-    private final @Nullable List<String> preferredInstanceTypes;
+      private final @Nullable List<String> preferredInstanceTypes;
 
     public List<String> getPreferredInstanceTypes() {
         return this.preferredInstanceTypes == null ? List.of() : this.preferredInstanceTypes;

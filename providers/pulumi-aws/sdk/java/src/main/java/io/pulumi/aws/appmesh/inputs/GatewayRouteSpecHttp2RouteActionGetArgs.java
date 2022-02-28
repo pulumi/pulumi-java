@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttp2RouteActionTargetGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class GatewayRouteSpecHttp2RouteActionGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="target", required=true)
-    private final Input<GatewayRouteSpecHttp2RouteActionTargetGetArgs> target;
+      private final Input<GatewayRouteSpecHttp2RouteActionTargetGetArgs> target;
 
     public Input<GatewayRouteSpecHttp2RouteActionTargetGetArgs> getTarget() {
         return this.target;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationStrategy")
-    private final @Nullable Input<String> authenticationStrategy;
+      private final @Nullable Input<String> authenticationStrategy;
 
     public Input<String> getAuthenticationStrategy() {
         return this.authenticationStrategy == null ? Input.empty() : this.authenticationStrategy;
@@ -31,7 +31,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data", required=true)
-    private final Input<String> data;
+      private final Input<String> data;
 
     public Input<String> getData() {
         return this.data;
@@ -42,7 +42,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -53,7 +53,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineType", required=true)
-    private final Input<String> engineType;
+      private final Input<String> engineType;
 
     public Input<String> getEngineType() {
         return this.engineType;
@@ -64,7 +64,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineVersion", required=true)
-    private final Input<String> engineVersion;
+      private final Input<String> engineVersion;
 
     public Input<String> getEngineVersion() {
         return this.engineVersion;
@@ -75,7 +75,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -86,7 +86,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

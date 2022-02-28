@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.GetScriptDagEdge;
 import io.pulumi.aws.glue.inputs.GetScriptDagNode;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dagEdges", required=true)
-    private final List<GetScriptDagEdge> dagEdges;
+      private final List<GetScriptDagEdge> dagEdges;
 
     public List<GetScriptDagEdge> getDagEdges() {
         return this.dagEdges;
@@ -33,7 +33,7 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dagNodes", required=true)
-    private final List<GetScriptDagNode> dagNodes;
+      private final List<GetScriptDagNode> dagNodes;
 
     public List<GetScriptDagNode> getDagNodes() {
         return this.dagNodes;
@@ -44,7 +44,7 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="language")
-    private final @Nullable String language;
+      private final @Nullable String language;
 
     public Optional<String> getLanguage() {
         return this.language == null ? Optional.empty() : Optional.ofNullable(this.language);

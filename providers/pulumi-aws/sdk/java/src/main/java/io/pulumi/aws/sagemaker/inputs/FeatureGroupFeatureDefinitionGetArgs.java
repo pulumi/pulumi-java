@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FeatureGroupFeatureDefinitionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="featureName")
-    private final @Nullable Input<String> featureName;
+      private final @Nullable Input<String> featureName;
 
     public Input<String> getFeatureName() {
         return this.featureName == null ? Input.empty() : this.featureName;
@@ -30,7 +30,7 @@ public final class FeatureGroupFeatureDefinitionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="featureType")
-    private final @Nullable Input<String> featureType;
+      private final @Nullable Input<String> featureType;
 
     public Input<String> getFeatureType() {
         return this.featureType == null ? Input.empty() : this.featureType;

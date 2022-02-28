@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class FeatureGroupOfflineStoreConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="dataCatalogConfig")
-    private final @Nullable Input<FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs> dataCatalogConfig;
+      private final @Nullable Input<FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs> dataCatalogConfig;
 
     public Input<FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs> getDataCatalogConfig() {
         return this.dataCatalogConfig == null ? Input.empty() : this.dataCatalogConfig;
@@ -32,7 +32,7 @@ public final class FeatureGroupOfflineStoreConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="disableGlueTableCreation")
-    private final @Nullable Input<Boolean> disableGlueTableCreation;
+      private final @Nullable Input<Boolean> disableGlueTableCreation;
 
     public Input<Boolean> getDisableGlueTableCreation() {
         return this.disableGlueTableCreation == null ? Input.empty() : this.disableGlueTableCreation;
@@ -43,7 +43,7 @@ public final class FeatureGroupOfflineStoreConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="s3StorageConfig", required=true)
-    private final Input<FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs> s3StorageConfig;
+      private final Input<FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs> s3StorageConfig;
 
     public Input<FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs> getS3StorageConfig() {
         return this.s3StorageConfig;

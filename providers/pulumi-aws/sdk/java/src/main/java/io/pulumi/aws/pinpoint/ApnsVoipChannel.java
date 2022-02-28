@@ -8,8 +8,8 @@ import io.pulumi.aws.pinpoint.ApnsVoipChannelArgs;
 import io.pulumi.aws.pinpoint.inputs.ApnsVoipChannelState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -163,6 +163,21 @@ public class ApnsVoipChannel extends io.pulumi.resources.CustomResource {
         return this.tokenKeyId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ApnsVoipChannel(String name) {
+        this(name, ApnsVoipChannelArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ApnsVoipChannel(String name, ApnsVoipChannelArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

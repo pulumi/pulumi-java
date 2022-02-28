@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="atime")
-    private final @Nullable Input<String> atime;
+      private final @Nullable Input<String> atime;
 
     public Input<String> getAtime() {
         return this.atime == null ? Input.empty() : this.atime;
@@ -31,7 +31,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bytesPerSecond")
-    private final @Nullable Input<Integer> bytesPerSecond;
+      private final @Nullable Input<Integer> bytesPerSecond;
 
     public Input<Integer> getBytesPerSecond() {
         return this.bytesPerSecond == null ? Input.empty() : this.bytesPerSecond;
@@ -42,7 +42,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gid")
-    private final @Nullable Input<String> gid;
+      private final @Nullable Input<String> gid;
 
     public Input<String> getGid() {
         return this.gid == null ? Input.empty() : this.gid;
@@ -53,7 +53,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logLevel")
-    private final @Nullable Input<String> logLevel;
+      private final @Nullable Input<String> logLevel;
 
     public Input<String> getLogLevel() {
         return this.logLevel == null ? Input.empty() : this.logLevel;
@@ -64,7 +64,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mtime")
-    private final @Nullable Input<String> mtime;
+      private final @Nullable Input<String> mtime;
 
     public Input<String> getMtime() {
         return this.mtime == null ? Input.empty() : this.mtime;
@@ -75,7 +75,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overwriteMode")
-    private final @Nullable Input<String> overwriteMode;
+      private final @Nullable Input<String> overwriteMode;
 
     public Input<String> getOverwriteMode() {
         return this.overwriteMode == null ? Input.empty() : this.overwriteMode;
@@ -86,7 +86,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="posixPermissions")
-    private final @Nullable Input<String> posixPermissions;
+      private final @Nullable Input<String> posixPermissions;
 
     public Input<String> getPosixPermissions() {
         return this.posixPermissions == null ? Input.empty() : this.posixPermissions;
@@ -97,7 +97,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preserveDeletedFiles")
-    private final @Nullable Input<String> preserveDeletedFiles;
+      private final @Nullable Input<String> preserveDeletedFiles;
 
     public Input<String> getPreserveDeletedFiles() {
         return this.preserveDeletedFiles == null ? Input.empty() : this.preserveDeletedFiles;
@@ -108,7 +108,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preserveDevices")
-    private final @Nullable Input<String> preserveDevices;
+      private final @Nullable Input<String> preserveDevices;
 
     public Input<String> getPreserveDevices() {
         return this.preserveDevices == null ? Input.empty() : this.preserveDevices;
@@ -119,7 +119,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskQueueing")
-    private final @Nullable Input<String> taskQueueing;
+      private final @Nullable Input<String> taskQueueing;
 
     public Input<String> getTaskQueueing() {
         return this.taskQueueing == null ? Input.empty() : this.taskQueueing;
@@ -130,7 +130,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transferMode")
-    private final @Nullable Input<String> transferMode;
+      private final @Nullable Input<String> transferMode;
 
     public Input<String> getTransferMode() {
         return this.transferMode == null ? Input.empty() : this.transferMode;
@@ -141,7 +141,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Input<String> uid;
+      private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -152,7 +152,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="verifyMode")
-    private final @Nullable Input<String> verifyMode;
+      private final @Nullable Input<String> verifyMode;
 
     public Input<String> getVerifyMode() {
         return this.verifyMode == null ? Input.empty() : this.verifyMode;

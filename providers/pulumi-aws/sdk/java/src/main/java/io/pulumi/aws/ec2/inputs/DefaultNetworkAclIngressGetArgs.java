@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DefaultNetworkAclIngressGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<String> action;
+      private final Input<String> action;
 
     public Input<String> getAction() {
         return this.action;
@@ -31,7 +31,7 @@ public final class DefaultNetworkAclIngressGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="cidrBlock")
-    private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Input<String> cidrBlock;
 
     public Input<String> getCidrBlock() {
         return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
@@ -42,7 +42,7 @@ public final class DefaultNetworkAclIngressGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fromPort", required=true)
-    private final Input<Integer> fromPort;
+      private final Input<Integer> fromPort;
 
     public Input<Integer> getFromPort() {
         return this.fromPort;
@@ -53,7 +53,7 @@ public final class DefaultNetworkAclIngressGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="icmpCode")
-    private final @Nullable Input<Integer> icmpCode;
+      private final @Nullable Input<Integer> icmpCode;
 
     public Input<Integer> getIcmpCode() {
         return this.icmpCode == null ? Input.empty() : this.icmpCode;
@@ -64,7 +64,7 @@ public final class DefaultNetworkAclIngressGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="icmpType")
-    private final @Nullable Input<Integer> icmpType;
+      private final @Nullable Input<Integer> icmpType;
 
     public Input<Integer> getIcmpType() {
         return this.icmpType == null ? Input.empty() : this.icmpType;
@@ -75,7 +75,7 @@ public final class DefaultNetworkAclIngressGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipv6CidrBlock")
-    private final @Nullable Input<String> ipv6CidrBlock;
+      private final @Nullable Input<String> ipv6CidrBlock;
 
     public Input<String> getIpv6CidrBlock() {
         return this.ipv6CidrBlock == null ? Input.empty() : this.ipv6CidrBlock;
@@ -86,7 +86,7 @@ public final class DefaultNetworkAclIngressGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<String> protocol;
+      private final Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol;
@@ -97,7 +97,7 @@ public final class DefaultNetworkAclIngressGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ruleNo", required=true)
-    private final Input<Integer> ruleNo;
+      private final Input<Integer> ruleNo;
 
     public Input<Integer> getRuleNo() {
         return this.ruleNo;
@@ -108,7 +108,7 @@ public final class DefaultNetworkAclIngressGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="toPort", required=true)
-    private final Input<Integer> toPort;
+      private final Input<Integer> toPort;
 
     public Input<Integer> getToPort() {
         return this.toPort;

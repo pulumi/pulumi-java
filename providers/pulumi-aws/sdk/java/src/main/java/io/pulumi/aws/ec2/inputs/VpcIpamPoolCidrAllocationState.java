@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cidr")
-    private final @Nullable Input<String> cidr;
+      private final @Nullable Input<String> cidr;
 
     public Input<String> getCidr() {
         return this.cidr == null ? Input.empty() : this.cidr;
@@ -32,7 +32,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,14 +43,14 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="disallowedCidrs")
-    private final @Nullable Input<List<String>> disallowedCidrs;
+      private final @Nullable Input<List<String>> disallowedCidrs;
 
     public Input<List<String>> getDisallowedCidrs() {
         return this.disallowedCidrs == null ? Input.empty() : this.disallowedCidrs;
     }
 
     @InputImport(name="ipamPoolAllocationId")
-    private final @Nullable Input<String> ipamPoolAllocationId;
+      private final @Nullable Input<String> ipamPoolAllocationId;
 
     public Input<String> getIpamPoolAllocationId() {
         return this.ipamPoolAllocationId == null ? Input.empty() : this.ipamPoolAllocationId;
@@ -61,7 +61,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ipamPoolId")
-    private final @Nullable Input<String> ipamPoolId;
+      private final @Nullable Input<String> ipamPoolId;
 
     public Input<String> getIpamPoolId() {
         return this.ipamPoolId == null ? Input.empty() : this.ipamPoolId;
@@ -72,7 +72,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="netmaskLength")
-    private final @Nullable Input<Integer> netmaskLength;
+      private final @Nullable Input<Integer> netmaskLength;
 
     public Input<Integer> getNetmaskLength() {
         return this.netmaskLength == null ? Input.empty() : this.netmaskLength;
@@ -83,7 +83,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -94,7 +94,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceOwner")
-    private final @Nullable Input<String> resourceOwner;
+      private final @Nullable Input<String> resourceOwner;
 
     public Input<String> getResourceOwner() {
         return this.resourceOwner == null ? Input.empty() : this.resourceOwner;
@@ -105,7 +105,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+      private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;

@@ -8,8 +8,8 @@ import io.pulumi.aws.ecr.LifecyclePolicyArgs;
 import io.pulumi.aws.ecr.inputs.LifecyclePolicyState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -76,6 +76,21 @@ public class LifecyclePolicy extends io.pulumi.resources.CustomResource {
         return this.repository;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public LifecyclePolicy(String name) {
+        this(name, LifecyclePolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public LifecyclePolicy(String name, LifecyclePolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

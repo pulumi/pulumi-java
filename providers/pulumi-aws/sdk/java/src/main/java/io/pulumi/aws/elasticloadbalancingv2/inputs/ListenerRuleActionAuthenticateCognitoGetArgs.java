@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ListenerRuleActionAuthenticateCognitoGetArgs extends io.pulum
      * 
      */
     @InputImport(name="authenticationRequestExtraParams")
-    private final @Nullable Input<Map<String,String>> authenticationRequestExtraParams;
+      private final @Nullable Input<Map<String,String>> authenticationRequestExtraParams;
 
     public Input<Map<String,String>> getAuthenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Input.empty() : this.authenticationRequestExtraParams;
@@ -32,7 +32,7 @@ public final class ListenerRuleActionAuthenticateCognitoGetArgs extends io.pulum
      * 
      */
     @InputImport(name="onUnauthenticatedRequest")
-    private final @Nullable Input<String> onUnauthenticatedRequest;
+      private final @Nullable Input<String> onUnauthenticatedRequest;
 
     public Input<String> getOnUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest == null ? Input.empty() : this.onUnauthenticatedRequest;
@@ -43,7 +43,7 @@ public final class ListenerRuleActionAuthenticateCognitoGetArgs extends io.pulum
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+      private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -54,7 +54,7 @@ public final class ListenerRuleActionAuthenticateCognitoGetArgs extends io.pulum
      * 
      */
     @InputImport(name="sessionCookieName")
-    private final @Nullable Input<String> sessionCookieName;
+      private final @Nullable Input<String> sessionCookieName;
 
     public Input<String> getSessionCookieName() {
         return this.sessionCookieName == null ? Input.empty() : this.sessionCookieName;
@@ -65,7 +65,7 @@ public final class ListenerRuleActionAuthenticateCognitoGetArgs extends io.pulum
      * 
      */
     @InputImport(name="sessionTimeout")
-    private final @Nullable Input<Integer> sessionTimeout;
+      private final @Nullable Input<Integer> sessionTimeout;
 
     public Input<Integer> getSessionTimeout() {
         return this.sessionTimeout == null ? Input.empty() : this.sessionTimeout;
@@ -76,7 +76,7 @@ public final class ListenerRuleActionAuthenticateCognitoGetArgs extends io.pulum
      * 
      */
     @InputImport(name="userPoolArn", required=true)
-    private final Input<String> userPoolArn;
+      private final Input<String> userPoolArn;
 
     public Input<String> getUserPoolArn() {
         return this.userPoolArn;
@@ -87,7 +87,7 @@ public final class ListenerRuleActionAuthenticateCognitoGetArgs extends io.pulum
      * 
      */
     @InputImport(name="userPoolClientId", required=true)
-    private final Input<String> userPoolClientId;
+      private final Input<String> userPoolClientId;
 
     public Input<String> getUserPoolClientId() {
         return this.userPoolClientId;
@@ -98,7 +98,7 @@ public final class ListenerRuleActionAuthenticateCognitoGetArgs extends io.pulum
      * 
      */
     @InputImport(name="userPoolDomain", required=true)
-    private final Input<String> userPoolDomain;
+      private final Input<String> userPoolDomain;
 
     public Input<String> getUserPoolDomain() {
         return this.userPoolDomain;

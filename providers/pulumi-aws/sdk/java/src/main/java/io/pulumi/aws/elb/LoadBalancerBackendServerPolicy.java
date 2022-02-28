@@ -9,8 +9,8 @@ import io.pulumi.aws.elb.inputs.LoadBalancerBackendServerPolicyState;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -67,6 +67,21 @@ public class LoadBalancerBackendServerPolicy extends io.pulumi.resources.CustomR
         return this.policyNames;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public LoadBalancerBackendServerPolicy(String name) {
+        this(name, LoadBalancerBackendServerPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public LoadBalancerBackendServerPolicy(String name, LoadBalancerBackendServerPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

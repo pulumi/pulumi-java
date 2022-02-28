@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.DistributionTrustedSignerItemArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DistributionTrustedSignerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -32,7 +32,7 @@ public final class DistributionTrustedSignerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="items")
-    private final @Nullable Input<List<DistributionTrustedSignerItemArgs>> items;
+      private final @Nullable Input<List<DistributionTrustedSignerItemArgs>> items;
 
     public Input<List<DistributionTrustedSignerItemArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;

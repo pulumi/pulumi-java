@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.workspaces.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="directoryId")
-    private final @Nullable String directoryId;
+      private final @Nullable String directoryId;
 
     public Optional<String> getDirectoryId() {
         return this.directoryId == null ? Optional.empty() : Optional.ofNullable(this.directoryId);
@@ -31,7 +31,7 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -42,7 +42,7 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable String userName;
+      private final @Nullable String userName;
 
     public Optional<String> getUserName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
@@ -53,7 +53,7 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceId")
-    private final @Nullable String workspaceId;
+      private final @Nullable String workspaceId;
 
     public Optional<String> getWorkspaceId() {
         return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);

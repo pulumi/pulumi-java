@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.PeeringConnectionOptionsAccepterArgs;
 import io.pulumi.aws.ec2.inputs.PeeringConnectionOptionsRequesterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PeeringConnectionOptionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="accepter")
-    private final @Nullable Input<PeeringConnectionOptionsAccepterArgs> accepter;
+      private final @Nullable Input<PeeringConnectionOptionsAccepterArgs> accepter;
 
     public Input<PeeringConnectionOptionsAccepterArgs> getAccepter() {
         return this.accepter == null ? Input.empty() : this.accepter;
@@ -36,7 +36,7 @@ public final class PeeringConnectionOptionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="requester")
-    private final @Nullable Input<PeeringConnectionOptionsRequesterArgs> requester;
+      private final @Nullable Input<PeeringConnectionOptionsRequesterArgs> requester;
 
     public Input<PeeringConnectionOptionsRequesterArgs> getRequester() {
         return this.requester == null ? Input.empty() : this.requester;
@@ -47,7 +47,7 @@ public final class PeeringConnectionOptionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vpcPeeringConnectionId", required=true)
-    private final Input<String> vpcPeeringConnectionId;
+      private final Input<String> vpcPeeringConnectionId;
 
     public Input<String> getVpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId;

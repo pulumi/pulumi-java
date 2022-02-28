@@ -5,7 +5,7 @@ package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.aws.appstream.inputs.DirectoryConfigServiceAccountCredentialsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable Input<String> createdTime;
+      private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
@@ -32,7 +32,7 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="directoryName")
-    private final @Nullable Input<String> directoryName;
+      private final @Nullable Input<String> directoryName;
 
     public Input<String> getDirectoryName() {
         return this.directoryName == null ? Input.empty() : this.directoryName;
@@ -43,7 +43,7 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="organizationalUnitDistinguishedNames")
-    private final @Nullable Input<List<String>> organizationalUnitDistinguishedNames;
+      private final @Nullable Input<List<String>> organizationalUnitDistinguishedNames;
 
     public Input<List<String>> getOrganizationalUnitDistinguishedNames() {
         return this.organizationalUnitDistinguishedNames == null ? Input.empty() : this.organizationalUnitDistinguishedNames;
@@ -54,7 +54,7 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceAccountCredentials")
-    private final @Nullable Input<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials;
+      private final @Nullable Input<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials;
 
     public Input<DirectoryConfigServiceAccountCredentialsGetArgs> getServiceAccountCredentials() {
         return this.serviceAccountCredentials == null ? Input.empty() : this.serviceAccountCredentials;

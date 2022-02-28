@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
      * 
      */
     @InputImport(name="cloudwatchEncryptionMode")
-    private final @Nullable Input<String> cloudwatchEncryptionMode;
+      private final @Nullable Input<String> cloudwatchEncryptionMode;
 
     public Input<String> getCloudwatchEncryptionMode() {
         return this.cloudwatchEncryptionMode == null ? Input.empty() : this.cloudwatchEncryptionMode;
@@ -30,7 +30,7 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;

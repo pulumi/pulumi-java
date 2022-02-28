@@ -4,7 +4,7 @@
 package io.pulumi.aws.sfn.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="includeExecutionData")
-    private final @Nullable Input<Boolean> includeExecutionData;
+      private final @Nullable Input<Boolean> includeExecutionData;
 
     public Input<Boolean> getIncludeExecutionData() {
         return this.includeExecutionData == null ? Input.empty() : this.includeExecutionData;
@@ -31,7 +31,7 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="level")
-    private final @Nullable Input<String> level;
+      private final @Nullable Input<String> level;
 
     public Input<String> getLevel() {
         return this.level == null ? Input.empty() : this.level;
@@ -42,7 +42,7 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="logDestination")
-    private final @Nullable Input<String> logDestination;
+      private final @Nullable Input<String> logDestination;
 
     public Input<String> getLogDestination() {
         return this.logDestination == null ? Input.empty() : this.logDestination;

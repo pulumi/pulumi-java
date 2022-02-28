@@ -11,8 +11,8 @@ import io.pulumi.aws.cloudfront.outputs.ResponseHeadersPolicyCustomHeadersConfig
 import io.pulumi.aws.cloudfront.outputs.ResponseHeadersPolicySecurityHeadersConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -120,6 +120,21 @@ public class ResponseHeadersPolicy extends io.pulumi.resources.CustomResource {
         return this.securityHeadersConfig;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ResponseHeadersPolicy(String name) {
+        this(name, ResponseHeadersPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ResponseHeadersPolicy(String name, @Nullable ResponseHeadersPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

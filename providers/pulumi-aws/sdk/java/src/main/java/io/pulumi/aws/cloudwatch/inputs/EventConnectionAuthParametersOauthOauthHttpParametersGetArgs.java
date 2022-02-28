@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthOauthHt
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthOauthHttpParametersQueryStringGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersGetArgs 
      * 
      */
     @InputImport(name="bodies")
-    private final @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersBodyGetArgs>> bodies;
+      private final @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersBodyGetArgs>> bodies;
 
     public Input<List<EventConnectionAuthParametersOauthOauthHttpParametersBodyGetArgs>> getBodies() {
         return this.bodies == null ? Input.empty() : this.bodies;
@@ -33,7 +33,7 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersGetArgs 
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs>> headers;
+      private final @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs>> headers;
 
     public Input<List<EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -44,7 +44,7 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersGetArgs 
      * 
      */
     @InputImport(name="queryStrings")
-    private final @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringGetArgs>> queryStrings;
+      private final @Nullable Input<List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringGetArgs>> queryStrings;
 
     public Input<List<EventConnectionAuthParametersOauthOauthHttpParametersQueryStringGetArgs>> getQueryStrings() {
         return this.queryStrings == null ? Input.empty() : this.queryStrings;

@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteMatchMetadataGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="metadatas")
-    private final @Nullable Input<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> metadatas;
+      private final @Nullable Input<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> metadatas;
 
     public Input<List<RouteSpecGrpcRouteMatchMetadataGetArgs>> getMetadatas() {
         return this.metadatas == null ? Input.empty() : this.metadatas;
@@ -32,7 +32,7 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="methodName")
-    private final @Nullable Input<String> methodName;
+      private final @Nullable Input<String> methodName;
 
     public Input<String> getMethodName() {
         return this.methodName == null ? Input.empty() : this.methodName;
@@ -44,7 +44,7 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -55,7 +55,7 @@ public final class RouteSpecGrpcRouteMatchGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VpcEndpointServiceAllowedPrincipleState extends io.pulumi.res
      * 
      */
     @InputImport(name="principalArn")
-    private final @Nullable Input<String> principalArn;
+      private final @Nullable Input<String> principalArn;
 
     public Input<String> getPrincipalArn() {
         return this.principalArn == null ? Input.empty() : this.principalArn;
@@ -30,7 +30,7 @@ public final class VpcEndpointServiceAllowedPrincipleState extends io.pulumi.res
      * 
      */
     @InputImport(name="vpcEndpointServiceId")
-    private final @Nullable Input<String> vpcEndpointServiceId;
+      private final @Nullable Input<String> vpcEndpointServiceId;
 
     public Input<String> getVpcEndpointServiceId() {
         return this.vpcEndpointServiceId == null ? Input.empty() : this.vpcEndpointServiceId;

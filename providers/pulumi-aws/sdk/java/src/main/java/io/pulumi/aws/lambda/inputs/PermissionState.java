@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -30,7 +30,7 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventSourceToken")
-    private final @Nullable Input<String> eventSourceToken;
+      private final @Nullable Input<String> eventSourceToken;
 
     public Input<String> getEventSourceToken() {
         return this.eventSourceToken == null ? Input.empty() : this.eventSourceToken;
@@ -41,7 +41,7 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="function")
-    private final @Nullable Input<String> function;
+      private final @Nullable Input<String> function;
 
     public Input<String> getFunction() {
         return this.function == null ? Input.empty() : this.function;
@@ -52,7 +52,7 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principal")
-    private final @Nullable Input<String> principal;
+      private final @Nullable Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal == null ? Input.empty() : this.principal;
@@ -63,7 +63,7 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qualifier")
-    private final @Nullable Input<String> qualifier;
+      private final @Nullable Input<String> qualifier;
 
     public Input<String> getQualifier() {
         return this.qualifier == null ? Input.empty() : this.qualifier;
@@ -74,7 +74,7 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceAccount")
-    private final @Nullable Input<String> sourceAccount;
+      private final @Nullable Input<String> sourceAccount;
 
     public Input<String> getSourceAccount() {
         return this.sourceAccount == null ? Input.empty() : this.sourceAccount;
@@ -89,7 +89,7 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceArn")
-    private final @Nullable Input<String> sourceArn;
+      private final @Nullable Input<String> sourceArn;
 
     public Input<String> getSourceArn() {
         return this.sourceArn == null ? Input.empty() : this.sourceArn;
@@ -100,7 +100,7 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statementId")
-    private final @Nullable Input<String> statementId;
+      private final @Nullable Input<String> statementId;
 
     public Input<String> getStatementId() {
         return this.statementId == null ? Input.empty() : this.statementId;
@@ -111,7 +111,7 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statementIdPrefix")
-    private final @Nullable Input<String> statementIdPrefix;
+      private final @Nullable Input<String> statementIdPrefix;
 
     public Input<String> getStatementIdPrefix() {
         return this.statementIdPrefix == null ? Input.empty() : this.statementIdPrefix;

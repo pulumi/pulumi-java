@@ -5,7 +5,7 @@ package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.aws.guardduty.inputs.OrganizationConfigurationDatasourcesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="autoEnable")
-    private final @Nullable Input<Boolean> autoEnable;
+      private final @Nullable Input<Boolean> autoEnable;
 
     public Input<Boolean> getAutoEnable() {
         return this.autoEnable == null ? Input.empty() : this.autoEnable;
@@ -32,7 +32,7 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="datasources")
-    private final @Nullable Input<OrganizationConfigurationDatasourcesGetArgs> datasources;
+      private final @Nullable Input<OrganizationConfigurationDatasourcesGetArgs> datasources;
 
     public Input<OrganizationConfigurationDatasourcesGetArgs> getDatasources() {
         return this.datasources == null ? Input.empty() : this.datasources;
@@ -43,7 +43,7 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="detectorId")
-    private final @Nullable Input<String> detectorId;
+      private final @Nullable Input<String> detectorId;
 
     public Input<String> getDetectorId() {
         return this.detectorId == null ? Input.empty() : this.detectorId;

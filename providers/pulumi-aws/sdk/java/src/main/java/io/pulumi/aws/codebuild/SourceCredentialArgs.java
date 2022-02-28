@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="authType", required=true)
-    private final Input<String> authType;
+      private final Input<String> authType;
 
     public Input<String> getAuthType() {
         return this.authType;
@@ -30,7 +30,7 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverType", required=true)
-    private final Input<String> serverType;
+      private final Input<String> serverType;
 
     public Input<String> getServerType() {
         return this.serverType;
@@ -41,7 +41,7 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="token", required=true)
-    private final Input<String> token;
+      private final Input<String> token;
 
     public Input<String> getToken() {
         return this.token;
@@ -52,7 +52,7 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;

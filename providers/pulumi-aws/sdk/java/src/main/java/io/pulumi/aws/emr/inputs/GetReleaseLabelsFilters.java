@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetReleaseLabelsFilters extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="application")
-    private final @Nullable String application;
+      private final @Nullable String application;
 
     public Optional<String> getApplication() {
         return this.application == null ? Optional.empty() : Optional.ofNullable(this.application);
@@ -30,7 +30,7 @@ public final class GetReleaseLabelsFilters extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable String prefix;
+      private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);

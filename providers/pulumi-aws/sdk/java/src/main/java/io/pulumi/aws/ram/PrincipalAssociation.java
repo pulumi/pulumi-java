@@ -8,8 +8,8 @@ import io.pulumi.aws.ram.PrincipalAssociationArgs;
 import io.pulumi.aws.ram.inputs.PrincipalAssociationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -68,6 +68,21 @@ public class PrincipalAssociation extends io.pulumi.resources.CustomResource {
         return this.resourceShareArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public PrincipalAssociation(String name) {
+        this(name, PrincipalAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public PrincipalAssociation(String name, PrincipalAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

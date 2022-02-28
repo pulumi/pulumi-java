@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.aws.ec2.inputs.DefaultRouteTableRouteArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultRouteTableId", required=true)
-    private final Input<String> defaultRouteTableId;
+      private final Input<String> defaultRouteTableId;
 
     public Input<String> getDefaultRouteTableId() {
         return this.defaultRouteTableId;
@@ -33,7 +33,7 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="propagatingVgws")
-    private final @Nullable Input<List<String>> propagatingVgws;
+      private final @Nullable Input<List<String>> propagatingVgws;
 
     public Input<List<String>> getPropagatingVgws() {
         return this.propagatingVgws == null ? Input.empty() : this.propagatingVgws;
@@ -44,7 +44,7 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routes")
-    private final @Nullable Input<List<DefaultRouteTableRouteArgs>> routes;
+      private final @Nullable Input<List<DefaultRouteTableRouteArgs>> routes;
 
     public Input<List<DefaultRouteTableRouteArgs>> getRoutes() {
         return this.routes == null ? Input.empty() : this.routes;
@@ -55,7 +55,7 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

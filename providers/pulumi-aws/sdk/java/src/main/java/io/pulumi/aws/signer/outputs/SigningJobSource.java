@@ -4,7 +4,7 @@
 package io.pulumi.aws.signer.outputs;
 
 import io.pulumi.aws.signer.outputs.SigningJobSourceS3;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType

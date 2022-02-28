@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsAccountId")
-    private final @Nullable Input<String> awsAccountId;
+      private final @Nullable Input<String> awsAccountId;
 
     public Input<String> getAwsAccountId() {
         return this.awsAccountId == null ? Input.empty() : this.awsAccountId;
@@ -30,7 +30,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-    private final Input<String> email;
+      private final Input<String> email;
 
     public Input<String> getEmail() {
         return this.email;
@@ -41,7 +41,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamArn")
-    private final @Nullable Input<String> iamArn;
+      private final @Nullable Input<String> iamArn;
 
     public Input<String> getIamArn() {
         return this.iamArn == null ? Input.empty() : this.iamArn;
@@ -52,7 +52,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityType", required=true)
-    private final Input<String> identityType;
+      private final Input<String> identityType;
 
     public Input<String> getIdentityType() {
         return this.identityType;
@@ -63,7 +63,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -74,7 +74,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionName")
-    private final @Nullable Input<String> sessionName;
+      private final @Nullable Input<String> sessionName;
 
     public Input<String> getSessionName() {
         return this.sessionName == null ? Input.empty() : this.sessionName;
@@ -85,7 +85,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -96,7 +96,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userRole", required=true)
-    private final Input<String> userRole;
+      private final Input<String> userRole;
 
     public Input<String> getUserRole() {
         return this.userRole;

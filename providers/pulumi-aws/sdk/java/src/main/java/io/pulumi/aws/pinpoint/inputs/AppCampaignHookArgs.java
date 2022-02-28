@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AppCampaignHookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="lambdaFunctionName")
-    private final @Nullable Input<String> lambdaFunctionName;
+      private final @Nullable Input<String> lambdaFunctionName;
 
     public Input<String> getLambdaFunctionName() {
         return this.lambdaFunctionName == null ? Input.empty() : this.lambdaFunctionName;
@@ -30,7 +30,7 @@ public final class AppCampaignHookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -41,7 +41,7 @@ public final class AppCampaignHookArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="webUrl")
-    private final @Nullable Input<String> webUrl;
+      private final @Nullable Input<String> webUrl;
 
     public Input<String> getWebUrl() {
         return this.webUrl == null ? Input.empty() : this.webUrl;

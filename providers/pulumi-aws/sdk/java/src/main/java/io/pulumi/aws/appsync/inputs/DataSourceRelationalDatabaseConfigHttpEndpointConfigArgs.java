@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs exte
      * 
      */
     @InputImport(name="awsSecretStoreArn", required=true)
-    private final Input<String> awsSecretStoreArn;
+      private final Input<String> awsSecretStoreArn;
 
     public Input<String> getAwsSecretStoreArn() {
         return this.awsSecretStoreArn;
@@ -30,7 +30,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs exte
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+      private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -41,7 +41,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs exte
      * 
      */
     @InputImport(name="dbClusterIdentifier", required=true)
-    private final Input<String> dbClusterIdentifier;
+      private final Input<String> dbClusterIdentifier;
 
     public Input<String> getDbClusterIdentifier() {
         return this.dbClusterIdentifier;
@@ -52,7 +52,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs exte
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -63,7 +63,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigArgs exte
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<String> schema;
+      private final @Nullable Input<String> schema;
 
     public Input<String> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;

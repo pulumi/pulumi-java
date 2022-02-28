@@ -5,7 +5,7 @@ package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.aws.guardduty.inputs.DetectorDatasourcesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -33,7 +33,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -44,7 +44,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasources")
-    private final @Nullable Input<DetectorDatasourcesGetArgs> datasources;
+      private final @Nullable Input<DetectorDatasourcesGetArgs> datasources;
 
     public Input<DetectorDatasourcesGetArgs> getDatasources() {
         return this.datasources == null ? Input.empty() : this.datasources;
@@ -55,7 +55,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+      private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -66,7 +66,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="findingPublishingFrequency")
-    private final @Nullable Input<String> findingPublishingFrequency;
+      private final @Nullable Input<String> findingPublishingFrequency;
 
     public Input<String> getFindingPublishingFrequency() {
         return this.findingPublishingFrequency == null ? Input.empty() : this.findingPublishingFrequency;
@@ -77,7 +77,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -88,7 +88,7 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

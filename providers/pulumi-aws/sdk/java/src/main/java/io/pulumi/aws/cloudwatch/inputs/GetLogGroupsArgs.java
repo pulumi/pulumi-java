@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetLogGroupsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logGroupNamePrefix", required=true)
-    private final String logGroupNamePrefix;
+      private final String logGroupNamePrefix;
 
     public String getLogGroupNamePrefix() {
         return this.logGroupNamePrefix;

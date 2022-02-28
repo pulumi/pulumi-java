@@ -5,7 +5,7 @@ package io.pulumi.aws.ses;
 
 import io.pulumi.aws.ses.inputs.ConfigurationSetDeliveryOptionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deliveryOptions")
-    private final @Nullable Input<ConfigurationSetDeliveryOptionsArgs> deliveryOptions;
+      private final @Nullable Input<ConfigurationSetDeliveryOptionsArgs> deliveryOptions;
 
     public Input<ConfigurationSetDeliveryOptionsArgs> getDeliveryOptions() {
         return this.deliveryOptions == null ? Input.empty() : this.deliveryOptions;
@@ -32,7 +32,7 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="reputationMetricsEnabled")
-    private final @Nullable Input<Boolean> reputationMetricsEnabled;
+      private final @Nullable Input<Boolean> reputationMetricsEnabled;
 
     public Input<Boolean> getReputationMetricsEnabled() {
         return this.reputationMetricsEnabled == null ? Input.empty() : this.reputationMetricsEnabled;
@@ -54,7 +54,7 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sendingEnabled")
-    private final @Nullable Input<Boolean> sendingEnabled;
+      private final @Nullable Input<Boolean> sendingEnabled;
 
     public Input<Boolean> getSendingEnabled() {
         return this.sendingEnabled == null ? Input.empty() : this.sendingEnabled;

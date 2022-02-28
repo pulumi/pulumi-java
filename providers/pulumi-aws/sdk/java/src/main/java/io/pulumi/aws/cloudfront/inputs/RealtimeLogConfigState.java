@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.RealtimeLogConfigEndpointGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<RealtimeLogConfigEndpointGetArgs> endpoint;
+      private final @Nullable Input<RealtimeLogConfigEndpointGetArgs> endpoint;
 
     public Input<RealtimeLogConfigEndpointGetArgs> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -44,7 +44,7 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<List<String>> fields;
+      private final @Nullable Input<List<String>> fields;
 
     public Input<List<String>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -55,7 +55,7 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,7 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="samplingRate")
-    private final @Nullable Input<Integer> samplingRate;
+      private final @Nullable Input<Integer> samplingRate;
 
     public Input<Integer> getSamplingRate() {
         return this.samplingRate == null ? Input.empty() : this.samplingRate;

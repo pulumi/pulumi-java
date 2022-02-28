@@ -6,7 +6,7 @@ package io.pulumi.aws.codebuild.inputs;
 import io.pulumi.aws.codebuild.inputs.ProjectEnvironmentEnvironmentVariableArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectEnvironmentRegistryCredentialArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ProjectEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<String> certificate;
+      private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -34,7 +34,7 @@ public final class ProjectEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="computeType", required=true)
-    private final Input<String> computeType;
+      private final Input<String> computeType;
 
     public Input<String> getComputeType() {
         return this.computeType;
@@ -45,7 +45,7 @@ public final class ProjectEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<List<ProjectEnvironmentEnvironmentVariableArgs>> environmentVariables;
+      private final @Nullable Input<List<ProjectEnvironmentEnvironmentVariableArgs>> environmentVariables;
 
     public Input<List<ProjectEnvironmentEnvironmentVariableArgs>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -56,7 +56,7 @@ public final class ProjectEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="image", required=true)
-    private final Input<String> image;
+      private final Input<String> image;
 
     public Input<String> getImage() {
         return this.image;
@@ -67,7 +67,7 @@ public final class ProjectEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="imagePullCredentialsType")
-    private final @Nullable Input<String> imagePullCredentialsType;
+      private final @Nullable Input<String> imagePullCredentialsType;
 
     public Input<String> getImagePullCredentialsType() {
         return this.imagePullCredentialsType == null ? Input.empty() : this.imagePullCredentialsType;
@@ -78,7 +78,7 @@ public final class ProjectEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privilegedMode")
-    private final @Nullable Input<Boolean> privilegedMode;
+      private final @Nullable Input<Boolean> privilegedMode;
 
     public Input<Boolean> getPrivilegedMode() {
         return this.privilegedMode == null ? Input.empty() : this.privilegedMode;
@@ -89,7 +89,7 @@ public final class ProjectEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="registryCredential")
-    private final @Nullable Input<ProjectEnvironmentRegistryCredentialArgs> registryCredential;
+      private final @Nullable Input<ProjectEnvironmentRegistryCredentialArgs> registryCredential;
 
     public Input<ProjectEnvironmentRegistryCredentialArgs> getRegistryCredential() {
         return this.registryCredential == null ? Input.empty() : this.registryCredential;
@@ -100,7 +100,7 @@ public final class ProjectEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

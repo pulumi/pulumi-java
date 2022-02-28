@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchRangeArgs extends io.pulu
      * 
      */
     @InputImport(name="end", required=true)
-    private final Input<Integer> end;
+      private final Input<Integer> end;
 
     public Input<Integer> getEnd() {
         return this.end;
@@ -29,7 +29,7 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchRangeArgs extends io.pulu
      * 
      */
     @InputImport(name="start", required=true)
-    private final Input<Integer> start;
+      private final Input<Integer> start;
 
     public Input<Integer> getStart() {
         return this.start;

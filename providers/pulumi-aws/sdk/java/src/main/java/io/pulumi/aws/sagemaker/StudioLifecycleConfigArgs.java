@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="studioLifecycleConfigAppType", required=true)
-    private final Input<String> studioLifecycleConfigAppType;
+      private final Input<String> studioLifecycleConfigAppType;
 
     public Input<String> getStudioLifecycleConfigAppType() {
         return this.studioLifecycleConfigAppType;
@@ -31,7 +31,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="studioLifecycleConfigContent", required=true)
-    private final Input<String> studioLifecycleConfigContent;
+      private final Input<String> studioLifecycleConfigContent;
 
     public Input<String> getStudioLifecycleConfigContent() {
         return this.studioLifecycleConfigContent;
@@ -42,7 +42,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="studioLifecycleConfigName", required=true)
-    private final Input<String> studioLifecycleConfigName;
+      private final Input<String> studioLifecycleConfigName;
 
     public Input<String> getStudioLifecycleConfigName() {
         return this.studioLifecycleConfigName;
@@ -53,7 +53,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

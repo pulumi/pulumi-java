@@ -6,7 +6,7 @@ package io.pulumi.aws.mskconnect;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.mskconnect.inputs.GetWorkerConfigurationArgs;
 import io.pulumi.aws.mskconnect.outputs.GetWorkerConfigurationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.aws.autoscaling.inputs.GetAmiIdsFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class GetAmiIdsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetAmiIdsFilter> filters;
+      private final @Nullable List<GetAmiIdsFilter> filters;
 
     public List<GetAmiIdsFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.fms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PolicyExcludeMapGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accounts")
-    private final @Nullable Input<List<String>> accounts;
+      private final @Nullable Input<List<String>> accounts;
 
     public Input<List<String>> getAccounts() {
         return this.accounts == null ? Input.empty() : this.accounts;
@@ -31,7 +31,7 @@ public final class PolicyExcludeMapGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="orgunits")
-    private final @Nullable Input<List<String>> orgunits;
+      private final @Nullable Input<List<String>> orgunits;
 
     public Input<List<String>> getOrgunits() {
         return this.orgunits == null ? Input.empty() : this.orgunits;

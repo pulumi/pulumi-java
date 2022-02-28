@@ -4,7 +4,7 @@
 package io.pulumi.aws.transfer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="addressAllocationIds")
-    private final @Nullable Input<List<String>> addressAllocationIds;
+      private final @Nullable Input<List<String>> addressAllocationIds;
 
     public Input<List<String>> getAddressAllocationIds() {
         return this.addressAllocationIds == null ? Input.empty() : this.addressAllocationIds;
@@ -31,7 +31,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -42,7 +42,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -53,7 +53,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vpcEndpointId")
-    private final @Nullable Input<String> vpcEndpointId;
+      private final @Nullable Input<String> vpcEndpointId;
 
     public Input<String> getVpcEndpointId() {
         return this.vpcEndpointId == null ? Input.empty() : this.vpcEndpointId;
@@ -64,7 +64,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

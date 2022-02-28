@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteMatchHeaderMatchGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RouteSpecHttp2RouteMatchHeaderGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="invert")
-    private final @Nullable Input<Boolean> invert;
+      private final @Nullable Input<Boolean> invert;
 
     public Input<Boolean> getInvert() {
         return this.invert == null ? Input.empty() : this.invert;
@@ -32,7 +32,7 @@ public final class RouteSpecHttp2RouteMatchHeaderGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="match")
-    private final @Nullable Input<RouteSpecHttp2RouteMatchHeaderMatchGetArgs> match;
+      private final @Nullable Input<RouteSpecHttp2RouteMatchHeaderMatchGetArgs> match;
 
     public Input<RouteSpecHttp2RouteMatchHeaderMatchGetArgs> getMatch() {
         return this.match == null ? Input.empty() : this.match;
@@ -43,7 +43,7 @@ public final class RouteSpecHttp2RouteMatchHeaderGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

@@ -7,7 +7,7 @@ import io.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchSpecificationEbsBlockDevic
 import io.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs;
 import io.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,14 +21,14 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
     public static final SpotFleetRequestLaunchSpecificationArgs Empty = new SpotFleetRequestLaunchSpecificationArgs();
 
     @InputImport(name="ami", required=true)
-    private final Input<String> ami;
+      private final Input<String> ami;
 
     public Input<String> getAmi() {
         return this.ami;
     }
 
     @InputImport(name="associatePublicIpAddress")
-    private final @Nullable Input<Boolean> associatePublicIpAddress;
+      private final @Nullable Input<Boolean> associatePublicIpAddress;
 
     public Input<Boolean> getAssociatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Input.empty() : this.associatePublicIpAddress;
@@ -39,42 +39,42 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
     }
 
     @InputImport(name="ebsBlockDevices")
-    private final @Nullable Input<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs>> ebsBlockDevices;
+      private final @Nullable Input<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs>> ebsBlockDevices;
 
     public Input<List<SpotFleetRequestLaunchSpecificationEbsBlockDeviceArgs>> getEbsBlockDevices() {
         return this.ebsBlockDevices == null ? Input.empty() : this.ebsBlockDevices;
     }
 
     @InputImport(name="ebsOptimized")
-    private final @Nullable Input<Boolean> ebsOptimized;
+      private final @Nullable Input<Boolean> ebsOptimized;
 
     public Input<Boolean> getEbsOptimized() {
         return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
     }
 
     @InputImport(name="ephemeralBlockDevices")
-    private final @Nullable Input<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
+      private final @Nullable Input<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
     public Input<List<SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Input.empty() : this.ephemeralBlockDevices;
     }
 
     @InputImport(name="iamInstanceProfile")
-    private final @Nullable Input<String> iamInstanceProfile;
+      private final @Nullable Input<String> iamInstanceProfile;
 
     public Input<String> getIamInstanceProfile() {
         return this.iamInstanceProfile == null ? Input.empty() : this.iamInstanceProfile;
     }
 
     @InputImport(name="iamInstanceProfileArn")
-    private final @Nullable Input<String> iamInstanceProfileArn;
+      private final @Nullable Input<String> iamInstanceProfileArn;
 
     public Input<String> getIamInstanceProfileArn() {
         return this.iamInstanceProfileArn == null ? Input.empty() : this.iamInstanceProfileArn;
@@ -85,42 +85,42 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final Input<String> instanceType;
+      private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
     }
 
     @InputImport(name="keyName")
-    private final @Nullable Input<String> keyName;
+      private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
     }
 
     @InputImport(name="monitoring")
-    private final @Nullable Input<Boolean> monitoring;
+      private final @Nullable Input<Boolean> monitoring;
 
     public Input<Boolean> getMonitoring() {
         return this.monitoring == null ? Input.empty() : this.monitoring;
     }
 
     @InputImport(name="placementGroup")
-    private final @Nullable Input<String> placementGroup;
+      private final @Nullable Input<String> placementGroup;
 
     public Input<String> getPlacementGroup() {
         return this.placementGroup == null ? Input.empty() : this.placementGroup;
     }
 
     @InputImport(name="placementTenancy")
-    private final @Nullable Input<String> placementTenancy;
+      private final @Nullable Input<String> placementTenancy;
 
     public Input<String> getPlacementTenancy() {
         return this.placementTenancy == null ? Input.empty() : this.placementTenancy;
     }
 
     @InputImport(name="rootBlockDevices")
-    private final @Nullable Input<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs>> rootBlockDevices;
+      private final @Nullable Input<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs>> rootBlockDevices;
 
     public Input<List<SpotFleetRequestLaunchSpecificationRootBlockDeviceArgs>> getRootBlockDevices() {
         return this.rootBlockDevices == null ? Input.empty() : this.rootBlockDevices;
@@ -131,7 +131,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="spotPrice")
-    private final @Nullable Input<String> spotPrice;
+      private final @Nullable Input<String> spotPrice;
 
     public Input<String> getSpotPrice() {
         return this.spotPrice == null ? Input.empty() : this.spotPrice;
@@ -142,7 +142,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -153,21 +153,21 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="userData")
-    private final @Nullable Input<String> userData;
+      private final @Nullable Input<String> userData;
 
     public Input<String> getUserData() {
         return this.userData == null ? Input.empty() : this.userData;
     }
 
     @InputImport(name="vpcSecurityGroupIds")
-    private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
 
     public Input<List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
@@ -178,7 +178,7 @@ public final class SpotFleetRequestLaunchSpecificationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="weightedCapacity")
-    private final @Nullable Input<String> weightedCapacity;
+      private final @Nullable Input<String> weightedCapacity;
 
     public Input<String> getWeightedCapacity() {
         return this.weightedCapacity == null ? Input.empty() : this.weightedCapacity;

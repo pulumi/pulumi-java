@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DataRepositoryAssociationS3AutoExportPolicyArgs extends io.pu
      * 
      */
     @InputImport(name="events")
-    private final @Nullable Input<List<String>> events;
+      private final @Nullable Input<List<String>> events;
 
     public Input<List<String>> getEvents() {
         return this.events == null ? Input.empty() : this.events;

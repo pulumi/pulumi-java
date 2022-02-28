@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsSamlOptionsIdpArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -33,7 +33,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="idp")
-    private final @Nullable Input<DomainSamlOptionsSamlOptionsIdpArgs> idp;
+      private final @Nullable Input<DomainSamlOptionsSamlOptionsIdpArgs> idp;
 
     public Input<DomainSamlOptionsSamlOptionsIdpArgs> getIdp() {
         return this.idp == null ? Input.empty() : this.idp;
@@ -44,7 +44,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="masterBackendRole")
-    private final @Nullable Input<String> masterBackendRole;
+      private final @Nullable Input<String> masterBackendRole;
 
     public Input<String> getMasterBackendRole() {
         return this.masterBackendRole == null ? Input.empty() : this.masterBackendRole;
@@ -55,7 +55,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="masterUserName")
-    private final @Nullable Input<String> masterUserName;
+      private final @Nullable Input<String> masterUserName;
 
     public Input<String> getMasterUserName() {
         return this.masterUserName == null ? Input.empty() : this.masterUserName;
@@ -66,7 +66,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rolesKey")
-    private final @Nullable Input<String> rolesKey;
+      private final @Nullable Input<String> rolesKey;
 
     public Input<String> getRolesKey() {
         return this.rolesKey == null ? Input.empty() : this.rolesKey;
@@ -77,7 +77,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sessionTimeoutMinutes")
-    private final @Nullable Input<Integer> sessionTimeoutMinutes;
+      private final @Nullable Input<Integer> sessionTimeoutMinutes;
 
     public Input<Integer> getSessionTimeoutMinutes() {
         return this.sessionTimeoutMinutes == null ? Input.empty() : this.sessionTimeoutMinutes;
@@ -88,7 +88,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subjectKey")
-    private final @Nullable Input<String> subjectKey;
+      private final @Nullable Input<String> subjectKey;
 
     public Input<String> getSubjectKey() {
         return this.subjectKey == null ? Input.empty() : this.subjectKey;

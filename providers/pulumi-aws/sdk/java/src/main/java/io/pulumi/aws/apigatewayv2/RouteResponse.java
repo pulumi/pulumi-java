@@ -8,8 +8,8 @@ import io.pulumi.aws.apigatewayv2.RouteResponseArgs;
 import io.pulumi.aws.apigatewayv2.inputs.RouteResponseState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -102,6 +102,21 @@ public class RouteResponse extends io.pulumi.resources.CustomResource {
         return this.routeResponseKey;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RouteResponse(String name) {
+        this(name, RouteResponseArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RouteResponse(String name, RouteResponseArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

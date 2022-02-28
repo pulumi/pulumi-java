@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -30,7 +30,7 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="css")
-    private final @Nullable Input<String> css;
+      private final @Nullable Input<String> css;
 
     public Input<String> getCss() {
         return this.css == null ? Input.empty() : this.css;
@@ -41,7 +41,7 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="imageFile")
-    private final @Nullable Input<String> imageFile;
+      private final @Nullable Input<String> imageFile;
 
     public Input<String> getImageFile() {
         return this.imageFile == null ? Input.empty() : this.imageFile;
@@ -52,7 +52,7 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="userPoolId", required=true)
-    private final Input<String> userPoolId;
+      private final Input<String> userPoolId;
 
     public Input<String> getUserPoolId() {
         return this.userPoolId;

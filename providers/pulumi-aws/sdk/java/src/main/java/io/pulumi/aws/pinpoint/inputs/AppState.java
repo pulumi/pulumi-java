@@ -7,7 +7,7 @@ import io.pulumi.aws.pinpoint.inputs.AppCampaignHookGetArgs;
 import io.pulumi.aws.pinpoint.inputs.AppLimitsGetArgs;
 import io.pulumi.aws.pinpoint.inputs.AppQuietTimeGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+      private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
@@ -34,7 +34,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -45,7 +45,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="campaignHook")
-    private final @Nullable Input<AppCampaignHookGetArgs> campaignHook;
+      private final @Nullable Input<AppCampaignHookGetArgs> campaignHook;
 
     public Input<AppCampaignHookGetArgs> getCampaignHook() {
         return this.campaignHook == null ? Input.empty() : this.campaignHook;
@@ -56,7 +56,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limits")
-    private final @Nullable Input<AppLimitsGetArgs> limits;
+      private final @Nullable Input<AppLimitsGetArgs> limits;
 
     public Input<AppLimitsGetArgs> getLimits() {
         return this.limits == null ? Input.empty() : this.limits;
@@ -67,7 +67,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -89,7 +89,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quietTime")
-    private final @Nullable Input<AppQuietTimeGetArgs> quietTime;
+      private final @Nullable Input<AppQuietTimeGetArgs> quietTime;
 
     public Input<AppQuietTimeGetArgs> getQuietTime() {
         return this.quietTime == null ? Input.empty() : this.quietTime;
@@ -100,7 +100,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -111,7 +111,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

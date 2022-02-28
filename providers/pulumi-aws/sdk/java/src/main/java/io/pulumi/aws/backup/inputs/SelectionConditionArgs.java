@@ -8,7 +8,7 @@ import io.pulumi.aws.backup.inputs.SelectionConditionStringLikeArgs;
 import io.pulumi.aws.backup.inputs.SelectionConditionStringNotEqualArgs;
 import io.pulumi.aws.backup.inputs.SelectionConditionStringNotLikeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,28 +19,28 @@ public final class SelectionConditionArgs extends io.pulumi.resources.ResourceAr
     public static final SelectionConditionArgs Empty = new SelectionConditionArgs();
 
     @InputImport(name="stringEquals")
-    private final @Nullable Input<List<SelectionConditionStringEqualArgs>> stringEquals;
+      private final @Nullable Input<List<SelectionConditionStringEqualArgs>> stringEquals;
 
     public Input<List<SelectionConditionStringEqualArgs>> getStringEquals() {
         return this.stringEquals == null ? Input.empty() : this.stringEquals;
     }
 
     @InputImport(name="stringLikes")
-    private final @Nullable Input<List<SelectionConditionStringLikeArgs>> stringLikes;
+      private final @Nullable Input<List<SelectionConditionStringLikeArgs>> stringLikes;
 
     public Input<List<SelectionConditionStringLikeArgs>> getStringLikes() {
         return this.stringLikes == null ? Input.empty() : this.stringLikes;
     }
 
     @InputImport(name="stringNotEquals")
-    private final @Nullable Input<List<SelectionConditionStringNotEqualArgs>> stringNotEquals;
+      private final @Nullable Input<List<SelectionConditionStringNotEqualArgs>> stringNotEquals;
 
     public Input<List<SelectionConditionStringNotEqualArgs>> getStringNotEquals() {
         return this.stringNotEquals == null ? Input.empty() : this.stringNotEquals;
     }
 
     @InputImport(name="stringNotLikes")
-    private final @Nullable Input<List<SelectionConditionStringNotLikeArgs>> stringNotLikes;
+      private final @Nullable Input<List<SelectionConditionStringNotLikeArgs>> stringNotLikes;
 
     public Input<List<SelectionConditionStringNotLikeArgs>> getStringNotLikes() {
         return this.stringNotLikes == null ? Input.empty() : this.stringNotLikes;

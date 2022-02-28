@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class UserPoolUserPoolAddOnsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="advancedSecurityMode", required=true)
-    private final Input<String> advancedSecurityMode;
+      private final Input<String> advancedSecurityMode;
 
     public Input<String> getAdvancedSecurityMode() {
         return this.advancedSecurityMode;

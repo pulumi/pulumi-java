@@ -10,8 +10,8 @@ import io.pulumi.aws.codeartifact.outputs.RepositoryExternalConnections;
 import io.pulumi.aws.codeartifact.outputs.RepositoryUpstream;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -174,6 +174,21 @@ public class Repository extends io.pulumi.resources.CustomResource {
         return this.upstreams;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Repository(String name) {
+        this(name, RepositoryArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Repository(String name, RepositoryArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

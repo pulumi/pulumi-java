@@ -4,7 +4,7 @@
 package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CertificateAuthorityCertificateState extends io.pulumi.resour
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<String> certificate;
+      private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -30,7 +30,7 @@ public final class CertificateAuthorityCertificateState extends io.pulumi.resour
      * 
      */
     @InputImport(name="certificateAuthorityArn")
-    private final @Nullable Input<String> certificateAuthorityArn;
+      private final @Nullable Input<String> certificateAuthorityArn;
 
     public Input<String> getCertificateAuthorityArn() {
         return this.certificateAuthorityArn == null ? Input.empty() : this.certificateAuthorityArn;
@@ -41,7 +41,7 @@ public final class CertificateAuthorityCertificateState extends io.pulumi.resour
      * 
      */
     @InputImport(name="certificateChain")
-    private final @Nullable Input<String> certificateChain;
+      private final @Nullable Input<String> certificateChain;
 
     public Input<String> getCertificateChain() {
         return this.certificateChain == null ? Input.empty() : this.certificateChain;

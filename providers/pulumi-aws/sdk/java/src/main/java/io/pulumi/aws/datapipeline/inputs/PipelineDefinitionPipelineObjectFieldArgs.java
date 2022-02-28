@@ -4,7 +4,7 @@
 package io.pulumi.aws.datapipeline.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PipelineDefinitionPipelineObjectFieldArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -30,7 +30,7 @@ public final class PipelineDefinitionPipelineObjectFieldArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="refValue")
-    private final @Nullable Input<String> refValue;
+      private final @Nullable Input<String> refValue;
 
     public Input<String> getRefValue() {
         return this.refValue == null ? Input.empty() : this.refValue;
@@ -41,7 +41,7 @@ public final class PipelineDefinitionPipelineObjectFieldArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="stringValue")
-    private final @Nullable Input<String> stringValue;
+      private final @Nullable Input<String> stringValue;
 
     public Input<String> getStringValue() {
         return this.stringValue == null ? Input.empty() : this.stringValue;

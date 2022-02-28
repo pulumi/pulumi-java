@@ -10,7 +10,7 @@ import io.pulumi.aws.ecs.inputs.TaskDefinitionProxyConfigurationGetArgs;
 import io.pulumi.aws.ecs.inputs.TaskDefinitionRuntimePlatformGetArgs;
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -40,7 +40,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="containerDefinitions")
-    private final @Nullable Input<String> containerDefinitions;
+      private final @Nullable Input<String> containerDefinitions;
 
     public Input<String> getContainerDefinitions() {
         return this.containerDefinitions == null ? Input.empty() : this.containerDefinitions;
@@ -51,7 +51,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="cpu")
-    private final @Nullable Input<String> cpu;
+      private final @Nullable Input<String> cpu;
 
     public Input<String> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
@@ -62,7 +62,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ephemeralStorage")
-    private final @Nullable Input<TaskDefinitionEphemeralStorageGetArgs> ephemeralStorage;
+      private final @Nullable Input<TaskDefinitionEphemeralStorageGetArgs> ephemeralStorage;
 
     public Input<TaskDefinitionEphemeralStorageGetArgs> getEphemeralStorage() {
         return this.ephemeralStorage == null ? Input.empty() : this.ephemeralStorage;
@@ -73,7 +73,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="executionRoleArn")
-    private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
@@ -84,7 +84,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="family")
-    private final @Nullable Input<String> family;
+      private final @Nullable Input<String> family;
 
     public Input<String> getFamily() {
         return this.family == null ? Input.empty() : this.family;
@@ -95,7 +95,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="inferenceAccelerators")
-    private final @Nullable Input<List<TaskDefinitionInferenceAcceleratorGetArgs>> inferenceAccelerators;
+      private final @Nullable Input<List<TaskDefinitionInferenceAcceleratorGetArgs>> inferenceAccelerators;
 
     public Input<List<TaskDefinitionInferenceAcceleratorGetArgs>> getInferenceAccelerators() {
         return this.inferenceAccelerators == null ? Input.empty() : this.inferenceAccelerators;
@@ -106,7 +106,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ipcMode")
-    private final @Nullable Input<String> ipcMode;
+      private final @Nullable Input<String> ipcMode;
 
     public Input<String> getIpcMode() {
         return this.ipcMode == null ? Input.empty() : this.ipcMode;
@@ -117,7 +117,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="memory")
-    private final @Nullable Input<String> memory;
+      private final @Nullable Input<String> memory;
 
     public Input<String> getMemory() {
         return this.memory == null ? Input.empty() : this.memory;
@@ -128,7 +128,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkMode")
-    private final @Nullable Input<String> networkMode;
+      private final @Nullable Input<String> networkMode;
 
     public Input<String> getNetworkMode() {
         return this.networkMode == null ? Input.empty() : this.networkMode;
@@ -139,7 +139,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="pidMode")
-    private final @Nullable Input<String> pidMode;
+      private final @Nullable Input<String> pidMode;
 
     public Input<String> getPidMode() {
         return this.pidMode == null ? Input.empty() : this.pidMode;
@@ -150,7 +150,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="placementConstraints")
-    private final @Nullable Input<List<TaskDefinitionPlacementConstraintGetArgs>> placementConstraints;
+      private final @Nullable Input<List<TaskDefinitionPlacementConstraintGetArgs>> placementConstraints;
 
     public Input<List<TaskDefinitionPlacementConstraintGetArgs>> getPlacementConstraints() {
         return this.placementConstraints == null ? Input.empty() : this.placementConstraints;
@@ -161,7 +161,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="proxyConfiguration")
-    private final @Nullable Input<TaskDefinitionProxyConfigurationGetArgs> proxyConfiguration;
+      private final @Nullable Input<TaskDefinitionProxyConfigurationGetArgs> proxyConfiguration;
 
     public Input<TaskDefinitionProxyConfigurationGetArgs> getProxyConfiguration() {
         return this.proxyConfiguration == null ? Input.empty() : this.proxyConfiguration;
@@ -172,7 +172,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="requiresCompatibilities")
-    private final @Nullable Input<List<String>> requiresCompatibilities;
+      private final @Nullable Input<List<String>> requiresCompatibilities;
 
     public Input<List<String>> getRequiresCompatibilities() {
         return this.requiresCompatibilities == null ? Input.empty() : this.requiresCompatibilities;
@@ -183,7 +183,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<Integer> revision;
+      private final @Nullable Input<Integer> revision;
 
     public Input<Integer> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -194,14 +194,14 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="runtimePlatform")
-    private final @Nullable Input<TaskDefinitionRuntimePlatformGetArgs> runtimePlatform;
+      private final @Nullable Input<TaskDefinitionRuntimePlatformGetArgs> runtimePlatform;
 
     public Input<TaskDefinitionRuntimePlatformGetArgs> getRuntimePlatform() {
         return this.runtimePlatform == null ? Input.empty() : this.runtimePlatform;
     }
 
     @InputImport(name="skipDestroy")
-    private final @Nullable Input<Boolean> skipDestroy;
+      private final @Nullable Input<Boolean> skipDestroy;
 
     public Input<Boolean> getSkipDestroy() {
         return this.skipDestroy == null ? Input.empty() : this.skipDestroy;
@@ -212,7 +212,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -223,7 +223,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -234,7 +234,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="taskRoleArn")
-    private final @Nullable Input<String> taskRoleArn;
+      private final @Nullable Input<String> taskRoleArn;
 
     public Input<String> getTaskRoleArn() {
         return this.taskRoleArn == null ? Input.empty() : this.taskRoleArn;
@@ -245,7 +245,7 @@ public final class TaskDefinitionState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable Input<List<TaskDefinitionVolumeGetArgs>> volumes;
+      private final @Nullable Input<List<TaskDefinitionVolumeGetArgs>> volumes;
 
     public Input<List<TaskDefinitionVolumeGetArgs>> getVolumes() {
         return this.volumes == null ? Input.empty() : this.volumes;

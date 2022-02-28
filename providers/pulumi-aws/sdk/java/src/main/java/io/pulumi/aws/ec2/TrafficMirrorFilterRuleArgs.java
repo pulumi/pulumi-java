@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.TrafficMirrorFilterRuleDestinationPortRangeArgs;
 import io.pulumi.aws.ec2.inputs.TrafficMirrorFilterRuleSourcePortRangeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="destinationCidrBlock", required=true)
-    private final Input<String> destinationCidrBlock;
+      private final Input<String> destinationCidrBlock;
 
     public Input<String> getDestinationCidrBlock() {
         return this.destinationCidrBlock;
@@ -44,7 +44,7 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="destinationPortRange")
-    private final @Nullable Input<TrafficMirrorFilterRuleDestinationPortRangeArgs> destinationPortRange;
+      private final @Nullable Input<TrafficMirrorFilterRuleDestinationPortRangeArgs> destinationPortRange;
 
     public Input<TrafficMirrorFilterRuleDestinationPortRangeArgs> getDestinationPortRange() {
         return this.destinationPortRange == null ? Input.empty() : this.destinationPortRange;
@@ -55,7 +55,7 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<Integer> protocol;
+      private final @Nullable Input<Integer> protocol;
 
     public Input<Integer> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -66,7 +66,7 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleAction", required=true)
-    private final Input<String> ruleAction;
+      private final Input<String> ruleAction;
 
     public Input<String> getRuleAction() {
         return this.ruleAction;
@@ -77,7 +77,7 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleNumber", required=true)
-    private final Input<Integer> ruleNumber;
+      private final Input<Integer> ruleNumber;
 
     public Input<Integer> getRuleNumber() {
         return this.ruleNumber;
@@ -88,7 +88,7 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourceCidrBlock", required=true)
-    private final Input<String> sourceCidrBlock;
+      private final Input<String> sourceCidrBlock;
 
     public Input<String> getSourceCidrBlock() {
         return this.sourceCidrBlock;
@@ -99,7 +99,7 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourcePortRange")
-    private final @Nullable Input<TrafficMirrorFilterRuleSourcePortRangeArgs> sourcePortRange;
+      private final @Nullable Input<TrafficMirrorFilterRuleSourcePortRangeArgs> sourcePortRange;
 
     public Input<TrafficMirrorFilterRuleSourcePortRangeArgs> getSourcePortRange() {
         return this.sourcePortRange == null ? Input.empty() : this.sourcePortRange;
@@ -110,7 +110,7 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="trafficDirection", required=true)
-    private final Input<String> trafficDirection;
+      private final Input<String> trafficDirection;
 
     public Input<String> getTrafficDirection() {
         return this.trafficDirection;
@@ -121,7 +121,7 @@ public final class TrafficMirrorFilterRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="trafficMirrorFilterId", required=true)
-    private final Input<String> trafficMirrorFilterId;
+      private final Input<String> trafficMirrorFilterId;
 
     public Input<String> getTrafficMirrorFilterId() {
         return this.trafficMirrorFilterId;

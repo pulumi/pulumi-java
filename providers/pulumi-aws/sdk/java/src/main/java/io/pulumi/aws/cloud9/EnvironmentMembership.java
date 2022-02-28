@@ -8,8 +8,8 @@ import io.pulumi.aws.cloud9.EnvironmentMembershipArgs;
 import io.pulumi.aws.cloud9.inputs.EnvironmentMembershipState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -86,6 +86,21 @@ public class EnvironmentMembership extends io.pulumi.resources.CustomResource {
         return this.userId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public EnvironmentMembership(String name) {
+        this(name, EnvironmentMembershipArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public EnvironmentMembership(String name, EnvironmentMembershipArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

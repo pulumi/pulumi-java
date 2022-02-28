@@ -5,7 +5,7 @@ package io.pulumi.aws.athena.outputs;
 
 import io.pulumi.aws.athena.outputs.WorkgroupConfigurationEngineVersion;
 import io.pulumi.aws.athena.outputs.WorkgroupConfigurationResultConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;

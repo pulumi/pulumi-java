@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="autoScalingEnabled")
-    private final @Nullable Input<Boolean> autoScalingEnabled;
+      private final @Nullable Input<Boolean> autoScalingEnabled;
 
     public Input<Boolean> getAutoScalingEnabled() {
         return this.autoScalingEnabled == null ? Input.empty() : this.autoScalingEnabled;
@@ -32,7 +32,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="configurationType", required=true)
-    private final Input<String> configurationType;
+      private final Input<String> configurationType;
 
     public Input<String> getConfigurationType() {
         return this.configurationType;
@@ -43,7 +43,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="parallelism")
-    private final @Nullable Input<Integer> parallelism;
+      private final @Nullable Input<Integer> parallelism;
 
     public Input<Integer> getParallelism() {
         return this.parallelism == null ? Input.empty() : this.parallelism;
@@ -54,7 +54,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="parallelismPerKpu")
-    private final @Nullable Input<Integer> parallelismPerKpu;
+      private final @Nullable Input<Integer> parallelismPerKpu;
 
     public Input<Integer> getParallelismPerKpu() {
         return this.parallelismPerKpu == null ? Input.empty() : this.parallelismPerKpu;

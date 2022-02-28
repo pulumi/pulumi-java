@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="available")
-    private final @Nullable Input<Integer> available;
+      private final @Nullable Input<Integer> available;
 
     public Input<Integer> getAvailable() {
         return this.available == null ? Input.empty() : this.available;
@@ -30,7 +30,7 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="desiredInstances", required=true)
-    private final Input<Integer> desiredInstances;
+      private final Input<Integer> desiredInstances;
 
     public Input<Integer> getDesiredInstances() {
         return this.desiredInstances;
@@ -41,7 +41,7 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="inUse")
-    private final @Nullable Input<Integer> inUse;
+      private final @Nullable Input<Integer> inUse;
 
     public Input<Integer> getInUse() {
         return this.inUse == null ? Input.empty() : this.inUse;
@@ -52,7 +52,7 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="running")
-    private final @Nullable Input<Integer> running;
+      private final @Nullable Input<Integer> running;
 
     public Input<Integer> getRunning() {
         return this.running == null ? Input.empty() : this.running;

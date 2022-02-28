@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -30,7 +30,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="authType")
-    private final @Nullable Input<String> authType;
+      private final @Nullable Input<String> authType;
 
     public Input<String> getAuthType() {
         return this.authType == null ? Input.empty() : this.authType;
@@ -41,7 +41,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serverType")
-    private final @Nullable Input<String> serverType;
+      private final @Nullable Input<String> serverType;
 
     public Input<String> getServerType() {
         return this.serverType == null ? Input.empty() : this.serverType;
@@ -52,7 +52,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="token")
-    private final @Nullable Input<String> token;
+      private final @Nullable Input<String> token;
 
     public Input<String> getToken() {
         return this.token == null ? Input.empty() : this.token;
@@ -63,7 +63,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;

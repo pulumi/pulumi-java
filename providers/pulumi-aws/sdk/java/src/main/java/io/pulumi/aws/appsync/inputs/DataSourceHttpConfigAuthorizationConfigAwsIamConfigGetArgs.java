@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs ex
      * 
      */
     @InputImport(name="signingRegion")
-    private final @Nullable Input<String> signingRegion;
+      private final @Nullable Input<String> signingRegion;
 
     public Input<String> getSigningRegion() {
         return this.signingRegion == null ? Input.empty() : this.signingRegion;
@@ -30,7 +30,7 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs ex
      * 
      */
     @InputImport(name="signingServiceName")
-    private final @Nullable Input<String> signingServiceName;
+      private final @Nullable Input<String> signingServiceName;
 
     public Input<String> getSigningServiceName() {
         return this.signingServiceName == null ? Input.empty() : this.signingServiceName;

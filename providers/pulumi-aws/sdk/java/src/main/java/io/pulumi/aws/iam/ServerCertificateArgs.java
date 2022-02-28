@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="certificateBody", required=true)
-    private final Input<String> certificateBody;
+      private final Input<String> certificateBody;
 
     public Input<String> getCertificateBody() {
         return this.certificateBody;
@@ -34,7 +34,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="certificateChain")
-    private final @Nullable Input<String> certificateChain;
+      private final @Nullable Input<String> certificateChain;
 
     public Input<String> getCertificateChain() {
         return this.certificateChain == null ? Input.empty() : this.certificateChain;
@@ -46,7 +46,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -72,7 +72,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -83,7 +83,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateKey", required=true)
-    private final Input<String> privateKey;
+      private final Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey;
@@ -94,7 +94,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

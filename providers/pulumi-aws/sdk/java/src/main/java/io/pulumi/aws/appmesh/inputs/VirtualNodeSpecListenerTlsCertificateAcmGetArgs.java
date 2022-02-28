@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class VirtualNodeSpecListenerTlsCertificateAcmGetArgs extends io.pu
      * 
      */
     @InputImport(name="certificateArn", required=true)
-    private final Input<String> certificateArn;
+      private final Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn;

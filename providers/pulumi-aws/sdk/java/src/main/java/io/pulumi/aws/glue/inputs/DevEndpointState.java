@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-    private final @Nullable Input<Map<String,Object>> arguments;
+      private final @Nullable Input<Map<String,Object>> arguments;
 
     public Input<Map<String,Object>> getArguments() {
         return this.arguments == null ? Input.empty() : this.arguments;
@@ -34,7 +34,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -45,7 +45,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -56,7 +56,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extraJarsS3Path")
-    private final @Nullable Input<String> extraJarsS3Path;
+      private final @Nullable Input<String> extraJarsS3Path;
 
     public Input<String> getExtraJarsS3Path() {
         return this.extraJarsS3Path == null ? Input.empty() : this.extraJarsS3Path;
@@ -67,7 +67,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extraPythonLibsS3Path")
-    private final @Nullable Input<String> extraPythonLibsS3Path;
+      private final @Nullable Input<String> extraPythonLibsS3Path;
 
     public Input<String> getExtraPythonLibsS3Path() {
         return this.extraPythonLibsS3Path == null ? Input.empty() : this.extraPythonLibsS3Path;
@@ -78,7 +78,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failureReason")
-    private final @Nullable Input<String> failureReason;
+      private final @Nullable Input<String> failureReason;
 
     public Input<String> getFailureReason() {
         return this.failureReason == null ? Input.empty() : this.failureReason;
@@ -89,7 +89,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="glueVersion")
-    private final @Nullable Input<String> glueVersion;
+      private final @Nullable Input<String> glueVersion;
 
     public Input<String> getGlueVersion() {
         return this.glueVersion == null ? Input.empty() : this.glueVersion;
@@ -100,7 +100,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -111,7 +111,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfNodes")
-    private final @Nullable Input<Integer> numberOfNodes;
+      private final @Nullable Input<Integer> numberOfNodes;
 
     public Input<Integer> getNumberOfNodes() {
         return this.numberOfNodes == null ? Input.empty() : this.numberOfNodes;
@@ -122,7 +122,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfWorkers")
-    private final @Nullable Input<Integer> numberOfWorkers;
+      private final @Nullable Input<Integer> numberOfWorkers;
 
     public Input<Integer> getNumberOfWorkers() {
         return this.numberOfWorkers == null ? Input.empty() : this.numberOfWorkers;
@@ -133,7 +133,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateAddress")
-    private final @Nullable Input<String> privateAddress;
+      private final @Nullable Input<String> privateAddress;
 
     public Input<String> getPrivateAddress() {
         return this.privateAddress == null ? Input.empty() : this.privateAddress;
@@ -144,7 +144,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicAddress")
-    private final @Nullable Input<String> publicAddress;
+      private final @Nullable Input<String> publicAddress;
 
     public Input<String> getPublicAddress() {
         return this.publicAddress == null ? Input.empty() : this.publicAddress;
@@ -155,7 +155,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-    private final @Nullable Input<String> publicKey;
+      private final @Nullable Input<String> publicKey;
 
     public Input<String> getPublicKey() {
         return this.publicKey == null ? Input.empty() : this.publicKey;
@@ -166,7 +166,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKeys")
-    private final @Nullable Input<List<String>> publicKeys;
+      private final @Nullable Input<List<String>> publicKeys;
 
     public Input<List<String>> getPublicKeys() {
         return this.publicKeys == null ? Input.empty() : this.publicKeys;
@@ -177,7 +177,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -188,7 +188,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityConfiguration")
-    private final @Nullable Input<String> securityConfiguration;
+      private final @Nullable Input<String> securityConfiguration;
 
     public Input<String> getSecurityConfiguration() {
         return this.securityConfiguration == null ? Input.empty() : this.securityConfiguration;
@@ -199,7 +199,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -210,7 +210,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -221,7 +221,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -232,7 +232,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -243,7 +243,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -254,7 +254,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;
@@ -265,7 +265,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerType")
-    private final @Nullable Input<String> workerType;
+      private final @Nullable Input<String> workerType;
 
     public Input<String> getWorkerType() {
         return this.workerType == null ? Input.empty() : this.workerType;
@@ -276,7 +276,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="yarnEndpointAddress")
-    private final @Nullable Input<String> yarnEndpointAddress;
+      private final @Nullable Input<String> yarnEndpointAddress;
 
     public Input<String> getYarnEndpointAddress() {
         return this.yarnEndpointAddress == null ? Input.empty() : this.yarnEndpointAddress;
@@ -287,7 +287,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zeppelinRemoteSparkInterpreterPort")
-    private final @Nullable Input<Integer> zeppelinRemoteSparkInterpreterPort;
+      private final @Nullable Input<Integer> zeppelinRemoteSparkInterpreterPort;
 
     public Input<Integer> getZeppelinRemoteSparkInterpreterPort() {
         return this.zeppelinRemoteSparkInterpreterPort == null ? Input.empty() : this.zeppelinRemoteSparkInterpreterPort;

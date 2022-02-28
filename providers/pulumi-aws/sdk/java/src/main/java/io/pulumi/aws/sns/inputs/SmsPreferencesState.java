@@ -4,7 +4,7 @@
 package io.pulumi.aws.sns.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SmsPreferencesState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="defaultSenderId")
-    private final @Nullable Input<String> defaultSenderId;
+      private final @Nullable Input<String> defaultSenderId;
 
     public Input<String> getDefaultSenderId() {
         return this.defaultSenderId == null ? Input.empty() : this.defaultSenderId;
@@ -31,7 +31,7 @@ public final class SmsPreferencesState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="defaultSmsType")
-    private final @Nullable Input<String> defaultSmsType;
+      private final @Nullable Input<String> defaultSmsType;
 
     public Input<String> getDefaultSmsType() {
         return this.defaultSmsType == null ? Input.empty() : this.defaultSmsType;
@@ -42,7 +42,7 @@ public final class SmsPreferencesState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deliveryStatusIamRoleArn")
-    private final @Nullable Input<String> deliveryStatusIamRoleArn;
+      private final @Nullable Input<String> deliveryStatusIamRoleArn;
 
     public Input<String> getDeliveryStatusIamRoleArn() {
         return this.deliveryStatusIamRoleArn == null ? Input.empty() : this.deliveryStatusIamRoleArn;
@@ -53,7 +53,7 @@ public final class SmsPreferencesState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deliveryStatusSuccessSamplingRate")
-    private final @Nullable Input<String> deliveryStatusSuccessSamplingRate;
+      private final @Nullable Input<String> deliveryStatusSuccessSamplingRate;
 
     public Input<String> getDeliveryStatusSuccessSamplingRate() {
         return this.deliveryStatusSuccessSamplingRate == null ? Input.empty() : this.deliveryStatusSuccessSamplingRate;
@@ -64,7 +64,7 @@ public final class SmsPreferencesState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="monthlySpendLimit")
-    private final @Nullable Input<Integer> monthlySpendLimit;
+      private final @Nullable Input<Integer> monthlySpendLimit;
 
     public Input<Integer> getMonthlySpendLimit() {
         return this.monthlySpendLimit == null ? Input.empty() : this.monthlySpendLimit;
@@ -75,7 +75,7 @@ public final class SmsPreferencesState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="usageReportS3Bucket")
-    private final @Nullable Input<String> usageReportS3Bucket;
+      private final @Nullable Input<String> usageReportS3Bucket;
 
     public Input<String> getUsageReportS3Bucket() {
         return this.usageReportS3Bucket == null ? Input.empty() : this.usageReportS3Bucket;

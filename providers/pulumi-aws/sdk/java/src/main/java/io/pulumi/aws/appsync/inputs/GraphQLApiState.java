@@ -9,7 +9,7 @@ import io.pulumi.aws.appsync.inputs.GraphQLApiLogConfigGetArgs;
 import io.pulumi.aws.appsync.inputs.GraphQLApiOpenidConnectConfigGetArgs;
 import io.pulumi.aws.appsync.inputs.GraphQLApiUserPoolConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalAuthenticationProviders")
-    private final @Nullable Input<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> additionalAuthenticationProviders;
+      private final @Nullable Input<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> additionalAuthenticationProviders;
 
     public Input<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> getAdditionalAuthenticationProviders() {
         return this.additionalAuthenticationProviders == null ? Input.empty() : this.additionalAuthenticationProviders;
@@ -38,7 +38,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -49,7 +49,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable Input<String> authenticationType;
+      private final @Nullable Input<String> authenticationType;
 
     public Input<String> getAuthenticationType() {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
@@ -60,7 +60,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lambdaAuthorizerConfig")
-    private final @Nullable Input<GraphQLApiLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig;
+      private final @Nullable Input<GraphQLApiLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig;
 
     public Input<GraphQLApiLambdaAuthorizerConfigGetArgs> getLambdaAuthorizerConfig() {
         return this.lambdaAuthorizerConfig == null ? Input.empty() : this.lambdaAuthorizerConfig;
@@ -71,7 +71,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfig")
-    private final @Nullable Input<GraphQLApiLogConfigGetArgs> logConfig;
+      private final @Nullable Input<GraphQLApiLogConfigGetArgs> logConfig;
 
     public Input<GraphQLApiLogConfigGetArgs> getLogConfig() {
         return this.logConfig == null ? Input.empty() : this.logConfig;
@@ -82,7 +82,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -93,7 +93,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="openidConnectConfig")
-    private final @Nullable Input<GraphQLApiOpenidConnectConfigGetArgs> openidConnectConfig;
+      private final @Nullable Input<GraphQLApiOpenidConnectConfigGetArgs> openidConnectConfig;
 
     public Input<GraphQLApiOpenidConnectConfigGetArgs> getOpenidConnectConfig() {
         return this.openidConnectConfig == null ? Input.empty() : this.openidConnectConfig;
@@ -104,7 +104,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<String> schema;
+      private final @Nullable Input<String> schema;
 
     public Input<String> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -115,7 +115,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -126,7 +126,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -137,7 +137,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uris")
-    private final @Nullable Input<Map<String,String>> uris;
+      private final @Nullable Input<Map<String,String>> uris;
 
     public Input<Map<String,String>> getUris() {
         return this.uris == null ? Input.empty() : this.uris;
@@ -148,7 +148,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userPoolConfig")
-    private final @Nullable Input<GraphQLApiUserPoolConfigGetArgs> userPoolConfig;
+      private final @Nullable Input<GraphQLApiUserPoolConfigGetArgs> userPoolConfig;
 
     public Input<GraphQLApiUserPoolConfigGetArgs> getUserPoolConfig() {
         return this.userPoolConfig == null ? Input.empty() : this.userPoolConfig;
@@ -159,7 +159,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xrayEnabled")
-    private final @Nullable Input<Boolean> xrayEnabled;
+      private final @Nullable Input<Boolean> xrayEnabled;
 
     public Input<Boolean> getXrayEnabled() {
         return this.xrayEnabled == null ? Input.empty() : this.xrayEnabled;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class LambdaFunctionAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="functionArn")
-    private final @Nullable Input<String> functionArn;
+      private final @Nullable Input<String> functionArn;
 
     public Input<String> getFunctionArn() {
         return this.functionArn == null ? Input.empty() : this.functionArn;
@@ -30,7 +30,7 @@ public final class LambdaFunctionAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;

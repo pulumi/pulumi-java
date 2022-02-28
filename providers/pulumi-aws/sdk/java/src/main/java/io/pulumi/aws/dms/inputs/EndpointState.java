@@ -9,7 +9,7 @@ import io.pulumi.aws.dms.inputs.EndpointKinesisSettingsGetArgs;
 import io.pulumi.aws.dms.inputs.EndpointMongodbSettingsGetArgs;
 import io.pulumi.aws.dms.inputs.EndpointS3SettingsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateArn")
-    private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
@@ -37,7 +37,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+      private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -48,7 +48,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elasticsearchSettings")
-    private final @Nullable Input<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings;
+      private final @Nullable Input<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings;
 
     public Input<EndpointElasticsearchSettingsGetArgs> getElasticsearchSettings() {
         return this.elasticsearchSettings == null ? Input.empty() : this.elasticsearchSettings;
@@ -59,7 +59,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointArn")
-    private final @Nullable Input<String> endpointArn;
+      private final @Nullable Input<String> endpointArn;
 
     public Input<String> getEndpointArn() {
         return this.endpointArn == null ? Input.empty() : this.endpointArn;
@@ -70,7 +70,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointId")
-    private final @Nullable Input<String> endpointId;
+      private final @Nullable Input<String> endpointId;
 
     public Input<String> getEndpointId() {
         return this.endpointId == null ? Input.empty() : this.endpointId;
@@ -81,7 +81,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointType")
-    private final @Nullable Input<String> endpointType;
+      private final @Nullable Input<String> endpointType;
 
     public Input<String> getEndpointType() {
         return this.endpointType == null ? Input.empty() : this.endpointType;
@@ -92,7 +92,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineName")
-    private final @Nullable Input<String> engineName;
+      private final @Nullable Input<String> engineName;
 
     public Input<String> getEngineName() {
         return this.engineName == null ? Input.empty() : this.engineName;
@@ -103,7 +103,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extraConnectionAttributes")
-    private final @Nullable Input<String> extraConnectionAttributes;
+      private final @Nullable Input<String> extraConnectionAttributes;
 
     public Input<String> getExtraConnectionAttributes() {
         return this.extraConnectionAttributes == null ? Input.empty() : this.extraConnectionAttributes;
@@ -114,7 +114,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kafkaSettings")
-    private final @Nullable Input<EndpointKafkaSettingsGetArgs> kafkaSettings;
+      private final @Nullable Input<EndpointKafkaSettingsGetArgs> kafkaSettings;
 
     public Input<EndpointKafkaSettingsGetArgs> getKafkaSettings() {
         return this.kafkaSettings == null ? Input.empty() : this.kafkaSettings;
@@ -125,7 +125,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kinesisSettings")
-    private final @Nullable Input<EndpointKinesisSettingsGetArgs> kinesisSettings;
+      private final @Nullable Input<EndpointKinesisSettingsGetArgs> kinesisSettings;
 
     public Input<EndpointKinesisSettingsGetArgs> getKinesisSettings() {
         return this.kinesisSettings == null ? Input.empty() : this.kinesisSettings;
@@ -136,7 +136,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -147,7 +147,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mongodbSettings")
-    private final @Nullable Input<EndpointMongodbSettingsGetArgs> mongodbSettings;
+      private final @Nullable Input<EndpointMongodbSettingsGetArgs> mongodbSettings;
 
     public Input<EndpointMongodbSettingsGetArgs> getMongodbSettings() {
         return this.mongodbSettings == null ? Input.empty() : this.mongodbSettings;
@@ -158,7 +158,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -169,7 +169,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -180,7 +180,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Settings")
-    private final @Nullable Input<EndpointS3SettingsGetArgs> s3Settings;
+      private final @Nullable Input<EndpointS3SettingsGetArgs> s3Settings;
 
     public Input<EndpointS3SettingsGetArgs> getS3Settings() {
         return this.s3Settings == null ? Input.empty() : this.s3Settings;
@@ -191,7 +191,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretsManagerAccessRoleArn")
-    private final @Nullable Input<String> secretsManagerAccessRoleArn;
+      private final @Nullable Input<String> secretsManagerAccessRoleArn;
 
     public Input<String> getSecretsManagerAccessRoleArn() {
         return this.secretsManagerAccessRoleArn == null ? Input.empty() : this.secretsManagerAccessRoleArn;
@@ -202,7 +202,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretsManagerArn")
-    private final @Nullable Input<String> secretsManagerArn;
+      private final @Nullable Input<String> secretsManagerArn;
 
     public Input<String> getSecretsManagerArn() {
         return this.secretsManagerArn == null ? Input.empty() : this.secretsManagerArn;
@@ -213,7 +213,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName")
-    private final @Nullable Input<String> serverName;
+      private final @Nullable Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName == null ? Input.empty() : this.serverName;
@@ -224,7 +224,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccessRole")
-    private final @Nullable Input<String> serviceAccessRole;
+      private final @Nullable Input<String> serviceAccessRole;
 
     public Input<String> getServiceAccessRole() {
         return this.serviceAccessRole == null ? Input.empty() : this.serviceAccessRole;
@@ -235,7 +235,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslMode")
-    private final @Nullable Input<String> sslMode;
+      private final @Nullable Input<String> sslMode;
 
     public Input<String> getSslMode() {
         return this.sslMode == null ? Input.empty() : this.sslMode;
@@ -246,7 +246,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -257,7 +257,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -268,7 +268,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;

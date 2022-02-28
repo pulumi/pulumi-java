@@ -4,7 +4,7 @@
 package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AliasRoutingStrategyGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="fleetId")
-    private final @Nullable Input<String> fleetId;
+      private final @Nullable Input<String> fleetId;
 
     public Input<String> getFleetId() {
         return this.fleetId == null ? Input.empty() : this.fleetId;
@@ -30,7 +30,7 @@ public final class AliasRoutingStrategyGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -41,7 +41,7 @@ public final class AliasRoutingStrategyGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

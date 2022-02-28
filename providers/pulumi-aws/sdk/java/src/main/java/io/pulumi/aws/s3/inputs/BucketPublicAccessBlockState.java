@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BucketPublicAccessBlockState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="blockPublicAcls")
-    private final @Nullable Input<Boolean> blockPublicAcls;
+      private final @Nullable Input<Boolean> blockPublicAcls;
 
     public Input<Boolean> getBlockPublicAcls() {
         return this.blockPublicAcls == null ? Input.empty() : this.blockPublicAcls;
@@ -34,7 +34,7 @@ public final class BucketPublicAccessBlockState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="blockPublicPolicy")
-    private final @Nullable Input<Boolean> blockPublicPolicy;
+      private final @Nullable Input<Boolean> blockPublicPolicy;
 
     public Input<Boolean> getBlockPublicPolicy() {
         return this.blockPublicPolicy == null ? Input.empty() : this.blockPublicPolicy;
@@ -45,7 +45,7 @@ public final class BucketPublicAccessBlockState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -57,7 +57,7 @@ public final class BucketPublicAccessBlockState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ignorePublicAcls")
-    private final @Nullable Input<Boolean> ignorePublicAcls;
+      private final @Nullable Input<Boolean> ignorePublicAcls;
 
     public Input<Boolean> getIgnorePublicAcls() {
         return this.ignorePublicAcls == null ? Input.empty() : this.ignorePublicAcls;
@@ -69,7 +69,7 @@ public final class BucketPublicAccessBlockState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="restrictPublicBuckets")
-    private final @Nullable Input<Boolean> restrictPublicBuckets;
+      private final @Nullable Input<Boolean> restrictPublicBuckets;
 
     public Input<Boolean> getRestrictPublicBuckets() {
         return this.restrictPublicBuckets == null ? Input.empty() : this.restrictPublicBuckets;

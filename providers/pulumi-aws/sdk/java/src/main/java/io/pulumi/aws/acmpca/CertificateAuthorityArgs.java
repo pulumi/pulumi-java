@@ -6,7 +6,7 @@ package io.pulumi.aws.acmpca;
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateAuthorityConfigurationArgs;
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityRevocationConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="certificateAuthorityConfiguration", required=true)
-    private final Input<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration;
+      private final Input<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration;
 
     public Input<CertificateAuthorityCertificateAuthorityConfigurationArgs> getCertificateAuthorityConfiguration() {
         return this.certificateAuthorityConfiguration;
@@ -35,7 +35,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -46,7 +46,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="permanentDeletionTimeInDays")
-    private final @Nullable Input<Integer> permanentDeletionTimeInDays;
+      private final @Nullable Input<Integer> permanentDeletionTimeInDays;
 
     public Input<Integer> getPermanentDeletionTimeInDays() {
         return this.permanentDeletionTimeInDays == null ? Input.empty() : this.permanentDeletionTimeInDays;
@@ -57,7 +57,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="revocationConfiguration")
-    private final @Nullable Input<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
+      private final @Nullable Input<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
 
     public Input<CertificateAuthorityRevocationConfigurationArgs> getRevocationConfiguration() {
         return this.revocationConfiguration == null ? Input.empty() : this.revocationConfiguration;
@@ -68,7 +68,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -79,7 +79,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

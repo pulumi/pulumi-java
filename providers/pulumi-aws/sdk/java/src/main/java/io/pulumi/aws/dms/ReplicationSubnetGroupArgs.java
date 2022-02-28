@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="replicationSubnetGroupDescription", required=true)
-    private final Input<String> replicationSubnetGroupDescription;
+      private final Input<String> replicationSubnetGroupDescription;
 
     public Input<String> getReplicationSubnetGroupDescription() {
         return this.replicationSubnetGroupDescription;
@@ -32,7 +32,7 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="replicationSubnetGroupId", required=true)
-    private final Input<String> replicationSubnetGroupId;
+      private final Input<String> replicationSubnetGroupId;
 
     public Input<String> getReplicationSubnetGroupId() {
         return this.replicationSubnetGroupId;
@@ -43,7 +43,7 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final Input<List<String>> subnetIds;
+      private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
@@ -54,7 +54,7 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

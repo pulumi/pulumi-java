@@ -10,8 +10,8 @@ import io.pulumi.aws.acm.outputs.CertificateDomainValidationOption;
 import io.pulumi.aws.acm.outputs.CertificateOptions;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -247,6 +247,21 @@ public class Certificate extends io.pulumi.resources.CustomResource {
         return this.validationMethod;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Certificate(String name) {
+        this(name, CertificateArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Certificate(String name, @Nullable CertificateArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

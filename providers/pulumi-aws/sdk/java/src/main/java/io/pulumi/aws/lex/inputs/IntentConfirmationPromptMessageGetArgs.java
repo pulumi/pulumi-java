@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class IntentConfirmationPromptMessageGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="content", required=true)
-    private final Input<String> content;
+      private final Input<String> content;
 
     public Input<String> getContent() {
         return this.content;
@@ -31,7 +31,7 @@ public final class IntentConfirmationPromptMessageGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="contentType", required=true)
-    private final Input<String> contentType;
+      private final Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType;
@@ -43,7 +43,7 @@ public final class IntentConfirmationPromptMessageGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="groupNumber")
-    private final @Nullable Input<Integer> groupNumber;
+      private final @Nullable Input<Integer> groupNumber;
 
     public Input<Integer> getGroupNumber() {
         return this.groupNumber == null ? Input.empty() : this.groupNumber;

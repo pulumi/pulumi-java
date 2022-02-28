@@ -5,7 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.aws.autoscaling.inputs.GroupInstanceRefreshPreferencesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GroupInstanceRefreshArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="preferences")
-    private final @Nullable Input<GroupInstanceRefreshPreferencesArgs> preferences;
+      private final @Nullable Input<GroupInstanceRefreshPreferencesArgs> preferences;
 
     public Input<GroupInstanceRefreshPreferencesArgs> getPreferences() {
         return this.preferences == null ? Input.empty() : this.preferences;
@@ -32,7 +32,7 @@ public final class GroupInstanceRefreshArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="strategy", required=true)
-    private final Input<String> strategy;
+      private final Input<String> strategy;
 
     public Input<String> getStrategy() {
         return this.strategy;
@@ -43,7 +43,7 @@ public final class GroupInstanceRefreshArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="triggers")
-    private final @Nullable Input<List<String>> triggers;
+      private final @Nullable Input<List<String>> triggers;
 
     public Input<List<String>> getTriggers() {
         return this.triggers == null ? Input.empty() : this.triggers;

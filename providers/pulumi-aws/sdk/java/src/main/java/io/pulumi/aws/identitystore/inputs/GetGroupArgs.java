@@ -4,7 +4,7 @@
 package io.pulumi.aws.identitystore.inputs;
 
 import io.pulumi.aws.identitystore.inputs.GetGroupFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters", required=true)
-    private final List<GetGroupFilter> filters;
+      private final List<GetGroupFilter> filters;
 
     public List<GetGroupFilter> getFilters() {
         return this.filters;
@@ -32,7 +32,7 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="groupId")
-    private final @Nullable String groupId;
+      private final @Nullable String groupId;
 
     public Optional<String> getGroupId() {
         return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
@@ -43,7 +43,7 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="identityStoreId", required=true)
-    private final String identityStoreId;
+      private final String identityStoreId;
 
     public String getIdentityStoreId() {
         return this.identityStoreId;

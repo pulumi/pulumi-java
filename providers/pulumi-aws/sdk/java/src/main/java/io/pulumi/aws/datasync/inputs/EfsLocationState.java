@@ -5,7 +5,7 @@ package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.aws.datasync.inputs.EfsLocationEc2ConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ec2Config")
-    private final @Nullable Input<EfsLocationEc2ConfigGetArgs> ec2Config;
+      private final @Nullable Input<EfsLocationEc2ConfigGetArgs> ec2Config;
 
     public Input<EfsLocationEc2ConfigGetArgs> getEc2Config() {
         return this.ec2Config == null ? Input.empty() : this.ec2Config;
@@ -43,7 +43,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="efsFileSystemArn")
-    private final @Nullable Input<String> efsFileSystemArn;
+      private final @Nullable Input<String> efsFileSystemArn;
 
     public Input<String> getEfsFileSystemArn() {
         return this.efsFileSystemArn == null ? Input.empty() : this.efsFileSystemArn;
@@ -54,7 +54,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdirectory")
-    private final @Nullable Input<String> subdirectory;
+      private final @Nullable Input<String> subdirectory;
 
     public Input<String> getSubdirectory() {
         return this.subdirectory == null ? Input.empty() : this.subdirectory;
@@ -65,7 +65,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -76,14 +76,14 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
     }
 
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;

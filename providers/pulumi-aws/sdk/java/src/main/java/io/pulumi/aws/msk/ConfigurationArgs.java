@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kafkaVersions")
-    private final @Nullable Input<List<String>> kafkaVersions;
+      private final @Nullable Input<List<String>> kafkaVersions;
 
     public Input<List<String>> getKafkaVersions() {
         return this.kafkaVersions == null ? Input.empty() : this.kafkaVersions;
@@ -42,7 +42,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverProperties", required=true)
-    private final Input<String> serverProperties;
+      private final Input<String> serverProperties;
 
     public Input<String> getServerProperties() {
         return this.serverProperties;

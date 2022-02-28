@@ -8,8 +8,8 @@ import io.pulumi.aws.amp.RuleGroupNamespaceArgs;
 import io.pulumi.aws.amp.inputs.RuleGroupNamespaceState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -72,6 +72,21 @@ public class RuleGroupNamespace extends io.pulumi.resources.CustomResource {
         return this.workspaceId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RuleGroupNamespace(String name) {
+        this(name, RuleGroupNamespaceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RuleGroupNamespace(String name, RuleGroupNamespaceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

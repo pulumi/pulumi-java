@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional.outputs;
 
 import io.pulumi.aws.wafregional.outputs.WebAclRuleAction;
 import io.pulumi.aws.wafregional.outputs.WebAclRuleOverrideAction;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

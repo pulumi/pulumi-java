@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetResponseHeadersPolicyCustomHeadersConfigItem extends io.pu
      * 
      */
     @InputImport(name="header", required=true)
-    private final String header;
+      private final String header;
 
     public String getHeader() {
         return this.header;
@@ -29,7 +29,7 @@ public final class GetResponseHeadersPolicyCustomHeadersConfigItem extends io.pu
      * 
      */
     @InputImport(name="override", required=true)
-    private final Boolean override;
+      private final Boolean override;
 
     public Boolean getOverride() {
         return this.override;
@@ -40,7 +40,7 @@ public final class GetResponseHeadersPolicyCustomHeadersConfigItem extends io.pu
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;

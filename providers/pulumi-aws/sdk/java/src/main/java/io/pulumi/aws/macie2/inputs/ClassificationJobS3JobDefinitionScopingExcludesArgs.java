@@ -5,7 +5,7 @@ package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingExcludesAndArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesArgs extends i
      * 
      */
     @InputImport(name="ands")
-    private final @Nullable Input<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> ands;
+      private final @Nullable Input<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> ands;
 
     public Input<List<ClassificationJobS3JobDefinitionScopingExcludesAndArgs>> getAnds() {
         return this.ands == null ? Input.empty() : this.ands;

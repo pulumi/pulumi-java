@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="acceptanceRequired", required=true)
-    private final Input<Boolean> acceptanceRequired;
+      private final Input<Boolean> acceptanceRequired;
 
     public Input<Boolean> getAcceptanceRequired() {
         return this.acceptanceRequired;
@@ -33,7 +33,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="allowedPrincipals")
-    private final @Nullable Input<List<String>> allowedPrincipals;
+      private final @Nullable Input<List<String>> allowedPrincipals;
 
     public Input<List<String>> getAllowedPrincipals() {
         return this.allowedPrincipals == null ? Input.empty() : this.allowedPrincipals;
@@ -44,7 +44,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gatewayLoadBalancerArns")
-    private final @Nullable Input<List<String>> gatewayLoadBalancerArns;
+      private final @Nullable Input<List<String>> gatewayLoadBalancerArns;
 
     public Input<List<String>> getGatewayLoadBalancerArns() {
         return this.gatewayLoadBalancerArns == null ? Input.empty() : this.gatewayLoadBalancerArns;
@@ -55,7 +55,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="networkLoadBalancerArns")
-    private final @Nullable Input<List<String>> networkLoadBalancerArns;
+      private final @Nullable Input<List<String>> networkLoadBalancerArns;
 
     public Input<List<String>> getNetworkLoadBalancerArns() {
         return this.networkLoadBalancerArns == null ? Input.empty() : this.networkLoadBalancerArns;
@@ -66,7 +66,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privateDnsName")
-    private final @Nullable Input<String> privateDnsName;
+      private final @Nullable Input<String> privateDnsName;
 
     public Input<String> getPrivateDnsName() {
         return this.privateDnsName == null ? Input.empty() : this.privateDnsName;
@@ -77,7 +77,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

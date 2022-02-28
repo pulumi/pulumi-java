@@ -5,7 +5,7 @@ package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.aws.kms.inputs.GetKeyMultiRegionConfigurationPrimaryKey;
 import io.pulumi.aws.kms.inputs.GetKeyMultiRegionConfigurationReplicaKey;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class GetKeyMultiRegionConfiguration extends io.pulumi.resources.In
     public static final GetKeyMultiRegionConfiguration Empty = new GetKeyMultiRegionConfiguration();
 
     @InputImport(name="multiRegionKeyType", required=true)
-    private final String multiRegionKeyType;
+      private final String multiRegionKeyType;
 
     public String getMultiRegionKeyType() {
         return this.multiRegionKeyType;
     }
 
     @InputImport(name="primaryKeys", required=true)
-    private final List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys;
+      private final List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys;
 
     public List<GetKeyMultiRegionConfigurationPrimaryKey> getPrimaryKeys() {
         return this.primaryKeys;
     }
 
     @InputImport(name="replicaKeys", required=true)
-    private final List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys;
+      private final List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys;
 
     public List<GetKeyMultiRegionConfigurationReplicaKey> getReplicaKeys() {
         return this.replicaKeys;

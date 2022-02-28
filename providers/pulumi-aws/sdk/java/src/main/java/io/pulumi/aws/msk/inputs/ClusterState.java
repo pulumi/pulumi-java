@@ -10,7 +10,7 @@ import io.pulumi.aws.msk.inputs.ClusterEncryptionInfoGetArgs;
 import io.pulumi.aws.msk.inputs.ClusterLoggingInfoGetArgs;
 import io.pulumi.aws.msk.inputs.ClusterOpenMonitoringGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -38,7 +38,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootstrapBrokers")
-    private final @Nullable Input<String> bootstrapBrokers;
+      private final @Nullable Input<String> bootstrapBrokers;
 
     public Input<String> getBootstrapBrokers() {
         return this.bootstrapBrokers == null ? Input.empty() : this.bootstrapBrokers;
@@ -49,7 +49,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootstrapBrokersSaslIam")
-    private final @Nullable Input<String> bootstrapBrokersSaslIam;
+      private final @Nullable Input<String> bootstrapBrokersSaslIam;
 
     public Input<String> getBootstrapBrokersSaslIam() {
         return this.bootstrapBrokersSaslIam == null ? Input.empty() : this.bootstrapBrokersSaslIam;
@@ -60,7 +60,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootstrapBrokersSaslScram")
-    private final @Nullable Input<String> bootstrapBrokersSaslScram;
+      private final @Nullable Input<String> bootstrapBrokersSaslScram;
 
     public Input<String> getBootstrapBrokersSaslScram() {
         return this.bootstrapBrokersSaslScram == null ? Input.empty() : this.bootstrapBrokersSaslScram;
@@ -71,7 +71,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootstrapBrokersTls")
-    private final @Nullable Input<String> bootstrapBrokersTls;
+      private final @Nullable Input<String> bootstrapBrokersTls;
 
     public Input<String> getBootstrapBrokersTls() {
         return this.bootstrapBrokersTls == null ? Input.empty() : this.bootstrapBrokersTls;
@@ -82,7 +82,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brokerNodeGroupInfo")
-    private final @Nullable Input<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo;
+      private final @Nullable Input<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo;
 
     public Input<ClusterBrokerNodeGroupInfoGetArgs> getBrokerNodeGroupInfo() {
         return this.brokerNodeGroupInfo == null ? Input.empty() : this.brokerNodeGroupInfo;
@@ -93,7 +93,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientAuthentication")
-    private final @Nullable Input<ClusterClientAuthenticationGetArgs> clientAuthentication;
+      private final @Nullable Input<ClusterClientAuthenticationGetArgs> clientAuthentication;
 
     public Input<ClusterClientAuthenticationGetArgs> getClientAuthentication() {
         return this.clientAuthentication == null ? Input.empty() : this.clientAuthentication;
@@ -104,7 +104,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-    private final @Nullable Input<String> clusterName;
+      private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -115,7 +115,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationInfo")
-    private final @Nullable Input<ClusterConfigurationInfoGetArgs> configurationInfo;
+      private final @Nullable Input<ClusterConfigurationInfoGetArgs> configurationInfo;
 
     public Input<ClusterConfigurationInfoGetArgs> getConfigurationInfo() {
         return this.configurationInfo == null ? Input.empty() : this.configurationInfo;
@@ -127,7 +127,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="currentVersion")
-    private final @Nullable Input<String> currentVersion;
+      private final @Nullable Input<String> currentVersion;
 
     public Input<String> getCurrentVersion() {
         return this.currentVersion == null ? Input.empty() : this.currentVersion;
@@ -138,7 +138,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionInfo")
-    private final @Nullable Input<ClusterEncryptionInfoGetArgs> encryptionInfo;
+      private final @Nullable Input<ClusterEncryptionInfoGetArgs> encryptionInfo;
 
     public Input<ClusterEncryptionInfoGetArgs> getEncryptionInfo() {
         return this.encryptionInfo == null ? Input.empty() : this.encryptionInfo;
@@ -149,7 +149,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enhancedMonitoring")
-    private final @Nullable Input<String> enhancedMonitoring;
+      private final @Nullable Input<String> enhancedMonitoring;
 
     public Input<String> getEnhancedMonitoring() {
         return this.enhancedMonitoring == null ? Input.empty() : this.enhancedMonitoring;
@@ -160,7 +160,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kafkaVersion")
-    private final @Nullable Input<String> kafkaVersion;
+      private final @Nullable Input<String> kafkaVersion;
 
     public Input<String> getKafkaVersion() {
         return this.kafkaVersion == null ? Input.empty() : this.kafkaVersion;
@@ -171,7 +171,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingInfo")
-    private final @Nullable Input<ClusterLoggingInfoGetArgs> loggingInfo;
+      private final @Nullable Input<ClusterLoggingInfoGetArgs> loggingInfo;
 
     public Input<ClusterLoggingInfoGetArgs> getLoggingInfo() {
         return this.loggingInfo == null ? Input.empty() : this.loggingInfo;
@@ -182,7 +182,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfBrokerNodes")
-    private final @Nullable Input<Integer> numberOfBrokerNodes;
+      private final @Nullable Input<Integer> numberOfBrokerNodes;
 
     public Input<Integer> getNumberOfBrokerNodes() {
         return this.numberOfBrokerNodes == null ? Input.empty() : this.numberOfBrokerNodes;
@@ -193,7 +193,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="openMonitoring")
-    private final @Nullable Input<ClusterOpenMonitoringGetArgs> openMonitoring;
+      private final @Nullable Input<ClusterOpenMonitoringGetArgs> openMonitoring;
 
     public Input<ClusterOpenMonitoringGetArgs> getOpenMonitoring() {
         return this.openMonitoring == null ? Input.empty() : this.openMonitoring;
@@ -204,7 +204,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -215,7 +215,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -226,7 +226,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zookeeperConnectString")
-    private final @Nullable Input<String> zookeeperConnectString;
+      private final @Nullable Input<String> zookeeperConnectString;
 
     public Input<String> getZookeeperConnectString() {
         return this.zookeeperConnectString == null ? Input.empty() : this.zookeeperConnectString;
@@ -237,7 +237,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zookeeperConnectStringTls")
-    private final @Nullable Input<String> zookeeperConnectStringTls;
+      private final @Nullable Input<String> zookeeperConnectStringTls;
 
     public Input<String> getZookeeperConnectStringTls() {
         return this.zookeeperConnectStringTls == null ? Input.empty() : this.zookeeperConnectStringTls;

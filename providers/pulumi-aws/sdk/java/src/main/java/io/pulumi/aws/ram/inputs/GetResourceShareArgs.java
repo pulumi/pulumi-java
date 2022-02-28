@@ -4,7 +4,7 @@
 package io.pulumi.aws.ram.inputs;
 
 import io.pulumi.aws.ram.inputs.GetResourceShareFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GetResourceShareArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetResourceShareFilter> filters;
+      private final @Nullable List<GetResourceShareFilter> filters;
 
     public List<GetResourceShareFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -33,7 +33,7 @@ public final class GetResourceShareArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class GetResourceShareArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceOwner", required=true)
-    private final String resourceOwner;
+      private final String resourceOwner;
 
     public String getResourceOwner() {
         return this.resourceOwner;
@@ -55,7 +55,7 @@ public final class GetResourceShareArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

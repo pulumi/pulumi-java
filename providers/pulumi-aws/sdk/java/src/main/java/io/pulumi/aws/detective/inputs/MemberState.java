@@ -4,7 +4,7 @@
 package io.pulumi.aws.detective.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -31,7 +31,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="administratorId")
-    private final @Nullable Input<String> administratorId;
+      private final @Nullable Input<String> administratorId;
 
     public Input<String> getAdministratorId() {
         return this.administratorId == null ? Input.empty() : this.administratorId;
@@ -42,14 +42,14 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableEmailNotification")
-    private final @Nullable Input<Boolean> disableEmailNotification;
+      private final @Nullable Input<Boolean> disableEmailNotification;
 
     public Input<Boolean> getDisableEmailNotification() {
         return this.disableEmailNotification == null ? Input.empty() : this.disableEmailNotification;
     }
 
     @InputImport(name="disabledReason")
-    private final @Nullable Input<String> disabledReason;
+      private final @Nullable Input<String> disabledReason;
 
     public Input<String> getDisabledReason() {
         return this.disabledReason == null ? Input.empty() : this.disabledReason;
@@ -60,7 +60,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailAddress")
-    private final @Nullable Input<String> emailAddress;
+      private final @Nullable Input<String> emailAddress;
 
     public Input<String> getEmailAddress() {
         return this.emailAddress == null ? Input.empty() : this.emailAddress;
@@ -71,7 +71,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="graphArn")
-    private final @Nullable Input<String> graphArn;
+      private final @Nullable Input<String> graphArn;
 
     public Input<String> getGraphArn() {
         return this.graphArn == null ? Input.empty() : this.graphArn;
@@ -82,7 +82,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invitedTime")
-    private final @Nullable Input<String> invitedTime;
+      private final @Nullable Input<String> invitedTime;
 
     public Input<String> getInvitedTime() {
         return this.invitedTime == null ? Input.empty() : this.invitedTime;
@@ -93,7 +93,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -104,7 +104,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -115,7 +115,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updatedTime")
-    private final @Nullable Input<String> updatedTime;
+      private final @Nullable Input<String> updatedTime;
 
     public Input<String> getUpdatedTime() {
         return this.updatedTime == null ? Input.empty() : this.updatedTime;
@@ -126,7 +126,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeUsageInBytes")
-    private final @Nullable Input<String> volumeUsageInBytes;
+      private final @Nullable Input<String> volumeUsageInBytes;
 
     public Input<String> getVolumeUsageInBytes() {
         return this.volumeUsageInBytes == null ? Input.empty() : this.volumeUsageInBytes;

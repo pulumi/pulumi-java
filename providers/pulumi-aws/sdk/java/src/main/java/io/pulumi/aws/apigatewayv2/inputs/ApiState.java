@@ -5,7 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.aws.apigatewayv2.inputs.ApiCorsConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiEndpoint")
-    private final @Nullable Input<String> apiEndpoint;
+      private final @Nullable Input<String> apiEndpoint;
 
     public Input<String> getApiEndpoint() {
         return this.apiEndpoint == null ? Input.empty() : this.apiEndpoint;
@@ -35,7 +35,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiKeySelectionExpression")
-    private final @Nullable Input<String> apiKeySelectionExpression;
+      private final @Nullable Input<String> apiKeySelectionExpression;
 
     public Input<String> getApiKeySelectionExpression() {
         return this.apiKeySelectionExpression == null ? Input.empty() : this.apiKeySelectionExpression;
@@ -46,7 +46,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -57,7 +57,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+      private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -68,7 +68,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="corsConfiguration")
-    private final @Nullable Input<ApiCorsConfigurationGetArgs> corsConfiguration;
+      private final @Nullable Input<ApiCorsConfigurationGetArgs> corsConfiguration;
 
     public Input<ApiCorsConfigurationGetArgs> getCorsConfiguration() {
         return this.corsConfiguration == null ? Input.empty() : this.corsConfiguration;
@@ -79,7 +79,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentialsArn")
-    private final @Nullable Input<String> credentialsArn;
+      private final @Nullable Input<String> credentialsArn;
 
     public Input<String> getCredentialsArn() {
         return this.credentialsArn == null ? Input.empty() : this.credentialsArn;
@@ -90,7 +90,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -103,7 +103,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableExecuteApiEndpoint")
-    private final @Nullable Input<Boolean> disableExecuteApiEndpoint;
+      private final @Nullable Input<Boolean> disableExecuteApiEndpoint;
 
     public Input<Boolean> getDisableExecuteApiEndpoint() {
         return this.disableExecuteApiEndpoint == null ? Input.empty() : this.disableExecuteApiEndpoint;
@@ -116,7 +116,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionArn")
-    private final @Nullable Input<String> executionArn;
+      private final @Nullable Input<String> executionArn;
 
     public Input<String> getExecutionArn() {
         return this.executionArn == null ? Input.empty() : this.executionArn;
@@ -127,7 +127,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failOnWarnings")
-    private final @Nullable Input<Boolean> failOnWarnings;
+      private final @Nullable Input<Boolean> failOnWarnings;
 
     public Input<Boolean> getFailOnWarnings() {
         return this.failOnWarnings == null ? Input.empty() : this.failOnWarnings;
@@ -138,7 +138,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -149,7 +149,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocolType")
-    private final @Nullable Input<String> protocolType;
+      private final @Nullable Input<String> protocolType;
 
     public Input<String> getProtocolType() {
         return this.protocolType == null ? Input.empty() : this.protocolType;
@@ -160,7 +160,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeKey")
-    private final @Nullable Input<String> routeKey;
+      private final @Nullable Input<String> routeKey;
 
     public Input<String> getRouteKey() {
         return this.routeKey == null ? Input.empty() : this.routeKey;
@@ -172,7 +172,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeSelectionExpression")
-    private final @Nullable Input<String> routeSelectionExpression;
+      private final @Nullable Input<String> routeSelectionExpression;
 
     public Input<String> getRouteSelectionExpression() {
         return this.routeSelectionExpression == null ? Input.empty() : this.routeSelectionExpression;
@@ -183,7 +183,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -194,7 +194,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -207,7 +207,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -218,7 +218,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

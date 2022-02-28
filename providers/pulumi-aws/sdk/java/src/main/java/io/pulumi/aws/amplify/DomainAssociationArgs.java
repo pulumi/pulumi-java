@@ -5,7 +5,7 @@ package io.pulumi.aws.amplify;
 
 import io.pulumi.aws.amplify.inputs.DomainAssociationSubDomainArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="appId", required=true)
-    private final Input<String> appId;
+      private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
@@ -33,7 +33,7 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -44,7 +44,7 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subDomains", required=true)
-    private final Input<List<DomainAssociationSubDomainArgs>> subDomains;
+      private final Input<List<DomainAssociationSubDomainArgs>> subDomains;
 
     public Input<List<DomainAssociationSubDomainArgs>> getSubDomains() {
         return this.subDomains;
@@ -55,7 +55,7 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="waitForVerification")
-    private final @Nullable Input<Boolean> waitForVerification;
+      private final @Nullable Input<Boolean> waitForVerification;
 
     public Input<Boolean> getWaitForVerification() {
         return this.waitForVerification == null ? Input.empty() : this.waitForVerification;

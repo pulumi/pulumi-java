@@ -9,8 +9,8 @@ import io.pulumi.aws.cfg.inputs.OrganizationConformancePackState;
 import io.pulumi.aws.cfg.outputs.OrganizationConformancePackInputParameter;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -146,6 +146,21 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
         return this.templateS3Uri;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public OrganizationConformancePack(String name) {
+        this(name, OrganizationConformancePackArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public OrganizationConformancePack(String name, @Nullable OrganizationConformancePackArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

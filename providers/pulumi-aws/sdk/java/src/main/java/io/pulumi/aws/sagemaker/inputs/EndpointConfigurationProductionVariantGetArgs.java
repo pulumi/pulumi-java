@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
      * 
      */
     @InputImport(name="acceleratorType")
-    private final @Nullable Input<String> acceleratorType;
+      private final @Nullable Input<String> acceleratorType;
 
     public Input<String> getAcceleratorType() {
         return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
@@ -32,7 +32,7 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
      * 
      */
     @InputImport(name="initialInstanceCount", required=true)
-    private final Input<Integer> initialInstanceCount;
+      private final Input<Integer> initialInstanceCount;
 
     public Input<Integer> getInitialInstanceCount() {
         return this.initialInstanceCount;
@@ -43,7 +43,7 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
      * 
      */
     @InputImport(name="initialVariantWeight")
-    private final @Nullable Input<Double> initialVariantWeight;
+      private final @Nullable Input<Double> initialVariantWeight;
 
     public Input<Double> getInitialVariantWeight() {
         return this.initialVariantWeight == null ? Input.empty() : this.initialVariantWeight;
@@ -54,7 +54,7 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final Input<String> instanceType;
+      private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
@@ -65,7 +65,7 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
      * 
      */
     @InputImport(name="modelName", required=true)
-    private final Input<String> modelName;
+      private final Input<String> modelName;
 
     public Input<String> getModelName() {
         return this.modelName;
@@ -76,7 +76,7 @@ public final class EndpointConfigurationProductionVariantGetArgs extends io.pulu
      * 
      */
     @InputImport(name="variantName")
-    private final @Nullable Input<String> variantName;
+      private final @Nullable Input<String> variantName;
 
     public Input<String> getVariantName() {
         return this.variantName == null ? Input.empty() : this.variantName;

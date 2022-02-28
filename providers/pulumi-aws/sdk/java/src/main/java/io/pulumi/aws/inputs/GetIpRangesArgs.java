@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GetIpRangesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="regions")
-    private final @Nullable List<String> regions;
+      private final @Nullable List<String> regions;
 
     public List<String> getRegions() {
         return this.regions == null ? List.of() : this.regions;
@@ -37,7 +37,7 @@ public final class GetIpRangesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="services", required=true)
-    private final List<String> services;
+      private final List<String> services;
 
     public List<String> getServices() {
         return this.services;
@@ -48,7 +48,7 @@ public final class GetIpRangesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable String url;
+      private final @Nullable String url;
 
     public Optional<String> getUrl() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);

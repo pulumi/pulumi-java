@@ -4,7 +4,7 @@
 package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.aws.signer.inputs.GetSigningJobSignedObjectS3;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class GetSigningJobSignedObject extends io.pulumi.resources.InvokeA
     public static final GetSigningJobSignedObject Empty = new GetSigningJobSignedObject();
 
     @InputImport(name="s3s", required=true)
-    private final List<GetSigningJobSignedObjectS3> s3s;
+      private final List<GetSigningJobSignedObjectS3> s3s;
 
     public List<GetSigningJobSignedObjectS3> getS3s() {
         return this.s3s;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DocumentationPartLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<String> method;
+      private final @Nullable Input<String> method;
 
     public Input<String> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -30,7 +30,7 @@ public final class DocumentationPartLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -41,7 +41,7 @@ public final class DocumentationPartLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -52,7 +52,7 @@ public final class DocumentationPartLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="statusCode")
-    private final @Nullable Input<String> statusCode;
+      private final @Nullable Input<String> statusCode;
 
     public Input<String> getStatusCode() {
         return this.statusCode == null ? Input.empty() : this.statusCode;
@@ -63,7 +63,7 @@ public final class DocumentationPartLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

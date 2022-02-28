@@ -5,7 +5,7 @@ package io.pulumi.aws.chime;
 
 import io.pulumi.aws.chime.inputs.VoiceConnectorTerminationCredentialsCredentialArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VoiceConnectorTerminationCredentialsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="credentials", required=true)
-    private final Input<List<VoiceConnectorTerminationCredentialsCredentialArgs>> credentials;
+      private final Input<List<VoiceConnectorTerminationCredentialsCredentialArgs>> credentials;
 
     public Input<List<VoiceConnectorTerminationCredentialsCredentialArgs>> getCredentials() {
         return this.credentials;
@@ -31,7 +31,7 @@ public final class VoiceConnectorTerminationCredentialsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="voiceConnectorId", required=true)
-    private final Input<String> voiceConnectorId;
+      private final Input<String> voiceConnectorId;
 
     public Input<String> getVoiceConnectorId() {
         return this.voiceConnectorId;

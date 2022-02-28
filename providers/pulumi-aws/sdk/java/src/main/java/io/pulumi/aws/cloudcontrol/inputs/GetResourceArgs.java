@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudcontrol.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="identifier", required=true)
-    private final String identifier;
+      private final String identifier;
 
     public String getIdentifier() {
         return this.identifier;
@@ -30,7 +30,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable String roleArn;
+      private final @Nullable String roleArn;
 
     public Optional<String> getRoleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
@@ -41,7 +41,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="typeName", required=true)
-    private final String typeName;
+      private final String typeName;
 
     public String getTypeName() {
         return this.typeName;
@@ -52,7 +52,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="typeVersionId")
-    private final @Nullable String typeVersionId;
+      private final @Nullable String typeVersionId;
 
     public Optional<String> getTypeVersionId() {
         return this.typeVersionId == null ? Optional.empty() : Optional.ofNullable(this.typeVersionId);

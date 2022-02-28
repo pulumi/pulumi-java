@@ -7,7 +7,7 @@ import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersRun
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="cloudwatchConfig")
-    private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs> cloudwatchConfig;
+      private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs> cloudwatchConfig;
 
     public Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigArgs> getCloudwatchConfig() {
         return this.cloudwatchConfig == null ? Input.empty() : this.cloudwatchConfig;
@@ -35,7 +35,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -46,7 +46,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="documentHash")
-    private final @Nullable Input<String> documentHash;
+      private final @Nullable Input<String> documentHash;
 
     public Input<String> getDocumentHash() {
         return this.documentHash == null ? Input.empty() : this.documentHash;
@@ -57,7 +57,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="documentHashType")
-    private final @Nullable Input<String> documentHashType;
+      private final @Nullable Input<String> documentHashType;
 
     public Input<String> getDocumentHashType() {
         return this.documentHashType == null ? Input.empty() : this.documentHashType;
@@ -68,7 +68,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="documentVersion")
-    private final @Nullable Input<String> documentVersion;
+      private final @Nullable Input<String> documentVersion;
 
     public Input<String> getDocumentVersion() {
         return this.documentVersion == null ? Input.empty() : this.documentVersion;
@@ -79,7 +79,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="notificationConfig")
-    private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs> notificationConfig;
+      private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs> notificationConfig;
 
     public Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigArgs> getNotificationConfig() {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
@@ -90,7 +90,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="outputS3Bucket")
-    private final @Nullable Input<String> outputS3Bucket;
+      private final @Nullable Input<String> outputS3Bucket;
 
     public Input<String> getOutputS3Bucket() {
         return this.outputS3Bucket == null ? Input.empty() : this.outputS3Bucket;
@@ -101,7 +101,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="outputS3KeyPrefix")
-    private final @Nullable Input<String> outputS3KeyPrefix;
+      private final @Nullable Input<String> outputS3KeyPrefix;
 
     public Input<String> getOutputS3KeyPrefix() {
         return this.outputS3KeyPrefix == null ? Input.empty() : this.outputS3KeyPrefix;
@@ -112,7 +112,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>> parameters;
+      private final @Nullable Input<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>> parameters;
 
     public Input<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -123,7 +123,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="serviceRoleArn")
-    private final @Nullable Input<String> serviceRoleArn;
+      private final @Nullable Input<String> serviceRoleArn;
 
     public Input<String> getServiceRoleArn() {
         return this.serviceRoleArn == null ? Input.empty() : this.serviceRoleArn;
@@ -134,7 +134,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="timeoutSeconds")
-    private final @Nullable Input<Integer> timeoutSeconds;
+      private final @Nullable Input<Integer> timeoutSeconds;
 
     public Input<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;

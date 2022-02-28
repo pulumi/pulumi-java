@@ -4,7 +4,7 @@
 package io.pulumi.aws.inspector;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="duration", required=true)
-    private final Input<Integer> duration;
+      private final Input<Integer> duration;
 
     public Input<Integer> getDuration() {
         return this.duration;
@@ -33,7 +33,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rulesPackageArns", required=true)
-    private final Input<List<String>> rulesPackageArns;
+      private final Input<List<String>> rulesPackageArns;
 
     public Input<List<String>> getRulesPackageArns() {
         return this.rulesPackageArns;
@@ -55,7 +55,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -66,7 +66,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetArn", required=true)
-    private final Input<String> targetArn;
+      private final Input<String> targetArn;
 
     public Input<String> getTargetArn() {
         return this.targetArn;

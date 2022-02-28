@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,77 +16,77 @@ public final class NodejsAppLayerCloudwatchConfigurationLogStreamArgs extends io
     public static final NodejsAppLayerCloudwatchConfigurationLogStreamArgs Empty = new NodejsAppLayerCloudwatchConfigurationLogStreamArgs();
 
     @InputImport(name="batchCount")
-    private final @Nullable Input<Integer> batchCount;
+      private final @Nullable Input<Integer> batchCount;
 
     public Input<Integer> getBatchCount() {
         return this.batchCount == null ? Input.empty() : this.batchCount;
     }
 
     @InputImport(name="batchSize")
-    private final @Nullable Input<Integer> batchSize;
+      private final @Nullable Input<Integer> batchSize;
 
     public Input<Integer> getBatchSize() {
         return this.batchSize == null ? Input.empty() : this.batchSize;
     }
 
     @InputImport(name="bufferDuration")
-    private final @Nullable Input<Integer> bufferDuration;
+      private final @Nullable Input<Integer> bufferDuration;
 
     public Input<Integer> getBufferDuration() {
         return this.bufferDuration == null ? Input.empty() : this.bufferDuration;
     }
 
     @InputImport(name="datetimeFormat")
-    private final @Nullable Input<String> datetimeFormat;
+      private final @Nullable Input<String> datetimeFormat;
 
     public Input<String> getDatetimeFormat() {
         return this.datetimeFormat == null ? Input.empty() : this.datetimeFormat;
     }
 
     @InputImport(name="encoding")
-    private final @Nullable Input<String> encoding;
+      private final @Nullable Input<String> encoding;
 
     public Input<String> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
     }
 
     @InputImport(name="file", required=true)
-    private final Input<String> file;
+      private final Input<String> file;
 
     public Input<String> getFile() {
         return this.file;
     }
 
     @InputImport(name="fileFingerprintLines")
-    private final @Nullable Input<String> fileFingerprintLines;
+      private final @Nullable Input<String> fileFingerprintLines;
 
     public Input<String> getFileFingerprintLines() {
         return this.fileFingerprintLines == null ? Input.empty() : this.fileFingerprintLines;
     }
 
     @InputImport(name="initialPosition")
-    private final @Nullable Input<String> initialPosition;
+      private final @Nullable Input<String> initialPosition;
 
     public Input<String> getInitialPosition() {
         return this.initialPosition == null ? Input.empty() : this.initialPosition;
     }
 
     @InputImport(name="logGroupName", required=true)
-    private final Input<String> logGroupName;
+      private final Input<String> logGroupName;
 
     public Input<String> getLogGroupName() {
         return this.logGroupName;
     }
 
     @InputImport(name="multilineStartPattern")
-    private final @Nullable Input<String> multilineStartPattern;
+      private final @Nullable Input<String> multilineStartPattern;
 
     public Input<String> getMultilineStartPattern() {
         return this.multilineStartPattern == null ? Input.empty() : this.multilineStartPattern;
     }
 
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;

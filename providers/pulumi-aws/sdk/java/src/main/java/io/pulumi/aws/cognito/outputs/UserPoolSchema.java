@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito.outputs;
 
 import io.pulumi.aws.cognito.outputs.UserPoolSchemaNumberAttributeConstraints;
 import io.pulumi.aws.cognito.outputs.UserPoolSchemaStringAttributeConstraints;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;

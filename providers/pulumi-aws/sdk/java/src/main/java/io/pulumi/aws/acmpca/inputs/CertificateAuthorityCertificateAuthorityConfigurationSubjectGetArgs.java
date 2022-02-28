@@ -4,7 +4,7 @@
 package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="commonName")
-    private final @Nullable Input<String> commonName;
+      private final @Nullable Input<String> commonName;
 
     public Input<String> getCommonName() {
         return this.commonName == null ? Input.empty() : this.commonName;
@@ -30,7 +30,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="country")
-    private final @Nullable Input<String> country;
+      private final @Nullable Input<String> country;
 
     public Input<String> getCountry() {
         return this.country == null ? Input.empty() : this.country;
@@ -41,7 +41,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="distinguishedNameQualifier")
-    private final @Nullable Input<String> distinguishedNameQualifier;
+      private final @Nullable Input<String> distinguishedNameQualifier;
 
     public Input<String> getDistinguishedNameQualifier() {
         return this.distinguishedNameQualifier == null ? Input.empty() : this.distinguishedNameQualifier;
@@ -52,7 +52,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="generationQualifier")
-    private final @Nullable Input<String> generationQualifier;
+      private final @Nullable Input<String> generationQualifier;
 
     public Input<String> getGenerationQualifier() {
         return this.generationQualifier == null ? Input.empty() : this.generationQualifier;
@@ -63,7 +63,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="givenName")
-    private final @Nullable Input<String> givenName;
+      private final @Nullable Input<String> givenName;
 
     public Input<String> getGivenName() {
         return this.givenName == null ? Input.empty() : this.givenName;
@@ -74,7 +74,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="initials")
-    private final @Nullable Input<String> initials;
+      private final @Nullable Input<String> initials;
 
     public Input<String> getInitials() {
         return this.initials == null ? Input.empty() : this.initials;
@@ -85,7 +85,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="locality")
-    private final @Nullable Input<String> locality;
+      private final @Nullable Input<String> locality;
 
     public Input<String> getLocality() {
         return this.locality == null ? Input.empty() : this.locality;
@@ -96,7 +96,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="organization")
-    private final @Nullable Input<String> organization;
+      private final @Nullable Input<String> organization;
 
     public Input<String> getOrganization() {
         return this.organization == null ? Input.empty() : this.organization;
@@ -107,7 +107,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="organizationalUnit")
-    private final @Nullable Input<String> organizationalUnit;
+      private final @Nullable Input<String> organizationalUnit;
 
     public Input<String> getOrganizationalUnit() {
         return this.organizationalUnit == null ? Input.empty() : this.organizationalUnit;
@@ -118,7 +118,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="pseudonym")
-    private final @Nullable Input<String> pseudonym;
+      private final @Nullable Input<String> pseudonym;
 
     public Input<String> getPseudonym() {
         return this.pseudonym == null ? Input.empty() : this.pseudonym;
@@ -129,7 +129,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -140,7 +140,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="surname")
-    private final @Nullable Input<String> surname;
+      private final @Nullable Input<String> surname;
 
     public Input<String> getSurname() {
         return this.surname == null ? Input.empty() : this.surname;
@@ -151,7 +151,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;

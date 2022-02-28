@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.DistributionRestrictionsGeoRestrictionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -14,7 +14,7 @@ public final class DistributionRestrictionsArgs extends io.pulumi.resources.Reso
     public static final DistributionRestrictionsArgs Empty = new DistributionRestrictionsArgs();
 
     @InputImport(name="geoRestriction", required=true)
-    private final Input<DistributionRestrictionsGeoRestrictionArgs> geoRestriction;
+      private final Input<DistributionRestrictionsGeoRestrictionArgs> geoRestriction;
 
     public Input<DistributionRestrictionsGeoRestrictionArgs> getGeoRestriction() {
         return this.geoRestriction;

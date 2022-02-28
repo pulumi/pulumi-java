@@ -12,7 +12,7 @@ import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamS3ConfigurationArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamServerSideEncryptionArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -39,14 +39,14 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<String> destination;
+      private final Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination;
     }
 
     @InputImport(name="destinationId")
-    private final @Nullable Input<String> destinationId;
+      private final @Nullable Input<String> destinationId;
 
     public Input<String> getDestinationId() {
         return this.destinationId == null ? Input.empty() : this.destinationId;
@@ -57,7 +57,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="elasticsearchConfiguration")
-    private final @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationArgs> elasticsearchConfiguration;
+      private final @Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationArgs> elasticsearchConfiguration;
 
     public Input<FirehoseDeliveryStreamElasticsearchConfigurationArgs> getElasticsearchConfiguration() {
         return this.elasticsearchConfiguration == null ? Input.empty() : this.elasticsearchConfiguration;
@@ -68,7 +68,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="extendedS3Configuration")
-    private final @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> extendedS3Configuration;
+      private final @Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> extendedS3Configuration;
 
     public Input<FirehoseDeliveryStreamExtendedS3ConfigurationArgs> getExtendedS3Configuration() {
         return this.extendedS3Configuration == null ? Input.empty() : this.extendedS3Configuration;
@@ -79,7 +79,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="httpEndpointConfiguration")
-    private final @Nullable Input<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> httpEndpointConfiguration;
+      private final @Nullable Input<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> httpEndpointConfiguration;
 
     public Input<FirehoseDeliveryStreamHttpEndpointConfigurationArgs> getHttpEndpointConfiguration() {
         return this.httpEndpointConfiguration == null ? Input.empty() : this.httpEndpointConfiguration;
@@ -90,7 +90,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kinesisSourceConfiguration")
-    private final @Nullable Input<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> kinesisSourceConfiguration;
+      private final @Nullable Input<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> kinesisSourceConfiguration;
 
     public Input<FirehoseDeliveryStreamKinesisSourceConfigurationArgs> getKinesisSourceConfiguration() {
         return this.kinesisSourceConfiguration == null ? Input.empty() : this.kinesisSourceConfiguration;
@@ -102,7 +102,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -115,7 +115,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="redshiftConfiguration")
-    private final @Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationArgs> redshiftConfiguration;
+      private final @Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationArgs> redshiftConfiguration;
 
     public Input<FirehoseDeliveryStreamRedshiftConfigurationArgs> getRedshiftConfiguration() {
         return this.redshiftConfiguration == null ? Input.empty() : this.redshiftConfiguration;
@@ -127,7 +127,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="s3Configuration")
-    private final @Nullable Input<FirehoseDeliveryStreamS3ConfigurationArgs> s3Configuration;
+      private final @Nullable Input<FirehoseDeliveryStreamS3ConfigurationArgs> s3Configuration;
 
     public Input<FirehoseDeliveryStreamS3ConfigurationArgs> getS3Configuration() {
         return this.s3Configuration == null ? Input.empty() : this.s3Configuration;
@@ -139,7 +139,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="serverSideEncryption")
-    private final @Nullable Input<FirehoseDeliveryStreamServerSideEncryptionArgs> serverSideEncryption;
+      private final @Nullable Input<FirehoseDeliveryStreamServerSideEncryptionArgs> serverSideEncryption;
 
     public Input<FirehoseDeliveryStreamServerSideEncryptionArgs> getServerSideEncryption() {
         return this.serverSideEncryption == null ? Input.empty() : this.serverSideEncryption;
@@ -150,7 +150,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="splunkConfiguration")
-    private final @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationArgs> splunkConfiguration;
+      private final @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationArgs> splunkConfiguration;
 
     public Input<FirehoseDeliveryStreamSplunkConfigurationArgs> getSplunkConfiguration() {
         return this.splunkConfiguration == null ? Input.empty() : this.splunkConfiguration;
@@ -161,7 +161,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -172,7 +172,7 @@ public final class FirehoseDeliveryStreamArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="versionId")
-    private final @Nullable Input<String> versionId;
+      private final @Nullable Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId == null ? Input.empty() : this.versionId;

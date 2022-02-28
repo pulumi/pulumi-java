@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class IntegrationTlsConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="insecureSkipVerification")
-    private final @Nullable Input<Boolean> insecureSkipVerification;
+      private final @Nullable Input<Boolean> insecureSkipVerification;
 
     public Input<Boolean> getInsecureSkipVerification() {
         return this.insecureSkipVerification == null ? Input.empty() : this.insecureSkipVerification;

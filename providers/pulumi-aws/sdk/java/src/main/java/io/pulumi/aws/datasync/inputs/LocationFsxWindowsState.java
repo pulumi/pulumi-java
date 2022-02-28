@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="creationTime")
-    private final @Nullable Input<String> creationTime;
+      private final @Nullable Input<String> creationTime;
 
     public Input<String> getCreationTime() {
         return this.creationTime == null ? Input.empty() : this.creationTime;
@@ -43,7 +43,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -54,7 +54,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fsxFilesystemArn")
-    private final @Nullable Input<String> fsxFilesystemArn;
+      private final @Nullable Input<String> fsxFilesystemArn;
 
     public Input<String> getFsxFilesystemArn() {
         return this.fsxFilesystemArn == null ? Input.empty() : this.fsxFilesystemArn;
@@ -65,7 +65,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -76,7 +76,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securityGroupArns")
-    private final @Nullable Input<List<String>> securityGroupArns;
+      private final @Nullable Input<List<String>> securityGroupArns;
 
     public Input<List<String>> getSecurityGroupArns() {
         return this.securityGroupArns == null ? Input.empty() : this.securityGroupArns;
@@ -87,7 +87,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="subdirectory")
-    private final @Nullable Input<String> subdirectory;
+      private final @Nullable Input<String> subdirectory;
 
     public Input<String> getSubdirectory() {
         return this.subdirectory == null ? Input.empty() : this.subdirectory;
@@ -98,7 +98,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -109,7 +109,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -120,7 +120,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -131,7 +131,7 @@ public final class LocationFsxWindowsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="user")
-    private final @Nullable Input<String> user;
+      private final @Nullable Input<String> user;
 
     public Input<String> getUser() {
         return this.user == null ? Input.empty() : this.user;

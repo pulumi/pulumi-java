@@ -5,7 +5,7 @@ package io.pulumi.aws.rds;
 
 import io.pulumi.aws.rds.inputs.ProxyDefaultTargetGroupConnectionPoolConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ProxyDefaultTargetGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectionPoolConfig")
-    private final @Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig;
+      private final @Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig;
 
     public Input<ProxyDefaultTargetGroupConnectionPoolConfigArgs> getConnectionPoolConfig() {
         return this.connectionPoolConfig == null ? Input.empty() : this.connectionPoolConfig;
@@ -31,7 +31,7 @@ public final class ProxyDefaultTargetGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dbProxyName", required=true)
-    private final Input<String> dbProxyName;
+      private final Input<String> dbProxyName;
 
     public Input<String> getDbProxyName() {
         return this.dbProxyName;

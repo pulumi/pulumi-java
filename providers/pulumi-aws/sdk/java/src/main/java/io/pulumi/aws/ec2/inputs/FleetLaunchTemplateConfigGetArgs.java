@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs;
 import io.pulumi.aws.ec2.inputs.FleetLaunchTemplateConfigOverrideGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class FleetLaunchTemplateConfigGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="launchTemplateSpecification", required=true)
-    private final Input<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
+      private final Input<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
 
     public Input<FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs> getLaunchTemplateSpecification() {
         return this.launchTemplateSpecification;
@@ -32,7 +32,7 @@ public final class FleetLaunchTemplateConfigGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="overrides")
-    private final @Nullable Input<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides;
+      private final @Nullable Input<List<FleetLaunchTemplateConfigOverrideGetArgs>> overrides;
 
     public Input<List<FleetLaunchTemplateConfigOverrideGetArgs>> getOverrides() {
         return this.overrides == null ? Input.empty() : this.overrides;

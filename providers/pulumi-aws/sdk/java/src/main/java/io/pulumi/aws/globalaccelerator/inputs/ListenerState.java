@@ -5,7 +5,7 @@ package io.pulumi.aws.globalaccelerator.inputs;
 
 import io.pulumi.aws.globalaccelerator.inputs.ListenerPortRangeGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceleratorArn")
-    private final @Nullable Input<String> acceleratorArn;
+      private final @Nullable Input<String> acceleratorArn;
 
     public Input<String> getAcceleratorArn() {
         return this.acceleratorArn == null ? Input.empty() : this.acceleratorArn;
@@ -32,7 +32,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientAffinity")
-    private final @Nullable Input<String> clientAffinity;
+      private final @Nullable Input<String> clientAffinity;
 
     public Input<String> getClientAffinity() {
         return this.clientAffinity == null ? Input.empty() : this.clientAffinity;
@@ -43,7 +43,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portRanges")
-    private final @Nullable Input<List<ListenerPortRangeGetArgs>> portRanges;
+      private final @Nullable Input<List<ListenerPortRangeGetArgs>> portRanges;
 
     public Input<List<ListenerPortRangeGetArgs>> getPortRanges() {
         return this.portRanges == null ? Input.empty() : this.portRanges;
@@ -54,7 +54,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;

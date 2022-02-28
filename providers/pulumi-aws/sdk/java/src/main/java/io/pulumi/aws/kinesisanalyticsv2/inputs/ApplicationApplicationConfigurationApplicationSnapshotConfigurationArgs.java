@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
      * 
      */
     @InputImport(name="snapshotsEnabled", required=true)
-    private final Input<Boolean> snapshotsEnabled;
+      private final Input<Boolean> snapshotsEnabled;
 
     public Input<Boolean> getSnapshotsEnabled() {
         return this.snapshotsEnabled;

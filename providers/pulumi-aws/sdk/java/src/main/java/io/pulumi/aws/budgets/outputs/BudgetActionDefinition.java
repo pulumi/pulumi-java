@@ -6,7 +6,7 @@ package io.pulumi.aws.budgets.outputs;
 import io.pulumi.aws.budgets.outputs.BudgetActionDefinitionIamActionDefinition;
 import io.pulumi.aws.budgets.outputs.BudgetActionDefinitionScpActionDefinition;
 import io.pulumi.aws.budgets.outputs.BudgetActionDefinitionSsmActionDefinition;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

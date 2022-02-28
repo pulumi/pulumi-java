@@ -18,8 +18,8 @@ import io.pulumi.aws.codedeploy.outputs.DeploymentGroupOnPremisesInstanceTagFilt
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupTriggerConfiguration;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -326,6 +326,21 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
         return this.triggerConfigurations;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DeploymentGroup(String name) {
+        this(name, DeploymentGroupArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DeploymentGroup(String name, DeploymentGroupArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

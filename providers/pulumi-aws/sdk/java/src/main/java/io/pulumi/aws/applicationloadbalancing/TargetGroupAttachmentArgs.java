@@ -4,7 +4,7 @@
 package io.pulumi.aws.applicationloadbalancing;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -31,7 +31,7 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -42,7 +42,7 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetGroupArn", required=true)
-    private final Input<String> targetGroupArn;
+      private final Input<String> targetGroupArn;
 
     public Input<String> getTargetGroupArn() {
         return this.targetGroupArn;
@@ -53,7 +53,7 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetId", required=true)
-    private final Input<String> targetId;
+      private final Input<String> targetId;
 
     public Input<String> getTargetId() {
         return this.targetId;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code")
-    private final @Nullable Input<String> code;
+      private final @Nullable Input<String> code;
 
     public Input<String> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -42,7 +42,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -53,7 +53,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -64,7 +64,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="liveStageEtag")
-    private final @Nullable Input<String> liveStageEtag;
+      private final @Nullable Input<String> liveStageEtag;
 
     public Input<String> getLiveStageEtag() {
         return this.liveStageEtag == null ? Input.empty() : this.liveStageEtag;
@@ -75,7 +75,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -86,7 +86,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publish")
-    private final @Nullable Input<Boolean> publish;
+      private final @Nullable Input<Boolean> publish;
 
     public Input<Boolean> getPublish() {
         return this.publish == null ? Input.empty() : this.publish;
@@ -97,7 +97,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtime")
-    private final @Nullable Input<String> runtime;
+      private final @Nullable Input<String> runtime;
 
     public Input<String> getRuntime() {
         return this.runtime == null ? Input.empty() : this.runtime;
@@ -108,7 +108,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

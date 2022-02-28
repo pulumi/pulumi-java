@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.DefaultSecurityGroupEgressArgs;
 import io.pulumi.aws.ec2.inputs.DefaultSecurityGroupIngressArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class DefaultSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="egress")
-    private final @Nullable Input<List<DefaultSecurityGroupEgressArgs>> egress;
+      private final @Nullable Input<List<DefaultSecurityGroupEgressArgs>> egress;
 
     public Input<List<DefaultSecurityGroupEgressArgs>> getEgress() {
         return this.egress == null ? Input.empty() : this.egress;
@@ -35,14 +35,14 @@ public final class DefaultSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ingress")
-    private final @Nullable Input<List<DefaultSecurityGroupIngressArgs>> ingress;
+      private final @Nullable Input<List<DefaultSecurityGroupIngressArgs>> ingress;
 
     public Input<List<DefaultSecurityGroupIngressArgs>> getIngress() {
         return this.ingress == null ? Input.empty() : this.ingress;
     }
 
     @InputImport(name="revokeRulesOnDelete")
-    private final @Nullable Input<Boolean> revokeRulesOnDelete;
+      private final @Nullable Input<Boolean> revokeRulesOnDelete;
 
     public Input<Boolean> getRevokeRulesOnDelete() {
         return this.revokeRulesOnDelete == null ? Input.empty() : this.revokeRulesOnDelete;
@@ -53,7 +53,7 @@ public final class DefaultSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -64,7 +64,7 @@ public final class DefaultSecurityGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

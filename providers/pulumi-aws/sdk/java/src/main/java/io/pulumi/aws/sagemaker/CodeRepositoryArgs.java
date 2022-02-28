@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.CodeRepositoryGitConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="codeRepositoryName", required=true)
-    private final Input<String> codeRepositoryName;
+      private final Input<String> codeRepositoryName;
 
     public Input<String> getCodeRepositoryName() {
         return this.codeRepositoryName;
@@ -32,7 +32,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gitConfig", required=true)
-    private final Input<CodeRepositoryGitConfigArgs> gitConfig;
+      private final Input<CodeRepositoryGitConfigArgs> gitConfig;
 
     public Input<CodeRepositoryGitConfigArgs> getGitConfig() {
         return this.gitConfig;
@@ -43,7 +43,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

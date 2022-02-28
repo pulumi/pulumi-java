@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
      * 
      */
     @InputImport(name="propertyGroupId", required=true)
-    private final Input<String> propertyGroupId;
+      private final Input<String> propertyGroupId;
 
     public Input<String> getPropertyGroupId() {
         return this.propertyGroupId;
@@ -30,7 +30,7 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
      * 
      */
     @InputImport(name="propertyMap", required=true)
-    private final Input<Map<String,String>> propertyMap;
+      private final Input<Map<String,String>> propertyMap;
 
     public Input<Map<String,String>> getPropertyMap() {
         return this.propertyMap;

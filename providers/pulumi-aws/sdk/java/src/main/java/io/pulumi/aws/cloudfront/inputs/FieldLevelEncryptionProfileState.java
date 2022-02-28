@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class FieldLevelEncryptionProfileState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="callerReference")
-    private final @Nullable Input<String> callerReference;
+      private final @Nullable Input<String> callerReference;
 
     public Input<String> getCallerReference() {
         return this.callerReference == null ? Input.empty() : this.callerReference;
@@ -31,7 +31,7 @@ public final class FieldLevelEncryptionProfileState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -42,7 +42,7 @@ public final class FieldLevelEncryptionProfileState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="encryptionEntities")
-    private final @Nullable Input<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities;
+      private final @Nullable Input<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities;
 
     public Input<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> getEncryptionEntities() {
         return this.encryptionEntities == null ? Input.empty() : this.encryptionEntities;
@@ -53,7 +53,7 @@ public final class FieldLevelEncryptionProfileState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -64,7 +64,7 @@ public final class FieldLevelEncryptionProfileState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

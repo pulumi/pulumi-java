@@ -5,7 +5,7 @@ package io.pulumi.aws.lambda;
 
 import io.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigDestinationConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="destinationConfig")
-    private final @Nullable Input<FunctionEventInvokeConfigDestinationConfigArgs> destinationConfig;
+      private final @Nullable Input<FunctionEventInvokeConfigDestinationConfigArgs> destinationConfig;
 
     public Input<FunctionEventInvokeConfigDestinationConfigArgs> getDestinationConfig() {
         return this.destinationConfig == null ? Input.empty() : this.destinationConfig;
@@ -32,7 +32,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="functionName", required=true)
-    private final Input<String> functionName;
+      private final Input<String> functionName;
 
     public Input<String> getFunctionName() {
         return this.functionName;
@@ -43,7 +43,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="maximumEventAgeInSeconds")
-    private final @Nullable Input<Integer> maximumEventAgeInSeconds;
+      private final @Nullable Input<Integer> maximumEventAgeInSeconds;
 
     public Input<Integer> getMaximumEventAgeInSeconds() {
         return this.maximumEventAgeInSeconds == null ? Input.empty() : this.maximumEventAgeInSeconds;
@@ -54,7 +54,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="maximumRetryAttempts")
-    private final @Nullable Input<Integer> maximumRetryAttempts;
+      private final @Nullable Input<Integer> maximumRetryAttempts;
 
     public Input<Integer> getMaximumRetryAttempts() {
         return this.maximumRetryAttempts == null ? Input.empty() : this.maximumRetryAttempts;
@@ -65,7 +65,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="qualifier")
-    private final @Nullable Input<String> qualifier;
+      private final @Nullable Input<String> qualifier;
 
     public Input<String> getQualifier() {
         return this.qualifier == null ? Input.empty() : this.qualifier;

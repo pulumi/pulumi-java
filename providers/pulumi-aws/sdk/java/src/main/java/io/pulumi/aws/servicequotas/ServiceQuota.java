@@ -8,8 +8,8 @@ import io.pulumi.aws.servicequotas.ServiceQuotaArgs;
 import io.pulumi.aws.servicequotas.inputs.ServiceQuotaState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -158,6 +158,21 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
         return this.value;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ServiceQuota(String name) {
+        this(name, ServiceQuotaArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ServiceQuota(String name, ServiceQuotaArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

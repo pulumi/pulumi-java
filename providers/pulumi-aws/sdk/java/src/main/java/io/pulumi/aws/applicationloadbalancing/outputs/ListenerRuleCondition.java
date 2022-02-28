@@ -9,7 +9,7 @@ import io.pulumi.aws.applicationloadbalancing.outputs.ListenerRuleConditionHttpR
 import io.pulumi.aws.applicationloadbalancing.outputs.ListenerRuleConditionPathPattern;
 import io.pulumi.aws.applicationloadbalancing.outputs.ListenerRuleConditionQueryString;
 import io.pulumi.aws.applicationloadbalancing.outputs.ListenerRuleConditionSourceIp;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

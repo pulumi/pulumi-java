@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleOverrideActionCountArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleOverrideActionNoneArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class WebAclRuleOverrideActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<WebAclRuleOverrideActionCountArgs> count;
+      private final @Nullable Input<WebAclRuleOverrideActionCountArgs> count;
 
     public Input<WebAclRuleOverrideActionCountArgs> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -31,7 +31,7 @@ public final class WebAclRuleOverrideActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="none")
-    private final @Nullable Input<WebAclRuleOverrideActionNoneArgs> none;
+      private final @Nullable Input<WebAclRuleOverrideActionNoneArgs> none;
 
     public Input<WebAclRuleOverrideActionNoneArgs> getNone() {
         return this.none == null ? Input.empty() : this.none;

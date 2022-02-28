@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowUsersToChangePassword")
-    private final @Nullable Input<Boolean> allowUsersToChangePassword;
+      private final @Nullable Input<Boolean> allowUsersToChangePassword;
 
     public Input<Boolean> getAllowUsersToChangePassword() {
         return this.allowUsersToChangePassword == null ? Input.empty() : this.allowUsersToChangePassword;
@@ -31,7 +31,7 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hardExpiry")
-    private final @Nullable Input<Boolean> hardExpiry;
+      private final @Nullable Input<Boolean> hardExpiry;
 
     public Input<Boolean> getHardExpiry() {
         return this.hardExpiry == null ? Input.empty() : this.hardExpiry;
@@ -42,7 +42,7 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxPasswordAge")
-    private final @Nullable Input<Integer> maxPasswordAge;
+      private final @Nullable Input<Integer> maxPasswordAge;
 
     public Input<Integer> getMaxPasswordAge() {
         return this.maxPasswordAge == null ? Input.empty() : this.maxPasswordAge;
@@ -53,7 +53,7 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="minimumPasswordLength")
-    private final @Nullable Input<Integer> minimumPasswordLength;
+      private final @Nullable Input<Integer> minimumPasswordLength;
 
     public Input<Integer> getMinimumPasswordLength() {
         return this.minimumPasswordLength == null ? Input.empty() : this.minimumPasswordLength;
@@ -64,7 +64,7 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="passwordReusePrevention")
-    private final @Nullable Input<Integer> passwordReusePrevention;
+      private final @Nullable Input<Integer> passwordReusePrevention;
 
     public Input<Integer> getPasswordReusePrevention() {
         return this.passwordReusePrevention == null ? Input.empty() : this.passwordReusePrevention;
@@ -75,7 +75,7 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="requireLowercaseCharacters")
-    private final @Nullable Input<Boolean> requireLowercaseCharacters;
+      private final @Nullable Input<Boolean> requireLowercaseCharacters;
 
     public Input<Boolean> getRequireLowercaseCharacters() {
         return this.requireLowercaseCharacters == null ? Input.empty() : this.requireLowercaseCharacters;
@@ -86,7 +86,7 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="requireNumbers")
-    private final @Nullable Input<Boolean> requireNumbers;
+      private final @Nullable Input<Boolean> requireNumbers;
 
     public Input<Boolean> getRequireNumbers() {
         return this.requireNumbers == null ? Input.empty() : this.requireNumbers;
@@ -97,7 +97,7 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="requireSymbols")
-    private final @Nullable Input<Boolean> requireSymbols;
+      private final @Nullable Input<Boolean> requireSymbols;
 
     public Input<Boolean> getRequireSymbols() {
         return this.requireSymbols == null ? Input.empty() : this.requireSymbols;
@@ -108,7 +108,7 @@ public final class AccountPasswordPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="requireUppercaseCharacters")
-    private final @Nullable Input<Boolean> requireUppercaseCharacters;
+      private final @Nullable Input<Boolean> requireUppercaseCharacters;
 
     public Input<Boolean> getRequireUppercaseCharacters() {
         return this.requireUppercaseCharacters == null ? Input.empty() : this.requireUppercaseCharacters;

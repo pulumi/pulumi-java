@@ -4,7 +4,7 @@
 package io.pulumi.aws.directoryservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
     public static final DirectoryConnectSettingsArgs Empty = new DirectoryConnectSettingsArgs();
 
     @InputImport(name="availabilityZones")
-    private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Input<List<String>> availabilityZones;
 
     public Input<List<String>> getAvailabilityZones() {
         return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
@@ -27,7 +27,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="connectIps")
-    private final @Nullable Input<List<String>> connectIps;
+      private final @Nullable Input<List<String>> connectIps;
 
     public Input<List<String>> getConnectIps() {
         return this.connectIps == null ? Input.empty() : this.connectIps;
@@ -38,7 +38,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="customerDnsIps", required=true)
-    private final Input<List<String>> customerDnsIps;
+      private final Input<List<String>> customerDnsIps;
 
     public Input<List<String>> getCustomerDnsIps() {
         return this.customerDnsIps;
@@ -49,7 +49,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="customerUsername", required=true)
-    private final Input<String> customerUsername;
+      private final Input<String> customerUsername;
 
     public Input<String> getCustomerUsername() {
         return this.customerUsername;
@@ -60,7 +60,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final Input<List<String>> subnetIds;
+      private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
@@ -71,7 +71,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+      private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;

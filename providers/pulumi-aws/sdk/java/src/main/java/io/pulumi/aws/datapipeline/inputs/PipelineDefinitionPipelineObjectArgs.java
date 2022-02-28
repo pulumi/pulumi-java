@@ -5,7 +5,7 @@ package io.pulumi.aws.datapipeline.inputs;
 
 import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionPipelineObjectFieldArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PipelineDefinitionPipelineObjectArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<List<PipelineDefinitionPipelineObjectFieldArgs>> fields;
+      private final @Nullable Input<List<PipelineDefinitionPipelineObjectFieldArgs>> fields;
 
     public Input<List<PipelineDefinitionPipelineObjectFieldArgs>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -32,7 +32,7 @@ public final class PipelineDefinitionPipelineObjectArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -43,7 +43,7 @@ public final class PipelineDefinitionPipelineObjectArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

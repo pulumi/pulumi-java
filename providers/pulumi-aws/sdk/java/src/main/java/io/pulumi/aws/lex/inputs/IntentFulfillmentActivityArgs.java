@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.IntentFulfillmentActivityCodeHookArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class IntentFulfillmentActivityArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="codeHook")
-    private final @Nullable Input<IntentFulfillmentActivityCodeHookArgs> codeHook;
+      private final @Nullable Input<IntentFulfillmentActivityCodeHookArgs> codeHook;
 
     public Input<IntentFulfillmentActivityCodeHookArgs> getCodeHook() {
         return this.codeHook == null ? Input.empty() : this.codeHook;
@@ -33,7 +33,7 @@ public final class IntentFulfillmentActivityArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

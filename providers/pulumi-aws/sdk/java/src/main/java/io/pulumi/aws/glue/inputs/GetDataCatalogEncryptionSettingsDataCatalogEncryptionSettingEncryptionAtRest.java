@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingE
      * 
      */
     @InputImport(name="catalogEncryptionMode", required=true)
-    private final String catalogEncryptionMode;
+      private final String catalogEncryptionMode;
 
     public String getCatalogEncryptionMode() {
         return this.catalogEncryptionMode;
@@ -28,7 +28,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingE
      * 
      */
     @InputImport(name="sseAwsKmsKeyId", required=true)
-    private final String sseAwsKmsKeyId;
+      private final String sseAwsKmsKeyId;
 
     public String getSseAwsKmsKeyId() {
         return this.sseAwsKmsKeyId;

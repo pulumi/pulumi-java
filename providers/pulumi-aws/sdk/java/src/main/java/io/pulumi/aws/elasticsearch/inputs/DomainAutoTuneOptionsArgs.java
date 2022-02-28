@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.DomainAutoTuneOptionsMaintenanceScheduleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DomainAutoTuneOptionsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="desiredState", required=true)
-    private final Input<String> desiredState;
+      private final Input<String> desiredState;
 
     public Input<String> getDesiredState() {
         return this.desiredState;
@@ -32,7 +32,7 @@ public final class DomainAutoTuneOptionsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maintenanceSchedules")
-    private final @Nullable Input<List<DomainAutoTuneOptionsMaintenanceScheduleArgs>> maintenanceSchedules;
+      private final @Nullable Input<List<DomainAutoTuneOptionsMaintenanceScheduleArgs>> maintenanceSchedules;
 
     public Input<List<DomainAutoTuneOptionsMaintenanceScheduleArgs>> getMaintenanceSchedules() {
         return this.maintenanceSchedules == null ? Input.empty() : this.maintenanceSchedules;
@@ -43,7 +43,7 @@ public final class DomainAutoTuneOptionsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rollbackOnDisable")
-    private final @Nullable Input<String> rollbackOnDisable;
+      private final @Nullable Input<String> rollbackOnDisable;
 
     public Input<String> getRollbackOnDisable() {
         return this.rollbackOnDisable == null ? Input.empty() : this.rollbackOnDisable;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.alb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,35 +13,35 @@ public final class GetLoadBalancerSubnetMapping extends io.pulumi.resources.Invo
     public static final GetLoadBalancerSubnetMapping Empty = new GetLoadBalancerSubnetMapping();
 
     @InputImport(name="allocationId", required=true)
-    private final String allocationId;
+      private final String allocationId;
 
     public String getAllocationId() {
         return this.allocationId;
     }
 
     @InputImport(name="ipv6Address", required=true)
-    private final String ipv6Address;
+      private final String ipv6Address;
 
     public String getIpv6Address() {
         return this.ipv6Address;
     }
 
     @InputImport(name="outpostId", required=true)
-    private final String outpostId;
+      private final String outpostId;
 
     public String getOutpostId() {
         return this.outpostId;
     }
 
     @InputImport(name="privateIpv4Address", required=true)
-    private final String privateIpv4Address;
+      private final String privateIpv4Address;
 
     public String getPrivateIpv4Address() {
         return this.privateIpv4Address;
     }
 
     @InputImport(name="subnetId", required=true)
-    private final String subnetId;
+      private final String subnetId;
 
     public String getSubnetId() {
         return this.subnetId;

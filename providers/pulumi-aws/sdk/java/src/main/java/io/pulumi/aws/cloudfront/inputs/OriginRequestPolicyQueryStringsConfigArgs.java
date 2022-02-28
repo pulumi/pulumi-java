@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyQueryStringsConfigQueryStringsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class OriginRequestPolicyQueryStringsConfigArgs extends io.pulumi.r
     public static final OriginRequestPolicyQueryStringsConfigArgs Empty = new OriginRequestPolicyQueryStringsConfigArgs();
 
     @InputImport(name="queryStringBehavior", required=true)
-    private final Input<String> queryStringBehavior;
+      private final Input<String> queryStringBehavior;
 
     public Input<String> getQueryStringBehavior() {
         return this.queryStringBehavior;
     }
 
     @InputImport(name="queryStrings")
-    private final @Nullable Input<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings;
+      private final @Nullable Input<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings;
 
     public Input<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> getQueryStrings() {
         return this.queryStrings == null ? Input.empty() : this.queryStrings;

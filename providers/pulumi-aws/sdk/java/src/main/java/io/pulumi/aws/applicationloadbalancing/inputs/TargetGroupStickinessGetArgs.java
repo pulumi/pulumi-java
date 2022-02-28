@@ -4,7 +4,7 @@
 package io.pulumi.aws.applicationloadbalancing.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cookieDuration")
-    private final @Nullable Input<Integer> cookieDuration;
+      private final @Nullable Input<Integer> cookieDuration;
 
     public Input<Integer> getCookieDuration() {
         return this.cookieDuration == null ? Input.empty() : this.cookieDuration;
@@ -32,7 +32,7 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cookieName")
-    private final @Nullable Input<String> cookieName;
+      private final @Nullable Input<String> cookieName;
 
     public Input<String> getCookieName() {
         return this.cookieName == null ? Input.empty() : this.cookieName;
@@ -43,7 +43,7 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -54,7 +54,7 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

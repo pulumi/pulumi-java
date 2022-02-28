@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class HoursOfOperationConfigStartTimeGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="hours", required=true)
-    private final Input<Integer> hours;
+      private final Input<Integer> hours;
 
     public Input<Integer> getHours() {
         return this.hours;
@@ -29,7 +29,7 @@ public final class HoursOfOperationConfigStartTimeGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="minutes", required=true)
-    private final Input<Integer> minutes;
+      private final Input<Integer> minutes;
 
     public Input<Integer> getMinutes() {
         return this.minutes;

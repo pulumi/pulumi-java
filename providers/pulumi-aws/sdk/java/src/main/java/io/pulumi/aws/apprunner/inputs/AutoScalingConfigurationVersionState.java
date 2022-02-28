@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * 
      */
     @InputImport(name="autoScalingConfigurationName")
-    private final @Nullable Input<String> autoScalingConfigurationName;
+      private final @Nullable Input<String> autoScalingConfigurationName;
 
     public Input<String> getAutoScalingConfigurationName() {
         return this.autoScalingConfigurationName == null ? Input.empty() : this.autoScalingConfigurationName;
@@ -44,7 +44,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * 
      */
     @InputImport(name="autoScalingConfigurationRevision")
-    private final @Nullable Input<Integer> autoScalingConfigurationRevision;
+      private final @Nullable Input<Integer> autoScalingConfigurationRevision;
 
     public Input<Integer> getAutoScalingConfigurationRevision() {
         return this.autoScalingConfigurationRevision == null ? Input.empty() : this.autoScalingConfigurationRevision;
@@ -55,7 +55,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * 
      */
     @InputImport(name="latest")
-    private final @Nullable Input<Boolean> latest;
+      private final @Nullable Input<Boolean> latest;
 
     public Input<Boolean> getLatest() {
         return this.latest == null ? Input.empty() : this.latest;
@@ -66,7 +66,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxConcurrency")
-    private final @Nullable Input<Integer> maxConcurrency;
+      private final @Nullable Input<Integer> maxConcurrency;
 
     public Input<Integer> getMaxConcurrency() {
         return this.maxConcurrency == null ? Input.empty() : this.maxConcurrency;
@@ -77,7 +77,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxSize")
-    private final @Nullable Input<Integer> maxSize;
+      private final @Nullable Input<Integer> maxSize;
 
     public Input<Integer> getMaxSize() {
         return this.maxSize == null ? Input.empty() : this.maxSize;
@@ -88,7 +88,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * 
      */
     @InputImport(name="minSize")
-    private final @Nullable Input<Integer> minSize;
+      private final @Nullable Input<Integer> minSize;
 
     public Input<Integer> getMinSize() {
         return this.minSize == null ? Input.empty() : this.minSize;
@@ -99,7 +99,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -110,7 +110,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -121,7 +121,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

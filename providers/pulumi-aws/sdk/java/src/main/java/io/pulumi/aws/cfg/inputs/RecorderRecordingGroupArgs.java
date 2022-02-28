@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class RecorderRecordingGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allSupported")
-    private final @Nullable Input<Boolean> allSupported;
+      private final @Nullable Input<Boolean> allSupported;
 
     public Input<Boolean> getAllSupported() {
         return this.allSupported == null ? Input.empty() : this.allSupported;
@@ -32,7 +32,7 @@ public final class RecorderRecordingGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="includeGlobalResourceTypes")
-    private final @Nullable Input<Boolean> includeGlobalResourceTypes;
+      private final @Nullable Input<Boolean> includeGlobalResourceTypes;
 
     public Input<Boolean> getIncludeGlobalResourceTypes() {
         return this.includeGlobalResourceTypes == null ? Input.empty() : this.includeGlobalResourceTypes;
@@ -43,7 +43,7 @@ public final class RecorderRecordingGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceTypes")
-    private final @Nullable Input<List<String>> resourceTypes;
+      private final @Nullable Input<List<String>> resourceTypes;
 
     public Input<List<String>> getResourceTypes() {
         return this.resourceTypes == null ? Input.empty() : this.resourceTypes;

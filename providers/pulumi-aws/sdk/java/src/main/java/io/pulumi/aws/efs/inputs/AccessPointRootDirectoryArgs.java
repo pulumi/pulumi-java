@@ -5,7 +5,7 @@ package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.aws.efs.inputs.AccessPointRootDirectoryCreationInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AccessPointRootDirectoryArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="creationInfo")
-    private final @Nullable Input<AccessPointRootDirectoryCreationInfoArgs> creationInfo;
+      private final @Nullable Input<AccessPointRootDirectoryCreationInfoArgs> creationInfo;
 
     public Input<AccessPointRootDirectoryCreationInfoArgs> getCreationInfo() {
         return this.creationInfo == null ? Input.empty() : this.creationInfo;
@@ -31,7 +31,7 @@ public final class AccessPointRootDirectoryArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;

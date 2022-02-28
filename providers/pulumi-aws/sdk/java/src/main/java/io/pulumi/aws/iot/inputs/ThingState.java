@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<Map<String,String>> attributes;
+      private final @Nullable Input<Map<String,String>> attributes;
 
     public Input<Map<String,String>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -43,7 +43,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultClientId")
-    private final @Nullable Input<String> defaultClientId;
+      private final @Nullable Input<String> defaultClientId;
 
     public Input<String> getDefaultClientId() {
         return this.defaultClientId == null ? Input.empty() : this.defaultClientId;
@@ -54,7 +54,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thingTypeName")
-    private final @Nullable Input<String> thingTypeName;
+      private final @Nullable Input<String> thingTypeName;
 
     public Input<String> getThingTypeName() {
         return this.thingTypeName == null ? Input.empty() : this.thingTypeName;
@@ -76,7 +76,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;

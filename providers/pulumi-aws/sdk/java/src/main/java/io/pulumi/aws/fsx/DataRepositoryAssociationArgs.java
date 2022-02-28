@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx;
 
 import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3Args;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="batchImportMetaDataOnCreate")
-    private final @Nullable Input<Boolean> batchImportMetaDataOnCreate;
+      private final @Nullable Input<Boolean> batchImportMetaDataOnCreate;
 
     public Input<Boolean> getBatchImportMetaDataOnCreate() {
         return this.batchImportMetaDataOnCreate == null ? Input.empty() : this.batchImportMetaDataOnCreate;
@@ -34,7 +34,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dataRepositoryPath", required=true)
-    private final Input<String> dataRepositoryPath;
+      private final Input<String> dataRepositoryPath;
 
     public Input<String> getDataRepositoryPath() {
         return this.dataRepositoryPath;
@@ -45,7 +45,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="deleteDataInFilesystem")
-    private final @Nullable Input<Boolean> deleteDataInFilesystem;
+      private final @Nullable Input<Boolean> deleteDataInFilesystem;
 
     public Input<Boolean> getDeleteDataInFilesystem() {
         return this.deleteDataInFilesystem == null ? Input.empty() : this.deleteDataInFilesystem;
@@ -56,7 +56,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="fileSystemId", required=true)
-    private final Input<String> fileSystemId;
+      private final Input<String> fileSystemId;
 
     public Input<String> getFileSystemId() {
         return this.fileSystemId;
@@ -67,7 +67,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="fileSystemPath", required=true)
-    private final Input<String> fileSystemPath;
+      private final Input<String> fileSystemPath;
 
     public Input<String> getFileSystemPath() {
         return this.fileSystemPath;
@@ -78,7 +78,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="importedFileChunkSize")
-    private final @Nullable Input<Integer> importedFileChunkSize;
+      private final @Nullable Input<Integer> importedFileChunkSize;
 
     public Input<Integer> getImportedFileChunkSize() {
         return this.importedFileChunkSize == null ? Input.empty() : this.importedFileChunkSize;
@@ -90,7 +90,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="s3")
-    private final @Nullable Input<DataRepositoryAssociationS3Args> s3;
+      private final @Nullable Input<DataRepositoryAssociationS3Args> s3;
 
     public Input<DataRepositoryAssociationS3Args> getS3() {
         return this.s3 == null ? Input.empty() : this.s3;
@@ -101,7 +101,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -112,7 +112,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

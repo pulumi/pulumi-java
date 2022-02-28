@@ -6,7 +6,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs;
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DistributionConfigurationDistributionGetArgs extends io.pulum
      * 
      */
     @InputImport(name="amiDistributionConfiguration")
-    private final @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs> amiDistributionConfiguration;
+      private final @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs> amiDistributionConfiguration;
 
     public Input<DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs> getAmiDistributionConfiguration() {
         return this.amiDistributionConfiguration == null ? Input.empty() : this.amiDistributionConfiguration;
@@ -33,7 +33,7 @@ public final class DistributionConfigurationDistributionGetArgs extends io.pulum
      * 
      */
     @InputImport(name="containerDistributionConfiguration")
-    private final @Nullable Input<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs> containerDistributionConfiguration;
+      private final @Nullable Input<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs> containerDistributionConfiguration;
 
     public Input<DistributionConfigurationDistributionContainerDistributionConfigurationGetArgs> getContainerDistributionConfiguration() {
         return this.containerDistributionConfiguration == null ? Input.empty() : this.containerDistributionConfiguration;
@@ -44,7 +44,7 @@ public final class DistributionConfigurationDistributionGetArgs extends io.pulum
      * 
      */
     @InputImport(name="licenseConfigurationArns")
-    private final @Nullable Input<List<String>> licenseConfigurationArns;
+      private final @Nullable Input<List<String>> licenseConfigurationArns;
 
     public Input<List<String>> getLicenseConfigurationArns() {
         return this.licenseConfigurationArns == null ? Input.empty() : this.licenseConfigurationArns;
@@ -55,7 +55,7 @@ public final class DistributionConfigurationDistributionGetArgs extends io.pulum
      * 
      */
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;

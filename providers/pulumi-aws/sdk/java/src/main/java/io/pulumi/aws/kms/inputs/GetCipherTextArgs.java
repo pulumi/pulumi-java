@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kms.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetCipherTextArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="context")
-    private final @Nullable Map<String,String> context;
+      private final @Nullable Map<String,String> context;
 
     public Map<String,String> getContext() {
         return this.context == null ? Map.of() : this.context;
@@ -31,7 +31,7 @@ public final class GetCipherTextArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final String keyId;
+      private final String keyId;
 
     public String getKeyId() {
         return this.keyId;
@@ -42,7 +42,7 @@ public final class GetCipherTextArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="plaintext", required=true)
-    private final String plaintext;
+      private final String plaintext;
 
     public String getPlaintext() {
         return this.plaintext;

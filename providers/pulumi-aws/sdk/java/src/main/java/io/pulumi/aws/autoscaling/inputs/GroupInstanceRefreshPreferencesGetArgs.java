@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="checkpointDelay")
-    private final @Nullable Input<String> checkpointDelay;
+      private final @Nullable Input<String> checkpointDelay;
 
     public Input<String> getCheckpointDelay() {
         return this.checkpointDelay == null ? Input.empty() : this.checkpointDelay;
@@ -32,7 +32,7 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="checkpointPercentages")
-    private final @Nullable Input<List<Integer>> checkpointPercentages;
+      private final @Nullable Input<List<Integer>> checkpointPercentages;
 
     public Input<List<Integer>> getCheckpointPercentages() {
         return this.checkpointPercentages == null ? Input.empty() : this.checkpointPercentages;
@@ -43,7 +43,7 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="instanceWarmup")
-    private final @Nullable Input<String> instanceWarmup;
+      private final @Nullable Input<String> instanceWarmup;
 
     public Input<String> getInstanceWarmup() {
         return this.instanceWarmup == null ? Input.empty() : this.instanceWarmup;
@@ -54,7 +54,7 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="minHealthyPercentage")
-    private final @Nullable Input<Integer> minHealthyPercentage;
+      private final @Nullable Input<Integer> minHealthyPercentage;
 
     public Input<Integer> getMinHealthyPercentage() {
         return this.minHealthyPercentage == null ? Input.empty() : this.minHealthyPercentage;

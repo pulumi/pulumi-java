@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PatchBaselineSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="configuration", required=true)
-    private final Input<String> configuration;
+      private final Input<String> configuration;
 
     public Input<String> getConfiguration() {
         return this.configuration;
@@ -30,7 +30,7 @@ public final class PatchBaselineSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -41,7 +41,7 @@ public final class PatchBaselineSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="products", required=true)
-    private final Input<List<String>> products;
+      private final Input<List<String>> products;
 
     public Input<List<String>> getProducts() {
         return this.products;

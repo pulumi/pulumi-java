@@ -4,7 +4,7 @@
 package io.pulumi.aws.worklink;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="certificate", required=true)
-    private final Input<String> certificate;
+      private final Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate;
@@ -30,7 +30,7 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -41,7 +41,7 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends io.pulumi.
      * 
      */
     @InputImport(name="fleetArn", required=true)
-    private final Input<String> fleetArn;
+      private final Input<String> fleetArn;
 
     public Input<String> getFleetArn() {
         return this.fleetArn;

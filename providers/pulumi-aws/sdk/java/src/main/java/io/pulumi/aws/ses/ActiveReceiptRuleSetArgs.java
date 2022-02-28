@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ActiveReceiptRuleSetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ruleSetName", required=true)
-    private final Input<String> ruleSetName;
+      private final Input<String> ruleSetName;
 
     public Input<String> getRuleSetName() {
         return this.ruleSetName;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ResolverQueryLogConfigAssociationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resolverQueryLogConfigId", required=true)
-    private final Input<String> resolverQueryLogConfigId;
+      private final Input<String> resolverQueryLogConfigId;
 
     public Input<String> getResolverQueryLogConfigId() {
         return this.resolverQueryLogConfigId;
@@ -29,7 +29,7 @@ public final class ResolverQueryLogConfigAssociationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;

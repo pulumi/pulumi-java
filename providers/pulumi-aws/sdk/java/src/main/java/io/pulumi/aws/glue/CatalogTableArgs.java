@@ -8,7 +8,7 @@ import io.pulumi.aws.glue.inputs.CatalogTablePartitionKeyArgs;
 import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorArgs;
 import io.pulumi.aws.glue.inputs.CatalogTableTargetTableArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
@@ -37,7 +37,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -48,7 +48,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -59,7 +59,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable Input<String> owner;
+      private final @Nullable Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner == null ? Input.empty() : this.owner;
@@ -81,7 +81,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -92,7 +92,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionIndices")
-    private final @Nullable Input<List<CatalogTablePartitionIndexArgs>> partitionIndices;
+      private final @Nullable Input<List<CatalogTablePartitionIndexArgs>> partitionIndices;
 
     public Input<List<CatalogTablePartitionIndexArgs>> getPartitionIndices() {
         return this.partitionIndices == null ? Input.empty() : this.partitionIndices;
@@ -103,7 +103,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionKeys")
-    private final @Nullable Input<List<CatalogTablePartitionKeyArgs>> partitionKeys;
+      private final @Nullable Input<List<CatalogTablePartitionKeyArgs>> partitionKeys;
 
     public Input<List<CatalogTablePartitionKeyArgs>> getPartitionKeys() {
         return this.partitionKeys == null ? Input.empty() : this.partitionKeys;
@@ -114,7 +114,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retention")
-    private final @Nullable Input<Integer> retention;
+      private final @Nullable Input<Integer> retention;
 
     public Input<Integer> getRetention() {
         return this.retention == null ? Input.empty() : this.retention;
@@ -125,7 +125,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageDescriptor")
-    private final @Nullable Input<CatalogTableStorageDescriptorArgs> storageDescriptor;
+      private final @Nullable Input<CatalogTableStorageDescriptorArgs> storageDescriptor;
 
     public Input<CatalogTableStorageDescriptorArgs> getStorageDescriptor() {
         return this.storageDescriptor == null ? Input.empty() : this.storageDescriptor;
@@ -136,7 +136,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableType")
-    private final @Nullable Input<String> tableType;
+      private final @Nullable Input<String> tableType;
 
     public Input<String> getTableType() {
         return this.tableType == null ? Input.empty() : this.tableType;
@@ -147,7 +147,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetTable")
-    private final @Nullable Input<CatalogTableTargetTableArgs> targetTable;
+      private final @Nullable Input<CatalogTableTargetTableArgs> targetTable;
 
     public Input<CatalogTableTargetTableArgs> getTargetTable() {
         return this.targetTable == null ? Input.empty() : this.targetTable;
@@ -158,7 +158,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="viewExpandedText")
-    private final @Nullable Input<String> viewExpandedText;
+      private final @Nullable Input<String> viewExpandedText;
 
     public Input<String> getViewExpandedText() {
         return this.viewExpandedText == null ? Input.empty() : this.viewExpandedText;
@@ -169,7 +169,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="viewOriginalText")
-    private final @Nullable Input<String> viewOriginalText;
+      private final @Nullable Input<String> viewOriginalText;
 
     public Input<String> getViewOriginalText() {
         return this.viewOriginalText == null ? Input.empty() : this.viewOriginalText;

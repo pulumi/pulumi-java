@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GraphQLApiLogConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cloudwatchLogsRoleArn", required=true)
-    private final Input<String> cloudwatchLogsRoleArn;
+      private final Input<String> cloudwatchLogsRoleArn;
 
     public Input<String> getCloudwatchLogsRoleArn() {
         return this.cloudwatchLogsRoleArn;
@@ -31,7 +31,7 @@ public final class GraphQLApiLogConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="excludeVerboseContent")
-    private final @Nullable Input<Boolean> excludeVerboseContent;
+      private final @Nullable Input<Boolean> excludeVerboseContent;
 
     public Input<Boolean> getExcludeVerboseContent() {
         return this.excludeVerboseContent == null ? Input.empty() : this.excludeVerboseContent;
@@ -42,7 +42,7 @@ public final class GraphQLApiLogConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="fieldLogLevel", required=true)
-    private final Input<String> fieldLogLevel;
+      private final Input<String> fieldLogLevel;
 
     public Input<String> getFieldLogLevel() {
         return this.fieldLogLevel;

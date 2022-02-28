@@ -6,7 +6,7 @@ package io.pulumi.aws.connect.inputs;
 import io.pulumi.aws.connect.inputs.HoursOfOperationConfigEndTimeArgs;
 import io.pulumi.aws.connect.inputs.HoursOfOperationConfigStartTimeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="day", required=true)
-    private final Input<String> day;
+      private final Input<String> day;
 
     public Input<String> getDay() {
         return this.day;
@@ -31,7 +31,7 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final Input<HoursOfOperationConfigEndTimeArgs> endTime;
+      private final Input<HoursOfOperationConfigEndTimeArgs> endTime;
 
     public Input<HoursOfOperationConfigEndTimeArgs> getEndTime() {
         return this.endTime;
@@ -42,7 +42,7 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final Input<HoursOfOperationConfigStartTimeArgs> startTime;
+      private final Input<HoursOfOperationConfigStartTimeArgs> startTime;
 
     public Input<HoursOfOperationConfigStartTimeArgs> getStartTime() {
         return this.startTime;

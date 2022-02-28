@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.enums.PlacementStrategy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -36,7 +36,7 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionCount")
-    private final @Nullable Input<Integer> partitionCount;
+      private final @Nullable Input<Integer> partitionCount;
 
     public Input<Integer> getPartitionCount() {
         return this.partitionCount == null ? Input.empty() : this.partitionCount;
@@ -47,7 +47,7 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="strategy", required=true)
-    private final Input<Either<String,PlacementStrategy>> strategy;
+      private final Input<Either<String,PlacementStrategy>> strategy;
 
     public Input<Either<String,PlacementStrategy>> getStrategy() {
         return this.strategy;
@@ -58,7 +58,7 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

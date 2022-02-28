@@ -8,7 +8,7 @@ import io.pulumi.aws.lambda.outputs.GetFunctionEnvironment;
 import io.pulumi.aws.lambda.outputs.GetFunctionFileSystemConfig;
 import io.pulumi.aws.lambda.outputs.GetFunctionTracingConfig;
 import io.pulumi.aws.lambda.outputs.GetFunctionVpcConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

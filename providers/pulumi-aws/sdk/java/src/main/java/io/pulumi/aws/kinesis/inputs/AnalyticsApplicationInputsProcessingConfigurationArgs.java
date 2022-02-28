@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsProcessingConfigurationLambdaArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class AnalyticsApplicationInputsProcessingConfigurationArgs extends
      * 
      */
     @InputImport(name="lambda", required=true)
-    private final Input<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> lambda;
+      private final Input<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> lambda;
 
     public Input<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> getLambda() {
         return this.lambda;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserPoolDeviceConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="challengeRequiredOnNewDevice")
-    private final @Nullable Input<Boolean> challengeRequiredOnNewDevice;
+      private final @Nullable Input<Boolean> challengeRequiredOnNewDevice;
 
     public Input<Boolean> getChallengeRequiredOnNewDevice() {
         return this.challengeRequiredOnNewDevice == null ? Input.empty() : this.challengeRequiredOnNewDevice;
@@ -30,7 +30,7 @@ public final class UserPoolDeviceConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deviceOnlyRememberedOnUserPrompt")
-    private final @Nullable Input<Boolean> deviceOnlyRememberedOnUserPrompt;
+      private final @Nullable Input<Boolean> deviceOnlyRememberedOnUserPrompt;
 
     public Input<Boolean> getDeviceOnlyRememberedOnUserPrompt() {
         return this.deviceOnlyRememberedOnUserPrompt == null ? Input.empty() : this.deviceOnlyRememberedOnUserPrompt;

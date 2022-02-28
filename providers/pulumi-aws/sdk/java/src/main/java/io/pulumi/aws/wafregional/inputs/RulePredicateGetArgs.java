@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class RulePredicateGetArgs extends io.pulumi.resources.ResourceArgs
     public static final RulePredicateGetArgs Empty = new RulePredicateGetArgs();
 
     @InputImport(name="dataId", required=true)
-    private final Input<String> dataId;
+      private final Input<String> dataId;
 
     public Input<String> getDataId() {
         return this.dataId;
     }
 
     @InputImport(name="negated", required=true)
-    private final Input<Boolean> negated;
+      private final Input<Boolean> negated;
 
     public Input<Boolean> getNegated() {
         return this.negated;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

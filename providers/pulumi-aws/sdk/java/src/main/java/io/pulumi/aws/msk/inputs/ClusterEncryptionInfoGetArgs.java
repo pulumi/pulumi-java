@@ -5,7 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.aws.msk.inputs.ClusterEncryptionInfoEncryptionInTransitGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ClusterEncryptionInfoGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="encryptionAtRestKmsKeyArn")
-    private final @Nullable Input<String> encryptionAtRestKmsKeyArn;
+      private final @Nullable Input<String> encryptionAtRestKmsKeyArn;
 
     public Input<String> getEncryptionAtRestKmsKeyArn() {
         return this.encryptionAtRestKmsKeyArn == null ? Input.empty() : this.encryptionAtRestKmsKeyArn;
@@ -31,7 +31,7 @@ public final class ClusterEncryptionInfoGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="encryptionInTransit")
-    private final @Nullable Input<ClusterEncryptionInfoEncryptionInTransitGetArgs> encryptionInTransit;
+      private final @Nullable Input<ClusterEncryptionInfoEncryptionInTransitGetArgs> encryptionInTransit;
 
     public Input<ClusterEncryptionInfoEncryptionInTransitGetArgs> getEncryptionInTransit() {
         return this.encryptionInTransit == null ? Input.empty() : this.encryptionInTransit;

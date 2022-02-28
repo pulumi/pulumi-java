@@ -5,7 +5,7 @@ package io.pulumi.aws.dynamodb;
 
 import io.pulumi.aws.dynamodb.inputs.GlobalTableReplicaArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -32,7 +32,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicas", required=true)
-    private final Input<List<GlobalTableReplicaArgs>> replicas;
+      private final Input<List<GlobalTableReplicaArgs>> replicas;
 
     public Input<List<GlobalTableReplicaArgs>> getReplicas() {
         return this.replicas;

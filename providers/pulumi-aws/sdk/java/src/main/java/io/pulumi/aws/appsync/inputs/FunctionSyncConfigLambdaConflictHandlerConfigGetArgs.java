@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FunctionSyncConfigLambdaConflictHandlerConfigGetArgs extends 
      * 
      */
     @InputImport(name="lambdaConflictHandlerArn")
-    private final @Nullable Input<String> lambdaConflictHandlerArn;
+      private final @Nullable Input<String> lambdaConflictHandlerArn;
 
     public Input<String> getLambdaConflictHandlerArn() {
         return this.lambdaConflictHandlerArn == null ? Input.empty() : this.lambdaConflictHandlerArn;

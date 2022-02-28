@@ -7,7 +7,7 @@ import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationClo
 import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs;
 import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationS3EncryptionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -16,14 +16,14 @@ public final class SecurityConfigurationEncryptionConfigurationArgs extends io.p
     public static final SecurityConfigurationEncryptionConfigurationArgs Empty = new SecurityConfigurationEncryptionConfigurationArgs();
 
     @InputImport(name="cloudwatchEncryption", required=true)
-    private final Input<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> cloudwatchEncryption;
+      private final Input<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> cloudwatchEncryption;
 
     public Input<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs> getCloudwatchEncryption() {
         return this.cloudwatchEncryption;
     }
 
     @InputImport(name="jobBookmarksEncryption", required=true)
-    private final Input<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> jobBookmarksEncryption;
+      private final Input<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> jobBookmarksEncryption;
 
     public Input<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionArgs> getJobBookmarksEncryption() {
         return this.jobBookmarksEncryption;
@@ -34,7 +34,7 @@ public final class SecurityConfigurationEncryptionConfigurationArgs extends io.p
      * 
      */
     @InputImport(name="s3Encryption", required=true)
-    private final Input<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> s3Encryption;
+      private final Input<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> s3Encryption;
 
     public Input<SecurityConfigurationEncryptionConfigurationS3EncryptionArgs> getS3Encryption() {
         return this.s3Encryption;

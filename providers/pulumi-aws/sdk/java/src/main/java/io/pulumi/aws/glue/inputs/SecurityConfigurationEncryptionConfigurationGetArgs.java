@@ -7,7 +7,7 @@ import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationClo
 import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs;
 import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -16,14 +16,14 @@ public final class SecurityConfigurationEncryptionConfigurationGetArgs extends i
     public static final SecurityConfigurationEncryptionConfigurationGetArgs Empty = new SecurityConfigurationEncryptionConfigurationGetArgs();
 
     @InputImport(name="cloudwatchEncryption", required=true)
-    private final Input<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionGetArgs> cloudwatchEncryption;
+      private final Input<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionGetArgs> cloudwatchEncryption;
 
     public Input<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionGetArgs> getCloudwatchEncryption() {
         return this.cloudwatchEncryption;
     }
 
     @InputImport(name="jobBookmarksEncryption", required=true)
-    private final Input<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs> jobBookmarksEncryption;
+      private final Input<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs> jobBookmarksEncryption;
 
     public Input<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs> getJobBookmarksEncryption() {
         return this.jobBookmarksEncryption;
@@ -34,7 +34,7 @@ public final class SecurityConfigurationEncryptionConfigurationGetArgs extends i
      * 
      */
     @InputImport(name="s3Encryption", required=true)
-    private final Input<SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs> s3Encryption;
+      private final Input<SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs> s3Encryption;
 
     public Input<SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs> getS3Encryption() {
         return this.s3Encryption;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TopicRuleErrorActionStepFunctionsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="executionNamePrefix")
-    private final @Nullable Input<String> executionNamePrefix;
+      private final @Nullable Input<String> executionNamePrefix;
 
     public Input<String> getExecutionNamePrefix() {
         return this.executionNamePrefix == null ? Input.empty() : this.executionNamePrefix;
@@ -30,7 +30,7 @@ public final class TopicRuleErrorActionStepFunctionsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -41,7 +41,7 @@ public final class TopicRuleErrorActionStepFunctionsGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="stateMachineName", required=true)
-    private final Input<String> stateMachineName;
+      private final Input<String> stateMachineName;
 
     public Input<String> getStateMachineName() {
         return this.stateMachineName;

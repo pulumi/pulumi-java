@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maximumCapacityUnits", required=true)
-    private final Input<Integer> maximumCapacityUnits;
+      private final Input<Integer> maximumCapacityUnits;
 
     public Input<Integer> getMaximumCapacityUnits() {
         return this.maximumCapacityUnits;
@@ -31,7 +31,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maximumCoreCapacityUnits")
-    private final @Nullable Input<Integer> maximumCoreCapacityUnits;
+      private final @Nullable Input<Integer> maximumCoreCapacityUnits;
 
     public Input<Integer> getMaximumCoreCapacityUnits() {
         return this.maximumCoreCapacityUnits == null ? Input.empty() : this.maximumCoreCapacityUnits;
@@ -42,7 +42,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maximumOndemandCapacityUnits")
-    private final @Nullable Input<Integer> maximumOndemandCapacityUnits;
+      private final @Nullable Input<Integer> maximumOndemandCapacityUnits;
 
     public Input<Integer> getMaximumOndemandCapacityUnits() {
         return this.maximumOndemandCapacityUnits == null ? Input.empty() : this.maximumOndemandCapacityUnits;
@@ -53,7 +53,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minimumCapacityUnits", required=true)
-    private final Input<Integer> minimumCapacityUnits;
+      private final Input<Integer> minimumCapacityUnits;
 
     public Input<Integer> getMinimumCapacityUnits() {
         return this.minimumCapacityUnits;
@@ -64,7 +64,7 @@ public final class ManagedScalingPolicyComputeLimitArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="unitType", required=true)
-    private final Input<String> unitType;
+      private final Input<String> unitType;
 
     public Input<String> getUnitType() {
         return this.unitType;

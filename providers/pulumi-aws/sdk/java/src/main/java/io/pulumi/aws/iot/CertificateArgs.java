@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="active", required=true)
-    private final Input<Boolean> active;
+      private final Input<Boolean> active;
 
     public Input<Boolean> getActive() {
         return this.active;
@@ -35,7 +35,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="csr")
-    private final @Nullable Input<String> csr;
+      private final @Nullable Input<String> csr;
 
     public Input<String> getCsr() {
         return this.csr == null ? Input.empty() : this.csr;

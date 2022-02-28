@@ -8,8 +8,8 @@ import io.pulumi.aws.chime.VoiceConnectorStreamingArgs;
 import io.pulumi.aws.chime.inputs.VoiceConnectorStreamingState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -90,6 +90,21 @@ public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource 
         return this.voiceConnectorId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VoiceConnectorStreaming(String name) {
+        this(name, VoiceConnectorStreamingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VoiceConnectorStreaming(String name, VoiceConnectorStreamingArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

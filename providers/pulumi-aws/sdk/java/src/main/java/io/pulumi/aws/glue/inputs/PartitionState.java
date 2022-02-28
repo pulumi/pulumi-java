@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
@@ -33,7 +33,7 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-    private final @Nullable Input<String> creationTime;
+      private final @Nullable Input<String> creationTime;
 
     public Input<String> getCreationTime() {
         return this.creationTime == null ? Input.empty() : this.creationTime;
@@ -44,7 +44,7 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+      private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -55,7 +55,7 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastAccessedTime")
-    private final @Nullable Input<String> lastAccessedTime;
+      private final @Nullable Input<String> lastAccessedTime;
 
     public Input<String> getLastAccessedTime() {
         return this.lastAccessedTime == null ? Input.empty() : this.lastAccessedTime;
@@ -66,7 +66,7 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastAnalyzedTime")
-    private final @Nullable Input<String> lastAnalyzedTime;
+      private final @Nullable Input<String> lastAnalyzedTime;
 
     public Input<String> getLastAnalyzedTime() {
         return this.lastAnalyzedTime == null ? Input.empty() : this.lastAnalyzedTime;
@@ -77,7 +77,7 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -88,7 +88,7 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionValues")
-    private final @Nullable Input<List<String>> partitionValues;
+      private final @Nullable Input<List<String>> partitionValues;
 
     public Input<List<String>> getPartitionValues() {
         return this.partitionValues == null ? Input.empty() : this.partitionValues;
@@ -99,14 +99,14 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageDescriptor")
-    private final @Nullable Input<PartitionStorageDescriptorGetArgs> storageDescriptor;
+      private final @Nullable Input<PartitionStorageDescriptorGetArgs> storageDescriptor;
 
     public Input<PartitionStorageDescriptorGetArgs> getStorageDescriptor() {
         return this.storageDescriptor == null ? Input.empty() : this.storageDescriptor;
     }
 
     @InputImport(name="tableName")
-    private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;

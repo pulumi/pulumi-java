@@ -7,7 +7,7 @@ import io.pulumi.aws.s3.inputs.InventoryDestinationGetArgs;
 import io.pulumi.aws.s3.inputs.InventoryFilterGetArgs;
 import io.pulumi.aws.s3.inputs.InventoryScheduleGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -35,7 +35,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<InventoryDestinationGetArgs> destination;
+      private final @Nullable Input<InventoryDestinationGetArgs> destination;
 
     public Input<InventoryDestinationGetArgs> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -46,7 +46,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -57,7 +57,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<InventoryFilterGetArgs> filter;
+      private final @Nullable Input<InventoryFilterGetArgs> filter;
 
     public Input<InventoryFilterGetArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -68,7 +68,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includedObjectVersions")
-    private final @Nullable Input<String> includedObjectVersions;
+      private final @Nullable Input<String> includedObjectVersions;
 
     public Input<String> getIncludedObjectVersions() {
         return this.includedObjectVersions == null ? Input.empty() : this.includedObjectVersions;
@@ -79,7 +79,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -90,7 +90,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optionalFields")
-    private final @Nullable Input<List<String>> optionalFields;
+      private final @Nullable Input<List<String>> optionalFields;
 
     public Input<List<String>> getOptionalFields() {
         return this.optionalFields == null ? Input.empty() : this.optionalFields;
@@ -101,7 +101,7 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<InventoryScheduleGetArgs> schedule;
+      private final @Nullable Input<InventoryScheduleGetArgs> schedule;
 
     public Input<InventoryScheduleGetArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;

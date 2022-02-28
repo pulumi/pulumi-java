@@ -9,8 +9,8 @@ import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointPolicyState;
 import io.pulumi.aws.s3control.outputs.MultiRegionAccessPointPolicyDetails;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -79,6 +79,21 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
         return this.proposed;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public MultiRegionAccessPointPolicy(String name) {
+        this(name, MultiRegionAccessPointPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public MultiRegionAccessPointPolicy(String name, MultiRegionAccessPointPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<String> configuration;
+      private final @Nullable Input<String> configuration;
 
     public Input<String> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -30,7 +30,7 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="creationDate")
-    private final @Nullable Input<String> creationDate;
+      private final @Nullable Input<String> creationDate;
 
     public Input<String> getCreationDate() {
         return this.creationDate == null ? Input.empty() : this.creationDate;
@@ -41,7 +41,7 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;

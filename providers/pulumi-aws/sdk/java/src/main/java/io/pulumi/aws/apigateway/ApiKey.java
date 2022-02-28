@@ -8,8 +8,8 @@ import io.pulumi.aws.apigateway.ApiKeyArgs;
 import io.pulumi.aws.apigateway.inputs.ApiKeyState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -160,6 +160,21 @@ public class ApiKey extends io.pulumi.resources.CustomResource {
         return this.value;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ApiKey(String name) {
+        this(name, ApiKeyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ApiKey(String name, @Nullable ApiKeyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

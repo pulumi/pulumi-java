@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ClusterRoleAssociationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dbClusterIdentifier", required=true)
-    private final Input<String> dbClusterIdentifier;
+      private final Input<String> dbClusterIdentifier;
 
     public Input<String> getDbClusterIdentifier() {
         return this.dbClusterIdentifier;
@@ -29,7 +29,7 @@ public final class ClusterRoleAssociationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="featureName", required=true)
-    private final Input<String> featureName;
+      private final Input<String> featureName;
 
     public Input<String> getFeatureName() {
         return this.featureName;
@@ -40,7 +40,7 @@ public final class ClusterRoleAssociationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;

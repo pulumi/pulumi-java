@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDataCatalogEncryptionSettingsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="catalogId", required=true)
-    private final String catalogId;
+      private final String catalogId;
 
     public String getCatalogId() {
         return this.catalogId;

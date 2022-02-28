@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="studioLifecycleConfigAppType")
-    private final @Nullable Input<String> studioLifecycleConfigAppType;
+      private final @Nullable Input<String> studioLifecycleConfigAppType;
 
     public Input<String> getStudioLifecycleConfigAppType() {
         return this.studioLifecycleConfigAppType == null ? Input.empty() : this.studioLifecycleConfigAppType;
@@ -42,7 +42,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="studioLifecycleConfigContent")
-    private final @Nullable Input<String> studioLifecycleConfigContent;
+      private final @Nullable Input<String> studioLifecycleConfigContent;
 
     public Input<String> getStudioLifecycleConfigContent() {
         return this.studioLifecycleConfigContent == null ? Input.empty() : this.studioLifecycleConfigContent;
@@ -53,7 +53,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="studioLifecycleConfigName")
-    private final @Nullable Input<String> studioLifecycleConfigName;
+      private final @Nullable Input<String> studioLifecycleConfigName;
 
     public Input<String> getStudioLifecycleConfigName() {
         return this.studioLifecycleConfigName == null ? Input.empty() : this.studioLifecycleConfigName;
@@ -64,7 +64,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -75,7 +75,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

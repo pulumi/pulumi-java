@@ -9,8 +9,8 @@ import io.pulumi.aws.ses.inputs.ConfgurationSetState;
 import io.pulumi.aws.ses.outputs.ConfgurationSetDeliveryOptions;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -120,6 +120,21 @@ public class ConfgurationSet extends io.pulumi.resources.CustomResource {
         return this.sendingEnabled;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ConfgurationSet(String name) {
+        this(name, ConfgurationSetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ConfgurationSet(String name, @Nullable ConfgurationSetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

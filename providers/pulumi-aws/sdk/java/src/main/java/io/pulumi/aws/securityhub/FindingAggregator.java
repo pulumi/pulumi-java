@@ -8,8 +8,8 @@ import io.pulumi.aws.securityhub.FindingAggregatorArgs;
 import io.pulumi.aws.securityhub.inputs.FindingAggregatorState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -59,6 +59,21 @@ public class FindingAggregator extends io.pulumi.resources.CustomResource {
         return this.specifiedRegions;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public FindingAggregator(String name) {
+        this(name, FindingAggregatorArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public FindingAggregator(String name, FindingAggregatorArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

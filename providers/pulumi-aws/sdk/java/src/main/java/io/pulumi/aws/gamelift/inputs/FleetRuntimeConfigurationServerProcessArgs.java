@@ -4,7 +4,7 @@
 package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FleetRuntimeConfigurationServerProcessArgs extends io.pulumi.
      * 
      */
     @InputImport(name="concurrentExecutions", required=true)
-    private final Input<Integer> concurrentExecutions;
+      private final Input<Integer> concurrentExecutions;
 
     public Input<Integer> getConcurrentExecutions() {
         return this.concurrentExecutions;
@@ -31,7 +31,7 @@ public final class FleetRuntimeConfigurationServerProcessArgs extends io.pulumi.
      * 
      */
     @InputImport(name="launchPath", required=true)
-    private final Input<String> launchPath;
+      private final Input<String> launchPath;
 
     public Input<String> getLaunchPath() {
         return this.launchPath;
@@ -42,7 +42,7 @@ public final class FleetRuntimeConfigurationServerProcessArgs extends io.pulumi.
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<String> parameters;
+      private final @Nullable Input<String> parameters;
 
     public Input<String> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;

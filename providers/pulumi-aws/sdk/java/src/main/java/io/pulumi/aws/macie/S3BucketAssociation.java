@@ -9,8 +9,8 @@ import io.pulumi.aws.macie.inputs.S3BucketAssociationState;
 import io.pulumi.aws.macie.outputs.S3BucketAssociationClassificationType;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -83,6 +83,21 @@ public class S3BucketAssociation extends io.pulumi.resources.CustomResource {
         return this.prefix;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public S3BucketAssociation(String name) {
+        this(name, S3BucketAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public S3BucketAssociation(String name, S3BucketAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

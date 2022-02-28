@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compatibility", required=true)
-    private final Input<String> compatibility;
+      private final Input<String> compatibility;
 
     public Input<String> getCompatibility() {
         return this.compatibility;
@@ -31,7 +31,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataFormat", required=true)
-    private final Input<String> dataFormat;
+      private final Input<String> dataFormat;
 
     public Input<String> getDataFormat() {
         return this.dataFormat;
@@ -42,7 +42,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -53,7 +53,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryArn")
-    private final @Nullable Input<String> registryArn;
+      private final @Nullable Input<String> registryArn;
 
     public Input<String> getRegistryArn() {
         return this.registryArn == null ? Input.empty() : this.registryArn;
@@ -64,7 +64,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaDefinition", required=true)
-    private final Input<String> schemaDefinition;
+      private final Input<String> schemaDefinition;
 
     public Input<String> getSchemaDefinition() {
         return this.schemaDefinition;
@@ -75,7 +75,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaName", required=true)
-    private final Input<String> schemaName;
+      private final Input<String> schemaName;
 
     public Input<String> getSchemaName() {
         return this.schemaName;
@@ -86,7 +86,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

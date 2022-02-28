@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticloadbalancingv2.outputs;
 
 import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerDefaultActionForwardStickiness;
 import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerDefaultActionForwardTargetGroup;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

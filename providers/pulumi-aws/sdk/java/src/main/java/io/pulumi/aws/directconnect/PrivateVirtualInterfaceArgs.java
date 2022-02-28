@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class PrivateVirtualInterfaceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="addressFamily", required=true)
-    private final Input<String> addressFamily;
+      private final Input<String> addressFamily;
 
     public Input<String> getAddressFamily() {
         return this.addressFamily;
@@ -33,7 +33,7 @@ public final class PrivateVirtualInterfaceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="amazonAddress")
-    private final @Nullable Input<String> amazonAddress;
+      private final @Nullable Input<String> amazonAddress;
 
     public Input<String> getAmazonAddress() {
         return this.amazonAddress == null ? Input.empty() : this.amazonAddress;
@@ -44,7 +44,7 @@ public final class PrivateVirtualInterfaceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="bgpAsn", required=true)
-    private final Input<Integer> bgpAsn;
+      private final Input<Integer> bgpAsn;
 
     public Input<Integer> getBgpAsn() {
         return this.bgpAsn;
@@ -55,7 +55,7 @@ public final class PrivateVirtualInterfaceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="bgpAuthKey")
-    private final @Nullable Input<String> bgpAuthKey;
+      private final @Nullable Input<String> bgpAuthKey;
 
     public Input<String> getBgpAuthKey() {
         return this.bgpAuthKey == null ? Input.empty() : this.bgpAuthKey;
@@ -66,7 +66,7 @@ public final class PrivateVirtualInterfaceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectionId", required=true)
-    private final Input<String> connectionId;
+      private final Input<String> connectionId;
 
     public Input<String> getConnectionId() {
         return this.connectionId;
@@ -77,7 +77,7 @@ public final class PrivateVirtualInterfaceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customerAddress")
-    private final @Nullable Input<String> customerAddress;
+      private final @Nullable Input<String> customerAddress;
 
     public Input<String> getCustomerAddress() {
         return this.customerAddress == null ? Input.empty() : this.customerAddress;
@@ -88,7 +88,7 @@ public final class PrivateVirtualInterfaceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dxGatewayId")
-    private final @Nullable Input<String> dxGatewayId;
+      private final @Nullable Input<String> dxGatewayId;
 
     public Input<String> getDxGatewayId() {
         return this.dxGatewayId == null ? Input.empty() : this.dxGatewayId;
@@ -100,7 +100,7 @@ public final class PrivateVirtualInterfaceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="mtu")
-    private final @Nullable Input<Integer> mtu;
+      private final @Nullable Input<Integer> mtu;
 
     public Input<Integer> getMtu() {
         return this.mtu == null ? Input.empty() : this.mtu;
@@ -111,14 +111,14 @@ public final class PrivateVirtualInterfaceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="sitelinkEnabled")
-    private final @Nullable Input<Boolean> sitelinkEnabled;
+      private final @Nullable Input<Boolean> sitelinkEnabled;
 
     public Input<Boolean> getSitelinkEnabled() {
         return this.sitelinkEnabled == null ? Input.empty() : this.sitelinkEnabled;
@@ -129,7 +129,7 @@ public final class PrivateVirtualInterfaceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -140,7 +140,7 @@ public final class PrivateVirtualInterfaceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vlan", required=true)
-    private final Input<Integer> vlan;
+      private final Input<Integer> vlan;
 
     public Input<Integer> getVlan() {
         return this.vlan;
@@ -151,7 +151,7 @@ public final class PrivateVirtualInterfaceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vpnGatewayId")
-    private final @Nullable Input<String> vpnGatewayId;
+      private final @Nullable Input<String> vpnGatewayId;
 
     public Input<String> getVpnGatewayId() {
         return this.vpnGatewayId == null ? Input.empty() : this.vpnGatewayId;

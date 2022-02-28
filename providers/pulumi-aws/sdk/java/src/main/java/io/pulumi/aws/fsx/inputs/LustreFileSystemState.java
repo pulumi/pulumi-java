@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="autoImportPolicy")
-    private final @Nullable Input<String> autoImportPolicy;
+      private final @Nullable Input<String> autoImportPolicy;
 
     public Input<String> getAutoImportPolicy() {
         return this.autoImportPolicy == null ? Input.empty() : this.autoImportPolicy;
@@ -45,7 +45,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="automaticBackupRetentionDays")
-    private final @Nullable Input<Integer> automaticBackupRetentionDays;
+      private final @Nullable Input<Integer> automaticBackupRetentionDays;
 
     public Input<Integer> getAutomaticBackupRetentionDays() {
         return this.automaticBackupRetentionDays == null ? Input.empty() : this.automaticBackupRetentionDays;
@@ -56,7 +56,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="backupId")
-    private final @Nullable Input<String> backupId;
+      private final @Nullable Input<String> backupId;
 
     public Input<String> getBackupId() {
         return this.backupId == null ? Input.empty() : this.backupId;
@@ -67,7 +67,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="copyTagsToBackups")
-    private final @Nullable Input<Boolean> copyTagsToBackups;
+      private final @Nullable Input<Boolean> copyTagsToBackups;
 
     public Input<Boolean> getCopyTagsToBackups() {
         return this.copyTagsToBackups == null ? Input.empty() : this.copyTagsToBackups;
@@ -78,7 +78,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dailyAutomaticBackupStartTime")
-    private final @Nullable Input<String> dailyAutomaticBackupStartTime;
+      private final @Nullable Input<String> dailyAutomaticBackupStartTime;
 
     public Input<String> getDailyAutomaticBackupStartTime() {
         return this.dailyAutomaticBackupStartTime == null ? Input.empty() : this.dailyAutomaticBackupStartTime;
@@ -89,7 +89,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataCompressionType")
-    private final @Nullable Input<String> dataCompressionType;
+      private final @Nullable Input<String> dataCompressionType;
 
     public Input<String> getDataCompressionType() {
         return this.dataCompressionType == null ? Input.empty() : this.dataCompressionType;
@@ -100,7 +100,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deploymentType")
-    private final @Nullable Input<String> deploymentType;
+      private final @Nullable Input<String> deploymentType;
 
     public Input<String> getDeploymentType() {
         return this.deploymentType == null ? Input.empty() : this.deploymentType;
@@ -111,7 +111,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dnsName")
-    private final @Nullable Input<String> dnsName;
+      private final @Nullable Input<String> dnsName;
 
     public Input<String> getDnsName() {
         return this.dnsName == null ? Input.empty() : this.dnsName;
@@ -122,7 +122,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="driveCacheType")
-    private final @Nullable Input<String> driveCacheType;
+      private final @Nullable Input<String> driveCacheType;
 
     public Input<String> getDriveCacheType() {
         return this.driveCacheType == null ? Input.empty() : this.driveCacheType;
@@ -133,7 +133,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="exportPath")
-    private final @Nullable Input<String> exportPath;
+      private final @Nullable Input<String> exportPath;
 
     public Input<String> getExportPath() {
         return this.exportPath == null ? Input.empty() : this.exportPath;
@@ -144,7 +144,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fileSystemTypeVersion")
-    private final @Nullable Input<String> fileSystemTypeVersion;
+      private final @Nullable Input<String> fileSystemTypeVersion;
 
     public Input<String> getFileSystemTypeVersion() {
         return this.fileSystemTypeVersion == null ? Input.empty() : this.fileSystemTypeVersion;
@@ -155,7 +155,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="importPath")
-    private final @Nullable Input<String> importPath;
+      private final @Nullable Input<String> importPath;
 
     public Input<String> getImportPath() {
         return this.importPath == null ? Input.empty() : this.importPath;
@@ -166,7 +166,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="importedFileChunkSize")
-    private final @Nullable Input<Integer> importedFileChunkSize;
+      private final @Nullable Input<Integer> importedFileChunkSize;
 
     public Input<Integer> getImportedFileChunkSize() {
         return this.importedFileChunkSize == null ? Input.empty() : this.importedFileChunkSize;
@@ -177,7 +177,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -188,7 +188,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mountName")
-    private final @Nullable Input<String> mountName;
+      private final @Nullable Input<String> mountName;
 
     public Input<String> getMountName() {
         return this.mountName == null ? Input.empty() : this.mountName;
@@ -199,7 +199,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="networkInterfaceIds")
-    private final @Nullable Input<List<String>> networkInterfaceIds;
+      private final @Nullable Input<List<String>> networkInterfaceIds;
 
     public Input<List<String>> getNetworkInterfaceIds() {
         return this.networkInterfaceIds == null ? Input.empty() : this.networkInterfaceIds;
@@ -210,7 +210,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -221,7 +221,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="perUnitStorageThroughput")
-    private final @Nullable Input<Integer> perUnitStorageThroughput;
+      private final @Nullable Input<Integer> perUnitStorageThroughput;
 
     public Input<Integer> getPerUnitStorageThroughput() {
         return this.perUnitStorageThroughput == null ? Input.empty() : this.perUnitStorageThroughput;
@@ -232,7 +232,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -243,7 +243,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageCapacity")
-    private final @Nullable Input<Integer> storageCapacity;
+      private final @Nullable Input<Integer> storageCapacity;
 
     public Input<Integer> getStorageCapacity() {
         return this.storageCapacity == null ? Input.empty() : this.storageCapacity;
@@ -254,7 +254,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageType")
-    private final @Nullable Input<String> storageType;
+      private final @Nullable Input<String> storageType;
 
     public Input<String> getStorageType() {
         return this.storageType == null ? Input.empty() : this.storageType;
@@ -265,7 +265,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<String> subnetIds;
+      private final @Nullable Input<String> subnetIds;
 
     public Input<String> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -276,7 +276,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -287,7 +287,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -298,7 +298,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;
@@ -309,7 +309,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="weeklyMaintenanceStartTime")
-    private final @Nullable Input<String> weeklyMaintenanceStartTime;
+      private final @Nullable Input<String> weeklyMaintenanceStartTime;
 
     public Input<String> getWeeklyMaintenanceStartTime() {
         return this.weeklyMaintenanceStartTime == null ? Input.empty() : this.weeklyMaintenanceStartTime;

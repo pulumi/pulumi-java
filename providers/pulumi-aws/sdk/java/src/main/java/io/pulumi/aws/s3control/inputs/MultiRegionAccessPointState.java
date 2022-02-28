@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -31,7 +31,7 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="alias")
-    private final @Nullable Input<String> alias;
+      private final @Nullable Input<String> alias;
 
     public Input<String> getAlias() {
         return this.alias == null ? Input.empty() : this.alias;
@@ -42,7 +42,7 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -53,7 +53,7 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="details")
-    private final @Nullable Input<MultiRegionAccessPointDetailsGetArgs> details;
+      private final @Nullable Input<MultiRegionAccessPointDetailsGetArgs> details;
 
     public Input<MultiRegionAccessPointDetailsGetArgs> getDetails() {
         return this.details == null ? Input.empty() : this.details;
@@ -64,7 +64,7 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -75,7 +75,7 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

@@ -6,7 +6,7 @@ package io.pulumi.aws.cognito;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cognito.inputs.GetUserPoolClientsArgs;
 import io.pulumi.aws.cognito.outputs.GetUserPoolClientsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

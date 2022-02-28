@@ -6,7 +6,7 @@ package io.pulumi.aws.ses;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ses.inputs.GetEmailIdentityArgs;
 import io.pulumi.aws.ses.outputs.GetEmailIdentityResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

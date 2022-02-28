@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.DefaultNetworkAclEgressGetArgs;
 import io.pulumi.aws.ec2.inputs.DefaultNetworkAclIngressGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="defaultNetworkAclId")
-    private final @Nullable Input<String> defaultNetworkAclId;
+      private final @Nullable Input<String> defaultNetworkAclId;
 
     public Input<String> getDefaultNetworkAclId() {
         return this.defaultNetworkAclId == null ? Input.empty() : this.defaultNetworkAclId;
@@ -45,7 +45,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="egress")
-    private final @Nullable Input<List<DefaultNetworkAclEgressGetArgs>> egress;
+      private final @Nullable Input<List<DefaultNetworkAclEgressGetArgs>> egress;
 
     public Input<List<DefaultNetworkAclEgressGetArgs>> getEgress() {
         return this.egress == null ? Input.empty() : this.egress;
@@ -56,7 +56,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ingress")
-    private final @Nullable Input<List<DefaultNetworkAclIngressGetArgs>> ingress;
+      private final @Nullable Input<List<DefaultNetworkAclIngressGetArgs>> ingress;
 
     public Input<List<DefaultNetworkAclIngressGetArgs>> getIngress() {
         return this.ingress == null ? Input.empty() : this.ingress;
@@ -67,7 +67,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -78,7 +78,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -89,7 +89,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -100,7 +100,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -111,7 +111,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

@@ -6,7 +6,7 @@ package io.pulumi.aws.workspaces.outputs;
 import io.pulumi.aws.workspaces.outputs.GetDirectorySelfServicePermission;
 import io.pulumi.aws.workspaces.outputs.GetDirectoryWorkspaceAccessProperty;
 import io.pulumi.aws.workspaces.outputs.GetDirectoryWorkspaceCreationProperty;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;

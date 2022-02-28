@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,49 +21,49 @@ public final class DefaultSubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone", required=true)
-    private final Input<String> availabilityZone;
+      private final Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone;
     }
 
     @InputImport(name="customerOwnedIpv4Pool")
-    private final @Nullable Input<String> customerOwnedIpv4Pool;
+      private final @Nullable Input<String> customerOwnedIpv4Pool;
 
     public Input<String> getCustomerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool == null ? Input.empty() : this.customerOwnedIpv4Pool;
     }
 
     @InputImport(name="enableDns64")
-    private final @Nullable Input<Boolean> enableDns64;
+      private final @Nullable Input<Boolean> enableDns64;
 
     public Input<Boolean> getEnableDns64() {
         return this.enableDns64 == null ? Input.empty() : this.enableDns64;
     }
 
     @InputImport(name="enableResourceNameDnsARecordOnLaunch")
-    private final @Nullable Input<Boolean> enableResourceNameDnsARecordOnLaunch;
+      private final @Nullable Input<Boolean> enableResourceNameDnsARecordOnLaunch;
 
     public Input<Boolean> getEnableResourceNameDnsARecordOnLaunch() {
         return this.enableResourceNameDnsARecordOnLaunch == null ? Input.empty() : this.enableResourceNameDnsARecordOnLaunch;
     }
 
     @InputImport(name="enableResourceNameDnsAaaaRecordOnLaunch")
-    private final @Nullable Input<Boolean> enableResourceNameDnsAaaaRecordOnLaunch;
+      private final @Nullable Input<Boolean> enableResourceNameDnsAaaaRecordOnLaunch;
 
     public Input<Boolean> getEnableResourceNameDnsAaaaRecordOnLaunch() {
         return this.enableResourceNameDnsAaaaRecordOnLaunch == null ? Input.empty() : this.enableResourceNameDnsAaaaRecordOnLaunch;
     }
 
     @InputImport(name="ipv6Native")
-    private final @Nullable Input<Boolean> ipv6Native;
+      private final @Nullable Input<Boolean> ipv6Native;
 
     public Input<Boolean> getIpv6Native() {
         return this.ipv6Native == null ? Input.empty() : this.ipv6Native;
     }
 
     @InputImport(name="mapCustomerOwnedIpOnLaunch")
-    private final @Nullable Input<Boolean> mapCustomerOwnedIpOnLaunch;
+      private final @Nullable Input<Boolean> mapCustomerOwnedIpOnLaunch;
 
     public Input<Boolean> getMapCustomerOwnedIpOnLaunch() {
         return this.mapCustomerOwnedIpOnLaunch == null ? Input.empty() : this.mapCustomerOwnedIpOnLaunch;
@@ -74,21 +74,21 @@ public final class DefaultSubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mapPublicIpOnLaunch")
-    private final @Nullable Input<Boolean> mapPublicIpOnLaunch;
+      private final @Nullable Input<Boolean> mapPublicIpOnLaunch;
 
     public Input<Boolean> getMapPublicIpOnLaunch() {
         return this.mapPublicIpOnLaunch == null ? Input.empty() : this.mapPublicIpOnLaunch;
     }
 
     @InputImport(name="outpostArn")
-    private final @Nullable Input<String> outpostArn;
+      private final @Nullable Input<String> outpostArn;
 
     public Input<String> getOutpostArn() {
         return this.outpostArn == null ? Input.empty() : this.outpostArn;
     }
 
     @InputImport(name="privateDnsHostnameTypeOnLaunch")
-    private final @Nullable Input<String> privateDnsHostnameTypeOnLaunch;
+      private final @Nullable Input<String> privateDnsHostnameTypeOnLaunch;
 
     public Input<String> getPrivateDnsHostnameTypeOnLaunch() {
         return this.privateDnsHostnameTypeOnLaunch == null ? Input.empty() : this.privateDnsHostnameTypeOnLaunch;
@@ -99,7 +99,7 @@ public final class DefaultSubnetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

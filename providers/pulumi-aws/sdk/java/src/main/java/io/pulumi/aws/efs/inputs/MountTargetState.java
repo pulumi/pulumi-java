@@ -4,7 +4,7 @@
 package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZoneId")
-    private final @Nullable Input<String> availabilityZoneId;
+      private final @Nullable Input<String> availabilityZoneId;
 
     public Input<String> getAvailabilityZoneId() {
         return this.availabilityZoneId == null ? Input.empty() : this.availabilityZoneId;
@@ -31,7 +31,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZoneName")
-    private final @Nullable Input<String> availabilityZoneName;
+      private final @Nullable Input<String> availabilityZoneName;
 
     public Input<String> getAvailabilityZoneName() {
         return this.availabilityZoneName == null ? Input.empty() : this.availabilityZoneName;
@@ -42,7 +42,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsName")
-    private final @Nullable Input<String> dnsName;
+      private final @Nullable Input<String> dnsName;
 
     public Input<String> getDnsName() {
         return this.dnsName == null ? Input.empty() : this.dnsName;
@@ -53,7 +53,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystemArn")
-    private final @Nullable Input<String> fileSystemArn;
+      private final @Nullable Input<String> fileSystemArn;
 
     public Input<String> getFileSystemArn() {
         return this.fileSystemArn == null ? Input.empty() : this.fileSystemArn;
@@ -64,7 +64,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystemId")
-    private final @Nullable Input<String> fileSystemId;
+      private final @Nullable Input<String> fileSystemId;
 
     public Input<String> getFileSystemId() {
         return this.fileSystemId == null ? Input.empty() : this.fileSystemId;
@@ -76,7 +76,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -87,7 +87,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountTargetDnsName")
-    private final @Nullable Input<String> mountTargetDnsName;
+      private final @Nullable Input<String> mountTargetDnsName;
 
     public Input<String> getMountTargetDnsName() {
         return this.mountTargetDnsName == null ? Input.empty() : this.mountTargetDnsName;
@@ -98,7 +98,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaceId")
-    private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
@@ -109,7 +109,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -121,7 +121,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -132,7 +132,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;

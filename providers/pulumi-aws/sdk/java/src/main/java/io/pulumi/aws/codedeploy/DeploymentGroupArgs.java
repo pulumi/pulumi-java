@@ -14,7 +14,7 @@ import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupOnPremisesInstanceTagFilterArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupTriggerConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +31,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="alarmConfiguration")
-    private final @Nullable Input<DeploymentGroupAlarmConfigurationArgs> alarmConfiguration;
+      private final @Nullable Input<DeploymentGroupAlarmConfigurationArgs> alarmConfiguration;
 
     public Input<DeploymentGroupAlarmConfigurationArgs> getAlarmConfiguration() {
         return this.alarmConfiguration == null ? Input.empty() : this.alarmConfiguration;
@@ -42,7 +42,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appName", required=true)
-    private final Input<String> appName;
+      private final Input<String> appName;
 
     public Input<String> getAppName() {
         return this.appName;
@@ -53,7 +53,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="autoRollbackConfiguration")
-    private final @Nullable Input<DeploymentGroupAutoRollbackConfigurationArgs> autoRollbackConfiguration;
+      private final @Nullable Input<DeploymentGroupAutoRollbackConfigurationArgs> autoRollbackConfiguration;
 
     public Input<DeploymentGroupAutoRollbackConfigurationArgs> getAutoRollbackConfiguration() {
         return this.autoRollbackConfiguration == null ? Input.empty() : this.autoRollbackConfiguration;
@@ -64,7 +64,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="autoscalingGroups")
-    private final @Nullable Input<List<String>> autoscalingGroups;
+      private final @Nullable Input<List<String>> autoscalingGroups;
 
     public Input<List<String>> getAutoscalingGroups() {
         return this.autoscalingGroups == null ? Input.empty() : this.autoscalingGroups;
@@ -75,7 +75,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="blueGreenDeploymentConfig")
-    private final @Nullable Input<DeploymentGroupBlueGreenDeploymentConfigArgs> blueGreenDeploymentConfig;
+      private final @Nullable Input<DeploymentGroupBlueGreenDeploymentConfigArgs> blueGreenDeploymentConfig;
 
     public Input<DeploymentGroupBlueGreenDeploymentConfigArgs> getBlueGreenDeploymentConfig() {
         return this.blueGreenDeploymentConfig == null ? Input.empty() : this.blueGreenDeploymentConfig;
@@ -86,7 +86,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deploymentConfigName")
-    private final @Nullable Input<String> deploymentConfigName;
+      private final @Nullable Input<String> deploymentConfigName;
 
     public Input<String> getDeploymentConfigName() {
         return this.deploymentConfigName == null ? Input.empty() : this.deploymentConfigName;
@@ -97,7 +97,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deploymentGroupName", required=true)
-    private final Input<String> deploymentGroupName;
+      private final Input<String> deploymentGroupName;
 
     public Input<String> getDeploymentGroupName() {
         return this.deploymentGroupName;
@@ -108,7 +108,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deploymentStyle")
-    private final @Nullable Input<DeploymentGroupDeploymentStyleArgs> deploymentStyle;
+      private final @Nullable Input<DeploymentGroupDeploymentStyleArgs> deploymentStyle;
 
     public Input<DeploymentGroupDeploymentStyleArgs> getDeploymentStyle() {
         return this.deploymentStyle == null ? Input.empty() : this.deploymentStyle;
@@ -119,7 +119,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ec2TagFilters")
-    private final @Nullable Input<List<DeploymentGroupEc2TagFilterArgs>> ec2TagFilters;
+      private final @Nullable Input<List<DeploymentGroupEc2TagFilterArgs>> ec2TagFilters;
 
     public Input<List<DeploymentGroupEc2TagFilterArgs>> getEc2TagFilters() {
         return this.ec2TagFilters == null ? Input.empty() : this.ec2TagFilters;
@@ -130,7 +130,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ec2TagSets")
-    private final @Nullable Input<List<DeploymentGroupEc2TagSetArgs>> ec2TagSets;
+      private final @Nullable Input<List<DeploymentGroupEc2TagSetArgs>> ec2TagSets;
 
     public Input<List<DeploymentGroupEc2TagSetArgs>> getEc2TagSets() {
         return this.ec2TagSets == null ? Input.empty() : this.ec2TagSets;
@@ -141,7 +141,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ecsService")
-    private final @Nullable Input<DeploymentGroupEcsServiceArgs> ecsService;
+      private final @Nullable Input<DeploymentGroupEcsServiceArgs> ecsService;
 
     public Input<DeploymentGroupEcsServiceArgs> getEcsService() {
         return this.ecsService == null ? Input.empty() : this.ecsService;
@@ -152,7 +152,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="loadBalancerInfo")
-    private final @Nullable Input<DeploymentGroupLoadBalancerInfoArgs> loadBalancerInfo;
+      private final @Nullable Input<DeploymentGroupLoadBalancerInfoArgs> loadBalancerInfo;
 
     public Input<DeploymentGroupLoadBalancerInfoArgs> getLoadBalancerInfo() {
         return this.loadBalancerInfo == null ? Input.empty() : this.loadBalancerInfo;
@@ -163,7 +163,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="onPremisesInstanceTagFilters")
-    private final @Nullable Input<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> onPremisesInstanceTagFilters;
+      private final @Nullable Input<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> onPremisesInstanceTagFilters;
 
     public Input<List<DeploymentGroupOnPremisesInstanceTagFilterArgs>> getOnPremisesInstanceTagFilters() {
         return this.onPremisesInstanceTagFilters == null ? Input.empty() : this.onPremisesInstanceTagFilters;
@@ -174,7 +174,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceRoleArn", required=true)
-    private final Input<String> serviceRoleArn;
+      private final Input<String> serviceRoleArn;
 
     public Input<String> getServiceRoleArn() {
         return this.serviceRoleArn;
@@ -185,7 +185,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -196,7 +196,7 @@ public final class DeploymentGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="triggerConfigurations")
-    private final @Nullable Input<List<DeploymentGroupTriggerConfigurationArgs>> triggerConfigurations;
+      private final @Nullable Input<List<DeploymentGroupTriggerConfigurationArgs>> triggerConfigurations;
 
     public Input<List<DeploymentGroupTriggerConfigurationArgs>> getTriggerConfigurations() {
         return this.triggerConfigurations == null ? Input.empty() : this.triggerConfigurations;

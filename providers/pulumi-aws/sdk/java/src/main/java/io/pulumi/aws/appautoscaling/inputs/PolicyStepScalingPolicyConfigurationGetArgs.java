@@ -5,7 +5,7 @@ package io.pulumi.aws.appautoscaling.inputs;
 
 import io.pulumi.aws.appautoscaling.inputs.PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="adjustmentType")
-    private final @Nullable Input<String> adjustmentType;
+      private final @Nullable Input<String> adjustmentType;
 
     public Input<String> getAdjustmentType() {
         return this.adjustmentType == null ? Input.empty() : this.adjustmentType;
@@ -33,7 +33,7 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="cooldown")
-    private final @Nullable Input<Integer> cooldown;
+      private final @Nullable Input<Integer> cooldown;
 
     public Input<Integer> getCooldown() {
         return this.cooldown == null ? Input.empty() : this.cooldown;
@@ -44,7 +44,7 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="metricAggregationType")
-    private final @Nullable Input<String> metricAggregationType;
+      private final @Nullable Input<String> metricAggregationType;
 
     public Input<String> getMetricAggregationType() {
         return this.metricAggregationType == null ? Input.empty() : this.metricAggregationType;
@@ -55,7 +55,7 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="minAdjustmentMagnitude")
-    private final @Nullable Input<Integer> minAdjustmentMagnitude;
+      private final @Nullable Input<Integer> minAdjustmentMagnitude;
 
     public Input<Integer> getMinAdjustmentMagnitude() {
         return this.minAdjustmentMagnitude == null ? Input.empty() : this.minAdjustmentMagnitude;
@@ -66,7 +66,7 @@ public final class PolicyStepScalingPolicyConfigurationGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="stepAdjustments")
-    private final @Nullable Input<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> stepAdjustments;
+      private final @Nullable Input<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> stepAdjustments;
 
     public Input<List<PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs>> getStepAdjustments() {
         return this.stepAdjustments == null ? Input.empty() : this.stepAdjustments;

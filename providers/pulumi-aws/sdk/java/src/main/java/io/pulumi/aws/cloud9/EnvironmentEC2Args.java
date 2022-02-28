@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloud9;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automaticStopTimeMinutes")
-    private final @Nullable Input<Integer> automaticStopTimeMinutes;
+      private final @Nullable Input<Integer> automaticStopTimeMinutes;
 
     public Input<Integer> getAutomaticStopTimeMinutes() {
         return this.automaticStopTimeMinutes == null ? Input.empty() : this.automaticStopTimeMinutes;
@@ -32,7 +32,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final Input<String> instanceType;
+      private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
@@ -54,7 +54,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerArn")
-    private final @Nullable Input<String> ownerArn;
+      private final @Nullable Input<String> ownerArn;
 
     public Input<String> getOwnerArn() {
         return this.ownerArn == null ? Input.empty() : this.ownerArn;
@@ -76,7 +76,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -87,7 +87,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codecommit.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="repositoryName", required=true)
-    private final String repositoryName;
+      private final String repositoryName;
 
     public String getRepositoryName() {
         return this.repositoryName;

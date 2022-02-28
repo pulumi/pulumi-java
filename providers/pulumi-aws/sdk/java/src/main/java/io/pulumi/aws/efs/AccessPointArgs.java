@@ -6,7 +6,7 @@ package io.pulumi.aws.efs;
 import io.pulumi.aws.efs.inputs.AccessPointPosixUserArgs;
 import io.pulumi.aws.efs.inputs.AccessPointRootDirectoryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystemId", required=true)
-    private final Input<String> fileSystemId;
+      private final Input<String> fileSystemId;
 
     public Input<String> getFileSystemId() {
         return this.fileSystemId;
@@ -33,7 +33,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="posixUser")
-    private final @Nullable Input<AccessPointPosixUserArgs> posixUser;
+      private final @Nullable Input<AccessPointPosixUserArgs> posixUser;
 
     public Input<AccessPointPosixUserArgs> getPosixUser() {
         return this.posixUser == null ? Input.empty() : this.posixUser;
@@ -44,7 +44,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootDirectory")
-    private final @Nullable Input<AccessPointRootDirectoryArgs> rootDirectory;
+      private final @Nullable Input<AccessPointRootDirectoryArgs> rootDirectory;
 
     public Input<AccessPointRootDirectoryArgs> getRootDirectory() {
         return this.rootDirectory == null ? Input.empty() : this.rootDirectory;
@@ -55,7 +55,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

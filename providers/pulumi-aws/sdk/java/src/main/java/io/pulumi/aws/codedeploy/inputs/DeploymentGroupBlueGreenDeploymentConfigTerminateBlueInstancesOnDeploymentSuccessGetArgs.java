@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -33,7 +33,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
      * 
      */
     @InputImport(name="terminationWaitTimeInMinutes")
-    private final @Nullable Input<Integer> terminationWaitTimeInMinutes;
+      private final @Nullable Input<Integer> terminationWaitTimeInMinutes;
 
     public Input<Integer> getTerminationWaitTimeInMinutes() {
         return this.terminationWaitTimeInMinutes == null ? Input.empty() : this.terminationWaitTimeInMinutes;

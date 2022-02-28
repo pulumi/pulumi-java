@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PullThroughCacheRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ecrRepositoryPrefix", required=true)
-    private final Input<String> ecrRepositoryPrefix;
+      private final Input<String> ecrRepositoryPrefix;
 
     public Input<String> getEcrRepositoryPrefix() {
         return this.ecrRepositoryPrefix;
@@ -29,7 +29,7 @@ public final class PullThroughCacheRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="upstreamRegistryUrl", required=true)
-    private final Input<String> upstreamRegistryUrl;
+      private final Input<String> upstreamRegistryUrl;
 
     public Input<String> getUpstreamRegistryUrl() {
         return this.upstreamRegistryUrl;

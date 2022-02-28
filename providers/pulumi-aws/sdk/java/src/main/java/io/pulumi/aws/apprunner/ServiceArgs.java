@@ -8,7 +8,7 @@ import io.pulumi.aws.apprunner.inputs.ServiceHealthCheckConfigurationArgs;
 import io.pulumi.aws.apprunner.inputs.ServiceInstanceConfigurationArgs;
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoScalingConfigurationArn")
-    private final @Nullable Input<String> autoScalingConfigurationArn;
+      private final @Nullable Input<String> autoScalingConfigurationArn;
 
     public Input<String> getAutoScalingConfigurationArn() {
         return this.autoScalingConfigurationArn == null ? Input.empty() : this.autoScalingConfigurationArn;
@@ -35,7 +35,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfiguration")
-    private final @Nullable Input<ServiceEncryptionConfigurationArgs> encryptionConfiguration;
+      private final @Nullable Input<ServiceEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Input<ServiceEncryptionConfigurationArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
@@ -46,7 +46,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckConfiguration")
-    private final @Nullable Input<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration;
+      private final @Nullable Input<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration;
 
     public Input<ServiceHealthCheckConfigurationArgs> getHealthCheckConfiguration() {
         return this.healthCheckConfiguration == null ? Input.empty() : this.healthCheckConfiguration;
@@ -57,7 +57,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceConfiguration")
-    private final @Nullable Input<ServiceInstanceConfigurationArgs> instanceConfiguration;
+      private final @Nullable Input<ServiceInstanceConfigurationArgs> instanceConfiguration;
 
     public Input<ServiceInstanceConfigurationArgs> getInstanceConfiguration() {
         return this.instanceConfiguration == null ? Input.empty() : this.instanceConfiguration;
@@ -68,7 +68,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -79,7 +79,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceConfiguration", required=true)
-    private final Input<ServiceSourceConfigurationArgs> sourceConfiguration;
+      private final Input<ServiceSourceConfigurationArgs> sourceConfiguration;
 
     public Input<ServiceSourceConfigurationArgs> getSourceConfiguration() {
         return this.sourceConfiguration;
@@ -90,7 +90,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deploymentDurationInMinutes")
-    private final @Nullable Input<Integer> deploymentDurationInMinutes;
+      private final @Nullable Input<Integer> deploymentDurationInMinutes;
 
     public Input<Integer> getDeploymentDurationInMinutes() {
         return this.deploymentDurationInMinutes == null ? Input.empty() : this.deploymentDurationInMinutes;
@@ -44,7 +44,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -55,7 +55,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="finalBakeTimeInMinutes")
-    private final @Nullable Input<Integer> finalBakeTimeInMinutes;
+      private final @Nullable Input<Integer> finalBakeTimeInMinutes;
 
     public Input<Integer> getFinalBakeTimeInMinutes() {
         return this.finalBakeTimeInMinutes == null ? Input.empty() : this.finalBakeTimeInMinutes;
@@ -66,7 +66,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="growthFactor")
-    private final @Nullable Input<Double> growthFactor;
+      private final @Nullable Input<Double> growthFactor;
 
     public Input<Double> getGrowthFactor() {
         return this.growthFactor == null ? Input.empty() : this.growthFactor;
@@ -77,7 +77,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="growthType")
-    private final @Nullable Input<String> growthType;
+      private final @Nullable Input<String> growthType;
 
     public Input<String> getGrowthType() {
         return this.growthType == null ? Input.empty() : this.growthType;
@@ -88,7 +88,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -99,7 +99,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="replicateTo")
-    private final @Nullable Input<String> replicateTo;
+      private final @Nullable Input<String> replicateTo;
 
     public Input<String> getReplicateTo() {
         return this.replicateTo == null ? Input.empty() : this.replicateTo;
@@ -110,7 +110,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -121,7 +121,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

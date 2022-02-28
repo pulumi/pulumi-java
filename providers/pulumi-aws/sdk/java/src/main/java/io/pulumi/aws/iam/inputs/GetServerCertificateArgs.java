@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetServerCertificateArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="latest")
-    private final @Nullable Boolean latest;
+      private final @Nullable Boolean latest;
 
     public Optional<Boolean> getLatest() {
         return this.latest == null ? Optional.empty() : Optional.ofNullable(this.latest);
@@ -31,7 +31,7 @@ public final class GetServerCertificateArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -42,7 +42,7 @@ public final class GetServerCertificateArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable String namePrefix;
+      private final @Nullable String namePrefix;
 
     public Optional<String> getNamePrefix() {
         return this.namePrefix == null ? Optional.empty() : Optional.ofNullable(this.namePrefix);
@@ -53,7 +53,7 @@ public final class GetServerCertificateArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="pathPrefix")
-    private final @Nullable String pathPrefix;
+      private final @Nullable String pathPrefix;
 
     public Optional<String> getPathPrefix() {
         return this.pathPrefix == null ? Optional.empty() : Optional.ofNullable(this.pathPrefix);

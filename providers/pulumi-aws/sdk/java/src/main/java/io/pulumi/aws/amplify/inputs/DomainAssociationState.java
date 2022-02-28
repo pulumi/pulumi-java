@@ -5,7 +5,7 @@ package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.aws.amplify.inputs.DomainAssociationSubDomainGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable Input<String> appId;
+      private final @Nullable Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId == null ? Input.empty() : this.appId;
@@ -33,7 +33,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -44,7 +44,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="certificateVerificationDnsRecord")
-    private final @Nullable Input<String> certificateVerificationDnsRecord;
+      private final @Nullable Input<String> certificateVerificationDnsRecord;
 
     public Input<String> getCertificateVerificationDnsRecord() {
         return this.certificateVerificationDnsRecord == null ? Input.empty() : this.certificateVerificationDnsRecord;
@@ -55,7 +55,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -66,7 +66,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subDomains")
-    private final @Nullable Input<List<DomainAssociationSubDomainGetArgs>> subDomains;
+      private final @Nullable Input<List<DomainAssociationSubDomainGetArgs>> subDomains;
 
     public Input<List<DomainAssociationSubDomainGetArgs>> getSubDomains() {
         return this.subDomains == null ? Input.empty() : this.subDomains;
@@ -77,7 +77,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="waitForVerification")
-    private final @Nullable Input<Boolean> waitForVerification;
+      private final @Nullable Input<Boolean> waitForVerification;
 
     public Input<Boolean> getWaitForVerification() {
         return this.waitForVerification == null ? Input.empty() : this.waitForVerification;

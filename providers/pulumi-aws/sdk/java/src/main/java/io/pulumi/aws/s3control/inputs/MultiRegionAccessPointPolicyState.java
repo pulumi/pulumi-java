@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointPolicyDetailsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
     public static final MultiRegionAccessPointPolicyState Empty = new MultiRegionAccessPointPolicyState();
 
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -27,7 +27,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
      * 
      */
     @InputImport(name="details")
-    private final @Nullable Input<MultiRegionAccessPointPolicyDetailsGetArgs> details;
+      private final @Nullable Input<MultiRegionAccessPointPolicyDetailsGetArgs> details;
 
     public Input<MultiRegionAccessPointPolicyDetailsGetArgs> getDetails() {
         return this.details == null ? Input.empty() : this.details;
@@ -38,7 +38,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
      * 
      */
     @InputImport(name="established")
-    private final @Nullable Input<String> established;
+      private final @Nullable Input<String> established;
 
     public Input<String> getEstablished() {
         return this.established == null ? Input.empty() : this.established;
@@ -49,7 +49,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
      * 
      */
     @InputImport(name="proposed")
-    private final @Nullable Input<String> proposed;
+      private final @Nullable Input<String> proposed;
 
     public Input<String> getProposed() {
         return this.proposed == null ? Input.empty() : this.proposed;

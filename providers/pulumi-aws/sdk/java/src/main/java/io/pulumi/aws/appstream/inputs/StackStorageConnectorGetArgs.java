@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="connectorType", required=true)
-    private final Input<String> connectorType;
+      private final Input<String> connectorType;
 
     public Input<String> getConnectorType() {
         return this.connectorType;
@@ -31,7 +31,7 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="domains")
-    private final @Nullable Input<List<String>> domains;
+      private final @Nullable Input<List<String>> domains;
 
     public Input<List<String>> getDomains() {
         return this.domains == null ? Input.empty() : this.domains;
@@ -42,7 +42,7 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceIdentifier")
-    private final @Nullable Input<String> resourceIdentifier;
+      private final @Nullable Input<String> resourceIdentifier;
 
     public Input<String> getResourceIdentifier() {
         return this.resourceIdentifier == null ? Input.empty() : this.resourceIdentifier;

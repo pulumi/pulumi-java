@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs e
      * 
      */
     @InputImport(name="classification")
-    private final @Nullable Input<String> classification;
+      private final @Nullable Input<String> classification;
 
     public Input<String> getClassification() {
         return this.classification == null ? Input.empty() : this.classification;
@@ -32,7 +32,7 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs e
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,Object>> properties;
+      private final @Nullable Input<Map<String,Object>> properties;
 
     public Input<Map<String,Object>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;

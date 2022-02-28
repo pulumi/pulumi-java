@@ -4,7 +4,7 @@
 package io.pulumi.aws.lightsail.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceName")
-    private final @Nullable Input<String> instanceName;
+      private final @Nullable Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName == null ? Input.empty() : this.instanceName;
@@ -30,7 +30,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -41,7 +41,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="staticIpName")
-    private final @Nullable Input<String> staticIpName;
+      private final @Nullable Input<String> staticIpName;
 
     public Input<String> getStaticIpName() {
         return this.staticIpName == null ? Input.empty() : this.staticIpName;

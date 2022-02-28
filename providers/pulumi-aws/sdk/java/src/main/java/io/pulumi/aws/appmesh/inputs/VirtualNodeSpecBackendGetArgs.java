@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class VirtualNodeSpecBackendGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="virtualService", required=true)
-    private final Input<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService;
+      private final Input<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService;
 
     public Input<VirtualNodeSpecBackendVirtualServiceGetArgs> getVirtualService() {
         return this.virtualService;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.lb;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="certificateArn", required=true)
-    private final Input<String> certificateArn;
+      private final Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn;
@@ -29,7 +29,7 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="listenerArn", required=true)
-    private final Input<String> listenerArn;
+      private final Input<String> listenerArn;
 
     public Input<String> getListenerArn() {
         return this.listenerArn;

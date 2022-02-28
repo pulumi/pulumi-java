@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="httpPort", required=true)
-    private final Input<Integer> httpPort;
+      private final Input<Integer> httpPort;
 
     public Input<Integer> getHttpPort() {
         return this.httpPort;
@@ -32,7 +32,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="httpsPort", required=true)
-    private final Input<Integer> httpsPort;
+      private final Input<Integer> httpsPort;
 
     public Input<Integer> getHttpsPort() {
         return this.httpsPort;
@@ -43,7 +43,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="originKeepaliveTimeout")
-    private final @Nullable Input<Integer> originKeepaliveTimeout;
+      private final @Nullable Input<Integer> originKeepaliveTimeout;
 
     public Input<Integer> getOriginKeepaliveTimeout() {
         return this.originKeepaliveTimeout == null ? Input.empty() : this.originKeepaliveTimeout;
@@ -55,7 +55,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="originProtocolPolicy", required=true)
-    private final Input<String> originProtocolPolicy;
+      private final Input<String> originProtocolPolicy;
 
     public Input<String> getOriginProtocolPolicy() {
         return this.originProtocolPolicy;
@@ -66,7 +66,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="originReadTimeout")
-    private final @Nullable Input<Integer> originReadTimeout;
+      private final @Nullable Input<Integer> originReadTimeout;
 
     public Input<Integer> getOriginReadTimeout() {
         return this.originReadTimeout == null ? Input.empty() : this.originReadTimeout;
@@ -79,7 +79,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="originSslProtocols", required=true)
-    private final Input<List<String>> originSslProtocols;
+      private final Input<List<String>> originSslProtocols;
 
     public Input<List<String>> getOriginSslProtocols() {
         return this.originSslProtocols;

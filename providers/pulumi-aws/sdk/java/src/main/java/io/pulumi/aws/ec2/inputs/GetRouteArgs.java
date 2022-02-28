@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="carrierGatewayId")
-    private final @Nullable String carrierGatewayId;
+      private final @Nullable String carrierGatewayId;
 
     public Optional<String> getCarrierGatewayId() {
         return this.carrierGatewayId == null ? Optional.empty() : Optional.ofNullable(this.carrierGatewayId);
@@ -30,7 +30,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinationCidrBlock")
-    private final @Nullable String destinationCidrBlock;
+      private final @Nullable String destinationCidrBlock;
 
     public Optional<String> getDestinationCidrBlock() {
         return this.destinationCidrBlock == null ? Optional.empty() : Optional.ofNullable(this.destinationCidrBlock);
@@ -41,7 +41,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinationIpv6CidrBlock")
-    private final @Nullable String destinationIpv6CidrBlock;
+      private final @Nullable String destinationIpv6CidrBlock;
 
     public Optional<String> getDestinationIpv6CidrBlock() {
         return this.destinationIpv6CidrBlock == null ? Optional.empty() : Optional.ofNullable(this.destinationIpv6CidrBlock);
@@ -52,7 +52,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destinationPrefixListId")
-    private final @Nullable String destinationPrefixListId;
+      private final @Nullable String destinationPrefixListId;
 
     public Optional<String> getDestinationPrefixListId() {
         return this.destinationPrefixListId == null ? Optional.empty() : Optional.ofNullable(this.destinationPrefixListId);
@@ -63,7 +63,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="egressOnlyGatewayId")
-    private final @Nullable String egressOnlyGatewayId;
+      private final @Nullable String egressOnlyGatewayId;
 
     public Optional<String> getEgressOnlyGatewayId() {
         return this.egressOnlyGatewayId == null ? Optional.empty() : Optional.ofNullable(this.egressOnlyGatewayId);
@@ -74,7 +74,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gatewayId")
-    private final @Nullable String gatewayId;
+      private final @Nullable String gatewayId;
 
     public Optional<String> getGatewayId() {
         return this.gatewayId == null ? Optional.empty() : Optional.ofNullable(this.gatewayId);
@@ -85,7 +85,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable String instanceId;
+      private final @Nullable String instanceId;
 
     public Optional<String> getInstanceId() {
         return this.instanceId == null ? Optional.empty() : Optional.ofNullable(this.instanceId);
@@ -96,7 +96,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="localGatewayId")
-    private final @Nullable String localGatewayId;
+      private final @Nullable String localGatewayId;
 
     public Optional<String> getLocalGatewayId() {
         return this.localGatewayId == null ? Optional.empty() : Optional.ofNullable(this.localGatewayId);
@@ -107,7 +107,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="natGatewayId")
-    private final @Nullable String natGatewayId;
+      private final @Nullable String natGatewayId;
 
     public Optional<String> getNatGatewayId() {
         return this.natGatewayId == null ? Optional.empty() : Optional.ofNullable(this.natGatewayId);
@@ -118,7 +118,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkInterfaceId")
-    private final @Nullable String networkInterfaceId;
+      private final @Nullable String networkInterfaceId;
 
     public Optional<String> getNetworkInterfaceId() {
         return this.networkInterfaceId == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceId);
@@ -129,7 +129,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routeTableId", required=true)
-    private final String routeTableId;
+      private final String routeTableId;
 
     public String getRouteTableId() {
         return this.routeTableId;
@@ -140,7 +140,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="transitGatewayId")
-    private final @Nullable String transitGatewayId;
+      private final @Nullable String transitGatewayId;
 
     public Optional<String> getTransitGatewayId() {
         return this.transitGatewayId == null ? Optional.empty() : Optional.ofNullable(this.transitGatewayId);
@@ -151,7 +151,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vpcPeeringConnectionId")
-    private final @Nullable String vpcPeeringConnectionId;
+      private final @Nullable String vpcPeeringConnectionId;
 
     public Optional<String> getVpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId == null ? Optional.empty() : Optional.ofNullable(this.vpcPeeringConnectionId);

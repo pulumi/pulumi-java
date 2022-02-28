@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetDomainLogPublishingOption extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="cloudwatchLogGroupArn", required=true)
-    private final String cloudwatchLogGroupArn;
+      private final String cloudwatchLogGroupArn;
 
     public String getCloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
@@ -29,7 +29,7 @@ public final class GetDomainLogPublishingOption extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -40,7 +40,7 @@ public final class GetDomainLogPublishingOption extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="logType", required=true)
-    private final String logType;
+      private final String logType;
 
     public String getLogType() {
         return this.logType;

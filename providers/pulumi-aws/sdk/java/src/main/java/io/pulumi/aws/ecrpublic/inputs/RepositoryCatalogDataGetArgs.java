@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecrpublic.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="aboutText")
-    private final @Nullable Input<String> aboutText;
+      private final @Nullable Input<String> aboutText;
 
     public Input<String> getAboutText() {
         return this.aboutText == null ? Input.empty() : this.aboutText;
@@ -31,7 +31,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="architectures")
-    private final @Nullable Input<List<String>> architectures;
+      private final @Nullable Input<List<String>> architectures;
 
     public Input<List<String>> getArchitectures() {
         return this.architectures == null ? Input.empty() : this.architectures;
@@ -42,7 +42,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -53,7 +53,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="logoImageBlob")
-    private final @Nullable Input<String> logoImageBlob;
+      private final @Nullable Input<String> logoImageBlob;
 
     public Input<String> getLogoImageBlob() {
         return this.logoImageBlob == null ? Input.empty() : this.logoImageBlob;
@@ -64,7 +64,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="operatingSystems")
-    private final @Nullable Input<List<String>> operatingSystems;
+      private final @Nullable Input<List<String>> operatingSystems;
 
     public Input<List<String>> getOperatingSystems() {
         return this.operatingSystems == null ? Input.empty() : this.operatingSystems;
@@ -75,7 +75,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="usageText")
-    private final @Nullable Input<String> usageText;
+      private final @Nullable Input<String> usageText;
 
     public Input<String> getUsageText() {
         return this.usageText == null ? Input.empty() : this.usageText;

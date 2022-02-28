@@ -5,7 +5,7 @@ package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
      * 
      */
     @InputImport(name="comparator")
-    private final @Nullable Input<String> comparator;
+      private final @Nullable Input<String> comparator;
 
     public Input<String> getComparator() {
         return this.comparator == null ? Input.empty() : this.comparator;
@@ -32,7 +32,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -43,7 +43,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
      * 
      */
     @InputImport(name="tagValues")
-    private final @Nullable Input<List<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArgs>> tagValues;
+      private final @Nullable Input<List<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArgs>> tagValues;
 
     public Input<List<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArgs>> getTagValues() {
         return this.tagValues == null ? Input.empty() : this.tagValues;
@@ -54,7 +54,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;

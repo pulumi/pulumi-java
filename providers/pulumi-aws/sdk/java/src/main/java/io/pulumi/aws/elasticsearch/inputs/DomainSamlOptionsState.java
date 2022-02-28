@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsSamlOptionsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DomainSamlOptionsState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -31,7 +31,7 @@ public final class DomainSamlOptionsState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="samlOptions")
-    private final @Nullable Input<DomainSamlOptionsSamlOptionsGetArgs> samlOptions;
+      private final @Nullable Input<DomainSamlOptionsSamlOptionsGetArgs> samlOptions;
 
     public Input<DomainSamlOptionsSamlOptionsGetArgs> getSamlOptions() {
         return this.samlOptions == null ? Input.empty() : this.samlOptions;

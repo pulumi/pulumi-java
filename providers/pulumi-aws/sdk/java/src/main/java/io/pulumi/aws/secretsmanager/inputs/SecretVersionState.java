@@ -4,7 +4,7 @@
 package io.pulumi.aws.secretsmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretBinary")
-    private final @Nullable Input<String> secretBinary;
+      private final @Nullable Input<String> secretBinary;
 
     public Input<String> getSecretBinary() {
         return this.secretBinary == null ? Input.empty() : this.secretBinary;
@@ -42,7 +42,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretId")
-    private final @Nullable Input<String> secretId;
+      private final @Nullable Input<String> secretId;
 
     public Input<String> getSecretId() {
         return this.secretId == null ? Input.empty() : this.secretId;
@@ -53,7 +53,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretString")
-    private final @Nullable Input<String> secretString;
+      private final @Nullable Input<String> secretString;
 
     public Input<String> getSecretString() {
         return this.secretString == null ? Input.empty() : this.secretString;
@@ -64,7 +64,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionId")
-    private final @Nullable Input<String> versionId;
+      private final @Nullable Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId == null ? Input.empty() : this.versionId;
@@ -75,7 +75,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionStages")
-    private final @Nullable Input<List<String>> versionStages;
+      private final @Nullable Input<List<String>> versionStages;
 
     public Input<List<String>> getVersionStages() {
         return this.versionStages == null ? Input.empty() : this.versionStages;

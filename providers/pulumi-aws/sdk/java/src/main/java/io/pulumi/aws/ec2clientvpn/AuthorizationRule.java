@@ -8,8 +8,8 @@ import io.pulumi.aws.ec2clientvpn.AuthorizationRuleArgs;
 import io.pulumi.aws.ec2clientvpn.inputs.AuthorizationRuleState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -106,6 +106,21 @@ public class AuthorizationRule extends io.pulumi.resources.CustomResource {
         return this.targetNetworkCidr;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AuthorizationRule(String name) {
+        this(name, AuthorizationRuleArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AuthorizationRule(String name, AuthorizationRuleArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

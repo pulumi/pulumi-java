@@ -5,7 +5,7 @@ package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.aws.batch.inputs.JobDefinitionRetryStrategyEvaluateOnExitGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class JobDefinitionRetryStrategyGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="attempts")
-    private final @Nullable Input<Integer> attempts;
+      private final @Nullable Input<Integer> attempts;
 
     public Input<Integer> getAttempts() {
         return this.attempts == null ? Input.empty() : this.attempts;
@@ -32,7 +32,7 @@ public final class JobDefinitionRetryStrategyGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="evaluateOnExits")
-    private final @Nullable Input<List<JobDefinitionRetryStrategyEvaluateOnExitGetArgs>> evaluateOnExits;
+      private final @Nullable Input<List<JobDefinitionRetryStrategyEvaluateOnExitGetArgs>> evaluateOnExits;
 
     public Input<List<JobDefinitionRetryStrategyEvaluateOnExitGetArgs>> getEvaluateOnExits() {
         return this.evaluateOnExits == null ? Input.empty() : this.evaluateOnExits;

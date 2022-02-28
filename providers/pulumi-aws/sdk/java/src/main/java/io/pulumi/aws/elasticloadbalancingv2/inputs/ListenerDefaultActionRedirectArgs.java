@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ListenerDefaultActionRedirectArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -30,7 +30,7 @@ public final class ListenerDefaultActionRedirectArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -41,7 +41,7 @@ public final class ListenerDefaultActionRedirectArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<String> port;
+      private final @Nullable Input<String> port;
 
     public Input<String> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -52,7 +52,7 @@ public final class ListenerDefaultActionRedirectArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -63,7 +63,7 @@ public final class ListenerDefaultActionRedirectArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -74,7 +74,7 @@ public final class ListenerDefaultActionRedirectArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="statusCode", required=true)
-    private final Input<String> statusCode;
+      private final Input<String> statusCode;
 
     public Input<String> getStatusCode() {
         return this.statusCode;

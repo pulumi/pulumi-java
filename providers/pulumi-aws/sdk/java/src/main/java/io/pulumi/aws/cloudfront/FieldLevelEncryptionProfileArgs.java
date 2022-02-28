@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -31,7 +31,7 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="encryptionEntities", required=true)
-    private final Input<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities;
+      private final Input<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities;
 
     public Input<FieldLevelEncryptionProfileEncryptionEntitiesArgs> getEncryptionEntities() {
         return this.encryptionEntities;
@@ -42,7 +42,7 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

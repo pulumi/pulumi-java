@@ -6,7 +6,7 @@ package io.pulumi.aws.lambda.inputs;
 import io.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigDestinationConfigOnFailureArgs;
 import io.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigDestinationConfigOnSuccessArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class FunctionEventInvokeConfigDestinationConfigArgs extends io.pul
      * 
      */
     @InputImport(name="onFailure")
-    private final @Nullable Input<FunctionEventInvokeConfigDestinationConfigOnFailureArgs> onFailure;
+      private final @Nullable Input<FunctionEventInvokeConfigDestinationConfigOnFailureArgs> onFailure;
 
     public Input<FunctionEventInvokeConfigDestinationConfigOnFailureArgs> getOnFailure() {
         return this.onFailure == null ? Input.empty() : this.onFailure;
@@ -31,7 +31,7 @@ public final class FunctionEventInvokeConfigDestinationConfigArgs extends io.pul
      * 
      */
     @InputImport(name="onSuccess")
-    private final @Nullable Input<FunctionEventInvokeConfigDestinationConfigOnSuccessArgs> onSuccess;
+      private final @Nullable Input<FunctionEventInvokeConfigDestinationConfigOnSuccessArgs> onSuccess;
 
     public Input<FunctionEventInvokeConfigDestinationConfigOnSuccessArgs> getOnSuccess() {
         return this.onSuccess == null ? Input.empty() : this.onSuccess;

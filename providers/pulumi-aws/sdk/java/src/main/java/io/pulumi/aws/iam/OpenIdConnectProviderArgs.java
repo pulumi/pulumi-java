@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clientIdLists", required=true)
-    private final Input<List<String>> clientIdLists;
+      private final Input<List<String>> clientIdLists;
 
     public Input<List<String>> getClientIdLists() {
         return this.clientIdLists;
@@ -32,7 +32,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -43,7 +43,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="thumbprintLists", required=true)
-    private final Input<List<String>> thumbprintLists;
+      private final Input<List<String>> thumbprintLists;
 
     public Input<List<String>> getThumbprintLists() {
         return this.thumbprintLists;
@@ -54,7 +54,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;

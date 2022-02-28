@@ -6,7 +6,7 @@ package io.pulumi.aws.elasticloadbalancingv2;
 import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerRuleActionArgs;
 import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerRuleConditionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-    private final Input<List<ListenerRuleActionArgs>> actions;
+      private final Input<List<ListenerRuleActionArgs>> actions;
 
     public Input<List<ListenerRuleActionArgs>> getActions() {
         return this.actions;
@@ -35,7 +35,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions", required=true)
-    private final Input<List<ListenerRuleConditionArgs>> conditions;
+      private final Input<List<ListenerRuleConditionArgs>> conditions;
 
     public Input<List<ListenerRuleConditionArgs>> getConditions() {
         return this.conditions;
@@ -46,7 +46,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="listenerArn", required=true)
-    private final Input<String> listenerArn;
+      private final Input<String> listenerArn;
 
     public Input<String> getListenerArn() {
         return this.listenerArn;
@@ -57,7 +57,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -68,7 +68,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

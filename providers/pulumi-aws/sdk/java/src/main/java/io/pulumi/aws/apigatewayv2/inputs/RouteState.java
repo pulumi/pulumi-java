@@ -5,7 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.aws.apigatewayv2.inputs.RouteRequestParameterGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId")
-    private final @Nullable Input<String> apiId;
+      private final @Nullable Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId == null ? Input.empty() : this.apiId;
@@ -34,7 +34,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiKeyRequired")
-    private final @Nullable Input<Boolean> apiKeyRequired;
+      private final @Nullable Input<Boolean> apiKeyRequired;
 
     public Input<Boolean> getApiKeyRequired() {
         return this.apiKeyRequired == null ? Input.empty() : this.apiKeyRequired;
@@ -45,7 +45,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationScopes")
-    private final @Nullable Input<List<String>> authorizationScopes;
+      private final @Nullable Input<List<String>> authorizationScopes;
 
     public Input<List<String>> getAuthorizationScopes() {
         return this.authorizationScopes == null ? Input.empty() : this.authorizationScopes;
@@ -59,7 +59,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationType")
-    private final @Nullable Input<String> authorizationType;
+      private final @Nullable Input<String> authorizationType;
 
     public Input<String> getAuthorizationType() {
         return this.authorizationType == null ? Input.empty() : this.authorizationType;
@@ -70,7 +70,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerId")
-    private final @Nullable Input<String> authorizerId;
+      private final @Nullable Input<String> authorizerId;
 
     public Input<String> getAuthorizerId() {
         return this.authorizerId == null ? Input.empty() : this.authorizerId;
@@ -81,7 +81,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modelSelectionExpression")
-    private final @Nullable Input<String> modelSelectionExpression;
+      private final @Nullable Input<String> modelSelectionExpression;
 
     public Input<String> getModelSelectionExpression() {
         return this.modelSelectionExpression == null ? Input.empty() : this.modelSelectionExpression;
@@ -92,7 +92,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationName")
-    private final @Nullable Input<String> operationName;
+      private final @Nullable Input<String> operationName;
 
     public Input<String> getOperationName() {
         return this.operationName == null ? Input.empty() : this.operationName;
@@ -103,7 +103,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestModels")
-    private final @Nullable Input<Map<String,String>> requestModels;
+      private final @Nullable Input<Map<String,String>> requestModels;
 
     public Input<Map<String,String>> getRequestModels() {
         return this.requestModels == null ? Input.empty() : this.requestModels;
@@ -114,7 +114,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestParameters")
-    private final @Nullable Input<List<RouteRequestParameterGetArgs>> requestParameters;
+      private final @Nullable Input<List<RouteRequestParameterGetArgs>> requestParameters;
 
     public Input<List<RouteRequestParameterGetArgs>> getRequestParameters() {
         return this.requestParameters == null ? Input.empty() : this.requestParameters;
@@ -125,7 +125,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeKey")
-    private final @Nullable Input<String> routeKey;
+      private final @Nullable Input<String> routeKey;
 
     public Input<String> getRouteKey() {
         return this.routeKey == null ? Input.empty() : this.routeKey;
@@ -136,7 +136,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeResponseSelectionExpression")
-    private final @Nullable Input<String> routeResponseSelectionExpression;
+      private final @Nullable Input<String> routeResponseSelectionExpression;
 
     public Input<String> getRouteResponseSelectionExpression() {
         return this.routeResponseSelectionExpression == null ? Input.empty() : this.routeResponseSelectionExpression;
@@ -147,7 +147,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;

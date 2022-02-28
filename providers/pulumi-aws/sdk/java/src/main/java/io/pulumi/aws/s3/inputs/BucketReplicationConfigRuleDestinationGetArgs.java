@@ -8,7 +8,7 @@ import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationEncryptionC
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationMetricsGetArgs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationReplicationTimeGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
      * 
      */
     @InputImport(name="accessControlTranslation")
-    private final @Nullable Input<BucketReplicationConfigRuleDestinationAccessControlTranslationGetArgs> accessControlTranslation;
+      private final @Nullable Input<BucketReplicationConfigRuleDestinationAccessControlTranslationGetArgs> accessControlTranslation;
 
     public Input<BucketReplicationConfigRuleDestinationAccessControlTranslationGetArgs> getAccessControlTranslation() {
         return this.accessControlTranslation == null ? Input.empty() : this.accessControlTranslation;
@@ -34,7 +34,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
      * 
      */
     @InputImport(name="account")
-    private final @Nullable Input<String> account;
+      private final @Nullable Input<String> account;
 
     public Input<String> getAccount() {
         return this.account == null ? Input.empty() : this.account;
@@ -45,7 +45,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -56,7 +56,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
      * 
      */
     @InputImport(name="encryptionConfiguration")
-    private final @Nullable Input<BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs> encryptionConfiguration;
+      private final @Nullable Input<BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs> encryptionConfiguration;
 
     public Input<BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
@@ -67,7 +67,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
      * 
      */
     @InputImport(name="metrics")
-    private final @Nullable Input<BucketReplicationConfigRuleDestinationMetricsGetArgs> metrics;
+      private final @Nullable Input<BucketReplicationConfigRuleDestinationMetricsGetArgs> metrics;
 
     public Input<BucketReplicationConfigRuleDestinationMetricsGetArgs> getMetrics() {
         return this.metrics == null ? Input.empty() : this.metrics;
@@ -78,7 +78,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
      * 
      */
     @InputImport(name="replicationTime")
-    private final @Nullable Input<BucketReplicationConfigRuleDestinationReplicationTimeGetArgs> replicationTime;
+      private final @Nullable Input<BucketReplicationConfigRuleDestinationReplicationTimeGetArgs> replicationTime;
 
     public Input<BucketReplicationConfigRuleDestinationReplicationTimeGetArgs> getReplicationTime() {
         return this.replicationTime == null ? Input.empty() : this.replicationTime;
@@ -89,7 +89,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
      * 
      */
     @InputImport(name="storageClass")
-    private final @Nullable Input<String> storageClass;
+      private final @Nullable Input<String> storageClass;
 
     public Input<String> getStorageClass() {
         return this.storageClass == null ? Input.empty() : this.storageClass;

@@ -9,7 +9,7 @@ import io.pulumi.aws.cloudfront.inputs.GetResponseHeadersPolicySecurityHeadersCo
 import io.pulumi.aws.cloudfront.inputs.GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy;
 import io.pulumi.aws.cloudfront.inputs.GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity;
 import io.pulumi.aws.cloudfront.inputs.GetResponseHeadersPolicySecurityHeadersConfigXssProtection;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends io.pulu
      * 
      */
     @InputImport(name="contentSecurityPolicies", required=true)
-    private final List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies;
+      private final List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> getContentSecurityPolicies() {
         return this.contentSecurityPolicies;
@@ -34,7 +34,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends io.pulu
      * 
      */
     @InputImport(name="contentTypeOptions", required=true)
-    private final List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions;
+      private final List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> getContentTypeOptions() {
         return this.contentTypeOptions;
@@ -45,7 +45,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends io.pulu
      * 
      */
     @InputImport(name="frameOptions", required=true)
-    private final List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions;
+      private final List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> getFrameOptions() {
         return this.frameOptions;
@@ -56,7 +56,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends io.pulu
      * 
      */
     @InputImport(name="referrerPolicies", required=true)
-    private final List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies;
+      private final List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> getReferrerPolicies() {
         return this.referrerPolicies;
@@ -67,7 +67,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends io.pulu
      * 
      */
     @InputImport(name="strictTransportSecurities", required=true)
-    private final List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities;
+      private final List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> getStrictTransportSecurities() {
         return this.strictTransportSecurities;
@@ -78,7 +78,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends io.pulu
      * 
      */
     @InputImport(name="xssProtections", required=true)
-    private final List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections;
+      private final List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> getXssProtections() {
         return this.xssProtections;

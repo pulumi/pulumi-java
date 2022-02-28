@@ -5,7 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.aws.codebuild.inputs.WebhookFilterGroupFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class WebhookFilterGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable Input<List<WebhookFilterGroupFilterArgs>> filters;
+      private final @Nullable Input<List<WebhookFilterGroupFilterArgs>> filters;
 
     public Input<List<WebhookFilterGroupFilterArgs>> getFilters() {
         return this.filters == null ? Input.empty() : this.filters;

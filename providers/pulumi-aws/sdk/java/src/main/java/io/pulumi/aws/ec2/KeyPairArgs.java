@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable Input<String> keyName;
+      private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -31,7 +31,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyNamePrefix")
-    private final @Nullable Input<String> keyNamePrefix;
+      private final @Nullable Input<String> keyNamePrefix;
 
     public Input<String> getKeyNamePrefix() {
         return this.keyNamePrefix == null ? Input.empty() : this.keyNamePrefix;
@@ -42,7 +42,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey", required=true)
-    private final Input<String> publicKey;
+      private final Input<String> publicKey;
 
     public Input<String> getPublicKey() {
         return this.publicKey;
@@ -53,7 +53,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

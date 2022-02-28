@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="branchName", required=true)
-    private final Input<String> branchName;
+      private final Input<String> branchName;
 
     public Input<String> getBranchName() {
         return this.branchName;
@@ -31,7 +31,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="dnsRecord")
-    private final @Nullable Input<String> dnsRecord;
+      private final @Nullable Input<String> dnsRecord;
 
     public Input<String> getDnsRecord() {
         return this.dnsRecord == null ? Input.empty() : this.dnsRecord;
@@ -42,7 +42,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="prefix", required=true)
-    private final Input<String> prefix;
+      private final Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix;
@@ -53,7 +53,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="verified")
-    private final @Nullable Input<Boolean> verified;
+      private final @Nullable Input<Boolean> verified;
 
     public Input<Boolean> getVerified() {
         return this.verified == null ? Input.empty() : this.verified;

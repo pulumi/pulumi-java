@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbInstanceIdentifier", required=true)
-    private final Input<String> dbInstanceIdentifier;
+      private final Input<String> dbInstanceIdentifier;
 
     public Input<String> getDbInstanceIdentifier() {
         return this.dbInstanceIdentifier;
@@ -31,7 +31,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbSnapshotIdentifier", required=true)
-    private final Input<String> dbSnapshotIdentifier;
+      private final Input<String> dbSnapshotIdentifier;
 
     public Input<String> getDbSnapshotIdentifier() {
         return this.dbSnapshotIdentifier;
@@ -42,7 +42,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

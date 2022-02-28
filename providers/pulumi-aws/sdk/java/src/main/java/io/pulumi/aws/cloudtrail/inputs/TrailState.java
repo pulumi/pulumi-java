@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudtrail.inputs.TrailAdvancedEventSelectorGetArgs;
 import io.pulumi.aws.cloudtrail.inputs.TrailEventSelectorGetArgs;
 import io.pulumi.aws.cloudtrail.inputs.TrailInsightSelectorGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advancedEventSelectors")
-    private final @Nullable Input<List<TrailAdvancedEventSelectorGetArgs>> advancedEventSelectors;
+      private final @Nullable Input<List<TrailAdvancedEventSelectorGetArgs>> advancedEventSelectors;
 
     public Input<List<TrailAdvancedEventSelectorGetArgs>> getAdvancedEventSelectors() {
         return this.advancedEventSelectors == null ? Input.empty() : this.advancedEventSelectors;
@@ -36,7 +36,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -47,7 +47,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudWatchLogsGroupArn")
-    private final @Nullable Input<String> cloudWatchLogsGroupArn;
+      private final @Nullable Input<String> cloudWatchLogsGroupArn;
 
     public Input<String> getCloudWatchLogsGroupArn() {
         return this.cloudWatchLogsGroupArn == null ? Input.empty() : this.cloudWatchLogsGroupArn;
@@ -58,7 +58,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudWatchLogsRoleArn")
-    private final @Nullable Input<String> cloudWatchLogsRoleArn;
+      private final @Nullable Input<String> cloudWatchLogsRoleArn;
 
     public Input<String> getCloudWatchLogsRoleArn() {
         return this.cloudWatchLogsRoleArn == null ? Input.empty() : this.cloudWatchLogsRoleArn;
@@ -69,7 +69,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableLogFileValidation")
-    private final @Nullable Input<Boolean> enableLogFileValidation;
+      private final @Nullable Input<Boolean> enableLogFileValidation;
 
     public Input<Boolean> getEnableLogFileValidation() {
         return this.enableLogFileValidation == null ? Input.empty() : this.enableLogFileValidation;
@@ -80,7 +80,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableLogging")
-    private final @Nullable Input<Boolean> enableLogging;
+      private final @Nullable Input<Boolean> enableLogging;
 
     public Input<Boolean> getEnableLogging() {
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
@@ -91,7 +91,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventSelectors")
-    private final @Nullable Input<List<TrailEventSelectorGetArgs>> eventSelectors;
+      private final @Nullable Input<List<TrailEventSelectorGetArgs>> eventSelectors;
 
     public Input<List<TrailEventSelectorGetArgs>> getEventSelectors() {
         return this.eventSelectors == null ? Input.empty() : this.eventSelectors;
@@ -102,7 +102,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeRegion")
-    private final @Nullable Input<String> homeRegion;
+      private final @Nullable Input<String> homeRegion;
 
     public Input<String> getHomeRegion() {
         return this.homeRegion == null ? Input.empty() : this.homeRegion;
@@ -113,7 +113,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeGlobalServiceEvents")
-    private final @Nullable Input<Boolean> includeGlobalServiceEvents;
+      private final @Nullable Input<Boolean> includeGlobalServiceEvents;
 
     public Input<Boolean> getIncludeGlobalServiceEvents() {
         return this.includeGlobalServiceEvents == null ? Input.empty() : this.includeGlobalServiceEvents;
@@ -124,7 +124,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insightSelectors")
-    private final @Nullable Input<List<TrailInsightSelectorGetArgs>> insightSelectors;
+      private final @Nullable Input<List<TrailInsightSelectorGetArgs>> insightSelectors;
 
     public Input<List<TrailInsightSelectorGetArgs>> getInsightSelectors() {
         return this.insightSelectors == null ? Input.empty() : this.insightSelectors;
@@ -135,7 +135,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isMultiRegionTrail")
-    private final @Nullable Input<Boolean> isMultiRegionTrail;
+      private final @Nullable Input<Boolean> isMultiRegionTrail;
 
     public Input<Boolean> getIsMultiRegionTrail() {
         return this.isMultiRegionTrail == null ? Input.empty() : this.isMultiRegionTrail;
@@ -146,7 +146,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isOrganizationTrail")
-    private final @Nullable Input<Boolean> isOrganizationTrail;
+      private final @Nullable Input<Boolean> isOrganizationTrail;
 
     public Input<Boolean> getIsOrganizationTrail() {
         return this.isOrganizationTrail == null ? Input.empty() : this.isOrganizationTrail;
@@ -157,7 +157,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -168,7 +168,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -179,7 +179,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3BucketName")
-    private final @Nullable Input<String> s3BucketName;
+      private final @Nullable Input<String> s3BucketName;
 
     public Input<String> getS3BucketName() {
         return this.s3BucketName == null ? Input.empty() : this.s3BucketName;
@@ -190,7 +190,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3KeyPrefix")
-    private final @Nullable Input<String> s3KeyPrefix;
+      private final @Nullable Input<String> s3KeyPrefix;
 
     public Input<String> getS3KeyPrefix() {
         return this.s3KeyPrefix == null ? Input.empty() : this.s3KeyPrefix;
@@ -201,7 +201,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snsTopicName")
-    private final @Nullable Input<String> snsTopicName;
+      private final @Nullable Input<String> snsTopicName;
 
     public Input<String> getSnsTopicName() {
         return this.snsTopicName == null ? Input.empty() : this.snsTopicName;
@@ -212,7 +212,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -223,7 +223,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

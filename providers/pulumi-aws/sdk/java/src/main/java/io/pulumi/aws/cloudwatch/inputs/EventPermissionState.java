@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.aws.cloudwatch.inputs.EventPermissionConditionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -31,7 +31,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<EventPermissionConditionGetArgs> condition;
+      private final @Nullable Input<EventPermissionConditionGetArgs> condition;
 
     public Input<EventPermissionConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -42,7 +42,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eventBusName")
-    private final @Nullable Input<String> eventBusName;
+      private final @Nullable Input<String> eventBusName;
 
     public Input<String> getEventBusName() {
         return this.eventBusName == null ? Input.empty() : this.eventBusName;
@@ -53,7 +53,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="principal")
-    private final @Nullable Input<String> principal;
+      private final @Nullable Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal == null ? Input.empty() : this.principal;
@@ -64,7 +64,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="statementId")
-    private final @Nullable Input<String> statementId;
+      private final @Nullable Input<String> statementId;
 
     public Input<String> getStatementId() {
         return this.statementId == null ? Input.empty() : this.statementId;

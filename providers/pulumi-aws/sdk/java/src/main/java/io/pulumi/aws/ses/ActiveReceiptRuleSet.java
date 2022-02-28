@@ -8,8 +8,8 @@ import io.pulumi.aws.ses.ActiveReceiptRuleSetArgs;
 import io.pulumi.aws.ses.inputs.ActiveReceiptRuleSetState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -50,6 +50,21 @@ public class ActiveReceiptRuleSet extends io.pulumi.resources.CustomResource {
         return this.ruleSetName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ActiveReceiptRuleSet(String name) {
+        this(name, ActiveReceiptRuleSetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ActiveReceiptRuleSet(String name, ActiveReceiptRuleSetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

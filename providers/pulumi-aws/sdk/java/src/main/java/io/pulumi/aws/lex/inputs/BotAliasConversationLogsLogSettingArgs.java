@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<String> destination;
+      private final Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination;
@@ -30,7 +30,7 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -41,7 +41,7 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="logType", required=true)
-    private final Input<String> logType;
+      private final Input<String> logType;
 
     public Input<String> getLogType() {
         return this.logType;
@@ -52,7 +52,7 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceArn", required=true)
-    private final Input<String> resourceArn;
+      private final Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn;
@@ -63,7 +63,7 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourcePrefix")
-    private final @Nullable Input<String> resourcePrefix;
+      private final @Nullable Input<String> resourcePrefix;
 
     public Input<String> getResourcePrefix() {
         return this.resourcePrefix == null ? Input.empty() : this.resourcePrefix;

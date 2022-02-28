@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class ModelPackageGroupPolicyState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="modelPackageGroupName")
-    private final @Nullable Input<String> modelPackageGroupName;
+      private final @Nullable Input<String> modelPackageGroupName;
 
     public Input<String> getModelPackageGroupName() {
         return this.modelPackageGroupName == null ? Input.empty() : this.modelPackageGroupName;
     }
 
     @InputImport(name="resourcePolicy")
-    private final @Nullable Input<String> resourcePolicy;
+      private final @Nullable Input<String> resourcePolicy;
 
     public Input<String> getResourcePolicy() {
         return this.resourcePolicy == null ? Input.empty() : this.resourcePolicy;

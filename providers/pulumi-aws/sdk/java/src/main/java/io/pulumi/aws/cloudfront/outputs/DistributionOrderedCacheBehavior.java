@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudfront.outputs;
 import io.pulumi.aws.cloudfront.outputs.DistributionOrderedCacheBehaviorForwardedValues;
 import io.pulumi.aws.cloudfront.outputs.DistributionOrderedCacheBehaviorFunctionAssociation;
 import io.pulumi.aws.cloudfront.outputs.DistributionOrderedCacheBehaviorLambdaFunctionAssociation;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

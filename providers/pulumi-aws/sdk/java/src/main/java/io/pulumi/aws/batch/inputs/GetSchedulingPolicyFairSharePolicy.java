@@ -4,7 +4,7 @@
 package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.aws.batch.inputs.GetSchedulingPolicyFairSharePolicyShareDistribution;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class GetSchedulingPolicyFairSharePolicy extends io.pulumi.resource
      * 
      */
     @InputImport(name="computeReservation", required=true)
-    private final Integer computeReservation;
+      private final Integer computeReservation;
 
     public Integer getComputeReservation() {
         return this.computeReservation;
     }
 
     @InputImport(name="shareDecaySeconds", required=true)
-    private final Integer shareDecaySeconds;
+      private final Integer shareDecaySeconds;
 
     public Integer getShareDecaySeconds() {
         return this.shareDecaySeconds;
@@ -37,7 +37,7 @@ public final class GetSchedulingPolicyFairSharePolicy extends io.pulumi.resource
      * 
      */
     @InputImport(name="shareDistributions", required=true)
-    private final List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions;
+      private final List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions;
 
     public List<GetSchedulingPolicyFairSharePolicyShareDistribution> getShareDistributions() {
         return this.shareDistributions;

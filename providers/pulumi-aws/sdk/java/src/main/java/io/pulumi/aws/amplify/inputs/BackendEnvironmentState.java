@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BackendEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable Input<String> appId;
+      private final @Nullable Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId == null ? Input.empty() : this.appId;
@@ -30,7 +30,7 @@ public final class BackendEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -41,7 +41,7 @@ public final class BackendEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deploymentArtifacts")
-    private final @Nullable Input<String> deploymentArtifacts;
+      private final @Nullable Input<String> deploymentArtifacts;
 
     public Input<String> getDeploymentArtifacts() {
         return this.deploymentArtifacts == null ? Input.empty() : this.deploymentArtifacts;
@@ -52,7 +52,7 @@ public final class BackendEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="environmentName")
-    private final @Nullable Input<String> environmentName;
+      private final @Nullable Input<String> environmentName;
 
     public Input<String> getEnvironmentName() {
         return this.environmentName == null ? Input.empty() : this.environmentName;
@@ -63,7 +63,7 @@ public final class BackendEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="stackName")
-    private final @Nullable Input<String> stackName;
+      private final @Nullable Input<String> stackName;
 
     public Input<String> getStackName() {
         return this.stackName == null ? Input.empty() : this.stackName;

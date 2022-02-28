@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecLoggingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class VirtualGatewaySpecArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="backendDefaults")
-    private final @Nullable Input<VirtualGatewaySpecBackendDefaultsArgs> backendDefaults;
+      private final @Nullable Input<VirtualGatewaySpecBackendDefaultsArgs> backendDefaults;
 
     public Input<VirtualGatewaySpecBackendDefaultsArgs> getBackendDefaults() {
         return this.backendDefaults == null ? Input.empty() : this.backendDefaults;
@@ -32,7 +32,7 @@ public final class VirtualGatewaySpecArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="listener", required=true)
-    private final Input<VirtualGatewaySpecListenerArgs> listener;
+      private final Input<VirtualGatewaySpecListenerArgs> listener;
 
     public Input<VirtualGatewaySpecListenerArgs> getListener() {
         return this.listener;
@@ -43,7 +43,7 @@ public final class VirtualGatewaySpecArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logging")
-    private final @Nullable Input<VirtualGatewaySpecLoggingArgs> logging;
+      private final @Nullable Input<VirtualGatewaySpecLoggingArgs> logging;
 
     public Input<VirtualGatewaySpecLoggingArgs> getLogging() {
         return this.logging == null ? Input.empty() : this.logging;

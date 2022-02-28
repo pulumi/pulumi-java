@@ -8,7 +8,7 @@ import io.pulumi.aws.s3.inputs.BucketLifecycleRuleNoncurrentVersionExpirationGet
 import io.pulumi.aws.s3.inputs.BucketLifecycleRuleNoncurrentVersionTransitionGetArgs;
 import io.pulumi.aws.s3.inputs.BucketLifecycleRuleTransitionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="abortIncompleteMultipartUploadDays")
-    private final @Nullable Input<Integer> abortIncompleteMultipartUploadDays;
+      private final @Nullable Input<Integer> abortIncompleteMultipartUploadDays;
 
     public Input<Integer> getAbortIncompleteMultipartUploadDays() {
         return this.abortIncompleteMultipartUploadDays == null ? Input.empty() : this.abortIncompleteMultipartUploadDays;
@@ -38,7 +38,7 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -49,7 +49,7 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="expiration")
-    private final @Nullable Input<BucketLifecycleRuleExpirationGetArgs> expiration;
+      private final @Nullable Input<BucketLifecycleRuleExpirationGetArgs> expiration;
 
     public Input<BucketLifecycleRuleExpirationGetArgs> getExpiration() {
         return this.expiration == null ? Input.empty() : this.expiration;
@@ -60,7 +60,7 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -71,7 +71,7 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="noncurrentVersionExpiration")
-    private final @Nullable Input<BucketLifecycleRuleNoncurrentVersionExpirationGetArgs> noncurrentVersionExpiration;
+      private final @Nullable Input<BucketLifecycleRuleNoncurrentVersionExpirationGetArgs> noncurrentVersionExpiration;
 
     public Input<BucketLifecycleRuleNoncurrentVersionExpirationGetArgs> getNoncurrentVersionExpiration() {
         return this.noncurrentVersionExpiration == null ? Input.empty() : this.noncurrentVersionExpiration;
@@ -82,7 +82,7 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="noncurrentVersionTransitions")
-    private final @Nullable Input<List<BucketLifecycleRuleNoncurrentVersionTransitionGetArgs>> noncurrentVersionTransitions;
+      private final @Nullable Input<List<BucketLifecycleRuleNoncurrentVersionTransitionGetArgs>> noncurrentVersionTransitions;
 
     public Input<List<BucketLifecycleRuleNoncurrentVersionTransitionGetArgs>> getNoncurrentVersionTransitions() {
         return this.noncurrentVersionTransitions == null ? Input.empty() : this.noncurrentVersionTransitions;
@@ -93,7 +93,7 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -104,7 +104,7 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -115,7 +115,7 @@ public final class BucketLifecycleRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="transitions")
-    private final @Nullable Input<List<BucketLifecycleRuleTransitionGetArgs>> transitions;
+      private final @Nullable Input<List<BucketLifecycleRuleTransitionGetArgs>> transitions;
 
     public Input<List<BucketLifecycleRuleTransitionGetArgs>> getTransitions() {
         return this.transitions == null ? Input.empty() : this.transitions;

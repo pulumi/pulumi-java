@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DomainSamlOptionsSamlOptionsIdpArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="entityId", required=true)
-    private final Input<String> entityId;
+      private final Input<String> entityId;
 
     public Input<String> getEntityId() {
         return this.entityId;
@@ -29,7 +29,7 @@ public final class DomainSamlOptionsSamlOptionsIdpArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="metadataContent", required=true)
-    private final Input<String> metadataContent;
+      private final Input<String> metadataContent;
 
     public Input<String> getMetadataContent() {
         return this.metadataContent;

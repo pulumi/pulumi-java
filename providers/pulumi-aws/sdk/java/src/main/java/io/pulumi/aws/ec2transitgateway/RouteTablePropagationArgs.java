@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RouteTablePropagationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transitGatewayAttachmentId", required=true)
-    private final Input<String> transitGatewayAttachmentId;
+      private final Input<String> transitGatewayAttachmentId;
 
     public Input<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
@@ -29,7 +29,7 @@ public final class RouteTablePropagationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transitGatewayRouteTableId", required=true)
-    private final Input<String> transitGatewayRouteTableId;
+      private final Input<String> transitGatewayRouteTableId;
 
     public Input<String> getTransitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId;

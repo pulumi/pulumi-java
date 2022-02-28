@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteActionWeightedTargetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RouteSpecGrpcRouteActionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="weightedTargets", required=true)
-    private final Input<List<RouteSpecGrpcRouteActionWeightedTargetArgs>> weightedTargets;
+      private final Input<List<RouteSpecGrpcRouteActionWeightedTargetArgs>> weightedTargets;
 
     public Input<List<RouteSpecGrpcRouteActionWeightedTargetArgs>> getWeightedTargets() {
         return this.weightedTargets;

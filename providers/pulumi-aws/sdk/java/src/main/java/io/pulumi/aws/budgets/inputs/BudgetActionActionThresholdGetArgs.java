@@ -4,7 +4,7 @@
 package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BudgetActionActionThresholdGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="actionThresholdType", required=true)
-    private final Input<String> actionThresholdType;
+      private final Input<String> actionThresholdType;
 
     public Input<String> getActionThresholdType() {
         return this.actionThresholdType;
@@ -30,7 +30,7 @@ public final class BudgetActionActionThresholdGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="actionThresholdValue", required=true)
-    private final Input<Double> actionThresholdValue;
+      private final Input<Double> actionThresholdValue;
 
     public Input<Double> getActionThresholdValue() {
         return this.actionThresholdValue;

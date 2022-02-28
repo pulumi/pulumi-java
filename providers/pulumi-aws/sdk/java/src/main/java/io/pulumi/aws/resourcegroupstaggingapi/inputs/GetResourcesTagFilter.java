@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.resourcegroupstaggingapi.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetResourcesTagFilter extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -31,7 +31,7 @@ public final class GetResourcesTagFilter extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="values")
-    private final @Nullable List<String> values;
+      private final @Nullable List<String> values;
 
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;

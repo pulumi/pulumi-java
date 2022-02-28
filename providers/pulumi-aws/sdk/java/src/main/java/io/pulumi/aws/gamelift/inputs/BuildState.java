@@ -5,7 +5,7 @@ package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.aws.gamelift.inputs.BuildStorageLocationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatingSystem")
-    private final @Nullable Input<String> operatingSystem;
+      private final @Nullable Input<String> operatingSystem;
 
     public Input<String> getOperatingSystem() {
         return this.operatingSystem == null ? Input.empty() : this.operatingSystem;
@@ -54,7 +54,7 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageLocation")
-    private final @Nullable Input<BuildStorageLocationGetArgs> storageLocation;
+      private final @Nullable Input<BuildStorageLocationGetArgs> storageLocation;
 
     public Input<BuildStorageLocationGetArgs> getStorageLocation() {
         return this.storageLocation == null ? Input.empty() : this.storageLocation;
@@ -65,7 +65,7 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -76,7 +76,7 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -87,7 +87,7 @@ public final class BuildState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

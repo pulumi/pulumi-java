@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ProjectSourceBuildStatusConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="context")
-    private final @Nullable Input<String> context;
+      private final @Nullable Input<String> context;
 
     public Input<String> getContext() {
         return this.context == null ? Input.empty() : this.context;
@@ -30,7 +30,7 @@ public final class ProjectSourceBuildStatusConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetUrl")
-    private final @Nullable Input<String> targetUrl;
+      private final @Nullable Input<String> targetUrl;
 
     public Input<String> getTargetUrl() {
         return this.targetUrl == null ? Input.empty() : this.targetUrl;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="documentFormat")
-    private final @Nullable String documentFormat;
+      private final @Nullable String documentFormat;
 
     public Optional<String> getDocumentFormat() {
         return this.documentFormat == null ? Optional.empty() : Optional.ofNullable(this.documentFormat);
@@ -30,7 +30,7 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="documentVersion")
-    private final @Nullable String documentVersion;
+      private final @Nullable String documentVersion;
 
     public Optional<String> getDocumentVersion() {
         return this.documentVersion == null ? Optional.empty() : Optional.ofNullable(this.documentVersion);
@@ -41,7 +41,7 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

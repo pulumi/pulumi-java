@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="catalogId", required=true)
-    private final String catalogId;
+      private final String catalogId;
 
     public String getCatalogId() {
         return this.catalogId;
@@ -32,7 +32,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="columnNames")
-    private final @Nullable List<String> columnNames;
+      private final @Nullable List<String> columnNames;
 
     public List<String> getColumnNames() {
         return this.columnNames == null ? List.of() : this.columnNames;
@@ -43,7 +43,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+      private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -54,7 +54,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="excludedColumnNames")
-    private final @Nullable List<String> excludedColumnNames;
+      private final @Nullable List<String> excludedColumnNames;
 
     public List<String> getExcludedColumnNames() {
         return this.excludedColumnNames == null ? List.of() : this.excludedColumnNames;
@@ -65,7 +65,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -76,7 +76,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="wildcard")
-    private final @Nullable Boolean wildcard;
+      private final @Nullable Boolean wildcard;
 
     public Optional<Boolean> getWildcard() {
         return this.wildcard == null ? Optional.empty() : Optional.ofNullable(this.wildcard);

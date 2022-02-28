@@ -8,8 +8,8 @@ import io.pulumi.aws.worklink.WebsiteCertificateAuthorityAssociationArgs;
 import io.pulumi.aws.worklink.inputs.WebsiteCertificateAuthorityAssociationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -84,6 +84,21 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
         return this.websiteCaId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public WebsiteCertificateAuthorityAssociation(String name) {
+        this(name, WebsiteCertificateAuthorityAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WebsiteCertificateAuthorityAssociation(String name, WebsiteCertificateAuthorityAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

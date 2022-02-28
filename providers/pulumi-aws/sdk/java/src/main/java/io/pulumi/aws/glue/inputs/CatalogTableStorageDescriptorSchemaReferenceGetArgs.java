@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceGetArgs extends i
      * 
      */
     @InputImport(name="schemaId")
-    private final @Nullable Input<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs> schemaId;
+      private final @Nullable Input<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs> schemaId;
 
     public Input<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs> getSchemaId() {
         return this.schemaId == null ? Input.empty() : this.schemaId;
@@ -32,7 +32,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceGetArgs extends i
      * 
      */
     @InputImport(name="schemaVersionId")
-    private final @Nullable Input<String> schemaVersionId;
+      private final @Nullable Input<String> schemaVersionId;
 
     public Input<String> getSchemaVersionId() {
         return this.schemaVersionId == null ? Input.empty() : this.schemaVersionId;
@@ -43,7 +43,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceGetArgs extends i
      * 
      */
     @InputImport(name="schemaVersionNumber", required=true)
-    private final Input<Integer> schemaVersionNumber;
+      private final Input<Integer> schemaVersionNumber;
 
     public Input<Integer> getSchemaVersionNumber() {
         return this.schemaVersionNumber;

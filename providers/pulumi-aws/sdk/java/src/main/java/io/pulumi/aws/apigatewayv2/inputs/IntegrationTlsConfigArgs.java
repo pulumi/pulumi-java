@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class IntegrationTlsConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="serverNameToVerify")
-    private final @Nullable Input<String> serverNameToVerify;
+      private final @Nullable Input<String> serverNameToVerify;
 
     public Input<String> getServerNameToVerify() {
         return this.serverNameToVerify == null ? Input.empty() : this.serverNameToVerify;

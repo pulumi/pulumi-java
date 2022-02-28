@@ -5,7 +5,7 @@ package io.pulumi.aws.rds;
 
 import io.pulumi.aws.rds.inputs.ProxyAuthArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auths", required=true)
-    private final Input<List<ProxyAuthArgs>> auths;
+      private final Input<List<ProxyAuthArgs>> auths;
 
     public Input<List<ProxyAuthArgs>> getAuths() {
         return this.auths;
@@ -35,7 +35,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="debugLogging")
-    private final @Nullable Input<Boolean> debugLogging;
+      private final @Nullable Input<Boolean> debugLogging;
 
     public Input<Boolean> getDebugLogging() {
         return this.debugLogging == null ? Input.empty() : this.debugLogging;
@@ -46,7 +46,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineFamily", required=true)
-    private final Input<String> engineFamily;
+      private final Input<String> engineFamily;
 
     public Input<String> getEngineFamily() {
         return this.engineFamily;
@@ -57,7 +57,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleClientTimeout")
-    private final @Nullable Input<Integer> idleClientTimeout;
+      private final @Nullable Input<Integer> idleClientTimeout;
 
     public Input<Integer> getIdleClientTimeout() {
         return this.idleClientTimeout == null ? Input.empty() : this.idleClientTimeout;
@@ -68,7 +68,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -79,7 +79,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireTls")
-    private final @Nullable Input<Boolean> requireTls;
+      private final @Nullable Input<Boolean> requireTls;
 
     public Input<Boolean> getRequireTls() {
         return this.requireTls == null ? Input.empty() : this.requireTls;
@@ -90,7 +90,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -101,7 +101,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -112,7 +112,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-    private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
 
     public Input<List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
@@ -123,7 +123,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSubnetIds", required=true)
-    private final Input<List<String>> vpcSubnetIds;
+      private final Input<List<String>> vpcSubnetIds;
 
     public Input<List<String>> getVpcSubnetIds() {
         return this.vpcSubnetIds;

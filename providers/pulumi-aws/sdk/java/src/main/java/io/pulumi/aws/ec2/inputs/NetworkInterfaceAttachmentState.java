@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="attachmentId")
-    private final @Nullable Input<String> attachmentId;
+      private final @Nullable Input<String> attachmentId;
 
     public Input<String> getAttachmentId() {
         return this.attachmentId == null ? Input.empty() : this.attachmentId;
@@ -31,7 +31,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deviceIndex")
-    private final @Nullable Input<Integer> deviceIndex;
+      private final @Nullable Input<Integer> deviceIndex;
 
     public Input<Integer> getDeviceIndex() {
         return this.deviceIndex == null ? Input.empty() : this.deviceIndex;
@@ -42,7 +42,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -53,7 +53,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="networkInterfaceId")
-    private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
@@ -64,7 +64,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

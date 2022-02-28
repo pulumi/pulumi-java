@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.aws.iam.inputs.GetPolicyDocumentStatement;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="overrideJson")
-    private final @Nullable String overrideJson;
+      private final @Nullable String overrideJson;
 
     public Optional<String> getOverrideJson() {
         return this.overrideJson == null ? Optional.empty() : Optional.ofNullable(this.overrideJson);
@@ -32,7 +32,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="overridePolicyDocuments")
-    private final @Nullable List<String> overridePolicyDocuments;
+      private final @Nullable List<String> overridePolicyDocuments;
 
     public List<String> getOverridePolicyDocuments() {
         return this.overridePolicyDocuments == null ? List.of() : this.overridePolicyDocuments;
@@ -43,7 +43,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="policyId")
-    private final @Nullable String policyId;
+      private final @Nullable String policyId;
 
     public Optional<String> getPolicyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
@@ -54,7 +54,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="sourceJson")
-    private final @Nullable String sourceJson;
+      private final @Nullable String sourceJson;
 
     public Optional<String> getSourceJson() {
         return this.sourceJson == null ? Optional.empty() : Optional.ofNullable(this.sourceJson);
@@ -65,7 +65,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="sourcePolicyDocuments")
-    private final @Nullable List<String> sourcePolicyDocuments;
+      private final @Nullable List<String> sourcePolicyDocuments;
 
     public List<String> getSourcePolicyDocuments() {
         return this.sourcePolicyDocuments == null ? List.of() : this.sourcePolicyDocuments;
@@ -76,7 +76,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="statements")
-    private final @Nullable List<GetPolicyDocumentStatement> statements;
+      private final @Nullable List<GetPolicyDocumentStatement> statements;
 
     public List<GetPolicyDocumentStatement> getStatements() {
         return this.statements == null ? List.of() : this.statements;
@@ -87,7 +87,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+      private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);

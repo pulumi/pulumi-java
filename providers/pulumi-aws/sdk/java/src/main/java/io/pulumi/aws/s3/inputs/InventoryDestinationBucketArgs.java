@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -31,7 +31,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bucketArn", required=true)
-    private final Input<String> bucketArn;
+      private final Input<String> bucketArn;
 
     public Input<String> getBucketArn() {
         return this.bucketArn;
@@ -42,7 +42,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<InventoryDestinationBucketEncryptionArgs> encryption;
+      private final @Nullable Input<InventoryDestinationBucketEncryptionArgs> encryption;
 
     public Input<InventoryDestinationBucketEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -53,7 +53,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="format", required=true)
-    private final Input<String> format;
+      private final Input<String> format;
 
     public Input<String> getFormat() {
         return this.format;
@@ -64,7 +64,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;

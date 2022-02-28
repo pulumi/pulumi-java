@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
     public static final ObjectLambdaAccessPointPolicyState Empty = new ObjectLambdaAccessPointPolicyState();
 
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -27,7 +27,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
      * 
      */
     @InputImport(name="hasPublicAccessPolicy")
-    private final @Nullable Input<Boolean> hasPublicAccessPolicy;
+      private final @Nullable Input<Boolean> hasPublicAccessPolicy;
 
     public Input<Boolean> getHasPublicAccessPolicy() {
         return this.hasPublicAccessPolicy == null ? Input.empty() : this.hasPublicAccessPolicy;
@@ -38,7 +38,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -49,7 +49,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;

@@ -5,7 +5,7 @@ package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.aws.memorydb.inputs.UserAuthenticationModeGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessString")
-    private final @Nullable Input<String> accessString;
+      private final @Nullable Input<String> accessString;
 
     public Input<String> getAccessString() {
         return this.accessString == null ? Input.empty() : this.accessString;
@@ -32,7 +32,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -43,7 +43,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationMode")
-    private final @Nullable Input<UserAuthenticationModeGetArgs> authenticationMode;
+      private final @Nullable Input<UserAuthenticationModeGetArgs> authenticationMode;
 
     public Input<UserAuthenticationModeGetArgs> getAuthenticationMode() {
         return this.authenticationMode == null ? Input.empty() : this.authenticationMode;
@@ -55,7 +55,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumEngineVersion")
-    private final @Nullable Input<String> minimumEngineVersion;
+      private final @Nullable Input<String> minimumEngineVersion;
 
     public Input<String> getMinimumEngineVersion() {
         return this.minimumEngineVersion == null ? Input.empty() : this.minimumEngineVersion;
@@ -66,7 +66,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -77,7 +77,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -88,7 +88,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;

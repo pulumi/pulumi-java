@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.aws.apigateway.inputs.UsagePlanApiStageThrottleGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -32,7 +32,7 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="stage", required=true)
-    private final Input<String> stage;
+      private final Input<String> stage;
 
     public Input<String> getStage() {
         return this.stage;
@@ -43,7 +43,7 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="throttles")
-    private final @Nullable Input<List<UsagePlanApiStageThrottleGetArgs>> throttles;
+      private final @Nullable Input<List<UsagePlanApiStageThrottleGetArgs>> throttles;
 
     public Input<List<UsagePlanApiStageThrottleGetArgs>> getThrottles() {
         return this.throttles == null ? Input.empty() : this.throttles;

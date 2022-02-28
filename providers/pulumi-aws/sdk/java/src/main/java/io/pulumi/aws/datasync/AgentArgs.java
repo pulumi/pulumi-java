@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activationKey")
-    private final @Nullable Input<String> activationKey;
+      private final @Nullable Input<String> activationKey;
 
     public Input<String> getActivationKey() {
         return this.activationKey == null ? Input.empty() : this.activationKey;
@@ -32,7 +32,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -43,7 +43,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkEndpoint")
-    private final @Nullable Input<String> privateLinkEndpoint;
+      private final @Nullable Input<String> privateLinkEndpoint;
 
     public Input<String> getPrivateLinkEndpoint() {
         return this.privateLinkEndpoint == null ? Input.empty() : this.privateLinkEndpoint;
@@ -65,7 +65,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupArns")
-    private final @Nullable Input<List<String>> securityGroupArns;
+      private final @Nullable Input<List<String>> securityGroupArns;
 
     public Input<List<String>> getSecurityGroupArns() {
         return this.securityGroupArns == null ? Input.empty() : this.securityGroupArns;
@@ -76,7 +76,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetArns")
-    private final @Nullable Input<List<String>> subnetArns;
+      private final @Nullable Input<List<String>> subnetArns;
 
     public Input<List<String>> getSubnetArns() {
         return this.subnetArns == null ? Input.empty() : this.subnetArns;
@@ -87,7 +87,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -98,7 +98,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcEndpointId")
-    private final @Nullable Input<String> vpcEndpointId;
+      private final @Nullable Input<String> vpcEndpointId;
 
     public Input<String> getVpcEndpointId() {
         return this.vpcEndpointId == null ? Input.empty() : this.vpcEndpointId;

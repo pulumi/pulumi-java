@@ -7,7 +7,7 @@ import io.pulumi.aws.elb.inputs.LoadBalancerAccessLogsArgs;
 import io.pulumi.aws.elb.inputs.LoadBalancerHealthCheckArgs;
 import io.pulumi.aws.elb.inputs.LoadBalancerListenerArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessLogs")
-    private final @Nullable Input<LoadBalancerAccessLogsArgs> accessLogs;
+      private final @Nullable Input<LoadBalancerAccessLogsArgs> accessLogs;
 
     public Input<LoadBalancerAccessLogsArgs> getAccessLogs() {
         return this.accessLogs == null ? Input.empty() : this.accessLogs;
@@ -37,7 +37,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZones")
-    private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Input<List<String>> availabilityZones;
 
     public Input<List<String>> getAvailabilityZones() {
         return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
@@ -48,7 +48,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionDraining")
-    private final @Nullable Input<Boolean> connectionDraining;
+      private final @Nullable Input<Boolean> connectionDraining;
 
     public Input<Boolean> getConnectionDraining() {
         return this.connectionDraining == null ? Input.empty() : this.connectionDraining;
@@ -59,7 +59,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionDrainingTimeout")
-    private final @Nullable Input<Integer> connectionDrainingTimeout;
+      private final @Nullable Input<Integer> connectionDrainingTimeout;
 
     public Input<Integer> getConnectionDrainingTimeout() {
         return this.connectionDrainingTimeout == null ? Input.empty() : this.connectionDrainingTimeout;
@@ -70,7 +70,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crossZoneLoadBalancing")
-    private final @Nullable Input<Boolean> crossZoneLoadBalancing;
+      private final @Nullable Input<Boolean> crossZoneLoadBalancing;
 
     public Input<Boolean> getCrossZoneLoadBalancing() {
         return this.crossZoneLoadBalancing == null ? Input.empty() : this.crossZoneLoadBalancing;
@@ -81,7 +81,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="desyncMitigationMode")
-    private final @Nullable Input<String> desyncMitigationMode;
+      private final @Nullable Input<String> desyncMitigationMode;
 
     public Input<String> getDesyncMitigationMode() {
         return this.desyncMitigationMode == null ? Input.empty() : this.desyncMitigationMode;
@@ -92,7 +92,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheck")
-    private final @Nullable Input<LoadBalancerHealthCheckArgs> healthCheck;
+      private final @Nullable Input<LoadBalancerHealthCheckArgs> healthCheck;
 
     public Input<LoadBalancerHealthCheckArgs> getHealthCheck() {
         return this.healthCheck == null ? Input.empty() : this.healthCheck;
@@ -103,7 +103,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleTimeout")
-    private final @Nullable Input<Integer> idleTimeout;
+      private final @Nullable Input<Integer> idleTimeout;
 
     public Input<Integer> getIdleTimeout() {
         return this.idleTimeout == null ? Input.empty() : this.idleTimeout;
@@ -114,7 +114,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instances")
-    private final @Nullable Input<List<String>> instances;
+      private final @Nullable Input<List<String>> instances;
 
     public Input<List<String>> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -125,7 +125,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="internal")
-    private final @Nullable Input<Boolean> internal;
+      private final @Nullable Input<Boolean> internal;
 
     public Input<Boolean> getInternal() {
         return this.internal == null ? Input.empty() : this.internal;
@@ -136,7 +136,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="listeners", required=true)
-    private final Input<List<LoadBalancerListenerArgs>> listeners;
+      private final Input<List<LoadBalancerListenerArgs>> listeners;
 
     public Input<List<LoadBalancerListenerArgs>> getListeners() {
         return this.listeners;
@@ -147,7 +147,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -159,7 +159,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -171,7 +171,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -184,7 +184,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSecurityGroup")
-    private final @Nullable Input<String> sourceSecurityGroup;
+      private final @Nullable Input<String> sourceSecurityGroup;
 
     public Input<String> getSourceSecurityGroup() {
         return this.sourceSecurityGroup == null ? Input.empty() : this.sourceSecurityGroup;
@@ -195,7 +195,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnets")
-    private final @Nullable Input<List<String>> subnets;
+      private final @Nullable Input<List<String>> subnets;
 
     public Input<List<String>> getSubnets() {
         return this.subnets == null ? Input.empty() : this.subnets;
@@ -206,7 +206,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

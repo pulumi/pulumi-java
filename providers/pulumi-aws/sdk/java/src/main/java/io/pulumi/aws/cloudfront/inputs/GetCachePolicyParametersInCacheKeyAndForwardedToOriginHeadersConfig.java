@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
      * 
      */
     @InputImport(name="headerBehavior", required=true)
-    private final String headerBehavior;
+      private final String headerBehavior;
 
     public String getHeaderBehavior() {
         return this.headerBehavior;
@@ -30,7 +30,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
      * 
      */
     @InputImport(name="headers", required=true)
-    private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers;
+      private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers;
 
     public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> getHeaders() {
         return this.headers;

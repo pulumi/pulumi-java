@@ -9,7 +9,7 @@ import io.pulumi.aws.elastictranscoder.inputs.PresetThumbnailsGetArgs;
 import io.pulumi.aws.elastictranscoder.inputs.PresetVideoGetArgs;
 import io.pulumi.aws.elastictranscoder.inputs.PresetVideoWatermarkGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -37,7 +37,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audio")
-    private final @Nullable Input<PresetAudioGetArgs> audio;
+      private final @Nullable Input<PresetAudioGetArgs> audio;
 
     public Input<PresetAudioGetArgs> getAudio() {
         return this.audio == null ? Input.empty() : this.audio;
@@ -48,7 +48,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audioCodecOptions")
-    private final @Nullable Input<PresetAudioCodecOptionsGetArgs> audioCodecOptions;
+      private final @Nullable Input<PresetAudioCodecOptionsGetArgs> audioCodecOptions;
 
     public Input<PresetAudioCodecOptionsGetArgs> getAudioCodecOptions() {
         return this.audioCodecOptions == null ? Input.empty() : this.audioCodecOptions;
@@ -59,7 +59,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="container")
-    private final @Nullable Input<String> container;
+      private final @Nullable Input<String> container;
 
     public Input<String> getContainer() {
         return this.container == null ? Input.empty() : this.container;
@@ -70,7 +70,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -81,7 +81,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -92,14 +92,14 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thumbnails")
-    private final @Nullable Input<PresetThumbnailsGetArgs> thumbnails;
+      private final @Nullable Input<PresetThumbnailsGetArgs> thumbnails;
 
     public Input<PresetThumbnailsGetArgs> getThumbnails() {
         return this.thumbnails == null ? Input.empty() : this.thumbnails;
     }
 
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -110,7 +110,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="video")
-    private final @Nullable Input<PresetVideoGetArgs> video;
+      private final @Nullable Input<PresetVideoGetArgs> video;
 
     public Input<PresetVideoGetArgs> getVideo() {
         return this.video == null ? Input.empty() : this.video;
@@ -121,7 +121,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="videoCodecOptions")
-    private final @Nullable Input<Map<String,String>> videoCodecOptions;
+      private final @Nullable Input<Map<String,String>> videoCodecOptions;
 
     public Input<Map<String,String>> getVideoCodecOptions() {
         return this.videoCodecOptions == null ? Input.empty() : this.videoCodecOptions;
@@ -132,7 +132,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="videoWatermarks")
-    private final @Nullable Input<List<PresetVideoWatermarkGetArgs>> videoWatermarks;
+      private final @Nullable Input<List<PresetVideoWatermarkGetArgs>> videoWatermarks;
 
     public Input<List<PresetVideoWatermarkGetArgs>> getVideoWatermarks() {
         return this.videoWatermarks == null ? Input.empty() : this.videoWatermarks;

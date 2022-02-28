@@ -15,8 +15,8 @@ import io.pulumi.aws.mq.outputs.BrokerMaintenanceWindowStartTime;
 import io.pulumi.aws.mq.outputs.BrokerUser;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -376,6 +376,21 @@ public class Broker extends io.pulumi.resources.CustomResource {
         return this.users;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Broker(String name) {
+        this(name, BrokerArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Broker(String name, BrokerArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

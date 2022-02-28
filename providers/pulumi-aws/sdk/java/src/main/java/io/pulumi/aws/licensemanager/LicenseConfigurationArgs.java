@@ -4,7 +4,7 @@
 package io.pulumi.aws.licensemanager;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="licenseCount")
-    private final @Nullable Input<Integer> licenseCount;
+      private final @Nullable Input<Integer> licenseCount;
 
     public Input<Integer> getLicenseCount() {
         return this.licenseCount == null ? Input.empty() : this.licenseCount;
@@ -45,7 +45,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="licenseCountHardLimit")
-    private final @Nullable Input<Boolean> licenseCountHardLimit;
+      private final @Nullable Input<Boolean> licenseCountHardLimit;
 
     public Input<Boolean> getLicenseCountHardLimit() {
         return this.licenseCountHardLimit == null ? Input.empty() : this.licenseCountHardLimit;
@@ -56,7 +56,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="licenseCountingType", required=true)
-    private final Input<String> licenseCountingType;
+      private final Input<String> licenseCountingType;
 
     public Input<String> getLicenseCountingType() {
         return this.licenseCountingType;
@@ -67,7 +67,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="licenseRules")
-    private final @Nullable Input<List<String>> licenseRules;
+      private final @Nullable Input<List<String>> licenseRules;
 
     public Input<List<String>> getLicenseRules() {
         return this.licenseRules == null ? Input.empty() : this.licenseRules;
@@ -78,7 +78,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -89,7 +89,7 @@ public final class LicenseConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

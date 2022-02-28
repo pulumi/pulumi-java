@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
      * 
      */
     @InputImport(name="cookieBehavior", required=true)
-    private final String cookieBehavior;
+      private final String cookieBehavior;
 
     public String getCookieBehavior() {
         return this.cookieBehavior;
@@ -30,7 +30,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
      * 
      */
     @InputImport(name="cookies", required=true)
-    private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies;
+      private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies;
 
     public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> getCookies() {
         return this.cookies;

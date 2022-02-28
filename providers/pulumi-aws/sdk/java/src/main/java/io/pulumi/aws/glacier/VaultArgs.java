@@ -5,7 +5,7 @@ package io.pulumi.aws.glacier;
 
 import io.pulumi.aws.glacier.inputs.VaultNotificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicy")
-    private final @Nullable Input<String> accessPolicy;
+      private final @Nullable Input<String> accessPolicy;
 
     public Input<String> getAccessPolicy() {
         return this.accessPolicy == null ? Input.empty() : this.accessPolicy;
@@ -33,7 +33,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notification")
-    private final @Nullable Input<VaultNotificationArgs> notification;
+      private final @Nullable Input<VaultNotificationArgs> notification;
 
     public Input<VaultNotificationArgs> getNotification() {
         return this.notification == null ? Input.empty() : this.notification;
@@ -55,7 +55,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

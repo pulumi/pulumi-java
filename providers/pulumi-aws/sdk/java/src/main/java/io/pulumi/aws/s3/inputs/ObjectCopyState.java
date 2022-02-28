@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.ObjectCopyGrantGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acl")
-    private final @Nullable Input<String> acl;
+      private final @Nullable Input<String> acl;
 
     public Input<String> getAcl() {
         return this.acl == null ? Input.empty() : this.acl;
@@ -34,14 +34,14 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
     }
 
     @InputImport(name="bucketKeyEnabled")
-    private final @Nullable Input<Boolean> bucketKeyEnabled;
+      private final @Nullable Input<Boolean> bucketKeyEnabled;
 
     public Input<Boolean> getBucketKeyEnabled() {
         return this.bucketKeyEnabled == null ? Input.empty() : this.bucketKeyEnabled;
@@ -52,7 +52,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheControl")
-    private final @Nullable Input<String> cacheControl;
+      private final @Nullable Input<String> cacheControl;
 
     public Input<String> getCacheControl() {
         return this.cacheControl == null ? Input.empty() : this.cacheControl;
@@ -63,7 +63,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentDisposition")
-    private final @Nullable Input<String> contentDisposition;
+      private final @Nullable Input<String> contentDisposition;
 
     public Input<String> getContentDisposition() {
         return this.contentDisposition == null ? Input.empty() : this.contentDisposition;
@@ -74,7 +74,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentEncoding")
-    private final @Nullable Input<String> contentEncoding;
+      private final @Nullable Input<String> contentEncoding;
 
     public Input<String> getContentEncoding() {
         return this.contentEncoding == null ? Input.empty() : this.contentEncoding;
@@ -85,7 +85,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentLanguage")
-    private final @Nullable Input<String> contentLanguage;
+      private final @Nullable Input<String> contentLanguage;
 
     public Input<String> getContentLanguage() {
         return this.contentLanguage == null ? Input.empty() : this.contentLanguage;
@@ -96,7 +96,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -107,7 +107,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyIfMatch")
-    private final @Nullable Input<String> copyIfMatch;
+      private final @Nullable Input<String> copyIfMatch;
 
     public Input<String> getCopyIfMatch() {
         return this.copyIfMatch == null ? Input.empty() : this.copyIfMatch;
@@ -118,7 +118,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyIfModifiedSince")
-    private final @Nullable Input<String> copyIfModifiedSince;
+      private final @Nullable Input<String> copyIfModifiedSince;
 
     public Input<String> getCopyIfModifiedSince() {
         return this.copyIfModifiedSince == null ? Input.empty() : this.copyIfModifiedSince;
@@ -129,7 +129,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyIfNoneMatch")
-    private final @Nullable Input<String> copyIfNoneMatch;
+      private final @Nullable Input<String> copyIfNoneMatch;
 
     public Input<String> getCopyIfNoneMatch() {
         return this.copyIfNoneMatch == null ? Input.empty() : this.copyIfNoneMatch;
@@ -140,7 +140,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyIfUnmodifiedSince")
-    private final @Nullable Input<String> copyIfUnmodifiedSince;
+      private final @Nullable Input<String> copyIfUnmodifiedSince;
 
     public Input<String> getCopyIfUnmodifiedSince() {
         return this.copyIfUnmodifiedSince == null ? Input.empty() : this.copyIfUnmodifiedSince;
@@ -151,7 +151,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerAlgorithm")
-    private final @Nullable Input<String> customerAlgorithm;
+      private final @Nullable Input<String> customerAlgorithm;
 
     public Input<String> getCustomerAlgorithm() {
         return this.customerAlgorithm == null ? Input.empty() : this.customerAlgorithm;
@@ -162,7 +162,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerKey")
-    private final @Nullable Input<String> customerKey;
+      private final @Nullable Input<String> customerKey;
 
     public Input<String> getCustomerKey() {
         return this.customerKey == null ? Input.empty() : this.customerKey;
@@ -173,7 +173,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerKeyMd5")
-    private final @Nullable Input<String> customerKeyMd5;
+      private final @Nullable Input<String> customerKeyMd5;
 
     public Input<String> getCustomerKeyMd5() {
         return this.customerKeyMd5 == null ? Input.empty() : this.customerKeyMd5;
@@ -184,7 +184,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -195,7 +195,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expectedBucketOwner")
-    private final @Nullable Input<String> expectedBucketOwner;
+      private final @Nullable Input<String> expectedBucketOwner;
 
     public Input<String> getExpectedBucketOwner() {
         return this.expectedBucketOwner == null ? Input.empty() : this.expectedBucketOwner;
@@ -206,7 +206,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expectedSourceBucketOwner")
-    private final @Nullable Input<String> expectedSourceBucketOwner;
+      private final @Nullable Input<String> expectedSourceBucketOwner;
 
     public Input<String> getExpectedSourceBucketOwner() {
         return this.expectedSourceBucketOwner == null ? Input.empty() : this.expectedSourceBucketOwner;
@@ -217,7 +217,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expiration")
-    private final @Nullable Input<String> expiration;
+      private final @Nullable Input<String> expiration;
 
     public Input<String> getExpiration() {
         return this.expiration == null ? Input.empty() : this.expiration;
@@ -228,7 +228,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expires")
-    private final @Nullable Input<String> expires;
+      private final @Nullable Input<String> expires;
 
     public Input<String> getExpires() {
         return this.expires == null ? Input.empty() : this.expires;
@@ -239,7 +239,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-    private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Input<Boolean> forceDestroy;
 
     public Input<Boolean> getForceDestroy() {
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
@@ -250,7 +250,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grants")
-    private final @Nullable Input<List<ObjectCopyGrantGetArgs>> grants;
+      private final @Nullable Input<List<ObjectCopyGrantGetArgs>> grants;
 
     public Input<List<ObjectCopyGrantGetArgs>> getGrants() {
         return this.grants == null ? Input.empty() : this.grants;
@@ -261,7 +261,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -272,7 +272,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsEncryptionContext")
-    private final @Nullable Input<String> kmsEncryptionContext;
+      private final @Nullable Input<String> kmsEncryptionContext;
 
     public Input<String> getKmsEncryptionContext() {
         return this.kmsEncryptionContext == null ? Input.empty() : this.kmsEncryptionContext;
@@ -283,7 +283,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -294,7 +294,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModified")
-    private final @Nullable Input<String> lastModified;
+      private final @Nullable Input<String> lastModified;
 
     public Input<String> getLastModified() {
         return this.lastModified == null ? Input.empty() : this.lastModified;
@@ -305,7 +305,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -316,7 +316,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataDirective")
-    private final @Nullable Input<String> metadataDirective;
+      private final @Nullable Input<String> metadataDirective;
 
     public Input<String> getMetadataDirective() {
         return this.metadataDirective == null ? Input.empty() : this.metadataDirective;
@@ -327,7 +327,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectLockLegalHoldStatus")
-    private final @Nullable Input<String> objectLockLegalHoldStatus;
+      private final @Nullable Input<String> objectLockLegalHoldStatus;
 
     public Input<String> getObjectLockLegalHoldStatus() {
         return this.objectLockLegalHoldStatus == null ? Input.empty() : this.objectLockLegalHoldStatus;
@@ -338,7 +338,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectLockMode")
-    private final @Nullable Input<String> objectLockMode;
+      private final @Nullable Input<String> objectLockMode;
 
     public Input<String> getObjectLockMode() {
         return this.objectLockMode == null ? Input.empty() : this.objectLockMode;
@@ -349,7 +349,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectLockRetainUntilDate")
-    private final @Nullable Input<String> objectLockRetainUntilDate;
+      private final @Nullable Input<String> objectLockRetainUntilDate;
 
     public Input<String> getObjectLockRetainUntilDate() {
         return this.objectLockRetainUntilDate == null ? Input.empty() : this.objectLockRetainUntilDate;
@@ -360,7 +360,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestCharged")
-    private final @Nullable Input<Boolean> requestCharged;
+      private final @Nullable Input<Boolean> requestCharged;
 
     public Input<Boolean> getRequestCharged() {
         return this.requestCharged == null ? Input.empty() : this.requestCharged;
@@ -371,7 +371,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestPayer")
-    private final @Nullable Input<String> requestPayer;
+      private final @Nullable Input<String> requestPayer;
 
     public Input<String> getRequestPayer() {
         return this.requestPayer == null ? Input.empty() : this.requestPayer;
@@ -382,7 +382,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverSideEncryption")
-    private final @Nullable Input<String> serverSideEncryption;
+      private final @Nullable Input<String> serverSideEncryption;
 
     public Input<String> getServerSideEncryption() {
         return this.serverSideEncryption == null ? Input.empty() : this.serverSideEncryption;
@@ -393,7 +393,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<String> source;
+      private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -404,7 +404,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceCustomerAlgorithm")
-    private final @Nullable Input<String> sourceCustomerAlgorithm;
+      private final @Nullable Input<String> sourceCustomerAlgorithm;
 
     public Input<String> getSourceCustomerAlgorithm() {
         return this.sourceCustomerAlgorithm == null ? Input.empty() : this.sourceCustomerAlgorithm;
@@ -415,7 +415,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceCustomerKey")
-    private final @Nullable Input<String> sourceCustomerKey;
+      private final @Nullable Input<String> sourceCustomerKey;
 
     public Input<String> getSourceCustomerKey() {
         return this.sourceCustomerKey == null ? Input.empty() : this.sourceCustomerKey;
@@ -426,7 +426,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceCustomerKeyMd5")
-    private final @Nullable Input<String> sourceCustomerKeyMd5;
+      private final @Nullable Input<String> sourceCustomerKeyMd5;
 
     public Input<String> getSourceCustomerKeyMd5() {
         return this.sourceCustomerKeyMd5 == null ? Input.empty() : this.sourceCustomerKeyMd5;
@@ -437,7 +437,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceVersionId")
-    private final @Nullable Input<String> sourceVersionId;
+      private final @Nullable Input<String> sourceVersionId;
 
     public Input<String> getSourceVersionId() {
         return this.sourceVersionId == null ? Input.empty() : this.sourceVersionId;
@@ -448,7 +448,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageClass")
-    private final @Nullable Input<String> storageClass;
+      private final @Nullable Input<String> storageClass;
 
     public Input<String> getStorageClass() {
         return this.storageClass == null ? Input.empty() : this.storageClass;
@@ -459,7 +459,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taggingDirective")
-    private final @Nullable Input<String> taggingDirective;
+      private final @Nullable Input<String> taggingDirective;
 
     public Input<String> getTaggingDirective() {
         return this.taggingDirective == null ? Input.empty() : this.taggingDirective;
@@ -470,7 +470,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -481,7 +481,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -492,7 +492,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionId")
-    private final @Nullable Input<String> versionId;
+      private final @Nullable Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId == null ? Input.empty() : this.versionId;
@@ -503,7 +503,7 @@ public final class ObjectCopyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="websiteRedirect")
-    private final @Nullable Input<String> websiteRedirect;
+      private final @Nullable Input<String> websiteRedirect;
 
     public Input<String> getWebsiteRedirect() {
         return this.websiteRedirect == null ? Input.empty() : this.websiteRedirect;

@@ -5,7 +5,7 @@ package io.pulumi.aws.dlm;
 
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description", required=true)
-    private final Input<String> description;
+      private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -32,7 +32,7 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="executionRoleArn", required=true)
-    private final Input<String> executionRoleArn;
+      private final Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn;
@@ -43,7 +43,7 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyDetails", required=true)
-    private final Input<LifecyclePolicyPolicyDetailsArgs> policyDetails;
+      private final Input<LifecyclePolicyPolicyDetailsArgs> policyDetails;
 
     public Input<LifecyclePolicyPolicyDetailsArgs> getPolicyDetails() {
         return this.policyDetails;
@@ -54,7 +54,7 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -65,7 +65,7 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

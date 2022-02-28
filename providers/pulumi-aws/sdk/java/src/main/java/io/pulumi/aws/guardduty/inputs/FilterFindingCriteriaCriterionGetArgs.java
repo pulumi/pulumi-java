@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="equals")
-    private final @Nullable Input<List<String>> equals;
+      private final @Nullable Input<List<String>> equals;
 
     public Input<List<String>> getEquals() {
         return this.equals == null ? Input.empty() : this.equals;
@@ -31,7 +31,7 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="field", required=true)
-    private final Input<String> field;
+      private final Input<String> field;
 
     public Input<String> getField() {
         return this.field;
@@ -42,7 +42,7 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="greaterThan")
-    private final @Nullable Input<String> greaterThan;
+      private final @Nullable Input<String> greaterThan;
 
     public Input<String> getGreaterThan() {
         return this.greaterThan == null ? Input.empty() : this.greaterThan;
@@ -53,7 +53,7 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="greaterThanOrEqual")
-    private final @Nullable Input<String> greaterThanOrEqual;
+      private final @Nullable Input<String> greaterThanOrEqual;
 
     public Input<String> getGreaterThanOrEqual() {
         return this.greaterThanOrEqual == null ? Input.empty() : this.greaterThanOrEqual;
@@ -64,7 +64,7 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="lessThan")
-    private final @Nullable Input<String> lessThan;
+      private final @Nullable Input<String> lessThan;
 
     public Input<String> getLessThan() {
         return this.lessThan == null ? Input.empty() : this.lessThan;
@@ -75,7 +75,7 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="lessThanOrEqual")
-    private final @Nullable Input<String> lessThanOrEqual;
+      private final @Nullable Input<String> lessThanOrEqual;
 
     public Input<String> getLessThanOrEqual() {
         return this.lessThanOrEqual == null ? Input.empty() : this.lessThanOrEqual;
@@ -86,7 +86,7 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="notEquals")
-    private final @Nullable Input<List<String>> notEquals;
+      private final @Nullable Input<List<String>> notEquals;
 
     public Input<List<String>> getNotEquals() {
         return this.notEquals == null ? Input.empty() : this.notEquals;

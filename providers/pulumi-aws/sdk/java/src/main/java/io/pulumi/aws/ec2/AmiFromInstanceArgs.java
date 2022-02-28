@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.AmiFromInstanceEbsBlockDeviceArgs;
 import io.pulumi.aws.ec2.inputs.AmiFromInstanceEphemeralBlockDeviceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ebsBlockDevices")
-    private final @Nullable Input<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices;
+      private final @Nullable Input<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices;
 
     public Input<List<AmiFromInstanceEbsBlockDeviceArgs>> getEbsBlockDevices() {
         return this.ebsBlockDevices == null ? Input.empty() : this.ebsBlockDevices;
@@ -48,7 +48,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ephemeralBlockDevices")
-    private final @Nullable Input<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
+      private final @Nullable Input<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
     public Input<List<AmiFromInstanceEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Input.empty() : this.ephemeralBlockDevices;
@@ -59,7 +59,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -73,7 +73,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="snapshotWithoutReboot")
-    private final @Nullable Input<Boolean> snapshotWithoutReboot;
+      private final @Nullable Input<Boolean> snapshotWithoutReboot;
 
     public Input<Boolean> getSnapshotWithoutReboot() {
         return this.snapshotWithoutReboot == null ? Input.empty() : this.snapshotWithoutReboot;
@@ -84,7 +84,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceInstanceId", required=true)
-    private final Input<String> sourceInstanceId;
+      private final Input<String> sourceInstanceId;
 
     public Input<String> getSourceInstanceId() {
         return this.sourceInstanceId;
@@ -95,7 +95,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

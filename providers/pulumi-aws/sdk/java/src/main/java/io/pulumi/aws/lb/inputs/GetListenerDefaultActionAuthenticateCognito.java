@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -15,56 +15,56 @@ public final class GetListenerDefaultActionAuthenticateCognito extends io.pulumi
     public static final GetListenerDefaultActionAuthenticateCognito Empty = new GetListenerDefaultActionAuthenticateCognito();
 
     @InputImport(name="authenticationRequestExtraParams", required=true)
-    private final Map<String,String> authenticationRequestExtraParams;
+      private final Map<String,String> authenticationRequestExtraParams;
 
     public Map<String,String> getAuthenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams;
     }
 
     @InputImport(name="onUnauthenticatedRequest", required=true)
-    private final String onUnauthenticatedRequest;
+      private final String onUnauthenticatedRequest;
 
     public String getOnUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest;
     }
 
     @InputImport(name="scope", required=true)
-    private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;
     }
 
     @InputImport(name="sessionCookieName", required=true)
-    private final String sessionCookieName;
+      private final String sessionCookieName;
 
     public String getSessionCookieName() {
         return this.sessionCookieName;
     }
 
     @InputImport(name="sessionTimeout", required=true)
-    private final Integer sessionTimeout;
+      private final Integer sessionTimeout;
 
     public Integer getSessionTimeout() {
         return this.sessionTimeout;
     }
 
     @InputImport(name="userPoolArn", required=true)
-    private final String userPoolArn;
+      private final String userPoolArn;
 
     public String getUserPoolArn() {
         return this.userPoolArn;
     }
 
     @InputImport(name="userPoolClientId", required=true)
-    private final String userPoolClientId;
+      private final String userPoolClientId;
 
     public String getUserPoolClientId() {
         return this.userPoolClientId;
     }
 
     @InputImport(name="userPoolDomain", required=true)
-    private final String userPoolDomain;
+      private final String userPoolDomain;
 
     public String getUserPoolDomain() {
         return this.userPoolDomain;

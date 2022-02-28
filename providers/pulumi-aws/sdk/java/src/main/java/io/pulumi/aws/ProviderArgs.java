@@ -9,7 +9,7 @@ import io.pulumi.aws.inputs.ProviderDefaultTagsArgs;
 import io.pulumi.aws.inputs.ProviderEndpointArgs;
 import io.pulumi.aws.inputs.ProviderIgnoreTagsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,21 +27,21 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessKey")
-    private final @Nullable Input<String> accessKey;
+      private final @Nullable Input<String> accessKey;
 
     public Input<String> getAccessKey() {
         return this.accessKey == null ? Input.empty() : this.accessKey;
     }
 
     @InputImport(name="allowedAccountIds", json=true)
-    private final @Nullable Input<List<String>> allowedAccountIds;
+      private final @Nullable Input<List<String>> allowedAccountIds;
 
     public Input<List<String>> getAllowedAccountIds() {
         return this.allowedAccountIds == null ? Input.empty() : this.allowedAccountIds;
     }
 
     @InputImport(name="assumeRole", json=true)
-    private final @Nullable Input<ProviderAssumeRoleArgs> assumeRole;
+      private final @Nullable Input<ProviderAssumeRoleArgs> assumeRole;
 
     public Input<ProviderAssumeRoleArgs> getAssumeRole() {
         return this.assumeRole == null ? Input.empty() : this.assumeRole;
@@ -52,21 +52,21 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultTags", json=true)
-    private final @Nullable Input<ProviderDefaultTagsArgs> defaultTags;
+      private final @Nullable Input<ProviderDefaultTagsArgs> defaultTags;
 
     public Input<ProviderDefaultTagsArgs> getDefaultTags() {
         return this.defaultTags == null ? Input.empty() : this.defaultTags;
     }
 
     @InputImport(name="endpoints", json=true)
-    private final @Nullable Input<List<ProviderEndpointArgs>> endpoints;
+      private final @Nullable Input<List<ProviderEndpointArgs>> endpoints;
 
     public Input<List<ProviderEndpointArgs>> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
     }
 
     @InputImport(name="forbiddenAccountIds", json=true)
-    private final @Nullable Input<List<String>> forbiddenAccountIds;
+      private final @Nullable Input<List<String>> forbiddenAccountIds;
 
     public Input<List<String>> getForbiddenAccountIds() {
         return this.forbiddenAccountIds == null ? Input.empty() : this.forbiddenAccountIds;
@@ -78,7 +78,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpProxy")
-    private final @Nullable Input<String> httpProxy;
+      private final @Nullable Input<String> httpProxy;
 
     public Input<String> getHttpProxy() {
         return this.httpProxy == null ? Input.empty() : this.httpProxy;
@@ -89,7 +89,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreTags", json=true)
-    private final @Nullable Input<ProviderIgnoreTagsArgs> ignoreTags;
+      private final @Nullable Input<ProviderIgnoreTagsArgs> ignoreTags;
 
     public Input<ProviderIgnoreTagsArgs> getIgnoreTags() {
         return this.ignoreTags == null ? Input.empty() : this.ignoreTags;
@@ -100,7 +100,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insecure", json=true)
-    private final @Nullable Input<Boolean> insecure;
+      private final @Nullable Input<Boolean> insecure;
 
     public Input<Boolean> getInsecure() {
         return this.insecure == null ? Input.empty() : this.insecure;
@@ -111,7 +111,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRetries", json=true)
-    private final @Nullable Input<Integer> maxRetries;
+      private final @Nullable Input<Integer> maxRetries;
 
     public Input<Integer> getMaxRetries() {
         return this.maxRetries == null ? Input.empty() : this.maxRetries;
@@ -122,7 +122,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profile")
-    private final @Nullable Input<String> profile;
+      private final @Nullable Input<String> profile;
 
     public Input<String> getProfile() {
         return this.profile == null ? Input.empty() : this.profile;
@@ -133,7 +133,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -146,7 +146,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3ForcePathStyle", json=true)
-    private final @Nullable Input<Boolean> s3ForcePathStyle;
+      private final @Nullable Input<Boolean> s3ForcePathStyle;
 
     public Input<Boolean> getS3ForcePathStyle() {
         return this.s3ForcePathStyle == null ? Input.empty() : this.s3ForcePathStyle;
@@ -157,7 +157,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretKey")
-    private final @Nullable Input<String> secretKey;
+      private final @Nullable Input<String> secretKey;
 
     public Input<String> getSecretKey() {
         return this.secretKey == null ? Input.empty() : this.secretKey;
@@ -168,7 +168,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sharedCredentialsFile")
-    private final @Nullable Input<String> sharedCredentialsFile;
+      private final @Nullable Input<String> sharedCredentialsFile;
 
     public Input<String> getSharedCredentialsFile() {
         return this.sharedCredentialsFile == null ? Input.empty() : this.sharedCredentialsFile;
@@ -180,7 +180,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipCredentialsValidation", json=true)
-    private final @Nullable Input<Boolean> skipCredentialsValidation;
+      private final @Nullable Input<Boolean> skipCredentialsValidation;
 
     public Input<Boolean> getSkipCredentialsValidation() {
         return this.skipCredentialsValidation == null ? Input.empty() : this.skipCredentialsValidation;
@@ -191,14 +191,14 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipGetEc2Platforms", json=true)
-    private final @Nullable Input<Boolean> skipGetEc2Platforms;
+      private final @Nullable Input<Boolean> skipGetEc2Platforms;
 
     public Input<Boolean> getSkipGetEc2Platforms() {
         return this.skipGetEc2Platforms == null ? Input.empty() : this.skipGetEc2Platforms;
     }
 
     @InputImport(name="skipMetadataApiCheck", json=true)
-    private final @Nullable Input<Boolean> skipMetadataApiCheck;
+      private final @Nullable Input<Boolean> skipMetadataApiCheck;
 
     public Input<Boolean> getSkipMetadataApiCheck() {
         return this.skipMetadataApiCheck == null ? Input.empty() : this.skipMetadataApiCheck;
@@ -210,7 +210,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipRegionValidation", json=true)
-    private final @Nullable Input<Boolean> skipRegionValidation;
+      private final @Nullable Input<Boolean> skipRegionValidation;
 
     public Input<Boolean> getSkipRegionValidation() {
         return this.skipRegionValidation == null ? Input.empty() : this.skipRegionValidation;
@@ -221,7 +221,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipRequestingAccountId", json=true)
-    private final @Nullable Input<Boolean> skipRequestingAccountId;
+      private final @Nullable Input<Boolean> skipRequestingAccountId;
 
     public Input<Boolean> getSkipRequestingAccountId() {
         return this.skipRequestingAccountId == null ? Input.empty() : this.skipRequestingAccountId;
@@ -232,7 +232,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="token")
-    private final @Nullable Input<String> token;
+      private final @Nullable Input<String> token;
 
     public Input<String> getToken() {
         return this.token == null ? Input.empty() : this.token;

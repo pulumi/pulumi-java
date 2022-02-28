@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="logDestinationConfigs", required=true)
-    private final Input<List<String>> logDestinationConfigs;
+      private final Input<List<String>> logDestinationConfigs;
 
     public Input<List<String>> getLogDestinationConfigs() {
         return this.logDestinationConfigs;
@@ -33,7 +33,7 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="loggingFilter")
-    private final @Nullable Input<WebAclLoggingConfigurationLoggingFilterArgs> loggingFilter;
+      private final @Nullable Input<WebAclLoggingConfigurationLoggingFilterArgs> loggingFilter;
 
     public Input<WebAclLoggingConfigurationLoggingFilterArgs> getLoggingFilter() {
         return this.loggingFilter == null ? Input.empty() : this.loggingFilter;
@@ -44,7 +44,7 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="redactedFields")
-    private final @Nullable Input<List<WebAclLoggingConfigurationRedactedFieldArgs>> redactedFields;
+      private final @Nullable Input<List<WebAclLoggingConfigurationRedactedFieldArgs>> redactedFields;
 
     public Input<List<WebAclLoggingConfigurationRedactedFieldArgs>> getRedactedFields() {
         return this.redactedFields == null ? Input.empty() : this.redactedFields;
@@ -55,7 +55,7 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceArn", required=true)
-    private final Input<String> resourceArn;
+      private final Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn;

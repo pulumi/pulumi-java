@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class DataSourceDynamodbConfigDeltaSyncConfigGetArgs extends io.pul
     public static final DataSourceDynamodbConfigDeltaSyncConfigGetArgs Empty = new DataSourceDynamodbConfigDeltaSyncConfigGetArgs();
 
     @InputImport(name="baseTableTtl")
-    private final @Nullable Input<Integer> baseTableTtl;
+      private final @Nullable Input<Integer> baseTableTtl;
 
     public Input<Integer> getBaseTableTtl() {
         return this.baseTableTtl == null ? Input.empty() : this.baseTableTtl;
     }
 
     @InputImport(name="deltaSyncTableName", required=true)
-    private final Input<String> deltaSyncTableName;
+      private final Input<String> deltaSyncTableName;
 
     public Input<String> getDeltaSyncTableName() {
         return this.deltaSyncTableName;
     }
 
     @InputImport(name="deltaSyncTableTtl")
-    private final @Nullable Input<Integer> deltaSyncTableTtl;
+      private final @Nullable Input<Integer> deltaSyncTableTtl;
 
     public Input<Integer> getDeltaSyncTableTtl() {
         return this.deltaSyncTableTtl == null ? Input.empty() : this.deltaSyncTableTtl;

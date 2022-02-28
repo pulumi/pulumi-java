@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="associationId")
-    private final @Nullable Input<String> associationId;
+      private final @Nullable Input<String> associationId;
 
     public Input<String> getAssociationId() {
         return this.associationId == null ? Input.empty() : this.associationId;
@@ -31,7 +31,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="clientVpnEndpointId")
-    private final @Nullable Input<String> clientVpnEndpointId;
+      private final @Nullable Input<String> clientVpnEndpointId;
 
     public Input<String> getClientVpnEndpointId() {
         return this.clientVpnEndpointId == null ? Input.empty() : this.clientVpnEndpointId;
@@ -42,7 +42,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -53,7 +53,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -64,7 +64,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -75,7 +75,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

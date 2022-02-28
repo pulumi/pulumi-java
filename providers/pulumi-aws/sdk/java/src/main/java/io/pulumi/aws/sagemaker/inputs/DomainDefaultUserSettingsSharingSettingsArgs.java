@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainDefaultUserSettingsSharingSettingsArgs extends io.pulum
      * 
      */
     @InputImport(name="notebookOutputOption")
-    private final @Nullable Input<String> notebookOutputOption;
+      private final @Nullable Input<String> notebookOutputOption;
 
     public Input<String> getNotebookOutputOption() {
         return this.notebookOutputOption == null ? Input.empty() : this.notebookOutputOption;
@@ -30,7 +30,7 @@ public final class DomainDefaultUserSettingsSharingSettingsArgs extends io.pulum
      * 
      */
     @InputImport(name="s3KmsKeyId")
-    private final @Nullable Input<String> s3KmsKeyId;
+      private final @Nullable Input<String> s3KmsKeyId;
 
     public Input<String> getS3KmsKeyId() {
         return this.s3KmsKeyId == null ? Input.empty() : this.s3KmsKeyId;
@@ -41,7 +41,7 @@ public final class DomainDefaultUserSettingsSharingSettingsArgs extends io.pulum
      * 
      */
     @InputImport(name="s3OutputPath")
-    private final @Nullable Input<String> s3OutputPath;
+      private final @Nullable Input<String> s3OutputPath;
 
     public Input<String> getS3OutputPath() {
         return this.s3OutputPath == null ? Input.empty() : this.s3OutputPath;

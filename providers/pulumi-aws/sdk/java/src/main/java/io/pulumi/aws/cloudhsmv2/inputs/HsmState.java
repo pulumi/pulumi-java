@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudhsmv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -30,7 +30,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterId")
-    private final @Nullable Input<String> clusterId;
+      private final @Nullable Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId == null ? Input.empty() : this.clusterId;
@@ -41,7 +41,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hsmEniId")
-    private final @Nullable Input<String> hsmEniId;
+      private final @Nullable Input<String> hsmEniId;
 
     public Input<String> getHsmEniId() {
         return this.hsmEniId == null ? Input.empty() : this.hsmEniId;
@@ -52,7 +52,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hsmId")
-    private final @Nullable Input<String> hsmId;
+      private final @Nullable Input<String> hsmId;
 
     public Input<String> getHsmId() {
         return this.hsmId == null ? Input.empty() : this.hsmId;
@@ -63,7 +63,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hsmState")
-    private final @Nullable Input<String> hsmState;
+      private final @Nullable Input<String> hsmState;
 
     public Input<String> getHsmState() {
         return this.hsmState == null ? Input.empty() : this.hsmState;
@@ -74,7 +74,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -85,7 +85,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;

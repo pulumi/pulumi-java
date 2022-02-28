@@ -13,7 +13,7 @@ import io.pulumi.aws.ec2.inputs.SpotInstanceRequestMetadataOptionsGetArgs;
 import io.pulumi.aws.ec2.inputs.SpotInstanceRequestNetworkInterfaceGetArgs;
 import io.pulumi.aws.ec2.inputs.SpotInstanceRequestRootBlockDeviceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,14 +32,14 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ami")
-    private final @Nullable Input<String> ami;
+      private final @Nullable Input<String> ami;
 
     public Input<String> getAmi() {
         return this.ami == null ? Input.empty() : this.ami;
     }
 
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -50,7 +50,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="associatePublicIpAddress")
-    private final @Nullable Input<Boolean> associatePublicIpAddress;
+      private final @Nullable Input<Boolean> associatePublicIpAddress;
 
     public Input<Boolean> getAssociatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Input.empty() : this.associatePublicIpAddress;
@@ -61,7 +61,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -74,7 +74,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="blockDurationMinutes")
-    private final @Nullable Input<Integer> blockDurationMinutes;
+      private final @Nullable Input<Integer> blockDurationMinutes;
 
     public Input<Integer> getBlockDurationMinutes() {
         return this.blockDurationMinutes == null ? Input.empty() : this.blockDurationMinutes;
@@ -85,7 +85,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="capacityReservationSpecification")
-    private final @Nullable Input<SpotInstanceRequestCapacityReservationSpecificationGetArgs> capacityReservationSpecification;
+      private final @Nullable Input<SpotInstanceRequestCapacityReservationSpecificationGetArgs> capacityReservationSpecification;
 
     public Input<SpotInstanceRequestCapacityReservationSpecificationGetArgs> getCapacityReservationSpecification() {
         return this.capacityReservationSpecification == null ? Input.empty() : this.capacityReservationSpecification;
@@ -96,7 +96,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="cpuCoreCount")
-    private final @Nullable Input<Integer> cpuCoreCount;
+      private final @Nullable Input<Integer> cpuCoreCount;
 
     public Input<Integer> getCpuCoreCount() {
         return this.cpuCoreCount == null ? Input.empty() : this.cpuCoreCount;
@@ -107,7 +107,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="cpuThreadsPerCore")
-    private final @Nullable Input<Integer> cpuThreadsPerCore;
+      private final @Nullable Input<Integer> cpuThreadsPerCore;
 
     public Input<Integer> getCpuThreadsPerCore() {
         return this.cpuThreadsPerCore == null ? Input.empty() : this.cpuThreadsPerCore;
@@ -118,7 +118,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="creditSpecification")
-    private final @Nullable Input<SpotInstanceRequestCreditSpecificationGetArgs> creditSpecification;
+      private final @Nullable Input<SpotInstanceRequestCreditSpecificationGetArgs> creditSpecification;
 
     public Input<SpotInstanceRequestCreditSpecificationGetArgs> getCreditSpecification() {
         return this.creditSpecification == null ? Input.empty() : this.creditSpecification;
@@ -129,7 +129,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="disableApiTermination")
-    private final @Nullable Input<Boolean> disableApiTermination;
+      private final @Nullable Input<Boolean> disableApiTermination;
 
     public Input<Boolean> getDisableApiTermination() {
         return this.disableApiTermination == null ? Input.empty() : this.disableApiTermination;
@@ -140,7 +140,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ebsBlockDevices")
-    private final @Nullable Input<List<SpotInstanceRequestEbsBlockDeviceGetArgs>> ebsBlockDevices;
+      private final @Nullable Input<List<SpotInstanceRequestEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
     public Input<List<SpotInstanceRequestEbsBlockDeviceGetArgs>> getEbsBlockDevices() {
         return this.ebsBlockDevices == null ? Input.empty() : this.ebsBlockDevices;
@@ -151,7 +151,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ebsOptimized")
-    private final @Nullable Input<Boolean> ebsOptimized;
+      private final @Nullable Input<Boolean> ebsOptimized;
 
     public Input<Boolean> getEbsOptimized() {
         return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
@@ -162,7 +162,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enclaveOptions")
-    private final @Nullable Input<SpotInstanceRequestEnclaveOptionsGetArgs> enclaveOptions;
+      private final @Nullable Input<SpotInstanceRequestEnclaveOptionsGetArgs> enclaveOptions;
 
     public Input<SpotInstanceRequestEnclaveOptionsGetArgs> getEnclaveOptions() {
         return this.enclaveOptions == null ? Input.empty() : this.enclaveOptions;
@@ -173,7 +173,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ephemeralBlockDevices")
-    private final @Nullable Input<List<SpotInstanceRequestEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
+      private final @Nullable Input<List<SpotInstanceRequestEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
     public Input<List<SpotInstanceRequestEphemeralBlockDeviceGetArgs>> getEphemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Input.empty() : this.ephemeralBlockDevices;
@@ -184,7 +184,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="getPasswordData")
-    private final @Nullable Input<Boolean> getPasswordData;
+      private final @Nullable Input<Boolean> getPasswordData;
 
     public Input<Boolean> getGetPasswordData() {
         return this.getPasswordData == null ? Input.empty() : this.getPasswordData;
@@ -195,7 +195,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="hibernation")
-    private final @Nullable Input<Boolean> hibernation;
+      private final @Nullable Input<Boolean> hibernation;
 
     public Input<Boolean> getHibernation() {
         return this.hibernation == null ? Input.empty() : this.hibernation;
@@ -206,7 +206,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="hostId")
-    private final @Nullable Input<String> hostId;
+      private final @Nullable Input<String> hostId;
 
     public Input<String> getHostId() {
         return this.hostId == null ? Input.empty() : this.hostId;
@@ -217,7 +217,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="iamInstanceProfile")
-    private final @Nullable Input<String> iamInstanceProfile;
+      private final @Nullable Input<String> iamInstanceProfile;
 
     public Input<String> getIamInstanceProfile() {
         return this.iamInstanceProfile == null ? Input.empty() : this.iamInstanceProfile;
@@ -228,7 +228,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceInitiatedShutdownBehavior")
-    private final @Nullable Input<String> instanceInitiatedShutdownBehavior;
+      private final @Nullable Input<String> instanceInitiatedShutdownBehavior;
 
     public Input<String> getInstanceInitiatedShutdownBehavior() {
         return this.instanceInitiatedShutdownBehavior == null ? Input.empty() : this.instanceInitiatedShutdownBehavior;
@@ -239,7 +239,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceInterruptionBehavior")
-    private final @Nullable Input<String> instanceInterruptionBehavior;
+      private final @Nullable Input<String> instanceInterruptionBehavior;
 
     public Input<String> getInstanceInterruptionBehavior() {
         return this.instanceInterruptionBehavior == null ? Input.empty() : this.instanceInterruptionBehavior;
@@ -254,7 +254,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      */
     @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
     @InputImport(name="instanceInterruptionBehaviour")
-    private final @Nullable Input<String> instanceInterruptionBehaviour;
+      private final @Nullable Input<String> instanceInterruptionBehaviour;
 
     @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
     public Input<String> getInstanceInterruptionBehaviour() {
@@ -262,7 +262,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
     }
 
     @InputImport(name="instanceState")
-    private final @Nullable Input<String> instanceState;
+      private final @Nullable Input<String> instanceState;
 
     public Input<String> getInstanceState() {
         return this.instanceState == null ? Input.empty() : this.instanceState;
@@ -273,7 +273,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -284,7 +284,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ipv6AddressCount")
-    private final @Nullable Input<Integer> ipv6AddressCount;
+      private final @Nullable Input<Integer> ipv6AddressCount;
 
     public Input<Integer> getIpv6AddressCount() {
         return this.ipv6AddressCount == null ? Input.empty() : this.ipv6AddressCount;
@@ -295,7 +295,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ipv6Addresses")
-    private final @Nullable Input<List<String>> ipv6Addresses;
+      private final @Nullable Input<List<String>> ipv6Addresses;
 
     public Input<List<String>> getIpv6Addresses() {
         return this.ipv6Addresses == null ? Input.empty() : this.ipv6Addresses;
@@ -306,7 +306,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable Input<String> keyName;
+      private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -318,7 +318,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="launchGroup")
-    private final @Nullable Input<String> launchGroup;
+      private final @Nullable Input<String> launchGroup;
 
     public Input<String> getLaunchGroup() {
         return this.launchGroup == null ? Input.empty() : this.launchGroup;
@@ -330,7 +330,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="launchTemplate")
-    private final @Nullable Input<SpotInstanceRequestLaunchTemplateGetArgs> launchTemplate;
+      private final @Nullable Input<SpotInstanceRequestLaunchTemplateGetArgs> launchTemplate;
 
     public Input<SpotInstanceRequestLaunchTemplateGetArgs> getLaunchTemplate() {
         return this.launchTemplate == null ? Input.empty() : this.launchTemplate;
@@ -341,7 +341,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metadataOptions")
-    private final @Nullable Input<SpotInstanceRequestMetadataOptionsGetArgs> metadataOptions;
+      private final @Nullable Input<SpotInstanceRequestMetadataOptionsGetArgs> metadataOptions;
 
     public Input<SpotInstanceRequestMetadataOptionsGetArgs> getMetadataOptions() {
         return this.metadataOptions == null ? Input.empty() : this.metadataOptions;
@@ -352,7 +352,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="monitoring")
-    private final @Nullable Input<Boolean> monitoring;
+      private final @Nullable Input<Boolean> monitoring;
 
     public Input<Boolean> getMonitoring() {
         return this.monitoring == null ? Input.empty() : this.monitoring;
@@ -363,21 +363,21 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable Input<List<SpotInstanceRequestNetworkInterfaceGetArgs>> networkInterfaces;
+      private final @Nullable Input<List<SpotInstanceRequestNetworkInterfaceGetArgs>> networkInterfaces;
 
     public Input<List<SpotInstanceRequestNetworkInterfaceGetArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
     }
 
     @InputImport(name="outpostArn")
-    private final @Nullable Input<String> outpostArn;
+      private final @Nullable Input<String> outpostArn;
 
     public Input<String> getOutpostArn() {
         return this.outpostArn == null ? Input.empty() : this.outpostArn;
     }
 
     @InputImport(name="passwordData")
-    private final @Nullable Input<String> passwordData;
+      private final @Nullable Input<String> passwordData;
 
     public Input<String> getPasswordData() {
         return this.passwordData == null ? Input.empty() : this.passwordData;
@@ -388,7 +388,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="placementGroup")
-    private final @Nullable Input<String> placementGroup;
+      private final @Nullable Input<String> placementGroup;
 
     public Input<String> getPlacementGroup() {
         return this.placementGroup == null ? Input.empty() : this.placementGroup;
@@ -399,14 +399,14 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="placementPartitionNumber")
-    private final @Nullable Input<Integer> placementPartitionNumber;
+      private final @Nullable Input<Integer> placementPartitionNumber;
 
     public Input<Integer> getPlacementPartitionNumber() {
         return this.placementPartitionNumber == null ? Input.empty() : this.placementPartitionNumber;
     }
 
     @InputImport(name="primaryNetworkInterfaceId")
-    private final @Nullable Input<String> primaryNetworkInterfaceId;
+      private final @Nullable Input<String> primaryNetworkInterfaceId;
 
     public Input<String> getPrimaryNetworkInterfaceId() {
         return this.primaryNetworkInterfaceId == null ? Input.empty() : this.primaryNetworkInterfaceId;
@@ -419,7 +419,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="privateDns")
-    private final @Nullable Input<String> privateDns;
+      private final @Nullable Input<String> privateDns;
 
     public Input<String> getPrivateDns() {
         return this.privateDns == null ? Input.empty() : this.privateDns;
@@ -430,7 +430,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="privateIp")
-    private final @Nullable Input<String> privateIp;
+      private final @Nullable Input<String> privateIp;
 
     public Input<String> getPrivateIp() {
         return this.privateIp == null ? Input.empty() : this.privateIp;
@@ -442,7 +442,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="publicDns")
-    private final @Nullable Input<String> publicDns;
+      private final @Nullable Input<String> publicDns;
 
     public Input<String> getPublicDns() {
         return this.publicDns == null ? Input.empty() : this.publicDns;
@@ -453,7 +453,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="publicIp")
-    private final @Nullable Input<String> publicIp;
+      private final @Nullable Input<String> publicIp;
 
     public Input<String> getPublicIp() {
         return this.publicIp == null ? Input.empty() : this.publicIp;
@@ -464,7 +464,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="rootBlockDevice")
-    private final @Nullable Input<SpotInstanceRequestRootBlockDeviceGetArgs> rootBlockDevice;
+      private final @Nullable Input<SpotInstanceRequestRootBlockDeviceGetArgs> rootBlockDevice;
 
     public Input<SpotInstanceRequestRootBlockDeviceGetArgs> getRootBlockDevice() {
         return this.rootBlockDevice == null ? Input.empty() : this.rootBlockDevice;
@@ -475,7 +475,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="secondaryPrivateIps")
-    private final @Nullable Input<List<String>> secondaryPrivateIps;
+      private final @Nullable Input<List<String>> secondaryPrivateIps;
 
     public Input<List<String>> getSecondaryPrivateIps() {
         return this.secondaryPrivateIps == null ? Input.empty() : this.secondaryPrivateIps;
@@ -486,7 +486,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -497,7 +497,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceDestCheck")
-    private final @Nullable Input<Boolean> sourceDestCheck;
+      private final @Nullable Input<Boolean> sourceDestCheck;
 
     public Input<Boolean> getSourceDestCheck() {
         return this.sourceDestCheck == null ? Input.empty() : this.sourceDestCheck;
@@ -513,7 +513,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="spotBidStatus")
-    private final @Nullable Input<String> spotBidStatus;
+      private final @Nullable Input<String> spotBidStatus;
 
     public Input<String> getSpotBidStatus() {
         return this.spotBidStatus == null ? Input.empty() : this.spotBidStatus;
@@ -525,7 +525,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="spotInstanceId")
-    private final @Nullable Input<String> spotInstanceId;
+      private final @Nullable Input<String> spotInstanceId;
 
     public Input<String> getSpotInstanceId() {
         return this.spotInstanceId == null ? Input.empty() : this.spotInstanceId;
@@ -536,14 +536,14 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="spotPrice")
-    private final @Nullable Input<String> spotPrice;
+      private final @Nullable Input<String> spotPrice;
 
     public Input<String> getSpotPrice() {
         return this.spotPrice == null ? Input.empty() : this.spotPrice;
     }
 
     @InputImport(name="spotRequestState")
-    private final @Nullable Input<String> spotRequestState;
+      private final @Nullable Input<String> spotRequestState;
 
     public Input<String> getSpotRequestState() {
         return this.spotRequestState == null ? Input.empty() : this.spotRequestState;
@@ -555,7 +555,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="spotType")
-    private final @Nullable Input<String> spotType;
+      private final @Nullable Input<String> spotType;
 
     public Input<String> getSpotType() {
         return this.spotType == null ? Input.empty() : this.spotType;
@@ -566,7 +566,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -577,7 +577,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -588,7 +588,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -599,7 +599,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tenancy")
-    private final @Nullable Input<String> tenancy;
+      private final @Nullable Input<String> tenancy;
 
     public Input<String> getTenancy() {
         return this.tenancy == null ? Input.empty() : this.tenancy;
@@ -610,7 +610,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userData")
-    private final @Nullable Input<String> userData;
+      private final @Nullable Input<String> userData;
 
     public Input<String> getUserData() {
         return this.userData == null ? Input.empty() : this.userData;
@@ -621,7 +621,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userDataBase64")
-    private final @Nullable Input<String> userDataBase64;
+      private final @Nullable Input<String> userDataBase64;
 
     public Input<String> getUserDataBase64() {
         return this.userDataBase64 == null ? Input.empty() : this.userDataBase64;
@@ -632,7 +632,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="validFrom")
-    private final @Nullable Input<String> validFrom;
+      private final @Nullable Input<String> validFrom;
 
     public Input<String> getValidFrom() {
         return this.validFrom == null ? Input.empty() : this.validFrom;
@@ -643,7 +643,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="validUntil")
-    private final @Nullable Input<String> validUntil;
+      private final @Nullable Input<String> validUntil;
 
     public Input<String> getValidUntil() {
         return this.validUntil == null ? Input.empty() : this.validUntil;
@@ -654,7 +654,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="volumeTags")
-    private final @Nullable Input<Map<String,String>> volumeTags;
+      private final @Nullable Input<Map<String,String>> volumeTags;
 
     public Input<Map<String,String>> getVolumeTags() {
         return this.volumeTags == null ? Input.empty() : this.volumeTags;
@@ -665,7 +665,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-    private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
 
     public Input<List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
@@ -678,7 +678,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="waitForFulfillment")
-    private final @Nullable Input<Boolean> waitForFulfillment;
+      private final @Nullable Input<Boolean> waitForFulfillment;
 
     public Input<Boolean> getWaitForFulfillment() {
         return this.waitForFulfillment == null ? Input.empty() : this.waitForFulfillment;

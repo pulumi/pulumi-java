@@ -7,7 +7,7 @@ import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamHttpEndpointConfigurat
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationGetArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * 
      */
     @InputImport(name="accessKey")
-    private final @Nullable Input<String> accessKey;
+      private final @Nullable Input<String> accessKey;
 
     public Input<String> getAccessKey() {
         return this.accessKey == null ? Input.empty() : this.accessKey;
@@ -34,7 +34,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * 
      */
     @InputImport(name="bufferingInterval")
-    private final @Nullable Input<Integer> bufferingInterval;
+      private final @Nullable Input<Integer> bufferingInterval;
 
     public Input<Integer> getBufferingInterval() {
         return this.bufferingInterval == null ? Input.empty() : this.bufferingInterval;
@@ -45,7 +45,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * 
      */
     @InputImport(name="bufferingSize")
-    private final @Nullable Input<Integer> bufferingSize;
+      private final @Nullable Input<Integer> bufferingSize;
 
     public Input<Integer> getBufferingSize() {
         return this.bufferingSize == null ? Input.empty() : this.bufferingSize;
@@ -56,7 +56,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * 
      */
     @InputImport(name="cloudwatchLoggingOptions")
-    private final @Nullable Input<FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
+      private final @Nullable Input<FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
     public Input<FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions == null ? Input.empty() : this.cloudwatchLoggingOptions;
@@ -67,7 +67,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * 
      */
     @InputImport(name="processingConfiguration")
-    private final @Nullable Input<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationGetArgs> processingConfiguration;
+      private final @Nullable Input<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationGetArgs> processingConfiguration;
 
     public Input<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationGetArgs> getProcessingConfiguration() {
         return this.processingConfiguration == null ? Input.empty() : this.processingConfiguration;
@@ -89,7 +89,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * 
      */
     @InputImport(name="requestConfiguration")
-    private final @Nullable Input<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs> requestConfiguration;
+      private final @Nullable Input<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs> requestConfiguration;
 
     public Input<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs> getRequestConfiguration() {
         return this.requestConfiguration == null ? Input.empty() : this.requestConfiguration;
@@ -100,7 +100,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * 
      */
     @InputImport(name="retryDuration")
-    private final @Nullable Input<Integer> retryDuration;
+      private final @Nullable Input<Integer> retryDuration;
 
     public Input<Integer> getRetryDuration() {
         return this.retryDuration == null ? Input.empty() : this.retryDuration;
@@ -111,7 +111,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -122,7 +122,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * 
      */
     @InputImport(name="s3BackupMode")
-    private final @Nullable Input<String> s3BackupMode;
+      private final @Nullable Input<String> s3BackupMode;
 
     public Input<String> getS3BackupMode() {
         return this.s3BackupMode == null ? Input.empty() : this.s3BackupMode;
@@ -133,7 +133,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+      private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;

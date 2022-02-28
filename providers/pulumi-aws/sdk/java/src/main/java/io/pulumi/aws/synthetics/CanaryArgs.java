@@ -8,7 +8,7 @@ import io.pulumi.aws.synthetics.inputs.CanaryRunConfigArgs;
 import io.pulumi.aws.synthetics.inputs.CanaryScheduleArgs;
 import io.pulumi.aws.synthetics.inputs.CanaryVpcConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactConfig")
-    private final @Nullable Input<CanaryArtifactConfigArgs> artifactConfig;
+      private final @Nullable Input<CanaryArtifactConfigArgs> artifactConfig;
 
     public Input<CanaryArtifactConfigArgs> getArtifactConfig() {
         return this.artifactConfig == null ? Input.empty() : this.artifactConfig;
@@ -37,7 +37,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactS3Location", required=true)
-    private final Input<String> artifactS3Location;
+      private final Input<String> artifactS3Location;
 
     public Input<String> getArtifactS3Location() {
         return this.artifactS3Location;
@@ -48,7 +48,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionRoleArn", required=true)
-    private final Input<String> executionRoleArn;
+      private final Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn;
@@ -59,7 +59,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failureRetentionPeriod")
-    private final @Nullable Input<Integer> failureRetentionPeriod;
+      private final @Nullable Input<Integer> failureRetentionPeriod;
 
     public Input<Integer> getFailureRetentionPeriod() {
         return this.failureRetentionPeriod == null ? Input.empty() : this.failureRetentionPeriod;
@@ -70,7 +70,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="handler", required=true)
-    private final Input<String> handler;
+      private final Input<String> handler;
 
     public Input<String> getHandler() {
         return this.handler;
@@ -81,7 +81,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -92,7 +92,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runConfig")
-    private final @Nullable Input<CanaryRunConfigArgs> runConfig;
+      private final @Nullable Input<CanaryRunConfigArgs> runConfig;
 
     public Input<CanaryRunConfigArgs> getRunConfig() {
         return this.runConfig == null ? Input.empty() : this.runConfig;
@@ -103,7 +103,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeVersion", required=true)
-    private final Input<String> runtimeVersion;
+      private final Input<String> runtimeVersion;
 
     public Input<String> getRuntimeVersion() {
         return this.runtimeVersion;
@@ -114,7 +114,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Bucket")
-    private final @Nullable Input<String> s3Bucket;
+      private final @Nullable Input<String> s3Bucket;
 
     public Input<String> getS3Bucket() {
         return this.s3Bucket == null ? Input.empty() : this.s3Bucket;
@@ -125,7 +125,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Key")
-    private final @Nullable Input<String> s3Key;
+      private final @Nullable Input<String> s3Key;
 
     public Input<String> getS3Key() {
         return this.s3Key == null ? Input.empty() : this.s3Key;
@@ -136,7 +136,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Version")
-    private final @Nullable Input<String> s3Version;
+      private final @Nullable Input<String> s3Version;
 
     public Input<String> getS3Version() {
         return this.s3Version == null ? Input.empty() : this.s3Version;
@@ -147,7 +147,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final Input<CanaryScheduleArgs> schedule;
+      private final Input<CanaryScheduleArgs> schedule;
 
     public Input<CanaryScheduleArgs> getSchedule() {
         return this.schedule;
@@ -158,7 +158,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startCanary")
-    private final @Nullable Input<Boolean> startCanary;
+      private final @Nullable Input<Boolean> startCanary;
 
     public Input<Boolean> getStartCanary() {
         return this.startCanary == null ? Input.empty() : this.startCanary;
@@ -169,7 +169,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successRetentionPeriod")
-    private final @Nullable Input<Integer> successRetentionPeriod;
+      private final @Nullable Input<Integer> successRetentionPeriod;
 
     public Input<Integer> getSuccessRetentionPeriod() {
         return this.successRetentionPeriod == null ? Input.empty() : this.successRetentionPeriod;
@@ -180,7 +180,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -191,7 +191,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-    private final @Nullable Input<CanaryVpcConfigArgs> vpcConfig;
+      private final @Nullable Input<CanaryVpcConfigArgs> vpcConfig;
 
     public Input<CanaryVpcConfigArgs> getVpcConfig() {
         return this.vpcConfig == null ? Input.empty() : this.vpcConfig;
@@ -202,7 +202,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zipFile")
-    private final @Nullable Input<String> zipFile;
+      private final @Nullable Input<String> zipFile;
 
     public Input<String> getZipFile() {
         return this.zipFile == null ? Input.empty() : this.zipFile;

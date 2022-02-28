@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudformation.inputs;
 
 import io.pulumi.aws.cloudformation.inputs.CloudFormationTypeLoggingConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="defaultVersionId")
-    private final @Nullable Input<String> defaultVersionId;
+      private final @Nullable Input<String> defaultVersionId;
 
     public Input<String> getDefaultVersionId() {
         return this.defaultVersionId == null ? Input.empty() : this.defaultVersionId;
@@ -43,7 +43,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deprecatedStatus")
-    private final @Nullable Input<String> deprecatedStatus;
+      private final @Nullable Input<String> deprecatedStatus;
 
     public Input<String> getDeprecatedStatus() {
         return this.deprecatedStatus == null ? Input.empty() : this.deprecatedStatus;
@@ -54,7 +54,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -65,7 +65,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="documentationUrl")
-    private final @Nullable Input<String> documentationUrl;
+      private final @Nullable Input<String> documentationUrl;
 
     public Input<String> getDocumentationUrl() {
         return this.documentationUrl == null ? Input.empty() : this.documentationUrl;
@@ -76,7 +76,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="executionRoleArn")
-    private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
@@ -87,7 +87,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="isDefaultVersion")
-    private final @Nullable Input<Boolean> isDefaultVersion;
+      private final @Nullable Input<Boolean> isDefaultVersion;
 
     public Input<Boolean> getIsDefaultVersion() {
         return this.isDefaultVersion == null ? Input.empty() : this.isDefaultVersion;
@@ -98,7 +98,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="loggingConfig")
-    private final @Nullable Input<CloudFormationTypeLoggingConfigGetArgs> loggingConfig;
+      private final @Nullable Input<CloudFormationTypeLoggingConfigGetArgs> loggingConfig;
 
     public Input<CloudFormationTypeLoggingConfigGetArgs> getLoggingConfig() {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
@@ -109,7 +109,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="provisioningType")
-    private final @Nullable Input<String> provisioningType;
+      private final @Nullable Input<String> provisioningType;
 
     public Input<String> getProvisioningType() {
         return this.provisioningType == null ? Input.empty() : this.provisioningType;
@@ -120,7 +120,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<String> schema;
+      private final @Nullable Input<String> schema;
 
     public Input<String> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -131,7 +131,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schemaHandlerPackage")
-    private final @Nullable Input<String> schemaHandlerPackage;
+      private final @Nullable Input<String> schemaHandlerPackage;
 
     public Input<String> getSchemaHandlerPackage() {
         return this.schemaHandlerPackage == null ? Input.empty() : this.schemaHandlerPackage;
@@ -142,7 +142,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sourceUrl")
-    private final @Nullable Input<String> sourceUrl;
+      private final @Nullable Input<String> sourceUrl;
 
     public Input<String> getSourceUrl() {
         return this.sourceUrl == null ? Input.empty() : this.sourceUrl;
@@ -153,7 +153,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -164,7 +164,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="typeArn")
-    private final @Nullable Input<String> typeArn;
+      private final @Nullable Input<String> typeArn;
 
     public Input<String> getTypeArn() {
         return this.typeArn == null ? Input.empty() : this.typeArn;
@@ -175,7 +175,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="typeName")
-    private final @Nullable Input<String> typeName;
+      private final @Nullable Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName == null ? Input.empty() : this.typeName;
@@ -186,7 +186,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="versionId")
-    private final @Nullable Input<String> versionId;
+      private final @Nullable Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId == null ? Input.empty() : this.versionId;
@@ -197,7 +197,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="visibility")
-    private final @Nullable Input<String> visibility;
+      private final @Nullable Input<String> visibility;
 
     public Input<String> getVisibility() {
         return this.visibility == null ? Input.empty() : this.visibility;

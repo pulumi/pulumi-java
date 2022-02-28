@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetUserPoolClientArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final String clientId;
+      private final String clientId;
 
     public String getClientId() {
         return this.clientId;
@@ -28,7 +28,7 @@ public final class GetUserPoolClientArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="userPoolId", required=true)
-    private final String userPoolId;
+      private final String userPoolId;
 
     public String getUserPoolId() {
         return this.userPoolId;

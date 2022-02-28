@@ -8,8 +8,8 @@ import io.pulumi.aws.ses.DomainDkimArgs;
 import io.pulumi.aws.ses.inputs.DomainDkimState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -71,6 +71,21 @@ public class DomainDkim extends io.pulumi.resources.CustomResource {
         return this.domain;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DomainDkim(String name) {
+        this(name, DomainDkimArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DomainDkim(String name, DomainDkimArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

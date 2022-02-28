@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 import io.pulumi.aws.cloudwatch.inputs.MetricStreamExcludeFilterGetArgs;
 import io.pulumi.aws.cloudwatch.inputs.MetricStreamIncludeFilterGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationDate")
-    private final @Nullable Input<String> creationDate;
+      private final @Nullable Input<String> creationDate;
 
     public Input<String> getCreationDate() {
         return this.creationDate == null ? Input.empty() : this.creationDate;
@@ -45,7 +45,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excludeFilters")
-    private final @Nullable Input<List<MetricStreamExcludeFilterGetArgs>> excludeFilters;
+      private final @Nullable Input<List<MetricStreamExcludeFilterGetArgs>> excludeFilters;
 
     public Input<List<MetricStreamExcludeFilterGetArgs>> getExcludeFilters() {
         return this.excludeFilters == null ? Input.empty() : this.excludeFilters;
@@ -56,7 +56,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firehoseArn")
-    private final @Nullable Input<String> firehoseArn;
+      private final @Nullable Input<String> firehoseArn;
 
     public Input<String> getFirehoseArn() {
         return this.firehoseArn == null ? Input.empty() : this.firehoseArn;
@@ -67,7 +67,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeFilters")
-    private final @Nullable Input<List<MetricStreamIncludeFilterGetArgs>> includeFilters;
+      private final @Nullable Input<List<MetricStreamIncludeFilterGetArgs>> includeFilters;
 
     public Input<List<MetricStreamIncludeFilterGetArgs>> getIncludeFilters() {
         return this.includeFilters == null ? Input.empty() : this.includeFilters;
@@ -78,14 +78,14 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastUpdateDate")
-    private final @Nullable Input<String> lastUpdateDate;
+      private final @Nullable Input<String> lastUpdateDate;
 
     public Input<String> getLastUpdateDate() {
         return this.lastUpdateDate == null ? Input.empty() : this.lastUpdateDate;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -96,7 +96,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -107,7 +107,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputFormat")
-    private final @Nullable Input<String> outputFormat;
+      private final @Nullable Input<String> outputFormat;
 
     public Input<String> getOutputFormat() {
         return this.outputFormat == null ? Input.empty() : this.outputFormat;
@@ -118,7 +118,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -129,7 +129,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -140,7 +140,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -151,7 +151,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

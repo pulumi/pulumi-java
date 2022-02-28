@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="availabilityZoneGroup")
-    private final @Nullable String availabilityZoneGroup;
+      private final @Nullable String availabilityZoneGroup;
 
     public Optional<String> getAvailabilityZoneGroup() {
         return this.availabilityZoneGroup == null ? Optional.empty() : Optional.ofNullable(this.availabilityZoneGroup);
@@ -32,7 +32,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="engine", required=true)
-    private final String engine;
+      private final String engine;
 
     public String getEngine() {
         return this.engine;
@@ -43,7 +43,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="engineVersion")
-    private final @Nullable String engineVersion;
+      private final @Nullable String engineVersion;
 
     public Optional<String> getEngineVersion() {
         return this.engineVersion == null ? Optional.empty() : Optional.ofNullable(this.engineVersion);
@@ -54,7 +54,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="instanceClass")
-    private final @Nullable String instanceClass;
+      private final @Nullable String instanceClass;
 
     public Optional<String> getInstanceClass() {
         return this.instanceClass == null ? Optional.empty() : Optional.ofNullable(this.instanceClass);
@@ -65,7 +65,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="licenseModel")
-    private final @Nullable String licenseModel;
+      private final @Nullable String licenseModel;
 
     public Optional<String> getLicenseModel() {
         return this.licenseModel == null ? Optional.empty() : Optional.ofNullable(this.licenseModel);
@@ -76,7 +76,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="preferredEngineVersions")
-    private final @Nullable List<String> preferredEngineVersions;
+      private final @Nullable List<String> preferredEngineVersions;
 
     public List<String> getPreferredEngineVersions() {
         return this.preferredEngineVersions == null ? List.of() : this.preferredEngineVersions;
@@ -87,7 +87,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="preferredInstanceClasses")
-    private final @Nullable List<String> preferredInstanceClasses;
+      private final @Nullable List<String> preferredInstanceClasses;
 
     public List<String> getPreferredInstanceClasses() {
         return this.preferredInstanceClasses == null ? List.of() : this.preferredInstanceClasses;
@@ -98,7 +98,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="storageType")
-    private final @Nullable String storageType;
+      private final @Nullable String storageType;
 
     public Optional<String> getStorageType() {
         return this.storageType == null ? Optional.empty() : Optional.ofNullable(this.storageType);
@@ -109,7 +109,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="supportsEnhancedMonitoring")
-    private final @Nullable Boolean supportsEnhancedMonitoring;
+      private final @Nullable Boolean supportsEnhancedMonitoring;
 
     public Optional<Boolean> getSupportsEnhancedMonitoring() {
         return this.supportsEnhancedMonitoring == null ? Optional.empty() : Optional.ofNullable(this.supportsEnhancedMonitoring);
@@ -120,7 +120,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="supportsGlobalDatabases")
-    private final @Nullable Boolean supportsGlobalDatabases;
+      private final @Nullable Boolean supportsGlobalDatabases;
 
     public Optional<Boolean> getSupportsGlobalDatabases() {
         return this.supportsGlobalDatabases == null ? Optional.empty() : Optional.ofNullable(this.supportsGlobalDatabases);
@@ -131,7 +131,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="supportsIamDatabaseAuthentication")
-    private final @Nullable Boolean supportsIamDatabaseAuthentication;
+      private final @Nullable Boolean supportsIamDatabaseAuthentication;
 
     public Optional<Boolean> getSupportsIamDatabaseAuthentication() {
         return this.supportsIamDatabaseAuthentication == null ? Optional.empty() : Optional.ofNullable(this.supportsIamDatabaseAuthentication);
@@ -142,7 +142,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="supportsIops")
-    private final @Nullable Boolean supportsIops;
+      private final @Nullable Boolean supportsIops;
 
     public Optional<Boolean> getSupportsIops() {
         return this.supportsIops == null ? Optional.empty() : Optional.ofNullable(this.supportsIops);
@@ -153,7 +153,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="supportsKerberosAuthentication")
-    private final @Nullable Boolean supportsKerberosAuthentication;
+      private final @Nullable Boolean supportsKerberosAuthentication;
 
     public Optional<Boolean> getSupportsKerberosAuthentication() {
         return this.supportsKerberosAuthentication == null ? Optional.empty() : Optional.ofNullable(this.supportsKerberosAuthentication);
@@ -164,7 +164,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="supportsPerformanceInsights")
-    private final @Nullable Boolean supportsPerformanceInsights;
+      private final @Nullable Boolean supportsPerformanceInsights;
 
     public Optional<Boolean> getSupportsPerformanceInsights() {
         return this.supportsPerformanceInsights == null ? Optional.empty() : Optional.ofNullable(this.supportsPerformanceInsights);
@@ -175,7 +175,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="supportsStorageAutoscaling")
-    private final @Nullable Boolean supportsStorageAutoscaling;
+      private final @Nullable Boolean supportsStorageAutoscaling;
 
     public Optional<Boolean> getSupportsStorageAutoscaling() {
         return this.supportsStorageAutoscaling == null ? Optional.empty() : Optional.ofNullable(this.supportsStorageAutoscaling);
@@ -186,7 +186,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="supportsStorageEncryption")
-    private final @Nullable Boolean supportsStorageEncryption;
+      private final @Nullable Boolean supportsStorageEncryption;
 
     public Optional<Boolean> getSupportsStorageEncryption() {
         return this.supportsStorageEncryption == null ? Optional.empty() : Optional.ofNullable(this.supportsStorageEncryption);
@@ -197,7 +197,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="vpc")
-    private final @Nullable Boolean vpc;
+      private final @Nullable Boolean vpc;
 
     public Optional<Boolean> getVpc() {
         return this.vpc == null ? Optional.empty() : Optional.ofNullable(this.vpc);

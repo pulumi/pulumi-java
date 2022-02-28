@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class LogSubscriptionFilterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="destinationArn", required=true)
-    private final Input<String> destinationArn;
+      private final Input<String> destinationArn;
 
     public Input<String> getDestinationArn() {
         return this.destinationArn;
@@ -30,7 +30,7 @@ public final class LogSubscriptionFilterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="distribution")
-    private final @Nullable Input<String> distribution;
+      private final @Nullable Input<String> distribution;
 
     public Input<String> getDistribution() {
         return this.distribution == null ? Input.empty() : this.distribution;
@@ -41,7 +41,7 @@ public final class LogSubscriptionFilterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filterPattern", required=true)
-    private final Input<String> filterPattern;
+      private final Input<String> filterPattern;
 
     public Input<String> getFilterPattern() {
         return this.filterPattern;
@@ -52,7 +52,7 @@ public final class LogSubscriptionFilterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="logGroup", required=true)
-    private final Input<String> logGroup;
+      private final Input<String> logGroup;
 
     public Input<String> getLogGroup() {
         return this.logGroup;
@@ -63,7 +63,7 @@ public final class LogSubscriptionFilterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -74,7 +74,7 @@ public final class LogSubscriptionFilterArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;

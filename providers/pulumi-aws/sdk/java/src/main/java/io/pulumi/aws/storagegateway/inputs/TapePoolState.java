@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolName")
-    private final @Nullable Input<String> poolName;
+      private final @Nullable Input<String> poolName;
 
     public Input<String> getPoolName() {
         return this.poolName == null ? Input.empty() : this.poolName;
@@ -43,7 +43,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionLockTimeInDays")
-    private final @Nullable Input<Integer> retentionLockTimeInDays;
+      private final @Nullable Input<Integer> retentionLockTimeInDays;
 
     public Input<Integer> getRetentionLockTimeInDays() {
         return this.retentionLockTimeInDays == null ? Input.empty() : this.retentionLockTimeInDays;
@@ -54,7 +54,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionLockType")
-    private final @Nullable Input<String> retentionLockType;
+      private final @Nullable Input<String> retentionLockType;
 
     public Input<String> getRetentionLockType() {
         return this.retentionLockType == null ? Input.empty() : this.retentionLockType;
@@ -65,7 +65,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageClass")
-    private final @Nullable Input<String> storageClass;
+      private final @Nullable Input<String> storageClass;
 
     public Input<String> getStorageClass() {
         return this.storageClass == null ? Input.empty() : this.storageClass;
@@ -76,7 +76,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

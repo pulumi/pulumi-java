@@ -5,7 +5,7 @@ package io.pulumi.aws.glue;
 
 import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class PartitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
@@ -33,7 +33,7 @@ public final class PartitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -44,7 +44,7 @@ public final class PartitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -55,7 +55,7 @@ public final class PartitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionValues", required=true)
-    private final Input<List<String>> partitionValues;
+      private final Input<List<String>> partitionValues;
 
     public Input<List<String>> getPartitionValues() {
         return this.partitionValues;
@@ -66,14 +66,14 @@ public final class PartitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageDescriptor")
-    private final @Nullable Input<PartitionStorageDescriptorArgs> storageDescriptor;
+      private final @Nullable Input<PartitionStorageDescriptorArgs> storageDescriptor;
 
     public Input<PartitionStorageDescriptorArgs> getStorageDescriptor() {
         return this.storageDescriptor == null ? Input.empty() : this.storageDescriptor;
     }
 
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+      private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;

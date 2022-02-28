@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RuleScopeGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="complianceResourceId")
-    private final @Nullable Input<String> complianceResourceId;
+      private final @Nullable Input<String> complianceResourceId;
 
     public Input<String> getComplianceResourceId() {
         return this.complianceResourceId == null ? Input.empty() : this.complianceResourceId;
@@ -31,7 +31,7 @@ public final class RuleScopeGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="complianceResourceTypes")
-    private final @Nullable Input<List<String>> complianceResourceTypes;
+      private final @Nullable Input<List<String>> complianceResourceTypes;
 
     public Input<List<String>> getComplianceResourceTypes() {
         return this.complianceResourceTypes == null ? Input.empty() : this.complianceResourceTypes;
@@ -42,7 +42,7 @@ public final class RuleScopeGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagKey")
-    private final @Nullable Input<String> tagKey;
+      private final @Nullable Input<String> tagKey;
 
     public Input<String> getTagKey() {
         return this.tagKey == null ? Input.empty() : this.tagKey;
@@ -53,7 +53,7 @@ public final class RuleScopeGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagValue")
-    private final @Nullable Input<String> tagValue;
+      private final @Nullable Input<String> tagValue;
 
     public Input<String> getTagValue() {
         return this.tagValue == null ? Input.empty() : this.tagValue;

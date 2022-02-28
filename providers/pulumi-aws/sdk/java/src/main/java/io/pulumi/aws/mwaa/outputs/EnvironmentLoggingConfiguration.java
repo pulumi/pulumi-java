@@ -8,7 +8,7 @@ import io.pulumi.aws.mwaa.outputs.EnvironmentLoggingConfigurationSchedulerLogs;
 import io.pulumi.aws.mwaa.outputs.EnvironmentLoggingConfigurationTaskLogs;
 import io.pulumi.aws.mwaa.outputs.EnvironmentLoggingConfigurationWebserverLogs;
 import io.pulumi.aws.mwaa.outputs.EnvironmentLoggingConfigurationWorkerLogs;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

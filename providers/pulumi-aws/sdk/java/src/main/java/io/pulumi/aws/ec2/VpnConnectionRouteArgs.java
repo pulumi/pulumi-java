@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destinationCidrBlock", required=true)
-    private final Input<String> destinationCidrBlock;
+      private final Input<String> destinationCidrBlock;
 
     public Input<String> getDestinationCidrBlock() {
         return this.destinationCidrBlock;
@@ -29,7 +29,7 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="vpnConnectionId", required=true)
-    private final Input<String> vpnConnectionId;
+      private final Input<String> vpnConnectionId;
 
     public Input<String> getVpnConnectionId() {
         return this.vpnConnectionId;

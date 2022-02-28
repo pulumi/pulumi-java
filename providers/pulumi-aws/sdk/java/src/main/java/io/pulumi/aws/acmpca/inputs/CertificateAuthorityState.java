@@ -6,7 +6,7 @@ package io.pulumi.aws.acmpca.inputs;
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateAuthorityConfigurationGetArgs;
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityRevocationConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -35,7 +35,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<String> certificate;
+      private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -46,7 +46,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificateAuthorityConfiguration")
-    private final @Nullable Input<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration;
+      private final @Nullable Input<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> certificateAuthorityConfiguration;
 
     public Input<CertificateAuthorityCertificateAuthorityConfigurationGetArgs> getCertificateAuthorityConfiguration() {
         return this.certificateAuthorityConfiguration == null ? Input.empty() : this.certificateAuthorityConfiguration;
@@ -57,7 +57,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificateChain")
-    private final @Nullable Input<String> certificateChain;
+      private final @Nullable Input<String> certificateChain;
 
     public Input<String> getCertificateChain() {
         return this.certificateChain == null ? Input.empty() : this.certificateChain;
@@ -68,7 +68,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificateSigningRequest")
-    private final @Nullable Input<String> certificateSigningRequest;
+      private final @Nullable Input<String> certificateSigningRequest;
 
     public Input<String> getCertificateSigningRequest() {
         return this.certificateSigningRequest == null ? Input.empty() : this.certificateSigningRequest;
@@ -79,7 +79,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -90,7 +90,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="notAfter")
-    private final @Nullable Input<String> notAfter;
+      private final @Nullable Input<String> notAfter;
 
     public Input<String> getNotAfter() {
         return this.notAfter == null ? Input.empty() : this.notAfter;
@@ -101,7 +101,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="notBefore")
-    private final @Nullable Input<String> notBefore;
+      private final @Nullable Input<String> notBefore;
 
     public Input<String> getNotBefore() {
         return this.notBefore == null ? Input.empty() : this.notBefore;
@@ -112,7 +112,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="permanentDeletionTimeInDays")
-    private final @Nullable Input<Integer> permanentDeletionTimeInDays;
+      private final @Nullable Input<Integer> permanentDeletionTimeInDays;
 
     public Input<Integer> getPermanentDeletionTimeInDays() {
         return this.permanentDeletionTimeInDays == null ? Input.empty() : this.permanentDeletionTimeInDays;
@@ -123,7 +123,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="revocationConfiguration")
-    private final @Nullable Input<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration;
+      private final @Nullable Input<CertificateAuthorityRevocationConfigurationGetArgs> revocationConfiguration;
 
     public Input<CertificateAuthorityRevocationConfigurationGetArgs> getRevocationConfiguration() {
         return this.revocationConfiguration == null ? Input.empty() : this.revocationConfiguration;
@@ -134,7 +134,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serial")
-    private final @Nullable Input<String> serial;
+      private final @Nullable Input<String> serial;
 
     public Input<String> getSerial() {
         return this.serial == null ? Input.empty() : this.serial;
@@ -145,7 +145,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -156,7 +156,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -167,7 +167,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -178,7 +178,7 @@ public final class CertificateAuthorityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ProjectFileSystemLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="identifier")
-    private final @Nullable Input<String> identifier;
+      private final @Nullable Input<String> identifier;
 
     public Input<String> getIdentifier() {
         return this.identifier == null ? Input.empty() : this.identifier;
@@ -30,7 +30,7 @@ public final class ProjectFileSystemLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -41,7 +41,7 @@ public final class ProjectFileSystemLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="mountOptions")
-    private final @Nullable Input<String> mountOptions;
+      private final @Nullable Input<String> mountOptions;
 
     public Input<String> getMountOptions() {
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
@@ -52,7 +52,7 @@ public final class ProjectFileSystemLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="mountPoint")
-    private final @Nullable Input<String> mountPoint;
+      private final @Nullable Input<String> mountPoint;
 
     public Input<String> getMountPoint() {
         return this.mountPoint == null ? Input.empty() : this.mountPoint;
@@ -63,7 +63,7 @@ public final class ProjectFileSystemLocationGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

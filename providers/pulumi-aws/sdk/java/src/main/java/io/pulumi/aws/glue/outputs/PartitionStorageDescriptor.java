@@ -7,7 +7,7 @@ import io.pulumi.aws.glue.outputs.PartitionStorageDescriptorColumn;
 import io.pulumi.aws.glue.outputs.PartitionStorageDescriptorSerDeInfo;
 import io.pulumi.aws.glue.outputs.PartitionStorageDescriptorSkewedInfo;
 import io.pulumi.aws.glue.outputs.PartitionStorageDescriptorSortColumn;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accepts")
-    private final @Nullable String accepts;
+      private final @Nullable String accepts;
 
     public Optional<String> getAccepts() {
         return this.accepts == null ? Optional.empty() : Optional.ofNullable(this.accepts);
@@ -31,7 +31,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="exportType", required=true)
-    private final String exportType;
+      private final String exportType;
 
     public String getExportType() {
         return this.exportType;
@@ -42,7 +42,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,String> parameters;
+      private final @Nullable Map<String,String> parameters;
 
     public Map<String,String> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -53,7 +53,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-    private final String restApiId;
+      private final String restApiId;
 
     public String getRestApiId() {
         return this.restApiId;
@@ -64,7 +64,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stageName", required=true)
-    private final String stageName;
+      private final String stageName;
 
     public String getStageName() {
         return this.stageName;

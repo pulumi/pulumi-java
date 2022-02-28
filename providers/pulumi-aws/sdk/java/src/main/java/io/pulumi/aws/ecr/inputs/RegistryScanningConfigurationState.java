@@ -5,7 +5,7 @@ package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.aws.ecr.inputs.RegistryScanningConfigurationRuleGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RegistryScanningConfigurationState extends io.pulumi.resource
      * 
      */
     @InputImport(name="registryId")
-    private final @Nullable Input<String> registryId;
+      private final @Nullable Input<String> registryId;
 
     public Input<String> getRegistryId() {
         return this.registryId == null ? Input.empty() : this.registryId;
@@ -32,7 +32,7 @@ public final class RegistryScanningConfigurationState extends io.pulumi.resource
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<RegistryScanningConfigurationRuleGetArgs>> rules;
+      private final @Nullable Input<List<RegistryScanningConfigurationRuleGetArgs>> rules;
 
     public Input<List<RegistryScanningConfigurationRuleGetArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -43,7 +43,7 @@ public final class RegistryScanningConfigurationState extends io.pulumi.resource
      * 
      */
     @InputImport(name="scanType")
-    private final @Nullable Input<String> scanType;
+      private final @Nullable Input<String> scanType;
 
     public Input<String> getScanType() {
         return this.scanType == null ? Input.empty() : this.scanType;

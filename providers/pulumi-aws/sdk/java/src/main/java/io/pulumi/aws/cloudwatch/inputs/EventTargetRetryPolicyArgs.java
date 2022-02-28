@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EventTargetRetryPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maximumEventAgeInSeconds")
-    private final @Nullable Input<Integer> maximumEventAgeInSeconds;
+      private final @Nullable Input<Integer> maximumEventAgeInSeconds;
 
     public Input<Integer> getMaximumEventAgeInSeconds() {
         return this.maximumEventAgeInSeconds == null ? Input.empty() : this.maximumEventAgeInSeconds;
@@ -30,7 +30,7 @@ public final class EventTargetRetryPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maximumRetryAttempts")
-    private final @Nullable Input<Integer> maximumRetryAttempts;
+      private final @Nullable Input<Integer> maximumRetryAttempts;
 
     public Input<Integer> getMaximumRetryAttempts() {
         return this.maximumRetryAttempts == null ? Input.empty() : this.maximumRetryAttempts;

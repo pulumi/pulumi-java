@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AuthorizerJwtConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="audiences")
-    private final @Nullable Input<List<String>> audiences;
+      private final @Nullable Input<List<String>> audiences;
 
     public Input<List<String>> getAudiences() {
         return this.audiences == null ? Input.empty() : this.audiences;
@@ -31,7 +31,7 @@ public final class AuthorizerJwtConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="issuer")
-    private final @Nullable Input<String> issuer;
+      private final @Nullable Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer == null ? Input.empty() : this.issuer;

@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.PartitionIndexPartitionIndexGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
@@ -31,7 +31,7 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+      private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -42,7 +42,7 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="partitionIndex")
-    private final @Nullable Input<PartitionIndexPartitionIndexGetArgs> partitionIndex;
+      private final @Nullable Input<PartitionIndexPartitionIndexGetArgs> partitionIndex;
 
     public Input<PartitionIndexPartitionIndexGetArgs> getPartitionIndex() {
         return this.partitionIndex == null ? Input.empty() : this.partitionIndex;
@@ -53,7 +53,7 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tableName")
-    private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;

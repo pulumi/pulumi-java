@@ -4,7 +4,7 @@
 package io.pulumi.aws.sns;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="confirmationTimeoutInMinutes")
-    private final @Nullable Input<Integer> confirmationTimeoutInMinutes;
+      private final @Nullable Input<Integer> confirmationTimeoutInMinutes;
 
     public Input<Integer> getConfirmationTimeoutInMinutes() {
         return this.confirmationTimeoutInMinutes == null ? Input.empty() : this.confirmationTimeoutInMinutes;
@@ -32,7 +32,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deliveryPolicy")
-    private final @Nullable Input<String> deliveryPolicy;
+      private final @Nullable Input<String> deliveryPolicy;
 
     public Input<String> getDeliveryPolicy() {
         return this.deliveryPolicy == null ? Input.empty() : this.deliveryPolicy;
@@ -43,7 +43,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final Input<String> endpoint;
+      private final Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint;
@@ -54,7 +54,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endpointAutoConfirms")
-    private final @Nullable Input<Boolean> endpointAutoConfirms;
+      private final @Nullable Input<Boolean> endpointAutoConfirms;
 
     public Input<Boolean> getEndpointAutoConfirms() {
         return this.endpointAutoConfirms == null ? Input.empty() : this.endpointAutoConfirms;
@@ -65,7 +65,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="filterPolicy")
-    private final @Nullable Input<String> filterPolicy;
+      private final @Nullable Input<String> filterPolicy;
 
     public Input<String> getFilterPolicy() {
         return this.filterPolicy == null ? Input.empty() : this.filterPolicy;
@@ -76,7 +76,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<String> protocol;
+      private final Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol;
@@ -87,7 +87,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rawMessageDelivery")
-    private final @Nullable Input<Boolean> rawMessageDelivery;
+      private final @Nullable Input<Boolean> rawMessageDelivery;
 
     public Input<Boolean> getRawMessageDelivery() {
         return this.rawMessageDelivery == null ? Input.empty() : this.rawMessageDelivery;
@@ -98,7 +98,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="redrivePolicy")
-    private final @Nullable Input<String> redrivePolicy;
+      private final @Nullable Input<String> redrivePolicy;
 
     public Input<String> getRedrivePolicy() {
         return this.redrivePolicy == null ? Input.empty() : this.redrivePolicy;
@@ -109,7 +109,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subscriptionRoleArn")
-    private final @Nullable Input<String> subscriptionRoleArn;
+      private final @Nullable Input<String> subscriptionRoleArn;
 
     public Input<String> getSubscriptionRoleArn() {
         return this.subscriptionRoleArn == null ? Input.empty() : this.subscriptionRoleArn;
@@ -120,7 +120,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="topic", required=true)
-    private final Input<String> topic;
+      private final Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic;

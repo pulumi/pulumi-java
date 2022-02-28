@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito.outputs;
 
 import io.pulumi.aws.cognito.outputs.UserPoolLambdaConfigCustomEmailSender;
 import io.pulumi.aws.cognito.outputs.UserPoolLambdaConfigCustomSmsSender;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

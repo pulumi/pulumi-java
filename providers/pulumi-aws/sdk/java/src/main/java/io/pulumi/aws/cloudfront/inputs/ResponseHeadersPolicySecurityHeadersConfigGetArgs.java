@@ -10,7 +10,7 @@ import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfi
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs;
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
      * 
      */
     @InputImport(name="contentSecurityPolicy")
-    private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy;
+      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> contentSecurityPolicy;
 
     public Input<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyGetArgs> getContentSecurityPolicy() {
         return this.contentSecurityPolicy == null ? Input.empty() : this.contentSecurityPolicy;
@@ -35,7 +35,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
      * 
      */
     @InputImport(name="contentTypeOptions")
-    private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions;
+      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> contentTypeOptions;
 
     public Input<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsGetArgs> getContentTypeOptions() {
         return this.contentTypeOptions == null ? Input.empty() : this.contentTypeOptions;
@@ -46,7 +46,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
      * 
      */
     @InputImport(name="frameOptions")
-    private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions;
+      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> frameOptions;
 
     public Input<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsGetArgs> getFrameOptions() {
         return this.frameOptions == null ? Input.empty() : this.frameOptions;
@@ -57,7 +57,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
      * 
      */
     @InputImport(name="referrerPolicy")
-    private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy;
+      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> referrerPolicy;
 
     public Input<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyGetArgs> getReferrerPolicy() {
         return this.referrerPolicy == null ? Input.empty() : this.referrerPolicy;
@@ -68,7 +68,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
      * 
      */
     @InputImport(name="strictTransportSecurity")
-    private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity;
+      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> strictTransportSecurity;
 
     public Input<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityGetArgs> getStrictTransportSecurity() {
         return this.strictTransportSecurity == null ? Input.empty() : this.strictTransportSecurity;
@@ -79,7 +79,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigGetArgs extends io.
      * 
      */
     @InputImport(name="xssProtection")
-    private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection;
+      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> xssProtection;
 
     public Input<ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArgs> getXssProtection() {
         return this.xssProtection == null ? Input.empty() : this.xssProtection;

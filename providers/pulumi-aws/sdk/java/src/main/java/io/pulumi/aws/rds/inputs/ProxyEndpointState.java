@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbProxyEndpointName")
-    private final @Nullable Input<String> dbProxyEndpointName;
+      private final @Nullable Input<String> dbProxyEndpointName;
 
     public Input<String> getDbProxyEndpointName() {
         return this.dbProxyEndpointName == null ? Input.empty() : this.dbProxyEndpointName;
@@ -44,7 +44,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbProxyName")
-    private final @Nullable Input<String> dbProxyName;
+      private final @Nullable Input<String> dbProxyName;
 
     public Input<String> getDbProxyName() {
         return this.dbProxyName == null ? Input.empty() : this.dbProxyName;
@@ -55,7 +55,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<String> endpoint;
+      private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -66,7 +66,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isDefault")
-    private final @Nullable Input<Boolean> isDefault;
+      private final @Nullable Input<Boolean> isDefault;
 
     public Input<Boolean> getIsDefault() {
         return this.isDefault == null ? Input.empty() : this.isDefault;
@@ -77,14 +77,14 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -95,7 +95,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetRole")
-    private final @Nullable Input<String> targetRole;
+      private final @Nullable Input<String> targetRole;
 
     public Input<String> getTargetRole() {
         return this.targetRole == null ? Input.empty() : this.targetRole;
@@ -106,7 +106,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;
@@ -117,7 +117,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-    private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
 
     public Input<List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
@@ -128,7 +128,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSubnetIds")
-    private final @Nullable Input<List<String>> vpcSubnetIds;
+      private final @Nullable Input<List<String>> vpcSubnetIds;
 
     public Input<List<String>> getVpcSubnetIds() {
         return this.vpcSubnetIds == null ? Input.empty() : this.vpcSubnetIds;

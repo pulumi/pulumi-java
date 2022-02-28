@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +17,14 @@ public final class GetFunctionFileSystemConfig extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="arn", required=true)
-    private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;
     }
 
     @InputImport(name="localMountPath", required=true)
-    private final String localMountPath;
+      private final String localMountPath;
 
     public String getLocalMountPath() {
         return this.localMountPath;

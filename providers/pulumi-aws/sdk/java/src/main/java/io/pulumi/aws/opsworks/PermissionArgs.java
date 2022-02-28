@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowSsh")
-    private final @Nullable Input<Boolean> allowSsh;
+      private final @Nullable Input<Boolean> allowSsh;
 
     public Input<Boolean> getAllowSsh() {
         return this.allowSsh == null ? Input.empty() : this.allowSsh;
@@ -31,7 +31,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowSudo")
-    private final @Nullable Input<Boolean> allowSudo;
+      private final @Nullable Input<Boolean> allowSudo;
 
     public Input<Boolean> getAllowSudo() {
         return this.allowSudo == null ? Input.empty() : this.allowSudo;
@@ -42,7 +42,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="level")
-    private final @Nullable Input<String> level;
+      private final @Nullable Input<String> level;
 
     public Input<String> getLevel() {
         return this.level == null ? Input.empty() : this.level;
@@ -53,7 +53,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackId")
-    private final @Nullable Input<String> stackId;
+      private final @Nullable Input<String> stackId;
 
     public Input<String> getStackId() {
         return this.stackId == null ? Input.empty() : this.stackId;
@@ -64,7 +64,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userArn", required=true)
-    private final Input<String> userArn;
+      private final Input<String> userArn;
 
     public Input<String> getUserArn() {
         return this.userArn;

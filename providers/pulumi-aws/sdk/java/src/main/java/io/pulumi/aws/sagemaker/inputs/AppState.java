@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.AppResourceSpecGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appName")
-    private final @Nullable Input<String> appName;
+      private final @Nullable Input<String> appName;
 
     public Input<String> getAppName() {
         return this.appName == null ? Input.empty() : this.appName;
@@ -32,7 +32,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appType")
-    private final @Nullable Input<String> appType;
+      private final @Nullable Input<String> appType;
 
     public Input<String> getAppType() {
         return this.appType == null ? Input.empty() : this.appType;
@@ -43,7 +43,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -54,7 +54,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainId")
-    private final @Nullable Input<String> domainId;
+      private final @Nullable Input<String> domainId;
 
     public Input<String> getDomainId() {
         return this.domainId == null ? Input.empty() : this.domainId;
@@ -65,7 +65,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSpec")
-    private final @Nullable Input<AppResourceSpecGetArgs> resourceSpec;
+      private final @Nullable Input<AppResourceSpecGetArgs> resourceSpec;
 
     public Input<AppResourceSpecGetArgs> getResourceSpec() {
         return this.resourceSpec == null ? Input.empty() : this.resourceSpec;
@@ -76,7 +76,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -98,7 +98,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProfileName")
-    private final @Nullable Input<String> userProfileName;
+      private final @Nullable Input<String> userProfileName;
 
     public Input<String> getUserProfileName() {
         return this.userProfileName == null ? Input.empty() : this.userProfileName;

@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class RouteSpecHttp2RouteRetryPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="httpRetryEvents")
-    private final @Nullable Input<List<String>> httpRetryEvents;
+      private final @Nullable Input<List<String>> httpRetryEvents;
 
     public Input<List<String>> getHttpRetryEvents() {
         return this.httpRetryEvents == null ? Input.empty() : this.httpRetryEvents;
@@ -35,7 +35,7 @@ public final class RouteSpecHttp2RouteRetryPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxRetries", required=true)
-    private final Input<Integer> maxRetries;
+      private final Input<Integer> maxRetries;
 
     public Input<Integer> getMaxRetries() {
         return this.maxRetries;
@@ -46,7 +46,7 @@ public final class RouteSpecHttp2RouteRetryPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="perRetryTimeout", required=true)
-    private final Input<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutArgs> perRetryTimeout;
+      private final Input<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutArgs> perRetryTimeout;
 
     public Input<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutArgs> getPerRetryTimeout() {
         return this.perRetryTimeout;
@@ -57,7 +57,7 @@ public final class RouteSpecHttp2RouteRetryPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="tcpRetryEvents")
-    private final @Nullable Input<List<String>> tcpRetryEvents;
+      private final @Nullable Input<List<String>> tcpRetryEvents;
 
     public Input<List<String>> getTcpRetryEvents() {
         return this.tcpRetryEvents == null ? Input.empty() : this.tcpRetryEvents;

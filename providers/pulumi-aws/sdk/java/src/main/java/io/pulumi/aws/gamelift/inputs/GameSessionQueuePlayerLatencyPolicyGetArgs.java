@@ -4,7 +4,7 @@
 package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GameSessionQueuePlayerLatencyPolicyGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maximumIndividualPlayerLatencyMilliseconds", required=true)
-    private final Input<Integer> maximumIndividualPlayerLatencyMilliseconds;
+      private final Input<Integer> maximumIndividualPlayerLatencyMilliseconds;
 
     public Input<Integer> getMaximumIndividualPlayerLatencyMilliseconds() {
         return this.maximumIndividualPlayerLatencyMilliseconds;
@@ -30,7 +30,7 @@ public final class GameSessionQueuePlayerLatencyPolicyGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="policyDurationSeconds")
-    private final @Nullable Input<Integer> policyDurationSeconds;
+      private final @Nullable Input<Integer> policyDurationSeconds;
 
     public Input<Integer> getPolicyDurationSeconds() {
         return this.policyDurationSeconds == null ? Input.empty() : this.policyDurationSeconds;

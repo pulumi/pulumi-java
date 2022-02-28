@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AuthorizationRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="accessGroupId")
-    private final @Nullable Input<String> accessGroupId;
+      private final @Nullable Input<String> accessGroupId;
 
     public Input<String> getAccessGroupId() {
         return this.accessGroupId == null ? Input.empty() : this.accessGroupId;
@@ -31,7 +31,7 @@ public final class AuthorizationRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="authorizeAllGroups")
-    private final @Nullable Input<Boolean> authorizeAllGroups;
+      private final @Nullable Input<Boolean> authorizeAllGroups;
 
     public Input<Boolean> getAuthorizeAllGroups() {
         return this.authorizeAllGroups == null ? Input.empty() : this.authorizeAllGroups;
@@ -42,7 +42,7 @@ public final class AuthorizationRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clientVpnEndpointId")
-    private final @Nullable Input<String> clientVpnEndpointId;
+      private final @Nullable Input<String> clientVpnEndpointId;
 
     public Input<String> getClientVpnEndpointId() {
         return this.clientVpnEndpointId == null ? Input.empty() : this.clientVpnEndpointId;
@@ -53,7 +53,7 @@ public final class AuthorizationRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -64,7 +64,7 @@ public final class AuthorizationRuleState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetNetworkCidr")
-    private final @Nullable Input<String> targetNetworkCidr;
+      private final @Nullable Input<String> targetNetworkCidr;
 
     public Input<String> getTargetNetworkCidr() {
         return this.targetNetworkCidr == null ? Input.empty() : this.targetNetworkCidr;

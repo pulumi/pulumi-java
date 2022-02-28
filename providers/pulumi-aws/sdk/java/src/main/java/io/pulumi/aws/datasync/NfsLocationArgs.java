@@ -6,7 +6,7 @@ package io.pulumi.aws.datasync;
 import io.pulumi.aws.datasync.inputs.NfsLocationMountOptionsArgs;
 import io.pulumi.aws.datasync.inputs.NfsLocationOnPremConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountOptions")
-    private final @Nullable Input<NfsLocationMountOptionsArgs> mountOptions;
+      private final @Nullable Input<NfsLocationMountOptionsArgs> mountOptions;
 
     public Input<NfsLocationMountOptionsArgs> getMountOptions() {
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
@@ -33,7 +33,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onPremConfig", required=true)
-    private final Input<NfsLocationOnPremConfigArgs> onPremConfig;
+      private final Input<NfsLocationOnPremConfigArgs> onPremConfig;
 
     public Input<NfsLocationOnPremConfigArgs> getOnPremConfig() {
         return this.onPremConfig;
@@ -44,7 +44,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverHostname", required=true)
-    private final Input<String> serverHostname;
+      private final Input<String> serverHostname;
 
     public Input<String> getServerHostname() {
         return this.serverHostname;
@@ -55,7 +55,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdirectory", required=true)
-    private final Input<String> subdirectory;
+      private final Input<String> subdirectory;
 
     public Input<String> getSubdirectory() {
         return this.subdirectory;
@@ -66,7 +66,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

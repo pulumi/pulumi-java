@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupNames")
-    private final @Nullable Input<List<String>> groupNames;
+      private final @Nullable Input<List<String>> groupNames;
 
     public Input<List<String>> getGroupNames() {
         return this.groupNames == null ? Input.empty() : this.groupNames;
@@ -32,7 +32,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notifications")
-    private final @Nullable Input<List<String>> notifications;
+      private final @Nullable Input<List<String>> notifications;
 
     public Input<List<String>> getNotifications() {
         return this.notifications == null ? Input.empty() : this.notifications;
@@ -43,7 +43,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topicArn")
-    private final @Nullable Input<String> topicArn;
+      private final @Nullable Input<String> topicArn;
 
     public Input<String> getTopicArn() {
         return this.topicArn == null ? Input.empty() : this.topicArn;

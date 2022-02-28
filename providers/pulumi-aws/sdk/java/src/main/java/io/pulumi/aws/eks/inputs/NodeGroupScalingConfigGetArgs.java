@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class NodeGroupScalingConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="desiredSize", required=true)
-    private final Input<Integer> desiredSize;
+      private final Input<Integer> desiredSize;
 
     public Input<Integer> getDesiredSize() {
         return this.desiredSize;
@@ -29,7 +29,7 @@ public final class NodeGroupScalingConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="maxSize", required=true)
-    private final Input<Integer> maxSize;
+      private final Input<Integer> maxSize;
 
     public Input<Integer> getMaxSize() {
         return this.maxSize;
@@ -40,7 +40,7 @@ public final class NodeGroupScalingConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="minSize", required=true)
-    private final Input<Integer> minSize;
+      private final Input<Integer> minSize;
 
     public Input<Integer> getMinSize() {
         return this.minSize;

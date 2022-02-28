@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ConnectionPhysicalConnectionRequirementsArgs extends io.pulum
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -31,7 +31,7 @@ public final class ConnectionPhysicalConnectionRequirementsArgs extends io.pulum
      * 
      */
     @InputImport(name="securityGroupIdLists")
-    private final @Nullable Input<List<String>> securityGroupIdLists;
+      private final @Nullable Input<List<String>> securityGroupIdLists;
 
     public Input<List<String>> getSecurityGroupIdLists() {
         return this.securityGroupIdLists == null ? Input.empty() : this.securityGroupIdLists;
@@ -42,7 +42,7 @@ public final class ConnectionPhysicalConnectionRequirementsArgs extends io.pulum
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;

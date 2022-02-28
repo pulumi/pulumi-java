@@ -6,7 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationFilterGetArgs;
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class AnalyticsConfigurationState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -32,7 +32,7 @@ public final class AnalyticsConfigurationState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<AnalyticsConfigurationFilterGetArgs> filter;
+      private final @Nullable Input<AnalyticsConfigurationFilterGetArgs> filter;
 
     public Input<AnalyticsConfigurationFilterGetArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -43,7 +43,7 @@ public final class AnalyticsConfigurationState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class AnalyticsConfigurationState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="storageClassAnalysis")
-    private final @Nullable Input<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis;
+      private final @Nullable Input<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis;
 
     public Input<AnalyticsConfigurationStorageClassAnalysisGetArgs> getStorageClassAnalysis() {
         return this.storageClassAnalysis == null ? Input.empty() : this.storageClassAnalysis;

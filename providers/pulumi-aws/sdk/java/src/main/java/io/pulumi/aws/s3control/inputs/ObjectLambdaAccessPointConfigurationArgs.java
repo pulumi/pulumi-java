@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ObjectLambdaAccessPointConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="allowedFeatures")
-    private final @Nullable Input<List<String>> allowedFeatures;
+      private final @Nullable Input<List<String>> allowedFeatures;
 
     public Input<List<String>> getAllowedFeatures() {
         return this.allowedFeatures == null ? Input.empty() : this.allowedFeatures;
@@ -33,7 +33,7 @@ public final class ObjectLambdaAccessPointConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="cloudWatchMetricsEnabled")
-    private final @Nullable Input<Boolean> cloudWatchMetricsEnabled;
+      private final @Nullable Input<Boolean> cloudWatchMetricsEnabled;
 
     public Input<Boolean> getCloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled == null ? Input.empty() : this.cloudWatchMetricsEnabled;
@@ -44,7 +44,7 @@ public final class ObjectLambdaAccessPointConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="supportingAccessPoint", required=true)
-    private final Input<String> supportingAccessPoint;
+      private final Input<String> supportingAccessPoint;
 
     public Input<String> getSupportingAccessPoint() {
         return this.supportingAccessPoint;
@@ -55,7 +55,7 @@ public final class ObjectLambdaAccessPointConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="transformationConfigurations", required=true)
-    private final Input<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs>> transformationConfigurations;
+      private final Input<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs>> transformationConfigurations;
 
     public Input<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs>> getTransformationConfigurations() {
         return this.transformationConfigurations;

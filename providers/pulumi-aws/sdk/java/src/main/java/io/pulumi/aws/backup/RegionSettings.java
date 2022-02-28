@@ -8,8 +8,8 @@ import io.pulumi.aws.backup.RegionSettingsArgs;
 import io.pulumi.aws.backup.inputs.RegionSettingsState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -60,6 +60,21 @@ public class RegionSettings extends io.pulumi.resources.CustomResource {
         return this.resourceTypeOptInPreference;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RegionSettings(String name) {
+        this(name, RegionSettingsArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RegionSettings(String name, RegionSettingsArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

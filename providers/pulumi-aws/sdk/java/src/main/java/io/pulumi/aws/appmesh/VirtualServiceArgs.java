@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh;
 
 import io.pulumi.aws.appmesh.inputs.VirtualServiceSpecArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class VirtualServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="meshName", required=true)
-    private final Input<String> meshName;
+      private final Input<String> meshName;
 
     public Input<String> getMeshName() {
         return this.meshName;
@@ -32,7 +32,7 @@ public final class VirtualServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="meshOwner")
-    private final @Nullable Input<String> meshOwner;
+      private final @Nullable Input<String> meshOwner;
 
     public Input<String> getMeshOwner() {
         return this.meshOwner == null ? Input.empty() : this.meshOwner;
@@ -43,7 +43,7 @@ public final class VirtualServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class VirtualServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec", required=true)
-    private final Input<VirtualServiceSpecArgs> spec;
+      private final Input<VirtualServiceSpecArgs> spec;
 
     public Input<VirtualServiceSpecArgs> getSpec() {
         return this.spec;
@@ -65,7 +65,7 @@ public final class VirtualServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

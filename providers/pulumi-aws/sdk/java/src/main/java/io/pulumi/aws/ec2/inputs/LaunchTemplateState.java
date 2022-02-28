@@ -20,7 +20,7 @@ import io.pulumi.aws.ec2.inputs.LaunchTemplateNetworkInterfaceGetArgs;
 import io.pulumi.aws.ec2.inputs.LaunchTemplatePlacementGetArgs;
 import io.pulumi.aws.ec2.inputs.LaunchTemplateTagSpecificationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +39,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -51,7 +51,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="blockDeviceMappings")
-    private final @Nullable Input<List<LaunchTemplateBlockDeviceMappingGetArgs>> blockDeviceMappings;
+      private final @Nullable Input<List<LaunchTemplateBlockDeviceMappingGetArgs>> blockDeviceMappings;
 
     public Input<List<LaunchTemplateBlockDeviceMappingGetArgs>> getBlockDeviceMappings() {
         return this.blockDeviceMappings == null ? Input.empty() : this.blockDeviceMappings;
@@ -62,7 +62,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="capacityReservationSpecification")
-    private final @Nullable Input<LaunchTemplateCapacityReservationSpecificationGetArgs> capacityReservationSpecification;
+      private final @Nullable Input<LaunchTemplateCapacityReservationSpecificationGetArgs> capacityReservationSpecification;
 
     public Input<LaunchTemplateCapacityReservationSpecificationGetArgs> getCapacityReservationSpecification() {
         return this.capacityReservationSpecification == null ? Input.empty() : this.capacityReservationSpecification;
@@ -73,7 +73,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="cpuOptions")
-    private final @Nullable Input<LaunchTemplateCpuOptionsGetArgs> cpuOptions;
+      private final @Nullable Input<LaunchTemplateCpuOptionsGetArgs> cpuOptions;
 
     public Input<LaunchTemplateCpuOptionsGetArgs> getCpuOptions() {
         return this.cpuOptions == null ? Input.empty() : this.cpuOptions;
@@ -85,7 +85,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="creditSpecification")
-    private final @Nullable Input<LaunchTemplateCreditSpecificationGetArgs> creditSpecification;
+      private final @Nullable Input<LaunchTemplateCreditSpecificationGetArgs> creditSpecification;
 
     public Input<LaunchTemplateCreditSpecificationGetArgs> getCreditSpecification() {
         return this.creditSpecification == null ? Input.empty() : this.creditSpecification;
@@ -96,7 +96,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="defaultVersion")
-    private final @Nullable Input<Integer> defaultVersion;
+      private final @Nullable Input<Integer> defaultVersion;
 
     public Input<Integer> getDefaultVersion() {
         return this.defaultVersion == null ? Input.empty() : this.defaultVersion;
@@ -107,7 +107,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -119,7 +119,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="disableApiTermination")
-    private final @Nullable Input<Boolean> disableApiTermination;
+      private final @Nullable Input<Boolean> disableApiTermination;
 
     public Input<Boolean> getDisableApiTermination() {
         return this.disableApiTermination == null ? Input.empty() : this.disableApiTermination;
@@ -130,7 +130,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ebsOptimized")
-    private final @Nullable Input<String> ebsOptimized;
+      private final @Nullable Input<String> ebsOptimized;
 
     public Input<String> getEbsOptimized() {
         return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
@@ -142,7 +142,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="elasticGpuSpecifications")
-    private final @Nullable Input<List<LaunchTemplateElasticGpuSpecificationGetArgs>> elasticGpuSpecifications;
+      private final @Nullable Input<List<LaunchTemplateElasticGpuSpecificationGetArgs>> elasticGpuSpecifications;
 
     public Input<List<LaunchTemplateElasticGpuSpecificationGetArgs>> getElasticGpuSpecifications() {
         return this.elasticGpuSpecifications == null ? Input.empty() : this.elasticGpuSpecifications;
@@ -153,7 +153,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="elasticInferenceAccelerator")
-    private final @Nullable Input<LaunchTemplateElasticInferenceAcceleratorGetArgs> elasticInferenceAccelerator;
+      private final @Nullable Input<LaunchTemplateElasticInferenceAcceleratorGetArgs> elasticInferenceAccelerator;
 
     public Input<LaunchTemplateElasticInferenceAcceleratorGetArgs> getElasticInferenceAccelerator() {
         return this.elasticInferenceAccelerator == null ? Input.empty() : this.elasticInferenceAccelerator;
@@ -164,7 +164,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enclaveOptions")
-    private final @Nullable Input<LaunchTemplateEnclaveOptionsGetArgs> enclaveOptions;
+      private final @Nullable Input<LaunchTemplateEnclaveOptionsGetArgs> enclaveOptions;
 
     public Input<LaunchTemplateEnclaveOptionsGetArgs> getEnclaveOptions() {
         return this.enclaveOptions == null ? Input.empty() : this.enclaveOptions;
@@ -175,7 +175,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="hibernationOptions")
-    private final @Nullable Input<LaunchTemplateHibernationOptionsGetArgs> hibernationOptions;
+      private final @Nullable Input<LaunchTemplateHibernationOptionsGetArgs> hibernationOptions;
 
     public Input<LaunchTemplateHibernationOptionsGetArgs> getHibernationOptions() {
         return this.hibernationOptions == null ? Input.empty() : this.hibernationOptions;
@@ -187,7 +187,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="iamInstanceProfile")
-    private final @Nullable Input<LaunchTemplateIamInstanceProfileGetArgs> iamInstanceProfile;
+      private final @Nullable Input<LaunchTemplateIamInstanceProfileGetArgs> iamInstanceProfile;
 
     public Input<LaunchTemplateIamInstanceProfileGetArgs> getIamInstanceProfile() {
         return this.iamInstanceProfile == null ? Input.empty() : this.iamInstanceProfile;
@@ -198,7 +198,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="imageId")
-    private final @Nullable Input<String> imageId;
+      private final @Nullable Input<String> imageId;
 
     public Input<String> getImageId() {
         return this.imageId == null ? Input.empty() : this.imageId;
@@ -210,7 +210,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instanceInitiatedShutdownBehavior")
-    private final @Nullable Input<String> instanceInitiatedShutdownBehavior;
+      private final @Nullable Input<String> instanceInitiatedShutdownBehavior;
 
     public Input<String> getInstanceInitiatedShutdownBehavior() {
         return this.instanceInitiatedShutdownBehavior == null ? Input.empty() : this.instanceInitiatedShutdownBehavior;
@@ -222,7 +222,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instanceMarketOptions")
-    private final @Nullable Input<LaunchTemplateInstanceMarketOptionsGetArgs> instanceMarketOptions;
+      private final @Nullable Input<LaunchTemplateInstanceMarketOptionsGetArgs> instanceMarketOptions;
 
     public Input<LaunchTemplateInstanceMarketOptionsGetArgs> getInstanceMarketOptions() {
         return this.instanceMarketOptions == null ? Input.empty() : this.instanceMarketOptions;
@@ -233,7 +233,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -244,7 +244,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kernelId")
-    private final @Nullable Input<String> kernelId;
+      private final @Nullable Input<String> kernelId;
 
     public Input<String> getKernelId() {
         return this.kernelId == null ? Input.empty() : this.kernelId;
@@ -255,7 +255,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable Input<String> keyName;
+      private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -266,7 +266,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="latestVersion")
-    private final @Nullable Input<Integer> latestVersion;
+      private final @Nullable Input<Integer> latestVersion;
 
     public Input<Integer> getLatestVersion() {
         return this.latestVersion == null ? Input.empty() : this.latestVersion;
@@ -277,7 +277,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="licenseSpecifications")
-    private final @Nullable Input<List<LaunchTemplateLicenseSpecificationGetArgs>> licenseSpecifications;
+      private final @Nullable Input<List<LaunchTemplateLicenseSpecificationGetArgs>> licenseSpecifications;
 
     public Input<List<LaunchTemplateLicenseSpecificationGetArgs>> getLicenseSpecifications() {
         return this.licenseSpecifications == null ? Input.empty() : this.licenseSpecifications;
@@ -288,7 +288,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadataOptions")
-    private final @Nullable Input<LaunchTemplateMetadataOptionsGetArgs> metadataOptions;
+      private final @Nullable Input<LaunchTemplateMetadataOptionsGetArgs> metadataOptions;
 
     public Input<LaunchTemplateMetadataOptionsGetArgs> getMetadataOptions() {
         return this.metadataOptions == null ? Input.empty() : this.metadataOptions;
@@ -299,7 +299,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="monitoring")
-    private final @Nullable Input<LaunchTemplateMonitoringGetArgs> monitoring;
+      private final @Nullable Input<LaunchTemplateMonitoringGetArgs> monitoring;
 
     public Input<LaunchTemplateMonitoringGetArgs> getMonitoring() {
         return this.monitoring == null ? Input.empty() : this.monitoring;
@@ -310,7 +310,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -321,7 +321,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -333,7 +333,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable Input<List<LaunchTemplateNetworkInterfaceGetArgs>> networkInterfaces;
+      private final @Nullable Input<List<LaunchTemplateNetworkInterfaceGetArgs>> networkInterfaces;
 
     public Input<List<LaunchTemplateNetworkInterfaceGetArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
@@ -344,7 +344,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="placement")
-    private final @Nullable Input<LaunchTemplatePlacementGetArgs> placement;
+      private final @Nullable Input<LaunchTemplatePlacementGetArgs> placement;
 
     public Input<LaunchTemplatePlacementGetArgs> getPlacement() {
         return this.placement == null ? Input.empty() : this.placement;
@@ -355,7 +355,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ramDiskId")
-    private final @Nullable Input<String> ramDiskId;
+      private final @Nullable Input<String> ramDiskId;
 
     public Input<String> getRamDiskId() {
         return this.ramDiskId == null ? Input.empty() : this.ramDiskId;
@@ -367,7 +367,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="securityGroupNames")
-    private final @Nullable Input<List<String>> securityGroupNames;
+      private final @Nullable Input<List<String>> securityGroupNames;
 
     public Input<List<String>> getSecurityGroupNames() {
         return this.securityGroupNames == null ? Input.empty() : this.securityGroupNames;
@@ -378,7 +378,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagSpecifications")
-    private final @Nullable Input<List<LaunchTemplateTagSpecificationGetArgs>> tagSpecifications;
+      private final @Nullable Input<List<LaunchTemplateTagSpecificationGetArgs>> tagSpecifications;
 
     public Input<List<LaunchTemplateTagSpecificationGetArgs>> getTagSpecifications() {
         return this.tagSpecifications == null ? Input.empty() : this.tagSpecifications;
@@ -389,7 +389,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -400,7 +400,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -411,7 +411,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="updateDefaultVersion")
-    private final @Nullable Input<Boolean> updateDefaultVersion;
+      private final @Nullable Input<Boolean> updateDefaultVersion;
 
     public Input<Boolean> getUpdateDefaultVersion() {
         return this.updateDefaultVersion == null ? Input.empty() : this.updateDefaultVersion;
@@ -422,7 +422,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userData")
-    private final @Nullable Input<String> userData;
+      private final @Nullable Input<String> userData;
 
     public Input<String> getUserData() {
         return this.userData == null ? Input.empty() : this.userData;
@@ -433,7 +433,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-    private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
 
     public Input<List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;

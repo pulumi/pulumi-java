@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticache.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      */
     @Deprecated /* Use engine_version_actual instead */
     @InputImport(name="actualEngineVersion")
-    private final @Nullable Input<String> actualEngineVersion;
+      private final @Nullable Input<String> actualEngineVersion;
 
     @Deprecated /* Use engine_version_actual instead */
     public Input<String> getActualEngineVersion() {
@@ -36,7 +36,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -47,7 +47,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="atRestEncryptionEnabled")
-    private final @Nullable Input<Boolean> atRestEncryptionEnabled;
+      private final @Nullable Input<Boolean> atRestEncryptionEnabled;
 
     public Input<Boolean> getAtRestEncryptionEnabled() {
         return this.atRestEncryptionEnabled == null ? Input.empty() : this.atRestEncryptionEnabled;
@@ -58,7 +58,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="authTokenEnabled")
-    private final @Nullable Input<Boolean> authTokenEnabled;
+      private final @Nullable Input<Boolean> authTokenEnabled;
 
     public Input<Boolean> getAuthTokenEnabled() {
         return this.authTokenEnabled == null ? Input.empty() : this.authTokenEnabled;
@@ -69,7 +69,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cacheNodeType")
-    private final @Nullable Input<String> cacheNodeType;
+      private final @Nullable Input<String> cacheNodeType;
 
     public Input<String> getCacheNodeType() {
         return this.cacheNodeType == null ? Input.empty() : this.cacheNodeType;
@@ -80,7 +80,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clusterEnabled")
-    private final @Nullable Input<Boolean> clusterEnabled;
+      private final @Nullable Input<Boolean> clusterEnabled;
 
     public Input<Boolean> getClusterEnabled() {
         return this.clusterEnabled == null ? Input.empty() : this.clusterEnabled;
@@ -91,7 +91,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="engine")
-    private final @Nullable Input<String> engine;
+      private final @Nullable Input<String> engine;
 
     public Input<String> getEngine() {
         return this.engine == null ? Input.empty() : this.engine;
@@ -102,7 +102,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="engineVersionActual")
-    private final @Nullable Input<String> engineVersionActual;
+      private final @Nullable Input<String> engineVersionActual;
 
     public Input<String> getEngineVersionActual() {
         return this.engineVersionActual == null ? Input.empty() : this.engineVersionActual;
@@ -113,7 +113,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="globalReplicationGroupDescription")
-    private final @Nullable Input<String> globalReplicationGroupDescription;
+      private final @Nullable Input<String> globalReplicationGroupDescription;
 
     public Input<String> getGlobalReplicationGroupDescription() {
         return this.globalReplicationGroupDescription == null ? Input.empty() : this.globalReplicationGroupDescription;
@@ -124,7 +124,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="globalReplicationGroupId")
-    private final @Nullable Input<String> globalReplicationGroupId;
+      private final @Nullable Input<String> globalReplicationGroupId;
 
     public Input<String> getGlobalReplicationGroupId() {
         return this.globalReplicationGroupId == null ? Input.empty() : this.globalReplicationGroupId;
@@ -135,7 +135,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="globalReplicationGroupIdSuffix")
-    private final @Nullable Input<String> globalReplicationGroupIdSuffix;
+      private final @Nullable Input<String> globalReplicationGroupIdSuffix;
 
     public Input<String> getGlobalReplicationGroupIdSuffix() {
         return this.globalReplicationGroupIdSuffix == null ? Input.empty() : this.globalReplicationGroupIdSuffix;
@@ -146,7 +146,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="primaryReplicationGroupId")
-    private final @Nullable Input<String> primaryReplicationGroupId;
+      private final @Nullable Input<String> primaryReplicationGroupId;
 
     public Input<String> getPrimaryReplicationGroupId() {
         return this.primaryReplicationGroupId == null ? Input.empty() : this.primaryReplicationGroupId;
@@ -157,7 +157,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="transitEncryptionEnabled")
-    private final @Nullable Input<Boolean> transitEncryptionEnabled;
+      private final @Nullable Input<Boolean> transitEncryptionEnabled;
 
     public Input<Boolean> getTransitEncryptionEnabled() {
         return this.transitEncryptionEnabled == null ? Input.empty() : this.transitEncryptionEnabled;

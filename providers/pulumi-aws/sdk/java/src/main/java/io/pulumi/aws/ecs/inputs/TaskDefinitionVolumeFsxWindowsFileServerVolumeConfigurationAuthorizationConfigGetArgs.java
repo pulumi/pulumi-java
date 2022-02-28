@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
      * 
      */
     @InputImport(name="credentialsParameter", required=true)
-    private final Input<String> credentialsParameter;
+      private final Input<String> credentialsParameter;
 
     public Input<String> getCredentialsParameter() {
         return this.credentialsParameter;
@@ -29,7 +29,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
      * 
      */
     @InputImport(name="domain", required=true)
-    private final Input<String> domain;
+      private final Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain;

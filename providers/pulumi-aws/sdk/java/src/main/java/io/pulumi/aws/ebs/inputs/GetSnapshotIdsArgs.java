@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.aws.ebs.inputs.GetSnapshotIdsFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GetSnapshotIdsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetSnapshotIdsFilter> filters;
+      private final @Nullable List<GetSnapshotIdsFilter> filters;
 
     public List<GetSnapshotIdsFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -34,7 +34,7 @@ public final class GetSnapshotIdsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="owners")
-    private final @Nullable List<String> owners;
+      private final @Nullable List<String> owners;
 
     public List<String> getOwners() {
         return this.owners == null ? List.of() : this.owners;
@@ -45,7 +45,7 @@ public final class GetSnapshotIdsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restorableByUserIds")
-    private final @Nullable List<String> restorableByUserIds;
+      private final @Nullable List<String> restorableByUserIds;
 
     public List<String> getRestorableByUserIds() {
         return this.restorableByUserIds == null ? List.of() : this.restorableByUserIds;

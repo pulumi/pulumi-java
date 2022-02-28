@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class EventTargetEcsTargetNetworkConfigurationGetArgs extends io.pu
      * 
      */
     @InputImport(name="assignPublicIp")
-    private final @Nullable Input<Boolean> assignPublicIp;
+      private final @Nullable Input<Boolean> assignPublicIp;
 
     public Input<Boolean> getAssignPublicIp() {
         return this.assignPublicIp == null ? Input.empty() : this.assignPublicIp;
@@ -32,7 +32,7 @@ public final class EventTargetEcsTargetNetworkConfigurationGetArgs extends io.pu
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -43,7 +43,7 @@ public final class EventTargetEcsTargetNetworkConfigurationGetArgs extends io.pu
      * 
      */
     @InputImport(name="subnets", required=true)
-    private final Input<List<String>> subnets;
+      private final Input<List<String>> subnets;
 
     public Input<List<String>> getSubnets() {
         return this.subnets;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class StreamConsumerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -30,7 +30,7 @@ public final class StreamConsumerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamArn", required=true)
-    private final Input<String> streamArn;
+      private final Input<String> streamArn;
 
     public Input<String> getStreamArn() {
         return this.streamArn;

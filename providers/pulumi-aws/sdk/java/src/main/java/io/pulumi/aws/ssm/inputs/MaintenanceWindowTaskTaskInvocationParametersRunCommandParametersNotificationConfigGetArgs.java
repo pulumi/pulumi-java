@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="notificationArn")
-    private final @Nullable Input<String> notificationArn;
+      private final @Nullable Input<String> notificationArn;
 
     public Input<String> getNotificationArn() {
         return this.notificationArn == null ? Input.empty() : this.notificationArn;
@@ -31,7 +31,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="notificationEvents")
-    private final @Nullable Input<List<String>> notificationEvents;
+      private final @Nullable Input<List<String>> notificationEvents;
 
     public Input<List<String>> getNotificationEvents() {
         return this.notificationEvents == null ? Input.empty() : this.notificationEvents;
@@ -42,7 +42,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * 
      */
     @InputImport(name="notificationType")
-    private final @Nullable Input<String> notificationType;
+      private final @Nullable Input<String> notificationType;
 
     public Input<String> getNotificationType() {
         return this.notificationType == null ? Input.empty() : this.notificationType;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="modelPackageGroupDescription")
-    private final @Nullable Input<String> modelPackageGroupDescription;
+      private final @Nullable Input<String> modelPackageGroupDescription;
 
     public Input<String> getModelPackageGroupDescription() {
         return this.modelPackageGroupDescription == null ? Input.empty() : this.modelPackageGroupDescription;
@@ -42,7 +42,7 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="modelPackageGroupName")
-    private final @Nullable Input<String> modelPackageGroupName;
+      private final @Nullable Input<String> modelPackageGroupName;
 
     public Input<String> getModelPackageGroupName() {
         return this.modelPackageGroupName == null ? Input.empty() : this.modelPackageGroupName;
@@ -53,7 +53,7 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -64,7 +64,7 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

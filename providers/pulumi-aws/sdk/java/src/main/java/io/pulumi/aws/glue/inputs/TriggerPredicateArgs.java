@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.TriggerPredicateConditionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TriggerPredicateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="conditions", required=true)
-    private final Input<List<TriggerPredicateConditionArgs>> conditions;
+      private final Input<List<TriggerPredicateConditionArgs>> conditions;
 
     public Input<List<TriggerPredicateConditionArgs>> getConditions() {
         return this.conditions;
@@ -32,7 +32,7 @@ public final class TriggerPredicateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="logical")
-    private final @Nullable Input<String> logical;
+      private final @Nullable Input<String> logical;
 
     public Input<String> getLogical() {
         return this.logical == null ? Input.empty() : this.logical;

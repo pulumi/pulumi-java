@@ -5,7 +5,7 @@ package io.pulumi.aws.eks;
 
 import io.pulumi.aws.eks.inputs.FargateProfileSelectorArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -33,7 +33,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fargateProfileName")
-    private final @Nullable Input<String> fargateProfileName;
+      private final @Nullable Input<String> fargateProfileName;
 
     public Input<String> getFargateProfileName() {
         return this.fargateProfileName == null ? Input.empty() : this.fargateProfileName;
@@ -44,7 +44,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podExecutionRoleArn", required=true)
-    private final Input<String> podExecutionRoleArn;
+      private final Input<String> podExecutionRoleArn;
 
     public Input<String> getPodExecutionRoleArn() {
         return this.podExecutionRoleArn;
@@ -55,7 +55,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selectors", required=true)
-    private final Input<List<FargateProfileSelectorArgs>> selectors;
+      private final Input<List<FargateProfileSelectorArgs>> selectors;
 
     public Input<List<FargateProfileSelectorArgs>> getSelectors() {
         return this.selectors;
@@ -66,7 +66,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -77,7 +77,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.codecommit.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="approvalRuleTemplateId")
-    private final @Nullable Input<String> approvalRuleTemplateId;
+      private final @Nullable Input<String> approvalRuleTemplateId;
 
     public Input<String> getApprovalRuleTemplateId() {
         return this.approvalRuleTemplateId == null ? Input.empty() : this.approvalRuleTemplateId;
@@ -30,7 +30,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -41,7 +41,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="creationDate")
-    private final @Nullable Input<String> creationDate;
+      private final @Nullable Input<String> creationDate;
 
     public Input<String> getCreationDate() {
         return this.creationDate == null ? Input.empty() : this.creationDate;
@@ -52,7 +52,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -63,7 +63,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lastModifiedDate")
-    private final @Nullable Input<String> lastModifiedDate;
+      private final @Nullable Input<String> lastModifiedDate;
 
     public Input<String> getLastModifiedDate() {
         return this.lastModifiedDate == null ? Input.empty() : this.lastModifiedDate;
@@ -74,7 +74,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lastModifiedUser")
-    private final @Nullable Input<String> lastModifiedUser;
+      private final @Nullable Input<String> lastModifiedUser;
 
     public Input<String> getLastModifiedUser() {
         return this.lastModifiedUser == null ? Input.empty() : this.lastModifiedUser;
@@ -85,7 +85,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -96,7 +96,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ruleContentSha256")
-    private final @Nullable Input<String> ruleContentSha256;
+      private final @Nullable Input<String> ruleContentSha256;
 
     public Input<String> getRuleContentSha256() {
         return this.ruleContentSha256 == null ? Input.empty() : this.ruleContentSha256;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DistributionTrustedSignerItemGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="awsAccountNumber")
-    private final @Nullable Input<String> awsAccountNumber;
+      private final @Nullable Input<String> awsAccountNumber;
 
     public Input<String> getAwsAccountNumber() {
         return this.awsAccountNumber == null ? Input.empty() : this.awsAccountNumber;
@@ -31,7 +31,7 @@ public final class DistributionTrustedSignerItemGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="keyPairIds")
-    private final @Nullable Input<List<String>> keyPairIds;
+      private final @Nullable Input<List<String>> keyPairIds;
 
     public Input<List<String>> getKeyPairIds() {
         return this.keyPairIds == null ? Input.empty() : this.keyPairIds;

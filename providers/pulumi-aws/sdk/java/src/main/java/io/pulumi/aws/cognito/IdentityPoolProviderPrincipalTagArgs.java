@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class IdentityPoolProviderPrincipalTagArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="identityPoolId", required=true)
-    private final Input<String> identityPoolId;
+      private final Input<String> identityPoolId;
 
     public Input<String> getIdentityPoolId() {
         return this.identityPoolId;
@@ -34,21 +34,21 @@ public final class IdentityPoolProviderPrincipalTagArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="identityProviderName", required=true)
-    private final Input<String> identityProviderName;
+      private final Input<String> identityProviderName;
 
     public Input<String> getIdentityProviderName() {
         return this.identityProviderName;
     }
 
     @InputImport(name="principalTags")
-    private final @Nullable Input<Map<String,String>> principalTags;
+      private final @Nullable Input<Map<String,String>> principalTags;
 
     public Input<Map<String,String>> getPrincipalTags() {
         return this.principalTags == null ? Input.empty() : this.principalTags;
     }
 
     @InputImport(name="useDefaults")
-    private final @Nullable Input<Boolean> useDefaults;
+      private final @Nullable Input<Boolean> useDefaults;
 
     public Input<Boolean> getUseDefaults() {
         return this.useDefaults == null ? Input.empty() : this.useDefaults;

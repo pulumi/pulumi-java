@@ -8,8 +8,8 @@ import io.pulumi.aws.codecommit.ApprovalRuleTemplateAssociationArgs;
 import io.pulumi.aws.codecommit.inputs.ApprovalRuleTemplateAssociationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -58,6 +58,21 @@ public class ApprovalRuleTemplateAssociation extends io.pulumi.resources.CustomR
         return this.repositoryName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ApprovalRuleTemplateAssociation(String name) {
+        this(name, ApprovalRuleTemplateAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ApprovalRuleTemplateAssociation(String name, ApprovalRuleTemplateAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -11,7 +11,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldSingleH
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldUriPathGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -29,7 +29,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      */
     @Deprecated /* Not supported by WAFv2 API */
     @InputImport(name="allQueryArguments")
-    private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsGetArgs> allQueryArguments;
+      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsGetArgs> allQueryArguments;
 
     @Deprecated /* Not supported by WAFv2 API */
     public Input<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsGetArgs> getAllQueryArguments() {
@@ -45,7 +45,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      */
     @Deprecated /* Not supported by WAFv2 API */
     @InputImport(name="body")
-    private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldBodyGetArgs> body;
+      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldBodyGetArgs> body;
 
     @Deprecated /* Not supported by WAFv2 API */
     public Input<WebAclLoggingConfigurationRedactedFieldBodyGetArgs> getBody() {
@@ -57,7 +57,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldMethodGetArgs> method;
+      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldMethodGetArgs> method;
 
     public Input<WebAclLoggingConfigurationRedactedFieldMethodGetArgs> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -68,7 +68,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      * 
      */
     @InputImport(name="queryString")
-    private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldQueryStringGetArgs> queryString;
+      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldQueryStringGetArgs> queryString;
 
     public Input<WebAclLoggingConfigurationRedactedFieldQueryStringGetArgs> getQueryString() {
         return this.queryString == null ? Input.empty() : this.queryString;
@@ -79,7 +79,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      * 
      */
     @InputImport(name="singleHeader")
-    private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleHeaderGetArgs> singleHeader;
+      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleHeaderGetArgs> singleHeader;
 
     public Input<WebAclLoggingConfigurationRedactedFieldSingleHeaderGetArgs> getSingleHeader() {
         return this.singleHeader == null ? Input.empty() : this.singleHeader;
@@ -94,7 +94,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      */
     @Deprecated /* Not supported by WAFv2 API */
     @InputImport(name="singleQueryArgument")
-    private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs> singleQueryArgument;
+      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs> singleQueryArgument;
 
     @Deprecated /* Not supported by WAFv2 API */
     public Input<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs> getSingleQueryArgument() {
@@ -106,7 +106,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      * 
      */
     @InputImport(name="uriPath")
-    private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldUriPathGetArgs> uriPath;
+      private final @Nullable Input<WebAclLoggingConfigurationRedactedFieldUriPathGetArgs> uriPath;
 
     public Input<WebAclLoggingConfigurationRedactedFieldUriPathGetArgs> getUriPath() {
         return this.uriPath == null ? Input.empty() : this.uriPath;

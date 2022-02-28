@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.GetDomainClusterConfigZoneAwarenessConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dedicatedMasterCount", required=true)
-    private final Integer dedicatedMasterCount;
+      private final Integer dedicatedMasterCount;
 
     public Integer getDedicatedMasterCount() {
         return this.dedicatedMasterCount;
@@ -34,7 +34,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dedicatedMasterEnabled", required=true)
-    private final Boolean dedicatedMasterEnabled;
+      private final Boolean dedicatedMasterEnabled;
 
     public Boolean getDedicatedMasterEnabled() {
         return this.dedicatedMasterEnabled;
@@ -45,7 +45,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dedicatedMasterType", required=true)
-    private final String dedicatedMasterType;
+      private final String dedicatedMasterType;
 
     public String getDedicatedMasterType() {
         return this.dedicatedMasterType;
@@ -56,7 +56,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="instanceCount", required=true)
-    private final Integer instanceCount;
+      private final Integer instanceCount;
 
     public Integer getInstanceCount() {
         return this.instanceCount;
@@ -67,7 +67,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+      private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -78,7 +78,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="warmCount", required=true)
-    private final Integer warmCount;
+      private final Integer warmCount;
 
     public Integer getWarmCount() {
         return this.warmCount;
@@ -89,7 +89,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="warmEnabled")
-    private final @Nullable Boolean warmEnabled;
+      private final @Nullable Boolean warmEnabled;
 
     public Optional<Boolean> getWarmEnabled() {
         return this.warmEnabled == null ? Optional.empty() : Optional.ofNullable(this.warmEnabled);
@@ -100,7 +100,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="warmType", required=true)
-    private final String warmType;
+      private final String warmType;
 
     public String getWarmType() {
         return this.warmType;
@@ -111,7 +111,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="zoneAwarenessConfigs", required=true)
-    private final List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs;
+      private final List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs;
 
     public List<GetDomainClusterConfigZoneAwarenessConfig> getZoneAwarenessConfigs() {
         return this.zoneAwarenessConfigs;
@@ -122,7 +122,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="zoneAwarenessEnabled", required=true)
-    private final Boolean zoneAwarenessEnabled;
+      private final Boolean zoneAwarenessEnabled;
 
     public Boolean getZoneAwarenessEnabled() {
         return this.zoneAwarenessEnabled;

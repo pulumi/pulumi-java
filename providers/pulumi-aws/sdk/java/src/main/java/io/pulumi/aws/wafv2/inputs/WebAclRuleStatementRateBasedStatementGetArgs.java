@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementForwardedIpConfigGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WebAclRuleStatementRateBasedStatementGetArgs extends io.pulum
      * 
      */
     @InputImport(name="aggregateKeyType")
-    private final @Nullable Input<String> aggregateKeyType;
+      private final @Nullable Input<String> aggregateKeyType;
 
     public Input<String> getAggregateKeyType() {
         return this.aggregateKeyType == null ? Input.empty() : this.aggregateKeyType;
@@ -33,7 +33,7 @@ public final class WebAclRuleStatementRateBasedStatementGetArgs extends io.pulum
      * 
      */
     @InputImport(name="forwardedIpConfig")
-    private final @Nullable Input<WebAclRuleStatementRateBasedStatementForwardedIpConfigGetArgs> forwardedIpConfig;
+      private final @Nullable Input<WebAclRuleStatementRateBasedStatementForwardedIpConfigGetArgs> forwardedIpConfig;
 
     public Input<WebAclRuleStatementRateBasedStatementForwardedIpConfigGetArgs> getForwardedIpConfig() {
         return this.forwardedIpConfig == null ? Input.empty() : this.forwardedIpConfig;
@@ -44,7 +44,7 @@ public final class WebAclRuleStatementRateBasedStatementGetArgs extends io.pulum
      * 
      */
     @InputImport(name="limit", required=true)
-    private final Input<Integer> limit;
+      private final Input<Integer> limit;
 
     public Input<Integer> getLimit() {
         return this.limit;
@@ -55,7 +55,7 @@ public final class WebAclRuleStatementRateBasedStatementGetArgs extends io.pulum
      * 
      */
     @InputImport(name="scopeDownStatement")
-    private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementGetArgs> scopeDownStatement;
+      private final @Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementGetArgs> scopeDownStatement;
 
     public Input<WebAclRuleStatementRateBasedStatementScopeDownStatementGetArgs> getScopeDownStatement() {
         return this.scopeDownStatement == null ? Input.empty() : this.scopeDownStatement;

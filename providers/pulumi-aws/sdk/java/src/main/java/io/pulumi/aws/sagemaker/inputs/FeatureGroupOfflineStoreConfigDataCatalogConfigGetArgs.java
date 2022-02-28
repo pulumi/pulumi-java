@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs extend
      * 
      */
     @InputImport(name="catalog")
-    private final @Nullable Input<String> catalog;
+      private final @Nullable Input<String> catalog;
 
     public Input<String> getCatalog() {
         return this.catalog == null ? Input.empty() : this.catalog;
@@ -30,7 +30,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs extend
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Input<String> database;
+      private final @Nullable Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
@@ -41,7 +41,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs extend
      * 
      */
     @InputImport(name="tableName")
-    private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;

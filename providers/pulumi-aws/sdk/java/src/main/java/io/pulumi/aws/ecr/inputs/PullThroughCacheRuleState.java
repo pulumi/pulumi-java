@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ecrRepositoryPrefix")
-    private final @Nullable Input<String> ecrRepositoryPrefix;
+      private final @Nullable Input<String> ecrRepositoryPrefix;
 
     public Input<String> getEcrRepositoryPrefix() {
         return this.ecrRepositoryPrefix == null ? Input.empty() : this.ecrRepositoryPrefix;
@@ -30,7 +30,7 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="registryId")
-    private final @Nullable Input<String> registryId;
+      private final @Nullable Input<String> registryId;
 
     public Input<String> getRegistryId() {
         return this.registryId == null ? Input.empty() : this.registryId;
@@ -41,7 +41,7 @@ public final class PullThroughCacheRuleState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="upstreamRegistryUrl")
-    private final @Nullable Input<String> upstreamRegistryUrl;
+      private final @Nullable Input<String> upstreamRegistryUrl;
 
     public Input<String> getUpstreamRegistryUrl() {
         return this.upstreamRegistryUrl == null ? Input.empty() : this.upstreamRegistryUrl;

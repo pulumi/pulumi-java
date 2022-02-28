@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssoadmin;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="instanceArn", required=true)
-    private final Input<String> instanceArn;
+      private final Input<String> instanceArn;
 
     public Input<String> getInstanceArn() {
         return this.instanceArn;
@@ -29,7 +29,7 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="managedPolicyArn", required=true)
-    private final Input<String> managedPolicyArn;
+      private final Input<String> managedPolicyArn;
 
     public Input<String> getManagedPolicyArn() {
         return this.managedPolicyArn;
@@ -40,7 +40,7 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="permissionSetArn", required=true)
-    private final Input<String> permissionSetArn;
+      private final Input<String> permissionSetArn;
 
     public Input<String> getPermissionSetArn() {
         return this.permissionSetArn;

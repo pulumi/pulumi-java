@@ -8,8 +8,8 @@ import io.pulumi.aws.appconfig.DeploymentStrategyArgs;
 import io.pulumi.aws.appconfig.inputs.DeploymentStrategyState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -173,6 +173,21 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DeploymentStrategy(String name) {
+        this(name, DeploymentStrategyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DeploymentStrategy(String name, DeploymentStrategyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.
