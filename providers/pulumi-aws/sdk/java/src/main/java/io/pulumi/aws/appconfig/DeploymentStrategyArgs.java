@@ -4,7 +4,7 @@
 package io.pulumi.aws.appconfig;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="deploymentDurationInMinutes", required=true)
-    private final Input<Integer> deploymentDurationInMinutes;
+      private final Input<Integer> deploymentDurationInMinutes;
 
     public Input<Integer> getDeploymentDurationInMinutes() {
         return this.deploymentDurationInMinutes;
@@ -33,7 +33,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="finalBakeTimeInMinutes")
-    private final @Nullable Input<Integer> finalBakeTimeInMinutes;
+      private final @Nullable Input<Integer> finalBakeTimeInMinutes;
 
     public Input<Integer> getFinalBakeTimeInMinutes() {
         return this.finalBakeTimeInMinutes == null ? Input.empty() : this.finalBakeTimeInMinutes;
@@ -55,7 +55,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="growthFactor", required=true)
-    private final Input<Double> growthFactor;
+      private final Input<Double> growthFactor;
 
     public Input<Double> getGrowthFactor() {
         return this.growthFactor;
@@ -66,7 +66,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="growthType")
-    private final @Nullable Input<String> growthType;
+      private final @Nullable Input<String> growthType;
 
     public Input<String> getGrowthType() {
         return this.growthType == null ? Input.empty() : this.growthType;
@@ -77,7 +77,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,7 +88,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="replicateTo", required=true)
-    private final Input<String> replicateTo;
+      private final Input<String> replicateTo;
 
     public Input<String> getReplicateTo() {
         return this.replicateTo;
@@ -99,7 +99,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class GetBrokerEncryptionOption extends io.pulumi.resources.InvokeA
     public static final GetBrokerEncryptionOption Empty = new GetBrokerEncryptionOption();
 
     @InputImport(name="kmsKeyId", required=true)
-    private final String kmsKeyId;
+      private final String kmsKeyId;
 
     public String getKmsKeyId() {
         return this.kmsKeyId;
     }
 
     @InputImport(name="useAwsOwnedKey", required=true)
-    private final Boolean useAwsOwnedKey;
+      private final Boolean useAwsOwnedKey;
 
     public Boolean getUseAwsOwnedKey() {
         return this.useAwsOwnedKey;

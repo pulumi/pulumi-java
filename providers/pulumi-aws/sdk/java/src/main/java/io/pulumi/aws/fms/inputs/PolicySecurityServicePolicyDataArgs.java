@@ -4,7 +4,7 @@
 package io.pulumi.aws.fms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PolicySecurityServicePolicyDataArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="managedServiceData")
-    private final @Nullable Input<String> managedServiceData;
+      private final @Nullable Input<String> managedServiceData;
 
     public Input<String> getManagedServiceData() {
         return this.managedServiceData == null ? Input.empty() : this.managedServiceData;
@@ -30,7 +30,7 @@ public final class PolicySecurityServicePolicyDataArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

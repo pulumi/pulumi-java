@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetAmiFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="executableUsers")
-    private final @Nullable List<String> executableUsers;
+      private final @Nullable List<String> executableUsers;
 
     public List<String> getExecutableUsers() {
         return this.executableUsers == null ? List.of() : this.executableUsers;
@@ -37,7 +37,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetAmiFilter> filters;
+      private final @Nullable List<GetAmiFilter> filters;
 
     public List<GetAmiFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -49,7 +49,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mostRecent")
-    private final @Nullable Boolean mostRecent;
+      private final @Nullable Boolean mostRecent;
 
     public Optional<Boolean> getMostRecent() {
         return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
@@ -64,7 +64,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nameRegex")
-    private final @Nullable String nameRegex;
+      private final @Nullable String nameRegex;
 
     public Optional<String> getNameRegex() {
         return this.nameRegex == null ? Optional.empty() : Optional.ofNullable(this.nameRegex);
@@ -75,7 +75,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="owners", required=true)
-    private final List<String> owners;
+      private final List<String> owners;
 
     public List<String> getOwners() {
         return this.owners;
@@ -88,7 +88,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

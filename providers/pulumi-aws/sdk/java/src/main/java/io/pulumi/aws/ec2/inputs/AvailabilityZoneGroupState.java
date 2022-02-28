@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AvailabilityZoneGroupState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="groupName")
-    private final @Nullable Input<String> groupName;
+      private final @Nullable Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName == null ? Input.empty() : this.groupName;
@@ -30,7 +30,7 @@ public final class AvailabilityZoneGroupState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="optInStatus")
-    private final @Nullable Input<String> optInStatus;
+      private final @Nullable Input<String> optInStatus;
 
     public Input<String> getOptInStatus() {
         return this.optInStatus == null ? Input.empty() : this.optInStatus;

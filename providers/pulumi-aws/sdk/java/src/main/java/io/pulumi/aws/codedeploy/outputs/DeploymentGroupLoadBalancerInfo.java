@@ -6,7 +6,7 @@ package io.pulumi.aws.codedeploy.outputs;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupLoadBalancerInfoElbInfo;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupLoadBalancerInfoTargetGroupInfo;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfo;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

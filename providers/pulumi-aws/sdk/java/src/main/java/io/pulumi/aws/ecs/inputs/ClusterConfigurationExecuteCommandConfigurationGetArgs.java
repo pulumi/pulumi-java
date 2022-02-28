@@ -5,7 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.aws.ecs.inputs.ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -31,7 +31,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
      * 
      */
     @InputImport(name="logConfiguration")
-    private final @Nullable Input<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration;
+      private final @Nullable Input<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration;
 
     public Input<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> getLogConfiguration() {
         return this.logConfiguration == null ? Input.empty() : this.logConfiguration;
@@ -42,7 +42,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
      * 
      */
     @InputImport(name="logging")
-    private final @Nullable Input<String> logging;
+      private final @Nullable Input<String> logging;
 
     public Input<String> getLogging() {
         return this.logging == null ? Input.empty() : this.logging;

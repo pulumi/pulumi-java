@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetRouteTableFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetRouteTableFilter> filters;
+      private final @Nullable List<GetRouteTableFilter> filters;
 
     public List<GetRouteTableFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -33,7 +33,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gatewayId")
-    private final @Nullable String gatewayId;
+      private final @Nullable String gatewayId;
 
     public Optional<String> getGatewayId() {
         return this.gatewayId == null ? Optional.empty() : Optional.ofNullable(this.gatewayId);
@@ -44,7 +44,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routeTableId")
-    private final @Nullable String routeTableId;
+      private final @Nullable String routeTableId;
 
     public Optional<String> getRouteTableId() {
         return this.routeTableId == null ? Optional.empty() : Optional.ofNullable(this.routeTableId);
@@ -55,7 +55,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable String subnetId;
+      private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
@@ -66,7 +66,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -77,7 +77,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable String vpcId;
+      private final @Nullable String vpcId;
 
     public Optional<String> getVpcId() {
         return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);

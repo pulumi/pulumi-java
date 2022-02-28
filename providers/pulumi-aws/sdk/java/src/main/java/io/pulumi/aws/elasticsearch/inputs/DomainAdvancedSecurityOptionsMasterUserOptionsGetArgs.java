@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs extends
      * 
      */
     @InputImport(name="masterUserArn")
-    private final @Nullable Input<String> masterUserArn;
+      private final @Nullable Input<String> masterUserArn;
 
     public Input<String> getMasterUserArn() {
         return this.masterUserArn == null ? Input.empty() : this.masterUserArn;
@@ -30,7 +30,7 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs extends
      * 
      */
     @InputImport(name="masterUserName")
-    private final @Nullable Input<String> masterUserName;
+      private final @Nullable Input<String> masterUserName;
 
     public Input<String> getMasterUserName() {
         return this.masterUserName == null ? Input.empty() : this.masterUserName;
@@ -41,7 +41,7 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs extends
      * 
      */
     @InputImport(name="masterUserPassword")
-    private final @Nullable Input<String> masterUserPassword;
+      private final @Nullable Input<String> masterUserPassword;
 
     public Input<String> getMasterUserPassword() {
         return this.masterUserPassword == null ? Input.empty() : this.masterUserPassword;

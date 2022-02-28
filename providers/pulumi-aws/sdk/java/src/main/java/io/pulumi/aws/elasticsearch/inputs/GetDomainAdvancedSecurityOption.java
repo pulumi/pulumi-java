@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDomainAdvancedSecurityOption extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -28,7 +28,7 @@ public final class GetDomainAdvancedSecurityOption extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="internalUserDatabaseEnabled", required=true)
-    private final Boolean internalUserDatabaseEnabled;
+      private final Boolean internalUserDatabaseEnabled;
 
     public Boolean getInternalUserDatabaseEnabled() {
         return this.internalUserDatabaseEnabled;

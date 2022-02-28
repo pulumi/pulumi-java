@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @InputImport(name="flags", required=true)
-    private final Input<List<String>> flags;
+      private final Input<List<String>> flags;
 
     public Input<List<String>> getFlags() {
         return this.flags;
@@ -33,7 +33,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @InputImport(name="masks")
-    private final @Nullable Input<List<String>> masks;
+      private final @Nullable Input<List<String>> masks;
 
     public Input<List<String>> getMasks() {
         return this.masks == null ? Input.empty() : this.masks;

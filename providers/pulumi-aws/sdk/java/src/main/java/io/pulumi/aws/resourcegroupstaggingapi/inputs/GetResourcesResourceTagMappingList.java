@@ -4,7 +4,7 @@
 package io.pulumi.aws.resourcegroupstaggingapi.inputs;
 
 import io.pulumi.aws.resourcegroupstaggingapi.inputs.GetResourcesResourceTagMappingListComplianceDetail;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class GetResourcesResourceTagMappingList extends io.pulumi.resource
      * 
      */
     @InputImport(name="complianceDetails", required=true)
-    private final List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails;
+      private final List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails;
 
     public List<GetResourcesResourceTagMappingListComplianceDetail> getComplianceDetails() {
         return this.complianceDetails;
@@ -31,7 +31,7 @@ public final class GetResourcesResourceTagMappingList extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceArn", required=true)
-    private final String resourceArn;
+      private final String resourceArn;
 
     public String getResourceArn() {
         return this.resourceArn;
@@ -42,7 +42,7 @@ public final class GetResourcesResourceTagMappingList extends io.pulumi.resource
      * 
      */
     @InputImport(name="tags", required=true)
-    private final Map<String,String> tags;
+      private final Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags;

@@ -15,7 +15,7 @@ import io.pulumi.aws.elasticsearch.inputs.DomainNodeToNodeEncryptionArgs;
 import io.pulumi.aws.elasticsearch.inputs.DomainSnapshotOptionsArgs;
 import io.pulumi.aws.elasticsearch.inputs.DomainVpcOptionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -32,14 +32,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicies")
-    private final @Nullable Input<String> accessPolicies;
+      private final @Nullable Input<String> accessPolicies;
 
     public Input<String> getAccessPolicies() {
         return this.accessPolicies == null ? Input.empty() : this.accessPolicies;
     }
 
     @InputImport(name="advancedOptions")
-    private final @Nullable Input<Map<String,String>> advancedOptions;
+      private final @Nullable Input<Map<String,String>> advancedOptions;
 
     public Input<Map<String,String>> getAdvancedOptions() {
         return this.advancedOptions == null ? Input.empty() : this.advancedOptions;
@@ -50,7 +50,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advancedSecurityOptions")
-    private final @Nullable Input<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions;
+      private final @Nullable Input<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions;
 
     public Input<DomainAdvancedSecurityOptionsArgs> getAdvancedSecurityOptions() {
         return this.advancedSecurityOptions == null ? Input.empty() : this.advancedSecurityOptions;
@@ -61,7 +61,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoTuneOptions")
-    private final @Nullable Input<DomainAutoTuneOptionsArgs> autoTuneOptions;
+      private final @Nullable Input<DomainAutoTuneOptionsArgs> autoTuneOptions;
 
     public Input<DomainAutoTuneOptionsArgs> getAutoTuneOptions() {
         return this.autoTuneOptions == null ? Input.empty() : this.autoTuneOptions;
@@ -72,7 +72,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterConfig")
-    private final @Nullable Input<DomainClusterConfigArgs> clusterConfig;
+      private final @Nullable Input<DomainClusterConfigArgs> clusterConfig;
 
     public Input<DomainClusterConfigArgs> getClusterConfig() {
         return this.clusterConfig == null ? Input.empty() : this.clusterConfig;
@@ -83,7 +83,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cognitoOptions")
-    private final @Nullable Input<DomainCognitoOptionsArgs> cognitoOptions;
+      private final @Nullable Input<DomainCognitoOptionsArgs> cognitoOptions;
 
     public Input<DomainCognitoOptionsArgs> getCognitoOptions() {
         return this.cognitoOptions == null ? Input.empty() : this.cognitoOptions;
@@ -94,7 +94,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainEndpointOptions")
-    private final @Nullable Input<DomainDomainEndpointOptionsArgs> domainEndpointOptions;
+      private final @Nullable Input<DomainDomainEndpointOptionsArgs> domainEndpointOptions;
 
     public Input<DomainDomainEndpointOptionsArgs> getDomainEndpointOptions() {
         return this.domainEndpointOptions == null ? Input.empty() : this.domainEndpointOptions;
@@ -105,7 +105,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -116,7 +116,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsOptions")
-    private final @Nullable Input<DomainEbsOptionsArgs> ebsOptions;
+      private final @Nullable Input<DomainEbsOptionsArgs> ebsOptions;
 
     public Input<DomainEbsOptionsArgs> getEbsOptions() {
         return this.ebsOptions == null ? Input.empty() : this.ebsOptions;
@@ -127,7 +127,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elasticsearchVersion")
-    private final @Nullable Input<String> elasticsearchVersion;
+      private final @Nullable Input<String> elasticsearchVersion;
 
     public Input<String> getElasticsearchVersion() {
         return this.elasticsearchVersion == null ? Input.empty() : this.elasticsearchVersion;
@@ -138,7 +138,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptAtRest")
-    private final @Nullable Input<DomainEncryptAtRestArgs> encryptAtRest;
+      private final @Nullable Input<DomainEncryptAtRestArgs> encryptAtRest;
 
     public Input<DomainEncryptAtRestArgs> getEncryptAtRest() {
         return this.encryptAtRest == null ? Input.empty() : this.encryptAtRest;
@@ -149,7 +149,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logPublishingOptions")
-    private final @Nullable Input<List<DomainLogPublishingOptionArgs>> logPublishingOptions;
+      private final @Nullable Input<List<DomainLogPublishingOptionArgs>> logPublishingOptions;
 
     public Input<List<DomainLogPublishingOptionArgs>> getLogPublishingOptions() {
         return this.logPublishingOptions == null ? Input.empty() : this.logPublishingOptions;
@@ -160,7 +160,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeToNodeEncryption")
-    private final @Nullable Input<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption;
+      private final @Nullable Input<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption;
 
     public Input<DomainNodeToNodeEncryptionArgs> getNodeToNodeEncryption() {
         return this.nodeToNodeEncryption == null ? Input.empty() : this.nodeToNodeEncryption;
@@ -171,7 +171,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotOptions")
-    private final @Nullable Input<DomainSnapshotOptionsArgs> snapshotOptions;
+      private final @Nullable Input<DomainSnapshotOptionsArgs> snapshotOptions;
 
     public Input<DomainSnapshotOptionsArgs> getSnapshotOptions() {
         return this.snapshotOptions == null ? Input.empty() : this.snapshotOptions;
@@ -182,7 +182,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -193,7 +193,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcOptions")
-    private final @Nullable Input<DomainVpcOptionsArgs> vpcOptions;
+      private final @Nullable Input<DomainVpcOptionsArgs> vpcOptions;
 
     public Input<DomainVpcOptionsArgs> getVpcOptions() {
         return this.vpcOptions == null ? Input.empty() : this.vpcOptions;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="aspectRatio")
-    private final @Nullable Input<String> aspectRatio;
+      private final @Nullable Input<String> aspectRatio;
 
     public Input<String> getAspectRatio() {
         return this.aspectRatio == null ? Input.empty() : this.aspectRatio;
@@ -30,7 +30,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<String> format;
+      private final @Nullable Input<String> format;
 
     public Input<String> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -41,7 +41,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<String> interval;
+      private final @Nullable Input<String> interval;
 
     public Input<String> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -52,7 +52,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxHeight")
-    private final @Nullable Input<String> maxHeight;
+      private final @Nullable Input<String> maxHeight;
 
     public Input<String> getMaxHeight() {
         return this.maxHeight == null ? Input.empty() : this.maxHeight;
@@ -63,7 +63,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxWidth")
-    private final @Nullable Input<String> maxWidth;
+      private final @Nullable Input<String> maxWidth;
 
     public Input<String> getMaxWidth() {
         return this.maxWidth == null ? Input.empty() : this.maxWidth;
@@ -74,7 +74,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="paddingPolicy")
-    private final @Nullable Input<String> paddingPolicy;
+      private final @Nullable Input<String> paddingPolicy;
 
     public Input<String> getPaddingPolicy() {
         return this.paddingPolicy == null ? Input.empty() : this.paddingPolicy;
@@ -85,7 +85,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resolution")
-    private final @Nullable Input<String> resolution;
+      private final @Nullable Input<String> resolution;
 
     public Input<String> getResolution() {
         return this.resolution == null ? Input.empty() : this.resolution;
@@ -96,7 +96,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sizingPolicy")
-    private final @Nullable Input<String> sizingPolicy;
+      private final @Nullable Input<String> sizingPolicy;
 
     public Input<String> getSizingPolicy() {
         return this.sizingPolicy == null ? Input.empty() : this.sizingPolicy;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetStreamStreamModeDetail extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="streamMode", required=true)
-    private final String streamMode;
+      private final String streamMode;
 
     public String getStreamMode() {
         return this.streamMode;

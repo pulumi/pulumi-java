@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RestApiPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -30,7 +30,7 @@ public final class RestApiPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApiId")
-    private final @Nullable Input<String> restApiId;
+      private final @Nullable Input<String> restApiId;
 
     public Input<String> getRestApiId() {
         return this.restApiId == null ? Input.empty() : this.restApiId;

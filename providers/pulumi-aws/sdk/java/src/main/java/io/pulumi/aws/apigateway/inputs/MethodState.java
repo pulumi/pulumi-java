@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class MethodState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiKeyRequired")
-    private final @Nullable Input<Boolean> apiKeyRequired;
+      private final @Nullable Input<Boolean> apiKeyRequired;
 
     public Input<Boolean> getApiKeyRequired() {
         return this.apiKeyRequired == null ? Input.empty() : this.apiKeyRequired;
@@ -33,7 +33,7 @@ public final class MethodState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorization")
-    private final @Nullable Input<String> authorization;
+      private final @Nullable Input<String> authorization;
 
     public Input<String> getAuthorization() {
         return this.authorization == null ? Input.empty() : this.authorization;
@@ -44,7 +44,7 @@ public final class MethodState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationScopes")
-    private final @Nullable Input<List<String>> authorizationScopes;
+      private final @Nullable Input<List<String>> authorizationScopes;
 
     public Input<List<String>> getAuthorizationScopes() {
         return this.authorizationScopes == null ? Input.empty() : this.authorizationScopes;
@@ -55,7 +55,7 @@ public final class MethodState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerId")
-    private final @Nullable Input<String> authorizerId;
+      private final @Nullable Input<String> authorizerId;
 
     public Input<String> getAuthorizerId() {
         return this.authorizerId == null ? Input.empty() : this.authorizerId;
@@ -66,7 +66,7 @@ public final class MethodState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpMethod")
-    private final @Nullable Input<String> httpMethod;
+      private final @Nullable Input<String> httpMethod;
 
     public Input<String> getHttpMethod() {
         return this.httpMethod == null ? Input.empty() : this.httpMethod;
@@ -77,7 +77,7 @@ public final class MethodState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationName")
-    private final @Nullable Input<String> operationName;
+      private final @Nullable Input<String> operationName;
 
     public Input<String> getOperationName() {
         return this.operationName == null ? Input.empty() : this.operationName;
@@ -90,7 +90,7 @@ public final class MethodState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestModels")
-    private final @Nullable Input<Map<String,String>> requestModels;
+      private final @Nullable Input<Map<String,String>> requestModels;
 
     public Input<Map<String,String>> getRequestModels() {
         return this.requestModels == null ? Input.empty() : this.requestModels;
@@ -102,7 +102,7 @@ public final class MethodState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestParameters")
-    private final @Nullable Input<Map<String,Boolean>> requestParameters;
+      private final @Nullable Input<Map<String,Boolean>> requestParameters;
 
     public Input<Map<String,Boolean>> getRequestParameters() {
         return this.requestParameters == null ? Input.empty() : this.requestParameters;
@@ -113,7 +113,7 @@ public final class MethodState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestValidatorId")
-    private final @Nullable Input<String> requestValidatorId;
+      private final @Nullable Input<String> requestValidatorId;
 
     public Input<String> getRequestValidatorId() {
         return this.requestValidatorId == null ? Input.empty() : this.requestValidatorId;
@@ -124,7 +124,7 @@ public final class MethodState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -135,7 +135,7 @@ public final class MethodState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi")
-    private final @Nullable Input<String> restApi;
+      private final @Nullable Input<String> restApi;
 
     public Input<String> getRestApi() {
         return this.restApi == null ? Input.empty() : this.restApi;

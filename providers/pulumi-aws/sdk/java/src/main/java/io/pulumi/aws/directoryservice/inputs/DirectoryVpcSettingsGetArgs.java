@@ -4,7 +4,7 @@
 package io.pulumi.aws.directoryservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class DirectoryVpcSettingsGetArgs extends io.pulumi.resources.Resou
     public static final DirectoryVpcSettingsGetArgs Empty = new DirectoryVpcSettingsGetArgs();
 
     @InputImport(name="availabilityZones")
-    private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Input<List<String>> availabilityZones;
 
     public Input<List<String>> getAvailabilityZones() {
         return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
@@ -27,7 +27,7 @@ public final class DirectoryVpcSettingsGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final Input<List<String>> subnetIds;
+      private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
@@ -38,7 +38,7 @@ public final class DirectoryVpcSettingsGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+      private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;

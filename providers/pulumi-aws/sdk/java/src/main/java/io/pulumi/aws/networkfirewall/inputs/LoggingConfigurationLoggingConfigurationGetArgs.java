@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class LoggingConfigurationLoggingConfigurationGetArgs extends io.pu
      * 
      */
     @InputImport(name="logDestinationConfigs", required=true)
-    private final Input<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs>> logDestinationConfigs;
+      private final Input<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs>> logDestinationConfigs;
 
     public Input<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigGetArgs>> getLogDestinationConfigs() {
         return this.logDestinationConfigs;

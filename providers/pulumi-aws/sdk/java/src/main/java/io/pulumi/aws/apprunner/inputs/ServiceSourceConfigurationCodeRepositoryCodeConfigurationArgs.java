@@ -5,7 +5,7 @@ package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs
      * 
      */
     @InputImport(name="codeConfigurationValues")
-    private final @Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> codeConfigurationValues;
+      private final @Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> codeConfigurationValues;
 
     public Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesArgs> getCodeConfigurationValues() {
         return this.codeConfigurationValues == null ? Input.empty() : this.codeConfigurationValues;
@@ -31,7 +31,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs
      * 
      */
     @InputImport(name="configurationSource", required=true)
-    private final Input<String> configurationSource;
+      private final Input<String> configurationSource;
 
     public Input<String> getConfigurationSource() {
         return this.configurationSource;

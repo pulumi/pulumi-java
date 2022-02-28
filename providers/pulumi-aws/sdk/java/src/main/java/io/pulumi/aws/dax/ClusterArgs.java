@@ -5,7 +5,7 @@ package io.pulumi.aws.dax;
 
 import io.pulumi.aws.dax.inputs.ClusterServerSideEncryptionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZones")
-    private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Input<List<String>> availabilityZones;
 
     public Input<List<String>> getAvailabilityZones() {
         return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
@@ -37,7 +37,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterEndpointEncryptionType")
-    private final @Nullable Input<String> clusterEndpointEncryptionType;
+      private final @Nullable Input<String> clusterEndpointEncryptionType;
 
     public Input<String> getClusterEndpointEncryptionType() {
         return this.clusterEndpointEncryptionType == null ? Input.empty() : this.clusterEndpointEncryptionType;
@@ -49,7 +49,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -60,7 +60,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -73,7 +73,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRoleArn", required=true)
-    private final Input<String> iamRoleArn;
+      private final Input<String> iamRoleArn;
 
     public Input<String> getIamRoleArn() {
         return this.iamRoleArn;
@@ -87,7 +87,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindow")
-    private final @Nullable Input<String> maintenanceWindow;
+      private final @Nullable Input<String> maintenanceWindow;
 
     public Input<String> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
@@ -99,7 +99,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeType", required=true)
-    private final Input<String> nodeType;
+      private final Input<String> nodeType;
 
     public Input<String> getNodeType() {
         return this.nodeType;
@@ -112,7 +112,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationTopicArn")
-    private final @Nullable Input<String> notificationTopicArn;
+      private final @Nullable Input<String> notificationTopicArn;
 
     public Input<String> getNotificationTopicArn() {
         return this.notificationTopicArn == null ? Input.empty() : this.notificationTopicArn;
@@ -124,7 +124,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameterGroupName")
-    private final @Nullable Input<String> parameterGroupName;
+      private final @Nullable Input<String> parameterGroupName;
 
     public Input<String> getParameterGroupName() {
         return this.parameterGroupName == null ? Input.empty() : this.parameterGroupName;
@@ -137,7 +137,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicationFactor", required=true)
-    private final Input<Integer> replicationFactor;
+      private final Input<Integer> replicationFactor;
 
     public Input<Integer> getReplicationFactor() {
         return this.replicationFactor;
@@ -149,7 +149,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -160,7 +160,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverSideEncryption")
-    private final @Nullable Input<ClusterServerSideEncryptionArgs> serverSideEncryption;
+      private final @Nullable Input<ClusterServerSideEncryptionArgs> serverSideEncryption;
 
     public Input<ClusterServerSideEncryptionArgs> getServerSideEncryption() {
         return this.serverSideEncryption == null ? Input.empty() : this.serverSideEncryption;
@@ -172,7 +172,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetGroupName")
-    private final @Nullable Input<String> subnetGroupName;
+      private final @Nullable Input<String> subnetGroupName;
 
     public Input<String> getSubnetGroupName() {
         return this.subnetGroupName == null ? Input.empty() : this.subnetGroupName;
@@ -183,7 +183,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

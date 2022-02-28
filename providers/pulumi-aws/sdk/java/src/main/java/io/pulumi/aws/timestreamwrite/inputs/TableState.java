@@ -6,7 +6,7 @@ package io.pulumi.aws.timestreamwrite.inputs;
 import io.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesGetArgs;
 import io.pulumi.aws.timestreamwrite.inputs.TableRetentionPropertiesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+      private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -44,7 +44,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="magneticStoreWriteProperties")
-    private final @Nullable Input<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties;
+      private final @Nullable Input<TableMagneticStoreWritePropertiesGetArgs> magneticStoreWriteProperties;
 
     public Input<TableMagneticStoreWritePropertiesGetArgs> getMagneticStoreWriteProperties() {
         return this.magneticStoreWriteProperties == null ? Input.empty() : this.magneticStoreWriteProperties;
@@ -55,7 +55,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionProperties")
-    private final @Nullable Input<TableRetentionPropertiesGetArgs> retentionProperties;
+      private final @Nullable Input<TableRetentionPropertiesGetArgs> retentionProperties;
 
     public Input<TableRetentionPropertiesGetArgs> getRetentionProperties() {
         return this.retentionProperties == null ? Input.empty() : this.retentionProperties;
@@ -66,7 +66,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName")
-    private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;
@@ -77,7 +77,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -88,7 +88,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

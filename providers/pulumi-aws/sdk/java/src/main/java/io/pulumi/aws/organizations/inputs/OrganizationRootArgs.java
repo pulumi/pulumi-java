@@ -5,7 +5,7 @@ package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.aws.organizations.inputs.OrganizationRootPolicyTypeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class OrganizationRootArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class OrganizationRootArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -43,7 +43,7 @@ public final class OrganizationRootArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class OrganizationRootArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyTypes")
-    private final @Nullable Input<List<OrganizationRootPolicyTypeArgs>> policyTypes;
+      private final @Nullable Input<List<OrganizationRootPolicyTypeArgs>> policyTypes;
 
     public Input<List<OrganizationRootPolicyTypeArgs>> getPolicyTypes() {
         return this.policyTypes == null ? Input.empty() : this.policyTypes;

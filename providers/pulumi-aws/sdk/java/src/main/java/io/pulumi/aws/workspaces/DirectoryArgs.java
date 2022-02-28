@@ -7,7 +7,7 @@ import io.pulumi.aws.workspaces.inputs.DirectorySelfServicePermissionsArgs;
 import io.pulumi.aws.workspaces.inputs.DirectoryWorkspaceAccessPropertiesArgs;
 import io.pulumi.aws.workspaces.inputs.DirectoryWorkspaceCreationPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryId", required=true)
-    private final Input<String> directoryId;
+      private final Input<String> directoryId;
 
     public Input<String> getDirectoryId() {
         return this.directoryId;
@@ -35,7 +35,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipGroupIds")
-    private final @Nullable Input<List<String>> ipGroupIds;
+      private final @Nullable Input<List<String>> ipGroupIds;
 
     public Input<List<String>> getIpGroupIds() {
         return this.ipGroupIds == null ? Input.empty() : this.ipGroupIds;
@@ -46,7 +46,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfServicePermissions")
-    private final @Nullable Input<DirectorySelfServicePermissionsArgs> selfServicePermissions;
+      private final @Nullable Input<DirectorySelfServicePermissionsArgs> selfServicePermissions;
 
     public Input<DirectorySelfServicePermissionsArgs> getSelfServicePermissions() {
         return this.selfServicePermissions == null ? Input.empty() : this.selfServicePermissions;
@@ -57,7 +57,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -68,7 +68,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -79,7 +79,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceAccessProperties")
-    private final @Nullable Input<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties;
+      private final @Nullable Input<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties;
 
     public Input<DirectoryWorkspaceAccessPropertiesArgs> getWorkspaceAccessProperties() {
         return this.workspaceAccessProperties == null ? Input.empty() : this.workspaceAccessProperties;
@@ -90,7 +90,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceCreationProperties")
-    private final @Nullable Input<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties;
+      private final @Nullable Input<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties;
 
     public Input<DirectoryWorkspaceCreationPropertiesArgs> getWorkspaceCreationProperties() {
         return this.workspaceCreationProperties == null ? Input.empty() : this.workspaceCreationProperties;

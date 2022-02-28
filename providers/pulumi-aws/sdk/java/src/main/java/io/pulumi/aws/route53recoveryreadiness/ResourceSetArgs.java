@@ -5,7 +5,7 @@ package io.pulumi.aws.route53recoveryreadiness;
 
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSetName", required=true)
-    private final Input<String> resourceSetName;
+      private final Input<String> resourceSetName;
 
     public Input<String> getResourceSetName() {
         return this.resourceSetName;
@@ -33,7 +33,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSetType", required=true)
-    private final Input<String> resourceSetType;
+      private final Input<String> resourceSetType;
 
     public Input<String> getResourceSetType() {
         return this.resourceSetType;
@@ -44,7 +44,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources", required=true)
-    private final Input<List<ResourceSetResourceArgs>> resources;
+      private final Input<List<ResourceSetResourceArgs>> resources;
 
     public Input<List<ResourceSetResourceArgs>> getResources() {
         return this.resources;
@@ -55,7 +55,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

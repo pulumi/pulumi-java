@@ -6,7 +6,7 @@ package io.pulumi.aws.msk.outputs;
 import io.pulumi.aws.msk.outputs.ClusterLoggingInfoBrokerLogsCloudwatchLogs;
 import io.pulumi.aws.msk.outputs.ClusterLoggingInfoBrokerLogsFirehose;
 import io.pulumi.aws.msk.outputs.ClusterLoggingInfoBrokerLogsS3;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.codeartifact.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -30,7 +30,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="domainOwner")
-    private final @Nullable Input<String> domainOwner;
+      private final @Nullable Input<String> domainOwner;
 
     public Input<String> getDomainOwner() {
         return this.domainOwner == null ? Input.empty() : this.domainOwner;
@@ -41,7 +41,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="policyDocument")
-    private final @Nullable Input<String> policyDocument;
+      private final @Nullable Input<String> policyDocument;
 
     public Input<String> getPolicyDocument() {
         return this.policyDocument == null ? Input.empty() : this.policyDocument;
@@ -52,7 +52,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="policyRevision")
-    private final @Nullable Input<String> policyRevision;
+      private final @Nullable Input<String> policyRevision;
 
     public Input<String> getPolicyRevision() {
         return this.policyRevision == null ? Input.empty() : this.policyRevision;
@@ -63,7 +63,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="repository")
-    private final @Nullable Input<String> repository;
+      private final @Nullable Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository == null ? Input.empty() : this.repository;
@@ -74,7 +74,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceArn")
-    private final @Nullable Input<String> resourceArn;
+      private final @Nullable Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn == null ? Input.empty() : this.resourceArn;

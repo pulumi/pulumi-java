@@ -6,7 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsAr
      * 
      */
     @InputImport(name="customActions")
-    private final @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> customActions;
+      private final @Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> customActions;
 
     public Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs>> getCustomActions() {
         return this.customActions == null ? Input.empty() : this.customActions;
@@ -32,7 +32,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsAr
      * 
      */
     @InputImport(name="statelessRules", required=true)
-    private final Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> statelessRules;
+      private final Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> statelessRules;
 
     public Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs>> getStatelessRules() {
         return this.statelessRules;

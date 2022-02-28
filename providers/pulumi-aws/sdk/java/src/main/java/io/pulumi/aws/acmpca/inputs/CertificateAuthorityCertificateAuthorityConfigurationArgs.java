@@ -5,7 +5,7 @@ package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationArgs ext
      * 
      */
     @InputImport(name="keyAlgorithm", required=true)
-    private final Input<String> keyAlgorithm;
+      private final Input<String> keyAlgorithm;
 
     public Input<String> getKeyAlgorithm() {
         return this.keyAlgorithm;
@@ -30,7 +30,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationArgs ext
      * 
      */
     @InputImport(name="signingAlgorithm", required=true)
-    private final Input<String> signingAlgorithm;
+      private final Input<String> signingAlgorithm;
 
     public Input<String> getSigningAlgorithm() {
         return this.signingAlgorithm;
@@ -41,7 +41,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationArgs ext
      * 
      */
     @InputImport(name="subject", required=true)
-    private final Input<CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs> subject;
+      private final Input<CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs> subject;
 
     public Input<CertificateAuthorityCertificateAuthorityConfigurationSubjectArgs> getSubject() {
         return this.subject;

@@ -8,7 +8,7 @@ import io.pulumi.aws.sagemaker.inputs.ModelInferenceExecutionConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.ModelPrimaryContainerArgs;
 import io.pulumi.aws.sagemaker.inputs.ModelVpcConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containers")
-    private final @Nullable Input<List<ModelContainerArgs>> containers;
+      private final @Nullable Input<List<ModelContainerArgs>> containers;
 
     public Input<List<ModelContainerArgs>> getContainers() {
         return this.containers == null ? Input.empty() : this.containers;
@@ -37,7 +37,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableNetworkIsolation")
-    private final @Nullable Input<Boolean> enableNetworkIsolation;
+      private final @Nullable Input<Boolean> enableNetworkIsolation;
 
     public Input<Boolean> getEnableNetworkIsolation() {
         return this.enableNetworkIsolation == null ? Input.empty() : this.enableNetworkIsolation;
@@ -48,7 +48,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionRoleArn", required=true)
-    private final Input<String> executionRoleArn;
+      private final Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn;
@@ -59,7 +59,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inferenceExecutionConfig")
-    private final @Nullable Input<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig;
+      private final @Nullable Input<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig;
 
     public Input<ModelInferenceExecutionConfigArgs> getInferenceExecutionConfig() {
         return this.inferenceExecutionConfig == null ? Input.empty() : this.inferenceExecutionConfig;
@@ -70,7 +70,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -81,7 +81,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryContainer")
-    private final @Nullable Input<ModelPrimaryContainerArgs> primaryContainer;
+      private final @Nullable Input<ModelPrimaryContainerArgs> primaryContainer;
 
     public Input<ModelPrimaryContainerArgs> getPrimaryContainer() {
         return this.primaryContainer == null ? Input.empty() : this.primaryContainer;
@@ -92,7 +92,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -103,7 +103,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-    private final @Nullable Input<ModelVpcConfigArgs> vpcConfig;
+      private final @Nullable Input<ModelVpcConfigArgs> vpcConfig;
 
     public Input<ModelVpcConfigArgs> getVpcConfig() {
         return this.vpcConfig == null ? Input.empty() : this.vpcConfig;

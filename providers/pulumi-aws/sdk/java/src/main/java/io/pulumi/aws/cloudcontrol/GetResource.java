@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudcontrol;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudcontrol.inputs.GetResourceArgs;
 import io.pulumi.aws.cloudcontrol.outputs.GetResourceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

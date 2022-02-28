@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ciphertextBlob")
-    private final @Nullable Input<String> ciphertextBlob;
+      private final @Nullable Input<String> ciphertextBlob;
 
     public Input<String> getCiphertextBlob() {
         return this.ciphertextBlob == null ? Input.empty() : this.ciphertextBlob;
@@ -31,7 +31,7 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="context")
-    private final @Nullable Input<Map<String,String>> context;
+      private final @Nullable Input<Map<String,String>> context;
 
     public Input<Map<String,String>> getContext() {
         return this.context == null ? Input.empty() : this.context;
@@ -42,7 +42,7 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+      private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
@@ -53,7 +53,7 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plaintext")
-    private final @Nullable Input<String> plaintext;
+      private final @Nullable Input<String> plaintext;
 
     public Input<String> getPlaintext() {
         return this.plaintext == null ? Input.empty() : this.plaintext;

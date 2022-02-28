@@ -4,7 +4,7 @@
 package io.pulumi.aws.lakeformation.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -30,7 +30,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModified")
-    private final @Nullable Input<String> lastModified;
+      private final @Nullable Input<String> lastModified;
 
     public Input<String> getLastModified() {
         return this.lastModified == null ? Input.empty() : this.lastModified;
@@ -41,7 +41,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;

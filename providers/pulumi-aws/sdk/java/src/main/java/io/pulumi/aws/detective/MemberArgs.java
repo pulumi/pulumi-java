@@ -4,7 +4,7 @@
 package io.pulumi.aws.detective;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+      private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
@@ -31,7 +31,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableEmailNotification")
-    private final @Nullable Input<Boolean> disableEmailNotification;
+      private final @Nullable Input<Boolean> disableEmailNotification;
 
     public Input<Boolean> getDisableEmailNotification() {
         return this.disableEmailNotification == null ? Input.empty() : this.disableEmailNotification;
@@ -42,7 +42,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailAddress", required=true)
-    private final Input<String> emailAddress;
+      private final Input<String> emailAddress;
 
     public Input<String> getEmailAddress() {
         return this.emailAddress;
@@ -53,7 +53,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="graphArn", required=true)
-    private final Input<String> graphArn;
+      private final Input<String> graphArn;
 
     public Input<String> getGraphArn() {
         return this.graphArn;
@@ -64,7 +64,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;

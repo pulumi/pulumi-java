@@ -8,8 +8,8 @@ import io.pulumi.aws.ecr.RegistryPolicyArgs;
 import io.pulumi.aws.ecr.inputs.RegistryPolicyState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -50,6 +50,21 @@ public class RegistryPolicy extends io.pulumi.resources.CustomResource {
         return this.registryId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RegistryPolicy(String name) {
+        this(name, RegistryPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RegistryPolicy(String name, RegistryPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

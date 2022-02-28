@@ -6,7 +6,7 @@ package io.pulumi.aws.batch.inputs;
 import io.pulumi.aws.batch.inputs.JobDefinitionRetryStrategyGetArgs;
 import io.pulumi.aws.batch.inputs.JobDefinitionTimeoutGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -37,7 +37,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerProperties")
-    private final @Nullable Input<String> containerProperties;
+      private final @Nullable Input<String> containerProperties;
 
     public Input<String> getContainerProperties() {
         return this.containerProperties == null ? Input.empty() : this.containerProperties;
@@ -48,7 +48,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -59,7 +59,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -70,7 +70,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformCapabilities")
-    private final @Nullable Input<List<String>> platformCapabilities;
+      private final @Nullable Input<List<String>> platformCapabilities;
 
     public Input<List<String>> getPlatformCapabilities() {
         return this.platformCapabilities == null ? Input.empty() : this.platformCapabilities;
@@ -81,7 +81,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="propagateTags")
-    private final @Nullable Input<Boolean> propagateTags;
+      private final @Nullable Input<Boolean> propagateTags;
 
     public Input<Boolean> getPropagateTags() {
         return this.propagateTags == null ? Input.empty() : this.propagateTags;
@@ -93,7 +93,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryStrategy")
-    private final @Nullable Input<JobDefinitionRetryStrategyGetArgs> retryStrategy;
+      private final @Nullable Input<JobDefinitionRetryStrategyGetArgs> retryStrategy;
 
     public Input<JobDefinitionRetryStrategyGetArgs> getRetryStrategy() {
         return this.retryStrategy == null ? Input.empty() : this.retryStrategy;
@@ -104,7 +104,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<Integer> revision;
+      private final @Nullable Input<Integer> revision;
 
     public Input<Integer> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -115,7 +115,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -126,7 +126,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -137,7 +137,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<JobDefinitionTimeoutGetArgs> timeout;
+      private final @Nullable Input<JobDefinitionTimeoutGetArgs> timeout;
 
     public Input<JobDefinitionTimeoutGetArgs> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -148,7 +148,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

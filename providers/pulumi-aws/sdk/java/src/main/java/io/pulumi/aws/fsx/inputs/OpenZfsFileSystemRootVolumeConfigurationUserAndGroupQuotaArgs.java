@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<Integer> id;
+      private final Input<Integer> id;
 
     public Input<Integer> getId() {
         return this.id;
@@ -30,14 +30,14 @@ public final class OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs
      * 
      */
     @InputImport(name="storageCapacityQuotaGib", required=true)
-    private final Input<Integer> storageCapacityQuotaGib;
+      private final Input<Integer> storageCapacityQuotaGib;
 
     public Input<Integer> getStorageCapacityQuotaGib() {
         return this.storageCapacityQuotaGib;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

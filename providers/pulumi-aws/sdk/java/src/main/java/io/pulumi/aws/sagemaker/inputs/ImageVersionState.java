@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baseImage")
-    private final @Nullable Input<String> baseImage;
+      private final @Nullable Input<String> baseImage;
 
     public Input<String> getBaseImage() {
         return this.baseImage == null ? Input.empty() : this.baseImage;
@@ -43,14 +43,14 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerImage")
-    private final @Nullable Input<String> containerImage;
+      private final @Nullable Input<String> containerImage;
 
     public Input<String> getContainerImage() {
         return this.containerImage == null ? Input.empty() : this.containerImage;
     }
 
     @InputImport(name="imageArn")
-    private final @Nullable Input<String> imageArn;
+      private final @Nullable Input<String> imageArn;
 
     public Input<String> getImageArn() {
         return this.imageArn == null ? Input.empty() : this.imageArn;
@@ -61,14 +61,14 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageName")
-    private final @Nullable Input<String> imageName;
+      private final @Nullable Input<String> imageName;
 
     public Input<String> getImageName() {
         return this.imageName == null ? Input.empty() : this.imageName;
     }
 
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;

@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesisanalyticsv2.outputs;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

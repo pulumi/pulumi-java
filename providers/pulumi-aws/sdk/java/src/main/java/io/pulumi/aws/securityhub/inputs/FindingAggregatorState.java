@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FindingAggregatorState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="linkingMode")
-    private final @Nullable Input<String> linkingMode;
+      private final @Nullable Input<String> linkingMode;
 
     public Input<String> getLinkingMode() {
         return this.linkingMode == null ? Input.empty() : this.linkingMode;
@@ -31,7 +31,7 @@ public final class FindingAggregatorState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="specifiedRegions")
-    private final @Nullable Input<List<String>> specifiedRegions;
+      private final @Nullable Input<List<String>> specifiedRegions;
 
     public Input<List<String>> getSpecifiedRegions() {
         return this.specifiedRegions == null ? Input.empty() : this.specifiedRegions;

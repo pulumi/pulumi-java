@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DeliveryChannelSnapshotDeliveryPropertiesArgs extends io.pulu
      * 
      */
     @InputImport(name="deliveryFrequency")
-    private final @Nullable Input<String> deliveryFrequency;
+      private final @Nullable Input<String> deliveryFrequency;
 
     public Input<String> getDeliveryFrequency() {
         return this.deliveryFrequency == null ? Input.empty() : this.deliveryFrequency;

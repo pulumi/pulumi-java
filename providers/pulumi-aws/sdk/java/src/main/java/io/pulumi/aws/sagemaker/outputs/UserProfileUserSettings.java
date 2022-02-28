@@ -7,7 +7,7 @@ import io.pulumi.aws.sagemaker.outputs.UserProfileUserSettingsJupyterServerAppSe
 import io.pulumi.aws.sagemaker.outputs.UserProfileUserSettingsKernelGatewayAppSettings;
 import io.pulumi.aws.sagemaker.outputs.UserProfileUserSettingsSharingSettings;
 import io.pulumi.aws.sagemaker.outputs.UserProfileUserSettingsTensorBoardAppSettings;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

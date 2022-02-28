@@ -5,7 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.aws.codebuild.inputs.ReportGroupExportConfigS3DestinationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ReportGroupExportConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="s3Destination")
-    private final @Nullable Input<ReportGroupExportConfigS3DestinationArgs> s3Destination;
+      private final @Nullable Input<ReportGroupExportConfigS3DestinationArgs> s3Destination;
 
     public Input<ReportGroupExportConfigS3DestinationArgs> getS3Destination() {
         return this.s3Destination == null ? Input.empty() : this.s3Destination;
@@ -31,7 +31,7 @@ public final class ReportGroupExportConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

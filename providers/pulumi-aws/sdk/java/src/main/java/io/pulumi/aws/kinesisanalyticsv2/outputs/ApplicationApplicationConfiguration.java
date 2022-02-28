@@ -10,7 +10,7 @@ import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurat
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationRunConfiguration;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfiguration;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationVpcConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

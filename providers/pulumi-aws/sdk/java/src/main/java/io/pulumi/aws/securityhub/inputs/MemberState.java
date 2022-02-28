@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -31,7 +31,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -42,7 +42,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invite")
-    private final @Nullable Input<Boolean> invite;
+      private final @Nullable Input<Boolean> invite;
 
     public Input<Boolean> getInvite() {
         return this.invite == null ? Input.empty() : this.invite;
@@ -53,7 +53,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterId")
-    private final @Nullable Input<String> masterId;
+      private final @Nullable Input<String> masterId;
 
     public Input<String> getMasterId() {
         return this.masterId == null ? Input.empty() : this.masterId;
@@ -64,7 +64,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memberStatus")
-    private final @Nullable Input<String> memberStatus;
+      private final @Nullable Input<String> memberStatus;
 
     public Input<String> getMemberStatus() {
         return this.memberStatus == null ? Input.empty() : this.memberStatus;

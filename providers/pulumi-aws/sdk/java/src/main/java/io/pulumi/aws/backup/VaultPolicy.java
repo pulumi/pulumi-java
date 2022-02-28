@@ -8,8 +8,8 @@ import io.pulumi.aws.backup.VaultPolicyArgs;
 import io.pulumi.aws.backup.inputs.VaultPolicyState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -72,6 +72,21 @@ public class VaultPolicy extends io.pulumi.resources.CustomResource {
         return this.policy;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VaultPolicy(String name) {
+        this(name, VaultPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VaultPolicy(String name, VaultPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -5,7 +5,7 @@ package io.pulumi.aws.emr;
 
 import io.pulumi.aws.emr.inputs.InstanceGroupEbsConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingPolicy")
-    private final @Nullable Input<String> autoscalingPolicy;
+      private final @Nullable Input<String> autoscalingPolicy;
 
     public Input<String> getAutoscalingPolicy() {
         return this.autoscalingPolicy == null ? Input.empty() : this.autoscalingPolicy;
@@ -34,7 +34,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bidPrice")
-    private final @Nullable Input<String> bidPrice;
+      private final @Nullable Input<String> bidPrice;
 
     public Input<String> getBidPrice() {
         return this.bidPrice == null ? Input.empty() : this.bidPrice;
@@ -45,7 +45,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterId", required=true)
-    private final Input<String> clusterId;
+      private final Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId;
@@ -56,7 +56,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationsJson")
-    private final @Nullable Input<String> configurationsJson;
+      private final @Nullable Input<String> configurationsJson;
 
     public Input<String> getConfigurationsJson() {
         return this.configurationsJson == null ? Input.empty() : this.configurationsJson;
@@ -67,7 +67,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsConfigs")
-    private final @Nullable Input<List<InstanceGroupEbsConfigArgs>> ebsConfigs;
+      private final @Nullable Input<List<InstanceGroupEbsConfigArgs>> ebsConfigs;
 
     public Input<List<InstanceGroupEbsConfigArgs>> getEbsConfigs() {
         return this.ebsConfigs == null ? Input.empty() : this.ebsConfigs;
@@ -78,7 +78,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsOptimized")
-    private final @Nullable Input<Boolean> ebsOptimized;
+      private final @Nullable Input<Boolean> ebsOptimized;
 
     public Input<Boolean> getEbsOptimized() {
         return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
@@ -89,7 +89,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceCount")
-    private final @Nullable Input<Integer> instanceCount;
+      private final @Nullable Input<Integer> instanceCount;
 
     public Input<Integer> getInstanceCount() {
         return this.instanceCount == null ? Input.empty() : this.instanceCount;
@@ -100,7 +100,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final Input<String> instanceType;
+      private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
@@ -111,7 +111,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VirtualGatewaySpecListenerHealthCheckArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="healthyThreshold", required=true)
-    private final Input<Integer> healthyThreshold;
+      private final Input<Integer> healthyThreshold;
 
     public Input<Integer> getHealthyThreshold() {
         return this.healthyThreshold;
@@ -31,7 +31,7 @@ public final class VirtualGatewaySpecListenerHealthCheckArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="intervalMillis", required=true)
-    private final Input<Integer> intervalMillis;
+      private final Input<Integer> intervalMillis;
 
     public Input<Integer> getIntervalMillis() {
         return this.intervalMillis;
@@ -42,7 +42,7 @@ public final class VirtualGatewaySpecListenerHealthCheckArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -53,7 +53,7 @@ public final class VirtualGatewaySpecListenerHealthCheckArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -64,7 +64,7 @@ public final class VirtualGatewaySpecListenerHealthCheckArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<String> protocol;
+      private final Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol;
@@ -75,7 +75,7 @@ public final class VirtualGatewaySpecListenerHealthCheckArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="timeoutMillis", required=true)
-    private final Input<Integer> timeoutMillis;
+      private final Input<Integer> timeoutMillis;
 
     public Input<Integer> getTimeoutMillis() {
         return this.timeoutMillis;
@@ -86,7 +86,7 @@ public final class VirtualGatewaySpecListenerHealthCheckArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="unhealthyThreshold", required=true)
-    private final Input<Integer> unhealthyThreshold;
+      private final Input<Integer> unhealthyThreshold;
 
     public Input<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,28 +17,28 @@ public final class InstanceRootBlockDeviceArgs extends io.pulumi.resources.Resou
     public static final InstanceRootBlockDeviceArgs Empty = new InstanceRootBlockDeviceArgs();
 
     @InputImport(name="deleteOnTermination")
-    private final @Nullable Input<Boolean> deleteOnTermination;
+      private final @Nullable Input<Boolean> deleteOnTermination;
 
     public Input<Boolean> getDeleteOnTermination() {
         return this.deleteOnTermination == null ? Input.empty() : this.deleteOnTermination;
     }
 
     @InputImport(name="iops")
-    private final @Nullable Input<Integer> iops;
+      private final @Nullable Input<Integer> iops;
 
     public Input<Integer> getIops() {
         return this.iops == null ? Input.empty() : this.iops;
     }
 
     @InputImport(name="volumeSize")
-    private final @Nullable Input<Integer> volumeSize;
+      private final @Nullable Input<Integer> volumeSize;
 
     public Input<Integer> getVolumeSize() {
         return this.volumeSize == null ? Input.empty() : this.volumeSize;
     }
 
     @InputImport(name="volumeType")
-    private final @Nullable Input<String> volumeType;
+      private final @Nullable Input<String> volumeType;
 
     public Input<String> getVolumeType() {
         return this.volumeType == null ? Input.empty() : this.volumeType;

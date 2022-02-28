@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.aws.route53.inputs.GetResolverEndpointFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GetResolverEndpointArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetResolverEndpointFilter> filters;
+      private final @Nullable List<GetResolverEndpointFilter> filters;
 
     public List<GetResolverEndpointFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -34,7 +34,7 @@ public final class GetResolverEndpointArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resolverEndpointId")
-    private final @Nullable String resolverEndpointId;
+      private final @Nullable String resolverEndpointId;
 
     public Optional<String> getResolverEndpointId() {
         return this.resolverEndpointId == null ? Optional.empty() : Optional.ofNullable(this.resolverEndpointId);

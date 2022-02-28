@@ -4,7 +4,7 @@
 package io.pulumi.aws.sns;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="eventDeliveryFailureTopicArn")
-    private final @Nullable Input<String> eventDeliveryFailureTopicArn;
+      private final @Nullable Input<String> eventDeliveryFailureTopicArn;
 
     public Input<String> getEventDeliveryFailureTopicArn() {
         return this.eventDeliveryFailureTopicArn == null ? Input.empty() : this.eventDeliveryFailureTopicArn;
@@ -30,7 +30,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="eventEndpointCreatedTopicArn")
-    private final @Nullable Input<String> eventEndpointCreatedTopicArn;
+      private final @Nullable Input<String> eventEndpointCreatedTopicArn;
 
     public Input<String> getEventEndpointCreatedTopicArn() {
         return this.eventEndpointCreatedTopicArn == null ? Input.empty() : this.eventEndpointCreatedTopicArn;
@@ -41,7 +41,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="eventEndpointDeletedTopicArn")
-    private final @Nullable Input<String> eventEndpointDeletedTopicArn;
+      private final @Nullable Input<String> eventEndpointDeletedTopicArn;
 
     public Input<String> getEventEndpointDeletedTopicArn() {
         return this.eventEndpointDeletedTopicArn == null ? Input.empty() : this.eventEndpointDeletedTopicArn;
@@ -52,7 +52,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="eventEndpointUpdatedTopicArn")
-    private final @Nullable Input<String> eventEndpointUpdatedTopicArn;
+      private final @Nullable Input<String> eventEndpointUpdatedTopicArn;
 
     public Input<String> getEventEndpointUpdatedTopicArn() {
         return this.eventEndpointUpdatedTopicArn == null ? Input.empty() : this.eventEndpointUpdatedTopicArn;
@@ -63,7 +63,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="failureFeedbackRoleArn")
-    private final @Nullable Input<String> failureFeedbackRoleArn;
+      private final @Nullable Input<String> failureFeedbackRoleArn;
 
     public Input<String> getFailureFeedbackRoleArn() {
         return this.failureFeedbackRoleArn == null ? Input.empty() : this.failureFeedbackRoleArn;
@@ -74,7 +74,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -85,7 +85,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="platform", required=true)
-    private final Input<String> platform;
+      private final Input<String> platform;
 
     public Input<String> getPlatform() {
         return this.platform;
@@ -96,7 +96,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="platformCredential", required=true)
-    private final Input<String> platformCredential;
+      private final Input<String> platformCredential;
 
     public Input<String> getPlatformCredential() {
         return this.platformCredential;
@@ -107,7 +107,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="platformPrincipal")
-    private final @Nullable Input<String> platformPrincipal;
+      private final @Nullable Input<String> platformPrincipal;
 
     public Input<String> getPlatformPrincipal() {
         return this.platformPrincipal == null ? Input.empty() : this.platformPrincipal;
@@ -118,7 +118,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="successFeedbackRoleArn")
-    private final @Nullable Input<String> successFeedbackRoleArn;
+      private final @Nullable Input<String> successFeedbackRoleArn;
 
     public Input<String> getSuccessFeedbackRoleArn() {
         return this.successFeedbackRoleArn == null ? Input.empty() : this.successFeedbackRoleArn;
@@ -129,7 +129,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="successFeedbackSampleRate")
-    private final @Nullable Input<String> successFeedbackSampleRate;
+      private final @Nullable Input<String> successFeedbackSampleRate;
 
     public Input<String> getSuccessFeedbackSampleRate() {
         return this.successFeedbackSampleRate == null ? Input.empty() : this.successFeedbackSampleRate;

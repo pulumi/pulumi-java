@@ -5,7 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.aws.appsync.inputs.DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DataSourceHttpConfigAuthorizationConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="authorizationType")
-    private final @Nullable Input<String> authorizationType;
+      private final @Nullable Input<String> authorizationType;
 
     public Input<String> getAuthorizationType() {
         return this.authorizationType == null ? Input.empty() : this.authorizationType;
@@ -31,7 +31,7 @@ public final class DataSourceHttpConfigAuthorizationConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="awsIamConfig")
-    private final @Nullable Input<DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs> awsIamConfig;
+      private final @Nullable Input<DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs> awsIamConfig;
 
     public Input<DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs> getAwsIamConfig() {
         return this.awsIamConfig == null ? Input.empty() : this.awsIamConfig;

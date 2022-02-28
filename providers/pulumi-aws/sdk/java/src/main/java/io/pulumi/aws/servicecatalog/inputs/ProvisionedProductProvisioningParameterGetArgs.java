@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ProvisionedProductProvisioningParameterGetArgs extends io.pul
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -31,7 +31,7 @@ public final class ProvisionedProductProvisioningParameterGetArgs extends io.pul
      * 
      */
     @InputImport(name="usePreviousValue")
-    private final @Nullable Input<Boolean> usePreviousValue;
+      private final @Nullable Input<Boolean> usePreviousValue;
 
     public Input<Boolean> getUsePreviousValue() {
         return this.usePreviousValue == null ? Input.empty() : this.usePreviousValue;
@@ -42,7 +42,7 @@ public final class ProvisionedProductProvisioningParameterGetArgs extends io.pul
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

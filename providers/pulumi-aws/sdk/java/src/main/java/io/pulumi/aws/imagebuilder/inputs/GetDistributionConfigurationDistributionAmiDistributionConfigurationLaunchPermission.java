@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * 
      */
     @InputImport(name="userGroups", required=true)
-    private final List<String> userGroups;
+      private final List<String> userGroups;
 
     public List<String> getUserGroups() {
         return this.userGroups;
@@ -29,7 +29,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * 
      */
     @InputImport(name="userIds", required=true)
-    private final List<String> userIds;
+      private final List<String> userIds;
 
     public List<String> getUserIds() {
         return this.userIds;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetClusterCertificateAuthority extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="data", required=true)
-    private final String data;
+      private final String data;
 
     public String getData() {
         return this.data;

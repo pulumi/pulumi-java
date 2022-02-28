@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploa
      * 
      */
     @InputImport(name="daysAfterInitiation", required=true)
-    private final Input<Integer> daysAfterInitiation;
+      private final Input<Integer> daysAfterInitiation;
 
     public Input<Integer> getDaysAfterInitiation() {
         return this.daysAfterInitiation;

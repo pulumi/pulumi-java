@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentId")
-    private final @Nullable Input<String> parentId;
+      private final @Nullable Input<String> parentId;
 
     public Input<String> getParentId() {
         return this.parentId == null ? Input.empty() : this.parentId;
@@ -30,7 +30,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -41,7 +41,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathPart")
-    private final @Nullable Input<String> pathPart;
+      private final @Nullable Input<String> pathPart;
 
     public Input<String> getPathPart() {
         return this.pathPart == null ? Input.empty() : this.pathPart;
@@ -52,7 +52,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi")
-    private final @Nullable Input<String> restApi;
+      private final @Nullable Input<String> restApi;
 
     public Input<String> getRestApi() {
         return this.restApi == null ? Input.empty() : this.restApi;

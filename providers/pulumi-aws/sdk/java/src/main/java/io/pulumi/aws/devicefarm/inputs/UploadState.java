@@ -4,7 +4,7 @@
 package io.pulumi.aws.devicefarm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -30,7 +30,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category")
-    private final @Nullable Input<String> category;
+      private final @Nullable Input<String> category;
 
     public Input<String> getCategory() {
         return this.category == null ? Input.empty() : this.category;
@@ -41,7 +41,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -52,7 +52,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<String> metadata;
+      private final @Nullable Input<String> metadata;
 
     public Input<String> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -63,7 +63,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -74,7 +74,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectArn")
-    private final @Nullable Input<String> projectArn;
+      private final @Nullable Input<String> projectArn;
 
     public Input<String> getProjectArn() {
         return this.projectArn == null ? Input.empty() : this.projectArn;
@@ -85,7 +85,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -96,7 +96,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;

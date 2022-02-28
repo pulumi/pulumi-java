@@ -4,7 +4,7 @@
 package io.pulumi.aws.detective.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable Input<String> createdTime;
+      private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
@@ -31,7 +31,7 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="graphArn")
-    private final @Nullable Input<String> graphArn;
+      private final @Nullable Input<String> graphArn;
 
     public Input<String> getGraphArn() {
         return this.graphArn == null ? Input.empty() : this.graphArn;
@@ -42,14 +42,14 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

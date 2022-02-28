@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.DeviceDeviceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     public static final DeviceState Empty = new DeviceState();
 
     @InputImport(name="agentVersion")
-    private final @Nullable Input<String> agentVersion;
+      private final @Nullable Input<String> agentVersion;
 
     public Input<String> getAgentVersion() {
         return this.agentVersion == null ? Input.empty() : this.agentVersion;
@@ -27,7 +27,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -38,7 +38,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="device")
-    private final @Nullable Input<DeviceDeviceGetArgs> device;
+      private final @Nullable Input<DeviceDeviceGetArgs> device;
 
     public Input<DeviceDeviceGetArgs> getDevice() {
         return this.device == null ? Input.empty() : this.device;
@@ -49,7 +49,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceFleetName")
-    private final @Nullable Input<String> deviceFleetName;
+      private final @Nullable Input<String> deviceFleetName;
 
     public Input<String> getDeviceFleetName() {
         return this.deviceFleetName == null ? Input.empty() : this.deviceFleetName;

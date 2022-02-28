@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RuleGroupRuleGroupStatefulRuleOptionsGetArgs extends io.pulum
      * 
      */
     @InputImport(name="ruleOrder", required=true)
-    private final Input<String> ruleOrder;
+      private final Input<String> ruleOrder;
 
     public Input<String> getRuleOrder() {
         return this.ruleOrder;

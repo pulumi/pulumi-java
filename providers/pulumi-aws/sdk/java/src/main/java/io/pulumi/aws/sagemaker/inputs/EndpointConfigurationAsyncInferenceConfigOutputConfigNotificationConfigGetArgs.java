@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
      * 
      */
     @InputImport(name="errorTopic")
-    private final @Nullable Input<String> errorTopic;
+      private final @Nullable Input<String> errorTopic;
 
     public Input<String> getErrorTopic() {
         return this.errorTopic == null ? Input.empty() : this.errorTopic;
@@ -30,7 +30,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
      * 
      */
     @InputImport(name="successTopic")
-    private final @Nullable Input<String> successTopic;
+      private final @Nullable Input<String> successTopic;
 
     public Input<String> getSuccessTopic() {
         return this.successTopic == null ? Input.empty() : this.successTopic;

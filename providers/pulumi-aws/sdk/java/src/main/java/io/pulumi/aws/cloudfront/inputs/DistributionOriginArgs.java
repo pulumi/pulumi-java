@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudfront.inputs.DistributionOriginCustomOriginConfigArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionOriginOriginShieldArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionOriginS3OriginConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="connectionAttempts")
-    private final @Nullable Input<Integer> connectionAttempts;
+      private final @Nullable Input<Integer> connectionAttempts;
 
     public Input<Integer> getConnectionAttempts() {
         return this.connectionAttempts == null ? Input.empty() : this.connectionAttempts;
@@ -36,7 +36,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="connectionTimeout")
-    private final @Nullable Input<Integer> connectionTimeout;
+      private final @Nullable Input<Integer> connectionTimeout;
 
     public Input<Integer> getConnectionTimeout() {
         return this.connectionTimeout == null ? Input.empty() : this.connectionTimeout;
@@ -49,7 +49,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="customHeaders")
-    private final @Nullable Input<List<DistributionOriginCustomHeaderArgs>> customHeaders;
+      private final @Nullable Input<List<DistributionOriginCustomHeaderArgs>> customHeaders;
 
     public Input<List<DistributionOriginCustomHeaderArgs>> getCustomHeaders() {
         return this.customHeaders == null ? Input.empty() : this.customHeaders;
@@ -62,7 +62,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="customOriginConfig")
-    private final @Nullable Input<DistributionOriginCustomOriginConfigArgs> customOriginConfig;
+      private final @Nullable Input<DistributionOriginCustomOriginConfigArgs> customOriginConfig;
 
     public Input<DistributionOriginCustomOriginConfigArgs> getCustomOriginConfig() {
         return this.customOriginConfig == null ? Input.empty() : this.customOriginConfig;
@@ -74,7 +74,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -85,7 +85,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="originId", required=true)
-    private final Input<String> originId;
+      private final Input<String> originId;
 
     public Input<String> getOriginId() {
         return this.originId;
@@ -98,7 +98,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="originPath")
-    private final @Nullable Input<String> originPath;
+      private final @Nullable Input<String> originPath;
 
     public Input<String> getOriginPath() {
         return this.originPath == null ? Input.empty() : this.originPath;
@@ -110,7 +110,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="originShield")
-    private final @Nullable Input<DistributionOriginOriginShieldArgs> originShield;
+      private final @Nullable Input<DistributionOriginOriginShieldArgs> originShield;
 
     public Input<DistributionOriginOriginShieldArgs> getOriginShield() {
         return this.originShield == null ? Input.empty() : this.originShield;
@@ -123,7 +123,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="s3OriginConfig")
-    private final @Nullable Input<DistributionOriginS3OriginConfigArgs> s3OriginConfig;
+      private final @Nullable Input<DistributionOriginS3OriginConfigArgs> s3OriginConfig;
 
     public Input<DistributionOriginS3OriginConfigArgs> getS3OriginConfig() {
         return this.s3OriginConfig == null ? Input.empty() : this.s3OriginConfig;

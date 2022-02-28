@@ -6,7 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationFilterGetArgs;
 import io.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationTieringGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -33,7 +33,7 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<BucketIntelligentTieringConfigurationFilterGetArgs> filter;
+      private final @Nullable Input<BucketIntelligentTieringConfigurationFilterGetArgs> filter;
 
     public Input<BucketIntelligentTieringConfigurationFilterGetArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -44,7 +44,7 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -66,7 +66,7 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * 
      */
     @InputImport(name="tierings")
-    private final @Nullable Input<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings;
+      private final @Nullable Input<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings;
 
     public Input<List<BucketIntelligentTieringConfigurationTieringGetArgs>> getTierings() {
         return this.tierings == null ? Input.empty() : this.tierings;

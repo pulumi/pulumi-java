@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainId", required=true)
-    private final Input<String> domainId;
+      private final Input<String> domainId;
 
     public Input<String> getDomainId() {
         return this.domainId;
@@ -32,7 +32,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="singleSignOnUserIdentifier")
-    private final @Nullable Input<String> singleSignOnUserIdentifier;
+      private final @Nullable Input<String> singleSignOnUserIdentifier;
 
     public Input<String> getSingleSignOnUserIdentifier() {
         return this.singleSignOnUserIdentifier == null ? Input.empty() : this.singleSignOnUserIdentifier;
@@ -43,7 +43,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="singleSignOnUserValue")
-    private final @Nullable Input<String> singleSignOnUserValue;
+      private final @Nullable Input<String> singleSignOnUserValue;
 
     public Input<String> getSingleSignOnUserValue() {
         return this.singleSignOnUserValue == null ? Input.empty() : this.singleSignOnUserValue;
@@ -54,7 +54,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -65,7 +65,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProfileName", required=true)
-    private final Input<String> userProfileName;
+      private final Input<String> userProfileName;
 
     public Input<String> getUserProfileName() {
         return this.userProfileName;
@@ -76,7 +76,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userSettings")
-    private final @Nullable Input<UserProfileUserSettingsArgs> userSettings;
+      private final @Nullable Input<UserProfileUserSettingsArgs> userSettings;
 
     public Input<UserProfileUserSettingsArgs> getUserSettings() {
         return this.userSettings == null ? Input.empty() : this.userSettings;

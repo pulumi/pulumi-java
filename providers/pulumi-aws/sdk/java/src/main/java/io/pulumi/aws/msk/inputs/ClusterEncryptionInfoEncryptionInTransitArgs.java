@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterEncryptionInfoEncryptionInTransitArgs extends io.pulum
      * 
      */
     @InputImport(name="clientBroker")
-    private final @Nullable Input<String> clientBroker;
+      private final @Nullable Input<String> clientBroker;
 
     public Input<String> getClientBroker() {
         return this.clientBroker == null ? Input.empty() : this.clientBroker;
@@ -31,7 +31,7 @@ public final class ClusterEncryptionInfoEncryptionInTransitArgs extends io.pulum
      * 
      */
     @InputImport(name="inCluster")
-    private final @Nullable Input<Boolean> inCluster;
+      private final @Nullable Input<Boolean> inCluster;
 
     public Input<Boolean> getInCluster() {
         return this.inCluster == null ? Input.empty() : this.inCluster;

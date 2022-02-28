@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.BotAliasConversationLogsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="botName")
-    private final @Nullable Input<String> botName;
+      private final @Nullable Input<String> botName;
 
     public Input<String> getBotName() {
         return this.botName == null ? Input.empty() : this.botName;
@@ -42,7 +42,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="botVersion")
-    private final @Nullable Input<String> botVersion;
+      private final @Nullable Input<String> botVersion;
 
     public Input<String> getBotVersion() {
         return this.botVersion == null ? Input.empty() : this.botVersion;
@@ -53,7 +53,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="checksum")
-    private final @Nullable Input<String> checksum;
+      private final @Nullable Input<String> checksum;
 
     public Input<String> getChecksum() {
         return this.checksum == null ? Input.empty() : this.checksum;
@@ -64,7 +64,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conversationLogs")
-    private final @Nullable Input<BotAliasConversationLogsGetArgs> conversationLogs;
+      private final @Nullable Input<BotAliasConversationLogsGetArgs> conversationLogs;
 
     public Input<BotAliasConversationLogsGetArgs> getConversationLogs() {
         return this.conversationLogs == null ? Input.empty() : this.conversationLogs;
@@ -75,7 +75,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdDate")
-    private final @Nullable Input<String> createdDate;
+      private final @Nullable Input<String> createdDate;
 
     public Input<String> getCreatedDate() {
         return this.createdDate == null ? Input.empty() : this.createdDate;
@@ -86,7 +86,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -97,7 +97,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastUpdatedDate")
-    private final @Nullable Input<String> lastUpdatedDate;
+      private final @Nullable Input<String> lastUpdatedDate;
 
     public Input<String> getLastUpdatedDate() {
         return this.lastUpdatedDate == null ? Input.empty() : this.lastUpdatedDate;
@@ -108,7 +108,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

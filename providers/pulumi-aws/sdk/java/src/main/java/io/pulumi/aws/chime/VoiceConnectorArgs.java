@@ -4,7 +4,7 @@
 package io.pulumi.aws.chime;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsRegion")
-    private final @Nullable Input<String> awsRegion;
+      private final @Nullable Input<String> awsRegion;
 
     public Input<String> getAwsRegion() {
         return this.awsRegion == null ? Input.empty() : this.awsRegion;
@@ -31,7 +31,7 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireEncryption", required=true)
-    private final Input<Boolean> requireEncryption;
+      private final Input<Boolean> requireEncryption;
 
     public Input<Boolean> getRequireEncryption() {
         return this.requireEncryption;

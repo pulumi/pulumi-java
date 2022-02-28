@@ -6,7 +6,7 @@ package io.pulumi.aws.lakeformation.inputs;
 import io.pulumi.aws.lakeformation.inputs.DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs;
 import io.pulumi.aws.lakeformation.inputs.DataLakeSettingsCreateTableDefaultPermissionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="admins")
-    private final @Nullable Input<List<String>> admins;
+      private final @Nullable Input<List<String>> admins;
 
     public Input<List<String>> getAdmins() {
         return this.admins == null ? Input.empty() : this.admins;
@@ -33,7 +33,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
@@ -44,7 +44,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="createDatabaseDefaultPermissions")
-    private final @Nullable Input<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> createDatabaseDefaultPermissions;
+      private final @Nullable Input<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> createDatabaseDefaultPermissions;
 
     public Input<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> getCreateDatabaseDefaultPermissions() {
         return this.createDatabaseDefaultPermissions == null ? Input.empty() : this.createDatabaseDefaultPermissions;
@@ -55,7 +55,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="createTableDefaultPermissions")
-    private final @Nullable Input<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> createTableDefaultPermissions;
+      private final @Nullable Input<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> createTableDefaultPermissions;
 
     public Input<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> getCreateTableDefaultPermissions() {
         return this.createTableDefaultPermissions == null ? Input.empty() : this.createTableDefaultPermissions;
@@ -66,7 +66,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="trustedResourceOwners")
-    private final @Nullable Input<List<String>> trustedResourceOwners;
+      private final @Nullable Input<List<String>> trustedResourceOwners;
 
     public Input<List<String>> getTrustedResourceOwners() {
         return this.trustedResourceOwners == null ? Input.empty() : this.trustedResourceOwners;

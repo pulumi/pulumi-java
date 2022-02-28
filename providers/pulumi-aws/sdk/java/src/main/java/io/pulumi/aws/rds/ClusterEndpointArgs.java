@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterEndpointIdentifier", required=true)
-    private final Input<String> clusterEndpointIdentifier;
+      private final Input<String> clusterEndpointIdentifier;
 
     public Input<String> getClusterEndpointIdentifier() {
         return this.clusterEndpointIdentifier;
@@ -32,7 +32,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterIdentifier", required=true)
-    private final Input<String> clusterIdentifier;
+      private final Input<String> clusterIdentifier;
 
     public Input<String> getClusterIdentifier() {
         return this.clusterIdentifier;
@@ -43,7 +43,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customEndpointType", required=true)
-    private final Input<String> customEndpointType;
+      private final Input<String> customEndpointType;
 
     public Input<String> getCustomEndpointType() {
         return this.customEndpointType;
@@ -54,7 +54,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="excludedMembers")
-    private final @Nullable Input<List<String>> excludedMembers;
+      private final @Nullable Input<List<String>> excludedMembers;
 
     public Input<List<String>> getExcludedMembers() {
         return this.excludedMembers == null ? Input.empty() : this.excludedMembers;
@@ -65,7 +65,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="staticMembers")
-    private final @Nullable Input<List<String>> staticMembers;
+      private final @Nullable Input<List<String>> staticMembers;
 
     public Input<List<String>> getStaticMembers() {
         return this.staticMembers == null ? Input.empty() : this.staticMembers;
@@ -76,7 +76,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

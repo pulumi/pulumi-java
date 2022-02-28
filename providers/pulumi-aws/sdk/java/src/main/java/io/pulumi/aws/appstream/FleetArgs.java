@@ -7,7 +7,7 @@ import io.pulumi.aws.appstream.inputs.FleetComputeCapacityArgs;
 import io.pulumi.aws.appstream.inputs.FleetDomainJoinInfoArgs;
 import io.pulumi.aws.appstream.inputs.FleetVpcConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeCapacity", required=true)
-    private final Input<FleetComputeCapacityArgs> computeCapacity;
+      private final Input<FleetComputeCapacityArgs> computeCapacity;
 
     public Input<FleetComputeCapacityArgs> getComputeCapacity() {
         return this.computeCapacity;
@@ -36,7 +36,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disconnectTimeoutInSeconds")
-    private final @Nullable Input<Integer> disconnectTimeoutInSeconds;
+      private final @Nullable Input<Integer> disconnectTimeoutInSeconds;
 
     public Input<Integer> getDisconnectTimeoutInSeconds() {
         return this.disconnectTimeoutInSeconds == null ? Input.empty() : this.disconnectTimeoutInSeconds;
@@ -58,7 +58,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -69,7 +69,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainJoinInfo")
-    private final @Nullable Input<FleetDomainJoinInfoArgs> domainJoinInfo;
+      private final @Nullable Input<FleetDomainJoinInfoArgs> domainJoinInfo;
 
     public Input<FleetDomainJoinInfoArgs> getDomainJoinInfo() {
         return this.domainJoinInfo == null ? Input.empty() : this.domainJoinInfo;
@@ -80,7 +80,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDefaultInternetAccess")
-    private final @Nullable Input<Boolean> enableDefaultInternetAccess;
+      private final @Nullable Input<Boolean> enableDefaultInternetAccess;
 
     public Input<Boolean> getEnableDefaultInternetAccess() {
         return this.enableDefaultInternetAccess == null ? Input.empty() : this.enableDefaultInternetAccess;
@@ -91,7 +91,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleetType")
-    private final @Nullable Input<String> fleetType;
+      private final @Nullable Input<String> fleetType;
 
     public Input<String> getFleetType() {
         return this.fleetType == null ? Input.empty() : this.fleetType;
@@ -102,7 +102,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRoleArn")
-    private final @Nullable Input<String> iamRoleArn;
+      private final @Nullable Input<String> iamRoleArn;
 
     public Input<String> getIamRoleArn() {
         return this.iamRoleArn == null ? Input.empty() : this.iamRoleArn;
@@ -113,7 +113,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleDisconnectTimeoutInSeconds")
-    private final @Nullable Input<Integer> idleDisconnectTimeoutInSeconds;
+      private final @Nullable Input<Integer> idleDisconnectTimeoutInSeconds;
 
     public Input<Integer> getIdleDisconnectTimeoutInSeconds() {
         return this.idleDisconnectTimeoutInSeconds == null ? Input.empty() : this.idleDisconnectTimeoutInSeconds;
@@ -124,7 +124,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageArn")
-    private final @Nullable Input<String> imageArn;
+      private final @Nullable Input<String> imageArn;
 
     public Input<String> getImageArn() {
         return this.imageArn == null ? Input.empty() : this.imageArn;
@@ -135,7 +135,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageName")
-    private final @Nullable Input<String> imageName;
+      private final @Nullable Input<String> imageName;
 
     public Input<String> getImageName() {
         return this.imageName == null ? Input.empty() : this.imageName;
@@ -146,7 +146,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final Input<String> instanceType;
+      private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
@@ -157,7 +157,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxUserDurationInSeconds")
-    private final @Nullable Input<Integer> maxUserDurationInSeconds;
+      private final @Nullable Input<Integer> maxUserDurationInSeconds;
 
     public Input<Integer> getMaxUserDurationInSeconds() {
         return this.maxUserDurationInSeconds == null ? Input.empty() : this.maxUserDurationInSeconds;
@@ -168,7 +168,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -179,7 +179,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamView")
-    private final @Nullable Input<String> streamView;
+      private final @Nullable Input<String> streamView;
 
     public Input<String> getStreamView() {
         return this.streamView == null ? Input.empty() : this.streamView;
@@ -190,7 +190,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -201,7 +201,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-    private final @Nullable Input<FleetVpcConfigArgs> vpcConfig;
+      private final @Nullable Input<FleetVpcConfigArgs> vpcConfig;
 
     public Input<FleetVpcConfigArgs> getVpcConfig() {
         return this.vpcConfig == null ? Input.empty() : this.vpcConfig;

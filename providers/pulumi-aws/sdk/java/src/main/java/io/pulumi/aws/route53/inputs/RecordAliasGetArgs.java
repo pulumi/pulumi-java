@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RecordAliasGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluateTargetHealth", required=true)
-    private final Input<Boolean> evaluateTargetHealth;
+      private final Input<Boolean> evaluateTargetHealth;
 
     public Input<Boolean> getEvaluateTargetHealth() {
         return this.evaluateTargetHealth;
@@ -30,7 +30,7 @@ public final class RecordAliasGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -41,7 +41,7 @@ public final class RecordAliasGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneId", required=true)
-    private final Input<String> zoneId;
+      private final Input<String> zoneId;
 
     public Input<String> getZoneId() {
         return this.zoneId;

@@ -7,7 +7,7 @@ import io.pulumi.aws.fms.inputs.PolicyExcludeMapArgs;
 import io.pulumi.aws.fms.inputs.PolicyIncludeMapArgs;
 import io.pulumi.aws.fms.inputs.PolicySecurityServicePolicyDataArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteAllPolicyResources")
-    private final @Nullable Input<Boolean> deleteAllPolicyResources;
+      private final @Nullable Input<Boolean> deleteAllPolicyResources;
 
     public Input<Boolean> getDeleteAllPolicyResources() {
         return this.deleteAllPolicyResources == null ? Input.empty() : this.deleteAllPolicyResources;
@@ -36,7 +36,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excludeMap")
-    private final @Nullable Input<PolicyExcludeMapArgs> excludeMap;
+      private final @Nullable Input<PolicyExcludeMapArgs> excludeMap;
 
     public Input<PolicyExcludeMapArgs> getExcludeMap() {
         return this.excludeMap == null ? Input.empty() : this.excludeMap;
@@ -47,7 +47,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excludeResourceTags", required=true)
-    private final Input<Boolean> excludeResourceTags;
+      private final Input<Boolean> excludeResourceTags;
 
     public Input<Boolean> getExcludeResourceTags() {
         return this.excludeResourceTags;
@@ -58,7 +58,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includeMap")
-    private final @Nullable Input<PolicyIncludeMapArgs> includeMap;
+      private final @Nullable Input<PolicyIncludeMapArgs> includeMap;
 
     public Input<PolicyIncludeMapArgs> getIncludeMap() {
         return this.includeMap == null ? Input.empty() : this.includeMap;
@@ -69,7 +69,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -80,7 +80,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remediationEnabled")
-    private final @Nullable Input<Boolean> remediationEnabled;
+      private final @Nullable Input<Boolean> remediationEnabled;
 
     public Input<Boolean> getRemediationEnabled() {
         return this.remediationEnabled == null ? Input.empty() : this.remediationEnabled;
@@ -91,7 +91,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceTags")
-    private final @Nullable Input<Map<String,String>> resourceTags;
+      private final @Nullable Input<Map<String,String>> resourceTags;
 
     public Input<Map<String,String>> getResourceTags() {
         return this.resourceTags == null ? Input.empty() : this.resourceTags;
@@ -102,7 +102,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+      private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -113,7 +113,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceTypeLists")
-    private final @Nullable Input<List<String>> resourceTypeLists;
+      private final @Nullable Input<List<String>> resourceTypeLists;
 
     public Input<List<String>> getResourceTypeLists() {
         return this.resourceTypeLists == null ? Input.empty() : this.resourceTypeLists;
@@ -124,7 +124,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityServicePolicyData", required=true)
-    private final Input<PolicySecurityServicePolicyDataArgs> securityServicePolicyData;
+      private final Input<PolicySecurityServicePolicyDataArgs> securityServicePolicyData;
 
     public Input<PolicySecurityServicePolicyDataArgs> getSecurityServicePolicyData() {
         return this.securityServicePolicyData;

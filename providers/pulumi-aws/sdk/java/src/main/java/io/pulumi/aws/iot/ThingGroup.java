@@ -10,8 +10,8 @@ import io.pulumi.aws.iot.outputs.ThingGroupMetadata;
 import io.pulumi.aws.iot.outputs.ThingGroupProperties;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -131,6 +131,21 @@ public class ThingGroup extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ThingGroup(String name) {
+        this(name, ThingGroupArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ThingGroup(String name, @Nullable ThingGroupArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

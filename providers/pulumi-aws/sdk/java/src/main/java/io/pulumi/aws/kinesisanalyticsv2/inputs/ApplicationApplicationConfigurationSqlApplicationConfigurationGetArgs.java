@@ -7,7 +7,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="input")
-    private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input;
+      private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input;
 
     public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -33,7 +33,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="outputs")
-    private final @Nullable Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs;
+      private final @Nullable Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs;
 
     public Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> getOutputs() {
         return this.outputs == null ? Input.empty() : this.outputs;
@@ -44,7 +44,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="referenceDataSource")
-    private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource;
+      private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource;
 
     public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> getReferenceDataSource() {
         return this.referenceDataSource == null ? Input.empty() : this.referenceDataSource;

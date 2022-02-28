@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="configurationSet")
-    private final @Nullable Input<String> configurationSet;
+      private final @Nullable Input<String> configurationSet;
 
     public Input<String> getConfigurationSet() {
         return this.configurationSet == null ? Input.empty() : this.configurationSet;
@@ -30,7 +30,7 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="emailSendingAccount")
-    private final @Nullable Input<String> emailSendingAccount;
+      private final @Nullable Input<String> emailSendingAccount;
 
     public Input<String> getEmailSendingAccount() {
         return this.emailSendingAccount == null ? Input.empty() : this.emailSendingAccount;
@@ -41,7 +41,7 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fromEmailAddress")
-    private final @Nullable Input<String> fromEmailAddress;
+      private final @Nullable Input<String> fromEmailAddress;
 
     public Input<String> getFromEmailAddress() {
         return this.fromEmailAddress == null ? Input.empty() : this.fromEmailAddress;
@@ -52,7 +52,7 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="replyToEmailAddress")
-    private final @Nullable Input<String> replyToEmailAddress;
+      private final @Nullable Input<String> replyToEmailAddress;
 
     public Input<String> getReplyToEmailAddress() {
         return this.replyToEmailAddress == null ? Input.empty() : this.replyToEmailAddress;
@@ -63,7 +63,7 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sourceArn")
-    private final @Nullable Input<String> sourceArn;
+      private final @Nullable Input<String> sourceArn;
 
     public Input<String> getSourceArn() {
         return this.sourceArn == null ? Input.empty() : this.sourceArn;

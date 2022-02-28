@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allowSingleColumn")
-    private final @Nullable Input<Boolean> allowSingleColumn;
+      private final @Nullable Input<Boolean> allowSingleColumn;
 
     public Input<Boolean> getAllowSingleColumn() {
         return this.allowSingleColumn == null ? Input.empty() : this.allowSingleColumn;
@@ -32,7 +32,7 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="containsHeader")
-    private final @Nullable Input<String> containsHeader;
+      private final @Nullable Input<String> containsHeader;
 
     public Input<String> getContainsHeader() {
         return this.containsHeader == null ? Input.empty() : this.containsHeader;
@@ -43,7 +43,7 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="delimiter")
-    private final @Nullable Input<String> delimiter;
+      private final @Nullable Input<String> delimiter;
 
     public Input<String> getDelimiter() {
         return this.delimiter == null ? Input.empty() : this.delimiter;
@@ -54,7 +54,7 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="disableValueTrimming")
-    private final @Nullable Input<Boolean> disableValueTrimming;
+      private final @Nullable Input<Boolean> disableValueTrimming;
 
     public Input<Boolean> getDisableValueTrimming() {
         return this.disableValueTrimming == null ? Input.empty() : this.disableValueTrimming;
@@ -65,7 +65,7 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Input<List<String>> headers;
+      private final @Nullable Input<List<String>> headers;
 
     public Input<List<String>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -76,7 +76,7 @@ public final class ClassifierCsvClassifierGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="quoteSymbol")
-    private final @Nullable Input<String> quoteSymbol;
+      private final @Nullable Input<String> quoteSymbol;
 
     public Input<String> getQuoteSymbol() {
         return this.quoteSymbol == null ? Input.empty() : this.quoteSymbol;

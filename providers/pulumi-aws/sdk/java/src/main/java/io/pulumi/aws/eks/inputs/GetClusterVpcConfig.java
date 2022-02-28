@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class GetClusterVpcConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterSecurityGroupId", required=true)
-    private final String clusterSecurityGroupId;
+      private final String clusterSecurityGroupId;
 
     public String getClusterSecurityGroupId() {
         return this.clusterSecurityGroupId;
@@ -30,7 +30,7 @@ public final class GetClusterVpcConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointPrivateAccess", required=true)
-    private final Boolean endpointPrivateAccess;
+      private final Boolean endpointPrivateAccess;
 
     public Boolean getEndpointPrivateAccess() {
         return this.endpointPrivateAccess;
@@ -41,7 +41,7 @@ public final class GetClusterVpcConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointPublicAccess", required=true)
-    private final Boolean endpointPublicAccess;
+      private final Boolean endpointPublicAccess;
 
     public Boolean getEndpointPublicAccess() {
         return this.endpointPublicAccess;
@@ -52,7 +52,7 @@ public final class GetClusterVpcConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="publicAccessCidrs", required=true)
-    private final List<String> publicAccessCidrs;
+      private final List<String> publicAccessCidrs;
 
     public List<String> getPublicAccessCidrs() {
         return this.publicAccessCidrs;
@@ -63,7 +63,7 @@ public final class GetClusterVpcConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-    private final List<String> securityGroupIds;
+      private final List<String> securityGroupIds;
 
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
@@ -74,7 +74,7 @@ public final class GetClusterVpcConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final List<String> subnetIds;
+      private final List<String> subnetIds;
 
     public List<String> getSubnetIds() {
         return this.subnetIds;
@@ -85,7 +85,7 @@ public final class GetClusterVpcConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final String vpcId;
+      private final String vpcId;
 
     public String getVpcId() {
         return this.vpcId;

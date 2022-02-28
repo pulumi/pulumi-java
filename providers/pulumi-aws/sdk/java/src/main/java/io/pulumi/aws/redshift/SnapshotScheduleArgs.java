@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SnapshotScheduleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="definitions", required=true)
-    private final Input<List<String>> definitions;
+      private final Input<List<String>> definitions;
 
     public Input<List<String>> getDefinitions() {
         return this.definitions;
@@ -33,7 +33,7 @@ public final class SnapshotScheduleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class SnapshotScheduleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="forceDestroy")
-    private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Input<Boolean> forceDestroy;
 
     public Input<Boolean> getForceDestroy() {
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
@@ -55,7 +55,7 @@ public final class SnapshotScheduleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identifier")
-    private final @Nullable Input<String> identifier;
+      private final @Nullable Input<String> identifier;
 
     public Input<String> getIdentifier() {
         return this.identifier == null ? Input.empty() : this.identifier;
@@ -67,7 +67,7 @@ public final class SnapshotScheduleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identifierPrefix")
-    private final @Nullable Input<String> identifierPrefix;
+      private final @Nullable Input<String> identifierPrefix;
 
     public Input<String> getIdentifierPrefix() {
         return this.identifierPrefix == null ? Input.empty() : this.identifierPrefix;
@@ -78,7 +78,7 @@ public final class SnapshotScheduleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

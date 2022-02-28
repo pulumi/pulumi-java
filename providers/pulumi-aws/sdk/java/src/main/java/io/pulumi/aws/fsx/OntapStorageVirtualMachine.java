@@ -10,8 +10,8 @@ import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineActiveDirectoryConfig
 import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineEndpoint;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -195,6 +195,21 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
         return this.uuid;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public OntapStorageVirtualMachine(String name) {
+        this(name, OntapStorageVirtualMachineArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public OntapStorageVirtualMachine(String name, OntapStorageVirtualMachineArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationCloudwatchLoggingOptionsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationConfiguration")
-    private final @Nullable Input<ApplicationApplicationConfigurationGetArgs> applicationConfiguration;
+      private final @Nullable Input<ApplicationApplicationConfigurationGetArgs> applicationConfiguration;
 
     public Input<ApplicationApplicationConfigurationGetArgs> getApplicationConfiguration() {
         return this.applicationConfiguration == null ? Input.empty() : this.applicationConfiguration;
@@ -35,7 +35,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -46,7 +46,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchLoggingOptions")
-    private final @Nullable Input<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
+      private final @Nullable Input<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
     public Input<ApplicationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions == null ? Input.empty() : this.cloudwatchLoggingOptions;
@@ -57,7 +57,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTimestamp")
-    private final @Nullable Input<String> createTimestamp;
+      private final @Nullable Input<String> createTimestamp;
 
     public Input<String> getCreateTimestamp() {
         return this.createTimestamp == null ? Input.empty() : this.createTimestamp;
@@ -68,7 +68,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -79,7 +79,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceStop")
-    private final @Nullable Input<Boolean> forceStop;
+      private final @Nullable Input<Boolean> forceStop;
 
     public Input<Boolean> getForceStop() {
         return this.forceStop == null ? Input.empty() : this.forceStop;
@@ -90,7 +90,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastUpdateTimestamp")
-    private final @Nullable Input<String> lastUpdateTimestamp;
+      private final @Nullable Input<String> lastUpdateTimestamp;
 
     public Input<String> getLastUpdateTimestamp() {
         return this.lastUpdateTimestamp == null ? Input.empty() : this.lastUpdateTimestamp;
@@ -101,7 +101,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -112,7 +112,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeEnvironment")
-    private final @Nullable Input<String> runtimeEnvironment;
+      private final @Nullable Input<String> runtimeEnvironment;
 
     public Input<String> getRuntimeEnvironment() {
         return this.runtimeEnvironment == null ? Input.empty() : this.runtimeEnvironment;
@@ -123,7 +123,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceExecutionRole")
-    private final @Nullable Input<String> serviceExecutionRole;
+      private final @Nullable Input<String> serviceExecutionRole;
 
     public Input<String> getServiceExecutionRole() {
         return this.serviceExecutionRole == null ? Input.empty() : this.serviceExecutionRole;
@@ -134,7 +134,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startApplication")
-    private final @Nullable Input<Boolean> startApplication;
+      private final @Nullable Input<Boolean> startApplication;
 
     public Input<Boolean> getStartApplication() {
         return this.startApplication == null ? Input.empty() : this.startApplication;
@@ -145,7 +145,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -156,7 +156,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -167,7 +167,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -178,7 +178,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionId")
-    private final @Nullable Input<Integer> versionId;
+      private final @Nullable Input<Integer> versionId;
 
     public Input<Integer> getVersionId() {
         return this.versionId == null ? Input.empty() : this.versionId;

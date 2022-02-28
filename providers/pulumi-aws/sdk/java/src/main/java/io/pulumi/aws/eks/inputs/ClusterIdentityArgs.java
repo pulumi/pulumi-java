@@ -5,7 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.ClusterIdentityOidcArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="oidcs")
-    private final @Nullable Input<List<ClusterIdentityOidcArgs>> oidcs;
+      private final @Nullable Input<List<ClusterIdentityOidcArgs>> oidcs;
 
     public Input<List<ClusterIdentityOidcArgs>> getOidcs() {
         return this.oidcs == null ? Input.empty() : this.oidcs;

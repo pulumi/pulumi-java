@@ -7,7 +7,7 @@ import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterObjectGetArg
 import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterValueGetArgs;
 import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionPipelineObjectGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PipelineDefinitionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="parameterObjects")
-    private final @Nullable Input<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects;
+      private final @Nullable Input<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects;
 
     public Input<List<PipelineDefinitionParameterObjectGetArgs>> getParameterObjects() {
         return this.parameterObjects == null ? Input.empty() : this.parameterObjects;
@@ -34,7 +34,7 @@ public final class PipelineDefinitionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="parameterValues")
-    private final @Nullable Input<List<PipelineDefinitionParameterValueGetArgs>> parameterValues;
+      private final @Nullable Input<List<PipelineDefinitionParameterValueGetArgs>> parameterValues;
 
     public Input<List<PipelineDefinitionParameterValueGetArgs>> getParameterValues() {
         return this.parameterValues == null ? Input.empty() : this.parameterValues;
@@ -45,7 +45,7 @@ public final class PipelineDefinitionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="pipelineId")
-    private final @Nullable Input<String> pipelineId;
+      private final @Nullable Input<String> pipelineId;
 
     public Input<String> getPipelineId() {
         return this.pipelineId == null ? Input.empty() : this.pipelineId;
@@ -56,7 +56,7 @@ public final class PipelineDefinitionState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="pipelineObjects")
-    private final @Nullable Input<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects;
+      private final @Nullable Input<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects;
 
     public Input<List<PipelineDefinitionPipelineObjectGetArgs>> getPipelineObjects() {
         return this.pipelineObjects == null ? Input.empty() : this.pipelineObjects;

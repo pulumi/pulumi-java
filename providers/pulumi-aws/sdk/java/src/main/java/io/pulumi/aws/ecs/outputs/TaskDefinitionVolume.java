@@ -6,7 +6,7 @@ package io.pulumi.aws.ecs.outputs;
 import io.pulumi.aws.ecs.outputs.TaskDefinitionVolumeDockerVolumeConfiguration;
 import io.pulumi.aws.ecs.outputs.TaskDefinitionVolumeEfsVolumeConfiguration;
 import io.pulumi.aws.ecs.outputs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

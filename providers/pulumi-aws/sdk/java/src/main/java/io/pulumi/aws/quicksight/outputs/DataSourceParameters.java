@@ -23,7 +23,7 @@ import io.pulumi.aws.quicksight.outputs.DataSourceParametersSpark;
 import io.pulumi.aws.quicksight.outputs.DataSourceParametersSqlServer;
 import io.pulumi.aws.quicksight.outputs.DataSourceParametersTeradata;
 import io.pulumi.aws.quicksight.outputs.DataSourceParametersTwitter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

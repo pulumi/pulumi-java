@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="eqExactMatches")
-    private final @Nullable Input<List<String>> eqExactMatches;
+      private final @Nullable Input<List<String>> eqExactMatches;
 
     public Input<List<String>> getEqExactMatches() {
         return this.eqExactMatches == null ? Input.empty() : this.eqExactMatches;
@@ -31,7 +31,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="eqs")
-    private final @Nullable Input<List<String>> eqs;
+      private final @Nullable Input<List<String>> eqs;
 
     public Input<List<String>> getEqs() {
         return this.eqs == null ? Input.empty() : this.eqs;
@@ -42,7 +42,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="field", required=true)
-    private final Input<String> field;
+      private final Input<String> field;
 
     public Input<String> getField() {
         return this.field;
@@ -53,7 +53,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="gt")
-    private final @Nullable Input<String> gt;
+      private final @Nullable Input<String> gt;
 
     public Input<String> getGt() {
         return this.gt == null ? Input.empty() : this.gt;
@@ -64,7 +64,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="gte")
-    private final @Nullable Input<String> gte;
+      private final @Nullable Input<String> gte;
 
     public Input<String> getGte() {
         return this.gte == null ? Input.empty() : this.gte;
@@ -75,7 +75,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="lt")
-    private final @Nullable Input<String> lt;
+      private final @Nullable Input<String> lt;
 
     public Input<String> getLt() {
         return this.lt == null ? Input.empty() : this.lt;
@@ -86,7 +86,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="lte")
-    private final @Nullable Input<String> lte;
+      private final @Nullable Input<String> lte;
 
     public Input<String> getLte() {
         return this.lte == null ? Input.empty() : this.lte;
@@ -97,7 +97,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="neqs")
-    private final @Nullable Input<List<String>> neqs;
+      private final @Nullable Input<List<String>> neqs;
 
     public Input<List<String>> getNeqs() {
         return this.neqs == null ? Input.empty() : this.neqs;

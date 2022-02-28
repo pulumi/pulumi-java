@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressFamily", required=true)
-    private final Input<String> addressFamily;
+      private final Input<String> addressFamily;
 
     public Input<String> getAddressFamily() {
         return this.addressFamily;
@@ -32,7 +32,7 @@ public final class BgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amazonAddress")
-    private final @Nullable Input<String> amazonAddress;
+      private final @Nullable Input<String> amazonAddress;
 
     public Input<String> getAmazonAddress() {
         return this.amazonAddress == null ? Input.empty() : this.amazonAddress;
@@ -43,7 +43,7 @@ public final class BgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgpAsn", required=true)
-    private final Input<Integer> bgpAsn;
+      private final Input<Integer> bgpAsn;
 
     public Input<Integer> getBgpAsn() {
         return this.bgpAsn;
@@ -54,7 +54,7 @@ public final class BgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgpAuthKey")
-    private final @Nullable Input<String> bgpAuthKey;
+      private final @Nullable Input<String> bgpAuthKey;
 
     public Input<String> getBgpAuthKey() {
         return this.bgpAuthKey == null ? Input.empty() : this.bgpAuthKey;
@@ -66,7 +66,7 @@ public final class BgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerAddress")
-    private final @Nullable Input<String> customerAddress;
+      private final @Nullable Input<String> customerAddress;
 
     public Input<String> getCustomerAddress() {
         return this.customerAddress == null ? Input.empty() : this.customerAddress;
@@ -77,7 +77,7 @@ public final class BgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualInterfaceId", required=true)
-    private final Input<String> virtualInterfaceId;
+      private final Input<String> virtualInterfaceId;
 
     public Input<String> getVirtualInterfaceId() {
         return this.virtualInterfaceId;

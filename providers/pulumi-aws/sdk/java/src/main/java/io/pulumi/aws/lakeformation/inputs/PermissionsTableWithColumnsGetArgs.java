@@ -4,7 +4,7 @@
 package io.pulumi.aws.lakeformation.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class PermissionsTableWithColumnsGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
@@ -32,7 +32,7 @@ public final class PermissionsTableWithColumnsGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="columnNames")
-    private final @Nullable Input<List<String>> columnNames;
+      private final @Nullable Input<List<String>> columnNames;
 
     public Input<List<String>> getColumnNames() {
         return this.columnNames == null ? Input.empty() : this.columnNames;
@@ -43,14 +43,14 @@ public final class PermissionsTableWithColumnsGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
     }
 
     @InputImport(name="excludedColumnNames")
-    private final @Nullable Input<List<String>> excludedColumnNames;
+      private final @Nullable Input<List<String>> excludedColumnNames;
 
     public Input<List<String>> getExcludedColumnNames() {
         return this.excludedColumnNames == null ? Input.empty() : this.excludedColumnNames;
@@ -61,14 +61,14 @@ public final class PermissionsTableWithColumnsGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="wildcard")
-    private final @Nullable Input<Boolean> wildcard;
+      private final @Nullable Input<Boolean> wildcard;
 
     public Input<Boolean> getWildcard() {
         return this.wildcard == null ? Input.empty() : this.wildcard;

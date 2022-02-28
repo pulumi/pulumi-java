@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudsearch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DomainScalingParametersArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="desiredInstanceType")
-    private final @Nullable Input<String> desiredInstanceType;
+      private final @Nullable Input<String> desiredInstanceType;
 
     public Input<String> getDesiredInstanceType() {
         return this.desiredInstanceType == null ? Input.empty() : this.desiredInstanceType;
@@ -31,7 +31,7 @@ public final class DomainScalingParametersArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="desiredPartitionCount")
-    private final @Nullable Input<Integer> desiredPartitionCount;
+      private final @Nullable Input<Integer> desiredPartitionCount;
 
     public Input<Integer> getDesiredPartitionCount() {
         return this.desiredPartitionCount == null ? Input.empty() : this.desiredPartitionCount;
@@ -42,7 +42,7 @@ public final class DomainScalingParametersArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="desiredReplicationCount")
-    private final @Nullable Input<Integer> desiredReplicationCount;
+      private final @Nullable Input<Integer> desiredReplicationCount;
 
     public Input<Integer> getDesiredReplicationCount() {
         return this.desiredReplicationCount == null ? Input.empty() : this.desiredReplicationCount;

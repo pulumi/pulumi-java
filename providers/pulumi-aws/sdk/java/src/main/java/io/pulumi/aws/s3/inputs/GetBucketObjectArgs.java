@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final String bucket;
+      private final String bucket;
 
     public String getBucket() {
         return this.bucket;
@@ -31,14 +31,14 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="range")
-    private final @Nullable String range;
+      private final @Nullable String range;
 
     public Optional<String> getRange() {
         return this.range == null ? Optional.empty() : Optional.ofNullable(this.range);
@@ -49,7 +49,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -60,7 +60,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="versionId")
-    private final @Nullable String versionId;
+      private final @Nullable String versionId;
 
     public Optional<String> getVersionId() {
         return this.versionId == null ? Optional.empty() : Optional.ofNullable(this.versionId);

@@ -4,7 +4,7 @@
 package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RateBasedRulePredicateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataId", required=true)
-    private final Input<String> dataId;
+      private final Input<String> dataId;
 
     public Input<String> getDataId() {
         return this.dataId;
@@ -33,7 +33,7 @@ public final class RateBasedRulePredicateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="negated", required=true)
-    private final Input<Boolean> negated;
+      private final Input<Boolean> negated;
 
     public Input<Boolean> getNegated() {
         return this.negated;
@@ -44,7 +44,7 @@ public final class RateBasedRulePredicateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

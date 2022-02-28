@@ -6,7 +6,7 @@ package io.pulumi.aws.acm.inputs;
 import io.pulumi.aws.acm.inputs.CertificateDomainValidationOptionGetArgs;
 import io.pulumi.aws.acm.inputs.CertificateOptionsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthorityArn")
-    private final @Nullable Input<String> certificateAuthorityArn;
+      private final @Nullable Input<String> certificateAuthorityArn;
 
     public Input<String> getCertificateAuthorityArn() {
         return this.certificateAuthorityArn == null ? Input.empty() : this.certificateAuthorityArn;
@@ -45,7 +45,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateBody")
-    private final @Nullable Input<String> certificateBody;
+      private final @Nullable Input<String> certificateBody;
 
     public Input<String> getCertificateBody() {
         return this.certificateBody == null ? Input.empty() : this.certificateBody;
@@ -57,7 +57,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateChain")
-    private final @Nullable Input<String> certificateChain;
+      private final @Nullable Input<String> certificateChain;
 
     public Input<String> getCertificateChain() {
         return this.certificateChain == null ? Input.empty() : this.certificateChain;
@@ -68,7 +68,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -79,7 +79,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainValidationOptions")
-    private final @Nullable Input<List<CertificateDomainValidationOptionGetArgs>> domainValidationOptions;
+      private final @Nullable Input<List<CertificateDomainValidationOptionGetArgs>> domainValidationOptions;
 
     public Input<List<CertificateDomainValidationOptionGetArgs>> getDomainValidationOptions() {
         return this.domainValidationOptions == null ? Input.empty() : this.domainValidationOptions;
@@ -91,7 +91,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<CertificateOptionsGetArgs> options;
+      private final @Nullable Input<CertificateOptionsGetArgs> options;
 
     public Input<CertificateOptionsGetArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -102,7 +102,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKey")
-    private final @Nullable Input<String> privateKey;
+      private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
@@ -113,7 +113,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -124,7 +124,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subjectAlternativeNames")
-    private final @Nullable Input<List<String>> subjectAlternativeNames;
+      private final @Nullable Input<List<String>> subjectAlternativeNames;
 
     public Input<List<String>> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
@@ -135,7 +135,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -146,7 +146,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -157,7 +157,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationEmails")
-    private final @Nullable Input<List<String>> validationEmails;
+      private final @Nullable Input<List<String>> validationEmails;
 
     public Input<List<String>> getValidationEmails() {
         return this.validationEmails == null ? Input.empty() : this.validationEmails;
@@ -168,7 +168,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationMethod")
-    private final @Nullable Input<String> validationMethod;
+      private final @Nullable Input<String> validationMethod;
 
     public Input<String> getValidationMethod() {
         return this.validationMethod == null ? Input.empty() : this.validationMethod;

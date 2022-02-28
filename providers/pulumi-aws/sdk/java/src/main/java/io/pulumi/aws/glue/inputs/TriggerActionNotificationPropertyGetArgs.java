@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TriggerActionNotificationPropertyGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="notifyDelayAfter")
-    private final @Nullable Input<Integer> notifyDelayAfter;
+      private final @Nullable Input<Integer> notifyDelayAfter;
 
     public Input<Integer> getNotifyDelayAfter() {
         return this.notifyDelayAfter == null ? Input.empty() : this.notifyDelayAfter;

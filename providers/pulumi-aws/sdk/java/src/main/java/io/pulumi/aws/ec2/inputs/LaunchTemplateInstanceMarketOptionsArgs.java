@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.LaunchTemplateInstanceMarketOptionsSpotOptionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class LaunchTemplateInstanceMarketOptionsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="marketType")
-    private final @Nullable Input<String> marketType;
+      private final @Nullable Input<String> marketType;
 
     public Input<String> getMarketType() {
         return this.marketType == null ? Input.empty() : this.marketType;
@@ -31,7 +31,7 @@ public final class LaunchTemplateInstanceMarketOptionsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="spotOptions")
-    private final @Nullable Input<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions;
+      private final @Nullable Input<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions;
 
     public Input<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> getSpotOptions() {
         return this.spotOptions == null ? Input.empty() : this.spotOptions;

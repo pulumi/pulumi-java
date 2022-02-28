@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventBusName")
-    private final @Nullable Input<String> eventBusName;
+      private final @Nullable Input<String> eventBusName;
 
     public Input<String> getEventBusName() {
         return this.eventBusName == null ? Input.empty() : this.eventBusName;
@@ -43,7 +43,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventPattern")
-    private final @Nullable Input<String> eventPattern;
+      private final @Nullable Input<String> eventPattern;
 
     public Input<String> getEventPattern() {
         return this.eventPattern == null ? Input.empty() : this.eventPattern;
@@ -54,7 +54,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEnabled")
-    private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
@@ -65,7 +65,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -76,7 +76,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -87,7 +87,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -98,7 +98,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleExpression")
-    private final @Nullable Input<String> scheduleExpression;
+      private final @Nullable Input<String> scheduleExpression;
 
     public Input<String> getScheduleExpression() {
         return this.scheduleExpression == null ? Input.empty() : this.scheduleExpression;
@@ -109,7 +109,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

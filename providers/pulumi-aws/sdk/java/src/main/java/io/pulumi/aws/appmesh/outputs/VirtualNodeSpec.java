@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecBackendDefaults;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListener;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecLogging;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecServiceDiscovery;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

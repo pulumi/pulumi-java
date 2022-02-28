@@ -5,7 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="authorizationConfig")
-    private final @Nullable Input<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs> authorizationConfig;
+      private final @Nullable Input<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs> authorizationConfig;
 
     public Input<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs> getAuthorizationConfig() {
         return this.authorizationConfig == null ? Input.empty() : this.authorizationConfig;
@@ -32,7 +32,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="fileSystemId", required=true)
-    private final Input<String> fileSystemId;
+      private final Input<String> fileSystemId;
 
     public Input<String> getFileSystemId() {
         return this.fileSystemId;
@@ -43,7 +43,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="rootDirectory")
-    private final @Nullable Input<String> rootDirectory;
+      private final @Nullable Input<String> rootDirectory;
 
     public Input<String> getRootDirectory() {
         return this.rootDirectory == null ? Input.empty() : this.rootDirectory;
@@ -54,7 +54,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="transitEncryption")
-    private final @Nullable Input<String> transitEncryption;
+      private final @Nullable Input<String> transitEncryption;
 
     public Input<String> getTransitEncryption() {
         return this.transitEncryption == null ? Input.empty() : this.transitEncryption;
@@ -65,7 +65,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="transitEncryptionPort")
-    private final @Nullable Input<Integer> transitEncryptionPort;
+      private final @Nullable Input<Integer> transitEncryptionPort;
 
     public Input<Integer> getTransitEncryptionPort() {
         return this.transitEncryptionPort == null ? Input.empty() : this.transitEncryptionPort;

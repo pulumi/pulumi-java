@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final Input<String> containerName;
+      private final Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName;
@@ -31,7 +31,7 @@ public final class ServiceLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerPort", required=true)
-    private final Input<Integer> containerPort;
+      private final Input<Integer> containerPort;
 
     public Input<Integer> getContainerPort() {
         return this.containerPort;
@@ -42,7 +42,7 @@ public final class ServiceLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="elbName")
-    private final @Nullable Input<String> elbName;
+      private final @Nullable Input<String> elbName;
 
     public Input<String> getElbName() {
         return this.elbName == null ? Input.empty() : this.elbName;
@@ -53,7 +53,7 @@ public final class ServiceLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="targetGroupArn")
-    private final @Nullable Input<String> targetGroupArn;
+      private final @Nullable Input<String> targetGroupArn;
 
     public Input<String> getTargetGroupArn() {
         return this.targetGroupArn == null ? Input.empty() : this.targetGroupArn;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticache;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="globalReplicationGroupDescription")
-    private final @Nullable Input<String> globalReplicationGroupDescription;
+      private final @Nullable Input<String> globalReplicationGroupDescription;
 
     public Input<String> getGlobalReplicationGroupDescription() {
         return this.globalReplicationGroupDescription == null ? Input.empty() : this.globalReplicationGroupDescription;
@@ -30,7 +30,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="globalReplicationGroupIdSuffix", required=true)
-    private final Input<String> globalReplicationGroupIdSuffix;
+      private final Input<String> globalReplicationGroupIdSuffix;
 
     public Input<String> getGlobalReplicationGroupIdSuffix() {
         return this.globalReplicationGroupIdSuffix;
@@ -41,7 +41,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="primaryReplicationGroupId", required=true)
-    private final Input<String> primaryReplicationGroupId;
+      private final Input<String> primaryReplicationGroupId;
 
     public Input<String> getPrimaryReplicationGroupId() {
         return this.primaryReplicationGroupId;

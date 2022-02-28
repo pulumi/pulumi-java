@@ -4,7 +4,7 @@
 package io.pulumi.aws.timestreamwrite.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TableRetentionPropertiesGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="magneticStoreRetentionPeriodInDays", required=true)
-    private final Input<Integer> magneticStoreRetentionPeriodInDays;
+      private final Input<Integer> magneticStoreRetentionPeriodInDays;
 
     public Input<Integer> getMagneticStoreRetentionPeriodInDays() {
         return this.magneticStoreRetentionPeriodInDays;
@@ -29,7 +29,7 @@ public final class TableRetentionPropertiesGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="memoryStoreRetentionPeriodInHours", required=true)
-    private final Input<Integer> memoryStoreRetentionPeriodInHours;
+      private final Input<Integer> memoryStoreRetentionPeriodInHours;
 
     public Input<Integer> getMemoryStoreRetentionPeriodInHours() {
         return this.memoryStoreRetentionPeriodInHours;

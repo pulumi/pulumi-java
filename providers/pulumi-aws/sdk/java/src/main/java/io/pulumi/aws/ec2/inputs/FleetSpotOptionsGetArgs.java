@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.FleetSpotOptionsMaintenanceStrategiesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FleetSpotOptionsGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allocationStrategy")
-    private final @Nullable Input<String> allocationStrategy;
+      private final @Nullable Input<String> allocationStrategy;
 
     public Input<String> getAllocationStrategy() {
         return this.allocationStrategy == null ? Input.empty() : this.allocationStrategy;
@@ -32,7 +32,7 @@ public final class FleetSpotOptionsGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceInterruptionBehavior")
-    private final @Nullable Input<String> instanceInterruptionBehavior;
+      private final @Nullable Input<String> instanceInterruptionBehavior;
 
     public Input<String> getInstanceInterruptionBehavior() {
         return this.instanceInterruptionBehavior == null ? Input.empty() : this.instanceInterruptionBehavior;
@@ -43,7 +43,7 @@ public final class FleetSpotOptionsGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instancePoolsToUseCount")
-    private final @Nullable Input<Integer> instancePoolsToUseCount;
+      private final @Nullable Input<Integer> instancePoolsToUseCount;
 
     public Input<Integer> getInstancePoolsToUseCount() {
         return this.instancePoolsToUseCount == null ? Input.empty() : this.instancePoolsToUseCount;
@@ -54,7 +54,7 @@ public final class FleetSpotOptionsGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maintenanceStrategies")
-    private final @Nullable Input<FleetSpotOptionsMaintenanceStrategiesGetArgs> maintenanceStrategies;
+      private final @Nullable Input<FleetSpotOptionsMaintenanceStrategiesGetArgs> maintenanceStrategies;
 
     public Input<FleetSpotOptionsMaintenanceStrategiesGetArgs> getMaintenanceStrategies() {
         return this.maintenanceStrategies == null ? Input.empty() : this.maintenanceStrategies;

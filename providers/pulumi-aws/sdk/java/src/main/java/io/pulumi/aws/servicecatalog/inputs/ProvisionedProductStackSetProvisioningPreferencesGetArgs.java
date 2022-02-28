@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
      * 
      */
     @InputImport(name="accounts")
-    private final @Nullable Input<List<String>> accounts;
+      private final @Nullable Input<List<String>> accounts;
 
     public Input<List<String>> getAccounts() {
         return this.accounts == null ? Input.empty() : this.accounts;
@@ -32,7 +32,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
      * 
      */
     @InputImport(name="failureToleranceCount")
-    private final @Nullable Input<Integer> failureToleranceCount;
+      private final @Nullable Input<Integer> failureToleranceCount;
 
     public Input<Integer> getFailureToleranceCount() {
         return this.failureToleranceCount == null ? Input.empty() : this.failureToleranceCount;
@@ -43,7 +43,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
      * 
      */
     @InputImport(name="failureTolerancePercentage")
-    private final @Nullable Input<Integer> failureTolerancePercentage;
+      private final @Nullable Input<Integer> failureTolerancePercentage;
 
     public Input<Integer> getFailureTolerancePercentage() {
         return this.failureTolerancePercentage == null ? Input.empty() : this.failureTolerancePercentage;
@@ -54,7 +54,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
      * 
      */
     @InputImport(name="maxConcurrencyCount")
-    private final @Nullable Input<Integer> maxConcurrencyCount;
+      private final @Nullable Input<Integer> maxConcurrencyCount;
 
     public Input<Integer> getMaxConcurrencyCount() {
         return this.maxConcurrencyCount == null ? Input.empty() : this.maxConcurrencyCount;
@@ -65,7 +65,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
      * 
      */
     @InputImport(name="maxConcurrencyPercentage")
-    private final @Nullable Input<Integer> maxConcurrencyPercentage;
+      private final @Nullable Input<Integer> maxConcurrencyPercentage;
 
     public Input<Integer> getMaxConcurrencyPercentage() {
         return this.maxConcurrencyPercentage == null ? Input.empty() : this.maxConcurrencyPercentage;
@@ -76,7 +76,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
      * 
      */
     @InputImport(name="regions")
-    private final @Nullable Input<List<String>> regions;
+      private final @Nullable Input<List<String>> regions;
 
     public Input<List<String>> getRegions() {
         return this.regions == null ? Input.empty() : this.regions;

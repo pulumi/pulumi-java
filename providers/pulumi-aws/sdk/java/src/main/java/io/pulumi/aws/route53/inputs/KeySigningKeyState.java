@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="digestAlgorithmMnemonic")
-    private final @Nullable Input<String> digestAlgorithmMnemonic;
+      private final @Nullable Input<String> digestAlgorithmMnemonic;
 
     public Input<String> getDigestAlgorithmMnemonic() {
         return this.digestAlgorithmMnemonic == null ? Input.empty() : this.digestAlgorithmMnemonic;
@@ -31,7 +31,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="digestAlgorithmType")
-    private final @Nullable Input<Integer> digestAlgorithmType;
+      private final @Nullable Input<Integer> digestAlgorithmType;
 
     public Input<Integer> getDigestAlgorithmType() {
         return this.digestAlgorithmType == null ? Input.empty() : this.digestAlgorithmType;
@@ -42,7 +42,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="digestValue")
-    private final @Nullable Input<String> digestValue;
+      private final @Nullable Input<String> digestValue;
 
     public Input<String> getDigestValue() {
         return this.digestValue == null ? Input.empty() : this.digestValue;
@@ -53,7 +53,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnskeyRecord")
-    private final @Nullable Input<String> dnskeyRecord;
+      private final @Nullable Input<String> dnskeyRecord;
 
     public Input<String> getDnskeyRecord() {
         return this.dnskeyRecord == null ? Input.empty() : this.dnskeyRecord;
@@ -64,7 +64,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dsRecord")
-    private final @Nullable Input<String> dsRecord;
+      private final @Nullable Input<String> dsRecord;
 
     public Input<String> getDsRecord() {
         return this.dsRecord == null ? Input.empty() : this.dsRecord;
@@ -75,7 +75,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flag")
-    private final @Nullable Input<Integer> flag;
+      private final @Nullable Input<Integer> flag;
 
     public Input<Integer> getFlag() {
         return this.flag == null ? Input.empty() : this.flag;
@@ -86,7 +86,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostedZoneId")
-    private final @Nullable Input<String> hostedZoneId;
+      private final @Nullable Input<String> hostedZoneId;
 
     public Input<String> getHostedZoneId() {
         return this.hostedZoneId == null ? Input.empty() : this.hostedZoneId;
@@ -97,7 +97,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyManagementServiceArn")
-    private final @Nullable Input<String> keyManagementServiceArn;
+      private final @Nullable Input<String> keyManagementServiceArn;
 
     public Input<String> getKeyManagementServiceArn() {
         return this.keyManagementServiceArn == null ? Input.empty() : this.keyManagementServiceArn;
@@ -108,7 +108,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyTag")
-    private final @Nullable Input<Integer> keyTag;
+      private final @Nullable Input<Integer> keyTag;
 
     public Input<Integer> getKeyTag() {
         return this.keyTag == null ? Input.empty() : this.keyTag;
@@ -119,7 +119,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -130,7 +130,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-    private final @Nullable Input<String> publicKey;
+      private final @Nullable Input<String> publicKey;
 
     public Input<String> getPublicKey() {
         return this.publicKey == null ? Input.empty() : this.publicKey;
@@ -141,7 +141,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signingAlgorithmMnemonic")
-    private final @Nullable Input<String> signingAlgorithmMnemonic;
+      private final @Nullable Input<String> signingAlgorithmMnemonic;
 
     public Input<String> getSigningAlgorithmMnemonic() {
         return this.signingAlgorithmMnemonic == null ? Input.empty() : this.signingAlgorithmMnemonic;
@@ -152,7 +152,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signingAlgorithmType")
-    private final @Nullable Input<Integer> signingAlgorithmType;
+      private final @Nullable Input<Integer> signingAlgorithmType;
 
     public Input<Integer> getSigningAlgorithmType() {
         return this.signingAlgorithmType == null ? Input.empty() : this.signingAlgorithmType;
@@ -163,7 +163,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

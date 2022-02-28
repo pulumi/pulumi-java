@@ -4,7 +4,7 @@
 package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="comparisonOperator", required=true)
-    private final Input<String> comparisonOperator;
+      private final Input<String> comparisonOperator;
 
     public Input<String> getComparisonOperator() {
         return this.comparisonOperator;
@@ -32,7 +32,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="notificationType", required=true)
-    private final Input<String> notificationType;
+      private final Input<String> notificationType;
 
     public Input<String> getNotificationType() {
         return this.notificationType;
@@ -43,7 +43,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subscriberEmailAddresses")
-    private final @Nullable Input<List<String>> subscriberEmailAddresses;
+      private final @Nullable Input<List<String>> subscriberEmailAddresses;
 
     public Input<List<String>> getSubscriberEmailAddresses() {
         return this.subscriberEmailAddresses == null ? Input.empty() : this.subscriberEmailAddresses;
@@ -54,7 +54,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subscriberSnsTopicArns")
-    private final @Nullable Input<List<String>> subscriberSnsTopicArns;
+      private final @Nullable Input<List<String>> subscriberSnsTopicArns;
 
     public Input<List<String>> getSubscriberSnsTopicArns() {
         return this.subscriberSnsTopicArns == null ? Input.empty() : this.subscriberSnsTopicArns;
@@ -65,7 +65,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="threshold", required=true)
-    private final Input<Double> threshold;
+      private final Input<Double> threshold;
 
     public Input<Double> getThreshold() {
         return this.threshold;
@@ -76,7 +76,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="thresholdType", required=true)
-    private final Input<String> thresholdType;
+      private final Input<String> thresholdType;
 
     public Input<String> getThresholdType() {
         return this.thresholdType;

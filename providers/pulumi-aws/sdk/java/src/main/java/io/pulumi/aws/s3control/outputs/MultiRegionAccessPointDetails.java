@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control.outputs;
 
 import io.pulumi.aws.s3control.outputs.MultiRegionAccessPointDetailsPublicAccessBlock;
 import io.pulumi.aws.s3control.outputs.MultiRegionAccessPointDetailsRegion;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

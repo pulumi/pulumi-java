@@ -4,7 +4,7 @@
 package io.pulumi.aws.serverlessrepository;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="applicationId", required=true)
-    private final Input<String> applicationId;
+      private final Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId;
@@ -32,7 +32,7 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="capabilities", required=true)
-    private final Input<List<String>> capabilities;
+      private final Input<List<String>> capabilities;
 
     public Input<List<String>> getCapabilities() {
         return this.capabilities;
@@ -43,7 +43,7 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -65,7 +65,7 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="semanticVersion")
-    private final @Nullable Input<String> semanticVersion;
+      private final @Nullable Input<String> semanticVersion;
 
     public Input<String> getSemanticVersion() {
         return this.semanticVersion == null ? Input.empty() : this.semanticVersion;
@@ -76,7 +76,7 @@ public final class CloudFormationStackArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -7,7 +7,7 @@ import io.pulumi.aws.ses.inputs.EventDestinationCloudwatchDestinationGetArgs;
 import io.pulumi.aws.ses.inputs.EventDestinationKinesisDestinationGetArgs;
 import io.pulumi.aws.ses.inputs.EventDestinationSnsDestinationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -35,7 +35,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cloudwatchDestinations")
-    private final @Nullable Input<List<EventDestinationCloudwatchDestinationGetArgs>> cloudwatchDestinations;
+      private final @Nullable Input<List<EventDestinationCloudwatchDestinationGetArgs>> cloudwatchDestinations;
 
     public Input<List<EventDestinationCloudwatchDestinationGetArgs>> getCloudwatchDestinations() {
         return this.cloudwatchDestinations == null ? Input.empty() : this.cloudwatchDestinations;
@@ -46,7 +46,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="configurationSetName")
-    private final @Nullable Input<String> configurationSetName;
+      private final @Nullable Input<String> configurationSetName;
 
     public Input<String> getConfigurationSetName() {
         return this.configurationSetName == null ? Input.empty() : this.configurationSetName;
@@ -57,7 +57,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -68,7 +68,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kinesisDestination")
-    private final @Nullable Input<EventDestinationKinesisDestinationGetArgs> kinesisDestination;
+      private final @Nullable Input<EventDestinationKinesisDestinationGetArgs> kinesisDestination;
 
     public Input<EventDestinationKinesisDestinationGetArgs> getKinesisDestination() {
         return this.kinesisDestination == null ? Input.empty() : this.kinesisDestination;
@@ -79,7 +79,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="matchingTypes")
-    private final @Nullable Input<List<String>> matchingTypes;
+      private final @Nullable Input<List<String>> matchingTypes;
 
     public Input<List<String>> getMatchingTypes() {
         return this.matchingTypes == null ? Input.empty() : this.matchingTypes;
@@ -90,7 +90,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -101,7 +101,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snsDestination")
-    private final @Nullable Input<EventDestinationSnsDestinationGetArgs> snsDestination;
+      private final @Nullable Input<EventDestinationSnsDestinationGetArgs> snsDestination;
 
     public Input<EventDestinationSnsDestinationGetArgs> getSnsDestination() {
         return this.snsDestination == null ? Input.empty() : this.snsDestination;

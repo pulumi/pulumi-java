@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DataCatalogEncryptionSettingsState extends io.pulumi.resource
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
@@ -31,7 +31,7 @@ public final class DataCatalogEncryptionSettingsState extends io.pulumi.resource
      * 
      */
     @InputImport(name="dataCatalogEncryptionSettings")
-    private final @Nullable Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings;
+      private final @Nullable Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings;
 
     public Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> getDataCatalogEncryptionSettings() {
         return this.dataCatalogEncryptionSettings == null ? Input.empty() : this.dataCatalogEncryptionSettings;

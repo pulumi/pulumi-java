@@ -5,7 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.aws.ses.inputs.ConfgurationSetDeliveryOptionsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deliveryOptions")
-    private final @Nullable Input<ConfgurationSetDeliveryOptionsGetArgs> deliveryOptions;
+      private final @Nullable Input<ConfgurationSetDeliveryOptionsGetArgs> deliveryOptions;
 
     public Input<ConfgurationSetDeliveryOptionsGetArgs> getDeliveryOptions() {
         return this.deliveryOptions == null ? Input.empty() : this.deliveryOptions;
@@ -43,7 +43,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lastFreshStart")
-    private final @Nullable Input<String> lastFreshStart;
+      private final @Nullable Input<String> lastFreshStart;
 
     public Input<String> getLastFreshStart() {
         return this.lastFreshStart == null ? Input.empty() : this.lastFreshStart;
@@ -54,7 +54,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="reputationMetricsEnabled")
-    private final @Nullable Input<Boolean> reputationMetricsEnabled;
+      private final @Nullable Input<Boolean> reputationMetricsEnabled;
 
     public Input<Boolean> getReputationMetricsEnabled() {
         return this.reputationMetricsEnabled == null ? Input.empty() : this.reputationMetricsEnabled;
@@ -76,7 +76,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sendingEnabled")
-    private final @Nullable Input<Boolean> sendingEnabled;
+      private final @Nullable Input<Boolean> sendingEnabled;
 
     public Input<Boolean> getSendingEnabled() {
         return this.sendingEnabled == null ? Input.empty() : this.sendingEnabled;

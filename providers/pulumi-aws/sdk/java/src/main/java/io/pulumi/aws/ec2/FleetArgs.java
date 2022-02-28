@@ -8,7 +8,7 @@ import io.pulumi.aws.ec2.inputs.FleetOnDemandOptionsArgs;
 import io.pulumi.aws.ec2.inputs.FleetSpotOptionsArgs;
 import io.pulumi.aws.ec2.inputs.FleetTargetCapacitySpecificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excessCapacityTerminationPolicy")
-    private final @Nullable Input<String> excessCapacityTerminationPolicy;
+      private final @Nullable Input<String> excessCapacityTerminationPolicy;
 
     public Input<String> getExcessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy == null ? Input.empty() : this.excessCapacityTerminationPolicy;
@@ -36,7 +36,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchTemplateConfig", required=true)
-    private final Input<FleetLaunchTemplateConfigArgs> launchTemplateConfig;
+      private final Input<FleetLaunchTemplateConfigArgs> launchTemplateConfig;
 
     public Input<FleetLaunchTemplateConfigArgs> getLaunchTemplateConfig() {
         return this.launchTemplateConfig;
@@ -47,7 +47,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onDemandOptions")
-    private final @Nullable Input<FleetOnDemandOptionsArgs> onDemandOptions;
+      private final @Nullable Input<FleetOnDemandOptionsArgs> onDemandOptions;
 
     public Input<FleetOnDemandOptionsArgs> getOnDemandOptions() {
         return this.onDemandOptions == null ? Input.empty() : this.onDemandOptions;
@@ -58,7 +58,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replaceUnhealthyInstances")
-    private final @Nullable Input<Boolean> replaceUnhealthyInstances;
+      private final @Nullable Input<Boolean> replaceUnhealthyInstances;
 
     public Input<Boolean> getReplaceUnhealthyInstances() {
         return this.replaceUnhealthyInstances == null ? Input.empty() : this.replaceUnhealthyInstances;
@@ -69,7 +69,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spotOptions")
-    private final @Nullable Input<FleetSpotOptionsArgs> spotOptions;
+      private final @Nullable Input<FleetSpotOptionsArgs> spotOptions;
 
     public Input<FleetSpotOptionsArgs> getSpotOptions() {
         return this.spotOptions == null ? Input.empty() : this.spotOptions;
@@ -80,7 +80,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -91,7 +91,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetCapacitySpecification", required=true)
-    private final Input<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification;
+      private final Input<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification;
 
     public Input<FleetTargetCapacitySpecificationArgs> getTargetCapacitySpecification() {
         return this.targetCapacitySpecification;
@@ -102,7 +102,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminateInstances")
-    private final @Nullable Input<Boolean> terminateInstances;
+      private final @Nullable Input<Boolean> terminateInstances;
 
     public Input<Boolean> getTerminateInstances() {
         return this.terminateInstances == null ? Input.empty() : this.terminateInstances;
@@ -113,7 +113,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminateInstancesWithExpiration")
-    private final @Nullable Input<Boolean> terminateInstancesWithExpiration;
+      private final @Nullable Input<Boolean> terminateInstancesWithExpiration;
 
     public Input<Boolean> getTerminateInstancesWithExpiration() {
         return this.terminateInstancesWithExpiration == null ? Input.empty() : this.terminateInstancesWithExpiration;
@@ -124,7 +124,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

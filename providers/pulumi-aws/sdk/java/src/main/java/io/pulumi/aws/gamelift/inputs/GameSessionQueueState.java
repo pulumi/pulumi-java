@@ -5,7 +5,7 @@ package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.aws.gamelift.inputs.GameSessionQueuePlayerLatencyPolicyGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinations")
-    private final @Nullable Input<List<String>> destinations;
+      private final @Nullable Input<List<String>> destinations;
 
     public Input<List<String>> getDestinations() {
         return this.destinations == null ? Input.empty() : this.destinations;
@@ -45,7 +45,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="playerLatencyPolicies")
-    private final @Nullable Input<List<GameSessionQueuePlayerLatencyPolicyGetArgs>> playerLatencyPolicies;
+      private final @Nullable Input<List<GameSessionQueuePlayerLatencyPolicyGetArgs>> playerLatencyPolicies;
 
     public Input<List<GameSessionQueuePlayerLatencyPolicyGetArgs>> getPlayerLatencyPolicies() {
         return this.playerLatencyPolicies == null ? Input.empty() : this.playerLatencyPolicies;
@@ -67,7 +67,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -78,7 +78,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -89,7 +89,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timeoutInSeconds")
-    private final @Nullable Input<Integer> timeoutInSeconds;
+      private final @Nullable Input<Integer> timeoutInSeconds;
 
     public Input<Integer> getTimeoutInSeconds() {
         return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;

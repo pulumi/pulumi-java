@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WebAclLoggingConfigurationLoggingFilterGetArgs extends io.pul
      * 
      */
     @InputImport(name="defaultBehavior", required=true)
-    private final Input<String> defaultBehavior;
+      private final Input<String> defaultBehavior;
 
     public Input<String> getDefaultBehavior() {
         return this.defaultBehavior;
@@ -31,7 +31,7 @@ public final class WebAclLoggingConfigurationLoggingFilterGetArgs extends io.pul
      * 
      */
     @InputImport(name="filters", required=true)
-    private final Input<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters;
+      private final Input<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> filters;
 
     public Input<List<WebAclLoggingConfigurationLoggingFilterFilterGetArgs>> getFilters() {
         return this.filters;

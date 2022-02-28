@@ -5,7 +5,7 @@ package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.aws.guardduty.inputs.FilterFindingCriteriaCriterionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +15,7 @@ public final class FilterFindingCriteriaArgs extends io.pulumi.resources.Resourc
     public static final FilterFindingCriteriaArgs Empty = new FilterFindingCriteriaArgs();
 
     @InputImport(name="criterions", required=true)
-    private final Input<List<FilterFindingCriteriaCriterionArgs>> criterions;
+      private final Input<List<FilterFindingCriteriaCriterionArgs>> criterions;
 
     public Input<List<FilterFindingCriteriaCriterionArgs>> getCriterions() {
         return this.criterions;

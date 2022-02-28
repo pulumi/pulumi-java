@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3outposts.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EndpointNetworkInterfaceGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="networkInterfaceId")
-    private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;

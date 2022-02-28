@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesArgs 
      * 
      */
     @InputImport(name="propertyGroups", required=true)
-    private final Input<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs>> propertyGroups;
+      private final Input<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs>> propertyGroups;
 
     public Input<List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs>> getPropertyGroups() {
         return this.propertyGroups;

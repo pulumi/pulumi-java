@@ -91,7 +91,7 @@ import io.pulumi.aws.securityhub.outputs.InsightFiltersUpdatedAt;
 import io.pulumi.aws.securityhub.outputs.InsightFiltersUserDefinedValue;
 import io.pulumi.aws.securityhub.outputs.InsightFiltersVerificationState;
 import io.pulumi.aws.securityhub.outputs.InsightFiltersWorkflowStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

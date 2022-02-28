@@ -5,7 +5,7 @@ package io.pulumi.aws.waf;
 
 import io.pulumi.aws.waf.inputs.GeoMatchSetGeoMatchConstraintArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GeoMatchSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="geoMatchConstraints")
-    private final @Nullable Input<List<GeoMatchSetGeoMatchConstraintArgs>> geoMatchConstraints;
+      private final @Nullable Input<List<GeoMatchSetGeoMatchConstraintArgs>> geoMatchConstraints;
 
     public Input<List<GeoMatchSetGeoMatchConstraintArgs>> getGeoMatchConstraints() {
         return this.geoMatchConstraints == null ? Input.empty() : this.geoMatchConstraints;
@@ -32,7 +32,7 @@ public final class GeoMatchSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

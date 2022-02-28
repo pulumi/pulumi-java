@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="adDomainJoinPassword")
-    private final @Nullable Input<String> adDomainJoinPassword;
+      private final @Nullable Input<String> adDomainJoinPassword;
 
     public Input<String> getAdDomainJoinPassword() {
         return this.adDomainJoinPassword == null ? Input.empty() : this.adDomainJoinPassword;
@@ -30,7 +30,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="adDomainJoinUser")
-    private final @Nullable Input<String> adDomainJoinUser;
+      private final @Nullable Input<String> adDomainJoinUser;
 
     public Input<String> getAdDomainJoinUser() {
         return this.adDomainJoinUser == null ? Input.empty() : this.adDomainJoinUser;
@@ -41,7 +41,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="crossRealmTrustPrincipalPassword")
-    private final @Nullable Input<String> crossRealmTrustPrincipalPassword;
+      private final @Nullable Input<String> crossRealmTrustPrincipalPassword;
 
     public Input<String> getCrossRealmTrustPrincipalPassword() {
         return this.crossRealmTrustPrincipalPassword == null ? Input.empty() : this.crossRealmTrustPrincipalPassword;
@@ -52,7 +52,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="kdcAdminPassword", required=true)
-    private final Input<String> kdcAdminPassword;
+      private final Input<String> kdcAdminPassword;
 
     public Input<String> getKdcAdminPassword() {
         return this.kdcAdminPassword;
@@ -63,7 +63,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="realm", required=true)
-    private final Input<String> realm;
+      private final Input<String> realm;
 
     public Input<String> getRealm() {
         return this.realm;

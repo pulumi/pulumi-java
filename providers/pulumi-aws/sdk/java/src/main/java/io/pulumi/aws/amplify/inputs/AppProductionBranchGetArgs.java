@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="branchName")
-    private final @Nullable Input<String> branchName;
+      private final @Nullable Input<String> branchName;
 
     public Input<String> getBranchName() {
         return this.branchName == null ? Input.empty() : this.branchName;
@@ -30,7 +30,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="lastDeployTime")
-    private final @Nullable Input<String> lastDeployTime;
+      private final @Nullable Input<String> lastDeployTime;
 
     public Input<String> getLastDeployTime() {
         return this.lastDeployTime == null ? Input.empty() : this.lastDeployTime;
@@ -41,7 +41,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -52,7 +52,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="thumbnailUrl")
-    private final @Nullable Input<String> thumbnailUrl;
+      private final @Nullable Input<String> thumbnailUrl;
 
     public Input<String> getThumbnailUrl() {
         return this.thumbnailUrl == null ? Input.empty() : this.thumbnailUrl;

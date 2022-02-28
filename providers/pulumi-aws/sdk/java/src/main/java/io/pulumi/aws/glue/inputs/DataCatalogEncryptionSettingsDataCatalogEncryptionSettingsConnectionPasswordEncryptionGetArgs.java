@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
      * 
      */
     @InputImport(name="awsKmsKeyId")
-    private final @Nullable Input<String> awsKmsKeyId;
+      private final @Nullable Input<String> awsKmsKeyId;
 
     public Input<String> getAwsKmsKeyId() {
         return this.awsKmsKeyId == null ? Input.empty() : this.awsKmsKeyId;
@@ -31,7 +31,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
      * 
      */
     @InputImport(name="returnConnectionPasswordEncrypted", required=true)
-    private final Input<Boolean> returnConnectionPasswordEncrypted;
+      private final Input<Boolean> returnConnectionPasswordEncrypted;
 
     public Input<Boolean> getReturnConnectionPasswordEncrypted() {
         return this.returnConnectionPasswordEncrypted;

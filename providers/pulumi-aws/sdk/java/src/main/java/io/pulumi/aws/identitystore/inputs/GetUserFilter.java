@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.identitystore.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetUserFilter extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attributePath", required=true)
-    private final String attributePath;
+      private final String attributePath;
 
     public String getAttributePath() {
         return this.attributePath;
@@ -28,7 +28,7 @@ public final class GetUserFilter extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attributeValue", required=true)
-    private final String attributeValue;
+      private final String attributeValue;
 
     public String getAttributeValue() {
         return this.attributeValue;

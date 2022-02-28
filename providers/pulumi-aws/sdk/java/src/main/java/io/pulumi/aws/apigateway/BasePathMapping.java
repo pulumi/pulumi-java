@@ -8,8 +8,8 @@ import io.pulumi.aws.apigateway.BasePathMappingArgs;
 import io.pulumi.aws.apigateway.inputs.BasePathMappingState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -94,6 +94,21 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
         return this.stageName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public BasePathMapping(String name) {
+        this(name, BasePathMappingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public BasePathMapping(String name, BasePathMappingArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerConnectionPool;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerHealthCheck;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerPortMapping;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerTls;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

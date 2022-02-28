@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs
      * 
      */
     @InputImport(name="isValueSecret")
-    private final @Nullable Input<Boolean> isValueSecret;
+      private final @Nullable Input<Boolean> isValueSecret;
 
     public Input<Boolean> getIsValueSecret() {
         return this.isValueSecret == null ? Input.empty() : this.isValueSecret;
@@ -31,7 +31,7 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -42,7 +42,7 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersBodyArgs
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

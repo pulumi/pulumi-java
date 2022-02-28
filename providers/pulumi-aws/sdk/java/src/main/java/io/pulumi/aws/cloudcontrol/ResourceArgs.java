@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudcontrol;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final ResourceArgs Empty = new ResourceArgs();
 
     @InputImport(name="desiredState", required=true)
-    private final Input<String> desiredState;
+      private final Input<String> desiredState;
 
     public Input<String> getDesiredState() {
         return this.desiredState;
@@ -26,7 +26,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -37,7 +37,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<String> schema;
+      private final @Nullable Input<String> schema;
 
     public Input<String> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -48,7 +48,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeName", required=true)
-    private final Input<String> typeName;
+      private final Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName;
@@ -59,7 +59,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeVersionId")
-    private final @Nullable Input<String> typeVersionId;
+      private final @Nullable Input<String> typeVersionId;
 
     public Input<String> getTypeVersionId() {
         return this.typeVersionId == null ? Input.empty() : this.typeVersionId;

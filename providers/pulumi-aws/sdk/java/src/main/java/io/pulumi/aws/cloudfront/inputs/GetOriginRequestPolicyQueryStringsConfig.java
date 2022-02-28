@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.GetOriginRequestPolicyQueryStringsConfigQueryString;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class GetOriginRequestPolicyQueryStringsConfig extends io.pulumi.re
     public static final GetOriginRequestPolicyQueryStringsConfig Empty = new GetOriginRequestPolicyQueryStringsConfig();
 
     @InputImport(name="queryStringBehavior", required=true)
-    private final String queryStringBehavior;
+      private final String queryStringBehavior;
 
     public String getQueryStringBehavior() {
         return this.queryStringBehavior;
     }
 
     @InputImport(name="queryStrings", required=true)
-    private final List<GetOriginRequestPolicyQueryStringsConfigQueryString> queryStrings;
+      private final List<GetOriginRequestPolicyQueryStringsConfigQueryString> queryStrings;
 
     public List<GetOriginRequestPolicyQueryStringsConfigQueryString> getQueryStrings() {
         return this.queryStrings;

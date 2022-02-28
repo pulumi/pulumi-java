@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.neptune.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="engine")
-    private final @Nullable String engine;
+      private final @Nullable String engine;
 
     public Optional<String> getEngine() {
         return this.engine == null ? Optional.empty() : Optional.ofNullable(this.engine);
@@ -32,7 +32,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="engineVersion")
-    private final @Nullable String engineVersion;
+      private final @Nullable String engineVersion;
 
     public Optional<String> getEngineVersion() {
         return this.engineVersion == null ? Optional.empty() : Optional.ofNullable(this.engineVersion);
@@ -43,7 +43,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="instanceClass")
-    private final @Nullable String instanceClass;
+      private final @Nullable String instanceClass;
 
     public Optional<String> getInstanceClass() {
         return this.instanceClass == null ? Optional.empty() : Optional.ofNullable(this.instanceClass);
@@ -54,7 +54,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="licenseModel")
-    private final @Nullable String licenseModel;
+      private final @Nullable String licenseModel;
 
     public Optional<String> getLicenseModel() {
         return this.licenseModel == null ? Optional.empty() : Optional.ofNullable(this.licenseModel);
@@ -65,7 +65,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="preferredInstanceClasses")
-    private final @Nullable List<String> preferredInstanceClasses;
+      private final @Nullable List<String> preferredInstanceClasses;
 
     public List<String> getPreferredInstanceClasses() {
         return this.preferredInstanceClasses == null ? List.of() : this.preferredInstanceClasses;
@@ -76,7 +76,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="vpc")
-    private final @Nullable Boolean vpc;
+      private final @Nullable Boolean vpc;
 
     public Optional<Boolean> getVpc() {
         return this.vpc == null ? Optional.empty() : Optional.ofNullable(this.vpc);

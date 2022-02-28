@@ -6,7 +6,7 @@ package io.pulumi.aws.organizations.outputs;
 import io.pulumi.aws.organizations.outputs.GetOrganizationAccount;
 import io.pulumi.aws.organizations.outputs.GetOrganizationNonMasterAccount;
 import io.pulumi.aws.organizations.outputs.GetOrganizationRoot;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

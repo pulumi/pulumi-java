@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoAccept")
-    private final @Nullable Input<Boolean> autoAccept;
+      private final @Nullable Input<Boolean> autoAccept;
 
     public Input<Boolean> getAutoAccept() {
         return this.autoAccept == null ? Input.empty() : this.autoAccept;
@@ -33,7 +33,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -45,7 +45,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateDnsEnabled")
-    private final @Nullable Input<Boolean> privateDnsEnabled;
+      private final @Nullable Input<Boolean> privateDnsEnabled;
 
     public Input<Boolean> getPrivateDnsEnabled() {
         return this.privateDnsEnabled == null ? Input.empty() : this.privateDnsEnabled;
@@ -56,7 +56,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeTableIds")
-    private final @Nullable Input<List<String>> routeTableIds;
+      private final @Nullable Input<List<String>> routeTableIds;
 
     public Input<List<String>> getRouteTableIds() {
         return this.routeTableIds == null ? Input.empty() : this.routeTableIds;
@@ -67,7 +67,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -78,7 +78,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -89,7 +89,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -100,7 +100,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -111,7 +111,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcEndpointType")
-    private final @Nullable Input<String> vpcEndpointType;
+      private final @Nullable Input<String> vpcEndpointType;
 
     public Input<String> getVpcEndpointType() {
         return this.vpcEndpointType == null ? Input.empty() : this.vpcEndpointType;
@@ -122,7 +122,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+      private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;

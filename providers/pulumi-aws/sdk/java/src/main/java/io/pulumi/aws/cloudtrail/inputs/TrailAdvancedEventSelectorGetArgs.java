@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudtrail.inputs;
 
 import io.pulumi.aws.cloudtrail.inputs.TrailAdvancedEventSelectorFieldSelectorGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TrailAdvancedEventSelectorGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="fieldSelectors", required=true)
-    private final Input<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors;
+      private final Input<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> fieldSelectors;
 
     public Input<List<TrailAdvancedEventSelectorFieldSelectorGetArgs>> getFieldSelectors() {
         return this.fieldSelectors;
@@ -32,7 +32,7 @@ public final class TrailAdvancedEventSelectorGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

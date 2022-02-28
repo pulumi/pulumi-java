@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2;
 
 import io.pulumi.aws.wafv2.inputs.RegexPatternSetRegularExpressionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="regularExpressions")
-    private final @Nullable Input<List<RegexPatternSetRegularExpressionArgs>> regularExpressions;
+      private final @Nullable Input<List<RegexPatternSetRegularExpressionArgs>> regularExpressions;
 
     public Input<List<RegexPatternSetRegularExpressionArgs>> getRegularExpressions() {
         return this.regularExpressions == null ? Input.empty() : this.regularExpressions;
@@ -55,7 +55,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+      private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -66,7 +66,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

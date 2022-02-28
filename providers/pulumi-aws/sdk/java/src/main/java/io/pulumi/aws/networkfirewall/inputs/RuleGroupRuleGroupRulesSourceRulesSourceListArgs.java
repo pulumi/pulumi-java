@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceListArgs extends io.p
      * 
      */
     @InputImport(name="generatedRulesType", required=true)
-    private final Input<String> generatedRulesType;
+      private final Input<String> generatedRulesType;
 
     public Input<String> getGeneratedRulesType() {
         return this.generatedRulesType;
@@ -30,7 +30,7 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceListArgs extends io.p
      * 
      */
     @InputImport(name="targetTypes", required=true)
-    private final Input<List<String>> targetTypes;
+      private final Input<List<String>> targetTypes;
 
     public Input<List<String>> getTargetTypes() {
         return this.targetTypes;
@@ -41,7 +41,7 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceListArgs extends io.p
      * 
      */
     @InputImport(name="targets", required=true)
-    private final Input<List<String>> targets;
+      private final Input<List<String>> targets;
 
     public Input<List<String>> getTargets() {
         return this.targets;

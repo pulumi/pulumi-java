@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetAmiBlockDeviceMapping extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final String deviceName;
+      private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
@@ -29,7 +29,7 @@ public final class GetAmiBlockDeviceMapping extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ebs", required=true)
-    private final Map<String,String> ebs;
+      private final Map<String,String> ebs;
 
     public Map<String,String> getEbs() {
         return this.ebs;
@@ -40,7 +40,7 @@ public final class GetAmiBlockDeviceMapping extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="noDevice", required=true)
-    private final String noDevice;
+      private final String noDevice;
 
     public String getNoDevice() {
         return this.noDevice;
@@ -51,7 +51,7 @@ public final class GetAmiBlockDeviceMapping extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="virtualName", required=true)
-    private final String virtualName;
+      private final String virtualName;
 
     public String getVirtualName() {
         return this.virtualName;

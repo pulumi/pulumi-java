@@ -13,8 +13,8 @@ import io.pulumi.aws.elastictranscoder.outputs.PresetVideo;
 import io.pulumi.aws.elastictranscoder.outputs.PresetVideoWatermark;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -183,6 +183,21 @@ public class Preset extends io.pulumi.resources.CustomResource {
         return this.videoWatermarks;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Preset(String name) {
+        this(name, PresetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Preset(String name, PresetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

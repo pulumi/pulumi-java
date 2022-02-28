@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EventTargetInputTransformerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="inputPaths")
-    private final @Nullable Input<Map<String,String>> inputPaths;
+      private final @Nullable Input<Map<String,String>> inputPaths;
 
     public Input<Map<String,String>> getInputPaths() {
         return this.inputPaths == null ? Input.empty() : this.inputPaths;
@@ -34,7 +34,7 @@ public final class EventTargetInputTransformerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="inputTemplate", required=true)
-    private final Input<String> inputTemplate;
+      private final Input<String> inputTemplate;
 
     public Input<String> getInputTemplate() {
         return this.inputTemplate;

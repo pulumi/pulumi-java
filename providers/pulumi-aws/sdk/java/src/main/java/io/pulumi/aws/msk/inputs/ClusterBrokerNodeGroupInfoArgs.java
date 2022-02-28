@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ClusterBrokerNodeGroupInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="azDistribution")
-    private final @Nullable Input<String> azDistribution;
+      private final @Nullable Input<String> azDistribution;
 
     public Input<String> getAzDistribution() {
         return this.azDistribution == null ? Input.empty() : this.azDistribution;
@@ -32,7 +32,7 @@ public final class ClusterBrokerNodeGroupInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientSubnets", required=true)
-    private final Input<List<String>> clientSubnets;
+      private final Input<List<String>> clientSubnets;
 
     public Input<List<String>> getClientSubnets() {
         return this.clientSubnets;
@@ -43,7 +43,7 @@ public final class ClusterBrokerNodeGroupInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ebsVolumeSize", required=true)
-    private final Input<Integer> ebsVolumeSize;
+      private final Input<Integer> ebsVolumeSize;
 
     public Input<Integer> getEbsVolumeSize() {
         return this.ebsVolumeSize;
@@ -54,7 +54,7 @@ public final class ClusterBrokerNodeGroupInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final Input<String> instanceType;
+      private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
@@ -65,7 +65,7 @@ public final class ClusterBrokerNodeGroupInfoArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="securityGroups", required=true)
-    private final Input<List<String>> securityGroups;
+      private final Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class GetUsersArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nameRegex")
-    private final @Nullable String nameRegex;
+      private final @Nullable String nameRegex;
 
     public Optional<String> getNameRegex() {
         return this.nameRegex == null ? Optional.empty() : Optional.ofNullable(this.nameRegex);
@@ -32,7 +32,7 @@ public final class GetUsersArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pathPrefix")
-    private final @Nullable String pathPrefix;
+      private final @Nullable String pathPrefix;
 
     public Optional<String> getPathPrefix() {
         return this.pathPrefix == null ? Optional.empty() : Optional.ofNullable(this.pathPrefix);

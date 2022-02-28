@@ -4,7 +4,7 @@
 package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -30,7 +30,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="principal")
-    private final @Nullable Input<String> principal;
+      private final @Nullable Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal == null ? Input.empty() : this.principal;
@@ -41,7 +41,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="profileName")
-    private final @Nullable Input<String> profileName;
+      private final @Nullable Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName == null ? Input.empty() : this.profileName;
@@ -52,7 +52,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="profileVersion")
-    private final @Nullable Input<String> profileVersion;
+      private final @Nullable Input<String> profileVersion;
 
     public Input<String> getProfileVersion() {
         return this.profileVersion == null ? Input.empty() : this.profileVersion;
@@ -63,7 +63,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="statementId")
-    private final @Nullable Input<String> statementId;
+      private final @Nullable Input<String> statementId;
 
     public Input<String> getStatementId() {
         return this.statementId == null ? Input.empty() : this.statementId;
@@ -74,7 +74,7 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="statementIdPrefix")
-    private final @Nullable Input<String> statementIdPrefix;
+      private final @Nullable Input<String> statementIdPrefix;
 
     public Input<String> getStatementIdPrefix() {
         return this.statementIdPrefix == null ? Input.empty() : this.statementIdPrefix;

@@ -6,7 +6,7 @@ package io.pulumi.aws.sfn;
 import io.pulumi.aws.sfn.inputs.StateMachineLoggingConfigurationArgs;
 import io.pulumi.aws.sfn.inputs.StateMachineTracingConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definition", required=true)
-    private final Input<String> definition;
+      private final Input<String> definition;
 
     public Input<String> getDefinition() {
         return this.definition;
@@ -33,7 +33,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingConfiguration")
-    private final @Nullable Input<StateMachineLoggingConfigurationArgs> loggingConfiguration;
+      private final @Nullable Input<StateMachineLoggingConfigurationArgs> loggingConfiguration;
 
     public Input<StateMachineLoggingConfigurationArgs> getLoggingConfiguration() {
         return this.loggingConfiguration == null ? Input.empty() : this.loggingConfiguration;
@@ -44,7 +44,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -66,7 +66,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -77,7 +77,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tracingConfiguration")
-    private final @Nullable Input<StateMachineTracingConfigurationArgs> tracingConfiguration;
+      private final @Nullable Input<StateMachineTracingConfigurationArgs> tracingConfiguration;
 
     public Input<StateMachineTracingConfigurationArgs> getTracingConfiguration() {
         return this.tracingConfiguration == null ? Input.empty() : this.tracingConfiguration;
@@ -88,7 +88,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

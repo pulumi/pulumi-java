@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticache;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
     public static final UserGroupArgs Empty = new UserGroupArgs();
 
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -28,14 +28,14 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engine", required=true)
-    private final Input<String> engine;
+      private final Input<String> engine;
 
     public Input<String> getEngine() {
         return this.engine;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -46,7 +46,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userGroupId", required=true)
-    private final Input<String> userGroupId;
+      private final Input<String> userGroupId;
 
     public Input<String> getUserGroupId() {
         return this.userGroupId;
@@ -57,7 +57,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userIds")
-    private final @Nullable Input<List<String>> userIds;
+      private final @Nullable Input<List<String>> userIds;
 
     public Input<List<String>> getUserIds() {
         return this.userIds == null ? Input.empty() : this.userIds;

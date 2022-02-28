@@ -7,7 +7,7 @@ import io.pulumi.aws.s3.inputs.BucketNotificationLambdaFunctionGetArgs;
 import io.pulumi.aws.s3.inputs.BucketNotificationQueueGetArgs;
 import io.pulumi.aws.s3.inputs.BucketNotificationTopicGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class BucketNotificationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -35,7 +35,7 @@ public final class BucketNotificationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="eventbridge")
-    private final @Nullable Input<Boolean> eventbridge;
+      private final @Nullable Input<Boolean> eventbridge;
 
     public Input<Boolean> getEventbridge() {
         return this.eventbridge == null ? Input.empty() : this.eventbridge;
@@ -46,7 +46,7 @@ public final class BucketNotificationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="lambdaFunctions")
-    private final @Nullable Input<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions;
+      private final @Nullable Input<List<BucketNotificationLambdaFunctionGetArgs>> lambdaFunctions;
 
     public Input<List<BucketNotificationLambdaFunctionGetArgs>> getLambdaFunctions() {
         return this.lambdaFunctions == null ? Input.empty() : this.lambdaFunctions;
@@ -57,7 +57,7 @@ public final class BucketNotificationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="queues")
-    private final @Nullable Input<List<BucketNotificationQueueGetArgs>> queues;
+      private final @Nullable Input<List<BucketNotificationQueueGetArgs>> queues;
 
     public Input<List<BucketNotificationQueueGetArgs>> getQueues() {
         return this.queues == null ? Input.empty() : this.queues;
@@ -68,7 +68,7 @@ public final class BucketNotificationState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="topics")
-    private final @Nullable Input<List<BucketNotificationTopicGetArgs>> topics;
+      private final @Nullable Input<List<BucketNotificationTopicGetArgs>> topics;
 
     public Input<List<BucketNotificationTopicGetArgs>> getTopics() {
         return this.topics == null ? Input.empty() : this.topics;

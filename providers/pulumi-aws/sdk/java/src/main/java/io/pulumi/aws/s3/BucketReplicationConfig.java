@@ -9,8 +9,8 @@ import io.pulumi.aws.s3.inputs.BucketReplicationConfigState;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRule;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -88,6 +88,21 @@ public class BucketReplicationConfig extends io.pulumi.resources.CustomResource 
         return this.rules;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public BucketReplicationConfig(String name) {
+        this(name, BucketReplicationConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public BucketReplicationConfig(String name, BucketReplicationConfigArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

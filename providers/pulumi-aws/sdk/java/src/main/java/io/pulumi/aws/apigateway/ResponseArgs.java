@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseParameters")
-    private final @Nullable Input<Map<String,String>> responseParameters;
+      private final @Nullable Input<Map<String,String>> responseParameters;
 
     public Input<Map<String,String>> getResponseParameters() {
         return this.responseParameters == null ? Input.empty() : this.responseParameters;
@@ -31,7 +31,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseTemplates")
-    private final @Nullable Input<Map<String,String>> responseTemplates;
+      private final @Nullable Input<Map<String,String>> responseTemplates;
 
     public Input<Map<String,String>> getResponseTemplates() {
         return this.responseTemplates == null ? Input.empty() : this.responseTemplates;
@@ -42,7 +42,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseType", required=true)
-    private final Input<String> responseType;
+      private final Input<String> responseType;
 
     public Input<String> getResponseType() {
         return this.responseType;
@@ -53,7 +53,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-    private final Input<String> restApiId;
+      private final Input<String> restApiId;
 
     public Input<String> getRestApiId() {
         return this.restApiId;
@@ -64,7 +64,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statusCode")
-    private final @Nullable Input<String> statusCode;
+      private final @Nullable Input<String> statusCode;
 
     public Input<String> getStatusCode() {
         return this.statusCode == null ? Input.empty() : this.statusCode;

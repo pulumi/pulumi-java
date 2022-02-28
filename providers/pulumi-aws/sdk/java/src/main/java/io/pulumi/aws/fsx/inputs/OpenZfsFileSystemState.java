@@ -6,7 +6,7 @@ package io.pulumi.aws.fsx.inputs;
 import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemDiskIopsConfigurationGetArgs;
 import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -36,7 +36,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="automaticBackupRetentionDays")
-    private final @Nullable Input<Integer> automaticBackupRetentionDays;
+      private final @Nullable Input<Integer> automaticBackupRetentionDays;
 
     public Input<Integer> getAutomaticBackupRetentionDays() {
         return this.automaticBackupRetentionDays == null ? Input.empty() : this.automaticBackupRetentionDays;
@@ -47,7 +47,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="backupId")
-    private final @Nullable Input<String> backupId;
+      private final @Nullable Input<String> backupId;
 
     public Input<String> getBackupId() {
         return this.backupId == null ? Input.empty() : this.backupId;
@@ -58,7 +58,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="copyTagsToBackups")
-    private final @Nullable Input<Boolean> copyTagsToBackups;
+      private final @Nullable Input<Boolean> copyTagsToBackups;
 
     public Input<Boolean> getCopyTagsToBackups() {
         return this.copyTagsToBackups == null ? Input.empty() : this.copyTagsToBackups;
@@ -69,7 +69,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="copyTagsToVolumes")
-    private final @Nullable Input<Boolean> copyTagsToVolumes;
+      private final @Nullable Input<Boolean> copyTagsToVolumes;
 
     public Input<Boolean> getCopyTagsToVolumes() {
         return this.copyTagsToVolumes == null ? Input.empty() : this.copyTagsToVolumes;
@@ -80,7 +80,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dailyAutomaticBackupStartTime")
-    private final @Nullable Input<String> dailyAutomaticBackupStartTime;
+      private final @Nullable Input<String> dailyAutomaticBackupStartTime;
 
     public Input<String> getDailyAutomaticBackupStartTime() {
         return this.dailyAutomaticBackupStartTime == null ? Input.empty() : this.dailyAutomaticBackupStartTime;
@@ -91,7 +91,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="deploymentType")
-    private final @Nullable Input<String> deploymentType;
+      private final @Nullable Input<String> deploymentType;
 
     public Input<String> getDeploymentType() {
         return this.deploymentType == null ? Input.empty() : this.deploymentType;
@@ -102,7 +102,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="diskIopsConfiguration")
-    private final @Nullable Input<OpenZfsFileSystemDiskIopsConfigurationGetArgs> diskIopsConfiguration;
+      private final @Nullable Input<OpenZfsFileSystemDiskIopsConfigurationGetArgs> diskIopsConfiguration;
 
     public Input<OpenZfsFileSystemDiskIopsConfigurationGetArgs> getDiskIopsConfiguration() {
         return this.diskIopsConfiguration == null ? Input.empty() : this.diskIopsConfiguration;
@@ -113,7 +113,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dnsName")
-    private final @Nullable Input<String> dnsName;
+      private final @Nullable Input<String> dnsName;
 
     public Input<String> getDnsName() {
         return this.dnsName == null ? Input.empty() : this.dnsName;
@@ -124,7 +124,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -135,7 +135,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="networkInterfaceIds")
-    private final @Nullable Input<List<String>> networkInterfaceIds;
+      private final @Nullable Input<List<String>> networkInterfaceIds;
 
     public Input<List<String>> getNetworkInterfaceIds() {
         return this.networkInterfaceIds == null ? Input.empty() : this.networkInterfaceIds;
@@ -146,7 +146,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -157,7 +157,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rootVolumeConfiguration")
-    private final @Nullable Input<OpenZfsFileSystemRootVolumeConfigurationGetArgs> rootVolumeConfiguration;
+      private final @Nullable Input<OpenZfsFileSystemRootVolumeConfigurationGetArgs> rootVolumeConfiguration;
 
     public Input<OpenZfsFileSystemRootVolumeConfigurationGetArgs> getRootVolumeConfiguration() {
         return this.rootVolumeConfiguration == null ? Input.empty() : this.rootVolumeConfiguration;
@@ -168,7 +168,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rootVolumeId")
-    private final @Nullable Input<String> rootVolumeId;
+      private final @Nullable Input<String> rootVolumeId;
 
     public Input<String> getRootVolumeId() {
         return this.rootVolumeId == null ? Input.empty() : this.rootVolumeId;
@@ -179,7 +179,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -190,7 +190,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="storageCapacity")
-    private final @Nullable Input<Integer> storageCapacity;
+      private final @Nullable Input<Integer> storageCapacity;
 
     public Input<Integer> getStorageCapacity() {
         return this.storageCapacity == null ? Input.empty() : this.storageCapacity;
@@ -201,7 +201,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="storageType")
-    private final @Nullable Input<String> storageType;
+      private final @Nullable Input<String> storageType;
 
     public Input<String> getStorageType() {
         return this.storageType == null ? Input.empty() : this.storageType;
@@ -212,7 +212,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<String> subnetIds;
+      private final @Nullable Input<String> subnetIds;
 
     public Input<String> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -223,7 +223,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -234,7 +234,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -245,7 +245,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="throughputCapacity")
-    private final @Nullable Input<Integer> throughputCapacity;
+      private final @Nullable Input<Integer> throughputCapacity;
 
     public Input<Integer> getThroughputCapacity() {
         return this.throughputCapacity == null ? Input.empty() : this.throughputCapacity;
@@ -256,7 +256,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;
@@ -267,7 +267,7 @@ public final class OpenZfsFileSystemState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="weeklyMaintenanceStartTime")
-    private final @Nullable Input<String> weeklyMaintenanceStartTime;
+      private final @Nullable Input<String> weeklyMaintenanceStartTime;
 
     public Input<String> getWeeklyMaintenanceStartTime() {
         return this.weeklyMaintenanceStartTime == null ? Input.empty() : this.weeklyMaintenanceStartTime;

@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.GetVirtualServiceSpecProviderVirtualNode;
 import io.pulumi.aws.appmesh.outputs.GetVirtualServiceSpecProviderVirtualRouter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 

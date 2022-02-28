@@ -7,7 +7,7 @@ import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeDockerVolumeConfigurationGet
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeEfsVolumeConfigurationGetArgs;
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dockerVolumeConfiguration")
-    private final @Nullable Input<TaskDefinitionVolumeDockerVolumeConfigurationGetArgs> dockerVolumeConfiguration;
+      private final @Nullable Input<TaskDefinitionVolumeDockerVolumeConfigurationGetArgs> dockerVolumeConfiguration;
 
     public Input<TaskDefinitionVolumeDockerVolumeConfigurationGetArgs> getDockerVolumeConfiguration() {
         return this.dockerVolumeConfiguration == null ? Input.empty() : this.dockerVolumeConfiguration;
@@ -33,7 +33,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="efsVolumeConfiguration")
-    private final @Nullable Input<TaskDefinitionVolumeEfsVolumeConfigurationGetArgs> efsVolumeConfiguration;
+      private final @Nullable Input<TaskDefinitionVolumeEfsVolumeConfigurationGetArgs> efsVolumeConfiguration;
 
     public Input<TaskDefinitionVolumeEfsVolumeConfigurationGetArgs> getEfsVolumeConfiguration() {
         return this.efsVolumeConfiguration == null ? Input.empty() : this.efsVolumeConfiguration;
@@ -44,7 +44,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="fsxWindowsFileServerVolumeConfiguration")
-    private final @Nullable Input<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs> fsxWindowsFileServerVolumeConfiguration;
+      private final @Nullable Input<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs> fsxWindowsFileServerVolumeConfiguration;
 
     public Input<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs> getFsxWindowsFileServerVolumeConfiguration() {
         return this.fsxWindowsFileServerVolumeConfiguration == null ? Input.empty() : this.fsxWindowsFileServerVolumeConfiguration;
@@ -55,7 +55,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="hostPath")
-    private final @Nullable Input<String> hostPath;
+      private final @Nullable Input<String> hostPath;
 
     public Input<String> getHostPath() {
         return this.hostPath == null ? Input.empty() : this.hostPath;
@@ -67,7 +67,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

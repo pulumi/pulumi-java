@@ -4,7 +4,7 @@
 package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.aws.efs.inputs.GetAccessPointRootDirectoryCreationInfo;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetAccessPointRootDirectory extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="creationInfos", required=true)
-    private final List<GetAccessPointRootDirectoryCreationInfo> creationInfos;
+      private final List<GetAccessPointRootDirectoryCreationInfo> creationInfos;
 
     public List<GetAccessPointRootDirectoryCreationInfo> getCreationInfos() {
         return this.creationInfos;
@@ -30,7 +30,7 @@ public final class GetAccessPointRootDirectory extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;

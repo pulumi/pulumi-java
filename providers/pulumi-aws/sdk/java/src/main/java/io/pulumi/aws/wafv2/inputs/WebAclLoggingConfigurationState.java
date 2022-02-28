@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="logDestinationConfigs")
-    private final @Nullable Input<List<String>> logDestinationConfigs;
+      private final @Nullable Input<List<String>> logDestinationConfigs;
 
     public Input<List<String>> getLogDestinationConfigs() {
         return this.logDestinationConfigs == null ? Input.empty() : this.logDestinationConfigs;
@@ -33,7 +33,7 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="loggingFilter")
-    private final @Nullable Input<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter;
+      private final @Nullable Input<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter;
 
     public Input<WebAclLoggingConfigurationLoggingFilterGetArgs> getLoggingFilter() {
         return this.loggingFilter == null ? Input.empty() : this.loggingFilter;
@@ -44,7 +44,7 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="redactedFields")
-    private final @Nullable Input<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields;
+      private final @Nullable Input<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields;
 
     public Input<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> getRedactedFields() {
         return this.redactedFields == null ? Input.empty() : this.redactedFields;
@@ -55,7 +55,7 @@ public final class WebAclLoggingConfigurationState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceArn")
-    private final @Nullable Input<String> resourceArn;
+      private final @Nullable Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn == null ? Input.empty() : this.resourceArn;

@@ -5,7 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="amiTags")
-    private final @Nullable Input<Map<String,String>> amiTags;
+      private final @Nullable Input<Map<String,String>> amiTags;
 
     public Input<Map<String,String>> getAmiTags() {
         return this.amiTags == null ? Input.empty() : this.amiTags;
@@ -33,7 +33,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -55,7 +55,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="launchPermission")
-    private final @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs> launchPermission;
+      private final @Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs> launchPermission;
 
     public Input<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs> getLaunchPermission() {
         return this.launchPermission == null ? Input.empty() : this.launchPermission;
@@ -66,7 +66,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @InputImport(name="targetAccountIds")
-    private final @Nullable Input<List<String>> targetAccountIds;
+      private final @Nullable Input<List<String>> targetAccountIds;
 
     public Input<List<String>> getTargetAccountIds() {
         return this.targetAccountIds == null ? Input.empty() : this.targetAccountIds;

@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.aws.ec2.inputs.ManagedPrefixListEntryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="addressFamily", required=true)
-    private final Input<String> addressFamily;
+      private final Input<String> addressFamily;
 
     public Input<String> getAddressFamily() {
         return this.addressFamily;
@@ -34,7 +34,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="entries")
-    private final @Nullable Input<List<ManagedPrefixListEntryArgs>> entries;
+      private final @Nullable Input<List<ManagedPrefixListEntryArgs>> entries;
 
     public Input<List<ManagedPrefixListEntryArgs>> getEntries() {
         return this.entries == null ? Input.empty() : this.entries;
@@ -45,7 +45,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxEntries", required=true)
-    private final Input<Integer> maxEntries;
+      private final Input<Integer> maxEntries;
 
     public Input<Integer> getMaxEntries() {
         return this.maxEntries;
@@ -56,7 +56,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -9,8 +9,8 @@ import io.pulumi.aws.emr.inputs.ManagedScalingPolicyState;
 import io.pulumi.aws.emr.outputs.ManagedScalingPolicyComputeLimit;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -60,6 +60,21 @@ public class ManagedScalingPolicy extends io.pulumi.resources.CustomResource {
         return this.computeLimits;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ManagedScalingPolicy(String name) {
+        this(name, ManagedScalingPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ManagedScalingPolicy(String name, ManagedScalingPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

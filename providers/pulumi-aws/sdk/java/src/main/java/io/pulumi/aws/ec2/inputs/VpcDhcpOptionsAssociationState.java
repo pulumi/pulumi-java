@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VpcDhcpOptionsAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dhcpOptionsId")
-    private final @Nullable Input<String> dhcpOptionsId;
+      private final @Nullable Input<String> dhcpOptionsId;
 
     public Input<String> getDhcpOptionsId() {
         return this.dhcpOptionsId == null ? Input.empty() : this.dhcpOptionsId;
@@ -30,7 +30,7 @@ public final class VpcDhcpOptionsAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

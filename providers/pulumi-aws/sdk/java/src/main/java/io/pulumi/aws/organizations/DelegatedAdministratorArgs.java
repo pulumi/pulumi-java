@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DelegatedAdministratorArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+      private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
@@ -29,7 +29,7 @@ public final class DelegatedAdministratorArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="servicePrincipal", required=true)
-    private final Input<String> servicePrincipal;
+      private final Input<String> servicePrincipal;
 
     public Input<String> getServicePrincipal() {
         return this.servicePrincipal;

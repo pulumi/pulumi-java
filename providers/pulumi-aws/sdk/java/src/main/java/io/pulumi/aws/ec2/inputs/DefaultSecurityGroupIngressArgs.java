@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class DefaultSecurityGroupIngressArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="cidrBlocks")
-    private final @Nullable Input<List<String>> cidrBlocks;
+      private final @Nullable Input<List<String>> cidrBlocks;
 
     public Input<List<String>> getCidrBlocks() {
         return this.cidrBlocks == null ? Input.empty() : this.cidrBlocks;
@@ -33,7 +33,7 @@ public final class DefaultSecurityGroupIngressArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class DefaultSecurityGroupIngressArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fromPort", required=true)
-    private final Input<Integer> fromPort;
+      private final Input<Integer> fromPort;
 
     public Input<Integer> getFromPort() {
         return this.fromPort;
@@ -55,7 +55,7 @@ public final class DefaultSecurityGroupIngressArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipv6CidrBlocks")
-    private final @Nullable Input<List<String>> ipv6CidrBlocks;
+      private final @Nullable Input<List<String>> ipv6CidrBlocks;
 
     public Input<List<String>> getIpv6CidrBlocks() {
         return this.ipv6CidrBlocks == null ? Input.empty() : this.ipv6CidrBlocks;
@@ -66,7 +66,7 @@ public final class DefaultSecurityGroupIngressArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="prefixListIds")
-    private final @Nullable Input<List<String>> prefixListIds;
+      private final @Nullable Input<List<String>> prefixListIds;
 
     public Input<List<String>> getPrefixListIds() {
         return this.prefixListIds == null ? Input.empty() : this.prefixListIds;
@@ -77,7 +77,7 @@ public final class DefaultSecurityGroupIngressArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<String> protocol;
+      private final Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol;
@@ -88,7 +88,7 @@ public final class DefaultSecurityGroupIngressArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -99,7 +99,7 @@ public final class DefaultSecurityGroupIngressArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="self")
-    private final @Nullable Input<Boolean> self;
+      private final @Nullable Input<Boolean> self;
 
     public Input<Boolean> getSelf() {
         return this.self == null ? Input.empty() : this.self;
@@ -110,7 +110,7 @@ public final class DefaultSecurityGroupIngressArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="toPort", required=true)
-    private final Input<Integer> toPort;
+      private final Input<Integer> toPort;
 
     public Input<Integer> getToPort() {
         return this.toPort;

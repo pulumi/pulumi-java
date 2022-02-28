@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TaskSetCapacityProviderStrategyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="base")
-    private final @Nullable Input<Integer> base;
+      private final @Nullable Input<Integer> base;
 
     public Input<Integer> getBase() {
         return this.base == null ? Input.empty() : this.base;
@@ -31,7 +31,7 @@ public final class TaskSetCapacityProviderStrategyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="capacityProvider", required=true)
-    private final Input<String> capacityProvider;
+      private final Input<String> capacityProvider;
 
     public Input<String> getCapacityProvider() {
         return this.capacityProvider;
@@ -42,7 +42,7 @@ public final class TaskSetCapacityProviderStrategyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="weight", required=true)
-    private final Input<Integer> weight;
+      private final Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight;

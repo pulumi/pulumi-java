@@ -6,7 +6,7 @@ package io.pulumi.aws.msk.inputs;
 import io.pulumi.aws.msk.inputs.ClusterClientAuthenticationSaslGetArgs;
 import io.pulumi.aws.msk.inputs.ClusterClientAuthenticationTlsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class ClusterClientAuthenticationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sasl")
-    private final @Nullable Input<ClusterClientAuthenticationSaslGetArgs> sasl;
+      private final @Nullable Input<ClusterClientAuthenticationSaslGetArgs> sasl;
 
     public Input<ClusterClientAuthenticationSaslGetArgs> getSasl() {
         return this.sasl == null ? Input.empty() : this.sasl;
@@ -31,7 +31,7 @@ public final class ClusterClientAuthenticationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="tls")
-    private final @Nullable Input<ClusterClientAuthenticationTlsGetArgs> tls;
+      private final @Nullable Input<ClusterClientAuthenticationTlsGetArgs> tls;
 
     public Input<ClusterClientAuthenticationTlsGetArgs> getTls() {
         return this.tls == null ? Input.empty() : this.tls;

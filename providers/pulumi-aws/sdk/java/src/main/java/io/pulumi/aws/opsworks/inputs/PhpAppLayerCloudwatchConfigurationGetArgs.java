@@ -5,7 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.aws.opsworks.inputs.PhpAppLayerCloudwatchConfigurationLogStreamGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class PhpAppLayerCloudwatchConfigurationGetArgs extends io.pulumi.r
     public static final PhpAppLayerCloudwatchConfigurationGetArgs Empty = new PhpAppLayerCloudwatchConfigurationGetArgs();
 
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
     @InputImport(name="logStreams")
-    private final @Nullable Input<List<PhpAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
+      private final @Nullable Input<List<PhpAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
 
     public Input<List<PhpAppLayerCloudwatchConfigurationLogStreamGetArgs>> getLogStreams() {
         return this.logStreams == null ? Input.empty() : this.logStreams;

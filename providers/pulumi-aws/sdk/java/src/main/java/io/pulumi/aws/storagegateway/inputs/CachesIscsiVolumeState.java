@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="chapEnabled")
-    private final @Nullable Input<Boolean> chapEnabled;
+      private final @Nullable Input<Boolean> chapEnabled;
 
     public Input<Boolean> getChapEnabled() {
         return this.chapEnabled == null ? Input.empty() : this.chapEnabled;
@@ -44,7 +44,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gatewayArn")
-    private final @Nullable Input<String> gatewayArn;
+      private final @Nullable Input<String> gatewayArn;
 
     public Input<String> getGatewayArn() {
         return this.gatewayArn == null ? Input.empty() : this.gatewayArn;
@@ -55,7 +55,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kmsEncrypted")
-    private final @Nullable Input<Boolean> kmsEncrypted;
+      private final @Nullable Input<Boolean> kmsEncrypted;
 
     public Input<Boolean> getKmsEncrypted() {
         return this.kmsEncrypted == null ? Input.empty() : this.kmsEncrypted;
@@ -66,7 +66,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kmsKey")
-    private final @Nullable Input<String> kmsKey;
+      private final @Nullable Input<String> kmsKey;
 
     public Input<String> getKmsKey() {
         return this.kmsKey == null ? Input.empty() : this.kmsKey;
@@ -77,7 +77,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="lunNumber")
-    private final @Nullable Input<Integer> lunNumber;
+      private final @Nullable Input<Integer> lunNumber;
 
     public Input<Integer> getLunNumber() {
         return this.lunNumber == null ? Input.empty() : this.lunNumber;
@@ -88,7 +88,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="networkInterfaceId")
-    private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
@@ -99,7 +99,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="networkInterfacePort")
-    private final @Nullable Input<Integer> networkInterfacePort;
+      private final @Nullable Input<Integer> networkInterfacePort;
 
     public Input<Integer> getNetworkInterfacePort() {
         return this.networkInterfacePort == null ? Input.empty() : this.networkInterfacePort;
@@ -110,7 +110,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="snapshotId")
-    private final @Nullable Input<String> snapshotId;
+      private final @Nullable Input<String> snapshotId;
 
     public Input<String> getSnapshotId() {
         return this.snapshotId == null ? Input.empty() : this.snapshotId;
@@ -121,7 +121,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sourceVolumeArn")
-    private final @Nullable Input<String> sourceVolumeArn;
+      private final @Nullable Input<String> sourceVolumeArn;
 
     public Input<String> getSourceVolumeArn() {
         return this.sourceVolumeArn == null ? Input.empty() : this.sourceVolumeArn;
@@ -132,7 +132,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -143,7 +143,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -154,7 +154,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetArn")
-    private final @Nullable Input<String> targetArn;
+      private final @Nullable Input<String> targetArn;
 
     public Input<String> getTargetArn() {
         return this.targetArn == null ? Input.empty() : this.targetArn;
@@ -165,7 +165,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetName")
-    private final @Nullable Input<String> targetName;
+      private final @Nullable Input<String> targetName;
 
     public Input<String> getTargetName() {
         return this.targetName == null ? Input.empty() : this.targetName;
@@ -176,7 +176,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="volumeArn")
-    private final @Nullable Input<String> volumeArn;
+      private final @Nullable Input<String> volumeArn;
 
     public Input<String> getVolumeArn() {
         return this.volumeArn == null ? Input.empty() : this.volumeArn;
@@ -187,7 +187,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="volumeId")
-    private final @Nullable Input<String> volumeId;
+      private final @Nullable Input<String> volumeId;
 
     public Input<String> getVolumeId() {
         return this.volumeId == null ? Input.empty() : this.volumeId;
@@ -198,7 +198,7 @@ public final class CachesIscsiVolumeState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="volumeSizeInBytes")
-    private final @Nullable Input<Integer> volumeSizeInBytes;
+      private final @Nullable Input<Integer> volumeSizeInBytes;
 
     public Input<Integer> getVolumeSizeInBytes() {
         return this.volumeSizeInBytes == null ? Input.empty() : this.volumeSizeInBytes;

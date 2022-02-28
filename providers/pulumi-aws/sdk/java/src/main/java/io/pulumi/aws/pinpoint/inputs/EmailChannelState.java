@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+      private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
@@ -32,7 +32,7 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationSet")
-    private final @Nullable Input<String> configurationSet;
+      private final @Nullable Input<String> configurationSet;
 
     public Input<String> getConfigurationSet() {
         return this.configurationSet == null ? Input.empty() : this.configurationSet;
@@ -43,7 +43,7 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -54,7 +54,7 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fromAddress")
-    private final @Nullable Input<String> fromAddress;
+      private final @Nullable Input<String> fromAddress;
 
     public Input<String> getFromAddress() {
         return this.fromAddress == null ? Input.empty() : this.fromAddress;
@@ -65,7 +65,7 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<String> identity;
+      private final @Nullable Input<String> identity;
 
     public Input<String> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -76,7 +76,7 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messagesPerSecond")
-    private final @Nullable Input<Integer> messagesPerSecond;
+      private final @Nullable Input<Integer> messagesPerSecond;
 
     public Input<Integer> getMessagesPerSecond() {
         return this.messagesPerSecond == null ? Input.empty() : this.messagesPerSecond;
@@ -87,7 +87,7 @@ public final class EmailChannelState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;

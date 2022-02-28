@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.DeviceFleetOutputConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceFleetName", required=true)
-    private final Input<String> deviceFleetName;
+      private final Input<String> deviceFleetName;
 
     public Input<String> getDeviceFleetName() {
         return this.deviceFleetName;
@@ -44,7 +44,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableIotRoleAlias")
-    private final @Nullable Input<Boolean> enableIotRoleAlias;
+      private final @Nullable Input<Boolean> enableIotRoleAlias;
 
     public Input<Boolean> getEnableIotRoleAlias() {
         return this.enableIotRoleAlias == null ? Input.empty() : this.enableIotRoleAlias;
@@ -55,7 +55,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputConfig", required=true)
-    private final Input<DeviceFleetOutputConfigArgs> outputConfig;
+      private final Input<DeviceFleetOutputConfigArgs> outputConfig;
 
     public Input<DeviceFleetOutputConfigArgs> getOutputConfig() {
         return this.outputConfig;
@@ -66,7 +66,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -77,7 +77,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

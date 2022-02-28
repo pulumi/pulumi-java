@@ -5,7 +5,7 @@ package io.pulumi.aws.ssm;
 
 import io.pulumi.aws.ssm.inputs.ResourceDataSyncS3DestinationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="s3Destination", required=true)
-    private final Input<ResourceDataSyncS3DestinationArgs> s3Destination;
+      private final Input<ResourceDataSyncS3DestinationArgs> s3Destination;
 
     public Input<ResourceDataSyncS3DestinationArgs> getS3Destination() {
         return this.s3Destination;

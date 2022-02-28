@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.outposts.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetOutpostsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable String availabilityZone;
+      private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
@@ -30,7 +30,7 @@ public final class GetOutpostsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="availabilityZoneId")
-    private final @Nullable String availabilityZoneId;
+      private final @Nullable String availabilityZoneId;
 
     public Optional<String> getAvailabilityZoneId() {
         return this.availabilityZoneId == null ? Optional.empty() : Optional.ofNullable(this.availabilityZoneId);
@@ -41,7 +41,7 @@ public final class GetOutpostsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable String ownerId;
+      private final @Nullable String ownerId;
 
     public Optional<String> getOwnerId() {
         return this.ownerId == null ? Optional.empty() : Optional.ofNullable(this.ownerId);
@@ -52,7 +52,7 @@ public final class GetOutpostsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="siteId")
-    private final @Nullable String siteId;
+      private final @Nullable String siteId;
 
     public Optional<String> getSiteId() {
         return this.siteId == null ? Optional.empty() : Optional.ofNullable(this.siteId);

@@ -7,7 +7,7 @@ import io.pulumi.aws.amplify.inputs.AppAutoBranchCreationConfigGetArgs;
 import io.pulumi.aws.amplify.inputs.AppCustomRuleGetArgs;
 import io.pulumi.aws.amplify.inputs.AppProductionBranchGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessToken")
-    private final @Nullable Input<String> accessToken;
+      private final @Nullable Input<String> accessToken;
 
     public Input<String> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
@@ -36,7 +36,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -47,7 +47,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoBranchCreationConfig")
-    private final @Nullable Input<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig;
+      private final @Nullable Input<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig;
 
     public Input<AppAutoBranchCreationConfigGetArgs> getAutoBranchCreationConfig() {
         return this.autoBranchCreationConfig == null ? Input.empty() : this.autoBranchCreationConfig;
@@ -58,7 +58,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoBranchCreationPatterns")
-    private final @Nullable Input<List<String>> autoBranchCreationPatterns;
+      private final @Nullable Input<List<String>> autoBranchCreationPatterns;
 
     public Input<List<String>> getAutoBranchCreationPatterns() {
         return this.autoBranchCreationPatterns == null ? Input.empty() : this.autoBranchCreationPatterns;
@@ -69,7 +69,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basicAuthCredentials")
-    private final @Nullable Input<String> basicAuthCredentials;
+      private final @Nullable Input<String> basicAuthCredentials;
 
     public Input<String> getBasicAuthCredentials() {
         return this.basicAuthCredentials == null ? Input.empty() : this.basicAuthCredentials;
@@ -80,7 +80,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildSpec")
-    private final @Nullable Input<String> buildSpec;
+      private final @Nullable Input<String> buildSpec;
 
     public Input<String> getBuildSpec() {
         return this.buildSpec == null ? Input.empty() : this.buildSpec;
@@ -91,7 +91,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customRules")
-    private final @Nullable Input<List<AppCustomRuleGetArgs>> customRules;
+      private final @Nullable Input<List<AppCustomRuleGetArgs>> customRules;
 
     public Input<List<AppCustomRuleGetArgs>> getCustomRules() {
         return this.customRules == null ? Input.empty() : this.customRules;
@@ -102,7 +102,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultDomain")
-    private final @Nullable Input<String> defaultDomain;
+      private final @Nullable Input<String> defaultDomain;
 
     public Input<String> getDefaultDomain() {
         return this.defaultDomain == null ? Input.empty() : this.defaultDomain;
@@ -113,7 +113,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -124,7 +124,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableAutoBranchCreation")
-    private final @Nullable Input<Boolean> enableAutoBranchCreation;
+      private final @Nullable Input<Boolean> enableAutoBranchCreation;
 
     public Input<Boolean> getEnableAutoBranchCreation() {
         return this.enableAutoBranchCreation == null ? Input.empty() : this.enableAutoBranchCreation;
@@ -135,7 +135,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableBasicAuth")
-    private final @Nullable Input<Boolean> enableBasicAuth;
+      private final @Nullable Input<Boolean> enableBasicAuth;
 
     public Input<Boolean> getEnableBasicAuth() {
         return this.enableBasicAuth == null ? Input.empty() : this.enableBasicAuth;
@@ -146,7 +146,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableBranchAutoBuild")
-    private final @Nullable Input<Boolean> enableBranchAutoBuild;
+      private final @Nullable Input<Boolean> enableBranchAutoBuild;
 
     public Input<Boolean> getEnableBranchAutoBuild() {
         return this.enableBranchAutoBuild == null ? Input.empty() : this.enableBranchAutoBuild;
@@ -157,7 +157,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableBranchAutoDeletion")
-    private final @Nullable Input<Boolean> enableBranchAutoDeletion;
+      private final @Nullable Input<Boolean> enableBranchAutoDeletion;
 
     public Input<Boolean> getEnableBranchAutoDeletion() {
         return this.enableBranchAutoDeletion == null ? Input.empty() : this.enableBranchAutoDeletion;
@@ -168,7 +168,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<Map<String,String>> environmentVariables;
+      private final @Nullable Input<Map<String,String>> environmentVariables;
 
     public Input<Map<String,String>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -179,7 +179,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamServiceRoleArn")
-    private final @Nullable Input<String> iamServiceRoleArn;
+      private final @Nullable Input<String> iamServiceRoleArn;
 
     public Input<String> getIamServiceRoleArn() {
         return this.iamServiceRoleArn == null ? Input.empty() : this.iamServiceRoleArn;
@@ -190,7 +190,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -201,7 +201,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oauthToken")
-    private final @Nullable Input<String> oauthToken;
+      private final @Nullable Input<String> oauthToken;
 
     public Input<String> getOauthToken() {
         return this.oauthToken == null ? Input.empty() : this.oauthToken;
@@ -212,7 +212,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable Input<String> platform;
+      private final @Nullable Input<String> platform;
 
     public Input<String> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -223,7 +223,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productionBranches")
-    private final @Nullable Input<List<AppProductionBranchGetArgs>> productionBranches;
+      private final @Nullable Input<List<AppProductionBranchGetArgs>> productionBranches;
 
     public Input<List<AppProductionBranchGetArgs>> getProductionBranches() {
         return this.productionBranches == null ? Input.empty() : this.productionBranches;
@@ -234,7 +234,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repository")
-    private final @Nullable Input<String> repository;
+      private final @Nullable Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository == null ? Input.empty() : this.repository;
@@ -245,7 +245,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -256,7 +256,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

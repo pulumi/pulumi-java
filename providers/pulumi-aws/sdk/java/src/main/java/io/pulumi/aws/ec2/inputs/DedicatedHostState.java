@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoPlacement")
-    private final @Nullable Input<String> autoPlacement;
+      private final @Nullable Input<String> autoPlacement;
 
     public Input<String> getAutoPlacement() {
         return this.autoPlacement == null ? Input.empty() : this.autoPlacement;
@@ -42,7 +42,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -53,7 +53,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostRecovery")
-    private final @Nullable Input<String> hostRecovery;
+      private final @Nullable Input<String> hostRecovery;
 
     public Input<String> getHostRecovery() {
         return this.hostRecovery == null ? Input.empty() : this.hostRecovery;
@@ -64,7 +64,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceFamily")
-    private final @Nullable Input<String> instanceFamily;
+      private final @Nullable Input<String> instanceFamily;
 
     public Input<String> getInstanceFamily() {
         return this.instanceFamily == null ? Input.empty() : this.instanceFamily;
@@ -75,7 +75,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -86,7 +86,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -97,7 +97,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -108,7 +108,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

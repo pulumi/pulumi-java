@@ -5,7 +5,7 @@ package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
      * 
      */
     @InputImport(name="documentVersion")
-    private final @Nullable Input<String> documentVersion;
+      private final @Nullable Input<String> documentVersion;
 
     public Input<String> getDocumentVersion() {
         return this.documentVersion == null ? Input.empty() : this.documentVersion;
@@ -32,7 +32,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters;
+      private final @Nullable Input<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters;
 
     public Input<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;

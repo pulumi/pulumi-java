@@ -7,7 +7,7 @@ import io.pulumi.aws.gamelift.inputs.FleetEc2InboundPermissionArgs;
 import io.pulumi.aws.gamelift.inputs.FleetResourceCreationLimitPolicyArgs;
 import io.pulumi.aws.gamelift.inputs.FleetRuntimeConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildId", required=true)
-    private final Input<String> buildId;
+      private final Input<String> buildId;
 
     public Input<String> getBuildId() {
         return this.buildId;
@@ -35,7 +35,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ec2InboundPermissions")
-    private final @Nullable Input<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions;
+      private final @Nullable Input<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions;
 
     public Input<List<FleetEc2InboundPermissionArgs>> getEc2InboundPermissions() {
         return this.ec2InboundPermissions == null ? Input.empty() : this.ec2InboundPermissions;
@@ -57,7 +57,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ec2InstanceType", required=true)
-    private final Input<String> ec2InstanceType;
+      private final Input<String> ec2InstanceType;
 
     public Input<String> getEc2InstanceType() {
         return this.ec2InstanceType;
@@ -68,7 +68,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fleetType")
-    private final @Nullable Input<String> fleetType;
+      private final @Nullable Input<String> fleetType;
 
     public Input<String> getFleetType() {
         return this.fleetType == null ? Input.empty() : this.fleetType;
@@ -79,7 +79,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceRoleArn")
-    private final @Nullable Input<String> instanceRoleArn;
+      private final @Nullable Input<String> instanceRoleArn;
 
     public Input<String> getInstanceRoleArn() {
         return this.instanceRoleArn == null ? Input.empty() : this.instanceRoleArn;
@@ -90,7 +90,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricGroups")
-    private final @Nullable Input<List<String>> metricGroups;
+      private final @Nullable Input<List<String>> metricGroups;
 
     public Input<List<String>> getMetricGroups() {
         return this.metricGroups == null ? Input.empty() : this.metricGroups;
@@ -101,7 +101,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -112,7 +112,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="newGameSessionProtectionPolicy")
-    private final @Nullable Input<String> newGameSessionProtectionPolicy;
+      private final @Nullable Input<String> newGameSessionProtectionPolicy;
 
     public Input<String> getNewGameSessionProtectionPolicy() {
         return this.newGameSessionProtectionPolicy == null ? Input.empty() : this.newGameSessionProtectionPolicy;
@@ -123,7 +123,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceCreationLimitPolicy")
-    private final @Nullable Input<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
+      private final @Nullable Input<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
 
     public Input<FleetResourceCreationLimitPolicyArgs> getResourceCreationLimitPolicy() {
         return this.resourceCreationLimitPolicy == null ? Input.empty() : this.resourceCreationLimitPolicy;
@@ -134,7 +134,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeConfiguration")
-    private final @Nullable Input<FleetRuntimeConfigurationArgs> runtimeConfiguration;
+      private final @Nullable Input<FleetRuntimeConfigurationArgs> runtimeConfiguration;
 
     public Input<FleetRuntimeConfigurationArgs> getRuntimeConfiguration() {
         return this.runtimeConfiguration == null ? Input.empty() : this.runtimeConfiguration;
@@ -145,7 +145,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

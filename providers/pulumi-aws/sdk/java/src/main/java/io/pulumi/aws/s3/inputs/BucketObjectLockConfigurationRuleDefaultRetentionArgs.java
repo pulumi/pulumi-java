@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionArgs extends
      * 
      */
     @InputImport(name="days")
-    private final @Nullable Input<Integer> days;
+      private final @Nullable Input<Integer> days;
 
     public Input<Integer> getDays() {
         return this.days == null ? Input.empty() : this.days;
@@ -31,7 +31,7 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionArgs extends
      * 
      */
     @InputImport(name="mode", required=true)
-    private final Input<String> mode;
+      private final Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode;
@@ -42,7 +42,7 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionArgs extends
      * 
      */
     @InputImport(name="years")
-    private final @Nullable Input<Integer> years;
+      private final @Nullable Input<Integer> years;
 
     public Input<Integer> getYears() {
         return this.years == null ? Input.empty() : this.years;

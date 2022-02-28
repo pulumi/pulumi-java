@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbClusterIdentifier")
-    private final @Nullable Input<String> dbClusterIdentifier;
+      private final @Nullable Input<String> dbClusterIdentifier;
 
     public Input<String> getDbClusterIdentifier() {
         return this.dbClusterIdentifier == null ? Input.empty() : this.dbClusterIdentifier;
@@ -30,7 +30,7 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbInstanceIdentifier")
-    private final @Nullable Input<String> dbInstanceIdentifier;
+      private final @Nullable Input<String> dbInstanceIdentifier;
 
     public Input<String> getDbInstanceIdentifier() {
         return this.dbInstanceIdentifier == null ? Input.empty() : this.dbInstanceIdentifier;
@@ -41,7 +41,7 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dbProxyName", required=true)
-    private final Input<String> dbProxyName;
+      private final Input<String> dbProxyName;
 
     public Input<String> getDbProxyName() {
         return this.dbProxyName;
@@ -52,7 +52,7 @@ public final class ProxyTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetGroupName", required=true)
-    private final Input<String> targetGroupName;
+      private final Input<String> targetGroupName;
 
     public Input<String> getTargetGroupName() {
         return this.targetGroupName;

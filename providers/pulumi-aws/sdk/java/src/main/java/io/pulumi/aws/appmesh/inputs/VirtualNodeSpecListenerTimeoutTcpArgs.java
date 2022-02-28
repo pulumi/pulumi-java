@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutTcpIdleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class VirtualNodeSpecListenerTimeoutTcpArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="idle")
-    private final @Nullable Input<VirtualNodeSpecListenerTimeoutTcpIdleArgs> idle;
+      private final @Nullable Input<VirtualNodeSpecListenerTimeoutTcpIdleArgs> idle;
 
     public Input<VirtualNodeSpecListenerTimeoutTcpIdleArgs> getIdle() {
         return this.idle == null ? Input.empty() : this.idle;

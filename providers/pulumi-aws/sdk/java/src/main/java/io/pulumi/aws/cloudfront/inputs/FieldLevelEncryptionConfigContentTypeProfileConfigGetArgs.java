@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs ext
      * 
      */
     @InputImport(name="contentTypeProfiles", required=true)
-    private final Input<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs> contentTypeProfiles;
+      private final Input<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs> contentTypeProfiles;
 
     public Input<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs> getContentTypeProfiles() {
         return this.contentTypeProfiles;
@@ -30,7 +30,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs ext
      * 
      */
     @InputImport(name="forwardWhenContentTypeIsUnknown", required=true)
-    private final Input<Boolean> forwardWhenContentTypeIsUnknown;
+      private final Input<Boolean> forwardWhenContentTypeIsUnknown;
 
     public Input<Boolean> getForwardWhenContentTypeIsUnknown() {
         return this.forwardWhenContentTypeIsUnknown;

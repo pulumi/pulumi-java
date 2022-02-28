@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssoadmin.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instanceArn")
-    private final @Nullable Input<String> instanceArn;
+      private final @Nullable Input<String> instanceArn;
 
     public Input<String> getInstanceArn() {
         return this.instanceArn == null ? Input.empty() : this.instanceArn;
@@ -30,7 +30,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="managedPolicyArn")
-    private final @Nullable Input<String> managedPolicyArn;
+      private final @Nullable Input<String> managedPolicyArn;
 
     public Input<String> getManagedPolicyArn() {
         return this.managedPolicyArn == null ? Input.empty() : this.managedPolicyArn;
@@ -41,7 +41,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="managedPolicyName")
-    private final @Nullable Input<String> managedPolicyName;
+      private final @Nullable Input<String> managedPolicyName;
 
     public Input<String> getManagedPolicyName() {
         return this.managedPolicyName == null ? Input.empty() : this.managedPolicyName;
@@ -52,7 +52,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="permissionSetArn")
-    private final @Nullable Input<String> permissionSetArn;
+      private final @Nullable Input<String> permissionSetArn;
 
     public Input<String> getPermissionSetArn() {
         return this.permissionSetArn == null ? Input.empty() : this.permissionSetArn;

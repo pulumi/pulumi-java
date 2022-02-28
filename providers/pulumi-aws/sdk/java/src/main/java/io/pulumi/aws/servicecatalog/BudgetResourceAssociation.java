@@ -8,8 +8,8 @@ import io.pulumi.aws.servicecatalog.BudgetResourceAssociationArgs;
 import io.pulumi.aws.servicecatalog.inputs.BudgetResourceAssociationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -60,6 +60,21 @@ public class BudgetResourceAssociation extends io.pulumi.resources.CustomResourc
         return this.resourceId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public BudgetResourceAssociation(String name) {
+        this(name, BudgetResourceAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public BudgetResourceAssociation(String name, BudgetResourceAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

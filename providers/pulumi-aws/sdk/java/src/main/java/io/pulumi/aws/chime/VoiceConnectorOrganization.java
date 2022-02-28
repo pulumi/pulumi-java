@@ -9,8 +9,8 @@ import io.pulumi.aws.chime.inputs.VoiceConnectorOrganizationState;
 import io.pulumi.aws.chime.outputs.VoiceConnectorOrganizationRoute;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -75,6 +75,21 @@ public class VoiceConnectorOrganization extends io.pulumi.resources.CustomResour
         return this.voiceConnectorId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VoiceConnectorOrganization(String name) {
+        this(name, VoiceConnectorOrganizationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VoiceConnectorOrganization(String name, VoiceConnectorOrganizationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

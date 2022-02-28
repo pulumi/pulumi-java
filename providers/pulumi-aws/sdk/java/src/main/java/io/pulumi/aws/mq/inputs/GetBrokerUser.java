@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,21 +15,21 @@ public final class GetBrokerUser extends io.pulumi.resources.InvokeArgs {
     public static final GetBrokerUser Empty = new GetBrokerUser();
 
     @InputImport(name="consoleAccess", required=true)
-    private final Boolean consoleAccess;
+      private final Boolean consoleAccess;
 
     public Boolean getConsoleAccess() {
         return this.consoleAccess;
     }
 
     @InputImport(name="groups", required=true)
-    private final List<String> groups;
+      private final List<String> groups;
 
     public List<String> getGroups() {
         return this.groups;
     }
 
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;

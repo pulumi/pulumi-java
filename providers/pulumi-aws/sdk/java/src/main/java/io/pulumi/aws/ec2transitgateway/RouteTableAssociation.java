@@ -8,8 +8,8 @@ import io.pulumi.aws.ec2transitgateway.RouteTableAssociationArgs;
 import io.pulumi.aws.ec2transitgateway.inputs.RouteTableAssociationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -86,6 +86,21 @@ public class RouteTableAssociation extends io.pulumi.resources.CustomResource {
         return this.transitGatewayRouteTableId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RouteTableAssociation(String name) {
+        this(name, RouteTableAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RouteTableAssociation(String name, RouteTableAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

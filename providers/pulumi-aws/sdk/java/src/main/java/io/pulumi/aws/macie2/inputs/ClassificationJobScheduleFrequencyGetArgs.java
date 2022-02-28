@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ClassificationJobScheduleFrequencyGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="dailySchedule")
-    private final @Nullable Input<Boolean> dailySchedule;
+      private final @Nullable Input<Boolean> dailySchedule;
 
     public Input<Boolean> getDailySchedule() {
         return this.dailySchedule == null ? Input.empty() : this.dailySchedule;
@@ -32,7 +32,7 @@ public final class ClassificationJobScheduleFrequencyGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="monthlySchedule")
-    private final @Nullable Input<Integer> monthlySchedule;
+      private final @Nullable Input<Integer> monthlySchedule;
 
     public Input<Integer> getMonthlySchedule() {
         return this.monthlySchedule == null ? Input.empty() : this.monthlySchedule;
@@ -43,7 +43,7 @@ public final class ClassificationJobScheduleFrequencyGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="weeklySchedule")
-    private final @Nullable Input<String> weeklySchedule;
+      private final @Nullable Input<String> weeklySchedule;
 
     public Input<String> getWeeklySchedule() {
         return this.weeklySchedule == null ? Input.empty() : this.weeklySchedule;

@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.aws.cognito.inputs.UserPoolAdminCreateUserConfigInviteMessageTemplateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class UserPoolAdminCreateUserConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="allowAdminCreateUserOnly")
-    private final @Nullable Input<Boolean> allowAdminCreateUserOnly;
+      private final @Nullable Input<Boolean> allowAdminCreateUserOnly;
 
     public Input<Boolean> getAllowAdminCreateUserOnly() {
         return this.allowAdminCreateUserOnly == null ? Input.empty() : this.allowAdminCreateUserOnly;
@@ -31,7 +31,7 @@ public final class UserPoolAdminCreateUserConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="inviteMessageTemplate")
-    private final @Nullable Input<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate;
+      private final @Nullable Input<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> inviteMessageTemplate;
 
     public Input<UserPoolAdminCreateUserConfigInviteMessageTemplateArgs> getInviteMessageTemplate() {
         return this.inviteMessageTemplate == null ? Input.empty() : this.inviteMessageTemplate;

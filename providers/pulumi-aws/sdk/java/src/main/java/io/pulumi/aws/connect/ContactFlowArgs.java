@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
     }
 
     @InputImport(name="contentHash")
-    private final @Nullable Input<String> contentHash;
+      private final @Nullable Input<String> contentHash;
 
     public Input<String> getContentHash() {
         return this.contentHash == null ? Input.empty() : this.contentHash;
@@ -38,7 +38,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -49,7 +49,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filename")
-    private final @Nullable Input<String> filename;
+      private final @Nullable Input<String> filename;
 
     public Input<String> getFilename() {
         return this.filename == null ? Input.empty() : this.filename;
@@ -60,7 +60,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -71,7 +71,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -82,7 +82,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -93,7 +93,7 @@ public final class ContactFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

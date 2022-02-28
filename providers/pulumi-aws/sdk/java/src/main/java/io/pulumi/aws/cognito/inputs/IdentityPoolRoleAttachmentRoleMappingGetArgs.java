@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.aws.cognito.inputs.IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingGetArgs extends io.pulum
      * 
      */
     @InputImport(name="ambiguousRoleResolution")
-    private final @Nullable Input<String> ambiguousRoleResolution;
+      private final @Nullable Input<String> ambiguousRoleResolution;
 
     public Input<String> getAmbiguousRoleResolution() {
         return this.ambiguousRoleResolution == null ? Input.empty() : this.ambiguousRoleResolution;
@@ -32,7 +32,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingGetArgs extends io.pulum
      * 
      */
     @InputImport(name="identityProvider", required=true)
-    private final Input<String> identityProvider;
+      private final Input<String> identityProvider;
 
     public Input<String> getIdentityProvider() {
         return this.identityProvider;
@@ -43,7 +43,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingGetArgs extends io.pulum
      * 
      */
     @InputImport(name="mappingRules")
-    private final @Nullable Input<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs>> mappingRules;
+      private final @Nullable Input<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs>> mappingRules;
 
     public Input<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs>> getMappingRules() {
         return this.mappingRules == null ? Input.empty() : this.mappingRules;
@@ -54,7 +54,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingGetArgs extends io.pulum
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

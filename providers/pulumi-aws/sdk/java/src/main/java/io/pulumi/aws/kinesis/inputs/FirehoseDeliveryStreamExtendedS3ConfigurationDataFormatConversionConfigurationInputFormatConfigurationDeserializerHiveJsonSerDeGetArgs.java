@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="timestampFormats")
-    private final @Nullable Input<List<String>> timestampFormats;
+      private final @Nullable Input<List<String>> timestampFormats;
 
     public Input<List<String>> getTimestampFormats() {
         return this.timestampFormats == null ? Input.empty() : this.timestampFormats;

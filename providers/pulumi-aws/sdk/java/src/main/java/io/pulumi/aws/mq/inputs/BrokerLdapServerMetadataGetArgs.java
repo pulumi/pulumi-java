@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="hosts")
-    private final @Nullable Input<List<String>> hosts;
+      private final @Nullable Input<List<String>> hosts;
 
     public Input<List<String>> getHosts() {
         return this.hosts == null ? Input.empty() : this.hosts;
@@ -32,7 +32,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="roleBase")
-    private final @Nullable Input<String> roleBase;
+      private final @Nullable Input<String> roleBase;
 
     public Input<String> getRoleBase() {
         return this.roleBase == null ? Input.empty() : this.roleBase;
@@ -43,7 +43,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="roleName")
-    private final @Nullable Input<String> roleName;
+      private final @Nullable Input<String> roleName;
 
     public Input<String> getRoleName() {
         return this.roleName == null ? Input.empty() : this.roleName;
@@ -54,7 +54,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="roleSearchMatching")
-    private final @Nullable Input<String> roleSearchMatching;
+      private final @Nullable Input<String> roleSearchMatching;
 
     public Input<String> getRoleSearchMatching() {
         return this.roleSearchMatching == null ? Input.empty() : this.roleSearchMatching;
@@ -65,7 +65,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="roleSearchSubtree")
-    private final @Nullable Input<Boolean> roleSearchSubtree;
+      private final @Nullable Input<Boolean> roleSearchSubtree;
 
     public Input<Boolean> getRoleSearchSubtree() {
         return this.roleSearchSubtree == null ? Input.empty() : this.roleSearchSubtree;
@@ -76,7 +76,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="serviceAccountPassword")
-    private final @Nullable Input<String> serviceAccountPassword;
+      private final @Nullable Input<String> serviceAccountPassword;
 
     public Input<String> getServiceAccountPassword() {
         return this.serviceAccountPassword == null ? Input.empty() : this.serviceAccountPassword;
@@ -87,7 +87,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="serviceAccountUsername")
-    private final @Nullable Input<String> serviceAccountUsername;
+      private final @Nullable Input<String> serviceAccountUsername;
 
     public Input<String> getServiceAccountUsername() {
         return this.serviceAccountUsername == null ? Input.empty() : this.serviceAccountUsername;
@@ -98,7 +98,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="userBase")
-    private final @Nullable Input<String> userBase;
+      private final @Nullable Input<String> userBase;
 
     public Input<String> getUserBase() {
         return this.userBase == null ? Input.empty() : this.userBase;
@@ -109,7 +109,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="userRoleName")
-    private final @Nullable Input<String> userRoleName;
+      private final @Nullable Input<String> userRoleName;
 
     public Input<String> getUserRoleName() {
         return this.userRoleName == null ? Input.empty() : this.userRoleName;
@@ -120,7 +120,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="userSearchMatching")
-    private final @Nullable Input<String> userSearchMatching;
+      private final @Nullable Input<String> userSearchMatching;
 
     public Input<String> getUserSearchMatching() {
         return this.userSearchMatching == null ? Input.empty() : this.userSearchMatching;
@@ -131,7 +131,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="userSearchSubtree")
-    private final @Nullable Input<Boolean> userSearchSubtree;
+      private final @Nullable Input<Boolean> userSearchSubtree;
 
     public Input<Boolean> getUserSearchSubtree() {
         return this.userSearchSubtree == null ? Input.empty() : this.userSearchSubtree;

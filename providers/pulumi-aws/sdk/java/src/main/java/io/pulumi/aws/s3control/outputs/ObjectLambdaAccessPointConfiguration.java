@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.outputs;
 
 import io.pulumi.aws.s3control.outputs.ObjectLambdaAccessPointConfigurationTransformationConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

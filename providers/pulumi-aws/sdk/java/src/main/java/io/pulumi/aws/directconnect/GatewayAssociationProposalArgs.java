@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allowedPrefixes")
-    private final @Nullable Input<List<String>> allowedPrefixes;
+      private final @Nullable Input<List<String>> allowedPrefixes;
 
     public Input<List<String>> getAllowedPrefixes() {
         return this.allowedPrefixes == null ? Input.empty() : this.allowedPrefixes;
@@ -31,7 +31,7 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="associatedGatewayId", required=true)
-    private final Input<String> associatedGatewayId;
+      private final Input<String> associatedGatewayId;
 
     public Input<String> getAssociatedGatewayId() {
         return this.associatedGatewayId;
@@ -42,7 +42,7 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dxGatewayId", required=true)
-    private final Input<String> dxGatewayId;
+      private final Input<String> dxGatewayId;
 
     public Input<String> getDxGatewayId() {
         return this.dxGatewayId;
@@ -53,7 +53,7 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dxGatewayOwnerAccountId", required=true)
-    private final Input<String> dxGatewayOwnerAccountId;
+      private final Input<String> dxGatewayOwnerAccountId;
 
     public Input<String> getDxGatewayOwnerAccountId() {
         return this.dxGatewayOwnerAccountId;

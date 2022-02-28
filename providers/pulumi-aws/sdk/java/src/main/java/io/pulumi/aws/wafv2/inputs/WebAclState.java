@@ -8,7 +8,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclVisibilityConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -37,7 +37,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Integer> capacity;
+      private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -48,7 +48,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customResponseBodies")
-    private final @Nullable Input<List<WebAclCustomResponseBodyGetArgs>> customResponseBodies;
+      private final @Nullable Input<List<WebAclCustomResponseBodyGetArgs>> customResponseBodies;
 
     public Input<List<WebAclCustomResponseBodyGetArgs>> getCustomResponseBodies() {
         return this.customResponseBodies == null ? Input.empty() : this.customResponseBodies;
@@ -59,7 +59,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAction")
-    private final @Nullable Input<WebAclDefaultActionGetArgs> defaultAction;
+      private final @Nullable Input<WebAclDefaultActionGetArgs> defaultAction;
 
     public Input<WebAclDefaultActionGetArgs> getDefaultAction() {
         return this.defaultAction == null ? Input.empty() : this.defaultAction;
@@ -70,14 +70,14 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="lockToken")
-    private final @Nullable Input<String> lockToken;
+      private final @Nullable Input<String> lockToken;
 
     public Input<String> getLockToken() {
         return this.lockToken == null ? Input.empty() : this.lockToken;
@@ -88,7 +88,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -99,7 +99,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<WebAclRuleGetArgs>> rules;
+      private final @Nullable Input<List<WebAclRuleGetArgs>> rules;
 
     public Input<List<WebAclRuleGetArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -110,7 +110,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+      private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -121,7 +121,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -132,7 +132,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -143,7 +143,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="visibilityConfig")
-    private final @Nullable Input<WebAclVisibilityConfigGetArgs> visibilityConfig;
+      private final @Nullable Input<WebAclVisibilityConfigGetArgs> visibilityConfig;
 
     public Input<WebAclVisibilityConfigGetArgs> getVisibilityConfig() {
         return this.visibilityConfig == null ? Input.empty() : this.visibilityConfig;

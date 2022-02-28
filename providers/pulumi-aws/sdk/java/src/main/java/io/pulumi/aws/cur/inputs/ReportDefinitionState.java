@@ -4,7 +4,7 @@
 package io.pulumi.aws.cur.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="additionalArtifacts")
-    private final @Nullable Input<List<String>> additionalArtifacts;
+      private final @Nullable Input<List<String>> additionalArtifacts;
 
     public Input<List<String>> getAdditionalArtifacts() {
         return this.additionalArtifacts == null ? Input.empty() : this.additionalArtifacts;
@@ -32,7 +32,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="additionalSchemaElements")
-    private final @Nullable Input<List<String>> additionalSchemaElements;
+      private final @Nullable Input<List<String>> additionalSchemaElements;
 
     public Input<List<String>> getAdditionalSchemaElements() {
         return this.additionalSchemaElements == null ? Input.empty() : this.additionalSchemaElements;
@@ -43,7 +43,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -54,7 +54,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="compression")
-    private final @Nullable Input<String> compression;
+      private final @Nullable Input<String> compression;
 
     public Input<String> getCompression() {
         return this.compression == null ? Input.empty() : this.compression;
@@ -65,7 +65,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<String> format;
+      private final @Nullable Input<String> format;
 
     public Input<String> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -76,7 +76,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="refreshClosedReports")
-    private final @Nullable Input<Boolean> refreshClosedReports;
+      private final @Nullable Input<Boolean> refreshClosedReports;
 
     public Input<Boolean> getRefreshClosedReports() {
         return this.refreshClosedReports == null ? Input.empty() : this.refreshClosedReports;
@@ -87,7 +87,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="reportName")
-    private final @Nullable Input<String> reportName;
+      private final @Nullable Input<String> reportName;
 
     public Input<String> getReportName() {
         return this.reportName == null ? Input.empty() : this.reportName;
@@ -98,7 +98,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="reportVersioning")
-    private final @Nullable Input<String> reportVersioning;
+      private final @Nullable Input<String> reportVersioning;
 
     public Input<String> getReportVersioning() {
         return this.reportVersioning == null ? Input.empty() : this.reportVersioning;
@@ -109,7 +109,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="s3Bucket")
-    private final @Nullable Input<String> s3Bucket;
+      private final @Nullable Input<String> s3Bucket;
 
     public Input<String> getS3Bucket() {
         return this.s3Bucket == null ? Input.empty() : this.s3Bucket;
@@ -120,7 +120,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="s3Prefix")
-    private final @Nullable Input<String> s3Prefix;
+      private final @Nullable Input<String> s3Prefix;
 
     public Input<String> getS3Prefix() {
         return this.s3Prefix == null ? Input.empty() : this.s3Prefix;
@@ -131,7 +131,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="s3Region")
-    private final @Nullable Input<String> s3Region;
+      private final @Nullable Input<String> s3Region;
 
     public Input<String> getS3Region() {
         return this.s3Region == null ? Input.empty() : this.s3Region;
@@ -142,7 +142,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timeUnit")
-    private final @Nullable Input<String> timeUnit;
+      private final @Nullable Input<String> timeUnit;
 
     public Input<String> getTimeUnit() {
         return this.timeUnit == null ? Input.empty() : this.timeUnit;

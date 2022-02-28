@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class StageDefaultRouteSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dataTraceEnabled")
-    private final @Nullable Input<Boolean> dataTraceEnabled;
+      private final @Nullable Input<Boolean> dataTraceEnabled;
 
     public Input<Boolean> getDataTraceEnabled() {
         return this.dataTraceEnabled == null ? Input.empty() : this.dataTraceEnabled;
@@ -34,7 +34,7 @@ public final class StageDefaultRouteSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="detailedMetricsEnabled")
-    private final @Nullable Input<Boolean> detailedMetricsEnabled;
+      private final @Nullable Input<Boolean> detailedMetricsEnabled;
 
     public Input<Boolean> getDetailedMetricsEnabled() {
         return this.detailedMetricsEnabled == null ? Input.empty() : this.detailedMetricsEnabled;
@@ -46,7 +46,7 @@ public final class StageDefaultRouteSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="loggingLevel")
-    private final @Nullable Input<String> loggingLevel;
+      private final @Nullable Input<String> loggingLevel;
 
     public Input<String> getLoggingLevel() {
         return this.loggingLevel == null ? Input.empty() : this.loggingLevel;
@@ -57,7 +57,7 @@ public final class StageDefaultRouteSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="throttlingBurstLimit")
-    private final @Nullable Input<Integer> throttlingBurstLimit;
+      private final @Nullable Input<Integer> throttlingBurstLimit;
 
     public Input<Integer> getThrottlingBurstLimit() {
         return this.throttlingBurstLimit == null ? Input.empty() : this.throttlingBurstLimit;
@@ -68,7 +68,7 @@ public final class StageDefaultRouteSettingsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="throttlingRateLimit")
-    private final @Nullable Input<Double> throttlingRateLimit;
+      private final @Nullable Input<Double> throttlingRateLimit;
 
     public Input<Double> getThrottlingRateLimit() {
         return this.throttlingRateLimit == null ? Input.empty() : this.throttlingRateLimit;

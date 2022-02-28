@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="blackhole")
-    private final @Nullable Input<Boolean> blackhole;
+      private final @Nullable Input<Boolean> blackhole;
 
     public Input<Boolean> getBlackhole() {
         return this.blackhole == null ? Input.empty() : this.blackhole;
@@ -31,14 +31,14 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="prefixListId")
-    private final @Nullable Input<String> prefixListId;
+      private final @Nullable Input<String> prefixListId;
 
     public Input<String> getPrefixListId() {
         return this.prefixListId == null ? Input.empty() : this.prefixListId;
     }
 
     @InputImport(name="prefixListOwnerId")
-    private final @Nullable Input<String> prefixListOwnerId;
+      private final @Nullable Input<String> prefixListOwnerId;
 
     public Input<String> getPrefixListOwnerId() {
         return this.prefixListOwnerId == null ? Input.empty() : this.prefixListOwnerId;
@@ -49,7 +49,7 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="transitGatewayAttachmentId")
-    private final @Nullable Input<String> transitGatewayAttachmentId;
+      private final @Nullable Input<String> transitGatewayAttachmentId;
 
     public Input<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId == null ? Input.empty() : this.transitGatewayAttachmentId;
@@ -60,7 +60,7 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="transitGatewayRouteTableId")
-    private final @Nullable Input<String> transitGatewayRouteTableId;
+      private final @Nullable Input<String> transitGatewayRouteTableId;
 
     public Input<String> getTransitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId == null ? Input.empty() : this.transitGatewayRouteTableId;

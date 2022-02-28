@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RuleGroupCustomResponseBodyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="content", required=true)
-    private final Input<String> content;
+      private final Input<String> content;
 
     public Input<String> getContent() {
         return this.content;
@@ -29,7 +29,7 @@ public final class RuleGroupCustomResponseBodyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="contentType", required=true)
-    private final Input<String> contentType;
+      private final Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType;
@@ -40,7 +40,7 @@ public final class RuleGroupCustomResponseBodyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;

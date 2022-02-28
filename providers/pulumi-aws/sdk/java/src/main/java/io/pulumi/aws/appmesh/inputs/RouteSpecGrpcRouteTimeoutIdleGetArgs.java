@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RouteSpecGrpcRouteTimeoutIdleGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="unit", required=true)
-    private final Input<String> unit;
+      private final Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit;
@@ -30,7 +30,7 @@ public final class RouteSpecGrpcRouteTimeoutIdleGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<Integer> value;
+      private final Input<Integer> value;
 
     public Input<Integer> getValue() {
         return this.value;

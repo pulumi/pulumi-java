@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.globalaccelerator.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class GetAcceleratorIpSet extends io.pulumi.resources.InvokeArgs {
     public static final GetAcceleratorIpSet Empty = new GetAcceleratorIpSet();
 
     @InputImport(name="ipAddresses", required=true)
-    private final List<String> ipAddresses;
+      private final List<String> ipAddresses;
 
     public List<String> getIpAddresses() {
         return this.ipAddresses;
     }
 
     @InputImport(name="ipFamily", required=true)
-    private final String ipFamily;
+      private final String ipFamily;
 
     public String getIpFamily() {
         return this.ipFamily;

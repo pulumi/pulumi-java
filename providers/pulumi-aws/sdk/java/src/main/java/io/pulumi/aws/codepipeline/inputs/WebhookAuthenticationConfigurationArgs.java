@@ -4,7 +4,7 @@
 package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WebhookAuthenticationConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="allowedIpRange")
-    private final @Nullable Input<String> allowedIpRange;
+      private final @Nullable Input<String> allowedIpRange;
 
     public Input<String> getAllowedIpRange() {
         return this.allowedIpRange == null ? Input.empty() : this.allowedIpRange;
@@ -30,7 +30,7 @@ public final class WebhookAuthenticationConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="secretToken")
-    private final @Nullable Input<String> secretToken;
+      private final @Nullable Input<String> secretToken;
 
     public Input<String> getSecretToken() {
         return this.secretToken == null ? Input.empty() : this.secretToken;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class OntapVolumeTieringPolicyArgs extends io.pulumi.resources.Reso
     public static final OntapVolumeTieringPolicyArgs Empty = new OntapVolumeTieringPolicyArgs();
 
     @InputImport(name="coolingPeriod")
-    private final @Nullable Input<Integer> coolingPeriod;
+      private final @Nullable Input<Integer> coolingPeriod;
 
     public Input<Integer> getCoolingPeriod() {
         return this.coolingPeriod == null ? Input.empty() : this.coolingPeriod;
@@ -27,7 +27,7 @@ public final class OntapVolumeTieringPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

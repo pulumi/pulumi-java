@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="deliveryStream")
-    private final @Nullable Input<String> deliveryStream;
+      private final @Nullable Input<String> deliveryStream;
 
     public Input<String> getDeliveryStream() {
         return this.deliveryStream == null ? Input.empty() : this.deliveryStream;
@@ -31,7 +31,7 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;

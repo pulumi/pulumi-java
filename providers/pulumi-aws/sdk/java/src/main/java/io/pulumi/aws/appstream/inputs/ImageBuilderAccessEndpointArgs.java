@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ImageBuilderAccessEndpointArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="endpointType", required=true)
-    private final Input<String> endpointType;
+      private final Input<String> endpointType;
 
     public Input<String> getEndpointType() {
         return this.endpointType;
@@ -30,7 +30,7 @@ public final class ImageBuilderAccessEndpointArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="vpceId")
-    private final @Nullable Input<String> vpceId;
+      private final @Nullable Input<String> vpceId;
 
     public Input<String> getVpceId() {
         return this.vpceId == null ? Input.empty() : this.vpceId;

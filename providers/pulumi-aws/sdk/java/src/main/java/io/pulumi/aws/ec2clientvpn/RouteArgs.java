@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientVpnEndpointId", required=true)
-    private final Input<String> clientVpnEndpointId;
+      private final Input<String> clientVpnEndpointId;
 
     public Input<String> getClientVpnEndpointId() {
         return this.clientVpnEndpointId;
@@ -30,7 +30,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationCidrBlock", required=true)
-    private final Input<String> destinationCidrBlock;
+      private final Input<String> destinationCidrBlock;
 
     public Input<String> getDestinationCidrBlock() {
         return this.destinationCidrBlock;
@@ -52,7 +52,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetVpcSubnetId", required=true)
-    private final Input<String> targetVpcSubnetId;
+      private final Input<String> targetVpcSubnetId;
 
     public Input<String> getTargetVpcSubnetId() {
         return this.targetVpcSubnetId;

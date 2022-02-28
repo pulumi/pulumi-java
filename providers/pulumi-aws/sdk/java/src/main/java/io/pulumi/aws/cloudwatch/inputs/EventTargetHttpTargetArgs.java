@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class EventTargetHttpTargetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="headerParameters")
-    private final @Nullable Input<Map<String,String>> headerParameters;
+      private final @Nullable Input<Map<String,String>> headerParameters;
 
     public Input<Map<String,String>> getHeaderParameters() {
         return this.headerParameters == null ? Input.empty() : this.headerParameters;
@@ -32,7 +32,7 @@ public final class EventTargetHttpTargetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="pathParameterValues")
-    private final @Nullable Input<List<String>> pathParameterValues;
+      private final @Nullable Input<List<String>> pathParameterValues;
 
     public Input<List<String>> getPathParameterValues() {
         return this.pathParameterValues == null ? Input.empty() : this.pathParameterValues;
@@ -43,7 +43,7 @@ public final class EventTargetHttpTargetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="queryStringParameters")
-    private final @Nullable Input<Map<String,String>> queryStringParameters;
+      private final @Nullable Input<Map<String,String>> queryStringParameters;
 
     public Input<Map<String,String>> getQueryStringParameters() {
         return this.queryStringParameters == null ? Input.empty() : this.queryStringParameters;

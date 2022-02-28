@@ -6,7 +6,7 @@ package io.pulumi.aws.cognito.inputs;
 import io.pulumi.aws.cognito.inputs.UserPoolLambdaConfigCustomEmailSenderGetArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolLambdaConfigCustomSmsSenderGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="createAuthChallenge")
-    private final @Nullable Input<String> createAuthChallenge;
+      private final @Nullable Input<String> createAuthChallenge;
 
     public Input<String> getCreateAuthChallenge() {
         return this.createAuthChallenge == null ? Input.empty() : this.createAuthChallenge;
@@ -32,7 +32,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customEmailSender")
-    private final @Nullable Input<UserPoolLambdaConfigCustomEmailSenderGetArgs> customEmailSender;
+      private final @Nullable Input<UserPoolLambdaConfigCustomEmailSenderGetArgs> customEmailSender;
 
     public Input<UserPoolLambdaConfigCustomEmailSenderGetArgs> getCustomEmailSender() {
         return this.customEmailSender == null ? Input.empty() : this.customEmailSender;
@@ -43,7 +43,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customMessage")
-    private final @Nullable Input<String> customMessage;
+      private final @Nullable Input<String> customMessage;
 
     public Input<String> getCustomMessage() {
         return this.customMessage == null ? Input.empty() : this.customMessage;
@@ -54,7 +54,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customSmsSender")
-    private final @Nullable Input<UserPoolLambdaConfigCustomSmsSenderGetArgs> customSmsSender;
+      private final @Nullable Input<UserPoolLambdaConfigCustomSmsSenderGetArgs> customSmsSender;
 
     public Input<UserPoolLambdaConfigCustomSmsSenderGetArgs> getCustomSmsSender() {
         return this.customSmsSender == null ? Input.empty() : this.customSmsSender;
@@ -65,7 +65,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="defineAuthChallenge")
-    private final @Nullable Input<String> defineAuthChallenge;
+      private final @Nullable Input<String> defineAuthChallenge;
 
     public Input<String> getDefineAuthChallenge() {
         return this.defineAuthChallenge == null ? Input.empty() : this.defineAuthChallenge;
@@ -76,7 +76,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -87,7 +87,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="postAuthentication")
-    private final @Nullable Input<String> postAuthentication;
+      private final @Nullable Input<String> postAuthentication;
 
     public Input<String> getPostAuthentication() {
         return this.postAuthentication == null ? Input.empty() : this.postAuthentication;
@@ -98,7 +98,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="postConfirmation")
-    private final @Nullable Input<String> postConfirmation;
+      private final @Nullable Input<String> postConfirmation;
 
     public Input<String> getPostConfirmation() {
         return this.postConfirmation == null ? Input.empty() : this.postConfirmation;
@@ -109,7 +109,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="preAuthentication")
-    private final @Nullable Input<String> preAuthentication;
+      private final @Nullable Input<String> preAuthentication;
 
     public Input<String> getPreAuthentication() {
         return this.preAuthentication == null ? Input.empty() : this.preAuthentication;
@@ -120,7 +120,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="preSignUp")
-    private final @Nullable Input<String> preSignUp;
+      private final @Nullable Input<String> preSignUp;
 
     public Input<String> getPreSignUp() {
         return this.preSignUp == null ? Input.empty() : this.preSignUp;
@@ -131,7 +131,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="preTokenGeneration")
-    private final @Nullable Input<String> preTokenGeneration;
+      private final @Nullable Input<String> preTokenGeneration;
 
     public Input<String> getPreTokenGeneration() {
         return this.preTokenGeneration == null ? Input.empty() : this.preTokenGeneration;
@@ -142,7 +142,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="userMigration")
-    private final @Nullable Input<String> userMigration;
+      private final @Nullable Input<String> userMigration;
 
     public Input<String> getUserMigration() {
         return this.userMigration == null ? Input.empty() : this.userMigration;
@@ -153,7 +153,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="verifyAuthChallengeResponse")
-    private final @Nullable Input<String> verifyAuthChallengeResponse;
+      private final @Nullable Input<String> verifyAuthChallengeResponse;
 
     public Input<String> getVerifyAuthChallengeResponse() {
         return this.verifyAuthChallengeResponse == null ? Input.empty() : this.verifyAuthChallengeResponse;

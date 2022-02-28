@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.outputs.RouteSpecGrpcRoute;
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttp2Route;
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttpRoute;
 import io.pulumi.aws.appmesh.outputs.RouteSpecTcpRoute;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationDate")
-    private final @Nullable Input<String> expirationDate;
+      private final @Nullable Input<String> expirationDate;
 
     public Input<String> getExpirationDate() {
         return this.expirationDate == null ? Input.empty() : this.expirationDate;
@@ -43,7 +43,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRole", required=true)
-    private final Input<String> iamRole;
+      private final Input<String> iamRole;
 
     public Input<String> getIamRole() {
         return this.iamRole;
@@ -54,7 +54,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationLimit")
-    private final @Nullable Input<Integer> registrationLimit;
+      private final @Nullable Input<Integer> registrationLimit;
 
     public Input<Integer> getRegistrationLimit() {
         return this.registrationLimit == null ? Input.empty() : this.registrationLimit;
@@ -76,7 +76,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

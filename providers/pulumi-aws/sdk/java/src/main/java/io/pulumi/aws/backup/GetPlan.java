@@ -6,7 +6,7 @@ package io.pulumi.aws.backup;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.backup.inputs.GetPlanArgs;
 import io.pulumi.aws.backup.outputs.GetPlanResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -6,7 +6,7 @@ package io.pulumi.aws.fsx.inputs;
 import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs;
 import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="copyTagsToSnapshots")
-    private final @Nullable Input<Boolean> copyTagsToSnapshots;
+      private final @Nullable Input<Boolean> copyTagsToSnapshots;
 
     public Input<Boolean> getCopyTagsToSnapshots() {
         return this.copyTagsToSnapshots == null ? Input.empty() : this.copyTagsToSnapshots;
@@ -34,7 +34,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="dataCompressionType")
-    private final @Nullable Input<String> dataCompressionType;
+      private final @Nullable Input<String> dataCompressionType;
 
     public Input<String> getDataCompressionType() {
         return this.dataCompressionType == null ? Input.empty() : this.dataCompressionType;
@@ -45,7 +45,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="nfsExports")
-    private final @Nullable Input<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> nfsExports;
+      private final @Nullable Input<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> nfsExports;
 
     public Input<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> getNfsExports() {
         return this.nfsExports == null ? Input.empty() : this.nfsExports;
@@ -56,7 +56,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -67,7 +67,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="userAndGroupQuotas")
-    private final @Nullable Input<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> userAndGroupQuotas;
+      private final @Nullable Input<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> userAndGroupQuotas;
 
     public Input<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> getUserAndGroupQuotas() {
         return this.userAndGroupQuotas == null ? Input.empty() : this.userAndGroupQuotas;

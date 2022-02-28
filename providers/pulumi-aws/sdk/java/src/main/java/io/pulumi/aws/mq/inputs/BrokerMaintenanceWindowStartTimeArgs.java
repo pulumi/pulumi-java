@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-    private final Input<String> dayOfWeek;
+      private final Input<String> dayOfWeek;
 
     public Input<String> getDayOfWeek() {
         return this.dayOfWeek;
@@ -29,7 +29,7 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="timeOfDay", required=true)
-    private final Input<String> timeOfDay;
+      private final Input<String> timeOfDay;
 
     public Input<String> getTimeOfDay() {
         return this.timeOfDay;
@@ -40,7 +40,7 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="timeZone", required=true)
-    private final Input<String> timeZone;
+      private final Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone;

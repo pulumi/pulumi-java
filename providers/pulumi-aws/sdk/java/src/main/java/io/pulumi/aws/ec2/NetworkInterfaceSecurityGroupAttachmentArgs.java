@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class NetworkInterfaceSecurityGroupAttachmentArgs extends io.pulumi
      * 
      */
     @InputImport(name="networkInterfaceId", required=true)
-    private final Input<String> networkInterfaceId;
+      private final Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId;
@@ -29,7 +29,7 @@ public final class NetworkInterfaceSecurityGroupAttachmentArgs extends io.pulumi
      * 
      */
     @InputImport(name="securityGroupId", required=true)
-    private final Input<String> securityGroupId;
+      private final Input<String> securityGroupId;
 
     public Input<String> getSecurityGroupId() {
         return this.securityGroupId;

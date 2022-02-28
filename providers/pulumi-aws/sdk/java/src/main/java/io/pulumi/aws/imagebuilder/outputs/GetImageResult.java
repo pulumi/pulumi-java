@@ -5,7 +5,7 @@ package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.GetImageImageTestsConfiguration;
 import io.pulumi.aws.imagebuilder.outputs.GetImageOutputResource;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.mskconnect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CustomPluginLocationS3Args extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bucketArn", required=true)
-    private final Input<String> bucketArn;
+      private final Input<String> bucketArn;
 
     public Input<String> getBucketArn() {
         return this.bucketArn;
@@ -30,7 +30,7 @@ public final class CustomPluginLocationS3Args extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="fileKey", required=true)
-    private final Input<String> fileKey;
+      private final Input<String> fileKey;
 
     public Input<String> getFileKey() {
         return this.fileKey;
@@ -41,7 +41,7 @@ public final class CustomPluginLocationS3Args extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="objectVersion")
-    private final @Nullable Input<String> objectVersion;
+      private final @Nullable Input<String> objectVersion;
 
     public Input<String> getObjectVersion() {
         return this.objectVersion == null ? Input.empty() : this.objectVersion;

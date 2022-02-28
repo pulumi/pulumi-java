@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FleetLaunchTemplateConfigOverrideArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -31,7 +31,7 @@ public final class FleetLaunchTemplateConfigOverrideArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -42,7 +42,7 @@ public final class FleetLaunchTemplateConfigOverrideArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="maxPrice")
-    private final @Nullable Input<String> maxPrice;
+      private final @Nullable Input<String> maxPrice;
 
     public Input<String> getMaxPrice() {
         return this.maxPrice == null ? Input.empty() : this.maxPrice;
@@ -53,7 +53,7 @@ public final class FleetLaunchTemplateConfigOverrideArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Double> priority;
+      private final @Nullable Input<Double> priority;
 
     public Input<Double> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -64,7 +64,7 @@ public final class FleetLaunchTemplateConfigOverrideArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -75,7 +75,7 @@ public final class FleetLaunchTemplateConfigOverrideArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="weightedCapacity")
-    private final @Nullable Input<Double> weightedCapacity;
+      private final @Nullable Input<Double> weightedCapacity;
 
     public Input<Double> getWeightedCapacity() {
         return this.weightedCapacity == null ? Input.empty() : this.weightedCapacity;

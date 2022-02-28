@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VpcEndpointRouteTableAssociationState extends io.pulumi.resou
      * 
      */
     @InputImport(name="routeTableId")
-    private final @Nullable Input<String> routeTableId;
+      private final @Nullable Input<String> routeTableId;
 
     public Input<String> getRouteTableId() {
         return this.routeTableId == null ? Input.empty() : this.routeTableId;
@@ -30,7 +30,7 @@ public final class VpcEndpointRouteTableAssociationState extends io.pulumi.resou
      * 
      */
     @InputImport(name="vpcEndpointId")
-    private final @Nullable Input<String> vpcEndpointId;
+      private final @Nullable Input<String> vpcEndpointId;
 
     public Input<String> getVpcEndpointId() {
         return this.vpcEndpointId == null ? Input.empty() : this.vpcEndpointId;

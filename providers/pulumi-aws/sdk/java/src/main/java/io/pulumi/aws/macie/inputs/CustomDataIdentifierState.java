@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -44,7 +44,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -55,7 +55,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ignoreWords")
-    private final @Nullable Input<List<String>> ignoreWords;
+      private final @Nullable Input<List<String>> ignoreWords;
 
     public Input<List<String>> getIgnoreWords() {
         return this.ignoreWords == null ? Input.empty() : this.ignoreWords;
@@ -66,7 +66,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keywords")
-    private final @Nullable Input<List<String>> keywords;
+      private final @Nullable Input<List<String>> keywords;
 
     public Input<List<String>> getKeywords() {
         return this.keywords == null ? Input.empty() : this.keywords;
@@ -77,14 +77,14 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maximumMatchDistance")
-    private final @Nullable Input<Integer> maximumMatchDistance;
+      private final @Nullable Input<Integer> maximumMatchDistance;
 
     public Input<Integer> getMaximumMatchDistance() {
         return this.maximumMatchDistance == null ? Input.empty() : this.maximumMatchDistance;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -95,7 +95,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -106,7 +106,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="regex")
-    private final @Nullable Input<String> regex;
+      private final @Nullable Input<String> regex;
 
     public Input<String> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -117,14 +117,14 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

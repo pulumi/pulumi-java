@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetCoipPoolFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,7 @@ public final class GetCoipPoolArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCoipPoolArgs Empty = new GetCoipPoolArgs();
 
     @InputImport(name="filters")
-    private final @Nullable List<GetCoipPoolFilter> filters;
+      private final @Nullable List<GetCoipPoolFilter> filters;
 
     public List<GetCoipPoolFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -29,7 +29,7 @@ public final class GetCoipPoolArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="localGatewayRouteTableId")
-    private final @Nullable String localGatewayRouteTableId;
+      private final @Nullable String localGatewayRouteTableId;
 
     public Optional<String> getLocalGatewayRouteTableId() {
         return this.localGatewayRouteTableId == null ? Optional.empty() : Optional.ofNullable(this.localGatewayRouteTableId);
@@ -40,7 +40,7 @@ public final class GetCoipPoolArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="poolId")
-    private final @Nullable String poolId;
+      private final @Nullable String poolId;
 
     public Optional<String> getPoolId() {
         return this.poolId == null ? Optional.empty() : Optional.ofNullable(this.poolId);
@@ -52,7 +52,7 @@ public final class GetCoipPoolArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

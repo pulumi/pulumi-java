@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.aws.cloudwatch.inputs.LogMetricFilterMetricTransformationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class LogMetricFilterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="logGroupName", required=true)
-    private final Input<String> logGroupName;
+      private final Input<String> logGroupName;
 
     public Input<String> getLogGroupName() {
         return this.logGroupName;
@@ -31,7 +31,7 @@ public final class LogMetricFilterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metricTransformation", required=true)
-    private final Input<LogMetricFilterMetricTransformationArgs> metricTransformation;
+      private final Input<LogMetricFilterMetricTransformationArgs> metricTransformation;
 
     public Input<LogMetricFilterMetricTransformationArgs> getMetricTransformation() {
         return this.metricTransformation;
@@ -42,7 +42,7 @@ public final class LogMetricFilterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class LogMetricFilterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="pattern", required=true)
-    private final Input<String> pattern;
+      private final Input<String> pattern;
 
     public Input<String> getPattern() {
         return this.pattern;

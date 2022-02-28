@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ReplicationTaskArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="cdcStartPosition")
-    private final @Nullable Input<String> cdcStartPosition;
+      private final @Nullable Input<String> cdcStartPosition;
 
     public Input<String> getCdcStartPosition() {
         return this.cdcStartPosition == null ? Input.empty() : this.cdcStartPosition;
@@ -31,7 +31,7 @@ public final class ReplicationTaskArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="cdcStartTime")
-    private final @Nullable Input<String> cdcStartTime;
+      private final @Nullable Input<String> cdcStartTime;
 
     public Input<String> getCdcStartTime() {
         return this.cdcStartTime == null ? Input.empty() : this.cdcStartTime;
@@ -42,7 +42,7 @@ public final class ReplicationTaskArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="migrationType", required=true)
-    private final Input<String> migrationType;
+      private final Input<String> migrationType;
 
     public Input<String> getMigrationType() {
         return this.migrationType;
@@ -53,7 +53,7 @@ public final class ReplicationTaskArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="replicationInstanceArn", required=true)
-    private final Input<String> replicationInstanceArn;
+      private final Input<String> replicationInstanceArn;
 
     public Input<String> getReplicationInstanceArn() {
         return this.replicationInstanceArn;
@@ -64,7 +64,7 @@ public final class ReplicationTaskArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="replicationTaskId", required=true)
-    private final Input<String> replicationTaskId;
+      private final Input<String> replicationTaskId;
 
     public Input<String> getReplicationTaskId() {
         return this.replicationTaskId;
@@ -75,7 +75,7 @@ public final class ReplicationTaskArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="replicationTaskSettings")
-    private final @Nullable Input<String> replicationTaskSettings;
+      private final @Nullable Input<String> replicationTaskSettings;
 
     public Input<String> getReplicationTaskSettings() {
         return this.replicationTaskSettings == null ? Input.empty() : this.replicationTaskSettings;
@@ -86,7 +86,7 @@ public final class ReplicationTaskArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceEndpointArn", required=true)
-    private final Input<String> sourceEndpointArn;
+      private final Input<String> sourceEndpointArn;
 
     public Input<String> getSourceEndpointArn() {
         return this.sourceEndpointArn;
@@ -97,7 +97,7 @@ public final class ReplicationTaskArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tableMappings", required=true)
-    private final Input<String> tableMappings;
+      private final Input<String> tableMappings;
 
     public Input<String> getTableMappings() {
         return this.tableMappings;
@@ -108,7 +108,7 @@ public final class ReplicationTaskArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -119,7 +119,7 @@ public final class ReplicationTaskArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetEndpointArn", required=true)
-    private final Input<String> targetEndpointArn;
+      private final Input<String> targetEndpointArn;
 
     public Input<String> getTargetEndpointArn() {
         return this.targetEndpointArn;

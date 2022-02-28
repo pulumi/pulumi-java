@@ -16,7 +16,7 @@ import io.pulumi.aws.cognito.inputs.UserPoolUserPoolAddOnsGetArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolUsernameConfigurationGetArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolVerificationMessageTemplateGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountRecoverySetting")
-    private final @Nullable Input<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting;
+      private final @Nullable Input<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting;
 
     public Input<UserPoolAccountRecoverySettingGetArgs> getAccountRecoverySetting() {
         return this.accountRecoverySetting == null ? Input.empty() : this.accountRecoverySetting;
@@ -45,7 +45,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminCreateUserConfig")
-    private final @Nullable Input<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig;
+      private final @Nullable Input<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig;
 
     public Input<UserPoolAdminCreateUserConfigGetArgs> getAdminCreateUserConfig() {
         return this.adminCreateUserConfig == null ? Input.empty() : this.adminCreateUserConfig;
@@ -56,7 +56,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aliasAttributes")
-    private final @Nullable Input<List<String>> aliasAttributes;
+      private final @Nullable Input<List<String>> aliasAttributes;
 
     public Input<List<String>> getAliasAttributes() {
         return this.aliasAttributes == null ? Input.empty() : this.aliasAttributes;
@@ -67,7 +67,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -78,7 +78,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoVerifiedAttributes")
-    private final @Nullable Input<List<String>> autoVerifiedAttributes;
+      private final @Nullable Input<List<String>> autoVerifiedAttributes;
 
     public Input<List<String>> getAutoVerifiedAttributes() {
         return this.autoVerifiedAttributes == null ? Input.empty() : this.autoVerifiedAttributes;
@@ -89,7 +89,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationDate")
-    private final @Nullable Input<String> creationDate;
+      private final @Nullable Input<String> creationDate;
 
     public Input<String> getCreationDate() {
         return this.creationDate == null ? Input.empty() : this.creationDate;
@@ -100,7 +100,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customDomain")
-    private final @Nullable Input<String> customDomain;
+      private final @Nullable Input<String> customDomain;
 
     public Input<String> getCustomDomain() {
         return this.customDomain == null ? Input.empty() : this.customDomain;
@@ -111,7 +111,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceConfiguration")
-    private final @Nullable Input<UserPoolDeviceConfigurationGetArgs> deviceConfiguration;
+      private final @Nullable Input<UserPoolDeviceConfigurationGetArgs> deviceConfiguration;
 
     public Input<UserPoolDeviceConfigurationGetArgs> getDeviceConfiguration() {
         return this.deviceConfiguration == null ? Input.empty() : this.deviceConfiguration;
@@ -122,7 +122,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -133,7 +133,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailConfiguration")
-    private final @Nullable Input<UserPoolEmailConfigurationGetArgs> emailConfiguration;
+      private final @Nullable Input<UserPoolEmailConfigurationGetArgs> emailConfiguration;
 
     public Input<UserPoolEmailConfigurationGetArgs> getEmailConfiguration() {
         return this.emailConfiguration == null ? Input.empty() : this.emailConfiguration;
@@ -144,7 +144,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailVerificationMessage")
-    private final @Nullable Input<String> emailVerificationMessage;
+      private final @Nullable Input<String> emailVerificationMessage;
 
     public Input<String> getEmailVerificationMessage() {
         return this.emailVerificationMessage == null ? Input.empty() : this.emailVerificationMessage;
@@ -155,7 +155,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailVerificationSubject")
-    private final @Nullable Input<String> emailVerificationSubject;
+      private final @Nullable Input<String> emailVerificationSubject;
 
     public Input<String> getEmailVerificationSubject() {
         return this.emailVerificationSubject == null ? Input.empty() : this.emailVerificationSubject;
@@ -166,7 +166,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<String> endpoint;
+      private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -177,7 +177,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="estimatedNumberOfUsers")
-    private final @Nullable Input<Integer> estimatedNumberOfUsers;
+      private final @Nullable Input<Integer> estimatedNumberOfUsers;
 
     public Input<Integer> getEstimatedNumberOfUsers() {
         return this.estimatedNumberOfUsers == null ? Input.empty() : this.estimatedNumberOfUsers;
@@ -188,7 +188,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lambdaConfig")
-    private final @Nullable Input<UserPoolLambdaConfigGetArgs> lambdaConfig;
+      private final @Nullable Input<UserPoolLambdaConfigGetArgs> lambdaConfig;
 
     public Input<UserPoolLambdaConfigGetArgs> getLambdaConfig() {
         return this.lambdaConfig == null ? Input.empty() : this.lambdaConfig;
@@ -199,7 +199,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedDate")
-    private final @Nullable Input<String> lastModifiedDate;
+      private final @Nullable Input<String> lastModifiedDate;
 
     public Input<String> getLastModifiedDate() {
         return this.lastModifiedDate == null ? Input.empty() : this.lastModifiedDate;
@@ -210,7 +210,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mfaConfiguration")
-    private final @Nullable Input<String> mfaConfiguration;
+      private final @Nullable Input<String> mfaConfiguration;
 
     public Input<String> getMfaConfiguration() {
         return this.mfaConfiguration == null ? Input.empty() : this.mfaConfiguration;
@@ -221,7 +221,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -232,7 +232,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="passwordPolicy")
-    private final @Nullable Input<UserPoolPasswordPolicyGetArgs> passwordPolicy;
+      private final @Nullable Input<UserPoolPasswordPolicyGetArgs> passwordPolicy;
 
     public Input<UserPoolPasswordPolicyGetArgs> getPasswordPolicy() {
         return this.passwordPolicy == null ? Input.empty() : this.passwordPolicy;
@@ -243,7 +243,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemas")
-    private final @Nullable Input<List<UserPoolSchemaGetArgs>> schemas;
+      private final @Nullable Input<List<UserPoolSchemaGetArgs>> schemas;
 
     public Input<List<UserPoolSchemaGetArgs>> getSchemas() {
         return this.schemas == null ? Input.empty() : this.schemas;
@@ -254,7 +254,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smsAuthenticationMessage")
-    private final @Nullable Input<String> smsAuthenticationMessage;
+      private final @Nullable Input<String> smsAuthenticationMessage;
 
     public Input<String> getSmsAuthenticationMessage() {
         return this.smsAuthenticationMessage == null ? Input.empty() : this.smsAuthenticationMessage;
@@ -265,7 +265,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smsConfiguration")
-    private final @Nullable Input<UserPoolSmsConfigurationGetArgs> smsConfiguration;
+      private final @Nullable Input<UserPoolSmsConfigurationGetArgs> smsConfiguration;
 
     public Input<UserPoolSmsConfigurationGetArgs> getSmsConfiguration() {
         return this.smsConfiguration == null ? Input.empty() : this.smsConfiguration;
@@ -276,7 +276,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smsVerificationMessage")
-    private final @Nullable Input<String> smsVerificationMessage;
+      private final @Nullable Input<String> smsVerificationMessage;
 
     public Input<String> getSmsVerificationMessage() {
         return this.smsVerificationMessage == null ? Input.empty() : this.smsVerificationMessage;
@@ -287,7 +287,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="softwareTokenMfaConfiguration")
-    private final @Nullable Input<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration;
+      private final @Nullable Input<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration;
 
     public Input<UserPoolSoftwareTokenMfaConfigurationGetArgs> getSoftwareTokenMfaConfiguration() {
         return this.softwareTokenMfaConfiguration == null ? Input.empty() : this.softwareTokenMfaConfiguration;
@@ -298,7 +298,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -309,7 +309,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -320,7 +320,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userPoolAddOns")
-    private final @Nullable Input<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns;
+      private final @Nullable Input<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns;
 
     public Input<UserPoolUserPoolAddOnsGetArgs> getUserPoolAddOns() {
         return this.userPoolAddOns == null ? Input.empty() : this.userPoolAddOns;
@@ -331,7 +331,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usernameAttributes")
-    private final @Nullable Input<List<String>> usernameAttributes;
+      private final @Nullable Input<List<String>> usernameAttributes;
 
     public Input<List<String>> getUsernameAttributes() {
         return this.usernameAttributes == null ? Input.empty() : this.usernameAttributes;
@@ -342,7 +342,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usernameConfiguration")
-    private final @Nullable Input<UserPoolUsernameConfigurationGetArgs> usernameConfiguration;
+      private final @Nullable Input<UserPoolUsernameConfigurationGetArgs> usernameConfiguration;
 
     public Input<UserPoolUsernameConfigurationGetArgs> getUsernameConfiguration() {
         return this.usernameConfiguration == null ? Input.empty() : this.usernameConfiguration;
@@ -353,7 +353,7 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="verificationMessageTemplate")
-    private final @Nullable Input<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate;
+      private final @Nullable Input<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate;
 
     public Input<UserPoolVerificationMessageTemplateGetArgs> getVerificationMessageTemplate() {
         return this.verificationMessageTemplate == null ? Input.empty() : this.verificationMessageTemplate;

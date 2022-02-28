@@ -5,7 +5,7 @@ package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.aws.redshift.inputs.SecurityGroupIngressGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingress")
-    private final @Nullable Input<List<SecurityGroupIngressGetArgs>> ingress;
+      private final @Nullable Input<List<SecurityGroupIngressGetArgs>> ingress;
 
     public Input<List<SecurityGroupIngressGetArgs>> getIngress() {
         return this.ingress == null ? Input.empty() : this.ingress;
@@ -43,7 +43,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

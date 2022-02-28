@@ -5,7 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.aws.codebuild.inputs.ProjectBuildBatchConfigRestrictionsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="combineArtifacts")
-    private final @Nullable Input<Boolean> combineArtifacts;
+      private final @Nullable Input<Boolean> combineArtifacts;
 
     public Input<Boolean> getCombineArtifacts() {
         return this.combineArtifacts == null ? Input.empty() : this.combineArtifacts;
@@ -33,7 +33,7 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="restrictions")
-    private final @Nullable Input<ProjectBuildBatchConfigRestrictionsGetArgs> restrictions;
+      private final @Nullable Input<ProjectBuildBatchConfigRestrictionsGetArgs> restrictions;
 
     public Input<ProjectBuildBatchConfigRestrictionsGetArgs> getRestrictions() {
         return this.restrictions == null ? Input.empty() : this.restrictions;
@@ -44,7 +44,7 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="serviceRole", required=true)
-    private final Input<String> serviceRole;
+      private final Input<String> serviceRole;
 
     public Input<String> getServiceRole() {
         return this.serviceRole;
@@ -55,7 +55,7 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="timeoutInMins")
-    private final @Nullable Input<Integer> timeoutInMins;
+      private final @Nullable Input<Integer> timeoutInMins;
 
     public Input<Integer> getTimeoutInMins() {
         return this.timeoutInMins == null ? Input.empty() : this.timeoutInMins;

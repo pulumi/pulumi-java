@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ResourceDataSyncS3DestinationGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+      private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
@@ -30,7 +30,7 @@ public final class ResourceDataSyncS3DestinationGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -41,7 +41,7 @@ public final class ResourceDataSyncS3DestinationGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -52,7 +52,7 @@ public final class ResourceDataSyncS3DestinationGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
@@ -63,7 +63,7 @@ public final class ResourceDataSyncS3DestinationGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="syncFormat")
-    private final @Nullable Input<String> syncFormat;
+      private final @Nullable Input<String> syncFormat;
 
     public Input<String> getSyncFormat() {
         return this.syncFormat == null ? Input.empty() : this.syncFormat;

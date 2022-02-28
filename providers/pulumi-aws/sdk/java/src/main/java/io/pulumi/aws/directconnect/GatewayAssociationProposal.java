@@ -8,8 +8,8 @@ import io.pulumi.aws.directconnect.GatewayAssociationProposalArgs;
 import io.pulumi.aws.directconnect.inputs.GatewayAssociationProposalState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -123,6 +123,21 @@ public class GatewayAssociationProposal extends io.pulumi.resources.CustomResour
         return this.dxGatewayOwnerAccountId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public GatewayAssociationProposal(String name) {
+        this(name, GatewayAssociationProposalArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public GatewayAssociationProposal(String name, GatewayAssociationProposalArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

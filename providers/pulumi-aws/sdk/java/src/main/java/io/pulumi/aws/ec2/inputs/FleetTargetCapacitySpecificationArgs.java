@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultTargetCapacityType", required=true)
-    private final Input<String> defaultTargetCapacityType;
+      private final Input<String> defaultTargetCapacityType;
 
     public Input<String> getDefaultTargetCapacityType() {
         return this.defaultTargetCapacityType;
@@ -31,7 +31,7 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="onDemandTargetCapacity")
-    private final @Nullable Input<Integer> onDemandTargetCapacity;
+      private final @Nullable Input<Integer> onDemandTargetCapacity;
 
     public Input<Integer> getOnDemandTargetCapacity() {
         return this.onDemandTargetCapacity == null ? Input.empty() : this.onDemandTargetCapacity;
@@ -42,7 +42,7 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="spotTargetCapacity")
-    private final @Nullable Input<Integer> spotTargetCapacity;
+      private final @Nullable Input<Integer> spotTargetCapacity;
 
     public Input<Integer> getSpotTargetCapacity() {
         return this.spotTargetCapacity == null ? Input.empty() : this.spotTargetCapacity;
@@ -53,7 +53,7 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="totalTargetCapacity", required=true)
-    private final Input<Integer> totalTargetCapacity;
+      private final Input<Integer> totalTargetCapacity;
 
     public Input<Integer> getTotalTargetCapacity() {
         return this.totalTargetCapacity;

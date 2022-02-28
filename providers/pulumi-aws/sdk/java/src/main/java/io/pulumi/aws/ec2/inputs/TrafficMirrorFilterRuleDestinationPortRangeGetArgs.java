@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TrafficMirrorFilterRuleDestinationPortRangeGetArgs extends io
      * 
      */
     @InputImport(name="fromPort")
-    private final @Nullable Input<Integer> fromPort;
+      private final @Nullable Input<Integer> fromPort;
 
     public Input<Integer> getFromPort() {
         return this.fromPort == null ? Input.empty() : this.fromPort;
@@ -30,7 +30,7 @@ public final class TrafficMirrorFilterRuleDestinationPortRangeGetArgs extends io
      * 
      */
     @InputImport(name="toPort")
-    private final @Nullable Input<Integer> toPort;
+      private final @Nullable Input<Integer> toPort;
 
     public Input<Integer> getToPort() {
         return this.toPort == null ? Input.empty() : this.toPort;

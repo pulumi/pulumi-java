@@ -13,7 +13,7 @@ import io.pulumi.aws.glue.inputs.CrawlerRecrawlPolicyGetArgs;
 import io.pulumi.aws.glue.inputs.CrawlerS3TargetGetArgs;
 import io.pulumi.aws.glue.inputs.CrawlerSchemaChangePolicyGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,14 +30,14 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
     }
 
     @InputImport(name="catalogTargets")
-    private final @Nullable Input<List<CrawlerCatalogTargetGetArgs>> catalogTargets;
+      private final @Nullable Input<List<CrawlerCatalogTargetGetArgs>> catalogTargets;
 
     public Input<List<CrawlerCatalogTargetGetArgs>> getCatalogTargets() {
         return this.catalogTargets == null ? Input.empty() : this.catalogTargets;
@@ -48,7 +48,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classifiers")
-    private final @Nullable Input<List<String>> classifiers;
+      private final @Nullable Input<List<String>> classifiers;
 
     public Input<List<String>> getClassifiers() {
         return this.classifiers == null ? Input.empty() : this.classifiers;
@@ -59,7 +59,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<String> configuration;
+      private final @Nullable Input<String> configuration;
 
     public Input<String> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -70,14 +70,14 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+      private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
     @InputImport(name="deltaTargets")
-    private final @Nullable Input<List<CrawlerDeltaTargetGetArgs>> deltaTargets;
+      private final @Nullable Input<List<CrawlerDeltaTargetGetArgs>> deltaTargets;
 
     public Input<List<CrawlerDeltaTargetGetArgs>> getDeltaTargets() {
         return this.deltaTargets == null ? Input.empty() : this.deltaTargets;
@@ -88,7 +88,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -99,7 +99,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dynamodbTargets")
-    private final @Nullable Input<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets;
+      private final @Nullable Input<List<CrawlerDynamodbTargetGetArgs>> dynamodbTargets;
 
     public Input<List<CrawlerDynamodbTargetGetArgs>> getDynamodbTargets() {
         return this.dynamodbTargets == null ? Input.empty() : this.dynamodbTargets;
@@ -110,7 +110,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jdbcTargets")
-    private final @Nullable Input<List<CrawlerJdbcTargetGetArgs>> jdbcTargets;
+      private final @Nullable Input<List<CrawlerJdbcTargetGetArgs>> jdbcTargets;
 
     public Input<List<CrawlerJdbcTargetGetArgs>> getJdbcTargets() {
         return this.jdbcTargets == null ? Input.empty() : this.jdbcTargets;
@@ -121,7 +121,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lineageConfiguration")
-    private final @Nullable Input<CrawlerLineageConfigurationGetArgs> lineageConfiguration;
+      private final @Nullable Input<CrawlerLineageConfigurationGetArgs> lineageConfiguration;
 
     public Input<CrawlerLineageConfigurationGetArgs> getLineageConfiguration() {
         return this.lineageConfiguration == null ? Input.empty() : this.lineageConfiguration;
@@ -132,7 +132,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mongodbTargets")
-    private final @Nullable Input<List<CrawlerMongodbTargetGetArgs>> mongodbTargets;
+      private final @Nullable Input<List<CrawlerMongodbTargetGetArgs>> mongodbTargets;
 
     public Input<List<CrawlerMongodbTargetGetArgs>> getMongodbTargets() {
         return this.mongodbTargets == null ? Input.empty() : this.mongodbTargets;
@@ -143,7 +143,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -154,7 +154,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recrawlPolicy")
-    private final @Nullable Input<CrawlerRecrawlPolicyGetArgs> recrawlPolicy;
+      private final @Nullable Input<CrawlerRecrawlPolicyGetArgs> recrawlPolicy;
 
     public Input<CrawlerRecrawlPolicyGetArgs> getRecrawlPolicy() {
         return this.recrawlPolicy == null ? Input.empty() : this.recrawlPolicy;
@@ -165,7 +165,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -176,7 +176,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Targets")
-    private final @Nullable Input<List<CrawlerS3TargetGetArgs>> s3Targets;
+      private final @Nullable Input<List<CrawlerS3TargetGetArgs>> s3Targets;
 
     public Input<List<CrawlerS3TargetGetArgs>> getS3Targets() {
         return this.s3Targets == null ? Input.empty() : this.s3Targets;
@@ -187,7 +187,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<String> schedule;
+      private final @Nullable Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -198,7 +198,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaChangePolicy")
-    private final @Nullable Input<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy;
+      private final @Nullable Input<CrawlerSchemaChangePolicyGetArgs> schemaChangePolicy;
 
     public Input<CrawlerSchemaChangePolicyGetArgs> getSchemaChangePolicy() {
         return this.schemaChangePolicy == null ? Input.empty() : this.schemaChangePolicy;
@@ -209,7 +209,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityConfiguration")
-    private final @Nullable Input<String> securityConfiguration;
+      private final @Nullable Input<String> securityConfiguration;
 
     public Input<String> getSecurityConfiguration() {
         return this.securityConfiguration == null ? Input.empty() : this.securityConfiguration;
@@ -220,7 +220,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tablePrefix")
-    private final @Nullable Input<String> tablePrefix;
+      private final @Nullable Input<String> tablePrefix;
 
     public Input<String> getTablePrefix() {
         return this.tablePrefix == null ? Input.empty() : this.tablePrefix;
@@ -231,7 +231,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -242,7 +242,7 @@ public final class CrawlerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

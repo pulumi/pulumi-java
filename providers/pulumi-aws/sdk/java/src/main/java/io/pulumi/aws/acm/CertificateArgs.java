@@ -5,7 +5,7 @@ package io.pulumi.aws.acm;
 
 import io.pulumi.aws.acm.inputs.CertificateOptionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthorityArn")
-    private final @Nullable Input<String> certificateAuthorityArn;
+      private final @Nullable Input<String> certificateAuthorityArn;
 
     public Input<String> getCertificateAuthorityArn() {
         return this.certificateAuthorityArn == null ? Input.empty() : this.certificateAuthorityArn;
@@ -33,7 +33,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateBody")
-    private final @Nullable Input<String> certificateBody;
+      private final @Nullable Input<String> certificateBody;
 
     public Input<String> getCertificateBody() {
         return this.certificateBody == null ? Input.empty() : this.certificateBody;
@@ -45,7 +45,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateChain")
-    private final @Nullable Input<String> certificateChain;
+      private final @Nullable Input<String> certificateChain;
 
     public Input<String> getCertificateChain() {
         return this.certificateChain == null ? Input.empty() : this.certificateChain;
@@ -56,7 +56,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -68,7 +68,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<CertificateOptionsArgs> options;
+      private final @Nullable Input<CertificateOptionsArgs> options;
 
     public Input<CertificateOptionsArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -79,7 +79,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKey")
-    private final @Nullable Input<String> privateKey;
+      private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
@@ -90,7 +90,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subjectAlternativeNames")
-    private final @Nullable Input<List<String>> subjectAlternativeNames;
+      private final @Nullable Input<List<String>> subjectAlternativeNames;
 
     public Input<List<String>> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
@@ -101,7 +101,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -112,7 +112,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationMethod")
-    private final @Nullable Input<String> validationMethod;
+      private final @Nullable Input<String> validationMethod;
 
     public Input<String> getValidationMethod() {
         return this.validationMethod == null ? Input.empty() : this.validationMethod;

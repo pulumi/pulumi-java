@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticache.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ReplicationGroupClusterModeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="numNodeGroups")
-    private final @Nullable Input<Integer> numNodeGroups;
+      private final @Nullable Input<Integer> numNodeGroups;
 
     public Input<Integer> getNumNodeGroups() {
         return this.numNodeGroups == null ? Input.empty() : this.numNodeGroups;
@@ -30,7 +30,7 @@ public final class ReplicationGroupClusterModeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="replicasPerNodeGroup", required=true)
-    private final Input<Integer> replicasPerNodeGroup;
+      private final Input<Integer> replicasPerNodeGroup;
 
     public Input<Integer> getReplicasPerNodeGroup() {
         return this.replicasPerNodeGroup;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetAuthorizationTokenArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="registryId")
-    private final @Nullable String registryId;
+      private final @Nullable String registryId;
 
     public Optional<String> getRegistryId() {
         return this.registryId == null ? Optional.empty() : Optional.ofNullable(this.registryId);

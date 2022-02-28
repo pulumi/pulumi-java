@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigGetArgs 
      * 
      */
     @InputImport(name="iops")
-    private final @Nullable Input<Integer> iops;
+      private final @Nullable Input<Integer> iops;
 
     public Input<Integer> getIops() {
         return this.iops == null ? Input.empty() : this.iops;
@@ -31,7 +31,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigGetArgs 
      * 
      */
     @InputImport(name="size", required=true)
-    private final Input<Integer> size;
+      private final Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size;
@@ -42,7 +42,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigGetArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -53,7 +53,7 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigEbsConfigGetArgs 
      * 
      */
     @InputImport(name="volumesPerInstance")
-    private final @Nullable Input<Integer> volumesPerInstance;
+      private final @Nullable Input<Integer> volumesPerInstance;
 
     public Input<Integer> getVolumesPerInstance() {
         return this.volumesPerInstance == null ? Input.empty() : this.volumesPerInstance;

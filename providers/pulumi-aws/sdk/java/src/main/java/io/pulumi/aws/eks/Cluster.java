@@ -13,8 +13,8 @@ import io.pulumi.aws.eks.outputs.ClusterKubernetesNetworkConfig;
 import io.pulumi.aws.eks.outputs.ClusterVpcConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -261,6 +261,21 @@ public class Cluster extends io.pulumi.resources.CustomResource {
         return this.vpcConfig;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Cluster(String name) {
+        this(name, ClusterArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Cluster(String name, ClusterArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

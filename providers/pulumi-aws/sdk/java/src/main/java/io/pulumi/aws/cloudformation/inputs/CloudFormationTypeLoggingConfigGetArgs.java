@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudformation.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class CloudFormationTypeLoggingConfigGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="logGroupName", required=true)
-    private final Input<String> logGroupName;
+      private final Input<String> logGroupName;
 
     public Input<String> getLogGroupName() {
         return this.logGroupName;
@@ -29,7 +29,7 @@ public final class CloudFormationTypeLoggingConfigGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="logRoleArn", required=true)
-    private final Input<String> logRoleArn;
+      private final Input<String> logRoleArn;
 
     public Input<String> getLogRoleArn() {
         return this.logRoleArn;

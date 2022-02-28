@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WorkteamMemberDefinitionOidcMemberDefinitionArgs extends io.p
      * 
      */
     @InputImport(name="groups", required=true)
-    private final Input<List<String>> groups;
+      private final Input<List<String>> groups;
 
     public Input<List<String>> getGroups() {
         return this.groups;

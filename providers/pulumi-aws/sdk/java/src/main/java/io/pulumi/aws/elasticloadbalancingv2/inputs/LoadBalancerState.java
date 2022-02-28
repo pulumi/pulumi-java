@@ -6,7 +6,7 @@ package io.pulumi.aws.elasticloadbalancingv2.inputs;
 import io.pulumi.aws.elasticloadbalancingv2.inputs.LoadBalancerAccessLogsGetArgs;
 import io.pulumi.aws.elasticloadbalancingv2.inputs.LoadBalancerSubnetMappingGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessLogs")
-    private final @Nullable Input<LoadBalancerAccessLogsGetArgs> accessLogs;
+      private final @Nullable Input<LoadBalancerAccessLogsGetArgs> accessLogs;
 
     public Input<LoadBalancerAccessLogsGetArgs> getAccessLogs() {
         return this.accessLogs == null ? Input.empty() : this.accessLogs;
@@ -36,7 +36,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -47,7 +47,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arnSuffix")
-    private final @Nullable Input<String> arnSuffix;
+      private final @Nullable Input<String> arnSuffix;
 
     public Input<String> getArnSuffix() {
         return this.arnSuffix == null ? Input.empty() : this.arnSuffix;
@@ -58,7 +58,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerOwnedIpv4Pool")
-    private final @Nullable Input<String> customerOwnedIpv4Pool;
+      private final @Nullable Input<String> customerOwnedIpv4Pool;
 
     public Input<String> getCustomerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool == null ? Input.empty() : this.customerOwnedIpv4Pool;
@@ -69,7 +69,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="desyncMitigationMode")
-    private final @Nullable Input<String> desyncMitigationMode;
+      private final @Nullable Input<String> desyncMitigationMode;
 
     public Input<String> getDesyncMitigationMode() {
         return this.desyncMitigationMode == null ? Input.empty() : this.desyncMitigationMode;
@@ -80,7 +80,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsName")
-    private final @Nullable Input<String> dnsName;
+      private final @Nullable Input<String> dnsName;
 
     public Input<String> getDnsName() {
         return this.dnsName == null ? Input.empty() : this.dnsName;
@@ -91,7 +91,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dropInvalidHeaderFields")
-    private final @Nullable Input<Boolean> dropInvalidHeaderFields;
+      private final @Nullable Input<Boolean> dropInvalidHeaderFields;
 
     public Input<Boolean> getDropInvalidHeaderFields() {
         return this.dropInvalidHeaderFields == null ? Input.empty() : this.dropInvalidHeaderFields;
@@ -103,7 +103,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableCrossZoneLoadBalancing")
-    private final @Nullable Input<Boolean> enableCrossZoneLoadBalancing;
+      private final @Nullable Input<Boolean> enableCrossZoneLoadBalancing;
 
     public Input<Boolean> getEnableCrossZoneLoadBalancing() {
         return this.enableCrossZoneLoadBalancing == null ? Input.empty() : this.enableCrossZoneLoadBalancing;
@@ -115,7 +115,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDeletionProtection")
-    private final @Nullable Input<Boolean> enableDeletionProtection;
+      private final @Nullable Input<Boolean> enableDeletionProtection;
 
     public Input<Boolean> getEnableDeletionProtection() {
         return this.enableDeletionProtection == null ? Input.empty() : this.enableDeletionProtection;
@@ -126,7 +126,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableHttp2")
-    private final @Nullable Input<Boolean> enableHttp2;
+      private final @Nullable Input<Boolean> enableHttp2;
 
     public Input<Boolean> getEnableHttp2() {
         return this.enableHttp2 == null ? Input.empty() : this.enableHttp2;
@@ -137,7 +137,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableWafFailOpen")
-    private final @Nullable Input<Boolean> enableWafFailOpen;
+      private final @Nullable Input<Boolean> enableWafFailOpen;
 
     public Input<Boolean> getEnableWafFailOpen() {
         return this.enableWafFailOpen == null ? Input.empty() : this.enableWafFailOpen;
@@ -148,7 +148,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleTimeout")
-    private final @Nullable Input<Integer> idleTimeout;
+      private final @Nullable Input<Integer> idleTimeout;
 
     public Input<Integer> getIdleTimeout() {
         return this.idleTimeout == null ? Input.empty() : this.idleTimeout;
@@ -159,7 +159,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="internal")
-    private final @Nullable Input<Boolean> internal;
+      private final @Nullable Input<Boolean> internal;
 
     public Input<Boolean> getInternal() {
         return this.internal == null ? Input.empty() : this.internal;
@@ -170,7 +170,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddressType")
-    private final @Nullable Input<String> ipAddressType;
+      private final @Nullable Input<String> ipAddressType;
 
     public Input<String> getIpAddressType() {
         return this.ipAddressType == null ? Input.empty() : this.ipAddressType;
@@ -181,7 +181,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerType")
-    private final @Nullable Input<String> loadBalancerType;
+      private final @Nullable Input<String> loadBalancerType;
 
     public Input<String> getLoadBalancerType() {
         return this.loadBalancerType == null ? Input.empty() : this.loadBalancerType;
@@ -194,7 +194,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -205,7 +205,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -216,7 +216,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -227,7 +227,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetMappings")
-    private final @Nullable Input<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings;
+      private final @Nullable Input<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings;
 
     public Input<List<LoadBalancerSubnetMappingGetArgs>> getSubnetMappings() {
         return this.subnetMappings == null ? Input.empty() : this.subnetMappings;
@@ -240,7 +240,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnets")
-    private final @Nullable Input<List<String>> subnets;
+      private final @Nullable Input<List<String>> subnets;
 
     public Input<List<String>> getSubnets() {
         return this.subnets == null ? Input.empty() : this.subnets;
@@ -251,7 +251,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -262,14 +262,14 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
     }
 
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;
@@ -281,7 +281,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneId")
-    private final @Nullable Input<String> zoneId;
+      private final @Nullable Input<String> zoneId;
 
     public Input<String> getZoneId() {
         return this.zoneId == null ? Input.empty() : this.zoneId;

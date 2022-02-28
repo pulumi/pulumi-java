@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FleetStackAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="fleetName")
-    private final @Nullable Input<String> fleetName;
+      private final @Nullable Input<String> fleetName;
 
     public Input<String> getFleetName() {
         return this.fleetName == null ? Input.empty() : this.fleetName;
@@ -30,7 +30,7 @@ public final class FleetStackAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="stackName")
-    private final @Nullable Input<String> stackName;
+      private final @Nullable Input<String> stackName;
 
     public Input<String> getStackName() {
         return this.stackName == null ? Input.empty() : this.stackName;

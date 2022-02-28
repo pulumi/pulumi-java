@@ -5,7 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.aws.appsync.inputs.FunctionSyncConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId")
-    private final @Nullable Input<String> apiId;
+      private final @Nullable Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId == null ? Input.empty() : this.apiId;
@@ -32,7 +32,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -43,7 +43,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSource")
-    private final @Nullable Input<String> dataSource;
+      private final @Nullable Input<String> dataSource;
 
     public Input<String> getDataSource() {
         return this.dataSource == null ? Input.empty() : this.dataSource;
@@ -54,7 +54,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -65,7 +65,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionId")
-    private final @Nullable Input<String> functionId;
+      private final @Nullable Input<String> functionId;
 
     public Input<String> getFunctionId() {
         return this.functionId == null ? Input.empty() : this.functionId;
@@ -76,7 +76,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionVersion")
-    private final @Nullable Input<String> functionVersion;
+      private final @Nullable Input<String> functionVersion;
 
     public Input<String> getFunctionVersion() {
         return this.functionVersion == null ? Input.empty() : this.functionVersion;
@@ -87,7 +87,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxBatchSize")
-    private final @Nullable Input<Integer> maxBatchSize;
+      private final @Nullable Input<Integer> maxBatchSize;
 
     public Input<Integer> getMaxBatchSize() {
         return this.maxBatchSize == null ? Input.empty() : this.maxBatchSize;
@@ -98,7 +98,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -109,7 +109,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestMappingTemplate")
-    private final @Nullable Input<String> requestMappingTemplate;
+      private final @Nullable Input<String> requestMappingTemplate;
 
     public Input<String> getRequestMappingTemplate() {
         return this.requestMappingTemplate == null ? Input.empty() : this.requestMappingTemplate;
@@ -120,7 +120,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseMappingTemplate")
-    private final @Nullable Input<String> responseMappingTemplate;
+      private final @Nullable Input<String> responseMappingTemplate;
 
     public Input<String> getResponseMappingTemplate() {
         return this.responseMappingTemplate == null ? Input.empty() : this.responseMappingTemplate;
@@ -131,7 +131,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncConfig")
-    private final @Nullable Input<FunctionSyncConfigGetArgs> syncConfig;
+      private final @Nullable Input<FunctionSyncConfigGetArgs> syncConfig;
 
     public Input<FunctionSyncConfigGetArgs> getSyncConfig() {
         return this.syncConfig == null ? Input.empty() : this.syncConfig;

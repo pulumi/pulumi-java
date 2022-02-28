@@ -8,8 +8,8 @@ import io.pulumi.aws.kinesisanalyticsv2.ApplicationSnapshotArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationSnapshotState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -88,6 +88,21 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
         return this.snapshotName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ApplicationSnapshot(String name) {
+        this(name, ApplicationSnapshotArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ApplicationSnapshot(String name, ApplicationSnapshotArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -12,8 +12,8 @@ import io.pulumi.aws.lambda.outputs.EventSourceMappingSelfManagedEventSource;
 import io.pulumi.aws.lambda.outputs.EventSourceMappingSourceAccessConfiguration;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -348,6 +348,21 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
         return this.uuid;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public EventSourceMapping(String name) {
+        this(name, EventSourceMappingArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public EventSourceMapping(String name, EventSourceMappingArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

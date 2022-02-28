@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class LaunchTemplateLicenseSpecificationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="licenseConfigurationArn", required=true)
-    private final Input<String> licenseConfigurationArn;
+      private final Input<String> licenseConfigurationArn;
 
     public Input<String> getLicenseConfigurationArn() {
         return this.licenseConfigurationArn;

@@ -8,8 +8,8 @@ import io.pulumi.aws.amp.WorkspaceArgs;
 import io.pulumi.aws.amp.inputs.WorkspaceState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -74,6 +74,21 @@ public class Workspace extends io.pulumi.resources.CustomResource {
         return this.prometheusEndpoint;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Workspace(String name) {
+        this(name, WorkspaceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Workspace(String name, @Nullable WorkspaceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

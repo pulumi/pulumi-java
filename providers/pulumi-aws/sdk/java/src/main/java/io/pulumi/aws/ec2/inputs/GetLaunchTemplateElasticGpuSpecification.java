@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetLaunchTemplateElasticGpuSpecification extends io.pulumi.re
     public static final GetLaunchTemplateElasticGpuSpecification Empty = new GetLaunchTemplateElasticGpuSpecification();
 
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

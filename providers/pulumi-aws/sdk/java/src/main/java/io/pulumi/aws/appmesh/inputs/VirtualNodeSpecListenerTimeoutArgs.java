@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttp2Args;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttpArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutTcpArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="grpc")
-    private final @Nullable Input<VirtualNodeSpecListenerTimeoutGrpcArgs> grpc;
+      private final @Nullable Input<VirtualNodeSpecListenerTimeoutGrpcArgs> grpc;
 
     public Input<VirtualNodeSpecListenerTimeoutGrpcArgs> getGrpc() {
         return this.grpc == null ? Input.empty() : this.grpc;
@@ -33,7 +33,7 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="http")
-    private final @Nullable Input<VirtualNodeSpecListenerTimeoutHttpArgs> http;
+      private final @Nullable Input<VirtualNodeSpecListenerTimeoutHttpArgs> http;
 
     public Input<VirtualNodeSpecListenerTimeoutHttpArgs> getHttp() {
         return this.http == null ? Input.empty() : this.http;
@@ -44,7 +44,7 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="http2")
-    private final @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2Args> http2;
+      private final @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2Args> http2;
 
     public Input<VirtualNodeSpecListenerTimeoutHttp2Args> getHttp2() {
         return this.http2 == null ? Input.empty() : this.http2;
@@ -55,7 +55,7 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="tcp")
-    private final @Nullable Input<VirtualNodeSpecListenerTimeoutTcpArgs> tcp;
+      private final @Nullable Input<VirtualNodeSpecListenerTimeoutTcpArgs> tcp;
 
     public Input<VirtualNodeSpecListenerTimeoutTcpArgs> getTcp() {
         return this.tcp == null ? Input.empty() : this.tcp;

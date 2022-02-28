@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="artifactIdentifier", required=true)
-    private final Input<String> artifactIdentifier;
+      private final Input<String> artifactIdentifier;
 
     public Input<String> getArtifactIdentifier() {
         return this.artifactIdentifier;
@@ -31,7 +31,7 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="bucketOwnerAccess")
-    private final @Nullable Input<String> bucketOwnerAccess;
+      private final @Nullable Input<String> bucketOwnerAccess;
 
     public Input<String> getBucketOwnerAccess() {
         return this.bucketOwnerAccess == null ? Input.empty() : this.bucketOwnerAccess;
@@ -42,7 +42,7 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="encryptionDisabled")
-    private final @Nullable Input<Boolean> encryptionDisabled;
+      private final @Nullable Input<Boolean> encryptionDisabled;
 
     public Input<Boolean> getEncryptionDisabled() {
         return this.encryptionDisabled == null ? Input.empty() : this.encryptionDisabled;
@@ -53,7 +53,7 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -64,7 +64,7 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -75,7 +75,7 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="namespaceType")
-    private final @Nullable Input<String> namespaceType;
+      private final @Nullable Input<String> namespaceType;
 
     public Input<String> getNamespaceType() {
         return this.namespaceType == null ? Input.empty() : this.namespaceType;
@@ -86,7 +86,7 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="overrideArtifactName")
-    private final @Nullable Input<Boolean> overrideArtifactName;
+      private final @Nullable Input<Boolean> overrideArtifactName;
 
     public Input<Boolean> getOverrideArtifactName() {
         return this.overrideArtifactName == null ? Input.empty() : this.overrideArtifactName;
@@ -97,7 +97,7 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="packaging")
-    private final @Nullable Input<String> packaging;
+      private final @Nullable Input<String> packaging;
 
     public Input<String> getPackaging() {
         return this.packaging == null ? Input.empty() : this.packaging;
@@ -108,7 +108,7 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -119,7 +119,7 @@ public final class ProjectSecondaryArtifactGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

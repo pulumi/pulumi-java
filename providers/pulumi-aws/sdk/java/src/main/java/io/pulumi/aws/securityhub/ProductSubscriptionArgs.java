@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ProductSubscriptionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="productArn", required=true)
-    private final Input<String> productArn;
+      private final Input<String> productArn;
 
     public Input<String> getProductArn() {
         return this.productArn;

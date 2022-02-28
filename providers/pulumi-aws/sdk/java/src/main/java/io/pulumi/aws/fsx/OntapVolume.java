@@ -9,8 +9,8 @@ import io.pulumi.aws.fsx.inputs.OntapVolumeState;
 import io.pulumi.aws.fsx.outputs.OntapVolumeTieringPolicy;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -237,6 +237,21 @@ public class OntapVolume extends io.pulumi.resources.CustomResource {
         return this.volumeType;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public OntapVolume(String name) {
+        this(name, OntapVolumeArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public OntapVolume(String name, OntapVolumeArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

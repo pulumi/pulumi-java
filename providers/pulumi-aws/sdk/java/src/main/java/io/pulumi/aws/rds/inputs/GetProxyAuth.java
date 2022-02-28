@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,28 +13,28 @@ public final class GetProxyAuth extends io.pulumi.resources.InvokeArgs {
     public static final GetProxyAuth Empty = new GetProxyAuth();
 
     @InputImport(name="authScheme", required=true)
-    private final String authScheme;
+      private final String authScheme;
 
     public String getAuthScheme() {
         return this.authScheme;
     }
 
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
     }
 
     @InputImport(name="iamAuth", required=true)
-    private final String iamAuth;
+      private final String iamAuth;
 
     public String getIamAuth() {
         return this.iamAuth;
     }
 
     @InputImport(name="secretArn", required=true)
-    private final String secretArn;
+      private final String secretArn;
 
     public String getSecretArn() {
         return this.secretArn;

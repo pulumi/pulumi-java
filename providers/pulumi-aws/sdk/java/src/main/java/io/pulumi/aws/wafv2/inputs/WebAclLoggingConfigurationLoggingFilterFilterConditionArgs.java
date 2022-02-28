@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionArgs ex
      * 
      */
     @InputImport(name="actionCondition")
-    private final @Nullable Input<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs> actionCondition;
+      private final @Nullable Input<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs> actionCondition;
 
     public Input<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs> getActionCondition() {
         return this.actionCondition == null ? Input.empty() : this.actionCondition;
@@ -31,7 +31,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionArgs ex
      * 
      */
     @InputImport(name="labelNameCondition")
-    private final @Nullable Input<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionArgs> labelNameCondition;
+      private final @Nullable Input<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionArgs> labelNameCondition;
 
     public Input<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionArgs> getLabelNameCondition() {
         return this.labelNameCondition == null ? Input.empty() : this.labelNameCondition;

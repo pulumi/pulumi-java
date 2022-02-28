@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ServiceActionDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="assumeRole")
-    private final @Nullable Input<String> assumeRole;
+      private final @Nullable Input<String> assumeRole;
 
     public Input<String> getAssumeRole() {
         return this.assumeRole == null ? Input.empty() : this.assumeRole;
@@ -30,7 +30,7 @@ public final class ServiceActionDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -41,7 +41,7 @@ public final class ServiceActionDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<String> parameters;
+      private final @Nullable Input<String> parameters;
 
     public Input<String> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -52,7 +52,7 @@ public final class ServiceActionDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -63,7 +63,7 @@ public final class ServiceActionDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+      private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;

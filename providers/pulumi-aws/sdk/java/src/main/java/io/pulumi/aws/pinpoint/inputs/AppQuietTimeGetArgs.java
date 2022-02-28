@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AppQuietTimeGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="end")
-    private final @Nullable Input<String> end;
+      private final @Nullable Input<String> end;
 
     public Input<String> getEnd() {
         return this.end == null ? Input.empty() : this.end;
@@ -30,7 +30,7 @@ public final class AppQuietTimeGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="start")
-    private final @Nullable Input<String> start;
+      private final @Nullable Input<String> start;
 
     public Input<String> getStart() {
         return this.start == null ? Input.empty() : this.start;

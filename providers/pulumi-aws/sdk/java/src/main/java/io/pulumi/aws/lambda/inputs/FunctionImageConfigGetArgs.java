@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="commands")
-    private final @Nullable Input<List<String>> commands;
+      private final @Nullable Input<List<String>> commands;
 
     public Input<List<String>> getCommands() {
         return this.commands == null ? Input.empty() : this.commands;
@@ -31,7 +31,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="entryPoints")
-    private final @Nullable Input<List<String>> entryPoints;
+      private final @Nullable Input<List<String>> entryPoints;
 
     public Input<List<String>> getEntryPoints() {
         return this.entryPoints == null ? Input.empty() : this.entryPoints;
@@ -42,7 +42,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="workingDirectory")
-    private final @Nullable Input<String> workingDirectory;
+      private final @Nullable Input<String> workingDirectory;
 
     public Input<String> getWorkingDirectory() {
         return this.workingDirectory == null ? Input.empty() : this.workingDirectory;

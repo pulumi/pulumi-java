@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.EndpointConfigurationAsyncInferenceConfigClientConfig;
 import io.pulumi.aws.sagemaker.outputs.EndpointConfigurationAsyncInferenceConfigOutputConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

@@ -6,7 +6,7 @@ package io.pulumi.aws.autoscalingplans.inputs;
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanApplicationSourceGetArgs;
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ScalingPlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationSource")
-    private final @Nullable Input<ScalingPlanApplicationSourceGetArgs> applicationSource;
+      private final @Nullable Input<ScalingPlanApplicationSourceGetArgs> applicationSource;
 
     public Input<ScalingPlanApplicationSourceGetArgs> getApplicationSource() {
         return this.applicationSource == null ? Input.empty() : this.applicationSource;
@@ -34,7 +34,7 @@ public final class ScalingPlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class ScalingPlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingInstructions")
-    private final @Nullable Input<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions;
+      private final @Nullable Input<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions;
 
     public Input<List<ScalingPlanScalingInstructionGetArgs>> getScalingInstructions() {
         return this.scalingInstructions == null ? Input.empty() : this.scalingInstructions;
@@ -56,7 +56,7 @@ public final class ScalingPlanState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingPlanVersion")
-    private final @Nullable Input<Integer> scalingPlanVersion;
+      private final @Nullable Input<Integer> scalingPlanVersion;
 
     public Input<Integer> getScalingPlanVersion() {
         return this.scalingPlanVersion == null ? Input.empty() : this.scalingPlanVersion;

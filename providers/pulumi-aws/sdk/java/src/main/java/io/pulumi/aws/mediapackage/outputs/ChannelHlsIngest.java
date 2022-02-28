@@ -4,7 +4,7 @@
 package io.pulumi.aws.mediapackage.outputs;
 
 import io.pulumi.aws.mediapackage.outputs.ChannelHlsIngestIngestEndpoint;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

@@ -6,7 +6,7 @@ package io.pulumi.aws.ecr;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ecr.inputs.GetRepositoryArgs;
 import io.pulumi.aws.ecr.outputs.GetRepositoryResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

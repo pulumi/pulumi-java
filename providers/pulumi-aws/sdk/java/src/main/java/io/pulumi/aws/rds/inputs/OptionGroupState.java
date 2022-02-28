@@ -5,7 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.aws.rds.inputs.OptionGroupOptionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineName")
-    private final @Nullable Input<String> engineName;
+      private final @Nullable Input<String> engineName;
 
     public Input<String> getEngineName() {
         return this.engineName == null ? Input.empty() : this.engineName;
@@ -44,7 +44,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="majorEngineVersion")
-    private final @Nullable Input<String> majorEngineVersion;
+      private final @Nullable Input<String> majorEngineVersion;
 
     public Input<String> getMajorEngineVersion() {
         return this.majorEngineVersion == null ? Input.empty() : this.majorEngineVersion;
@@ -55,7 +55,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -77,7 +77,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optionGroupDescription")
-    private final @Nullable Input<String> optionGroupDescription;
+      private final @Nullable Input<String> optionGroupDescription;
 
     public Input<String> getOptionGroupDescription() {
         return this.optionGroupDescription == null ? Input.empty() : this.optionGroupDescription;
@@ -88,7 +88,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<List<OptionGroupOptionGetArgs>> options;
+      private final @Nullable Input<List<OptionGroupOptionGetArgs>> options;
 
     public Input<List<OptionGroupOptionGetArgs>> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -99,7 +99,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -110,7 +110,7 @@ public final class OptionGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

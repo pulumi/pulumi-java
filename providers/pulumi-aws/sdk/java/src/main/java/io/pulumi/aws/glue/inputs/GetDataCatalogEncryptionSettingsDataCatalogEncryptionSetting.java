@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption;
 import io.pulumi.aws.glue.inputs.GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
      * 
      */
     @InputImport(name="connectionPasswordEncryptions", required=true)
-    private final List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions;
+      private final List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions;
 
     public List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> getConnectionPasswordEncryptions() {
         return this.connectionPasswordEncryptions;
@@ -30,7 +30,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
      * 
      */
     @InputImport(name="encryptionAtRests", required=true)
-    private final List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests;
+      private final List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests;
 
     public List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> getEncryptionAtRests() {
         return this.encryptionAtRests;

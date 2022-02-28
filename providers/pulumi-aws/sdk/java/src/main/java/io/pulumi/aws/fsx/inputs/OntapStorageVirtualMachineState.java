@@ -6,7 +6,7 @@ package io.pulumi.aws.fsx.inputs;
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs;
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="activeDirectoryConfiguration")
-    private final @Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration;
+      private final @Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration;
 
     public Input<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> getActiveDirectoryConfiguration() {
         return this.activeDirectoryConfiguration == null ? Input.empty() : this.activeDirectoryConfiguration;
@@ -34,7 +34,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -45,7 +45,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="endpoints")
-    private final @Nullable Input<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints;
+      private final @Nullable Input<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints;
 
     public Input<List<OntapStorageVirtualMachineEndpointGetArgs>> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
@@ -56,7 +56,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fileSystemId")
-    private final @Nullable Input<String> fileSystemId;
+      private final @Nullable Input<String> fileSystemId;
 
     public Input<String> getFileSystemId() {
         return this.fileSystemId == null ? Input.empty() : this.fileSystemId;
@@ -67,7 +67,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="rootVolumeSecurityStyle")
-    private final @Nullable Input<String> rootVolumeSecurityStyle;
+      private final @Nullable Input<String> rootVolumeSecurityStyle;
 
     public Input<String> getRootVolumeSecurityStyle() {
         return this.rootVolumeSecurityStyle == null ? Input.empty() : this.rootVolumeSecurityStyle;
@@ -89,14 +89,14 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subtype")
-    private final @Nullable Input<String> subtype;
+      private final @Nullable Input<String> subtype;
 
     public Input<String> getSubtype() {
         return this.subtype == null ? Input.empty() : this.subtype;
     }
 
     @InputImport(name="svmAdminPassword")
-    private final @Nullable Input<String> svmAdminPassword;
+      private final @Nullable Input<String> svmAdminPassword;
 
     public Input<String> getSvmAdminPassword() {
         return this.svmAdminPassword == null ? Input.empty() : this.svmAdminPassword;
@@ -107,7 +107,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -118,7 +118,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -129,7 +129,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="uuid")
-    private final @Nullable Input<String> uuid;
+      private final @Nullable Input<String> uuid;
 
     public Input<String> getUuid() {
         return this.uuid == null ? Input.empty() : this.uuid;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTimeA
      * 
      */
     @InputImport(name="minutes")
-    private final @Nullable Input<Integer> minutes;
+      private final @Nullable Input<Integer> minutes;
 
     public Input<Integer> getMinutes() {
         return this.minutes == null ? Input.empty() : this.minutes;
@@ -31,7 +31,7 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTimeA
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

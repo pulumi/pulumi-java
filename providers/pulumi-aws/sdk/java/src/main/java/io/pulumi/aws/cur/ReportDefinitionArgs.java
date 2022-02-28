@@ -4,7 +4,7 @@
 package io.pulumi.aws.cur;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="additionalArtifacts")
-    private final @Nullable Input<List<String>> additionalArtifacts;
+      private final @Nullable Input<List<String>> additionalArtifacts;
 
     public Input<List<String>> getAdditionalArtifacts() {
         return this.additionalArtifacts == null ? Input.empty() : this.additionalArtifacts;
@@ -32,7 +32,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="additionalSchemaElements", required=true)
-    private final Input<List<String>> additionalSchemaElements;
+      private final Input<List<String>> additionalSchemaElements;
 
     public Input<List<String>> getAdditionalSchemaElements() {
         return this.additionalSchemaElements;
@@ -43,7 +43,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="compression", required=true)
-    private final Input<String> compression;
+      private final Input<String> compression;
 
     public Input<String> getCompression() {
         return this.compression;
@@ -54,7 +54,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="format", required=true)
-    private final Input<String> format;
+      private final Input<String> format;
 
     public Input<String> getFormat() {
         return this.format;
@@ -65,7 +65,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="refreshClosedReports")
-    private final @Nullable Input<Boolean> refreshClosedReports;
+      private final @Nullable Input<Boolean> refreshClosedReports;
 
     public Input<Boolean> getRefreshClosedReports() {
         return this.refreshClosedReports == null ? Input.empty() : this.refreshClosedReports;
@@ -76,7 +76,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="reportName", required=true)
-    private final Input<String> reportName;
+      private final Input<String> reportName;
 
     public Input<String> getReportName() {
         return this.reportName;
@@ -87,7 +87,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="reportVersioning")
-    private final @Nullable Input<String> reportVersioning;
+      private final @Nullable Input<String> reportVersioning;
 
     public Input<String> getReportVersioning() {
         return this.reportVersioning == null ? Input.empty() : this.reportVersioning;
@@ -98,7 +98,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="s3Bucket", required=true)
-    private final Input<String> s3Bucket;
+      private final Input<String> s3Bucket;
 
     public Input<String> getS3Bucket() {
         return this.s3Bucket;
@@ -109,7 +109,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="s3Prefix")
-    private final @Nullable Input<String> s3Prefix;
+      private final @Nullable Input<String> s3Prefix;
 
     public Input<String> getS3Prefix() {
         return this.s3Prefix == null ? Input.empty() : this.s3Prefix;
@@ -120,7 +120,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="s3Region", required=true)
-    private final Input<String> s3Region;
+      private final Input<String> s3Region;
 
     public Input<String> getS3Region() {
         return this.s3Region;
@@ -131,7 +131,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timeUnit", required=true)
-    private final Input<String> timeUnit;
+      private final Input<String> timeUnit;
 
     public Input<String> getTimeUnit() {
         return this.timeUnit;

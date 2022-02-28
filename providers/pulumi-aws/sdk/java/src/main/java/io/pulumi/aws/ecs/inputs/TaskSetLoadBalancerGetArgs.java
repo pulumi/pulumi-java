@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final Input<String> containerName;
+      private final Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName;
@@ -31,7 +31,7 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerPort")
-    private final @Nullable Input<Integer> containerPort;
+      private final @Nullable Input<Integer> containerPort;
 
     public Input<Integer> getContainerPort() {
         return this.containerPort == null ? Input.empty() : this.containerPort;
@@ -42,7 +42,7 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="loadBalancerName")
-    private final @Nullable Input<String> loadBalancerName;
+      private final @Nullable Input<String> loadBalancerName;
 
     public Input<String> getLoadBalancerName() {
         return this.loadBalancerName == null ? Input.empty() : this.loadBalancerName;
@@ -53,7 +53,7 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="targetGroupArn")
-    private final @Nullable Input<String> targetGroupArn;
+      private final @Nullable Input<String> targetGroupArn;
 
     public Input<String> getTargetGroupArn() {
         return this.targetGroupArn == null ? Input.empty() : this.targetGroupArn;

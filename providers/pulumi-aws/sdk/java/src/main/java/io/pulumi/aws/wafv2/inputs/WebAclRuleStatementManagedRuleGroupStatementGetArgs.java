@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
      * 
      */
     @InputImport(name="excludedRules")
-    private final @Nullable Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules;
+      private final @Nullable Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules;
 
     public Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> getExcludedRules() {
         return this.excludedRules == null ? Input.empty() : this.excludedRules;
@@ -33,7 +33,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
      * 
      */
     @InputImport(name="scopeDownStatement")
-    private final @Nullable Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement;
+      private final @Nullable Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement;
 
     public Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> getScopeDownStatement() {
         return this.scopeDownStatement == null ? Input.empty() : this.scopeDownStatement;
@@ -55,7 +55,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
      * 
      */
     @InputImport(name="vendorName", required=true)
-    private final Input<String> vendorName;
+      private final Input<String> vendorName;
 
     public Input<String> getVendorName() {
         return this.vendorName;

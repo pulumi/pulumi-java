@@ -12,8 +12,8 @@ import io.pulumi.aws.wafv2.outputs.WebAclRule;
 import io.pulumi.aws.wafv2.outputs.WebAclVisibilityConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -199,6 +199,21 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
         return this.visibilityConfig;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public WebAcl(String name) {
+        this(name, WebAclArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WebAcl(String name, WebAclArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

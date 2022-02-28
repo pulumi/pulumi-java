@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customEndpoint")
-    private final @Nullable Input<String> customEndpoint;
+      private final @Nullable Input<String> customEndpoint;
 
     public Input<String> getCustomEndpoint() {
         return this.customEndpoint == null ? Input.empty() : this.customEndpoint;
@@ -31,7 +31,7 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customEndpointCertificateArn")
-    private final @Nullable Input<String> customEndpointCertificateArn;
+      private final @Nullable Input<String> customEndpointCertificateArn;
 
     public Input<String> getCustomEndpointCertificateArn() {
         return this.customEndpointCertificateArn == null ? Input.empty() : this.customEndpointCertificateArn;
@@ -42,7 +42,7 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customEndpointEnabled")
-    private final @Nullable Input<Boolean> customEndpointEnabled;
+      private final @Nullable Input<Boolean> customEndpointEnabled;
 
     public Input<Boolean> getCustomEndpointEnabled() {
         return this.customEndpointEnabled == null ? Input.empty() : this.customEndpointEnabled;
@@ -53,14 +53,14 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="enforceHttps")
-    private final @Nullable Input<Boolean> enforceHttps;
+      private final @Nullable Input<Boolean> enforceHttps;
 
     public Input<Boolean> getEnforceHttps() {
         return this.enforceHttps == null ? Input.empty() : this.enforceHttps;
     }
 
     @InputImport(name="tlsSecurityPolicy")
-    private final @Nullable Input<String> tlsSecurityPolicy;
+      private final @Nullable Input<String> tlsSecurityPolicy;
 
     public Input<String> getTlsSecurityPolicy() {
         return this.tlsSecurityPolicy == null ? Input.empty() : this.tlsSecurityPolicy;

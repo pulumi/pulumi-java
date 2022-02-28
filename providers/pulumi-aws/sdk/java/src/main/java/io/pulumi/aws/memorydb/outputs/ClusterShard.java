@@ -4,7 +4,7 @@
 package io.pulumi.aws.memorydb.outputs;
 
 import io.pulumi.aws.memorydb.outputs.ClusterShardNode;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

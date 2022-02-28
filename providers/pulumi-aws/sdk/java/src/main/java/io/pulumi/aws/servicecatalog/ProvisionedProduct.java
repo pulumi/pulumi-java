@@ -10,8 +10,8 @@ import io.pulumi.aws.servicecatalog.outputs.ProvisionedProductProvisioningParame
 import io.pulumi.aws.servicecatalog.outputs.ProvisionedProductStackSetProvisioningPreferences;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -393,6 +393,21 @@ public class ProvisionedProduct extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ProvisionedProduct(String name) {
+        this(name, ProvisionedProductArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ProvisionedProduct(String name, @Nullable ProvisionedProductArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

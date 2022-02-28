@@ -4,7 +4,7 @@
 package io.pulumi.aws.batch;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeEnvironments", required=true)
-    private final Input<List<String>> computeEnvironments;
+      private final Input<List<String>> computeEnvironments;
 
     public Input<List<String>> getComputeEnvironments() {
         return this.computeEnvironments;
@@ -35,7 +35,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -58,7 +58,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedulingPolicyArn")
-    private final @Nullable Input<String> schedulingPolicyArn;
+      private final @Nullable Input<String> schedulingPolicyArn;
 
     public Input<String> getSchedulingPolicyArn() {
         return this.schedulingPolicyArn == null ? Input.empty() : this.schedulingPolicyArn;
@@ -69,7 +69,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state", required=true)
-    private final Input<String> state;
+      private final Input<String> state;
 
     public Input<String> getState() {
         return this.state;
@@ -80,7 +80,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

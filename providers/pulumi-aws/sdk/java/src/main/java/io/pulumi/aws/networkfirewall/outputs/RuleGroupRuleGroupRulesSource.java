@@ -6,7 +6,7 @@ package io.pulumi.aws.networkfirewall.outputs;
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupRulesSourceRulesSourceList;
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupRulesSourceStatefulRule;
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

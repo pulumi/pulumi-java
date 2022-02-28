@@ -6,7 +6,7 @@ package io.pulumi.aws.fsx;
 import io.pulumi.aws.fsx.inputs.WindowsFileSystemAuditLogConfigurationArgs;
 import io.pulumi.aws.fsx.inputs.WindowsFileSystemSelfManagedActiveDirectoryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="activeDirectoryId")
-    private final @Nullable Input<String> activeDirectoryId;
+      private final @Nullable Input<String> activeDirectoryId;
 
     public Input<String> getActiveDirectoryId() {
         return this.activeDirectoryId == null ? Input.empty() : this.activeDirectoryId;
@@ -36,7 +36,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="aliases")
-    private final @Nullable Input<List<String>> aliases;
+      private final @Nullable Input<List<String>> aliases;
 
     public Input<List<String>> getAliases() {
         return this.aliases == null ? Input.empty() : this.aliases;
@@ -47,7 +47,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="auditLogConfiguration")
-    private final @Nullable Input<WindowsFileSystemAuditLogConfigurationArgs> auditLogConfiguration;
+      private final @Nullable Input<WindowsFileSystemAuditLogConfigurationArgs> auditLogConfiguration;
 
     public Input<WindowsFileSystemAuditLogConfigurationArgs> getAuditLogConfiguration() {
         return this.auditLogConfiguration == null ? Input.empty() : this.auditLogConfiguration;
@@ -58,7 +58,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="automaticBackupRetentionDays")
-    private final @Nullable Input<Integer> automaticBackupRetentionDays;
+      private final @Nullable Input<Integer> automaticBackupRetentionDays;
 
     public Input<Integer> getAutomaticBackupRetentionDays() {
         return this.automaticBackupRetentionDays == null ? Input.empty() : this.automaticBackupRetentionDays;
@@ -69,7 +69,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="backupId")
-    private final @Nullable Input<String> backupId;
+      private final @Nullable Input<String> backupId;
 
     public Input<String> getBackupId() {
         return this.backupId == null ? Input.empty() : this.backupId;
@@ -80,7 +80,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="copyTagsToBackups")
-    private final @Nullable Input<Boolean> copyTagsToBackups;
+      private final @Nullable Input<Boolean> copyTagsToBackups;
 
     public Input<Boolean> getCopyTagsToBackups() {
         return this.copyTagsToBackups == null ? Input.empty() : this.copyTagsToBackups;
@@ -91,7 +91,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dailyAutomaticBackupStartTime")
-    private final @Nullable Input<String> dailyAutomaticBackupStartTime;
+      private final @Nullable Input<String> dailyAutomaticBackupStartTime;
 
     public Input<String> getDailyAutomaticBackupStartTime() {
         return this.dailyAutomaticBackupStartTime == null ? Input.empty() : this.dailyAutomaticBackupStartTime;
@@ -102,7 +102,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deploymentType")
-    private final @Nullable Input<String> deploymentType;
+      private final @Nullable Input<String> deploymentType;
 
     public Input<String> getDeploymentType() {
         return this.deploymentType == null ? Input.empty() : this.deploymentType;
@@ -113,7 +113,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -124,7 +124,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="preferredSubnetId")
-    private final @Nullable Input<String> preferredSubnetId;
+      private final @Nullable Input<String> preferredSubnetId;
 
     public Input<String> getPreferredSubnetId() {
         return this.preferredSubnetId == null ? Input.empty() : this.preferredSubnetId;
@@ -135,7 +135,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -146,7 +146,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="selfManagedActiveDirectory")
-    private final @Nullable Input<WindowsFileSystemSelfManagedActiveDirectoryArgs> selfManagedActiveDirectory;
+      private final @Nullable Input<WindowsFileSystemSelfManagedActiveDirectoryArgs> selfManagedActiveDirectory;
 
     public Input<WindowsFileSystemSelfManagedActiveDirectoryArgs> getSelfManagedActiveDirectory() {
         return this.selfManagedActiveDirectory == null ? Input.empty() : this.selfManagedActiveDirectory;
@@ -157,7 +157,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="skipFinalBackup")
-    private final @Nullable Input<Boolean> skipFinalBackup;
+      private final @Nullable Input<Boolean> skipFinalBackup;
 
     public Input<Boolean> getSkipFinalBackup() {
         return this.skipFinalBackup == null ? Input.empty() : this.skipFinalBackup;
@@ -168,7 +168,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageCapacity")
-    private final @Nullable Input<Integer> storageCapacity;
+      private final @Nullable Input<Integer> storageCapacity;
 
     public Input<Integer> getStorageCapacity() {
         return this.storageCapacity == null ? Input.empty() : this.storageCapacity;
@@ -179,7 +179,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageType")
-    private final @Nullable Input<String> storageType;
+      private final @Nullable Input<String> storageType;
 
     public Input<String> getStorageType() {
         return this.storageType == null ? Input.empty() : this.storageType;
@@ -190,7 +190,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final Input<List<String>> subnetIds;
+      private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
@@ -201,7 +201,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -212,7 +212,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="throughputCapacity", required=true)
-    private final Input<Integer> throughputCapacity;
+      private final Input<Integer> throughputCapacity;
 
     public Input<Integer> getThroughputCapacity() {
         return this.throughputCapacity;
@@ -223,7 +223,7 @@ public final class WindowsFileSystemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="weeklyMaintenanceStartTime")
-    private final @Nullable Input<String> weeklyMaintenanceStartTime;
+      private final @Nullable Input<String> weeklyMaintenanceStartTime;
 
     public Input<String> getWeeklyMaintenanceStartTime() {
         return this.weeklyMaintenanceStartTime == null ? Input.empty() : this.weeklyMaintenanceStartTime;

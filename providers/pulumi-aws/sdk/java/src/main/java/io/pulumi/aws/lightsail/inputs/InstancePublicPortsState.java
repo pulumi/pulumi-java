@@ -5,7 +5,7 @@ package io.pulumi.aws.lightsail.inputs;
 
 import io.pulumi.aws.lightsail.inputs.InstancePublicPortsPortInfoGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InstancePublicPortsState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceName")
-    private final @Nullable Input<String> instanceName;
+      private final @Nullable Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName == null ? Input.empty() : this.instanceName;
@@ -32,7 +32,7 @@ public final class InstancePublicPortsState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="portInfos")
-    private final @Nullable Input<List<InstancePublicPortsPortInfoGetArgs>> portInfos;
+      private final @Nullable Input<List<InstancePublicPortsPortInfoGetArgs>> portInfos;
 
     public Input<List<InstancePublicPortsPortInfoGetArgs>> getPortInfos() {
         return this.portInfos == null ? Input.empty() : this.portInfos;

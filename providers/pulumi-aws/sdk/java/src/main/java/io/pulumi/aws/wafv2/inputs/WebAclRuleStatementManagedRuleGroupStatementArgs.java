@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends io.p
      * 
      */
     @InputImport(name="excludedRules")
-    private final @Nullable Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> excludedRules;
+      private final @Nullable Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> excludedRules;
 
     public Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> getExcludedRules() {
         return this.excludedRules == null ? Input.empty() : this.excludedRules;
@@ -33,7 +33,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends io.p
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends io.p
      * 
      */
     @InputImport(name="scopeDownStatement")
-    private final @Nullable Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> scopeDownStatement;
+      private final @Nullable Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> scopeDownStatement;
 
     public Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> getScopeDownStatement() {
         return this.scopeDownStatement == null ? Input.empty() : this.scopeDownStatement;
@@ -55,7 +55,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends io.p
      * 
      */
     @InputImport(name="vendorName", required=true)
-    private final Input<String> vendorName;
+      private final Input<String> vendorName;
 
     public Input<String> getVendorName() {
         return this.vendorName;

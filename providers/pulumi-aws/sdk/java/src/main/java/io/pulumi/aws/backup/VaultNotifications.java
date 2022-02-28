@@ -8,8 +8,8 @@ import io.pulumi.aws.backup.VaultNotificationsArgs;
 import io.pulumi.aws.backup.inputs.VaultNotificationsState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -87,6 +87,21 @@ public class VaultNotifications extends io.pulumi.resources.CustomResource {
         return this.snsTopicArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VaultNotifications(String name) {
+        this(name, VaultNotificationsArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VaultNotifications(String name, VaultNotificationsArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

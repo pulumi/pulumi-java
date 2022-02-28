@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainId")
-    private final @Nullable Input<String> domainId;
+      private final @Nullable Input<String> domainId;
 
     public Input<String> getDomainId() {
         return this.domainId == null ? Input.empty() : this.domainId;
@@ -43,7 +43,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeEfsFileSystemUid")
-    private final @Nullable Input<String> homeEfsFileSystemUid;
+      private final @Nullable Input<String> homeEfsFileSystemUid;
 
     public Input<String> getHomeEfsFileSystemUid() {
         return this.homeEfsFileSystemUid == null ? Input.empty() : this.homeEfsFileSystemUid;
@@ -54,7 +54,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="singleSignOnUserIdentifier")
-    private final @Nullable Input<String> singleSignOnUserIdentifier;
+      private final @Nullable Input<String> singleSignOnUserIdentifier;
 
     public Input<String> getSingleSignOnUserIdentifier() {
         return this.singleSignOnUserIdentifier == null ? Input.empty() : this.singleSignOnUserIdentifier;
@@ -65,7 +65,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="singleSignOnUserValue")
-    private final @Nullable Input<String> singleSignOnUserValue;
+      private final @Nullable Input<String> singleSignOnUserValue;
 
     public Input<String> getSingleSignOnUserValue() {
         return this.singleSignOnUserValue == null ? Input.empty() : this.singleSignOnUserValue;
@@ -76,7 +76,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -98,7 +98,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProfileName")
-    private final @Nullable Input<String> userProfileName;
+      private final @Nullable Input<String> userProfileName;
 
     public Input<String> getUserProfileName() {
         return this.userProfileName == null ? Input.empty() : this.userProfileName;
@@ -109,7 +109,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userSettings")
-    private final @Nullable Input<UserProfileUserSettingsGetArgs> userSettings;
+      private final @Nullable Input<UserProfileUserSettingsGetArgs> userSettings;
 
     public Input<UserProfileUserSettingsGetArgs> getUserSettings() {
         return this.userSettings == null ? Input.empty() : this.userSettings;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ActiveReceiptRuleSetState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -30,7 +30,7 @@ public final class ActiveReceiptRuleSetState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ruleSetName")
-    private final @Nullable Input<String> ruleSetName;
+      private final @Nullable Input<String> ruleSetName;
 
     public Input<String> getRuleSetName() {
         return this.ruleSetName == null ? Input.empty() : this.ruleSetName;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.redshift.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetOrderableClusterArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="clusterType")
-    private final @Nullable String clusterType;
+      private final @Nullable String clusterType;
 
     public Optional<String> getClusterType() {
         return this.clusterType == null ? Optional.empty() : Optional.ofNullable(this.clusterType);
@@ -31,7 +31,7 @@ public final class GetOrderableClusterArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="clusterVersion")
-    private final @Nullable String clusterVersion;
+      private final @Nullable String clusterVersion;
 
     public Optional<String> getClusterVersion() {
         return this.clusterVersion == null ? Optional.empty() : Optional.ofNullable(this.clusterVersion);
@@ -42,7 +42,7 @@ public final class GetOrderableClusterArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="nodeType")
-    private final @Nullable String nodeType;
+      private final @Nullable String nodeType;
 
     public Optional<String> getNodeType() {
         return this.nodeType == null ? Optional.empty() : Optional.ofNullable(this.nodeType);
@@ -53,7 +53,7 @@ public final class GetOrderableClusterArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="preferredNodeTypes")
-    private final @Nullable List<String> preferredNodeTypes;
+      private final @Nullable List<String> preferredNodeTypes;
 
     public List<String> getPreferredNodeTypes() {
         return this.preferredNodeTypes == null ? List.of() : this.preferredNodeTypes;

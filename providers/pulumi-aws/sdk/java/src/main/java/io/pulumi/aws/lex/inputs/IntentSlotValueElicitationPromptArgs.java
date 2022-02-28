@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.IntentSlotValueElicitationPromptMessageArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class IntentSlotValueElicitationPromptArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxAttempts", required=true)
-    private final Input<Integer> maxAttempts;
+      private final Input<Integer> maxAttempts;
 
     public Input<Integer> getMaxAttempts() {
         return this.maxAttempts;
@@ -35,7 +35,7 @@ public final class IntentSlotValueElicitationPromptArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="messages", required=true)
-    private final Input<List<IntentSlotValueElicitationPromptMessageArgs>> messages;
+      private final Input<List<IntentSlotValueElicitationPromptMessageArgs>> messages;
 
     public Input<List<IntentSlotValueElicitationPromptMessageArgs>> getMessages() {
         return this.messages;
@@ -48,7 +48,7 @@ public final class IntentSlotValueElicitationPromptArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="responseCard")
-    private final @Nullable Input<String> responseCard;
+      private final @Nullable Input<String> responseCard;
 
     public Input<String> getResponseCard() {
         return this.responseCard == null ? Input.empty() : this.responseCard;

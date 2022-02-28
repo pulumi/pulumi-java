@@ -5,7 +5,7 @@ package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.aws.apprunner.inputs.CustomDomainAssociationCertificateValidationRecordGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certificateValidationRecords")
-    private final @Nullable Input<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords;
+      private final @Nullable Input<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords;
 
     public Input<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> getCertificateValidationRecords() {
         return this.certificateValidationRecords == null ? Input.empty() : this.certificateValidationRecords;
@@ -33,7 +33,7 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dnsTarget")
-    private final @Nullable Input<String> dnsTarget;
+      private final @Nullable Input<String> dnsTarget;
 
     public Input<String> getDnsTarget() {
         return this.dnsTarget == null ? Input.empty() : this.dnsTarget;
@@ -44,7 +44,7 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -55,7 +55,7 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enableWwwSubdomain")
-    private final @Nullable Input<Boolean> enableWwwSubdomain;
+      private final @Nullable Input<Boolean> enableWwwSubdomain;
 
     public Input<Boolean> getEnableWwwSubdomain() {
         return this.enableWwwSubdomain == null ? Input.empty() : this.enableWwwSubdomain;
@@ -66,7 +66,7 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serviceArn")
-    private final @Nullable Input<String> serviceArn;
+      private final @Nullable Input<String> serviceArn;
 
     public Input<String> getServiceArn() {
         return this.serviceArn == null ? Input.empty() : this.serviceArn;
@@ -77,7 +77,7 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

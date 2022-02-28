@@ -8,8 +8,8 @@ import io.pulumi.aws.cloudsearch.DomainServiceAccessPolicyArgs;
 import io.pulumi.aws.cloudsearch.inputs.DomainServiceAccessPolicyState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -54,6 +54,21 @@ public class DomainServiceAccessPolicy extends io.pulumi.resources.CustomResourc
         return this.domainName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DomainServiceAccessPolicy(String name) {
+        this(name, DomainServiceAccessPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DomainServiceAccessPolicy(String name, DomainServiceAccessPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

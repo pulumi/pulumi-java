@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudsearch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainServiceAccessPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="accessPolicy")
-    private final @Nullable Input<String> accessPolicy;
+      private final @Nullable Input<String> accessPolicy;
 
     public Input<String> getAccessPolicy() {
         return this.accessPolicy == null ? Input.empty() : this.accessPolicy;
@@ -30,7 +30,7 @@ public final class DomainServiceAccessPolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId")
-    private final @Nullable Input<String> apiId;
+      private final @Nullable Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId == null ? Input.empty() : this.apiId;
@@ -32,7 +32,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoDeployed")
-    private final @Nullable Input<Boolean> autoDeployed;
+      private final @Nullable Input<Boolean> autoDeployed;
 
     public Input<Boolean> getAutoDeployed() {
         return this.autoDeployed == null ? Input.empty() : this.autoDeployed;
@@ -43,7 +43,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -54,7 +54,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggers")
-    private final @Nullable Input<Map<String,String>> triggers;
+      private final @Nullable Input<Map<String,String>> triggers;
 
     public Input<Map<String,String>> getTriggers() {
         return this.triggers == null ? Input.empty() : this.triggers;

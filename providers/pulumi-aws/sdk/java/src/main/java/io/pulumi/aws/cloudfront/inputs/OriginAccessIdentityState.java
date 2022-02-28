@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="callerReference")
-    private final @Nullable Input<String> callerReference;
+      private final @Nullable Input<String> callerReference;
 
     public Input<String> getCallerReference() {
         return this.callerReference == null ? Input.empty() : this.callerReference;
@@ -32,7 +32,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cloudfrontAccessIdentityPath")
-    private final @Nullable Input<String> cloudfrontAccessIdentityPath;
+      private final @Nullable Input<String> cloudfrontAccessIdentityPath;
 
     public Input<String> getCloudfrontAccessIdentityPath() {
         return this.cloudfrontAccessIdentityPath == null ? Input.empty() : this.cloudfrontAccessIdentityPath;
@@ -43,7 +43,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -55,7 +55,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -68,7 +68,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="iamArn")
-    private final @Nullable Input<String> iamArn;
+      private final @Nullable Input<String> iamArn;
 
     public Input<String> getIamArn() {
         return this.iamArn == null ? Input.empty() : this.iamArn;
@@ -81,7 +81,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="s3CanonicalUserId")
-    private final @Nullable Input<String> s3CanonicalUserId;
+      private final @Nullable Input<String> s3CanonicalUserId;
 
     public Input<String> getS3CanonicalUserId() {
         return this.s3CanonicalUserId == null ? Input.empty() : this.s3CanonicalUserId;

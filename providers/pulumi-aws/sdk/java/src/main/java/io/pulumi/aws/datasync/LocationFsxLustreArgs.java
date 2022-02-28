@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="fsxFilesystemArn", required=true)
-    private final Input<String> fsxFilesystemArn;
+      private final Input<String> fsxFilesystemArn;
 
     public Input<String> getFsxFilesystemArn() {
         return this.fsxFilesystemArn;
@@ -32,7 +32,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroupArns", required=true)
-    private final Input<List<String>> securityGroupArns;
+      private final Input<List<String>> securityGroupArns;
 
     public Input<List<String>> getSecurityGroupArns() {
         return this.securityGroupArns;
@@ -43,7 +43,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subdirectory")
-    private final @Nullable Input<String> subdirectory;
+      private final @Nullable Input<String> subdirectory;
 
     public Input<String> getSubdirectory() {
         return this.subdirectory == null ? Input.empty() : this.subdirectory;
@@ -54,7 +54,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -65,7 +65,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class BucketServerSideEncryptionConfigurationRuleArgs extends io.pu
      * 
      */
     @InputImport(name="applyServerSideEncryptionByDefault", required=true)
-    private final Input<BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs> applyServerSideEncryptionByDefault;
+      private final Input<BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs> applyServerSideEncryptionByDefault;
 
     public Input<BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs> getApplyServerSideEncryptionByDefault() {
         return this.applyServerSideEncryptionByDefault;
@@ -31,7 +31,7 @@ public final class BucketServerSideEncryptionConfigurationRuleArgs extends io.pu
      * 
      */
     @InputImport(name="bucketKeyEnabled")
-    private final @Nullable Input<Boolean> bucketKeyEnabled;
+      private final @Nullable Input<Boolean> bucketKeyEnabled;
 
     public Input<Boolean> getBucketKeyEnabled() {
         return this.bucketKeyEnabled == null ? Input.empty() : this.bucketKeyEnabled;

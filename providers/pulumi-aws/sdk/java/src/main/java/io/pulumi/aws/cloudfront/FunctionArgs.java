@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code", required=true)
-    private final Input<String> code;
+      private final Input<String> code;
 
     public Input<String> getCode() {
         return this.code;
@@ -31,7 +31,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -42,7 +42,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publish")
-    private final @Nullable Input<Boolean> publish;
+      private final @Nullable Input<Boolean> publish;
 
     public Input<Boolean> getPublish() {
         return this.publish == null ? Input.empty() : this.publish;
@@ -64,7 +64,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtime", required=true)
-    private final Input<String> runtime;
+      private final Input<String> runtime;
 
     public Input<String> getRuntime() {
         return this.runtime;

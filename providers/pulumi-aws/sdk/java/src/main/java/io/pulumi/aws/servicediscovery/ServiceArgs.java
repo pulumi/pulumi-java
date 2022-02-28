@@ -7,7 +7,7 @@ import io.pulumi.aws.servicediscovery.inputs.ServiceDnsConfigArgs;
 import io.pulumi.aws.servicediscovery.inputs.ServiceHealthCheckConfigArgs;
 import io.pulumi.aws.servicediscovery.inputs.ServiceHealthCheckCustomConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsConfig")
-    private final @Nullable Input<ServiceDnsConfigArgs> dnsConfig;
+      private final @Nullable Input<ServiceDnsConfigArgs> dnsConfig;
 
     public Input<ServiceDnsConfigArgs> getDnsConfig() {
         return this.dnsConfig == null ? Input.empty() : this.dnsConfig;
@@ -46,7 +46,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-    private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Input<Boolean> forceDestroy;
 
     public Input<Boolean> getForceDestroy() {
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
@@ -57,7 +57,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckConfig")
-    private final @Nullable Input<ServiceHealthCheckConfigArgs> healthCheckConfig;
+      private final @Nullable Input<ServiceHealthCheckConfigArgs> healthCheckConfig;
 
     public Input<ServiceHealthCheckConfigArgs> getHealthCheckConfig() {
         return this.healthCheckConfig == null ? Input.empty() : this.healthCheckConfig;
@@ -68,7 +68,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckCustomConfig")
-    private final @Nullable Input<ServiceHealthCheckCustomConfigArgs> healthCheckCustomConfig;
+      private final @Nullable Input<ServiceHealthCheckCustomConfigArgs> healthCheckCustomConfig;
 
     public Input<ServiceHealthCheckCustomConfigArgs> getHealthCheckCustomConfig() {
         return this.healthCheckCustomConfig == null ? Input.empty() : this.healthCheckCustomConfig;
@@ -79,7 +79,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -90,7 +90,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceId")
-    private final @Nullable Input<String> namespaceId;
+      private final @Nullable Input<String> namespaceId;
 
     public Input<String> getNamespaceId() {
         return this.namespaceId == null ? Input.empty() : this.namespaceId;
@@ -101,7 +101,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

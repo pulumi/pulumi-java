@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class GetInstanceTypeGpus extends io.pulumi.resources.InvokeArgs {
     public static final GetInstanceTypeGpus Empty = new GetInstanceTypeGpus();
 
     @InputImport(name="count", required=true)
-    private final Integer count;
+      private final Integer count;
 
     public Integer getCount() {
         return this.count;
     }
 
     @InputImport(name="manufacturer", required=true)
-    private final String manufacturer;
+      private final String manufacturer;
 
     public String getManufacturer() {
         return this.manufacturer;
@@ -32,14 +32,14 @@ public final class GetInstanceTypeGpus extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="memorySize", required=true)
-    private final Integer memorySize;
+      private final Integer memorySize;
 
     public Integer getMemorySize() {
         return this.memorySize;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

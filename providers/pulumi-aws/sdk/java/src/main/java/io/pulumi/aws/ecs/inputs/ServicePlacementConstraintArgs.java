@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ServicePlacementConstraintArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="expression")
-    private final @Nullable Input<String> expression;
+      private final @Nullable Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression == null ? Input.empty() : this.expression;
@@ -30,7 +30,7 @@ public final class ServicePlacementConstraintArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

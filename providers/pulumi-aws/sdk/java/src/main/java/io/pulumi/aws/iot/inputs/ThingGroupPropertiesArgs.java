@@ -5,7 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.aws.iot.inputs.ThingGroupPropertiesAttributePayloadArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ThingGroupPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="attributePayload")
-    private final @Nullable Input<ThingGroupPropertiesAttributePayloadArgs> attributePayload;
+      private final @Nullable Input<ThingGroupPropertiesAttributePayloadArgs> attributePayload;
 
     public Input<ThingGroupPropertiesAttributePayloadArgs> getAttributePayload() {
         return this.attributePayload == null ? Input.empty() : this.attributePayload;
@@ -31,7 +31,7 @@ public final class ThingGroupPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;

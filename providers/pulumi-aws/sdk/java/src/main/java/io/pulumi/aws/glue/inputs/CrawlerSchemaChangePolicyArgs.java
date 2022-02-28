@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CrawlerSchemaChangePolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="deleteBehavior")
-    private final @Nullable Input<String> deleteBehavior;
+      private final @Nullable Input<String> deleteBehavior;
 
     public Input<String> getDeleteBehavior() {
         return this.deleteBehavior == null ? Input.empty() : this.deleteBehavior;
@@ -30,7 +30,7 @@ public final class CrawlerSchemaChangePolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="updateBehavior")
-    private final @Nullable Input<String> updateBehavior;
+      private final @Nullable Input<String> updateBehavior;
 
     public Input<String> getUpdateBehavior() {
         return this.updateBehavior == null ? Input.empty() : this.updateBehavior;

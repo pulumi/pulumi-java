@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CrawlerLineageConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="crawlerLineageSettings")
-    private final @Nullable Input<String> crawlerLineageSettings;
+      private final @Nullable Input<String> crawlerLineageSettings;
 
     public Input<String> getCrawlerLineageSettings() {
         return this.crawlerLineageSettings == null ? Input.empty() : this.crawlerLineageSettings;

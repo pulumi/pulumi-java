@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.DeviceDeviceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="device", required=true)
-    private final Input<DeviceDeviceArgs> device;
+      private final Input<DeviceDeviceArgs> device;
 
     public Input<DeviceDeviceArgs> getDevice() {
         return this.device;
@@ -30,7 +30,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceFleetName", required=true)
-    private final Input<String> deviceFleetName;
+      private final Input<String> deviceFleetName;
 
     public Input<String> getDeviceFleetName() {
         return this.deviceFleetName;

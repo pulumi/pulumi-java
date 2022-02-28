@@ -5,7 +5,7 @@ package io.pulumi.aws.s3;
 
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acl")
-    private final @Nullable Input<String> acl;
+      private final @Nullable Input<String> acl;
 
     public Input<String> getAcl() {
         return this.acl == null ? Input.empty() : this.acl;
@@ -33,7 +33,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -44,7 +44,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketKeyEnabled")
-    private final @Nullable Input<Boolean> bucketKeyEnabled;
+      private final @Nullable Input<Boolean> bucketKeyEnabled;
 
     public Input<Boolean> getBucketKeyEnabled() {
         return this.bucketKeyEnabled == null ? Input.empty() : this.bucketKeyEnabled;
@@ -55,7 +55,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheControl")
-    private final @Nullable Input<String> cacheControl;
+      private final @Nullable Input<String> cacheControl;
 
     public Input<String> getCacheControl() {
         return this.cacheControl == null ? Input.empty() : this.cacheControl;
@@ -66,7 +66,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -77,7 +77,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentBase64")
-    private final @Nullable Input<String> contentBase64;
+      private final @Nullable Input<String> contentBase64;
 
     public Input<String> getContentBase64() {
         return this.contentBase64 == null ? Input.empty() : this.contentBase64;
@@ -88,7 +88,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentDisposition")
-    private final @Nullable Input<String> contentDisposition;
+      private final @Nullable Input<String> contentDisposition;
 
     public Input<String> getContentDisposition() {
         return this.contentDisposition == null ? Input.empty() : this.contentDisposition;
@@ -99,7 +99,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentEncoding")
-    private final @Nullable Input<String> contentEncoding;
+      private final @Nullable Input<String> contentEncoding;
 
     public Input<String> getContentEncoding() {
         return this.contentEncoding == null ? Input.empty() : this.contentEncoding;
@@ -110,7 +110,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentLanguage")
-    private final @Nullable Input<String> contentLanguage;
+      private final @Nullable Input<String> contentLanguage;
 
     public Input<String> getContentLanguage() {
         return this.contentLanguage == null ? Input.empty() : this.contentLanguage;
@@ -121,7 +121,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -132,7 +132,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -143,7 +143,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-    private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Input<Boolean> forceDestroy;
 
     public Input<Boolean> getForceDestroy() {
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
@@ -154,7 +154,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -165,7 +165,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -176,7 +176,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -187,7 +187,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectLockLegalHoldStatus")
-    private final @Nullable Input<String> objectLockLegalHoldStatus;
+      private final @Nullable Input<String> objectLockLegalHoldStatus;
 
     public Input<String> getObjectLockLegalHoldStatus() {
         return this.objectLockLegalHoldStatus == null ? Input.empty() : this.objectLockLegalHoldStatus;
@@ -198,7 +198,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectLockMode")
-    private final @Nullable Input<String> objectLockMode;
+      private final @Nullable Input<String> objectLockMode;
 
     public Input<String> getObjectLockMode() {
         return this.objectLockMode == null ? Input.empty() : this.objectLockMode;
@@ -209,7 +209,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectLockRetainUntilDate")
-    private final @Nullable Input<String> objectLockRetainUntilDate;
+      private final @Nullable Input<String> objectLockRetainUntilDate;
 
     public Input<String> getObjectLockRetainUntilDate() {
         return this.objectLockRetainUntilDate == null ? Input.empty() : this.objectLockRetainUntilDate;
@@ -220,7 +220,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverSideEncryption")
-    private final @Nullable Input<String> serverSideEncryption;
+      private final @Nullable Input<String> serverSideEncryption;
 
     public Input<String> getServerSideEncryption() {
         return this.serverSideEncryption == null ? Input.empty() : this.serverSideEncryption;
@@ -231,7 +231,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<AssetOrArchive> source;
+      private final @Nullable Input<AssetOrArchive> source;
 
     public Input<AssetOrArchive> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -242,7 +242,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceHash")
-    private final @Nullable Input<String> sourceHash;
+      private final @Nullable Input<String> sourceHash;
 
     public Input<String> getSourceHash() {
         return this.sourceHash == null ? Input.empty() : this.sourceHash;
@@ -253,7 +253,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageClass")
-    private final @Nullable Input<String> storageClass;
+      private final @Nullable Input<String> storageClass;
 
     public Input<String> getStorageClass() {
         return this.storageClass == null ? Input.empty() : this.storageClass;
@@ -264,7 +264,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -275,7 +275,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="websiteRedirect")
-    private final @Nullable Input<String> websiteRedirect;
+      private final @Nullable Input<String> websiteRedirect;
 
     public Input<String> getWebsiteRedirect() {
         return this.websiteRedirect == null ? Input.empty() : this.websiteRedirect;

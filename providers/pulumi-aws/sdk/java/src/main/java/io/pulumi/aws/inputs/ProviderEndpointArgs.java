@@ -4,7 +4,7 @@
 package io.pulumi.aws.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,2107 +15,2107 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     public static final ProviderEndpointArgs Empty = new ProviderEndpointArgs();
 
     @InputImport(name="accessanalyzer")
-    private @Nullable Input<String> accessanalyzer;
+      private @Nullable Input<String> accessanalyzer;
 
     public Input<String> getAccessanalyzer() {
         return this.accessanalyzer == null ? Input.empty() : this.accessanalyzer;
     }
 
     @InputImport(name="account")
-    private @Nullable Input<String> account;
+      private @Nullable Input<String> account;
 
     public Input<String> getAccount() {
         return this.account == null ? Input.empty() : this.account;
     }
 
     @InputImport(name="acm")
-    private @Nullable Input<String> acm;
+      private @Nullable Input<String> acm;
 
     public Input<String> getAcm() {
         return this.acm == null ? Input.empty() : this.acm;
     }
 
     @InputImport(name="acmpca")
-    private @Nullable Input<String> acmpca;
+      private @Nullable Input<String> acmpca;
 
     public Input<String> getAcmpca() {
         return this.acmpca == null ? Input.empty() : this.acmpca;
     }
 
     @InputImport(name="alexaforbusiness")
-    private @Nullable Input<String> alexaforbusiness;
+      private @Nullable Input<String> alexaforbusiness;
 
     public Input<String> getAlexaforbusiness() {
         return this.alexaforbusiness == null ? Input.empty() : this.alexaforbusiness;
     }
 
     @InputImport(name="amp")
-    private @Nullable Input<String> amp;
+      private @Nullable Input<String> amp;
 
     public Input<String> getAmp() {
         return this.amp == null ? Input.empty() : this.amp;
     }
 
     @InputImport(name="amplify")
-    private @Nullable Input<String> amplify;
+      private @Nullable Input<String> amplify;
 
     public Input<String> getAmplify() {
         return this.amplify == null ? Input.empty() : this.amplify;
     }
 
     @InputImport(name="amplifybackend")
-    private @Nullable Input<String> amplifybackend;
+      private @Nullable Input<String> amplifybackend;
 
     public Input<String> getAmplifybackend() {
         return this.amplifybackend == null ? Input.empty() : this.amplifybackend;
     }
 
     @InputImport(name="apigateway")
-    private @Nullable Input<String> apigateway;
+      private @Nullable Input<String> apigateway;
 
     public Input<String> getApigateway() {
         return this.apigateway == null ? Input.empty() : this.apigateway;
     }
 
     @InputImport(name="apigatewayv2")
-    private @Nullable Input<String> apigatewayv2;
+      private @Nullable Input<String> apigatewayv2;
 
     public Input<String> getApigatewayv2() {
         return this.apigatewayv2 == null ? Input.empty() : this.apigatewayv2;
     }
 
     @InputImport(name="appautoscaling")
-    private @Nullable Input<String> appautoscaling;
+      private @Nullable Input<String> appautoscaling;
 
     public Input<String> getAppautoscaling() {
         return this.appautoscaling == null ? Input.empty() : this.appautoscaling;
     }
 
     @InputImport(name="appconfig")
-    private @Nullable Input<String> appconfig;
+      private @Nullable Input<String> appconfig;
 
     public Input<String> getAppconfig() {
         return this.appconfig == null ? Input.empty() : this.appconfig;
     }
 
     @InputImport(name="appflow")
-    private @Nullable Input<String> appflow;
+      private @Nullable Input<String> appflow;
 
     public Input<String> getAppflow() {
         return this.appflow == null ? Input.empty() : this.appflow;
     }
 
     @InputImport(name="appintegrations")
-    private @Nullable Input<String> appintegrations;
+      private @Nullable Input<String> appintegrations;
 
     public Input<String> getAppintegrations() {
         return this.appintegrations == null ? Input.empty() : this.appintegrations;
     }
 
     @InputImport(name="appintegrationsservice")
-    private @Nullable Input<String> appintegrationsservice;
+      private @Nullable Input<String> appintegrationsservice;
 
     public Input<String> getAppintegrationsservice() {
         return this.appintegrationsservice == null ? Input.empty() : this.appintegrationsservice;
     }
 
     @InputImport(name="applicationautoscaling")
-    private @Nullable Input<String> applicationautoscaling;
+      private @Nullable Input<String> applicationautoscaling;
 
     public Input<String> getApplicationautoscaling() {
         return this.applicationautoscaling == null ? Input.empty() : this.applicationautoscaling;
     }
 
     @InputImport(name="applicationcostprofiler")
-    private @Nullable Input<String> applicationcostprofiler;
+      private @Nullable Input<String> applicationcostprofiler;
 
     public Input<String> getApplicationcostprofiler() {
         return this.applicationcostprofiler == null ? Input.empty() : this.applicationcostprofiler;
     }
 
     @InputImport(name="applicationdiscovery")
-    private @Nullable Input<String> applicationdiscovery;
+      private @Nullable Input<String> applicationdiscovery;
 
     public Input<String> getApplicationdiscovery() {
         return this.applicationdiscovery == null ? Input.empty() : this.applicationdiscovery;
     }
 
     @InputImport(name="applicationdiscoveryservice")
-    private @Nullable Input<String> applicationdiscoveryservice;
+      private @Nullable Input<String> applicationdiscoveryservice;
 
     public Input<String> getApplicationdiscoveryservice() {
         return this.applicationdiscoveryservice == null ? Input.empty() : this.applicationdiscoveryservice;
     }
 
     @InputImport(name="applicationinsights")
-    private @Nullable Input<String> applicationinsights;
+      private @Nullable Input<String> applicationinsights;
 
     public Input<String> getApplicationinsights() {
         return this.applicationinsights == null ? Input.empty() : this.applicationinsights;
     }
 
     @InputImport(name="appmesh")
-    private @Nullable Input<String> appmesh;
+      private @Nullable Input<String> appmesh;
 
     public Input<String> getAppmesh() {
         return this.appmesh == null ? Input.empty() : this.appmesh;
     }
 
     @InputImport(name="appregistry")
-    private @Nullable Input<String> appregistry;
+      private @Nullable Input<String> appregistry;
 
     public Input<String> getAppregistry() {
         return this.appregistry == null ? Input.empty() : this.appregistry;
     }
 
     @InputImport(name="apprunner")
-    private @Nullable Input<String> apprunner;
+      private @Nullable Input<String> apprunner;
 
     public Input<String> getApprunner() {
         return this.apprunner == null ? Input.empty() : this.apprunner;
     }
 
     @InputImport(name="appstream")
-    private @Nullable Input<String> appstream;
+      private @Nullable Input<String> appstream;
 
     public Input<String> getAppstream() {
         return this.appstream == null ? Input.empty() : this.appstream;
     }
 
     @InputImport(name="appsync")
-    private @Nullable Input<String> appsync;
+      private @Nullable Input<String> appsync;
 
     public Input<String> getAppsync() {
         return this.appsync == null ? Input.empty() : this.appsync;
     }
 
     @InputImport(name="athena")
-    private @Nullable Input<String> athena;
+      private @Nullable Input<String> athena;
 
     public Input<String> getAthena() {
         return this.athena == null ? Input.empty() : this.athena;
     }
 
     @InputImport(name="auditmanager")
-    private @Nullable Input<String> auditmanager;
+      private @Nullable Input<String> auditmanager;
 
     public Input<String> getAuditmanager() {
         return this.auditmanager == null ? Input.empty() : this.auditmanager;
     }
 
     @InputImport(name="augmentedairuntime")
-    private @Nullable Input<String> augmentedairuntime;
+      private @Nullable Input<String> augmentedairuntime;
 
     public Input<String> getAugmentedairuntime() {
         return this.augmentedairuntime == null ? Input.empty() : this.augmentedairuntime;
     }
 
     @InputImport(name="autoscaling")
-    private @Nullable Input<String> autoscaling;
+      private @Nullable Input<String> autoscaling;
 
     public Input<String> getAutoscaling() {
         return this.autoscaling == null ? Input.empty() : this.autoscaling;
     }
 
     @InputImport(name="autoscalingplans")
-    private @Nullable Input<String> autoscalingplans;
+      private @Nullable Input<String> autoscalingplans;
 
     public Input<String> getAutoscalingplans() {
         return this.autoscalingplans == null ? Input.empty() : this.autoscalingplans;
     }
 
     @InputImport(name="backup")
-    private @Nullable Input<String> backup;
+      private @Nullable Input<String> backup;
 
     public Input<String> getBackup() {
         return this.backup == null ? Input.empty() : this.backup;
     }
 
     @InputImport(name="batch")
-    private @Nullable Input<String> batch;
+      private @Nullable Input<String> batch;
 
     public Input<String> getBatch() {
         return this.batch == null ? Input.empty() : this.batch;
     }
 
     @InputImport(name="braket")
-    private @Nullable Input<String> braket;
+      private @Nullable Input<String> braket;
 
     public Input<String> getBraket() {
         return this.braket == null ? Input.empty() : this.braket;
     }
 
     @InputImport(name="budgets")
-    private @Nullable Input<String> budgets;
+      private @Nullable Input<String> budgets;
 
     public Input<String> getBudgets() {
         return this.budgets == null ? Input.empty() : this.budgets;
     }
 
     @InputImport(name="chime")
-    private @Nullable Input<String> chime;
+      private @Nullable Input<String> chime;
 
     public Input<String> getChime() {
         return this.chime == null ? Input.empty() : this.chime;
     }
 
     @InputImport(name="cloud9")
-    private @Nullable Input<String> cloud9;
+      private @Nullable Input<String> cloud9;
 
     public Input<String> getCloud9() {
         return this.cloud9 == null ? Input.empty() : this.cloud9;
     }
 
     @InputImport(name="cloudcontrol")
-    private @Nullable Input<String> cloudcontrol;
+      private @Nullable Input<String> cloudcontrol;
 
     public Input<String> getCloudcontrol() {
         return this.cloudcontrol == null ? Input.empty() : this.cloudcontrol;
     }
 
     @InputImport(name="cloudcontrolapi")
-    private @Nullable Input<String> cloudcontrolapi;
+      private @Nullable Input<String> cloudcontrolapi;
 
     public Input<String> getCloudcontrolapi() {
         return this.cloudcontrolapi == null ? Input.empty() : this.cloudcontrolapi;
     }
 
     @InputImport(name="clouddirectory")
-    private @Nullable Input<String> clouddirectory;
+      private @Nullable Input<String> clouddirectory;
 
     public Input<String> getClouddirectory() {
         return this.clouddirectory == null ? Input.empty() : this.clouddirectory;
     }
 
     @InputImport(name="cloudformation")
-    private @Nullable Input<String> cloudformation;
+      private @Nullable Input<String> cloudformation;
 
     public Input<String> getCloudformation() {
         return this.cloudformation == null ? Input.empty() : this.cloudformation;
     }
 
     @InputImport(name="cloudfront")
-    private @Nullable Input<String> cloudfront;
+      private @Nullable Input<String> cloudfront;
 
     public Input<String> getCloudfront() {
         return this.cloudfront == null ? Input.empty() : this.cloudfront;
     }
 
     @InputImport(name="cloudhsm")
-    private @Nullable Input<String> cloudhsm;
+      private @Nullable Input<String> cloudhsm;
 
     public Input<String> getCloudhsm() {
         return this.cloudhsm == null ? Input.empty() : this.cloudhsm;
     }
 
     @InputImport(name="cloudhsmv2")
-    private @Nullable Input<String> cloudhsmv2;
+      private @Nullable Input<String> cloudhsmv2;
 
     public Input<String> getCloudhsmv2() {
         return this.cloudhsmv2 == null ? Input.empty() : this.cloudhsmv2;
     }
 
     @InputImport(name="cloudsearch")
-    private @Nullable Input<String> cloudsearch;
+      private @Nullable Input<String> cloudsearch;
 
     public Input<String> getCloudsearch() {
         return this.cloudsearch == null ? Input.empty() : this.cloudsearch;
     }
 
     @InputImport(name="cloudsearchdomain")
-    private @Nullable Input<String> cloudsearchdomain;
+      private @Nullable Input<String> cloudsearchdomain;
 
     public Input<String> getCloudsearchdomain() {
         return this.cloudsearchdomain == null ? Input.empty() : this.cloudsearchdomain;
     }
 
     @InputImport(name="cloudtrail")
-    private @Nullable Input<String> cloudtrail;
+      private @Nullable Input<String> cloudtrail;
 
     public Input<String> getCloudtrail() {
         return this.cloudtrail == null ? Input.empty() : this.cloudtrail;
     }
 
     @InputImport(name="cloudwatch")
-    private @Nullable Input<String> cloudwatch;
+      private @Nullable Input<String> cloudwatch;
 
     public Input<String> getCloudwatch() {
         return this.cloudwatch == null ? Input.empty() : this.cloudwatch;
     }
 
     @InputImport(name="cloudwatchevents")
-    private @Nullable Input<String> cloudwatchevents;
+      private @Nullable Input<String> cloudwatchevents;
 
     public Input<String> getCloudwatchevents() {
         return this.cloudwatchevents == null ? Input.empty() : this.cloudwatchevents;
     }
 
     @InputImport(name="cloudwatchlogs")
-    private @Nullable Input<String> cloudwatchlogs;
+      private @Nullable Input<String> cloudwatchlogs;
 
     public Input<String> getCloudwatchlogs() {
         return this.cloudwatchlogs == null ? Input.empty() : this.cloudwatchlogs;
     }
 
     @InputImport(name="codeartifact")
-    private @Nullable Input<String> codeartifact;
+      private @Nullable Input<String> codeartifact;
 
     public Input<String> getCodeartifact() {
         return this.codeartifact == null ? Input.empty() : this.codeartifact;
     }
 
     @InputImport(name="codebuild")
-    private @Nullable Input<String> codebuild;
+      private @Nullable Input<String> codebuild;
 
     public Input<String> getCodebuild() {
         return this.codebuild == null ? Input.empty() : this.codebuild;
     }
 
     @InputImport(name="codecommit")
-    private @Nullable Input<String> codecommit;
+      private @Nullable Input<String> codecommit;
 
     public Input<String> getCodecommit() {
         return this.codecommit == null ? Input.empty() : this.codecommit;
     }
 
     @InputImport(name="codedeploy")
-    private @Nullable Input<String> codedeploy;
+      private @Nullable Input<String> codedeploy;
 
     public Input<String> getCodedeploy() {
         return this.codedeploy == null ? Input.empty() : this.codedeploy;
     }
 
     @InputImport(name="codeguruprofiler")
-    private @Nullable Input<String> codeguruprofiler;
+      private @Nullable Input<String> codeguruprofiler;
 
     public Input<String> getCodeguruprofiler() {
         return this.codeguruprofiler == null ? Input.empty() : this.codeguruprofiler;
     }
 
     @InputImport(name="codegurureviewer")
-    private @Nullable Input<String> codegurureviewer;
+      private @Nullable Input<String> codegurureviewer;
 
     public Input<String> getCodegurureviewer() {
         return this.codegurureviewer == null ? Input.empty() : this.codegurureviewer;
     }
 
     @InputImport(name="codepipeline")
-    private @Nullable Input<String> codepipeline;
+      private @Nullable Input<String> codepipeline;
 
     public Input<String> getCodepipeline() {
         return this.codepipeline == null ? Input.empty() : this.codepipeline;
     }
 
     @InputImport(name="codestar")
-    private @Nullable Input<String> codestar;
+      private @Nullable Input<String> codestar;
 
     public Input<String> getCodestar() {
         return this.codestar == null ? Input.empty() : this.codestar;
     }
 
     @InputImport(name="codestarconnections")
-    private @Nullable Input<String> codestarconnections;
+      private @Nullable Input<String> codestarconnections;
 
     public Input<String> getCodestarconnections() {
         return this.codestarconnections == null ? Input.empty() : this.codestarconnections;
     }
 
     @InputImport(name="codestarnotifications")
-    private @Nullable Input<String> codestarnotifications;
+      private @Nullable Input<String> codestarnotifications;
 
     public Input<String> getCodestarnotifications() {
         return this.codestarnotifications == null ? Input.empty() : this.codestarnotifications;
     }
 
     @InputImport(name="cognitoidentity")
-    private @Nullable Input<String> cognitoidentity;
+      private @Nullable Input<String> cognitoidentity;
 
     public Input<String> getCognitoidentity() {
         return this.cognitoidentity == null ? Input.empty() : this.cognitoidentity;
     }
 
     @InputImport(name="cognitoidentityprovider")
-    private @Nullable Input<String> cognitoidentityprovider;
+      private @Nullable Input<String> cognitoidentityprovider;
 
     public Input<String> getCognitoidentityprovider() {
         return this.cognitoidentityprovider == null ? Input.empty() : this.cognitoidentityprovider;
     }
 
     @InputImport(name="cognitoidp")
-    private @Nullable Input<String> cognitoidp;
+      private @Nullable Input<String> cognitoidp;
 
     public Input<String> getCognitoidp() {
         return this.cognitoidp == null ? Input.empty() : this.cognitoidp;
     }
 
     @InputImport(name="cognitosync")
-    private @Nullable Input<String> cognitosync;
+      private @Nullable Input<String> cognitosync;
 
     public Input<String> getCognitosync() {
         return this.cognitosync == null ? Input.empty() : this.cognitosync;
     }
 
     @InputImport(name="comprehend")
-    private @Nullable Input<String> comprehend;
+      private @Nullable Input<String> comprehend;
 
     public Input<String> getComprehend() {
         return this.comprehend == null ? Input.empty() : this.comprehend;
     }
 
     @InputImport(name="comprehendmedical")
-    private @Nullable Input<String> comprehendmedical;
+      private @Nullable Input<String> comprehendmedical;
 
     public Input<String> getComprehendmedical() {
         return this.comprehendmedical == null ? Input.empty() : this.comprehendmedical;
     }
 
     @InputImport(name="config")
-    private @Nullable Input<String> config;
+      private @Nullable Input<String> config;
 
     public Input<String> getConfig() {
         return this.config == null ? Input.empty() : this.config;
     }
 
     @InputImport(name="configservice")
-    private @Nullable Input<String> configservice;
+      private @Nullable Input<String> configservice;
 
     public Input<String> getConfigservice() {
         return this.configservice == null ? Input.empty() : this.configservice;
     }
 
     @InputImport(name="connect")
-    private @Nullable Input<String> connect;
+      private @Nullable Input<String> connect;
 
     public Input<String> getConnect() {
         return this.connect == null ? Input.empty() : this.connect;
     }
 
     @InputImport(name="connectcontactlens")
-    private @Nullable Input<String> connectcontactlens;
+      private @Nullable Input<String> connectcontactlens;
 
     public Input<String> getConnectcontactlens() {
         return this.connectcontactlens == null ? Input.empty() : this.connectcontactlens;
     }
 
     @InputImport(name="connectparticipant")
-    private @Nullable Input<String> connectparticipant;
+      private @Nullable Input<String> connectparticipant;
 
     public Input<String> getConnectparticipant() {
         return this.connectparticipant == null ? Input.empty() : this.connectparticipant;
     }
 
     @InputImport(name="costandusagereportservice")
-    private @Nullable Input<String> costandusagereportservice;
+      private @Nullable Input<String> costandusagereportservice;
 
     public Input<String> getCostandusagereportservice() {
         return this.costandusagereportservice == null ? Input.empty() : this.costandusagereportservice;
     }
 
     @InputImport(name="costexplorer")
-    private @Nullable Input<String> costexplorer;
+      private @Nullable Input<String> costexplorer;
 
     public Input<String> getCostexplorer() {
         return this.costexplorer == null ? Input.empty() : this.costexplorer;
     }
 
     @InputImport(name="cur")
-    private @Nullable Input<String> cur;
+      private @Nullable Input<String> cur;
 
     public Input<String> getCur() {
         return this.cur == null ? Input.empty() : this.cur;
     }
 
     @InputImport(name="databasemigration")
-    private @Nullable Input<String> databasemigration;
+      private @Nullable Input<String> databasemigration;
 
     public Input<String> getDatabasemigration() {
         return this.databasemigration == null ? Input.empty() : this.databasemigration;
     }
 
     @InputImport(name="databasemigrationservice")
-    private @Nullable Input<String> databasemigrationservice;
+      private @Nullable Input<String> databasemigrationservice;
 
     public Input<String> getDatabasemigrationservice() {
         return this.databasemigrationservice == null ? Input.empty() : this.databasemigrationservice;
     }
 
     @InputImport(name="dataexchange")
-    private @Nullable Input<String> dataexchange;
+      private @Nullable Input<String> dataexchange;
 
     public Input<String> getDataexchange() {
         return this.dataexchange == null ? Input.empty() : this.dataexchange;
     }
 
     @InputImport(name="datapipeline")
-    private @Nullable Input<String> datapipeline;
+      private @Nullable Input<String> datapipeline;
 
     public Input<String> getDatapipeline() {
         return this.datapipeline == null ? Input.empty() : this.datapipeline;
     }
 
     @InputImport(name="datasync")
-    private @Nullable Input<String> datasync;
+      private @Nullable Input<String> datasync;
 
     public Input<String> getDatasync() {
         return this.datasync == null ? Input.empty() : this.datasync;
     }
 
     @InputImport(name="dax")
-    private @Nullable Input<String> dax;
+      private @Nullable Input<String> dax;
 
     public Input<String> getDax() {
         return this.dax == null ? Input.empty() : this.dax;
     }
 
     @InputImport(name="detective")
-    private @Nullable Input<String> detective;
+      private @Nullable Input<String> detective;
 
     public Input<String> getDetective() {
         return this.detective == null ? Input.empty() : this.detective;
     }
 
     @InputImport(name="devicefarm")
-    private @Nullable Input<String> devicefarm;
+      private @Nullable Input<String> devicefarm;
 
     public Input<String> getDevicefarm() {
         return this.devicefarm == null ? Input.empty() : this.devicefarm;
     }
 
     @InputImport(name="devopsguru")
-    private @Nullable Input<String> devopsguru;
+      private @Nullable Input<String> devopsguru;
 
     public Input<String> getDevopsguru() {
         return this.devopsguru == null ? Input.empty() : this.devopsguru;
     }
 
     @InputImport(name="directconnect")
-    private @Nullable Input<String> directconnect;
+      private @Nullable Input<String> directconnect;
 
     public Input<String> getDirectconnect() {
         return this.directconnect == null ? Input.empty() : this.directconnect;
     }
 
     @InputImport(name="dlm")
-    private @Nullable Input<String> dlm;
+      private @Nullable Input<String> dlm;
 
     public Input<String> getDlm() {
         return this.dlm == null ? Input.empty() : this.dlm;
     }
 
     @InputImport(name="dms")
-    private @Nullable Input<String> dms;
+      private @Nullable Input<String> dms;
 
     public Input<String> getDms() {
         return this.dms == null ? Input.empty() : this.dms;
     }
 
     @InputImport(name="docdb")
-    private @Nullable Input<String> docdb;
+      private @Nullable Input<String> docdb;
 
     public Input<String> getDocdb() {
         return this.docdb == null ? Input.empty() : this.docdb;
     }
 
     @InputImport(name="ds")
-    private @Nullable Input<String> ds;
+      private @Nullable Input<String> ds;
 
     public Input<String> getDs() {
         return this.ds == null ? Input.empty() : this.ds;
     }
 
     @InputImport(name="dynamodb")
-    private @Nullable Input<String> dynamodb;
+      private @Nullable Input<String> dynamodb;
 
     public Input<String> getDynamodb() {
         return this.dynamodb == null ? Input.empty() : this.dynamodb;
     }
 
     @InputImport(name="dynamodbstreams")
-    private @Nullable Input<String> dynamodbstreams;
+      private @Nullable Input<String> dynamodbstreams;
 
     public Input<String> getDynamodbstreams() {
         return this.dynamodbstreams == null ? Input.empty() : this.dynamodbstreams;
     }
 
     @InputImport(name="ec2")
-    private @Nullable Input<String> ec2;
+      private @Nullable Input<String> ec2;
 
     public Input<String> getEc2() {
         return this.ec2 == null ? Input.empty() : this.ec2;
     }
 
     @InputImport(name="ec2instanceconnect")
-    private @Nullable Input<String> ec2instanceconnect;
+      private @Nullable Input<String> ec2instanceconnect;
 
     public Input<String> getEc2instanceconnect() {
         return this.ec2instanceconnect == null ? Input.empty() : this.ec2instanceconnect;
     }
 
     @InputImport(name="ecr")
-    private @Nullable Input<String> ecr;
+      private @Nullable Input<String> ecr;
 
     public Input<String> getEcr() {
         return this.ecr == null ? Input.empty() : this.ecr;
     }
 
     @InputImport(name="ecrpublic")
-    private @Nullable Input<String> ecrpublic;
+      private @Nullable Input<String> ecrpublic;
 
     public Input<String> getEcrpublic() {
         return this.ecrpublic == null ? Input.empty() : this.ecrpublic;
     }
 
     @InputImport(name="ecs")
-    private @Nullable Input<String> ecs;
+      private @Nullable Input<String> ecs;
 
     public Input<String> getEcs() {
         return this.ecs == null ? Input.empty() : this.ecs;
     }
 
     @InputImport(name="efs")
-    private @Nullable Input<String> efs;
+      private @Nullable Input<String> efs;
 
     public Input<String> getEfs() {
         return this.efs == null ? Input.empty() : this.efs;
     }
 
     @InputImport(name="eks")
-    private @Nullable Input<String> eks;
+      private @Nullable Input<String> eks;
 
     public Input<String> getEks() {
         return this.eks == null ? Input.empty() : this.eks;
     }
 
     @InputImport(name="elasticache")
-    private @Nullable Input<String> elasticache;
+      private @Nullable Input<String> elasticache;
 
     public Input<String> getElasticache() {
         return this.elasticache == null ? Input.empty() : this.elasticache;
     }
 
     @InputImport(name="elasticbeanstalk")
-    private @Nullable Input<String> elasticbeanstalk;
+      private @Nullable Input<String> elasticbeanstalk;
 
     public Input<String> getElasticbeanstalk() {
         return this.elasticbeanstalk == null ? Input.empty() : this.elasticbeanstalk;
     }
 
     @InputImport(name="elasticinference")
-    private @Nullable Input<String> elasticinference;
+      private @Nullable Input<String> elasticinference;
 
     public Input<String> getElasticinference() {
         return this.elasticinference == null ? Input.empty() : this.elasticinference;
     }
 
     @InputImport(name="elasticsearch")
-    private @Nullable Input<String> elasticsearch;
+      private @Nullable Input<String> elasticsearch;
 
     public Input<String> getElasticsearch() {
         return this.elasticsearch == null ? Input.empty() : this.elasticsearch;
     }
 
     @InputImport(name="elasticsearchservice")
-    private @Nullable Input<String> elasticsearchservice;
+      private @Nullable Input<String> elasticsearchservice;
 
     public Input<String> getElasticsearchservice() {
         return this.elasticsearchservice == null ? Input.empty() : this.elasticsearchservice;
     }
 
     @InputImport(name="elastictranscoder")
-    private @Nullable Input<String> elastictranscoder;
+      private @Nullable Input<String> elastictranscoder;
 
     public Input<String> getElastictranscoder() {
         return this.elastictranscoder == null ? Input.empty() : this.elastictranscoder;
     }
 
     @InputImport(name="elb")
-    private @Nullable Input<String> elb;
+      private @Nullable Input<String> elb;
 
     public Input<String> getElb() {
         return this.elb == null ? Input.empty() : this.elb;
     }
 
     @InputImport(name="elbv2")
-    private @Nullable Input<String> elbv2;
+      private @Nullable Input<String> elbv2;
 
     public Input<String> getElbv2() {
         return this.elbv2 == null ? Input.empty() : this.elbv2;
     }
 
     @InputImport(name="emr")
-    private @Nullable Input<String> emr;
+      private @Nullable Input<String> emr;
 
     public Input<String> getEmr() {
         return this.emr == null ? Input.empty() : this.emr;
     }
 
     @InputImport(name="emrcontainers")
-    private @Nullable Input<String> emrcontainers;
+      private @Nullable Input<String> emrcontainers;
 
     public Input<String> getEmrcontainers() {
         return this.emrcontainers == null ? Input.empty() : this.emrcontainers;
     }
 
     @InputImport(name="es")
-    private @Nullable Input<String> es;
+      private @Nullable Input<String> es;
 
     public Input<String> getEs() {
         return this.es == null ? Input.empty() : this.es;
     }
 
     @InputImport(name="eventbridge")
-    private @Nullable Input<String> eventbridge;
+      private @Nullable Input<String> eventbridge;
 
     public Input<String> getEventbridge() {
         return this.eventbridge == null ? Input.empty() : this.eventbridge;
     }
 
     @InputImport(name="events")
-    private @Nullable Input<String> events;
+      private @Nullable Input<String> events;
 
     public Input<String> getEvents() {
         return this.events == null ? Input.empty() : this.events;
     }
 
     @InputImport(name="finspace")
-    private @Nullable Input<String> finspace;
+      private @Nullable Input<String> finspace;
 
     public Input<String> getFinspace() {
         return this.finspace == null ? Input.empty() : this.finspace;
     }
 
     @InputImport(name="finspacedata")
-    private @Nullable Input<String> finspacedata;
+      private @Nullable Input<String> finspacedata;
 
     public Input<String> getFinspacedata() {
         return this.finspacedata == null ? Input.empty() : this.finspacedata;
     }
 
     @InputImport(name="firehose")
-    private @Nullable Input<String> firehose;
+      private @Nullable Input<String> firehose;
 
     public Input<String> getFirehose() {
         return this.firehose == null ? Input.empty() : this.firehose;
     }
 
     @InputImport(name="fis")
-    private @Nullable Input<String> fis;
+      private @Nullable Input<String> fis;
 
     public Input<String> getFis() {
         return this.fis == null ? Input.empty() : this.fis;
     }
 
     @InputImport(name="fms")
-    private @Nullable Input<String> fms;
+      private @Nullable Input<String> fms;
 
     public Input<String> getFms() {
         return this.fms == null ? Input.empty() : this.fms;
     }
 
     @InputImport(name="forecast")
-    private @Nullable Input<String> forecast;
+      private @Nullable Input<String> forecast;
 
     public Input<String> getForecast() {
         return this.forecast == null ? Input.empty() : this.forecast;
     }
 
     @InputImport(name="forecastquery")
-    private @Nullable Input<String> forecastquery;
+      private @Nullable Input<String> forecastquery;
 
     public Input<String> getForecastquery() {
         return this.forecastquery == null ? Input.empty() : this.forecastquery;
     }
 
     @InputImport(name="forecastqueryservice")
-    private @Nullable Input<String> forecastqueryservice;
+      private @Nullable Input<String> forecastqueryservice;
 
     public Input<String> getForecastqueryservice() {
         return this.forecastqueryservice == null ? Input.empty() : this.forecastqueryservice;
     }
 
     @InputImport(name="forecastservice")
-    private @Nullable Input<String> forecastservice;
+      private @Nullable Input<String> forecastservice;
 
     public Input<String> getForecastservice() {
         return this.forecastservice == null ? Input.empty() : this.forecastservice;
     }
 
     @InputImport(name="frauddetector")
-    private @Nullable Input<String> frauddetector;
+      private @Nullable Input<String> frauddetector;
 
     public Input<String> getFrauddetector() {
         return this.frauddetector == null ? Input.empty() : this.frauddetector;
     }
 
     @InputImport(name="fsx")
-    private @Nullable Input<String> fsx;
+      private @Nullable Input<String> fsx;
 
     public Input<String> getFsx() {
         return this.fsx == null ? Input.empty() : this.fsx;
     }
 
     @InputImport(name="gamelift")
-    private @Nullable Input<String> gamelift;
+      private @Nullable Input<String> gamelift;
 
     public Input<String> getGamelift() {
         return this.gamelift == null ? Input.empty() : this.gamelift;
     }
 
     @InputImport(name="glacier")
-    private @Nullable Input<String> glacier;
+      private @Nullable Input<String> glacier;
 
     public Input<String> getGlacier() {
         return this.glacier == null ? Input.empty() : this.glacier;
     }
 
     @InputImport(name="globalaccelerator")
-    private @Nullable Input<String> globalaccelerator;
+      private @Nullable Input<String> globalaccelerator;
 
     public Input<String> getGlobalaccelerator() {
         return this.globalaccelerator == null ? Input.empty() : this.globalaccelerator;
     }
 
     @InputImport(name="glue")
-    private @Nullable Input<String> glue;
+      private @Nullable Input<String> glue;
 
     public Input<String> getGlue() {
         return this.glue == null ? Input.empty() : this.glue;
     }
 
     @InputImport(name="gluedatabrew")
-    private @Nullable Input<String> gluedatabrew;
+      private @Nullable Input<String> gluedatabrew;
 
     public Input<String> getGluedatabrew() {
         return this.gluedatabrew == null ? Input.empty() : this.gluedatabrew;
     }
 
     @InputImport(name="greengrass")
-    private @Nullable Input<String> greengrass;
+      private @Nullable Input<String> greengrass;
 
     public Input<String> getGreengrass() {
         return this.greengrass == null ? Input.empty() : this.greengrass;
     }
 
     @InputImport(name="greengrassv2")
-    private @Nullable Input<String> greengrassv2;
+      private @Nullable Input<String> greengrassv2;
 
     public Input<String> getGreengrassv2() {
         return this.greengrassv2 == null ? Input.empty() : this.greengrassv2;
     }
 
     @InputImport(name="groundstation")
-    private @Nullable Input<String> groundstation;
+      private @Nullable Input<String> groundstation;
 
     public Input<String> getGroundstation() {
         return this.groundstation == null ? Input.empty() : this.groundstation;
     }
 
     @InputImport(name="guardduty")
-    private @Nullable Input<String> guardduty;
+      private @Nullable Input<String> guardduty;
 
     public Input<String> getGuardduty() {
         return this.guardduty == null ? Input.empty() : this.guardduty;
     }
 
     @InputImport(name="health")
-    private @Nullable Input<String> health;
+      private @Nullable Input<String> health;
 
     public Input<String> getHealth() {
         return this.health == null ? Input.empty() : this.health;
     }
 
     @InputImport(name="healthlake")
-    private @Nullable Input<String> healthlake;
+      private @Nullable Input<String> healthlake;
 
     public Input<String> getHealthlake() {
         return this.healthlake == null ? Input.empty() : this.healthlake;
     }
 
     @InputImport(name="honeycode")
-    private @Nullable Input<String> honeycode;
+      private @Nullable Input<String> honeycode;
 
     public Input<String> getHoneycode() {
         return this.honeycode == null ? Input.empty() : this.honeycode;
     }
 
     @InputImport(name="iam")
-    private @Nullable Input<String> iam;
+      private @Nullable Input<String> iam;
 
     public Input<String> getIam() {
         return this.iam == null ? Input.empty() : this.iam;
     }
 
     @InputImport(name="identitystore")
-    private @Nullable Input<String> identitystore;
+      private @Nullable Input<String> identitystore;
 
     public Input<String> getIdentitystore() {
         return this.identitystore == null ? Input.empty() : this.identitystore;
     }
 
     @InputImport(name="imagebuilder")
-    private @Nullable Input<String> imagebuilder;
+      private @Nullable Input<String> imagebuilder;
 
     public Input<String> getImagebuilder() {
         return this.imagebuilder == null ? Input.empty() : this.imagebuilder;
     }
 
     @InputImport(name="inspector")
-    private @Nullable Input<String> inspector;
+      private @Nullable Input<String> inspector;
 
     public Input<String> getInspector() {
         return this.inspector == null ? Input.empty() : this.inspector;
     }
 
     @InputImport(name="iot")
-    private @Nullable Input<String> iot;
+      private @Nullable Input<String> iot;
 
     public Input<String> getIot() {
         return this.iot == null ? Input.empty() : this.iot;
     }
 
     @InputImport(name="iot1clickdevices")
-    private @Nullable Input<String> iot1clickdevices;
+      private @Nullable Input<String> iot1clickdevices;
 
     public Input<String> getIot1clickdevices() {
         return this.iot1clickdevices == null ? Input.empty() : this.iot1clickdevices;
     }
 
     @InputImport(name="iot1clickdevicesservice")
-    private @Nullable Input<String> iot1clickdevicesservice;
+      private @Nullable Input<String> iot1clickdevicesservice;
 
     public Input<String> getIot1clickdevicesservice() {
         return this.iot1clickdevicesservice == null ? Input.empty() : this.iot1clickdevicesservice;
     }
 
     @InputImport(name="iot1clickprojects")
-    private @Nullable Input<String> iot1clickprojects;
+      private @Nullable Input<String> iot1clickprojects;
 
     public Input<String> getIot1clickprojects() {
         return this.iot1clickprojects == null ? Input.empty() : this.iot1clickprojects;
     }
 
     @InputImport(name="iotanalytics")
-    private @Nullable Input<String> iotanalytics;
+      private @Nullable Input<String> iotanalytics;
 
     public Input<String> getIotanalytics() {
         return this.iotanalytics == null ? Input.empty() : this.iotanalytics;
     }
 
     @InputImport(name="iotdataplane")
-    private @Nullable Input<String> iotdataplane;
+      private @Nullable Input<String> iotdataplane;
 
     public Input<String> getIotdataplane() {
         return this.iotdataplane == null ? Input.empty() : this.iotdataplane;
     }
 
     @InputImport(name="iotdeviceadvisor")
-    private @Nullable Input<String> iotdeviceadvisor;
+      private @Nullable Input<String> iotdeviceadvisor;
 
     public Input<String> getIotdeviceadvisor() {
         return this.iotdeviceadvisor == null ? Input.empty() : this.iotdeviceadvisor;
     }
 
     @InputImport(name="iotevents")
-    private @Nullable Input<String> iotevents;
+      private @Nullable Input<String> iotevents;
 
     public Input<String> getIotevents() {
         return this.iotevents == null ? Input.empty() : this.iotevents;
     }
 
     @InputImport(name="ioteventsdata")
-    private @Nullable Input<String> ioteventsdata;
+      private @Nullable Input<String> ioteventsdata;
 
     public Input<String> getIoteventsdata() {
         return this.ioteventsdata == null ? Input.empty() : this.ioteventsdata;
     }
 
     @InputImport(name="iotfleethub")
-    private @Nullable Input<String> iotfleethub;
+      private @Nullable Input<String> iotfleethub;
 
     public Input<String> getIotfleethub() {
         return this.iotfleethub == null ? Input.empty() : this.iotfleethub;
     }
 
     @InputImport(name="iotjobsdataplane")
-    private @Nullable Input<String> iotjobsdataplane;
+      private @Nullable Input<String> iotjobsdataplane;
 
     public Input<String> getIotjobsdataplane() {
         return this.iotjobsdataplane == null ? Input.empty() : this.iotjobsdataplane;
     }
 
     @InputImport(name="iotsecuretunneling")
-    private @Nullable Input<String> iotsecuretunneling;
+      private @Nullable Input<String> iotsecuretunneling;
 
     public Input<String> getIotsecuretunneling() {
         return this.iotsecuretunneling == null ? Input.empty() : this.iotsecuretunneling;
     }
 
     @InputImport(name="iotsitewise")
-    private @Nullable Input<String> iotsitewise;
+      private @Nullable Input<String> iotsitewise;
 
     public Input<String> getIotsitewise() {
         return this.iotsitewise == null ? Input.empty() : this.iotsitewise;
     }
 
     @InputImport(name="iotthingsgraph")
-    private @Nullable Input<String> iotthingsgraph;
+      private @Nullable Input<String> iotthingsgraph;
 
     public Input<String> getIotthingsgraph() {
         return this.iotthingsgraph == null ? Input.empty() : this.iotthingsgraph;
     }
 
     @InputImport(name="iotwireless")
-    private @Nullable Input<String> iotwireless;
+      private @Nullable Input<String> iotwireless;
 
     public Input<String> getIotwireless() {
         return this.iotwireless == null ? Input.empty() : this.iotwireless;
     }
 
     @InputImport(name="kafka")
-    private @Nullable Input<String> kafka;
+      private @Nullable Input<String> kafka;
 
     public Input<String> getKafka() {
         return this.kafka == null ? Input.empty() : this.kafka;
     }
 
     @InputImport(name="kafkaconnect")
-    private @Nullable Input<String> kafkaconnect;
+      private @Nullable Input<String> kafkaconnect;
 
     public Input<String> getKafkaconnect() {
         return this.kafkaconnect == null ? Input.empty() : this.kafkaconnect;
     }
 
     @InputImport(name="kendra")
-    private @Nullable Input<String> kendra;
+      private @Nullable Input<String> kendra;
 
     public Input<String> getKendra() {
         return this.kendra == null ? Input.empty() : this.kendra;
     }
 
     @InputImport(name="kinesis")
-    private @Nullable Input<String> kinesis;
+      private @Nullable Input<String> kinesis;
 
     public Input<String> getKinesis() {
         return this.kinesis == null ? Input.empty() : this.kinesis;
     }
 
     @InputImport(name="kinesisanalytics")
-    private @Nullable Input<String> kinesisanalytics;
+      private @Nullable Input<String> kinesisanalytics;
 
     public Input<String> getKinesisanalytics() {
         return this.kinesisanalytics == null ? Input.empty() : this.kinesisanalytics;
     }
 
     @InputImport(name="kinesisanalyticsv2")
-    private @Nullable Input<String> kinesisanalyticsv2;
+      private @Nullable Input<String> kinesisanalyticsv2;
 
     public Input<String> getKinesisanalyticsv2() {
         return this.kinesisanalyticsv2 == null ? Input.empty() : this.kinesisanalyticsv2;
     }
 
     @InputImport(name="kinesisvideo")
-    private @Nullable Input<String> kinesisvideo;
+      private @Nullable Input<String> kinesisvideo;
 
     public Input<String> getKinesisvideo() {
         return this.kinesisvideo == null ? Input.empty() : this.kinesisvideo;
     }
 
     @InputImport(name="kinesisvideoarchivedmedia")
-    private @Nullable Input<String> kinesisvideoarchivedmedia;
+      private @Nullable Input<String> kinesisvideoarchivedmedia;
 
     public Input<String> getKinesisvideoarchivedmedia() {
         return this.kinesisvideoarchivedmedia == null ? Input.empty() : this.kinesisvideoarchivedmedia;
     }
 
     @InputImport(name="kinesisvideomedia")
-    private @Nullable Input<String> kinesisvideomedia;
+      private @Nullable Input<String> kinesisvideomedia;
 
     public Input<String> getKinesisvideomedia() {
         return this.kinesisvideomedia == null ? Input.empty() : this.kinesisvideomedia;
     }
 
     @InputImport(name="kinesisvideosignalingchannels")
-    private @Nullable Input<String> kinesisvideosignalingchannels;
+      private @Nullable Input<String> kinesisvideosignalingchannels;
 
     public Input<String> getKinesisvideosignalingchannels() {
         return this.kinesisvideosignalingchannels == null ? Input.empty() : this.kinesisvideosignalingchannels;
     }
 
     @InputImport(name="kms")
-    private @Nullable Input<String> kms;
+      private @Nullable Input<String> kms;
 
     public Input<String> getKms() {
         return this.kms == null ? Input.empty() : this.kms;
     }
 
     @InputImport(name="lakeformation")
-    private @Nullable Input<String> lakeformation;
+      private @Nullable Input<String> lakeformation;
 
     public Input<String> getLakeformation() {
         return this.lakeformation == null ? Input.empty() : this.lakeformation;
     }
 
     @InputImport(name="lambda")
-    private @Nullable Input<String> lambda;
+      private @Nullable Input<String> lambda;
 
     public Input<String> getLambda() {
         return this.lambda == null ? Input.empty() : this.lambda;
     }
 
     @InputImport(name="lexmodelbuilding")
-    private @Nullable Input<String> lexmodelbuilding;
+      private @Nullable Input<String> lexmodelbuilding;
 
     public Input<String> getLexmodelbuilding() {
         return this.lexmodelbuilding == null ? Input.empty() : this.lexmodelbuilding;
     }
 
     @InputImport(name="lexmodelbuildingservice")
-    private @Nullable Input<String> lexmodelbuildingservice;
+      private @Nullable Input<String> lexmodelbuildingservice;
 
     public Input<String> getLexmodelbuildingservice() {
         return this.lexmodelbuildingservice == null ? Input.empty() : this.lexmodelbuildingservice;
     }
 
     @InputImport(name="lexmodels")
-    private @Nullable Input<String> lexmodels;
+      private @Nullable Input<String> lexmodels;
 
     public Input<String> getLexmodels() {
         return this.lexmodels == null ? Input.empty() : this.lexmodels;
     }
 
     @InputImport(name="lexmodelsv2")
-    private @Nullable Input<String> lexmodelsv2;
+      private @Nullable Input<String> lexmodelsv2;
 
     public Input<String> getLexmodelsv2() {
         return this.lexmodelsv2 == null ? Input.empty() : this.lexmodelsv2;
     }
 
     @InputImport(name="lexruntime")
-    private @Nullable Input<String> lexruntime;
+      private @Nullable Input<String> lexruntime;
 
     public Input<String> getLexruntime() {
         return this.lexruntime == null ? Input.empty() : this.lexruntime;
     }
 
     @InputImport(name="lexruntimeservice")
-    private @Nullable Input<String> lexruntimeservice;
+      private @Nullable Input<String> lexruntimeservice;
 
     public Input<String> getLexruntimeservice() {
         return this.lexruntimeservice == null ? Input.empty() : this.lexruntimeservice;
     }
 
     @InputImport(name="lexruntimev2")
-    private @Nullable Input<String> lexruntimev2;
+      private @Nullable Input<String> lexruntimev2;
 
     public Input<String> getLexruntimev2() {
         return this.lexruntimev2 == null ? Input.empty() : this.lexruntimev2;
     }
 
     @InputImport(name="licensemanager")
-    private @Nullable Input<String> licensemanager;
+      private @Nullable Input<String> licensemanager;
 
     public Input<String> getLicensemanager() {
         return this.licensemanager == null ? Input.empty() : this.licensemanager;
     }
 
     @InputImport(name="lightsail")
-    private @Nullable Input<String> lightsail;
+      private @Nullable Input<String> lightsail;
 
     public Input<String> getLightsail() {
         return this.lightsail == null ? Input.empty() : this.lightsail;
     }
 
     @InputImport(name="location")
-    private @Nullable Input<String> location;
+      private @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="lookoutequipment")
-    private @Nullable Input<String> lookoutequipment;
+      private @Nullable Input<String> lookoutequipment;
 
     public Input<String> getLookoutequipment() {
         return this.lookoutequipment == null ? Input.empty() : this.lookoutequipment;
     }
 
     @InputImport(name="lookoutforvision")
-    private @Nullable Input<String> lookoutforvision;
+      private @Nullable Input<String> lookoutforvision;
 
     public Input<String> getLookoutforvision() {
         return this.lookoutforvision == null ? Input.empty() : this.lookoutforvision;
     }
 
     @InputImport(name="lookoutmetrics")
-    private @Nullable Input<String> lookoutmetrics;
+      private @Nullable Input<String> lookoutmetrics;
 
     public Input<String> getLookoutmetrics() {
         return this.lookoutmetrics == null ? Input.empty() : this.lookoutmetrics;
     }
 
     @InputImport(name="machinelearning")
-    private @Nullable Input<String> machinelearning;
+      private @Nullable Input<String> machinelearning;
 
     public Input<String> getMachinelearning() {
         return this.machinelearning == null ? Input.empty() : this.machinelearning;
     }
 
     @InputImport(name="macie")
-    private @Nullable Input<String> macie;
+      private @Nullable Input<String> macie;
 
     public Input<String> getMacie() {
         return this.macie == null ? Input.empty() : this.macie;
     }
 
     @InputImport(name="macie2")
-    private @Nullable Input<String> macie2;
+      private @Nullable Input<String> macie2;
 
     public Input<String> getMacie2() {
         return this.macie2 == null ? Input.empty() : this.macie2;
     }
 
     @InputImport(name="managedblockchain")
-    private @Nullable Input<String> managedblockchain;
+      private @Nullable Input<String> managedblockchain;
 
     public Input<String> getManagedblockchain() {
         return this.managedblockchain == null ? Input.empty() : this.managedblockchain;
     }
 
     @InputImport(name="marketplacecatalog")
-    private @Nullable Input<String> marketplacecatalog;
+      private @Nullable Input<String> marketplacecatalog;
 
     public Input<String> getMarketplacecatalog() {
         return this.marketplacecatalog == null ? Input.empty() : this.marketplacecatalog;
     }
 
     @InputImport(name="marketplacecommerceanalytics")
-    private @Nullable Input<String> marketplacecommerceanalytics;
+      private @Nullable Input<String> marketplacecommerceanalytics;
 
     public Input<String> getMarketplacecommerceanalytics() {
         return this.marketplacecommerceanalytics == null ? Input.empty() : this.marketplacecommerceanalytics;
     }
 
     @InputImport(name="marketplaceentitlement")
-    private @Nullable Input<String> marketplaceentitlement;
+      private @Nullable Input<String> marketplaceentitlement;
 
     public Input<String> getMarketplaceentitlement() {
         return this.marketplaceentitlement == null ? Input.empty() : this.marketplaceentitlement;
     }
 
     @InputImport(name="marketplaceentitlementservice")
-    private @Nullable Input<String> marketplaceentitlementservice;
+      private @Nullable Input<String> marketplaceentitlementservice;
 
     public Input<String> getMarketplaceentitlementservice() {
         return this.marketplaceentitlementservice == null ? Input.empty() : this.marketplaceentitlementservice;
     }
 
     @InputImport(name="marketplacemetering")
-    private @Nullable Input<String> marketplacemetering;
+      private @Nullable Input<String> marketplacemetering;
 
     public Input<String> getMarketplacemetering() {
         return this.marketplacemetering == null ? Input.empty() : this.marketplacemetering;
     }
 
     @InputImport(name="mediaconnect")
-    private @Nullable Input<String> mediaconnect;
+      private @Nullable Input<String> mediaconnect;
 
     public Input<String> getMediaconnect() {
         return this.mediaconnect == null ? Input.empty() : this.mediaconnect;
     }
 
     @InputImport(name="mediaconvert")
-    private @Nullable Input<String> mediaconvert;
+      private @Nullable Input<String> mediaconvert;
 
     public Input<String> getMediaconvert() {
         return this.mediaconvert == null ? Input.empty() : this.mediaconvert;
     }
 
     @InputImport(name="medialive")
-    private @Nullable Input<String> medialive;
+      private @Nullable Input<String> medialive;
 
     public Input<String> getMedialive() {
         return this.medialive == null ? Input.empty() : this.medialive;
     }
 
     @InputImport(name="mediapackage")
-    private @Nullable Input<String> mediapackage;
+      private @Nullable Input<String> mediapackage;
 
     public Input<String> getMediapackage() {
         return this.mediapackage == null ? Input.empty() : this.mediapackage;
     }
 
     @InputImport(name="mediapackagevod")
-    private @Nullable Input<String> mediapackagevod;
+      private @Nullable Input<String> mediapackagevod;
 
     public Input<String> getMediapackagevod() {
         return this.mediapackagevod == null ? Input.empty() : this.mediapackagevod;
     }
 
     @InputImport(name="mediastore")
-    private @Nullable Input<String> mediastore;
+      private @Nullable Input<String> mediastore;
 
     public Input<String> getMediastore() {
         return this.mediastore == null ? Input.empty() : this.mediastore;
     }
 
     @InputImport(name="mediastoredata")
-    private @Nullable Input<String> mediastoredata;
+      private @Nullable Input<String> mediastoredata;
 
     public Input<String> getMediastoredata() {
         return this.mediastoredata == null ? Input.empty() : this.mediastoredata;
     }
 
     @InputImport(name="mediatailor")
-    private @Nullable Input<String> mediatailor;
+      private @Nullable Input<String> mediatailor;
 
     public Input<String> getMediatailor() {
         return this.mediatailor == null ? Input.empty() : this.mediatailor;
     }
 
     @InputImport(name="memorydb")
-    private @Nullable Input<String> memorydb;
+      private @Nullable Input<String> memorydb;
 
     public Input<String> getMemorydb() {
         return this.memorydb == null ? Input.empty() : this.memorydb;
     }
 
     @InputImport(name="mgn")
-    private @Nullable Input<String> mgn;
+      private @Nullable Input<String> mgn;
 
     public Input<String> getMgn() {
         return this.mgn == null ? Input.empty() : this.mgn;
     }
 
     @InputImport(name="migrationhub")
-    private @Nullable Input<String> migrationhub;
+      private @Nullable Input<String> migrationhub;
 
     public Input<String> getMigrationhub() {
         return this.migrationhub == null ? Input.empty() : this.migrationhub;
     }
 
     @InputImport(name="migrationhubconfig")
-    private @Nullable Input<String> migrationhubconfig;
+      private @Nullable Input<String> migrationhubconfig;
 
     public Input<String> getMigrationhubconfig() {
         return this.migrationhubconfig == null ? Input.empty() : this.migrationhubconfig;
     }
 
     @InputImport(name="mobile")
-    private @Nullable Input<String> mobile;
+      private @Nullable Input<String> mobile;
 
     public Input<String> getMobile() {
         return this.mobile == null ? Input.empty() : this.mobile;
     }
 
     @InputImport(name="mobileanalytics")
-    private @Nullable Input<String> mobileanalytics;
+      private @Nullable Input<String> mobileanalytics;
 
     public Input<String> getMobileanalytics() {
         return this.mobileanalytics == null ? Input.empty() : this.mobileanalytics;
     }
 
     @InputImport(name="mq")
-    private @Nullable Input<String> mq;
+      private @Nullable Input<String> mq;
 
     public Input<String> getMq() {
         return this.mq == null ? Input.empty() : this.mq;
     }
 
     @InputImport(name="mturk")
-    private @Nullable Input<String> mturk;
+      private @Nullable Input<String> mturk;
 
     public Input<String> getMturk() {
         return this.mturk == null ? Input.empty() : this.mturk;
     }
 
     @InputImport(name="mwaa")
-    private @Nullable Input<String> mwaa;
+      private @Nullable Input<String> mwaa;
 
     public Input<String> getMwaa() {
         return this.mwaa == null ? Input.empty() : this.mwaa;
     }
 
     @InputImport(name="neptune")
-    private @Nullable Input<String> neptune;
+      private @Nullable Input<String> neptune;
 
     public Input<String> getNeptune() {
         return this.neptune == null ? Input.empty() : this.neptune;
     }
 
     @InputImport(name="networkfirewall")
-    private @Nullable Input<String> networkfirewall;
+      private @Nullable Input<String> networkfirewall;
 
     public Input<String> getNetworkfirewall() {
         return this.networkfirewall == null ? Input.empty() : this.networkfirewall;
     }
 
     @InputImport(name="networkmanager")
-    private @Nullable Input<String> networkmanager;
+      private @Nullable Input<String> networkmanager;
 
     public Input<String> getNetworkmanager() {
         return this.networkmanager == null ? Input.empty() : this.networkmanager;
     }
 
     @InputImport(name="nimblestudio")
-    private @Nullable Input<String> nimblestudio;
+      private @Nullable Input<String> nimblestudio;
 
     public Input<String> getNimblestudio() {
         return this.nimblestudio == null ? Input.empty() : this.nimblestudio;
     }
 
     @InputImport(name="opsworks")
-    private @Nullable Input<String> opsworks;
+      private @Nullable Input<String> opsworks;
 
     public Input<String> getOpsworks() {
         return this.opsworks == null ? Input.empty() : this.opsworks;
     }
 
     @InputImport(name="opsworkscm")
-    private @Nullable Input<String> opsworkscm;
+      private @Nullable Input<String> opsworkscm;
 
     public Input<String> getOpsworkscm() {
         return this.opsworkscm == null ? Input.empty() : this.opsworkscm;
     }
 
     @InputImport(name="organizations")
-    private @Nullable Input<String> organizations;
+      private @Nullable Input<String> organizations;
 
     public Input<String> getOrganizations() {
         return this.organizations == null ? Input.empty() : this.organizations;
     }
 
     @InputImport(name="outposts")
-    private @Nullable Input<String> outposts;
+      private @Nullable Input<String> outposts;
 
     public Input<String> getOutposts() {
         return this.outposts == null ? Input.empty() : this.outposts;
     }
 
     @InputImport(name="personalize")
-    private @Nullable Input<String> personalize;
+      private @Nullable Input<String> personalize;
 
     public Input<String> getPersonalize() {
         return this.personalize == null ? Input.empty() : this.personalize;
     }
 
     @InputImport(name="personalizeevents")
-    private @Nullable Input<String> personalizeevents;
+      private @Nullable Input<String> personalizeevents;
 
     public Input<String> getPersonalizeevents() {
         return this.personalizeevents == null ? Input.empty() : this.personalizeevents;
     }
 
     @InputImport(name="personalizeruntime")
-    private @Nullable Input<String> personalizeruntime;
+      private @Nullable Input<String> personalizeruntime;
 
     public Input<String> getPersonalizeruntime() {
         return this.personalizeruntime == null ? Input.empty() : this.personalizeruntime;
     }
 
     @InputImport(name="pi")
-    private @Nullable Input<String> pi;
+      private @Nullable Input<String> pi;
 
     public Input<String> getPi() {
         return this.pi == null ? Input.empty() : this.pi;
     }
 
     @InputImport(name="pinpoint")
-    private @Nullable Input<String> pinpoint;
+      private @Nullable Input<String> pinpoint;
 
     public Input<String> getPinpoint() {
         return this.pinpoint == null ? Input.empty() : this.pinpoint;
     }
 
     @InputImport(name="pinpointemail")
-    private @Nullable Input<String> pinpointemail;
+      private @Nullable Input<String> pinpointemail;
 
     public Input<String> getPinpointemail() {
         return this.pinpointemail == null ? Input.empty() : this.pinpointemail;
     }
 
     @InputImport(name="pinpointsmsvoice")
-    private @Nullable Input<String> pinpointsmsvoice;
+      private @Nullable Input<String> pinpointsmsvoice;
 
     public Input<String> getPinpointsmsvoice() {
         return this.pinpointsmsvoice == null ? Input.empty() : this.pinpointsmsvoice;
     }
 
     @InputImport(name="polly")
-    private @Nullable Input<String> polly;
+      private @Nullable Input<String> polly;
 
     public Input<String> getPolly() {
         return this.polly == null ? Input.empty() : this.polly;
     }
 
     @InputImport(name="pricing")
-    private @Nullable Input<String> pricing;
+      private @Nullable Input<String> pricing;
 
     public Input<String> getPricing() {
         return this.pricing == null ? Input.empty() : this.pricing;
     }
 
     @InputImport(name="prometheus")
-    private @Nullable Input<String> prometheus;
+      private @Nullable Input<String> prometheus;
 
     public Input<String> getPrometheus() {
         return this.prometheus == null ? Input.empty() : this.prometheus;
     }
 
     @InputImport(name="prometheusservice")
-    private @Nullable Input<String> prometheusservice;
+      private @Nullable Input<String> prometheusservice;
 
     public Input<String> getPrometheusservice() {
         return this.prometheusservice == null ? Input.empty() : this.prometheusservice;
     }
 
     @InputImport(name="proton")
-    private @Nullable Input<String> proton;
+      private @Nullable Input<String> proton;
 
     public Input<String> getProton() {
         return this.proton == null ? Input.empty() : this.proton;
     }
 
     @InputImport(name="qldb")
-    private @Nullable Input<String> qldb;
+      private @Nullable Input<String> qldb;
 
     public Input<String> getQldb() {
         return this.qldb == null ? Input.empty() : this.qldb;
     }
 
     @InputImport(name="qldbsession")
-    private @Nullable Input<String> qldbsession;
+      private @Nullable Input<String> qldbsession;
 
     public Input<String> getQldbsession() {
         return this.qldbsession == null ? Input.empty() : this.qldbsession;
     }
 
     @InputImport(name="quicksight")
-    private @Nullable Input<String> quicksight;
+      private @Nullable Input<String> quicksight;
 
     public Input<String> getQuicksight() {
         return this.quicksight == null ? Input.empty() : this.quicksight;
     }
 
     @InputImport(name="ram")
-    private @Nullable Input<String> ram;
+      private @Nullable Input<String> ram;
 
     public Input<String> getRam() {
         return this.ram == null ? Input.empty() : this.ram;
     }
 
     @InputImport(name="rds")
-    private @Nullable Input<String> rds;
+      private @Nullable Input<String> rds;
 
     public Input<String> getRds() {
         return this.rds == null ? Input.empty() : this.rds;
     }
 
     @InputImport(name="rdsdata")
-    private @Nullable Input<String> rdsdata;
+      private @Nullable Input<String> rdsdata;
 
     public Input<String> getRdsdata() {
         return this.rdsdata == null ? Input.empty() : this.rdsdata;
     }
 
     @InputImport(name="rdsdataservice")
-    private @Nullable Input<String> rdsdataservice;
+      private @Nullable Input<String> rdsdataservice;
 
     public Input<String> getRdsdataservice() {
         return this.rdsdataservice == null ? Input.empty() : this.rdsdataservice;
     }
 
     @InputImport(name="redshift")
-    private @Nullable Input<String> redshift;
+      private @Nullable Input<String> redshift;
 
     public Input<String> getRedshift() {
         return this.redshift == null ? Input.empty() : this.redshift;
     }
 
     @InputImport(name="redshiftdata")
-    private @Nullable Input<String> redshiftdata;
+      private @Nullable Input<String> redshiftdata;
 
     public Input<String> getRedshiftdata() {
         return this.redshiftdata == null ? Input.empty() : this.redshiftdata;
     }
 
     @InputImport(name="rekognition")
-    private @Nullable Input<String> rekognition;
+      private @Nullable Input<String> rekognition;
 
     public Input<String> getRekognition() {
         return this.rekognition == null ? Input.empty() : this.rekognition;
     }
 
     @InputImport(name="resourcegroups")
-    private @Nullable Input<String> resourcegroups;
+      private @Nullable Input<String> resourcegroups;
 
     public Input<String> getResourcegroups() {
         return this.resourcegroups == null ? Input.empty() : this.resourcegroups;
     }
 
     @InputImport(name="resourcegroupstagging")
-    private @Nullable Input<String> resourcegroupstagging;
+      private @Nullable Input<String> resourcegroupstagging;
 
     public Input<String> getResourcegroupstagging() {
         return this.resourcegroupstagging == null ? Input.empty() : this.resourcegroupstagging;
     }
 
     @InputImport(name="resourcegroupstaggingapi")
-    private @Nullable Input<String> resourcegroupstaggingapi;
+      private @Nullable Input<String> resourcegroupstaggingapi;
 
     public Input<String> getResourcegroupstaggingapi() {
         return this.resourcegroupstaggingapi == null ? Input.empty() : this.resourcegroupstaggingapi;
     }
 
     @InputImport(name="robomaker")
-    private @Nullable Input<String> robomaker;
+      private @Nullable Input<String> robomaker;
 
     public Input<String> getRobomaker() {
         return this.robomaker == null ? Input.empty() : this.robomaker;
     }
 
     @InputImport(name="route53")
-    private @Nullable Input<String> route53;
+      private @Nullable Input<String> route53;
 
     public Input<String> getRoute53() {
         return this.route53 == null ? Input.empty() : this.route53;
     }
 
     @InputImport(name="route53domains")
-    private @Nullable Input<String> route53domains;
+      private @Nullable Input<String> route53domains;
 
     public Input<String> getRoute53domains() {
         return this.route53domains == null ? Input.empty() : this.route53domains;
     }
 
     @InputImport(name="route53recoverycontrolconfig")
-    private @Nullable Input<String> route53recoverycontrolconfig;
+      private @Nullable Input<String> route53recoverycontrolconfig;
 
     public Input<String> getRoute53recoverycontrolconfig() {
         return this.route53recoverycontrolconfig == null ? Input.empty() : this.route53recoverycontrolconfig;
     }
 
     @InputImport(name="route53recoveryreadiness")
-    private @Nullable Input<String> route53recoveryreadiness;
+      private @Nullable Input<String> route53recoveryreadiness;
 
     public Input<String> getRoute53recoveryreadiness() {
         return this.route53recoveryreadiness == null ? Input.empty() : this.route53recoveryreadiness;
     }
 
     @InputImport(name="route53resolver")
-    private @Nullable Input<String> route53resolver;
+      private @Nullable Input<String> route53resolver;
 
     public Input<String> getRoute53resolver() {
         return this.route53resolver == null ? Input.empty() : this.route53resolver;
     }
 
     @InputImport(name="s3")
-    private @Nullable Input<String> s3;
+      private @Nullable Input<String> s3;
 
     public Input<String> getS3() {
         return this.s3 == null ? Input.empty() : this.s3;
     }
 
     @InputImport(name="s3control")
-    private @Nullable Input<String> s3control;
+      private @Nullable Input<String> s3control;
 
     public Input<String> getS3control() {
         return this.s3control == null ? Input.empty() : this.s3control;
     }
 
     @InputImport(name="s3outposts")
-    private @Nullable Input<String> s3outposts;
+      private @Nullable Input<String> s3outposts;
 
     public Input<String> getS3outposts() {
         return this.s3outposts == null ? Input.empty() : this.s3outposts;
     }
 
     @InputImport(name="sagemaker")
-    private @Nullable Input<String> sagemaker;
+      private @Nullable Input<String> sagemaker;
 
     public Input<String> getSagemaker() {
         return this.sagemaker == null ? Input.empty() : this.sagemaker;
     }
 
     @InputImport(name="sagemakeredgemanager")
-    private @Nullable Input<String> sagemakeredgemanager;
+      private @Nullable Input<String> sagemakeredgemanager;
 
     public Input<String> getSagemakeredgemanager() {
         return this.sagemakeredgemanager == null ? Input.empty() : this.sagemakeredgemanager;
     }
 
     @InputImport(name="sagemakerfeaturestoreruntime")
-    private @Nullable Input<String> sagemakerfeaturestoreruntime;
+      private @Nullable Input<String> sagemakerfeaturestoreruntime;
 
     public Input<String> getSagemakerfeaturestoreruntime() {
         return this.sagemakerfeaturestoreruntime == null ? Input.empty() : this.sagemakerfeaturestoreruntime;
     }
 
     @InputImport(name="sagemakerruntime")
-    private @Nullable Input<String> sagemakerruntime;
+      private @Nullable Input<String> sagemakerruntime;
 
     public Input<String> getSagemakerruntime() {
         return this.sagemakerruntime == null ? Input.empty() : this.sagemakerruntime;
     }
 
     @InputImport(name="savingsplans")
-    private @Nullable Input<String> savingsplans;
+      private @Nullable Input<String> savingsplans;
 
     public Input<String> getSavingsplans() {
         return this.savingsplans == null ? Input.empty() : this.savingsplans;
     }
 
     @InputImport(name="schemas")
-    private @Nullable Input<String> schemas;
+      private @Nullable Input<String> schemas;
 
     public Input<String> getSchemas() {
         return this.schemas == null ? Input.empty() : this.schemas;
     }
 
     @InputImport(name="sdb")
-    private @Nullable Input<String> sdb;
+      private @Nullable Input<String> sdb;
 
     public Input<String> getSdb() {
         return this.sdb == null ? Input.empty() : this.sdb;
     }
 
     @InputImport(name="secretsmanager")
-    private @Nullable Input<String> secretsmanager;
+      private @Nullable Input<String> secretsmanager;
 
     public Input<String> getSecretsmanager() {
         return this.secretsmanager == null ? Input.empty() : this.secretsmanager;
     }
 
     @InputImport(name="securityhub")
-    private @Nullable Input<String> securityhub;
+      private @Nullable Input<String> securityhub;
 
     public Input<String> getSecurityhub() {
         return this.securityhub == null ? Input.empty() : this.securityhub;
     }
 
     @InputImport(name="serverlessapplicationrepository")
-    private @Nullable Input<String> serverlessapplicationrepository;
+      private @Nullable Input<String> serverlessapplicationrepository;
 
     public Input<String> getServerlessapplicationrepository() {
         return this.serverlessapplicationrepository == null ? Input.empty() : this.serverlessapplicationrepository;
     }
 
     @InputImport(name="serverlessapprepo")
-    private @Nullable Input<String> serverlessapprepo;
+      private @Nullable Input<String> serverlessapprepo;
 
     public Input<String> getServerlessapprepo() {
         return this.serverlessapprepo == null ? Input.empty() : this.serverlessapprepo;
     }
 
     @InputImport(name="serverlessrepo")
-    private @Nullable Input<String> serverlessrepo;
+      private @Nullable Input<String> serverlessrepo;
 
     public Input<String> getServerlessrepo() {
         return this.serverlessrepo == null ? Input.empty() : this.serverlessrepo;
     }
 
     @InputImport(name="servicecatalog")
-    private @Nullable Input<String> servicecatalog;
+      private @Nullable Input<String> servicecatalog;
 
     public Input<String> getServicecatalog() {
         return this.servicecatalog == null ? Input.empty() : this.servicecatalog;
     }
 
     @InputImport(name="servicediscovery")
-    private @Nullable Input<String> servicediscovery;
+      private @Nullable Input<String> servicediscovery;
 
     public Input<String> getServicediscovery() {
         return this.servicediscovery == null ? Input.empty() : this.servicediscovery;
     }
 
     @InputImport(name="servicequotas")
-    private @Nullable Input<String> servicequotas;
+      private @Nullable Input<String> servicequotas;
 
     public Input<String> getServicequotas() {
         return this.servicequotas == null ? Input.empty() : this.servicequotas;
     }
 
     @InputImport(name="ses")
-    private @Nullable Input<String> ses;
+      private @Nullable Input<String> ses;
 
     public Input<String> getSes() {
         return this.ses == null ? Input.empty() : this.ses;
     }
 
     @InputImport(name="sesv2")
-    private @Nullable Input<String> sesv2;
+      private @Nullable Input<String> sesv2;
 
     public Input<String> getSesv2() {
         return this.sesv2 == null ? Input.empty() : this.sesv2;
     }
 
     @InputImport(name="sfn")
-    private @Nullable Input<String> sfn;
+      private @Nullable Input<String> sfn;
 
     public Input<String> getSfn() {
         return this.sfn == null ? Input.empty() : this.sfn;
     }
 
     @InputImport(name="shield")
-    private @Nullable Input<String> shield;
+      private @Nullable Input<String> shield;
 
     public Input<String> getShield() {
         return this.shield == null ? Input.empty() : this.shield;
     }
 
     @InputImport(name="signer")
-    private @Nullable Input<String> signer;
+      private @Nullable Input<String> signer;
 
     public Input<String> getSigner() {
         return this.signer == null ? Input.empty() : this.signer;
     }
 
     @InputImport(name="simpledb")
-    private @Nullable Input<String> simpledb;
+      private @Nullable Input<String> simpledb;
 
     public Input<String> getSimpledb() {
         return this.simpledb == null ? Input.empty() : this.simpledb;
     }
 
     @InputImport(name="sms")
-    private @Nullable Input<String> sms;
+      private @Nullable Input<String> sms;
 
     public Input<String> getSms() {
         return this.sms == null ? Input.empty() : this.sms;
     }
 
     @InputImport(name="snowball")
-    private @Nullable Input<String> snowball;
+      private @Nullable Input<String> snowball;
 
     public Input<String> getSnowball() {
         return this.snowball == null ? Input.empty() : this.snowball;
     }
 
     @InputImport(name="sns")
-    private @Nullable Input<String> sns;
+      private @Nullable Input<String> sns;
 
     public Input<String> getSns() {
         return this.sns == null ? Input.empty() : this.sns;
     }
 
     @InputImport(name="sqs")
-    private @Nullable Input<String> sqs;
+      private @Nullable Input<String> sqs;
 
     public Input<String> getSqs() {
         return this.sqs == null ? Input.empty() : this.sqs;
     }
 
     @InputImport(name="ssm")
-    private @Nullable Input<String> ssm;
+      private @Nullable Input<String> ssm;
 
     public Input<String> getSsm() {
         return this.ssm == null ? Input.empty() : this.ssm;
     }
 
     @InputImport(name="ssmcontacts")
-    private @Nullable Input<String> ssmcontacts;
+      private @Nullable Input<String> ssmcontacts;
 
     public Input<String> getSsmcontacts() {
         return this.ssmcontacts == null ? Input.empty() : this.ssmcontacts;
     }
 
     @InputImport(name="ssmincidents")
-    private @Nullable Input<String> ssmincidents;
+      private @Nullable Input<String> ssmincidents;
 
     public Input<String> getSsmincidents() {
         return this.ssmincidents == null ? Input.empty() : this.ssmincidents;
     }
 
     @InputImport(name="sso")
-    private @Nullable Input<String> sso;
+      private @Nullable Input<String> sso;
 
     public Input<String> getSso() {
         return this.sso == null ? Input.empty() : this.sso;
     }
 
     @InputImport(name="ssoadmin")
-    private @Nullable Input<String> ssoadmin;
+      private @Nullable Input<String> ssoadmin;
 
     public Input<String> getSsoadmin() {
         return this.ssoadmin == null ? Input.empty() : this.ssoadmin;
     }
 
     @InputImport(name="ssooidc")
-    private @Nullable Input<String> ssooidc;
+      private @Nullable Input<String> ssooidc;
 
     public Input<String> getSsooidc() {
         return this.ssooidc == null ? Input.empty() : this.ssooidc;
     }
 
     @InputImport(name="stepfunctions")
-    private @Nullable Input<String> stepfunctions;
+      private @Nullable Input<String> stepfunctions;
 
     public Input<String> getStepfunctions() {
         return this.stepfunctions == null ? Input.empty() : this.stepfunctions;
     }
 
     @InputImport(name="storagegateway")
-    private @Nullable Input<String> storagegateway;
+      private @Nullable Input<String> storagegateway;
 
     public Input<String> getStoragegateway() {
         return this.storagegateway == null ? Input.empty() : this.storagegateway;
     }
 
     @InputImport(name="sts")
-    private @Nullable Input<String> sts;
+      private @Nullable Input<String> sts;
 
     public Input<String> getSts() {
         return this.sts == null ? Input.empty() : this.sts;
     }
 
     @InputImport(name="support")
-    private @Nullable Input<String> support;
+      private @Nullable Input<String> support;
 
     public Input<String> getSupport() {
         return this.support == null ? Input.empty() : this.support;
     }
 
     @InputImport(name="swf")
-    private @Nullable Input<String> swf;
+      private @Nullable Input<String> swf;
 
     public Input<String> getSwf() {
         return this.swf == null ? Input.empty() : this.swf;
     }
 
     @InputImport(name="synthetics")
-    private @Nullable Input<String> synthetics;
+      private @Nullable Input<String> synthetics;
 
     public Input<String> getSynthetics() {
         return this.synthetics == null ? Input.empty() : this.synthetics;
     }
 
     @InputImport(name="textract")
-    private @Nullable Input<String> textract;
+      private @Nullable Input<String> textract;
 
     public Input<String> getTextract() {
         return this.textract == null ? Input.empty() : this.textract;
     }
 
     @InputImport(name="timestreamquery")
-    private @Nullable Input<String> timestreamquery;
+      private @Nullable Input<String> timestreamquery;
 
     public Input<String> getTimestreamquery() {
         return this.timestreamquery == null ? Input.empty() : this.timestreamquery;
     }
 
     @InputImport(name="timestreamwrite")
-    private @Nullable Input<String> timestreamwrite;
+      private @Nullable Input<String> timestreamwrite;
 
     public Input<String> getTimestreamwrite() {
         return this.timestreamwrite == null ? Input.empty() : this.timestreamwrite;
     }
 
     @InputImport(name="transcribe")
-    private @Nullable Input<String> transcribe;
+      private @Nullable Input<String> transcribe;
 
     public Input<String> getTranscribe() {
         return this.transcribe == null ? Input.empty() : this.transcribe;
     }
 
     @InputImport(name="transcribeservice")
-    private @Nullable Input<String> transcribeservice;
+      private @Nullable Input<String> transcribeservice;
 
     public Input<String> getTranscribeservice() {
         return this.transcribeservice == null ? Input.empty() : this.transcribeservice;
     }
 
     @InputImport(name="transcribestreaming")
-    private @Nullable Input<String> transcribestreaming;
+      private @Nullable Input<String> transcribestreaming;
 
     public Input<String> getTranscribestreaming() {
         return this.transcribestreaming == null ? Input.empty() : this.transcribestreaming;
     }
 
     @InputImport(name="transcribestreamingservice")
-    private @Nullable Input<String> transcribestreamingservice;
+      private @Nullable Input<String> transcribestreamingservice;
 
     public Input<String> getTranscribestreamingservice() {
         return this.transcribestreamingservice == null ? Input.empty() : this.transcribestreamingservice;
     }
 
     @InputImport(name="transfer")
-    private @Nullable Input<String> transfer;
+      private @Nullable Input<String> transfer;
 
     public Input<String> getTransfer() {
         return this.transfer == null ? Input.empty() : this.transfer;
     }
 
     @InputImport(name="translate")
-    private @Nullable Input<String> translate;
+      private @Nullable Input<String> translate;
 
     public Input<String> getTranslate() {
         return this.translate == null ? Input.empty() : this.translate;
     }
 
     @InputImport(name="waf")
-    private @Nullable Input<String> waf;
+      private @Nullable Input<String> waf;
 
     public Input<String> getWaf() {
         return this.waf == null ? Input.empty() : this.waf;
     }
 
     @InputImport(name="wafregional")
-    private @Nullable Input<String> wafregional;
+      private @Nullable Input<String> wafregional;
 
     public Input<String> getWafregional() {
         return this.wafregional == null ? Input.empty() : this.wafregional;
     }
 
     @InputImport(name="wafv2")
-    private @Nullable Input<String> wafv2;
+      private @Nullable Input<String> wafv2;
 
     public Input<String> getWafv2() {
         return this.wafv2 == null ? Input.empty() : this.wafv2;
     }
 
     @InputImport(name="wellarchitected")
-    private @Nullable Input<String> wellarchitected;
+      private @Nullable Input<String> wellarchitected;
 
     public Input<String> getWellarchitected() {
         return this.wellarchitected == null ? Input.empty() : this.wellarchitected;
     }
 
     @InputImport(name="workdocs")
-    private @Nullable Input<String> workdocs;
+      private @Nullable Input<String> workdocs;
 
     public Input<String> getWorkdocs() {
         return this.workdocs == null ? Input.empty() : this.workdocs;
     }
 
     @InputImport(name="worklink")
-    private @Nullable Input<String> worklink;
+      private @Nullable Input<String> worklink;
 
     public Input<String> getWorklink() {
         return this.worklink == null ? Input.empty() : this.worklink;
     }
 
     @InputImport(name="workmail")
-    private @Nullable Input<String> workmail;
+      private @Nullable Input<String> workmail;
 
     public Input<String> getWorkmail() {
         return this.workmail == null ? Input.empty() : this.workmail;
     }
 
     @InputImport(name="workmailmessageflow")
-    private @Nullable Input<String> workmailmessageflow;
+      private @Nullable Input<String> workmailmessageflow;
 
     public Input<String> getWorkmailmessageflow() {
         return this.workmailmessageflow == null ? Input.empty() : this.workmailmessageflow;
     }
 
     @InputImport(name="workspaces")
-    private @Nullable Input<String> workspaces;
+      private @Nullable Input<String> workspaces;
 
     public Input<String> getWorkspaces() {
         return this.workspaces == null ? Input.empty() : this.workspaces;
     }
 
     @InputImport(name="xray")
-    private @Nullable Input<String> xray;
+      private @Nullable Input<String> xray;
 
     public Input<String> getXray() {
         return this.xray == null ? Input.empty() : this.xray;

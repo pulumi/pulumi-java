@@ -6,7 +6,7 @@ package io.pulumi.aws.elasticloadbalancingv2.inputs;
 import io.pulumi.aws.elasticloadbalancingv2.inputs.TargetGroupHealthCheckGetArgs;
 import io.pulumi.aws.elasticloadbalancingv2.inputs.TargetGroupStickinessGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -35,7 +35,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arnSuffix")
-    private final @Nullable Input<String> arnSuffix;
+      private final @Nullable Input<String> arnSuffix;
 
     public Input<String> getArnSuffix() {
         return this.arnSuffix == null ? Input.empty() : this.arnSuffix;
@@ -46,7 +46,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionTermination")
-    private final @Nullable Input<Boolean> connectionTermination;
+      private final @Nullable Input<Boolean> connectionTermination;
 
     public Input<Boolean> getConnectionTermination() {
         return this.connectionTermination == null ? Input.empty() : this.connectionTermination;
@@ -57,7 +57,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deregistrationDelay")
-    private final @Nullable Input<Integer> deregistrationDelay;
+      private final @Nullable Input<Integer> deregistrationDelay;
 
     public Input<Integer> getDeregistrationDelay() {
         return this.deregistrationDelay == null ? Input.empty() : this.deregistrationDelay;
@@ -68,7 +68,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheck")
-    private final @Nullable Input<TargetGroupHealthCheckGetArgs> healthCheck;
+      private final @Nullable Input<TargetGroupHealthCheckGetArgs> healthCheck;
 
     public Input<TargetGroupHealthCheckGetArgs> getHealthCheck() {
         return this.healthCheck == null ? Input.empty() : this.healthCheck;
@@ -79,7 +79,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lambdaMultiValueHeadersEnabled")
-    private final @Nullable Input<Boolean> lambdaMultiValueHeadersEnabled;
+      private final @Nullable Input<Boolean> lambdaMultiValueHeadersEnabled;
 
     public Input<Boolean> getLambdaMultiValueHeadersEnabled() {
         return this.lambdaMultiValueHeadersEnabled == null ? Input.empty() : this.lambdaMultiValueHeadersEnabled;
@@ -90,7 +90,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancingAlgorithmType")
-    private final @Nullable Input<String> loadBalancingAlgorithmType;
+      private final @Nullable Input<String> loadBalancingAlgorithmType;
 
     public Input<String> getLoadBalancingAlgorithmType() {
         return this.loadBalancingAlgorithmType == null ? Input.empty() : this.loadBalancingAlgorithmType;
@@ -101,7 +101,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -112,7 +112,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -123,7 +123,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -134,7 +134,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preserveClientIp")
-    private final @Nullable Input<String> preserveClientIp;
+      private final @Nullable Input<String> preserveClientIp;
 
     public Input<String> getPreserveClientIp() {
         return this.preserveClientIp == null ? Input.empty() : this.preserveClientIp;
@@ -145,7 +145,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -156,7 +156,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocolVersion")
-    private final @Nullable Input<String> protocolVersion;
+      private final @Nullable Input<String> protocolVersion;
 
     public Input<String> getProtocolVersion() {
         return this.protocolVersion == null ? Input.empty() : this.protocolVersion;
@@ -167,7 +167,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="proxyProtocolV2")
-    private final @Nullable Input<Boolean> proxyProtocolV2;
+      private final @Nullable Input<Boolean> proxyProtocolV2;
 
     public Input<Boolean> getProxyProtocolV2() {
         return this.proxyProtocolV2 == null ? Input.empty() : this.proxyProtocolV2;
@@ -178,7 +178,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slowStart")
-    private final @Nullable Input<Integer> slowStart;
+      private final @Nullable Input<Integer> slowStart;
 
     public Input<Integer> getSlowStart() {
         return this.slowStart == null ? Input.empty() : this.slowStart;
@@ -189,7 +189,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stickiness")
-    private final @Nullable Input<TargetGroupStickinessGetArgs> stickiness;
+      private final @Nullable Input<TargetGroupStickinessGetArgs> stickiness;
 
     public Input<TargetGroupStickinessGetArgs> getStickiness() {
         return this.stickiness == null ? Input.empty() : this.stickiness;
@@ -200,7 +200,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -211,7 +211,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -222,7 +222,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetType")
-    private final @Nullable Input<String> targetType;
+      private final @Nullable Input<String> targetType;
 
     public Input<String> getTargetType() {
         return this.targetType == null ? Input.empty() : this.targetType;
@@ -233,7 +233,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

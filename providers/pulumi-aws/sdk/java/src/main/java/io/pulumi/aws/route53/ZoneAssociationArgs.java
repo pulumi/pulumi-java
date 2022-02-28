@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ZoneAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+      private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;
@@ -30,7 +30,7 @@ public final class ZoneAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vpcRegion")
-    private final @Nullable Input<String> vpcRegion;
+      private final @Nullable Input<String> vpcRegion;
 
     public Input<String> getVpcRegion() {
         return this.vpcRegion == null ? Input.empty() : this.vpcRegion;
@@ -41,7 +41,7 @@ public final class ZoneAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="zoneId", required=true)
-    private final Input<String> zoneId;
+      private final Input<String> zoneId;
 
     public Input<String> getZoneId() {
         return this.zoneId;

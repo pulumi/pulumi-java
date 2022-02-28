@@ -4,7 +4,7 @@
 package io.pulumi.aws.accessanalyzer;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analyzerName", required=true)
-    private final Input<String> analyzerName;
+      private final Input<String> analyzerName;
 
     public Input<String> getAnalyzerName() {
         return this.analyzerName;
@@ -31,7 +31,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -42,7 +42,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

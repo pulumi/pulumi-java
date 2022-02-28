@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCustomHeadersConfigItemGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigGetArgs extends io.pu
     public static final ResponseHeadersPolicyCustomHeadersConfigGetArgs Empty = new ResponseHeadersPolicyCustomHeadersConfigGetArgs();
 
     @InputImport(name="items")
-    private final @Nullable Input<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items;
+      private final @Nullable Input<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items;
 
     public Input<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;

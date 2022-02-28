@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,21 +14,21 @@ public final class GetInstanceTypeInferenceAccelerator extends io.pulumi.resourc
     public static final GetInstanceTypeInferenceAccelerator Empty = new GetInstanceTypeInferenceAccelerator();
 
     @InputImport(name="count", required=true)
-    private final Integer count;
+      private final Integer count;
 
     public Integer getCount() {
         return this.count;
     }
 
     @InputImport(name="manufacturer", required=true)
-    private final String manufacturer;
+      private final String manufacturer;
 
     public String getManufacturer() {
         return this.manufacturer;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

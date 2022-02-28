@@ -10,7 +10,7 @@ import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerRuleConditionPathPatt
 import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerRuleConditionQueryStringArgs;
 import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerRuleConditionSourceIpArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hostHeader")
-    private final @Nullable Input<ListenerRuleConditionHostHeaderArgs> hostHeader;
+      private final @Nullable Input<ListenerRuleConditionHostHeaderArgs> hostHeader;
 
     public Input<ListenerRuleConditionHostHeaderArgs> getHostHeader() {
         return this.hostHeader == null ? Input.empty() : this.hostHeader;
@@ -36,7 +36,7 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="httpHeader")
-    private final @Nullable Input<ListenerRuleConditionHttpHeaderArgs> httpHeader;
+      private final @Nullable Input<ListenerRuleConditionHttpHeaderArgs> httpHeader;
 
     public Input<ListenerRuleConditionHttpHeaderArgs> getHttpHeader() {
         return this.httpHeader == null ? Input.empty() : this.httpHeader;
@@ -47,7 +47,7 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="httpRequestMethod")
-    private final @Nullable Input<ListenerRuleConditionHttpRequestMethodArgs> httpRequestMethod;
+      private final @Nullable Input<ListenerRuleConditionHttpRequestMethodArgs> httpRequestMethod;
 
     public Input<ListenerRuleConditionHttpRequestMethodArgs> getHttpRequestMethod() {
         return this.httpRequestMethod == null ? Input.empty() : this.httpRequestMethod;
@@ -58,7 +58,7 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="pathPattern")
-    private final @Nullable Input<ListenerRuleConditionPathPatternArgs> pathPattern;
+      private final @Nullable Input<ListenerRuleConditionPathPatternArgs> pathPattern;
 
     public Input<ListenerRuleConditionPathPatternArgs> getPathPattern() {
         return this.pathPattern == null ? Input.empty() : this.pathPattern;
@@ -69,7 +69,7 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="queryStrings")
-    private final @Nullable Input<List<ListenerRuleConditionQueryStringArgs>> queryStrings;
+      private final @Nullable Input<List<ListenerRuleConditionQueryStringArgs>> queryStrings;
 
     public Input<List<ListenerRuleConditionQueryStringArgs>> getQueryStrings() {
         return this.queryStrings == null ? Input.empty() : this.queryStrings;
@@ -80,7 +80,7 @@ public final class ListenerRuleConditionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourceIp")
-    private final @Nullable Input<ListenerRuleConditionSourceIpArgs> sourceIp;
+      private final @Nullable Input<ListenerRuleConditionSourceIpArgs> sourceIp;
 
     public Input<ListenerRuleConditionSourceIpArgs> getSourceIp() {
         return this.sourceIp == null ? Input.empty() : this.sourceIp;

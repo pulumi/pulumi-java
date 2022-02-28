@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigGetArgs;
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCustomHeadersConfigGetArgs;
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ResponseHeadersPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -33,7 +33,7 @@ public final class ResponseHeadersPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="corsConfig")
-    private final @Nullable Input<ResponseHeadersPolicyCorsConfigGetArgs> corsConfig;
+      private final @Nullable Input<ResponseHeadersPolicyCorsConfigGetArgs> corsConfig;
 
     public Input<ResponseHeadersPolicyCorsConfigGetArgs> getCorsConfig() {
         return this.corsConfig == null ? Input.empty() : this.corsConfig;
@@ -44,7 +44,7 @@ public final class ResponseHeadersPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="customHeadersConfig")
-    private final @Nullable Input<ResponseHeadersPolicyCustomHeadersConfigGetArgs> customHeadersConfig;
+      private final @Nullable Input<ResponseHeadersPolicyCustomHeadersConfigGetArgs> customHeadersConfig;
 
     public Input<ResponseHeadersPolicyCustomHeadersConfigGetArgs> getCustomHeadersConfig() {
         return this.customHeadersConfig == null ? Input.empty() : this.customHeadersConfig;
@@ -55,7 +55,7 @@ public final class ResponseHeadersPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -66,7 +66,7 @@ public final class ResponseHeadersPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class ResponseHeadersPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="securityHeadersConfig")
-    private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigGetArgs> securityHeadersConfig;
+      private final @Nullable Input<ResponseHeadersPolicySecurityHeadersConfigGetArgs> securityHeadersConfig;
 
     public Input<ResponseHeadersPolicySecurityHeadersConfigGetArgs> getSecurityHeadersConfig() {
         return this.securityHeadersConfig == null ? Input.empty() : this.securityHeadersConfig;

@@ -9,7 +9,7 @@ import io.pulumi.aws.elastictranscoder.inputs.PipelineNotificationsGetArgs;
 import io.pulumi.aws.elastictranscoder.inputs.PipelineThumbnailConfigGetArgs;
 import io.pulumi.aws.elastictranscoder.inputs.PipelineThumbnailConfigPermissionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -36,7 +36,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsKmsKeyArn")
-    private final @Nullable Input<String> awsKmsKeyArn;
+      private final @Nullable Input<String> awsKmsKeyArn;
 
     public Input<String> getAwsKmsKeyArn() {
         return this.awsKmsKeyArn == null ? Input.empty() : this.awsKmsKeyArn;
@@ -47,7 +47,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentConfig")
-    private final @Nullable Input<PipelineContentConfigGetArgs> contentConfig;
+      private final @Nullable Input<PipelineContentConfigGetArgs> contentConfig;
 
     public Input<PipelineContentConfigGetArgs> getContentConfig() {
         return this.contentConfig == null ? Input.empty() : this.contentConfig;
@@ -58,7 +58,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentConfigPermissions")
-    private final @Nullable Input<List<PipelineContentConfigPermissionGetArgs>> contentConfigPermissions;
+      private final @Nullable Input<List<PipelineContentConfigPermissionGetArgs>> contentConfigPermissions;
 
     public Input<List<PipelineContentConfigPermissionGetArgs>> getContentConfigPermissions() {
         return this.contentConfigPermissions == null ? Input.empty() : this.contentConfigPermissions;
@@ -69,7 +69,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputBucket")
-    private final @Nullable Input<String> inputBucket;
+      private final @Nullable Input<String> inputBucket;
 
     public Input<String> getInputBucket() {
         return this.inputBucket == null ? Input.empty() : this.inputBucket;
@@ -80,7 +80,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -91,7 +91,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notifications")
-    private final @Nullable Input<PipelineNotificationsGetArgs> notifications;
+      private final @Nullable Input<PipelineNotificationsGetArgs> notifications;
 
     public Input<PipelineNotificationsGetArgs> getNotifications() {
         return this.notifications == null ? Input.empty() : this.notifications;
@@ -102,7 +102,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputBucket")
-    private final @Nullable Input<String> outputBucket;
+      private final @Nullable Input<String> outputBucket;
 
     public Input<String> getOutputBucket() {
         return this.outputBucket == null ? Input.empty() : this.outputBucket;
@@ -113,7 +113,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -124,7 +124,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thumbnailConfig")
-    private final @Nullable Input<PipelineThumbnailConfigGetArgs> thumbnailConfig;
+      private final @Nullable Input<PipelineThumbnailConfigGetArgs> thumbnailConfig;
 
     public Input<PipelineThumbnailConfigGetArgs> getThumbnailConfig() {
         return this.thumbnailConfig == null ? Input.empty() : this.thumbnailConfig;
@@ -135,7 +135,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thumbnailConfigPermissions")
-    private final @Nullable Input<List<PipelineThumbnailConfigPermissionGetArgs>> thumbnailConfigPermissions;
+      private final @Nullable Input<List<PipelineThumbnailConfigPermissionGetArgs>> thumbnailConfigPermissions;
 
     public Input<List<PipelineThumbnailConfigPermissionGetArgs>> getThumbnailConfigPermissions() {
         return this.thumbnailConfigPermissions == null ? Input.empty() : this.thumbnailConfigPermissions;

@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsCertificateGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsValidationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class VirtualNodeSpecListenerTlsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="certificate", required=true)
-    private final Input<VirtualNodeSpecListenerTlsCertificateGetArgs> certificate;
+      private final Input<VirtualNodeSpecListenerTlsCertificateGetArgs> certificate;
 
     public Input<VirtualNodeSpecListenerTlsCertificateGetArgs> getCertificate() {
         return this.certificate;
@@ -32,7 +32,7 @@ public final class VirtualNodeSpecListenerTlsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="mode", required=true)
-    private final Input<String> mode;
+      private final Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode;
@@ -43,7 +43,7 @@ public final class VirtualNodeSpecListenerTlsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="validation")
-    private final @Nullable Input<VirtualNodeSpecListenerTlsValidationGetArgs> validation;
+      private final @Nullable Input<VirtualNodeSpecListenerTlsValidationGetArgs> validation;
 
     public Input<VirtualNodeSpecListenerTlsValidationGetArgs> getValidation() {
         return this.validation == null ? Input.empty() : this.validation;

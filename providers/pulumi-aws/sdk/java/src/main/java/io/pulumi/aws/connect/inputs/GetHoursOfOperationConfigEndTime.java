@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetHoursOfOperationConfigEndTime extends io.pulumi.resources.
      * 
      */
     @InputImport(name="hours", required=true)
-    private final Integer hours;
+      private final Integer hours;
 
     public Integer getHours() {
         return this.hours;
@@ -28,7 +28,7 @@ public final class GetHoursOfOperationConfigEndTime extends io.pulumi.resources.
      * 
      */
     @InputImport(name="minutes", required=true)
-    private final Integer minutes;
+      private final Integer minutes;
 
     public Integer getMinutes() {
         return this.minutes;

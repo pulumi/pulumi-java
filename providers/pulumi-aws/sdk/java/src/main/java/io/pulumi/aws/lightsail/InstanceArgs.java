@@ -4,7 +4,7 @@
 package io.pulumi.aws.lightsail;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone", required=true)
-    private final Input<String> availabilityZone;
+      private final Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone;
@@ -32,7 +32,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blueprintId", required=true)
-    private final Input<String> blueprintId;
+      private final Input<String> blueprintId;
 
     public Input<String> getBlueprintId() {
         return this.blueprintId;
@@ -43,7 +43,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId", required=true)
-    private final Input<String> bundleId;
+      private final Input<String> bundleId;
 
     public Input<String> getBundleId() {
         return this.bundleId;
@@ -55,7 +55,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPairName")
-    private final @Nullable Input<String> keyPairName;
+      private final @Nullable Input<String> keyPairName;
 
     public Input<String> getKeyPairName() {
         return this.keyPairName == null ? Input.empty() : this.keyPairName;
@@ -66,7 +66,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -88,7 +88,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userData")
-    private final @Nullable Input<String> userData;
+      private final @Nullable Input<String> userData;
 
     public Input<String> getUserData() {
         return this.userData == null ? Input.empty() : this.userData;

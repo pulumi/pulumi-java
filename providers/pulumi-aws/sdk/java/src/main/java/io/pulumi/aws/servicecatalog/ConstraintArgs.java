@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceptLanguage")
-    private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Input<String> acceptLanguage;
 
     public Input<String> getAcceptLanguage() {
         return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
@@ -30,7 +30,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Input<String> parameters;
+      private final Input<String> parameters;
 
     public Input<String> getParameters() {
         return this.parameters;
@@ -52,7 +52,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portfolioId", required=true)
-    private final Input<String> portfolioId;
+      private final Input<String> portfolioId;
 
     public Input<String> getPortfolioId() {
         return this.portfolioId;
@@ -63,7 +63,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productId", required=true)
-    private final Input<String> productId;
+      private final Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId;
@@ -74,7 +74,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

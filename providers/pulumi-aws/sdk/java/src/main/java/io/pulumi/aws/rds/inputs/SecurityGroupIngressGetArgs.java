@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cidr")
-    private final @Nullable Input<String> cidr;
+      private final @Nullable Input<String> cidr;
 
     public Input<String> getCidr() {
         return this.cidr == null ? Input.empty() : this.cidr;
@@ -30,7 +30,7 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="securityGroupId")
-    private final @Nullable Input<String> securityGroupId;
+      private final @Nullable Input<String> securityGroupId;
 
     public Input<String> getSecurityGroupId() {
         return this.securityGroupId == null ? Input.empty() : this.securityGroupId;
@@ -41,7 +41,7 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="securityGroupName")
-    private final @Nullable Input<String> securityGroupName;
+      private final @Nullable Input<String> securityGroupName;
 
     public Input<String> getSecurityGroupName() {
         return this.securityGroupName == null ? Input.empty() : this.securityGroupName;
@@ -53,7 +53,7 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="securityGroupOwnerId")
-    private final @Nullable Input<String> securityGroupOwnerId;
+      private final @Nullable Input<String> securityGroupOwnerId;
 
     public Input<String> getSecurityGroupOwnerId() {
         return this.securityGroupOwnerId == null ? Input.empty() : this.securityGroupOwnerId;

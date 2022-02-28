@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RuleSourceSourceDetailArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="eventSource")
-    private final @Nullable Input<String> eventSource;
+      private final @Nullable Input<String> eventSource;
 
     public Input<String> getEventSource() {
         return this.eventSource == null ? Input.empty() : this.eventSource;
@@ -30,7 +30,7 @@ public final class RuleSourceSourceDetailArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maximumExecutionFrequency")
-    private final @Nullable Input<String> maximumExecutionFrequency;
+      private final @Nullable Input<String> maximumExecutionFrequency;
 
     public Input<String> getMaximumExecutionFrequency() {
         return this.maximumExecutionFrequency == null ? Input.empty() : this.maximumExecutionFrequency;
@@ -41,7 +41,7 @@ public final class RuleSourceSourceDetailArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="messageType")
-    private final @Nullable Input<String> messageType;
+      private final @Nullable Input<String> messageType;
 
     public Input<String> getMessageType() {
         return this.messageType == null ? Input.empty() : this.messageType;

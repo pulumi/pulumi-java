@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ServiceDeploymentCircuitBreakerGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="enable", required=true)
-    private final Input<Boolean> enable;
+      private final Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable;
@@ -29,7 +29,7 @@ public final class ServiceDeploymentCircuitBreakerGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="rollback", required=true)
-    private final Input<Boolean> rollback;
+      private final Input<Boolean> rollback;
 
     public Input<Boolean> getRollback() {
         return this.rollback;

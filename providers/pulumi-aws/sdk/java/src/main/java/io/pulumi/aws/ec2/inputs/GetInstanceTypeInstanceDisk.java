@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,21 +14,21 @@ public final class GetInstanceTypeInstanceDisk extends io.pulumi.resources.Invok
     public static final GetInstanceTypeInstanceDisk Empty = new GetInstanceTypeInstanceDisk();
 
     @InputImport(name="count", required=true)
-    private final Integer count;
+      private final Integer count;
 
     public Integer getCount() {
         return this.count;
     }
 
     @InputImport(name="size", required=true)
-    private final Integer size;
+      private final Integer size;
 
     public Integer getSize() {
         return this.size;
     }
 
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;

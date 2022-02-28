@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InstanceEphemeralBlockDeviceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -31,7 +31,7 @@ public final class InstanceEphemeralBlockDeviceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="noDevice")
-    private final @Nullable Input<Boolean> noDevice;
+      private final @Nullable Input<Boolean> noDevice;
 
     public Input<Boolean> getNoDevice() {
         return this.noDevice == null ? Input.empty() : this.noDevice;
@@ -42,7 +42,7 @@ public final class InstanceEphemeralBlockDeviceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="virtualName")
-    private final @Nullable Input<String> virtualName;
+      private final @Nullable Input<String> virtualName;
 
     public Input<String> getVirtualName() {
         return this.virtualName == null ? Input.empty() : this.virtualName;

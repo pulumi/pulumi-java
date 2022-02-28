@@ -4,7 +4,7 @@
 package io.pulumi.aws.directoryservice;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="directoryId", required=true)
-    private final Input<String> directoryId;
+      private final Input<String> directoryId;
 
     public Input<String> getDirectoryId() {
         return this.directoryId;
@@ -30,7 +30,7 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dnsIps", required=true)
-    private final Input<List<String>> dnsIps;
+      private final Input<List<String>> dnsIps;
 
     public Input<List<String>> getDnsIps() {
         return this.dnsIps;
@@ -41,7 +41,7 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="remoteDomainName", required=true)
-    private final Input<String> remoteDomainName;
+      private final Input<String> remoteDomainName;
 
     public Input<String> getRemoteDomainName() {
         return this.remoteDomainName;

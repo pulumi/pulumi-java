@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
      * 
      */
     @InputImport(name="recordColumnDelimiter", required=true)
-    private final Input<String> recordColumnDelimiter;
+      private final Input<String> recordColumnDelimiter;
 
     public Input<String> getRecordColumnDelimiter() {
         return this.recordColumnDelimiter;
@@ -29,7 +29,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
      * 
      */
     @InputImport(name="recordRowDelimiter", required=true)
-    private final Input<String> recordRowDelimiter;
+      private final Input<String> recordRowDelimiter;
 
     public Input<String> getRecordRowDelimiter() {
         return this.recordRowDelimiter;

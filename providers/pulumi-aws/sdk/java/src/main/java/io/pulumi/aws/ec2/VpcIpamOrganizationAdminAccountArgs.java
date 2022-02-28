@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class VpcIpamOrganizationAdminAccountArgs extends io.pulumi.resourc
     public static final VpcIpamOrganizationAdminAccountArgs Empty = new VpcIpamOrganizationAdminAccountArgs();
 
     @InputImport(name="delegatedAdminAccountId", required=true)
-    private final Input<String> delegatedAdminAccountId;
+      private final Input<String> delegatedAdminAccountId;
 
     public Input<String> getDelegatedAdminAccountId() {
         return this.delegatedAdminAccountId;

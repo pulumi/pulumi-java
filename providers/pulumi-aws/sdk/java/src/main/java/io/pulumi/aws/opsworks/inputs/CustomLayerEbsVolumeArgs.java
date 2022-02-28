@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class CustomLayerEbsVolumeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="encrypted")
-    private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Input<Boolean> encrypted;
 
     public Input<Boolean> getEncrypted() {
         return this.encrypted == null ? Input.empty() : this.encrypted;
@@ -32,7 +32,7 @@ public final class CustomLayerEbsVolumeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="iops")
-    private final @Nullable Input<Integer> iops;
+      private final @Nullable Input<Integer> iops;
 
     public Input<Integer> getIops() {
         return this.iops == null ? Input.empty() : this.iops;
@@ -43,7 +43,7 @@ public final class CustomLayerEbsVolumeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="mountPoint", required=true)
-    private final Input<String> mountPoint;
+      private final Input<String> mountPoint;
 
     public Input<String> getMountPoint() {
         return this.mountPoint;
@@ -54,7 +54,7 @@ public final class CustomLayerEbsVolumeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="numberOfDisks", required=true)
-    private final Input<Integer> numberOfDisks;
+      private final Input<Integer> numberOfDisks;
 
     public Input<Integer> getNumberOfDisks() {
         return this.numberOfDisks;
@@ -65,7 +65,7 @@ public final class CustomLayerEbsVolumeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="raidLevel")
-    private final @Nullable Input<String> raidLevel;
+      private final @Nullable Input<String> raidLevel;
 
     public Input<String> getRaidLevel() {
         return this.raidLevel == null ? Input.empty() : this.raidLevel;
@@ -76,7 +76,7 @@ public final class CustomLayerEbsVolumeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="size", required=true)
-    private final Input<Integer> size;
+      private final Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size;
@@ -87,7 +87,7 @@ public final class CustomLayerEbsVolumeArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

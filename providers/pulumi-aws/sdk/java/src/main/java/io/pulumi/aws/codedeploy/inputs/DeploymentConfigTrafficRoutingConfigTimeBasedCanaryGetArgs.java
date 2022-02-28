@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs ex
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<Integer> interval;
+      private final @Nullable Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -30,7 +30,7 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedCanaryGetArgs ex
      * 
      */
     @InputImport(name="percentage")
-    private final @Nullable Input<Integer> percentage;
+      private final @Nullable Input<Integer> percentage;
 
     public Input<Integer> getPercentage() {
         return this.percentage == null ? Input.empty() : this.percentage;

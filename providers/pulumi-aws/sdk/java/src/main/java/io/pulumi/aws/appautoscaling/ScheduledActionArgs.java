@@ -5,7 +5,7 @@ package io.pulumi.aws.appautoscaling;
 
 import io.pulumi.aws.appautoscaling.inputs.ScheduledActionScalableTargetActionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -31,7 +31,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -53,7 +53,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scalableDimension", required=true)
-    private final Input<String> scalableDimension;
+      private final Input<String> scalableDimension;
 
     public Input<String> getScalableDimension() {
         return this.scalableDimension;
@@ -64,7 +64,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scalableTargetAction", required=true)
-    private final Input<ScheduledActionScalableTargetActionArgs> scalableTargetAction;
+      private final Input<ScheduledActionScalableTargetActionArgs> scalableTargetAction;
 
     public Input<ScheduledActionScalableTargetActionArgs> getScalableTargetAction() {
         return this.scalableTargetAction;
@@ -75,7 +75,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final Input<String> schedule;
+      private final Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule;
@@ -86,7 +86,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceNamespace", required=true)
-    private final Input<String> serviceNamespace;
+      private final Input<String> serviceNamespace;
 
     public Input<String> getServiceNamespace() {
         return this.serviceNamespace;
@@ -97,7 +97,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -108,7 +108,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timezone")
-    private final @Nullable Input<String> timezone;
+      private final @Nullable Input<String> timezone;
 
     public Input<String> getTimezone() {
         return this.timezone == null ? Input.empty() : this.timezone;

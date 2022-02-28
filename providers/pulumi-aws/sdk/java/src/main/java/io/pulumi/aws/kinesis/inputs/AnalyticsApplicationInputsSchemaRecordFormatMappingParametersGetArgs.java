@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      * 
      */
     @InputImport(name="csv")
-    private final @Nullable Input<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs> csv;
+      private final @Nullable Input<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs> csv;
 
     public Input<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvGetArgs> getCsv() {
         return this.csv == null ? Input.empty() : this.csv;
@@ -33,7 +33,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      * 
      */
     @InputImport(name="json")
-    private final @Nullable Input<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs> json;
+      private final @Nullable Input<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs> json;
 
     public Input<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs> getJson() {
         return this.json == null ? Input.empty() : this.json;

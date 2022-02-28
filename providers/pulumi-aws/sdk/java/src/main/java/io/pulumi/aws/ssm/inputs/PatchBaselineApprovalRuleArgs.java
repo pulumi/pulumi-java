@@ -5,7 +5,7 @@ package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.aws.ssm.inputs.PatchBaselineApprovalRulePatchFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class PatchBaselineApprovalRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="approveAfterDays")
-    private final @Nullable Input<Integer> approveAfterDays;
+      private final @Nullable Input<Integer> approveAfterDays;
 
     public Input<Integer> getApproveAfterDays() {
         return this.approveAfterDays == null ? Input.empty() : this.approveAfterDays;
@@ -34,7 +34,7 @@ public final class PatchBaselineApprovalRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="approveUntilDate")
-    private final @Nullable Input<String> approveUntilDate;
+      private final @Nullable Input<String> approveUntilDate;
 
     public Input<String> getApproveUntilDate() {
         return this.approveUntilDate == null ? Input.empty() : this.approveUntilDate;
@@ -45,7 +45,7 @@ public final class PatchBaselineApprovalRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="complianceLevel")
-    private final @Nullable Input<String> complianceLevel;
+      private final @Nullable Input<String> complianceLevel;
 
     public Input<String> getComplianceLevel() {
         return this.complianceLevel == null ? Input.empty() : this.complianceLevel;
@@ -56,7 +56,7 @@ public final class PatchBaselineApprovalRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enableNonSecurity")
-    private final @Nullable Input<Boolean> enableNonSecurity;
+      private final @Nullable Input<Boolean> enableNonSecurity;
 
     public Input<Boolean> getEnableNonSecurity() {
         return this.enableNonSecurity == null ? Input.empty() : this.enableNonSecurity;
@@ -67,7 +67,7 @@ public final class PatchBaselineApprovalRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="patchFilters", required=true)
-    private final Input<List<PatchBaselineApprovalRulePatchFilterArgs>> patchFilters;
+      private final Input<List<PatchBaselineApprovalRulePatchFilterArgs>> patchFilters;
 
     public Input<List<PatchBaselineApprovalRulePatchFilterArgs>> getPatchFilters() {
         return this.patchFilters;

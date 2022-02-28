@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class StudioSessionMappingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="identityId")
-    private final @Nullable Input<String> identityId;
+      private final @Nullable Input<String> identityId;
 
     public Input<String> getIdentityId() {
         return this.identityId == null ? Input.empty() : this.identityId;
@@ -30,7 +30,7 @@ public final class StudioSessionMappingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="identityName")
-    private final @Nullable Input<String> identityName;
+      private final @Nullable Input<String> identityName;
 
     public Input<String> getIdentityName() {
         return this.identityName == null ? Input.empty() : this.identityName;
@@ -41,7 +41,7 @@ public final class StudioSessionMappingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="identityType")
-    private final @Nullable Input<String> identityType;
+      private final @Nullable Input<String> identityType;
 
     public Input<String> getIdentityType() {
         return this.identityType == null ? Input.empty() : this.identityType;
@@ -52,7 +52,7 @@ public final class StudioSessionMappingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sessionPolicyArn")
-    private final @Nullable Input<String> sessionPolicyArn;
+      private final @Nullable Input<String> sessionPolicyArn;
 
     public Input<String> getSessionPolicyArn() {
         return this.sessionPolicyArn == null ? Input.empty() : this.sessionPolicyArn;
@@ -63,7 +63,7 @@ public final class StudioSessionMappingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="studioId")
-    private final @Nullable Input<String> studioId;
+      private final @Nullable Input<String> studioId;
 
     public Input<String> getStudioId() {
         return this.studioId == null ? Input.empty() : this.studioId;

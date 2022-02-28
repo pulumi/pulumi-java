@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
      * 
      */
     @InputImport(name="modeBlock", required=true)
-    private final Boolean modeBlock;
+      private final Boolean modeBlock;
 
     public Boolean getModeBlock() {
         return this.modeBlock;
@@ -29,7 +29,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
      * 
      */
     @InputImport(name="override", required=true)
-    private final Boolean override;
+      private final Boolean override;
 
     public Boolean getOverride() {
         return this.override;
@@ -40,7 +40,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
      * 
      */
     @InputImport(name="protection", required=true)
-    private final Boolean protection;
+      private final Boolean protection;
 
     public Boolean getProtection() {
         return this.protection;
@@ -51,7 +51,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
      * 
      */
     @InputImport(name="reportUri", required=true)
-    private final String reportUri;
+      private final String reportUri;
 
     public String getReportUri() {
         return this.reportUri;

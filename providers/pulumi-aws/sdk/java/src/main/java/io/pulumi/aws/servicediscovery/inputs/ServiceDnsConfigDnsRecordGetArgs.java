@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicediscovery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceDnsConfigDnsRecordGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ttl", required=true)
-    private final Input<Integer> ttl;
+      private final Input<Integer> ttl;
 
     public Input<Integer> getTtl() {
         return this.ttl;
@@ -30,7 +30,7 @@ public final class ServiceDnsConfigDnsRecordGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

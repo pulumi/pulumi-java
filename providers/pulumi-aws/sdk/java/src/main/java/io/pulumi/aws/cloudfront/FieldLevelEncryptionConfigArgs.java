@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudfront;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigArgs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -32,7 +32,7 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="contentTypeProfileConfig", required=true)
-    private final Input<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig;
+      private final Input<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig;
 
     public Input<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> getContentTypeProfileConfig() {
         return this.contentTypeProfileConfig;
@@ -43,7 +43,7 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="queryArgProfileConfig", required=true)
-    private final Input<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig;
+      private final Input<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig;
 
     public Input<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> getQueryArgProfileConfig() {
         return this.queryArgProfileConfig;

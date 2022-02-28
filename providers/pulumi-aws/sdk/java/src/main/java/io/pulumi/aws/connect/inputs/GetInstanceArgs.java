@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceAlias")
-    private final @Nullable String instanceAlias;
+      private final @Nullable String instanceAlias;
 
     public Optional<String> getInstanceAlias() {
         return this.instanceAlias == null ? Optional.empty() : Optional.ofNullable(this.instanceAlias);
@@ -30,7 +30,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable String instanceId;
+      private final @Nullable String instanceId;
 
     public Optional<String> getInstanceId() {
         return this.instanceId == null ? Optional.empty() : Optional.ofNullable(this.instanceId);

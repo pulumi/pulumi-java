@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="backupVaultName", required=true)
-    private final Input<String> backupVaultName;
+      private final Input<String> backupVaultName;
 
     public Input<String> getBackupVaultName() {
         return this.backupVaultName;
@@ -31,7 +31,7 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="changeableForDays")
-    private final @Nullable Input<Integer> changeableForDays;
+      private final @Nullable Input<Integer> changeableForDays;
 
     public Input<Integer> getChangeableForDays() {
         return this.changeableForDays == null ? Input.empty() : this.changeableForDays;
@@ -42,7 +42,7 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="maxRetentionDays")
-    private final @Nullable Input<Integer> maxRetentionDays;
+      private final @Nullable Input<Integer> maxRetentionDays;
 
     public Input<Integer> getMaxRetentionDays() {
         return this.maxRetentionDays == null ? Input.empty() : this.maxRetentionDays;
@@ -53,7 +53,7 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="minRetentionDays")
-    private final @Nullable Input<Integer> minRetentionDays;
+      private final @Nullable Input<Integer> minRetentionDays;
 
     public Input<Integer> getMinRetentionDays() {
         return this.minRetentionDays == null ? Input.empty() : this.minRetentionDays;

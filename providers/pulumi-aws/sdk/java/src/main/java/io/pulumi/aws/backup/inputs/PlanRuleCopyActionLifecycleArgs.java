@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PlanRuleCopyActionLifecycleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="coldStorageAfter")
-    private final @Nullable Input<Integer> coldStorageAfter;
+      private final @Nullable Input<Integer> coldStorageAfter;
 
     public Input<Integer> getColdStorageAfter() {
         return this.coldStorageAfter == null ? Input.empty() : this.coldStorageAfter;
@@ -30,7 +30,7 @@ public final class PlanRuleCopyActionLifecycleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deleteAfter")
-    private final @Nullable Input<Integer> deleteAfter;
+      private final @Nullable Input<Integer> deleteAfter;
 
     public Input<Integer> getDeleteAfter() {
         return this.deleteAfter == null ? Input.empty() : this.deleteAfter;

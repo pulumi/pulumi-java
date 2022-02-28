@@ -4,7 +4,7 @@
 package io.pulumi.aws.globalaccelerator.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class EndpointGroupEndpointConfigurationGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="clientIpPreservationEnabled")
-    private final @Nullable Input<Boolean> clientIpPreservationEnabled;
+      private final @Nullable Input<Boolean> clientIpPreservationEnabled;
 
     public Input<Boolean> getClientIpPreservationEnabled() {
         return this.clientIpPreservationEnabled == null ? Input.empty() : this.clientIpPreservationEnabled;
@@ -33,7 +33,7 @@ public final class EndpointGroupEndpointConfigurationGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="endpointId")
-    private final @Nullable Input<String> endpointId;
+      private final @Nullable Input<String> endpointId;
 
     public Input<String> getEndpointId() {
         return this.endpointId == null ? Input.empty() : this.endpointId;
@@ -44,7 +44,7 @@ public final class EndpointGroupEndpointConfigurationGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+      private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;

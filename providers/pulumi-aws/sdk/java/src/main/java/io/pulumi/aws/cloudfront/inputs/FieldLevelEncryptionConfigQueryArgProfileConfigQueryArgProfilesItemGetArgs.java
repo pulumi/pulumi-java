@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
      * 
      */
     @InputImport(name="profileId", required=true)
-    private final Input<String> profileId;
+      private final Input<String> profileId;
 
     public Input<String> getProfileId() {
         return this.profileId;
@@ -29,7 +29,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
      * 
      */
     @InputImport(name="queryArg", required=true)
-    private final Input<String> queryArg;
+      private final Input<String> queryArg;
 
     public Input<String> getQueryArg() {
         return this.queryArg;

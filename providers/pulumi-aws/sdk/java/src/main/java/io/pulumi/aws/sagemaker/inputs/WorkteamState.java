@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionGetArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkteamNotificationConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memberDefinitions")
-    private final @Nullable Input<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions;
+      private final @Nullable Input<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions;
 
     public Input<List<WorkteamMemberDefinitionGetArgs>> getMemberDefinitions() {
         return this.memberDefinitions == null ? Input.empty() : this.memberDefinitions;
@@ -56,7 +56,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfiguration")
-    private final @Nullable Input<WorkteamNotificationConfigurationGetArgs> notificationConfiguration;
+      private final @Nullable Input<WorkteamNotificationConfigurationGetArgs> notificationConfiguration;
 
     public Input<WorkteamNotificationConfigurationGetArgs> getNotificationConfiguration() {
         return this.notificationConfiguration == null ? Input.empty() : this.notificationConfiguration;
@@ -67,7 +67,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdomain")
-    private final @Nullable Input<String> subdomain;
+      private final @Nullable Input<String> subdomain;
 
     public Input<String> getSubdomain() {
         return this.subdomain == null ? Input.empty() : this.subdomain;
@@ -78,7 +78,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -89,7 +89,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -100,7 +100,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workforceName")
-    private final @Nullable Input<String> workforceName;
+      private final @Nullable Input<String> workforceName;
 
     public Input<String> getWorkforceName() {
         return this.workforceName == null ? Input.empty() : this.workforceName;
@@ -111,7 +111,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workteamName")
-    private final @Nullable Input<String> workteamName;
+      private final @Nullable Input<String> workteamName;
 
     public Input<String> getWorkteamName() {
         return this.workteamName == null ? Input.empty() : this.workteamName;

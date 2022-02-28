@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementG
      * 
      */
     @InputImport(name="fallbackBehavior", required=true)
-    private final Input<String> fallbackBehavior;
+      private final Input<String> fallbackBehavior;
 
     public Input<String> getFallbackBehavior() {
         return this.fallbackBehavior;
@@ -29,7 +29,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementG
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final Input<String> headerName;
+      private final Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName;

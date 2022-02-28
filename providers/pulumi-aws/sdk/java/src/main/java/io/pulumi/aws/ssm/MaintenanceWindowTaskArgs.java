@@ -6,7 +6,7 @@ package io.pulumi.aws.ssm;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTargetArgs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxConcurrency", required=true)
-    private final Input<String> maxConcurrency;
+      private final Input<String> maxConcurrency;
 
     public Input<String> getMaxConcurrency() {
         return this.maxConcurrency;
@@ -45,7 +45,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxErrors", required=true)
-    private final Input<String> maxErrors;
+      private final Input<String> maxErrors;
 
     public Input<String> getMaxErrors() {
         return this.maxErrors;
@@ -56,7 +56,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -78,7 +78,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serviceRoleArn")
-    private final @Nullable Input<String> serviceRoleArn;
+      private final @Nullable Input<String> serviceRoleArn;
 
     public Input<String> getServiceRoleArn() {
         return this.serviceRoleArn == null ? Input.empty() : this.serviceRoleArn;
@@ -89,7 +89,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targets")
-    private final @Nullable Input<List<MaintenanceWindowTaskTargetArgs>> targets;
+      private final @Nullable Input<List<MaintenanceWindowTaskTargetArgs>> targets;
 
     public Input<List<MaintenanceWindowTaskTargetArgs>> getTargets() {
         return this.targets == null ? Input.empty() : this.targets;
@@ -100,7 +100,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="taskArn", required=true)
-    private final Input<String> taskArn;
+      private final Input<String> taskArn;
 
     public Input<String> getTaskArn() {
         return this.taskArn;
@@ -111,7 +111,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="taskInvocationParameters")
-    private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters;
+      private final @Nullable Input<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters;
 
     public Input<MaintenanceWindowTaskTaskInvocationParametersArgs> getTaskInvocationParameters() {
         return this.taskInvocationParameters == null ? Input.empty() : this.taskInvocationParameters;
@@ -122,7 +122,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="taskType", required=true)
-    private final Input<String> taskType;
+      private final Input<String> taskType;
 
     public Input<String> getTaskType() {
         return this.taskType;
@@ -133,7 +133,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="windowId", required=true)
-    private final Input<String> windowId;
+      private final Input<String> windowId;
 
     public Input<String> getWindowId() {
         return this.windowId;

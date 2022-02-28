@@ -6,7 +6,7 @@ package io.pulumi.aws.servicequotas;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicequotas.inputs.GetServiceArgs;
 import io.pulumi.aws.servicequotas.outputs.GetServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

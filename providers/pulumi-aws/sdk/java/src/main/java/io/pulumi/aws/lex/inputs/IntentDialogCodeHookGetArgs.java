@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class IntentDialogCodeHookGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageVersion", required=true)
-    private final Input<String> messageVersion;
+      private final Input<String> messageVersion;
 
     public Input<String> getMessageVersion() {
         return this.messageVersion;
@@ -31,7 +31,7 @@ public final class IntentDialogCodeHookGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;

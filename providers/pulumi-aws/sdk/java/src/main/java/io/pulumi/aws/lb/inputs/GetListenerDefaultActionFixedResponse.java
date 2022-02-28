@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class GetListenerDefaultActionFixedResponse extends io.pulumi.resou
     public static final GetListenerDefaultActionFixedResponse Empty = new GetListenerDefaultActionFixedResponse();
 
     @InputImport(name="contentType", required=true)
-    private final String contentType;
+      private final String contentType;
 
     public String getContentType() {
         return this.contentType;
     }
 
     @InputImport(name="messageBody", required=true)
-    private final String messageBody;
+      private final String messageBody;
 
     public String getMessageBody() {
         return this.messageBody;
     }
 
     @InputImport(name="statusCode", required=true)
-    private final String statusCode;
+      private final String statusCode;
 
     public String getStatusCode() {
         return this.statusCode;

@@ -5,7 +5,7 @@ package io.pulumi.aws.storagegateway;
 
 import io.pulumi.aws.storagegateway.inputs.GatewaySmbActiveDirectorySettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activationKey")
-    private final @Nullable Input<String> activationKey;
+      private final @Nullable Input<String> activationKey;
 
     public Input<String> getActivationKey() {
         return this.activationKey == null ? Input.empty() : this.activationKey;
@@ -34,7 +34,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="averageDownloadRateLimitInBitsPerSec")
-    private final @Nullable Input<Integer> averageDownloadRateLimitInBitsPerSec;
+      private final @Nullable Input<Integer> averageDownloadRateLimitInBitsPerSec;
 
     public Input<Integer> getAverageDownloadRateLimitInBitsPerSec() {
         return this.averageDownloadRateLimitInBitsPerSec == null ? Input.empty() : this.averageDownloadRateLimitInBitsPerSec;
@@ -45,7 +45,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="averageUploadRateLimitInBitsPerSec")
-    private final @Nullable Input<Integer> averageUploadRateLimitInBitsPerSec;
+      private final @Nullable Input<Integer> averageUploadRateLimitInBitsPerSec;
 
     public Input<Integer> getAverageUploadRateLimitInBitsPerSec() {
         return this.averageUploadRateLimitInBitsPerSec == null ? Input.empty() : this.averageUploadRateLimitInBitsPerSec;
@@ -56,7 +56,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchLogGroupArn")
-    private final @Nullable Input<String> cloudwatchLogGroupArn;
+      private final @Nullable Input<String> cloudwatchLogGroupArn;
 
     public Input<String> getCloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn == null ? Input.empty() : this.cloudwatchLogGroupArn;
@@ -67,7 +67,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayIpAddress")
-    private final @Nullable Input<String> gatewayIpAddress;
+      private final @Nullable Input<String> gatewayIpAddress;
 
     public Input<String> getGatewayIpAddress() {
         return this.gatewayIpAddress == null ? Input.empty() : this.gatewayIpAddress;
@@ -78,7 +78,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayName", required=true)
-    private final Input<String> gatewayName;
+      private final Input<String> gatewayName;
 
     public Input<String> getGatewayName() {
         return this.gatewayName;
@@ -89,7 +89,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayTimezone", required=true)
-    private final Input<String> gatewayTimezone;
+      private final Input<String> gatewayTimezone;
 
     public Input<String> getGatewayTimezone() {
         return this.gatewayTimezone;
@@ -100,7 +100,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayType")
-    private final @Nullable Input<String> gatewayType;
+      private final @Nullable Input<String> gatewayType;
 
     public Input<String> getGatewayType() {
         return this.gatewayType == null ? Input.empty() : this.gatewayType;
@@ -111,7 +111,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayVpcEndpoint")
-    private final @Nullable Input<String> gatewayVpcEndpoint;
+      private final @Nullable Input<String> gatewayVpcEndpoint;
 
     public Input<String> getGatewayVpcEndpoint() {
         return this.gatewayVpcEndpoint == null ? Input.empty() : this.gatewayVpcEndpoint;
@@ -122,7 +122,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mediumChangerType")
-    private final @Nullable Input<String> mediumChangerType;
+      private final @Nullable Input<String> mediumChangerType;
 
     public Input<String> getMediumChangerType() {
         return this.mediumChangerType == null ? Input.empty() : this.mediumChangerType;
@@ -133,7 +133,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smbActiveDirectorySettings")
-    private final @Nullable Input<GatewaySmbActiveDirectorySettingsArgs> smbActiveDirectorySettings;
+      private final @Nullable Input<GatewaySmbActiveDirectorySettingsArgs> smbActiveDirectorySettings;
 
     public Input<GatewaySmbActiveDirectorySettingsArgs> getSmbActiveDirectorySettings() {
         return this.smbActiveDirectorySettings == null ? Input.empty() : this.smbActiveDirectorySettings;
@@ -144,7 +144,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smbFileShareVisibility")
-    private final @Nullable Input<Boolean> smbFileShareVisibility;
+      private final @Nullable Input<Boolean> smbFileShareVisibility;
 
     public Input<Boolean> getSmbFileShareVisibility() {
         return this.smbFileShareVisibility == null ? Input.empty() : this.smbFileShareVisibility;
@@ -155,7 +155,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smbGuestPassword")
-    private final @Nullable Input<String> smbGuestPassword;
+      private final @Nullable Input<String> smbGuestPassword;
 
     public Input<String> getSmbGuestPassword() {
         return this.smbGuestPassword == null ? Input.empty() : this.smbGuestPassword;
@@ -166,7 +166,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smbSecurityStrategy")
-    private final @Nullable Input<String> smbSecurityStrategy;
+      private final @Nullable Input<String> smbSecurityStrategy;
 
     public Input<String> getSmbSecurityStrategy() {
         return this.smbSecurityStrategy == null ? Input.empty() : this.smbSecurityStrategy;
@@ -177,7 +177,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -188,7 +188,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tapeDriveType")
-    private final @Nullable Input<String> tapeDriveType;
+      private final @Nullable Input<String> tapeDriveType;
 
     public Input<String> getTapeDriveType() {
         return this.tapeDriveType == null ? Input.empty() : this.tapeDriveType;

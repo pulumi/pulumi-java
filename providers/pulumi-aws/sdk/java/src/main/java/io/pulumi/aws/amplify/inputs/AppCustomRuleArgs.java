@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<String> condition;
+      private final @Nullable Input<String> condition;
 
     public Input<String> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -30,7 +30,7 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<String> source;
+      private final Input<String> source;
 
     public Input<String> getSource() {
         return this.source;
@@ -41,7 +41,7 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -52,7 +52,7 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target", required=true)
-    private final Input<String> target;
+      private final Input<String> target;
 
     public Input<String> getTarget() {
         return this.target;

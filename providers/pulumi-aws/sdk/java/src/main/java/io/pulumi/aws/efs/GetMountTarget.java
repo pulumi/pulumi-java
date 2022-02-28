@@ -6,7 +6,7 @@ package io.pulumi.aws.efs;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.efs.inputs.GetMountTargetArgs;
 import io.pulumi.aws.efs.outputs.GetMountTargetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

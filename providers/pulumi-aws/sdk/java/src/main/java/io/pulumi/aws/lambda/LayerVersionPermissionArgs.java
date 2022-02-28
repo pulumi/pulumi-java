@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<String> action;
+      private final Input<String> action;
 
     public Input<String> getAction() {
         return this.action;
@@ -31,7 +31,7 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="layerName", required=true)
-    private final Input<String> layerName;
+      private final Input<String> layerName;
 
     public Input<String> getLayerName() {
         return this.layerName;
@@ -42,7 +42,7 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="organizationId")
-    private final @Nullable Input<String> organizationId;
+      private final @Nullable Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId == null ? Input.empty() : this.organizationId;
@@ -53,7 +53,7 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="principal", required=true)
-    private final Input<String> principal;
+      private final Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal;
@@ -64,7 +64,7 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="statementId", required=true)
-    private final Input<String> statementId;
+      private final Input<String> statementId;
 
     public Input<String> getStatementId() {
         return this.statementId;
@@ -75,7 +75,7 @@ public final class LayerVersionPermissionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="versionNumber", required=true)
-    private final Input<Integer> versionNumber;
+      private final Input<Integer> versionNumber;
 
     public Input<Integer> getVersionNumber() {
         return this.versionNumber;

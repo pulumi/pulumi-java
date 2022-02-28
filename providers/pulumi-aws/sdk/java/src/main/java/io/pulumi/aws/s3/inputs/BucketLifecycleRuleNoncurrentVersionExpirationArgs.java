@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BucketLifecycleRuleNoncurrentVersionExpirationArgs extends io
      * 
      */
     @InputImport(name="days")
-    private final @Nullable Input<Integer> days;
+      private final @Nullable Input<Integer> days;
 
     public Input<Integer> getDays() {
         return this.days == null ? Input.empty() : this.days;

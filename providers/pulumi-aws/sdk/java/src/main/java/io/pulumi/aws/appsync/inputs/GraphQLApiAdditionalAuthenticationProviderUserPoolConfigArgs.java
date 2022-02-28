@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs 
      * 
      */
     @InputImport(name="appIdClientRegex")
-    private final @Nullable Input<String> appIdClientRegex;
+      private final @Nullable Input<String> appIdClientRegex;
 
     public Input<String> getAppIdClientRegex() {
         return this.appIdClientRegex == null ? Input.empty() : this.appIdClientRegex;
@@ -30,7 +30,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs 
      * 
      */
     @InputImport(name="awsRegion")
-    private final @Nullable Input<String> awsRegion;
+      private final @Nullable Input<String> awsRegion;
 
     public Input<String> getAwsRegion() {
         return this.awsRegion == null ? Input.empty() : this.awsRegion;
@@ -41,7 +41,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs 
      * 
      */
     @InputImport(name="userPoolId", required=true)
-    private final Input<String> userPoolId;
+      private final Input<String> userPoolId;
 
     public Input<String> getUserPoolId() {
         return this.userPoolId;

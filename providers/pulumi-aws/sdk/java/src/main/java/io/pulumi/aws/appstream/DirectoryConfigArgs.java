@@ -5,7 +5,7 @@ package io.pulumi.aws.appstream;
 
 import io.pulumi.aws.appstream.inputs.DirectoryConfigServiceAccountCredentialsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="directoryName", required=true)
-    private final Input<String> directoryName;
+      private final Input<String> directoryName;
 
     public Input<String> getDirectoryName() {
         return this.directoryName;
@@ -31,7 +31,7 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="organizationalUnitDistinguishedNames", required=true)
-    private final Input<List<String>> organizationalUnitDistinguishedNames;
+      private final Input<List<String>> organizationalUnitDistinguishedNames;
 
     public Input<List<String>> getOrganizationalUnitDistinguishedNames() {
         return this.organizationalUnitDistinguishedNames;
@@ -42,7 +42,7 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceAccountCredentials", required=true)
-    private final Input<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials;
+      private final Input<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials;
 
     public Input<DirectoryConfigServiceAccountCredentialsArgs> getServiceAccountCredentials() {
         return this.serviceAccountCredentials;

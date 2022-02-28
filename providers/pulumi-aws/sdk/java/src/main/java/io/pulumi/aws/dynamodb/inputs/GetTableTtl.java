@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dynamodb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class GetTableTtl extends io.pulumi.resources.InvokeArgs {
     public static final GetTableTtl Empty = new GetTableTtl();
 
     @InputImport(name="attributeName", required=true)
-    private final String attributeName;
+      private final String attributeName;
 
     public String getAttributeName() {
         return this.attributeName;
     }
 
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;

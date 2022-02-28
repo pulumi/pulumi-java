@@ -5,7 +5,7 @@ package io.pulumi.aws.route53recoverycontrol.inputs;
 
 import io.pulumi.aws.route53recoverycontrol.inputs.SafetyRuleRuleConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assertedControls")
-    private final @Nullable Input<List<String>> assertedControls;
+      private final @Nullable Input<List<String>> assertedControls;
 
     public Input<List<String>> getAssertedControls() {
         return this.assertedControls == null ? Input.empty() : this.assertedControls;
@@ -44,7 +44,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="controlPanelArn")
-    private final @Nullable Input<String> controlPanelArn;
+      private final @Nullable Input<String> controlPanelArn;
 
     public Input<String> getControlPanelArn() {
         return this.controlPanelArn == null ? Input.empty() : this.controlPanelArn;
@@ -55,7 +55,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatingControls")
-    private final @Nullable Input<List<String>> gatingControls;
+      private final @Nullable Input<List<String>> gatingControls;
 
     public Input<List<String>> getGatingControls() {
         return this.gatingControls == null ? Input.empty() : this.gatingControls;
@@ -66,7 +66,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleConfig")
-    private final @Nullable Input<SafetyRuleRuleConfigGetArgs> ruleConfig;
+      private final @Nullable Input<SafetyRuleRuleConfigGetArgs> ruleConfig;
 
     public Input<SafetyRuleRuleConfigGetArgs> getRuleConfig() {
         return this.ruleConfig == null ? Input.empty() : this.ruleConfig;
@@ -88,7 +88,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -99,7 +99,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetControls")
-    private final @Nullable Input<List<String>> targetControls;
+      private final @Nullable Input<List<String>> targetControls;
 
     public Input<List<String>> getTargetControls() {
         return this.targetControls == null ? Input.empty() : this.targetControls;
@@ -110,7 +110,7 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitPeriodMs")
-    private final @Nullable Input<Integer> waitPeriodMs;
+      private final @Nullable Input<Integer> waitPeriodMs;
 
     public Input<Integer> getWaitPeriodMs() {
         return this.waitPeriodMs == null ? Input.empty() : this.waitPeriodMs;

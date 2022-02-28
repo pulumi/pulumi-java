@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="awsAccountId")
-    private final @Nullable Input<String> awsAccountId;
+      private final @Nullable Input<String> awsAccountId;
 
     public Input<String> getAwsAccountId() {
         return this.awsAccountId == null ? Input.empty() : this.awsAccountId;
@@ -30,7 +30,7 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="certificateArn")
-    private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
@@ -41,7 +41,7 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="cloudfrontDistributionArn")
-    private final @Nullable Input<String> cloudfrontDistributionArn;
+      private final @Nullable Input<String> cloudfrontDistributionArn;
 
     public Input<String> getCloudfrontDistributionArn() {
         return this.cloudfrontDistributionArn == null ? Input.empty() : this.cloudfrontDistributionArn;
@@ -52,7 +52,7 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -63,7 +63,7 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="s3Bucket")
-    private final @Nullable Input<String> s3Bucket;
+      private final @Nullable Input<String> s3Bucket;
 
     public Input<String> getS3Bucket() {
         return this.s3Bucket == null ? Input.empty() : this.s3Bucket;
@@ -74,7 +74,7 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userPoolId")
-    private final @Nullable Input<String> userPoolId;
+      private final @Nullable Input<String> userPoolId;
 
     public Input<String> getUserPoolId() {
         return this.userPoolId == null ? Input.empty() : this.userPoolId;
@@ -85,7 +85,7 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.codeartifact;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainPermissionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="domain", required=true)
-    private final Input<String> domain;
+      private final Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain;
@@ -30,7 +30,7 @@ public final class DomainPermissionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="domainOwner")
-    private final @Nullable Input<String> domainOwner;
+      private final @Nullable Input<String> domainOwner;
 
     public Input<String> getDomainOwner() {
         return this.domainOwner == null ? Input.empty() : this.domainOwner;
@@ -41,7 +41,7 @@ public final class DomainPermissionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyDocument", required=true)
-    private final Input<String> policyDocument;
+      private final Input<String> policyDocument;
 
     public Input<String> getPolicyDocument() {
         return this.policyDocument;
@@ -52,7 +52,7 @@ public final class DomainPermissionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyRevision")
-    private final @Nullable Input<String> policyRevision;
+      private final @Nullable Input<String> policyRevision;
 
     public Input<String> getPolicyRevision() {
         return this.policyRevision == null ? Input.empty() : this.policyRevision;

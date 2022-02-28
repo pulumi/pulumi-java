@@ -8,8 +8,8 @@ import io.pulumi.aws.storagegateway.StoredIscsiVolumeArgs;
 import io.pulumi.aws.storagegateway.inputs.StoredIscsiVolumeState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -315,6 +315,21 @@ public class StoredIscsiVolume extends io.pulumi.resources.CustomResource {
         return this.volumeType;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public StoredIscsiVolume(String name) {
+        this(name, StoredIscsiVolumeArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public StoredIscsiVolume(String name, StoredIscsiVolumeArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

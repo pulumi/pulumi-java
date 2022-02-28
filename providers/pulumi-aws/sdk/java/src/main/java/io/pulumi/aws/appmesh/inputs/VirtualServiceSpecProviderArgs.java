@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualServiceSpecProviderVirtualNodeArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualServiceSpecProviderVirtualRouterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class VirtualServiceSpecProviderArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="virtualNode")
-    private final @Nullable Input<VirtualServiceSpecProviderVirtualNodeArgs> virtualNode;
+      private final @Nullable Input<VirtualServiceSpecProviderVirtualNodeArgs> virtualNode;
 
     public Input<VirtualServiceSpecProviderVirtualNodeArgs> getVirtualNode() {
         return this.virtualNode == null ? Input.empty() : this.virtualNode;
@@ -31,7 +31,7 @@ public final class VirtualServiceSpecProviderArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="virtualRouter")
-    private final @Nullable Input<VirtualServiceSpecProviderVirtualRouterArgs> virtualRouter;
+      private final @Nullable Input<VirtualServiceSpecProviderVirtualRouterArgs> virtualRouter;
 
     public Input<VirtualServiceSpecProviderVirtualRouterArgs> getVirtualRouter() {
         return this.virtualRouter == null ? Input.empty() : this.virtualRouter;

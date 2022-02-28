@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserPoolSchemaStringAttributeConstraintsGetArgs extends io.pu
      * 
      */
     @InputImport(name="maxLength")
-    private final @Nullable Input<String> maxLength;
+      private final @Nullable Input<String> maxLength;
 
     public Input<String> getMaxLength() {
         return this.maxLength == null ? Input.empty() : this.maxLength;
@@ -30,7 +30,7 @@ public final class UserPoolSchemaStringAttributeConstraintsGetArgs extends io.pu
      * 
      */
     @InputImport(name="minLength")
-    private final @Nullable Input<String> minLength;
+      private final @Nullable Input<String> minLength;
 
     public Input<String> getMinLength() {
         return this.minLength == null ? Input.empty() : this.minLength;

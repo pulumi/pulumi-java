@@ -10,8 +10,8 @@ import io.pulumi.aws.lambda.outputs.CodeSigningConfigAllowedPublishers;
 import io.pulumi.aws.lambda.outputs.CodeSigningConfigPolicies;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -118,6 +118,21 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
         return this.policies;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CodeSigningConfig(String name) {
+        this(name, CodeSigningConfigArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CodeSigningConfig(String name, CodeSigningConfigArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

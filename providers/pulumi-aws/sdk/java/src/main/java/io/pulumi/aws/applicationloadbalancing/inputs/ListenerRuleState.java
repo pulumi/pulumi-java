@@ -6,7 +6,7 @@ package io.pulumi.aws.applicationloadbalancing.inputs;
 import io.pulumi.aws.applicationloadbalancing.inputs.ListenerRuleActionGetArgs;
 import io.pulumi.aws.applicationloadbalancing.inputs.ListenerRuleConditionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable Input<List<ListenerRuleActionGetArgs>> actions;
+      private final @Nullable Input<List<ListenerRuleActionGetArgs>> actions;
 
     public Input<List<ListenerRuleActionGetArgs>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -35,7 +35,7 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -46,7 +46,7 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<ListenerRuleConditionGetArgs>> conditions;
+      private final @Nullable Input<List<ListenerRuleConditionGetArgs>> conditions;
 
     public Input<List<ListenerRuleConditionGetArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -57,7 +57,7 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="listenerArn")
-    private final @Nullable Input<String> listenerArn;
+      private final @Nullable Input<String> listenerArn;
 
     public Input<String> getListenerArn() {
         return this.listenerArn == null ? Input.empty() : this.listenerArn;
@@ -68,7 +68,7 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -79,7 +79,7 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -90,7 +90,7 @@ public final class ListenerRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

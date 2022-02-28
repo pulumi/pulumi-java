@@ -4,7 +4,7 @@
 package io.pulumi.aws.amp.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AlertManagerDefinitionState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="definition")
-    private final @Nullable Input<String> definition;
+      private final @Nullable Input<String> definition;
 
     public Input<String> getDefinition() {
         return this.definition == null ? Input.empty() : this.definition;
@@ -30,7 +30,7 @@ public final class AlertManagerDefinitionState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="workspaceId")
-    private final @Nullable Input<String> workspaceId;
+      private final @Nullable Input<String> workspaceId;
 
     public Input<String> getWorkspaceId() {
         return this.workspaceId == null ? Input.empty() : this.workspaceId;

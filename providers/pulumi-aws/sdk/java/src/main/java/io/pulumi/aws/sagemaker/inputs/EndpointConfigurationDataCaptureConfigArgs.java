@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigCaptureOptionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="captureContentTypeHeader")
-    private final @Nullable Input<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs> captureContentTypeHeader;
+      private final @Nullable Input<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs> captureContentTypeHeader;
 
     public Input<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs> getCaptureContentTypeHeader() {
         return this.captureContentTypeHeader == null ? Input.empty() : this.captureContentTypeHeader;
@@ -35,7 +35,7 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="captureOptions", required=true)
-    private final Input<List<EndpointConfigurationDataCaptureConfigCaptureOptionArgs>> captureOptions;
+      private final Input<List<EndpointConfigurationDataCaptureConfigCaptureOptionArgs>> captureOptions;
 
     public Input<List<EndpointConfigurationDataCaptureConfigCaptureOptionArgs>> getCaptureOptions() {
         return this.captureOptions;
@@ -46,7 +46,7 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="destinationS3Uri", required=true)
-    private final Input<String> destinationS3Uri;
+      private final Input<String> destinationS3Uri;
 
     public Input<String> getDestinationS3Uri() {
         return this.destinationS3Uri;
@@ -57,7 +57,7 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="enableCapture")
-    private final @Nullable Input<Boolean> enableCapture;
+      private final @Nullable Input<Boolean> enableCapture;
 
     public Input<Boolean> getEnableCapture() {
         return this.enableCapture == null ? Input.empty() : this.enableCapture;
@@ -68,7 +68,7 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="initialSamplingPercentage", required=true)
-    private final Input<Integer> initialSamplingPercentage;
+      private final Input<Integer> initialSamplingPercentage;
 
     public Input<Integer> getInitialSamplingPercentage() {
         return this.initialSamplingPercentage;
@@ -79,7 +79,7 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;

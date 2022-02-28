@@ -7,7 +7,7 @@ import io.pulumi.aws.mwaa.inputs.EnvironmentLastUpdatedGetArgs;
 import io.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationGetArgs;
 import io.pulumi.aws.mwaa.inputs.EnvironmentNetworkConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="airflowConfigurationOptions")
-    private final @Nullable Input<Map<String,String>> airflowConfigurationOptions;
+      private final @Nullable Input<Map<String,String>> airflowConfigurationOptions;
 
     public Input<Map<String,String>> getAirflowConfigurationOptions() {
         return this.airflowConfigurationOptions == null ? Input.empty() : this.airflowConfigurationOptions;
@@ -36,7 +36,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="airflowVersion")
-    private final @Nullable Input<String> airflowVersion;
+      private final @Nullable Input<String> airflowVersion;
 
     public Input<String> getAirflowVersion() {
         return this.airflowVersion == null ? Input.empty() : this.airflowVersion;
@@ -47,7 +47,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -59,7 +59,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -70,7 +70,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dagS3Path")
-    private final @Nullable Input<String> dagS3Path;
+      private final @Nullable Input<String> dagS3Path;
 
     public Input<String> getDagS3Path() {
         return this.dagS3Path == null ? Input.empty() : this.dagS3Path;
@@ -81,7 +81,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentClass")
-    private final @Nullable Input<String> environmentClass;
+      private final @Nullable Input<String> environmentClass;
 
     public Input<String> getEnvironmentClass() {
         return this.environmentClass == null ? Input.empty() : this.environmentClass;
@@ -92,7 +92,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionRoleArn")
-    private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
@@ -103,14 +103,14 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKey")
-    private final @Nullable Input<String> kmsKey;
+      private final @Nullable Input<String> kmsKey;
 
     public Input<String> getKmsKey() {
         return this.kmsKey == null ? Input.empty() : this.kmsKey;
     }
 
     @InputImport(name="lastUpdateds")
-    private final @Nullable Input<List<EnvironmentLastUpdatedGetArgs>> lastUpdateds;
+      private final @Nullable Input<List<EnvironmentLastUpdatedGetArgs>> lastUpdateds;
 
     public Input<List<EnvironmentLastUpdatedGetArgs>> getLastUpdateds() {
         return this.lastUpdateds == null ? Input.empty() : this.lastUpdateds;
@@ -121,7 +121,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingConfiguration")
-    private final @Nullable Input<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration;
+      private final @Nullable Input<EnvironmentLoggingConfigurationGetArgs> loggingConfiguration;
 
     public Input<EnvironmentLoggingConfigurationGetArgs> getLoggingConfiguration() {
         return this.loggingConfiguration == null ? Input.empty() : this.loggingConfiguration;
@@ -132,7 +132,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxWorkers")
-    private final @Nullable Input<Integer> maxWorkers;
+      private final @Nullable Input<Integer> maxWorkers;
 
     public Input<Integer> getMaxWorkers() {
         return this.maxWorkers == null ? Input.empty() : this.maxWorkers;
@@ -143,7 +143,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minWorkers")
-    private final @Nullable Input<Integer> minWorkers;
+      private final @Nullable Input<Integer> minWorkers;
 
     public Input<Integer> getMinWorkers() {
         return this.minWorkers == null ? Input.empty() : this.minWorkers;
@@ -154,7 +154,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -165,7 +165,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfiguration")
-    private final @Nullable Input<EnvironmentNetworkConfigurationGetArgs> networkConfiguration;
+      private final @Nullable Input<EnvironmentNetworkConfigurationGetArgs> networkConfiguration;
 
     public Input<EnvironmentNetworkConfigurationGetArgs> getNetworkConfiguration() {
         return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
@@ -176,7 +176,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pluginsS3ObjectVersion")
-    private final @Nullable Input<String> pluginsS3ObjectVersion;
+      private final @Nullable Input<String> pluginsS3ObjectVersion;
 
     public Input<String> getPluginsS3ObjectVersion() {
         return this.pluginsS3ObjectVersion == null ? Input.empty() : this.pluginsS3ObjectVersion;
@@ -187,7 +187,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pluginsS3Path")
-    private final @Nullable Input<String> pluginsS3Path;
+      private final @Nullable Input<String> pluginsS3Path;
 
     public Input<String> getPluginsS3Path() {
         return this.pluginsS3Path == null ? Input.empty() : this.pluginsS3Path;
@@ -198,7 +198,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requirementsS3ObjectVersion")
-    private final @Nullable Input<String> requirementsS3ObjectVersion;
+      private final @Nullable Input<String> requirementsS3ObjectVersion;
 
     public Input<String> getRequirementsS3ObjectVersion() {
         return this.requirementsS3ObjectVersion == null ? Input.empty() : this.requirementsS3ObjectVersion;
@@ -209,7 +209,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requirementsS3Path")
-    private final @Nullable Input<String> requirementsS3Path;
+      private final @Nullable Input<String> requirementsS3Path;
 
     public Input<String> getRequirementsS3Path() {
         return this.requirementsS3Path == null ? Input.empty() : this.requirementsS3Path;
@@ -220,7 +220,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRoleArn")
-    private final @Nullable Input<String> serviceRoleArn;
+      private final @Nullable Input<String> serviceRoleArn;
 
     public Input<String> getServiceRoleArn() {
         return this.serviceRoleArn == null ? Input.empty() : this.serviceRoleArn;
@@ -231,7 +231,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceBucketArn")
-    private final @Nullable Input<String> sourceBucketArn;
+      private final @Nullable Input<String> sourceBucketArn;
 
     public Input<String> getSourceBucketArn() {
         return this.sourceBucketArn == null ? Input.empty() : this.sourceBucketArn;
@@ -242,7 +242,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -253,7 +253,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -264,7 +264,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -275,7 +275,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webserverAccessMode")
-    private final @Nullable Input<String> webserverAccessMode;
+      private final @Nullable Input<String> webserverAccessMode;
 
     public Input<String> getWebserverAccessMode() {
         return this.webserverAccessMode == null ? Input.empty() : this.webserverAccessMode;
@@ -286,7 +286,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webserverUrl")
-    private final @Nullable Input<String> webserverUrl;
+      private final @Nullable Input<String> webserverUrl;
 
     public Input<String> getWebserverUrl() {
         return this.webserverUrl == null ? Input.empty() : this.webserverUrl;
@@ -297,7 +297,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weeklyMaintenanceWindowStart")
-    private final @Nullable Input<String> weeklyMaintenanceWindowStart;
+      private final @Nullable Input<String> weeklyMaintenanceWindowStart;
 
     public Input<String> getWeeklyMaintenanceWindowStart() {
         return this.weeklyMaintenanceWindowStart == null ? Input.empty() : this.weeklyMaintenanceWindowStart;

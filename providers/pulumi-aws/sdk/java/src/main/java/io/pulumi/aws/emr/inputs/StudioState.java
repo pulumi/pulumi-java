@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
     public static final StudioState Empty = new StudioState();
 
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -28,7 +28,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authMode")
-    private final @Nullable Input<String> authMode;
+      private final @Nullable Input<String> authMode;
 
     public Input<String> getAuthMode() {
         return this.authMode == null ? Input.empty() : this.authMode;
@@ -39,7 +39,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultS3Location")
-    private final @Nullable Input<String> defaultS3Location;
+      private final @Nullable Input<String> defaultS3Location;
 
     public Input<String> getDefaultS3Location() {
         return this.defaultS3Location == null ? Input.empty() : this.defaultS3Location;
@@ -50,7 +50,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -61,7 +61,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineSecurityGroupId")
-    private final @Nullable Input<String> engineSecurityGroupId;
+      private final @Nullable Input<String> engineSecurityGroupId;
 
     public Input<String> getEngineSecurityGroupId() {
         return this.engineSecurityGroupId == null ? Input.empty() : this.engineSecurityGroupId;
@@ -72,7 +72,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idpAuthUrl")
-    private final @Nullable Input<String> idpAuthUrl;
+      private final @Nullable Input<String> idpAuthUrl;
 
     public Input<String> getIdpAuthUrl() {
         return this.idpAuthUrl == null ? Input.empty() : this.idpAuthUrl;
@@ -83,7 +83,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idpRelayStateParameterName")
-    private final @Nullable Input<String> idpRelayStateParameterName;
+      private final @Nullable Input<String> idpRelayStateParameterName;
 
     public Input<String> getIdpRelayStateParameterName() {
         return this.idpRelayStateParameterName == null ? Input.empty() : this.idpRelayStateParameterName;
@@ -94,7 +94,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -105,7 +105,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRole")
-    private final @Nullable Input<String> serviceRole;
+      private final @Nullable Input<String> serviceRole;
 
     public Input<String> getServiceRole() {
         return this.serviceRole == null ? Input.empty() : this.serviceRole;
@@ -116,7 +116,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -127,14 +127,14 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -145,7 +145,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -156,7 +156,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userRole")
-    private final @Nullable Input<String> userRole;
+      private final @Nullable Input<String> userRole;
 
     public Input<String> getUserRole() {
         return this.userRole == null ? Input.empty() : this.userRole;
@@ -167,7 +167,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;
@@ -178,7 +178,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceSecurityGroupId")
-    private final @Nullable Input<String> workspaceSecurityGroupId;
+      private final @Nullable Input<String> workspaceSecurityGroupId;
 
     public Input<String> getWorkspaceSecurityGroupId() {
         return this.workspaceSecurityGroupId == null ? Input.empty() : this.workspaceSecurityGroupId;

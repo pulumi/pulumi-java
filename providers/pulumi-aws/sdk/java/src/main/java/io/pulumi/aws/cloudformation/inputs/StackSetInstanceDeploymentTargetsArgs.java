@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudformation.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class StackSetInstanceDeploymentTargetsArgs extends io.pulumi.resou
     public static final StackSetInstanceDeploymentTargetsArgs Empty = new StackSetInstanceDeploymentTargetsArgs();
 
     @InputImport(name="organizationalUnitIds")
-    private final @Nullable Input<List<String>> organizationalUnitIds;
+      private final @Nullable Input<List<String>> organizationalUnitIds;
 
     public Input<List<String>> getOrganizationalUnitIds() {
         return this.organizationalUnitIds == null ? Input.empty() : this.organizationalUnitIds;

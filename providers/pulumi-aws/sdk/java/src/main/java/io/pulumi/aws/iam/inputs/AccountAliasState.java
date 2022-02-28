@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AccountAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountAlias")
-    private final @Nullable Input<String> accountAlias;
+      private final @Nullable Input<String> accountAlias;
 
     public Input<String> getAccountAlias() {
         return this.accountAlias == null ? Input.empty() : this.accountAlias;

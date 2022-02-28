@@ -9,7 +9,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleRuleLabelArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleVisibilityConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<WebAclRuleActionArgs> action;
+      private final @Nullable Input<WebAclRuleActionArgs> action;
 
     public Input<WebAclRuleActionArgs> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -37,7 +37,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -48,7 +48,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overrideAction")
-    private final @Nullable Input<WebAclRuleOverrideActionArgs> overrideAction;
+      private final @Nullable Input<WebAclRuleOverrideActionArgs> overrideAction;
 
     public Input<WebAclRuleOverrideActionArgs> getOverrideAction() {
         return this.overrideAction == null ? Input.empty() : this.overrideAction;
@@ -59,7 +59,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -70,7 +70,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleLabels")
-    private final @Nullable Input<List<WebAclRuleRuleLabelArgs>> ruleLabels;
+      private final @Nullable Input<List<WebAclRuleRuleLabelArgs>> ruleLabels;
 
     public Input<List<WebAclRuleRuleLabelArgs>> getRuleLabels() {
         return this.ruleLabels == null ? Input.empty() : this.ruleLabels;
@@ -81,7 +81,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statement", required=true)
-    private final Input<WebAclRuleStatementArgs> statement;
+      private final Input<WebAclRuleStatementArgs> statement;
 
     public Input<WebAclRuleStatementArgs> getStatement() {
         return this.statement;
@@ -92,7 +92,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="visibilityConfig", required=true)
-    private final Input<WebAclRuleVisibilityConfigArgs> visibilityConfig;
+      private final Input<WebAclRuleVisibilityConfigArgs> visibilityConfig;
 
     public Input<WebAclRuleVisibilityConfigArgs> getVisibilityConfig() {
         return this.visibilityConfig;

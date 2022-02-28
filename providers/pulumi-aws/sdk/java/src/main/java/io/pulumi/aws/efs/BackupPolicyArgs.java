@@ -5,7 +5,7 @@ package io.pulumi.aws.efs;
 
 import io.pulumi.aws.efs.inputs.BackupPolicyBackupPolicyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupPolicy", required=true)
-    private final Input<BackupPolicyBackupPolicyArgs> backupPolicy;
+      private final Input<BackupPolicyBackupPolicyArgs> backupPolicy;
 
     public Input<BackupPolicyBackupPolicyArgs> getBackupPolicy() {
         return this.backupPolicy;
@@ -30,7 +30,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystemId", required=true)
-    private final Input<String> fileSystemId;
+      private final Input<String> fileSystemId;
 
     public Input<String> getFileSystemId() {
         return this.fileSystemId;

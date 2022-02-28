@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      * 
      */
     @InputImport(name="contentType", required=true)
-    private final Input<String> contentType;
+      private final Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType;
@@ -30,7 +30,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      * 
      */
     @InputImport(name="format", required=true)
-    private final Input<String> format;
+      private final Input<String> format;
 
     public Input<String> getFormat() {
         return this.format;
@@ -41,7 +41,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      * 
      */
     @InputImport(name="profileId")
-    private final @Nullable Input<String> profileId;
+      private final @Nullable Input<String> profileId;
 
     public Input<String> getProfileId() {
         return this.profileId == null ? Input.empty() : this.profileId;

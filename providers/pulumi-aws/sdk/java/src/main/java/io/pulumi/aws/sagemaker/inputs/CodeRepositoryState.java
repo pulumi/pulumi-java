@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.CodeRepositoryGitConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="codeRepositoryName")
-    private final @Nullable Input<String> codeRepositoryName;
+      private final @Nullable Input<String> codeRepositoryName;
 
     public Input<String> getCodeRepositoryName() {
         return this.codeRepositoryName == null ? Input.empty() : this.codeRepositoryName;
@@ -43,7 +43,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gitConfig")
-    private final @Nullable Input<CodeRepositoryGitConfigGetArgs> gitConfig;
+      private final @Nullable Input<CodeRepositoryGitConfigGetArgs> gitConfig;
 
     public Input<CodeRepositoryGitConfigGetArgs> getGitConfig() {
         return this.gitConfig == null ? Input.empty() : this.gitConfig;
@@ -54,7 +54,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -65,7 +65,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

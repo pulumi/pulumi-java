@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.globalaccelerator.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,21 +14,21 @@ public final class GetAcceleratorAttribute extends io.pulumi.resources.InvokeArg
     public static final GetAcceleratorAttribute Empty = new GetAcceleratorAttribute();
 
     @InputImport(name="flowLogsEnabled", required=true)
-    private final Boolean flowLogsEnabled;
+      private final Boolean flowLogsEnabled;
 
     public Boolean getFlowLogsEnabled() {
         return this.flowLogsEnabled;
     }
 
     @InputImport(name="flowLogsS3Bucket", required=true)
-    private final String flowLogsS3Bucket;
+      private final String flowLogsS3Bucket;
 
     public String getFlowLogsS3Bucket() {
         return this.flowLogsS3Bucket;
     }
 
     @InputImport(name="flowLogsS3Prefix", required=true)
-    private final String flowLogsS3Prefix;
+      private final String flowLogsS3Prefix;
 
     public String getFlowLogsS3Prefix() {
         return this.flowLogsS3Prefix;

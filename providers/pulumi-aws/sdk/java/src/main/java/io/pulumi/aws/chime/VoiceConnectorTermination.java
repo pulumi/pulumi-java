@@ -8,8 +8,8 @@ import io.pulumi.aws.chime.VoiceConnectorTerminationArgs;
 import io.pulumi.aws.chime.inputs.VoiceConnectorTerminationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -117,6 +117,21 @@ public class VoiceConnectorTermination extends io.pulumi.resources.CustomResourc
         return this.voiceConnectorId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VoiceConnectorTermination(String name) {
+        this(name, VoiceConnectorTerminationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VoiceConnectorTermination(String name, VoiceConnectorTerminationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -5,7 +5,7 @@ package io.pulumi.aws.memorydb;
 
 import io.pulumi.aws.memorydb.inputs.UserAuthenticationModeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessString", required=true)
-    private final Input<String> accessString;
+      private final Input<String> accessString;
 
     public Input<String> getAccessString() {
         return this.accessString;
@@ -32,7 +32,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationMode", required=true)
-    private final Input<UserAuthenticationModeArgs> authenticationMode;
+      private final Input<UserAuthenticationModeArgs> authenticationMode;
 
     public Input<UserAuthenticationModeArgs> getAuthenticationMode() {
         return this.authenticationMode;
@@ -43,7 +43,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -54,7 +54,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -65,7 +65,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-    private final Input<String> userName;
+      private final Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName;

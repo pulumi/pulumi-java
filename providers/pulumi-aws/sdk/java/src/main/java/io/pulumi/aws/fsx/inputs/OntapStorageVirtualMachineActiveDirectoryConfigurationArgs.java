@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,14 +20,14 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationArgs ex
      * 
      */
     @InputImport(name="netbiosName")
-    private final @Nullable Input<String> netbiosName;
+      private final @Nullable Input<String> netbiosName;
 
     public Input<String> getNetbiosName() {
         return this.netbiosName == null ? Input.empty() : this.netbiosName;
     }
 
     @InputImport(name="selfManagedActiveDirectoryConfiguration")
-    private final @Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs> selfManagedActiveDirectoryConfiguration;
+      private final @Nullable Input<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs> selfManagedActiveDirectoryConfiguration;
 
     public Input<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs> getSelfManagedActiveDirectoryConfiguration() {
         return this.selfManagedActiveDirectoryConfiguration == null ? Input.empty() : this.selfManagedActiveDirectoryConfiguration;

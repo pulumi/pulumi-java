@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="dxGatewayId")
-    private final @Nullable Input<String> dxGatewayId;
+      private final @Nullable Input<String> dxGatewayId;
 
     public Input<String> getDxGatewayId() {
         return this.dxGatewayId == null ? Input.empty() : this.dxGatewayId;
@@ -31,7 +31,7 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -42,7 +42,7 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="virtualInterfaceId", required=true)
-    private final Input<String> virtualInterfaceId;
+      private final Input<String> virtualInterfaceId;
 
     public Input<String> getVirtualInterfaceId() {
         return this.virtualInterfaceId;
@@ -53,7 +53,7 @@ public final class HostedPrivateVirtualInterfaceAccepterArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="vpnGatewayId")
-    private final @Nullable Input<String> vpnGatewayId;
+      private final @Nullable Input<String> vpnGatewayId;
 
     public Input<String> getVpnGatewayId() {
         return this.vpnGatewayId == null ? Input.empty() : this.vpnGatewayId;

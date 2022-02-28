@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TopicRuleCloudwatchAlarmArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="alarmName", required=true)
-    private final Input<String> alarmName;
+      private final Input<String> alarmName;
 
     public Input<String> getAlarmName() {
         return this.alarmName;
@@ -29,7 +29,7 @@ public final class TopicRuleCloudwatchAlarmArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -40,7 +40,7 @@ public final class TopicRuleCloudwatchAlarmArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="stateReason", required=true)
-    private final Input<String> stateReason;
+      private final Input<String> stateReason;
 
     public Input<String> getStateReason() {
         return this.stateReason;
@@ -51,7 +51,7 @@ public final class TopicRuleCloudwatchAlarmArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="stateValue", required=true)
-    private final Input<String> stateValue;
+      private final Input<String> stateValue;
 
     public Input<String> getStateValue() {
         return this.stateValue;

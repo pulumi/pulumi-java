@@ -5,7 +5,7 @@ package io.pulumi.aws.docdb;
 
 import io.pulumi.aws.docdb.inputs.ClusterParameterGroupParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="family", required=true)
-    private final Input<String> family;
+      private final Input<String> family;
 
     public Input<String> getFamily() {
         return this.family;
@@ -44,7 +44,7 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -66,7 +66,7 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<ClusterParameterGroupParameterArgs>> parameters;
+      private final @Nullable Input<List<ClusterParameterGroupParameterArgs>> parameters;
 
     public Input<List<ClusterParameterGroupParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -77,7 +77,7 @@ public final class ClusterParameterGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

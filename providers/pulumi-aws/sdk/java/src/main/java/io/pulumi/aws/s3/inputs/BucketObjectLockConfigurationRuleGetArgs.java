@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketObjectLockConfigurationRuleDefaultRetentionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class BucketObjectLockConfigurationRuleGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="defaultRetention", required=true)
-    private final Input<BucketObjectLockConfigurationRuleDefaultRetentionGetArgs> defaultRetention;
+      private final Input<BucketObjectLockConfigurationRuleDefaultRetentionGetArgs> defaultRetention;
 
     public Input<BucketObjectLockConfigurationRuleDefaultRetentionGetArgs> getDefaultRetention() {
         return this.defaultRetention;

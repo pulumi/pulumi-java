@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ManagedPrefixListEntryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cidr", required=true)
-    private final Input<String> cidr;
+      private final Input<String> cidr;
 
     public Input<String> getCidr() {
         return this.cidr;
@@ -30,7 +30,7 @@ public final class ManagedPrefixListEntryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class ManagedPrefixListEntryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="prefixListId", required=true)
-    private final Input<String> prefixListId;
+      private final Input<String> prefixListId;
 
     public Input<String> getPrefixListId() {
         return this.prefixListId;

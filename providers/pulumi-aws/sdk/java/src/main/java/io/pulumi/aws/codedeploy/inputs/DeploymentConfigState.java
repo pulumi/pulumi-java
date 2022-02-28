@@ -6,7 +6,7 @@ package io.pulumi.aws.codedeploy.inputs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigMinimumHealthyHostsGetArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="computePlatform")
-    private final @Nullable Input<String> computePlatform;
+      private final @Nullable Input<String> computePlatform;
 
     public Input<String> getComputePlatform() {
         return this.computePlatform == null ? Input.empty() : this.computePlatform;
@@ -32,7 +32,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deploymentConfigId")
-    private final @Nullable Input<String> deploymentConfigId;
+      private final @Nullable Input<String> deploymentConfigId;
 
     public Input<String> getDeploymentConfigId() {
         return this.deploymentConfigId == null ? Input.empty() : this.deploymentConfigId;
@@ -43,7 +43,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deploymentConfigName")
-    private final @Nullable Input<String> deploymentConfigName;
+      private final @Nullable Input<String> deploymentConfigName;
 
     public Input<String> getDeploymentConfigName() {
         return this.deploymentConfigName == null ? Input.empty() : this.deploymentConfigName;
@@ -54,7 +54,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="minimumHealthyHosts")
-    private final @Nullable Input<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts;
+      private final @Nullable Input<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts;
 
     public Input<DeploymentConfigMinimumHealthyHostsGetArgs> getMinimumHealthyHosts() {
         return this.minimumHealthyHosts == null ? Input.empty() : this.minimumHealthyHosts;
@@ -65,7 +65,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="trafficRoutingConfig")
-    private final @Nullable Input<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig;
+      private final @Nullable Input<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig;
 
     public Input<DeploymentConfigTrafficRoutingConfigGetArgs> getTrafficRoutingConfig() {
         return this.trafficRoutingConfig == null ? Input.empty() : this.trafficRoutingConfig;

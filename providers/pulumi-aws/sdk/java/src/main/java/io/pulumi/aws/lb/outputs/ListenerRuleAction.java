@@ -8,7 +8,7 @@ import io.pulumi.aws.lb.outputs.ListenerRuleActionAuthenticateOidc;
 import io.pulumi.aws.lb.outputs.ListenerRuleActionFixedResponse;
 import io.pulumi.aws.lb.outputs.ListenerRuleActionForward;
 import io.pulumi.aws.lb.outputs.ListenerRuleActionRedirect;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

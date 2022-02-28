@@ -6,7 +6,7 @@ package io.pulumi.aws.autoscalingplans.inputs;
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecificationArgs;
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationArgs 
      * 
      */
     @InputImport(name="customizedScalingMetricSpecification")
-    private final @Nullable Input<ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecificationArgs> customizedScalingMetricSpecification;
+      private final @Nullable Input<ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecificationArgs> customizedScalingMetricSpecification;
 
     public Input<ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecificationArgs> getCustomizedScalingMetricSpecification() {
         return this.customizedScalingMetricSpecification == null ? Input.empty() : this.customizedScalingMetricSpecification;
@@ -35,7 +35,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationArgs 
      * 
      */
     @InputImport(name="disableScaleIn")
-    private final @Nullable Input<Boolean> disableScaleIn;
+      private final @Nullable Input<Boolean> disableScaleIn;
 
     public Input<Boolean> getDisableScaleIn() {
         return this.disableScaleIn == null ? Input.empty() : this.disableScaleIn;
@@ -47,7 +47,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationArgs 
      * 
      */
     @InputImport(name="estimatedInstanceWarmup")
-    private final @Nullable Input<Integer> estimatedInstanceWarmup;
+      private final @Nullable Input<Integer> estimatedInstanceWarmup;
 
     public Input<Integer> getEstimatedInstanceWarmup() {
         return this.estimatedInstanceWarmup == null ? Input.empty() : this.estimatedInstanceWarmup;
@@ -59,7 +59,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationArgs 
      * 
      */
     @InputImport(name="predefinedScalingMetricSpecification")
-    private final @Nullable Input<ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationArgs> predefinedScalingMetricSpecification;
+      private final @Nullable Input<ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationArgs> predefinedScalingMetricSpecification;
 
     public Input<ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationArgs> getPredefinedScalingMetricSpecification() {
         return this.predefinedScalingMetricSpecification == null ? Input.empty() : this.predefinedScalingMetricSpecification;
@@ -71,7 +71,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationArgs 
      * 
      */
     @InputImport(name="scaleInCooldown")
-    private final @Nullable Input<Integer> scaleInCooldown;
+      private final @Nullable Input<Integer> scaleInCooldown;
 
     public Input<Integer> getScaleInCooldown() {
         return this.scaleInCooldown == null ? Input.empty() : this.scaleInCooldown;
@@ -83,7 +83,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationArgs 
      * 
      */
     @InputImport(name="scaleOutCooldown")
-    private final @Nullable Input<Integer> scaleOutCooldown;
+      private final @Nullable Input<Integer> scaleOutCooldown;
 
     public Input<Integer> getScaleOutCooldown() {
         return this.scaleOutCooldown == null ? Input.empty() : this.scaleOutCooldown;
@@ -94,7 +94,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationArgs 
      * 
      */
     @InputImport(name="targetValue", required=true)
-    private final Input<Double> targetValue;
+      private final Input<Double> targetValue;
 
     public Input<Double> getTargetValue() {
         return this.targetValue;

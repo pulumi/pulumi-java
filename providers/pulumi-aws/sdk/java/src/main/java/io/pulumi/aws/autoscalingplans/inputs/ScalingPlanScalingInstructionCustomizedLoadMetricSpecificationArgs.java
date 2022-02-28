@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscalingplans.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ScalingPlanScalingInstructionCustomizedLoadMetricSpecificatio
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable Input<Map<String,String>> dimensions;
+      private final @Nullable Input<Map<String,String>> dimensions;
 
     public Input<Map<String,String>> getDimensions() {
         return this.dimensions == null ? Input.empty() : this.dimensions;
@@ -31,7 +31,7 @@ public final class ScalingPlanScalingInstructionCustomizedLoadMetricSpecificatio
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+      private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -42,7 +42,7 @@ public final class ScalingPlanScalingInstructionCustomizedLoadMetricSpecificatio
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final Input<String> namespace;
+      private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;
@@ -53,7 +53,7 @@ public final class ScalingPlanScalingInstructionCustomizedLoadMetricSpecificatio
      * 
      */
     @InputImport(name="statistic", required=true)
-    private final Input<String> statistic;
+      private final Input<String> statistic;
 
     public Input<String> getStatistic() {
         return this.statistic;
@@ -64,7 +64,7 @@ public final class ScalingPlanScalingInstructionCustomizedLoadMetricSpecificatio
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable Input<String> unit;
+      private final @Nullable Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;

@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.IntentRejectionStatementMessageArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IntentRejectionStatementArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="messages", required=true)
-    private final Input<List<IntentRejectionStatementMessageArgs>> messages;
+      private final Input<List<IntentRejectionStatementMessageArgs>> messages;
 
     public Input<List<IntentRejectionStatementMessageArgs>> getMessages() {
         return this.messages;
@@ -36,7 +36,7 @@ public final class IntentRejectionStatementArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="responseCard")
-    private final @Nullable Input<String> responseCard;
+      private final @Nullable Input<String> responseCard;
 
     public Input<String> getResponseCard() {
         return this.responseCard == null ? Input.empty() : this.responseCard;

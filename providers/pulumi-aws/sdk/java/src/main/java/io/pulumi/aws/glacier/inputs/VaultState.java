@@ -5,7 +5,7 @@ package io.pulumi.aws.glacier.inputs;
 
 import io.pulumi.aws.glacier.inputs.VaultNotificationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicy")
-    private final @Nullable Input<String> accessPolicy;
+      private final @Nullable Input<String> accessPolicy;
 
     public Input<String> getAccessPolicy() {
         return this.accessPolicy == null ? Input.empty() : this.accessPolicy;
@@ -33,7 +33,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -44,7 +44,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -55,7 +55,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,7 +66,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notification")
-    private final @Nullable Input<VaultNotificationGetArgs> notification;
+      private final @Nullable Input<VaultNotificationGetArgs> notification;
 
     public Input<VaultNotificationGetArgs> getNotification() {
         return this.notification == null ? Input.empty() : this.notification;
@@ -77,7 +77,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -88,7 +88,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

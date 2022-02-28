@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InsightFiltersConfidenceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="eq")
-    private final @Nullable Input<String> eq;
+      private final @Nullable Input<String> eq;
 
     public Input<String> getEq() {
         return this.eq == null ? Input.empty() : this.eq;
@@ -30,7 +30,7 @@ public final class InsightFiltersConfidenceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="gte")
-    private final @Nullable Input<String> gte;
+      private final @Nullable Input<String> gte;
 
     public Input<String> getGte() {
         return this.gte == null ? Input.empty() : this.gte;
@@ -41,7 +41,7 @@ public final class InsightFiltersConfidenceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="lte")
-    private final @Nullable Input<String> lte;
+      private final @Nullable Input<String> lte;
 
     public Input<String> getLte() {
         return this.lte == null ? Input.empty() : this.lte;

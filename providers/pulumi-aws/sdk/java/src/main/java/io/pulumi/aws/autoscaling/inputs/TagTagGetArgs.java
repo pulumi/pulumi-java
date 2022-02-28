@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TagTagGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -30,7 +30,7 @@ public final class TagTagGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="propagateAtLaunch", required=true)
-    private final Input<Boolean> propagateAtLaunch;
+      private final Input<Boolean> propagateAtLaunch;
 
     public Input<Boolean> getPropagateAtLaunch() {
         return this.propagateAtLaunch;
@@ -41,7 +41,7 @@ public final class TagTagGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

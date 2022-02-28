@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.transfer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetServerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serverId", required=true)
-    private final String serverId;
+      private final String serverId;
 
     public String getServerId() {
         return this.serverId;

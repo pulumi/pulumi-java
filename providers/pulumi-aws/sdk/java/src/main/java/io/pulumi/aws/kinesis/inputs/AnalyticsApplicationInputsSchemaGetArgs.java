@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordColumnGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordFormatGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AnalyticsApplicationInputsSchemaGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="recordColumns", required=true)
-    private final Input<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> recordColumns;
+      private final Input<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> recordColumns;
 
     public Input<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> getRecordColumns() {
         return this.recordColumns;
@@ -34,7 +34,7 @@ public final class AnalyticsApplicationInputsSchemaGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="recordEncoding")
-    private final @Nullable Input<String> recordEncoding;
+      private final @Nullable Input<String> recordEncoding;
 
     public Input<String> getRecordEncoding() {
         return this.recordEncoding == null ? Input.empty() : this.recordEncoding;
@@ -46,7 +46,7 @@ public final class AnalyticsApplicationInputsSchemaGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="recordFormat", required=true)
-    private final Input<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> recordFormat;
+      private final Input<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> recordFormat;
 
     public Input<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> getRecordFormat() {
         return this.recordFormat;

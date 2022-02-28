@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="allowCredentials", required=true)
-    private final Boolean allowCredentials;
+      private final Boolean allowCredentials;
 
     public Boolean getAllowCredentials() {
         return this.allowCredentials;
@@ -31,7 +31,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="allowHeaders", required=true)
-    private final List<String> allowHeaders;
+      private final List<String> allowHeaders;
 
     public List<String> getAllowHeaders() {
         return this.allowHeaders;
@@ -42,7 +42,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="allowMethods", required=true)
-    private final List<String> allowMethods;
+      private final List<String> allowMethods;
 
     public List<String> getAllowMethods() {
         return this.allowMethods;
@@ -53,7 +53,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="allowOrigins", required=true)
-    private final List<String> allowOrigins;
+      private final List<String> allowOrigins;
 
     public List<String> getAllowOrigins() {
         return this.allowOrigins;
@@ -64,7 +64,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="exposeHeaders", required=true)
-    private final List<String> exposeHeaders;
+      private final List<String> exposeHeaders;
 
     public List<String> getExposeHeaders() {
         return this.exposeHeaders;
@@ -75,7 +75,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="maxAge", required=true)
-    private final Integer maxAge;
+      private final Integer maxAge;
 
     public Integer getMaxAge() {
         return this.maxAge;

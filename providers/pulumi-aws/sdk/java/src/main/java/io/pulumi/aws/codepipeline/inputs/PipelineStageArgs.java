@@ -5,7 +5,7 @@ package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.aws.codepipeline.inputs.PipelineStageActionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PipelineStageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-    private final Input<List<PipelineStageActionArgs>> actions;
+      private final Input<List<PipelineStageActionArgs>> actions;
 
     public Input<List<PipelineStageActionArgs>> getActions() {
         return this.actions;
@@ -31,7 +31,7 @@ public final class PipelineStageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

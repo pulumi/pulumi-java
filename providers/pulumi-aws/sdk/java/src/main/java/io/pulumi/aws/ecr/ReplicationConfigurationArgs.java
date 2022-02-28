@@ -5,7 +5,7 @@ package io.pulumi.aws.ecr;
 
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="replicationConfiguration")
-    private final @Nullable Input<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration;
+      private final @Nullable Input<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration;
 
     public Input<ReplicationConfigurationReplicationConfigurationArgs> getReplicationConfiguration() {
         return this.replicationConfiguration == null ? Input.empty() : this.replicationConfiguration;

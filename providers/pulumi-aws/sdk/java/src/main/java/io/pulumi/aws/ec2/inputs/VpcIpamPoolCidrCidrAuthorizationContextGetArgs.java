@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends io.pul
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+      private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -30,7 +30,7 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends io.pul
      * 
      */
     @InputImport(name="signature")
-    private final @Nullable Input<String> signature;
+      private final @Nullable Input<String> signature;
 
     public Input<String> getSignature() {
         return this.signature == null ? Input.empty() : this.signature;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ResolverCachingConfigGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cachingKeys")
-    private final @Nullable Input<List<String>> cachingKeys;
+      private final @Nullable Input<List<String>> cachingKeys;
 
     public Input<List<String>> getCachingKeys() {
         return this.cachingKeys == null ? Input.empty() : this.cachingKeys;
@@ -32,7 +32,7 @@ public final class ResolverCachingConfigGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<Integer> ttl;
+      private final @Nullable Input<Integer> ttl;
 
     public Input<Integer> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;

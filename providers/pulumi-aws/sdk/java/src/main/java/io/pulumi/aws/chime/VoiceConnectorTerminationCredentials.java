@@ -9,8 +9,8 @@ import io.pulumi.aws.chime.inputs.VoiceConnectorTerminationCredentialsState;
 import io.pulumi.aws.chime.outputs.VoiceConnectorTerminationCredentialsCredential;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -62,6 +62,21 @@ public class VoiceConnectorTerminationCredentials extends io.pulumi.resources.Cu
         return this.voiceConnectorId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VoiceConnectorTerminationCredentials(String name) {
+        this(name, VoiceConnectorTerminationCredentialsArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VoiceConnectorTerminationCredentials(String name, VoiceConnectorTerminationCredentialsArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

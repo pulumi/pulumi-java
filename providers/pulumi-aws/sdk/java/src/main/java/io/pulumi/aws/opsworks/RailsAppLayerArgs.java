@@ -6,7 +6,7 @@ package io.pulumi.aws.opsworks;
 import io.pulumi.aws.opsworks.inputs.RailsAppLayerCloudwatchConfigurationArgs;
 import io.pulumi.aws.opsworks.inputs.RailsAppLayerEbsVolumeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appServer")
-    private final @Nullable Input<String> appServer;
+      private final @Nullable Input<String> appServer;
 
     public Input<String> getAppServer() {
         return this.appServer == null ? Input.empty() : this.appServer;
@@ -36,7 +36,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoAssignElasticIps")
-    private final @Nullable Input<Boolean> autoAssignElasticIps;
+      private final @Nullable Input<Boolean> autoAssignElasticIps;
 
     public Input<Boolean> getAutoAssignElasticIps() {
         return this.autoAssignElasticIps == null ? Input.empty() : this.autoAssignElasticIps;
@@ -47,7 +47,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoAssignPublicIps")
-    private final @Nullable Input<Boolean> autoAssignPublicIps;
+      private final @Nullable Input<Boolean> autoAssignPublicIps;
 
     public Input<Boolean> getAutoAssignPublicIps() {
         return this.autoAssignPublicIps == null ? Input.empty() : this.autoAssignPublicIps;
@@ -58,7 +58,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoHealing")
-    private final @Nullable Input<Boolean> autoHealing;
+      private final @Nullable Input<Boolean> autoHealing;
 
     public Input<Boolean> getAutoHealing() {
         return this.autoHealing == null ? Input.empty() : this.autoHealing;
@@ -69,28 +69,28 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundlerVersion")
-    private final @Nullable Input<String> bundlerVersion;
+      private final @Nullable Input<String> bundlerVersion;
 
     public Input<String> getBundlerVersion() {
         return this.bundlerVersion == null ? Input.empty() : this.bundlerVersion;
     }
 
     @InputImport(name="cloudwatchConfiguration")
-    private final @Nullable Input<RailsAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
+      private final @Nullable Input<RailsAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
     public Input<RailsAppLayerCloudwatchConfigurationArgs> getCloudwatchConfiguration() {
         return this.cloudwatchConfiguration == null ? Input.empty() : this.cloudwatchConfiguration;
     }
 
     @InputImport(name="customConfigureRecipes")
-    private final @Nullable Input<List<String>> customConfigureRecipes;
+      private final @Nullable Input<List<String>> customConfigureRecipes;
 
     public Input<List<String>> getCustomConfigureRecipes() {
         return this.customConfigureRecipes == null ? Input.empty() : this.customConfigureRecipes;
     }
 
     @InputImport(name="customDeployRecipes")
-    private final @Nullable Input<List<String>> customDeployRecipes;
+      private final @Nullable Input<List<String>> customDeployRecipes;
 
     public Input<List<String>> getCustomDeployRecipes() {
         return this.customDeployRecipes == null ? Input.empty() : this.customDeployRecipes;
@@ -101,7 +101,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customInstanceProfileArn")
-    private final @Nullable Input<String> customInstanceProfileArn;
+      private final @Nullable Input<String> customInstanceProfileArn;
 
     public Input<String> getCustomInstanceProfileArn() {
         return this.customInstanceProfileArn == null ? Input.empty() : this.customInstanceProfileArn;
@@ -112,7 +112,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customJson")
-    private final @Nullable Input<String> customJson;
+      private final @Nullable Input<String> customJson;
 
     public Input<String> getCustomJson() {
         return this.customJson == null ? Input.empty() : this.customJson;
@@ -123,28 +123,28 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customSecurityGroupIds")
-    private final @Nullable Input<List<String>> customSecurityGroupIds;
+      private final @Nullable Input<List<String>> customSecurityGroupIds;
 
     public Input<List<String>> getCustomSecurityGroupIds() {
         return this.customSecurityGroupIds == null ? Input.empty() : this.customSecurityGroupIds;
     }
 
     @InputImport(name="customSetupRecipes")
-    private final @Nullable Input<List<String>> customSetupRecipes;
+      private final @Nullable Input<List<String>> customSetupRecipes;
 
     public Input<List<String>> getCustomSetupRecipes() {
         return this.customSetupRecipes == null ? Input.empty() : this.customSetupRecipes;
     }
 
     @InputImport(name="customShutdownRecipes")
-    private final @Nullable Input<List<String>> customShutdownRecipes;
+      private final @Nullable Input<List<String>> customShutdownRecipes;
 
     public Input<List<String>> getCustomShutdownRecipes() {
         return this.customShutdownRecipes == null ? Input.empty() : this.customShutdownRecipes;
     }
 
     @InputImport(name="customUndeployRecipes")
-    private final @Nullable Input<List<String>> customUndeployRecipes;
+      private final @Nullable Input<List<String>> customUndeployRecipes;
 
     public Input<List<String>> getCustomUndeployRecipes() {
         return this.customUndeployRecipes == null ? Input.empty() : this.customUndeployRecipes;
@@ -155,7 +155,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="drainElbOnShutdown")
-    private final @Nullable Input<Boolean> drainElbOnShutdown;
+      private final @Nullable Input<Boolean> drainElbOnShutdown;
 
     public Input<Boolean> getDrainElbOnShutdown() {
         return this.drainElbOnShutdown == null ? Input.empty() : this.drainElbOnShutdown;
@@ -166,7 +166,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsVolumes")
-    private final @Nullable Input<List<RailsAppLayerEbsVolumeArgs>> ebsVolumes;
+      private final @Nullable Input<List<RailsAppLayerEbsVolumeArgs>> ebsVolumes;
 
     public Input<List<RailsAppLayerEbsVolumeArgs>> getEbsVolumes() {
         return this.ebsVolumes == null ? Input.empty() : this.ebsVolumes;
@@ -177,7 +177,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elasticLoadBalancer")
-    private final @Nullable Input<String> elasticLoadBalancer;
+      private final @Nullable Input<String> elasticLoadBalancer;
 
     public Input<String> getElasticLoadBalancer() {
         return this.elasticLoadBalancer == null ? Input.empty() : this.elasticLoadBalancer;
@@ -188,7 +188,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="installUpdatesOnBoot")
-    private final @Nullable Input<Boolean> installUpdatesOnBoot;
+      private final @Nullable Input<Boolean> installUpdatesOnBoot;
 
     public Input<Boolean> getInstallUpdatesOnBoot() {
         return this.installUpdatesOnBoot == null ? Input.empty() : this.installUpdatesOnBoot;
@@ -199,7 +199,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceShutdownTimeout")
-    private final @Nullable Input<Integer> instanceShutdownTimeout;
+      private final @Nullable Input<Integer> instanceShutdownTimeout;
 
     public Input<Integer> getInstanceShutdownTimeout() {
         return this.instanceShutdownTimeout == null ? Input.empty() : this.instanceShutdownTimeout;
@@ -210,7 +210,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manageBundler")
-    private final @Nullable Input<Boolean> manageBundler;
+      private final @Nullable Input<Boolean> manageBundler;
 
     public Input<Boolean> getManageBundler() {
         return this.manageBundler == null ? Input.empty() : this.manageBundler;
@@ -221,7 +221,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -232,7 +232,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="passengerVersion")
-    private final @Nullable Input<String> passengerVersion;
+      private final @Nullable Input<String> passengerVersion;
 
     public Input<String> getPassengerVersion() {
         return this.passengerVersion == null ? Input.empty() : this.passengerVersion;
@@ -243,7 +243,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rubyVersion")
-    private final @Nullable Input<String> rubyVersion;
+      private final @Nullable Input<String> rubyVersion;
 
     public Input<String> getRubyVersion() {
         return this.rubyVersion == null ? Input.empty() : this.rubyVersion;
@@ -254,7 +254,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rubygemsVersion")
-    private final @Nullable Input<String> rubygemsVersion;
+      private final @Nullable Input<String> rubygemsVersion;
 
     public Input<String> getRubygemsVersion() {
         return this.rubygemsVersion == null ? Input.empty() : this.rubygemsVersion;
@@ -265,7 +265,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackId", required=true)
-    private final Input<String> stackId;
+      private final Input<String> stackId;
 
     public Input<String> getStackId() {
         return this.stackId;
@@ -276,7 +276,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemPackages")
-    private final @Nullable Input<List<String>> systemPackages;
+      private final @Nullable Input<List<String>> systemPackages;
 
     public Input<List<String>> getSystemPackages() {
         return this.systemPackages == null ? Input.empty() : this.systemPackages;
@@ -287,7 +287,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -298,7 +298,7 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useEbsOptimizedInstances")
-    private final @Nullable Input<Boolean> useEbsOptimizedInstances;
+      private final @Nullable Input<Boolean> useEbsOptimizedInstances;
 
     public Input<Boolean> getUseEbsOptimizedInstances() {
         return this.useEbsOptimizedInstances == null ? Input.empty() : this.useEbsOptimizedInstances;

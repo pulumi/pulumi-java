@@ -5,7 +5,7 @@ package io.pulumi.aws.route53;
 
 import io.pulumi.aws.route53.inputs.ResolverRuleTargetIpArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -33,7 +33,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resolverEndpointId")
-    private final @Nullable Input<String> resolverEndpointId;
+      private final @Nullable Input<String> resolverEndpointId;
 
     public Input<String> getResolverEndpointId() {
         return this.resolverEndpointId == null ? Input.empty() : this.resolverEndpointId;
@@ -56,7 +56,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleType", required=true)
-    private final Input<String> ruleType;
+      private final Input<String> ruleType;
 
     public Input<String> getRuleType() {
         return this.ruleType;
@@ -67,7 +67,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -79,7 +79,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetIps")
-    private final @Nullable Input<List<ResolverRuleTargetIpArgs>> targetIps;
+      private final @Nullable Input<List<ResolverRuleTargetIpArgs>> targetIps;
 
     public Input<List<ResolverRuleTargetIpArgs>> getTargetIps() {
         return this.targetIps == null ? Input.empty() : this.targetIps;

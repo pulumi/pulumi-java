@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticache.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,28 +21,28 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accessString")
-    private final @Nullable String accessString;
+      private final @Nullable String accessString;
 
     public Optional<String> getAccessString() {
         return this.accessString == null ? Optional.empty() : Optional.ofNullable(this.accessString);
     }
 
     @InputImport(name="engine")
-    private final @Nullable String engine;
+      private final @Nullable String engine;
 
     public Optional<String> getEngine() {
         return this.engine == null ? Optional.empty() : Optional.ofNullable(this.engine);
     }
 
     @InputImport(name="noPasswordRequired")
-    private final @Nullable Boolean noPasswordRequired;
+      private final @Nullable Boolean noPasswordRequired;
 
     public Optional<Boolean> getNoPasswordRequired() {
         return this.noPasswordRequired == null ? Optional.empty() : Optional.ofNullable(this.noPasswordRequired);
     }
 
     @InputImport(name="passwords")
-    private final @Nullable List<String> passwords;
+      private final @Nullable List<String> passwords;
 
     public List<String> getPasswords() {
         return this.passwords == null ? List.of() : this.passwords;
@@ -53,7 +53,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userId", required=true)
-    private final String userId;
+      private final String userId;
 
     public String getUserId() {
         return this.userId;
@@ -64,7 +64,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable String userName;
+      private final @Nullable String userName;
 
     public Optional<String> getUserName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);

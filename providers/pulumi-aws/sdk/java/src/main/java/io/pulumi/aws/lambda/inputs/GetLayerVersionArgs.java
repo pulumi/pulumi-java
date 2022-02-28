@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetLayerVersionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="compatibleArchitecture")
-    private final @Nullable String compatibleArchitecture;
+      private final @Nullable String compatibleArchitecture;
 
     public Optional<String> getCompatibleArchitecture() {
         return this.compatibleArchitecture == null ? Optional.empty() : Optional.ofNullable(this.compatibleArchitecture);
@@ -31,7 +31,7 @@ public final class GetLayerVersionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="compatibleRuntime")
-    private final @Nullable String compatibleRuntime;
+      private final @Nullable String compatibleRuntime;
 
     public Optional<String> getCompatibleRuntime() {
         return this.compatibleRuntime == null ? Optional.empty() : Optional.ofNullable(this.compatibleRuntime);
@@ -42,7 +42,7 @@ public final class GetLayerVersionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="layerName", required=true)
-    private final String layerName;
+      private final String layerName;
 
     public String getLayerName() {
         return this.layerName;
@@ -53,7 +53,7 @@ public final class GetLayerVersionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Integer version;
+      private final @Nullable Integer version;
 
     public Optional<Integer> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);

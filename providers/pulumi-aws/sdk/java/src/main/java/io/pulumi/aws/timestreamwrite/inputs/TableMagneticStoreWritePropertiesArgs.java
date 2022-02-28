@@ -5,7 +5,7 @@ package io.pulumi.aws.timestreamwrite.inputs;
 
 import io.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class TableMagneticStoreWritePropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="enableMagneticStoreWrites")
-    private final @Nullable Input<Boolean> enableMagneticStoreWrites;
+      private final @Nullable Input<Boolean> enableMagneticStoreWrites;
 
     public Input<Boolean> getEnableMagneticStoreWrites() {
         return this.enableMagneticStoreWrites == null ? Input.empty() : this.enableMagneticStoreWrites;
@@ -31,7 +31,7 @@ public final class TableMagneticStoreWritePropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="magneticStoreRejectedDataLocation")
-    private final @Nullable Input<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs> magneticStoreRejectedDataLocation;
+      private final @Nullable Input<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs> magneticStoreRejectedDataLocation;
 
     public Input<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationArgs> getMagneticStoreRejectedDataLocation() {
         return this.magneticStoreRejectedDataLocation == null ? Input.empty() : this.magneticStoreRejectedDataLocation;

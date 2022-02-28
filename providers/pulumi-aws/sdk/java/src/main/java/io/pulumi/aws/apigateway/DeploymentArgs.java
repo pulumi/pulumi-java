@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi", required=true)
-    private final Input<String> restApi;
+      private final Input<String> restApi;
 
     public Input<String> getRestApi() {
         return this.restApi;
@@ -42,7 +42,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageDescription")
-    private final @Nullable Input<String> stageDescription;
+      private final @Nullable Input<String> stageDescription;
 
     public Input<String> getStageDescription() {
         return this.stageDescription == null ? Input.empty() : this.stageDescription;
@@ -53,7 +53,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageName")
-    private final @Nullable Input<String> stageName;
+      private final @Nullable Input<String> stageName;
 
     public Input<String> getStageName() {
         return this.stageName == null ? Input.empty() : this.stageName;
@@ -64,7 +64,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggers")
-    private final @Nullable Input<Map<String,String>> triggers;
+      private final @Nullable Input<Map<String,String>> triggers;
 
     public Input<Map<String,String>> getTriggers() {
         return this.triggers == null ? Input.empty() : this.triggers;
@@ -75,7 +75,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variables")
-    private final @Nullable Input<Map<String,String>> variables;
+      private final @Nullable Input<Map<String,String>> variables;
 
     public Input<Map<String,String>> getVariables() {
         return this.variables == null ? Input.empty() : this.variables;

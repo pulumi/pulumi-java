@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssoadmin.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="inlinePolicy")
-    private final @Nullable Input<String> inlinePolicy;
+      private final @Nullable Input<String> inlinePolicy;
 
     public Input<String> getInlinePolicy() {
         return this.inlinePolicy == null ? Input.empty() : this.inlinePolicy;
@@ -30,7 +30,7 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="instanceArn")
-    private final @Nullable Input<String> instanceArn;
+      private final @Nullable Input<String> instanceArn;
 
     public Input<String> getInstanceArn() {
         return this.instanceArn == null ? Input.empty() : this.instanceArn;
@@ -41,7 +41,7 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="permissionSetArn")
-    private final @Nullable Input<String> permissionSetArn;
+      private final @Nullable Input<String> permissionSetArn;
 
     public Input<String> getPermissionSetArn() {
         return this.permissionSetArn == null ? Input.empty() : this.permissionSetArn;

@@ -5,7 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.aws.ecs.inputs.ClusterConfigurationExecuteCommandConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class ClusterConfigurationGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="executeCommandConfiguration")
-    private final @Nullable Input<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration;
+      private final @Nullable Input<ClusterConfigurationExecuteCommandConfigurationGetArgs> executeCommandConfiguration;
 
     public Input<ClusterConfigurationExecuteCommandConfigurationGetArgs> getExecuteCommandConfiguration() {
         return this.executeCommandConfiguration == null ? Input.empty() : this.executeCommandConfiguration;

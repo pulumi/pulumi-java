@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationGe
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<String> port;
+      private final @Nullable Input<String> port;
 
     public Input<String> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -31,7 +31,7 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationGe
      * 
      */
     @InputImport(name="runtimeEnvironmentVariables")
-    private final @Nullable Input<Map<String,String>> runtimeEnvironmentVariables;
+      private final @Nullable Input<Map<String,String>> runtimeEnvironmentVariables;
 
     public Input<Map<String,String>> getRuntimeEnvironmentVariables() {
         return this.runtimeEnvironmentVariables == null ? Input.empty() : this.runtimeEnvironmentVariables;
@@ -42,7 +42,7 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfigurationGe
      * 
      */
     @InputImport(name="startCommand")
-    private final @Nullable Input<String> startCommand;
+      private final @Nullable Input<String> startCommand;
 
     public Input<String> getStartCommand() {
         return this.startCommand == null ? Input.empty() : this.startCommand;

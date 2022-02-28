@@ -4,7 +4,7 @@
 package io.pulumi.aws.appautoscaling.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentArgs extend
      * 
      */
     @InputImport(name="metricIntervalLowerBound")
-    private final @Nullable Input<String> metricIntervalLowerBound;
+      private final @Nullable Input<String> metricIntervalLowerBound;
 
     public Input<String> getMetricIntervalLowerBound() {
         return this.metricIntervalLowerBound == null ? Input.empty() : this.metricIntervalLowerBound;
@@ -31,7 +31,7 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentArgs extend
      * 
      */
     @InputImport(name="metricIntervalUpperBound")
-    private final @Nullable Input<String> metricIntervalUpperBound;
+      private final @Nullable Input<String> metricIntervalUpperBound;
 
     public Input<String> getMetricIntervalUpperBound() {
         return this.metricIntervalUpperBound == null ? Input.empty() : this.metricIntervalUpperBound;
@@ -42,7 +42,7 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentArgs extend
      * 
      */
     @InputImport(name="scalingAdjustment", required=true)
-    private final Input<Integer> scalingAdjustment;
+      private final Input<Integer> scalingAdjustment;
 
     public Input<Integer> getScalingAdjustment() {
         return this.scalingAdjustment;

@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModifications;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjects;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

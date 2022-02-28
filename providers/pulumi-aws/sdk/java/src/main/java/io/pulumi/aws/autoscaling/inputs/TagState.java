@@ -5,7 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.aws.autoscaling.inputs.TagTagGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingGroupName")
-    private final @Nullable Input<String> autoscalingGroupName;
+      private final @Nullable Input<String> autoscalingGroupName;
 
     public Input<String> getAutoscalingGroupName() {
         return this.autoscalingGroupName == null ? Input.empty() : this.autoscalingGroupName;
@@ -31,7 +31,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<TagTagGetArgs> tag;
+      private final @Nullable Input<TagTagGetArgs> tag;
 
     public Input<TagTagGetArgs> getTag() {
         return this.tag == null ? Input.empty() : this.tag;

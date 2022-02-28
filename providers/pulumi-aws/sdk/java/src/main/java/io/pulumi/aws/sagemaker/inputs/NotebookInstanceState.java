@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="additionalCodeRepositories")
-    private final @Nullable Input<List<String>> additionalCodeRepositories;
+      private final @Nullable Input<List<String>> additionalCodeRepositories;
 
     public Input<List<String>> getAdditionalCodeRepositories() {
         return this.additionalCodeRepositories == null ? Input.empty() : this.additionalCodeRepositories;
@@ -34,7 +34,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -45,7 +45,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultCodeRepository")
-    private final @Nullable Input<String> defaultCodeRepository;
+      private final @Nullable Input<String> defaultCodeRepository;
 
     public Input<String> getDefaultCodeRepository() {
         return this.defaultCodeRepository == null ? Input.empty() : this.defaultCodeRepository;
@@ -56,7 +56,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="directInternetAccess")
-    private final @Nullable Input<String> directInternetAccess;
+      private final @Nullable Input<String> directInternetAccess;
 
     public Input<String> getDirectInternetAccess() {
         return this.directInternetAccess == null ? Input.empty() : this.directInternetAccess;
@@ -67,7 +67,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -78,7 +78,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -89,7 +89,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="lifecycleConfigName")
-    private final @Nullable Input<String> lifecycleConfigName;
+      private final @Nullable Input<String> lifecycleConfigName;
 
     public Input<String> getLifecycleConfigName() {
         return this.lifecycleConfigName == null ? Input.empty() : this.lifecycleConfigName;
@@ -100,7 +100,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -111,7 +111,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="networkInterfaceId")
-    private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
@@ -122,7 +122,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="platformIdentifier")
-    private final @Nullable Input<String> platformIdentifier;
+      private final @Nullable Input<String> platformIdentifier;
 
     public Input<String> getPlatformIdentifier() {
         return this.platformIdentifier == null ? Input.empty() : this.platformIdentifier;
@@ -133,7 +133,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -144,7 +144,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rootAccess")
-    private final @Nullable Input<String> rootAccess;
+      private final @Nullable Input<String> rootAccess;
 
     public Input<String> getRootAccess() {
         return this.rootAccess == null ? Input.empty() : this.rootAccess;
@@ -155,7 +155,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -166,7 +166,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -177,7 +177,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -188,7 +188,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -199,7 +199,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -210,7 +210,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="volumeSize")
-    private final @Nullable Input<Integer> volumeSize;
+      private final @Nullable Input<Integer> volumeSize;
 
     public Input<Integer> getVolumeSize() {
         return this.volumeSize == null ? Input.empty() : this.volumeSize;

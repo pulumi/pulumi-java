@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codeartifact.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetRepositoryEndpointArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="domain", required=true)
-    private final String domain;
+      private final String domain;
 
     public String getDomain() {
         return this.domain;
@@ -30,7 +30,7 @@ public final class GetRepositoryEndpointArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="domainOwner")
-    private final @Nullable String domainOwner;
+      private final @Nullable String domainOwner;
 
     public Optional<String> getDomainOwner() {
         return this.domainOwner == null ? Optional.empty() : Optional.ofNullable(this.domainOwner);
@@ -41,7 +41,7 @@ public final class GetRepositoryEndpointArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="format", required=true)
-    private final String format;
+      private final String format;
 
     public String getFormat() {
         return this.format;
@@ -52,7 +52,7 @@ public final class GetRepositoryEndpointArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="repository", required=true)
-    private final String repository;
+      private final String repository;
 
     public String getRepository() {
         return this.repository;

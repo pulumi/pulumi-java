@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class VirtualNodeSpecListenerTimeoutHttp2GetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="idle")
-    private final @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> idle;
+      private final @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> idle;
 
     public Input<VirtualNodeSpecListenerTimeoutHttp2IdleGetArgs> getIdle() {
         return this.idle == null ? Input.empty() : this.idle;
@@ -31,7 +31,7 @@ public final class VirtualNodeSpecListenerTimeoutHttp2GetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="perRequest")
-    private final @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> perRequest;
+      private final @Nullable Input<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> perRequest;
 
     public Input<VirtualNodeSpecListenerTimeoutHttp2PerRequestGetArgs> getPerRequest() {
         return this.perRequest == null ? Input.empty() : this.perRequest;

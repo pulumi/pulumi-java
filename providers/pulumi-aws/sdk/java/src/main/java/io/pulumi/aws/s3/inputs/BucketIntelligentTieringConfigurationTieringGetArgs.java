@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends i
      * 
      */
     @InputImport(name="accessTier", required=true)
-    private final Input<String> accessTier;
+      private final Input<String> accessTier;
 
     public Input<String> getAccessTier() {
         return this.accessTier;
@@ -30,7 +30,7 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends i
      * 
      */
     @InputImport(name="days", required=true)
-    private final Input<Integer> days;
+      private final Input<Integer> days;
 
     public Input<Integer> getDays() {
         return this.days;

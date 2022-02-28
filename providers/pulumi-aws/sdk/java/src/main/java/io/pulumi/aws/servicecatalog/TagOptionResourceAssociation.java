@@ -8,8 +8,8 @@ import io.pulumi.aws.servicecatalog.TagOptionResourceAssociationArgs;
 import io.pulumi.aws.servicecatalog.inputs.TagOptionResourceAssociationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -116,6 +116,21 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
         return this.tagOptionId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TagOptionResourceAssociation(String name) {
+        this(name, TagOptionResourceAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TagOptionResourceAssociation(String name, TagOptionResourceAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

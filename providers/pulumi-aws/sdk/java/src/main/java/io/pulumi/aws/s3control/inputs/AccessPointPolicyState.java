@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AccessPointPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="accessPointArn")
-    private final @Nullable Input<String> accessPointArn;
+      private final @Nullable Input<String> accessPointArn;
 
     public Input<String> getAccessPointArn() {
         return this.accessPointArn == null ? Input.empty() : this.accessPointArn;
@@ -31,7 +31,7 @@ public final class AccessPointPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hasPublicAccessPolicy")
-    private final @Nullable Input<Boolean> hasPublicAccessPolicy;
+      private final @Nullable Input<Boolean> hasPublicAccessPolicy;
 
     public Input<Boolean> getHasPublicAccessPolicy() {
         return this.hasPublicAccessPolicy == null ? Input.empty() : this.hasPublicAccessPolicy;
@@ -42,7 +42,7 @@ public final class AccessPointPolicyState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;

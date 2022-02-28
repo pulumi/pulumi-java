@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationId")
-    private final @Nullable Input<String> allocationId;
+      private final @Nullable Input<String> allocationId;
 
     public Input<String> getAllocationId() {
         return this.allocationId == null ? Input.empty() : this.allocationId;
@@ -31,7 +31,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectivityType")
-    private final @Nullable Input<String> connectivityType;
+      private final @Nullable Input<String> connectivityType;
 
     public Input<String> getConnectivityType() {
         return this.connectivityType == null ? Input.empty() : this.connectivityType;
@@ -42,7 +42,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaceId")
-    private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
@@ -53,7 +53,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIp")
-    private final @Nullable Input<String> privateIp;
+      private final @Nullable Input<String> privateIp;
 
     public Input<String> getPrivateIp() {
         return this.privateIp == null ? Input.empty() : this.privateIp;
@@ -64,7 +64,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIp")
-    private final @Nullable Input<String> publicIp;
+      private final @Nullable Input<String> publicIp;
 
     public Input<String> getPublicIp() {
         return this.publicIp == null ? Input.empty() : this.publicIp;
@@ -75,7 +75,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -86,7 +86,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -97,7 +97,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

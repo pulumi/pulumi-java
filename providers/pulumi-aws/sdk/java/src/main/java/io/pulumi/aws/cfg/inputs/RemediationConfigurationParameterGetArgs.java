@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RemediationConfigurationParameterGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class RemediationConfigurationParameterGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceValue")
-    private final @Nullable Input<String> resourceValue;
+      private final @Nullable Input<String> resourceValue;
 
     public Input<String> getResourceValue() {
         return this.resourceValue == null ? Input.empty() : this.resourceValue;
@@ -41,7 +41,7 @@ public final class RemediationConfigurationParameterGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="staticValue")
-    private final @Nullable Input<String> staticValue;
+      private final @Nullable Input<String> staticValue;
 
     public Input<String> getStaticValue() {
         return this.staticValue == null ? Input.empty() : this.staticValue;

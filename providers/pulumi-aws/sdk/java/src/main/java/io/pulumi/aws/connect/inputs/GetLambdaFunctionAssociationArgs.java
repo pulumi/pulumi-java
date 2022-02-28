@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetLambdaFunctionAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="functionArn", required=true)
-    private final String functionArn;
+      private final String functionArn;
 
     public String getFunctionArn() {
         return this.functionArn;
@@ -28,7 +28,7 @@ public final class GetLambdaFunctionAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;

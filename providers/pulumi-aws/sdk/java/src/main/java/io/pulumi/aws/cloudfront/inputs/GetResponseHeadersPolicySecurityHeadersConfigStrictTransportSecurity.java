@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
      * 
      */
     @InputImport(name="accessControlMaxAgeSec", required=true)
-    private final Integer accessControlMaxAgeSec;
+      private final Integer accessControlMaxAgeSec;
 
     public Integer getAccessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
@@ -29,7 +29,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
      * 
      */
     @InputImport(name="includeSubdomains", required=true)
-    private final Boolean includeSubdomains;
+      private final Boolean includeSubdomains;
 
     public Boolean getIncludeSubdomains() {
         return this.includeSubdomains;
@@ -40,7 +40,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
      * 
      */
     @InputImport(name="override", required=true)
-    private final Boolean override;
+      private final Boolean override;
 
     public Boolean getOverride() {
         return this.override;
@@ -51,7 +51,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
      * 
      */
     @InputImport(name="preload", required=true)
-    private final Boolean preload;
+      private final Boolean preload;
 
     public Boolean getPreload() {
         return this.preload;

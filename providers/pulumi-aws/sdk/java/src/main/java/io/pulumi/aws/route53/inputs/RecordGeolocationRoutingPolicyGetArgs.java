@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="continent")
-    private final @Nullable Input<String> continent;
+      private final @Nullable Input<String> continent;
 
     public Input<String> getContinent() {
         return this.continent == null ? Input.empty() : this.continent;
@@ -30,7 +30,7 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="country")
-    private final @Nullable Input<String> country;
+      private final @Nullable Input<String> country;
 
     public Input<String> getCountry() {
         return this.country == null ? Input.empty() : this.country;
@@ -41,7 +41,7 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="subdivision")
-    private final @Nullable Input<String> subdivision;
+      private final @Nullable Input<String> subdivision;
 
     public Input<String> getSubdivision() {
         return this.subdivision == null ? Input.empty() : this.subdivision;

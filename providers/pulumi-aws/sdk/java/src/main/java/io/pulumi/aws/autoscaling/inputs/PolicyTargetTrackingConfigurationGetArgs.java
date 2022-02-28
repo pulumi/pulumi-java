@@ -6,7 +6,7 @@ package io.pulumi.aws.autoscaling.inputs;
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs;
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="customizedMetricSpecification")
-    private final @Nullable Input<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification;
+      private final @Nullable Input<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification;
 
     public Input<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> getCustomizedMetricSpecification() {
         return this.customizedMetricSpecification == null ? Input.empty() : this.customizedMetricSpecification;
@@ -33,7 +33,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="disableScaleIn")
-    private final @Nullable Input<Boolean> disableScaleIn;
+      private final @Nullable Input<Boolean> disableScaleIn;
 
     public Input<Boolean> getDisableScaleIn() {
         return this.disableScaleIn == null ? Input.empty() : this.disableScaleIn;
@@ -44,7 +44,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="predefinedMetricSpecification")
-    private final @Nullable Input<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification;
+      private final @Nullable Input<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification;
 
     public Input<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> getPredefinedMetricSpecification() {
         return this.predefinedMetricSpecification == null ? Input.empty() : this.predefinedMetricSpecification;
@@ -55,7 +55,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="targetValue", required=true)
-    private final Input<Double> targetValue;
+      private final Input<Double> targetValue;
 
     public Input<Double> getTargetValue() {
         return this.targetValue;

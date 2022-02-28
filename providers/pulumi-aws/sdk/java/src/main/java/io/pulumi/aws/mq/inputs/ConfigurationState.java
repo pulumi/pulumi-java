@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationStrategy")
-    private final @Nullable Input<String> authenticationStrategy;
+      private final @Nullable Input<String> authenticationStrategy;
 
     public Input<String> getAuthenticationStrategy() {
         return this.authenticationStrategy == null ? Input.empty() : this.authenticationStrategy;
@@ -43,7 +43,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-    private final @Nullable Input<String> data;
+      private final @Nullable Input<String> data;
 
     public Input<String> getData() {
         return this.data == null ? Input.empty() : this.data;
@@ -54,7 +54,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -65,7 +65,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineType")
-    private final @Nullable Input<String> engineType;
+      private final @Nullable Input<String> engineType;
 
     public Input<String> getEngineType() {
         return this.engineType == null ? Input.empty() : this.engineType;
@@ -76,7 +76,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineVersion")
-    private final @Nullable Input<String> engineVersion;
+      private final @Nullable Input<String> engineVersion;
 
     public Input<String> getEngineVersion() {
         return this.engineVersion == null ? Input.empty() : this.engineVersion;
@@ -87,7 +87,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestRevision")
-    private final @Nullable Input<Integer> latestRevision;
+      private final @Nullable Input<Integer> latestRevision;
 
     public Input<Integer> getLatestRevision() {
         return this.latestRevision == null ? Input.empty() : this.latestRevision;
@@ -98,7 +98,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -109,7 +109,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -120,7 +120,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

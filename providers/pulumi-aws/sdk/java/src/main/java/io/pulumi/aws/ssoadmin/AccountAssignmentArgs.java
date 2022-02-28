@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssoadmin;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceArn", required=true)
-    private final Input<String> instanceArn;
+      private final Input<String> instanceArn;
 
     public Input<String> getInstanceArn() {
         return this.instanceArn;
@@ -30,7 +30,7 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="permissionSetArn", required=true)
-    private final Input<String> permissionSetArn;
+      private final Input<String> permissionSetArn;
 
     public Input<String> getPermissionSetArn() {
         return this.permissionSetArn;
@@ -41,7 +41,7 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final Input<String> principalId;
+      private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;
@@ -52,7 +52,7 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="principalType", required=true)
-    private final Input<String> principalType;
+      private final Input<String> principalType;
 
     public Input<String> getPrincipalType() {
         return this.principalType;
@@ -63,7 +63,7 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetId", required=true)
-    private final Input<String> targetId;
+      private final Input<String> targetId;
 
     public Input<String> getTargetId() {
         return this.targetId;
@@ -74,7 +74,7 @@ public final class AccountAssignmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetType")
-    private final @Nullable Input<String> targetType;
+      private final @Nullable Input<String> targetType;
 
     public Input<String> getTargetType() {
         return this.targetType == null ? Input.empty() : this.targetType;

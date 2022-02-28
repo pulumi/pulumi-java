@@ -5,7 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.aws.iot.inputs.ThingGroupMetadataRootToParentGroupArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class ThingGroupMetadataArgs extends io.pulumi.resources.ResourceAr
     public static final ThingGroupMetadataArgs Empty = new ThingGroupMetadataArgs();
 
     @InputImport(name="creationDate")
-    private final @Nullable Input<String> creationDate;
+      private final @Nullable Input<String> creationDate;
 
     public Input<String> getCreationDate() {
         return this.creationDate == null ? Input.empty() : this.creationDate;
@@ -28,14 +28,14 @@ public final class ThingGroupMetadataArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parentGroupName")
-    private final @Nullable Input<String> parentGroupName;
+      private final @Nullable Input<String> parentGroupName;
 
     public Input<String> getParentGroupName() {
         return this.parentGroupName == null ? Input.empty() : this.parentGroupName;
     }
 
     @InputImport(name="rootToParentGroups")
-    private final @Nullable Input<List<ThingGroupMetadataRootToParentGroupArgs>> rootToParentGroups;
+      private final @Nullable Input<List<ThingGroupMetadataRootToParentGroupArgs>> rootToParentGroups;
 
     public Input<List<ThingGroupMetadataRootToParentGroupArgs>> getRootToParentGroups() {
         return this.rootToParentGroups == null ? Input.empty() : this.rootToParentGroups;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetA
      * 
      */
     @InputImport(name="eventType", required=true)
-    private final Input<String> eventType;
+      private final Input<String> eventType;
 
     public Input<String> getEventType() {
         return this.eventType;
@@ -32,7 +32,7 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetA
      * 
      */
     @InputImport(name="includeBody")
-    private final @Nullable Input<Boolean> includeBody;
+      private final @Nullable Input<Boolean> includeBody;
 
     public Input<Boolean> getIncludeBody() {
         return this.includeBody == null ? Input.empty() : this.includeBody;
@@ -43,7 +43,7 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetA
      * 
      */
     @InputImport(name="lambdaArn", required=true)
-    private final Input<String> lambdaArn;
+      private final Input<String> lambdaArn;
 
     public Input<String> getLambdaArn() {
         return this.lambdaArn;

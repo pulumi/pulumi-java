@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetVpcIamPoolFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GetVpcIamPoolArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allocationResourceTags")
-    private final @Nullable Map<String,String> allocationResourceTags;
+      private final @Nullable Map<String,String> allocationResourceTags;
 
     public Map<String,String> getAllocationResourceTags() {
         return this.allocationResourceTags == null ? Map.of() : this.allocationResourceTags;
@@ -33,7 +33,7 @@ public final class GetVpcIamPoolArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetVpcIamPoolFilter> filters;
+      private final @Nullable List<GetVpcIamPoolFilter> filters;
 
     public List<GetVpcIamPoolFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -44,14 +44,14 @@ public final class GetVpcIamPoolArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
     @InputImport(name="ipamPoolId")
-    private final @Nullable String ipamPoolId;
+      private final @Nullable String ipamPoolId;
 
     public Optional<String> getIpamPoolId() {
         return this.ipamPoolId == null ? Optional.empty() : Optional.ofNullable(this.ipamPoolId);
@@ -62,7 +62,7 @@ public final class GetVpcIamPoolArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

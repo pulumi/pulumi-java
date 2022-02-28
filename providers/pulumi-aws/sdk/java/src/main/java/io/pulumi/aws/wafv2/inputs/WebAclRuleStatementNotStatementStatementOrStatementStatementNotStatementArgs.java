@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementN
      * 
      */
     @InputImport(name="statements", required=true)
-    private final Input<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementArgs>> statements;
+      private final Input<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementArgs>> statements;
 
     public Input<List<WebAclRuleStatementNotStatementStatementOrStatementStatementNotStatementStatementArgs>> getStatements() {
         return this.statements;

@@ -7,7 +7,7 @@ import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterObjectArgs;
 import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterValueArgs;
 import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionPipelineObjectArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parameterObjects")
-    private final @Nullable Input<List<PipelineDefinitionParameterObjectArgs>> parameterObjects;
+      private final @Nullable Input<List<PipelineDefinitionParameterObjectArgs>> parameterObjects;
 
     public Input<List<PipelineDefinitionParameterObjectArgs>> getParameterObjects() {
         return this.parameterObjects == null ? Input.empty() : this.parameterObjects;
@@ -34,7 +34,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parameterValues")
-    private final @Nullable Input<List<PipelineDefinitionParameterValueArgs>> parameterValues;
+      private final @Nullable Input<List<PipelineDefinitionParameterValueArgs>> parameterValues;
 
     public Input<List<PipelineDefinitionParameterValueArgs>> getParameterValues() {
         return this.parameterValues == null ? Input.empty() : this.parameterValues;
@@ -45,7 +45,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pipelineId", required=true)
-    private final Input<String> pipelineId;
+      private final Input<String> pipelineId;
 
     public Input<String> getPipelineId() {
         return this.pipelineId;
@@ -56,7 +56,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pipelineObjects", required=true)
-    private final Input<List<PipelineDefinitionPipelineObjectArgs>> pipelineObjects;
+      private final Input<List<PipelineDefinitionPipelineObjectArgs>> pipelineObjects;
 
     public Input<List<PipelineDefinitionPipelineObjectArgs>> getPipelineObjects() {
         return this.pipelineObjects;

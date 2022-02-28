@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudsearch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="analysisScheme")
-    private final @Nullable Input<String> analysisScheme;
+      private final @Nullable Input<String> analysisScheme;
 
     public Input<String> getAnalysisScheme() {
         return this.analysisScheme == null ? Input.empty() : this.analysisScheme;
@@ -31,7 +31,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Input<String> defaultValue;
+      private final @Nullable Input<String> defaultValue;
 
     public Input<String> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -42,7 +42,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="facet")
-    private final @Nullable Input<Boolean> facet;
+      private final @Nullable Input<Boolean> facet;
 
     public Input<Boolean> getFacet() {
         return this.facet == null ? Input.empty() : this.facet;
@@ -53,7 +53,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="highlight")
-    private final @Nullable Input<Boolean> highlight;
+      private final @Nullable Input<Boolean> highlight;
 
     public Input<Boolean> getHighlight() {
         return this.highlight == null ? Input.empty() : this.highlight;
@@ -64,7 +64,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -75,7 +75,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="return")
-    private final @Nullable Input<Boolean> $return;
+      private final @Nullable Input<Boolean> $return;
 
     public Input<Boolean> get$return() {
         return this.$return == null ? Input.empty() : this.$return;
@@ -86,7 +86,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="search")
-    private final @Nullable Input<Boolean> search;
+      private final @Nullable Input<Boolean> search;
 
     public Input<Boolean> getSearch() {
         return this.search == null ? Input.empty() : this.search;
@@ -97,7 +97,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sort")
-    private final @Nullable Input<Boolean> sort;
+      private final @Nullable Input<Boolean> sort;
 
     public Input<Boolean> getSort() {
         return this.sort == null ? Input.empty() : this.sort;
@@ -108,7 +108,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

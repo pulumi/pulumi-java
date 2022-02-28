@@ -5,7 +5,7 @@ package io.pulumi.aws.ecs;
 
 import io.pulumi.aws.ecs.inputs.ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClusterCapacityProvidersArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="capacityProviders")
-    private final @Nullable Input<List<String>> capacityProviders;
+      private final @Nullable Input<List<String>> capacityProviders;
 
     public Input<List<String>> getCapacityProviders() {
         return this.capacityProviders == null ? Input.empty() : this.capacityProviders;
@@ -32,7 +32,7 @@ public final class ClusterCapacityProvidersArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -43,7 +43,7 @@ public final class ClusterCapacityProvidersArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="defaultCapacityProviderStrategies")
-    private final @Nullable Input<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs>> defaultCapacityProviderStrategies;
+      private final @Nullable Input<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs>> defaultCapacityProviderStrategies;
 
     public Input<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs>> getDefaultCapacityProviderStrategies() {
         return this.defaultCapacityProviderStrategies == null ? Input.empty() : this.defaultCapacityProviderStrategies;

@@ -5,7 +5,7 @@ package io.pulumi.aws.ecrpublic.inputs;
 
 import io.pulumi.aws.ecrpublic.inputs.RepositoryCatalogDataGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,14 +32,14 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogData")
-    private final @Nullable Input<RepositoryCatalogDataGetArgs> catalogData;
+      private final @Nullable Input<RepositoryCatalogDataGetArgs> catalogData;
 
     public Input<RepositoryCatalogDataGetArgs> getCatalogData() {
         return this.catalogData == null ? Input.empty() : this.catalogData;
     }
 
     @InputImport(name="forceDestroy")
-    private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Input<Boolean> forceDestroy;
 
     public Input<Boolean> getForceDestroy() {
         return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
@@ -50,7 +50,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryId")
-    private final @Nullable Input<String> registryId;
+      private final @Nullable Input<String> registryId;
 
     public Input<String> getRegistryId() {
         return this.registryId == null ? Input.empty() : this.registryId;
@@ -61,7 +61,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryName")
-    private final @Nullable Input<String> repositoryName;
+      private final @Nullable Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName == null ? Input.empty() : this.repositoryName;
@@ -72,7 +72,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryUri")
-    private final @Nullable Input<String> repositoryUri;
+      private final @Nullable Input<String> repositoryUri;
 
     public Input<String> getRepositoryUri() {
         return this.repositoryUri == null ? Input.empty() : this.repositoryUri;

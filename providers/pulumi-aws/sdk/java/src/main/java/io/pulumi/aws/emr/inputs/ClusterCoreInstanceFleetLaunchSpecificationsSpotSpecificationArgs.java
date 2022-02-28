@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification
      * 
      */
     @InputImport(name="allocationStrategy", required=true)
-    private final Input<String> allocationStrategy;
+      private final Input<String> allocationStrategy;
 
     public Input<String> getAllocationStrategy() {
         return this.allocationStrategy;
@@ -31,7 +31,7 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification
      * 
      */
     @InputImport(name="blockDurationMinutes")
-    private final @Nullable Input<Integer> blockDurationMinutes;
+      private final @Nullable Input<Integer> blockDurationMinutes;
 
     public Input<Integer> getBlockDurationMinutes() {
         return this.blockDurationMinutes == null ? Input.empty() : this.blockDurationMinutes;
@@ -42,7 +42,7 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification
      * 
      */
     @InputImport(name="timeoutAction", required=true)
-    private final Input<String> timeoutAction;
+      private final Input<String> timeoutAction;
 
     public Input<String> getTimeoutAction() {
         return this.timeoutAction;
@@ -53,7 +53,7 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification
      * 
      */
     @InputImport(name="timeoutDurationMinutes", required=true)
-    private final Input<Integer> timeoutDurationMinutes;
+      private final Input<Integer> timeoutDurationMinutes;
 
     public Input<Integer> getTimeoutDurationMinutes() {
         return this.timeoutDurationMinutes;

@@ -6,7 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionSseKmsArgs;
 import io.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionSseS3Args;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class InventoryDestinationBucketEncryptionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="sseKms")
-    private final @Nullable Input<InventoryDestinationBucketEncryptionSseKmsArgs> sseKms;
+      private final @Nullable Input<InventoryDestinationBucketEncryptionSseKmsArgs> sseKms;
 
     public Input<InventoryDestinationBucketEncryptionSseKmsArgs> getSseKms() {
         return this.sseKms == null ? Input.empty() : this.sseKms;
@@ -31,7 +31,7 @@ public final class InventoryDestinationBucketEncryptionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="sseS3")
-    private final @Nullable Input<InventoryDestinationBucketEncryptionSseS3Args> sseS3;
+      private final @Nullable Input<InventoryDestinationBucketEncryptionSseS3Args> sseS3;
 
     public Input<InventoryDestinationBucketEncryptionSseS3Args> getSseS3() {
         return this.sseS3 == null ? Input.empty() : this.sseS3;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.dlm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs extends
      * 
      */
     @InputImport(name="interval", required=true)
-    private final Input<Integer> interval;
+      private final Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval;
@@ -31,7 +31,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs extends
      * 
      */
     @InputImport(name="intervalUnit")
-    private final @Nullable Input<String> intervalUnit;
+      private final @Nullable Input<String> intervalUnit;
 
     public Input<String> getIntervalUnit() {
         return this.intervalUnit == null ? Input.empty() : this.intervalUnit;
@@ -42,7 +42,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRuleGetArgs extends
      * 
      */
     @InputImport(name="times")
-    private final @Nullable Input<String> times;
+      private final @Nullable Input<String> times;
 
     public Input<String> getTimes() {
         return this.times == null ? Input.empty() : this.times;

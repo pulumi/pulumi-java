@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="affinity")
-    private final @Nullable Input<String> affinity;
+      private final @Nullable Input<String> affinity;
 
     public Input<String> getAffinity() {
         return this.affinity == null ? Input.empty() : this.affinity;
@@ -31,7 +31,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -42,7 +42,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="groupName")
-    private final @Nullable Input<String> groupName;
+      private final @Nullable Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName == null ? Input.empty() : this.groupName;
@@ -53,7 +53,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="hostId")
-    private final @Nullable Input<String> hostId;
+      private final @Nullable Input<String> hostId;
 
     public Input<String> getHostId() {
         return this.hostId == null ? Input.empty() : this.hostId;
@@ -64,7 +64,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="hostResourceGroupArn")
-    private final @Nullable Input<String> hostResourceGroupArn;
+      private final @Nullable Input<String> hostResourceGroupArn;
 
     public Input<String> getHostResourceGroupArn() {
         return this.hostResourceGroupArn == null ? Input.empty() : this.hostResourceGroupArn;
@@ -75,7 +75,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="partitionNumber")
-    private final @Nullable Input<Integer> partitionNumber;
+      private final @Nullable Input<Integer> partitionNumber;
 
     public Input<Integer> getPartitionNumber() {
         return this.partitionNumber == null ? Input.empty() : this.partitionNumber;
@@ -86,7 +86,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="spreadDomain")
-    private final @Nullable Input<String> spreadDomain;
+      private final @Nullable Input<String> spreadDomain;
 
     public Input<String> getSpreadDomain() {
         return this.spreadDomain == null ? Input.empty() : this.spreadDomain;
@@ -97,7 +97,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tenancy")
-    private final @Nullable Input<String> tenancy;
+      private final @Nullable Input<String> tenancy;
 
     public Input<String> getTenancy() {
         return this.tenancy == null ? Input.empty() : this.tenancy;

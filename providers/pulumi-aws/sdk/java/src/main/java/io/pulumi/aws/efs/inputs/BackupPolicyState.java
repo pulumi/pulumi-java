@@ -5,7 +5,7 @@ package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.aws.efs.inputs.BackupPolicyBackupPolicyGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class BackupPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupPolicy")
-    private final @Nullable Input<BackupPolicyBackupPolicyGetArgs> backupPolicy;
+      private final @Nullable Input<BackupPolicyBackupPolicyGetArgs> backupPolicy;
 
     public Input<BackupPolicyBackupPolicyGetArgs> getBackupPolicy() {
         return this.backupPolicy == null ? Input.empty() : this.backupPolicy;
@@ -31,7 +31,7 @@ public final class BackupPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystemId")
-    private final @Nullable Input<String> fileSystemId;
+      private final @Nullable Input<String> fileSystemId;
 
     public Input<String> getFileSystemId() {
         return this.fileSystemId == null ? Input.empty() : this.fileSystemId;

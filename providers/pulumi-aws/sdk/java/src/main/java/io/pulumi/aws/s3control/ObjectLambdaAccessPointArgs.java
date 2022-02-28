@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control;
 
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class ObjectLambdaAccessPointArgs extends io.pulumi.resources.Resou
     public static final ObjectLambdaAccessPointArgs Empty = new ObjectLambdaAccessPointArgs();
 
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -27,7 +27,7 @@ public final class ObjectLambdaAccessPointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="configuration", required=true)
-    private final Input<ObjectLambdaAccessPointConfigurationArgs> configuration;
+      private final Input<ObjectLambdaAccessPointConfigurationArgs> configuration;
 
     public Input<ObjectLambdaAccessPointConfigurationArgs> getConfiguration() {
         return this.configuration;
@@ -38,7 +38,7 @@ public final class ObjectLambdaAccessPointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

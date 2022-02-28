@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -30,7 +30,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="creationDate")
-    private final @Nullable Input<String> creationDate;
+      private final @Nullable Input<String> creationDate;
 
     public Input<String> getCreationDate() {
         return this.creationDate == null ? Input.empty() : this.creationDate;
@@ -41,7 +41,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="css")
-    private final @Nullable Input<String> css;
+      private final @Nullable Input<String> css;
 
     public Input<String> getCss() {
         return this.css == null ? Input.empty() : this.css;
@@ -52,7 +52,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cssVersion")
-    private final @Nullable Input<String> cssVersion;
+      private final @Nullable Input<String> cssVersion;
 
     public Input<String> getCssVersion() {
         return this.cssVersion == null ? Input.empty() : this.cssVersion;
@@ -63,7 +63,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="imageFile")
-    private final @Nullable Input<String> imageFile;
+      private final @Nullable Input<String> imageFile;
 
     public Input<String> getImageFile() {
         return this.imageFile == null ? Input.empty() : this.imageFile;
@@ -74,7 +74,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="imageUrl")
-    private final @Nullable Input<String> imageUrl;
+      private final @Nullable Input<String> imageUrl;
 
     public Input<String> getImageUrl() {
         return this.imageUrl == null ? Input.empty() : this.imageUrl;
@@ -85,7 +85,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="lastModifiedDate")
-    private final @Nullable Input<String> lastModifiedDate;
+      private final @Nullable Input<String> lastModifiedDate;
 
     public Input<String> getLastModifiedDate() {
         return this.lastModifiedDate == null ? Input.empty() : this.lastModifiedDate;
@@ -96,7 +96,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="userPoolId")
-    private final @Nullable Input<String> userPoolId;
+      private final @Nullable Input<String> userPoolId;
 
     public Input<String> getUserPoolId() {
         return this.userPoolId == null ? Input.empty() : this.userPoolId;

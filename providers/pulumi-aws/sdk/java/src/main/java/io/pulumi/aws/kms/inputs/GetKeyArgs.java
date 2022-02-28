@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kms.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="grantTokens")
-    private final @Nullable List<String> grantTokens;
+      private final @Nullable List<String> grantTokens;
 
     public List<String> getGrantTokens() {
         return this.grantTokens == null ? List.of() : this.grantTokens;
@@ -35,7 +35,7 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final String keyId;
+      private final String keyId;
 
     public String getKeyId() {
         return this.keyId;

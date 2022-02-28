@@ -8,8 +8,8 @@ import io.pulumi.aws.route53.ResolverFirewallDomainListArgs;
 import io.pulumi.aws.route53.inputs.ResolverFirewallDomainListState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -102,6 +102,21 @@ public class ResolverFirewallDomainList extends io.pulumi.resources.CustomResour
         return this.tagsAll;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ResolverFirewallDomainList(String name) {
+        this(name, ResolverFirewallDomainListArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ResolverFirewallDomainList(String name, @Nullable ResolverFirewallDomainListArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

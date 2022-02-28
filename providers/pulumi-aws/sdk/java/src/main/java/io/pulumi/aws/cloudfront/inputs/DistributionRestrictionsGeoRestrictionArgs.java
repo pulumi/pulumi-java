@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DistributionRestrictionsGeoRestrictionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable Input<List<String>> locations;
+      private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
@@ -35,7 +35,7 @@ public final class DistributionRestrictionsGeoRestrictionArgs extends io.pulumi.
      * 
      */
     @InputImport(name="restrictionType", required=true)
-    private final Input<String> restrictionType;
+      private final Input<String> restrictionType;
 
     public Input<String> getRestrictionType() {
         return this.restrictionType;

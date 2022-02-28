@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsGetArgs extends 
      * 
      */
     @InputImport(name="defaultResourceSpec", required=true)
-    private final Input<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
+      private final Input<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
     public Input<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
         return this.defaultResourceSpec;

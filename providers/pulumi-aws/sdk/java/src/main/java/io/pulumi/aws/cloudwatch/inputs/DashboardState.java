@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardArn")
-    private final @Nullable Input<String> dashboardArn;
+      private final @Nullable Input<String> dashboardArn;
 
     public Input<String> getDashboardArn() {
         return this.dashboardArn == null ? Input.empty() : this.dashboardArn;
@@ -30,7 +30,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardBody")
-    private final @Nullable Input<String> dashboardBody;
+      private final @Nullable Input<String> dashboardBody;
 
     public Input<String> getDashboardBody() {
         return this.dashboardBody == null ? Input.empty() : this.dashboardBody;
@@ -41,7 +41,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardName")
-    private final @Nullable Input<String> dashboardName;
+      private final @Nullable Input<String> dashboardName;
 
     public Input<String> getDashboardName() {
         return this.dashboardName == null ? Input.empty() : this.dashboardName;

@@ -8,7 +8,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputKinesisStreamArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputLambdaArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputSchemaArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AnalyticsApplicationOutputArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -35,7 +35,7 @@ public final class AnalyticsApplicationOutputArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="kinesisFirehose")
-    private final @Nullable Input<AnalyticsApplicationOutputKinesisFirehoseArgs> kinesisFirehose;
+      private final @Nullable Input<AnalyticsApplicationOutputKinesisFirehoseArgs> kinesisFirehose;
 
     public Input<AnalyticsApplicationOutputKinesisFirehoseArgs> getKinesisFirehose() {
         return this.kinesisFirehose == null ? Input.empty() : this.kinesisFirehose;
@@ -47,7 +47,7 @@ public final class AnalyticsApplicationOutputArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="kinesisStream")
-    private final @Nullable Input<AnalyticsApplicationOutputKinesisStreamArgs> kinesisStream;
+      private final @Nullable Input<AnalyticsApplicationOutputKinesisStreamArgs> kinesisStream;
 
     public Input<AnalyticsApplicationOutputKinesisStreamArgs> getKinesisStream() {
         return this.kinesisStream == null ? Input.empty() : this.kinesisStream;
@@ -58,7 +58,7 @@ public final class AnalyticsApplicationOutputArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="lambda")
-    private final @Nullable Input<AnalyticsApplicationOutputLambdaArgs> lambda;
+      private final @Nullable Input<AnalyticsApplicationOutputLambdaArgs> lambda;
 
     public Input<AnalyticsApplicationOutputLambdaArgs> getLambda() {
         return this.lambda == null ? Input.empty() : this.lambda;
@@ -69,7 +69,7 @@ public final class AnalyticsApplicationOutputArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -80,7 +80,7 @@ public final class AnalyticsApplicationOutputArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="schema", required=true)
-    private final Input<AnalyticsApplicationOutputSchemaArgs> schema;
+      private final Input<AnalyticsApplicationOutputSchemaArgs> schema;
 
     public Input<AnalyticsApplicationOutputSchemaArgs> getSchema() {
         return this.schema;

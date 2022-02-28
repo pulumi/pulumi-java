@@ -6,7 +6,7 @@ package io.pulumi.aws.elasticbeanstalk.inputs;
 import io.pulumi.aws.elasticbeanstalk.inputs.EnvironmentAllSettingGetArgs;
 import io.pulumi.aws.elasticbeanstalk.inputs.EnvironmentSettingGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allSettings")
-    private final @Nullable Input<List<EnvironmentAllSettingGetArgs>> allSettings;
+      private final @Nullable Input<List<EnvironmentAllSettingGetArgs>> allSettings;
 
     public Input<List<EnvironmentAllSettingGetArgs>> getAllSettings() {
         return this.allSettings == null ? Input.empty() : this.allSettings;
@@ -37,14 +37,14 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="application")
-    private final @Nullable Input<String> application;
+      private final @Nullable Input<String> application;
 
     public Input<String> getApplication() {
         return this.application == null ? Input.empty() : this.application;
     }
 
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -55,7 +55,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingGroups")
-    private final @Nullable Input<List<String>> autoscalingGroups;
+      private final @Nullable Input<List<String>> autoscalingGroups;
 
     public Input<List<String>> getAutoscalingGroups() {
         return this.autoscalingGroups == null ? Input.empty() : this.autoscalingGroups;
@@ -66,7 +66,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cname")
-    private final @Nullable Input<String> cname;
+      private final @Nullable Input<String> cname;
 
     public Input<String> getCname() {
         return this.cname == null ? Input.empty() : this.cname;
@@ -78,7 +78,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cnamePrefix")
-    private final @Nullable Input<String> cnamePrefix;
+      private final @Nullable Input<String> cnamePrefix;
 
     public Input<String> getCnamePrefix() {
         return this.cnamePrefix == null ? Input.empty() : this.cnamePrefix;
@@ -89,7 +89,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -100,7 +100,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointUrl")
-    private final @Nullable Input<String> endpointUrl;
+      private final @Nullable Input<String> endpointUrl;
 
     public Input<String> getEndpointUrl() {
         return this.endpointUrl == null ? Input.empty() : this.endpointUrl;
@@ -111,7 +111,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instances")
-    private final @Nullable Input<List<String>> instances;
+      private final @Nullable Input<List<String>> instances;
 
     public Input<List<String>> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -122,7 +122,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchConfigurations")
-    private final @Nullable Input<List<String>> launchConfigurations;
+      private final @Nullable Input<List<String>> launchConfigurations;
 
     public Input<List<String>> getLaunchConfigurations() {
         return this.launchConfigurations == null ? Input.empty() : this.launchConfigurations;
@@ -133,7 +133,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancers")
-    private final @Nullable Input<List<String>> loadBalancers;
+      private final @Nullable Input<List<String>> loadBalancers;
 
     public Input<List<String>> getLoadBalancers() {
         return this.loadBalancers == null ? Input.empty() : this.loadBalancers;
@@ -145,7 +145,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -157,7 +157,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformArn")
-    private final @Nullable Input<String> platformArn;
+      private final @Nullable Input<String> platformArn;
 
     public Input<String> getPlatformArn() {
         return this.platformArn == null ? Input.empty() : this.platformArn;
@@ -171,7 +171,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pollInterval")
-    private final @Nullable Input<String> pollInterval;
+      private final @Nullable Input<String> pollInterval;
 
     public Input<String> getPollInterval() {
         return this.pollInterval == null ? Input.empty() : this.pollInterval;
@@ -182,7 +182,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queues")
-    private final @Nullable Input<List<String>> queues;
+      private final @Nullable Input<List<String>> queues;
 
     public Input<List<String>> getQueues() {
         return this.queues == null ? Input.empty() : this.queues;
@@ -195,7 +195,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<List<EnvironmentSettingGetArgs>> settings;
+      private final @Nullable Input<List<EnvironmentSettingGetArgs>> settings;
 
     public Input<List<EnvironmentSettingGetArgs>> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -207,7 +207,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="solutionStackName")
-    private final @Nullable Input<String> solutionStackName;
+      private final @Nullable Input<String> solutionStackName;
 
     public Input<String> getSolutionStackName() {
         return this.solutionStackName == null ? Input.empty() : this.solutionStackName;
@@ -218,7 +218,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -229,7 +229,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -241,7 +241,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateName")
-    private final @Nullable Input<String> templateName;
+      private final @Nullable Input<String> templateName;
 
     public Input<String> getTemplateName() {
         return this.templateName == null ? Input.empty() : this.templateName;
@@ -253,7 +253,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<String> tier;
+      private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -264,7 +264,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggers")
-    private final @Nullable Input<List<String>> triggers;
+      private final @Nullable Input<List<String>> triggers;
 
     public Input<List<String>> getTriggers() {
         return this.triggers == null ? Input.empty() : this.triggers;
@@ -276,7 +276,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -290,7 +290,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForReadyTimeout")
-    private final @Nullable Input<String> waitForReadyTimeout;
+      private final @Nullable Input<String> waitForReadyTimeout;
 
     public Input<String> getWaitForReadyTimeout() {
         return this.waitForReadyTimeout == null ? Input.empty() : this.waitForReadyTimeout;

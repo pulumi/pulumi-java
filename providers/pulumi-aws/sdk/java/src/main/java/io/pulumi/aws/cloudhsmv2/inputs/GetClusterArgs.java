@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudhsmv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterId", required=true)
-    private final String clusterId;
+      private final String clusterId;
 
     public String getClusterId() {
         return this.clusterId;
@@ -30,7 +30,7 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterState")
-    private final @Nullable String clusterState;
+      private final @Nullable String clusterState;
 
     public Optional<String> getClusterState() {
         return this.clusterState == null ? Optional.empty() : Optional.ofNullable(this.clusterState);

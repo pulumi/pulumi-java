@@ -8,7 +8,7 @@ import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopRequestSourceArgs;
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionOutputConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FlowDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flowDefinitionName", required=true)
-    private final Input<String> flowDefinitionName;
+      private final Input<String> flowDefinitionName;
 
     public Input<String> getFlowDefinitionName() {
         return this.flowDefinitionName;
@@ -35,7 +35,7 @@ public final class FlowDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="humanLoopActivationConfig")
-    private final @Nullable Input<FlowDefinitionHumanLoopActivationConfigArgs> humanLoopActivationConfig;
+      private final @Nullable Input<FlowDefinitionHumanLoopActivationConfigArgs> humanLoopActivationConfig;
 
     public Input<FlowDefinitionHumanLoopActivationConfigArgs> getHumanLoopActivationConfig() {
         return this.humanLoopActivationConfig == null ? Input.empty() : this.humanLoopActivationConfig;
@@ -46,7 +46,7 @@ public final class FlowDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="humanLoopConfig", required=true)
-    private final Input<FlowDefinitionHumanLoopConfigArgs> humanLoopConfig;
+      private final Input<FlowDefinitionHumanLoopConfigArgs> humanLoopConfig;
 
     public Input<FlowDefinitionHumanLoopConfigArgs> getHumanLoopConfig() {
         return this.humanLoopConfig;
@@ -57,7 +57,7 @@ public final class FlowDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="humanLoopRequestSource")
-    private final @Nullable Input<FlowDefinitionHumanLoopRequestSourceArgs> humanLoopRequestSource;
+      private final @Nullable Input<FlowDefinitionHumanLoopRequestSourceArgs> humanLoopRequestSource;
 
     public Input<FlowDefinitionHumanLoopRequestSourceArgs> getHumanLoopRequestSource() {
         return this.humanLoopRequestSource == null ? Input.empty() : this.humanLoopRequestSource;
@@ -68,7 +68,7 @@ public final class FlowDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputConfig", required=true)
-    private final Input<FlowDefinitionOutputConfigArgs> outputConfig;
+      private final Input<FlowDefinitionOutputConfigArgs> outputConfig;
 
     public Input<FlowDefinitionOutputConfigArgs> getOutputConfig() {
         return this.outputConfig;
@@ -79,7 +79,7 @@ public final class FlowDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -90,7 +90,7 @@ public final class FlowDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

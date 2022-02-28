@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,14 +18,14 @@ public final class GetListenerDefaultActionForwardTargetGroup extends io.pulumi.
      * 
      */
     @InputImport(name="arn", required=true)
-    private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;
     }
 
     @InputImport(name="weight", required=true)
-    private final Integer weight;
+      private final Integer weight;
 
     public Integer getWeight() {
         return this.weight;

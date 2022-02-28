@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsCertificateAcmG
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsCertificateFileGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsCertificateSdsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class VirtualGatewaySpecListenerTlsCertificateGetArgs extends io.pu
      * 
      */
     @InputImport(name="acm")
-    private final @Nullable Input<VirtualGatewaySpecListenerTlsCertificateAcmGetArgs> acm;
+      private final @Nullable Input<VirtualGatewaySpecListenerTlsCertificateAcmGetArgs> acm;
 
     public Input<VirtualGatewaySpecListenerTlsCertificateAcmGetArgs> getAcm() {
         return this.acm == null ? Input.empty() : this.acm;
@@ -32,7 +32,7 @@ public final class VirtualGatewaySpecListenerTlsCertificateGetArgs extends io.pu
      * 
      */
     @InputImport(name="file")
-    private final @Nullable Input<VirtualGatewaySpecListenerTlsCertificateFileGetArgs> file;
+      private final @Nullable Input<VirtualGatewaySpecListenerTlsCertificateFileGetArgs> file;
 
     public Input<VirtualGatewaySpecListenerTlsCertificateFileGetArgs> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -43,7 +43,7 @@ public final class VirtualGatewaySpecListenerTlsCertificateGetArgs extends io.pu
      * 
      */
     @InputImport(name="sds")
-    private final @Nullable Input<VirtualGatewaySpecListenerTlsCertificateSdsGetArgs> sds;
+      private final @Nullable Input<VirtualGatewaySpecListenerTlsCertificateSdsGetArgs> sds;
 
     public Input<VirtualGatewaySpecListenerTlsCertificateSdsGetArgs> getSds() {
         return this.sds == null ? Input.empty() : this.sds;

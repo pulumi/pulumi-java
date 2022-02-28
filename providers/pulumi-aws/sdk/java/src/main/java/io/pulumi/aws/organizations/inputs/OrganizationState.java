@@ -7,7 +7,7 @@ import io.pulumi.aws.organizations.inputs.OrganizationAccountGetArgs;
 import io.pulumi.aws.organizations.inputs.OrganizationNonMasterAccountGetArgs;
 import io.pulumi.aws.organizations.inputs.OrganizationRootGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accounts")
-    private final @Nullable Input<List<OrganizationAccountGetArgs>> accounts;
+      private final @Nullable Input<List<OrganizationAccountGetArgs>> accounts;
 
     public Input<List<OrganizationAccountGetArgs>> getAccounts() {
         return this.accounts == null ? Input.empty() : this.accounts;
@@ -34,7 +34,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -45,7 +45,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsServiceAccessPrincipals")
-    private final @Nullable Input<List<String>> awsServiceAccessPrincipals;
+      private final @Nullable Input<List<String>> awsServiceAccessPrincipals;
 
     public Input<List<String>> getAwsServiceAccessPrincipals() {
         return this.awsServiceAccessPrincipals == null ? Input.empty() : this.awsServiceAccessPrincipals;
@@ -56,7 +56,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledPolicyTypes")
-    private final @Nullable Input<List<String>> enabledPolicyTypes;
+      private final @Nullable Input<List<String>> enabledPolicyTypes;
 
     public Input<List<String>> getEnabledPolicyTypes() {
         return this.enabledPolicyTypes == null ? Input.empty() : this.enabledPolicyTypes;
@@ -67,7 +67,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="featureSet")
-    private final @Nullable Input<String> featureSet;
+      private final @Nullable Input<String> featureSet;
 
     public Input<String> getFeatureSet() {
         return this.featureSet == null ? Input.empty() : this.featureSet;
@@ -78,7 +78,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterAccountArn")
-    private final @Nullable Input<String> masterAccountArn;
+      private final @Nullable Input<String> masterAccountArn;
 
     public Input<String> getMasterAccountArn() {
         return this.masterAccountArn == null ? Input.empty() : this.masterAccountArn;
@@ -89,7 +89,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterAccountEmail")
-    private final @Nullable Input<String> masterAccountEmail;
+      private final @Nullable Input<String> masterAccountEmail;
 
     public Input<String> getMasterAccountEmail() {
         return this.masterAccountEmail == null ? Input.empty() : this.masterAccountEmail;
@@ -100,7 +100,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterAccountId")
-    private final @Nullable Input<String> masterAccountId;
+      private final @Nullable Input<String> masterAccountId;
 
     public Input<String> getMasterAccountId() {
         return this.masterAccountId == null ? Input.empty() : this.masterAccountId;
@@ -111,7 +111,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nonMasterAccounts")
-    private final @Nullable Input<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts;
+      private final @Nullable Input<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts;
 
     public Input<List<OrganizationNonMasterAccountGetArgs>> getNonMasterAccounts() {
         return this.nonMasterAccounts == null ? Input.empty() : this.nonMasterAccounts;
@@ -122,7 +122,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roots")
-    private final @Nullable Input<List<OrganizationRootGetArgs>> roots;
+      private final @Nullable Input<List<OrganizationRootGetArgs>> roots;
 
     public Input<List<OrganizationRootGetArgs>> getRoots() {
         return this.roots == null ? Input.empty() : this.roots;

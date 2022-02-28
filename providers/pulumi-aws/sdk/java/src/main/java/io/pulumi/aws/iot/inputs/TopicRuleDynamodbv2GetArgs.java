@@ -5,7 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.aws.iot.inputs.TopicRuleDynamodbv2PutItemGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class TopicRuleDynamodbv2GetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="putItem")
-    private final @Nullable Input<TopicRuleDynamodbv2PutItemGetArgs> putItem;
+      private final @Nullable Input<TopicRuleDynamodbv2PutItemGetArgs> putItem;
 
     public Input<TopicRuleDynamodbv2PutItemGetArgs> getPutItem() {
         return this.putItem == null ? Input.empty() : this.putItem;
@@ -31,7 +31,7 @@ public final class TopicRuleDynamodbv2GetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;

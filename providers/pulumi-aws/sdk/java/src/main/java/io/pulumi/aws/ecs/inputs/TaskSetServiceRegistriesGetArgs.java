@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TaskSetServiceRegistriesGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="containerName")
-    private final @Nullable Input<String> containerName;
+      private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
@@ -31,7 +31,7 @@ public final class TaskSetServiceRegistriesGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="containerPort")
-    private final @Nullable Input<Integer> containerPort;
+      private final @Nullable Input<Integer> containerPort;
 
     public Input<Integer> getContainerPort() {
         return this.containerPort == null ? Input.empty() : this.containerPort;
@@ -42,7 +42,7 @@ public final class TaskSetServiceRegistriesGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -53,7 +53,7 @@ public final class TaskSetServiceRegistriesGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="registryArn", required=true)
-    private final Input<String> registryArn;
+      private final Input<String> registryArn;
 
     public Input<String> getRegistryArn() {
         return this.registryArn;

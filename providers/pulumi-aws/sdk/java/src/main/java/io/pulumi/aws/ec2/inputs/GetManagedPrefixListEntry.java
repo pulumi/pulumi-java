@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetManagedPrefixListEntry extends io.pulumi.resources.InvokeA
     public static final GetManagedPrefixListEntry Empty = new GetManagedPrefixListEntry();
 
     @InputImport(name="cidr", required=true)
-    private final String cidr;
+      private final String cidr;
 
     public String getCidr() {
         return this.cidr;
     }
 
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;

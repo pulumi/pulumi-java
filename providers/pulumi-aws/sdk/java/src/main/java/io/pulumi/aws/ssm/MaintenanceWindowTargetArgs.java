@@ -5,7 +5,7 @@ package io.pulumi.aws.ssm;
 
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTargetTargetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MaintenanceWindowTargetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class MaintenanceWindowTargetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class MaintenanceWindowTargetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ownerInformation")
-    private final @Nullable Input<String> ownerInformation;
+      private final @Nullable Input<String> ownerInformation;
 
     public Input<String> getOwnerInformation() {
         return this.ownerInformation == null ? Input.empty() : this.ownerInformation;
@@ -54,7 +54,7 @@ public final class MaintenanceWindowTargetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final Input<String> resourceType;
+      private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -66,7 +66,7 @@ public final class MaintenanceWindowTargetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="targets", required=true)
-    private final Input<List<MaintenanceWindowTargetTargetArgs>> targets;
+      private final Input<List<MaintenanceWindowTargetTargetArgs>> targets;
 
     public Input<List<MaintenanceWindowTargetTargetArgs>> getTargets() {
         return this.targets;
@@ -77,7 +77,7 @@ public final class MaintenanceWindowTargetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="windowId", required=true)
-    private final Input<String> windowId;
+      private final Input<String> windowId;
 
     public Input<String> getWindowId() {
         return this.windowId;

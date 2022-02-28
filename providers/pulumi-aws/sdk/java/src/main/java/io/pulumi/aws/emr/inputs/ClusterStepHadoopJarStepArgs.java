@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -32,7 +32,7 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="jar", required=true)
-    private final Input<String> jar;
+      private final Input<String> jar;
 
     public Input<String> getJar() {
         return this.jar;
@@ -43,7 +43,7 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="mainClass")
-    private final @Nullable Input<String> mainClass;
+      private final @Nullable Input<String> mainClass;
 
     public Input<String> getMainClass() {
         return this.mainClass == null ? Input.empty() : this.mainClass;
@@ -54,7 +54,7 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;

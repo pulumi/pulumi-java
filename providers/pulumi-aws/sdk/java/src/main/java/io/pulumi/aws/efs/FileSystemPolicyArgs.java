@@ -4,7 +4,7 @@
 package io.pulumi.aws.efs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FileSystemPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bypassPolicyLockoutSafetyCheck")
-    private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
+      private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
 
     public Input<Boolean> getBypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck == null ? Input.empty() : this.bypassPolicyLockoutSafetyCheck;
@@ -31,7 +31,7 @@ public final class FileSystemPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fileSystemId", required=true)
-    private final Input<String> fileSystemId;
+      private final Input<String> fileSystemId;
 
     public Input<String> getFileSystemId() {
         return this.fileSystemId;
@@ -42,7 +42,7 @@ public final class FileSystemPolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policy", required=true)
-    private final Input<String> policy;
+      private final Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy;

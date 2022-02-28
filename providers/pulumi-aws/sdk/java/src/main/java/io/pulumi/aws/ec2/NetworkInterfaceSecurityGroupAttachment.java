@@ -8,8 +8,8 @@ import io.pulumi.aws.ec2.NetworkInterfaceSecurityGroupAttachmentArgs;
 import io.pulumi.aws.ec2.inputs.NetworkInterfaceSecurityGroupAttachmentState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -59,6 +59,21 @@ public class NetworkInterfaceSecurityGroupAttachment extends io.pulumi.resources
         return this.securityGroupId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public NetworkInterfaceSecurityGroupAttachment(String name) {
+        this(name, NetworkInterfaceSecurityGroupAttachmentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public NetworkInterfaceSecurityGroupAttachment(String name, NetworkInterfaceSecurityGroupAttachmentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

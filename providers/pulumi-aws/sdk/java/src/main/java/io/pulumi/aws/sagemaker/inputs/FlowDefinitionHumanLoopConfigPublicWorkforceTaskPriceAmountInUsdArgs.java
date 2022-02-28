@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
      * 
      */
     @InputImport(name="cents")
-    private final @Nullable Input<Integer> cents;
+      private final @Nullable Input<Integer> cents;
 
     public Input<Integer> getCents() {
         return this.cents == null ? Input.empty() : this.cents;
@@ -30,7 +30,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
      * 
      */
     @InputImport(name="dollars")
-    private final @Nullable Input<Integer> dollars;
+      private final @Nullable Input<Integer> dollars;
 
     public Input<Integer> getDollars() {
         return this.dollars == null ? Input.empty() : this.dollars;
@@ -41,7 +41,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
      * 
      */
     @InputImport(name="tenthFractionsOfACent")
-    private final @Nullable Input<Integer> tenthFractionsOfACent;
+      private final @Nullable Input<Integer> tenthFractionsOfACent;
 
     public Input<Integer> getTenthFractionsOfACent() {
         return this.tenthFractionsOfACent == null ? Input.empty() : this.tenthFractionsOfACent;

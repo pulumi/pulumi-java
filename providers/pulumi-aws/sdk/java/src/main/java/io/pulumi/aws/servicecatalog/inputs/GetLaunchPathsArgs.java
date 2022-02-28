@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetLaunchPathsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="acceptLanguage")
-    private final @Nullable String acceptLanguage;
+      private final @Nullable String acceptLanguage;
 
     public Optional<String> getAcceptLanguage() {
         return this.acceptLanguage == null ? Optional.empty() : Optional.ofNullable(this.acceptLanguage);
@@ -30,7 +30,7 @@ public final class GetLaunchPathsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="productId", required=true)
-    private final String productId;
+      private final String productId;
 
     public String getProductId() {
         return this.productId;

@@ -6,7 +6,7 @@ package io.pulumi.aws.autoscalingplans;
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanApplicationSourceArgs;
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationSource", required=true)
-    private final Input<ScalingPlanApplicationSourceArgs> applicationSource;
+      private final Input<ScalingPlanApplicationSourceArgs> applicationSource;
 
     public Input<ScalingPlanApplicationSourceArgs> getApplicationSource() {
         return this.applicationSource;
@@ -33,7 +33,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingInstructions", required=true)
-    private final Input<List<ScalingPlanScalingInstructionArgs>> scalingInstructions;
+      private final Input<List<ScalingPlanScalingInstructionArgs>> scalingInstructions;
 
     public Input<List<ScalingPlanScalingInstructionArgs>> getScalingInstructions() {
         return this.scalingInstructions;

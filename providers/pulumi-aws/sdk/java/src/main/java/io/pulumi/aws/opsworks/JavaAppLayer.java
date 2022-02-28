@@ -10,8 +10,8 @@ import io.pulumi.aws.opsworks.outputs.JavaAppLayerCloudwatchConfiguration;
 import io.pulumi.aws.opsworks.outputs.JavaAppLayerEbsVolume;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -386,6 +386,21 @@ public class JavaAppLayer extends io.pulumi.resources.CustomResource {
         return this.useEbsOptimizedInstances;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public JavaAppLayer(String name) {
+        this(name, JavaAppLayerArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public JavaAppLayer(String name, JavaAppLayerArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

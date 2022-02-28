@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.workspaces.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="imageId", required=true)
-    private final String imageId;
+      private final String imageId;
 
     public String getImageId() {
         return this.imageId;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -33,7 +33,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="privateZone")
-    private final @Nullable Boolean privateZone;
+      private final @Nullable Boolean privateZone;
 
     public Optional<Boolean> getPrivateZone() {
         return this.privateZone == null ? Optional.empty() : Optional.ofNullable(this.privateZone);
@@ -44,7 +44,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceRecordSetCount")
-    private final @Nullable Integer resourceRecordSetCount;
+      private final @Nullable Integer resourceRecordSetCount;
 
     public Optional<Integer> getResourceRecordSetCount() {
         return this.resourceRecordSetCount == null ? Optional.empty() : Optional.ofNullable(this.resourceRecordSetCount);
@@ -55,7 +55,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -66,7 +66,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable String vpcId;
+      private final @Nullable String vpcId;
 
     public Optional<String> getVpcId() {
         return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
@@ -77,7 +77,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="zoneId")
-    private final @Nullable String zoneId;
+      private final @Nullable String zoneId;
 
     public Optional<String> getZoneId() {
         return this.zoneId == null ? Optional.empty() : Optional.ofNullable(this.zoneId);

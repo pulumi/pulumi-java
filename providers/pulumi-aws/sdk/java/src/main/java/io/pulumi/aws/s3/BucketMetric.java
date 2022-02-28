@@ -9,8 +9,8 @@ import io.pulumi.aws.s3.inputs.BucketMetricState;
 import io.pulumi.aws.s3.outputs.BucketMetricFilter;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -73,6 +73,21 @@ public class BucketMetric extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public BucketMetric(String name) {
+        this(name, BucketMetricArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public BucketMetric(String name, BucketMetricArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

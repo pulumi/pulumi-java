@@ -9,8 +9,8 @@ import io.pulumi.aws.apprunner.inputs.CustomDomainAssociationState;
 import io.pulumi.aws.apprunner.outputs.CustomDomainAssociationCertificateValidationRecord;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -121,6 +121,21 @@ public class CustomDomainAssociation extends io.pulumi.resources.CustomResource 
         return this.status;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CustomDomainAssociation(String name) {
+        this(name, CustomDomainAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CustomDomainAssociation(String name, CustomDomainAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

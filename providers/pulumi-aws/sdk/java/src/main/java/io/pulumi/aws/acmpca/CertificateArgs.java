@@ -5,7 +5,7 @@ package io.pulumi.aws.acmpca;
 
 import io.pulumi.aws.acmpca.inputs.CertificateValidityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthorityArn", required=true)
-    private final Input<String> certificateAuthorityArn;
+      private final Input<String> certificateAuthorityArn;
 
     public Input<String> getCertificateAuthorityArn() {
         return this.certificateAuthorityArn;
@@ -31,7 +31,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateSigningRequest", required=true)
-    private final Input<String> certificateSigningRequest;
+      private final Input<String> certificateSigningRequest;
 
     public Input<String> getCertificateSigningRequest() {
         return this.certificateSigningRequest;
@@ -42,7 +42,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signingAlgorithm", required=true)
-    private final Input<String> signingAlgorithm;
+      private final Input<String> signingAlgorithm;
 
     public Input<String> getSigningAlgorithm() {
         return this.signingAlgorithm;
@@ -53,7 +53,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateArn")
-    private final @Nullable Input<String> templateArn;
+      private final @Nullable Input<String> templateArn;
 
     public Input<String> getTemplateArn() {
         return this.templateArn == null ? Input.empty() : this.templateArn;
@@ -64,7 +64,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validity", required=true)
-    private final Input<CertificateValidityArgs> validity;
+      private final Input<CertificateValidityArgs> validity;
 
     public Input<CertificateValidityArgs> getValidity() {
         return this.validity;

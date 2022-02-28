@@ -5,7 +5,7 @@ package io.pulumi.aws.alb.outputs;
 
 import io.pulumi.aws.alb.outputs.GetListenerDefaultActionForwardStickiness;
 import io.pulumi.aws.alb.outputs.GetListenerDefaultActionForwardTargetGroup;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 

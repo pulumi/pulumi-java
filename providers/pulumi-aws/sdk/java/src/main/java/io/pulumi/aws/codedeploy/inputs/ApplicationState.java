@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+      private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
@@ -32,7 +32,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -43,7 +43,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computePlatform")
-    private final @Nullable Input<String> computePlatform;
+      private final @Nullable Input<String> computePlatform;
 
     public Input<String> getComputePlatform() {
         return this.computePlatform == null ? Input.empty() : this.computePlatform;
@@ -54,7 +54,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="githubAccountName")
-    private final @Nullable Input<String> githubAccountName;
+      private final @Nullable Input<String> githubAccountName;
 
     public Input<String> getGithubAccountName() {
         return this.githubAccountName == null ? Input.empty() : this.githubAccountName;
@@ -65,7 +65,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedToGithub")
-    private final @Nullable Input<Boolean> linkedToGithub;
+      private final @Nullable Input<Boolean> linkedToGithub;
 
     public Input<Boolean> getLinkedToGithub() {
         return this.linkedToGithub == null ? Input.empty() : this.linkedToGithub;
@@ -76,7 +76,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -98,7 +98,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

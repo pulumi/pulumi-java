@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class PeeringConnectionOptionsRequesterGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="allowClassicLinkToRemoteVpc")
-    private final @Nullable Input<Boolean> allowClassicLinkToRemoteVpc;
+      private final @Nullable Input<Boolean> allowClassicLinkToRemoteVpc;
 
     public Input<Boolean> getAllowClassicLinkToRemoteVpc() {
         return this.allowClassicLinkToRemoteVpc == null ? Input.empty() : this.allowClassicLinkToRemoteVpc;
@@ -33,7 +33,7 @@ public final class PeeringConnectionOptionsRequesterGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="allowRemoteVpcDnsResolution")
-    private final @Nullable Input<Boolean> allowRemoteVpcDnsResolution;
+      private final @Nullable Input<Boolean> allowRemoteVpcDnsResolution;
 
     public Input<Boolean> getAllowRemoteVpcDnsResolution() {
         return this.allowRemoteVpcDnsResolution == null ? Input.empty() : this.allowRemoteVpcDnsResolution;
@@ -46,7 +46,7 @@ public final class PeeringConnectionOptionsRequesterGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="allowVpcToRemoteClassicLink")
-    private final @Nullable Input<Boolean> allowVpcToRemoteClassicLink;
+      private final @Nullable Input<Boolean> allowVpcToRemoteClassicLink;
 
     public Input<Boolean> getAllowVpcToRemoteClassicLink() {
         return this.allowVpcToRemoteClassicLink == null ? Input.empty() : this.allowVpcToRemoteClassicLink;

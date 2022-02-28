@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetUserSshKeyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encoding", required=true)
-    private final String encoding;
+      private final String encoding;
 
     public String getEncoding() {
         return this.encoding;
@@ -28,7 +28,7 @@ public final class GetUserSshKeyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sshPublicKeyId", required=true)
-    private final String sshPublicKeyId;
+      private final String sshPublicKeyId;
 
     public String getSshPublicKeyId() {
         return this.sshPublicKeyId;
@@ -39,7 +39,7 @@ public final class GetUserSshKeyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;

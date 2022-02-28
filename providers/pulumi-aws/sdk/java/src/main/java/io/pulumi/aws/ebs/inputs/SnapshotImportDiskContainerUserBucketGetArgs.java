@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class SnapshotImportDiskContainerUserBucketGetArgs extends io.pulum
      * 
      */
     @InputImport(name="s3Bucket", required=true)
-    private final Input<String> s3Bucket;
+      private final Input<String> s3Bucket;
 
     public Input<String> getS3Bucket() {
         return this.s3Bucket;
@@ -29,7 +29,7 @@ public final class SnapshotImportDiskContainerUserBucketGetArgs extends io.pulum
      * 
      */
     @InputImport(name="s3Key", required=true)
-    private final Input<String> s3Key;
+      private final Input<String> s3Key;
 
     public Input<String> getS3Key() {
         return this.s3Key;

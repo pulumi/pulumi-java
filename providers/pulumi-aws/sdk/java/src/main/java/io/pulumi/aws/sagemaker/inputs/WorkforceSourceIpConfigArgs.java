@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WorkforceSourceIpConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cidrs", required=true)
-    private final Input<List<String>> cidrs;
+      private final Input<List<String>> cidrs;
 
     public Input<List<String>> getCidrs() {
         return this.cidrs;

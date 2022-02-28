@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.VpcIpamOperatingRegionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatingRegions")
-    private final @Nullable Input<List<VpcIpamOperatingRegionGetArgs>> operatingRegions;
+      private final @Nullable Input<List<VpcIpamOperatingRegionGetArgs>> operatingRegions;
 
     public Input<List<VpcIpamOperatingRegionGetArgs>> getOperatingRegions() {
         return this.operatingRegions == null ? Input.empty() : this.operatingRegions;
@@ -56,7 +56,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateDefaultScopeId")
-    private final @Nullable Input<String> privateDefaultScopeId;
+      private final @Nullable Input<String> privateDefaultScopeId;
 
     public Input<String> getPrivateDefaultScopeId() {
         return this.privateDefaultScopeId == null ? Input.empty() : this.privateDefaultScopeId;
@@ -68,7 +68,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicDefaultScopeId")
-    private final @Nullable Input<String> publicDefaultScopeId;
+      private final @Nullable Input<String> publicDefaultScopeId;
 
     public Input<String> getPublicDefaultScopeId() {
         return this.publicDefaultScopeId == null ? Input.empty() : this.publicDefaultScopeId;
@@ -79,7 +79,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopeCount")
-    private final @Nullable Input<Integer> scopeCount;
+      private final @Nullable Input<Integer> scopeCount;
 
     public Input<Integer> getScopeCount() {
         return this.scopeCount == null ? Input.empty() : this.scopeCount;
@@ -90,7 +90,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -101,7 +101,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

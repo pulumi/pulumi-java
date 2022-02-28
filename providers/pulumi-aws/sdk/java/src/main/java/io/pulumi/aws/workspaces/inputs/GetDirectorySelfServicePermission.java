@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.workspaces.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDirectorySelfServicePermission extends io.pulumi.resources
      * 
      */
     @InputImport(name="changeComputeType", required=true)
-    private final Boolean changeComputeType;
+      private final Boolean changeComputeType;
 
     public Boolean getChangeComputeType() {
         return this.changeComputeType;
@@ -28,7 +28,7 @@ public final class GetDirectorySelfServicePermission extends io.pulumi.resources
      * 
      */
     @InputImport(name="increaseVolumeSize", required=true)
-    private final Boolean increaseVolumeSize;
+      private final Boolean increaseVolumeSize;
 
     public Boolean getIncreaseVolumeSize() {
         return this.increaseVolumeSize;
@@ -39,7 +39,7 @@ public final class GetDirectorySelfServicePermission extends io.pulumi.resources
      * 
      */
     @InputImport(name="rebuildWorkspace", required=true)
-    private final Boolean rebuildWorkspace;
+      private final Boolean rebuildWorkspace;
 
     public Boolean getRebuildWorkspace() {
         return this.rebuildWorkspace;
@@ -50,7 +50,7 @@ public final class GetDirectorySelfServicePermission extends io.pulumi.resources
      * 
      */
     @InputImport(name="restartWorkspace", required=true)
-    private final Boolean restartWorkspace;
+      private final Boolean restartWorkspace;
 
     public Boolean getRestartWorkspace() {
         return this.restartWorkspace;
@@ -61,7 +61,7 @@ public final class GetDirectorySelfServicePermission extends io.pulumi.resources
      * 
      */
     @InputImport(name="switchRunningMode", required=true)
-    private final Boolean switchRunningMode;
+      private final Boolean switchRunningMode;
 
     public Boolean getSwitchRunningMode() {
         return this.switchRunningMode;

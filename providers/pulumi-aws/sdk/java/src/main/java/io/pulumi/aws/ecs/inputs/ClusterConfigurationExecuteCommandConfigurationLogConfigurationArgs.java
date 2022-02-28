@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
      * 
      */
     @InputImport(name="cloudWatchEncryptionEnabled")
-    private final @Nullable Input<Boolean> cloudWatchEncryptionEnabled;
+      private final @Nullable Input<Boolean> cloudWatchEncryptionEnabled;
 
     public Input<Boolean> getCloudWatchEncryptionEnabled() {
         return this.cloudWatchEncryptionEnabled == null ? Input.empty() : this.cloudWatchEncryptionEnabled;
@@ -31,7 +31,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
      * 
      */
     @InputImport(name="cloudWatchLogGroupName")
-    private final @Nullable Input<String> cloudWatchLogGroupName;
+      private final @Nullable Input<String> cloudWatchLogGroupName;
 
     public Input<String> getCloudWatchLogGroupName() {
         return this.cloudWatchLogGroupName == null ? Input.empty() : this.cloudWatchLogGroupName;
@@ -42,7 +42,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
      * 
      */
     @InputImport(name="s3BucketEncryptionEnabled")
-    private final @Nullable Input<Boolean> s3BucketEncryptionEnabled;
+      private final @Nullable Input<Boolean> s3BucketEncryptionEnabled;
 
     public Input<Boolean> getS3BucketEncryptionEnabled() {
         return this.s3BucketEncryptionEnabled == null ? Input.empty() : this.s3BucketEncryptionEnabled;
@@ -53,7 +53,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
      * 
      */
     @InputImport(name="s3BucketName")
-    private final @Nullable Input<String> s3BucketName;
+      private final @Nullable Input<String> s3BucketName;
 
     public Input<String> getS3BucketName() {
         return this.s3BucketName == null ? Input.empty() : this.s3BucketName;
@@ -64,7 +64,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
      * 
      */
     @InputImport(name="s3KeyPrefix")
-    private final @Nullable Input<String> s3KeyPrefix;
+      private final @Nullable Input<String> s3KeyPrefix;
 
     public Input<String> getS3KeyPrefix() {
         return this.s3KeyPrefix == null ? Input.empty() : this.s3KeyPrefix;

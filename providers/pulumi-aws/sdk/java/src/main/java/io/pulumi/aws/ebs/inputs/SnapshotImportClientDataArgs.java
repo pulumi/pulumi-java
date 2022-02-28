@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SnapshotImportClientDataArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -31,7 +31,7 @@ public final class SnapshotImportClientDataArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="uploadEnd")
-    private final @Nullable Input<String> uploadEnd;
+      private final @Nullable Input<String> uploadEnd;
 
     public Input<String> getUploadEnd() {
         return this.uploadEnd == null ? Input.empty() : this.uploadEnd;
@@ -42,7 +42,7 @@ public final class SnapshotImportClientDataArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="uploadSize")
-    private final @Nullable Input<Double> uploadSize;
+      private final @Nullable Input<Double> uploadSize;
 
     public Input<Double> getUploadSize() {
         return this.uploadSize == null ? Input.empty() : this.uploadSize;
@@ -53,7 +53,7 @@ public final class SnapshotImportClientDataArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="uploadStart")
-    private final @Nullable Input<String> uploadStart;
+      private final @Nullable Input<String> uploadStart;
 
     public Input<String> getUploadStart() {
         return this.uploadStart == null ? Input.empty() : this.uploadStart;

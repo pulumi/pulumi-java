@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.outputs;
 
 import io.pulumi.aws.msk.outputs.ClusterOpenMonitoringPrometheus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType

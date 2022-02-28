@@ -5,7 +5,7 @@ package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.aws.cfg.inputs.RuleSourceSourceDetailArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RuleSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner", required=true)
-    private final Input<String> owner;
+      private final Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner;
@@ -32,7 +32,7 @@ public final class RuleSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDetails")
-    private final @Nullable Input<List<RuleSourceSourceDetailArgs>> sourceDetails;
+      private final @Nullable Input<List<RuleSourceSourceDetailArgs>> sourceDetails;
 
     public Input<List<RuleSourceSourceDetailArgs>> getSourceDetails() {
         return this.sourceDetails == null ? Input.empty() : this.sourceDetails;
@@ -43,7 +43,7 @@ public final class RuleSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceIdentifier", required=true)
-    private final Input<String> sourceIdentifier;
+      private final Input<String> sourceIdentifier;
 
     public Input<String> getSourceIdentifier() {
         return this.sourceIdentifier;

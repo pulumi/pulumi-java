@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Input<String> defaultValue;
+      private final @Nullable Input<String> defaultValue;
 
     public Input<String> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -31,7 +31,7 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable Input<Map<String,String>> dimensions;
+      private final @Nullable Input<Map<String,String>> dimensions;
 
     public Input<Map<String,String>> getDimensions() {
         return this.dimensions == null ? Input.empty() : this.dimensions;
@@ -42,7 +42,7 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -53,7 +53,7 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final Input<String> namespace;
+      private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;
@@ -64,7 +64,7 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable Input<String> unit;
+      private final @Nullable Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;
@@ -75,7 +75,7 @@ public final class LogMetricFilterMetricTransformationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

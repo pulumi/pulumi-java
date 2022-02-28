@@ -4,7 +4,7 @@
 package io.pulumi.aws.amp;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RuleGroupNamespaceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="data", required=true)
-    private final Input<String> data;
+      private final Input<String> data;
 
     public Input<String> getData() {
         return this.data;
@@ -30,7 +30,7 @@ public final class RuleGroupNamespaceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -41,7 +41,7 @@ public final class RuleGroupNamespaceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workspaceId", required=true)
-    private final Input<String> workspaceId;
+      private final Input<String> workspaceId;
 
     public Input<String> getWorkspaceId() {
         return this.workspaceId;

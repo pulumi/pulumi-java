@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVpcPeeringConnectionCidrBlockSet extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cidrBlock", required=true)
-    private final String cidrBlock;
+      private final String cidrBlock;
 
     public String getCidrBlock() {
         return this.cidrBlock;

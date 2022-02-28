@@ -4,7 +4,7 @@
 package io.pulumi.aws.account.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -30,7 +30,7 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="alternateContactType")
-    private final @Nullable Input<String> alternateContactType;
+      private final @Nullable Input<String> alternateContactType;
 
     public Input<String> getAlternateContactType() {
         return this.alternateContactType == null ? Input.empty() : this.alternateContactType;
@@ -41,7 +41,7 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="emailAddress")
-    private final @Nullable Input<String> emailAddress;
+      private final @Nullable Input<String> emailAddress;
 
     public Input<String> getEmailAddress() {
         return this.emailAddress == null ? Input.empty() : this.emailAddress;
@@ -52,7 +52,7 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -63,7 +63,7 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="phoneNumber")
-    private final @Nullable Input<String> phoneNumber;
+      private final @Nullable Input<String> phoneNumber;
 
     public Input<String> getPhoneNumber() {
         return this.phoneNumber == null ? Input.empty() : this.phoneNumber;
@@ -74,7 +74,7 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;

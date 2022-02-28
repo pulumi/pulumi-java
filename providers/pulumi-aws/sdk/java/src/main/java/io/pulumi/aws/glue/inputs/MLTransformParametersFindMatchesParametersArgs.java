@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class MLTransformParametersFindMatchesParametersArgs extends io.pul
      * 
      */
     @InputImport(name="accuracyCostTradeOff")
-    private final @Nullable Input<Double> accuracyCostTradeOff;
+      private final @Nullable Input<Double> accuracyCostTradeOff;
 
     public Input<Double> getAccuracyCostTradeOff() {
         return this.accuracyCostTradeOff == null ? Input.empty() : this.accuracyCostTradeOff;
@@ -32,7 +32,7 @@ public final class MLTransformParametersFindMatchesParametersArgs extends io.pul
      * 
      */
     @InputImport(name="enforceProvidedLabels")
-    private final @Nullable Input<Boolean> enforceProvidedLabels;
+      private final @Nullable Input<Boolean> enforceProvidedLabels;
 
     public Input<Boolean> getEnforceProvidedLabels() {
         return this.enforceProvidedLabels == null ? Input.empty() : this.enforceProvidedLabels;
@@ -43,7 +43,7 @@ public final class MLTransformParametersFindMatchesParametersArgs extends io.pul
      * 
      */
     @InputImport(name="precisionRecallTradeOff")
-    private final @Nullable Input<Double> precisionRecallTradeOff;
+      private final @Nullable Input<Double> precisionRecallTradeOff;
 
     public Input<Double> getPrecisionRecallTradeOff() {
         return this.precisionRecallTradeOff == null ? Input.empty() : this.precisionRecallTradeOff;
@@ -54,7 +54,7 @@ public final class MLTransformParametersFindMatchesParametersArgs extends io.pul
      * 
      */
     @InputImport(name="primaryKeyColumnName")
-    private final @Nullable Input<String> primaryKeyColumnName;
+      private final @Nullable Input<String> primaryKeyColumnName;
 
     public Input<String> getPrimaryKeyColumnName() {
         return this.primaryKeyColumnName == null ? Input.empty() : this.primaryKeyColumnName;

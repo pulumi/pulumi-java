@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteMatchGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteRetryPolicyGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteTimeoutGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class RouteSpecGrpcRouteGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<RouteSpecGrpcRouteActionGetArgs> action;
+      private final Input<RouteSpecGrpcRouteActionGetArgs> action;
 
     public Input<RouteSpecGrpcRouteActionGetArgs> getAction() {
         return this.action;
@@ -33,7 +33,7 @@ public final class RouteSpecGrpcRouteGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="match")
-    private final @Nullable Input<RouteSpecGrpcRouteMatchGetArgs> match;
+      private final @Nullable Input<RouteSpecGrpcRouteMatchGetArgs> match;
 
     public Input<RouteSpecGrpcRouteMatchGetArgs> getMatch() {
         return this.match == null ? Input.empty() : this.match;
@@ -44,7 +44,7 @@ public final class RouteSpecGrpcRouteGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="retryPolicy")
-    private final @Nullable Input<RouteSpecGrpcRouteRetryPolicyGetArgs> retryPolicy;
+      private final @Nullable Input<RouteSpecGrpcRouteRetryPolicyGetArgs> retryPolicy;
 
     public Input<RouteSpecGrpcRouteRetryPolicyGetArgs> getRetryPolicy() {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
@@ -55,7 +55,7 @@ public final class RouteSpecGrpcRouteGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<RouteSpecGrpcRouteTimeoutGetArgs> timeout;
+      private final @Nullable Input<RouteSpecGrpcRouteTimeoutGetArgs> timeout;
 
     public Input<RouteSpecGrpcRouteTimeoutGetArgs> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;

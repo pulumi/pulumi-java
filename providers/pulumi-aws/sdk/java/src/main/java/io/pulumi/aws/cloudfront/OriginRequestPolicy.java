@@ -11,8 +11,8 @@ import io.pulumi.aws.cloudfront.outputs.OriginRequestPolicyHeadersConfig;
 import io.pulumi.aws.cloudfront.outputs.OriginRequestPolicyQueryStringsConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -107,6 +107,21 @@ public class OriginRequestPolicy extends io.pulumi.resources.CustomResource {
         return this.queryStringsConfig;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public OriginRequestPolicy(String name) {
+        this(name, OriginRequestPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public OriginRequestPolicy(String name, OriginRequestPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

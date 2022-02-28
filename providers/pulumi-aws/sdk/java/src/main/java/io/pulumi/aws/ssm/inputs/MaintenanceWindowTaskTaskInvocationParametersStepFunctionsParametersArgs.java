@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
      * 
      */
     @InputImport(name="input")
-    private final @Nullable Input<String> input;
+      private final @Nullable Input<String> input;
 
     public Input<String> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -30,7 +30,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DeploymentGroupTriggerConfigurationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="triggerEvents", required=true)
-    private final Input<List<String>> triggerEvents;
+      private final Input<List<String>> triggerEvents;
 
     public Input<List<String>> getTriggerEvents() {
         return this.triggerEvents;
@@ -30,7 +30,7 @@ public final class DeploymentGroupTriggerConfigurationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="triggerName", required=true)
-    private final Input<String> triggerName;
+      private final Input<String> triggerName;
 
     public Input<String> getTriggerName() {
         return this.triggerName;
@@ -41,7 +41,7 @@ public final class DeploymentGroupTriggerConfigurationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="triggerTargetArn", required=true)
-    private final Input<String> triggerTargetArn;
+      private final Input<String> triggerTargetArn;
 
     public Input<String> getTriggerTargetArn() {
         return this.triggerTargetArn;

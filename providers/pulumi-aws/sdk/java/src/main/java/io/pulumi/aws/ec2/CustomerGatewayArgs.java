@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bgpAsn", required=true)
-    private final Input<String> bgpAsn;
+      private final Input<String> bgpAsn;
 
     public Input<String> getBgpAsn() {
         return this.bgpAsn;
@@ -31,7 +31,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="certificateArn")
-    private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
@@ -42,7 +42,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+      private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
@@ -53,7 +53,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final Input<String> ipAddress;
+      private final Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress;
@@ -64,7 +64,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -76,7 +76,7 @@ public final class CustomerGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

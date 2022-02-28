@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="truststoreUri", required=true)
-    private final Input<String> truststoreUri;
+      private final Input<String> truststoreUri;
 
     public Input<String> getTruststoreUri() {
         return this.truststoreUri;
@@ -31,7 +31,7 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="truststoreVersion")
-    private final @Nullable Input<String> truststoreVersion;
+      private final @Nullable Input<String> truststoreVersion;
 
     public Input<String> getTruststoreVersion() {
         return this.truststoreVersion == null ? Input.empty() : this.truststoreVersion;

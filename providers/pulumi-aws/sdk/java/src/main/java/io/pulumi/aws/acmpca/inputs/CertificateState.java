@@ -5,7 +5,7 @@ package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.aws.acmpca.inputs.CertificateValidityGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<String> certificate;
+      private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -42,7 +42,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthorityArn")
-    private final @Nullable Input<String> certificateAuthorityArn;
+      private final @Nullable Input<String> certificateAuthorityArn;
 
     public Input<String> getCertificateAuthorityArn() {
         return this.certificateAuthorityArn == null ? Input.empty() : this.certificateAuthorityArn;
@@ -53,7 +53,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateChain")
-    private final @Nullable Input<String> certificateChain;
+      private final @Nullable Input<String> certificateChain;
 
     public Input<String> getCertificateChain() {
         return this.certificateChain == null ? Input.empty() : this.certificateChain;
@@ -64,7 +64,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateSigningRequest")
-    private final @Nullable Input<String> certificateSigningRequest;
+      private final @Nullable Input<String> certificateSigningRequest;
 
     public Input<String> getCertificateSigningRequest() {
         return this.certificateSigningRequest == null ? Input.empty() : this.certificateSigningRequest;
@@ -75,7 +75,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signingAlgorithm")
-    private final @Nullable Input<String> signingAlgorithm;
+      private final @Nullable Input<String> signingAlgorithm;
 
     public Input<String> getSigningAlgorithm() {
         return this.signingAlgorithm == null ? Input.empty() : this.signingAlgorithm;
@@ -86,7 +86,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateArn")
-    private final @Nullable Input<String> templateArn;
+      private final @Nullable Input<String> templateArn;
 
     public Input<String> getTemplateArn() {
         return this.templateArn == null ? Input.empty() : this.templateArn;
@@ -97,7 +97,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validity")
-    private final @Nullable Input<CertificateValidityGetArgs> validity;
+      private final @Nullable Input<CertificateValidityGetArgs> validity;
 
     public Input<CertificateValidityGetArgs> getValidity() {
         return this.validity == null ? Input.empty() : this.validity;

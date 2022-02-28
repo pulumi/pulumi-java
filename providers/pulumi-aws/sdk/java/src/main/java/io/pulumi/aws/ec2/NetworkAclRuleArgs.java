@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidrBlock")
-    private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Input<String> cidrBlock;
 
     public Input<String> getCidrBlock() {
         return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
@@ -32,7 +32,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egress")
-    private final @Nullable Input<Boolean> egress;
+      private final @Nullable Input<Boolean> egress;
 
     public Input<Boolean> getEgress() {
         return this.egress == null ? Input.empty() : this.egress;
@@ -43,7 +43,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fromPort")
-    private final @Nullable Input<Integer> fromPort;
+      private final @Nullable Input<Integer> fromPort;
 
     public Input<Integer> getFromPort() {
         return this.fromPort == null ? Input.empty() : this.fromPort;
@@ -54,7 +54,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="icmpCode")
-    private final @Nullable Input<String> icmpCode;
+      private final @Nullable Input<String> icmpCode;
 
     public Input<String> getIcmpCode() {
         return this.icmpCode == null ? Input.empty() : this.icmpCode;
@@ -65,7 +65,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="icmpType")
-    private final @Nullable Input<String> icmpType;
+      private final @Nullable Input<String> icmpType;
 
     public Input<String> getIcmpType() {
         return this.icmpType == null ? Input.empty() : this.icmpType;
@@ -76,7 +76,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6CidrBlock")
-    private final @Nullable Input<String> ipv6CidrBlock;
+      private final @Nullable Input<String> ipv6CidrBlock;
 
     public Input<String> getIpv6CidrBlock() {
         return this.ipv6CidrBlock == null ? Input.empty() : this.ipv6CidrBlock;
@@ -87,7 +87,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkAclId", required=true)
-    private final Input<String> networkAclId;
+      private final Input<String> networkAclId;
 
     public Input<String> getNetworkAclId() {
         return this.networkAclId;
@@ -98,7 +98,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<String> protocol;
+      private final Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol;
@@ -109,7 +109,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleAction", required=true)
-    private final Input<String> ruleAction;
+      private final Input<String> ruleAction;
 
     public Input<String> getRuleAction() {
         return this.ruleAction;
@@ -120,7 +120,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleNumber", required=true)
-    private final Input<Integer> ruleNumber;
+      private final Input<Integer> ruleNumber;
 
     public Input<Integer> getRuleNumber() {
         return this.ruleNumber;
@@ -131,7 +131,7 @@ public final class NetworkAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="toPort")
-    private final @Nullable Input<Integer> toPort;
+      private final @Nullable Input<Integer> toPort;
 
     public Input<Integer> getToPort() {
         return this.toPort == null ? Input.empty() : this.toPort;

@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx;
 
 import io.pulumi.aws.fsx.inputs.OntapFileSystemDiskIopsConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="automaticBackupRetentionDays")
-    private final @Nullable Input<Integer> automaticBackupRetentionDays;
+      private final @Nullable Input<Integer> automaticBackupRetentionDays;
 
     public Input<Integer> getAutomaticBackupRetentionDays() {
         return this.automaticBackupRetentionDays == null ? Input.empty() : this.automaticBackupRetentionDays;
@@ -34,7 +34,7 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dailyAutomaticBackupStartTime")
-    private final @Nullable Input<String> dailyAutomaticBackupStartTime;
+      private final @Nullable Input<String> dailyAutomaticBackupStartTime;
 
     public Input<String> getDailyAutomaticBackupStartTime() {
         return this.dailyAutomaticBackupStartTime == null ? Input.empty() : this.dailyAutomaticBackupStartTime;
@@ -45,7 +45,7 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deploymentType", required=true)
-    private final Input<String> deploymentType;
+      private final Input<String> deploymentType;
 
     public Input<String> getDeploymentType() {
         return this.deploymentType;
@@ -56,7 +56,7 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="diskIopsConfiguration")
-    private final @Nullable Input<OntapFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration;
+      private final @Nullable Input<OntapFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration;
 
     public Input<OntapFileSystemDiskIopsConfigurationArgs> getDiskIopsConfiguration() {
         return this.diskIopsConfiguration == null ? Input.empty() : this.diskIopsConfiguration;
@@ -67,7 +67,7 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="endpointIpAddressRange")
-    private final @Nullable Input<String> endpointIpAddressRange;
+      private final @Nullable Input<String> endpointIpAddressRange;
 
     public Input<String> getEndpointIpAddressRange() {
         return this.endpointIpAddressRange == null ? Input.empty() : this.endpointIpAddressRange;
@@ -78,7 +78,7 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fsxAdminPassword")
-    private final @Nullable Input<String> fsxAdminPassword;
+      private final @Nullable Input<String> fsxAdminPassword;
 
     public Input<String> getFsxAdminPassword() {
         return this.fsxAdminPassword == null ? Input.empty() : this.fsxAdminPassword;
@@ -89,7 +89,7 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -100,7 +100,7 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="preferredSubnetId", required=true)
-    private final Input<String> preferredSubnetId;
+      private final Input<String> preferredSubnetId;
 
     public Input<String> getPreferredSubnetId() {
         return this.preferredSubnetId;
@@ -111,7 +111,7 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="routeTableIds")
-    private final @Nullable Input<List<String>> routeTableIds;
+      private final @Nullable Input<List<String>> routeTableIds;
 
     public Input<List<String>> getRouteTableIds() {
         return this.routeTableIds == null ? Input.empty() : this.routeTableIds;
@@ -122,7 +122,7 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -133,7 +133,7 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageCapacity")
-    private final @Nullable Input<Integer> storageCapacity;
+      private final @Nullable Input<Integer> storageCapacity;
 
     public Input<Integer> getStorageCapacity() {
         return this.storageCapacity == null ? Input.empty() : this.storageCapacity;
@@ -144,7 +144,7 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageType")
-    private final @Nullable Input<String> storageType;
+      private final @Nullable Input<String> storageType;
 
     public Input<String> getStorageType() {
         return this.storageType == null ? Input.empty() : this.storageType;
@@ -155,7 +155,7 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final Input<List<String>> subnetIds;
+      private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
@@ -166,14 +166,14 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="throughputCapacity", required=true)
-    private final Input<Integer> throughputCapacity;
+      private final Input<Integer> throughputCapacity;
 
     public Input<Integer> getThroughputCapacity() {
         return this.throughputCapacity;
@@ -184,7 +184,7 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="weeklyMaintenanceStartTime")
-    private final @Nullable Input<String> weeklyMaintenanceStartTime;
+      private final @Nullable Input<String> weeklyMaintenanceStartTime;
 
     public Input<String> getWeeklyMaintenanceStartTime() {
         return this.weeklyMaintenanceStartTime == null ? Input.empty() : this.weeklyMaintenanceStartTime;

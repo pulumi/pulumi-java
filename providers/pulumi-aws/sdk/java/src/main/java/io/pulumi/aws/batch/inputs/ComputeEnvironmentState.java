@@ -5,7 +5,7 @@ package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ComputeEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class ComputeEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="computeEnvironmentName")
-    private final @Nullable Input<String> computeEnvironmentName;
+      private final @Nullable Input<String> computeEnvironmentName;
 
     public Input<String> getComputeEnvironmentName() {
         return this.computeEnvironmentName == null ? Input.empty() : this.computeEnvironmentName;
@@ -43,7 +43,7 @@ public final class ComputeEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="computeEnvironmentNamePrefix")
-    private final @Nullable Input<String> computeEnvironmentNamePrefix;
+      private final @Nullable Input<String> computeEnvironmentNamePrefix;
 
     public Input<String> getComputeEnvironmentNamePrefix() {
         return this.computeEnvironmentNamePrefix == null ? Input.empty() : this.computeEnvironmentNamePrefix;
@@ -54,7 +54,7 @@ public final class ComputeEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="computeResources")
-    private final @Nullable Input<ComputeEnvironmentComputeResourcesGetArgs> computeResources;
+      private final @Nullable Input<ComputeEnvironmentComputeResourcesGetArgs> computeResources;
 
     public Input<ComputeEnvironmentComputeResourcesGetArgs> getComputeResources() {
         return this.computeResources == null ? Input.empty() : this.computeResources;
@@ -65,7 +65,7 @@ public final class ComputeEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ecsClusterArn")
-    private final @Nullable Input<String> ecsClusterArn;
+      private final @Nullable Input<String> ecsClusterArn;
 
     public Input<String> getEcsClusterArn() {
         return this.ecsClusterArn == null ? Input.empty() : this.ecsClusterArn;
@@ -76,7 +76,7 @@ public final class ComputeEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceRole")
-    private final @Nullable Input<String> serviceRole;
+      private final @Nullable Input<String> serviceRole;
 
     public Input<String> getServiceRole() {
         return this.serviceRole == null ? Input.empty() : this.serviceRole;
@@ -87,7 +87,7 @@ public final class ComputeEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -98,7 +98,7 @@ public final class ComputeEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -109,7 +109,7 @@ public final class ComputeEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="statusReason")
-    private final @Nullable Input<String> statusReason;
+      private final @Nullable Input<String> statusReason;
 
     public Input<String> getStatusReason() {
         return this.statusReason == null ? Input.empty() : this.statusReason;
@@ -120,7 +120,7 @@ public final class ComputeEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -131,7 +131,7 @@ public final class ComputeEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -142,7 +142,7 @@ public final class ComputeEnvironmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

@@ -12,7 +12,7 @@ import io.pulumi.aws.ecs.inputs.ServiceOrderedPlacementStrategyGetArgs;
 import io.pulumi.aws.ecs.inputs.ServicePlacementConstraintGetArgs;
 import io.pulumi.aws.ecs.inputs.ServiceServiceRegistriesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityProviderStrategies")
-    private final @Nullable Input<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
+      private final @Nullable Input<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
 
     public Input<List<ServiceCapacityProviderStrategyGetArgs>> getCapacityProviderStrategies() {
         return this.capacityProviderStrategies == null ? Input.empty() : this.capacityProviderStrategies;
@@ -42,7 +42,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster")
-    private final @Nullable Input<String> cluster;
+      private final @Nullable Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster == null ? Input.empty() : this.cluster;
@@ -53,7 +53,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentCircuitBreaker")
-    private final @Nullable Input<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker;
+      private final @Nullable Input<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker;
 
     public Input<ServiceDeploymentCircuitBreakerGetArgs> getDeploymentCircuitBreaker() {
         return this.deploymentCircuitBreaker == null ? Input.empty() : this.deploymentCircuitBreaker;
@@ -64,7 +64,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentController")
-    private final @Nullable Input<ServiceDeploymentControllerGetArgs> deploymentController;
+      private final @Nullable Input<ServiceDeploymentControllerGetArgs> deploymentController;
 
     public Input<ServiceDeploymentControllerGetArgs> getDeploymentController() {
         return this.deploymentController == null ? Input.empty() : this.deploymentController;
@@ -75,7 +75,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentMaximumPercent")
-    private final @Nullable Input<Integer> deploymentMaximumPercent;
+      private final @Nullable Input<Integer> deploymentMaximumPercent;
 
     public Input<Integer> getDeploymentMaximumPercent() {
         return this.deploymentMaximumPercent == null ? Input.empty() : this.deploymentMaximumPercent;
@@ -86,7 +86,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentMinimumHealthyPercent")
-    private final @Nullable Input<Integer> deploymentMinimumHealthyPercent;
+      private final @Nullable Input<Integer> deploymentMinimumHealthyPercent;
 
     public Input<Integer> getDeploymentMinimumHealthyPercent() {
         return this.deploymentMinimumHealthyPercent == null ? Input.empty() : this.deploymentMinimumHealthyPercent;
@@ -97,7 +97,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="desiredCount")
-    private final @Nullable Input<Integer> desiredCount;
+      private final @Nullable Input<Integer> desiredCount;
 
     public Input<Integer> getDesiredCount() {
         return this.desiredCount == null ? Input.empty() : this.desiredCount;
@@ -108,7 +108,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableEcsManagedTags")
-    private final @Nullable Input<Boolean> enableEcsManagedTags;
+      private final @Nullable Input<Boolean> enableEcsManagedTags;
 
     public Input<Boolean> getEnableEcsManagedTags() {
         return this.enableEcsManagedTags == null ? Input.empty() : this.enableEcsManagedTags;
@@ -119,7 +119,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableExecuteCommand")
-    private final @Nullable Input<Boolean> enableExecuteCommand;
+      private final @Nullable Input<Boolean> enableExecuteCommand;
 
     public Input<Boolean> getEnableExecuteCommand() {
         return this.enableExecuteCommand == null ? Input.empty() : this.enableExecuteCommand;
@@ -130,7 +130,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceNewDeployment")
-    private final @Nullable Input<Boolean> forceNewDeployment;
+      private final @Nullable Input<Boolean> forceNewDeployment;
 
     public Input<Boolean> getForceNewDeployment() {
         return this.forceNewDeployment == null ? Input.empty() : this.forceNewDeployment;
@@ -141,7 +141,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckGracePeriodSeconds")
-    private final @Nullable Input<Integer> healthCheckGracePeriodSeconds;
+      private final @Nullable Input<Integer> healthCheckGracePeriodSeconds;
 
     public Input<Integer> getHealthCheckGracePeriodSeconds() {
         return this.healthCheckGracePeriodSeconds == null ? Input.empty() : this.healthCheckGracePeriodSeconds;
@@ -152,7 +152,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRole")
-    private final @Nullable Input<String> iamRole;
+      private final @Nullable Input<String> iamRole;
 
     public Input<String> getIamRole() {
         return this.iamRole == null ? Input.empty() : this.iamRole;
@@ -163,7 +163,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchType")
-    private final @Nullable Input<String> launchType;
+      private final @Nullable Input<String> launchType;
 
     public Input<String> getLaunchType() {
         return this.launchType == null ? Input.empty() : this.launchType;
@@ -174,7 +174,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancers")
-    private final @Nullable Input<List<ServiceLoadBalancerGetArgs>> loadBalancers;
+      private final @Nullable Input<List<ServiceLoadBalancerGetArgs>> loadBalancers;
 
     public Input<List<ServiceLoadBalancerGetArgs>> getLoadBalancers() {
         return this.loadBalancers == null ? Input.empty() : this.loadBalancers;
@@ -185,7 +185,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -196,7 +196,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfiguration")
-    private final @Nullable Input<ServiceNetworkConfigurationGetArgs> networkConfiguration;
+      private final @Nullable Input<ServiceNetworkConfigurationGetArgs> networkConfiguration;
 
     public Input<ServiceNetworkConfigurationGetArgs> getNetworkConfiguration() {
         return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
@@ -207,7 +207,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orderedPlacementStrategies")
-    private final @Nullable Input<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies;
+      private final @Nullable Input<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies;
 
     public Input<List<ServiceOrderedPlacementStrategyGetArgs>> getOrderedPlacementStrategies() {
         return this.orderedPlacementStrategies == null ? Input.empty() : this.orderedPlacementStrategies;
@@ -218,7 +218,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="placementConstraints")
-    private final @Nullable Input<List<ServicePlacementConstraintGetArgs>> placementConstraints;
+      private final @Nullable Input<List<ServicePlacementConstraintGetArgs>> placementConstraints;
 
     public Input<List<ServicePlacementConstraintGetArgs>> getPlacementConstraints() {
         return this.placementConstraints == null ? Input.empty() : this.placementConstraints;
@@ -229,7 +229,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformVersion")
-    private final @Nullable Input<String> platformVersion;
+      private final @Nullable Input<String> platformVersion;
 
     public Input<String> getPlatformVersion() {
         return this.platformVersion == null ? Input.empty() : this.platformVersion;
@@ -240,7 +240,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="propagateTags")
-    private final @Nullable Input<String> propagateTags;
+      private final @Nullable Input<String> propagateTags;
 
     public Input<String> getPropagateTags() {
         return this.propagateTags == null ? Input.empty() : this.propagateTags;
@@ -251,7 +251,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedulingStrategy")
-    private final @Nullable Input<String> schedulingStrategy;
+      private final @Nullable Input<String> schedulingStrategy;
 
     public Input<String> getSchedulingStrategy() {
         return this.schedulingStrategy == null ? Input.empty() : this.schedulingStrategy;
@@ -262,7 +262,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRegistries")
-    private final @Nullable Input<ServiceServiceRegistriesGetArgs> serviceRegistries;
+      private final @Nullable Input<ServiceServiceRegistriesGetArgs> serviceRegistries;
 
     public Input<ServiceServiceRegistriesGetArgs> getServiceRegistries() {
         return this.serviceRegistries == null ? Input.empty() : this.serviceRegistries;
@@ -273,7 +273,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -284,7 +284,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -295,7 +295,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskDefinition")
-    private final @Nullable Input<String> taskDefinition;
+      private final @Nullable Input<String> taskDefinition;
 
     public Input<String> getTaskDefinition() {
         return this.taskDefinition == null ? Input.empty() : this.taskDefinition;
@@ -306,7 +306,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitForSteadyState")
-    private final @Nullable Input<Boolean> waitForSteadyState;
+      private final @Nullable Input<Boolean> waitForSteadyState;
 
     public Input<Boolean> getWaitForSteadyState() {
         return this.waitForSteadyState == null ? Input.empty() : this.waitForSteadyState;

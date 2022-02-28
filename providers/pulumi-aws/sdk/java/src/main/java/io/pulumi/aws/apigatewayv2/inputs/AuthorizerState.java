@@ -5,7 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.aws.apigatewayv2.inputs.AuthorizerJwtConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId")
-    private final @Nullable Input<String> apiId;
+      private final @Nullable Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId == null ? Input.empty() : this.apiId;
@@ -35,7 +35,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerCredentialsArn")
-    private final @Nullable Input<String> authorizerCredentialsArn;
+      private final @Nullable Input<String> authorizerCredentialsArn;
 
     public Input<String> getAuthorizerCredentialsArn() {
         return this.authorizerCredentialsArn == null ? Input.empty() : this.authorizerCredentialsArn;
@@ -47,7 +47,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerPayloadFormatVersion")
-    private final @Nullable Input<String> authorizerPayloadFormatVersion;
+      private final @Nullable Input<String> authorizerPayloadFormatVersion;
 
     public Input<String> getAuthorizerPayloadFormatVersion() {
         return this.authorizerPayloadFormatVersion == null ? Input.empty() : this.authorizerPayloadFormatVersion;
@@ -60,7 +60,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerResultTtlInSeconds")
-    private final @Nullable Input<Integer> authorizerResultTtlInSeconds;
+      private final @Nullable Input<Integer> authorizerResultTtlInSeconds;
 
     public Input<Integer> getAuthorizerResultTtlInSeconds() {
         return this.authorizerResultTtlInSeconds == null ? Input.empty() : this.authorizerResultTtlInSeconds;
@@ -73,7 +73,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerType")
-    private final @Nullable Input<String> authorizerType;
+      private final @Nullable Input<String> authorizerType;
 
     public Input<String> getAuthorizerType() {
         return this.authorizerType == null ? Input.empty() : this.authorizerType;
@@ -86,7 +86,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerUri")
-    private final @Nullable Input<String> authorizerUri;
+      private final @Nullable Input<String> authorizerUri;
 
     public Input<String> getAuthorizerUri() {
         return this.authorizerUri == null ? Input.empty() : this.authorizerUri;
@@ -98,7 +98,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableSimpleResponses")
-    private final @Nullable Input<Boolean> enableSimpleResponses;
+      private final @Nullable Input<Boolean> enableSimpleResponses;
 
     public Input<Boolean> getEnableSimpleResponses() {
         return this.enableSimpleResponses == null ? Input.empty() : this.enableSimpleResponses;
@@ -111,7 +111,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identitySources")
-    private final @Nullable Input<List<String>> identitySources;
+      private final @Nullable Input<List<String>> identitySources;
 
     public Input<List<String>> getIdentitySources() {
         return this.identitySources == null ? Input.empty() : this.identitySources;
@@ -123,7 +123,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jwtConfiguration")
-    private final @Nullable Input<AuthorizerJwtConfigurationGetArgs> jwtConfiguration;
+      private final @Nullable Input<AuthorizerJwtConfigurationGetArgs> jwtConfiguration;
 
     public Input<AuthorizerJwtConfigurationGetArgs> getJwtConfiguration() {
         return this.jwtConfiguration == null ? Input.empty() : this.jwtConfiguration;
@@ -134,7 +134,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

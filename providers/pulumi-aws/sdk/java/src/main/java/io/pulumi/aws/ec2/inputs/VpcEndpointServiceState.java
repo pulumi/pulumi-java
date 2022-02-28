@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.VpcEndpointServicePrivateDnsNameConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="acceptanceRequired")
-    private final @Nullable Input<Boolean> acceptanceRequired;
+      private final @Nullable Input<Boolean> acceptanceRequired;
 
     public Input<Boolean> getAcceptanceRequired() {
         return this.acceptanceRequired == null ? Input.empty() : this.acceptanceRequired;
@@ -34,7 +34,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allowedPrincipals")
-    private final @Nullable Input<List<String>> allowedPrincipals;
+      private final @Nullable Input<List<String>> allowedPrincipals;
 
     public Input<List<String>> getAllowedPrincipals() {
         return this.allowedPrincipals == null ? Input.empty() : this.allowedPrincipals;
@@ -45,7 +45,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -56,7 +56,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="availabilityZones")
-    private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Input<List<String>> availabilityZones;
 
     public Input<List<String>> getAvailabilityZones() {
         return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
@@ -67,7 +67,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="baseEndpointDnsNames")
-    private final @Nullable Input<List<String>> baseEndpointDnsNames;
+      private final @Nullable Input<List<String>> baseEndpointDnsNames;
 
     public Input<List<String>> getBaseEndpointDnsNames() {
         return this.baseEndpointDnsNames == null ? Input.empty() : this.baseEndpointDnsNames;
@@ -78,7 +78,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gatewayLoadBalancerArns")
-    private final @Nullable Input<List<String>> gatewayLoadBalancerArns;
+      private final @Nullable Input<List<String>> gatewayLoadBalancerArns;
 
     public Input<List<String>> getGatewayLoadBalancerArns() {
         return this.gatewayLoadBalancerArns == null ? Input.empty() : this.gatewayLoadBalancerArns;
@@ -89,7 +89,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="managesVpcEndpoints")
-    private final @Nullable Input<Boolean> managesVpcEndpoints;
+      private final @Nullable Input<Boolean> managesVpcEndpoints;
 
     public Input<Boolean> getManagesVpcEndpoints() {
         return this.managesVpcEndpoints == null ? Input.empty() : this.managesVpcEndpoints;
@@ -100,7 +100,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="networkLoadBalancerArns")
-    private final @Nullable Input<List<String>> networkLoadBalancerArns;
+      private final @Nullable Input<List<String>> networkLoadBalancerArns;
 
     public Input<List<String>> getNetworkLoadBalancerArns() {
         return this.networkLoadBalancerArns == null ? Input.empty() : this.networkLoadBalancerArns;
@@ -111,7 +111,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="privateDnsName")
-    private final @Nullable Input<String> privateDnsName;
+      private final @Nullable Input<String> privateDnsName;
 
     public Input<String> getPrivateDnsName() {
         return this.privateDnsName == null ? Input.empty() : this.privateDnsName;
@@ -122,7 +122,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="privateDnsNameConfigurations")
-    private final @Nullable Input<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations;
+      private final @Nullable Input<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations;
 
     public Input<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> getPrivateDnsNameConfigurations() {
         return this.privateDnsNameConfigurations == null ? Input.empty() : this.privateDnsNameConfigurations;
@@ -133,7 +133,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -144,7 +144,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceType")
-    private final @Nullable Input<String> serviceType;
+      private final @Nullable Input<String> serviceType;
 
     public Input<String> getServiceType() {
         return this.serviceType == null ? Input.empty() : this.serviceType;
@@ -155,7 +155,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -166,7 +166,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -177,7 +177,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

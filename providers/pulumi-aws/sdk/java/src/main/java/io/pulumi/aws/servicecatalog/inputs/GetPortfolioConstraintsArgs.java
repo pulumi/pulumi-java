@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetPortfolioConstraintsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="acceptLanguage")
-    private final @Nullable String acceptLanguage;
+      private final @Nullable String acceptLanguage;
 
     public Optional<String> getAcceptLanguage() {
         return this.acceptLanguage == null ? Optional.empty() : Optional.ofNullable(this.acceptLanguage);
@@ -30,7 +30,7 @@ public final class GetPortfolioConstraintsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="portfolioId", required=true)
-    private final String portfolioId;
+      private final String portfolioId;
 
     public String getPortfolioId() {
         return this.portfolioId;
@@ -41,7 +41,7 @@ public final class GetPortfolioConstraintsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="productId")
-    private final @Nullable String productId;
+      private final @Nullable String productId;
 
     public Optional<String> getProductId() {
         return this.productId == null ? Optional.empty() : Optional.ofNullable(this.productId);

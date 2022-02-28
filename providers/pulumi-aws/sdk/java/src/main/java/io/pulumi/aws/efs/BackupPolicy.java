@@ -9,8 +9,8 @@ import io.pulumi.aws.efs.inputs.BackupPolicyState;
 import io.pulumi.aws.efs.outputs.BackupPolicyBackupPolicy;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -60,6 +60,21 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
         return this.fileSystemId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public BackupPolicy(String name) {
+        this(name, BackupPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public BackupPolicy(String name, BackupPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

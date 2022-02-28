@@ -8,8 +8,8 @@ import io.pulumi.aws.pinpoint.ApnsVoipSandboxChannelArgs;
 import io.pulumi.aws.pinpoint.inputs.ApnsVoipSandboxChannelState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -163,6 +163,21 @@ public class ApnsVoipSandboxChannel extends io.pulumi.resources.CustomResource {
         return this.tokenKeyId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ApnsVoipSandboxChannel(String name) {
+        this(name, ApnsVoipSandboxChannelArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ApnsVoipSandboxChannel(String name, ApnsVoipSandboxChannelArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

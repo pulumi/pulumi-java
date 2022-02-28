@@ -4,7 +4,7 @@
 package io.pulumi.aws.athena.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
      * 
      */
     @InputImport(name="encryptionOption")
-    private final @Nullable Input<String> encryptionOption;
+      private final @Nullable Input<String> encryptionOption;
 
     public Input<String> getEncryptionOption() {
         return this.encryptionOption == null ? Input.empty() : this.encryptionOption;
@@ -30,7 +30,7 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;

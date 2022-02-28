@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UserStackAssociationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable Input<String> authenticationType;
+      private final @Nullable Input<String> authenticationType;
 
     public Input<String> getAuthenticationType() {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
@@ -31,7 +31,7 @@ public final class UserStackAssociationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sendEmailNotification")
-    private final @Nullable Input<Boolean> sendEmailNotification;
+      private final @Nullable Input<Boolean> sendEmailNotification;
 
     public Input<Boolean> getSendEmailNotification() {
         return this.sendEmailNotification == null ? Input.empty() : this.sendEmailNotification;
@@ -42,7 +42,7 @@ public final class UserStackAssociationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="stackName")
-    private final @Nullable Input<String> stackName;
+      private final @Nullable Input<String> stackName;
 
     public Input<String> getStackName() {
         return this.stackName == null ? Input.empty() : this.stackName;
@@ -53,7 +53,7 @@ public final class UserStackAssociationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+      private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;

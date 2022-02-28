@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
      * 
      */
     @InputImport(name="publishMetricAction", required=true)
-    private final Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction;
+      private final Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction;
 
     public Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs> getPublishMetricAction() {
         return this.publishMetricAction;

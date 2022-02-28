@@ -11,7 +11,7 @@ import io.pulumi.aws.lex.inputs.IntentFulfillmentActivityArgs;
 import io.pulumi.aws.lex.inputs.IntentRejectionStatementArgs;
 import io.pulumi.aws.lex.inputs.IntentSlotArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conclusionStatement")
-    private final @Nullable Input<IntentConclusionStatementArgs> conclusionStatement;
+      private final @Nullable Input<IntentConclusionStatementArgs> conclusionStatement;
 
     public Input<IntentConclusionStatementArgs> getConclusionStatement() {
         return this.conclusionStatement == null ? Input.empty() : this.conclusionStatement;
@@ -45,7 +45,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="confirmationPrompt")
-    private final @Nullable Input<IntentConfirmationPromptArgs> confirmationPrompt;
+      private final @Nullable Input<IntentConfirmationPromptArgs> confirmationPrompt;
 
     public Input<IntentConfirmationPromptArgs> getConfirmationPrompt() {
         return this.confirmationPrompt == null ? Input.empty() : this.confirmationPrompt;
@@ -57,7 +57,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createVersion")
-    private final @Nullable Input<Boolean> createVersion;
+      private final @Nullable Input<Boolean> createVersion;
 
     public Input<Boolean> getCreateVersion() {
         return this.createVersion == null ? Input.empty() : this.createVersion;
@@ -68,7 +68,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -80,7 +80,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dialogCodeHook")
-    private final @Nullable Input<IntentDialogCodeHookArgs> dialogCodeHook;
+      private final @Nullable Input<IntentDialogCodeHookArgs> dialogCodeHook;
 
     public Input<IntentDialogCodeHookArgs> getDialogCodeHook() {
         return this.dialogCodeHook == null ? Input.empty() : this.dialogCodeHook;
@@ -94,7 +94,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="followUpPrompt")
-    private final @Nullable Input<IntentFollowUpPromptArgs> followUpPrompt;
+      private final @Nullable Input<IntentFollowUpPromptArgs> followUpPrompt;
 
     public Input<IntentFollowUpPromptArgs> getFollowUpPrompt() {
         return this.followUpPrompt == null ? Input.empty() : this.followUpPrompt;
@@ -107,7 +107,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fulfillmentActivity", required=true)
-    private final Input<IntentFulfillmentActivityArgs> fulfillmentActivity;
+      private final Input<IntentFulfillmentActivityArgs> fulfillmentActivity;
 
     public Input<IntentFulfillmentActivityArgs> getFulfillmentActivity() {
         return this.fulfillmentActivity;
@@ -118,7 +118,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -132,7 +132,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentIntentSignature")
-    private final @Nullable Input<String> parentIntentSignature;
+      private final @Nullable Input<String> parentIntentSignature;
 
     public Input<String> getParentIntentSignature() {
         return this.parentIntentSignature == null ? Input.empty() : this.parentIntentSignature;
@@ -145,7 +145,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rejectionStatement")
-    private final @Nullable Input<IntentRejectionStatementArgs> rejectionStatement;
+      private final @Nullable Input<IntentRejectionStatementArgs> rejectionStatement;
 
     public Input<IntentRejectionStatementArgs> getRejectionStatement() {
         return this.rejectionStatement == null ? Input.empty() : this.rejectionStatement;
@@ -158,7 +158,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sampleUtterances")
-    private final @Nullable Input<List<String>> sampleUtterances;
+      private final @Nullable Input<List<String>> sampleUtterances;
 
     public Input<List<String>> getSampleUtterances() {
         return this.sampleUtterances == null ? Input.empty() : this.sampleUtterances;
@@ -170,7 +170,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slots")
-    private final @Nullable Input<List<IntentSlotArgs>> slots;
+      private final @Nullable Input<List<IntentSlotArgs>> slots;
 
     public Input<List<IntentSlotArgs>> getSlots() {
         return this.slots == null ? Input.empty() : this.slots;

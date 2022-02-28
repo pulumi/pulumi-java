@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicediscovery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceHealthCheckConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="failureThreshold")
-    private final @Nullable Input<Integer> failureThreshold;
+      private final @Nullable Input<Integer> failureThreshold;
 
     public Input<Integer> getFailureThreshold() {
         return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
@@ -31,7 +31,7 @@ public final class ServiceHealthCheckConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourcePath")
-    private final @Nullable Input<String> resourcePath;
+      private final @Nullable Input<String> resourcePath;
 
     public Input<String> getResourcePath() {
         return this.resourcePath == null ? Input.empty() : this.resourcePath;
@@ -42,7 +42,7 @@ public final class ServiceHealthCheckConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

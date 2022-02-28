@@ -7,7 +7,7 @@ import io.pulumi.aws.lex.inputs.BotAbortStatementArgs;
 import io.pulumi.aws.lex.inputs.BotClarificationPromptArgs;
 import io.pulumi.aws.lex.inputs.BotIntentArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="abortStatement", required=true)
-    private final Input<BotAbortStatementArgs> abortStatement;
+      private final Input<BotAbortStatementArgs> abortStatement;
 
     public Input<BotAbortStatementArgs> getAbortStatement() {
         return this.abortStatement;
@@ -37,7 +37,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="childDirected", required=true)
-    private final Input<Boolean> childDirected;
+      private final Input<Boolean> childDirected;
 
     public Input<Boolean> getChildDirected() {
         return this.childDirected;
@@ -48,7 +48,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clarificationPrompt")
-    private final @Nullable Input<BotClarificationPromptArgs> clarificationPrompt;
+      private final @Nullable Input<BotClarificationPromptArgs> clarificationPrompt;
 
     public Input<BotClarificationPromptArgs> getClarificationPrompt() {
         return this.clarificationPrompt == null ? Input.empty() : this.clarificationPrompt;
@@ -59,7 +59,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createVersion")
-    private final @Nullable Input<Boolean> createVersion;
+      private final @Nullable Input<Boolean> createVersion;
 
     public Input<Boolean> getCreateVersion() {
         return this.createVersion == null ? Input.empty() : this.createVersion;
@@ -70,7 +70,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -81,7 +81,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detectSentiment")
-    private final @Nullable Input<Boolean> detectSentiment;
+      private final @Nullable Input<Boolean> detectSentiment;
 
     public Input<Boolean> getDetectSentiment() {
         return this.detectSentiment == null ? Input.empty() : this.detectSentiment;
@@ -92,7 +92,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableModelImprovements")
-    private final @Nullable Input<Boolean> enableModelImprovements;
+      private final @Nullable Input<Boolean> enableModelImprovements;
 
     public Input<Boolean> getEnableModelImprovements() {
         return this.enableModelImprovements == null ? Input.empty() : this.enableModelImprovements;
@@ -103,7 +103,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleSessionTtlInSeconds")
-    private final @Nullable Input<Integer> idleSessionTtlInSeconds;
+      private final @Nullable Input<Integer> idleSessionTtlInSeconds;
 
     public Input<Integer> getIdleSessionTtlInSeconds() {
         return this.idleSessionTtlInSeconds == null ? Input.empty() : this.idleSessionTtlInSeconds;
@@ -114,7 +114,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intents", required=true)
-    private final Input<List<BotIntentArgs>> intents;
+      private final Input<List<BotIntentArgs>> intents;
 
     public Input<List<BotIntentArgs>> getIntents() {
         return this.intents;
@@ -125,7 +125,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locale")
-    private final @Nullable Input<String> locale;
+      private final @Nullable Input<String> locale;
 
     public Input<String> getLocale() {
         return this.locale == null ? Input.empty() : this.locale;
@@ -136,7 +136,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -147,7 +147,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nluIntentConfidenceThreshold")
-    private final @Nullable Input<Double> nluIntentConfidenceThreshold;
+      private final @Nullable Input<Double> nluIntentConfidenceThreshold;
 
     public Input<Double> getNluIntentConfidenceThreshold() {
         return this.nluIntentConfidenceThreshold == null ? Input.empty() : this.nluIntentConfidenceThreshold;
@@ -158,7 +158,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="processBehavior")
-    private final @Nullable Input<String> processBehavior;
+      private final @Nullable Input<String> processBehavior;
 
     public Input<String> getProcessBehavior() {
         return this.processBehavior == null ? Input.empty() : this.processBehavior;
@@ -169,7 +169,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="voiceId")
-    private final @Nullable Input<String> voiceId;
+      private final @Nullable Input<String> voiceId;
 
     public Input<String> getVoiceId() {
         return this.voiceId == null ? Input.empty() : this.voiceId;

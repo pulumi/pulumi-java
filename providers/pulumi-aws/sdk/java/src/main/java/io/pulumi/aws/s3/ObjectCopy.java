@@ -9,8 +9,8 @@ import io.pulumi.aws.s3.inputs.ObjectCopyState;
 import io.pulumi.aws.s3.outputs.ObjectCopyGrant;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -648,6 +648,21 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
         return this.websiteRedirect;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ObjectCopy(String name) {
+        this(name, ObjectCopyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ObjectCopy(String name, ObjectCopyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

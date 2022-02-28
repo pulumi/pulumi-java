@@ -6,7 +6,7 @@ package io.pulumi.aws.worklink;
 import io.pulumi.aws.worklink.inputs.FleetIdentityProviderArgs;
 import io.pulumi.aws.worklink.inputs.FleetNetworkArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditStreamArn")
-    private final @Nullable Input<String> auditStreamArn;
+      private final @Nullable Input<String> auditStreamArn;
 
     public Input<String> getAuditStreamArn() {
         return this.auditStreamArn == null ? Input.empty() : this.auditStreamArn;
@@ -33,7 +33,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceCaCertificate")
-    private final @Nullable Input<String> deviceCaCertificate;
+      private final @Nullable Input<String> deviceCaCertificate;
 
     public Input<String> getDeviceCaCertificate() {
         return this.deviceCaCertificate == null ? Input.empty() : this.deviceCaCertificate;
@@ -44,7 +44,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -55,7 +55,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityProvider")
-    private final @Nullable Input<FleetIdentityProviderArgs> identityProvider;
+      private final @Nullable Input<FleetIdentityProviderArgs> identityProvider;
 
     public Input<FleetIdentityProviderArgs> getIdentityProvider() {
         return this.identityProvider == null ? Input.empty() : this.identityProvider;
@@ -66,7 +66,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<FleetNetworkArgs> network;
+      private final @Nullable Input<FleetNetworkArgs> network;
 
     public Input<FleetNetworkArgs> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -88,7 +88,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="optimizeForEndUserLocation")
-    private final @Nullable Input<Boolean> optimizeForEndUserLocation;
+      private final @Nullable Input<Boolean> optimizeForEndUserLocation;
 
     public Input<Boolean> getOptimizeForEndUserLocation() {
         return this.optimizeForEndUserLocation == null ? Input.empty() : this.optimizeForEndUserLocation;

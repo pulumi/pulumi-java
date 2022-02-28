@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfigArgs ext
      * 
      */
     @InputImport(name="maxConcurrentInvocationsPerInstance")
-    private final @Nullable Input<Integer> maxConcurrentInvocationsPerInstance;
+      private final @Nullable Input<Integer> maxConcurrentInvocationsPerInstance;
 
     public Input<Integer> getMaxConcurrentInvocationsPerInstance() {
         return this.maxConcurrentInvocationsPerInstance == null ? Input.empty() : this.maxConcurrentInvocationsPerInstance;

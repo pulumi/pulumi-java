@@ -4,7 +4,7 @@
 package io.pulumi.aws.inspector;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags", required=true)
-    private final Input<Map<String,String>> tags;
+      private final Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags;

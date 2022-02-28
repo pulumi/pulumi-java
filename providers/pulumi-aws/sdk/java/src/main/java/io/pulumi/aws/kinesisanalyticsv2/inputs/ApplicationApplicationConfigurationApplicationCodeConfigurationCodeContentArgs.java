@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @InputImport(name="s3ContentLocation")
-    private final @Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs> s3ContentLocation;
+      private final @Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs> s3ContentLocation;
 
     public Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs> getS3ContentLocation() {
         return this.s3ContentLocation == null ? Input.empty() : this.s3ContentLocation;
@@ -31,7 +31,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * 
      */
     @InputImport(name="textContent")
-    private final @Nullable Input<String> textContent;
+      private final @Nullable Input<String> textContent;
 
     public Input<String> getTextContent() {
         return this.textContent == null ? Input.empty() : this.textContent;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DistributionCustomErrorResponseArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="errorCachingMinTtl")
-    private final @Nullable Input<Integer> errorCachingMinTtl;
+      private final @Nullable Input<Integer> errorCachingMinTtl;
 
     public Input<Integer> getErrorCachingMinTtl() {
         return this.errorCachingMinTtl == null ? Input.empty() : this.errorCachingMinTtl;
@@ -34,7 +34,7 @@ public final class DistributionCustomErrorResponseArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="errorCode", required=true)
-    private final Input<Integer> errorCode;
+      private final Input<Integer> errorCode;
 
     public Input<Integer> getErrorCode() {
         return this.errorCode;
@@ -46,7 +46,7 @@ public final class DistributionCustomErrorResponseArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="responseCode")
-    private final @Nullable Input<Integer> responseCode;
+      private final @Nullable Input<Integer> responseCode;
 
     public Input<Integer> getResponseCode() {
         return this.responseCode == null ? Input.empty() : this.responseCode;
@@ -58,7 +58,7 @@ public final class DistributionCustomErrorResponseArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="responsePagePath")
-    private final @Nullable Input<String> responsePagePath;
+      private final @Nullable Input<String> responsePagePath;
 
     public Input<String> getResponsePagePath() {
         return this.responsePagePath == null ? Input.empty() : this.responsePagePath;

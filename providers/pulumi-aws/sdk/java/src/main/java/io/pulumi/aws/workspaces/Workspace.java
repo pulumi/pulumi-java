@@ -9,8 +9,8 @@ import io.pulumi.aws.workspaces.inputs.WorkspaceState;
 import io.pulumi.aws.workspaces.outputs.WorkspaceWorkspaceProperties;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -203,6 +203,21 @@ public class Workspace extends io.pulumi.resources.CustomResource {
         return this.workspaceProperties;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Workspace(String name) {
+        this(name, WorkspaceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Workspace(String name, WorkspaceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

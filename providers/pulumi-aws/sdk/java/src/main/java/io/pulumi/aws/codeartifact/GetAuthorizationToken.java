@@ -6,7 +6,7 @@ package io.pulumi.aws.codeartifact;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.codeartifact.inputs.GetAuthorizationTokenArgs;
 import io.pulumi.aws.codeartifact.outputs.GetAuthorizationTokenResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

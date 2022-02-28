@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetImagePipelineSchedule extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="pipelineExecutionStartCondition", required=true)
-    private final String pipelineExecutionStartCondition;
+      private final String pipelineExecutionStartCondition;
 
     public String getPipelineExecutionStartCondition() {
         return this.pipelineExecutionStartCondition;
@@ -28,7 +28,7 @@ public final class GetImagePipelineSchedule extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="scheduleExpression", required=true)
-    private final String scheduleExpression;
+      private final String scheduleExpression;
 
     public String getScheduleExpression() {
         return this.scheduleExpression;

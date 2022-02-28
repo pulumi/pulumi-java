@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GraphQLApiLambdaAuthorizerConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizerResultTtlInSeconds")
-    private final @Nullable Input<Integer> authorizerResultTtlInSeconds;
+      private final @Nullable Input<Integer> authorizerResultTtlInSeconds;
 
     public Input<Integer> getAuthorizerResultTtlInSeconds() {
         return this.authorizerResultTtlInSeconds == null ? Input.empty() : this.authorizerResultTtlInSeconds;
@@ -31,7 +31,7 @@ public final class GraphQLApiLambdaAuthorizerConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizerUri", required=true)
-    private final Input<String> authorizerUri;
+      private final Input<String> authorizerUri;
 
     public Input<String> getAuthorizerUri() {
         return this.authorizerUri;
@@ -42,7 +42,7 @@ public final class GraphQLApiLambdaAuthorizerConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="identityValidationExpression")
-    private final @Nullable Input<String> identityValidationExpression;
+      private final @Nullable Input<String> identityValidationExpression;
 
     public Input<String> getIdentityValidationExpression() {
         return this.identityValidationExpression == null ? Input.empty() : this.identityValidationExpression;

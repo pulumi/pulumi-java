@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatementGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class RuleGroupRuleStatementNotStatementStatementAndStatementGetArg
      * 
      */
     @InputImport(name="statements", required=true)
-    private final Input<List<RuleGroupRuleStatementNotStatementStatementAndStatementStatementGetArgs>> statements;
+      private final Input<List<RuleGroupRuleStatementNotStatementStatementAndStatementStatementGetArgs>> statements;
 
     public Input<List<RuleGroupRuleStatementNotStatementStatementAndStatementStatementGetArgs>> getStatements() {
         return this.statements;

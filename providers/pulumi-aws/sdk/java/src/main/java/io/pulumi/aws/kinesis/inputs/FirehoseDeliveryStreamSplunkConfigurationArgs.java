@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="cloudwatchLoggingOptions")
-    private final @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
+      private final @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
     public Input<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions == null ? Input.empty() : this.cloudwatchLoggingOptions;
@@ -33,7 +33,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="hecAcknowledgmentTimeout")
-    private final @Nullable Input<Integer> hecAcknowledgmentTimeout;
+      private final @Nullable Input<Integer> hecAcknowledgmentTimeout;
 
     public Input<Integer> getHecAcknowledgmentTimeout() {
         return this.hecAcknowledgmentTimeout == null ? Input.empty() : this.hecAcknowledgmentTimeout;
@@ -44,7 +44,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="hecEndpoint", required=true)
-    private final Input<String> hecEndpoint;
+      private final Input<String> hecEndpoint;
 
     public Input<String> getHecEndpoint() {
         return this.hecEndpoint;
@@ -55,7 +55,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="hecEndpointType")
-    private final @Nullable Input<String> hecEndpointType;
+      private final @Nullable Input<String> hecEndpointType;
 
     public Input<String> getHecEndpointType() {
         return this.hecEndpointType == null ? Input.empty() : this.hecEndpointType;
@@ -66,7 +66,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="hecToken", required=true)
-    private final Input<String> hecToken;
+      private final Input<String> hecToken;
 
     public Input<String> getHecToken() {
         return this.hecToken;
@@ -77,7 +77,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="processingConfiguration")
-    private final @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> processingConfiguration;
+      private final @Nullable Input<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> processingConfiguration;
 
     public Input<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> getProcessingConfiguration() {
         return this.processingConfiguration == null ? Input.empty() : this.processingConfiguration;
@@ -88,7 +88,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="retryDuration")
-    private final @Nullable Input<Integer> retryDuration;
+      private final @Nullable Input<Integer> retryDuration;
 
     public Input<Integer> getRetryDuration() {
         return this.retryDuration == null ? Input.empty() : this.retryDuration;
@@ -99,7 +99,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="s3BackupMode")
-    private final @Nullable Input<String> s3BackupMode;
+      private final @Nullable Input<String> s3BackupMode;
 
     public Input<String> getS3BackupMode() {
         return this.s3BackupMode == null ? Input.empty() : this.s3BackupMode;

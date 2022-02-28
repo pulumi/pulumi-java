@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="humanTaskUiArn", required=true)
-    private final Input<String> humanTaskUiArn;
+      private final Input<String> humanTaskUiArn;
 
     public Input<String> getHumanTaskUiArn() {
         return this.humanTaskUiArn;
@@ -33,7 +33,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="publicWorkforceTaskPrice")
-    private final @Nullable Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> publicWorkforceTaskPrice;
+      private final @Nullable Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> publicWorkforceTaskPrice;
 
     public Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> getPublicWorkforceTaskPrice() {
         return this.publicWorkforceTaskPrice == null ? Input.empty() : this.publicWorkforceTaskPrice;
@@ -44,7 +44,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="taskAvailabilityLifetimeInSeconds")
-    private final @Nullable Input<Integer> taskAvailabilityLifetimeInSeconds;
+      private final @Nullable Input<Integer> taskAvailabilityLifetimeInSeconds;
 
     public Input<Integer> getTaskAvailabilityLifetimeInSeconds() {
         return this.taskAvailabilityLifetimeInSeconds == null ? Input.empty() : this.taskAvailabilityLifetimeInSeconds;
@@ -55,7 +55,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="taskCount", required=true)
-    private final Input<Integer> taskCount;
+      private final Input<Integer> taskCount;
 
     public Input<Integer> getTaskCount() {
         return this.taskCount;
@@ -66,7 +66,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="taskDescription", required=true)
-    private final Input<String> taskDescription;
+      private final Input<String> taskDescription;
 
     public Input<String> getTaskDescription() {
         return this.taskDescription;
@@ -77,7 +77,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="taskKeywords")
-    private final @Nullable Input<List<String>> taskKeywords;
+      private final @Nullable Input<List<String>> taskKeywords;
 
     public Input<List<String>> getTaskKeywords() {
         return this.taskKeywords == null ? Input.empty() : this.taskKeywords;
@@ -88,7 +88,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="taskTimeLimitInSeconds")
-    private final @Nullable Input<Integer> taskTimeLimitInSeconds;
+      private final @Nullable Input<Integer> taskTimeLimitInSeconds;
 
     public Input<Integer> getTaskTimeLimitInSeconds() {
         return this.taskTimeLimitInSeconds == null ? Input.empty() : this.taskTimeLimitInSeconds;
@@ -99,7 +99,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="taskTitle", required=true)
-    private final Input<String> taskTitle;
+      private final Input<String> taskTitle;
 
     public Input<String> getTaskTitle() {
         return this.taskTitle;
@@ -110,7 +110,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="workteamArn", required=true)
-    private final Input<String> workteamArn;
+      private final Input<String> workteamArn;
 
     public Input<String> getWorkteamArn() {
         return this.workteamArn;

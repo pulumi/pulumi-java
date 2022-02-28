@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ReceiptRuleS3ActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+      private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
@@ -31,7 +31,7 @@ public final class ReceiptRuleS3ActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -42,7 +42,7 @@ public final class ReceiptRuleS3ActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="objectKeyPrefix")
-    private final @Nullable Input<String> objectKeyPrefix;
+      private final @Nullable Input<String> objectKeyPrefix;
 
     public Input<String> getObjectKeyPrefix() {
         return this.objectKeyPrefix == null ? Input.empty() : this.objectKeyPrefix;
@@ -53,7 +53,7 @@ public final class ReceiptRuleS3ActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="position", required=true)
-    private final Input<Integer> position;
+      private final Input<Integer> position;
 
     public Input<Integer> getPosition() {
         return this.position;
@@ -64,7 +64,7 @@ public final class ReceiptRuleS3ActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="topicArn")
-    private final @Nullable Input<String> topicArn;
+      private final @Nullable Input<String> topicArn;
 
     public Input<String> getTopicArn() {
         return this.topicArn == null ? Input.empty() : this.topicArn;

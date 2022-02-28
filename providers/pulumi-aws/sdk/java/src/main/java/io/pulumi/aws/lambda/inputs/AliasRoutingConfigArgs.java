@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class AliasRoutingConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="additionalVersionWeights")
-    private final @Nullable Input<Map<String,Double>> additionalVersionWeights;
+      private final @Nullable Input<Map<String,Double>> additionalVersionWeights;
 
     public Input<Map<String,Double>> getAdditionalVersionWeights() {
         return this.additionalVersionWeights == null ? Input.empty() : this.additionalVersionWeights;

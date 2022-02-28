@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="healthyThreshold")
-    private final @Nullable Input<Integer> healthyThreshold;
+      private final @Nullable Input<Integer> healthyThreshold;
 
     public Input<Integer> getHealthyThreshold() {
         return this.healthyThreshold == null ? Input.empty() : this.healthyThreshold;
@@ -31,7 +31,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<Integer> interval;
+      private final @Nullable Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -42,7 +42,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -53,7 +53,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -64,7 +64,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<Integer> timeout;
+      private final @Nullable Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -75,7 +75,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="unhealthyThreshold")
-    private final @Nullable Input<Integer> unhealthyThreshold;
+      private final @Nullable Input<Integer> unhealthyThreshold;
 
     public Input<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold == null ? Input.empty() : this.unhealthyThreshold;

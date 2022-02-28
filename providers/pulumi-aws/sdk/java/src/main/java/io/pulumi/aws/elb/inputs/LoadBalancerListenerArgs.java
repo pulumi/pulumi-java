@@ -4,7 +4,7 @@
 package io.pulumi.aws.elb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LoadBalancerListenerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instancePort", required=true)
-    private final Input<Integer> instancePort;
+      private final Input<Integer> instancePort;
 
     public Input<Integer> getInstancePort() {
         return this.instancePort;
@@ -32,7 +32,7 @@ public final class LoadBalancerListenerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceProtocol", required=true)
-    private final Input<String> instanceProtocol;
+      private final Input<String> instanceProtocol;
 
     public Input<String> getInstanceProtocol() {
         return this.instanceProtocol;
@@ -43,7 +43,7 @@ public final class LoadBalancerListenerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="lbPort", required=true)
-    private final Input<Integer> lbPort;
+      private final Input<Integer> lbPort;
 
     public Input<Integer> getLbPort() {
         return this.lbPort;
@@ -55,7 +55,7 @@ public final class LoadBalancerListenerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="lbProtocol", required=true)
-    private final Input<String> lbProtocol;
+      private final Input<String> lbProtocol;
 
     public Input<String> getLbProtocol() {
         return this.lbProtocol;
@@ -67,7 +67,7 @@ public final class LoadBalancerListenerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sslCertificateId")
-    private final @Nullable Input<String> sslCertificateId;
+      private final @Nullable Input<String> sslCertificateId;
 
     public Input<String> getSslCertificateId() {
         return this.sslCertificateId == null ? Input.empty() : this.sslCertificateId;

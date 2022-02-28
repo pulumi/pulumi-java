@@ -4,7 +4,7 @@
 package io.pulumi.aws.shield.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="aggregation")
-    private final @Nullable Input<String> aggregation;
+      private final @Nullable Input<String> aggregation;
 
     public Input<String> getAggregation() {
         return this.aggregation == null ? Input.empty() : this.aggregation;
@@ -32,7 +32,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+      private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -43,7 +43,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pattern")
-    private final @Nullable Input<String> pattern;
+      private final @Nullable Input<String> pattern;
 
     public Input<String> getPattern() {
         return this.pattern == null ? Input.empty() : this.pattern;
@@ -54,7 +54,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="protectionGroupArn")
-    private final @Nullable Input<String> protectionGroupArn;
+      private final @Nullable Input<String> protectionGroupArn;
 
     public Input<String> getProtectionGroupArn() {
         return this.protectionGroupArn == null ? Input.empty() : this.protectionGroupArn;
@@ -65,7 +65,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="protectionGroupId")
-    private final @Nullable Input<String> protectionGroupId;
+      private final @Nullable Input<String> protectionGroupId;
 
     public Input<String> getProtectionGroupId() {
         return this.protectionGroupId == null ? Input.empty() : this.protectionGroupId;
@@ -76,7 +76,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+      private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -87,7 +87,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -98,7 +98,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

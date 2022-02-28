@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PatchGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="baselineId", required=true)
-    private final Input<String> baselineId;
+      private final Input<String> baselineId;
 
     public Input<String> getBaselineId() {
         return this.baselineId;
@@ -29,7 +29,7 @@ public final class PatchGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patchGroup", required=true)
-    private final Input<String> patchGroup;
+      private final Input<String> patchGroup;
 
     public Input<String> getPatchGroup() {
         return this.patchGroup;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution extends i
      * 
      */
     @InputImport(name="shareIdentifier", required=true)
-    private final String shareIdentifier;
+      private final String shareIdentifier;
 
     public String getShareIdentifier() {
         return this.shareIdentifier;
@@ -29,7 +29,7 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution extends i
      * 
      */
     @InputImport(name="weightFactor", required=true)
-    private final Double weightFactor;
+      private final Double weightFactor;
 
     public Double getWeightFactor() {
         return this.weightFactor;

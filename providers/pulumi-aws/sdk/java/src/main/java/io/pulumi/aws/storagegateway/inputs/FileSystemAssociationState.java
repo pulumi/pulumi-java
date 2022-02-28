@@ -5,7 +5,7 @@ package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.aws.storagegateway.inputs.FileSystemAssociationCacheAttributesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="auditDestinationArn")
-    private final @Nullable Input<String> auditDestinationArn;
+      private final @Nullable Input<String> auditDestinationArn;
 
     public Input<String> getAuditDestinationArn() {
         return this.auditDestinationArn == null ? Input.empty() : this.auditDestinationArn;
@@ -43,7 +43,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cacheAttributes")
-    private final @Nullable Input<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes;
+      private final @Nullable Input<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes;
 
     public Input<FileSystemAssociationCacheAttributesGetArgs> getCacheAttributes() {
         return this.cacheAttributes == null ? Input.empty() : this.cacheAttributes;
@@ -54,7 +54,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gatewayArn")
-    private final @Nullable Input<String> gatewayArn;
+      private final @Nullable Input<String> gatewayArn;
 
     public Input<String> getGatewayArn() {
         return this.gatewayArn == null ? Input.empty() : this.gatewayArn;
@@ -65,7 +65,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="locationArn")
-    private final @Nullable Input<String> locationArn;
+      private final @Nullable Input<String> locationArn;
 
     public Input<String> getLocationArn() {
         return this.locationArn == null ? Input.empty() : this.locationArn;
@@ -76,7 +76,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -87,7 +87,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -98,7 +98,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -109,7 +109,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;

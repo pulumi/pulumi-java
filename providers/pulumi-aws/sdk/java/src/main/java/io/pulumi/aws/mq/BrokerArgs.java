@@ -10,7 +10,7 @@ import io.pulumi.aws.mq.inputs.BrokerLogsArgs;
 import io.pulumi.aws.mq.inputs.BrokerMaintenanceWindowStartTimeArgs;
 import io.pulumi.aws.mq.inputs.BrokerUserArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applyImmediately")
-    private final @Nullable Input<Boolean> applyImmediately;
+      private final @Nullable Input<Boolean> applyImmediately;
 
     public Input<Boolean> getApplyImmediately() {
         return this.applyImmediately == null ? Input.empty() : this.applyImmediately;
@@ -39,7 +39,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationStrategy")
-    private final @Nullable Input<String> authenticationStrategy;
+      private final @Nullable Input<String> authenticationStrategy;
 
     public Input<String> getAuthenticationStrategy() {
         return this.authenticationStrategy == null ? Input.empty() : this.authenticationStrategy;
@@ -50,7 +50,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoMinorVersionUpgrade")
-    private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
+      private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
 
     public Input<Boolean> getAutoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade == null ? Input.empty() : this.autoMinorVersionUpgrade;
@@ -61,7 +61,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brokerName")
-    private final @Nullable Input<String> brokerName;
+      private final @Nullable Input<String> brokerName;
 
     public Input<String> getBrokerName() {
         return this.brokerName == null ? Input.empty() : this.brokerName;
@@ -72,7 +72,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<BrokerConfigurationArgs> configuration;
+      private final @Nullable Input<BrokerConfigurationArgs> configuration;
 
     public Input<BrokerConfigurationArgs> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -83,7 +83,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentMode")
-    private final @Nullable Input<String> deploymentMode;
+      private final @Nullable Input<String> deploymentMode;
 
     public Input<String> getDeploymentMode() {
         return this.deploymentMode == null ? Input.empty() : this.deploymentMode;
@@ -94,7 +94,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionOptions")
-    private final @Nullable Input<BrokerEncryptionOptionsArgs> encryptionOptions;
+      private final @Nullable Input<BrokerEncryptionOptionsArgs> encryptionOptions;
 
     public Input<BrokerEncryptionOptionsArgs> getEncryptionOptions() {
         return this.encryptionOptions == null ? Input.empty() : this.encryptionOptions;
@@ -105,7 +105,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineType", required=true)
-    private final Input<String> engineType;
+      private final Input<String> engineType;
 
     public Input<String> getEngineType() {
         return this.engineType;
@@ -116,7 +116,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineVersion", required=true)
-    private final Input<String> engineVersion;
+      private final Input<String> engineVersion;
 
     public Input<String> getEngineVersion() {
         return this.engineVersion;
@@ -127,7 +127,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostInstanceType", required=true)
-    private final Input<String> hostInstanceType;
+      private final Input<String> hostInstanceType;
 
     public Input<String> getHostInstanceType() {
         return this.hostInstanceType;
@@ -138,7 +138,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ldapServerMetadata")
-    private final @Nullable Input<BrokerLdapServerMetadataArgs> ldapServerMetadata;
+      private final @Nullable Input<BrokerLdapServerMetadataArgs> ldapServerMetadata;
 
     public Input<BrokerLdapServerMetadataArgs> getLdapServerMetadata() {
         return this.ldapServerMetadata == null ? Input.empty() : this.ldapServerMetadata;
@@ -149,7 +149,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logs")
-    private final @Nullable Input<BrokerLogsArgs> logs;
+      private final @Nullable Input<BrokerLogsArgs> logs;
 
     public Input<BrokerLogsArgs> getLogs() {
         return this.logs == null ? Input.empty() : this.logs;
@@ -160,7 +160,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindowStartTime")
-    private final @Nullable Input<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime;
+      private final @Nullable Input<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime;
 
     public Input<BrokerMaintenanceWindowStartTimeArgs> getMaintenanceWindowStartTime() {
         return this.maintenanceWindowStartTime == null ? Input.empty() : this.maintenanceWindowStartTime;
@@ -171,7 +171,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publiclyAccessible")
-    private final @Nullable Input<Boolean> publiclyAccessible;
+      private final @Nullable Input<Boolean> publiclyAccessible;
 
     public Input<Boolean> getPubliclyAccessible() {
         return this.publiclyAccessible == null ? Input.empty() : this.publiclyAccessible;
@@ -182,7 +182,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -193,7 +193,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageType")
-    private final @Nullable Input<String> storageType;
+      private final @Nullable Input<String> storageType;
 
     public Input<String> getStorageType() {
         return this.storageType == null ? Input.empty() : this.storageType;
@@ -204,7 +204,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -215,7 +215,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -226,7 +226,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="users", required=true)
-    private final Input<List<BrokerUserArgs>> users;
+      private final Input<List<BrokerUserArgs>> users;
 
     public Input<List<BrokerUserArgs>> getUsers() {
         return this.users;

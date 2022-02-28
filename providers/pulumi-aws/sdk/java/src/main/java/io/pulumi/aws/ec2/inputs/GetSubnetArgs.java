@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetSubnetFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable String availabilityZone;
+      private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
@@ -34,7 +34,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="availabilityZoneId")
-    private final @Nullable String availabilityZoneId;
+      private final @Nullable String availabilityZoneId;
 
     public Optional<String> getAvailabilityZoneId() {
         return this.availabilityZoneId == null ? Optional.empty() : Optional.ofNullable(this.availabilityZoneId);
@@ -45,7 +45,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cidrBlock")
-    private final @Nullable String cidrBlock;
+      private final @Nullable String cidrBlock;
 
     public Optional<String> getCidrBlock() {
         return this.cidrBlock == null ? Optional.empty() : Optional.ofNullable(this.cidrBlock);
@@ -56,7 +56,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="defaultForAz")
-    private final @Nullable Boolean defaultForAz;
+      private final @Nullable Boolean defaultForAz;
 
     public Optional<Boolean> getDefaultForAz() {
         return this.defaultForAz == null ? Optional.empty() : Optional.ofNullable(this.defaultForAz);
@@ -67,7 +67,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetSubnetFilter> filters;
+      private final @Nullable List<GetSubnetFilter> filters;
 
     public List<GetSubnetFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -78,7 +78,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -89,7 +89,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipv6CidrBlock")
-    private final @Nullable String ipv6CidrBlock;
+      private final @Nullable String ipv6CidrBlock;
 
     public Optional<String> getIpv6CidrBlock() {
         return this.ipv6CidrBlock == null ? Optional.empty() : Optional.ofNullable(this.ipv6CidrBlock);
@@ -100,7 +100,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -111,7 +111,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -122,7 +122,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable String vpcId;
+      private final @Nullable String vpcId;
 
     public Optional<String> getVpcId() {
         return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);

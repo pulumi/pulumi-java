@@ -8,8 +8,8 @@ import io.pulumi.aws.ec2.SpotDatafeedSubscriptionArgs;
 import io.pulumi.aws.ec2.inputs.SpotDatafeedSubscriptionState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -61,6 +61,21 @@ public class SpotDatafeedSubscription extends io.pulumi.resources.CustomResource
         return this.prefix;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SpotDatafeedSubscription(String name) {
+        this(name, SpotDatafeedSubscriptionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SpotDatafeedSubscription(String name, SpotDatafeedSubscriptionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

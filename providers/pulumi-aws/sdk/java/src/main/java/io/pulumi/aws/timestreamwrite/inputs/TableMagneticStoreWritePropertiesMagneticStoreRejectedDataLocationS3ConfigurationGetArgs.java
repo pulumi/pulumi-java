@@ -4,7 +4,7 @@
 package io.pulumi.aws.timestreamwrite.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      * 
      */
     @InputImport(name="bucketName")
-    private final @Nullable Input<String> bucketName;
+      private final @Nullable Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName == null ? Input.empty() : this.bucketName;
@@ -30,7 +30,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      * 
      */
     @InputImport(name="encryptionOption")
-    private final @Nullable Input<String> encryptionOption;
+      private final @Nullable Input<String> encryptionOption;
 
     public Input<String> getEncryptionOption() {
         return this.encryptionOption == null ? Input.empty() : this.encryptionOption;
@@ -41,7 +41,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -52,7 +52,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      * 
      */
     @InputImport(name="objectKeyPrefix")
-    private final @Nullable Input<String> objectKeyPrefix;
+      private final @Nullable Input<String> objectKeyPrefix;
 
     public Input<String> getObjectKeyPrefix() {
         return this.objectKeyPrefix == null ? Input.empty() : this.objectKeyPrefix;

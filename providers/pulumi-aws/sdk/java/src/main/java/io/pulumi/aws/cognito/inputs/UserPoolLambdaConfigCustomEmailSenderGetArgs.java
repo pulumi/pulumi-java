@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class UserPoolLambdaConfigCustomEmailSenderGetArgs extends io.pulum
      * 
      */
     @InputImport(name="lambdaArn", required=true)
-    private final Input<String> lambdaArn;
+      private final Input<String> lambdaArn;
 
     public Input<String> getLambdaArn() {
         return this.lambdaArn;
@@ -29,7 +29,7 @@ public final class UserPoolLambdaConfigCustomEmailSenderGetArgs extends io.pulum
      * 
      */
     @InputImport(name="lambdaVersion", required=true)
-    private final Input<String> lambdaVersion;
+      private final Input<String> lambdaVersion;
 
     public Input<String> getLambdaVersion() {
         return this.lambdaVersion;

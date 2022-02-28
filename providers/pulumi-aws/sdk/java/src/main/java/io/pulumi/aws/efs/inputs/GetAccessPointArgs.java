@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.efs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetAccessPointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="accessPointId", required=true)
-    private final String accessPointId;
+      private final String accessPointId;
 
     public String getAccessPointId() {
         return this.accessPointId;
@@ -31,7 +31,7 @@ public final class GetAccessPointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

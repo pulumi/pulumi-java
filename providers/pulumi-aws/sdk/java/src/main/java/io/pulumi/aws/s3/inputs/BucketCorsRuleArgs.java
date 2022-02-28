@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedHeaders")
-    private final @Nullable Input<List<String>> allowedHeaders;
+      private final @Nullable Input<List<String>> allowedHeaders;
 
     public Input<List<String>> getAllowedHeaders() {
         return this.allowedHeaders == null ? Input.empty() : this.allowedHeaders;
@@ -32,7 +32,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedMethods", required=true)
-    private final Input<List<String>> allowedMethods;
+      private final Input<List<String>> allowedMethods;
 
     public Input<List<String>> getAllowedMethods() {
         return this.allowedMethods;
@@ -43,7 +43,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedOrigins", required=true)
-    private final Input<List<String>> allowedOrigins;
+      private final Input<List<String>> allowedOrigins;
 
     public Input<List<String>> getAllowedOrigins() {
         return this.allowedOrigins;
@@ -54,7 +54,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exposeHeaders")
-    private final @Nullable Input<List<String>> exposeHeaders;
+      private final @Nullable Input<List<String>> exposeHeaders;
 
     public Input<List<String>> getExposeHeaders() {
         return this.exposeHeaders == null ? Input.empty() : this.exposeHeaders;
@@ -65,7 +65,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxAgeSeconds")
-    private final @Nullable Input<Integer> maxAgeSeconds;
+      private final @Nullable Input<Integer> maxAgeSeconds;
 
     public Input<Integer> getMaxAgeSeconds() {
         return this.maxAgeSeconds == null ? Input.empty() : this.maxAgeSeconds;

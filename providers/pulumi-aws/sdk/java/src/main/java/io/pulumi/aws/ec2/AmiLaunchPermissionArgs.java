@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AmiLaunchPermissionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+      private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
@@ -29,7 +29,7 @@ public final class AmiLaunchPermissionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="imageId", required=true)
-    private final Input<String> imageId;
+      private final Input<String> imageId;
 
     public Input<String> getImageId() {
         return this.imageId;

@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.aws.fsx.inputs.OntapVolumeTieringPolicyGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystemId")
-    private final @Nullable Input<String> fileSystemId;
+      private final @Nullable Input<String> fileSystemId;
 
     public Input<String> getFileSystemId() {
         return this.fileSystemId == null ? Input.empty() : this.fileSystemId;
@@ -45,7 +45,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flexcacheEndpointType")
-    private final @Nullable Input<String> flexcacheEndpointType;
+      private final @Nullable Input<String> flexcacheEndpointType;
 
     public Input<String> getFlexcacheEndpointType() {
         return this.flexcacheEndpointType == null ? Input.empty() : this.flexcacheEndpointType;
@@ -56,7 +56,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="junctionPath")
-    private final @Nullable Input<String> junctionPath;
+      private final @Nullable Input<String> junctionPath;
 
     public Input<String> getJunctionPath() {
         return this.junctionPath == null ? Input.empty() : this.junctionPath;
@@ -67,7 +67,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ontapVolumeType")
-    private final @Nullable Input<String> ontapVolumeType;
+      private final @Nullable Input<String> ontapVolumeType;
 
     public Input<String> getOntapVolumeType() {
         return this.ontapVolumeType == null ? Input.empty() : this.ontapVolumeType;
@@ -89,7 +89,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityStyle")
-    private final @Nullable Input<String> securityStyle;
+      private final @Nullable Input<String> securityStyle;
 
     public Input<String> getSecurityStyle() {
         return this.securityStyle == null ? Input.empty() : this.securityStyle;
@@ -100,7 +100,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeInMegabytes")
-    private final @Nullable Input<Integer> sizeInMegabytes;
+      private final @Nullable Input<Integer> sizeInMegabytes;
 
     public Input<Integer> getSizeInMegabytes() {
         return this.sizeInMegabytes == null ? Input.empty() : this.sizeInMegabytes;
@@ -111,7 +111,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageEfficiencyEnabled")
-    private final @Nullable Input<Boolean> storageEfficiencyEnabled;
+      private final @Nullable Input<Boolean> storageEfficiencyEnabled;
 
     public Input<Boolean> getStorageEfficiencyEnabled() {
         return this.storageEfficiencyEnabled == null ? Input.empty() : this.storageEfficiencyEnabled;
@@ -122,7 +122,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageVirtualMachineId")
-    private final @Nullable Input<String> storageVirtualMachineId;
+      private final @Nullable Input<String> storageVirtualMachineId;
 
     public Input<String> getStorageVirtualMachineId() {
         return this.storageVirtualMachineId == null ? Input.empty() : this.storageVirtualMachineId;
@@ -133,7 +133,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -144,14 +144,14 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
     }
 
     @InputImport(name="tieringPolicy")
-    private final @Nullable Input<OntapVolumeTieringPolicyGetArgs> tieringPolicy;
+      private final @Nullable Input<OntapVolumeTieringPolicyGetArgs> tieringPolicy;
 
     public Input<OntapVolumeTieringPolicyGetArgs> getTieringPolicy() {
         return this.tieringPolicy == null ? Input.empty() : this.tieringPolicy;
@@ -162,7 +162,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uuid")
-    private final @Nullable Input<String> uuid;
+      private final @Nullable Input<String> uuid;
 
     public Input<String> getUuid() {
         return this.uuid == null ? Input.empty() : this.uuid;
@@ -173,7 +173,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeType")
-    private final @Nullable Input<String> volumeType;
+      private final @Nullable Input<String> volumeType;
 
     public Input<String> getVolumeType() {
         return this.volumeType == null ? Input.empty() : this.volumeType;

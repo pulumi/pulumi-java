@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AnalyticsApplicationInputsStartingPositionConfigurationArgs e
      * 
      */
     @InputImport(name="startingPosition")
-    private final @Nullable Input<String> startingPosition;
+      private final @Nullable Input<String> startingPosition;
 
     public Input<String> getStartingPosition() {
         return this.startingPosition == null ? Input.empty() : this.startingPosition;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicies")
-    private final @Nullable Input<String> accessPolicies;
+      private final @Nullable Input<String> accessPolicies;
 
     public Input<String> getAccessPolicies() {
         return this.accessPolicies == null ? Input.empty() : this.accessPolicies;
@@ -30,7 +30,7 @@ public final class DomainPolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;

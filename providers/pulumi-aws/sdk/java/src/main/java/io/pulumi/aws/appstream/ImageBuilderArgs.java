@@ -7,7 +7,7 @@ import io.pulumi.aws.appstream.inputs.ImageBuilderAccessEndpointArgs;
 import io.pulumi.aws.appstream.inputs.ImageBuilderDomainJoinInfoArgs;
 import io.pulumi.aws.appstream.inputs.ImageBuilderVpcConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessEndpoints")
-    private final @Nullable Input<List<ImageBuilderAccessEndpointArgs>> accessEndpoints;
+      private final @Nullable Input<List<ImageBuilderAccessEndpointArgs>> accessEndpoints;
 
     public Input<List<ImageBuilderAccessEndpointArgs>> getAccessEndpoints() {
         return this.accessEndpoints == null ? Input.empty() : this.accessEndpoints;
@@ -36,7 +36,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appstreamAgentVersion")
-    private final @Nullable Input<String> appstreamAgentVersion;
+      private final @Nullable Input<String> appstreamAgentVersion;
 
     public Input<String> getAppstreamAgentVersion() {
         return this.appstreamAgentVersion == null ? Input.empty() : this.appstreamAgentVersion;
@@ -47,7 +47,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -58,7 +58,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -69,7 +69,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainJoinInfo")
-    private final @Nullable Input<ImageBuilderDomainJoinInfoArgs> domainJoinInfo;
+      private final @Nullable Input<ImageBuilderDomainJoinInfoArgs> domainJoinInfo;
 
     public Input<ImageBuilderDomainJoinInfoArgs> getDomainJoinInfo() {
         return this.domainJoinInfo == null ? Input.empty() : this.domainJoinInfo;
@@ -80,7 +80,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDefaultInternetAccess")
-    private final @Nullable Input<Boolean> enableDefaultInternetAccess;
+      private final @Nullable Input<Boolean> enableDefaultInternetAccess;
 
     public Input<Boolean> getEnableDefaultInternetAccess() {
         return this.enableDefaultInternetAccess == null ? Input.empty() : this.enableDefaultInternetAccess;
@@ -91,7 +91,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRoleArn")
-    private final @Nullable Input<String> iamRoleArn;
+      private final @Nullable Input<String> iamRoleArn;
 
     public Input<String> getIamRoleArn() {
         return this.iamRoleArn == null ? Input.empty() : this.iamRoleArn;
@@ -102,7 +102,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageArn")
-    private final @Nullable Input<String> imageArn;
+      private final @Nullable Input<String> imageArn;
 
     public Input<String> getImageArn() {
         return this.imageArn == null ? Input.empty() : this.imageArn;
@@ -113,7 +113,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageName")
-    private final @Nullable Input<String> imageName;
+      private final @Nullable Input<String> imageName;
 
     public Input<String> getImageName() {
         return this.imageName == null ? Input.empty() : this.imageName;
@@ -124,7 +124,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final Input<String> instanceType;
+      private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
@@ -135,7 +135,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -146,7 +146,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -157,7 +157,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-    private final @Nullable Input<ImageBuilderVpcConfigArgs> vpcConfig;
+      private final @Nullable Input<ImageBuilderVpcConfigArgs> vpcConfig;
 
     public Input<ImageBuilderVpcConfigArgs> getVpcConfig() {
         return this.vpcConfig == null ? Input.empty() : this.vpcConfig;

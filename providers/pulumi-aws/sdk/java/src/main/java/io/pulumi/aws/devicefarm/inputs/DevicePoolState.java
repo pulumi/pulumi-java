@@ -5,7 +5,7 @@ package io.pulumi.aws.devicefarm.inputs;
 
 import io.pulumi.aws.devicefarm.inputs.DevicePoolRuleGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDevices")
-    private final @Nullable Input<Integer> maxDevices;
+      private final @Nullable Input<Integer> maxDevices;
 
     public Input<Integer> getMaxDevices() {
         return this.maxDevices == null ? Input.empty() : this.maxDevices;
@@ -56,7 +56,7 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectArn")
-    private final @Nullable Input<String> projectArn;
+      private final @Nullable Input<String> projectArn;
 
     public Input<String> getProjectArn() {
         return this.projectArn == null ? Input.empty() : this.projectArn;
@@ -78,7 +78,7 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<DevicePoolRuleGetArgs>> rules;
+      private final @Nullable Input<List<DevicePoolRuleGetArgs>> rules;
 
     public Input<List<DevicePoolRuleGetArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -89,7 +89,7 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -100,14 +100,14 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
     }
 
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

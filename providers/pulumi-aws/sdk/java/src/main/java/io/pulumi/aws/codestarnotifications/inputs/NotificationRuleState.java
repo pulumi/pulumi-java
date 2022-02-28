@@ -5,7 +5,7 @@ package io.pulumi.aws.codestarnotifications.inputs;
 
 import io.pulumi.aws.codestarnotifications.inputs.NotificationRuleTargetGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class NotificationRuleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class NotificationRuleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="detailType")
-    private final @Nullable Input<String> detailType;
+      private final @Nullable Input<String> detailType;
 
     public Input<String> getDetailType() {
         return this.detailType == null ? Input.empty() : this.detailType;
@@ -45,7 +45,7 @@ public final class NotificationRuleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="eventTypeIds")
-    private final @Nullable Input<List<String>> eventTypeIds;
+      private final @Nullable Input<List<String>> eventTypeIds;
 
     public Input<List<String>> getEventTypeIds() {
         return this.eventTypeIds == null ? Input.empty() : this.eventTypeIds;
@@ -56,7 +56,7 @@ public final class NotificationRuleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class NotificationRuleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable Input<String> resource;
+      private final @Nullable Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
@@ -78,7 +78,7 @@ public final class NotificationRuleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -89,7 +89,7 @@ public final class NotificationRuleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -100,7 +100,7 @@ public final class NotificationRuleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -111,7 +111,7 @@ public final class NotificationRuleState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targets")
-    private final @Nullable Input<List<NotificationRuleTargetGetArgs>> targets;
+      private final @Nullable Input<List<NotificationRuleTargetGetArgs>> targets;
 
     public Input<List<NotificationRuleTargetGetArgs>> getTargets() {
         return this.targets == null ? Input.empty() : this.targets;

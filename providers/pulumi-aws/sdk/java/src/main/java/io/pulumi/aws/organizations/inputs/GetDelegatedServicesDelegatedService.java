@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDelegatedServicesDelegatedService extends io.pulumi.resour
      * 
      */
     @InputImport(name="delegationEnabledDate", required=true)
-    private final String delegationEnabledDate;
+      private final String delegationEnabledDate;
 
     public String getDelegationEnabledDate() {
         return this.delegationEnabledDate;
@@ -28,7 +28,7 @@ public final class GetDelegatedServicesDelegatedService extends io.pulumi.resour
      * 
      */
     @InputImport(name="servicePrincipal", required=true)
-    private final String servicePrincipal;
+      private final String servicePrincipal;
 
     public String getServicePrincipal() {
         return this.servicePrincipal;

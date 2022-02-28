@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-    private final @Nullable Input<String> address;
+      private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -32,7 +32,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associateWithPrivateIp")
-    private final @Nullable Input<String> associateWithPrivateIp;
+      private final @Nullable Input<String> associateWithPrivateIp;
 
     public Input<String> getAssociateWithPrivateIp() {
         return this.associateWithPrivateIp == null ? Input.empty() : this.associateWithPrivateIp;
@@ -43,7 +43,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerOwnedIpv4Pool")
-    private final @Nullable Input<String> customerOwnedIpv4Pool;
+      private final @Nullable Input<String> customerOwnedIpv4Pool;
 
     public Input<String> getCustomerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool == null ? Input.empty() : this.customerOwnedIpv4Pool;
@@ -54,7 +54,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+      private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
@@ -65,7 +65,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkBorderGroup")
-    private final @Nullable Input<String> networkBorderGroup;
+      private final @Nullable Input<String> networkBorderGroup;
 
     public Input<String> getNetworkBorderGroup() {
         return this.networkBorderGroup == null ? Input.empty() : this.networkBorderGroup;
@@ -76,7 +76,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterface")
-    private final @Nullable Input<String> networkInterface;
+      private final @Nullable Input<String> networkInterface;
 
     public Input<String> getNetworkInterface() {
         return this.networkInterface == null ? Input.empty() : this.networkInterface;
@@ -87,7 +87,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIpv4Pool")
-    private final @Nullable Input<String> publicIpv4Pool;
+      private final @Nullable Input<String> publicIpv4Pool;
 
     public Input<String> getPublicIpv4Pool() {
         return this.publicIpv4Pool == null ? Input.empty() : this.publicIpv4Pool;
@@ -98,7 +98,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -109,7 +109,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpc")
-    private final @Nullable Input<Boolean> vpc;
+      private final @Nullable Input<Boolean> vpc;
 
     public Input<Boolean> getVpc() {
         return this.vpc == null ? Input.empty() : this.vpc;

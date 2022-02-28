@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UsagePlanQuotaSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="limit", required=true)
-    private final Input<Integer> limit;
+      private final Input<Integer> limit;
 
     public Input<Integer> getLimit() {
         return this.limit;
@@ -31,7 +31,7 @@ public final class UsagePlanQuotaSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="offset")
-    private final @Nullable Input<Integer> offset;
+      private final @Nullable Input<Integer> offset;
 
     public Input<Integer> getOffset() {
         return this.offset == null ? Input.empty() : this.offset;
@@ -42,7 +42,7 @@ public final class UsagePlanQuotaSettingsGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="period", required=true)
-    private final Input<String> period;
+      private final Input<String> period;
 
     public Input<String> getPeriod() {
         return this.period;

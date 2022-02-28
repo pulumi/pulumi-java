@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigArgs ext
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -31,7 +31,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigArgs ext
      * 
      */
     @InputImport(name="notificationConfig")
-    private final @Nullable Input<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigArgs> notificationConfig;
+      private final @Nullable Input<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigArgs> notificationConfig;
 
     public Input<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigArgs> getNotificationConfig() {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
@@ -42,7 +42,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigArgs ext
      * 
      */
     @InputImport(name="s3OutputPath", required=true)
-    private final Input<String> s3OutputPath;
+      private final Input<String> s3OutputPath;
 
     public Input<String> getS3OutputPath() {
         return this.s3OutputPath;

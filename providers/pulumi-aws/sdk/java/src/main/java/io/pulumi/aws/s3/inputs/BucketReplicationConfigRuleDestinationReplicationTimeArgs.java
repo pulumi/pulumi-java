@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeArgs ext
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<String> status;
+      private final Input<String> status;
 
     public Input<String> getStatus() {
         return this.status;
@@ -30,7 +30,7 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeArgs ext
      * 
      */
     @InputImport(name="time", required=true)
-    private final Input<BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs> time;
+      private final Input<BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs> time;
 
     public Input<BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs> getTime() {
         return this.time;

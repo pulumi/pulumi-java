@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -31,7 +31,7 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enableWwwSubdomain")
-    private final @Nullable Input<Boolean> enableWwwSubdomain;
+      private final @Nullable Input<Boolean> enableWwwSubdomain;
 
     public Input<Boolean> getEnableWwwSubdomain() {
         return this.enableWwwSubdomain == null ? Input.empty() : this.enableWwwSubdomain;
@@ -42,7 +42,7 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceArn", required=true)
-    private final Input<String> serviceArn;
+      private final Input<String> serviceArn;
 
     public Input<String> getServiceArn() {
         return this.serviceArn;

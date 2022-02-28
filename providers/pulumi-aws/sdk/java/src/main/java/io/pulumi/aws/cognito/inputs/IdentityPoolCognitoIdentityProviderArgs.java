@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+      private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -31,7 +31,7 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="providerName")
-    private final @Nullable Input<String> providerName;
+      private final @Nullable Input<String> providerName;
 
     public Input<String> getProviderName() {
         return this.providerName == null ? Input.empty() : this.providerName;
@@ -42,7 +42,7 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="serverSideTokenCheck")
-    private final @Nullable Input<Boolean> serverSideTokenCheck;
+      private final @Nullable Input<Boolean> serverSideTokenCheck;
 
     public Input<Boolean> getServerSideTokenCheck() {
         return this.serverSideTokenCheck == null ? Input.empty() : this.serverSideTokenCheck;

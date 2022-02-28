@@ -10,8 +10,8 @@ import io.pulumi.aws.worklink.outputs.FleetIdentityProvider;
 import io.pulumi.aws.worklink.outputs.FleetNetwork;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -185,6 +185,21 @@ public class Fleet extends io.pulumi.resources.CustomResource {
         return this.optimizeForEndUserLocation;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Fleet(String name) {
+        this(name, FleetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Fleet(String name, @Nullable FleetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

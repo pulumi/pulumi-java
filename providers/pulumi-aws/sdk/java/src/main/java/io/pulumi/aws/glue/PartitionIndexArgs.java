@@ -5,7 +5,7 @@ package io.pulumi.aws.glue;
 
 import io.pulumi.aws.glue.inputs.PartitionIndexPartitionIndexArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
@@ -31,7 +31,7 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -42,7 +42,7 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionIndex", required=true)
-    private final Input<PartitionIndexPartitionIndexArgs> partitionIndex;
+      private final Input<PartitionIndexPartitionIndexArgs> partitionIndex;
 
     public Input<PartitionIndexPartitionIndexArgs> getPartitionIndex() {
         return this.partitionIndex;
@@ -53,7 +53,7 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+      private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;
