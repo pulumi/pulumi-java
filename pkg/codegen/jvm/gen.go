@@ -1824,7 +1824,7 @@ func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, 
 	fprintf(w, "    private %s() {}\n", className)
 
 	if argsParamDef != "" {
-		// Name+Args builder constructor
+		// Args builder
 		// define builder mutator
 		fprintf(w, "    public interface BuilderApplicator {\n")
 		fprintf(w, "        public void apply(%s.Builder a);\n", ctx.ref(argsFQN))
