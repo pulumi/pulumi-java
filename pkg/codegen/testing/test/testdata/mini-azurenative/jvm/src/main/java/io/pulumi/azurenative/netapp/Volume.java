@@ -35,6 +35,22 @@ public class Volume extends io.pulumi.resources.CustomResource {
         return this.usageThreshold;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VolumeArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.netapp.VolumeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.netapp.VolumeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Volume(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

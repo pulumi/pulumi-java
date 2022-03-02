@@ -67,49 +67,49 @@ public final class DimensionsResponse {
     /**
      * Depth of the device.
      * 
-     */
+    */
     public Double getDepth() {
         return this.depth;
     }
     /**
      * Height of the device.
      * 
-     */
+    */
     public Double getHeight() {
         return this.height;
     }
     /**
      * Length of the device.
      * 
-     */
+    */
     public Double getLength() {
         return this.length;
     }
     /**
      * Unit for the dimensions of length, height and width.
      * 
-     */
+    */
     public String getLengthHeightUnit() {
         return this.lengthHeightUnit;
     }
     /**
      * Weight of the device.
      * 
-     */
+    */
     public Double getWeight() {
         return this.weight;
     }
     /**
      * Unit for the dimensions of weight.
      * 
-     */
+    */
     public String getWeightUnit() {
         return this.weightUnit;
     }
     /**
      * Width of the device.
      * 
-     */
+    */
     public Double getWidth() {
         return this.width;
     }

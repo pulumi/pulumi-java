@@ -31,14 +31,14 @@ public final class SpecificationResponse {
     /**
      * Name of the specification
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Value of the specification
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
