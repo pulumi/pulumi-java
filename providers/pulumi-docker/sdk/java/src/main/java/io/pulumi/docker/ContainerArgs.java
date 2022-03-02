@@ -271,7 +271,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Set of links for link based connectivity between containers that are running on the same host.
      * 
-     * @deprecated
+     * @Deprecated
      * The --link flag is a legacy feature of Docker. It may eventually be removed.
      * 
      */
@@ -388,7 +388,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * Set an alias for the container in all specified networks
      * 
-     * @deprecated
+     * @Deprecated
      * Use networks_advanced instead. Will be removed in v3.0.0
      * 
      */
@@ -415,7 +415,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * ID of the networks in which the container is.
      * 
-     * @deprecated
+     * @Deprecated
      * Use networks_advanced instead. Will be removed in v3.0.0
      * 
      */

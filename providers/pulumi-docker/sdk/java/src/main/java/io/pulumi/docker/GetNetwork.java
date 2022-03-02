@@ -13,8 +13,17 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetwork {
-/**
- * `docker.Network` provides details about a specific Docker Network.
+    private GetNetwork() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkArgs.Builder a);
+    }
+    private static GetNetworkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `docker.Network` provides details about a specific Docker Network.
  * 
  * ## Example Usage
  * ## Schema
@@ -42,13 +51,52 @@ public class GetNetwork {
  * - **ip_range** (String)
  * - **subnet** (String)
  * 
- *
- * A collection of arguments for invoking getNetwork.
+     *
+     * A collection of arguments for invoking getNetwork.
  * 
- *
- * A collection of values returned by getNetwork.
+     *
+     * A collection of values returned by getNetwork.
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `docker.Network` provides details about a specific Docker Network.
+     * 
+     * ## Example Usage
+     * ## Schema
+     * 
+     * ### Required
+     * 
+     * - **name** (String) The name of the Docker network.
+     * 
+     * ### Read-Only
+     * 
+     * - **driver** (String) The driver of the Docker network. Possible values are `bridge`, `host`, `overlay`, `macvlan`. See [network docs](https://docs.docker.com/network/#network-drivers) for more details.
+     * - **id** (String) The ID of this resource.
+     * - **internal** (Boolean) If `true`, the network is internal.
+     * - **ipam_config** (Set of Object) The IPAM configuration options (see below for nested schema)
+     * - **options** (Map of String) Only available with bridge networks. See [bridge options docs](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) for more details.
+     * - **scope** (String) Scope of the network. One of `swarm`, `global`, or `local`.
+     * 
+     * <a id="nestedatt--ipam_config"></a>
+     * ### Nested Schema for `ipam_config`
+     * 
+     * Read-Only:
+     * 
+     * - **aux_address** (Map of String)
+     * - **gateway** (String)
+     * - **ip_range** (String)
+     * - **subnet** (String)
+     * 
+     *
+         * A collection of arguments for invoking getNetwork.
+     * 
+     *
+         * A collection of values returned by getNetwork.
+     * 
+     */
     public static CompletableFuture<GetNetworkResult> invokeAsync(GetNetworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("docker:index/getNetwork:getNetwork", TypeShape.of(GetNetworkResult.class), args == null ? GetNetworkArgs.Empty : args, Utilities.withVersion(options));
     }

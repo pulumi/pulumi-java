@@ -16,7 +16,7 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
     public static final ContainerNetworkDataGetArgs Empty = new ContainerNetworkDataGetArgs();
 
     /**
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The network gateway of the container as read from its NetworkSettings.
      * 
      */
@@ -44,7 +44,7 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
     }
 
     /**
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The IP address of the container's first network it.
      * 
      */
@@ -58,7 +58,7 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
     }
 
     /**
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings.
      * 
      */
