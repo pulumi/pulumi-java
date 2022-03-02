@@ -73,6 +73,22 @@ public class GcmChannel extends io.pulumi.resources.CustomResource {
         return this.enabled;
     }
 
+    public interface BuilderApplicator {
+        public void apply(GcmChannelArgs.Builder a);
+    }
+    private static io.pulumi.aws.pinpoint.GcmChannelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.pinpoint.GcmChannelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public GcmChannel(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

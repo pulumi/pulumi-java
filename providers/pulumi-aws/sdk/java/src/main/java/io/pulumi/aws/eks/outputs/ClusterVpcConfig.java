@@ -70,49 +70,49 @@ public final class ClusterVpcConfig {
     /**
      * Cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.
      * 
-     */
+    */
     public Optional<String> getClusterSecurityGroupId() {
         return Optional.ofNullable(this.clusterSecurityGroupId);
     }
     /**
      * Whether the Amazon EKS private API server endpoint is enabled. Default is `false`.
      * 
-     */
+    */
     public Optional<Boolean> getEndpointPrivateAccess() {
         return Optional.ofNullable(this.endpointPrivateAccess);
     }
     /**
      * Whether the Amazon EKS public API server endpoint is enabled. Default is `true`.
      * 
-     */
+    */
     public Optional<Boolean> getEndpointPublicAccess() {
         return Optional.ofNullable(this.endpointPublicAccess);
     }
     /**
      * List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint when enabled. EKS defaults this to a list with `0.0.0.0/0`. This provider will only perform drift detection of its value when present in a configuration.
      * 
-     */
+    */
     public List<String> getPublicAccessCidrs() {
         return this.publicAccessCidrs == null ? List.of() : this.publicAccessCidrs;
     }
     /**
      * List of security group IDs for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
      * List of subnet IDs. Must be in at least two different availability zones. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your worker nodes and the Kubernetes control plane.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }
     /**
      * ID of the VPC associated with your cluster.
      * 
-     */
+    */
     public Optional<String> getVpcId() {
         return Optional.ofNullable(this.vpcId);
     }

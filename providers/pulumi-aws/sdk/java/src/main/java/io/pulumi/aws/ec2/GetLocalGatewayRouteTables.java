@@ -13,16 +13,38 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocalGatewayRouteTables {
-/**
- * Provides information for multiple EC2 Local Gateway Route Tables, such as their identifiers.
+    private GetLocalGatewayRouteTables() {}
+    public interface BuilderApplicator {
+        public void apply(GetLocalGatewayRouteTablesArgs.Builder a);
+    }
+    private static GetLocalGatewayRouteTablesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLocalGatewayRouteTablesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information for multiple EC2 Local Gateway Route Tables, such as their identifiers.
  * 
- *
- * A collection of arguments for invoking getLocalGatewayRouteTables.
+     *
+     * A collection of arguments for invoking getLocalGatewayRouteTables.
  * 
- *
- * A collection of values returned by getLocalGatewayRouteTables.
+     *
+     * A collection of values returned by getLocalGatewayRouteTables.
  * 
- */
+     */
+    public static CompletableFuture<GetLocalGatewayRouteTablesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information for multiple EC2 Local Gateway Route Tables, such as their identifiers.
+     * 
+     *
+         * A collection of arguments for invoking getLocalGatewayRouteTables.
+     * 
+     *
+         * A collection of values returned by getLocalGatewayRouteTables.
+     * 
+     */
     public static CompletableFuture<GetLocalGatewayRouteTablesResult> invokeAsync(@Nullable GetLocalGatewayRouteTablesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGatewayRouteTables:getLocalGatewayRouteTables", TypeShape.of(GetLocalGatewayRouteTablesResult.class), args == null ? GetLocalGatewayRouteTablesArgs.Empty : args, Utilities.withVersion(options));
     }

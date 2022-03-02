@@ -94,42 +94,42 @@ public final class GetZoneResult {
     /**
      * The Amazon Resource Name (ARN) of the Hosted Zone.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Caller Reference of the Hosted Zone.
      * 
-     */
+    */
     public String getCallerReference() {
         return this.callerReference;
     }
     /**
      * The comment field of the Hosted Zone.
      * 
-     */
+    */
     public String getComment() {
         return this.comment;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The description provided by the service that created the Hosted Zone (e.g., `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
      * 
-     */
+    */
     public String getLinkedServiceDescription() {
         return this.linkedServiceDescription;
     }
     /**
      * The service that created the Hosted Zone (e.g., `servicediscovery.amazonaws.com`).
      * 
-     */
+    */
     public String getLinkedServicePrincipal() {
         return this.linkedServicePrincipal;
     }
@@ -139,7 +139,7 @@ public final class GetZoneResult {
     /**
      * The list of DNS name servers for the Hosted Zone.
      * 
-     */
+    */
     public List<String> getNameServers() {
         return this.nameServers;
     }
@@ -149,7 +149,7 @@ public final class GetZoneResult {
     /**
      * The number of Record Set in the Hosted Zone.
      * 
-     */
+    */
     public Integer getResourceRecordSetCount() {
         return this.resourceRecordSetCount;
     }

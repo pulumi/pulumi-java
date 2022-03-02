@@ -32,14 +32,14 @@ public final class GetVpcDhcpOptionsFilter {
     /**
      * The name of the field to filter.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Set of values for filtering.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }

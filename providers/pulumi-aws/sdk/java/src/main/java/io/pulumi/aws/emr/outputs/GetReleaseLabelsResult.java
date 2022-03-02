@@ -41,14 +41,14 @@ public final class GetReleaseLabelsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The returned release labels.
      * 
-     */
+    */
     public List<String> getReleaseLabels() {
         return this.releaseLabels;
     }

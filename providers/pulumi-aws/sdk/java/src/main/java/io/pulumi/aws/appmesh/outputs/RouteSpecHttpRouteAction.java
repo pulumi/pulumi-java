@@ -26,7 +26,7 @@ public final class RouteSpecHttpRouteAction {
      * The targets that traffic is routed to when a request matches the route.
      * You can specify one or more targets and their relative weights with which to distribute traffic.
      * 
-     */
+    */
     public List<RouteSpecHttpRouteActionWeightedTarget> getWeightedTargets() {
         return this.weightedTargets;
     }

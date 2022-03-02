@@ -35,14 +35,14 @@ public final class TableReplica {
      * The ARN of the CMK that should be used for the AWS KMS encryption.
      * This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
      * 
-     */
+    */
     public Optional<String> getKmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
      * Region name of the replica.
      * 
-     */
+    */
     public String getRegionName() {
         return this.regionName;
     }

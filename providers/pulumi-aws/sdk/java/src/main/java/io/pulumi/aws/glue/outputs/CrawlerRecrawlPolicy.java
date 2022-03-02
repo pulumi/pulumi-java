@@ -25,7 +25,7 @@ public final class CrawlerRecrawlPolicy {
     /**
      * Specifies whether to crawl the entire dataset again or to crawl only folders that were added since the last crawler run. Valid Values are: `CRAWL_EVERYTHING` and `CRAWL_NEW_FOLDERS_ONLY`. Default value is `CRAWL_EVERYTHING`.
      * 
-     */
+    */
     public Optional<String> getRecrawlBehavior() {
         return Optional.ofNullable(this.recrawlBehavior);
     }

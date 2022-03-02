@@ -40,21 +40,21 @@ public final class AccessPointPosixUser {
     /**
      * POSIX group ID used for all file system operations using this access point.
      * 
-     */
+    */
     public Integer getGid() {
         return this.gid;
     }
     /**
      * Secondary POSIX group IDs used for all file system operations using this access point.
      * 
-     */
+    */
     public List<Integer> getSecondaryGids() {
         return this.secondaryGids == null ? List.of() : this.secondaryGids;
     }
     /**
      * POSIX user ID used for all file system operations using this access point.
      * 
-     */
+    */
     public Integer getUid() {
         return this.uid;
     }

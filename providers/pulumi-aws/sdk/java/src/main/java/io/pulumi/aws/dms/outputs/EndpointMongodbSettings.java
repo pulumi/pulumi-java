@@ -61,42 +61,42 @@ public final class EndpointMongodbSettings {
     /**
      * Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
      * 
-     */
+    */
     public Optional<String> getAuthMechanism() {
         return Optional.ofNullable(this.authMechanism);
     }
     /**
      * Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
      * 
-     */
+    */
     public Optional<String> getAuthSource() {
         return Optional.ofNullable(this.authSource);
     }
     /**
      * Authentication type to access the MongoDB source endpoint. Defaults to `password`.
      * 
-     */
+    */
     public Optional<String> getAuthType() {
         return Optional.ofNullable(this.authType);
     }
     /**
      * Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
      * 
-     */
+    */
     public Optional<String> getDocsToInvestigate() {
         return Optional.ofNullable(this.docsToInvestigate);
     }
     /**
      * Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
      * 
-     */
+    */
     public Optional<String> getExtractDocId() {
         return Optional.ofNullable(this.extractDocId);
     }
     /**
      * Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
      * 
-     */
+    */
     public Optional<String> getNestingLevel() {
         return Optional.ofNullable(this.nestingLevel);
     }

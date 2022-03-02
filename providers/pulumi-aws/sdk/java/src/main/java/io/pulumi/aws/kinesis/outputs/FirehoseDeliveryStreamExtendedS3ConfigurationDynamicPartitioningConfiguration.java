@@ -34,14 +34,14 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartition
     /**
      * Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
      * 
-     */
+    */
     public Optional<Integer> getRetryDuration() {
         return Optional.ofNullable(this.retryDuration);
     }

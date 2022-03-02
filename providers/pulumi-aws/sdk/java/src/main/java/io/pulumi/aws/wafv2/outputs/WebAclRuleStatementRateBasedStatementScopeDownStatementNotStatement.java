@@ -24,7 +24,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     /**
      * The statement to negate. You can use any statement that can be nested. See Statement above for details.
      * 
-     */
+    */
     public List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatement> getStatements() {
         return this.statements;
     }

@@ -89,6 +89,22 @@ public class ProxyDefaultTargetGroup extends io.pulumi.resources.CustomResource 
         return this.name;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ProxyDefaultTargetGroupArgs.Builder a);
+    }
+    private static io.pulumi.aws.rds.ProxyDefaultTargetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.rds.ProxyDefaultTargetGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ProxyDefaultTargetGroup(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

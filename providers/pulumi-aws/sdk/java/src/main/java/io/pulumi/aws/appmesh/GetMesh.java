@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMesh {
-/**
- * The App Mesh Mesh data source allows details of an App Mesh Mesh to be retrieved by its name and optionally the mesh_owner.
+    private GetMesh() {}
+    public interface BuilderApplicator {
+        public void apply(GetMeshArgs.Builder a);
+    }
+    private static GetMeshArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMeshArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The App Mesh Mesh data source allows details of an App Mesh Mesh to be retrieved by its name and optionally the mesh_owner.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getMesh.
+     *
+     * A collection of arguments for invoking getMesh.
  * 
- *
- * A collection of values returned by getMesh.
+     *
+     * A collection of values returned by getMesh.
  * 
- */
+     */
+    public static CompletableFuture<GetMeshResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The App Mesh Mesh data source allows details of an App Mesh Mesh to be retrieved by its name and optionally the mesh_owner.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getMesh.
+     * 
+     *
+         * A collection of values returned by getMesh.
+     * 
+     */
     public static CompletableFuture<GetMeshResult> invokeAsync(GetMeshArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:appmesh/getMesh:getMesh", TypeShape.of(GetMeshResult.class), args == null ? GetMeshArgs.Empty : args, Utilities.withVersion(options));
     }

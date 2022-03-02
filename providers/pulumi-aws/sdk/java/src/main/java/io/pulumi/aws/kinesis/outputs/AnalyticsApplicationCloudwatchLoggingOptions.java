@@ -40,21 +40,21 @@ public final class AnalyticsApplicationCloudwatchLoggingOptions {
     /**
      * The ARN of the Kinesis Analytics Application.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The ARN of the CloudWatch Log Stream.
      * 
-     */
+    */
     public String getLogStreamArn() {
         return this.logStreamArn;
     }
     /**
      * The ARN of the IAM Role used to send application messages.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }

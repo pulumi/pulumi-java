@@ -40,21 +40,21 @@ public final class AppCampaignHook {
     /**
      * Lambda function name or ARN to be called for delivery. Conflicts with `web_url`
      * 
-     */
+    */
     public Optional<String> getLambdaFunctionName() {
         return Optional.ofNullable(this.lambdaFunctionName);
     }
     /**
      * What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * Web URL to call for hook. If the URL has authentication specified it will be added as authentication to the request. Conflicts with `lambda_function_name`
      * 
-     */
+    */
     public Optional<String> getWebUrl() {
         return Optional.ofNullable(this.webUrl);
     }

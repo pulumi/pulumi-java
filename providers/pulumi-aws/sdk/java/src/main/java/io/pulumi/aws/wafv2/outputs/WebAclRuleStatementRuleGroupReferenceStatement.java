@@ -34,14 +34,14 @@ public final class WebAclRuleStatementRuleGroupReferenceStatement {
     /**
      * The Amazon Resource Name (ARN) of the `aws.wafv2.RuleGroup` resource.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
      * 
-     */
+    */
     public List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRule> getExcludedRules() {
         return this.excludedRules == null ? List.of() : this.excludedRules;
     }

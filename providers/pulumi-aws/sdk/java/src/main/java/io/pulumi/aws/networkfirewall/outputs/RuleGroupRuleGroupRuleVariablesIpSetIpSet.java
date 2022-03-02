@@ -24,7 +24,7 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetIpSet {
     /**
      * Set of IP addresses and address ranges, in CIDR notation.
      * 
-     */
+    */
     public List<String> getDefinitions() {
         return this.definitions;
     }

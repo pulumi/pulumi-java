@@ -31,14 +31,14 @@ public final class SelectionConditionStringNotLike {
     /**
      * The key in a key-value pair.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The value in a key-value pair.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

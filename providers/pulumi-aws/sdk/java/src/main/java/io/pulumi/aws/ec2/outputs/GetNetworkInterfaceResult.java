@@ -151,14 +151,14 @@ public final class GetNetworkInterfaceResult {
     /**
      * The ARN of the network interface.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The association information for an Elastic IP address (IPv4) associated with the network interface. See supported fields below.
      * 
-     */
+    */
     public List<GetNetworkInterfaceAssociation> getAssociations() {
         return this.associations;
     }
@@ -168,14 +168,14 @@ public final class GetNetworkInterfaceResult {
     /**
      * The Availability Zone.
      * 
-     */
+    */
     public String getAvailabilityZone() {
         return this.availabilityZone;
     }
     /**
      * Description of the network interface.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -188,91 +188,91 @@ public final class GetNetworkInterfaceResult {
     /**
      * The type of interface.
      * 
-     */
+    */
     public String getInterfaceType() {
         return this.interfaceType;
     }
     /**
      * List of IPv6 addresses to assign to the ENI.
      * 
-     */
+    */
     public List<String> getIpv6Addresses() {
         return this.ipv6Addresses;
     }
     /**
      * The MAC address.
      * 
-     */
+    */
     public String getMacAddress() {
         return this.macAddress;
     }
     /**
      * The Amazon Resource Name (ARN) of the Outpost.
      * 
-     */
+    */
     public String getOutpostArn() {
         return this.outpostArn;
     }
     /**
      * The AWS account ID of the owner of the network interface.
      * 
-     */
+    */
     public String getOwnerId() {
         return this.ownerId;
     }
     /**
      * The private DNS name.
      * 
-     */
+    */
     public String getPrivateDnsName() {
         return this.privateDnsName;
     }
     /**
      * The private IPv4 address of the network interface within the subnet.
      * 
-     */
+    */
     public String getPrivateIp() {
         return this.privateIp;
     }
     /**
      * The private IPv4 addresses associated with the network interface.
      * 
-     */
+    */
     public List<String> getPrivateIps() {
         return this.privateIps;
     }
     /**
      * The ID of the entity that launched the instance on your behalf.
      * 
-     */
+    */
     public String getRequesterId() {
         return this.requesterId;
     }
     /**
      * The list of security groups for the network interface.
      * 
-     */
+    */
     public List<String> getSecurityGroups() {
         return this.securityGroups;
     }
     /**
      * The ID of the subnet.
      * 
-     */
+    */
     public String getSubnetId() {
         return this.subnetId;
     }
     /**
      * Any tags assigned to the network interface.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * The ID of the VPC.
      * 
-     */
+    */
     public String getVpcId() {
         return this.vpcId;
     }

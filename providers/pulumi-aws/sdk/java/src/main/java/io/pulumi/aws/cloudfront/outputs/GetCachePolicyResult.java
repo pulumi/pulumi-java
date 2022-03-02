@@ -70,21 +70,21 @@ public final class GetCachePolicyResult {
     /**
      * A comment to describe the cache policy.
      * 
-     */
+    */
     public String getComment() {
         return this.comment;
     }
     /**
      * The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
-     */
+    */
     public Integer getDefaultTtl() {
         return this.defaultTtl;
     }
     /**
      * The current version of the cache policy.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
@@ -94,14 +94,14 @@ public final class GetCachePolicyResult {
     /**
      * The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
-     */
+    */
     public Integer getMaxTtl() {
         return this.maxTtl;
     }
     /**
      * The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
-     */
+    */
     public Integer getMinTtl() {
         return this.minTtl;
     }
@@ -111,7 +111,7 @@ public final class GetCachePolicyResult {
     /**
      * The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
      * 
-     */
+    */
     public List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> getParametersInCacheKeyAndForwardedToOrigins() {
         return this.parametersInCacheKeyAndForwardedToOrigins;
     }

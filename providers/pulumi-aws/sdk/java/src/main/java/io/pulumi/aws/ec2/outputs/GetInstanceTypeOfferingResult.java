@@ -47,14 +47,14 @@ public final class GetInstanceTypeOfferingResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * EC2 Instance Type.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }

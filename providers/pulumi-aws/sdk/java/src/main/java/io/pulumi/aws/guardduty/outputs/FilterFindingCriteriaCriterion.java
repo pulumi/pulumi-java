@@ -69,49 +69,49 @@ public final class FilterFindingCriteriaCriterion {
     /**
      * List of string values to be evaluated.
      * 
-     */
+    */
     public List<String> getEquals() {
         return this.equals == null ? List.of() : this.equals;
     }
     /**
      * The name of the field to be evaluated. The full list of field names can be found in [AWS documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_filter-findings.html#filter_criteria).
      * 
-     */
+    */
     public String getField() {
         return this.field;
     }
     /**
      * A value to be evaluated. Accepts either an integer or a date in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
-     */
+    */
     public Optional<String> getGreaterThan() {
         return Optional.ofNullable(this.greaterThan);
     }
     /**
      * A value to be evaluated. Accepts either an integer or a date in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
-     */
+    */
     public Optional<String> getGreaterThanOrEqual() {
         return Optional.ofNullable(this.greaterThanOrEqual);
     }
     /**
      * A value to be evaluated. Accepts either an integer or a date in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
-     */
+    */
     public Optional<String> getLessThan() {
         return Optional.ofNullable(this.lessThan);
     }
     /**
      * A value to be evaluated. Accepts either an integer or a date in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
-     */
+    */
     public Optional<String> getLessThanOrEqual() {
         return Optional.ofNullable(this.lessThanOrEqual);
     }
     /**
      * List of string values to be evaluated.
      * 
-     */
+    */
     public List<String> getNotEquals() {
         return this.notEquals == null ? List.of() : this.notEquals;
     }

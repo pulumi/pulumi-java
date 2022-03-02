@@ -33,14 +33,14 @@ public final class DeviceFleetOutputConfig {
     /**
      * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume after compilation job. If you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for your role's account.
      * 
-     */
+    */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * The Amazon Simple Storage (S3) bucker URI.
      * 
-     */
+    */
     public String getS3OutputLocation() {
         return this.s3OutputLocation;
     }

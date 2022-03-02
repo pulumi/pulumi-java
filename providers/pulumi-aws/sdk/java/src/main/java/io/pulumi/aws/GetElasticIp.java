@@ -14,21 +14,48 @@ import javax.annotation.Nullable;
 
 @Deprecated /* aws.getElasticIp has been deprecated in favor of aws.ec2.getElasticIp */
 public class GetElasticIp {
-/**
- * `aws.ec2.Eip` provides details about a specific Elastic IP.
+    private GetElasticIp() {}
+    public interface BuilderApplicator {
+        public void apply(GetElasticIpArgs.Builder a);
+    }
+    private static GetElasticIpArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetElasticIpArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `aws.ec2.Eip` provides details about a specific Elastic IP.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getElasticIp.
+     *
+     * A collection of arguments for invoking getElasticIp.
  * 
- *
- * A collection of values returned by getElasticIp.
+     *
+     * A collection of values returned by getElasticIp.
  * 
- * @deprecated
- * aws.getElasticIp has been deprecated in favor of aws.ec2.getElasticIp
+     * @Deprecated
+     * aws.getElasticIp has been deprecated in favor of aws.ec2.getElasticIp
  * 
- */
+     */
+    public static CompletableFuture<GetElasticIpResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `aws.ec2.Eip` provides details about a specific Elastic IP.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getElasticIp.
+     * 
+     *
+         * A collection of values returned by getElasticIp.
+     * 
+     * @Deprecated
+         * aws.getElasticIp has been deprecated in favor of aws.ec2.getElasticIp
+     * 
+     */
     @Deprecated /* aws.getElasticIp has been deprecated in favor of aws.ec2.getElasticIp */
     public static CompletableFuture<GetElasticIpResult> invokeAsync(@Nullable GetElasticIpArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getElasticIp:getElasticIp", TypeShape.of(GetElasticIpResult.class), args == null ? GetElasticIpArgs.Empty : args, Utilities.withVersion(options));

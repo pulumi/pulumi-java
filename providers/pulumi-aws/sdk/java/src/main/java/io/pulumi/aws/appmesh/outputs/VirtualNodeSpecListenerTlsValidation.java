@@ -34,14 +34,14 @@ public final class VirtualNodeSpecListenerTlsValidation {
     /**
      * The SANs for a TLS validation context.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames> getSubjectAlternativeNames() {
         return Optional.ofNullable(this.subjectAlternativeNames);
     }
     /**
      * The TLS validation context trust.
      * 
-     */
+    */
     public VirtualNodeSpecListenerTlsValidationTrust getTrust() {
         return this.trust;
     }

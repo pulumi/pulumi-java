@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpnAttachment {
-/**
- * Get information on an EC2 Transit Gateway VPN Attachment.
+    private GetVpnAttachment() {}
+    public interface BuilderApplicator {
+        public void apply(GetVpnAttachmentArgs.Builder a);
+    }
+    private static GetVpnAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVpnAttachmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get information on an EC2 Transit Gateway VPN Attachment.
  * 
  * > EC2 Transit Gateway VPN Attachments are implicitly created by VPN Connections referencing an EC2 Transit Gateway so there is no managed resource. For ease, the `aws.ec2.VpnConnection` resource includes a `transit_gateway_attachment_id` attribute which can replace some usage of this data source. For tagging the attachment, see the `aws.ec2.Tag` resource.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getVpnAttachment.
+     *
+     * A collection of arguments for invoking getVpnAttachment.
  * 
- *
- * A collection of values returned by getVpnAttachment.
+     *
+     * A collection of values returned by getVpnAttachment.
  * 
- */
+     */
+    public static CompletableFuture<GetVpnAttachmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get information on an EC2 Transit Gateway VPN Attachment.
+     * 
+     * > EC2 Transit Gateway VPN Attachments are implicitly created by VPN Connections referencing an EC2 Transit Gateway so there is no managed resource. For ease, the `aws.ec2.VpnConnection` resource includes a `transit_gateway_attachment_id` attribute which can replace some usage of this data source. For tagging the attachment, see the `aws.ec2.Tag` resource.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getVpnAttachment.
+     * 
+     *
+         * A collection of values returned by getVpnAttachment.
+     * 
+     */
     public static CompletableFuture<GetVpnAttachmentResult> invokeAsync(@Nullable GetVpnAttachmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getVpnAttachment:getVpnAttachment", TypeShape.of(GetVpnAttachmentResult.class), args == null ? GetVpnAttachmentArgs.Empty : args, Utilities.withVersion(options));
     }

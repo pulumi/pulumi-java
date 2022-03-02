@@ -32,14 +32,14 @@ public final class GetPrefixListFilter {
     /**
      * The name of the filter field. Valid values can be found in the [EC2 DescribePrefixLists API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribePrefixLists.html).
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }

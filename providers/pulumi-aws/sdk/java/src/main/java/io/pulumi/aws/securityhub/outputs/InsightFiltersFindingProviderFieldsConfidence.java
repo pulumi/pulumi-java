@@ -40,21 +40,21 @@ public final class InsightFiltersFindingProviderFieldsConfidence {
     /**
      * The equal-to condition to be applied to a single field when querying for findings, provided as a String.
      * 
-     */
+    */
     public Optional<String> getEq() {
         return Optional.ofNullable(this.eq);
     }
     /**
      * The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
      * 
-     */
+    */
     public Optional<String> getGte() {
         return Optional.ofNullable(this.gte);
     }
     /**
      * The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
      * 
-     */
+    */
     public Optional<String> getLte() {
         return Optional.ofNullable(this.lte);
     }

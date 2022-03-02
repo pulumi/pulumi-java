@@ -55,35 +55,35 @@ public final class LaunchTemplateMetadataOptions {
     /**
      * Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
      * 
-     */
+    */
     public Optional<String> getHttpEndpoint() {
         return Optional.ofNullable(this.httpEndpoint);
     }
     /**
      * Enables or disables the IPv6 endpoint for the instance metadata service. (Default: `disabled`).
      * 
-     */
+    */
     public Optional<String> getHttpProtocolIpv6() {
         return Optional.ofNullable(this.httpProtocolIpv6);
     }
     /**
      * The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
      * 
-     */
+    */
     public Optional<Integer> getHttpPutResponseHopLimit() {
         return Optional.ofNullable(this.httpPutResponseHopLimit);
     }
     /**
      * Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
      * 
-     */
+    */
     public Optional<String> getHttpTokens() {
         return Optional.ofNullable(this.httpTokens);
     }
     /**
      * Enables or disables access to instance tags from the instance metadata service. (Default: `disabled`).
      * 
-     */
+    */
     public Optional<String> getInstanceMetadataTags() {
         return Optional.ofNullable(this.instanceMetadataTags);
     }

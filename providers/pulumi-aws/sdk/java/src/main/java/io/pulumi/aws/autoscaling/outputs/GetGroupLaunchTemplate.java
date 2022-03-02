@@ -34,14 +34,14 @@ public final class GetGroupLaunchTemplate {
     /**
      * Name of the Auto Scaling Group.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Specify the exact name of the desired autoscaling group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

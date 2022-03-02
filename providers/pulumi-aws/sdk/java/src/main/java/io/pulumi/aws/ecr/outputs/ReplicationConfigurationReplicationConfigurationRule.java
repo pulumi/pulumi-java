@@ -34,14 +34,14 @@ public final class ReplicationConfigurationReplicationConfigurationRule {
     /**
      * the details of a replication destination. A maximum of 25 are allowed per `rule`. See Destination.
      * 
-     */
+    */
     public List<ReplicationConfigurationReplicationConfigurationRuleDestination> getDestinations() {
         return this.destinations;
     }
     /**
      * filters for a replication rule. See Repository Filter.
      * 
-     */
+    */
     public List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilter> getRepositoryFilters() {
         return this.repositoryFilters == null ? List.of() : this.repositoryFilters;
     }

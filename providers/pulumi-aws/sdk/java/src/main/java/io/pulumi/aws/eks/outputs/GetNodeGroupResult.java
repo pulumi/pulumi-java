@@ -134,14 +134,14 @@ public final class GetNodeGroupResult {
     /**
      * Type of Amazon Machine Image (AMI) associated with the EKS Node Group.
      * 
-     */
+    */
     public String getAmiType() {
         return this.amiType;
     }
     /**
      * Amazon Resource Name (ARN) of the EKS Node Group.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
@@ -151,28 +151,28 @@ public final class GetNodeGroupResult {
     /**
      * Disk size in GiB for worker nodes.
      * 
-     */
+    */
     public Integer getDiskSize() {
         return this.diskSize;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set of instance types associated with the EKS Node Group.
      * 
-     */
+    */
     public List<String> getInstanceTypes() {
         return this.instanceTypes;
     }
     /**
      * Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
@@ -182,63 +182,63 @@ public final class GetNodeGroupResult {
     /**
      * Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
      * 
-     */
+    */
     public String getNodeRoleArn() {
         return this.nodeRoleArn;
     }
     /**
      * AMI version of the EKS Node Group.
      * 
-     */
+    */
     public String getReleaseVersion() {
         return this.releaseVersion;
     }
     /**
      * Configuration block with remote access settings.
      * 
-     */
+    */
     public List<GetNodeGroupRemoteAccess> getRemoteAccesses() {
         return this.remoteAccesses;
     }
     /**
      * List of objects containing information about underlying resources.
      * 
-     */
+    */
     public List<GetNodeGroupResource> getResources() {
         return this.resources;
     }
     /**
      * Configuration block with scaling settings.
      * 
-     */
+    */
     public List<GetNodeGroupScalingConfig> getScalingConfigs() {
         return this.scalingConfigs;
     }
     /**
      * Status of the EKS Node Group.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Identifiers of EC2 Subnets to associate with the EKS Node Group.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }
     /**
      * Key-value map of resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * Kubernetes version.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

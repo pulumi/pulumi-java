@@ -41,7 +41,7 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMap {
     /**
      * A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.
      * 
-     */
+    */
     public Map<String,String> getAttributes() {
         return this.attributes == null ? Map.of() : this.attributes;
     }
@@ -49,14 +49,14 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMap {
      * The name of the AWS Cloud Map namespace to use.
      * Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace. Must be between 1 and 1024 characters in length.
      * 
-     */
+    */
     public String getNamespaceName() {
         return this.namespaceName;
     }
     /**
      * The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service. Must be between 1 and 1024 characters in length.
      * 
-     */
+    */
     public String getServiceName() {
         return this.serviceName;
     }

@@ -36,14 +36,14 @@ public final class GetOrganizationalUnitsResult {
     /**
      * List of child organizational units, which have the following attributes:
      * 
-     */
+    */
     public List<GetOrganizationalUnitsChildren> getChildrens() {
         return this.childrens;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

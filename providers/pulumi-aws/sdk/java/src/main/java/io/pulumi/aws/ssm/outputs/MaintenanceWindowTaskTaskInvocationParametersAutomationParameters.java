@@ -35,14 +35,14 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
     /**
      * The version of an Automation document to use during task execution.
      * 
-     */
+    */
     public Optional<String> getDocumentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
     /**
      * The parameters for the RUN_COMMAND task execution. Documented below.
      * 
-     */
+    */
     public List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }

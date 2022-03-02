@@ -23,7 +23,7 @@ public final class MonitoringSubscriptionMonitoringSubscription {
     /**
      * A subscription configuration for additional CloudWatch metrics. See below.
      * 
-     */
+    */
     public MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig getRealtimeMetricsSubscriptionConfig() {
         return this.realtimeMetricsSubscriptionConfig;
     }

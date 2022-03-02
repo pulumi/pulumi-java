@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDocument {
-/**
- * Gets the contents of the specified Systems Manager document.
+    private GetDocument() {}
+    public interface BuilderApplicator {
+        public void apply(GetDocumentArgs.Builder a);
+    }
+    private static GetDocumentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDocumentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the contents of the specified Systems Manager document.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getDocument.
+     *
+     * A collection of arguments for invoking getDocument.
  * 
- *
- * A collection of values returned by getDocument.
+     *
+     * A collection of values returned by getDocument.
  * 
- */
+     */
+    public static CompletableFuture<GetDocumentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the contents of the specified Systems Manager document.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getDocument.
+     * 
+     *
+         * A collection of values returned by getDocument.
+     * 
+     */
     public static CompletableFuture<GetDocumentResult> invokeAsync(GetDocumentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ssm/getDocument:getDocument", TypeShape.of(GetDocumentResult.class), args == null ? GetDocumentArgs.Empty : args, Utilities.withVersion(options));
     }

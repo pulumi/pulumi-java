@@ -23,7 +23,7 @@ public final class GetInstanceEnclaveOption {
     /**
      * Whether Nitro Enclaves are enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }

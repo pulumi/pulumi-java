@@ -40,21 +40,21 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn {
     /**
      * The Mapping reference to the data element.
      * 
-     */
+    */
     public Optional<String> getMapping() {
         return Optional.ofNullable(this.mapping);
     }
     /**
      * Name of the column.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The SQL Type of the column.
      * 
-     */
+    */
     public String getSqlType() {
         return this.sqlType;
     }

@@ -14,22 +14,50 @@ import javax.annotation.Nullable;
 
 @Deprecated /* aws.getAutoscalingGroups has been deprecated in favor of aws.autoscaling.getAmiIds */
 public class GetAutoscalingGroups {
-/**
- * The Autoscaling Groups data source allows access to the list of AWS
+    private GetAutoscalingGroups() {}
+    public interface BuilderApplicator {
+        public void apply(GetAutoscalingGroupsArgs.Builder a);
+    }
+    private static GetAutoscalingGroupsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAutoscalingGroupsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Autoscaling Groups data source allows access to the list of AWS
  * ASGs within a specific region. This will allow you to pass a list of AutoScaling Groups to other resources.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getAutoscalingGroups.
+     *
+     * A collection of arguments for invoking getAutoscalingGroups.
  * 
- *
- * A collection of values returned by getAutoscalingGroups.
+     *
+     * A collection of values returned by getAutoscalingGroups.
  * 
- * @deprecated
- * aws.getAutoscalingGroups has been deprecated in favor of aws.autoscaling.getAmiIds
+     * @Deprecated
+     * aws.getAutoscalingGroups has been deprecated in favor of aws.autoscaling.getAmiIds
  * 
- */
+     */
+    public static CompletableFuture<GetAutoscalingGroupsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Autoscaling Groups data source allows access to the list of AWS
+     * ASGs within a specific region. This will allow you to pass a list of AutoScaling Groups to other resources.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getAutoscalingGroups.
+     * 
+     *
+         * A collection of values returned by getAutoscalingGroups.
+     * 
+     * @Deprecated
+         * aws.getAutoscalingGroups has been deprecated in favor of aws.autoscaling.getAmiIds
+     * 
+     */
     @Deprecated /* aws.getAutoscalingGroups has been deprecated in favor of aws.autoscaling.getAmiIds */
     public static CompletableFuture<GetAutoscalingGroupsResult> invokeAsync(@Nullable GetAutoscalingGroupsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getAutoscalingGroups:getAutoscalingGroups", TypeShape.of(GetAutoscalingGroupsResult.class), args == null ? GetAutoscalingGroupsArgs.Empty : args, Utilities.withVersion(options));

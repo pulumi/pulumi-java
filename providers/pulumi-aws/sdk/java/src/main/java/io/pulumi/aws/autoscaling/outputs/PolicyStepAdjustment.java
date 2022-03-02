@@ -50,7 +50,7 @@ public final class PolicyStepAdjustment {
      * difference between the alarm threshold and the CloudWatch metric.
      * Without a value, AWS will treat this bound as infinity.
      * 
-     */
+    */
     public Optional<String> getMetricIntervalLowerBound() {
         return Optional.ofNullable(this.metricIntervalLowerBound);
     }
@@ -60,7 +60,7 @@ public final class PolicyStepAdjustment {
      * Without a value, AWS will treat this bound as infinity. The upper bound
      * must be greater than the lower bound.
      * 
-     */
+    */
     public Optional<String> getMetricIntervalUpperBound() {
         return Optional.ofNullable(this.metricIntervalUpperBound);
     }
@@ -69,7 +69,7 @@ public final class PolicyStepAdjustment {
      * scale, when the adjustment bounds are breached. A positive value scales
      * up. A negative value scales down.
      * 
-     */
+    */
     public Integer getScalingAdjustment() {
         return this.scalingAdjustment;
     }

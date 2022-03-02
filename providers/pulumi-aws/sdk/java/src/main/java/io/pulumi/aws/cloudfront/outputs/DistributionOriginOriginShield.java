@@ -32,14 +32,14 @@ public final class DistributionOriginOriginShield {
     /**
      * A flag that specifies whether Origin Shield is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The AWS Region for Origin Shield. To specify a region, use the region code, not the region name. For example, specify the US East (Ohio) region as us-east-2.
      * 
-     */
+    */
     public String getOriginShieldRegion() {
         return this.originShieldRegion;
     }

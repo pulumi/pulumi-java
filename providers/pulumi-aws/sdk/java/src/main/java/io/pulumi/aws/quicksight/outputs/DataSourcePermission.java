@@ -32,14 +32,14 @@ public final class DataSourcePermission {
     /**
      * Set of IAM actions to grant or revoke permissions on. Max of 16 items.
      * 
-     */
+    */
     public List<String> getActions() {
         return this.actions;
     }
     /**
      * The Amazon Resource Name (ARN) of the principal.
      * 
-     */
+    */
     public String getPrincipal() {
         return this.principal;
     }

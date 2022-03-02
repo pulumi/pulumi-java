@@ -23,7 +23,7 @@ public final class RuleGroupActivatedRuleAction {
     /**
      * The rule type, either `REGULAR`, `RATE_BASED`, or `GROUP`. Defaults to `REGULAR`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

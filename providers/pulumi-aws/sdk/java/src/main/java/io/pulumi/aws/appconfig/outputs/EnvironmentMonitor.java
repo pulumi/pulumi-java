@@ -33,14 +33,14 @@ public final class EnvironmentMonitor {
     /**
      * ARN of the Amazon CloudWatch alarm.
      * 
-     */
+    */
     public String getAlarmArn() {
         return this.alarmArn;
     }
     /**
      * ARN of an IAM role for AWS AppConfig to monitor `alarm_arn`.
      * 
-     */
+    */
     public Optional<String> getAlarmRoleArn() {
         return Optional.ofNullable(this.alarmRoleArn);
     }

@@ -42,7 +42,7 @@ public final class ServiceSourceConfigurationImageRepository {
     /**
      * Configuration for running the identified image. See Image Configuration below for more details.
      * 
-     */
+    */
     public Optional<ServiceSourceConfigurationImageRepositoryImageConfiguration> getImageConfiguration() {
         return Optional.ofNullable(this.imageConfiguration);
     }
@@ -50,14 +50,14 @@ public final class ServiceSourceConfigurationImageRepository {
      * The identifier of an image. For an image in Amazon Elastic Container Registry (Amazon ECR), this is an image name. For the
      * image name format, see Pulling an image in the Amazon ECR User Guide.
      * 
-     */
+    */
     public String getImageIdentifier() {
         return this.imageIdentifier;
     }
     /**
      * The type of the image repository. This reflects the repository provider and whether the repository is private or public. Valid values: `ECR` , `ECR_PUBLIC`.
      * 
-     */
+    */
     public String getImageRepositoryType() {
         return this.imageRepositoryType;
     }

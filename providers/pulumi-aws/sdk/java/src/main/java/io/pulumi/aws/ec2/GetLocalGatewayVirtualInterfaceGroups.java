@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocalGatewayVirtualInterfaceGroups {
-/**
- * Provides details about multiple EC2 Local Gateway Virtual Interface Groups, such as identifiers. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing).
+    private GetLocalGatewayVirtualInterfaceGroups() {}
+    public interface BuilderApplicator {
+        public void apply(GetLocalGatewayVirtualInterfaceGroupsArgs.Builder a);
+    }
+    private static GetLocalGatewayVirtualInterfaceGroupsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLocalGatewayVirtualInterfaceGroupsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about multiple EC2 Local Gateway Virtual Interface Groups, such as identifiers. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing).
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getLocalGatewayVirtualInterfaceGroups.
+     *
+     * A collection of arguments for invoking getLocalGatewayVirtualInterfaceGroups.
  * 
- *
- * A collection of values returned by getLocalGatewayVirtualInterfaceGroups.
+     *
+     * A collection of values returned by getLocalGatewayVirtualInterfaceGroups.
  * 
- */
+     */
+    public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about multiple EC2 Local Gateway Virtual Interface Groups, such as identifiers. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing).
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getLocalGatewayVirtualInterfaceGroups.
+     * 
+     *
+         * A collection of values returned by getLocalGatewayVirtualInterfaceGroups.
+     * 
+     */
     public static CompletableFuture<GetLocalGatewayVirtualInterfaceGroupsResult> invokeAsync(@Nullable GetLocalGatewayVirtualInterfaceGroupsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getLocalGatewayVirtualInterfaceGroups:getLocalGatewayVirtualInterfaceGroups", TypeShape.of(GetLocalGatewayVirtualInterfaceGroupsResult.class), args == null ? GetLocalGatewayVirtualInterfaceGroupsArgs.Empty : args, Utilities.withVersion(options));
     }

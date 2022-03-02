@@ -55,7 +55,7 @@ public final class GetResourcesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -68,7 +68,7 @@ public final class GetResourcesResult {
     /**
      * List of objects matching the search criteria.
      * 
-     */
+    */
     public List<GetResourcesResourceTagMappingList> getResourceTagMappingLists() {
         return this.resourceTagMappingLists;
     }

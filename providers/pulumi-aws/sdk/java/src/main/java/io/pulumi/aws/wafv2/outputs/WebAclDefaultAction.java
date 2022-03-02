@@ -34,14 +34,14 @@ public final class WebAclDefaultAction {
     /**
      * Specifies that AWS WAF should allow requests by default. See Allow below for details.
      * 
-     */
+    */
     public Optional<WebAclDefaultActionAllow> getAllow() {
         return Optional.ofNullable(this.allow);
     }
     /**
      * Specifies that AWS WAF should block requests by default. See Block below for details.
      * 
-     */
+    */
     public Optional<WebAclDefaultActionBlock> getBlock() {
         return Optional.ofNullable(this.block);
     }

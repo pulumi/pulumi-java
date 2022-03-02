@@ -94,14 +94,14 @@ public final class GetSigningProfileResult {
     /**
      * The Amazon Resource Name (ARN) for the signing profile.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -111,56 +111,56 @@ public final class GetSigningProfileResult {
     /**
      * A human-readable name for the signing platform associated with the signing profile.
      * 
-     */
+    */
     public String getPlatformDisplayName() {
         return this.platformDisplayName;
     }
     /**
      * The ID of the platform that is used by the target signing profile.
      * 
-     */
+    */
     public String getPlatformId() {
         return this.platformId;
     }
     /**
      * Revocation information for a signing profile.
      * 
-     */
+    */
     public List<GetSigningProfileRevocationRecord> getRevocationRecords() {
         return this.revocationRecords;
     }
     /**
      * The validity period for a signing job.
      * 
-     */
+    */
     public List<GetSigningProfileSignatureValidityPeriod> getSignatureValidityPeriods() {
         return this.signatureValidityPeriods;
     }
     /**
      * The status of the target signing profile.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * A list of tags associated with the signing profile.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * The current version of the signing profile.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
     /**
      * The signing profile ARN, including the profile version.
      * 
-     */
+    */
     public String getVersionArn() {
         return this.versionArn;
     }

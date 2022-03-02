@@ -31,14 +31,14 @@ public final class ClusterSetting {
     /**
      * Name of the setting to manage. Valid values: `containerInsights`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The value to assign to the setting. Value values are `enabled` and `disabled`.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

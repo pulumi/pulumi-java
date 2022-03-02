@@ -40,21 +40,21 @@ public final class ClusterClusterNode {
     /**
      * Whether the node is a leader node or a compute node
      * 
-     */
+    */
     public Optional<String> getNodeRole() {
         return Optional.ofNullable(this.nodeRole);
     }
     /**
      * The private IP address of a node within a cluster
      * 
-     */
+    */
     public Optional<String> getPrivateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
      * The public IP address of a node within a cluster
      * 
-     */
+    */
     public Optional<String> getPublicIpAddress() {
         return Optional.ofNullable(this.publicIpAddress);
     }

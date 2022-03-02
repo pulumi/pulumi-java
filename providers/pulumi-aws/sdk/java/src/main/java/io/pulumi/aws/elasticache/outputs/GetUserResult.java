@@ -58,7 +58,7 @@ public final class GetUserResult {
     /**
      * A string for what access a user possesses within the associated ElastiCache replication groups or clusters.
      * 
-     */
+    */
     public Optional<String> getAccessString() {
         return Optional.ofNullable(this.accessString);
     }
@@ -68,7 +68,7 @@ public final class GetUserResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -81,14 +81,14 @@ public final class GetUserResult {
     /**
      * The identifier for the user.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }
     /**
      * The user name of the user.
      * 
-     */
+    */
     public Optional<String> getUserName() {
         return Optional.ofNullable(this.userName);
     }

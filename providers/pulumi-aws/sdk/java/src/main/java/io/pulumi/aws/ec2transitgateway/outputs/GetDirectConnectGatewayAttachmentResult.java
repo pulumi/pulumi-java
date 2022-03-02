@@ -51,14 +51,14 @@ public final class GetDirectConnectGatewayAttachmentResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Key-value tags for the EC2 Transit Gateway Attachment
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

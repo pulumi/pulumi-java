@@ -23,7 +23,7 @@ public final class MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSu
     /**
      * A flag that indicates whether additional CloudWatch metrics are enabled for a given CloudFront distribution. Valid values are `Enabled` and `Disabled`. See below.
      * 
-     */
+    */
     public String getRealtimeMetricsSubscriptionStatus() {
         return this.realtimeMetricsSubscriptionStatus;
     }

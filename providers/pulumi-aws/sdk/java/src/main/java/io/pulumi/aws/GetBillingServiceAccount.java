@@ -12,15 +12,16 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBillingServiceAccount {
-/**
- * Use this data source to get the Account ID of the [AWS Billing and Cost Management Service Account](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-getting-started.html#step-2) for the purpose of permitting in S3 bucket policy.
- * 
- * ## Example Usage
- * 
- *
- * A collection of values returned by getBillingServiceAccount.
- * 
- */
+    private GetBillingServiceAccount() {}
+    /**
+         * Use this data source to get the Account ID of the [AWS Billing and Cost Management Service Account](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-getting-started.html#step-2) for the purpose of permitting in S3 bucket policy.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of values returned by getBillingServiceAccount.
+     * 
+     */
     public static CompletableFuture<GetBillingServiceAccountResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getBillingServiceAccount:getBillingServiceAccount", TypeShape.of(GetBillingServiceAccountResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

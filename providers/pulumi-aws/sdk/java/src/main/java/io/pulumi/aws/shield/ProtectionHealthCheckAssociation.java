@@ -61,6 +61,22 @@ public class ProtectionHealthCheckAssociation extends io.pulumi.resources.Custom
         return this.shieldProtectionId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ProtectionHealthCheckAssociationArgs.Builder a);
+    }
+    private static io.pulumi.aws.shield.ProtectionHealthCheckAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.shield.ProtectionHealthCheckAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ProtectionHealthCheckAssociation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

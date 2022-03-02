@@ -33,14 +33,14 @@ public final class NodeGroupUpdateConfig {
     /**
      * Desired max number of unavailable worker nodes during node group update.
      * 
-     */
+    */
     public Optional<Integer> getMaxUnavailable() {
         return Optional.ofNullable(this.maxUnavailable);
     }
     /**
      * Desired max percentage of unavailable worker nodes during node group update.
      * 
-     */
+    */
     public Optional<Integer> getMaxUnavailablePercentage() {
         return Optional.ofNullable(this.maxUnavailablePercentage);
     }

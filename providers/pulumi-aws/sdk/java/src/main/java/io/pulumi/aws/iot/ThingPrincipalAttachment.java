@@ -50,6 +50,22 @@ public class ThingPrincipalAttachment extends io.pulumi.resources.CustomResource
         return this.thing;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ThingPrincipalAttachmentArgs.Builder a);
+    }
+    private static io.pulumi.aws.iot.ThingPrincipalAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.iot.ThingPrincipalAttachmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ThingPrincipalAttachment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

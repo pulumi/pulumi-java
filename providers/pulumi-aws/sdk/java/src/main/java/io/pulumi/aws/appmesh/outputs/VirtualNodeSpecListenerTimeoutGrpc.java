@@ -34,14 +34,14 @@ public final class VirtualNodeSpecListenerTimeoutGrpc {
     /**
      * The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTimeoutGrpcIdle> getIdle() {
         return Optional.ofNullable(this.idle);
     }
     /**
      * The per request timeout.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTimeoutGrpcPerRequest> getPerRequest() {
         return Optional.ofNullable(this.perRequest);
     }

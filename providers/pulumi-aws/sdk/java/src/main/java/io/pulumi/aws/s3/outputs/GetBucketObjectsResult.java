@@ -74,7 +74,7 @@ public final class GetBucketObjectsResult {
     /**
      * List of any keys between `prefix` and the next occurrence of `delimiter` (i.e., similar to subdirectories of the `prefix` "directory"); the list is only returned when you specify `delimiter`
      * 
-     */
+    */
     public List<String> getCommonPrefixes() {
         return this.commonPrefixes;
     }
@@ -90,14 +90,14 @@ public final class GetBucketObjectsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of strings representing object keys
      * 
-     */
+    */
     public List<String> getKeys() {
         return this.keys;
     }
@@ -107,7 +107,7 @@ public final class GetBucketObjectsResult {
     /**
      * List of strings representing object owner IDs (see `fetch_owner` above)
      * 
-     */
+    */
     public List<String> getOwners() {
         return this.owners;
     }

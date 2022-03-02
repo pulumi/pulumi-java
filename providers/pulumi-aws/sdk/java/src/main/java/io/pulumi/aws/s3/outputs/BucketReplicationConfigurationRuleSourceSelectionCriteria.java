@@ -27,7 +27,7 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteria {
      * Match SSE-KMS encrypted objects (documented below). If specified, `replica_kms_key_id`
      * in `destination` must be specified as well.
      * 
-     */
+    */
     public Optional<BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects> getSseKmsEncryptedObjects() {
         return Optional.ofNullable(this.sseKmsEncryptedObjects);
     }

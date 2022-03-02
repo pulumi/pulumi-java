@@ -74,7 +74,7 @@ public final class GatewayAssociationArgs extends io.pulumi.resources.ResourceAr
     }
 
     /**
-     * @deprecated
+     * @Deprecated
      * use 'associated_gateway_id' argument instead
      * 
      */

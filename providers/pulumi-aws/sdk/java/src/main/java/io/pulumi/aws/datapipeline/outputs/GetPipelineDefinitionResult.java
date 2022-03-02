@@ -53,21 +53,21 @@ public final class GetPipelineDefinitionResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Parameter objects used in the pipeline definition. See below
      * 
-     */
+    */
     public List<GetPipelineDefinitionParameterObject> getParameterObjects() {
         return this.parameterObjects;
     }
     /**
      * Parameter values used in the pipeline definition. See below
      * 
-     */
+    */
     public List<GetPipelineDefinitionParameterValue> getParameterValues() {
         return this.parameterValues == null ? List.of() : this.parameterValues;
     }
@@ -77,7 +77,7 @@ public final class GetPipelineDefinitionResult {
     /**
      * Objects defined in the pipeline. See below
      * 
-     */
+    */
     public List<GetPipelineDefinitionPipelineObject> getPipelineObjects() {
         return this.pipelineObjects;
     }

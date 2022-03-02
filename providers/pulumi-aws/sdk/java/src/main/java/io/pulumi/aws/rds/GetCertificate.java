@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCertificate {
-/**
- * Information about an RDS Certificate.
+    private GetCertificate() {}
+    public interface BuilderApplicator {
+        public void apply(GetCertificateArgs.Builder a);
+    }
+    private static GetCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCertificateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Information about an RDS Certificate.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getCertificate.
+     *
+     * A collection of arguments for invoking getCertificate.
  * 
- *
- * A collection of values returned by getCertificate.
+     *
+     * A collection of values returned by getCertificate.
  * 
- */
+     */
+    public static CompletableFuture<GetCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Information about an RDS Certificate.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getCertificate.
+     * 
+     *
+         * A collection of values returned by getCertificate.
+     * 
+     */
     public static CompletableFuture<GetCertificateResult> invokeAsync(@Nullable GetCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getCertificate:getCertificate", TypeShape.of(GetCertificateResult.class), args == null ? GetCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -178,140 +178,140 @@ public final class DataSourceParameters {
     /**
      * Parameters for connecting to Amazon Elasticsearch.
      * 
-     */
+    */
     public Optional<DataSourceParametersAmazonElasticsearch> getAmazonElasticsearch() {
         return Optional.ofNullable(this.amazonElasticsearch);
     }
     /**
      * Parameters for connecting to Athena.
      * 
-     */
+    */
     public Optional<DataSourceParametersAthena> getAthena() {
         return Optional.ofNullable(this.athena);
     }
     /**
      * Parameters for connecting to Aurora MySQL.
      * 
-     */
+    */
     public Optional<DataSourceParametersAurora> getAurora() {
         return Optional.ofNullable(this.aurora);
     }
     /**
      * Parameters for connecting to Aurora Postgresql.
      * 
-     */
+    */
     public Optional<DataSourceParametersAuroraPostgresql> getAuroraPostgresql() {
         return Optional.ofNullable(this.auroraPostgresql);
     }
     /**
      * Parameters for connecting to AWS IOT Analytics.
      * 
-     */
+    */
     public Optional<DataSourceParametersAwsIotAnalytics> getAwsIotAnalytics() {
         return Optional.ofNullable(this.awsIotAnalytics);
     }
     /**
      * Parameters for connecting to Jira.
      * 
-     */
+    */
     public Optional<DataSourceParametersJira> getJira() {
         return Optional.ofNullable(this.jira);
     }
     /**
      * Parameters for connecting to MariaDB.
      * 
-     */
+    */
     public Optional<DataSourceParametersMariaDb> getMariaDb() {
         return Optional.ofNullable(this.mariaDb);
     }
     /**
      * Parameters for connecting to MySQL.
      * 
-     */
+    */
     public Optional<DataSourceParametersMysql> getMysql() {
         return Optional.ofNullable(this.mysql);
     }
     /**
      * Parameters for connecting to Oracle.
      * 
-     */
+    */
     public Optional<DataSourceParametersOracle> getOracle() {
         return Optional.ofNullable(this.oracle);
     }
     /**
      * Parameters for connecting to Postgresql.
      * 
-     */
+    */
     public Optional<DataSourceParametersPostgresql> getPostgresql() {
         return Optional.ofNullable(this.postgresql);
     }
     /**
      * Parameters for connecting to Presto.
      * 
-     */
+    */
     public Optional<DataSourceParametersPresto> getPresto() {
         return Optional.ofNullable(this.presto);
     }
     /**
      * Parameters for connecting to RDS.
      * 
-     */
+    */
     public Optional<DataSourceParametersRds> getRds() {
         return Optional.ofNullable(this.rds);
     }
     /**
      * Parameters for connecting to Redshift.
      * 
-     */
+    */
     public Optional<DataSourceParametersRedshift> getRedshift() {
         return Optional.ofNullable(this.redshift);
     }
     /**
      * Parameters for connecting to S3.
      * 
-     */
+    */
     public Optional<DataSourceParametersS3> getS3() {
         return Optional.ofNullable(this.s3);
     }
     /**
      * Parameters for connecting to ServiceNow.
      * 
-     */
+    */
     public Optional<DataSourceParametersServiceNow> getServiceNow() {
         return Optional.ofNullable(this.serviceNow);
     }
     /**
      * Parameters for connecting to Snowflake.
      * 
-     */
+    */
     public Optional<DataSourceParametersSnowflake> getSnowflake() {
         return Optional.ofNullable(this.snowflake);
     }
     /**
      * Parameters for connecting to Spark.
      * 
-     */
+    */
     public Optional<DataSourceParametersSpark> getSpark() {
         return Optional.ofNullable(this.spark);
     }
     /**
      * Parameters for connecting to SQL Server.
      * 
-     */
+    */
     public Optional<DataSourceParametersSqlServer> getSqlServer() {
         return Optional.ofNullable(this.sqlServer);
     }
     /**
      * Parameters for connecting to Teradata.
      * 
-     */
+    */
     public Optional<DataSourceParametersTeradata> getTeradata() {
         return Optional.ofNullable(this.teradata);
     }
     /**
      * Parameters for connecting to Twitter.
      * 
-     */
+    */
     public Optional<DataSourceParametersTwitter> getTwitter() {
         return Optional.ofNullable(this.twitter);
     }

@@ -39,21 +39,21 @@ public final class BudgetActionDefinitionSsmActionDefinition {
     /**
      * The action subType. Valid values are `STOP_EC2_INSTANCES` or `STOP_RDS_INSTANCES`.
      * 
-     */
+    */
     public String getActionSubType() {
         return this.actionSubType;
     }
     /**
      * The EC2 and RDS instance IDs.
      * 
-     */
+    */
     public List<String> getInstanceIds() {
         return this.instanceIds;
     }
     /**
      * The Region to run the SSM document.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }

@@ -23,7 +23,7 @@ public final class DataSourceSslProperties {
     /**
      * A Boolean option to control whether SSL should be disabled.
      * 
-     */
+    */
     public Boolean getDisableSsl() {
         return this.disableSsl;
     }

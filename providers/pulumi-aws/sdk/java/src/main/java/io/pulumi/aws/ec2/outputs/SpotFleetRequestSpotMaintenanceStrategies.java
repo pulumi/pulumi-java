@@ -25,7 +25,7 @@ public final class SpotFleetRequestSpotMaintenanceStrategies {
     /**
      * Nested argument containing the capacity rebalance for your fleet request. Defined below.
      * 
-     */
+    */
     public Optional<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalance> getCapacityRebalance() {
         return Optional.ofNullable(this.capacityRebalance);
     }

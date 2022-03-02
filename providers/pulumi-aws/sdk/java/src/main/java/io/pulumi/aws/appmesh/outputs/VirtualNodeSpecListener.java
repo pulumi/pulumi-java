@@ -66,42 +66,42 @@ public final class VirtualNodeSpecListener {
     /**
      * The connection pool information for the listener.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerConnectionPool> getConnectionPool() {
         return Optional.ofNullable(this.connectionPool);
     }
     /**
      * The health check information for the listener.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerHealthCheck> getHealthCheck() {
         return Optional.ofNullable(this.healthCheck);
     }
     /**
      * The outlier detection information for the listener.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerOutlierDetection> getOutlierDetection() {
         return Optional.ofNullable(this.outlierDetection);
     }
     /**
      * The port mapping information for the listener.
      * 
-     */
+    */
     public VirtualNodeSpecListenerPortMapping getPortMapping() {
         return this.portMapping;
     }
     /**
      * Timeouts for different protocols.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTimeout> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
      * The Transport Layer Security (TLS) properties for the listener
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTls> getTls() {
         return Optional.ofNullable(this.tls);
     }

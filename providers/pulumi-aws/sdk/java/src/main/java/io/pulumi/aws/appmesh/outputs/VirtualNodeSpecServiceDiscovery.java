@@ -34,14 +34,14 @@ public final class VirtualNodeSpecServiceDiscovery {
     /**
      * Specifies any AWS Cloud Map information for the virtual node.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecServiceDiscoveryAwsCloudMap> getAwsCloudMap() {
         return Optional.ofNullable(this.awsCloudMap);
     }
     /**
      * Specifies the DNS service name for the virtual node.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecServiceDiscoveryDns> getDns() {
         return Optional.ofNullable(this.dns);
     }

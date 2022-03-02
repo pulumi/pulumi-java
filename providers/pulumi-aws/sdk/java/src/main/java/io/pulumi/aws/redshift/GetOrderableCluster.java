@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrderableCluster {
-/**
- * Information about Redshift Orderable Clusters and valid parameter combinations.
+    private GetOrderableCluster() {}
+    public interface BuilderApplicator {
+        public void apply(GetOrderableClusterArgs.Builder a);
+    }
+    private static GetOrderableClusterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOrderableClusterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Information about Redshift Orderable Clusters and valid parameter combinations.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getOrderableCluster.
+     *
+     * A collection of arguments for invoking getOrderableCluster.
  * 
- *
- * A collection of values returned by getOrderableCluster.
+     *
+     * A collection of values returned by getOrderableCluster.
  * 
- */
+     */
+    public static CompletableFuture<GetOrderableClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Information about Redshift Orderable Clusters and valid parameter combinations.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getOrderableCluster.
+     * 
+     *
+         * A collection of values returned by getOrderableCluster.
+     * 
+     */
     public static CompletableFuture<GetOrderableClusterResult> invokeAsync(@Nullable GetOrderableClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:redshift/getOrderableCluster:getOrderableCluster", TypeShape.of(GetOrderableClusterResult.class), args == null ? GetOrderableClusterArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -42,21 +42,21 @@ public final class VirtualGatewaySpec {
     /**
      * The defaults for backends.
      * 
-     */
+    */
     public Optional<VirtualGatewaySpecBackendDefaults> getBackendDefaults() {
         return Optional.ofNullable(this.backendDefaults);
     }
     /**
      * The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
      * 
-     */
+    */
     public VirtualGatewaySpecListener getListener() {
         return this.listener;
     }
     /**
      * The inbound and outbound access logging information for the virtual gateway.
      * 
-     */
+    */
     public Optional<VirtualGatewaySpecLogging> getLogging() {
         return Optional.ofNullable(this.logging);
     }

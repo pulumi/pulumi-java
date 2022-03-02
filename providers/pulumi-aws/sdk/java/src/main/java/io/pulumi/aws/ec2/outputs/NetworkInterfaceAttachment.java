@@ -40,14 +40,14 @@ public final class NetworkInterfaceAttachment {
     /**
      * Integer to define the devices index.
      * 
-     */
+    */
     public Integer getDeviceIndex() {
         return this.deviceIndex;
     }
     /**
      * ID of the instance to attach to.
      * 
-     */
+    */
     public String getInstance() {
         return this.instance;
     }

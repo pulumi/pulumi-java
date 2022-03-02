@@ -50,14 +50,14 @@ public final class RouteSpecHttp2RouteMatch {
     /**
      * The client request headers to match on.
      * 
-     */
+    */
     public List<RouteSpecHttp2RouteMatchHeader> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
      * The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
      * 
-     */
+    */
     public Optional<String> getMethod() {
         return Optional.ofNullable(this.method);
     }
@@ -65,14 +65,14 @@ public final class RouteSpecHttp2RouteMatch {
      * The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
      * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
      * 
-     */
+    */
     public String getPrefix() {
         return this.prefix;
     }
     /**
      * The client request header scheme to match on. Valid values: `http`, `https`.
      * 
-     */
+    */
     public Optional<String> getScheme() {
         return Optional.ofNullable(this.scheme);
     }

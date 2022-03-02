@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDistributionConfigurations {
-/**
- * Use this data source to get the ARNs and names of Image Builder Distribution Configurations matching the specified criteria.
+    private GetDistributionConfigurations() {}
+    public interface BuilderApplicator {
+        public void apply(GetDistributionConfigurationsArgs.Builder a);
+    }
+    private static GetDistributionConfigurationsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDistributionConfigurationsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get the ARNs and names of Image Builder Distribution Configurations matching the specified criteria.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getDistributionConfigurations.
+     *
+     * A collection of arguments for invoking getDistributionConfigurations.
  * 
- *
- * A collection of values returned by getDistributionConfigurations.
+     *
+     * A collection of values returned by getDistributionConfigurations.
  * 
- */
+     */
+    public static CompletableFuture<GetDistributionConfigurationsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get the ARNs and names of Image Builder Distribution Configurations matching the specified criteria.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getDistributionConfigurations.
+     * 
+     *
+         * A collection of values returned by getDistributionConfigurations.
+     * 
+     */
     public static CompletableFuture<GetDistributionConfigurationsResult> invokeAsync(@Nullable GetDistributionConfigurationsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getDistributionConfigurations:getDistributionConfigurations", TypeShape.of(GetDistributionConfigurationsResult.class), args == null ? GetDistributionConfigurationsArgs.Empty : args, Utilities.withVersion(options));
     }

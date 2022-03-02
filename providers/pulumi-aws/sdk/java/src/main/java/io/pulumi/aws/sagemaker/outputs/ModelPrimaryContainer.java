@@ -64,7 +64,7 @@ public final class ModelPrimaryContainer {
     /**
      * The DNS host name for the container.
      * 
-     */
+    */
     public Optional<String> getContainerHostname() {
         return Optional.ofNullable(this.containerHostname);
     }
@@ -72,35 +72,35 @@ public final class ModelPrimaryContainer {
      * Environment variables for the Docker container.
      * A list of key value pairs.
      * 
-     */
+    */
     public Map<String,String> getEnvironment() {
         return this.environment == null ? Map.of() : this.environment;
     }
     /**
      * The registry path where the inference code image is stored in Amazon ECR.
      * 
-     */
+    */
     public String getImage() {
         return this.image;
     }
     /**
      * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
      * 
-     */
+    */
     public Optional<ModelPrimaryContainerImageConfig> getImageConfig() {
         return Optional.ofNullable(this.imageConfig);
     }
     /**
      * The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The URL for the S3 location where model artifacts are stored.
      * 
-     */
+    */
     public Optional<String> getModelDataUrl() {
         return Optional.ofNullable(this.modelDataUrl);
     }

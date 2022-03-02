@@ -49,28 +49,28 @@ public final class GroupInstanceRefreshPreferences {
     /**
      * The number of seconds to wait after a checkpoint. Defaults to `3600`.
      * 
-     */
+    */
     public Optional<String> getCheckpointDelay() {
         return Optional.ofNullable(this.checkpointDelay);
     }
     /**
      * List of percentages for each checkpoint. Values must be unique and in ascending order. To replace all instances, the final number must be `100`.
      * 
-     */
+    */
     public List<Integer> getCheckpointPercentages() {
         return this.checkpointPercentages == null ? List.of() : this.checkpointPercentages;
     }
     /**
      * The number of seconds until a newly launched instance is configured and ready to use. Default behavior is to use the Auto Scaling Group's health check grace period.
      * 
-     */
+    */
     public Optional<String> getInstanceWarmup() {
         return Optional.ofNullable(this.instanceWarmup);
     }
     /**
      * The amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to `90`.
      * 
-     */
+    */
     public Optional<Integer> getMinHealthyPercentage() {
         return Optional.ofNullable(this.minHealthyPercentage);
     }

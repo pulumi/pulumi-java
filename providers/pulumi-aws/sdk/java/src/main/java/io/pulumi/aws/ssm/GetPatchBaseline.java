@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPatchBaseline {
-/**
- * Provides an SSM Patch Baseline data source. Useful if you wish to reuse the default baselines provided.
+    private GetPatchBaseline() {}
+    public interface BuilderApplicator {
+        public void apply(GetPatchBaselineArgs.Builder a);
+    }
+    private static GetPatchBaselineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPatchBaselineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides an SSM Patch Baseline data source. Useful if you wish to reuse the default baselines provided.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getPatchBaseline.
+     *
+     * A collection of arguments for invoking getPatchBaseline.
  * 
- *
- * A collection of values returned by getPatchBaseline.
+     *
+     * A collection of values returned by getPatchBaseline.
  * 
- */
+     */
+    public static CompletableFuture<GetPatchBaselineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides an SSM Patch Baseline data source. Useful if you wish to reuse the default baselines provided.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getPatchBaseline.
+     * 
+     *
+         * A collection of values returned by getPatchBaseline.
+     * 
+     */
     public static CompletableFuture<GetPatchBaselineResult> invokeAsync(GetPatchBaselineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ssm/getPatchBaseline:getPatchBaseline", TypeShape.of(GetPatchBaselineResult.class), args == null ? GetPatchBaselineArgs.Empty : args, Utilities.withVersion(options));
     }

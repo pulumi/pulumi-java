@@ -132,21 +132,21 @@ public final class GetVpcEndpointResult {
     /**
      * The Amazon Resource Name (ARN) of the VPC endpoint.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type `Gateway`.
      * 
-     */
+    */
     public List<String> getCidrBlocks() {
         return this.cidrBlocks;
     }
     /**
      * The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
      * 
-     */
+    */
     public List<GetVpcEndpointDnsEntry> getDnsEntries() {
         return this.dnsEntries;
     }
@@ -159,56 +159,56 @@ public final class GetVpcEndpointResult {
     /**
      * One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type `Interface`.
      * 
-     */
+    */
     public List<String> getNetworkInterfaceIds() {
         return this.networkInterfaceIds;
     }
     /**
      * The ID of the AWS account that owns the VPC endpoint.
      * 
-     */
+    */
     public String getOwnerId() {
         return this.ownerId;
     }
     /**
      * The policy document associated with the VPC Endpoint. Applicable for endpoints of type `Gateway`.
      * 
-     */
+    */
     public String getPolicy() {
         return this.policy;
     }
     /**
      * The prefix list ID of the exposed AWS service. Applicable for endpoints of type `Gateway`.
      * 
-     */
+    */
     public String getPrefixListId() {
         return this.prefixListId;
     }
     /**
      * Whether or not the VPC is associated with a private hosted zone - `true` or `false`. Applicable for endpoints of type `Interface`.
      * 
-     */
+    */
     public Boolean getPrivateDnsEnabled() {
         return this.privateDnsEnabled;
     }
     /**
      * Whether or not the VPC Endpoint is being managed by its service - `true` or `false`.
      * 
-     */
+    */
     public Boolean getRequesterManaged() {
         return this.requesterManaged;
     }
     /**
      * One or more route tables associated with the VPC Endpoint. Applicable for endpoints of type `Gateway`.
      * 
-     */
+    */
     public List<String> getRouteTableIds() {
         return this.routeTableIds;
     }
     /**
      * One or more security groups associated with the network interfaces. Applicable for endpoints of type `Interface`.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
@@ -221,7 +221,7 @@ public final class GetVpcEndpointResult {
     /**
      * One or more subnets in which the VPC Endpoint is located. Applicable for endpoints of type `Interface`.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }
@@ -231,7 +231,7 @@ public final class GetVpcEndpointResult {
     /**
      * The VPC Endpoint type, `Gateway` or `Interface`.
      * 
-     */
+    */
     public String getVpcEndpointType() {
         return this.vpcEndpointType;
     }

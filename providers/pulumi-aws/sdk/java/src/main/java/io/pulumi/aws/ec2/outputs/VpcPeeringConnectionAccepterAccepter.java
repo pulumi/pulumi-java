@@ -44,7 +44,7 @@ public final class VpcPeeringConnectionAccepterAccepter {
      * Indicates whether a local ClassicLink connection can communicate
      * with the peer VPC over the VPC Peering Connection.
      * 
-     */
+    */
     public Optional<Boolean> getAllowClassicLinkToRemoteVpc() {
         return Optional.ofNullable(this.allowClassicLinkToRemoteVpc);
     }
@@ -52,7 +52,7 @@ public final class VpcPeeringConnectionAccepterAccepter {
      * Indicates whether a local VPC can resolve public DNS hostnames to
      * private IP addresses when queried from instances in a peer VPC.
      * 
-     */
+    */
     public Optional<Boolean> getAllowRemoteVpcDnsResolution() {
         return Optional.ofNullable(this.allowRemoteVpcDnsResolution);
     }
@@ -60,7 +60,7 @@ public final class VpcPeeringConnectionAccepterAccepter {
      * Indicates whether a local VPC can communicate with a ClassicLink
      * connection in the peer VPC over the VPC Peering Connection.
      * 
-     */
+    */
     public Optional<Boolean> getAllowVpcToRemoteClassicLink() {
         return Optional.ofNullable(this.allowVpcToRemoteClassicLink);
     }

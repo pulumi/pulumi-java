@@ -24,7 +24,7 @@ public final class GetMeshSpec {
     /**
      * The egress filter rules for the service mesh.
      * 
-     */
+    */
     public List<GetMeshSpecEgressFilter> getEgressFilters() {
         return this.egressFilters;
     }

@@ -31,14 +31,14 @@ public final class DomainSamlOptionsSamlOptionsIdp {
     /**
      * The unique Entity ID of the application in SAML Identity Provider.
      * 
-     */
+    */
     public String getEntityId() {
         return this.entityId;
     }
     /**
      * The Metadata of the SAML application in xml format.
      * 
-     */
+    */
     public String getMetadataContent() {
         return this.metadataContent;
     }

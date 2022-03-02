@@ -74,21 +74,21 @@ public final class GetPublicKeyResult {
     /**
      * Key ARN of the asymmetric CMK from which the public key was downloaded.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Type of the public key that was downloaded.
      * 
-     */
+    */
     public String getCustomerMasterKeySpec() {
         return this.customerMasterKeySpec;
     }
     /**
      * Encryption algorithms that AWS KMS supports for this key. Only set when the `key_usage` of the public key is `ENCRYPT_DECRYPT`.
      * 
-     */
+    */
     public List<String> getEncryptionAlgorithms() {
         return this.encryptionAlgorithms;
     }
@@ -98,7 +98,7 @@ public final class GetPublicKeyResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -108,21 +108,21 @@ public final class GetPublicKeyResult {
     /**
      * Permitted use of the public key. Valid values are `ENCRYPT_DECRYPT` or `SIGN_VERIFY`
      * 
-     */
+    */
     public String getKeyUsage() {
         return this.keyUsage;
     }
     /**
      * Exported public key. The value is a DER-encoded X.509 public key, also known as SubjectPublicKeyInfo (SPKI), as defined in [RFC 5280](https://tools.ietf.org/html/rfc5280). The value is Base64-encoded.
      * 
-     */
+    */
     public String getPublicKey() {
         return this.publicKey;
     }
     /**
      * Signing algorithms that AWS KMS supports for this key. Only set when the `key_usage` of the public key is `SIGN_VERIFY`.
      * 
-     */
+    */
     public List<String> getSigningAlgorithms() {
         return this.signingAlgorithms;
     }

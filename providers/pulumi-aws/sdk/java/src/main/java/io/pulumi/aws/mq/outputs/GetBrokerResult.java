@@ -130,7 +130,7 @@ public final class GetBrokerResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

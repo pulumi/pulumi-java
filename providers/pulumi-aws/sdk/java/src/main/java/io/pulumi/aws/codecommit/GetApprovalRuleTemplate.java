@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApprovalRuleTemplate {
-/**
- * Provides details about a specific CodeCommit Approval Rule Template.
+    private GetApprovalRuleTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetApprovalRuleTemplateArgs.Builder a);
+    }
+    private static GetApprovalRuleTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApprovalRuleTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about a specific CodeCommit Approval Rule Template.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getApprovalRuleTemplate.
+     *
+     * A collection of arguments for invoking getApprovalRuleTemplate.
  * 
- *
- * A collection of values returned by getApprovalRuleTemplate.
+     *
+     * A collection of values returned by getApprovalRuleTemplate.
  * 
- */
+     */
+    public static CompletableFuture<GetApprovalRuleTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about a specific CodeCommit Approval Rule Template.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getApprovalRuleTemplate.
+     * 
+     *
+         * A collection of values returned by getApprovalRuleTemplate.
+     * 
+     */
     public static CompletableFuture<GetApprovalRuleTemplateResult> invokeAsync(GetApprovalRuleTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:codecommit/getApprovalRuleTemplate:getApprovalRuleTemplate", TypeShape.of(GetApprovalRuleTemplateResult.class), args == null ? GetApprovalRuleTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

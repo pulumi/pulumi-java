@@ -25,7 +25,7 @@ public final class ClusterClientAuthenticationTls {
     /**
      * List of ACM Certificate Authority Amazon Resource Names (ARNs).
      * 
-     */
+    */
     public List<String> getCertificateAuthorityArns() {
         return this.certificateAuthorityArns == null ? List.of() : this.certificateAuthorityArns;
     }

@@ -12,18 +12,19 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocations {
-/**
- * Retrieve information about the AWS Direct Connect locations in the current AWS Region.
- * These are the locations that can be specified when configuring [`aws.directconnect.Connection`](https://www.terraform.io/docs/providers/aws/r/dx_connection.html) or [`aws.directconnect.LinkAggregationGroup`](https://www.terraform.io/docs/providers/aws/r/dx_lag.html) resources.
- * 
- * > **Note:** This data source is different from the [`aws.directconnect.getLocation`](https://www.terraform.io/docs/providers/aws/d/dx_location.html) data source which retrieves information about a specific AWS Direct Connect location in the current AWS Region.
- * 
- * ## Example Usage
- * 
- *
- * A collection of values returned by getLocations.
- * 
- */
+    private GetLocations() {}
+    /**
+         * Retrieve information about the AWS Direct Connect locations in the current AWS Region.
+     * These are the locations that can be specified when configuring [`aws.directconnect.Connection`](https://www.terraform.io/docs/providers/aws/r/dx_connection.html) or [`aws.directconnect.LinkAggregationGroup`](https://www.terraform.io/docs/providers/aws/r/dx_lag.html) resources.
+     * 
+     * > **Note:** This data source is different from the [`aws.directconnect.getLocation`](https://www.terraform.io/docs/providers/aws/d/dx_location.html) data source which retrieves information about a specific AWS Direct Connect location in the current AWS Region.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of values returned by getLocations.
+     * 
+     */
     public static CompletableFuture<GetLocationsResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:directconnect/getLocations:getLocations", TypeShape.of(GetLocationsResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

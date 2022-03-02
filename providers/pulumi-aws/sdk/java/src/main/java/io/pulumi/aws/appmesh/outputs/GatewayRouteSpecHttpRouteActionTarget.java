@@ -23,7 +23,7 @@ public final class GatewayRouteSpecHttpRouteActionTarget {
     /**
      * The virtual service gateway route target.
      * 
-     */
+    */
     public GatewayRouteSpecHttpRouteActionTargetVirtualService getVirtualService() {
         return this.virtualService;
     }

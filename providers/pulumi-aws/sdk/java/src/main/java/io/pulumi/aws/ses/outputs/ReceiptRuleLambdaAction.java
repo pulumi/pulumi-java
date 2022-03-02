@@ -48,28 +48,28 @@ public final class ReceiptRuleLambdaAction {
     /**
      * The ARN of the Lambda function to invoke
      * 
-     */
+    */
     public String getFunctionArn() {
         return this.functionArn;
     }
     /**
      * `Event` or `RequestResponse`
      * 
-     */
+    */
     public Optional<String> getInvocationType() {
         return Optional.ofNullable(this.invocationType);
     }
     /**
      * The position of the action in the receipt rule
      * 
-     */
+    */
     public Integer getPosition() {
         return this.position;
     }
     /**
      * The ARN of an SNS topic to notify
      * 
-     */
+    */
     public Optional<String> getTopicArn() {
         return Optional.ofNullable(this.topicArn);
     }

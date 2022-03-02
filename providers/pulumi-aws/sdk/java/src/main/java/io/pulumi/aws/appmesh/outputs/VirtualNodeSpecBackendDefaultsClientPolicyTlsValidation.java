@@ -34,14 +34,14 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation {
     /**
      * The SANs for a TLS validation context.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames> getSubjectAlternativeNames() {
         return Optional.ofNullable(this.subjectAlternativeNames);
     }
     /**
      * The TLS validation context trust.
      * 
-     */
+    */
     public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust getTrust() {
         return this.trust;
     }

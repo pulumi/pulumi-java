@@ -13,21 +13,48 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClusterSnapshot {
-/**
- * Use this data source to get information about a DB Cluster Snapshot for use when provisioning DB clusters.
+    private GetClusterSnapshot() {}
+    public interface BuilderApplicator {
+        public void apply(GetClusterSnapshotArgs.Builder a);
+    }
+    private static GetClusterSnapshotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetClusterSnapshotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get information about a DB Cluster Snapshot for use when provisioning DB clusters.
  * 
  * > **NOTE:** This data source does not apply to snapshots created on DB Instances.
  * See the `aws.rds.Snapshot` data source for DB Instance snapshots.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getClusterSnapshot.
+     *
+     * A collection of arguments for invoking getClusterSnapshot.
  * 
- *
- * A collection of values returned by getClusterSnapshot.
+     *
+     * A collection of values returned by getClusterSnapshot.
  * 
- */
+     */
+    public static CompletableFuture<GetClusterSnapshotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get information about a DB Cluster Snapshot for use when provisioning DB clusters.
+     * 
+     * > **NOTE:** This data source does not apply to snapshots created on DB Instances.
+     * See the `aws.rds.Snapshot` data source for DB Instance snapshots.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getClusterSnapshot.
+     * 
+     *
+         * A collection of values returned by getClusterSnapshot.
+     * 
+     */
     public static CompletableFuture<GetClusterSnapshotResult> invokeAsync(@Nullable GetClusterSnapshotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getClusterSnapshot:getClusterSnapshot", TypeShape.of(GetClusterSnapshotResult.class), args == null ? GetClusterSnapshotArgs.Empty : args, Utilities.withVersion(options));
     }

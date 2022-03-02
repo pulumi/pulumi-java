@@ -37,7 +37,7 @@ public final class GetSubnetIdsFilter {
      * [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html).
      * For example, if matching against tag `Name`, use:
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -45,7 +45,7 @@ public final class GetSubnetIdsFilter {
      * Set of values that are accepted for the given field.
      * Subnet IDs will be selected if any one of the given values match.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }

@@ -43,21 +43,21 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfo {
     /**
      * Configuration block for the production traffic route (documented below).
      * 
-     */
+    */
     public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute getProdTrafficRoute() {
         return this.prodTrafficRoute;
     }
     /**
      * Configuration blocks for a target group within a target group pair (documented below).
      * 
-     */
+    */
     public List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup> getTargetGroups() {
         return this.targetGroups;
     }
     /**
      * Configuration block for the test traffic route (documented below).
      * 
-     */
+    */
     public Optional<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute> getTestTrafficRoute() {
         return Optional.ofNullable(this.testTrafficRoute);
     }

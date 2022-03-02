@@ -55,7 +55,7 @@ public final class DistributionCustomErrorResponse {
      * HTTP error codes to stay in CloudFront caches before CloudFront queries your
      * origin to see whether the object has been updated.
      * 
-     */
+    */
     public Optional<Integer> getErrorCachingMinTtl() {
         return Optional.ofNullable(this.errorCachingMinTtl);
     }
@@ -63,7 +63,7 @@ public final class DistributionCustomErrorResponse {
      * The 4xx or 5xx HTTP status code that you want to
      * customize.
      * 
-     */
+    */
     public Integer getErrorCode() {
         return this.errorCode;
     }
@@ -71,7 +71,7 @@ public final class DistributionCustomErrorResponse {
      * The HTTP status code that you want CloudFront
      * to return with the custom error page to the viewer.
      * 
-     */
+    */
     public Optional<Integer> getResponseCode() {
         return Optional.ofNullable(this.responseCode);
     }
@@ -79,7 +79,7 @@ public final class DistributionCustomErrorResponse {
      * The path of the custom error page (for
      * example, `/custom_404.html`).
      * 
-     */
+    */
     public Optional<String> getResponsePagePath() {
         return Optional.ofNullable(this.responsePagePath);
     }

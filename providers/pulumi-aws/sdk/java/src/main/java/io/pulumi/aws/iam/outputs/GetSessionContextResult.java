@@ -58,35 +58,35 @@ public final class GetSessionContextResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * IAM source role ARN if `arn` corresponds to an STS assumed role. Otherwise, `issuer_arn` is equal to `arn`.
      * 
-     */
+    */
     public String getIssuerArn() {
         return this.issuerArn;
     }
     /**
      * Unique identifier of the IAM role that issues the STS assumed role.
      * 
-     */
+    */
     public String getIssuerId() {
         return this.issuerId;
     }
     /**
      * Name of the source role. Only available if `arn` corresponds to an STS assumed role.
      * 
-     */
+    */
     public String getIssuerName() {
         return this.issuerName;
     }
     /**
      * Name of the STS session. Only available if `arn` corresponds to an STS assumed role.
      * 
-     */
+    */
     public String getSessionName() {
         return this.sessionName;
     }

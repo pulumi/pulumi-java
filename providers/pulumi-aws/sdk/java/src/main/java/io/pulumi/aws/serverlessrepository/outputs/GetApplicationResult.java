@@ -63,28 +63,28 @@ public final class GetApplicationResult {
     /**
      * The ARN of the application.
      * 
-     */
+    */
     public String getApplicationId() {
         return this.applicationId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the application.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A list of capabilities describing the permissions needed to deploy the application.
      * 
-     */
+    */
     public List<String> getRequiredCapabilities() {
         return this.requiredCapabilities;
     }
@@ -94,14 +94,14 @@ public final class GetApplicationResult {
     /**
      * A URL pointing to the source code of the application version.
      * 
-     */
+    */
     public String getSourceCodeUrl() {
         return this.sourceCodeUrl;
     }
     /**
      * A URL pointing to the Cloud Formation template for the application version.
      * 
-     */
+    */
     public String getTemplateUrl() {
         return this.templateUrl;
     }

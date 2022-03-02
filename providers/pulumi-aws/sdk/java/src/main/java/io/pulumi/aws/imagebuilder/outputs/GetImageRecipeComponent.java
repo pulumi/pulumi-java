@@ -23,7 +23,7 @@ public final class GetImageRecipeComponent {
     /**
      * Amazon Resource Name (ARN) of the Image Builder Component.
      * 
-     */
+    */
     public String getComponentArn() {
         return this.componentArn;
     }

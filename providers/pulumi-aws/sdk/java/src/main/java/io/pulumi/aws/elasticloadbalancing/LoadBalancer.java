@@ -49,7 +49,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:elasticloadbalancing/loadBalancer:LoadBalancer bar elb-production-12345
  * ```
  * 
- * @deprecated
+ * @Deprecated
  * aws.elasticloadbalancing.LoadBalancer has been deprecated in favor of aws.elb.LoadBalancer
  * 
  */
@@ -377,6 +377,22 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
         return this.zoneId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(LoadBalancerArgs.Builder a);
+    }
+    private static io.pulumi.aws.elasticloadbalancing.LoadBalancerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.elasticloadbalancing.LoadBalancerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public LoadBalancer(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

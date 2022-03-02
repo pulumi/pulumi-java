@@ -33,14 +33,14 @@ public final class VirtualNodeSpecListenerConnectionPoolHttp {
     /**
      * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
      * 
-     */
+    */
     public Integer getMaxConnections() {
         return this.maxConnections;
     }
     /**
      * Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
      * 
-     */
+    */
     public Optional<Integer> getMaxPendingRequests() {
         return Optional.ofNullable(this.maxPendingRequests);
     }

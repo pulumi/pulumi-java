@@ -23,7 +23,7 @@ public final class VpcIpamOperatingRegion {
     /**
      * The name of the Region you want to add to the IPAM.
      * 
-     */
+    */
     public String getRegionName() {
         return this.regionName;
     }

@@ -13,16 +13,38 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPermissionSet {
-/**
- * Use this data source to get a Single Sign-On (SSO) Permission Set.
+    private GetPermissionSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetPermissionSetArgs.Builder a);
+    }
+    private static GetPermissionSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPermissionSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get a Single Sign-On (SSO) Permission Set.
  * 
- *
- * A collection of arguments for invoking getPermissionSet.
+     *
+     * A collection of arguments for invoking getPermissionSet.
  * 
- *
- * A collection of values returned by getPermissionSet.
+     *
+     * A collection of values returned by getPermissionSet.
  * 
- */
+     */
+    public static CompletableFuture<GetPermissionSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get a Single Sign-On (SSO) Permission Set.
+     * 
+     *
+         * A collection of arguments for invoking getPermissionSet.
+     * 
+     *
+         * A collection of values returned by getPermissionSet.
+     * 
+     */
     public static CompletableFuture<GetPermissionSetResult> invokeAsync(GetPermissionSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ssoadmin/getPermissionSet:getPermissionSet", TypeShape.of(GetPermissionSetResult.class), args == null ? GetPermissionSetArgs.Empty : args, Utilities.withVersion(options));
     }

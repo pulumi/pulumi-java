@@ -23,7 +23,7 @@ public final class GetBundleComputeType {
     /**
      * The name of the bundle. You cannot combine this parameter with `bundle_id`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

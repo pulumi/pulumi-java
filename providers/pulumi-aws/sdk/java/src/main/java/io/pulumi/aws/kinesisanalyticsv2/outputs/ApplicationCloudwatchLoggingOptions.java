@@ -32,7 +32,7 @@ public final class ApplicationCloudwatchLoggingOptions {
     /**
      * The ARN of the CloudWatch log stream to receive application messages.
      * 
-     */
+    */
     public String getLogStreamArn() {
         return this.logStreamArn;
     }

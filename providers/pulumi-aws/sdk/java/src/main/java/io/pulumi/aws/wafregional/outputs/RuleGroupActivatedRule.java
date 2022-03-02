@@ -49,28 +49,28 @@ public final class RuleGroupActivatedRule {
     /**
      * Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
      * 
-     */
+    */
     public RuleGroupActivatedRuleAction getAction() {
         return this.action;
     }
     /**
      * Specifies the order in which the rules are evaluated. Rules with a lower value are evaluated before rules with a higher value.
      * 
-     */
+    */
     public Integer getPriority() {
         return this.priority;
     }
     /**
      * The ID of a `waf_regional_rule`
      * 
-     */
+    */
     public String getRuleId() {
         return this.ruleId;
     }
     /**
      * The rule type, either `REGULAR`, `RATE_BASED`, or `GROUP`. Defaults to `REGULAR`.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

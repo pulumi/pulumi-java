@@ -23,7 +23,7 @@ public final class ProjectSecondarySourceGitSubmodulesConfig {
     /**
      * Whether to fetch Git submodules for the AWS CodeBuild build project.
      * 
-     */
+    */
     public Boolean getFetchSubmodules() {
         return this.fetchSubmodules;
     }

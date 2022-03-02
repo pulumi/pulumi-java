@@ -47,28 +47,28 @@ public final class NfsFileShareNfsFileShareDefaults {
     /**
      * The Unix directory mode in the string form "nnnn". Defaults to `"0777"`.
      * 
-     */
+    */
     public Optional<String> getDirectoryMode() {
         return Optional.ofNullable(this.directoryMode);
     }
     /**
      * The Unix file mode in the string form "nnnn". Defaults to `"0666"`.
      * 
-     */
+    */
     public Optional<String> getFileMode() {
         return Optional.ofNullable(this.fileMode);
     }
     /**
      * The default group ID for the file share (unless the files have another group ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
      * 
-     */
+    */
     public Optional<String> getGroupId() {
         return Optional.ofNullable(this.groupId);
     }
     /**
      * The default owner ID for the file share (unless the files have another owner ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
      * 
-     */
+    */
     public Optional<String> getOwnerId() {
         return Optional.ofNullable(this.ownerId);
     }

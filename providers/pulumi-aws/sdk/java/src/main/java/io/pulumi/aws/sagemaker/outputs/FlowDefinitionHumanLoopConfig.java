@@ -85,63 +85,63 @@ public final class FlowDefinitionHumanLoopConfig {
     /**
      * The Amazon Resource Name (ARN) of the human task user interface.
      * 
-     */
+    */
     public String getHumanTaskUiArn() {
         return this.humanTaskUiArn;
     }
     /**
      * Defines the amount of money paid to an Amazon Mechanical Turk worker for each task performed. See Public Workforce Task Price details below.
      * 
-     */
+    */
     public Optional<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice> getPublicWorkforceTaskPrice() {
         return Optional.ofNullable(this.publicWorkforceTaskPrice);
     }
     /**
      * The length of time that a task remains available for review by human workers. Valid value range between `1` and `864000`.
      * 
-     */
+    */
     public Optional<Integer> getTaskAvailabilityLifetimeInSeconds() {
         return Optional.ofNullable(this.taskAvailabilityLifetimeInSeconds);
     }
     /**
      * The number of distinct workers who will perform the same task on each object. Valid value range between `1` and `3`.
      * 
-     */
+    */
     public Integer getTaskCount() {
         return this.taskCount;
     }
     /**
      * A description for the human worker task.
      * 
-     */
+    */
     public String getTaskDescription() {
         return this.taskDescription;
     }
     /**
      * An array of keywords used to describe the task so that workers can discover the task.
      * 
-     */
+    */
     public List<String> getTaskKeywords() {
         return this.taskKeywords == null ? List.of() : this.taskKeywords;
     }
     /**
      * The amount of time that a worker has to complete a task. The default value is `3600` seconds.
      * 
-     */
+    */
     public Optional<Integer> getTaskTimeLimitInSeconds() {
         return Optional.ofNullable(this.taskTimeLimitInSeconds);
     }
     /**
      * A title for the human worker task.
      * 
-     */
+    */
     public String getTaskTitle() {
         return this.taskTitle;
     }
     /**
      * The Amazon Resource Name (ARN) of the human task user interface. Amazon Resource Name (ARN) of a team of workers. For Public workforces see [AWS Docs](https://docs.aws.amazon.com/sagemaker/latest/dg/sms-workforce-management-public.html).
      * 
-     */
+    */
     public String getWorkteamArn() {
         return this.workteamArn;
     }

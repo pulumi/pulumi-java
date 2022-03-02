@@ -25,7 +25,7 @@ public final class VirtualNodeSpecLogging {
     /**
      * The access log configuration for a virtual node.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecLoggingAccessLog> getAccessLog() {
         return Optional.ofNullable(this.accessLog);
     }

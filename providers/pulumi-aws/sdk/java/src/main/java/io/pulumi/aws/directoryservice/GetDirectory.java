@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDirectory {
-/**
- * Get attributes of AWS Directory Service directory (SimpleAD, Managed AD, AD Connector). It's especially useful to refer AWS Managed AD or on-premise AD in AD Connector configuration.
+    private GetDirectory() {}
+    public interface BuilderApplicator {
+        public void apply(GetDirectoryArgs.Builder a);
+    }
+    private static GetDirectoryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDirectoryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get attributes of AWS Directory Service directory (SimpleAD, Managed AD, AD Connector). It's especially useful to refer AWS Managed AD or on-premise AD in AD Connector configuration.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getDirectory.
+     *
+     * A collection of arguments for invoking getDirectory.
  * 
- *
- * A collection of values returned by getDirectory.
+     *
+     * A collection of values returned by getDirectory.
  * 
- */
+     */
+    public static CompletableFuture<GetDirectoryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get attributes of AWS Directory Service directory (SimpleAD, Managed AD, AD Connector). It's especially useful to refer AWS Managed AD or on-premise AD in AD Connector configuration.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getDirectory.
+     * 
+     *
+         * A collection of values returned by getDirectory.
+     * 
+     */
     public static CompletableFuture<GetDirectoryResult> invokeAsync(GetDirectoryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:directoryservice/getDirectory:getDirectory", TypeShape.of(GetDirectoryResult.class), args == null ? GetDirectoryArgs.Empty : args, Utilities.withVersion(options));
     }

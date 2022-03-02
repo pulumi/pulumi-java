@@ -34,14 +34,14 @@ public final class WorkgroupConfigurationResultConfiguration {
     /**
      * Configuration block with encryption settings. Documented below.
      * 
-     */
+    */
     public Optional<WorkgroupConfigurationResultConfigurationEncryptionConfiguration> getEncryptionConfiguration() {
         return Optional.ofNullable(this.encryptionConfiguration);
     }
     /**
      * The location in Amazon S3 where your query results are stored, such as `s3://path/to/query/bucket/`. For more information, see [Queries and Query Result Files](https://docs.aws.amazon.com/athena/latest/ug/querying.html).
      * 
-     */
+    */
     public Optional<String> getOutputLocation() {
         return Optional.ofNullable(this.outputLocation);
     }

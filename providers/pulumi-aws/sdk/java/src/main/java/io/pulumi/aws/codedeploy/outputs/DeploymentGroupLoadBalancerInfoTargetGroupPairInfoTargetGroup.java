@@ -23,7 +23,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup
     /**
      * Name of the target group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

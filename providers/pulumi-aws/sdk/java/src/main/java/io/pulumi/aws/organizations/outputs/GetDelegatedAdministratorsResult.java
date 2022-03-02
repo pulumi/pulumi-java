@@ -38,14 +38,14 @@ public final class GetDelegatedAdministratorsResult {
     /**
      * The list of delegated administrators in your organization, which have the following attributes:
      * 
-     */
+    */
     public List<GetDelegatedAdministratorsDelegatedAdministrator> getDelegatedAdministrators() {
         return this.delegatedAdministrators;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

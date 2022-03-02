@@ -34,14 +34,14 @@ public final class LaunchTemplateCapacityReservationSpecification {
     /**
      * Indicates the instance's Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
      * 
-     */
+    */
     public Optional<String> getCapacityReservationPreference() {
         return Optional.ofNullable(this.capacityReservationPreference);
     }
     /**
      * Used to target a specific Capacity Reservation:
      * 
-     */
+    */
     public Optional<LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget> getCapacityReservationTarget() {
         return Optional.ofNullable(this.capacityReservationTarget);
     }

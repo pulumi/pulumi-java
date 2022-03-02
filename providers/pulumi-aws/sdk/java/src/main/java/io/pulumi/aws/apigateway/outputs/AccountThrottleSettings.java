@@ -34,14 +34,14 @@ public final class AccountThrottleSettings {
     /**
      * The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
      * 
-     */
+    */
     public Optional<Integer> getBurstLimit() {
         return Optional.ofNullable(this.burstLimit);
     }
     /**
      * The number of times API Gateway allows the API to be called per second on average (RPS).
      * 
-     */
+    */
     public Optional<Double> getRateLimit() {
         return Optional.ofNullable(this.rateLimit);
     }

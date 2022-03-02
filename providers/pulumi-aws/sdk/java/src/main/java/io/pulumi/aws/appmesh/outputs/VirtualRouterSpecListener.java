@@ -23,7 +23,7 @@ public final class VirtualRouterSpecListener {
     /**
      * The port mapping information for the listener.
      * 
-     */
+    */
     public VirtualRouterSpecListenerPortMapping getPortMapping() {
         return this.portMapping;
     }

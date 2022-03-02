@@ -34,14 +34,14 @@ public final class GlobalClusterGlobalClusterMember {
     /**
      * Amazon Resource Name (ARN) of member DB Cluster.
      * 
-     */
+    */
     public Optional<String> getDbClusterArn() {
         return Optional.ofNullable(this.dbClusterArn);
     }
     /**
      * Whether the member is the primary DB Cluster.
      * 
-     */
+    */
     public Optional<Boolean> getIsWriter() {
         return Optional.ofNullable(this.isWriter);
     }

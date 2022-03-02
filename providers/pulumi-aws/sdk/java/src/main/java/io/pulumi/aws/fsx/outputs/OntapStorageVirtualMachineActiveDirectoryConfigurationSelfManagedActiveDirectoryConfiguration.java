@@ -28,11 +28,11 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      */
     private final @Nullable String fileSystemAdministratorsGroup;
     /**
-     * @deprecated
+     * @Deprecated
      * use 'organizational_unit_distinguished_name' instead
      * 
      */
-    @Deprecated /* use 'organizational_unit_distinguished_name' instead */
+        @Deprecated /* use 'organizational_unit_distinguished_name' instead */
     private final @Nullable String organizationalUnitDistinguidshedName;
     /**
      * The fully qualified distinguished name of the organizational unit within your self-managed AD directory that the Windows File Server instance will join. For example, `OU=FSx,DC=yourdomain,DC=corp,DC=com`. Only accepts OU as the direct parent of the SVM. If none is provided, the SVM is created in the default location of your self-managed AD directory. To learn more, see [RFC 2253](https://tools.ietf.org/html/rfc2253).
@@ -71,29 +71,29 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     /**
      * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * 
-     */
+    */
     public List<String> getDnsIps() {
         return this.dnsIps;
     }
     /**
      * The fully qualified domain name of the self-managed AD directory. For example, `corp.example.com`.
      * 
-     */
+    */
     public String getDomainName() {
         return this.domainName;
     }
     /**
      * The name of the domain group whose members are granted administrative privileges for the SVM. The group that you specify must already exist in your domain. Defaults to `Domain Admins`.
      * 
-     */
+    */
     public Optional<String> getFileSystemAdministratorsGroup() {
         return Optional.ofNullable(this.fileSystemAdministratorsGroup);
     }
     /**
-     * @deprecated
+     * @Deprecated
      * use 'organizational_unit_distinguished_name' instead
      * 
-     */
+    */
     @Deprecated /* use 'organizational_unit_distinguished_name' instead */
     public Optional<String> getOrganizationalUnitDistinguidshedName() {
         return Optional.ofNullable(this.organizationalUnitDistinguidshedName);
@@ -101,21 +101,21 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     /**
      * The fully qualified distinguished name of the organizational unit within your self-managed AD directory that the Windows File Server instance will join. For example, `OU=FSx,DC=yourdomain,DC=corp,DC=com`. Only accepts OU as the direct parent of the SVM. If none is provided, the SVM is created in the default location of your self-managed AD directory. To learn more, see [RFC 2253](https://tools.ietf.org/html/rfc2253).
      * 
-     */
+    */
     public Optional<String> getOrganizationalUnitDistinguishedName() {
         return Optional.ofNullable(this.organizationalUnitDistinguishedName);
     }
     /**
      * The password for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * The user name for the service account on your self-managed AD domain that Amazon FSx will use to join to your AD domain.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }

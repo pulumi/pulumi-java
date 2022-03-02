@@ -39,21 +39,21 @@ public final class DataSourceParametersPresto {
     /**
      * The catalog to which to connect.
      * 
-     */
+    */
     public String getCatalog() {
         return this.catalog;
     }
     /**
      * The host to which to connect.
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * The port to which to connect.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }

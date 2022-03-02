@@ -23,7 +23,7 @@ public final class GetCodeSigningConfigPolicy {
     /**
      * Code signing configuration policy for deployment validation failure.
      * 
-     */
+    */
     public String getUntrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
     }

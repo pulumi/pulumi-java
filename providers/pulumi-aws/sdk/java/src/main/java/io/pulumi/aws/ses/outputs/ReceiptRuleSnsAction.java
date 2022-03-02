@@ -41,21 +41,21 @@ public final class ReceiptRuleSnsAction {
     /**
      * The encoding to use for the email within the Amazon SNS notification. Default value is `UTF-8`.
      * 
-     */
+    */
     public Optional<String> getEncoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
      * The position of the action in the receipt rule
      * 
-     */
+    */
     public Integer getPosition() {
         return this.position;
     }
     /**
      * The ARN of an SNS topic to notify
      * 
-     */
+    */
     public String getTopicArn() {
         return this.topicArn;
     }

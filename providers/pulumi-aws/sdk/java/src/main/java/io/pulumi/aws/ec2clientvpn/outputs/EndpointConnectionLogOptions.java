@@ -41,21 +41,21 @@ public final class EndpointConnectionLogOptions {
     /**
      * The name of the CloudWatch Logs log group.
      * 
-     */
+    */
     public Optional<String> getCloudwatchLogGroup() {
         return Optional.ofNullable(this.cloudwatchLogGroup);
     }
     /**
      * The name of the CloudWatch Logs log stream to which the connection data is published.
      * 
-     */
+    */
     public Optional<String> getCloudwatchLogStream() {
         return Optional.ofNullable(this.cloudwatchLogStream);
     }
     /**
      * Indicates whether connection logging is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
