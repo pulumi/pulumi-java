@@ -484,7 +484,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		}
 	}
 
-	indent := "    "
+	const indent = "    "
 
 	if prop.Comment != "" || prop.DeprecationMessage != "" {
 		fprintf(w, "    /**\n")
@@ -924,7 +924,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 	// generates a class for Outputs where pt.properties >= 250
 	w := ctx.writer
-	indent := "    "
+	const indent = "    "
 
 	props := pt.properties
 
@@ -1125,7 +1125,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 
 func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 	w := ctx.writer
-	indent := "    "
+	const indent = "    "
 
 	props := pt.properties
 
