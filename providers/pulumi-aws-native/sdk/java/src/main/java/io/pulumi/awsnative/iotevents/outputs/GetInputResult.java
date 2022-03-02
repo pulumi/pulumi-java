@@ -44,7 +44,7 @@ public final class GetInputResult {
     /**
      * A brief description of the input.
      * 
-     */
+    */
     public Optional<String> getInputDescription() {
         return Optional.ofNullable(this.inputDescription);
     }
@@ -53,7 +53,7 @@ public final class GetInputResult {
      * 
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
      * 
-     */
+    */
     public List<InputTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

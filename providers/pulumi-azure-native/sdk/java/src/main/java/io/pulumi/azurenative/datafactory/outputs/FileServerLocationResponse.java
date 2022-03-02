@@ -42,14 +42,14 @@ public final class FileServerLocationResponse {
     /**
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getFileName() {
         return Optional.ofNullable(this.fileName);
     }
     /**
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
-     */
+    */
     public Optional<Object> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -57,7 +57,7 @@ public final class FileServerLocationResponse {
      * Type of dataset storage location.
      * Expected value is 'FileServerLocation'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

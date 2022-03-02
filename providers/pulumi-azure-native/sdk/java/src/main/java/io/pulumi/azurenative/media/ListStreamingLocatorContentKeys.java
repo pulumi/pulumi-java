@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStreamingLocatorContentKeys {
-/**
- * Class of response for listContentKeys action
+    private ListStreamingLocatorContentKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListStreamingLocatorContentKeysArgs.Builder a);
+    }
+    private static ListStreamingLocatorContentKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListStreamingLocatorContentKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class of response for listContentKeys action
  * API Version: 2020-05-01.
  * 
- *
- * Class of response for listContentKeys action
+     *
+     * Class of response for listContentKeys action
  * 
- */
+     */
+    public static CompletableFuture<ListStreamingLocatorContentKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class of response for listContentKeys action
+     * API Version: 2020-05-01.
+     * 
+     *
+         * Class of response for listContentKeys action
+     * 
+     */
     public static CompletableFuture<ListStreamingLocatorContentKeysResult> invokeAsync(ListStreamingLocatorContentKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:listStreamingLocatorContentKeys", TypeShape.of(ListStreamingLocatorContentKeysResult.class), args == null ? ListStreamingLocatorContentKeysArgs.Empty : args, Utilities.withVersion(options));
     }

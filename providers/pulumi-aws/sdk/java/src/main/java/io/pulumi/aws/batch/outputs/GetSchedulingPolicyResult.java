@@ -53,21 +53,21 @@ public final class GetSchedulingPolicyResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Specifies the name of the scheduling policy.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Key-value map of resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

@@ -125,7 +125,7 @@ public final class InstanceTemplateNetworkInterface {
      * network (e.g. via tunnel or because it is running on another cloud instance
      * on that network). This block can be repeated multiple times. Structure documented below.
      * 
-     */
+    */
     public List<InstanceTemplateNetworkInterfaceAccessConfig> getAccessConfigs() {
         return this.accessConfigs == null ? List.of() : this.accessConfigs;
     }
@@ -134,7 +134,7 @@ public final class InstanceTemplateNetworkInterface {
      * array of alias IP ranges for this network interface. Can only be specified for network
      * interfaces on subnet-mode networks. Structure documented below.
      * 
-     */
+    */
     public List<InstanceTemplateNetworkInterfaceAliasIpRange> getAliasIpRanges() {
         return this.aliasIpRanges == null ? List.of() : this.aliasIpRanges;
     }
@@ -143,7 +143,7 @@ public final class InstanceTemplateNetworkInterface {
      * Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
      * specified, then this instance will have no external IPv6 Internet access. Structure documented below.
      * 
-     */
+    */
     public List<InstanceTemplateNetworkInterfaceIpv6AccessConfig> getIpv6AccessConfigs() {
         return this.ipv6AccessConfigs == null ? List.of() : this.ipv6AccessConfigs;
     }
@@ -154,7 +154,7 @@ public final class InstanceTemplateNetworkInterface {
      * The name of the instance template. If you leave
      * this blank, the provider will auto-generate a unique name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -163,7 +163,7 @@ public final class InstanceTemplateNetworkInterface {
      * Use `network` attribute for Legacy or Auto subnetted networks and
      * `subnetwork` for custom subnetted networks.
      * 
-     */
+    */
     public Optional<String> getNetwork() {
         return Optional.ofNullable(this.network);
     }
@@ -171,28 +171,28 @@ public final class InstanceTemplateNetworkInterface {
      * The private IP address to assign to the instance. If
      * empty, the address will be automatically assigned.
      * 
-     */
+    */
     public Optional<String> getNetworkIp() {
         return Optional.ofNullable(this.networkIp);
     }
     /**
      * The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
      * 
-     */
+    */
     public Optional<String> getNicType() {
         return Optional.ofNullable(this.nicType);
     }
     /**
      * The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
      * 
-     */
+    */
     public Optional<Integer> getQueueCount() {
         return Optional.ofNullable(this.queueCount);
     }
     /**
      * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
      * 
-     */
+    */
     public Optional<String> getStackType() {
         return Optional.ofNullable(this.stackType);
     }
@@ -201,7 +201,7 @@ public final class InstanceTemplateNetworkInterface {
      * to. The subnetwork must exist in the same `region` this instance will be
      * created in. Either `network` or `subnetwork` must be provided.
      * 
-     */
+    */
     public Optional<String> getSubnetwork() {
         return Optional.ofNullable(this.subnetwork);
     }
@@ -209,7 +209,7 @@ public final class InstanceTemplateNetworkInterface {
      * The ID of the project in which the subnetwork belongs.
      * If it is not provided, the provider project is used.
      * 
-     */
+    */
     public Optional<String> getSubnetworkProject() {
         return Optional.ofNullable(this.subnetworkProject);
     }

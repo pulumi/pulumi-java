@@ -40,21 +40,21 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse {
     /**
      * Target server brand version
      * 
-     */
+    */
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
      * Target server version
      * 
-     */
+    */
     public String getTargetServerVersion() {
         return this.targetServerVersion;
     }
     /**
      * Validation errors
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }

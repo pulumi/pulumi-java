@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationAccountMap {
-/**
- * The integration account map.
+    private GetIntegrationAccountMap() {}
+    public interface BuilderApplicator {
+        public void apply(GetIntegrationAccountMapArgs.Builder a);
+    }
+    private static GetIntegrationAccountMapArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIntegrationAccountMapArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The integration account map.
  * API Version: 2019-05-01.
  * 
- *
- * The integration account map.
+     *
+     * The integration account map.
  * 
- */
+     */
+    public static CompletableFuture<GetIntegrationAccountMapResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The integration account map.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The integration account map.
+     * 
+     */
     public static CompletableFuture<GetIntegrationAccountMapResult> invokeAsync(GetIntegrationAccountMapArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountMap", TypeShape.of(GetIntegrationAccountMapResult.class), args == null ? GetIntegrationAccountMapArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -31,14 +31,14 @@ public final class UrlSigningParamIdentifierResponse {
     /**
      * Indicates the purpose of the parameter
      * 
-     */
+    */
     public String getParamIndicator() {
         return this.paramIndicator;
     }
     /**
      * Parameter name
      * 
-     */
+    */
     public String getParamName() {
         return this.paramName;
     }

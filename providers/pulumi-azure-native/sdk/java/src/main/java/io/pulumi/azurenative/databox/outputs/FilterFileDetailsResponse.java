@@ -31,14 +31,14 @@ public final class FilterFileDetailsResponse {
     /**
      * Path of the file that contains the details of all items to transfer.
      * 
-     */
+    */
     public String getFilterFilePath() {
         return this.filterFilePath;
     }
     /**
      * Type of the filter file.
      * 
-     */
+    */
     public String getFilterFileType() {
         return this.filterFileType;
     }

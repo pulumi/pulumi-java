@@ -40,7 +40,7 @@ public final class GetInstanceTypeFpga {
     /**
      * Size of the instance memory, in MiB.
      * 
-     */
+    */
     public Integer getMemorySize() {
         return this.memorySize;
     }

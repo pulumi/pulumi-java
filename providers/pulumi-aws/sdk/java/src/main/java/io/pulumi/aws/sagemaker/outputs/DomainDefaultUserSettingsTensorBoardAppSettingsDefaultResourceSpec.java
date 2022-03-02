@@ -47,28 +47,28 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourc
     /**
      * The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
      * 
-     */
+    */
     public Optional<String> getInstanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
      * 
-     */
+    */
     public Optional<String> getLifecycleConfigArn() {
         return Optional.ofNullable(this.lifecycleConfigArn);
     }
     /**
      * The ARN of the SageMaker image that the image version belongs to.
      * 
-     */
+    */
     public Optional<String> getSagemakerImageArn() {
         return Optional.ofNullable(this.sagemakerImageArn);
     }
     /**
      * The ARN of the image version created on the instance.
      * 
-     */
+    */
     public Optional<String> getSagemakerImageVersionArn() {
         return Optional.ofNullable(this.sagemakerImageVersionArn);
     }

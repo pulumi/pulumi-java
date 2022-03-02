@@ -32,14 +32,14 @@ public final class VaultNotification {
     /**
      * You can configure a vault to publish a notification for `ArchiveRetrievalCompleted` and `InventoryRetrievalCompleted` events.
      * 
-     */
+    */
     public List<String> getEvents() {
         return this.events;
     }
     /**
      * The SNS Topic ARN.
      * 
-     */
+    */
     public String getSnsTopic() {
         return this.snsTopic;
     }

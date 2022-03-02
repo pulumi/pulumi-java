@@ -23,7 +23,7 @@ public final class ConnectorProfileDynatraceConnectorProfileProperties {
     /**
      * The location of the Dynatrace resource
      * 
-     */
+    */
     public String getInstanceUrl() {
         return this.instanceUrl;
     }

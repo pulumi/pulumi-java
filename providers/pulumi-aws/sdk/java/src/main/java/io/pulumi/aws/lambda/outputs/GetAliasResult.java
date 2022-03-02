@@ -58,14 +58,14 @@ public final class GetAliasResult {
     /**
      * The Amazon Resource Name (ARN) identifying the Lambda function alias.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Description of alias.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -75,21 +75,21 @@ public final class GetAliasResult {
     /**
      * Lambda function version which the alias uses.
      * 
-     */
+    */
     public String getFunctionVersion() {
         return this.functionVersion;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The ARN to be used for invoking Lambda Function from API Gateway - to be used in aws_api_gateway_integration's `uri`.
      * 
-     */
+    */
     public String getInvokeArn() {
         return this.invokeArn;
     }

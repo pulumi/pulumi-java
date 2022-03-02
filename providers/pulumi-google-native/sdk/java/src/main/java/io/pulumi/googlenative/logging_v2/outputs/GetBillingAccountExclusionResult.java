@@ -60,42 +60,42 @@ public final class GetBillingAccountExclusionResult {
     /**
      * The creation timestamp of the exclusion.This field may not be present for older exclusions.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. A description of this exclusion.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. If set to True, then this exclusion is disabled and it does not exclude any log entries. You can update an exclusion to change the value of this field.
      * 
-     */
+    */
     public Boolean getDisabled() {
         return this.disabled;
     }
     /**
      * An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries) that matches the log entries to be excluded. By using the sample function (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you can exclude less than 100% of the matching log entries.For example, the following query matches 99% of low-severity log entries from Google Cloud Storage buckets:resource.type=gcs_bucket severity<ERROR sample(insertId, 0.99)
      * 
-     */
+    */
     public String getFilter() {
         return this.filter;
     }
     /**
      * A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The last update timestamp of the exclusion.This field may not be present for older exclusions.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }

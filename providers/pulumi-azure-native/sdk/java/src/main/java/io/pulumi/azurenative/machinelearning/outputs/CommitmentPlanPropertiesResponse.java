@@ -91,70 +91,70 @@ public final class CommitmentPlanPropertiesResponse {
     /**
      * Indicates whether usage beyond the commitment plan's included quantities will be charged.
      * 
-     */
+    */
     public Boolean getChargeForOverage() {
         return this.chargeForOverage;
     }
     /**
      * Indicates whether the commitment plan will incur a charge.
      * 
-     */
+    */
     public Boolean getChargeForPlan() {
         return this.chargeForPlan;
     }
     /**
      * The date at which this commitment plan was created, in ISO 8601 format.
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * The included resource quantities this plan gives you.
      * 
-     */
+    */
     public Map<String,PlanQuantityResponse> getIncludedQuantities() {
         return this.includedQuantities;
     }
     /**
      * The maximum number of commitment associations that can be children of this commitment plan.
      * 
-     */
+    */
     public Integer getMaxAssociationLimit() {
         return this.maxAssociationLimit;
     }
     /**
      * The maximum scale-out capacity for this commitment plan.
      * 
-     */
+    */
     public Integer getMaxCapacityLimit() {
         return this.maxCapacityLimit;
     }
     /**
      * The minimum scale-out capacity for this commitment plan.
      * 
-     */
+    */
     public Integer getMinCapacityLimit() {
         return this.minCapacityLimit;
     }
     /**
      * The Azure meter which will be used to charge for this commitment plan.
      * 
-     */
+    */
     public String getPlanMeter() {
         return this.planMeter;
     }
     /**
      * The frequency at which this commitment plan's included quantities are refilled.
      * 
-     */
+    */
     public Integer getRefillFrequencyInDays() {
         return this.refillFrequencyInDays;
     }
     /**
      * Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.
      * 
-     */
+    */
     public Boolean getSuspendPlanOnOverage() {
         return this.suspendPlanOnOverage;
     }

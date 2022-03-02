@@ -37,7 +37,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRule {
      * The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule> getExclusionRule() {
         return Optional.ofNullable(this.exclusionRule);
     }
@@ -45,7 +45,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRule {
      * Hotword-based detection rule.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule> getHotwordRule() {
         return Optional.ofNullable(this.hotwordRule);
     }

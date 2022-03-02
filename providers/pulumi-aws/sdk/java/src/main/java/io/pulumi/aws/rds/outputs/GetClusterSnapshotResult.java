@@ -146,28 +146,28 @@ public final class GetClusterSnapshotResult {
     /**
      * Specifies the allocated storage size in gigabytes (GB).
      * 
-     */
+    */
     public Integer getAllocatedStorage() {
         return this.allocatedStorage;
     }
     /**
      * List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.
      * 
-     */
+    */
     public List<String> getAvailabilityZones() {
         return this.availabilityZones;
     }
     /**
      * Specifies the DB cluster identifier of the DB cluster that this DB cluster snapshot was created from.
      * 
-     */
+    */
     public Optional<String> getDbClusterIdentifier() {
         return Optional.ofNullable(this.dbClusterIdentifier);
     }
     /**
      * The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
      * 
-     */
+    */
     public String getDbClusterSnapshotArn() {
         return this.dbClusterSnapshotArn;
     }
@@ -177,21 +177,21 @@ public final class GetClusterSnapshotResult {
     /**
      * Specifies the name of the database engine.
      * 
-     */
+    */
     public String getEngine() {
         return this.engine;
     }
     /**
      * Version of the database engine for this DB cluster snapshot.
      * 
-     */
+    */
     public String getEngineVersion() {
         return this.engineVersion;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -204,14 +204,14 @@ public final class GetClusterSnapshotResult {
     /**
      * If storage_encrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.
      * 
-     */
+    */
     public String getKmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * License model information for the restored DB cluster.
      * 
-     */
+    */
     public String getLicenseModel() {
         return this.licenseModel;
     }
@@ -221,14 +221,14 @@ public final class GetClusterSnapshotResult {
     /**
      * Port that the DB cluster was listening on at the time of the snapshot.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * Time when the snapshot was taken, in Universal Coordinated Time (UTC).
      * 
-     */
+    */
     public String getSnapshotCreateTime() {
         return this.snapshotCreateTime;
     }
@@ -241,28 +241,28 @@ public final class GetClusterSnapshotResult {
     /**
      * The status of this DB Cluster Snapshot.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Specifies whether the DB cluster snapshot is encrypted.
      * 
-     */
+    */
     public Boolean getStorageEncrypted() {
         return this.storageEncrypted;
     }
     /**
      * A map of tags for the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * The VPC ID associated with the DB cluster snapshot.
      * 
-     */
+    */
     public String getVpcId() {
         return this.vpcId;
     }

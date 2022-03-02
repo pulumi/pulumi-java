@@ -52,35 +52,35 @@ public final class ApiConfigHandlerResponse {
     /**
      * Action to take when users access resources that require authentication. Defaults to redirect.
      * 
-     */
+    */
     public String getAuthFailAction() {
         return this.authFailAction;
     }
     /**
      * Level of login required to access this resource. Defaults to optional.
      * 
-     */
+    */
     public String getLogin() {
         return this.login;
     }
     /**
      * Path to the script from the application root directory.
      * 
-     */
+    */
     public String getScript() {
         return this.script;
     }
     /**
      * Security (HTTPS) enforcement for this URL.
      * 
-     */
+    */
     public String getSecurityLevel() {
         return this.securityLevel;
     }
     /**
      * URL to serve the endpoint at.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

@@ -31,7 +31,7 @@ public final class BotSlotPriority {
     /**
      * The name of the slot.
      * 
-     */
+    */
     public String getSlotName() {
         return this.slotName;
     }

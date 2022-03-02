@@ -36,14 +36,14 @@ public final class AnalyticsApplicationInputsSchemaRecordFormat {
      * The Mapping Information for the record format.
      * See Mapping Parameters below for more details.
      * 
-     */
+    */
     public Optional<AnalyticsApplicationInputsSchemaRecordFormatMappingParameters> getMappingParameters() {
         return Optional.ofNullable(this.mappingParameters);
     }
     /**
      * The type of Record Format. Can be `CSV` or `JSON`.
      * 
-     */
+    */
     public Optional<String> getRecordFormatType() {
         return Optional.ofNullable(this.recordFormatType);
     }

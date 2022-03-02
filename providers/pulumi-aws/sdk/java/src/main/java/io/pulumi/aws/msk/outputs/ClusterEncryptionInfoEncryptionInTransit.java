@@ -34,14 +34,14 @@ public final class ClusterEncryptionInfoEncryptionInTransit {
     /**
      * Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
      * 
-     */
+    */
     public Optional<String> getClientBroker() {
         return Optional.ofNullable(this.clientBroker);
     }
     /**
      * Whether data communication among broker nodes is encrypted. Default value: `true`.
      * 
-     */
+    */
     public Optional<Boolean> getInCluster() {
         return Optional.ofNullable(this.inCluster);
     }

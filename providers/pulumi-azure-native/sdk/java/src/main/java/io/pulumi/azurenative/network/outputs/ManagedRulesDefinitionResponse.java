@@ -34,14 +34,14 @@ public final class ManagedRulesDefinitionResponse {
     /**
      * The Exclusions that are applied on the policy.
      * 
-     */
+    */
     public List<OwaspCrsExclusionEntryResponse> getExclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
     }
     /**
      * The managed rule sets that are associated with the policy.
      * 
-     */
+    */
     public List<ManagedRuleSetResponse> getManagedRuleSets() {
         return this.managedRuleSets;
     }

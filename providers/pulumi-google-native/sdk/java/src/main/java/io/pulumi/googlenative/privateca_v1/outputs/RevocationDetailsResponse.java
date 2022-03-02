@@ -31,14 +31,14 @@ public final class RevocationDetailsResponse {
     /**
      * Indicates why a Certificate was revoked.
      * 
-     */
+    */
     public String getRevocationState() {
         return this.revocationState;
     }
     /**
      * The time at which this Certificate was revoked.
      * 
-     */
+    */
     public String getRevocationTime() {
         return this.revocationTime;
     }

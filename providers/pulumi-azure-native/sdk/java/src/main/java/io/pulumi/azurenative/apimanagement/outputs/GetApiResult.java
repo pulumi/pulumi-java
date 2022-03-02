@@ -171,147 +171,147 @@ public final class GetApiResult {
     /**
      * Describes the Revision of the Api. If no value is provided, default revision 1 is created
      * 
-     */
+    */
     public Optional<String> getApiRevision() {
         return Optional.ofNullable(this.apiRevision);
     }
     /**
      * Description of the Api Revision.
      * 
-     */
+    */
     public Optional<String> getApiRevisionDescription() {
         return Optional.ofNullable(this.apiRevisionDescription);
     }
     /**
      * Type of API.
      * 
-     */
+    */
     public Optional<String> getApiType() {
         return Optional.ofNullable(this.apiType);
     }
     /**
      * Indicates the Version identifier of the API if the API is versioned
      * 
-     */
+    */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Description of the Api Version.
      * 
-     */
+    */
     public Optional<String> getApiVersionDescription() {
         return Optional.ofNullable(this.apiVersionDescription);
     }
     /**
      * Version set details
      * 
-     */
+    */
     public Optional<ApiVersionSetContractDetailsResponse> getApiVersionSet() {
         return Optional.ofNullable(this.apiVersionSet);
     }
     /**
      * A resource identifier for the related ApiVersionSet.
      * 
-     */
+    */
     public Optional<String> getApiVersionSetId() {
         return Optional.ofNullable(this.apiVersionSetId);
     }
     /**
      * Collection of authentication settings included into this API.
      * 
-     */
+    */
     public Optional<AuthenticationSettingsContractResponse> getAuthenticationSettings() {
         return Optional.ofNullable(this.authenticationSettings);
     }
     /**
      * Description of the API. May include HTML formatting tags.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * API name. Must be 1 to 300 characters long.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Indicates if API revision is current api revision.
      * 
-     */
+    */
     public Optional<Boolean> getIsCurrent() {
         return Optional.ofNullable(this.isCurrent);
     }
     /**
      * Indicates if API revision is accessible via the gateway.
      * 
-     */
+    */
     public Boolean getIsOnline() {
         return this.isOnline;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * Describes on which protocols the operations in this API can be invoked.
      * 
-     */
+    */
     public List<String> getProtocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
     /**
      * Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
      * 
-     */
+    */
     public Optional<String> getServiceUrl() {
         return Optional.ofNullable(this.serviceUrl);
     }
     /**
      * API identifier of the source API.
      * 
-     */
+    */
     public Optional<String> getSourceApiId() {
         return Optional.ofNullable(this.sourceApiId);
     }
     /**
      * Protocols over which API is made available.
      * 
-     */
+    */
     public Optional<SubscriptionKeyParameterNamesContractResponse> getSubscriptionKeyParameterNames() {
         return Optional.ofNullable(this.subscriptionKeyParameterNames);
     }
     /**
      * Specifies whether an API or Product subscription is required for accessing the API.
      * 
-     */
+    */
     public Optional<Boolean> getSubscriptionRequired() {
         return Optional.ofNullable(this.subscriptionRequired);
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

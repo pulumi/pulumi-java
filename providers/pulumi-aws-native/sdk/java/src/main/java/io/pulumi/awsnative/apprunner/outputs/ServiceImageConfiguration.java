@@ -38,7 +38,7 @@ public final class ServiceImageConfiguration {
     /**
      * Port
      * 
-     */
+    */
     public Optional<String> getPort() {
         return Optional.ofNullable(this.port);
     }
@@ -48,7 +48,7 @@ public final class ServiceImageConfiguration {
     /**
      * Start Command
      * 
-     */
+    */
     public Optional<String> getStartCommand() {
         return Optional.ofNullable(this.startCommand);
     }

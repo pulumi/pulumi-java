@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResolverQueryLoggingConfigAssociation {
-/**
- * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation.
+    private GetResolverQueryLoggingConfigAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetResolverQueryLoggingConfigAssociationArgs.Builder a);
+    }
+    private static GetResolverQueryLoggingConfigAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResolverQueryLoggingConfigAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation.
  * 
- */
+     */
+    public static CompletableFuture<GetResolverQueryLoggingConfigAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation.
+     * 
+     */
     public static CompletableFuture<GetResolverQueryLoggingConfigAssociationResult> invokeAsync(GetResolverQueryLoggingConfigAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getResolverQueryLoggingConfigAssociation", TypeShape.of(GetResolverQueryLoggingConfigAssociationResult.class), args == null ? GetResolverQueryLoggingConfigAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

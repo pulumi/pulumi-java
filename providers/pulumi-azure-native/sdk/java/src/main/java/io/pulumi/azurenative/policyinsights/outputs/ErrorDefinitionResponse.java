@@ -54,35 +54,35 @@ public final class ErrorDefinitionResponse {
     /**
      * Additional scenario specific error details.
      * 
-     */
+    */
     public List<TypedErrorInfoResponse> getAdditionalInfo() {
         return this.additionalInfo;
     }
     /**
      * Service specific error code which serves as the substatus for the HTTP error code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Internal error details.
      * 
-     */
+    */
     public List<ErrorDefinitionResponse> getDetails() {
         return this.details;
     }
     /**
      * Description of the error.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * The target of the error.
      * 
-     */
+    */
     public String getTarget() {
         return this.target;
     }

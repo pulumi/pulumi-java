@@ -75,56 +75,56 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubject {
     /**
      * The common name of the distinguished name.
      * 
-     */
+    */
     public Optional<String> getCommonName() {
         return Optional.ofNullable(this.commonName);
     }
     /**
      * The country code of the subject.
      * 
-     */
+    */
     public Optional<String> getCountryCode() {
         return Optional.ofNullable(this.countryCode);
     }
     /**
      * The locality or city of the subject.
      * 
-     */
+    */
     public Optional<String> getLocality() {
         return Optional.ofNullable(this.locality);
     }
     /**
      * The organization of the subject.
      * 
-     */
+    */
     public Optional<String> getOrganization() {
         return Optional.ofNullable(this.organization);
     }
     /**
      * The organizational unit of the subject.
      * 
-     */
+    */
     public Optional<String> getOrganizationalUnit() {
         return Optional.ofNullable(this.organizationalUnit);
     }
     /**
      * The postal code of the subject.
      * 
-     */
+    */
     public Optional<String> getPostalCode() {
         return Optional.ofNullable(this.postalCode);
     }
     /**
      * The province, territory, or regional state of the subject.
      * 
-     */
+    */
     public Optional<String> getProvince() {
         return Optional.ofNullable(this.province);
     }
     /**
      * The street address of the subject.
      * 
-     */
+    */
     public Optional<String> getStreetAddress() {
         return Optional.ofNullable(this.streetAddress);
     }

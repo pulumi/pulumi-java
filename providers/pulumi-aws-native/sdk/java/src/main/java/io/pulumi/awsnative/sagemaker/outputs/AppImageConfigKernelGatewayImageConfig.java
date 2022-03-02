@@ -35,14 +35,14 @@ public final class AppImageConfigKernelGatewayImageConfig {
     /**
      * The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
      * 
-     */
+    */
     public Optional<AppImageConfigFileSystemConfig> getFileSystemConfig() {
         return Optional.ofNullable(this.fileSystemConfig);
     }
     /**
      * The specification of the Jupyter kernels in the image.
      * 
-     */
+    */
     public List<AppImageConfigKernelSpec> getKernelSpecs() {
         return this.kernelSpecs;
     }

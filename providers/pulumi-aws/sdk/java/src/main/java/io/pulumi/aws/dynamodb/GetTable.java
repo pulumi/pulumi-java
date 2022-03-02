@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTable {
-/**
- * Provides information about a DynamoDB table.
+    private GetTable() {}
+    public interface BuilderApplicator {
+        public void apply(GetTableArgs.Builder a);
+    }
+    private static GetTableArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTableArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information about a DynamoDB table.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getTable.
+     *
+     * A collection of arguments for invoking getTable.
  * 
- *
- * A collection of values returned by getTable.
+     *
+     * A collection of values returned by getTable.
  * 
- */
+     */
+    public static CompletableFuture<GetTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information about a DynamoDB table.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getTable.
+     * 
+     *
+         * A collection of values returned by getTable.
+     * 
+     */
     public static CompletableFuture<GetTableResult> invokeAsync(GetTableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:dynamodb/getTable:getTable", TypeShape.of(GetTableResult.class), args == null ? GetTableArgs.Empty : args, Utilities.withVersion(options));
     }

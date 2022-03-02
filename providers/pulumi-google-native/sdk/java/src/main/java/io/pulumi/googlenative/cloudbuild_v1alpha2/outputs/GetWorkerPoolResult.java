@@ -75,56 +75,56 @@ public final class GetWorkerPoolResult {
     /**
      * Time at which the request to create the `WorkerPool` was received.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Time at which the request to delete the `WorkerPool` was received.
      * 
-     */
+    */
     public String getDeleteTime() {
         return this.deleteTime;
     }
     /**
      * The resource name of the `WorkerPool`. Format of the name is `projects/{project_id}/workerPools/{worker_pool_id}`, where the value of {worker_pool_id} is provided in the CreateWorkerPool request.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Network configuration for the `WorkerPool`.
      * 
-     */
+    */
     public NetworkConfigResponse getNetworkConfig() {
         return this.networkConfig;
     }
     /**
      * Immutable. The region where the `WorkerPool` runs. Only "us-central1" is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * WorkerPool state.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Time at which the request to update the `WorkerPool` was received.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * Worker configuration for the `WorkerPool`.
      * 
-     */
+    */
     public WorkerConfigResponse getWorkerConfig() {
         return this.workerConfig;
     }

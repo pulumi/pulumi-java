@@ -23,7 +23,7 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse {
     /**
      * Analysis status for the discovered resource.
      * 
-     */
+    */
     public DiscoveredResponse getDiscovered() {
         return this.discovered;
     }

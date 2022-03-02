@@ -25,7 +25,7 @@ public final class FirewallPolicyTransportSecurityResponse {
     /**
      * The CA used for intermediate CA generation.
      * 
-     */
+    */
     public Optional<FirewallPolicyCertificateAuthorityResponse> getCertificateAuthority() {
         return Optional.ofNullable(this.certificateAuthority);
     }

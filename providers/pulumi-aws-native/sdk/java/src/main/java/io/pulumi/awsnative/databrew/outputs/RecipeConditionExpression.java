@@ -40,21 +40,21 @@ public final class RecipeConditionExpression {
     /**
      * Input condition to be applied to the target column
      * 
-     */
+    */
     public String getCondition() {
         return this.condition;
     }
     /**
      * Name of the target column
      * 
-     */
+    */
     public String getTargetColumn() {
         return this.targetColumn;
     }
     /**
      * Value of the condition
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

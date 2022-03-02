@@ -121,7 +121,7 @@ public final class ServicePerimetersServicePerimeter {
      * - 
      * Time the AccessPolicy was created in UTC.
      * 
-     */
+    */
     public Optional<String> getCreateTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -129,7 +129,7 @@ public final class ServicePerimetersServicePerimeter {
      * Description of the ServicePerimeter and its use. Does not affect
      * behavior.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -138,7 +138,7 @@ public final class ServicePerimetersServicePerimeter {
      * begin with a letter and only include alphanumeric and '_'.
      * Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -160,7 +160,7 @@ public final class ServicePerimetersServicePerimeter {
      * Default value is `PERIMETER_TYPE_REGULAR`.
      * Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
      * 
-     */
+    */
     public Optional<String> getPerimeterType() {
         return Optional.ofNullable(this.perimeterType);
     }
@@ -171,7 +171,7 @@ public final class ServicePerimetersServicePerimeter {
      * the `useExplicitDryRunSpec` flag is set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServicePerimetersServicePerimeterSpec> getSpec() {
         return Optional.ofNullable(this.spec);
     }
@@ -181,14 +181,14 @@ public final class ServicePerimetersServicePerimeter {
      * perimeter content and boundaries.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServicePerimetersServicePerimeterStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Human readable title. Must be unique within the Policy.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
@@ -196,7 +196,7 @@ public final class ServicePerimetersServicePerimeter {
      * - 
      * Time the AccessPolicy was updated in UTC.
      * 
-     */
+    */
     public Optional<String> getUpdateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -211,7 +211,7 @@ public final class ServicePerimetersServicePerimeter {
      * between currently enforced and suggested restrictions. useExplicitDryRunSpec must
      * bet set to True if any of the fields in the spec are set to non-default values.
      * 
-     */
+    */
     public Optional<Boolean> getUseExplicitDryRunSpec() {
         return Optional.ofNullable(this.useExplicitDryRunSpec);
     }

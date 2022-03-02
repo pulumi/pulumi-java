@@ -25,7 +25,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     /**
      * S3 configuration for location to store rejections from magnetic store writes
      * 
-     */
+    */
     public Optional<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties> getS3Configuration() {
         return Optional.ofNullable(this.s3Configuration);
     }

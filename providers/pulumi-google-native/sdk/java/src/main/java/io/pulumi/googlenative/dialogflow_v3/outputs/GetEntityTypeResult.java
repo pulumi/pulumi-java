@@ -77,56 +77,56 @@ public final class GetEntityTypeResult {
     /**
      * Indicates whether the entity type can be automatically expanded.
      * 
-     */
+    */
     public String getAutoExpansionMode() {
         return this.autoExpansionMode;
     }
     /**
      * The human-readable name of the entity type, unique within the agent.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Enables fuzzy entity extraction during classification.
      * 
-     */
+    */
     public Boolean getEnableFuzzyExtraction() {
         return this.enableFuzzyExtraction;
     }
     /**
      * The collection of entity entries associated with the entity type.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3EntityTypeEntityResponse> getEntities() {
         return this.entities;
     }
     /**
      * Collection of exceptional words and phrases that shouldn't be matched. For example, if you have a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun) as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by entities and excluded phrases should be mutually exclusive.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse> getExcludedPhrases() {
         return this.excludedPhrases;
     }
     /**
      * Indicates the kind of entity type.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format: `projects//locations//agents//entityTypes/`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name when logging.
      * 
-     */
+    */
     public Boolean getRedact() {
         return this.redact;
     }

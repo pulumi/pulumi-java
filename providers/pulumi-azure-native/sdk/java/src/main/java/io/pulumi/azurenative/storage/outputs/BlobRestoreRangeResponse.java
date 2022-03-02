@@ -31,14 +31,14 @@ public final class BlobRestoreRangeResponse {
     /**
      * Blob end range. This is exclusive. Empty means account end.
      * 
-     */
+    */
     public String getEndRange() {
         return this.endRange;
     }
     /**
      * Blob start range. This is inclusive. Empty means account start.
      * 
-     */
+    */
     public String getStartRange() {
         return this.startRange;
     }

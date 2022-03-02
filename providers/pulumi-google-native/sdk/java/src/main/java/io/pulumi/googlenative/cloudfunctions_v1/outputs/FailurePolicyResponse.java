@@ -23,7 +23,7 @@ public final class FailurePolicyResponse {
     /**
      * If specified, then the function will be retried in case of a failure.
      * 
-     */
+    */
     public RetryResponse getRetry() {
         return this.retry;
     }

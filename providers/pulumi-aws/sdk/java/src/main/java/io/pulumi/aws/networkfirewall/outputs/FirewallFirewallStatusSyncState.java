@@ -35,14 +35,14 @@ public final class FirewallFirewallStatusSyncState {
     /**
      * Nested list describing the attachment status of the firewall's association with a single VPC subnet.
      * 
-     */
+    */
     public List<FirewallFirewallStatusSyncStateAttachment> getAttachments() {
         return this.attachments == null ? List.of() : this.attachments;
     }
     /**
      * The Availability Zone where the subnet is configured.
      * 
-     */
+    */
     public Optional<String> getAvailabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }

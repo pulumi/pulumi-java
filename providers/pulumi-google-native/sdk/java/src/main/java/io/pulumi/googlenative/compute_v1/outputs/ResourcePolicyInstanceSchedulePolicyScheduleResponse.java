@@ -23,7 +23,7 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse {
     /**
      * Specifies the frequency for the operation, using the unix-cron format.
      * 
-     */
+    */
     public String getSchedule() {
         return this.schedule;
     }

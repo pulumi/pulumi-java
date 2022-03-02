@@ -77,14 +77,14 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
      * that unhealthy states are detected and
      * alerted on quickly.
      * 
-     */
+    */
     public String getDuration() {
         return this.duration;
     }
     /**
      * Monitoring Query Language query that outputs a boolean stream.
      * 
-     */
+    */
     public String getQuery() {
         return this.query;
     }
@@ -99,7 +99,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
      * denominator_aggregations are specified.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AlertPolicyConditionConditionMonitoringQueryLanguageTrigger> getTrigger() {
         return Optional.ofNullable(this.trigger);
     }

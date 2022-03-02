@@ -31,14 +31,14 @@ public final class EnvelopeSignatureResponse {
     /**
      * A reference id to the key being used for signing
      * 
-     */
+    */
     public String getKeyid() {
         return this.keyid;
     }
     /**
      * The signature itself
      * 
-     */
+    */
     public String getSig() {
         return this.sig;
     }

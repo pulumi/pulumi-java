@@ -94,28 +94,28 @@ public final class GetVpcDhcpOptionsResult {
     /**
      * The ARN of the DHCP Options Set.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * EC2 DHCP Options ID
      * 
-     */
+    */
     public String getDhcpOptionsId() {
         return this.dhcpOptionsId;
     }
     /**
      * The suffix domain name to used when resolving non Fully Qualified Domain NamesE.g., the `search` value in the `/etc/resolv.conf` file.
      * 
-     */
+    */
     public String getDomainName() {
         return this.domainName;
     }
     /**
      * List of name servers.
      * 
-     */
+    */
     public List<String> getDomainNameServers() {
         return this.domainNameServers;
     }
@@ -125,42 +125,42 @@ public final class GetVpcDhcpOptionsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of NETBIOS name servers.
      * 
-     */
+    */
     public List<String> getNetbiosNameServers() {
         return this.netbiosNameServers;
     }
     /**
      * The NetBIOS node type (1, 2, 4, or 8). For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
      * 
-     */
+    */
     public String getNetbiosNodeType() {
         return this.netbiosNodeType;
     }
     /**
      * List of NTP servers.
      * 
-     */
+    */
     public List<String> getNtpServers() {
         return this.ntpServers;
     }
     /**
      * The ID of the AWS account that owns the DHCP options set.
      * 
-     */
+    */
     public String getOwnerId() {
         return this.ownerId;
     }
     /**
      * A map of tags assigned to the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

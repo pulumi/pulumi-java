@@ -33,14 +33,14 @@ public final class HubResponse {
     /**
      * Resource Id.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * Resource Type.
      * 
-     */
+    */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }

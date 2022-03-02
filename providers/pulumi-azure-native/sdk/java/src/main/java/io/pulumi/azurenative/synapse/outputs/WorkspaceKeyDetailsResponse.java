@@ -33,14 +33,14 @@ public final class WorkspaceKeyDetailsResponse {
     /**
      * Workspace Key sub-resource key vault url
      * 
-     */
+    */
     public Optional<String> getKeyVaultUrl() {
         return Optional.ofNullable(this.keyVaultUrl);
     }
     /**
      * Workspace Key sub-resource name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

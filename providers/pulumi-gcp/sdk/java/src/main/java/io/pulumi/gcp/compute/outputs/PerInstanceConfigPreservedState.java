@@ -37,14 +37,14 @@ public final class PerInstanceConfigPreservedState {
      * Stateful disks for the instance.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PerInstanceConfigPreservedStateDisk> getDisks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
      * Preserved metadata defined for this instance. This is a list of key->value pairs.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }

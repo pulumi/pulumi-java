@@ -36,7 +36,7 @@ public final class BucketWebsite {
      * Behaves as the bucket's directory index where
      * missing objects are treated as potential directories.
      * 
-     */
+    */
     public Optional<String> getMainPageSuffix() {
         return Optional.ofNullable(this.mainPageSuffix);
     }
@@ -44,7 +44,7 @@ public final class BucketWebsite {
      * The custom object to return when a requested
      * resource is not found.
      * 
-     */
+    */
     public Optional<String> getNotFoundPage() {
         return Optional.ofNullable(this.notFoundPage);
     }

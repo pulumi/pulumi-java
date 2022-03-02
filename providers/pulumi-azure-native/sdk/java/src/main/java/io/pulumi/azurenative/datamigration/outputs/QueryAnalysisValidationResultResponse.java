@@ -32,14 +32,14 @@ public final class QueryAnalysisValidationResultResponse {
     /**
      * List of queries executed and it's execution results in source and target
      * 
-     */
+    */
     public QueryExecutionResultResponse getQueryResults() {
         return this.queryResults;
     }
     /**
      * Errors that are part of the execution
      * 
-     */
+    */
     public ValidationErrorResponse getValidationErrors() {
         return this.validationErrors;
     }

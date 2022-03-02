@@ -47,28 +47,28 @@ public final class PeeringSkuResponse {
     /**
      * The family of the peering SKU.
      * 
-     */
+    */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
     /**
      * The name of the peering SKU.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The size of the peering SKU.
      * 
-     */
+    */
     public Optional<String> getSize() {
         return Optional.ofNullable(this.size);
     }
     /**
      * The tier of the peering SKU.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

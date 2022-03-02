@@ -54,35 +54,35 @@ public final class RedisInstanceDetailsResponse {
     /**
      * Specifies whether the instance is a master node.
      * 
-     */
+    */
     public Boolean getIsMaster() {
         return this.isMaster;
     }
     /**
      * If enableNonSslPort is true, provides Redis instance Non-SSL port.
      * 
-     */
+    */
     public Integer getNonSslPort() {
         return this.nonSslPort;
     }
     /**
      * If clustering is enabled, the Shard ID of Redis Instance
      * 
-     */
+    */
     public Integer getShardId() {
         return this.shardId;
     }
     /**
      * Redis instance SSL port.
      * 
-     */
+    */
     public Integer getSslPort() {
         return this.sslPort;
     }
     /**
      * If the Cache uses availability zones, specifies availability zone where this instance is located.
      * 
-     */
+    */
     public String getZone() {
         return this.zone;
     }

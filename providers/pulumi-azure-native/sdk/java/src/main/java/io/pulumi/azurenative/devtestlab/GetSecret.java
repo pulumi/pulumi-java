@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecret {
-/**
- * A secret.
+    private GetSecret() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecretArgs.Builder a);
+    }
+    private static GetSecretArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecretArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A secret.
  * API Version: 2018-09-15.
  * 
- *
- * A secret.
+     *
+     * A secret.
  * 
- */
+     */
+    public static CompletableFuture<GetSecretResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A secret.
+     * API Version: 2018-09-15.
+     * 
+     *
+         * A secret.
+     * 
+     */
     public static CompletableFuture<GetSecretResult> invokeAsync(GetSecretArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getSecret", TypeShape.of(GetSecretResult.class), args == null ? GetSecretArgs.Empty : args, Utilities.withVersion(options));
     }

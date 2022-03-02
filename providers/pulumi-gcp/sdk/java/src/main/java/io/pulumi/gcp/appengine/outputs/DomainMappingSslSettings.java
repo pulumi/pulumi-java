@@ -57,7 +57,7 @@ public final class DomainMappingSslSettings {
      * authorized to administer the `AuthorizedCertificate` resource to manually map it to a DomainMapping resource.
      * Example: 12345.
      * 
-     */
+    */
     public Optional<String> getCertificateId() {
         return Optional.ofNullable(this.certificateId);
     }
@@ -69,7 +69,7 @@ public final class DomainMappingSslSettings {
      * field will be left empty. To remove SSL support while there is still a pending managed certificate, clear the
      * `certificateId` field with an update request.
      * 
-     */
+    */
     public Optional<String> getPendingManagedCertificateId() {
         return Optional.ofNullable(this.pendingManagedCertificateId);
     }
@@ -78,7 +78,7 @@ public final class DomainMappingSslSettings {
      * If `MANUAL`, `certificateId` must be manually specified in order to configure SSL for this domain.
      * Possible values are `AUTOMATIC` and `MANUAL`.
      * 
-     */
+    */
     public String getSslManagementType() {
         return this.sslManagementType;
     }

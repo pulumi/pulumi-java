@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeliveryPipelineIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetDeliveryPipelineIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeliveryPipelineIamPolicyArgs.Builder a);
+    }
+    private static GetDeliveryPipelineIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeliveryPipelineIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetDeliveryPipelineIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetDeliveryPipelineIamPolicyResult> invokeAsync(GetDeliveryPipelineIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:clouddeploy/v1:getDeliveryPipelineIamPolicy", TypeShape.of(GetDeliveryPipelineIamPolicyResult.class), args == null ? GetDeliveryPipelineIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

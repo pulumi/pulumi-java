@@ -33,14 +33,14 @@ public final class UserRecommendationResponse {
     /**
      * The recommendation action of the machine or rule
      * 
-     */
+    */
     public Optional<String> getRecommendationAction() {
         return Optional.ofNullable(this.recommendationAction);
     }
     /**
      * Represents a user that is recommended to be allowed for a certain rule
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProxy {
-/**
- * Use this data source to get information about a DB Proxy.
+    private GetProxy() {}
+    public interface BuilderApplicator {
+        public void apply(GetProxyArgs.Builder a);
+    }
+    private static GetProxyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProxyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get information about a DB Proxy.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getProxy.
+     *
+     * A collection of arguments for invoking getProxy.
  * 
- *
- * A collection of values returned by getProxy.
+     *
+     * A collection of values returned by getProxy.
  * 
- */
+     */
+    public static CompletableFuture<GetProxyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get information about a DB Proxy.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getProxy.
+     * 
+     *
+         * A collection of values returned by getProxy.
+     * 
+     */
     public static CompletableFuture<GetProxyResult> invokeAsync(GetProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getProxy:getProxy", TypeShape.of(GetProxyResult.class), args == null ? GetProxyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -119,7 +119,7 @@ public final class GetApiResult {
     /**
      * The URI of the API, of the form `https://{api-id}.execute-api.{region}.amazonaws.com` for HTTP APIs and `wss://{api-id}.execute-api.{region}.amazonaws.com` for WebSocket APIs.
      * 
-     */
+    */
     public String getApiEndpoint() {
         return this.apiEndpoint;
     }
@@ -130,14 +130,14 @@ public final class GetApiResult {
      * An [API key selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions).
      * Applicable for WebSocket APIs.
      * 
-     */
+    */
     public String getApiKeySelectionExpression() {
         return this.apiKeySelectionExpression;
     }
     /**
      * The ARN of the API.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
@@ -145,21 +145,21 @@ public final class GetApiResult {
      * The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html).
      * Applicable for HTTP APIs.
      * 
-     */
+    */
     public List<GetApiCorsConfiguration> getCorsConfigurations() {
         return this.corsConfigurations;
     }
     /**
      * The description of the API.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Whether clients can invoke the API by using the default `execute-api` endpoint.
      * 
-     */
+    */
     public Boolean getDisableExecuteApiEndpoint() {
         return this.disableExecuteApiEndpoint;
     }
@@ -168,49 +168,49 @@ public final class GetApiResult {
      * or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
      * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
      * 
-     */
+    */
     public String getExecutionArn() {
         return this.executionArn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the API.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The API protocol.
      * 
-     */
+    */
     public String getProtocolType() {
         return this.protocolType;
     }
     /**
      * The [route selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-selection-expressions) for the API.
      * 
-     */
+    */
     public String getRouteSelectionExpression() {
         return this.routeSelectionExpression;
     }
     /**
      * A map of resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * A version identifier for the API.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

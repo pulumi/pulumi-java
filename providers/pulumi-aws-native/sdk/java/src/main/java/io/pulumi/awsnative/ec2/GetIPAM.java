@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIPAM {
-/**
- * Resource Schema of AWS::EC2::IPAM Type
+    private GetIPAM() {}
+    public interface BuilderApplicator {
+        public void apply(GetIPAMArgs.Builder a);
+    }
+    private static GetIPAMArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIPAMArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Schema of AWS::EC2::IPAM Type
  * 
- */
+     */
+    public static CompletableFuture<GetIPAMResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Schema of AWS::EC2::IPAM Type
+     * 
+     */
     public static CompletableFuture<GetIPAMResult> invokeAsync(GetIPAMArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getIPAM", TypeShape.of(GetIPAMResult.class), args == null ? GetIPAMArgs.Empty : args, Utilities.withVersion(options));
     }

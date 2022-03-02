@@ -71,7 +71,7 @@ public final class MetricMetricDescriptor {
      * without an ending period, for example "Request count". This field is optional but it is
      * recommended to be set for any metrics associated with user-visible concepts, such as Quota.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -82,7 +82,7 @@ public final class MetricMetricDescriptor {
      * or just for responses that failed.
      * Structure is documented below.
      * 
-     */
+    */
     public List<MetricMetricDescriptorLabel> getLabels() {
         return this.labels == null ? List.of() : this.labels;
     }
@@ -92,7 +92,7 @@ public final class MetricMetricDescriptor {
      * For counter metrics, set this to DELTA.
      * Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
      * 
-     */
+    */
     public String getMetricKind() {
         return this.metricKind;
     }
@@ -101,7 +101,7 @@ public final class MetricMetricDescriptor {
      * `INT64`, `DOUBLE`, or `DISTRIBUTION`. The supported units are a subset of
      * [The Unified Code for Units of Measure](http://unitsofmeasure.org/ucum.html) standard
      * 
-     */
+    */
     public Optional<String> getUnit() {
         return Optional.ofNullable(this.unit);
     }
@@ -110,7 +110,7 @@ public final class MetricMetricDescriptor {
      * Default value is `STRING`.
      * Possible values are `BOOL`, `INT64`, and `STRING`.
      * 
-     */
+    */
     public String getValueType() {
         return this.valueType;
     }

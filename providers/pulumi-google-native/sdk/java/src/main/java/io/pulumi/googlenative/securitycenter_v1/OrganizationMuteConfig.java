@@ -117,6 +117,22 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
+    public interface BuilderApplicator {
+        public void apply(OrganizationMuteConfigArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.securitycenter_v1.OrganizationMuteConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.securitycenter_v1.OrganizationMuteConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public OrganizationMuteConfig(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -33,14 +33,14 @@ public final class VpnServerConfigVpnClientRootCertificateResponse {
     /**
      * The certificate name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The certificate public data.
      * 
-     */
+    */
     public Optional<String> getPublicCertData() {
         return Optional.ofNullable(this.publicCertData);
     }

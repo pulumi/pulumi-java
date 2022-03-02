@@ -146,119 +146,119 @@ public final class JobStatisticsResponse {
     /**
      * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
      * 
-     */
+    */
     public Double getCompletionRatio() {
         return this.completionRatio;
     }
     /**
      * Creation time of this job, in milliseconds since the epoch. This field will be present on all jobs.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * End time of this job, in milliseconds since the epoch. This field will be present whenever a job is in the DONE state.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Statistics for an extract job.
      * 
-     */
+    */
     public JobStatistics4Response getExtract() {
         return this.extract;
     }
     /**
      * Statistics for a load job.
      * 
-     */
+    */
     public JobStatistics3Response getLoad() {
         return this.load;
     }
     /**
      * Number of child jobs executed.
      * 
-     */
+    */
     public String getNumChildJobs() {
         return this.numChildJobs;
     }
     /**
      * If this is a child job, the id of the parent.
      * 
-     */
+    */
     public String getParentJobId() {
         return this.parentJobId;
     }
     /**
      * Statistics for a query job.
      * 
-     */
+    */
     public JobStatistics2Response getQuery() {
         return this.query;
     }
     /**
      * Quotas which delayed this job's start time.
      * 
-     */
+    */
     public List<String> getQuotaDeferments() {
         return this.quotaDeferments;
     }
     /**
      * Name of the primary reservation assigned to this job. Note that this could be different than reservations reported in the reservation usage field if parent reservations were used to execute this job.
      * 
-     */
+    */
     public String getReservationId() {
         return this.reservationId;
     }
     /**
      * Job resource usage breakdown by reservation.
      * 
-     */
+    */
     public List<JobStatisticsReservationUsageItemResponse> getReservationUsage() {
         return this.reservationUsage;
     }
     /**
      * [Preview] Statistics for row-level security. Present only for query and extract jobs.
      * 
-     */
+    */
     public RowLevelSecurityStatisticsResponse getRowLevelSecurityStatistics() {
         return this.rowLevelSecurityStatistics;
     }
     /**
      * Statistics for a child job of a script.
      * 
-     */
+    */
     public ScriptStatisticsResponse getScriptStatistics() {
         return this.scriptStatistics;
     }
     /**
      * [Preview] Information of the session if this job is part of one.
      * 
-     */
+    */
     public SessionInfoResponse getSessionInfo() {
         return this.sessionInfo;
     }
     /**
      * Start time of this job, in milliseconds since the epoch. This field will be present when the job transitions from the PENDING state to either RUNNING or DONE.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Slot-milliseconds for the job.
      * 
-     */
+    */
     public String getTotalSlotMs() {
         return this.totalSlotMs;
     }
     /**
      * [Alpha] Information of the multi-statement transaction if this job is part of one.
      * 
-     */
+    */
     public TransactionInfoResponse getTransactionInfo() {
         return this.transactionInfo;
     }

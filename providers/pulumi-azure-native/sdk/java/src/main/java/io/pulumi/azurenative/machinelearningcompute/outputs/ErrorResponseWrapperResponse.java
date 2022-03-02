@@ -25,7 +25,7 @@ public final class ErrorResponseWrapperResponse {
     /**
      * The error response.
      * 
-     */
+    */
     public Optional<ErrorResponseResponse> getError() {
         return Optional.ofNullable(this.error);
     }

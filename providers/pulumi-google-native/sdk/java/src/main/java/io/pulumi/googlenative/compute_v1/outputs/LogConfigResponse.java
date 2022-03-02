@@ -40,21 +40,21 @@ public final class LogConfigResponse {
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public LogConfigCloudAuditOptionsResponse getCloudAudit() {
         return this.cloudAudit;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public LogConfigCounterOptionsResponse getCounter() {
         return this.counter;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public LogConfigDataAccessOptionsResponse getDataAccess() {
         return this.dataAccess;
     }

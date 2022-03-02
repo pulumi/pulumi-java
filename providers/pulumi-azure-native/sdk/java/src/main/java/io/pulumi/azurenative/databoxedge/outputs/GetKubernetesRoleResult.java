@@ -98,21 +98,21 @@ public final class GetKubernetesRoleResult {
     /**
      * Host OS supported by the Kubernetes role.
      * 
-     */
+    */
     public String getHostPlatform() {
         return this.hostPlatform;
     }
     /**
      * Platform where the runtime is hosted.
      * 
-     */
+    */
     public String getHostPlatformType() {
         return this.hostPlatformType;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -120,56 +120,56 @@ public final class GetKubernetesRoleResult {
      * Role type.
      * Expected value is 'Kubernetes'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Kubernetes cluster configuration
      * 
-     */
+    */
     public KubernetesClusterInfoResponse getKubernetesClusterInfo() {
         return this.kubernetesClusterInfo;
     }
     /**
      * Kubernetes role resources
      * 
-     */
+    */
     public KubernetesRoleResourcesResponse getKubernetesRoleResources() {
         return this.kubernetesRoleResources;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of Kubernetes deployment
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Role status.
      * 
-     */
+    */
     public String getRoleStatus() {
         return this.roleStatus;
     }
     /**
      * Role configured on ASE resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

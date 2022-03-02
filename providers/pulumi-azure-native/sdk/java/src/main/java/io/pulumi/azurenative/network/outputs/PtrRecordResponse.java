@@ -25,7 +25,7 @@ public final class PtrRecordResponse {
     /**
      * The PTR target domain name for this PTR record.
      * 
-     */
+    */
     public Optional<String> getPtrdname() {
         return Optional.ofNullable(this.ptrdname);
     }

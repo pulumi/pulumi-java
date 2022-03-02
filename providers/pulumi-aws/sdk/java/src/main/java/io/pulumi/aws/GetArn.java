@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetArn {
-/**
- * Parses an Amazon Resource Name (ARN) into its constituent parts.
+    private GetArn() {}
+    public interface BuilderApplicator {
+        public void apply(GetArnArgs.Builder a);
+    }
+    private static GetArnArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetArnArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Parses an Amazon Resource Name (ARN) into its constituent parts.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getArn.
+     *
+     * A collection of arguments for invoking getArn.
  * 
- *
- * A collection of values returned by getArn.
+     *
+     * A collection of values returned by getArn.
  * 
- */
+     */
+    public static CompletableFuture<GetArnResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Parses an Amazon Resource Name (ARN) into its constituent parts.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getArn.
+     * 
+     *
+         * A collection of values returned by getArn.
+     * 
+     */
     public static CompletableFuture<GetArnResult> invokeAsync(GetArnArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getArn:getArn", TypeShape.of(GetArnResult.class), args == null ? GetArnArgs.Empty : args, Utilities.withVersion(options));
     }

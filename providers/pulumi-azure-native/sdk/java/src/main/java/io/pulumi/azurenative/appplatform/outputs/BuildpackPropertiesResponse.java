@@ -25,7 +25,7 @@ public final class BuildpackPropertiesResponse {
     /**
      * Id of the buildpack
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

@@ -111,14 +111,14 @@ public final class URLMapPathMatcher {
      * Only one of defaultRouteAction or defaultUrlRedirect must be set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherDefaultRouteAction> getDefaultRouteAction() {
         return Optional.ofNullable(this.defaultRouteAction);
     }
     /**
      * The backend service or backend bucket to use when none of the given paths match.
      * 
-     */
+    */
     public Optional<String> getDefaultService() {
         return Optional.ofNullable(this.defaultService);
     }
@@ -128,14 +128,14 @@ public final class URLMapPathMatcher {
      * defaultRouteAction must not be set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherDefaultUrlRedirect> getDefaultUrlRedirect() {
         return Optional.ofNullable(this.defaultUrlRedirect);
     }
     /**
      * Description of this test case.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -146,7 +146,7 @@ public final class URLMapPathMatcher {
      * HttpRouteRule, PathMatcher and UrlMap.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherHeaderAction> getHeaderAction() {
         return Optional.ofNullable(this.headerAction);
     }
@@ -154,7 +154,7 @@ public final class URLMapPathMatcher {
      * The name of the query parameter to match. The query parameter must exist in the
      * request, in the absence of which the request match fails.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -167,7 +167,7 @@ public final class URLMapPathMatcher {
      * given pathMatcher, only one of pathRules or routeRules must be set.
      * Structure is documented below.
      * 
-     */
+    */
     public List<URLMapPathMatcherPathRule> getPathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
     }
@@ -180,7 +180,7 @@ public final class URLMapPathMatcher {
      * External load balancers.
      * Structure is documented below.
      * 
-     */
+    */
     public List<URLMapPathMatcherRouteRule> getRouteRules() {
         return this.routeRules == null ? List.of() : this.routeRules;
     }

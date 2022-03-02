@@ -25,7 +25,7 @@ public final class AgentPoolUpgradeSettingsResponse {
     /**
      * Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default
      * 
-     */
+    */
     public Optional<String> getMaxSurge() {
         return Optional.ofNullable(this.maxSurge);
     }

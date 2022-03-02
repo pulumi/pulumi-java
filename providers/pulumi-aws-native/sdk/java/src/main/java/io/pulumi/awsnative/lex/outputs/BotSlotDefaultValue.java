@@ -23,7 +23,7 @@ public final class BotSlotDefaultValue {
     /**
      * The default value to use when a user doesn't provide a value for a slot.
      * 
-     */
+    */
     public String getDefaultValue() {
         return this.defaultValue;
     }

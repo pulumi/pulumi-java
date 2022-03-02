@@ -25,7 +25,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludes {
     /**
      * An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
      * 
-     */
+    */
     public List<ClassificationJobS3JobDefinitionScopingIncludesAnd> getAnds() {
         return this.ands == null ? List.of() : this.ands;
     }

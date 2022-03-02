@@ -57,35 +57,35 @@ public final class LoadBalancerConfigurationResponse {
     /**
      * Resource id of the load balancer.
      * 
-     */
+    */
     public Optional<String> getLoadBalancerResourceId() {
         return Optional.ofNullable(this.loadBalancerResourceId);
     }
     /**
      * Private IP address.
      * 
-     */
+    */
     public Optional<PrivateIPAddressResponse> getPrivateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
      * Probe port.
      * 
-     */
+    */
     public Optional<Integer> getProbePort() {
         return Optional.ofNullable(this.probePort);
     }
     /**
      * Resource id of the public IP.
      * 
-     */
+    */
     public Optional<String> getPublicIpAddressResourceId() {
         return Optional.ofNullable(this.publicIpAddressResourceId);
     }
     /**
      * List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.
      * 
-     */
+    */
     public List<String> getSqlVirtualMachineInstances() {
         return this.sqlVirtualMachineInstances == null ? List.of() : this.sqlVirtualMachineInstances;
     }

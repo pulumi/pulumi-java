@@ -25,7 +25,7 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse {
     /**
      * Backend ports that virtual machines on this subnet are allowed to expose
      * 
-     */
+    */
     public List<PortResponse> getAllowedPorts() {
         return this.allowedPorts == null ? List.of() : this.allowedPorts;
     }

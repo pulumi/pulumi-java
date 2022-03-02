@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAppServiceEnvironment {
-/**
- * App Service Environment ARM resource.
+    private GetAppServiceEnvironment() {}
+    public interface BuilderApplicator {
+        public void apply(GetAppServiceEnvironmentArgs.Builder a);
+    }
+    private static GetAppServiceEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAppServiceEnvironmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * App Service Environment ARM resource.
  * API Version: 2020-12-01.
  * 
- *
- * App Service Environment ARM resource.
+     *
+     * App Service Environment ARM resource.
  * 
- */
+     */
+    public static CompletableFuture<GetAppServiceEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * App Service Environment ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * App Service Environment ARM resource.
+     * 
+     */
     public static CompletableFuture<GetAppServiceEnvironmentResult> invokeAsync(GetAppServiceEnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getAppServiceEnvironment", TypeShape.of(GetAppServiceEnvironmentResult.class), args == null ? GetAppServiceEnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

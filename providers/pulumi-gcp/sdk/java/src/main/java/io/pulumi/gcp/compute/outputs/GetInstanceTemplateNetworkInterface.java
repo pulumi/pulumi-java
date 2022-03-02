@@ -104,7 +104,7 @@ public final class GetInstanceTemplateNetworkInterface {
      * network (e.g. via tunnel or because it is running on another cloud instance
      * on that network). This block can be repeated multiple times. Structure documented below.
      * 
-     */
+    */
     public List<GetInstanceTemplateNetworkInterfaceAccessConfig> getAccessConfigs() {
         return this.accessConfigs;
     }
@@ -113,7 +113,7 @@ public final class GetInstanceTemplateNetworkInterface {
      * array of alias IP ranges for this network interface. Can only be specified for network
      * interfaces on subnet-mode networks. Structure documented below.
      * 
-     */
+    */
     public List<GetInstanceTemplateNetworkInterfaceAliasIpRange> getAliasIpRanges() {
         return this.aliasIpRanges;
     }
@@ -126,7 +126,7 @@ public final class GetInstanceTemplateNetworkInterface {
     /**
      * The name of the instance template. One of `name` or `filter` must be provided.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -135,7 +135,7 @@ public final class GetInstanceTemplateNetworkInterface {
      * Use `network` attribute for Legacy or Auto subnetted networks and
      * `subnetwork` for custom subnetted networks.
      * 
-     */
+    */
     public String getNetwork() {
         return this.network;
     }
@@ -143,7 +143,7 @@ public final class GetInstanceTemplateNetworkInterface {
      * The private IP address to assign to the instance. If
      * empty, the address will be automatically assigned.
      * 
-     */
+    */
     public String getNetworkIp() {
         return this.networkIp;
     }
@@ -161,7 +161,7 @@ public final class GetInstanceTemplateNetworkInterface {
      * to. The subnetwork must exist in the same `region` this instance will be
      * created in. Either `network` or `subnetwork` must be provided.
      * 
-     */
+    */
     public String getSubnetwork() {
         return this.subnetwork;
     }
@@ -169,7 +169,7 @@ public final class GetInstanceTemplateNetworkInterface {
      * The ID of the project in which the subnetwork belongs.
      * If it is not provided, the provider project is used.
      * 
-     */
+    */
     public String getSubnetworkProject() {
         return this.subnetworkProject;
     }

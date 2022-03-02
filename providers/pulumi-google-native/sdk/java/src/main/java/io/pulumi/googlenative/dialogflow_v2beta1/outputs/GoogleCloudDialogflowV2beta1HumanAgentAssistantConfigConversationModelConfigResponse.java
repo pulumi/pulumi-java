@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
     /**
      * Conversation model resource name. Format: `projects//conversationModels/`.
      * 
-     */
+    */
     public String getModel() {
         return this.model;
     }

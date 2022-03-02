@@ -76,42 +76,42 @@ public final class GetSimulationApplicationResult {
     /**
      * The current revision id.
      * 
-     */
+    */
     public Optional<String> getCurrentRevisionId() {
         return Optional.ofNullable(this.currentRevisionId);
     }
     /**
      * The URI of the Docker image for the robot application.
      * 
-     */
+    */
     public Optional<String> getEnvironment() {
         return Optional.ofNullable(this.environment);
     }
     /**
      * The rendering engine for the simulation application.
      * 
-     */
+    */
     public Optional<SimulationApplicationRenderingEngine> getRenderingEngine() {
         return Optional.ofNullable(this.renderingEngine);
     }
     /**
      * The robot software suite used by the simulation application.
      * 
-     */
+    */
     public Optional<SimulationApplicationRobotSoftwareSuite> getRobotSoftwareSuite() {
         return Optional.ofNullable(this.robotSoftwareSuite);
     }
     /**
      * The simulation software suite used by the simulation application.
      * 
-     */
+    */
     public Optional<SimulationApplicationSimulationSoftwareSuite> getSimulationSoftwareSuite() {
         return Optional.ofNullable(this.simulationSoftwareSuite);
     }
     /**
      * The sources of the simulation application.
      * 
-     */
+    */
     public List<SimulationApplicationSourceConfig> getSources() {
         return this.sources == null ? List.of() : this.sources;
     }

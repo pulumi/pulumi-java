@@ -40,21 +40,21 @@ public final class ManagedRuleOverrideResponse {
     /**
      * Describes the override action to be applied when rule matches.
      * 
-     */
+    */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
      * 
-     */
+    */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * Identifier for the managed rule.
      * 
-     */
+    */
     public String getRuleId() {
         return this.ruleId;
     }

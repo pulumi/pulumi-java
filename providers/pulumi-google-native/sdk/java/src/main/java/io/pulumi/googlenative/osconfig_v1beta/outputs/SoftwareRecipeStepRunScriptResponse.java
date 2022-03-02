@@ -40,21 +40,21 @@ public final class SoftwareRecipeStepRunScriptResponse {
     /**
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
-     */
+    */
     public List<Integer> getAllowedExitCodes() {
         return this.allowedExitCodes;
     }
     /**
      * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](<https://en.wikipedia.org/wiki/Shebang_\(Unix\)>).
      * 
-     */
+    */
     public String getInterpreter() {
         return this.interpreter;
     }
     /**
      * The shell script to be executed.
      * 
-     */
+    */
     public String getScript() {
         return this.script;
     }

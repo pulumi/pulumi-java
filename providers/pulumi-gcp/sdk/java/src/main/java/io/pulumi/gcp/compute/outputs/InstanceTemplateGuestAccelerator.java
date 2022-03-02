@@ -32,14 +32,14 @@ public final class InstanceTemplateGuestAccelerator {
     /**
      * The number of the guest accelerator cards exposed to this instance.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * The type of reservation from which this instance can consume resources.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

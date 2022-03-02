@@ -38,21 +38,21 @@ public final class NicIPAddressSettingsResponse {
     /**
      * Gets the ip address allocation method.
      * 
-     */
+    */
     public String getAllocationMethod() {
         return this.allocationMethod;
     }
     /**
      * Gets the ip address for the nic.
      * 
-     */
+    */
     public String getIpAddress() {
         return this.ipAddress;
     }
     /**
      * Gets the mask.
      * 
-     */
+    */
     public String getSubnetMask() {
         return this.subnetMask;
     }

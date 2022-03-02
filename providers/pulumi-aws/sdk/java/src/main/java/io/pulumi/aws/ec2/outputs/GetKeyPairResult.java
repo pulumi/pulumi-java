@@ -59,7 +59,7 @@ public final class GetKeyPairResult {
     /**
      * The ARN of the Key Pair.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
@@ -69,14 +69,14 @@ public final class GetKeyPairResult {
     /**
      * The SHA-1 digest of the DER encoded private key.
      * 
-     */
+    */
     public String getFingerprint() {
         return this.fingerprint;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -89,7 +89,7 @@ public final class GetKeyPairResult {
     /**
      * Any tags assigned to the Key Pair.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

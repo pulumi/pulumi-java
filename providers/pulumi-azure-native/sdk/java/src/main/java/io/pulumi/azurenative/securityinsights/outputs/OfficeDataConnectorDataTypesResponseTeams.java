@@ -25,7 +25,7 @@ public final class OfficeDataConnectorDataTypesResponseTeams {
     /**
      * Describe whether this data type connection is enabled or not.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

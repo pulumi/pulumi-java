@@ -25,7 +25,7 @@ public final class ClfsTargetResponse {
     /**
      * Resource ID of storage container.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

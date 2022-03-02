@@ -23,7 +23,7 @@ public final class SuccessDetailResponse {
     /**
      * If a native process other than the app crashed.
      * 
-     */
+    */
     public Boolean getOtherNativeCrash() {
         return this.otherNativeCrash;
     }

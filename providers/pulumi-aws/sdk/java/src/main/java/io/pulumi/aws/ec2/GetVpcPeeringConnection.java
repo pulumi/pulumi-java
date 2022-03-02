@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpcPeeringConnection {
-/**
- * The VPC Peering Connection data source provides details about
+    private GetVpcPeeringConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetVpcPeeringConnectionArgs.Builder a);
+    }
+    private static GetVpcPeeringConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVpcPeeringConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The VPC Peering Connection data source provides details about
  * a specific VPC peering connection.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getVpcPeeringConnection.
+     *
+     * A collection of arguments for invoking getVpcPeeringConnection.
  * 
- *
- * A collection of values returned by getVpcPeeringConnection.
+     *
+     * A collection of values returned by getVpcPeeringConnection.
  * 
- */
+     */
+    public static CompletableFuture<GetVpcPeeringConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The VPC Peering Connection data source provides details about
+     * a specific VPC peering connection.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getVpcPeeringConnection.
+     * 
+     *
+         * A collection of values returned by getVpcPeeringConnection.
+     * 
+     */
     public static CompletableFuture<GetVpcPeeringConnectionResult> invokeAsync(@Nullable GetVpcPeeringConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getVpcPeeringConnection:getVpcPeeringConnection", TypeShape.of(GetVpcPeeringConnectionResult.class), args == null ? GetVpcPeeringConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

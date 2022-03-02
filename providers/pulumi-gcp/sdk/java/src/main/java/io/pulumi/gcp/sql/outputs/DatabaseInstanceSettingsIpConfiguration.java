@@ -59,7 +59,7 @@ public final class DatabaseInstanceSettingsIpConfiguration {
     /**
      * The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
      * 
-     */
+    */
     public Optional<String> getAllocatedIpRange() {
         return Optional.ofNullable(this.allocatedIpRange);
     }
@@ -71,7 +71,7 @@ public final class DatabaseInstanceSettingsIpConfiguration {
      * a public IPV4 address. At least `ipv4_enabled` must be enabled or a
      * `private_network` must be configured.
      * 
-     */
+    */
     public Optional<Boolean> getIpv4Enabled() {
         return Optional.ofNullable(this.ipv4Enabled);
     }
@@ -82,14 +82,14 @@ public final class DatabaseInstanceSettingsIpConfiguration {
      * At least `ipv4_enabled` must be enabled or a `private_network` must be configured.
      * This setting can be updated, but it cannot be removed after it is set.
      * 
-     */
+    */
     public Optional<String> getPrivateNetwork() {
         return Optional.ofNullable(this.privateNetwork);
     }
     /**
      * Whether SSL connections over IP are enforced or not.
      * 
-     */
+    */
     public Optional<Boolean> getRequireSsl() {
         return Optional.ofNullable(this.requireSsl);
     }

@@ -116,7 +116,7 @@ public final class GetDataCollectionRuleResult {
     /**
      * The specification of data flows.
      * 
-     */
+    */
     public List<DataFlowResponse> getDataFlows() {
         return this.dataFlows == null ? List.of() : this.dataFlows;
     }
@@ -124,84 +124,84 @@ public final class GetDataCollectionRuleResult {
      * The specification of data sources.
      * This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
      * 
-     */
+    */
     public Optional<DataCollectionRuleResponseDataSources> getDataSources() {
         return Optional.ofNullable(this.dataSources);
     }
     /**
      * Description of the data collection rule.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The specification of destinations.
      * 
-     */
+    */
     public Optional<DataCollectionRuleResponseDestinations> getDestinations() {
         return Optional.ofNullable(this.destinations);
     }
     /**
      * Resource entity tag (ETag).
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Fully qualified ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The immutable ID of this data collection rule. This property is READ-ONLY.
      * 
-     */
+    */
     public String getImmutableId() {
         return this.immutableId;
     }
     /**
      * The kind of the resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The geo-location where the resource lives.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -74,14 +74,14 @@ public final class StorageLensConfiguration {
     /**
      * Specifies whether the Amazon S3 Storage Lens configuration is enabled or disabled.
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * The ARN for the Amazon S3 Storage Lens configuration.
      * 
-     */
+    */
     public Optional<String> getStorageLensArn() {
         return Optional.ofNullable(this.storageLensArn);
     }

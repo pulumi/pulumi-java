@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListDatabaseKeys {
-/**
- * The secret access keys used for authenticating connections to redis
+    private ListDatabaseKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListDatabaseKeysArgs.Builder a);
+    }
+    private static ListDatabaseKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListDatabaseKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The secret access keys used for authenticating connections to redis
  * API Version: 2021-03-01.
  * 
- *
- * The secret access keys used for authenticating connections to redis
+     *
+     * The secret access keys used for authenticating connections to redis
  * 
- */
+     */
+    public static CompletableFuture<ListDatabaseKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The secret access keys used for authenticating connections to redis
+     * API Version: 2021-03-01.
+     * 
+     *
+         * The secret access keys used for authenticating connections to redis
+     * 
+     */
     public static CompletableFuture<ListDatabaseKeysResult> invokeAsync(ListDatabaseKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:listDatabaseKeys", TypeShape.of(ListDatabaseKeysResult.class), args == null ? ListDatabaseKeysArgs.Empty : args, Utilities.withVersion(options));
     }

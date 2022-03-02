@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCostCategory {
-/**
- * Cost Category enables you to map your cost and usage into meaningful categories. You can use Cost Category to organize your costs using a rule-based engine.
+    private GetCostCategory() {}
+    public interface BuilderApplicator {
+        public void apply(GetCostCategoryArgs.Builder a);
+    }
+    private static GetCostCategoryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCostCategoryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Cost Category enables you to map your cost and usage into meaningful categories. You can use Cost Category to organize your costs using a rule-based engine.
  * 
- */
+     */
+    public static CompletableFuture<GetCostCategoryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Cost Category enables you to map your cost and usage into meaningful categories. You can use Cost Category to organize your costs using a rule-based engine.
+     * 
+     */
     public static CompletableFuture<GetCostCategoryResult> invokeAsync(GetCostCategoryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ce:getCostCategory", TypeShape.of(GetCostCategoryResult.class), args == null ? GetCostCategoryArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppMetadata {
-/**
- * String dictionary resource.
+    private ListWebAppMetadata() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppMetadataArgs.Builder a);
+    }
+    private static ListWebAppMetadataArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppMetadataArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * String dictionary resource.
  * API Version: 2020-12-01.
  * 
- *
- * String dictionary resource.
+     *
+     * String dictionary resource.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppMetadataResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * String dictionary resource.
+     * 
+     */
     public static CompletableFuture<ListWebAppMetadataResult> invokeAsync(ListWebAppMetadataArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppMetadata", TypeShape.of(ListWebAppMetadataResult.class), args == null ? ListWebAppMetadataArgs.Empty : args, Utilities.withVersion(options));
     }

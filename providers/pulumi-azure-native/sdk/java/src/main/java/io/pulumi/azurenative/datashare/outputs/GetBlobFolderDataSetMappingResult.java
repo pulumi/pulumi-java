@@ -110,28 +110,28 @@ public final class GetBlobFolderDataSetMappingResult {
     /**
      * Container that has the file path.
      * 
-     */
+    */
     public String getContainerName() {
         return this.containerName;
     }
     /**
      * The id of the source data set.
      * 
-     */
+    */
     public String getDataSetId() {
         return this.dataSetId;
     }
     /**
      * Gets the status of the data set mapping.
      * 
-     */
+    */
     public String getDataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
      * The resource id of the azure resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -139,63 +139,63 @@ public final class GetBlobFolderDataSetMappingResult {
      * Kind of data set mapping.
      * Expected value is 'BlobFolder'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Prefix for blob folder
      * 
-     */
+    */
     public String getPrefix() {
         return this.prefix;
     }
     /**
      * Provisioning state of the data set mapping.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource group of storage account.
      * 
-     */
+    */
     public String getResourceGroup() {
         return this.resourceGroup;
     }
     /**
      * Storage account name of the source data set.
      * 
-     */
+    */
     public String getStorageAccountName() {
         return this.storageAccountName;
     }
     /**
      * Subscription id of storage account.
      * 
-     */
+    */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
     /**
      * System Data of the Azure resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

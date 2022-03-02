@@ -66,35 +66,35 @@ public final class LimitRangeItem {
     /**
      * Default resource requirement limit value by resource name if resource limit is omitted.
      * 
-     */
+    */
     public Map<String,String> get$default() {
         return this.$default == null ? Map.of() : this.$default;
     }
     /**
      * DefaultRequest is the default resource requirement request value by resource name if resource request is omitted.
      * 
-     */
+    */
     public Map<String,String> getDefaultRequest() {
         return this.defaultRequest == null ? Map.of() : this.defaultRequest;
     }
     /**
      * Max usage constraints on this kind by resource name.
      * 
-     */
+    */
     public Map<String,String> getMax() {
         return this.max == null ? Map.of() : this.max;
     }
     /**
      * MaxLimitRequestRatio if specified, the named resource must have a request and limit that are both non-zero where limit divided by request is less than or equal to the enumerated value; this represents the max burst for the named resource.
      * 
-     */
+    */
     public Map<String,String> getMaxLimitRequestRatio() {
         return this.maxLimitRequestRatio == null ? Map.of() : this.maxLimitRequestRatio;
     }
     /**
      * Min usage constraints on this kind by resource name.
      * 
-     */
+    */
     public Map<String,String> getMin() {
         return this.min == null ? Map.of() : this.min;
     }
@@ -106,7 +106,7 @@ public final class LimitRangeItem {
      *  - `"PersistentVolumeClaim"` Limit that applies to all persistent volume claims in a namespace
      *  - `"Pod"` Limit that applies to all pods in a namespace
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

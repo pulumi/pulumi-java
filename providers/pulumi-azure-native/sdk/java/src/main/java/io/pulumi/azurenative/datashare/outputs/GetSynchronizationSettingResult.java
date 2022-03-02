@@ -53,35 +53,35 @@ public final class GetSynchronizationSettingResult {
     /**
      * The resource id of the azure resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of synchronization setting.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the azure resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * System Data of the Azure resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

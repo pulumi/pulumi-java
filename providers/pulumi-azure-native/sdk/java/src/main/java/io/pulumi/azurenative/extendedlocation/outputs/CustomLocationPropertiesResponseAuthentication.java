@@ -25,7 +25,7 @@ public final class CustomLocationPropertiesResponseAuthentication {
     /**
      * The type of the Custom Locations authentication
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

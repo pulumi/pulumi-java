@@ -38,14 +38,14 @@ public final class RemotePrivateEndpointConnectionResponse {
     /**
      * PrivateEndpoint of a remote private endpoint connection
      * 
-     */
+    */
     public Optional<ArmIdWrapperResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * The state of a private link connection
      * 
-     */
+    */
     public Optional<PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }

@@ -31,14 +31,14 @@ public final class SnapshotImportDiskContainerUserBucket {
     /**
      * The name of the Amazon S3 bucket where the disk image is located.
      * 
-     */
+    */
     public String getS3Bucket() {
         return this.s3Bucket;
     }
     /**
      * The file name of the disk image.
      * 
-     */
+    */
     public String getS3Key() {
         return this.s3Key;
     }

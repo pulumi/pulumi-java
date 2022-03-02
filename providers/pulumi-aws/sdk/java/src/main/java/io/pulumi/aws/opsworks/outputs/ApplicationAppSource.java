@@ -61,42 +61,42 @@ public final class ApplicationAppSource {
     /**
      * Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * For sources that are version-aware, the revision to use.
      * 
-     */
+    */
     public Optional<String> getRevision() {
         return Optional.ofNullable(this.revision);
     }
     /**
      * SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
      * 
-     */
+    */
     public Optional<String> getSshKey() {
         return Optional.ofNullable(this.sshKey);
     }
     /**
      * The type of source to use. For example, "archive".
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The URL where the app resource can be found.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }
     /**
      * Username to use when authenticating to the source.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

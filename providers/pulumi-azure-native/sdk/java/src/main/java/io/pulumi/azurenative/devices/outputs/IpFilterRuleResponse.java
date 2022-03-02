@@ -38,21 +38,21 @@ public final class IpFilterRuleResponse {
     /**
      * The desired action for requests captured by this rule.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * The name of the IP filter rule.
      * 
-     */
+    */
     public String getFilterName() {
         return this.filterName;
     }
     /**
      * A string that contains the IP address range in CIDR notation for the rule.
      * 
-     */
+    */
     public String getIpMask() {
         return this.ipMask;
     }

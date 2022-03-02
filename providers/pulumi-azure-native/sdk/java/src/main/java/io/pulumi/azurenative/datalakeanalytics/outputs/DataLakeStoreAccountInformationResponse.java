@@ -45,28 +45,28 @@ public final class DataLakeStoreAccountInformationResponse {
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The optional suffix for the Data Lake Store account.
      * 
-     */
+    */
     public String getSuffix() {
         return this.suffix;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkEdgeSecurityService {
-/**
- * Gets a specified NetworkEdgeSecurityService.
+    private GetNetworkEdgeSecurityService() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkEdgeSecurityServiceArgs.Builder a);
+    }
+    private static GetNetworkEdgeSecurityServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkEdgeSecurityServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a specified NetworkEdgeSecurityService.
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkEdgeSecurityServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a specified NetworkEdgeSecurityService.
+     * 
+     */
     public static CompletableFuture<GetNetworkEdgeSecurityServiceResult> invokeAsync(GetNetworkEdgeSecurityServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getNetworkEdgeSecurityService", TypeShape.of(GetNetworkEdgeSecurityServiceResult.class), args == null ? GetNetworkEdgeSecurityServiceArgs.Empty : args, Utilities.withVersion(options));
     }

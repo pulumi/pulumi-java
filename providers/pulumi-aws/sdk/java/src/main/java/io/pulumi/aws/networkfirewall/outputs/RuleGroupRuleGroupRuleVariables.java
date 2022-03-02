@@ -34,14 +34,14 @@ public final class RuleGroupRuleGroupRuleVariables {
     /**
      * Set of configuration blocks that define IP address information. See IP Sets below for details.
      * 
-     */
+    */
     public List<RuleGroupRuleGroupRuleVariablesIpSet> getIpSets() {
         return this.ipSets == null ? List.of() : this.ipSets;
     }
     /**
      * Set of configuration blocks that define port range information. See Port Sets below for details.
      * 
-     */
+    */
     public List<RuleGroupRuleGroupRuleVariablesPortSet> getPortSets() {
         return this.portSets == null ? List.of() : this.portSets;
     }

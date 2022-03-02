@@ -81,56 +81,56 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse {
     /**
      * Specify what happens to the public IP when the VM is deleted
      * 
-     */
+    */
     public Optional<String> getDeleteOption() {
         return Optional.ofNullable(this.deleteOption);
     }
     /**
      * The dns settings to be applied on the publicIP addresses .
      * 
-     */
+    */
     public Optional<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse> getDnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
     /**
      * The idle timeout of the public IP address.
      * 
-     */
+    */
     public Optional<Integer> getIdleTimeoutInMinutes() {
         return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
     /**
      * The list of IP tags associated with the public IP address.
      * 
-     */
+    */
     public List<VirtualMachineScaleSetIpTagResponse> getIpTags() {
         return this.ipTags == null ? List.of() : this.ipTags;
     }
     /**
      * The publicIP address configuration name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.
      * 
-     */
+    */
     public Optional<String> getPublicIPAddressVersion() {
         return Optional.ofNullable(this.publicIPAddressVersion);
     }
     /**
      * The PublicIPPrefix from which to allocate publicIP addresses.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getPublicIPPrefix() {
         return Optional.ofNullable(this.publicIPPrefix);
     }
     /**
      * Describes the public IP Sku
      * 
-     */
+    */
     public Optional<PublicIPAddressSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }

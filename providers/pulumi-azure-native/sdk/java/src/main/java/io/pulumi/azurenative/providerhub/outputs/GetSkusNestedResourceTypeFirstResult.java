@@ -42,14 +42,14 @@ public final class GetSkusNestedResourceTypeFirstResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -59,7 +59,7 @@ public final class GetSkusNestedResourceTypeFirstResult {
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

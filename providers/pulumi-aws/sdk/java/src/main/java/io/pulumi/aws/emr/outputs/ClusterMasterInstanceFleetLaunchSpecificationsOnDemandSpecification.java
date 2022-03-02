@@ -23,7 +23,7 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecifi
     /**
      * Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
      * 
-     */
+    */
     public String getAllocationStrategy() {
         return this.allocationStrategy;
     }

@@ -114,91 +114,91 @@ public final class GetCustomIPPrefixResult {
     /**
      * The prefix range in CIDR notation. Should include the start address and the prefix length.
      * 
-     */
+    */
     public Optional<String> getCidr() {
         return Optional.ofNullable(this.cidr);
     }
     /**
      * The commissioned state of the Custom IP Prefix.
      * 
-     */
+    */
     public Optional<String> getCommissionedState() {
         return Optional.ofNullable(this.commissionedState);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The extended location of the custom IP prefix.
      * 
-     */
+    */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the custom IP prefix resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The list of all referenced PublicIpPrefixes.
      * 
-     */
+    */
     public List<SubResourceResponse> getPublicIpPrefixes() {
         return this.publicIpPrefixes;
     }
     /**
      * The resource GUID property of the custom IP prefix resource.
      * 
-     */
+    */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
-     */
+    */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

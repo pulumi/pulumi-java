@@ -25,7 +25,7 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthResult {
     /**
      * List of vpn client connection health.
      * 
-     */
+    */
     public List<VpnClientConnectionHealthDetailResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

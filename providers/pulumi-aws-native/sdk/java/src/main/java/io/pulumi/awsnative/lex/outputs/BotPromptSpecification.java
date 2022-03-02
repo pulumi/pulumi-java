@@ -35,7 +35,7 @@ public final class BotPromptSpecification {
     /**
      * Indicates whether the user can interrupt a speech prompt from the bot.
      * 
-     */
+    */
     public Optional<Boolean> getAllowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);
     }

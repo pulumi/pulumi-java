@@ -65,42 +65,42 @@ public final class WorkflowTemplateJobHiveJob {
     /**
      * Optional. Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.
      * 
-     */
+    */
     public Optional<Boolean> getContinueOnFailure() {
         return Optional.ofNullable(this.continueOnFailure);
     }
     /**
      * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
-     */
+    */
     public List<String> getJarFileUris() {
         return this.jarFileUris == null ? List.of() : this.jarFileUris;
     }
     /**
      * Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * The HCFS URI of the script that contains SQL queries.
      * 
-     */
+    */
     public Optional<String> getQueryFileUri() {
         return Optional.ofNullable(this.queryFileUri);
     }
     /**
      * A list of queries.
      * 
-     */
+    */
     public Optional<WorkflowTemplateJobHiveJobQueryList> getQueryList() {
         return Optional.ofNullable(this.queryList);
     }
     /**
      * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
      * 
-     */
+    */
     public Map<String,String> getScriptVariables() {
         return this.scriptVariables == null ? Map.of() : this.scriptVariables;
     }

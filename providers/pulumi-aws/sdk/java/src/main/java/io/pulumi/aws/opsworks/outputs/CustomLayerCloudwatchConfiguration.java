@@ -34,7 +34,7 @@ public final class CustomLayerCloudwatchConfiguration {
     /**
      * A block the specifies how an opsworks logs look like. See Log Streams.
      * 
-     */
+    */
     public List<CustomLayerCloudwatchConfigurationLogStream> getLogStreams() {
         return this.logStreams == null ? List.of() : this.logStreams;
     }

@@ -39,7 +39,7 @@ public final class AutoscalingPolicyBasicAlgorithm {
      * update operation from the previous event has completed.
      * Bounds: [2m, 1d]. Default: 2m.
      * 
-     */
+    */
     public Optional<String> getCooldownPeriod() {
         return Optional.ofNullable(this.cooldownPeriod);
     }
@@ -47,7 +47,7 @@ public final class AutoscalingPolicyBasicAlgorithm {
      * YARN autoscaling configuration.
      * Structure is documented below.
      * 
-     */
+    */
     public AutoscalingPolicyBasicAlgorithmYarnConfig getYarnConfig() {
         return this.yarnConfig;
     }

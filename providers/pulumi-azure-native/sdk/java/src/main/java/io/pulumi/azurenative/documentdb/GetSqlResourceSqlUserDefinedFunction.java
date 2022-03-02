@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlResourceSqlUserDefinedFunction {
-/**
- * An Azure Cosmos DB userDefinedFunction.
+    private GetSqlResourceSqlUserDefinedFunction() {}
+    public interface BuilderApplicator {
+        public void apply(GetSqlResourceSqlUserDefinedFunctionArgs.Builder a);
+    }
+    private static GetSqlResourceSqlUserDefinedFunctionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSqlResourceSqlUserDefinedFunctionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure Cosmos DB userDefinedFunction.
  * API Version: 2021-03-15.
  * 
- *
- * An Azure Cosmos DB userDefinedFunction.
+     *
+     * An Azure Cosmos DB userDefinedFunction.
  * 
- */
+     */
+    public static CompletableFuture<GetSqlResourceSqlUserDefinedFunctionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure Cosmos DB userDefinedFunction.
+     * API Version: 2021-03-15.
+     * 
+     *
+         * An Azure Cosmos DB userDefinedFunction.
+     * 
+     */
     public static CompletableFuture<GetSqlResourceSqlUserDefinedFunctionResult> invokeAsync(GetSqlResourceSqlUserDefinedFunctionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlUserDefinedFunction", TypeShape.of(GetSqlResourceSqlUserDefinedFunctionResult.class), args == null ? GetSqlResourceSqlUserDefinedFunctionArgs.Empty : args, Utilities.withVersion(options));
     }

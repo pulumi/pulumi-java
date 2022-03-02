@@ -51,28 +51,28 @@ public final class GetNetblockIPRangesResult {
     /**
      * Retrieve list of all CIDR blocks.
      * 
-     */
+    */
     public List<String> getCidrBlocks() {
         return this.cidrBlocks;
     }
     /**
      * Retrieve list of the IPv4 CIDR blocks
      * 
-     */
+    */
     public List<String> getCidrBlocksIpv4s() {
         return this.cidrBlocksIpv4s;
     }
     /**
      * Retrieve list of the IPv6 CIDR blocks, if available.
      * 
-     */
+    */
     public List<String> getCidrBlocksIpv6s() {
         return this.cidrBlocksIpv6s;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourcePolicy {
-/**
- * A resource policy with specified policy statements that attaches to a Lex bot or bot alias.
+    private GetResourcePolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourcePolicyArgs.Builder a);
+    }
+    private static GetResourcePolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourcePolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A resource policy with specified policy statements that attaches to a Lex bot or bot alias.
  * 
- */
+     */
+    public static CompletableFuture<GetResourcePolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A resource policy with specified policy statements that attaches to a Lex bot or bot alias.
+     * 
+     */
     public static CompletableFuture<GetResourcePolicyResult> invokeAsync(GetResourcePolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lex:getResourcePolicy", TypeShape.of(GetResourcePolicyResult.class), args == null ? GetResourcePolicyArgs.Empty : args, Utilities.withVersion(options));
     }

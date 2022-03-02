@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetADLSGen2FolderDataSet {
-/**
- * An ADLS Gen 2 folder data set.
+    private GetADLSGen2FolderDataSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetADLSGen2FolderDataSetArgs.Builder a);
+    }
+    private static GetADLSGen2FolderDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetADLSGen2FolderDataSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An ADLS Gen 2 folder data set.
  * API Version: 2020-09-01.
  * 
- *
- * An ADLS Gen 2 folder data set.
+     *
+     * An ADLS Gen 2 folder data set.
  * 
- */
+     */
+    public static CompletableFuture<GetADLSGen2FolderDataSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An ADLS Gen 2 folder data set.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * An ADLS Gen 2 folder data set.
+     * 
+     */
     public static CompletableFuture<GetADLSGen2FolderDataSetResult> invokeAsync(GetADLSGen2FolderDataSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getADLSGen2FolderDataSet", TypeShape.of(GetADLSGen2FolderDataSetResult.class), args == null ? GetADLSGen2FolderDataSetArgs.Empty : args, Utilities.withVersion(options));
     }

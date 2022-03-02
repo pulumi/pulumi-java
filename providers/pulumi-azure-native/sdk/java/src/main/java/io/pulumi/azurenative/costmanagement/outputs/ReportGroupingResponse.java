@@ -31,14 +31,14 @@ public final class ReportGroupingResponse {
     /**
      * The name of the column to group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Has type of the column to group.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

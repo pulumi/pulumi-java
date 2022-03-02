@@ -30,7 +30,7 @@ public final class AnalysisError {
     /**
      * <p>The message associated with the analysis error.</p>
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }

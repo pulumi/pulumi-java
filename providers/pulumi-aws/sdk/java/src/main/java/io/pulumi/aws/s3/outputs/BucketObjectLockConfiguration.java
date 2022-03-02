@@ -34,14 +34,14 @@ public final class BucketObjectLockConfiguration {
     /**
      * Indicates whether this bucket has an Object Lock configuration enabled. Valid value is `Enabled`.
      * 
-     */
+    */
     public String getObjectLockEnabled() {
         return this.objectLockEnabled;
     }
     /**
      * The Object Lock rule in place for this bucket.
      * 
-     */
+    */
     public Optional<BucketObjectLockConfigurationRule> getRule() {
         return Optional.ofNullable(this.rule);
     }

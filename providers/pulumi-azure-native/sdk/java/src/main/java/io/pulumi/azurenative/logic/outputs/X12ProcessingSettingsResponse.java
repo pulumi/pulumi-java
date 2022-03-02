@@ -59,42 +59,42 @@ public final class X12ProcessingSettingsResponse {
     /**
      * The value indicating whether to convert numerical type to implied decimal.
      * 
-     */
+    */
     public Boolean getConvertImpliedDecimal() {
         return this.convertImpliedDecimal;
     }
     /**
      * The value indicating whether to create empty xml tags for trailing separators.
      * 
-     */
+    */
     public Boolean getCreateEmptyXmlTagsForTrailingSeparators() {
         return this.createEmptyXmlTagsForTrailingSeparators;
     }
     /**
      * The value indicating whether to mask security information.
      * 
-     */
+    */
     public Boolean getMaskSecurityInfo() {
         return this.maskSecurityInfo;
     }
     /**
      * The value indicating whether to preserve interchange.
      * 
-     */
+    */
     public Boolean getPreserveInterchange() {
         return this.preserveInterchange;
     }
     /**
      * The value indicating whether to suspend interchange on error.
      * 
-     */
+    */
     public Boolean getSuspendInterchangeOnError() {
         return this.suspendInterchangeOnError;
     }
     /**
      * The value indicating whether to use dot as decimal separator.
      * 
-     */
+    */
     public Boolean getUseDotAsDecimalSeparator() {
         return this.useDotAsDecimalSeparator;
     }

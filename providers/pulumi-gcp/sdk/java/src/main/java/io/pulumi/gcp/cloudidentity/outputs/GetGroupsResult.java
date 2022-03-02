@@ -36,14 +36,14 @@ public final class GetGroupsResult {
     /**
      * The list of groups under the provided customer or namespace. Structure is documented below.
      * 
-     */
+    */
     public List<GetGroupsGroup> getGroups() {
         return this.groups;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

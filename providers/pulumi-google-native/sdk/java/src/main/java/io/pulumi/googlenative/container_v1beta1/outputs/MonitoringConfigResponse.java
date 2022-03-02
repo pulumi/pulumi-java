@@ -32,14 +32,14 @@ public final class MonitoringConfigResponse {
     /**
      * Monitoring components configuration
      * 
-     */
+    */
     public MonitoringComponentConfigResponse getComponentConfig() {
         return this.componentConfig;
     }
     /**
      * Enable Google Cloud Managed Service for Prometheus in the cluster.
      * 
-     */
+    */
     public ManagedPrometheusConfigResponse getManagedPrometheusConfig() {
         return this.managedPrometheusConfig;
     }

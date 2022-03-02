@@ -69,49 +69,49 @@ public final class RosettaNetPipRoleSettingsResponse {
     /**
      * The action name.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * The RosettaNet ProcessConfiguration business document.
      * 
-     */
+    */
     public RosettaNetPipBusinessDocumentResponse getBusinessDocument() {
         return this.businessDocument;
     }
     /**
      * The description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The role name.
      * 
-     */
+    */
     public String getRole() {
         return this.role;
     }
     /**
      * The RosettaNet ProcessConfiguration role type.
      * 
-     */
+    */
     public String getRoleType() {
         return this.roleType;
     }
     /**
      * The service name.
      * 
-     */
+    */
     public String getService() {
         return this.service;
     }
     /**
      * The service classification name.
      * 
-     */
+    */
     public String getServiceClassification() {
         return this.serviceClassification;
     }

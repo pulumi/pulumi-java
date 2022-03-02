@@ -41,21 +41,21 @@ public final class LoadBalancerAccessLogs {
     /**
      * The S3 bucket name to store the logs in.
      * 
-     */
+    */
     public String getBucket() {
         return this.bucket;
     }
     /**
      * Boolean to enable / disable `access_logs`. Defaults to `false`, even when `bucket` is specified.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The S3 bucket prefix. Logs are stored in the root if not configured.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }

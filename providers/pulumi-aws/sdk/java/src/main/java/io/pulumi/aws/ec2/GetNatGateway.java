@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNatGateway {
-/**
- * Provides details about a specific Nat Gateway.
+    private GetNatGateway() {}
+    public interface BuilderApplicator {
+        public void apply(GetNatGatewayArgs.Builder a);
+    }
+    private static GetNatGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNatGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about a specific Nat Gateway.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getNatGateway.
+     *
+     * A collection of arguments for invoking getNatGateway.
  * 
- *
- * A collection of values returned by getNatGateway.
+     *
+     * A collection of values returned by getNatGateway.
  * 
- */
+     */
+    public static CompletableFuture<GetNatGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about a specific Nat Gateway.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getNatGateway.
+     * 
+     *
+         * A collection of values returned by getNatGateway.
+     * 
+     */
     public static CompletableFuture<GetNatGatewayResult> invokeAsync(@Nullable GetNatGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getNatGateway:getNatGateway", TypeShape.of(GetNatGatewayResult.class), args == null ? GetNatGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

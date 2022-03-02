@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListMediaServiceKeys {
-/**
- * The response body for a ListKeys API.
+    private ListMediaServiceKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListMediaServiceKeysArgs.Builder a);
+    }
+    private static ListMediaServiceKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListMediaServiceKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The response body for a ListKeys API.
  * API Version: 2015-10-01.
  * 
- *
- * The response body for a ListKeys API.
+     *
+     * The response body for a ListKeys API.
  * 
- */
+     */
+    public static CompletableFuture<ListMediaServiceKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The response body for a ListKeys API.
+     * API Version: 2015-10-01.
+     * 
+     *
+         * The response body for a ListKeys API.
+     * 
+     */
     public static CompletableFuture<ListMediaServiceKeysResult> invokeAsync(ListMediaServiceKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:listMediaServiceKeys", TypeShape.of(ListMediaServiceKeysResult.class), args == null ? ListMediaServiceKeysArgs.Empty : args, Utilities.withVersion(options));
     }

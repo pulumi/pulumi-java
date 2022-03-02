@@ -58,7 +58,7 @@ public final class ByteMatchSetByteMatchTuple {
     /**
      * The part of a web request that you want to search, such as a specified header or a query string.
      * 
-     */
+    */
     public ByteMatchSetByteMatchTupleFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
@@ -69,7 +69,7 @@ public final class ByteMatchSetByteMatchTuple {
      * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-PositionalConstraint)
      * for all supported values.
      * 
-     */
+    */
     public String getPositionalConstraint() {
         return this.positionalConstraint;
     }
@@ -78,7 +78,7 @@ public final class ByteMatchSetByteMatchTuple {
      * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TargetString)
      * for all supported values.
      * 
-     */
+    */
     public Optional<String> getTargetString() {
         return Optional.ofNullable(this.targetString);
     }
@@ -89,7 +89,7 @@ public final class ByteMatchSetByteMatchTuple {
      * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TextTransformation)
      * for all supported values.
      * 
-     */
+    */
     public String getTextTransformation() {
         return this.textTransformation;
     }

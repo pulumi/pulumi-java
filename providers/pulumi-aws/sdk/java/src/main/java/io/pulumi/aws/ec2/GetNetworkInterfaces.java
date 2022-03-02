@@ -13,16 +13,38 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkInterfaces {
-/**
- * ## Example Usage
+    private GetNetworkInterfaces() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkInterfacesArgs.Builder a);
+    }
+    private static GetNetworkInterfacesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkInterfacesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getNetworkInterfaces.
+     *
+     * A collection of arguments for invoking getNetworkInterfaces.
  * 
- *
- * A collection of values returned by getNetworkInterfaces.
+     *
+     * A collection of values returned by getNetworkInterfaces.
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkInterfacesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getNetworkInterfaces.
+     * 
+     *
+         * A collection of values returned by getNetworkInterfaces.
+     * 
+     */
     public static CompletableFuture<GetNetworkInterfacesResult> invokeAsync(@Nullable GetNetworkInterfacesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getNetworkInterfaces:getNetworkInterfaces", TypeShape.of(GetNetworkInterfacesResult.class), args == null ? GetNetworkInterfacesArgs.Empty : args, Utilities.withVersion(options));
     }

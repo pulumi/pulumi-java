@@ -35,14 +35,14 @@ public final class EnterpriseKeyIosSettings {
     /**
      * If set to true, it means allowed_bundle_ids will not be enforced.
      * 
-     */
+    */
     public Optional<Boolean> getAllowAllBundleIds() {
         return Optional.ofNullable(this.allowAllBundleIds);
     }
     /**
      * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
      * 
-     */
+    */
     public List<String> getAllowedBundleIds() {
         return this.allowedBundleIds == null ? List.of() : this.allowedBundleIds;
     }

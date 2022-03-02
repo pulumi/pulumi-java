@@ -40,14 +40,14 @@ public final class GetInstanceTypesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of EC2 Instance Types.
      * 
-     */
+    */
     public List<String> getInstanceTypes() {
         return this.instanceTypes;
     }

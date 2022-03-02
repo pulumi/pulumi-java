@@ -31,14 +31,14 @@ public final class JitAuthorizationPoliciesResponse {
     /**
      * The the principal id that will be granted JIT access.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The role definition id that will be granted to the Principal.
      * 
-     */
+    */
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }

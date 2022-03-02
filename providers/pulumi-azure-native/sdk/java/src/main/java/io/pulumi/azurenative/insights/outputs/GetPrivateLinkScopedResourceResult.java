@@ -54,35 +54,35 @@ public final class GetPrivateLinkScopedResourceResult {
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource id of the scoped Azure monitor resource.
      * 
-     */
+    */
     public Optional<String> getLinkedResourceId() {
         return Optional.ofNullable(this.linkedResourceId);
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of the private endpoint connection.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

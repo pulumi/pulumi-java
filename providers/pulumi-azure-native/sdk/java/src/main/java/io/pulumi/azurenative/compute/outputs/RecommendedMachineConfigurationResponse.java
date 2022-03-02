@@ -33,14 +33,14 @@ public final class RecommendedMachineConfigurationResponse {
     /**
      * Describes the resource range.
      * 
-     */
+    */
     public Optional<ResourceRangeResponse> getMemory() {
         return Optional.ofNullable(this.memory);
     }
     /**
      * Describes the resource range.
      * 
-     */
+    */
     public Optional<ResourceRangeResponse> getVCPUs() {
         return Optional.ofNullable(this.vCPUs);
     }

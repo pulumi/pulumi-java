@@ -33,14 +33,14 @@ public final class AddressPrefixItemResponse {
     /**
      * Address prefix.
      * 
-     */
+    */
     public Optional<String> getAddressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
     /**
      * Address prefix type.
      * 
-     */
+    */
     public Optional<String> getAddressPrefixType() {
         return Optional.ofNullable(this.addressPrefixType);
     }

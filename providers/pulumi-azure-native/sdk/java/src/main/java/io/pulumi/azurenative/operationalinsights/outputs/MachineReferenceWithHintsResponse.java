@@ -60,14 +60,14 @@ public final class MachineReferenceWithHintsResponse {
     /**
      * Last known display name.
      * 
-     */
+    */
     public String getDisplayNameHint() {
         return this.displayNameHint;
     }
     /**
      * Resource URI.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -75,28 +75,28 @@ public final class MachineReferenceWithHintsResponse {
      * Specifies the sub-class of the reference.
      * Expected value is 'ref:machinewithhints'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Last known operating system family.
      * 
-     */
+    */
     public String getOsFamilyHint() {
         return this.osFamilyHint;
     }
     /**
      * Resource type qualifier.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

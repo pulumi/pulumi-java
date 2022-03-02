@@ -84,14 +84,14 @@ public final class PersistentVolumeClaimSpec {
     /**
      * AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
      * 
-     */
+    */
     public List<String> getAccessModes() {
         return this.accessModes == null ? List.of() : this.accessModes;
     }
     /**
      * This field can be used to specify either: * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot) * An existing PVC (PersistentVolumeClaim) If the provisioner or an external controller can support the specified data source, it will create a new volume based on the contents of the specified data source. If the AnyVolumeDataSource feature gate is enabled, this field will always have the same contents as the DataSourceRef field.
      * 
-     */
+    */
     public Optional<TypedLocalObjectReference> getDataSource() {
         return Optional.ofNullable(this.dataSource);
     }
@@ -103,42 +103,42 @@ public final class PersistentVolumeClaimSpec {
      *   specified.
      *   (Alpha) Using this field requires the AnyVolumeDataSource feature gate to be enabled.
      * 
-     */
+    */
     public Optional<TypedLocalObjectReference> getDataSourceRef() {
         return Optional.ofNullable(this.dataSourceRef);
     }
     /**
      * Resources represents the minimum resources the volume should have. If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements that are lower than previous value but must still be higher than capacity recorded in the status field of the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
      * 
-     */
+    */
     public Optional<ResourceRequirements> getResources() {
         return Optional.ofNullable(this.resources);
     }
     /**
      * A label query over volumes to consider for binding.
      * 
-     */
+    */
     public Optional<LabelSelector> getSelector() {
         return Optional.ofNullable(this.selector);
     }
     /**
      * Name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1
      * 
-     */
+    */
     public Optional<String> getStorageClassName() {
         return Optional.ofNullable(this.storageClassName);
     }
     /**
      * volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec.
      * 
-     */
+    */
     public Optional<String> getVolumeMode() {
         return Optional.ofNullable(this.volumeMode);
     }
     /**
      * VolumeName is the binding reference to the PersistentVolume backing this claim.
      * 
-     */
+    */
     public Optional<String> getVolumeName() {
         return Optional.ofNullable(this.volumeName);
     }

@@ -67,49 +67,49 @@ public final class GetDatastoreResult {
     /**
      * Datastore create time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Datastore Configurations.
      * 
-     */
+    */
     public GoogleCloudApigeeV1DatastoreConfigResponse getDatastoreConfig() {
         return this.datastoreConfig;
     }
     /**
      * Display name in UI
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Datastore last update time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
      * 
-     */
+    */
     public String getLastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
      * Organization that the datastore belongs to
      * 
-     */
+    */
     public String getOrg() {
         return this.org;
     }
     /**
      * Resource link of Datastore. Example: `/organizations/{org}/analytics/datastores/{uuid}`
      * 
-     */
+    */
     public String getSelf() {
         return this.self;
     }
     /**
      * Destination storage type. Supported types `gcs` or `bigquery`.
      * 
-     */
+    */
     public String getTargetType() {
         return this.targetType;
     }

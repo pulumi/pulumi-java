@@ -33,14 +33,14 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociation {
      * The specific event to trigger this function.
      * Valid values: `viewer-request` or `viewer-response`
      * 
-     */
+    */
     public String getEventType() {
         return this.eventType;
     }
     /**
      * ARN of the Cloudfront function.
      * 
-     */
+    */
     public String getFunctionArn() {
         return this.functionArn;
     }

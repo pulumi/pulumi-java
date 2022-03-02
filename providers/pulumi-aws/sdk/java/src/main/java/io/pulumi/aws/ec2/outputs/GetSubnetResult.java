@@ -151,14 +151,14 @@ public final class GetSubnetResult {
     /**
      * ARN of the subnet.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Whether an IPv6 address is assigned on creation.
      * 
-     */
+    */
     public Boolean getAssignIpv6AddressOnCreation() {
         return this.assignIpv6AddressOnCreation;
     }
@@ -171,7 +171,7 @@ public final class GetSubnetResult {
     /**
      * Available IP addresses of the subnet.
      * 
-     */
+    */
     public Integer getAvailableIpAddressCount() {
         return this.availableIpAddressCount;
     }
@@ -181,7 +181,7 @@ public final class GetSubnetResult {
     /**
      * Identifier of customer owned IPv4 address pool.
      * 
-     */
+    */
     public String getCustomerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool;
     }
@@ -191,21 +191,21 @@ public final class GetSubnetResult {
     /**
      * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet return synthetic IPv6 addresses for IPv4-only destinations.
      * 
-     */
+    */
     public Boolean getEnableDns64() {
         return this.enableDns64;
     }
     /**
      * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
      * 
-     */
+    */
     public Boolean getEnableResourceNameDnsARecordOnLaunch() {
         return this.enableResourceNameDnsARecordOnLaunch;
     }
     /**
      * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
      * 
-     */
+    */
     public Boolean getEnableResourceNameDnsAaaaRecordOnLaunch() {
         return this.enableResourceNameDnsAaaaRecordOnLaunch;
     }
@@ -221,49 +221,49 @@ public final class GetSubnetResult {
     /**
      * Association ID of the IPv6 CIDR block.
      * 
-     */
+    */
     public String getIpv6CidrBlockAssociationId() {
         return this.ipv6CidrBlockAssociationId;
     }
     /**
      * Indicates whether this is an IPv6-only subnet.
      * 
-     */
+    */
     public Boolean getIpv6Native() {
         return this.ipv6Native;
     }
     /**
      * Whether customer owned IP addresses are assigned on network interface creation.
      * 
-     */
+    */
     public Boolean getMapCustomerOwnedIpOnLaunch() {
         return this.mapCustomerOwnedIpOnLaunch;
     }
     /**
      * Whether public IP addresses are assigned on instance launch.
      * 
-     */
+    */
     public Boolean getMapPublicIpOnLaunch() {
         return this.mapPublicIpOnLaunch;
     }
     /**
      * ARN of the Outpost.
      * 
-     */
+    */
     public String getOutpostArn() {
         return this.outpostArn;
     }
     /**
      * ID of the AWS account that owns the subnet.
      * 
-     */
+    */
     public String getOwnerId() {
         return this.ownerId;
     }
     /**
      * The type of hostnames assigned to instances in the subnet at launch.
      * 
-     */
+    */
     public String getPrivateDnsHostnameTypeOnLaunch() {
         return this.privateDnsHostnameTypeOnLaunch;
     }

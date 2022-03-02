@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkSegment {
-/**
- * NSX Segment
+    private GetWorkloadNetworkSegment() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkloadNetworkSegmentArgs.Builder a);
+    }
+    private static GetWorkloadNetworkSegmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkloadNetworkSegmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * NSX Segment
  * API Version: 2020-07-17-preview.
  * 
- *
- * NSX Segment
+     *
+     * NSX Segment
  * 
- */
+     */
+    public static CompletableFuture<GetWorkloadNetworkSegmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * NSX Segment
+     * API Version: 2020-07-17-preview.
+     * 
+     *
+         * NSX Segment
+     * 
+     */
     public static CompletableFuture<GetWorkloadNetworkSegmentResult> invokeAsync(GetWorkloadNetworkSegmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkSegment", TypeShape.of(GetWorkloadNetworkSegmentResult.class), args == null ? GetWorkloadNetworkSegmentArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -40,21 +40,21 @@ public final class SecretEnvSourceResponse {
     /**
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
      * 
-     */
+    */
     public LocalObjectReferenceResponse getLocalObjectReference() {
         return this.localObjectReference;
     }
     /**
      * The Secret to select from.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * (Optional) Specify whether the Secret must be defined
      * 
-     */
+    */
     public Boolean getOptional() {
         return this.optional;
     }

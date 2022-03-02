@@ -47,28 +47,28 @@ public final class NamespaceJunctionResponse {
     /**
      * Namespace path on a Cache for a Storage Target.
      * 
-     */
+    */
     public Optional<String> getNamespacePath() {
         return Optional.ofNullable(this.namespacePath);
     }
     /**
      * Name of the access policy applied to this junction.
      * 
-     */
+    */
     public Optional<String> getNfsAccessPolicy() {
         return Optional.ofNullable(this.nfsAccessPolicy);
     }
     /**
      * NFS export where targetPath exists.
      * 
-     */
+    */
     public Optional<String> getNfsExport() {
         return Optional.ofNullable(this.nfsExport);
     }
     /**
      * Path in Storage Target to which namespacePath points.
      * 
-     */
+    */
     public Optional<String> getTargetPath() {
         return Optional.ofNullable(this.targetPath);
     }

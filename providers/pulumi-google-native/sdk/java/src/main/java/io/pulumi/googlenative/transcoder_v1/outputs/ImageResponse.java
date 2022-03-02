@@ -40,21 +40,21 @@ public final class ImageResponse {
     /**
      * Target image opacity. Valid values are from `1.0` (solid, default) to `0.0` (transparent), exclusive. Set this to a value greater than `0.0`.
      * 
-     */
+    */
     public Double getAlpha() {
         return this.alpha;
     }
     /**
      * Normalized image resolution, based on output video resolution. Valid values: `0.0`–`1.0`. To respect the original image aspect ratio, set either `x` or `y` to `0.0`. To use the original image resolution, set both `x` and `y` to `0.0`.
      * 
-     */
+    */
     public NormalizedCoordinateResponse getResolution() {
         return this.resolution;
     }
     /**
      * URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }

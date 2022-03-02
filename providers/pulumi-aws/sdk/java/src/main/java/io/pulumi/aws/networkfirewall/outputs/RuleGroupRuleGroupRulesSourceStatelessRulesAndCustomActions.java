@@ -34,14 +34,14 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions {
     /**
      * Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
      * 
-     */
+    */
     public List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction> getCustomActions() {
         return this.customActions == null ? List.of() : this.customActions;
     }
     /**
      * Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
      * 
-     */
+    */
     public List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule> getStatelessRules() {
         return this.statelessRules;
     }

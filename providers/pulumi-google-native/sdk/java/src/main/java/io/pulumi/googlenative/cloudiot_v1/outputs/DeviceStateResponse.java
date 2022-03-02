@@ -31,14 +31,14 @@ public final class DeviceStateResponse {
     /**
      * The device state data.
      * 
-     */
+    */
     public String getBinaryData() {
         return this.binaryData;
     }
     /**
      * [Output only] The time at which this state version was updated in Cloud IoT Core.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }

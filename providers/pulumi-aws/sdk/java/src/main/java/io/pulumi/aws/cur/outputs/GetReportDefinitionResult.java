@@ -99,42 +99,42 @@ public final class GetReportDefinitionResult {
     /**
      * A list of additional artifacts.
      * 
-     */
+    */
     public List<String> getAdditionalArtifacts() {
         return this.additionalArtifacts;
     }
     /**
      * A list of schema elements.
      * 
-     */
+    */
     public List<String> getAdditionalSchemaElements() {
         return this.additionalSchemaElements;
     }
     /**
      * Preferred format for report.
      * 
-     */
+    */
     public String getCompression() {
         return this.compression;
     }
     /**
      * Preferred compression format for report.
      * 
-     */
+    */
     public String getFormat() {
         return this.format;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * If true reports are updated after they have been finalized.
      * 
-     */
+    */
     public Boolean getRefreshClosedReports() {
         return this.refreshClosedReports;
     }
@@ -144,35 +144,35 @@ public final class GetReportDefinitionResult {
     /**
      * Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
      * 
-     */
+    */
     public String getReportVersioning() {
         return this.reportVersioning;
     }
     /**
      * Name of customer S3 bucket.
      * 
-     */
+    */
     public String getS3Bucket() {
         return this.s3Bucket;
     }
     /**
      * Preferred report path prefix.
      * 
-     */
+    */
     public String getS3Prefix() {
         return this.s3Prefix;
     }
     /**
      * Region of customer S3 bucket.
      * 
-     */
+    */
     public String getS3Region() {
         return this.s3Region;
     }
     /**
      * The frequency on which report data are measured and displayed.
      * 
-     */
+    */
     public String getTimeUnit() {
         return this.timeUnit;
     }

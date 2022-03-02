@@ -34,14 +34,14 @@ public final class VirtualNodeSpecListenerTlsValidationTrust {
     /**
      * The TLS validation context trust for a local file certificate.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTlsValidationTrustFile> getFile() {
         return Optional.ofNullable(this.file);
     }
     /**
      * The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTlsValidationTrustSds> getSds() {
         return Optional.ofNullable(this.sds);
     }

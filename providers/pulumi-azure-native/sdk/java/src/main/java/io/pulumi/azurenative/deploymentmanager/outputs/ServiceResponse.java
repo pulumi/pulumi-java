@@ -49,28 +49,28 @@ public final class ServiceResponse {
     /**
      * Name of the service.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The detailed information about the units that make up the service.
      * 
-     */
+    */
     public List<ServiceUnitResponse> getServiceUnits() {
         return this.serviceUnits == null ? List.of() : this.serviceUnits;
     }
     /**
      * The Azure location to which the resources in the service belong to or should be deployed to.
      * 
-     */
+    */
     public String getTargetLocation() {
         return this.targetLocation;
     }
     /**
      * The subscription to which the resources in the service belong to or should be deployed to.
      * 
-     */
+    */
     public String getTargetSubscriptionId() {
         return this.targetSubscriptionId;
     }

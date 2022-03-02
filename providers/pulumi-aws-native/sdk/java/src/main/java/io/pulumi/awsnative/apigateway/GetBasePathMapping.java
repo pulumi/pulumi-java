@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBasePathMapping {
-/**
- * Resource Type definition for AWS::ApiGateway::BasePathMapping
+    private GetBasePathMapping() {}
+    public interface BuilderApplicator {
+        public void apply(GetBasePathMappingArgs.Builder a);
+    }
+    private static GetBasePathMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBasePathMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::ApiGateway::BasePathMapping
  * 
- */
+     */
+    public static CompletableFuture<GetBasePathMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::ApiGateway::BasePathMapping
+     * 
+     */
     public static CompletableFuture<GetBasePathMappingResult> invokeAsync(GetBasePathMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getBasePathMapping", TypeShape.of(GetBasePathMappingResult.class), args == null ? GetBasePathMappingArgs.Empty : args, Utilities.withVersion(options));
     }

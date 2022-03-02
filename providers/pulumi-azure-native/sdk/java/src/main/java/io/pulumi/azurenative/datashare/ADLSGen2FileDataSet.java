@@ -175,6 +175,22 @@ public class ADLSGen2FileDataSet extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ADLSGen2FileDataSetArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.datashare.ADLSGen2FileDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.datashare.ADLSGen2FileDataSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ADLSGen2FileDataSet(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

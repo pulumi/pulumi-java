@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:datashare:SynchronizationSetting SynchronizationSetting1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1/synchronizationSettings/SynchronizationSetting1 
  * ```
  * 
- * @deprecated
+ * @Deprecated
  * Please use one of the variants: ScheduledSynchronizationSetting.
  * 
  */
@@ -93,6 +93,22 @@ public class SynchronizationSetting extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SynchronizationSettingArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.datashare.SynchronizationSettingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.datashare.SynchronizationSettingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public SynchronizationSetting(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

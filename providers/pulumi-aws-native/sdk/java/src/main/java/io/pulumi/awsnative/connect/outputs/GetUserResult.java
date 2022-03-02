@@ -93,70 +93,70 @@ public final class GetUserResult {
     /**
      * The identifier of the user account in the directory used for identity management.
      * 
-     */
+    */
     public Optional<String> getDirectoryUserId() {
         return Optional.ofNullable(this.directoryUserId);
     }
     /**
      * The identifier of the hierarchy group for the user.
      * 
-     */
+    */
     public Optional<String> getHierarchyGroupArn() {
         return Optional.ofNullable(this.hierarchyGroupArn);
     }
     /**
      * The information about the identity of the user.
      * 
-     */
+    */
     public Optional<UserIdentityInfo> getIdentityInfo() {
         return Optional.ofNullable(this.identityInfo);
     }
     /**
      * The identifier of the Amazon Connect instance.
      * 
-     */
+    */
     public Optional<String> getInstanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
      * The phone settings for the user.
      * 
-     */
+    */
     public Optional<UserPhoneConfig> getPhoneConfig() {
         return Optional.ofNullable(this.phoneConfig);
     }
     /**
      * The identifier of the routing profile for the user.
      * 
-     */
+    */
     public Optional<String> getRoutingProfileArn() {
         return Optional.ofNullable(this.routingProfileArn);
     }
     /**
      * One or more security profile arns for the user
      * 
-     */
+    */
     public List<String> getSecurityProfileArns() {
         return this.securityProfileArns == null ? List.of() : this.securityProfileArns;
     }
     /**
      * One or more tags.
      * 
-     */
+    */
     public List<UserTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The Amazon Resource Name (ARN) for the user.
      * 
-     */
+    */
     public Optional<String> getUserArn() {
         return Optional.ofNullable(this.userArn);
     }
     /**
      * The user name for the account.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

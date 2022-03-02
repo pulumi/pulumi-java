@@ -35,14 +35,14 @@ public final class ProfileEnumValidValuesFormatResponse {
     /**
      * Localized names of the enum member.
      * 
-     */
+    */
     public Map<String,String> getLocalizedValueNames() {
         return this.localizedValueNames == null ? Map.of() : this.localizedValueNames;
     }
     /**
      * The integer value of the enum member.
      * 
-     */
+    */
     public Optional<Integer> getValue() {
         return Optional.ofNullable(this.value);
     }

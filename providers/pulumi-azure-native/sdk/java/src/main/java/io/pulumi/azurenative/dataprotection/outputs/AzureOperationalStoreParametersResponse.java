@@ -41,7 +41,7 @@ public final class AzureOperationalStoreParametersResponse {
     /**
      * type of datastore; Operational/Vault/Archive
      * 
-     */
+    */
     public String getDataStoreType() {
         return this.dataStoreType;
     }
@@ -49,14 +49,14 @@ public final class AzureOperationalStoreParametersResponse {
      * Type of the specific object - used for deserializing
      * Expected value is 'AzureOperationalStoreParameters'.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }
     /**
      * Gets or sets the Snapshot Resource Group Uri.
      * 
-     */
+    */
     public Optional<String> getResourceGroupId() {
         return Optional.ofNullable(this.resourceGroupId);
     }

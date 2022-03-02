@@ -84,21 +84,21 @@ public final class AmiEbsBlockDevice {
      * Boolean controlling whether the EBS volumes created to
      * support each created instance will be deleted once that instance is terminated.
      * 
-     */
+    */
     public Optional<Boolean> getDeleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
     /**
      * The path at which the device is exposed to created instances.
      * 
-     */
+    */
     public String getDeviceName() {
         return this.deviceName;
     }
     /**
      * Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
      * 
-     */
+    */
     public Optional<Boolean> getEncrypted() {
         return Optional.ofNullable(this.encrypted);
     }
@@ -106,7 +106,7 @@ public final class AmiEbsBlockDevice {
      * Number of I/O operations per second the
      * created volumes will support.
      * 
-     */
+    */
     public Optional<Integer> getIops() {
         return Optional.ofNullable(this.iops);
     }
@@ -115,14 +115,14 @@ public final class AmiEbsBlockDevice {
      * EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
      * snapshot.
      * 
-     */
+    */
     public Optional<String> getSnapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
     /**
      * The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
      * 
-     */
+    */
     public Optional<Integer> getThroughput() {
         return Optional.ofNullable(this.throughput);
     }
@@ -131,14 +131,14 @@ public final class AmiEbsBlockDevice {
      * If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
      * as the selected snapshot.
      * 
-     */
+    */
     public Optional<Integer> getVolumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
     /**
      * The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
      * 
-     */
+    */
     public Optional<String> getVolumeType() {
         return Optional.ofNullable(this.volumeType);
     }

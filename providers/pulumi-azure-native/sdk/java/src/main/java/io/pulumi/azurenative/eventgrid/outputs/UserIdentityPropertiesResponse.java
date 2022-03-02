@@ -33,14 +33,14 @@ public final class UserIdentityPropertiesResponse {
     /**
      * The client id of user assigned identity.
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The principal id of user assigned identity.
      * 
-     */
+    */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }

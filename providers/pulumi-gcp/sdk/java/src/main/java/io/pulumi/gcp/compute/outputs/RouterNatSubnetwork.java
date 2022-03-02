@@ -46,7 +46,7 @@ public final class RouterNatSubnetwork {
     /**
      * Self-link of subnetwork to NAT
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -56,7 +56,7 @@ public final class RouterNatSubnetwork {
      * `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
      * sourceIpRangesToNat
      * 
-     */
+    */
     public List<String> getSecondaryIpRangeNames() {
         return this.secondaryIpRangeNames == null ? List.of() : this.secondaryIpRangeNames;
     }
@@ -66,7 +66,7 @@ public final class RouterNatSubnetwork {
      * `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
      * `PRIMARY_IP_RANGE`.
      * 
-     */
+    */
     public List<String> getSourceIpRangesToNats() {
         return this.sourceIpRangesToNats;
     }

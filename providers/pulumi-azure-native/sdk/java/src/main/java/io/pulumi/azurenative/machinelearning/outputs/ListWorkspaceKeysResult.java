@@ -33,14 +33,14 @@ public final class ListWorkspaceKeysResult {
     /**
      * Primary authorization key for this workspace.
      * 
-     */
+    */
     public Optional<String> getPrimaryToken() {
         return Optional.ofNullable(this.primaryToken);
     }
     /**
      * Secondary authorization key for this workspace.
      * 
-     */
+    */
     public Optional<String> getSecondaryToken() {
         return Optional.ofNullable(this.secondaryToken);
     }

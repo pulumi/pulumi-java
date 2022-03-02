@@ -34,14 +34,14 @@ public final class DeliveryRuleRemoteAddressConditionResponse {
      * The name of the condition for the delivery rule.
      * Expected value is 'RemoteAddress'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
-     */
+    */
     public RemoteAddressMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

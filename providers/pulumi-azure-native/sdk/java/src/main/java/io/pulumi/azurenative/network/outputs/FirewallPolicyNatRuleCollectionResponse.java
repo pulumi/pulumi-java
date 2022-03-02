@@ -62,21 +62,21 @@ public final class FirewallPolicyNatRuleCollectionResponse {
     /**
      * The action type of a Nat rule collection.
      * 
-     */
+    */
     public Optional<FirewallPolicyNatRuleCollectionActionResponse> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The name of the rule collection.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the Firewall Policy Rule Collection resource.
      * 
-     */
+    */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
@@ -84,14 +84,14 @@ public final class FirewallPolicyNatRuleCollectionResponse {
      * The type of the rule collection.
      * Expected value is 'FirewallPolicyNatRuleCollection'.
      * 
-     */
+    */
     public String getRuleCollectionType() {
         return this.ruleCollectionType;
     }
     /**
      * List of rules included in a rule collection.
      * 
-     */
+    */
     public List<Object> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

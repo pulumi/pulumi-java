@@ -70,49 +70,49 @@ public final class GetCustomApiResult {
     /**
      * Resource ETag
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Custom API properties
      * 
-     */
+    */
     public CustomApiPropertiesDefinitionResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

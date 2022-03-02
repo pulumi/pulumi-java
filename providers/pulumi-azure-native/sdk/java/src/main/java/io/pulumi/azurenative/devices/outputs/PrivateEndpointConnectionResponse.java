@@ -46,28 +46,28 @@ public final class PrivateEndpointConnectionResponse {
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The properties of a private endpoint connection
      * 
-     */
+    */
     public PrivateEndpointConnectionPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

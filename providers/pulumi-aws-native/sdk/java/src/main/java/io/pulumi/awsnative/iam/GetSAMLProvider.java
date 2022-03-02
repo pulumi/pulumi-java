@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSAMLProvider {
-/**
- * Resource Type definition for AWS::IAM::SAMLProvider
+    private GetSAMLProvider() {}
+    public interface BuilderApplicator {
+        public void apply(GetSAMLProviderArgs.Builder a);
+    }
+    private static GetSAMLProviderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSAMLProviderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::IAM::SAMLProvider
  * 
- */
+     */
+    public static CompletableFuture<GetSAMLProviderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::IAM::SAMLProvider
+     * 
+     */
     public static CompletableFuture<GetSAMLProviderResult> invokeAsync(GetSAMLProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iam:getSAMLProvider", TypeShape.of(GetSAMLProviderResult.class), args == null ? GetSAMLProviderArgs.Empty : args, Utilities.withVersion(options));
     }

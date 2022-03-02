@@ -65,7 +65,7 @@ public final class GetResourceShareResult {
     /**
      * The Amazon Resource Name (ARN) of the resource share.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
@@ -75,7 +75,7 @@ public final class GetResourceShareResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -85,7 +85,7 @@ public final class GetResourceShareResult {
     /**
      * The ID of the AWS account that owns the resource share.
      * 
-     */
+    */
     public String getOwningAccountId() {
         return this.owningAccountId;
     }
@@ -95,14 +95,14 @@ public final class GetResourceShareResult {
     /**
      * The Status of the RAM share.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * The Tags attached to the RAM share
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

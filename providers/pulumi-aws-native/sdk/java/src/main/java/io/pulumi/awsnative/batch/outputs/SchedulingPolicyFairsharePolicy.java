@@ -40,7 +40,7 @@ public final class SchedulingPolicyFairsharePolicy {
     /**
      * List of Share Attributes
      * 
-     */
+    */
     public List<SchedulingPolicyShareAttributes> getShareDistribution() {
         return this.shareDistribution == null ? List.of() : this.shareDistribution;
     }

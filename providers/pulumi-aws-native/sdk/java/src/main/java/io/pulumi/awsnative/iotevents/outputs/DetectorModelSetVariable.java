@@ -31,14 +31,14 @@ public final class DetectorModelSetVariable {
     /**
      * The new value of the variable.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
     /**
      * The name of the variable.
      * 
-     */
+    */
     public String getVariableName() {
         return this.variableName;
     }

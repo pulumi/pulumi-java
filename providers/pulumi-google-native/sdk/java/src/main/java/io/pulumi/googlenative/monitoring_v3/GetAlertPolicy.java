@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAlertPolicy {
-/**
- * Gets a single alerting policy.
+    private GetAlertPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetAlertPolicyArgs.Builder a);
+    }
+    private static GetAlertPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAlertPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a single alerting policy.
  * 
- */
+     */
+    public static CompletableFuture<GetAlertPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a single alerting policy.
+     * 
+     */
     public static CompletableFuture<GetAlertPolicyResult> invokeAsync(GetAlertPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getAlertPolicy", TypeShape.of(GetAlertPolicyResult.class), args == null ? GetAlertPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

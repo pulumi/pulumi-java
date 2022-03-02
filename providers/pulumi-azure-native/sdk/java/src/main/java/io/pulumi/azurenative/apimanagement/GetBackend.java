@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackend {
-/**
- * Backend details.
+    private GetBackend() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackendArgs.Builder a);
+    }
+    private static GetBackendArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackendArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Backend details.
  * API Version: 2020-12-01.
  * 
- *
- * Backend details.
+     *
+     * Backend details.
  * 
- */
+     */
+    public static CompletableFuture<GetBackendResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Backend details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Backend details.
+     * 
+     */
     public static CompletableFuture<GetBackendResult> invokeAsync(GetBackendArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getBackend", TypeShape.of(GetBackendResult.class), args == null ? GetBackendArgs.Empty : args, Utilities.withVersion(options));
     }

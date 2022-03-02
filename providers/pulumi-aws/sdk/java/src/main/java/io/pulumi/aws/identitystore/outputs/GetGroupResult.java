@@ -42,7 +42,7 @@ public final class GetGroupResult {
     /**
      * The group's display name value.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
@@ -55,7 +55,7 @@ public final class GetGroupResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

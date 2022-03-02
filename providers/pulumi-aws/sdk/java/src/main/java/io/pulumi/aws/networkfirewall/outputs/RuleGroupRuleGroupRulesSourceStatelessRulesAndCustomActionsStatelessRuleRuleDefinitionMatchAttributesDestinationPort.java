@@ -33,14 +33,14 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     /**
      * The lower limit of the port range. This must be less than or equal to the `to_port`.
      * 
-     */
+    */
     public Integer getFromPort() {
         return this.fromPort;
     }
     /**
      * The upper limit of the port range. This must be greater than or equal to the `from_port`.
      * 
-     */
+    */
     public Optional<Integer> getToPort() {
         return Optional.ofNullable(this.toPort);
     }

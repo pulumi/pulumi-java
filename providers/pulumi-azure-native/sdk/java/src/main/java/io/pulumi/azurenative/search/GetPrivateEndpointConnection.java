@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnection {
-/**
- * Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
+    private GetPrivateEndpointConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateEndpointConnectionArgs.Builder a);
+    }
+    private static GetPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
  * API Version: 2020-08-01.
  * 
- *
- * Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
+     *
+     * Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
+     * API Version: 2020-08-01.
+     * 
+     *
+         * Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
+     * 
+     */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> invokeAsync(GetPrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:search:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args == null ? GetPrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

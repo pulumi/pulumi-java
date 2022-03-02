@@ -35,7 +35,7 @@ public final class AuthorityConfig {
      * Specifies some of the values in a certificate that are related to the subject.
      * Structure is documented below.
      * 
-     */
+    */
     public AuthorityConfigSubjectConfig getSubjectConfig() {
         return this.subjectConfig;
     }
@@ -43,7 +43,7 @@ public final class AuthorityConfig {
      * Describes how some of the technical X.509 fields in a certificate should be populated.
      * Structure is documented below.
      * 
-     */
+    */
     public AuthorityConfigX509Config getX509Config() {
         return this.x509Config;
     }

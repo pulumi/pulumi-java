@@ -34,14 +34,14 @@ public final class NonceResponse {
     /**
      * The time after the request is made when the nonce should expire.
      * 
-     */
+    */
     public Optional<String> getNonceExpirationInterval() {
         return Optional.ofNullable(this.nonceExpirationInterval);
     }
     /**
      * <code>false</code> if the nonce should not be validated while completing the login flow; otherwise, <code>true</code>.
      * 
-     */
+    */
     public Optional<Boolean> getValidateNonce() {
         return Optional.ofNullable(this.validateNonce);
     }

@@ -13,8 +13,17 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRemoteImage {
-/**
- * `docker.RemoteImage` provides details about a specific Docker Image which need to be presend on the Docker Host
+    private GetRemoteImage() {}
+    public interface BuilderApplicator {
+        public void apply(GetRemoteImageArgs.Builder a);
+    }
+    private static GetRemoteImageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRemoteImageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `docker.RemoteImage` provides details about a specific Docker Image which need to be presend on the Docker Host
  * 
  * ## Example Usage
  * ## Schema
@@ -31,13 +40,41 @@ public class GetRemoteImage {
  * 
  * - **repo_digest** (String) The image sha256 digest in the form of `repo[:tag]@sha256:<hash>`. It may be empty in the edge case where the local image was pulled from a repo, tagged locally, and then referred to in the data source by that local name/tag.
  * 
- *
- * A collection of arguments for invoking getRemoteImage.
+     *
+     * A collection of arguments for invoking getRemoteImage.
  * 
- *
- * A collection of values returned by getRemoteImage.
+     *
+     * A collection of values returned by getRemoteImage.
  * 
- */
+     */
+    public static CompletableFuture<GetRemoteImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `docker.RemoteImage` provides details about a specific Docker Image which need to be presend on the Docker Host
+     * 
+     * ## Example Usage
+     * ## Schema
+     * 
+     * ### Required
+     * 
+     * - **name** (String) The name of the Docker image, including any tags or SHA256 repo digests.
+     * 
+     * ### Optional
+     * 
+     * - **id** (String) The ID of this resource.
+     * 
+     * ### Read-Only
+     * 
+     * - **repo_digest** (String) The image sha256 digest in the form of `repo[:tag]@sha256:<hash>`. It may be empty in the edge case where the local image was pulled from a repo, tagged locally, and then referred to in the data source by that local name/tag.
+     * 
+     *
+         * A collection of arguments for invoking getRemoteImage.
+     * 
+     *
+         * A collection of values returned by getRemoteImage.
+     * 
+     */
     public static CompletableFuture<GetRemoteImageResult> invokeAsync(GetRemoteImageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("docker:index/getRemoteImage:getRemoteImage", TypeShape.of(GetRemoteImageResult.class), args == null ? GetRemoteImageArgs.Empty : args, Utilities.withVersion(options));
     }

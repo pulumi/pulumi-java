@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOpenShiftManagedCluster {
-/**
- * OpenShift Managed cluster.
+    private GetOpenShiftManagedCluster() {}
+    public interface BuilderApplicator {
+        public void apply(GetOpenShiftManagedClusterArgs.Builder a);
+    }
+    private static GetOpenShiftManagedClusterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOpenShiftManagedClusterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * OpenShift Managed cluster.
  * API Version: 2019-04-30.
  * 
- *
- * OpenShift Managed cluster.
+     *
+     * OpenShift Managed cluster.
  * 
- */
+     */
+    public static CompletableFuture<GetOpenShiftManagedClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * OpenShift Managed cluster.
+     * API Version: 2019-04-30.
+     * 
+     *
+         * OpenShift Managed cluster.
+     * 
+     */
     public static CompletableFuture<GetOpenShiftManagedClusterResult> invokeAsync(GetOpenShiftManagedClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerservice:getOpenShiftManagedCluster", TypeShape.of(GetOpenShiftManagedClusterResult.class), args == null ? GetOpenShiftManagedClusterArgs.Empty : args, Utilities.withVersion(options));
     }

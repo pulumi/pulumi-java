@@ -49,28 +49,28 @@ public final class AutomationActionEventHubResponse {
      * The type of the action that will be triggered by the Automation
      * Expected value is 'EventHub'.
      * 
-     */
+    */
     public String getActionType() {
         return this.actionType;
     }
     /**
      * The target Event Hub connection string (it will not be included in any response).
      * 
-     */
+    */
     public Optional<String> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * The target Event Hub Azure Resource ID.
      * 
-     */
+    */
     public Optional<String> getEventHubResourceId() {
         return Optional.ofNullable(this.eventHubResourceId);
     }
     /**
      * The target Event Hub SAS policy name.
      * 
-     */
+    */
     public String getSasPolicyName() {
         return this.sasPolicyName;
     }

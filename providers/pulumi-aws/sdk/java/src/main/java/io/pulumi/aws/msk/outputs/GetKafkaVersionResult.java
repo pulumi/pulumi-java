@@ -39,7 +39,7 @@ public final class GetKafkaVersionResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -49,7 +49,7 @@ public final class GetKafkaVersionResult {
     /**
      * Status of the MSK Kafka version eg. `ACTIVE` or `DEPRECATED`.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

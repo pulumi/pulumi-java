@@ -23,7 +23,7 @@ public final class SubnetResponse {
     /**
      * Resource ID of Virtual Network Subnet
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

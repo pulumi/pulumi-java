@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppVnetConnectionSlot {
-/**
- * Virtual Network information contract.
+    private GetWebAppVnetConnectionSlot() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppVnetConnectionSlotArgs.Builder a);
+    }
+    private static GetWebAppVnetConnectionSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppVnetConnectionSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Virtual Network information contract.
  * API Version: 2020-12-01.
  * 
- *
- * Virtual Network information contract.
+     *
+     * Virtual Network information contract.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppVnetConnectionSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Virtual Network information contract.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Virtual Network information contract.
+     * 
+     */
     public static CompletableFuture<GetWebAppVnetConnectionSlotResult> invokeAsync(GetWebAppVnetConnectionSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppVnetConnectionSlot", TypeShape.of(GetWebAppVnetConnectionSlotResult.class), args == null ? GetWebAppVnetConnectionSlotArgs.Empty : args, Utilities.withVersion(options));
     }

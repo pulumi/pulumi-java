@@ -91,70 +91,70 @@ public final class GetManagementGroupDiagnosticSettingResult {
     /**
      * The resource Id for the event hub authorization rule.
      * 
-     */
+    */
     public Optional<String> getEventHubAuthorizationRuleId() {
         return Optional.ofNullable(this.eventHubAuthorizationRuleId);
     }
     /**
      * The name of the event hub. If none is specified, the default event hub will be selected.
      * 
-     */
+    */
     public Optional<String> getEventHubName() {
         return Optional.ofNullable(this.eventHubName);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Location of the resource
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The list of logs settings.
      * 
-     */
+    */
     public List<ManagementGroupLogSettingsResponse> getLogs() {
         return this.logs == null ? List.of() : this.logs;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
      * 
-     */
+    */
     public Optional<String> getServiceBusRuleId() {
         return Optional.ofNullable(this.serviceBusRuleId);
     }
     /**
      * The resource ID of the storage account to which you would like to send Diagnostic Logs.
      * 
-     */
+    */
     public Optional<String> getStorageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
      * 
-     */
+    */
     public Optional<String> getWorkspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }

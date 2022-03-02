@@ -112,91 +112,91 @@ public final class GetUserResult {
     /**
      * The user email address, as it was specified during registration.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * The user family name, as it was specified during registration.
      * 
-     */
+    */
     public String getFamilyName() {
         return this.familyName;
     }
     /**
      * The user given name, as it was specified during registration.
      * 
-     */
+    */
     public String getGivenName() {
         return this.givenName;
     }
     /**
      * The identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The details of the latest operation. ex: status, error
      * 
-     */
+    */
     public LatestOperationResultResponse getLatestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The user tenant ID, as it was specified during registration.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * How long the user has used his VMs in this lab
      * 
-     */
+    */
     public String getTotalUsage() {
         return this.totalUsage;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
-     */
+    */
     public Optional<String> getUniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }

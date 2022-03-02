@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedNetworkPeeringPolicy {
-/**
- * The Managed Network Peering Policy resource
+    private GetManagedNetworkPeeringPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagedNetworkPeeringPolicyArgs.Builder a);
+    }
+    private static GetManagedNetworkPeeringPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagedNetworkPeeringPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Managed Network Peering Policy resource
  * API Version: 2019-06-01-preview.
  * 
- *
- * The Managed Network Peering Policy resource
+     *
+     * The Managed Network Peering Policy resource
  * 
- */
+     */
+    public static CompletableFuture<GetManagedNetworkPeeringPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Managed Network Peering Policy resource
+     * API Version: 2019-06-01-preview.
+     * 
+     *
+         * The Managed Network Peering Policy resource
+     * 
+     */
     public static CompletableFuture<GetManagedNetworkPeeringPolicyResult> invokeAsync(GetManagedNetworkPeeringPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managednetwork:getManagedNetworkPeeringPolicy", TypeShape.of(GetManagedNetworkPeeringPolicyResult.class), args == null ? GetManagedNetworkPeeringPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

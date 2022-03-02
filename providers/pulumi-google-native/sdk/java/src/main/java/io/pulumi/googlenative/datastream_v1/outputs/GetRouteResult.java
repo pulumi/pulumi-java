@@ -68,49 +68,49 @@ public final class GetRouteResult {
     /**
      * The create time of the resource.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Destination address for connection
      * 
-     */
+    */
     public String getDestinationAddress() {
         return this.destinationAddress;
     }
     /**
      * Destination port for connection
      * 
-     */
+    */
     public Integer getDestinationPort() {
         return this.destinationPort;
     }
     /**
      * Display name.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Labels.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The resource's name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The update time of the resource.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }

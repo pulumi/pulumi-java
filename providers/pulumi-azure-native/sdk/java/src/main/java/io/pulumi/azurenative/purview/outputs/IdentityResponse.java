@@ -40,21 +40,21 @@ public final class IdentityResponse {
     /**
      * Service principal object Id
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * Tenant Id
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * Identity Type
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

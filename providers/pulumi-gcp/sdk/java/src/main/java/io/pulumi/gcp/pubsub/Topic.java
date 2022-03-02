@@ -178,6 +178,22 @@ public class Topic extends io.pulumi.resources.CustomResource {
         return this.schemaSettings;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable TopicArgs.Builder a);
+    }
+    private static io.pulumi.gcp.pubsub.TopicArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.pubsub.TopicArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Topic(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

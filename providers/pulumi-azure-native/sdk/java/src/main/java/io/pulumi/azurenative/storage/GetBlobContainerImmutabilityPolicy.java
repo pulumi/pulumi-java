@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBlobContainerImmutabilityPolicy {
-/**
- * The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
+    private GetBlobContainerImmutabilityPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetBlobContainerImmutabilityPolicyArgs.Builder a);
+    }
+    private static GetBlobContainerImmutabilityPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBlobContainerImmutabilityPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
  * API Version: 2021-02-01.
  * 
- *
- * The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
+     *
+     * The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
  * 
- */
+     */
+    public static CompletableFuture<GetBlobContainerImmutabilityPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
+     * API Version: 2021-02-01.
+     * 
+     *
+         * The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
+     * 
+     */
     public static CompletableFuture<GetBlobContainerImmutabilityPolicyResult> invokeAsync(GetBlobContainerImmutabilityPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getBlobContainerImmutabilityPolicy", TypeShape.of(GetBlobContainerImmutabilityPolicyResult.class), args == null ? GetBlobContainerImmutabilityPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

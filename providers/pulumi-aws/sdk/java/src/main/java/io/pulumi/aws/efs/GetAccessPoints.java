@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessPoints {
-/**
- * Provides information about multiple Elastic File System (EFS) Access Points.
+    private GetAccessPoints() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccessPointsArgs.Builder a);
+    }
+    private static GetAccessPointsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccessPointsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information about multiple Elastic File System (EFS) Access Points.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getAccessPoints.
+     *
+     * A collection of arguments for invoking getAccessPoints.
  * 
- *
- * A collection of values returned by getAccessPoints.
+     *
+     * A collection of values returned by getAccessPoints.
  * 
- */
+     */
+    public static CompletableFuture<GetAccessPointsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information about multiple Elastic File System (EFS) Access Points.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getAccessPoints.
+     * 
+     *
+         * A collection of values returned by getAccessPoints.
+     * 
+     */
     public static CompletableFuture<GetAccessPointsResult> invokeAsync(GetAccessPointsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:efs/getAccessPoints:getAccessPoints", TypeShape.of(GetAccessPointsResult.class), args == null ? GetAccessPointsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -47,28 +47,28 @@ public final class X12SchemaReferenceResponse {
     /**
      * The message id.
      * 
-     */
+    */
     public String getMessageId() {
         return this.messageId;
     }
     /**
      * The schema name.
      * 
-     */
+    */
     public String getSchemaName() {
         return this.schemaName;
     }
     /**
      * The schema version.
      * 
-     */
+    */
     public String getSchemaVersion() {
         return this.schemaVersion;
     }
     /**
      * The sender application id.
      * 
-     */
+    */
     public Optional<String> getSenderApplicationId() {
         return Optional.ofNullable(this.senderApplicationId);
     }

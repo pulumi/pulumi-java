@@ -33,14 +33,14 @@ public final class SoftwareUpdateConfigurationTasksResponse {
     /**
      * Post task properties.
      * 
-     */
+    */
     public Optional<TaskPropertiesResponse> getPostTask() {
         return Optional.ofNullable(this.postTask);
     }
     /**
      * Pre task properties.
      * 
-     */
+    */
     public Optional<TaskPropertiesResponse> getPreTask() {
         return Optional.ofNullable(this.preTask);
     }

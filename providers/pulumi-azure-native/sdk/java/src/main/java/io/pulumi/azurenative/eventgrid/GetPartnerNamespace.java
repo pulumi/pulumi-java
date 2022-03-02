@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPartnerNamespace {
-/**
- * EventGrid Partner Namespace.
+    private GetPartnerNamespace() {}
+    public interface BuilderApplicator {
+        public void apply(GetPartnerNamespaceArgs.Builder a);
+    }
+    private static GetPartnerNamespaceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPartnerNamespaceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * EventGrid Partner Namespace.
  * API Version: 2021-06-01-preview.
  * 
- *
- * EventGrid Partner Namespace.
+     *
+     * EventGrid Partner Namespace.
  * 
- */
+     */
+    public static CompletableFuture<GetPartnerNamespaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * EventGrid Partner Namespace.
+     * API Version: 2021-06-01-preview.
+     * 
+     *
+         * EventGrid Partner Namespace.
+     * 
+     */
     public static CompletableFuture<GetPartnerNamespaceResult> invokeAsync(GetPartnerNamespaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerNamespace", TypeShape.of(GetPartnerNamespaceResult.class), args == null ? GetPartnerNamespaceArgs.Empty : args, Utilities.withVersion(options));
     }

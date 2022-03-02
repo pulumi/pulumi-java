@@ -25,7 +25,7 @@ public final class ApiDefinitionInfoResponse {
     /**
      * The URL of the API definition.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }

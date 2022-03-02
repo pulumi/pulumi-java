@@ -74,21 +74,21 @@ public final class GetIndexResult {
     /**
      * Capacity units
      * 
-     */
+    */
     public Optional<IndexCapacityUnitsConfiguration> getCapacityUnits() {
         return Optional.ofNullable(this.capacityUnits);
     }
     /**
      * A description for the index
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Document metadata configurations
      * 
-     */
+    */
     public List<IndexDocumentMetadataConfiguration> getDocumentMetadataConfigurations() {
         return this.documentMetadataConfigurations == null ? List.of() : this.documentMetadataConfigurations;
     }
@@ -104,7 +104,7 @@ public final class GetIndexResult {
     /**
      * Tags for labeling the index
      * 
-     */
+    */
     public List<IndexTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

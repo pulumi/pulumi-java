@@ -25,7 +25,7 @@ public final class RuleManagementEventClaimsDataSourceResponse {
     /**
      * the email address.
      * 
-     */
+    */
     public Optional<String> getEmailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }

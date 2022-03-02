@@ -76,49 +76,49 @@ public final class GetApprovalRuleTemplateResult {
     /**
      * The ID of the approval rule template.
      * 
-     */
+    */
     public String getApprovalRuleTemplateId() {
         return this.approvalRuleTemplateId;
     }
     /**
      * The content of the approval rule template.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
     /**
      * The date the approval rule template was created, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * The description of the approval rule template.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The date the approval rule template was most recently changed, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
-     */
+    */
     public String getLastModifiedDate() {
         return this.lastModifiedDate;
     }
     /**
      * The Amazon Resource Name (ARN) of the user who made the most recent changes to the approval rule template.
      * 
-     */
+    */
     public String getLastModifiedUser() {
         return this.lastModifiedUser;
     }
@@ -128,7 +128,7 @@ public final class GetApprovalRuleTemplateResult {
     /**
      * The SHA-256 hash signature for the content of the approval rule template.
      * 
-     */
+    */
     public String getRuleContentSha256() {
         return this.ruleContentSha256;
     }

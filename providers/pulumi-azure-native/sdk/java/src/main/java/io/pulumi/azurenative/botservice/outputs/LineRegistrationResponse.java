@@ -40,21 +40,21 @@ public final class LineRegistrationResponse {
     /**
      * Access token for the line channel registration
      * 
-     */
+    */
     public Optional<String> getChannelAccessToken() {
         return Optional.ofNullable(this.channelAccessToken);
     }
     /**
      * Secret for the line channel registration
      * 
-     */
+    */
     public Optional<String> getChannelSecret() {
         return Optional.ofNullable(this.channelSecret);
     }
     /**
      * Id generated for the line channel registration
      * 
-     */
+    */
     public String getGeneratedId() {
         return this.generatedId;
     }

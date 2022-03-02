@@ -23,7 +23,7 @@ public final class RuleGroupRuleRuleLabel {
     /**
      * The label string.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

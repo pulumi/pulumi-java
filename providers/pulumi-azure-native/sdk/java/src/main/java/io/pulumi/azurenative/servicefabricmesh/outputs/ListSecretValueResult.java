@@ -25,7 +25,7 @@ public final class ListSecretValueResult {
     /**
      * The actual value of the secret.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

@@ -48,28 +48,28 @@ public final class EndpointElasticsearchSettings {
     /**
      * Endpoint for the Elasticsearch cluster.
      * 
-     */
+    */
     public String getEndpointUri() {
         return this.endpointUri;
     }
     /**
      * Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
      * 
-     */
+    */
     public Optional<Integer> getErrorRetryDuration() {
         return Optional.ofNullable(this.errorRetryDuration);
     }
     /**
      * Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
      * 
-     */
+    */
     public Optional<Integer> getFullLoadErrorPercentage() {
         return Optional.ofNullable(this.fullLoadErrorPercentage);
     }
     /**
      * Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
      * 
-     */
+    */
     public String getServiceAccessRoleArn() {
         return this.serviceAccessRoleArn;
     }

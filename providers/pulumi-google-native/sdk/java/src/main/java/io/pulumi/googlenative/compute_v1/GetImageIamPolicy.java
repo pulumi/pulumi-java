@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetImageIamPolicy {
-/**
- * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+    private GetImageIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetImageIamPolicyArgs.Builder a);
+    }
+    private static GetImageIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetImageIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
  * 
- */
+     */
+    public static CompletableFuture<GetImageIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static CompletableFuture<GetImageIamPolicyResult> invokeAsync(GetImageIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getImageIamPolicy", TypeShape.of(GetImageIamPolicyResult.class), args == null ? GetImageIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

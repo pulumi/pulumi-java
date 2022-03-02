@@ -31,14 +31,14 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse {
     /**
      * Cloud Storage URI that points to a file that contains the conversation audio.
      * 
-     */
+    */
     public String getAudioUri() {
         return this.audioUri;
     }
     /**
      * Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
      * 
-     */
+    */
     public String getTranscriptUri() {
         return this.transcriptUri;
     }

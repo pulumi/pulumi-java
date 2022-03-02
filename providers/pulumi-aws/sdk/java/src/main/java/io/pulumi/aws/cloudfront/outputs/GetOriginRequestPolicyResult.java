@@ -64,28 +64,28 @@ public final class GetOriginRequestPolicyResult {
     /**
      * Comment to describe the origin request policy.
      * 
-     */
+    */
     public String getComment() {
         return this.comment;
     }
     /**
      * Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
      * 
-     */
+    */
     public List<GetOriginRequestPolicyCookiesConfig> getCookiesConfigs() {
         return this.cookiesConfigs;
     }
     /**
      * The current version of the origin request policy.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
      * 
-     */
+    */
     public List<GetOriginRequestPolicyHeadersConfig> getHeadersConfigs() {
         return this.headersConfigs;
     }
@@ -98,7 +98,7 @@ public final class GetOriginRequestPolicyResult {
     /**
      * Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.
      * 
-     */
+    */
     public List<GetOriginRequestPolicyQueryStringsConfig> getQueryStringsConfigs() {
         return this.queryStringsConfigs;
     }

@@ -185,14 +185,14 @@ public final class GetWebPubSubResult {
     /**
      * The settings for event handler in webpubsub service.
      * 
-     */
+    */
     public Optional<EventHandlerSettingsResponse> getEventHandler() {
         return Optional.ofNullable(this.eventHandler);
     }
     /**
      * The publicly accessible IP of the resource.
      * 
-     */
+    */
     public String getExternalIP() {
         return this.externalIP;
     }
@@ -204,63 +204,63 @@ public final class GetWebPubSubResult {
      * When a featureFlag is not explicitly set, its globally default value will be used
      * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
      * 
-     */
+    */
     public List<WebPubSubFeatureResponse> getFeatures() {
         return this.features == null ? List.of() : this.features;
     }
     /**
      * FQDN of the service instance.
      * 
-     */
+    */
     public String getHostName() {
         return this.hostName;
     }
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The managed identity response
      * 
-     */
+    */
     public Optional<ManagedIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Network ACLs
      * 
-     */
+    */
     public Optional<WebPubSubNetworkACLsResponse> getNetworkACLs() {
         return Optional.ofNullable(this.networkACLs);
     }
     /**
      * Private endpoint connections to the resource.
      * 
-     */
+    */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -269,70 +269,70 @@ public final class GetWebPubSubResult {
      * When it's Enabled, network ACLs still apply.
      * When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * The publicly accessible port of the resource which is designed for browser/client side usage.
      * 
-     */
+    */
     public Integer getPublicPort() {
         return this.publicPort;
     }
     /**
      * The publicly accessible port of the resource which is designed for customer server side usage.
      * 
-     */
+    */
     public Integer getServerPort() {
         return this.serverPort;
     }
     /**
      * The list of shared private link resources.
      * 
-     */
+    */
     public List<SharedPrivateLinkResourceResponse> getSharedPrivateLinkResources() {
         return this.sharedPrivateLinkResources;
     }
     /**
      * The billing information of the resource.(e.g. Free, Standard)
      * 
-     */
+    */
     public Optional<ResourceSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * TLS settings.
      * 
-     */
+    */
     public Optional<WebPubSubTlsSettingsResponse> getTls() {
         return Optional.ofNullable(this.tls);
     }
     /**
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Version of the resource. Probably you need the same or higher version of client SDKs.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

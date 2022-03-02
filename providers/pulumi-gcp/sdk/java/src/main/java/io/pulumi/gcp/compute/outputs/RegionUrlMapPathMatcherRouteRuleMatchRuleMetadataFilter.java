@@ -45,7 +45,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter {
      * most 64 entries.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> getFilterLabels() {
         return this.filterLabels;
     }
@@ -58,7 +58,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilter {
      *   the provided metadata.
      *   Possible values are `MATCH_ALL` and `MATCH_ANY`.
      * 
-     */
+    */
     public String getFilterMatchCriteria() {
         return this.filterMatchCriteria;
     }

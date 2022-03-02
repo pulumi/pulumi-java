@@ -33,14 +33,14 @@ public final class CompositePathResponse {
     /**
      * Sort order for composite paths.
      * 
-     */
+    */
     public Optional<String> getOrder() {
         return Optional.ofNullable(this.order);
     }
     /**
      * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }

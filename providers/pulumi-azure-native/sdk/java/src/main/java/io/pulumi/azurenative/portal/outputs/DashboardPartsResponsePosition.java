@@ -56,35 +56,35 @@ public final class DashboardPartsResponsePosition {
     /**
      * The dashboard's part column span.
      * 
-     */
+    */
     public Integer getColSpan() {
         return this.colSpan;
     }
     /**
      * The dashboard part's metadata.
      * 
-     */
+    */
     public Map<String,Object> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
      * The dashboard's part row span.
      * 
-     */
+    */
     public Integer getRowSpan() {
         return this.rowSpan;
     }
     /**
      * The dashboard's part x coordinate.
      * 
-     */
+    */
     public Integer getX() {
         return this.x;
     }
     /**
      * The dashboard's part y coordinate.
      * 
-     */
+    */
     public Integer getY() {
         return this.y;
     }

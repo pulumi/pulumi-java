@@ -34,14 +34,14 @@ public final class HttpLogsConfigResponse {
     /**
      * Http logs to azure blob storage configuration.
      * 
-     */
+    */
     public Optional<AzureBlobStorageHttpLogsConfigResponse> getAzureBlobStorage() {
         return Optional.ofNullable(this.azureBlobStorage);
     }
     /**
      * Http logs to file system configuration.
      * 
-     */
+    */
     public Optional<FileSystemHttpLogsConfigResponse> getFileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }

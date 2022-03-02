@@ -96,6 +96,22 @@ public class RegionNetworkFirewallPolicyIamPolicy extends io.pulumi.resources.Cu
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RegionNetworkFirewallPolicyIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.compute_alpha.RegionNetworkFirewallPolicyIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.compute_alpha.RegionNetworkFirewallPolicyIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RegionNetworkFirewallPolicyIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -81,6 +81,22 @@ public class MigrationJobIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(MigrationJobIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.datamigration_v1beta1.MigrationJobIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.datamigration_v1beta1.MigrationJobIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public MigrationJobIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

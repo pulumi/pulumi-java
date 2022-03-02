@@ -107,63 +107,63 @@ public final class GetSqlPoolSensitivityLabelResult {
     /**
      * The column name.
      * 
-     */
+    */
     public String getColumnName() {
         return this.columnName;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The information type.
      * 
-     */
+    */
     public Optional<String> getInformationType() {
         return Optional.ofNullable(this.informationType);
     }
     /**
      * The information type ID.
      * 
-     */
+    */
     public Optional<String> getInformationTypeId() {
         return Optional.ofNullable(this.informationTypeId);
     }
     /**
      * Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.
      * 
-     */
+    */
     public Boolean getIsDisabled() {
         return this.isDisabled;
     }
     /**
      * The label ID.
      * 
-     */
+    */
     public Optional<String> getLabelId() {
         return Optional.ofNullable(this.labelId);
     }
     /**
      * The label name.
      * 
-     */
+    */
     public Optional<String> getLabelName() {
         return Optional.ofNullable(this.labelName);
     }
     /**
      * managed by
      * 
-     */
+    */
     public String getManagedBy() {
         return this.managedBy;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -173,21 +173,21 @@ public final class GetSqlPoolSensitivityLabelResult {
     /**
      * The schema name.
      * 
-     */
+    */
     public String getSchemaName() {
         return this.schemaName;
     }
     /**
      * The table name.
      * 
-     */
+    */
     public String getTableName() {
         return this.tableName;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

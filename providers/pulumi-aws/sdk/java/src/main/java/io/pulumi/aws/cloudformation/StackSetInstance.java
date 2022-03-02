@@ -149,6 +149,22 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
         return this.stackSetName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(StackSetInstanceArgs.Builder a);
+    }
+    private static io.pulumi.aws.cloudformation.StackSetInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.cloudformation.StackSetInstanceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public StackSetInstance(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

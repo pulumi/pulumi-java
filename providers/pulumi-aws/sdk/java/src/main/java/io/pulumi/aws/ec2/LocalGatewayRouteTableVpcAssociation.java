@@ -93,6 +93,22 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
         return this.vpcId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(LocalGatewayRouteTableVpcAssociationArgs.Builder a);
+    }
+    private static io.pulumi.aws.ec2.LocalGatewayRouteTableVpcAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.ec2.LocalGatewayRouteTableVpcAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public LocalGatewayRouteTableVpcAssociation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

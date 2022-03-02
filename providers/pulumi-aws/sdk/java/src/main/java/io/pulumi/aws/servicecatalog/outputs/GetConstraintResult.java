@@ -77,7 +77,7 @@ public final class GetConstraintResult {
     /**
      * Description of the constraint.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -87,42 +87,42 @@ public final class GetConstraintResult {
     /**
      * Owner of the constraint.
      * 
-     */
+    */
     public String getOwner() {
         return this.owner;
     }
     /**
      * Constraint parameters in JSON format.
      * 
-     */
+    */
     public String getParameters() {
         return this.parameters;
     }
     /**
      * Portfolio identifier.
      * 
-     */
+    */
     public String getPortfolioId() {
         return this.portfolioId;
     }
     /**
      * Product identifier.
      * 
-     */
+    */
     public String getProductId() {
         return this.productId;
     }
     /**
      * Constraint status.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `RESOURCE_UPDATE`, `STACKSET`, and `TEMPLATE`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

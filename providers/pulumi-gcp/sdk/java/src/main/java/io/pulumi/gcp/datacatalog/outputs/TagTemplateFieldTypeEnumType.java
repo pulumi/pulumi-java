@@ -34,7 +34,7 @@ public final class TagTemplateFieldTypeEnumType {
      * Can have up to 500 allowed values.
      * Structure is documented below.
      * 
-     */
+    */
     public List<TagTemplateFieldTypeEnumTypeAllowedValue> getAllowedValues() {
         return this.allowedValues;
     }

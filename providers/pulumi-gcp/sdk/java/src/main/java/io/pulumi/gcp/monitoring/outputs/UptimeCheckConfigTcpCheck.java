@@ -23,7 +23,7 @@ public final class UptimeCheckConfigTcpCheck {
     /**
      * The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }

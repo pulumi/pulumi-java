@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpc {
-/**
- * `aws.ec2.Vpc` provides details about a specific VPC.
+    private GetVpc() {}
+    public interface BuilderApplicator {
+        public void apply(GetVpcArgs.Builder a);
+    }
+    private static GetVpcArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVpcArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `aws.ec2.Vpc` provides details about a specific VPC.
  * 
  * This resource can prove useful when a module accepts a vpc id as
  * an input variable and needs to, for example, determine the CIDR block of that
  * VPC.
  * 
- *
- * A collection of arguments for invoking getVpc.
+     *
+     * A collection of arguments for invoking getVpc.
  * 
- *
- * A collection of values returned by getVpc.
+     *
+     * A collection of values returned by getVpc.
  * 
- */
+     */
+    public static CompletableFuture<GetVpcResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `aws.ec2.Vpc` provides details about a specific VPC.
+     * 
+     * This resource can prove useful when a module accepts a vpc id as
+     * an input variable and needs to, for example, determine the CIDR block of that
+     * VPC.
+     * 
+     *
+         * A collection of arguments for invoking getVpc.
+     * 
+     *
+         * A collection of values returned by getVpc.
+     * 
+     */
     public static CompletableFuture<GetVpcResult> invokeAsync(@Nullable GetVpcArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getVpc:getVpc", TypeShape.of(GetVpcResult.class), args == null ? GetVpcArgs.Empty : args, Utilities.withVersion(options));
     }

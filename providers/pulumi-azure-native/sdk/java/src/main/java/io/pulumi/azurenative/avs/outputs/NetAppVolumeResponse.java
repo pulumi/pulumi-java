@@ -33,14 +33,14 @@ public final class NetAppVolumeResponse {
     /**
      * File path through which the NFS volume is exposed by the provider
      * 
-     */
+    */
     public Optional<String> getNfsFilePath() {
         return Optional.ofNullable(this.nfsFilePath);
     }
     /**
      * IP address of the NFS provider
      * 
-     */
+    */
     public Optional<String> getNfsProviderIp() {
         return Optional.ofNullable(this.nfsProviderIp);
     }

@@ -60,42 +60,42 @@ public final class DistributionResponse {
     /**
      * The CPU architecture for which packages in this distribution channel were built
      * 
-     */
+    */
     public String getArchitecture() {
         return this.architecture;
     }
     /**
      * The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
      * 
-     */
+    */
     public String getCpeUri() {
         return this.cpeUri;
     }
     /**
      * The distribution channel-specific description of this package.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The latest available version of this package in this distribution channel.
      * 
-     */
+    */
     public VersionResponse getLatestVersion() {
         return this.latestVersion;
     }
     /**
      * A freeform string denoting the maintainer of this package.
      * 
-     */
+    */
     public String getMaintainer() {
         return this.maintainer;
     }
     /**
      * The distribution channel-specific homepage for this package.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

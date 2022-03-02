@@ -119,91 +119,91 @@ public final class GetImageRecipeResult {
     /**
      * Set of objects with block device mappings for the the image recipe.
      * 
-     */
+    */
     public List<GetImageRecipeBlockDeviceMapping> getBlockDeviceMappings() {
         return this.blockDeviceMappings;
     }
     /**
      * List of objects with components for the image recipe.
      * 
-     */
+    */
     public List<GetImageRecipeComponent> getComponents() {
         return this.components;
     }
     /**
      * Date the image recipe was created.
      * 
-     */
+    */
     public String getDateCreated() {
         return this.dateCreated;
     }
     /**
      * Description of the image recipe.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the image recipe.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Owner of the image recipe.
      * 
-     */
+    */
     public String getOwner() {
         return this.owner;
     }
     /**
      * Platform of the image recipe.
      * 
-     */
+    */
     public String getParentImage() {
         return this.parentImage;
     }
     /**
      * Platform of the image recipe.
      * 
-     */
+    */
     public String getPlatform() {
         return this.platform;
     }
     /**
      * Key-value map of resource tags for the image recipe.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Base64 encoded contents of user data. Commands or a command script to run when build instance is launched.
      * 
-     */
+    */
     public String getUserDataBase64() {
         return this.userDataBase64;
     }
     /**
      * Version of the image recipe.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
     /**
      * The working directory used during build and test workflows.
      * 
-     */
+    */
     public String getWorkingDirectory() {
         return this.workingDirectory;
     }

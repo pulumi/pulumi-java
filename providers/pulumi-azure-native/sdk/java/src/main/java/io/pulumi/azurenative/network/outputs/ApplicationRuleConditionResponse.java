@@ -85,35 +85,35 @@ public final class ApplicationRuleConditionResponse {
     /**
      * Description of the rule condition.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of destination IP addresses or Service Tags.
      * 
-     */
+    */
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
      * List of FQDN Tags for this rule condition.
      * 
-     */
+    */
     public List<String> getFqdnTags() {
         return this.fqdnTags == null ? List.of() : this.fqdnTags;
     }
     /**
      * Name of the rule condition.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Array of Application Protocols.
      * 
-     */
+    */
     public List<FirewallPolicyRuleConditionApplicationProtocolResponse> getProtocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
@@ -121,28 +121,28 @@ public final class ApplicationRuleConditionResponse {
      * Rule Condition Type.
      * Expected value is 'ApplicationRuleCondition'.
      * 
-     */
+    */
     public String getRuleConditionType() {
         return this.ruleConditionType;
     }
     /**
      * List of source IP addresses for this rule.
      * 
-     */
+    */
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
      * List of source IpGroups for this rule.
      * 
-     */
+    */
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
     /**
      * List of FQDNs for this rule condition.
      * 
-     */
+    */
     public List<String> getTargetFqdns() {
         return this.targetFqdns == null ? List.of() : this.targetFqdns;
     }

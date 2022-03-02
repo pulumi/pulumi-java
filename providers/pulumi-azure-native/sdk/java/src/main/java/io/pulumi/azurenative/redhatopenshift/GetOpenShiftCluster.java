@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOpenShiftCluster {
-/**
- * OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
+    private GetOpenShiftCluster() {}
+    public interface BuilderApplicator {
+        public void apply(GetOpenShiftClusterArgs.Builder a);
+    }
+    private static GetOpenShiftClusterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOpenShiftClusterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
  * API Version: 2020-04-30.
  * 
- *
- * OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
+     *
+     * OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
  * 
- */
+     */
+    public static CompletableFuture<GetOpenShiftClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
+     * API Version: 2020-04-30.
+     * 
+     *
+         * OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
+     * 
+     */
     public static CompletableFuture<GetOpenShiftClusterResult> invokeAsync(GetOpenShiftClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:redhatopenshift:getOpenShiftCluster", TypeShape.of(GetOpenShiftClusterResult.class), args == null ? GetOpenShiftClusterArgs.Empty : args, Utilities.withVersion(options));
     }

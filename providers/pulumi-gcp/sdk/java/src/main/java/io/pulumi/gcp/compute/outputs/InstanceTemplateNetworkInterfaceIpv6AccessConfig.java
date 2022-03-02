@@ -43,7 +43,7 @@ public final class InstanceTemplateNetworkInterfaceIpv6AccessConfig {
      * The service-level to be provided for IPv6 traffic when the
      * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
      * 
-     */
+    */
     public String getNetworkTier() {
         return this.networkTier;
     }

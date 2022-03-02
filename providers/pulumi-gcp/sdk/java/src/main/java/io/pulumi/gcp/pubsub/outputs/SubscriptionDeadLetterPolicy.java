@@ -57,7 +57,7 @@ public final class SubscriptionDeadLetterPolicy {
      * Users should ensure that there is a subscription attached to this topic
      * since messages published to a topic with no subscriptions are lost.
      * 
-     */
+    */
     public Optional<String> getDeadLetterTopic() {
         return Optional.ofNullable(this.deadLetterTopic);
     }
@@ -71,7 +71,7 @@ public final class SubscriptionDeadLetterPolicy {
      * This field will be honored on a best effort basis.
      * If this parameter is 0, a default value of 5 is used.
      * 
-     */
+    */
     public Optional<Integer> getMaxDeliveryAttempts() {
         return Optional.ofNullable(this.maxDeliveryAttempts);
     }

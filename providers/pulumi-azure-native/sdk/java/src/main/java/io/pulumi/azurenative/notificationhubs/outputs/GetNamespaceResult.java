@@ -155,133 +155,133 @@ public final class GetNamespaceResult {
     /**
      * The time the namespace was created.
      * 
-     */
+    */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * Whether or not the namespace is set as Critical.
      * 
-     */
+    */
     public Optional<Boolean> getCritical() {
         return Optional.ofNullable(this.critical);
     }
     /**
      * Data center for the namespace
      * 
-     */
+    */
     public Optional<String> getDataCenter() {
         return Optional.ofNullable(this.dataCenter);
     }
     /**
      * Whether or not the namespace is currently enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Identifier for Azure Insights metrics
      * 
-     */
+    */
     public String getMetricId() {
         return this.metricId;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The namespace type.
      * 
-     */
+    */
     public Optional<String> getNamespaceType() {
         return Optional.ofNullable(this.namespaceType);
     }
     /**
      * Provisioning state of the Namespace.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
      * 
-     */
+    */
     public Optional<String> getRegion() {
         return Optional.ofNullable(this.region);
     }
     /**
      * ScaleUnit where the namespace gets created
      * 
-     */
+    */
     public Optional<String> getScaleUnit() {
         return Optional.ofNullable(this.scaleUnit);
     }
     /**
      * Endpoint you can use to perform NotificationHub operations.
      * 
-     */
+    */
     public Optional<String> getServiceBusEndpoint() {
         return Optional.ofNullable(this.serviceBusEndpoint);
     }
     /**
      * The sku of the created namespace
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The Id of the Azure subscription associated with the namespace.
      * 
-     */
+    */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The time the namespace was updated.
      * 
-     */
+    */
     public Optional<String> getUpdatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }

@@ -33,14 +33,14 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     /**
      * The Amazon Resource Name (ARN) of the AWS Lambda function.
      * 
-     */
+    */
     public String getFunctionArn() {
         return this.functionArn;
     }
     /**
      * Additional JSON that provides supplemental data to the Lambda function used to transform objects.
      * 
-     */
+    */
     public Optional<String> getFunctionPayload() {
         return Optional.ofNullable(this.functionPayload);
     }

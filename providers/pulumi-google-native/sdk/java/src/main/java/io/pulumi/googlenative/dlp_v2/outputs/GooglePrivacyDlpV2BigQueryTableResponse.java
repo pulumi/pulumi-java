@@ -38,21 +38,21 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse {
     /**
      * Dataset ID of the table.
      * 
-     */
+    */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * Name of the table.
      * 
-     */
+    */
     public String getTableId() {
         return this.tableId;
     }

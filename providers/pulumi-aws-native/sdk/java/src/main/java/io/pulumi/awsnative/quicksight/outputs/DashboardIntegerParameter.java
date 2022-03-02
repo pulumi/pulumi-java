@@ -33,14 +33,14 @@ public final class DashboardIntegerParameter {
     /**
      * <p>The name of the integer parameter.</p>
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * <p>The values for the integer parameter.</p>
      * 
-     */
+    */
     public List<Double> getValues() {
         return this.values;
     }

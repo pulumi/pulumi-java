@@ -84,7 +84,7 @@ public final class RouterStatusBestRoute {
     /**
      * The name of the router.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -92,7 +92,7 @@ public final class RouterStatusBestRoute {
      * The network name or resource link to the parent
      * network of this subnetwork.
      * 
-     */
+    */
     public String getNetwork() {
         return this.network;
     }
@@ -124,7 +124,7 @@ public final class RouterStatusBestRoute {
      * The ID of the project in which the resource
      * belongs. If it is not provided, the provider project is used.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }

@@ -40,21 +40,21 @@ public final class PrivateLinkServiceConnectionStateResponse {
     /**
      * Gets or sets actions required
      * 
-     */
+    */
     public Optional<String> getActionRequired() {
         return Optional.ofNullable(this.actionRequired);
     }
     /**
      * Gets or sets description
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Gets or sets the status
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

@@ -51,28 +51,28 @@ public final class ResourceSetDNSTargetResource {
     /**
      * The domain name that acts as an ingress point to a portion of the customer application.
      * 
-     */
+    */
     public Optional<String> getDomainName() {
         return Optional.ofNullable(this.domainName);
     }
     /**
      * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target resource.
      * 
-     */
+    */
     public Optional<String> getHostedZoneArn() {
         return Optional.ofNullable(this.hostedZoneArn);
     }
     /**
      * The Route 53 record set ID that will uniquely identify a DNS record, given a name and a type.
      * 
-     */
+    */
     public Optional<String> getRecordSetId() {
         return Optional.ofNullable(this.recordSetId);
     }
     /**
      * The type of DNS record of the target resource.
      * 
-     */
+    */
     public Optional<String> getRecordType() {
         return Optional.ofNullable(this.recordType);
     }

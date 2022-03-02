@@ -434,6 +434,22 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
         return this.virtualNetworkGateway2;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VirtualNetworkGatewayConnectionArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.network.VirtualNetworkGatewayConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.network.VirtualNetworkGatewayConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VirtualNetworkGatewayConnection(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

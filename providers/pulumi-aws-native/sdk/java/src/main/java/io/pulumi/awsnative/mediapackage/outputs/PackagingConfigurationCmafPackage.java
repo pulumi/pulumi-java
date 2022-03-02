@@ -46,14 +46,14 @@ public final class PackagingConfigurationCmafPackage {
     /**
      * A list of HLS manifest configurations.
      * 
-     */
+    */
     public List<PackagingConfigurationHlsManifest> getHlsManifests() {
         return this.hlsManifests;
     }
     /**
      * When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder's Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeEncoderConfigurationInSegments() {
         return Optional.ofNullable(this.includeEncoderConfigurationInSegments);
     }

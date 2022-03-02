@@ -27,7 +27,7 @@ public final class InboundSamlConfigIdpConfigIdpCertificate {
      * - 
      * The x509 certificate
      * 
-     */
+    */
     public Optional<String> getX509Certificate() {
         return Optional.ofNullable(this.x509Certificate);
     }

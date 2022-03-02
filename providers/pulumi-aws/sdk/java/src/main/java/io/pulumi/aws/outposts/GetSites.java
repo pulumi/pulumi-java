@@ -12,15 +12,16 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSites {
-/**
- * Provides details about multiple Outposts Sites.
- * 
- * ## Example Usage
- * 
- *
- * A collection of values returned by getSites.
- * 
- */
+    private GetSites() {}
+    /**
+         * Provides details about multiple Outposts Sites.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of values returned by getSites.
+     * 
+     */
     public static CompletableFuture<GetSitesResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getSites:getSites", TypeShape.of(GetSitesResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

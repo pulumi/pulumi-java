@@ -47,7 +47,7 @@ public final class PolicyListPolicy {
     /**
      * or `deny` - (Optional) One or the other must be set.
      * 
-     */
+    */
     public Optional<PolicyListPolicyAllow> getAllow() {
         return Optional.ofNullable(this.allow);
     }
@@ -58,14 +58,14 @@ public final class PolicyListPolicy {
      * If set to true, the values from the effective Policy of the parent resource
      * are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
      * 
-     */
+    */
     public Optional<Boolean> getInheritFromParent() {
         return Optional.ofNullable(this.inheritFromParent);
     }
     /**
      * The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
      * 
-     */
+    */
     public Optional<String> getSuggestedValue() {
         return Optional.ofNullable(this.suggestedValue);
     }

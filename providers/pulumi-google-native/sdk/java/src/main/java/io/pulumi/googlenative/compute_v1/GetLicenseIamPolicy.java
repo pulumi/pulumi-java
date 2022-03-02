@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLicenseIamPolicy {
-/**
- * Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+    private GetLicenseIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetLicenseIamPolicyArgs.Builder a);
+    }
+    private static GetLicenseIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLicenseIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
  * 
- */
+     */
+    public static CompletableFuture<GetLicenseIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
+     * 
+     */
     public static CompletableFuture<GetLicenseIamPolicyResult> invokeAsync(GetLicenseIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getLicenseIamPolicy", TypeShape.of(GetLicenseIamPolicyResult.class), args == null ? GetLicenseIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -33,14 +33,14 @@ public final class StackPropertiesResponse {
     /**
      * Id of the ClusterStack.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Version of the ClusterStack
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

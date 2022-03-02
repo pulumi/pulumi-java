@@ -25,7 +25,7 @@ public final class AmlTokenResponse {
      * Enum to determine identity framework.
      * Expected value is 'AMLToken'.
      * 
-     */
+    */
     public String getIdentityType() {
         return this.identityType;
     }

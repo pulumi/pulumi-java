@@ -35,14 +35,14 @@ public final class GetLocationsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The list of Cloud Run locations available for the given project.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations;
     }

@@ -12,15 +12,16 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetActiveReceiptRuleSet {
-/**
- * Retrieve the active SES receipt rule set
- * 
- * ## Example Usage
- * 
- *
- * A collection of values returned by getActiveReceiptRuleSet.
- * 
- */
+    private GetActiveReceiptRuleSet() {}
+    /**
+         * Retrieve the active SES receipt rule set
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of values returned by getActiveReceiptRuleSet.
+     * 
+     */
     public static CompletableFuture<GetActiveReceiptRuleSetResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ses/getActiveReceiptRuleSet:getActiveReceiptRuleSet", TypeShape.of(GetActiveReceiptRuleSetResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

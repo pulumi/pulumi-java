@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalReplicationGroup {
-/**
- * The AWS::ElastiCache::GlobalReplicationGroup resource creates an Amazon ElastiCache Global Replication Group.
+    private GetGlobalReplicationGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetGlobalReplicationGroupArgs.Builder a);
+    }
+    private static GetGlobalReplicationGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGlobalReplicationGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::ElastiCache::GlobalReplicationGroup resource creates an Amazon ElastiCache Global Replication Group.
  * 
- */
+     */
+    public static CompletableFuture<GetGlobalReplicationGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::ElastiCache::GlobalReplicationGroup resource creates an Amazon ElastiCache Global Replication Group.
+     * 
+     */
     public static CompletableFuture<GetGlobalReplicationGroupResult> invokeAsync(GetGlobalReplicationGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:elasticache:getGlobalReplicationGroup", TypeShape.of(GetGlobalReplicationGroupResult.class), args == null ? GetGlobalReplicationGroupArgs.Empty : args, Utilities.withVersion(options));
     }

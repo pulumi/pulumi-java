@@ -34,14 +34,14 @@ public final class LaunchTemplateTagSpecification {
     /**
      * The type of resource to tag.
      * 
-     */
+    */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
      * A map of tags to assign to the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }

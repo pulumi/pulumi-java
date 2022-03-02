@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResponsePolicy {
-/**
- * Fetches the representation of an existing Response Policy.
+    private GetResponsePolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetResponsePolicyArgs.Builder a);
+    }
+    private static GetResponsePolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResponsePolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Fetches the representation of an existing Response Policy.
  * 
- */
+     */
+    public static CompletableFuture<GetResponsePolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Fetches the representation of an existing Response Policy.
+     * 
+     */
     public static CompletableFuture<GetResponsePolicyResult> invokeAsync(GetResponsePolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dns/v1:getResponsePolicy", TypeShape.of(GetResponsePolicyResult.class), args == null ? GetResponsePolicyArgs.Empty : args, Utilities.withVersion(options));
     }

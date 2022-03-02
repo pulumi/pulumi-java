@@ -79,7 +79,7 @@ public final class FlexibleAppVersionHandlerStaticFiles {
      * uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
      * uploads are charged against both your code and static data storage resource quotas.
      * 
-     */
+    */
     public Optional<Boolean> getApplicationReadable() {
         return Optional.ofNullable(this.applicationReadable);
     }
@@ -88,7 +88,7 @@ public final class FlexibleAppVersionHandlerStaticFiles {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
      * Default is '0s'
      * 
-     */
+    */
     public Optional<String> getExpiration() {
         return Optional.ofNullable(this.expiration);
     }
@@ -96,7 +96,7 @@ public final class FlexibleAppVersionHandlerStaticFiles {
      * HTTP headers to use for all responses from these URLs.
      * An object containing a list of "key:value" value pairs.".
      * 
-     */
+    */
     public Map<String,String> getHttpHeaders() {
         return this.httpHeaders == null ? Map.of() : this.httpHeaders;
     }
@@ -104,7 +104,7 @@ public final class FlexibleAppVersionHandlerStaticFiles {
      * MIME type used to serve all files served by this handler.
      * Defaults to file-specific MIME types, which are derived from each file's filename extension.
      * 
-     */
+    */
     public Optional<String> getMimeType() {
         return Optional.ofNullable(this.mimeType);
     }
@@ -112,21 +112,21 @@ public final class FlexibleAppVersionHandlerStaticFiles {
      * Path to the static files matched by the URL pattern, from the application root directory.
      * The path can refer to text matched in groupings in the URL pattern.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * Whether this handler should match the request if the file referenced by the handler does not exist.
      * 
-     */
+    */
     public Optional<Boolean> getRequireMatchingFile() {
         return Optional.ofNullable(this.requireMatchingFile);
     }
     /**
      * Regular expression that matches the file paths for all files that should be referenced by this handler.
      * 
-     */
+    */
     public Optional<String> getUploadPathRegex() {
         return Optional.ofNullable(this.uploadPathRegex);
     }

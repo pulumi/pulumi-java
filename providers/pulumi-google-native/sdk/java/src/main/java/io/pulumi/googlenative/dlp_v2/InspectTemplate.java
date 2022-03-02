@@ -105,6 +105,22 @@ public class InspectTemplate extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable InspectTemplateArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.dlp_v2.InspectTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.dlp_v2.InspectTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public InspectTemplate(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

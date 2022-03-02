@@ -41,21 +41,21 @@ public final class LineChannelPropertiesResponse {
     /**
      * Callback Url to enter in line registration.
      * 
-     */
+    */
     public String getCallbackUrl() {
         return this.callbackUrl;
     }
     /**
      * Whether this channel is validated for the bot
      * 
-     */
+    */
     public Boolean getIsValidated() {
         return this.isValidated;
     }
     /**
      * The list of line channel registrations
      * 
-     */
+    */
     public List<LineRegistrationResponse> getLineRegistrations() {
         return this.lineRegistrations;
     }

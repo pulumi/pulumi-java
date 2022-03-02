@@ -74,35 +74,35 @@ public final class MigrateSqlServerSqlMITaskPropertiesResponse {
     /**
      * Array of command properties.
      * 
-     */
+    */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
     }
     /**
      * Array of errors. This is ignored if submitted.
      * 
-     */
+    */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Task input
      * 
-     */
+    */
     public Optional<MigrateSqlServerSqlMITaskInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Task output. This is ignored if submitted.
      * 
-     */
+    */
     public List<Object> getOutput() {
         return this.output;
     }
     /**
      * The state of the task. This is ignored if submitted.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -110,7 +110,7 @@ public final class MigrateSqlServerSqlMITaskPropertiesResponse {
      * Task type.
      * Expected value is 'Migrate.SqlServer.AzureSqlDbMI'.
      * 
-     */
+    */
     public String getTaskType() {
         return this.taskType;
     }

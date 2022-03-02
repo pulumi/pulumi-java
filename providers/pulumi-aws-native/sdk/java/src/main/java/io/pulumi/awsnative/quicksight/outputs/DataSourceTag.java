@@ -31,14 +31,14 @@ public final class DataSourceTag {
     /**
      * <p>Tag key.</p>
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * <p>Tag value.</p>
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

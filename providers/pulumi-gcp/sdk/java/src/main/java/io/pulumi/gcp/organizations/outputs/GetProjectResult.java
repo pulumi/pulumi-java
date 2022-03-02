@@ -68,7 +68,7 @@ public final class GetProjectResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -81,7 +81,7 @@ public final class GetProjectResult {
     /**
      * The numeric identifier of the project.
      * 
-     */
+    */
     public String getNumber() {
         return this.number;
     }

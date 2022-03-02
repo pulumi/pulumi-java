@@ -25,7 +25,7 @@ public final class MultichannelResponse {
     /**
      * Indicates whether multichannel is enabled
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiPortal {
-/**
- * API portal resource
+    private GetApiPortal() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiPortalArgs.Builder a);
+    }
+    private static GetApiPortalArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiPortalArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API portal resource
  * API Version: 2022-01-01-preview.
  * 
- *
- * API portal resource
+     *
+     * API portal resource
  * 
- */
+     */
+    public static CompletableFuture<GetApiPortalResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API portal resource
+     * API Version: 2022-01-01-preview.
+     * 
+     *
+         * API portal resource
+     * 
+     */
     public static CompletableFuture<GetApiPortalResult> invokeAsync(GetApiPortalArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getApiPortal", TypeShape.of(GetApiPortalResult.class), args == null ? GetApiPortalArgs.Empty : args, Utilities.withVersion(options));
     }

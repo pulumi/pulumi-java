@@ -33,14 +33,14 @@ public final class ImageBuilderDomainJoinInfo {
     /**
      * Fully qualified name of the directory (for example, corp.example.com).
      * 
-     */
+    */
     public Optional<String> getDirectoryName() {
         return Optional.ofNullable(this.directoryName);
     }
     /**
      * Distinguished name of the organizational unit for computer accounts.
      * 
-     */
+    */
     public Optional<String> getOrganizationalUnitDistinguishedName() {
         return Optional.ofNullable(this.organizationalUnitDistinguishedName);
     }

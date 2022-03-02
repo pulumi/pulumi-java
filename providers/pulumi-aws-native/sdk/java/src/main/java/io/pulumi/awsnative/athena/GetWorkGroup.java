@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkGroup {
-/**
- * Resource schema for AWS::Athena::WorkGroup
+    private GetWorkGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkGroupArgs.Builder a);
+    }
+    private static GetWorkGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::Athena::WorkGroup
  * 
- */
+     */
+    public static CompletableFuture<GetWorkGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::Athena::WorkGroup
+     * 
+     */
     public static CompletableFuture<GetWorkGroupResult> invokeAsync(GetWorkGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:athena:getWorkGroup", TypeShape.of(GetWorkGroupResult.class), args == null ? GetWorkGroupArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeploymentAtManagementGroupScope {
-/**
- * Deployment information.
+    private GetDeploymentAtManagementGroupScope() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeploymentAtManagementGroupScopeArgs.Builder a);
+    }
+    private static GetDeploymentAtManagementGroupScopeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeploymentAtManagementGroupScopeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Deployment information.
  * API Version: 2021-01-01.
  * 
- *
- * Deployment information.
+     *
+     * Deployment information.
  * 
- */
+     */
+    public static CompletableFuture<GetDeploymentAtManagementGroupScopeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Deployment information.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Deployment information.
+     * 
+     */
     public static CompletableFuture<GetDeploymentAtManagementGroupScopeResult> invokeAsync(GetDeploymentAtManagementGroupScopeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getDeploymentAtManagementGroupScope", TypeShape.of(GetDeploymentAtManagementGroupScopeResult.class), args == null ? GetDeploymentAtManagementGroupScopeArgs.Empty : args, Utilities.withVersion(options));
     }

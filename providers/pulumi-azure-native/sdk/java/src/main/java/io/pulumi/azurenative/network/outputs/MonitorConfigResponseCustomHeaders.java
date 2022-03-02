@@ -33,14 +33,14 @@ public final class MonitorConfigResponseCustomHeaders {
     /**
      * Header name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Header value.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

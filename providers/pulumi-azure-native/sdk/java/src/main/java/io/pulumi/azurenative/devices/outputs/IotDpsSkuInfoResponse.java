@@ -41,21 +41,21 @@ public final class IotDpsSkuInfoResponse {
     /**
      * The number of units to provision
      * 
-     */
+    */
     public Optional<Double> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Sku name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Pricing tier name of the provisioning service.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }

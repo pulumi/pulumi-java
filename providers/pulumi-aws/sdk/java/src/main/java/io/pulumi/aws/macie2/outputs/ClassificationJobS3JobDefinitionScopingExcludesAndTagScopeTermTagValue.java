@@ -29,7 +29,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
     /**
      * The object property to use in the condition.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }

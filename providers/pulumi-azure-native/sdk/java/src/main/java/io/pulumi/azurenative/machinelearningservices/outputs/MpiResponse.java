@@ -36,14 +36,14 @@ public final class MpiResponse {
      * Enum to determine the job distribution type.
      * Expected value is 'Mpi'.
      * 
-     */
+    */
     public String getDistributionType() {
         return this.distributionType;
     }
     /**
      * Number of processes per MPI node.
      * 
-     */
+    */
     public Optional<Integer> getProcessCountPerInstance() {
         return Optional.ofNullable(this.processCountPerInstance);
     }

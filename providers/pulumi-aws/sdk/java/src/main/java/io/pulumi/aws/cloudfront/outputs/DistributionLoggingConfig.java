@@ -45,7 +45,7 @@ public final class DistributionLoggingConfig {
      * The Amazon S3 bucket to store the access logs in, for
      * example, `myawslogbucket.s3.amazonaws.com`.
      * 
-     */
+    */
     public String getBucket() {
         return this.bucket;
     }
@@ -53,7 +53,7 @@ public final class DistributionLoggingConfig {
      * Specifies whether you want CloudFront to
      * include cookies in access logs (default: `false`).
      * 
-     */
+    */
     public Optional<Boolean> getIncludeCookies() {
         return Optional.ofNullable(this.includeCookies);
     }
@@ -61,7 +61,7 @@ public final class DistributionLoggingConfig {
      * An optional string that you want CloudFront to prefix
      * to the access log filenames for this distribution, for example, `myprefix/`.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }

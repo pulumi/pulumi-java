@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganizationPolicy {
-/**
- * Allows management of Organization policies for a Google Project. For more information see
+    private GetOrganizationPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetOrganizationPolicyArgs.Builder a);
+    }
+    private static GetOrganizationPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOrganizationPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Allows management of Organization policies for a Google Project. For more information see
  * [the official
  * documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getOrganizationPolicy.
+     *
+     * A collection of arguments for invoking getOrganizationPolicy.
  * 
- *
- * A collection of values returned by getOrganizationPolicy.
+     *
+     * A collection of values returned by getOrganizationPolicy.
  * 
- */
+     */
+    public static CompletableFuture<GetOrganizationPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Allows management of Organization policies for a Google Project. For more information see
+     * [the official
+     * documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getOrganizationPolicy.
+     * 
+     *
+         * A collection of values returned by getOrganizationPolicy.
+     * 
+     */
     public static CompletableFuture<GetOrganizationPolicyResult> invokeAsync(GetOrganizationPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:projects/getOrganizationPolicy:getOrganizationPolicy", TypeShape.of(GetOrganizationPolicyResult.class), args == null ? GetOrganizationPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -31,14 +31,14 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
     /**
      * The last time the schedule successfully ran. The timestamp is an RFC3339 string.
      * 
-     */
+    */
     public String getLastRunStartTime() {
         return this.lastRunStartTime;
     }
     /**
      * The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.
      * 
-     */
+    */
     public String getNextRunStartTime() {
         return this.nextRunStartTime;
     }

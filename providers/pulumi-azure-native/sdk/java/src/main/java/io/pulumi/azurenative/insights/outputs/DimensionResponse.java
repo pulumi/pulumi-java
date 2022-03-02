@@ -39,21 +39,21 @@ public final class DimensionResponse {
     /**
      * Name of the dimension
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Operator for dimension values
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * List of dimension values
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }

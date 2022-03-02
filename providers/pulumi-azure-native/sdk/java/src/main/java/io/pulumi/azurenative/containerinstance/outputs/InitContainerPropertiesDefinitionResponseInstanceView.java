@@ -48,28 +48,28 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView {
     /**
      * The current state of the init container.
      * 
-     */
+    */
     public ContainerStateResponse getCurrentState() {
         return this.currentState;
     }
     /**
      * The events of the init container.
      * 
-     */
+    */
     public List<EventResponse> getEvents() {
         return this.events;
     }
     /**
      * The previous state of the init container.
      * 
-     */
+    */
     public ContainerStateResponse getPreviousState() {
         return this.previousState;
     }
     /**
      * The number of times that the init container has been restarted.
      * 
-     */
+    */
     public Integer getRestartCount() {
         return this.restartCount;
     }

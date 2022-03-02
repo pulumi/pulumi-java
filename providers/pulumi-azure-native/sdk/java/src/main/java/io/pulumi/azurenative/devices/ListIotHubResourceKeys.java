@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListIotHubResourceKeys {
-/**
- * The list of shared access policies with a next link.
+    private ListIotHubResourceKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListIotHubResourceKeysArgs.Builder a);
+    }
+    private static ListIotHubResourceKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListIotHubResourceKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The list of shared access policies with a next link.
  * API Version: 2020-08-31.
  * 
- *
- * The list of shared access policies with a next link.
+     *
+     * The list of shared access policies with a next link.
  * 
- */
+     */
+    public static CompletableFuture<ListIotHubResourceKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The list of shared access policies with a next link.
+     * API Version: 2020-08-31.
+     * 
+     *
+         * The list of shared access policies with a next link.
+     * 
+     */
     public static CompletableFuture<ListIotHubResourceKeysResult> invokeAsync(ListIotHubResourceKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:listIotHubResourceKeys", TypeShape.of(ListIotHubResourceKeysResult.class), args == null ? ListIotHubResourceKeysArgs.Empty : args, Utilities.withVersion(options));
     }

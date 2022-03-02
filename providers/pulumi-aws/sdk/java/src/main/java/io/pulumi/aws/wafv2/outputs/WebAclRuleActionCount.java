@@ -25,7 +25,7 @@ public final class WebAclRuleActionCount {
     /**
      * Defines custom handling for the web request. See Custom Request Handling below for details.
      * 
-     */
+    */
     public Optional<WebAclRuleActionCountCustomRequestHandling> getCustomRequestHandling() {
         return Optional.ofNullable(this.customRequestHandling);
     }

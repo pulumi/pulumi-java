@@ -60,42 +60,42 @@ public final class GetGameServerDeploymentResult {
     /**
      * The creation time.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Human readable description of the game server delpoyment.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * ETag of the resource.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The labels associated with this game server deployment. Each label is a key-value pair.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The resource name of the game server deployment, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The last-modified time.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }

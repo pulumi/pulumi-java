@@ -27,7 +27,7 @@ public final class CertificateCertificateDescriptionConfigValue {
      * Indicates the intended use for keys that correspond to a certificate.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CertificateCertificateDescriptionConfigValueKeyUsage> getKeyUsages() {
         return this.keyUsages == null ? List.of() : this.keyUsages;
     }

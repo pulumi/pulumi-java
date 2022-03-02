@@ -33,14 +33,14 @@ public final class ProjectSourceBuildStatusConfig {
     /**
      * Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
      * 
-     */
+    */
     public Optional<String> getContext() {
         return Optional.ofNullable(this.context);
     }
     /**
      * Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
      * 
-     */
+    */
     public Optional<String> getTargetUrl() {
         return Optional.ofNullable(this.targetUrl);
     }

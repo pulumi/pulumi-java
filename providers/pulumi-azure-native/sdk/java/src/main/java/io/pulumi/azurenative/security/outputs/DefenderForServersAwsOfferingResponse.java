@@ -50,21 +50,21 @@ public final class DefenderForServersAwsOfferingResponse {
     /**
      * The ARC autoprovisioning configuration
      * 
-     */
+    */
     public Optional<DefenderForServersAwsOfferingResponseArcAutoProvisioning> getArcAutoProvisioning() {
         return Optional.ofNullable(this.arcAutoProvisioning);
     }
     /**
      * The Defender for servers connection configuration
      * 
-     */
+    */
     public Optional<DefenderForServersAwsOfferingResponseDefenderForServers> getDefenderForServers() {
         return Optional.ofNullable(this.defenderForServers);
     }
     /**
      * The offering description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -72,7 +72,7 @@ public final class DefenderForServersAwsOfferingResponse {
      * The type of the security offering.
      * Expected value is 'DefenderForServersAWS'.
      * 
-     */
+    */
     public String getOfferingType() {
         return this.offeringType;
     }

@@ -13,13 +13,32 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClientToken {
-/**
- * Use this function to get an Azure authentication token for the current login context.
+    private GetClientToken() {}
+    public interface BuilderApplicator {
+        public void apply(GetClientTokenArgs.Builder a);
+    }
+    private static GetClientTokenArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetClientTokenArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this function to get an Azure authentication token for the current login context.
  * 
- *
- * Configuration values returned by getClientToken.
+     *
+     * Configuration values returned by getClientToken.
  * 
- */
+     */
+    public static CompletableFuture<GetClientTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this function to get an Azure authentication token for the current login context.
+     * 
+     *
+         * Configuration values returned by getClientToken.
+     * 
+     */
     public static CompletableFuture<GetClientTokenResult> invokeAsync(@Nullable GetClientTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getClientToken", TypeShape.of(GetClientTokenResult.class), args == null ? GetClientTokenArgs.Empty : args, Utilities.withVersion(options));
     }

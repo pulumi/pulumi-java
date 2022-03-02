@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntVal
     /**
      * Matches values of the parent parameter with type 'INTEGER'. All values must lie in `integer_value_spec` of parent parameter.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }

@@ -97,35 +97,35 @@ public final class GetIoTAddonResult {
     /**
      * Host OS supported by the IoT addon.
      * 
-     */
+    */
     public String getHostPlatform() {
         return this.hostPlatform;
     }
     /**
      * Platform where the runtime is hosted.
      * 
-     */
+    */
     public String getHostPlatformType() {
         return this.hostPlatformType;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * IoT device metadata to which appliance needs to be connected.
      * 
-     */
+    */
     public IoTDeviceInfoResponse getIoTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
     /**
      * IoT edge device to which the IoT Addon needs to be configured.
      * 
-     */
+    */
     public IoTDeviceInfoResponse getIoTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
@@ -133,42 +133,42 @@ public final class GetIoTAddonResult {
      * Addon type.
      * Expected value is 'IotEdge'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Addon Provisioning State
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Addon type
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Version of IoT running on the appliance.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

@@ -32,6 +32,22 @@ public class ResponseHeadersPolicy extends io.pulumi.resources.CustomResource {
         return this.responseHeadersPolicyConfig;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ResponseHeadersPolicyArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.cloudfront.ResponseHeadersPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.cloudfront.ResponseHeadersPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ResponseHeadersPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

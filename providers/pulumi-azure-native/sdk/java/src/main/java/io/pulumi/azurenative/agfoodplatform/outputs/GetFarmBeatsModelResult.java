@@ -76,56 +76,56 @@ public final class GetFarmBeatsModelResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Uri of the FarmBeats instance.
      * 
-     */
+    */
     public String getInstanceUri() {
         return this.instanceUri;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * FarmBeats instance provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContainerDefinition {
-/**
- * The ECS container definition data source allows access to details of
+    private GetContainerDefinition() {}
+    public interface BuilderApplicator {
+        public void apply(GetContainerDefinitionArgs.Builder a);
+    }
+    private static GetContainerDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetContainerDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The ECS container definition data source allows access to details of
  * a specific container within an AWS ECS service.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getContainerDefinition.
+     *
+     * A collection of arguments for invoking getContainerDefinition.
  * 
- *
- * A collection of values returned by getContainerDefinition.
+     *
+     * A collection of values returned by getContainerDefinition.
  * 
- */
+     */
+    public static CompletableFuture<GetContainerDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The ECS container definition data source allows access to details of
+     * a specific container within an AWS ECS service.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getContainerDefinition.
+     * 
+     *
+         * A collection of values returned by getContainerDefinition.
+     * 
+     */
     public static CompletableFuture<GetContainerDefinitionResult> invokeAsync(GetContainerDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ecs/getContainerDefinition:getContainerDefinition", TypeShape.of(GetContainerDefinitionResult.class), args == null ? GetContainerDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

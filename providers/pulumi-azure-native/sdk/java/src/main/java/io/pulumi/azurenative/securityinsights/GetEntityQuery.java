@@ -14,17 +14,40 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: ActivityCustomEntityQuery. */
 public class GetEntityQuery {
-/**
- * Specific entity query.
+    private GetEntityQuery() {}
+    public interface BuilderApplicator {
+        public void apply(GetEntityQueryArgs.Builder a);
+    }
+    private static GetEntityQueryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEntityQueryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Specific entity query.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Specific entity query.
+     *
+     * Specific entity query.
  * 
- * @deprecated
- * Please use one of the variants: ActivityCustomEntityQuery.
+     * @Deprecated
+     * Please use one of the variants: ActivityCustomEntityQuery.
  * 
- */
+     */
+    public static CompletableFuture<GetEntityQueryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Specific entity query.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Specific entity query.
+     * 
+     * @Deprecated
+         * Please use one of the variants: ActivityCustomEntityQuery.
+     * 
+     */
     @Deprecated /* Please use one of the variants: ActivityCustomEntityQuery. */
     public static CompletableFuture<GetEntityQueryResult> invokeAsync(GetEntityQueryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEntityQuery", TypeShape.of(GetEntityQueryResult.class), args == null ? GetEntityQueryArgs.Empty : args, Utilities.withVersion(options));

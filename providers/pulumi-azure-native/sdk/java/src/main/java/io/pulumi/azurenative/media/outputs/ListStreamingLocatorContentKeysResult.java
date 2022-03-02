@@ -25,7 +25,7 @@ public final class ListStreamingLocatorContentKeysResult {
     /**
      * ContentKeys used by current Streaming Locator
      * 
-     */
+    */
     public List<StreamingLocatorContentKeyResponse> getContentKeys() {
         return this.contentKeys == null ? List.of() : this.contentKeys;
     }

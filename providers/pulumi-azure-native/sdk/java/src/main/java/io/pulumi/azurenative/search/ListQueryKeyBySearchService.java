@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListQueryKeyBySearchService {
-/**
- * Response containing the query API keys for a given Azure Cognitive Search service.
+    private ListQueryKeyBySearchService() {}
+    public interface BuilderApplicator {
+        public void apply(ListQueryKeyBySearchServiceArgs.Builder a);
+    }
+    private static ListQueryKeyBySearchServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListQueryKeyBySearchServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Response containing the query API keys for a given Azure Cognitive Search service.
  * API Version: 2020-08-01.
  * 
- *
- * Response containing the query API keys for a given Azure Cognitive Search service.
+     *
+     * Response containing the query API keys for a given Azure Cognitive Search service.
  * 
- */
+     */
+    public static CompletableFuture<ListQueryKeyBySearchServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Response containing the query API keys for a given Azure Cognitive Search service.
+     * API Version: 2020-08-01.
+     * 
+     *
+         * Response containing the query API keys for a given Azure Cognitive Search service.
+     * 
+     */
     public static CompletableFuture<ListQueryKeyBySearchServiceResult> invokeAsync(ListQueryKeyBySearchServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:search:listQueryKeyBySearchService", TypeShape.of(ListQueryKeyBySearchServiceResult.class), args == null ? ListQueryKeyBySearchServiceArgs.Empty : args, Utilities.withVersion(options));
     }

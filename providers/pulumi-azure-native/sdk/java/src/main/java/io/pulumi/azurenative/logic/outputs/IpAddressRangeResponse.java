@@ -25,7 +25,7 @@ public final class IpAddressRangeResponse {
     /**
      * The IP address range.
      * 
-     */
+    */
     public Optional<String> getAddressRange() {
         return Optional.ofNullable(this.addressRange);
     }

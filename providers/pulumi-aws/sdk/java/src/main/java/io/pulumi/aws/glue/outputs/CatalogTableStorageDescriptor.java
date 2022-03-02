@@ -119,91 +119,91 @@ public final class CatalogTableStorageDescriptor {
     /**
      * List of reducer grouping columns, clustering columns, and bucketing columns in the table.
      * 
-     */
+    */
     public List<String> getBucketColumns() {
         return this.bucketColumns == null ? List.of() : this.bucketColumns;
     }
     /**
      * Configuration block for columns in the table. See `columns` below.
      * 
-     */
+    */
     public List<CatalogTableStorageDescriptorColumn> getColumns() {
         return this.columns == null ? List.of() : this.columns;
     }
     /**
      * Whether the data in the table is compressed.
      * 
-     */
+    */
     public Optional<Boolean> getCompressed() {
         return Optional.ofNullable(this.compressed);
     }
     /**
      * Input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
      * 
-     */
+    */
     public Optional<String> getInputFormat() {
         return Optional.ofNullable(this.inputFormat);
     }
     /**
      * Physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Must be specified if the table contains any dimension columns.
      * 
-     */
+    */
     public Optional<Integer> getNumberOfBuckets() {
         return Optional.ofNullable(this.numberOfBuckets);
     }
     /**
      * Output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
      * 
-     */
+    */
     public Optional<String> getOutputFormat() {
         return Optional.ofNullable(this.outputFormat);
     }
     /**
      * Map of initialization parameters for the SerDe, in key-value form.
      * 
-     */
+    */
     public Map<String,String> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
      * 
-     */
+    */
     public Optional<CatalogTableStorageDescriptorSchemaReference> getSchemaReference() {
         return Optional.ofNullable(this.schemaReference);
     }
     /**
      * Configuration block for serialization and deserialization ("SerDe") information. See `ser_de_info` below.
      * 
-     */
+    */
     public Optional<CatalogTableStorageDescriptorSerDeInfo> getSerDeInfo() {
         return Optional.ofNullable(this.serDeInfo);
     }
     /**
      * Configuration block with information about values that appear very frequently in a column (skewed values). See `skewed_info` below.
      * 
-     */
+    */
     public Optional<CatalogTableStorageDescriptorSkewedInfo> getSkewedInfo() {
         return Optional.ofNullable(this.skewedInfo);
     }
     /**
      * Configuration block for the sort order of each bucket in the table. See `sort_columns` below.
      * 
-     */
+    */
     public List<CatalogTableStorageDescriptorSortColumn> getSortColumns() {
         return this.sortColumns == null ? List.of() : this.sortColumns;
     }
     /**
      * Whether the table data is stored in subdirectories.
      * 
-     */
+    */
     public Optional<Boolean> getStoredAsSubDirectories() {
         return Optional.ofNullable(this.storedAsSubDirectories);
     }

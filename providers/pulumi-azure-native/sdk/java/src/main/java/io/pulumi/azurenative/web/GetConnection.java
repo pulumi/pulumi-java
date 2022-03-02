@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnection {
-/**
- * API connection
+    private GetConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetConnectionArgs.Builder a);
+    }
+    private static GetConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API connection
  * API Version: 2016-06-01.
  * 
- *
- * API connection
+     *
+     * API connection
  * 
- */
+     */
+    public static CompletableFuture<GetConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API connection
+     * API Version: 2016-06-01.
+     * 
+     *
+         * API connection
+     * 
+     */
     public static CompletableFuture<GetConnectionResult> invokeAsync(GetConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getConnection", TypeShape.of(GetConnectionResult.class), args == null ? GetConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

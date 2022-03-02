@@ -23,7 +23,7 @@ public final class InsightFiltersNetworkDestinationIpv4 {
     /**
      * A finding's CIDR value.
      * 
-     */
+    */
     public String getCidr() {
         return this.cidr;
     }

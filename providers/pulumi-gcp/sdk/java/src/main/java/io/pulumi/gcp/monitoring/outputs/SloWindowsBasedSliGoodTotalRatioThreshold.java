@@ -47,7 +47,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
      * Basic SLI to evaluate to judge window quality.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance> getBasicSliPerformance() {
         return Optional.ofNullable(this.basicSliPerformance);
     }
@@ -55,7 +55,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
      * Request-based SLI to evaluate to judge window quality.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdPerformance> getPerformance() {
         return Optional.ofNullable(this.performance);
     }
@@ -64,7 +64,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
      * Good service is defined to be the count of requests made to
      * this service that return in no more than threshold.
      * 
-     */
+    */
     public Optional<Double> getThreshold() {
         return Optional.ofNullable(this.threshold);
     }

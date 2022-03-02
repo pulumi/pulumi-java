@@ -131,105 +131,105 @@ public final class GetConnectedRegistryResult {
     /**
      * The activation properties of the connected registry.
      * 
-     */
+    */
     public ActivationPropertiesResponse getActivation() {
         return this.activation;
     }
     /**
      * The list of the ACR token resource IDs used to authenticate clients to the connected registry.
      * 
-     */
+    */
     public List<String> getClientTokenIds() {
         return this.clientTokenIds == null ? List.of() : this.clientTokenIds;
     }
     /**
      * The current connection state of the connected registry.
      * 
-     */
+    */
     public String getConnectionState() {
         return this.connectionState;
     }
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The last activity time of the connected registry.
      * 
-     */
+    */
     public String getLastActivityTime() {
         return this.lastActivityTime;
     }
     /**
      * The logging properties of the connected registry.
      * 
-     */
+    */
     public Optional<LoggingPropertiesResponse> getLogging() {
         return Optional.ofNullable(this.logging);
     }
     /**
      * The login server properties of the connected registry.
      * 
-     */
+    */
     public Optional<LoginServerPropertiesResponse> getLoginServer() {
         return Optional.ofNullable(this.loginServer);
     }
     /**
      * The mode of the connected registry resource that indicates the permissions of the registry.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The parent of the connected registry.
      * 
-     */
+    */
     public ParentPropertiesResponse getParent() {
         return this.parent;
     }
     /**
      * Provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The list of current statuses of the connected registry.
      * 
-     */
+    */
     public List<StatusDetailPropertiesResponse> getStatusDetails() {
         return this.statusDetails;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The current version of ACR runtime on the connected registry.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

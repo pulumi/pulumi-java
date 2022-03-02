@@ -71,6 +71,22 @@ public class DefaultObjectACL extends io.pulumi.resources.CustomResource {
         return this.roleEntities;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DefaultObjectACLArgs.Builder a);
+    }
+    private static io.pulumi.gcp.storage.DefaultObjectACLArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.storage.DefaultObjectACLArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DefaultObjectACL(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

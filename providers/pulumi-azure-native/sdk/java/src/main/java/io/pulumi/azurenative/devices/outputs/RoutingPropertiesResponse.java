@@ -51,28 +51,28 @@ public final class RoutingPropertiesResponse {
     /**
      * The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.
      * 
-     */
+    */
     public Optional<RoutingEndpointsResponse> getEndpoints() {
         return Optional.ofNullable(this.endpoints);
     }
     /**
      * The list of user-provided enrichments that the IoT hub applies to messages to be delivered to built-in and custom endpoints. See: https://aka.ms/telemetryoneventgrid
      * 
-     */
+    */
     public List<EnrichmentPropertiesResponse> getEnrichments() {
         return this.enrichments == null ? List.of() : this.enrichments;
     }
     /**
      * The properties of the route that is used as a fall-back route when none of the conditions specified in the 'routes' section are met. This is an optional parameter. When this property is not set, the messages which do not meet any of the conditions specified in the 'routes' section get routed to the built-in eventhub endpoint.
      * 
-     */
+    */
     public Optional<FallbackRoutePropertiesResponse> getFallbackRoute() {
         return Optional.ofNullable(this.fallbackRoute);
     }
     /**
      * The list of user-provided routing rules that the IoT hub uses to route messages to built-in and custom endpoints. A maximum of 100 routing rules are allowed for paid hubs and a maximum of 5 routing rules are allowed for free hubs.
      * 
-     */
+    */
     public List<RoutePropertiesResponse> getRoutes() {
         return this.routes == null ? List.of() : this.routes;
     }

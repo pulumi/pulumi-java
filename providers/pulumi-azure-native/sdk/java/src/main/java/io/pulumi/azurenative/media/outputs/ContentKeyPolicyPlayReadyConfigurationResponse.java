@@ -43,7 +43,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
     /**
      * The PlayReady licenses.
      * 
-     */
+    */
     public List<ContentKeyPolicyPlayReadyLicenseResponse> getLicenses() {
         return this.licenses;
     }
@@ -51,14 +51,14 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyPlayReadyConfiguration'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The custom response data.
      * 
-     */
+    */
     public Optional<String> getResponseCustomData() {
         return Optional.ofNullable(this.responseCustomData);
     }

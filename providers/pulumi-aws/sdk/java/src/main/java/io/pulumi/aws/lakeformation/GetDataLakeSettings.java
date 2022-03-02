@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataLakeSettings {
-/**
- * Get Lake Formation principals designated as data lake administrators and lists of principal permission entries for default create database and default create table permissions.
+    private GetDataLakeSettings() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataLakeSettingsArgs.Builder a);
+    }
+    private static GetDataLakeSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataLakeSettingsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get Lake Formation principals designated as data lake administrators and lists of principal permission entries for default create database and default create table permissions.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getDataLakeSettings.
+     *
+     * A collection of arguments for invoking getDataLakeSettings.
  * 
- *
- * A collection of values returned by getDataLakeSettings.
+     *
+     * A collection of values returned by getDataLakeSettings.
  * 
- */
+     */
+    public static CompletableFuture<GetDataLakeSettingsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get Lake Formation principals designated as data lake administrators and lists of principal permission entries for default create database and default create table permissions.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getDataLakeSettings.
+     * 
+     *
+         * A collection of values returned by getDataLakeSettings.
+     * 
+     */
     public static CompletableFuture<GetDataLakeSettingsResult> invokeAsync(@Nullable GetDataLakeSettingsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lakeformation/getDataLakeSettings:getDataLakeSettings", TypeShape.of(GetDataLakeSettingsResult.class), args == null ? GetDataLakeSettingsArgs.Empty : args, Utilities.withVersion(options));
     }

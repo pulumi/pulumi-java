@@ -69,42 +69,42 @@ public final class NodejsAppLayerEbsVolume {
     /**
      * For PIOPS volumes, the IOPS per disk.
      * 
-     */
+    */
     public Optional<Integer> getIops() {
         return Optional.ofNullable(this.iops);
     }
     /**
      * The path to mount the EBS volume on the layer's instances.
      * 
-     */
+    */
     public String getMountPoint() {
         return this.mountPoint;
     }
     /**
      * The number of disks to use for the EBS volume.
      * 
-     */
+    */
     public Integer getNumberOfDisks() {
         return this.numberOfDisks;
     }
     /**
      * The RAID level to use for the volume.
      * 
-     */
+    */
     public Optional<String> getRaidLevel() {
         return Optional.ofNullable(this.raidLevel);
     }
     /**
      * The size of the volume in gigabytes.
      * 
-     */
+    */
     public Integer getSize() {
         return this.size;
     }
     /**
      * The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

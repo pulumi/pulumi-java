@@ -36,14 +36,14 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRef {
      * The Secret to select from.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> getLocalObjectReference() {
         return Optional.ofNullable(this.localObjectReference);
     }
     /**
      * Specify whether the Secret must be defined
      * 
-     */
+    */
     public Optional<Boolean> getOptional() {
         return Optional.ofNullable(this.optional);
     }

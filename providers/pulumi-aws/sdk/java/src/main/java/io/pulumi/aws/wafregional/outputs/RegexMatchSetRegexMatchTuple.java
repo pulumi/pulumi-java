@@ -42,14 +42,14 @@ public final class RegexMatchSetRegexMatchTuple {
     /**
      * The part of a web request that you want to search, such as a specified header or a query string.
      * 
-     */
+    */
     public RegexMatchSetRegexMatchTupleFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
     /**
      * The ID of a `WAF Regex Pattern Set`.
      * 
-     */
+    */
     public String getRegexPatternSetId() {
         return this.regexPatternSetId;
     }
@@ -59,7 +59,7 @@ public final class RegexMatchSetRegexMatchTuple {
      * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TextTransformation)
      * for all supported values.
      * 
-     */
+    */
     public String getTextTransformation() {
         return this.textTransformation;
     }

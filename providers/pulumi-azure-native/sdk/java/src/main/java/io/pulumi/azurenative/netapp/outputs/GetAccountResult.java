@@ -87,63 +87,63 @@ public final class GetAccountResult {
     /**
      * Active Directories
      * 
-     */
+    */
     public List<ActiveDirectoryResponse> getActiveDirectories() {
         return this.activeDirectories == null ? List.of() : this.activeDirectories;
     }
     /**
      * Encryption settings
      * 
-     */
+    */
     public Optional<AccountEncryptionResponse> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure lifecycle management
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The system meta data relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

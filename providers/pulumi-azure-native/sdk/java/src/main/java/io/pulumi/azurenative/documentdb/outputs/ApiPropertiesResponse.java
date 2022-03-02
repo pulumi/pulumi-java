@@ -25,7 +25,7 @@ public final class ApiPropertiesResponse {
     /**
      * Describes the ServerVersion of an a MongoDB account.
      * 
-     */
+    */
     public Optional<String> getServerVersion() {
         return Optional.ofNullable(this.serverVersion);
     }

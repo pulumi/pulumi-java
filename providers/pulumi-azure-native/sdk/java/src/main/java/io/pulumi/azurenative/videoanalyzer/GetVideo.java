@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVideo {
-/**
- * The representation of a single video in a Video Analyzer account.
+    private GetVideo() {}
+    public interface BuilderApplicator {
+        public void apply(GetVideoArgs.Builder a);
+    }
+    private static GetVideoArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVideoArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The representation of a single video in a Video Analyzer account.
  * API Version: 2021-05-01-preview.
  * 
- *
- * The representation of a single video in a Video Analyzer account.
+     *
+     * The representation of a single video in a Video Analyzer account.
  * 
- */
+     */
+    public static CompletableFuture<GetVideoResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The representation of a single video in a Video Analyzer account.
+     * API Version: 2021-05-01-preview.
+     * 
+     *
+         * The representation of a single video in a Video Analyzer account.
+     * 
+     */
     public static CompletableFuture<GetVideoResult> invokeAsync(GetVideoArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getVideo", TypeShape.of(GetVideoResult.class), args == null ? GetVideoArgs.Empty : args, Utilities.withVersion(options));
     }

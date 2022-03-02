@@ -23,7 +23,7 @@ public final class CaseClassificationResponse {
     /**
      * The display name of the classification.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }

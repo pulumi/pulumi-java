@@ -25,7 +25,7 @@ public final class AppInsightsPropertiesResponse {
     /**
      * ARM resource ID of the App Insights.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

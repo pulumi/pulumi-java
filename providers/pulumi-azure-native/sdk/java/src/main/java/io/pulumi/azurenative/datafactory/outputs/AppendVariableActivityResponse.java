@@ -73,21 +73,21 @@ public final class AppendVariableActivityResponse {
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -95,28 +95,28 @@ public final class AppendVariableActivityResponse {
      * Type of activity.
      * Expected value is 'AppendVariable'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
     /**
      * Value to be appended. Could be a static value or Expression
      * 
-     */
+    */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }
     /**
      * Name of the variable whose value needs to be appended to.
      * 
-     */
+    */
     public Optional<String> getVariableName() {
         return Optional.ofNullable(this.variableName);
     }

@@ -13,8 +13,17 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProjectServiceAccount {
-/**
- * Get the email address of a project's unique [automatic Google Cloud Storage service account](https://cloud.google.com/storage/docs/projects#service-accounts).
+    private GetProjectServiceAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetProjectServiceAccountArgs.Builder a);
+    }
+    private static GetProjectServiceAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProjectServiceAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get the email address of a project's unique [automatic Google Cloud Storage service account](https://cloud.google.com/storage/docs/projects#service-accounts).
  * 
  * For each Google Cloud project, Google maintains a unique service account which
  * is used as the identity for various Google Cloud Storage operations, including
@@ -49,13 +58,59 @@ public class GetProjectServiceAccount {
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getProjectServiceAccount.
+     *
+     * A collection of arguments for invoking getProjectServiceAccount.
  * 
- *
- * A collection of values returned by getProjectServiceAccount.
+     *
+     * A collection of values returned by getProjectServiceAccount.
  * 
- */
+     */
+    public static CompletableFuture<GetProjectServiceAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get the email address of a project's unique [automatic Google Cloud Storage service account](https://cloud.google.com/storage/docs/projects#service-accounts).
+     * 
+     * For each Google Cloud project, Google maintains a unique service account which
+     * is used as the identity for various Google Cloud Storage operations, including
+     * operations involving
+     * [customer-managed encryption keys](https://cloud.google.com/storage/docs/encryption/customer-managed-keys)
+     * and those involving
+     * [storage notifications to pub/sub](https://cloud.google.com/storage/docs/gsutil/commands/notification).
+     * This automatic Google service account requires access to the relevant Cloud KMS keys or pub/sub topics, respectively, in order for Cloud Storage to use
+     * these customer-managed resources.
+     * 
+     * The service account has a well-known, documented naming format which is parameterised on the numeric Google project ID.
+     * However, as noted in [the docs](https://cloud.google.com/storage/docs/projects#service-accounts), it is only created when certain relevant actions occur which
+     * presuppose its existence.
+     * These actions include calling a [Cloud Storage API endpoint](https://cloud.google.com/storage/docs/json_api/v1/projects/serviceAccount/get) to yield the
+     * service account's identity, or performing some operations in the UI which must use the service account's identity, such as attempting to list Cloud KMS keys
+     * on the bucket creation page.
+     * 
+     * Use of this data source calls the relevant API endpoint to obtain the service account's identity and thus ensures it exists prior to any API operations
+     * which demand its existence, such as specifying it in Cloud IAM policy.
+     * Always prefer to use this data source over interpolating the project ID into the well-known format for this service account, as the latter approach may cause
+     * provider update errors in cases where the service account does not yet exist.
+     * 
+     * >  When you write provider code which uses features depending on this service account *and* your provider code adds the service account in IAM policy on other resources,
+     *    you must take care for race conditions between the establishment of the IAM policy and creation of the relevant Cloud Storage resource.
+     *    Cloud Storage APIs will require permissions on resources such as pub/sub topics or Cloud KMS keys to exist *before* the attempt to utilise them in a
+     *    bucket configuration, otherwise the API calls will fail.
+     *    You may need to use `depends_on` to create an explicit dependency between the IAM policy resource and the Cloud Storage resource which depends on it.
+     *    See the examples here and in the `gcp.storage.Notification` resource.
+     * 
+     * For more information see
+     * [the API reference](https://cloud.google.com/storage/docs/json_api/v1/projects/serviceAccount).
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getProjectServiceAccount.
+     * 
+     *
+         * A collection of values returned by getProjectServiceAccount.
+     * 
+     */
     public static CompletableFuture<GetProjectServiceAccountResult> invokeAsync(@Nullable GetProjectServiceAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:storage/getProjectServiceAccount:getProjectServiceAccount", TypeShape.of(GetProjectServiceAccountResult.class), args == null ? GetProjectServiceAccountArgs.Empty : args, Utilities.withVersion(options));
     }

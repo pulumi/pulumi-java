@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHybridUseBenefit {
-/**
- * Response on GET of a hybrid use benefit
+    private GetHybridUseBenefit() {}
+    public interface BuilderApplicator {
+        public void apply(GetHybridUseBenefitArgs.Builder a);
+    }
+    private static GetHybridUseBenefitArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHybridUseBenefitArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Response on GET of a hybrid use benefit
  * API Version: 2019-06-01-preview.
  * 
- *
- * Response on GET of a hybrid use benefit
+     *
+     * Response on GET of a hybrid use benefit
  * 
- */
+     */
+    public static CompletableFuture<GetHybridUseBenefitResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Response on GET of a hybrid use benefit
+     * API Version: 2019-06-01-preview.
+     * 
+     *
+         * Response on GET of a hybrid use benefit
+     * 
+     */
     public static CompletableFuture<GetHybridUseBenefitResult> invokeAsync(GetHybridUseBenefitArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:softwareplan:getHybridUseBenefit", TypeShape.of(GetHybridUseBenefitResult.class), args == null ? GetHybridUseBenefitArgs.Empty : args, Utilities.withVersion(options));
     }

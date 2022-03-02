@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerTlsPolicy {
-/**
- * Gets details of a single ServerTlsPolicy.
+    private GetServerTlsPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetServerTlsPolicyArgs.Builder a);
+    }
+    private static GetServerTlsPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServerTlsPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single ServerTlsPolicy.
  * 
- */
+     */
+    public static CompletableFuture<GetServerTlsPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single ServerTlsPolicy.
+     * 
+     */
     public static CompletableFuture<GetServerTlsPolicyResult> invokeAsync(GetServerTlsPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networksecurity/v1:getServerTlsPolicy", TypeShape.of(GetServerTlsPolicyResult.class), args == null ? GetServerTlsPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

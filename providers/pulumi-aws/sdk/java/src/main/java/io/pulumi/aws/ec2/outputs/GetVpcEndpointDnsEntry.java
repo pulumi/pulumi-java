@@ -31,14 +31,14 @@ public final class GetVpcEndpointDnsEntry {
     /**
      * The DNS name.
      * 
-     */
+    */
     public String getDnsName() {
         return this.dnsName;
     }
     /**
      * The ID of the private hosted zone.
      * 
-     */
+    */
     public String getHostedZoneId() {
         return this.hostedZoneId;
     }

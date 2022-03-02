@@ -34,14 +34,14 @@ public final class IntegrationServiceEnvironmentSkuResponse {
     /**
      * The sku capacity.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The sku name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

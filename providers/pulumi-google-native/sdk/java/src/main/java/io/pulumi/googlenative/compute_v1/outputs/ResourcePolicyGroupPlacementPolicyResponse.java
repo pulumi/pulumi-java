@@ -39,21 +39,21 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
     /**
      * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
      * 
-     */
+    */
     public Integer getAvailabilityDomainCount() {
         return this.availabilityDomainCount;
     }
     /**
      * Specifies network collocation
      * 
-     */
+    */
     public String getCollocation() {
         return this.collocation;
     }
     /**
      * Number of vms in this placement group
      * 
-     */
+    */
     public Integer getVmCount() {
         return this.vmCount;
     }

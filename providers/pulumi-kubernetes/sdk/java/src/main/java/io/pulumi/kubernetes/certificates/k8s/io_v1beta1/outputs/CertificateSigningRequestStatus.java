@@ -35,14 +35,14 @@ public final class CertificateSigningRequestStatus {
     /**
      * If request was approved, the controller will place the issued certificate here.
      * 
-     */
+    */
     public Optional<String> getCertificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
      * Conditions applied to the request, such as approval or denial.
      * 
-     */
+    */
     public List<CertificateSigningRequestCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }

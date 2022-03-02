@@ -53,35 +53,35 @@ public final class GetRoleResult {
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Role type.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Role configured on ASE resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

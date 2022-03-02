@@ -58,7 +58,7 @@ public final class GetScriptResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -68,14 +68,14 @@ public final class GetScriptResult {
     /**
      * The Python script generated from the DAG when the `language` argument is set to `PYTHON`.
      * 
-     */
+    */
     public String getPythonScript() {
         return this.pythonScript;
     }
     /**
      * The Scala code generated from the DAG when the `language` argument is set to `SCALA`.
      * 
-     */
+    */
     public String getScalaCode() {
         return this.scalaCode;
     }

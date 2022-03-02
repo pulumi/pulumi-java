@@ -39,21 +39,21 @@ public final class GetLBIPRangesResult {
     /**
      * The IP ranges used for health checks when **HTTP(S), SSL proxy, TCP proxy, and Internal load balancing** is used
      * 
-     */
+    */
     public List<String> getHttpSslTcpInternals() {
         return this.httpSslTcpInternals;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The IP ranges used for health checks when **Network load balancing** is used
      * 
-     */
+    */
     public List<String> getNetworks() {
         return this.networks;
     }

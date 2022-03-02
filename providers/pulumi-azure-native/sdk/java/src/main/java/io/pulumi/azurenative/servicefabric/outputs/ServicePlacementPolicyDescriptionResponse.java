@@ -23,7 +23,7 @@ public final class ServicePlacementPolicyDescriptionResponse {
     /**
      * The type of placement policy for a service fabric service. Following are the possible values.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

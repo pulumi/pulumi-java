@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListTopicSharedAccessKeys {
-/**
- * Shared access keys of the Topic
+    private ListTopicSharedAccessKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListTopicSharedAccessKeysArgs.Builder a);
+    }
+    private static ListTopicSharedAccessKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListTopicSharedAccessKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Shared access keys of the Topic
  * API Version: 2020-06-01.
  * 
- *
- * Shared access keys of the Topic
+     *
+     * Shared access keys of the Topic
  * 
- */
+     */
+    public static CompletableFuture<ListTopicSharedAccessKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Shared access keys of the Topic
+     * API Version: 2020-06-01.
+     * 
+     *
+         * Shared access keys of the Topic
+     * 
+     */
     public static CompletableFuture<ListTopicSharedAccessKeysResult> invokeAsync(ListTopicSharedAccessKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:listTopicSharedAccessKeys", TypeShape.of(ListTopicSharedAccessKeysResult.class), args == null ? ListTopicSharedAccessKeysArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -132,28 +132,28 @@ public final class GetGen2EnvironmentResult {
     /**
      * The time the resource was created.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
      * 
-     */
+    */
     public String getDataAccessFqdn() {
         return this.dataAccessFqdn;
     }
     /**
      * An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
      * 
-     */
+    */
     public String getDataAccessId() {
         return this.dataAccessId;
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -161,77 +161,77 @@ public final class GetGen2EnvironmentResult {
      * The kind of the environment.
      * Expected value is 'Gen2'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
      * 
-     */
+    */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * An object that represents the status of the environment, and its internal state in the Time Series Insights service.
      * 
-     */
+    */
     public EnvironmentStatusResponse getStatus() {
         return this.status;
     }
     /**
      * The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment's data.
      * 
-     */
+    */
     public Gen2StorageConfigurationOutputResponse getStorageConfiguration() {
         return this.storageConfiguration;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The list of event properties which will be used to define the environment's time series id.
      * 
-     */
+    */
     public List<TimeSeriesIdPropertyResponse> getTimeSeriesIdProperties() {
         return this.timeSeriesIdProperties;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment's data available for faster query.
      * 
-     */
+    */
     public Optional<WarmStoreConfigurationPropertiesResponse> getWarmStoreConfiguration() {
         return Optional.ofNullable(this.warmStoreConfiguration);
     }

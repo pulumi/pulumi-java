@@ -35,7 +35,7 @@ public final class ConfigurationTemplateSetting {
     /**
      * A unique name for this Template.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

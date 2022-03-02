@@ -23,7 +23,7 @@ public final class ForZone {
     /**
      * name represents the name of the zone.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

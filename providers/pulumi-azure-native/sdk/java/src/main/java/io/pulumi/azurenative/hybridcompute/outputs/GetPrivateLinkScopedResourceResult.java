@@ -54,35 +54,35 @@ public final class GetPrivateLinkScopedResourceResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource id of the scoped Azure monitor resource.
      * 
-     */
+    */
     public Optional<String> getLinkedResourceId() {
         return Optional.ofNullable(this.linkedResourceId);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of the private endpoint connection.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -174,7 +174,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * The Compute Engine accelerator configuration for this runtime.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig> getAcceleratorConfig() {
         return Optional.ofNullable(this.acceleratorConfig);
     }
@@ -182,7 +182,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * Use a list of container images to start the notebook instance.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RuntimeVirtualMachineVirtualMachineConfigContainerImage> getContainerImages() {
         return this.containerImages == null ? List.of() : this.containerImages;
     }
@@ -190,7 +190,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * Data disk option configuration settings.
      * Structure is documented below.
      * 
-     */
+    */
     public RuntimeVirtualMachineVirtualMachineConfigDataDisk getDataDisk() {
         return this.dataDisk;
     }
@@ -198,7 +198,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * Encryption settings for virtual machine data disk.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig> getEncryptionConfig() {
         return Optional.ofNullable(this.encryptionConfig);
     }
@@ -208,7 +208,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * guest attributes](https://cloud.google.com/compute/docs/
      * storing-retrieving-metadata#guest_attributes)).
      * 
-     */
+    */
     public Map<String,String> getGuestAttributes() {
         return this.guestAttributes == null ? Map.of() : this.guestAttributes;
     }
@@ -220,7 +220,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * enabled networks, and all dependencies must be configured to be
      * accessible without external IP addresses.
      * 
-     */
+    */
     public Optional<Boolean> getInternalIpOnly() {
         return Optional.ofNullable(this.internalIpOnly);
     }
@@ -229,14 +229,14 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * by the disks.setLabels method. This field is only
      * applicable for persistent disks.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
      * The Compute Engine machine type used for runtimes.
      * 
-     */
+    */
     public String getMachineType() {
         return this.machineType;
     }
@@ -246,7 +246,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * /compute/docs/storing-retrieving-metadata#project_and_instance
      * _metadata)).
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
@@ -266,7 +266,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * * Shared VPC (network & subnet are required). Requires
      *   configuring Private Service Access.
      * 
-     */
+    */
     public Optional<String> getNetwork() {
         return Optional.ofNullable(this.network);
     }
@@ -275,7 +275,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * or VirtioNet.
      * Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
      * 
-     */
+    */
     public Optional<String> getNicType() {
         return Optional.ofNullable(this.nicType);
     }
@@ -283,7 +283,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * Shielded VM Instance configuration settings.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig> getShieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
@@ -295,7 +295,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      *   regions/us-east1/subnetworks/sub0`
      * * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
      * 
-     */
+    */
     public Optional<String> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -304,7 +304,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * (https://cloud.google.com/compute/docs/
      * label-or-tag-resources#tags)).
      * 
-     */
+    */
     public List<String> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -312,7 +312,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      * - 
      * The zone where the virtual machine is located.
      * 
-     */
+    */
     public Optional<String> getZone() {
         return Optional.ofNullable(this.zone);
     }

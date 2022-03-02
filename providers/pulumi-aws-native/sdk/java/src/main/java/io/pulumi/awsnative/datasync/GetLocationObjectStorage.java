@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocationObjectStorage {
-/**
- * Resource schema for AWS::DataSync::LocationObjectStorage.
+    private GetLocationObjectStorage() {}
+    public interface BuilderApplicator {
+        public void apply(GetLocationObjectStorageArgs.Builder a);
+    }
+    private static GetLocationObjectStorageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLocationObjectStorageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::DataSync::LocationObjectStorage.
  * 
- */
+     */
+    public static CompletableFuture<GetLocationObjectStorageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::DataSync::LocationObjectStorage.
+     * 
+     */
     public static CompletableFuture<GetLocationObjectStorageResult> invokeAsync(GetLocationObjectStorageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:datasync:getLocationObjectStorage", TypeShape.of(GetLocationObjectStorageResult.class), args == null ? GetLocationObjectStorageArgs.Empty : args, Utilities.withVersion(options));
     }

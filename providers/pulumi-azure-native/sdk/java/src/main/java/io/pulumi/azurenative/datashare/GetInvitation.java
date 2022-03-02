@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInvitation {
-/**
- * A Invitation data transfer object.
+    private GetInvitation() {}
+    public interface BuilderApplicator {
+        public void apply(GetInvitationArgs.Builder a);
+    }
+    private static GetInvitationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInvitationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Invitation data transfer object.
  * API Version: 2020-09-01.
  * 
- *
- * A Invitation data transfer object.
+     *
+     * A Invitation data transfer object.
  * 
- */
+     */
+    public static CompletableFuture<GetInvitationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Invitation data transfer object.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * A Invitation data transfer object.
+     * 
+     */
     public static CompletableFuture<GetInvitationResult> invokeAsync(GetInvitationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getInvitation", TypeShape.of(GetInvitationResult.class), args == null ? GetInvitationArgs.Empty : args, Utilities.withVersion(options));
     }

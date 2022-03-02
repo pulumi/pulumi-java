@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFavoriteProcess {
-/**
- * A favorite process identifier.
+    private GetFavoriteProcess() {}
+    public interface BuilderApplicator {
+        public void apply(GetFavoriteProcessArgs.Builder a);
+    }
+    private static GetFavoriteProcessArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFavoriteProcessArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A favorite process identifier.
  * API Version: 2020-12-16-preview.
  * 
- *
- * A favorite process identifier.
+     *
+     * A favorite process identifier.
  * 
- */
+     */
+    public static CompletableFuture<GetFavoriteProcessResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A favorite process identifier.
+     * API Version: 2020-12-16-preview.
+     * 
+     *
+         * A favorite process identifier.
+     * 
+     */
     public static CompletableFuture<GetFavoriteProcessResult> invokeAsync(GetFavoriteProcessArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getFavoriteProcess", TypeShape.of(GetFavoriteProcessResult.class), args == null ? GetFavoriteProcessArgs.Empty : args, Utilities.withVersion(options));
     }

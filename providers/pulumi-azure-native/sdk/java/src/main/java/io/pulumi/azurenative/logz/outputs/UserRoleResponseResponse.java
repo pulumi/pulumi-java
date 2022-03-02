@@ -25,7 +25,7 @@ public final class UserRoleResponseResponse {
     /**
      * User roles on configured in Logz.io account.
      * 
-     */
+    */
     public Optional<String> getRole() {
         return Optional.ofNullable(this.role);
     }

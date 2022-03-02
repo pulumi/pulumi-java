@@ -99,77 +99,77 @@ public final class FailoverTargetResponse {
     /**
      * The amount of free local storage available on the device in bytes.
      * 
-     */
+    */
     public Optional<Double> getAvailableLocalStorageInBytes() {
         return Optional.ofNullable(this.availableLocalStorageInBytes);
     }
     /**
      * The amount of free tiered storage available for the device in bytes.
      * 
-     */
+    */
     public Optional<Double> getAvailableTieredStorageInBytes() {
         return Optional.ofNullable(this.availableTieredStorageInBytes);
     }
     /**
      * The count of data containers on the device.
      * 
-     */
+    */
     public Optional<Integer> getDataContainersCount() {
         return Optional.ofNullable(this.dataContainersCount);
     }
     /**
      * The path ID of the device.
      * 
-     */
+    */
     public Optional<String> getDeviceId() {
         return Optional.ofNullable(this.deviceId);
     }
     /**
      * The geo location (applicable only for cloud appliances) of the device.
      * 
-     */
+    */
     public Optional<String> getDeviceLocation() {
         return Optional.ofNullable(this.deviceLocation);
     }
     /**
      * The software version of the device.
      * 
-     */
+    */
     public Optional<String> getDeviceSoftwareVersion() {
         return Optional.ofNullable(this.deviceSoftwareVersion);
     }
     /**
      * The status of the device.
      * 
-     */
+    */
     public Optional<String> getDeviceStatus() {
         return Optional.ofNullable(this.deviceStatus);
     }
     /**
      * The eligibility result of the device, as a failover target device.
      * 
-     */
+    */
     public Optional<TargetEligibilityResultResponse> getEligibilityResult() {
         return Optional.ofNullable(this.eligibilityResult);
     }
     /**
      * The friendly name for the current version of software on the device.
      * 
-     */
+    */
     public Optional<String> getFriendlyDeviceSoftwareVersion() {
         return Optional.ofNullable(this.friendlyDeviceSoftwareVersion);
     }
     /**
      * The model number of the device.
      * 
-     */
+    */
     public Optional<String> getModelDescription() {
         return Optional.ofNullable(this.modelDescription);
     }
     /**
      * The count of volumes on the device.
      * 
-     */
+    */
     public Optional<Integer> getVolumesCount() {
         return Optional.ofNullable(this.volumesCount);
     }

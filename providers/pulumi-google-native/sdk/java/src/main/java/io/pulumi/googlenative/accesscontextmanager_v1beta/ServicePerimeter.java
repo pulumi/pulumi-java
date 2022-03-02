@@ -90,6 +90,22 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
         return this.title;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ServicePerimeterArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.accesscontextmanager_v1beta.ServicePerimeterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.accesscontextmanager_v1beta.ServicePerimeterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ServicePerimeter(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

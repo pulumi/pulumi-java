@@ -25,7 +25,7 @@ public final class BulkCreationParametersResponse {
     /**
      * The number of virtual machine instances to create.
      * 
-     */
+    */
     public Optional<Integer> getInstanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }

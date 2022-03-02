@@ -34,14 +34,14 @@ public final class ContactStage {
     /**
      * The time to wait until beginning the next stage.
      * 
-     */
+    */
     public Integer getDurationInMinutes() {
         return this.durationInMinutes;
     }
     /**
      * The contacts or contact methods that the escalation plan or engagement plan is engaging.
      * 
-     */
+    */
     public List<ContactTargets> getTargets() {
         return this.targets == null ? List.of() : this.targets;
     }

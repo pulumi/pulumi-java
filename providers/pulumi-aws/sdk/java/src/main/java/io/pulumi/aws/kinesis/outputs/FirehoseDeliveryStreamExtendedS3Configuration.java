@@ -121,14 +121,14 @@ public final class FirehoseDeliveryStreamExtendedS3Configuration {
     /**
      * The ARN of the S3 bucket
      * 
-     */
+    */
     public String getBucketArn() {
         return this.bucketArn;
     }
     /**
      * Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
      * 
-     */
+    */
     public Optional<Integer> getBufferInterval() {
         return Optional.ofNullable(this.bufferInterval);
     }
@@ -136,28 +136,28 @@ public final class FirehoseDeliveryStreamExtendedS3Configuration {
      * Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
      * We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
      * 
-     */
+    */
     public Optional<Integer> getBufferSize() {
         return Optional.ofNullable(this.bufferSize);
     }
     /**
      * The CloudWatch Logging Options for the delivery stream. More details are given below
      * 
-     */
+    */
     public Optional<FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptions> getCloudwatchLoggingOptions() {
         return Optional.ofNullable(this.cloudwatchLoggingOptions);
     }
     /**
      * The compression format. If no value is specified, the default is `UNCOMPRESSED`. Other supported values are `GZIP`, `ZIP`, `Snappy`, & `HADOOP_SNAPPY`.
      * 
-     */
+    */
     public Optional<String> getCompressionFormat() {
         return Optional.ofNullable(this.compressionFormat);
     }
     /**
      * Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
      * 
-     */
+    */
     public Optional<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration> getDataFormatConversionConfiguration() {
         return Optional.ofNullable(this.dataFormatConversionConfiguration);
     }
@@ -167,7 +167,7 @@ public final class FirehoseDeliveryStreamExtendedS3Configuration {
     /**
      * Prefix added to failed records before writing them to S3. Not currently supported for `redshift` destination. This prefix appears immediately following the bucket name. For information about how to specify this prefix, see [Custom Prefixes for Amazon S3 Objects](https://docs.aws.amazon.com/firehose/latest/dev/s3-prefixes.html).
      * 
-     */
+    */
     public Optional<String> getErrorOutputPrefix() {
         return Optional.ofNullable(this.errorOutputPrefix);
     }
@@ -175,42 +175,42 @@ public final class FirehoseDeliveryStreamExtendedS3Configuration {
      * Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
      * be used.
      * 
-     */
+    */
     public Optional<String> getKmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
     /**
      * The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * The data processing configuration.  More details are given below.
      * 
-     */
+    */
     public Optional<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfiguration> getProcessingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
     /**
      * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
      * 
-     */
+    */
     public Optional<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfiguration> getS3BackupConfiguration() {
         return Optional.ofNullable(this.s3BackupConfiguration);
     }
     /**
      * The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
      * 
-     */
+    */
     public Optional<String> getS3BackupMode() {
         return Optional.ofNullable(this.s3BackupMode);
     }

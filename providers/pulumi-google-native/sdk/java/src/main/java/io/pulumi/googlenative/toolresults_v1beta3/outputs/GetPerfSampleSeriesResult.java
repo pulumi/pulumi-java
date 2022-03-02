@@ -60,42 +60,42 @@ public final class GetPerfSampleSeriesResult {
     /**
      * Basic series represented by a line chart
      * 
-     */
+    */
     public BasicPerfSampleSeriesResponse getBasicPerfSampleSeries() {
         return this.basicPerfSampleSeries;
     }
     /**
      * A tool results execution ID.
      * 
-     */
+    */
     public String getExecutionId() {
         return this.executionId;
     }
     /**
      * A tool results history ID.
      * 
-     */
+    */
     public String getHistoryId() {
         return this.historyId;
     }
     /**
      * The cloud project
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * A sample series id
      * 
-     */
+    */
     public String getSampleSeriesId() {
         return this.sampleSeriesId;
     }
     /**
      * A tool results step ID.
      * 
-     */
+    */
     public String getStepId() {
         return this.stepId;
     }

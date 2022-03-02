@@ -78,56 +78,56 @@ public final class GetCommitmentPlanResult {
     /**
      * An entity tag used to enforce optimistic concurrency.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The commitment plan properties.
      * 
-     */
+    */
     public CommitmentPlanPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The commitment plan SKU.
      * 
-     */
+    */
     public Optional<ResourceSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * User-defined tags for the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

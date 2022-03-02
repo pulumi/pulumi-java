@@ -55,35 +55,35 @@ public final class ReportFilterResponse {
     /**
      * The logical "AND" expression. Must have at least 2 items.
      * 
-     */
+    */
     public List<ReportFilterResponse> getAnd() {
         return this.and == null ? List.of() : this.and;
     }
     /**
      * Has comparison expression for a dimension
      * 
-     */
+    */
     public Optional<ReportComparisonExpressionResponse> getDimension() {
         return Optional.ofNullable(this.dimension);
     }
     /**
      * The logical "NOT" expression.
      * 
-     */
+    */
     public Optional<ReportFilterResponse> getNot() {
         return Optional.ofNullable(this.not);
     }
     /**
      * The logical "OR" expression. Must have at least 2 items.
      * 
-     */
+    */
     public List<ReportFilterResponse> getOr() {
         return this.or == null ? List.of() : this.or;
     }
     /**
      * Has comparison expression for a tag
      * 
-     */
+    */
     public Optional<ReportComparisonExpressionResponse> getTag() {
         return Optional.ofNullable(this.tag);
     }

@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
- * @deprecated
+ * @Deprecated
  * aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicy has been deprecated in favor of aws.elb.LoadBalancerCookieStickinessPolicy
  * 
  */
@@ -91,6 +91,22 @@ public class LoadBalancerCookieStickinessPolicy extends io.pulumi.resources.Cust
         return this.name;
     }
 
+    public interface BuilderApplicator {
+        public void apply(LoadBalancerCookieStickinessPolicyArgs.Builder a);
+    }
+    private static io.pulumi.aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.elasticloadbalancing.LoadBalancerCookieStickinessPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public LoadBalancerCookieStickinessPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

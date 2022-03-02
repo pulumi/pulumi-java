@@ -25,7 +25,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusResult {
     /**
      * List of BGP peers.
      * 
-     */
+    */
     public List<BgpPeerStatusResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

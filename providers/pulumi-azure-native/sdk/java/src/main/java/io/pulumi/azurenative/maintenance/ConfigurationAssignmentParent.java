@@ -117,6 +117,22 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ConfigurationAssignmentParentArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.maintenance.ConfigurationAssignmentParentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.maintenance.ConfigurationAssignmentParentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ConfigurationAssignmentParent(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

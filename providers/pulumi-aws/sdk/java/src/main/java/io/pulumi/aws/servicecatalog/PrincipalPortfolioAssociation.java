@@ -86,6 +86,22 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
         return this.principalType;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PrincipalPortfolioAssociationArgs.Builder a);
+    }
+    private static io.pulumi.aws.servicecatalog.PrincipalPortfolioAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.servicecatalog.PrincipalPortfolioAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PrincipalPortfolioAssociation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

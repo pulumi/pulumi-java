@@ -35,14 +35,14 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse {
     /**
      * Reference to an ApplicationGatewayBackendHttpSettings resource.
      * 
-     */
+    */
     public Optional<ApplicationGatewayBackendHttpSettingsResponse> getBackendHttpSettings() {
         return Optional.ofNullable(this.backendHttpSettings);
     }
     /**
      * List of ApplicationGatewayBackendHealthServer resources.
      * 
-     */
+    */
     public List<ApplicationGatewayBackendHealthServerResponse> getServers() {
         return this.servers == null ? List.of() : this.servers;
     }

@@ -12,15 +12,16 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEncryptionByDefault {
-/**
- * Provides a way to check whether default EBS encryption is enabled for your AWS account in the current AWS region.
- * 
- * ## Example Usage
- * 
- *
- * A collection of values returned by getEncryptionByDefault.
- * 
- */
+    private GetEncryptionByDefault() {}
+    /**
+         * Provides a way to check whether default EBS encryption is enabled for your AWS account in the current AWS region.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of values returned by getEncryptionByDefault.
+     * 
+     */
     public static CompletableFuture<GetEncryptionByDefaultResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ebs/getEncryptionByDefault:getEncryptionByDefault", TypeShape.of(GetEncryptionByDefaultResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

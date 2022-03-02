@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAFDOrigin {
-/**
- * CDN origin is the source of the content being delivered via CDN. When the edge nodes represented by an endpoint do not have the requested content cached, they attempt to fetch it from one or more of the configured origins.
+    private GetAFDOrigin() {}
+    public interface BuilderApplicator {
+        public void apply(GetAFDOriginArgs.Builder a);
+    }
+    private static GetAFDOriginArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAFDOriginArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * CDN origin is the source of the content being delivered via CDN. When the edge nodes represented by an endpoint do not have the requested content cached, they attempt to fetch it from one or more of the configured origins.
  * API Version: 2020-09-01.
  * 
- *
- * CDN origin is the source of the content being delivered via CDN. When the edge nodes represented by an endpoint do not have the requested content cached, they attempt to fetch it from one or more of the configured origins.
+     *
+     * CDN origin is the source of the content being delivered via CDN. When the edge nodes represented by an endpoint do not have the requested content cached, they attempt to fetch it from one or more of the configured origins.
  * 
- */
+     */
+    public static CompletableFuture<GetAFDOriginResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * CDN origin is the source of the content being delivered via CDN. When the edge nodes represented by an endpoint do not have the requested content cached, they attempt to fetch it from one or more of the configured origins.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * CDN origin is the source of the content being delivered via CDN. When the edge nodes represented by an endpoint do not have the requested content cached, they attempt to fetch it from one or more of the configured origins.
+     * 
+     */
     public static CompletableFuture<GetAFDOriginResult> invokeAsync(GetAFDOriginArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getAFDOrigin", TypeShape.of(GetAFDOriginResult.class), args == null ? GetAFDOriginArgs.Empty : args, Utilities.withVersion(options));
     }

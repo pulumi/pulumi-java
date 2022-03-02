@@ -98,14 +98,14 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
      * must be set.
      * 
-     */
+    */
     public Optional<String> getExactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
     /**
      * The name of the header to add.
      * 
-     */
+    */
     public String getHeaderName() {
         return this.headerName;
     }
@@ -114,7 +114,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * above are met. If set to true, the headerMatch is considered a match if the
      * match criteria above are NOT met. Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getInvertMatch() {
         return Optional.ofNullable(this.invertMatch);
     }
@@ -123,7 +123,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
      * must be set.
      * 
-     */
+    */
     public Optional<String> getPrefixMatch() {
         return Optional.ofNullable(this.prefixMatch);
     }
@@ -132,7 +132,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * parameter, irrespective of whether the parameter has a value or not. Only one of
      * presentMatch, exactMatch and regexMatch must be set.
      * 
-     */
+    */
     public Optional<Boolean> getPresentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }
@@ -145,7 +145,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * must be set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch> getRangeMatch() {
         return Optional.ofNullable(this.rangeMatch);
     }
@@ -155,7 +155,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
      * exactMatch and regexMatch must be set.
      * 
-     */
+    */
     public Optional<String> getRegexMatch() {
         return Optional.ofNullable(this.regexMatch);
     }
@@ -164,7 +164,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      * exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
      * must be set.
      * 
-     */
+    */
     public Optional<String> getSuffixMatch() {
         return Optional.ofNullable(this.suffixMatch);
     }

@@ -32,7 +32,7 @@ public final class ImageTemplateManagedImageSourceResponse {
     /**
      * ARM resource id of the managed image in customer subscription
      * 
-     */
+    */
     public String getImageId() {
         return this.imageId;
     }
@@ -40,7 +40,7 @@ public final class ImageTemplateManagedImageSourceResponse {
      * Specifies the type of source image you want to start with.
      * Expected value is 'ManagedImage'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

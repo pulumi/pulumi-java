@@ -77,14 +77,14 @@ public final class SecurityPolicyRule {
      * * "rate_based_ban" : limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rateLimitOptions to be set.
      * * "threshold" : limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * An optional description of this rule. Max size is 64.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -92,7 +92,7 @@ public final class SecurityPolicyRule {
      * A match condition that incoming traffic is evaluated against.
      * If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
      * 
-     */
+    */
     public SecurityPolicyRuleMatch getMatch() {
         return this.match;
     }
@@ -100,7 +100,7 @@ public final class SecurityPolicyRule {
      * When set to true, the `action` specified above is not enforced.
      * Stackdriver logs for requests that trigger a preview action are annotated as such.
      * 
-     */
+    */
     public Optional<Boolean> getPreview() {
         return Optional.ofNullable(this.preview);
     }
@@ -108,7 +108,7 @@ public final class SecurityPolicyRule {
      * An unique positive integer indicating the priority of evaluation for a rule.
      * Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
      * 
-     */
+    */
     public Integer getPriority() {
         return this.priority;
     }
@@ -116,7 +116,7 @@ public final class SecurityPolicyRule {
      * )
      * Must be specified if the `action` is "rate_based_bad" or "throttle". Cannot be specified for other actions. Structure is documented below.
      * 
-     */
+    */
     public Optional<SecurityPolicyRuleRateLimitOptions> getRateLimitOptions() {
         return Optional.ofNullable(this.rateLimitOptions);
     }

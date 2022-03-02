@@ -24,7 +24,7 @@ public final class GetProfileSupportedOptimizationTypesResult {
     /**
      * Supported optimization types for a profile.
      * 
-     */
+    */
     public List<String> getSupportedOptimizationTypes() {
         return this.supportedOptimizationTypes;
     }

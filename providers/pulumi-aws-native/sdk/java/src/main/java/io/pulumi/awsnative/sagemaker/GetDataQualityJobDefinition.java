@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataQualityJobDefinition {
-/**
- * Resource Type definition for AWS::SageMaker::DataQualityJobDefinition
+    private GetDataQualityJobDefinition() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataQualityJobDefinitionArgs.Builder a);
+    }
+    private static GetDataQualityJobDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataQualityJobDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::DataQualityJobDefinition
  * 
- */
+     */
+    public static CompletableFuture<GetDataQualityJobDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::SageMaker::DataQualityJobDefinition
+     * 
+     */
     public static CompletableFuture<GetDataQualityJobDefinitionResult> invokeAsync(GetDataQualityJobDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getDataQualityJobDefinition", TypeShape.of(GetDataQualityJobDefinitionResult.class), args == null ? GetDataQualityJobDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

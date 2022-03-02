@@ -47,28 +47,28 @@ public final class PipelineNotifications {
     /**
      * The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder has finished processing a job in this pipeline.
      * 
-     */
+    */
     public Optional<String> getCompleted() {
         return Optional.ofNullable(this.completed);
     }
     /**
      * The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters an error condition while processing a job in this pipeline.
      * 
-     */
+    */
     public Optional<String> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * The topic ARN for the Amazon Simple Notification Service (Amazon SNS) topic that you want to notify when Elastic Transcoder has started to process a job in this pipeline.
      * 
-     */
+    */
     public Optional<String> getProgressing() {
         return Optional.ofNullable(this.progressing);
     }
     /**
      * The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters a warning condition while processing a job in this pipeline.
      * 
-     */
+    */
     public Optional<String> getWarning() {
         return Optional.ofNullable(this.warning);
     }

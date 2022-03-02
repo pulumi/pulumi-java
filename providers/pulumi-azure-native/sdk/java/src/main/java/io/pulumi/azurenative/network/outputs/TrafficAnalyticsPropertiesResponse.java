@@ -25,7 +25,7 @@ public final class TrafficAnalyticsPropertiesResponse {
     /**
      * Parameters that define the configuration of traffic analytics.
      * 
-     */
+    */
     public Optional<TrafficAnalyticsConfigurationPropertiesResponse> getNetworkWatcherFlowAnalyticsConfiguration() {
         return Optional.ofNullable(this.networkWatcherFlowAnalyticsConfiguration);
     }

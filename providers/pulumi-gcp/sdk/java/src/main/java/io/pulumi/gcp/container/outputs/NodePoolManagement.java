@@ -33,14 +33,14 @@ public final class NodePoolManagement {
     /**
      * Whether the nodes will be automatically repaired.
      * 
-     */
+    */
     public Optional<Boolean> getAutoRepair() {
         return Optional.ofNullable(this.autoRepair);
     }
     /**
      * Whether the nodes will be automatically upgraded.
      * 
-     */
+    */
     public Optional<Boolean> getAutoUpgrade() {
         return Optional.ofNullable(this.autoUpgrade);
     }

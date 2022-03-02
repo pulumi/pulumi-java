@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExport {
-/**
- * An export resource.
+    private GetExport() {}
+    public interface BuilderApplicator {
+        public void apply(GetExportArgs.Builder a);
+    }
+    private static GetExportArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExportArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An export resource.
  * API Version: 2020-06-01.
  * 
- *
- * An export resource.
+     *
+     * An export resource.
  * 
- */
+     */
+    public static CompletableFuture<GetExportResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An export resource.
+     * API Version: 2020-06-01.
+     * 
+     *
+         * An export resource.
+     * 
+     */
     public static CompletableFuture<GetExportResult> invokeAsync(GetExportArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getExport", TypeShape.of(GetExportResult.class), args == null ? GetExportArgs.Empty : args, Utilities.withVersion(options));
     }

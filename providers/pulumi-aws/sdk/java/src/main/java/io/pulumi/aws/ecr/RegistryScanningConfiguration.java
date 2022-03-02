@@ -74,6 +74,22 @@ public class RegistryScanningConfiguration extends io.pulumi.resources.CustomRes
         return this.scanType;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RegistryScanningConfigurationArgs.Builder a);
+    }
+    private static io.pulumi.aws.ecr.RegistryScanningConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.ecr.RegistryScanningConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RegistryScanningConfiguration(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

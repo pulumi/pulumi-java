@@ -40,21 +40,21 @@ public final class InferenceContainerPropertiesResponse {
     /**
      * The route to check the liveness of the inference server container.
      * 
-     */
+    */
     public Optional<RouteResponse> getLivenessRoute() {
         return Optional.ofNullable(this.livenessRoute);
     }
     /**
      * The route to check the readiness of the inference server container.
      * 
-     */
+    */
     public Optional<RouteResponse> getReadinessRoute() {
         return Optional.ofNullable(this.readinessRoute);
     }
     /**
      * The port to send the scoring requests to, within the inference server container.
      * 
-     */
+    */
     public Optional<RouteResponse> getScoringRoute() {
         return Optional.ofNullable(this.scoringRoute);
     }

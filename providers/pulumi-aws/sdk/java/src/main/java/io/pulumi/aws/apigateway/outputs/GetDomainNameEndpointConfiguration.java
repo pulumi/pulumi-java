@@ -24,7 +24,7 @@ public final class GetDomainNameEndpointConfiguration {
     /**
      * List of endpoint types.
      * 
-     */
+    */
     public List<String> getTypes() {
         return this.types;
     }

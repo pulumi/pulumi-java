@@ -24,7 +24,7 @@ public final class ClusterLogging {
     /**
      * The cluster control plane logging configuration for your cluster.
      * 
-     */
+    */
     public Optional<ClusterLogging> getClusterLogging() {
         return Optional.ofNullable(this.clusterLogging);
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkPublicIP {
-/**
- * NSX Public IP Block
+    private GetWorkloadNetworkPublicIP() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkloadNetworkPublicIPArgs.Builder a);
+    }
+    private static GetWorkloadNetworkPublicIPArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkloadNetworkPublicIPArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * NSX Public IP Block
  * API Version: 2021-06-01.
  * 
- *
- * NSX Public IP Block
+     *
+     * NSX Public IP Block
  * 
- */
+     */
+    public static CompletableFuture<GetWorkloadNetworkPublicIPResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * NSX Public IP Block
+     * API Version: 2021-06-01.
+     * 
+     *
+         * NSX Public IP Block
+     * 
+     */
     public static CompletableFuture<GetWorkloadNetworkPublicIPResult> invokeAsync(GetWorkloadNetworkPublicIPArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkPublicIP", TypeShape.of(GetWorkloadNetworkPublicIPResult.class), args == null ? GetWorkloadNetworkPublicIPArgs.Empty : args, Utilities.withVersion(options));
     }

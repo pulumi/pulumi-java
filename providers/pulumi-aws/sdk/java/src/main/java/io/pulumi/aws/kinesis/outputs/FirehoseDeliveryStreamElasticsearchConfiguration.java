@@ -114,91 +114,91 @@ public final class FirehoseDeliveryStreamElasticsearchConfiguration {
     /**
      * Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.
      * 
-     */
+    */
     public Optional<Integer> getBufferingInterval() {
         return Optional.ofNullable(this.bufferingInterval);
     }
     /**
      * Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.
      * 
-     */
+    */
     public Optional<Integer> getBufferingSize() {
         return Optional.ofNullable(this.bufferingSize);
     }
     /**
      * The CloudWatch Logging Options for the delivery stream. More details are given below
      * 
-     */
+    */
     public Optional<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions> getCloudwatchLoggingOptions() {
         return Optional.ofNullable(this.cloudwatchLoggingOptions);
     }
     /**
      * The endpoint to use when communicating with the cluster. Conflicts with `domain_arn`.
      * 
-     */
+    */
     public Optional<String> getClusterEndpoint() {
         return Optional.ofNullable(this.clusterEndpoint);
     }
     /**
      * The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`. Conflicts with `cluster_endpoint`.
      * 
-     */
+    */
     public Optional<String> getDomainArn() {
         return Optional.ofNullable(this.domainArn);
     }
     /**
      * The Elasticsearch index name.
      * 
-     */
+    */
     public String getIndexName() {
         return this.indexName;
     }
     /**
      * The Elasticsearch index rotation period.  Index rotation appends a timestamp to the IndexName to facilitate expiration of old data.  Valid values are `NoRotation`, `OneHour`, `OneDay`, `OneWeek`, and `OneMonth`.  The default value is `OneDay`.
      * 
-     */
+    */
     public Optional<String> getIndexRotationPeriod() {
         return Optional.ofNullable(this.indexRotationPeriod);
     }
     /**
      * The data processing configuration.  More details are given below.
      * 
-     */
+    */
     public Optional<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration> getProcessingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
     /**
      * After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
      * 
-     */
+    */
     public Optional<Integer> getRetryDuration() {
         return Optional.ofNullable(this.retryDuration);
     }
     /**
      * The ARN of the IAM role to be assumed by Firehose for calling the Amazon ES Configuration API and for indexing documents.  The pattern needs to be `arn:.*`.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * Defines how documents should be delivered to Amazon S3.  Valid values are `FailedDocumentsOnly` and `AllDocuments`.  Default value is `FailedDocumentsOnly`.
      * 
-     */
+    */
     public Optional<String> getS3BackupMode() {
         return Optional.ofNullable(this.s3BackupMode);
     }
     /**
      * The Elasticsearch type name with maximum length of 100 characters.
      * 
-     */
+    */
     public Optional<String> getTypeName() {
         return Optional.ofNullable(this.typeName);
     }
     /**
      * The VPC configuration for the delivery stream to connect to Elastic Search associated with the VPC. More details are given below
      * 
-     */
+    */
     public Optional<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig> getVpcConfig() {
         return Optional.ofNullable(this.vpcConfig);
     }

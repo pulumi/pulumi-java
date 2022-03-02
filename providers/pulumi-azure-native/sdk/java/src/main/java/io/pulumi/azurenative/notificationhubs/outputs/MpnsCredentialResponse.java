@@ -40,21 +40,21 @@ public final class MpnsCredentialResponse {
     /**
      * The certificate key for this credential.
      * 
-     */
+    */
     public Optional<String> getCertificateKey() {
         return Optional.ofNullable(this.certificateKey);
     }
     /**
      * The MPNS certificate.
      * 
-     */
+    */
     public Optional<String> getMpnsCertificate() {
         return Optional.ofNullable(this.mpnsCertificate);
     }
     /**
      * The MPNS certificate Thumbprint
      * 
-     */
+    */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }

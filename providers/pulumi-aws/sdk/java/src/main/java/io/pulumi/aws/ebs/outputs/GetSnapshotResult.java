@@ -144,28 +144,28 @@ public final class GetSnapshotResult {
     /**
      * Amazon Resource Name (ARN) of the EBS Snapshot.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The data encryption key identifier for the snapshot.
      * 
-     */
+    */
     public String getDataEncryptionKeyId() {
         return this.dataEncryptionKeyId;
     }
     /**
      * A description for the snapshot
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Whether the snapshot is encrypted.
      * 
-     */
+    */
     public Boolean getEncrypted() {
         return this.encrypted;
     }
@@ -175,14 +175,14 @@ public final class GetSnapshotResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The ARN for the KMS encryption key.
      * 
-     */
+    */
     public String getKmsKeyId() {
         return this.kmsKeyId;
     }
@@ -192,21 +192,21 @@ public final class GetSnapshotResult {
     /**
      * The ARN of the Outpost on which the snapshot is stored.
      * 
-     */
+    */
     public String getOutpostArn() {
         return this.outpostArn;
     }
     /**
      * Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
      * 
-     */
+    */
     public String getOwnerAlias() {
         return this.ownerAlias;
     }
     /**
      * The AWS account ID of the EBS snapshot owner.
      * 
-     */
+    */
     public String getOwnerId() {
         return this.ownerId;
     }
@@ -219,7 +219,7 @@ public final class GetSnapshotResult {
     /**
      * The snapshot ID (e.g., snap-59fcb34e).
      * 
-     */
+    */
     public String getSnapshotId() {
         return this.snapshotId;
     }
@@ -229,35 +229,35 @@ public final class GetSnapshotResult {
     /**
      * The snapshot state.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The storage tier in which the snapshot is stored.
      * 
-     */
+    */
     public String getStorageTier() {
         return this.storageTier;
     }
     /**
      * A map of tags for the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * The volume ID (e.g., vol-59fcb34e).
      * 
-     */
+    */
     public String getVolumeId() {
         return this.volumeId;
     }
     /**
      * The size of the drive in GiBs.
      * 
-     */
+    */
     public Integer getVolumeSize() {
         return this.volumeSize;
     }

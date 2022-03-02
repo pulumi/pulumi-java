@@ -89,70 +89,70 @@ public final class GetWorkerPoolResult {
     /**
      * Time at which the request to create the `WorkerPool` was received.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Time at which the request to delete the `WorkerPool` was received.
      * 
-     */
+    */
     public String getDeleteTime() {
         return this.deleteTime;
     }
     /**
      * User-defined name of the `WorkerPool`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The project ID of the GCP project for which the `WorkerPool` is created.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
      * 
-     */
+    */
     public List<String> getRegions() {
         return this.regions;
     }
     /**
      * The service account used to manage the `WorkerPool`. The service account must have the Compute Instance Admin (Beta) permission at the project level.
      * 
-     */
+    */
     public String getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
     /**
      * WorkerPool Status.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Time at which the request to update the `WorkerPool` was received.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }
     /**
      * Configuration to be used for a creating workers in the `WorkerPool`.
      * 
-     */
+    */
     public WorkerConfigResponse getWorkerConfig() {
         return this.workerConfig;
     }
     /**
      * Total number of workers to be created across all requested regions.
      * 
-     */
+    */
     public String getWorkerCount() {
         return this.workerCount;
     }

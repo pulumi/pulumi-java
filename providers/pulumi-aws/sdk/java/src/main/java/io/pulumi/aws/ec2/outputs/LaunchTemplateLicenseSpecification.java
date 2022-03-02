@@ -23,7 +23,7 @@ public final class LaunchTemplateLicenseSpecification {
     /**
      * ARN of the license configuration.
      * 
-     */
+    */
     public String getLicenseConfigurationArn() {
         return this.licenseConfigurationArn;
     }

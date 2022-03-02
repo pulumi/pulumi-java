@@ -31,14 +31,14 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
     /**
      * AWS Key ID.
      * 
-     */
+    */
     public String getAccessKeyId() {
         return this.accessKeyId;
     }
     /**
      * AWS Secret Access Key.
      * 
-     */
+    */
     public String getSecretAccessKey() {
         return this.secretAccessKey;
     }

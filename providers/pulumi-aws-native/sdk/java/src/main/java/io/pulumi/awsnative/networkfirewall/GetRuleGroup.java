@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRuleGroup {
-/**
- * Resource type definition for AWS::NetworkFirewall::RuleGroup
+    private GetRuleGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetRuleGroupArgs.Builder a);
+    }
+    private static GetRuleGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRuleGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource type definition for AWS::NetworkFirewall::RuleGroup
  * 
- */
+     */
+    public static CompletableFuture<GetRuleGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource type definition for AWS::NetworkFirewall::RuleGroup
+     * 
+     */
     public static CompletableFuture<GetRuleGroupResult> invokeAsync(GetRuleGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkfirewall:getRuleGroup", TypeShape.of(GetRuleGroupResult.class), args == null ? GetRuleGroupArgs.Empty : args, Utilities.withVersion(options));
     }

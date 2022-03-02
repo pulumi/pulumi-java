@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSentinelOnboardingState {
-/**
- * Sentinel onboarding state
+    private GetSentinelOnboardingState() {}
+    public interface BuilderApplicator {
+        public void apply(GetSentinelOnboardingStateArgs.Builder a);
+    }
+    private static GetSentinelOnboardingStateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSentinelOnboardingStateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Sentinel onboarding state
  * API Version: 2021-03-01-preview.
  * 
- *
- * Sentinel onboarding state
+     *
+     * Sentinel onboarding state
  * 
- */
+     */
+    public static CompletableFuture<GetSentinelOnboardingStateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Sentinel onboarding state
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Sentinel onboarding state
+     * 
+     */
     public static CompletableFuture<GetSentinelOnboardingStateResult> invokeAsync(GetSentinelOnboardingStateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getSentinelOnboardingState", TypeShape.of(GetSentinelOnboardingStateResult.class), args == null ? GetSentinelOnboardingStateArgs.Empty : args, Utilities.withVersion(options));
     }

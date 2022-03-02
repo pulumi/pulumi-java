@@ -34,14 +34,14 @@ public final class HealthAlertActionResponse {
     /**
      * the id of the action group to use.
      * 
-     */
+    */
     public Optional<String> getActionGroupId() {
         return Optional.ofNullable(this.actionGroupId);
     }
     /**
      * The properties of a webhook object.
      * 
-     */
+    */
     public Map<String,String> getWebHookProperties() {
         return this.webHookProperties == null ? Map.of() : this.webHookProperties;
     }

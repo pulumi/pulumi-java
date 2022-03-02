@@ -115,7 +115,7 @@ public final class SpotFleetRequestLaunchSpecification {
     /**
      * The availability zone in which to place the request.
      * 
-     */
+    */
     public Optional<String> getAvailabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
@@ -137,7 +137,7 @@ public final class SpotFleetRequestLaunchSpecification {
     /**
      * The type of instance to request.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
@@ -159,21 +159,21 @@ public final class SpotFleetRequestLaunchSpecification {
     /**
      * The maximum spot bid for this override request.
      * 
-     */
+    */
     public Optional<String> getSpotPrice() {
         return Optional.ofNullable(this.spotPrice);
     }
     /**
      * The subnet in which to launch the requested instance.
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
@@ -186,7 +186,7 @@ public final class SpotFleetRequestLaunchSpecification {
     /**
      * The capacity added to the fleet by a fulfilled request.
      * 
-     */
+    */
     public Optional<String> getWeightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }

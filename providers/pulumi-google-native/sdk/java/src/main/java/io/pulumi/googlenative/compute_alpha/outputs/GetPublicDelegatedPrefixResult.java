@@ -111,91 +111,91 @@ public final class GetPublicDelegatedPrefixResult {
     /**
      * Creation timestamp in RFC3339 text format.
      * 
-     */
+    */
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix. An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve a PublicDelegatedPrefix.
      * 
-     */
+    */
     public String getFingerprint() {
         return this.fingerprint;
     }
     /**
      * The IPv4 address range, in CIDR format, represented by this public delegated prefix.
      * 
-     */
+    */
     public String getIpCidrRange() {
         return this.ipCidrRange;
     }
     /**
      * If true, the prefix will be live migrated.
      * 
-     */
+    */
     public Boolean getIsLiveMigration() {
         return this.isLiveMigration;
     }
     /**
      * Type of the resource. Always compute#publicDelegatedPrefix for public delegated prefixes.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The URL of parent prefix. Either PublicAdvertisedPrefix or PublicDelegatedPrefix.
      * 
-     */
+    */
     public String getParentPrefix() {
         return this.parentPrefix;
     }
     /**
      * The list of sub public delegated prefixes that exist for this public delegated prefix.
      * 
-     */
+    */
     public List<PublicDelegatedPrefixPublicDelegatedSubPrefixResponse> getPublicDelegatedSubPrefixs() {
         return this.publicDelegatedSubPrefixs;
     }
     /**
      * URL of the region where the public delegated prefix resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * Server-defined URL for the resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * Server-defined URL with id for the resource.
      * 
-     */
+    */
     public String getSelfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
      * The status of the public delegated prefix, which can be one of following values: - `INITIALIZING` The public delegated prefix is being initialized and addresses cannot be created yet. - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration prefix and is active. - `ANNOUNCED` The public delegated prefix is active. - `DELETING` The public delegated prefix is being deprovsioned.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

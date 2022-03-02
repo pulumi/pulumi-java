@@ -76,6 +76,22 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
         return this.state;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AgentPoolArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.storagetransfer_v1.AgentPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.storagetransfer_v1.AgentPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public AgentPool(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

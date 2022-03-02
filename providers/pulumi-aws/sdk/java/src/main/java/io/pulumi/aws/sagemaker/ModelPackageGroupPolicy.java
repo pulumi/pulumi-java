@@ -50,6 +50,22 @@ public class ModelPackageGroupPolicy extends io.pulumi.resources.CustomResource 
         return this.resourcePolicy;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ModelPackageGroupPolicyArgs.Builder a);
+    }
+    private static io.pulumi.aws.sagemaker.ModelPackageGroupPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.sagemaker.ModelPackageGroupPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ModelPackageGroupPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -44,7 +44,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfig {
      * concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
      * value 2. The maximum depth allowed is 5.
      * 
-     */
+    */
     public Integer getRecursiveStructureDepth() {
         return this.recursiveStructureDepth;
     }
@@ -55,7 +55,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfig {
      *   Default value is `ANALYTICS`.
      *   Possible values are `ANALYTICS`.
      * 
-     */
+    */
     public Optional<String> getSchemaType() {
         return Optional.ofNullable(this.schemaType);
     }

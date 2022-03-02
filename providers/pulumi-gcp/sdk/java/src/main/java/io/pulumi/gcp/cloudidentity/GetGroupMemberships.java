@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGroupMemberships {
-/**
- * Use this data source to get list of the Cloud Identity Group Memberships within a given Group.
+    private GetGroupMemberships() {}
+    public interface BuilderApplicator {
+        public void apply(GetGroupMembershipsArgs.Builder a);
+    }
+    private static GetGroupMembershipsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGroupMembershipsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get list of the Cloud Identity Group Memberships within a given Group.
  * 
  * https://cloud.google.com/identity/docs/concepts/overview#memberships
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getGroupMemberships.
+     *
+     * A collection of arguments for invoking getGroupMemberships.
  * 
- *
- * A collection of values returned by getGroupMemberships.
+     *
+     * A collection of values returned by getGroupMemberships.
  * 
- */
+     */
+    public static CompletableFuture<GetGroupMembershipsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get list of the Cloud Identity Group Memberships within a given Group.
+     * 
+     * https://cloud.google.com/identity/docs/concepts/overview#memberships
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getGroupMemberships.
+     * 
+     *
+         * A collection of values returned by getGroupMemberships.
+     * 
+     */
     public static CompletableFuture<GetGroupMembershipsResult> invokeAsync(GetGroupMembershipsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:cloudidentity/getGroupMemberships:getGroupMemberships", TypeShape.of(GetGroupMembershipsResult.class), args == null ? GetGroupMembershipsArgs.Empty : args, Utilities.withVersion(options));
     }

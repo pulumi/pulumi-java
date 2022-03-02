@@ -23,7 +23,7 @@ public final class ExpressRouteConnectionIdResponse {
     /**
      * The ID of the ExpressRouteConnection.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

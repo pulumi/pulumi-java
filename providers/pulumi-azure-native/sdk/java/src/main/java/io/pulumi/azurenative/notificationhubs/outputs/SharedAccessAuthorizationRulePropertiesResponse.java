@@ -83,63 +83,63 @@ public final class SharedAccessAuthorizationRulePropertiesResponse {
     /**
      * A string that describes the claim type
      * 
-     */
+    */
     public String getClaimType() {
         return this.claimType;
     }
     /**
      * A string that describes the claim value
      * 
-     */
+    */
     public String getClaimValue() {
         return this.claimValue;
     }
     /**
      * The created time for this rule
      * 
-     */
+    */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * A string that describes the authorization rule.
      * 
-     */
+    */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * The last modified time for this rule
      * 
-     */
+    */
     public String getModifiedTime() {
         return this.modifiedTime;
     }
     /**
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
-     */
+    */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * The revision number for the rule
      * 
-     */
+    */
     public Integer getRevision() {
         return this.revision;
     }
     /**
      * The rights associated with the rule.
      * 
-     */
+    */
     public List<String> getRights() {
         return this.rights == null ? List.of() : this.rights;
     }
     /**
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
-     */
+    */
     public String getSecondaryKey() {
         return this.secondaryKey;
     }

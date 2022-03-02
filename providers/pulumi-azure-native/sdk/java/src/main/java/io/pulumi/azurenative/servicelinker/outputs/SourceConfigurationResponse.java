@@ -33,14 +33,14 @@ public final class SourceConfigurationResponse {
     /**
      * The name of setting.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value of setting
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

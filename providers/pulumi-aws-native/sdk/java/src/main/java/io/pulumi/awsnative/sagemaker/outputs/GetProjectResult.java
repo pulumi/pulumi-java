@@ -48,7 +48,7 @@ public final class GetProjectResult {
     /**
      * The time at which the project was created.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
@@ -61,14 +61,14 @@ public final class GetProjectResult {
     /**
      * The status of a project.
      * 
-     */
+    */
     public Optional<ProjectStatus> getProjectStatus() {
         return Optional.ofNullable(this.projectStatus);
     }
     /**
      * Provisioned ServiceCatalog  Details
      * 
-     */
+    */
     public Optional<ServiceCatalogProvisionedProductDetailsProperties> getServiceCatalogProvisionedProductDetails() {
         return Optional.ofNullable(this.serviceCatalogProvisionedProductDetails);
     }

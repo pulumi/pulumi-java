@@ -53,28 +53,28 @@ public final class GetFeedbackMessageResult {
     /**
      * String content of the feedback. Maximum of 10000 characters.
      * 
-     */
+    */
     public String getBody() {
         return this.body;
     }
     /**
      * Create time.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The image storing this feedback if the feedback is an image representing operator's comments.
      * 
-     */
+    */
     public String getImage() {
         return this.image;
     }
     /**
      * Name of the feedback message in a feedback thread. Format: 'project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}'
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

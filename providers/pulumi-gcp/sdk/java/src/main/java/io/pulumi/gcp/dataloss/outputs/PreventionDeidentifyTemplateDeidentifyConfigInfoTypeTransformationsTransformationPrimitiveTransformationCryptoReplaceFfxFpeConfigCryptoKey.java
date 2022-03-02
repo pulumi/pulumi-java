@@ -46,7 +46,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Kms wrapped key
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped> getKmsWrapped() {
         return Optional.ofNullable(this.kmsWrapped);
     }
@@ -54,7 +54,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Transient crypto key
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient> get$transient() {
         return Optional.ofNullable(this.$transient);
     }
@@ -62,7 +62,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Unwrapped crypto key
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrapped> getUnwrapped() {
         return Optional.ofNullable(this.unwrapped);
     }

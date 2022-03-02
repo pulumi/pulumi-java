@@ -57,35 +57,35 @@ public final class WebChatChannelResponse {
      * The channel name
      * Expected value is 'WebChatChannel'.
      * 
-     */
+    */
     public String getChannelName() {
         return this.channelName;
     }
     /**
      * Entity Tag of the resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Specifies the location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The set of properties specific to Web Chat channel resource
      * 
-     */
+    */
     public Optional<WebChatChannelPropertiesResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * Provisioning state of the resource
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }

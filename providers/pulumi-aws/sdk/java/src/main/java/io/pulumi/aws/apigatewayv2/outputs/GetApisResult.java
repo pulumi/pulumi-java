@@ -44,14 +44,14 @@ public final class GetApisResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set of API identifiers.
      * 
-     */
+    */
     public List<String> getIds() {
         return this.ids;
     }

@@ -52,7 +52,7 @@ public final class GetInstanceScheduling {
      * Specifies if the instance should be
      * restarted if it was terminated by Compute Engine (not a user).
      * 
-     */
+    */
     public Boolean getAutomaticRestart() {
         return this.automaticRestart;
     }
@@ -67,14 +67,14 @@ public final class GetInstanceScheduling {
      * instance. One of `MIGRATE` or `TERMINATE`, for more info, read
      * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
      * 
-     */
+    */
     public String getOnHostMaintenance() {
         return this.onHostMaintenance;
     }
     /**
      * Whether the instance is preemptible.
      * 
-     */
+    */
     public Boolean getPreemptible() {
         return this.preemptible;
     }

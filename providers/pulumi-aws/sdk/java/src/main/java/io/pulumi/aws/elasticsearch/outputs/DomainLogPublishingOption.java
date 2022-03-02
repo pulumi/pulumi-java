@@ -41,21 +41,21 @@ public final class DomainLogPublishingOption {
     /**
      * ARN of the Cloudwatch log group to which log needs to be published.
      * 
-     */
+    */
     public String getCloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
     /**
      * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Type of Elasticsearch log. Valid values: `INDEX_SLOW_LOGS`, `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `AUDIT_LOGS`.
      * 
-     */
+    */
     public String getLogType() {
         return this.logType;
     }

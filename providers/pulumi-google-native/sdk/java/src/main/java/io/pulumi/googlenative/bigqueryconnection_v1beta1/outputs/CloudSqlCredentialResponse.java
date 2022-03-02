@@ -31,14 +31,14 @@ public final class CloudSqlCredentialResponse {
     /**
      * The password for the credential.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * The username for the credential.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }

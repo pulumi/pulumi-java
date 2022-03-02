@@ -89,70 +89,70 @@ public final class X12ValidationSettingsResponse {
     /**
      * The value indicating whether to allow leading and trailing spaces and zeroes.
      * 
-     */
+    */
     public Boolean getAllowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
     /**
      * The value indicating whether to check for duplicate group control number.
      * 
-     */
+    */
     public Boolean getCheckDuplicateGroupControlNumber() {
         return this.checkDuplicateGroupControlNumber;
     }
     /**
      * The value indicating whether to check for duplicate interchange control number.
      * 
-     */
+    */
     public Boolean getCheckDuplicateInterchangeControlNumber() {
         return this.checkDuplicateInterchangeControlNumber;
     }
     /**
      * The value indicating whether to check for duplicate transaction set control number.
      * 
-     */
+    */
     public Boolean getCheckDuplicateTransactionSetControlNumber() {
         return this.checkDuplicateTransactionSetControlNumber;
     }
     /**
      * The validity period of interchange control number.
      * 
-     */
+    */
     public Integer getInterchangeControlNumberValidityDays() {
         return this.interchangeControlNumberValidityDays;
     }
     /**
      * The trailing separator policy.
      * 
-     */
+    */
     public String getTrailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
     /**
      * The value indicating whether to trim leading and trailing spaces and zeroes.
      * 
-     */
+    */
     public Boolean getTrimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
     /**
      * The value indicating whether to validate character set in the message.
      * 
-     */
+    */
     public Boolean getValidateCharacterSet() {
         return this.validateCharacterSet;
     }
     /**
      * The value indicating whether to Whether to validate EDI types.
      * 
-     */
+    */
     public Boolean getValidateEDITypes() {
         return this.validateEDITypes;
     }
     /**
      * The value indicating whether to Whether to validate XSD types.
      * 
-     */
+    */
     public Boolean getValidateXSDTypes() {
         return this.validateXSDTypes;
     }

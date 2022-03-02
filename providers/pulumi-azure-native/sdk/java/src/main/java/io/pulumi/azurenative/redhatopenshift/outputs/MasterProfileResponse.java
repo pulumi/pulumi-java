@@ -33,14 +33,14 @@ public final class MasterProfileResponse {
     /**
      * The Azure resource ID of the master subnet (immutable).
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * The size of the master VMs (immutable).
      * 
-     */
+    */
     public Optional<String> getVmSize() {
         return Optional.ofNullable(this.vmSize);
     }

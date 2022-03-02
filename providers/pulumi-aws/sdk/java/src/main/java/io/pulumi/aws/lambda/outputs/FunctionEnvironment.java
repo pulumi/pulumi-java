@@ -25,7 +25,7 @@ public final class FunctionEnvironment {
     /**
      * Map of environment variables that are accessible from the function code during execution.
      * 
-     */
+    */
     public Map<String,String> getVariables() {
         return this.variables == null ? Map.of() : this.variables;
     }

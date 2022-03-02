@@ -71,14 +71,14 @@ public final class GetPermissionSetResult {
     /**
      * The description of the Permission Set.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -91,21 +91,21 @@ public final class GetPermissionSetResult {
     /**
      * The relay state URL used to redirect users within the application during the federation authentication process.
      * 
-     */
+    */
     public String getRelayState() {
         return this.relayState;
     }
     /**
      * The length of time that the application user sessions are valid in the ISO-8601 standard.
      * 
-     */
+    */
     public String getSessionDuration() {
         return this.sessionDuration;
     }
     /**
      * Key-value map of resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

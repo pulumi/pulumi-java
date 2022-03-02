@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSqlMigrationServiceMonitoringData {
-/**
- * Integration Runtime Monitoring Data.
+    private ListSqlMigrationServiceMonitoringData() {}
+    public interface BuilderApplicator {
+        public void apply(ListSqlMigrationServiceMonitoringDataArgs.Builder a);
+    }
+    private static ListSqlMigrationServiceMonitoringDataArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListSqlMigrationServiceMonitoringDataArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Integration Runtime Monitoring Data.
  * API Version: 2021-10-30-preview.
  * 
- *
- * Integration Runtime Monitoring Data.
+     *
+     * Integration Runtime Monitoring Data.
  * 
- */
+     */
+    public static CompletableFuture<ListSqlMigrationServiceMonitoringDataResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Integration Runtime Monitoring Data.
+     * API Version: 2021-10-30-preview.
+     * 
+     *
+         * Integration Runtime Monitoring Data.
+     * 
+     */
     public static CompletableFuture<ListSqlMigrationServiceMonitoringDataResult> invokeAsync(ListSqlMigrationServiceMonitoringDataArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:listSqlMigrationServiceMonitoringData", TypeShape.of(ListSqlMigrationServiceMonitoringDataResult.class), args == null ? ListSqlMigrationServiceMonitoringDataArgs.Empty : args, Utilities.withVersion(options));
     }

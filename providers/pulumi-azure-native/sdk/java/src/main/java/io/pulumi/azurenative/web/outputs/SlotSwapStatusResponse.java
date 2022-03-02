@@ -38,21 +38,21 @@ public final class SlotSwapStatusResponse {
     /**
      * The destination slot of the last swap operation.
      * 
-     */
+    */
     public String getDestinationSlotName() {
         return this.destinationSlotName;
     }
     /**
      * The source slot of the last swap operation.
      * 
-     */
+    */
     public String getSourceSlotName() {
         return this.sourceSlotName;
     }
     /**
      * The time the last successful slot swap completed.
      * 
-     */
+    */
     public String getTimestampUtc() {
         return this.timestampUtc;
     }

@@ -55,35 +55,35 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScaling {
     /**
      * Period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
      * 
-     */
+    */
     public Optional<Integer> getInstanceWarmupPeriod() {
         return Optional.ofNullable(this.instanceWarmupPeriod);
     }
     /**
      * Maximum step adjustment size. A number between 1 and 10,000.
      * 
-     */
+    */
     public Optional<Integer> getMaximumScalingStepSize() {
         return Optional.ofNullable(this.maximumScalingStepSize);
     }
     /**
      * Minimum step adjustment size. A number between 1 and 10,000.
      * 
-     */
+    */
     public Optional<Integer> getMinimumScalingStepSize() {
         return Optional.ofNullable(this.minimumScalingStepSize);
     }
     /**
      * Whether auto scaling is managed by ECS. Valid values are `ENABLED` and `DISABLED`.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Target utilization for the capacity provider. A number between 1 and 100.
      * 
-     */
+    */
     public Optional<Integer> getTargetCapacity() {
         return Optional.ofNullable(this.targetCapacity);
     }

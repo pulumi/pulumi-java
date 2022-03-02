@@ -46,28 +46,28 @@ public final class GetServerAzureADOnlyAuthenticationResult {
     /**
      * Azure Active Directory only Authentication enabled.
      * 
-     */
+    */
     public Boolean getAzureADOnlyAuthentication() {
         return this.azureADOnlyAuthentication;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

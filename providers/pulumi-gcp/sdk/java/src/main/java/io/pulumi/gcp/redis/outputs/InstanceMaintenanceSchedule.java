@@ -53,7 +53,7 @@ public final class InstanceMaintenanceSchedule {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -64,7 +64,7 @@ public final class InstanceMaintenanceSchedule {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
-     */
+    */
     public Optional<String> getScheduleDeadlineTime() {
         return Optional.ofNullable(this.scheduleDeadlineTime);
     }
@@ -74,7 +74,7 @@ public final class InstanceMaintenanceSchedule {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
      * resolution and up to nine fractional digits.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }

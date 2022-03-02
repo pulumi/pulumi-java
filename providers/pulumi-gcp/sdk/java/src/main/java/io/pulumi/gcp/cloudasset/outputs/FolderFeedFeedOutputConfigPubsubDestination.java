@@ -23,7 +23,7 @@ public final class FolderFeedFeedOutputConfigPubsubDestination {
     /**
      * Destination on Cloud Pubsub topic.
      * 
-     */
+    */
     public String getTopic() {
         return this.topic;
     }

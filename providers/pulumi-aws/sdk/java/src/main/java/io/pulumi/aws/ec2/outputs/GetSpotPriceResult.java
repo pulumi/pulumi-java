@@ -57,7 +57,7 @@ public final class GetSpotPriceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -67,14 +67,14 @@ public final class GetSpotPriceResult {
     /**
      * The most recent Spot Price value for the given instance type and AZ.
      * 
-     */
+    */
     public String getSpotPrice() {
         return this.spotPrice;
     }
     /**
      * The timestamp at which the Spot Price value was published.
      * 
-     */
+    */
     public String getSpotPriceTimestamp() {
         return this.spotPriceTimestamp;
     }

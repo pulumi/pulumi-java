@@ -83,63 +83,63 @@ public final class GetManagedPrivateEndpointResult {
     /**
      * The groupId in which the managed private endpoint is created.
      * 
-     */
+    */
     public String getGroupId() {
         return this.groupId;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The ARM resource ID of the resource for which the managed private endpoint is created.
      * 
-     */
+    */
     public String getPrivateLinkResourceId() {
         return this.privateLinkResourceId;
     }
     /**
      * The region of the resource to which the managed private endpoint is created.
      * 
-     */
+    */
     public Optional<String> getPrivateLinkResourceRegion() {
         return Optional.ofNullable(this.privateLinkResourceRegion);
     }
     /**
      * The provisioned state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The user request message.
      * 
-     */
+    */
     public Optional<String> getRequestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

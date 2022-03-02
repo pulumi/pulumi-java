@@ -25,7 +25,7 @@ public final class RuleGroupRuleActionCount {
     /**
      * Defines custom handling for the web request. See Custom Request Handling below for details.
      * 
-     */
+    */
     public Optional<RuleGroupRuleActionCountCustomRequestHandling> getCustomRequestHandling() {
         return Optional.ofNullable(this.customRequestHandling);
     }

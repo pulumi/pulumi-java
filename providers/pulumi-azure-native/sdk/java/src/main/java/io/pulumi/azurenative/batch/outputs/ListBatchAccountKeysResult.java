@@ -38,21 +38,21 @@ public final class ListBatchAccountKeysResult {
     /**
      * The Batch account name.
      * 
-     */
+    */
     public String getAccountName() {
         return this.accountName;
     }
     /**
      * The primary key associated with the account.
      * 
-     */
+    */
     public String getPrimary() {
         return this.primary;
     }
     /**
      * The secondary key associated with the account.
      * 
-     */
+    */
     public String getSecondary() {
         return this.secondary;
     }

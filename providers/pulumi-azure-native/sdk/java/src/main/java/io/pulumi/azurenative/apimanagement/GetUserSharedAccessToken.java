@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUserSharedAccessToken {
-/**
- * Get User Token response details.
+    private GetUserSharedAccessToken() {}
+    public interface BuilderApplicator {
+        public void apply(GetUserSharedAccessTokenArgs.Builder a);
+    }
+    private static GetUserSharedAccessTokenArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUserSharedAccessTokenArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get User Token response details.
  * API Version: 2020-12-01.
  * 
- *
- * Get User Token response details.
+     *
+     * Get User Token response details.
  * 
- */
+     */
+    public static CompletableFuture<GetUserSharedAccessTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get User Token response details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Get User Token response details.
+     * 
+     */
     public static CompletableFuture<GetUserSharedAccessTokenResult> invokeAsync(GetUserSharedAccessTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getUserSharedAccessToken", TypeShape.of(GetUserSharedAccessTokenResult.class), args == null ? GetUserSharedAccessTokenArgs.Empty : args, Utilities.withVersion(options));
     }

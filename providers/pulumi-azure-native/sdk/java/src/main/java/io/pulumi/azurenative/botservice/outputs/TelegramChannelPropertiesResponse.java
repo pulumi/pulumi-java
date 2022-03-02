@@ -41,21 +41,21 @@ public final class TelegramChannelPropertiesResponse {
     /**
      * The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-     */
+    */
     public Optional<String> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * Whether this channel is enabled for the bot
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * Whether this channel is validated for the bot
      * 
-     */
+    */
     public Optional<Boolean> getIsValidated() {
         return Optional.ofNullable(this.isValidated);
     }

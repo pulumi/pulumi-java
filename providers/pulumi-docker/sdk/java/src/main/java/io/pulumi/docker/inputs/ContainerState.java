@@ -214,7 +214,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     /**
      * The network gateway of the container.
      * 
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The network gateway of the container as read from its NetworkSettings.
      * 
      */
@@ -298,7 +298,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     /**
      * The IP address of the container.
      * 
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The IP address of the container's first network it.
      * 
      */
@@ -314,7 +314,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     /**
      * The IP prefix length of the container.
      * 
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings.
      * 
      */
@@ -353,7 +353,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     /**
      * Set of links for link based connectivity between containers that are running on the same host.
      * 
-     * @deprecated
+     * @Deprecated
      * The --link flag is a legacy feature of Docker. It may eventually be removed.
      * 
      */
@@ -470,7 +470,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     /**
      * Set an alias for the container in all specified networks
      * 
-     * @deprecated
+     * @Deprecated
      * Use networks_advanced instead. Will be removed in v3.0.0
      * 
      */
@@ -508,7 +508,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
     /**
      * ID of the networks in which the container is.
      * 
-     * @deprecated
+     * @Deprecated
      * Use networks_advanced instead. Will be removed in v3.0.0
      * 
      */

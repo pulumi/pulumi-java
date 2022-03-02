@@ -39,21 +39,21 @@ public final class RegistrationAssignmentPropertiesResponse {
     /**
      * Current state of the registration assignment.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Registration definition inside registration assignment.
      * 
-     */
+    */
     public RegistrationAssignmentPropertiesResponseRegistrationDefinition getRegistrationDefinition() {
         return this.registrationDefinition;
     }
     /**
      * Fully qualified path of the registration definition.
      * 
-     */
+    */
     public String getRegistrationDefinitionId() {
         return this.registrationDefinitionId;
     }

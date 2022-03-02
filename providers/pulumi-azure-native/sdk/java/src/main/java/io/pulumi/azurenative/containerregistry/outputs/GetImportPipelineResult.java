@@ -94,70 +94,70 @@ public final class GetImportPipelineResult {
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the import pipeline.
      * 
-     */
+    */
     public Optional<IdentityPropertiesResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The location of the import pipeline.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The list of all options configured for the pipeline.
      * 
-     */
+    */
     public List<String> getOptions() {
         return this.options == null ? List.of() : this.options;
     }
     /**
      * The provisioning state of the pipeline at the time the operation was called.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The source properties of the import pipeline.
      * 
-     */
+    */
     public ImportPipelineSourcePropertiesResponse getSource() {
         return this.source;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The properties that describe the trigger of the import pipeline.
      * 
-     */
+    */
     public Optional<PipelineTriggerPropertiesResponse> getTrigger() {
         return Optional.ofNullable(this.trigger);
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

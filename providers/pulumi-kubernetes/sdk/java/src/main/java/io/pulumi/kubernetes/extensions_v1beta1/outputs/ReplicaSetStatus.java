@@ -63,42 +63,42 @@ public final class ReplicaSetStatus {
     /**
      * The number of available replicas (ready for at least minReadySeconds) for this replica set.
      * 
-     */
+    */
     public Optional<Integer> getAvailableReplicas() {
         return Optional.ofNullable(this.availableReplicas);
     }
     /**
      * Represents the latest available observations of a replica set's current state.
      * 
-     */
+    */
     public List<ReplicaSetCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
      * The number of pods that have labels matching the labels of the pod template of the replicaset.
      * 
-     */
+    */
     public Optional<Integer> getFullyLabeledReplicas() {
         return Optional.ofNullable(this.fullyLabeledReplicas);
     }
     /**
      * ObservedGeneration reflects the generation of the most recently observed ReplicaSet.
      * 
-     */
+    */
     public Optional<Integer> getObservedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
     /**
      * The number of ready replicas for this replica set.
      * 
-     */
+    */
     public Optional<Integer> getReadyReplicas() {
         return Optional.ofNullable(this.readyReplicas);
     }
     /**
      * Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
      * 
-     */
+    */
     public Integer getReplicas() {
         return this.replicas;
     }

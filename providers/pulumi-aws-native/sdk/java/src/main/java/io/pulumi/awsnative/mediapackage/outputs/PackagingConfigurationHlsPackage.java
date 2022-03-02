@@ -46,7 +46,7 @@ public final class PackagingConfigurationHlsPackage {
     /**
      * A list of HLS manifest configurations.
      * 
-     */
+    */
     public List<PackagingConfigurationHlsManifest> getHlsManifests() {
         return this.hlsManifests;
     }
@@ -56,7 +56,7 @@ public final class PackagingConfigurationHlsPackage {
     /**
      * When enabled, audio streams will be placed in rendition groups in the output.
      * 
-     */
+    */
     public Optional<Boolean> getUseAudioRenditionGroup() {
         return Optional.ofNullable(this.useAudioRenditionGroup);
     }

@@ -45,28 +45,28 @@ public final class GoogleCloudRetailV2alphaIntervalResponse {
     /**
      * Exclusive upper bound.
      * 
-     */
+    */
     public Double getExclusiveMaximum() {
         return this.exclusiveMaximum;
     }
     /**
      * Exclusive lower bound.
      * 
-     */
+    */
     public Double getExclusiveMinimum() {
         return this.exclusiveMinimum;
     }
     /**
      * Inclusive upper bound.
      * 
-     */
+    */
     public Double getMaximum() {
         return this.maximum;
     }
     /**
      * Inclusive lower bound.
      * 
-     */
+    */
     public Double getMinimum() {
         return this.minimum;
     }

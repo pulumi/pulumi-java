@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAutomation {
-/**
- * The security automation resource.
+    private GetAutomation() {}
+    public interface BuilderApplicator {
+        public void apply(GetAutomationArgs.Builder a);
+    }
+    private static GetAutomationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAutomationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The security automation resource.
  * API Version: 2019-01-01-preview.
  * 
- *
- * The security automation resource.
+     *
+     * The security automation resource.
  * 
- */
+     */
+    public static CompletableFuture<GetAutomationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The security automation resource.
+     * API Version: 2019-01-01-preview.
+     * 
+     *
+         * The security automation resource.
+     * 
+     */
     public static CompletableFuture<GetAutomationResult> invokeAsync(GetAutomationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getAutomation", TypeShape.of(GetAutomationResult.class), args == null ? GetAutomationArgs.Empty : args, Utilities.withVersion(options));
     }

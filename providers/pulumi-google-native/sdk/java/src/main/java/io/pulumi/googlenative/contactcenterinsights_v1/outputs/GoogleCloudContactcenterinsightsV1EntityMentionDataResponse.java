@@ -39,21 +39,21 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse {
     /**
      * The key of this entity in conversation entities. Can be used to retrieve the exact `Entity` this mention is attached to.
      * 
-     */
+    */
     public String getEntityUniqueId() {
         return this.entityUniqueId;
     }
     /**
      * Sentiment expressed for this mention of the entity.
      * 
-     */
+    */
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentiment() {
         return this.sentiment;
     }
     /**
      * The type of the entity mention.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

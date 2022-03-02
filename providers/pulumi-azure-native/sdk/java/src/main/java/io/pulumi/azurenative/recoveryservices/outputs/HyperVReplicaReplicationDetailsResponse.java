@@ -80,7 +80,7 @@ public final class HyperVReplicaReplicationDetailsResponse {
     /**
      * Initial replication details.
      * 
-     */
+    */
     public Optional<InitialReplicationDetailsResponse> getInitialReplicationDetails() {
         return Optional.ofNullable(this.initialReplicationDetails);
     }
@@ -88,49 +88,49 @@ public final class HyperVReplicaReplicationDetailsResponse {
      * Gets the Instance type.
      * Expected value is 'HyperVReplica2012'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The Last replication time.
      * 
-     */
+    */
     public Optional<String> getLastReplicatedTime() {
         return Optional.ofNullable(this.lastReplicatedTime);
     }
     /**
      * VM disk details.
      * 
-     */
+    */
     public List<DiskDetailsResponse> getVMDiskDetails() {
         return this.vMDiskDetails == null ? List.of() : this.vMDiskDetails;
     }
     /**
      * The virtual machine Id.
      * 
-     */
+    */
     public Optional<String> getVmId() {
         return Optional.ofNullable(this.vmId);
     }
     /**
      * The PE Network details.
      * 
-     */
+    */
     public List<VMNicDetailsResponse> getVmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
     }
     /**
      * The protection state for the vm.
      * 
-     */
+    */
     public Optional<String> getVmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
     /**
      * The protection state description for the vm.
      * 
-     */
+    */
     public Optional<String> getVmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);
     }

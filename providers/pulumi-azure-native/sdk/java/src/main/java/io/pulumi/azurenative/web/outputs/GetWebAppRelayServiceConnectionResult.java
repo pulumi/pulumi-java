@@ -81,21 +81,21 @@ public final class GetWebAppRelayServiceConnectionResult {
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -111,7 +111,7 @@ public final class GetWebAppRelayServiceConnectionResult {
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -25,7 +25,7 @@ public final class HttpSettingsRoutesResponse {
     /**
      * The prefix that should precede all the authentication/authorization paths.
      * 
-     */
+    */
     public Optional<String> getApiPrefix() {
         return Optional.ofNullable(this.apiPrefix);
     }

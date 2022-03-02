@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecurityPartnerProvider {
-/**
- * Security Partner Provider resource.
+    private GetSecurityPartnerProvider() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecurityPartnerProviderArgs.Builder a);
+    }
+    private static GetSecurityPartnerProviderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecurityPartnerProviderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Security Partner Provider resource.
  * API Version: 2020-11-01.
  * 
- *
- * Security Partner Provider resource.
+     *
+     * Security Partner Provider resource.
  * 
- */
+     */
+    public static CompletableFuture<GetSecurityPartnerProviderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Security Partner Provider resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Security Partner Provider resource.
+     * 
+     */
     public static CompletableFuture<GetSecurityPartnerProviderResult> invokeAsync(GetSecurityPartnerProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getSecurityPartnerProvider", TypeShape.of(GetSecurityPartnerProviderResult.class), args == null ? GetSecurityPartnerProviderArgs.Empty : args, Utilities.withVersion(options));
     }

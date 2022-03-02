@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPolicyExemption {
-/**
- * The policy exemption.
+    private GetPolicyExemption() {}
+    public interface BuilderApplicator {
+        public void apply(GetPolicyExemptionArgs.Builder a);
+    }
+    private static GetPolicyExemptionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPolicyExemptionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The policy exemption.
  * API Version: 2020-07-01-preview.
  * 
- *
- * The policy exemption.
+     *
+     * The policy exemption.
  * 
- */
+     */
+    public static CompletableFuture<GetPolicyExemptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The policy exemption.
+     * API Version: 2020-07-01-preview.
+     * 
+     *
+         * The policy exemption.
+     * 
+     */
     public static CompletableFuture<GetPolicyExemptionResult> invokeAsync(GetPolicyExemptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getPolicyExemption", TypeShape.of(GetPolicyExemptionResult.class), args == null ? GetPolicyExemptionArgs.Empty : args, Utilities.withVersion(options));
     }

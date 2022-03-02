@@ -23,7 +23,7 @@ public final class ListAccountSasResult {
     /**
      * The shared access signature access token.
      * 
-     */
+    */
     public String getAccountSasToken() {
         return this.accountSasToken;
     }

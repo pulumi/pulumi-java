@@ -129,7 +129,7 @@ public final class TriggerBuild {
      * Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<TriggerBuildArtifacts> getArtifacts() {
         return Optional.ofNullable(this.artifacts);
     }
@@ -137,7 +137,7 @@ public final class TriggerBuild {
      * Secrets and secret environment variables.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<TriggerBuildAvailableSecrets> getAvailableSecrets() {
         return Optional.ofNullable(this.availableSecrets);
     }
@@ -147,7 +147,7 @@ public final class TriggerBuild {
      * The digests of the pushed images will be stored in the Build resource's results field.
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * 
-     */
+    */
     public List<String> getImages() {
         return this.images == null ? List.of() : this.images;
     }
@@ -155,7 +155,7 @@ public final class TriggerBuild {
      * Google Cloud Storage bucket where logs should be written.
      * Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
      * 
-     */
+    */
     public Optional<String> getLogsBucket() {
         return Optional.ofNullable(this.logsBucket);
     }
@@ -163,7 +163,7 @@ public final class TriggerBuild {
      * Special options for this build.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<TriggerBuildOptions> getOptions() {
         return Optional.ofNullable(this.options);
     }
@@ -173,7 +173,7 @@ public final class TriggerBuild {
      * The TTL starts ticking from createTime.
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
-     */
+    */
     public Optional<String> getQueueTtl() {
         return Optional.ofNullable(this.queueTtl);
     }
@@ -181,7 +181,7 @@ public final class TriggerBuild {
      * Secrets to decrypt using Cloud Key Management Service.
      * Structure is documented below.
      * 
-     */
+    */
     public List<TriggerBuildSecret> getSecrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }
@@ -190,7 +190,7 @@ public final class TriggerBuild {
      * One of `storageSource` or `repoSource` must be provided.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<TriggerBuildSource> getSource() {
         return Optional.ofNullable(this.source);
     }
@@ -198,21 +198,21 @@ public final class TriggerBuild {
      * The operations to be performed on the workspace.
      * Structure is documented below.
      * 
-     */
+    */
     public List<TriggerBuildStep> getSteps() {
         return this.steps;
     }
     /**
      * Substitutions to use in a triggered build. Should only be used with triggers.run
      * 
-     */
+    */
     public Map<String,String> getSubstitutions() {
         return this.substitutions == null ? Map.of() : this.substitutions;
     }
     /**
      * Tags for annotation of a Build. These are not docker tags.
      * 
-     */
+    */
     public List<String> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -222,7 +222,7 @@ public final class TriggerBuild {
      * time limit and will be allowed to continue to run until either it
      * completes or the build itself times out.
      * 
-     */
+    */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }

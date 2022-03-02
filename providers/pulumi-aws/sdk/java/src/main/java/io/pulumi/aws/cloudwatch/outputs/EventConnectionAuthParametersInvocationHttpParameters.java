@@ -42,21 +42,21 @@ public final class EventConnectionAuthParametersInvocationHttpParameters {
     /**
      * Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
      * 
-     */
+    */
     public List<EventConnectionAuthParametersInvocationHttpParametersBody> getBodies() {
         return this.bodies == null ? List.of() : this.bodies;
     }
     /**
      * Contains additional header parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
      * 
-     */
+    */
     public List<EventConnectionAuthParametersInvocationHttpParametersHeader> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
      * Contains additional query string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
      * 
-     */
+    */
     public List<EventConnectionAuthParametersInvocationHttpParametersQueryString> getQueryStrings() {
         return this.queryStrings == null ? List.of() : this.queryStrings;
     }

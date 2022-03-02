@@ -33,7 +33,7 @@ public final class InstanceGroupManagerNamedPort {
     /**
      * - Version name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -41,7 +41,7 @@ public final class InstanceGroupManagerNamedPort {
      * The port number.
      * ***
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceTypeRegistration {
-/**
- * API Version: 2020-11-20.
+    private GetResourceTypeRegistration() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourceTypeRegistrationArgs.Builder a);
+    }
+    private static GetResourceTypeRegistrationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourceTypeRegistrationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2020-11-20.
  * 
- */
+     */
+    public static CompletableFuture<GetResourceTypeRegistrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2020-11-20.
+     * 
+     */
     public static CompletableFuture<GetResourceTypeRegistrationResult> invokeAsync(GetResourceTypeRegistrationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:providerhub:getResourceTypeRegistration", TypeShape.of(GetResourceTypeRegistrationResult.class), args == null ? GetResourceTypeRegistrationArgs.Empty : args, Utilities.withVersion(options));
     }

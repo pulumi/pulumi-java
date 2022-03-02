@@ -57,21 +57,21 @@ public final class GetLocalGatewayResult {
     /**
      * Amazon Resource Name (ARN) of Outpost
      * 
-     */
+    */
     public String getOutpostArn() {
         return this.outpostArn;
     }
     /**
      * AWS account identifier that owns the Local Gateway.
      * 
-     */
+    */
     public String getOwnerId() {
         return this.ownerId;
     }
     /**
      * State of the local gateway.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }

@@ -74,14 +74,14 @@ public final class GetNatGatewayResult {
     /**
      * The Id of the EIP allocated to the selected Nat Gateway.
      * 
-     */
+    */
     public String getAllocationId() {
         return this.allocationId;
     }
     /**
      * The connectivity type of the NAT Gateway.
      * 
-     */
+    */
     public String getConnectivityType() {
         return this.connectivityType;
     }
@@ -94,21 +94,21 @@ public final class GetNatGatewayResult {
     /**
      * The Id of the ENI allocated to the selected Nat Gateway.
      * 
-     */
+    */
     public String getNetworkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
      * The private Ip address of the selected Nat Gateway.
      * 
-     */
+    */
     public String getPrivateIp() {
         return this.privateIp;
     }
     /**
      * The public Ip (EIP) address of the selected Nat Gateway.
      * 
-     */
+    */
     public String getPublicIp() {
         return this.publicIp;
     }

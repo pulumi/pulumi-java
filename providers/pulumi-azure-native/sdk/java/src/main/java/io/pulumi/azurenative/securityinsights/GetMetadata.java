@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMetadata {
-/**
- * Metadata resource definition.
+    private GetMetadata() {}
+    public interface BuilderApplicator {
+        public void apply(GetMetadataArgs.Builder a);
+    }
+    private static GetMetadataArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMetadataArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Metadata resource definition.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Metadata resource definition.
+     *
+     * Metadata resource definition.
  * 
- */
+     */
+    public static CompletableFuture<GetMetadataResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Metadata resource definition.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Metadata resource definition.
+     * 
+     */
     public static CompletableFuture<GetMetadataResult> invokeAsync(GetMetadataArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getMetadata", TypeShape.of(GetMetadataResult.class), args == null ? GetMetadataArgs.Empty : args, Utilities.withVersion(options));
     }

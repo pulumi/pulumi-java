@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetP2sVpnGatewayP2sVpnConnectionHealthDetailed {
-/**
- * P2S Vpn connection detailed health written to sas url.
+    private GetP2sVpnGatewayP2sVpnConnectionHealthDetailed() {}
+    public interface BuilderApplicator {
+        public void apply(GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs.Builder a);
+    }
+    private static GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * P2S Vpn connection detailed health written to sas url.
  * API Version: 2020-11-01.
  * 
- *
- * P2S Vpn connection detailed health written to sas url.
+     *
+     * P2S Vpn connection detailed health written to sas url.
  * 
- */
+     */
+    public static CompletableFuture<GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * P2S Vpn connection detailed health written to sas url.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * P2S Vpn connection detailed health written to sas url.
+     * 
+     */
     public static CompletableFuture<GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult> invokeAsync(GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getP2sVpnGatewayP2sVpnConnectionHealthDetailed", TypeShape.of(GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult.class), args == null ? GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs.Empty : args, Utilities.withVersion(options));
     }

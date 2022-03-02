@@ -45,28 +45,28 @@ public final class CropResponse {
     /**
      * The number of pixels to crop from the bottom. The default is 0.
      * 
-     */
+    */
     public Integer getBottomPixels() {
         return this.bottomPixels;
     }
     /**
      * The number of pixels to crop from the left. The default is 0.
      * 
-     */
+    */
     public Integer getLeftPixels() {
         return this.leftPixels;
     }
     /**
      * The number of pixels to crop from the right. The default is 0.
      * 
-     */
+    */
     public Integer getRightPixels() {
         return this.rightPixels;
     }
     /**
      * The number of pixels to crop from the top. The default is 0.
      * 
-     */
+    */
     public Integer getTopPixels() {
         return this.topPixels;
     }

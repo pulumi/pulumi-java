@@ -42,21 +42,21 @@ public final class CustomOpenIdConnectProviderResponse {
     /**
      * <code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The configuration settings of the login flow of the custom Open ID Connect provider.
      * 
-     */
+    */
     public Optional<OpenIdConnectLoginResponse> getLogin() {
         return Optional.ofNullable(this.login);
     }
     /**
      * The configuration settings of the app registration for the custom Open ID Connect provider.
      * 
-     */
+    */
     public Optional<OpenIdConnectRegistrationResponse> getRegistration() {
         return Optional.ofNullable(this.registration);
     }

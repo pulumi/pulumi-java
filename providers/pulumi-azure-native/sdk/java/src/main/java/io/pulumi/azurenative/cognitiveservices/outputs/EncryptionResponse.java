@@ -34,14 +34,14 @@ public final class EncryptionResponse {
     /**
      * Enumerates the possible value of keySource for Encryption
      * 
-     */
+    */
     public Optional<String> getKeySource() {
         return Optional.ofNullable(this.keySource);
     }
     /**
      * Properties of KeyVault
      * 
-     */
+    */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }

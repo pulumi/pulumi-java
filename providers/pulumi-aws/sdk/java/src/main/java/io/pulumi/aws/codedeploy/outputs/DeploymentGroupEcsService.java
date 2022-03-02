@@ -31,14 +31,14 @@ public final class DeploymentGroupEcsService {
     /**
      * The name of the ECS cluster.
      * 
-     */
+    */
     public String getClusterName() {
         return this.clusterName;
     }
     /**
      * The name of the ECS service.
      * 
-     */
+    */
     public String getServiceName() {
         return this.serviceName;
     }

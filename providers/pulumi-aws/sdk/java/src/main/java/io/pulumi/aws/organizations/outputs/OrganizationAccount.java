@@ -54,35 +54,35 @@ public final class OrganizationAccount {
     /**
      * ARN of the root
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Email of the account
      * 
-     */
+    */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
     /**
      * Identifier of the root
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The name of the policy type
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The status of the policy type as it relates to the associated root
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

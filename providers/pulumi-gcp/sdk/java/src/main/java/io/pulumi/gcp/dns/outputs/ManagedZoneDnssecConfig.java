@@ -60,14 +60,14 @@ public final class ManagedZoneDnssecConfig {
      * default_key_specs can only be updated when the state is `off`.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ManagedZoneDnssecConfigDefaultKeySpec> getDefaultKeySpecs() {
         return this.defaultKeySpecs == null ? List.of() : this.defaultKeySpecs;
     }
     /**
      * Identifies what kind of resource this is
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
@@ -76,7 +76,7 @@ public final class ManagedZoneDnssecConfig {
      * non_existence can only be updated when the state is `off`.
      * Possible values are `nsec` and `nsec3`.
      * 
-     */
+    */
     public Optional<String> getNonExistence() {
         return Optional.ofNullable(this.nonExistence);
     }
@@ -84,7 +84,7 @@ public final class ManagedZoneDnssecConfig {
      * Specifies whether DNSSEC is enabled, and what mode it is in
      * Possible values are `off`, `on`, and `transfer`.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

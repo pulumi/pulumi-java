@@ -101,77 +101,77 @@ public final class GetWebAppVnetConnectionResult {
      * A certificate file (.cer) blob containing the public key of the private key used to authenticate a
      * Point-To-Site VPN connection.
      * 
-     */
+    */
     public Optional<String> getCertBlob() {
         return Optional.ofNullable(this.certBlob);
     }
     /**
      * The client certificate thumbprint.
      * 
-     */
+    */
     public String getCertThumbprint() {
         return this.certThumbprint;
     }
     /**
      * DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
      * 
-     */
+    */
     public Optional<String> getDnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Flag that is used to denote if this is VNET injection
      * 
-     */
+    */
     public Optional<Boolean> getIsSwift() {
         return Optional.ofNullable(this.isSwift);
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * <code>true</code> if a resync is required; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Boolean getResyncRequired() {
         return this.resyncRequired;
     }
     /**
      * The routes that this Virtual Network connection uses.
      * 
-     */
+    */
     public List<VnetRouteResponse> getRoutes() {
         return this.routes;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The Virtual Network's resource ID.
      * 
-     */
+    */
     public Optional<String> getVnetResourceId() {
         return Optional.ofNullable(this.vnetResourceId);
     }

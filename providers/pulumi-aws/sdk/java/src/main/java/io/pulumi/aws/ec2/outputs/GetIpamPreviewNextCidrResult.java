@@ -44,7 +44,7 @@ public final class GetIpamPreviewNextCidrResult {
     /**
      * The previewed CIDR from the pool.
      * 
-     */
+    */
     public String getCidr() {
         return this.cidr;
     }
@@ -54,7 +54,7 @@ public final class GetIpamPreviewNextCidrResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

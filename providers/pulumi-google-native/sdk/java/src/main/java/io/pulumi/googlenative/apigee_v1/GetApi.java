@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApi {
-/**
- * Gets an API proxy including a list of existing revisions.
+    private GetApi() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiArgs.Builder a);
+    }
+    private static GetApiArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets an API proxy including a list of existing revisions.
  * 
- */
+     */
+    public static CompletableFuture<GetApiResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets an API proxy including a list of existing revisions.
+     * 
+     */
     public static CompletableFuture<GetApiResult> invokeAsync(GetApiArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getApi", TypeShape.of(GetApiResult.class), args == null ? GetApiArgs.Empty : args, Utilities.withVersion(options));
     }

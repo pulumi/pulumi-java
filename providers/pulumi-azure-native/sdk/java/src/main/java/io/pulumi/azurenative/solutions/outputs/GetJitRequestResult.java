@@ -115,91 +115,91 @@ public final class GetJitRequestResult {
     /**
      * The parent application id.
      * 
-     */
+    */
     public String getApplicationResourceId() {
         return this.applicationResourceId;
     }
     /**
      * The client entity that created the JIT request.
      * 
-     */
+    */
     public ApplicationClientDetailsResponse getCreatedBy() {
         return this.createdBy;
     }
     /**
      * Resource ID
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The JIT authorization policies.
      * 
-     */
+    */
     public List<JitAuthorizationPoliciesResponse> getJitAuthorizationPolicies() {
         return this.jitAuthorizationPolicies;
     }
     /**
      * The JIT request state.
      * 
-     */
+    */
     public String getJitRequestState() {
         return this.jitRequestState;
     }
     /**
      * The JIT request properties.
      * 
-     */
+    */
     public JitSchedulingPolicyResponse getJitSchedulingPolicy() {
         return this.jitSchedulingPolicy;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The JIT request provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The publisher tenant id.
      * 
-     */
+    */
     public String getPublisherTenantId() {
         return this.publisherTenantId;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The client entity that last updated the JIT request.
      * 
-     */
+    */
     public ApplicationClientDetailsResponse getUpdatedBy() {
         return this.updatedBy;
     }

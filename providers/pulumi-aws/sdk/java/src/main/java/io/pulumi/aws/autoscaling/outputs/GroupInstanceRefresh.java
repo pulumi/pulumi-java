@@ -42,21 +42,21 @@ public final class GroupInstanceRefresh {
     /**
      * Override default parameters for Instance Refresh.
      * 
-     */
+    */
     public Optional<GroupInstanceRefreshPreferences> getPreferences() {
         return Optional.ofNullable(this.preferences);
     }
     /**
      * The strategy to use for instance refresh. The only allowed value is `Rolling`. See [StartInstanceRefresh Action](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StartInstanceRefresh.html#API_StartInstanceRefresh_RequestParameters) for more information.
      * 
-     */
+    */
     public String getStrategy() {
         return this.strategy;
     }
     /**
      * Set of additional property names that will trigger an Instance Refresh. A refresh will always be triggered by a change in any of `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
      * 
-     */
+    */
     public List<String> getTriggers() {
         return this.triggers == null ? List.of() : this.triggers;
     }

@@ -62,7 +62,7 @@ public final class GetTableResult {
     /**
      * Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
      * 
-     */
+    */
     public Optional<Integer> getDefaultTimeToLive() {
         return Optional.ofNullable(this.defaultTimeToLive);
     }
@@ -72,21 +72,21 @@ public final class GetTableResult {
     /**
      * Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
      * 
-     */
+    */
     public Optional<Boolean> getPointInTimeRecoveryEnabled() {
         return Optional.ofNullable(this.pointInTimeRecoveryEnabled);
     }
     /**
      * Non-key columns of the table
      * 
-     */
+    */
     public List<TableColumn> getRegularColumns() {
         return this.regularColumns == null ? List.of() : this.regularColumns;
     }
     /**
      * An array of key-value pairs to apply to this resource
      * 
-     */
+    */
     public List<TableTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

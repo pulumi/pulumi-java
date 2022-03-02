@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListOpenShiftClusterCredentials {
-/**
- * OpenShiftClusterCredentials represents an OpenShift cluster's credentials
+    private ListOpenShiftClusterCredentials() {}
+    public interface BuilderApplicator {
+        public void apply(ListOpenShiftClusterCredentialsArgs.Builder a);
+    }
+    private static ListOpenShiftClusterCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListOpenShiftClusterCredentialsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * OpenShiftClusterCredentials represents an OpenShift cluster's credentials
  * API Version: 2020-04-30.
  * 
- *
- * OpenShiftClusterCredentials represents an OpenShift cluster's credentials
+     *
+     * OpenShiftClusterCredentials represents an OpenShift cluster's credentials
  * 
- */
+     */
+    public static CompletableFuture<ListOpenShiftClusterCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * OpenShiftClusterCredentials represents an OpenShift cluster's credentials
+     * API Version: 2020-04-30.
+     * 
+     *
+         * OpenShiftClusterCredentials represents an OpenShift cluster's credentials
+     * 
+     */
     public static CompletableFuture<ListOpenShiftClusterCredentialsResult> invokeAsync(ListOpenShiftClusterCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:redhatopenshift:listOpenShiftClusterCredentials", TypeShape.of(ListOpenShiftClusterCredentialsResult.class), args == null ? ListOpenShiftClusterCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

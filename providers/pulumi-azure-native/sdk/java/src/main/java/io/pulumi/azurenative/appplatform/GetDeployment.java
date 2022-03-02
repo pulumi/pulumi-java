@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeployment {
-/**
- * Deployment resource payload
+    private GetDeployment() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeploymentArgs.Builder a);
+    }
+    private static GetDeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeploymentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Deployment resource payload
  * API Version: 2020-07-01.
  * 
- *
- * Deployment resource payload
+     *
+     * Deployment resource payload
  * 
- */
+     */
+    public static CompletableFuture<GetDeploymentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Deployment resource payload
+     * API Version: 2020-07-01.
+     * 
+     *
+         * Deployment resource payload
+     * 
+     */
     public static CompletableFuture<GetDeploymentResult> invokeAsync(GetDeploymentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getDeployment", TypeShape.of(GetDeploymentResult.class), args == null ? GetDeploymentArgs.Empty : args, Utilities.withVersion(options));
     }

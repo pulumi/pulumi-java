@@ -28,7 +28,7 @@ public final class ClusterNodePoolNodeConfigLinuxNodeConfig {
      * and all pods running on the nodes. Specified as a map from the key, such as
      * `net.core.wmem_max`, to a string value.
      * 
-     */
+    */
     public Map<String,String> getSysctls() {
         return this.sysctls;
     }

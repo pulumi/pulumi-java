@@ -70,7 +70,7 @@ public final class CertificateCertificateDescription {
      * A PublicKey describes a public key.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CertificateCertificateDescriptionPublicKey> getPublicKeys() {
         return this.publicKeys == null ? List.of() : this.publicKeys;
     }

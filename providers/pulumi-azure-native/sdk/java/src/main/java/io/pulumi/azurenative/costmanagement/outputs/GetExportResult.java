@@ -93,70 +93,70 @@ public final class GetExportResult {
     /**
      * Has the definition for the export.
      * 
-     */
+    */
     public ExportDefinitionResponse getDefinition() {
         return this.definition;
     }
     /**
      * Has delivery information for the export.
      * 
-     */
+    */
     public ExportDeliveryInfoResponse getDeliveryInfo() {
         return this.deliveryInfo;
     }
     /**
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * The format of the export being delivered. Currently only 'Csv' is supported.
      * 
-     */
+    */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * If the export has an active schedule, provides an estimate of the next execution time.
      * 
-     */
+    */
     public String getNextRunTimeEstimate() {
         return this.nextRunTimeEstimate;
     }
     /**
      * If requested, has the most recent execution history for the export.
      * 
-     */
+    */
     public Optional<ExportExecutionListResultResponse> getRunHistory() {
         return Optional.ofNullable(this.runHistory);
     }
     /**
      * Has schedule information for the export.
      * 
-     */
+    */
     public Optional<ExportScheduleResponse> getSchedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -106,84 +106,84 @@ public final class GetVirtualMachineScaleSetExtensionResult {
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
-     */
+    */
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
     /**
      * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
      * 
-     */
+    */
     public Optional<Boolean> getEnableAutomaticUpgrade() {
         return Optional.ofNullable(this.enableAutomaticUpgrade);
     }
     /**
      * If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
      * 
-     */
+    */
     public Optional<String> getForceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the extension.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
-     */
+    */
     public Optional<Object> getProtectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
     /**
      * Collection of extension names after which this extension needs to be provisioned.
      * 
-     */
+    */
     public List<String> getProvisionAfterExtensions() {
         return this.provisionAfterExtensions == null ? List.of() : this.provisionAfterExtensions;
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The name of the extension handler publisher.
      * 
-     */
+    */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
      * Json formatted public settings for the extension.
      * 
-     */
+    */
     public Optional<Object> getSettings() {
         return Optional.ofNullable(this.settings);
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Specifies the version of the script handler.
      * 
-     */
+    */
     public Optional<String> getTypeHandlerVersion() {
         return Optional.ofNullable(this.typeHandlerVersion);
     }

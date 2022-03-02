@@ -48,21 +48,21 @@ public final class ServiceTraffic {
      * provided LatestRevision must be true if RevisionName is empty; it must be
      * false when RevisionName is non-empty.
      * 
-     */
+    */
     public Optional<Boolean> getLatestRevision() {
         return Optional.ofNullable(this.latestRevision);
     }
     /**
      * Percent specifies percent of the traffic to this Revision or Configuration.
      * 
-     */
+    */
     public Integer getPercent() {
         return this.percent;
     }
     /**
      * RevisionName of a specific revision to which to send this portion of traffic.
      * 
-     */
+    */
     public Optional<String> getRevisionName() {
         return Optional.ofNullable(this.revisionName);
     }

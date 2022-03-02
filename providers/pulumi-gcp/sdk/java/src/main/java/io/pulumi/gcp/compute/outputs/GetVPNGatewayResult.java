@@ -58,14 +58,14 @@ public final class GetVPNGatewayResult {
     /**
      * Description of this VPN gateway.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -75,7 +75,7 @@ public final class GetVPNGatewayResult {
     /**
      * The network of this VPN gateway.
      * 
-     */
+    */
     public String getNetwork() {
         return this.network;
     }
@@ -85,14 +85,14 @@ public final class GetVPNGatewayResult {
     /**
      * Region of this VPN gateway.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * The URI of the resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }

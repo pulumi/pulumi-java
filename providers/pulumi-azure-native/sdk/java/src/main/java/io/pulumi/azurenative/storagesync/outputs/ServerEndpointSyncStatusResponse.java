@@ -97,77 +97,77 @@ public final class ServerEndpointSyncStatusResponse {
     /**
      * Combined Health Status.
      * 
-     */
+    */
     public String getCombinedHealth() {
         return this.combinedHealth;
     }
     /**
      * Download sync activity
      * 
-     */
+    */
     public ServerEndpointSyncActivityStatusResponse getDownloadActivity() {
         return this.downloadActivity;
     }
     /**
      * Download Health Status.
      * 
-     */
+    */
     public String getDownloadHealth() {
         return this.downloadHealth;
     }
     /**
      * Download Status
      * 
-     */
+    */
     public ServerEndpointSyncSessionStatusResponse getDownloadStatus() {
         return this.downloadStatus;
     }
     /**
      * Last Updated Timestamp
      * 
-     */
+    */
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
      * Offline Data Transfer State
      * 
-     */
+    */
     public String getOfflineDataTransferStatus() {
         return this.offlineDataTransferStatus;
     }
     /**
      * Sync activity
      * 
-     */
+    */
     public String getSyncActivity() {
         return this.syncActivity;
     }
     /**
      * Total count of persistent files not syncing (combined upload + download).
      * 
-     */
+    */
     public Double getTotalPersistentFilesNotSyncingCount() {
         return this.totalPersistentFilesNotSyncingCount;
     }
     /**
      * Upload sync activity
      * 
-     */
+    */
     public ServerEndpointSyncActivityStatusResponse getUploadActivity() {
         return this.uploadActivity;
     }
     /**
      * Upload Health Status.
      * 
-     */
+    */
     public String getUploadHealth() {
         return this.uploadHealth;
     }
     /**
      * Upload Status
      * 
-     */
+    */
     public ServerEndpointSyncSessionStatusResponse getUploadStatus() {
         return this.uploadStatus;
     }

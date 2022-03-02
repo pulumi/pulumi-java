@@ -25,7 +25,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
     /**
      * When restoring from a snapshot, specifies whether the runtime is allowed to skip a state that cannot be mapped to the new program. Default is `false`.
      * 
-     */
+    */
     public Optional<Boolean> getAllowNonRestoredState() {
         return Optional.ofNullable(this.allowNonRestoredState);
     }

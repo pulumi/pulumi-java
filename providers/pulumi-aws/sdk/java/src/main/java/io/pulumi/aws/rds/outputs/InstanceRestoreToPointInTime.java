@@ -48,28 +48,28 @@ public final class InstanceRestoreToPointInTime {
     /**
      * The date and time to restore from. Value must be a time in Universal Coordinated Time (UTC) format and must be before the latest restorable time for the DB instance. Cannot be specified with `use_latest_restorable_time`.
      * 
-     */
+    */
     public Optional<String> getRestoreTime() {
         return Optional.ofNullable(this.restoreTime);
     }
     /**
      * The identifier of the source DB instance from which to restore. Must match the identifier of an existing DB instance. Required if `source_dbi_resource_id` is not specified.
      * 
-     */
+    */
     public Optional<String> getSourceDbInstanceIdentifier() {
         return Optional.ofNullable(this.sourceDbInstanceIdentifier);
     }
     /**
      * The resource ID of the source DB instance from which to restore. Required if `source_db_instance_identifier` is not specified.
      * 
-     */
+    */
     public Optional<String> getSourceDbiResourceId() {
         return Optional.ofNullable(this.sourceDbiResourceId);
     }
     /**
      * A boolean value that indicates whether the DB instance is restored from the latest backup time. Defaults to `false`. Cannot be specified with `restore_time`.
      * 
-     */
+    */
     public Optional<Boolean> getUseLatestRestorableTime() {
         return Optional.ofNullable(this.useLatestRestorableTime);
     }

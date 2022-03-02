@@ -166,133 +166,133 @@ public final class StepResponse {
     /**
      * Display information of the final state "abort" and reason.
      * 
-     */
+    */
     public AbortInfoResponse getAbort() {
         return this.abort;
     }
     /**
      * This is a step that leads to the final state Drop.
      * 
-     */
+    */
     public Boolean getCausesDrop() {
         return this.causesDrop;
     }
     /**
      * Display information of a Cloud SQL instance.
      * 
-     */
+    */
     public CloudSQLInstanceInfoResponse getCloudSqlInstance() {
         return this.cloudSqlInstance;
     }
     /**
      * Display information of the final state "deliver" and reason.
      * 
-     */
+    */
     public DeliverInfoResponse getDeliver() {
         return this.deliver;
     }
     /**
      * A description of the step. Usually this is a summary of the state.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Display information of the final state "drop" and reason.
      * 
-     */
+    */
     public DropInfoResponse getDrop() {
         return this.drop;
     }
     /**
      * Display information of the source and destination under analysis. The endpoint information in an intermediate state may differ with the initial input, as it might be modified by state like NAT, or Connection Proxy.
      * 
-     */
+    */
     public EndpointInfoResponse getEndpoint() {
         return this.endpoint;
     }
     /**
      * Display information of a Compute Engine firewall rule.
      * 
-     */
+    */
     public FirewallInfoResponse getFirewall() {
         return this.firewall;
     }
     /**
      * Display information of the final state "forward" and reason.
      * 
-     */
+    */
     public ForwardInfoResponse getForward() {
         return this.forward;
     }
     /**
      * Display information of a Compute Engine forwarding rule.
      * 
-     */
+    */
     public ForwardingRuleInfoResponse getForwardingRule() {
         return this.forwardingRule;
     }
     /**
      * Display information of a Google Kubernetes Engine cluster master.
      * 
-     */
+    */
     public GKEMasterInfoResponse getGkeMaster() {
         return this.gkeMaster;
     }
     /**
      * Display information of a Compute Engine instance.
      * 
-     */
+    */
     public InstanceInfoResponse getInstance() {
         return this.instance;
     }
     /**
      * Display information of the load balancers.
      * 
-     */
+    */
     public LoadBalancerInfoResponse getLoadBalancer() {
         return this.loadBalancer;
     }
     /**
      * Display information of a Google Cloud network.
      * 
-     */
+    */
     public NetworkInfoResponse getNetwork() {
         return this.network;
     }
     /**
      * Project ID that contains the configuration this step is validating.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * Display information of a Compute Engine route.
      * 
-     */
+    */
     public RouteInfoResponse getRoute() {
         return this.route;
     }
     /**
      * Each step is in one of the pre-defined states.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Display information of a Compute Engine VPN gateway.
      * 
-     */
+    */
     public VpnGatewayInfoResponse getVpnGateway() {
         return this.vpnGateway;
     }
     /**
      * Display information of a Compute Engine VPN tunnel.
      * 
-     */
+    */
     public VpnTunnelInfoResponse getVpnTunnel() {
         return this.vpnTunnel;
     }

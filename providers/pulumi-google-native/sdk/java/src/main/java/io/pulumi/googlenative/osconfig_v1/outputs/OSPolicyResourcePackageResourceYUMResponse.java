@@ -23,7 +23,7 @@ public final class OSPolicyResourcePackageResourceYUMResponse {
     /**
      * Package name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

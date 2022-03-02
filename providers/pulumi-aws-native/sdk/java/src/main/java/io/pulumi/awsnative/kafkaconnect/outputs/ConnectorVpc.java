@@ -32,14 +32,14 @@ public final class ConnectorVpc {
     /**
      * The AWS security groups to associate with the elastic network interfaces in order to specify what the connector has access to.
      * 
-     */
+    */
     public List<String> getSecurityGroups() {
         return this.securityGroups;
     }
     /**
      * The list of subnets to connect to in the virtual private cloud (VPC). AWS creates elastic network interfaces inside these subnets.
      * 
-     */
+    */
     public List<String> getSubnets() {
         return this.subnets;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPolicy {
-/**
- * Gets a `Policy` on a resource. If no `Policy` is set on the resource, NOT_FOUND is returned. The `etag` value can be used with `UpdatePolicy()` to update a `Policy` during read-modify-write.
+    private GetPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetPolicyArgs.Builder a);
+    }
+    private static GetPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a `Policy` on a resource. If no `Policy` is set on the resource, NOT_FOUND is returned. The `etag` value can be used with `UpdatePolicy()` to update a `Policy` during read-modify-write.
  * 
- */
+     */
+    public static CompletableFuture<GetPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a `Policy` on a resource. If no `Policy` is set on the resource, NOT_FOUND is returned. The `etag` value can be used with `UpdatePolicy()` to update a `Policy` during read-modify-write.
+     * 
+     */
     public static CompletableFuture<GetPolicyResult> invokeAsync(GetPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:orgpolicy/v2:getPolicy", TypeShape.of(GetPolicyResult.class), args == null ? GetPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

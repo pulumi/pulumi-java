@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpcEndpointService {
-/**
- * The VPC Endpoint Service data source details about a specific service that
+    private GetVpcEndpointService() {}
+    public interface BuilderApplicator {
+        public void apply(GetVpcEndpointServiceArgs.Builder a);
+    }
+    private static GetVpcEndpointServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVpcEndpointServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The VPC Endpoint Service data source details about a specific service that
  * can be specified when creating a VPC endpoint within the region configured in the provider.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getVpcEndpointService.
+     *
+     * A collection of arguments for invoking getVpcEndpointService.
  * 
- *
- * A collection of values returned by getVpcEndpointService.
+     *
+     * A collection of values returned by getVpcEndpointService.
  * 
- */
+     */
+    public static CompletableFuture<GetVpcEndpointServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The VPC Endpoint Service data source details about a specific service that
+     * can be specified when creating a VPC endpoint within the region configured in the provider.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getVpcEndpointService.
+     * 
+     *
+         * A collection of values returned by getVpcEndpointService.
+     * 
+     */
     public static CompletableFuture<GetVpcEndpointServiceResult> invokeAsync(@Nullable GetVpcEndpointServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getVpcEndpointService:getVpcEndpointService", TypeShape.of(GetVpcEndpointServiceResult.class), args == null ? GetVpcEndpointServiceArgs.Empty : args, Utilities.withVersion(options));
     }

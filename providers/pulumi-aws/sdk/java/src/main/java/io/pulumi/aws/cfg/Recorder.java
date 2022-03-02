@@ -75,6 +75,22 @@ public class Recorder extends io.pulumi.resources.CustomResource {
         return this.roleArn;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RecorderArgs.Builder a);
+    }
+    private static io.pulumi.aws.cfg.RecorderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.cfg.RecorderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Recorder(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

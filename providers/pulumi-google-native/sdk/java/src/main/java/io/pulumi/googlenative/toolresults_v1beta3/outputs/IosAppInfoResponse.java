@@ -23,7 +23,7 @@ public final class IosAppInfoResponse {
     /**
      * The name of the app. Required
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

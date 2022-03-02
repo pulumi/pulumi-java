@@ -29,7 +29,7 @@ public final class DatasetAccessEntryResponse {
     /**
      * [Required] The dataset this entry applies to.
      * 
-     */
+    */
     public DatasetReferenceResponse getDataset() {
         return this.dataset;
     }

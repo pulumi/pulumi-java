@@ -37,7 +37,7 @@ public final class ServiceCodeRepository {
     /**
      * Repository Url
      * 
-     */
+    */
     public String getRepositoryUrl() {
         return this.repositoryUrl;
     }

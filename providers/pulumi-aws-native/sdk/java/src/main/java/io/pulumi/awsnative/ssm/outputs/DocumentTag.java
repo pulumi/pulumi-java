@@ -33,14 +33,14 @@ public final class DocumentTag {
     /**
      * The name of the tag.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The value of the tag.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

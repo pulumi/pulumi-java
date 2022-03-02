@@ -34,14 +34,14 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     /**
      * The location and type of the application code.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent> getCodeContent() {
         return Optional.ofNullable(this.codeContent);
     }
     /**
      * Specifies whether the code content is in text or zip format. Valid values: `PLAINTEXT`, `ZIPFILE`.
      * 
-     */
+    */
     public String getCodeContentType() {
         return this.codeContentType;
     }

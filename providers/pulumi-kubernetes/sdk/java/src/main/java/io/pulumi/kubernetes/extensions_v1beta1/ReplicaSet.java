@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 /**
  * ReplicaSet ensures that a specified number of pod replicas are running at any given time.
  * 
- * @deprecated
+ * @Deprecated
  * extensions/v1beta1/ReplicaSet is deprecated by apps/v1/ReplicaSet and not supported by Kubernetes v1.16+ clusters.
  * 
  */
@@ -98,6 +98,22 @@ public class ReplicaSet extends io.pulumi.resources.CustomResource {
         return this.status;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable ReplicaSetArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.extensions_v1beta1.ReplicaSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.extensions_v1beta1.ReplicaSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ReplicaSet(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

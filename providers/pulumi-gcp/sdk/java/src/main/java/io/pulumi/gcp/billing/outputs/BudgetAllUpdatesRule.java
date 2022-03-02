@@ -63,7 +63,7 @@ public final class BudgetAllUpdatesRule {
      * those with Billing Account Administrators and Billing
      * Account Users IAM roles for the target account.
      * 
-     */
+    */
     public Optional<Boolean> getDisableDefaultIamRecipients() {
         return Optional.ofNullable(this.disableDefaultIamRecipients);
     }
@@ -73,7 +73,7 @@ public final class BudgetAllUpdatesRule {
      * projects/{project_id}/notificationChannels/{channel_id}.
      * A maximum of 5 channels are allowed.
      * 
-     */
+    */
     public List<String> getMonitoringNotificationChannels() {
         return this.monitoringNotificationChannels == null ? List.of() : this.monitoringNotificationChannels;
     }
@@ -83,7 +83,7 @@ public final class BudgetAllUpdatesRule {
      * projects/{project_id}/topics/{topic_id}. Updates are sent
      * at regular intervals to the topic.
      * 
-     */
+    */
     public Optional<String> getPubsubTopic() {
         return Optional.ofNullable(this.pubsubTopic);
     }
@@ -92,7 +92,7 @@ public final class BudgetAllUpdatesRule {
      * accepted. It represents the JSON schema as defined in
      * https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
      * 
-     */
+    */
     public Optional<String> getSchemaVersion() {
         return Optional.ofNullable(this.schemaVersion);
     }

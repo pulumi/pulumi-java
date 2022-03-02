@@ -69,49 +69,49 @@ public final class GetNetworkWatcherResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the network watcher resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

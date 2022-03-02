@@ -82,63 +82,63 @@ public final class CertificateResponse {
     /**
      * The issuer distinguished name in RFC 2253 format. Only present if parsed is true.
      * 
-     */
+    */
     public String getIssuer() {
         return this.issuer;
     }
     /**
      * The certificate is not valid after this time. Only present if parsed is true.
      * 
-     */
+    */
     public String getNotAfterTime() {
         return this.notAfterTime;
     }
     /**
      * The certificate is not valid before this time. Only present if parsed is true.
      * 
-     */
+    */
     public String getNotBeforeTime() {
         return this.notBeforeTime;
     }
     /**
      * True if the certificate was parsed successfully.
      * 
-     */
+    */
     public Boolean getParsed() {
         return this.parsed;
     }
     /**
      * The raw certificate bytes in DER format.
      * 
-     */
+    */
     public String getRawDer() {
         return this.rawDer;
     }
     /**
      * The certificate serial number as a hex string. Only present if parsed is true.
      * 
-     */
+    */
     public String getSerialNumber() {
         return this.serialNumber;
     }
     /**
      * The SHA-256 certificate fingerprint as a hex string. Only present if parsed is true.
      * 
-     */
+    */
     public String getSha256Fingerprint() {
         return this.sha256Fingerprint;
     }
     /**
      * The subject distinguished name in RFC 2253 format. Only present if parsed is true.
      * 
-     */
+    */
     public String getSubject() {
         return this.subject;
     }
     /**
      * The subject Alternative DNS names. Only present if parsed is true.
      * 
-     */
+    */
     public List<String> getSubjectAlternativeDnsNames() {
         return this.subjectAlternativeDnsNames;
     }

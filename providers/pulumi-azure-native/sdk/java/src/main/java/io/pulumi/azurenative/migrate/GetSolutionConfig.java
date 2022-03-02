@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSolutionConfig {
-/**
- * Class representing the config for the solution in the migrate project.
+    private GetSolutionConfig() {}
+    public interface BuilderApplicator {
+        public void apply(GetSolutionConfigArgs.Builder a);
+    }
+    private static GetSolutionConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSolutionConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing the config for the solution in the migrate project.
  * API Version: 2018-09-01-preview.
  * 
- *
- * Class representing the config for the solution in the migrate project.
+     *
+     * Class representing the config for the solution in the migrate project.
  * 
- */
+     */
+    public static CompletableFuture<GetSolutionConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing the config for the solution in the migrate project.
+     * API Version: 2018-09-01-preview.
+     * 
+     *
+         * Class representing the config for the solution in the migrate project.
+     * 
+     */
     public static CompletableFuture<GetSolutionConfigResult> invokeAsync(GetSolutionConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getSolutionConfig", TypeShape.of(GetSolutionConfigResult.class), args == null ? GetSolutionConfigArgs.Empty : args, Utilities.withVersion(options));
     }

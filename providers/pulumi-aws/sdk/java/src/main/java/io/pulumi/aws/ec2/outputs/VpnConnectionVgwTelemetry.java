@@ -62,42 +62,42 @@ public final class VpnConnectionVgwTelemetry {
     /**
      * The number of accepted routes.
      * 
-     */
+    */
     public Optional<Integer> getAcceptedRouteCount() {
         return Optional.ofNullable(this.acceptedRouteCount);
     }
     /**
      * The Amazon Resource Name (ARN) of the VPN tunnel endpoint certificate.
      * 
-     */
+    */
     public Optional<String> getCertificateArn() {
         return Optional.ofNullable(this.certificateArn);
     }
     /**
      * The date and time of the last change in status.
      * 
-     */
+    */
     public Optional<String> getLastStatusChange() {
         return Optional.ofNullable(this.lastStatusChange);
     }
     /**
      * The Internet-routable IP address of the virtual private gateway's outside interface.
      * 
-     */
+    */
     public Optional<String> getOutsideIpAddress() {
         return Optional.ofNullable(this.outsideIpAddress);
     }
     /**
      * The status of the VPN tunnel.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * If an error occurs, a description of the error.
      * 
-     */
+    */
     public Optional<String> getStatusMessage() {
         return Optional.ofNullable(this.statusMessage);
     }

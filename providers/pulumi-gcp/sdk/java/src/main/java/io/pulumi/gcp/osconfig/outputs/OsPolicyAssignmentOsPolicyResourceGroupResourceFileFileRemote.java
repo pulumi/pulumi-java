@@ -33,14 +33,14 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote
     /**
      * SHA256 checksum of the remote file.
      * 
-     */
+    */
     public Optional<String> getSha256Checksum() {
         return Optional.ofNullable(this.sha256Checksum);
     }
     /**
      * Required. URI for this repository.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }

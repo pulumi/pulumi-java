@@ -54,14 +54,14 @@ public final class EventHandlerResponse {
     /**
      * Upstream auth settings. If not set, no auth is used for upstream messages.
      * 
-     */
+    */
     public Optional<UpstreamAuthSettingsResponse> getAuth() {
         return Optional.ofNullable(this.auth);
     }
     /**
      * Gets ot sets the list of system events.
      * 
-     */
+    */
     public List<String> getSystemEvents() {
         return this.systemEvents == null ? List.of() : this.systemEvents;
     }
@@ -69,7 +69,7 @@ public final class EventHandlerResponse {
      * Gets or sets the EventHandler URL template. You can use a predefined parameter {hub} and {event} inside the template, the value of the EventHandler URL is dynamically calculated when the client request comes in.
      * For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can't contains parameters.
      * 
-     */
+    */
     public String getUrlTemplate() {
         return this.urlTemplate;
     }
@@ -80,7 +80,7 @@ public final class EventHandlerResponse {
      *     2. Combine multiple events with ",", for example "event1,event2", it matches event "event1" and "event2"
      *     3. The single event name, for example, "event1", it matches "event1"
      * 
-     */
+    */
     public Optional<String> getUserEventPattern() {
         return Optional.ofNullable(this.userEventPattern);
     }

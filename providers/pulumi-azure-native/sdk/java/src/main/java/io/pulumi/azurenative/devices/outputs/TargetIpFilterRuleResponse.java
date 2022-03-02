@@ -47,28 +47,28 @@ public final class TargetIpFilterRuleResponse {
     /**
      * The desired action for requests captured by this rule.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * The name of the IP filter rule.
      * 
-     */
+    */
     public String getFilterName() {
         return this.filterName;
     }
     /**
      * A string that contains the IP address range in CIDR notation for the rule.
      * 
-     */
+    */
     public String getIpMask() {
         return this.ipMask;
     }
     /**
      * Target for requests captured by this rule.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

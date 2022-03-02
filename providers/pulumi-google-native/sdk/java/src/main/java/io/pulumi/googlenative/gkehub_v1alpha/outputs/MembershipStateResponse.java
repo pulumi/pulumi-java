@@ -23,7 +23,7 @@ public final class MembershipStateResponse {
     /**
      * The current state of the Membership resource.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }

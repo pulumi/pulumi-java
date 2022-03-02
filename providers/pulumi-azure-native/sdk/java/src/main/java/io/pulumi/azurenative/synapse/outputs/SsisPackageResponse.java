@@ -79,49 +79,49 @@ public final class SsisPackageResponse {
     /**
      * Metadata description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Folder id which contains package.
      * 
-     */
+    */
     public Optional<Double> getFolderId() {
         return Optional.ofNullable(this.folderId);
     }
     /**
      * Metadata id.
      * 
-     */
+    */
     public Optional<Double> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Metadata name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Parameters in package
      * 
-     */
+    */
     public List<SsisParameterResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * Project id which contains package.
      * 
-     */
+    */
     public Optional<Double> getProjectId() {
         return Optional.ofNullable(this.projectId);
     }
     /**
      * Project version which contains package.
      * 
-     */
+    */
     public Optional<Double> getProjectVersion() {
         return Optional.ofNullable(this.projectVersion);
     }
@@ -129,7 +129,7 @@ public final class SsisPackageResponse {
      * The type of SSIS object metadata.
      * Expected value is 'Package'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

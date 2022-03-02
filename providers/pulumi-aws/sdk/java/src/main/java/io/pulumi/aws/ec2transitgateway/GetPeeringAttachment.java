@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPeeringAttachment {
-/**
- * Get information on an EC2 Transit Gateway Peering Attachment.
+    private GetPeeringAttachment() {}
+    public interface BuilderApplicator {
+        public void apply(GetPeeringAttachmentArgs.Builder a);
+    }
+    private static GetPeeringAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPeeringAttachmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get information on an EC2 Transit Gateway Peering Attachment.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getPeeringAttachment.
+     *
+     * A collection of arguments for invoking getPeeringAttachment.
  * 
- *
- * A collection of values returned by getPeeringAttachment.
+     *
+     * A collection of values returned by getPeeringAttachment.
  * 
- */
+     */
+    public static CompletableFuture<GetPeeringAttachmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get information on an EC2 Transit Gateway Peering Attachment.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getPeeringAttachment.
+     * 
+     *
+         * A collection of values returned by getPeeringAttachment.
+     * 
+     */
     public static CompletableFuture<GetPeeringAttachmentResult> invokeAsync(@Nullable GetPeeringAttachmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getPeeringAttachment:getPeeringAttachment", TypeShape.of(GetPeeringAttachmentResult.class), args == null ? GetPeeringAttachmentArgs.Empty : args, Utilities.withVersion(options));
     }

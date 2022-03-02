@@ -32,14 +32,14 @@ public final class RuleGroupRuleGroupRuleVariablesPortSet {
     /**
      * An unique alphanumeric string to identify the `port_set`.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * A configuration block that defines a set of port ranges. See Port Set below for details.
      * 
-     */
+    */
     public RuleGroupRuleGroupRuleVariablesPortSetPortSet getPortSet() {
         return this.portSet;
     }

@@ -42,21 +42,21 @@ public final class SecretAuthInfoResponse {
      * The authentication type.
      * Expected value is 'secret'.
      * 
-     */
+    */
     public String getAuthType() {
         return this.authType;
     }
     /**
      * Username or account name for secret auth.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Password or account key for secret auth.
      * 
-     */
+    */
     public Optional<String> getSecret() {
         return Optional.ofNullable(this.secret);
     }

@@ -41,21 +41,21 @@ public final class CatalogTableStorageDescriptorSkewedInfo {
     /**
      * List of names of columns that contain skewed values.
      * 
-     */
+    */
     public List<String> getSkewedColumnNames() {
         return this.skewedColumnNames == null ? List.of() : this.skewedColumnNames;
     }
     /**
      * List of values that appear so frequently as to be considered skewed.
      * 
-     */
+    */
     public Map<String,String> getSkewedColumnValueLocationMaps() {
         return this.skewedColumnValueLocationMaps == null ? Map.of() : this.skewedColumnValueLocationMaps;
     }
     /**
      * Map of skewed values to the columns that contain them.
      * 
-     */
+    */
     public List<String> getSkewedColumnValues() {
         return this.skewedColumnValues == null ? List.of() : this.skewedColumnValues;
     }

@@ -33,14 +33,14 @@ public final class VpnServerConfigVpnClientRevokedCertificateResponse {
     /**
      * The certificate name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The revoked VPN client certificate thumbprint.
      * 
-     */
+    */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }

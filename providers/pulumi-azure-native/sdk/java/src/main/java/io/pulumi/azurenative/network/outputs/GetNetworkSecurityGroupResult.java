@@ -116,91 +116,91 @@ public final class GetNetworkSecurityGroupResult {
     /**
      * The default security rules of network security group.
      * 
-     */
+    */
     public List<SecurityRuleResponse> getDefaultSecurityRules() {
         return this.defaultSecurityRules;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * A collection of references to flow log resources.
      * 
-     */
+    */
     public List<FlowLogResponse> getFlowLogs() {
         return this.flowLogs;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A collection of references to network interfaces.
      * 
-     */
+    */
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * The provisioning state of the network security group resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource GUID property of the network security group resource.
      * 
-     */
+    */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * A collection of security rules of the network security group.
      * 
-     */
+    */
     public List<SecurityRuleResponse> getSecurityRules() {
         return this.securityRules == null ? List.of() : this.securityRules;
     }
     /**
      * A collection of references to subnets.
      * 
-     */
+    */
     public List<SubnetResponse> getSubnets() {
         return this.subnets;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

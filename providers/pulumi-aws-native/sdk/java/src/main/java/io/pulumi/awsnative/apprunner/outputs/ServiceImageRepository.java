@@ -41,14 +41,14 @@ public final class ServiceImageRepository {
     /**
      * Image Identifier
      * 
-     */
+    */
     public String getImageIdentifier() {
         return this.imageIdentifier;
     }
     /**
      * Image Repository Type
      * 
-     */
+    */
     public ServiceImageRepositoryImageRepositoryType getImageRepositoryType() {
         return this.imageRepositoryType;
     }

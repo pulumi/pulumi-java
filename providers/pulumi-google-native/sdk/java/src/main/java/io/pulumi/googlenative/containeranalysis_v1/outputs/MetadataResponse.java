@@ -54,35 +54,35 @@ public final class MetadataResponse {
     /**
      * The timestamp of when the build completed.
      * 
-     */
+    */
     public String getBuildFinishedOn() {
         return this.buildFinishedOn;
     }
     /**
      * Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
      * 
-     */
+    */
     public String getBuildInvocationId() {
         return this.buildInvocationId;
     }
     /**
      * The timestamp of when the build started.
      * 
-     */
+    */
     public String getBuildStartedOn() {
         return this.buildStartedOn;
     }
     /**
      * Indicates that the builder claims certain fields in this message to be complete.
      * 
-     */
+    */
     public CompletenessResponse getCompleteness() {
         return this.completeness;
     }
     /**
      * If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
      * 
-     */
+    */
     public Boolean getReproducible() {
         return this.reproducible;
     }

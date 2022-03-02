@@ -65,42 +65,42 @@ public final class SubjectAccessReviewSpec {
     /**
      * Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
      * 
-     */
+    */
     public Map<String,List<String>> getExtra() {
         return this.extra == null ? Map.of() : this.extra;
     }
     /**
      * Groups is the groups you're testing for.
      * 
-     */
+    */
     public List<String> getGroup() {
         return this.group == null ? List.of() : this.group;
     }
     /**
      * NonResourceAttributes describes information for a non-resource access request
      * 
-     */
+    */
     public Optional<NonResourceAttributes> getNonResourceAttributes() {
         return Optional.ofNullable(this.nonResourceAttributes);
     }
     /**
      * ResourceAuthorizationAttributes describes information for a resource access request
      * 
-     */
+    */
     public Optional<ResourceAttributes> getResourceAttributes() {
         return Optional.ofNullable(this.resourceAttributes);
     }
     /**
      * UID information about the requesting user.
      * 
-     */
+    */
     public Optional<String> getUid() {
         return Optional.ofNullable(this.uid);
     }
     /**
      * User is the user you're testing for. If you specify "User" but not "Group", then is it interpreted as "What if User were not a member of any groups
      * 
-     */
+    */
     public Optional<String> getUser() {
         return Optional.ofNullable(this.user);
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventIntegration {
-/**
- * Resource Type definition for AWS::AppIntegrations::EventIntegration
+    private GetEventIntegration() {}
+    public interface BuilderApplicator {
+        public void apply(GetEventIntegrationArgs.Builder a);
+    }
+    private static GetEventIntegrationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEventIntegrationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::AppIntegrations::EventIntegration
  * 
- */
+     */
+    public static CompletableFuture<GetEventIntegrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::AppIntegrations::EventIntegration
+     * 
+     */
     public static CompletableFuture<GetEventIntegrationResult> invokeAsync(GetEventIntegrationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appintegrations:getEventIntegration", TypeShape.of(GetEventIntegrationResult.class), args == null ? GetEventIntegrationArgs.Empty : args, Utilities.withVersion(options));
     }

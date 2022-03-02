@@ -33,14 +33,14 @@ public final class TimeSeriesIdPropertyResponse {
     /**
      * The name of the property.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The type of the property.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCommunicationService {
-/**
- * A class representing a CommunicationService resource.
+    private GetCommunicationService() {}
+    public interface BuilderApplicator {
+        public void apply(GetCommunicationServiceArgs.Builder a);
+    }
+    private static GetCommunicationServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCommunicationServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A class representing a CommunicationService resource.
  * API Version: 2020-08-20.
  * 
- *
- * A class representing a CommunicationService resource.
+     *
+     * A class representing a CommunicationService resource.
  * 
- */
+     */
+    public static CompletableFuture<GetCommunicationServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A class representing a CommunicationService resource.
+     * API Version: 2020-08-20.
+     * 
+     *
+         * A class representing a CommunicationService resource.
+     * 
+     */
     public static CompletableFuture<GetCommunicationServiceResult> invokeAsync(GetCommunicationServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:communication:getCommunicationService", TypeShape.of(GetCommunicationServiceResult.class), args == null ? GetCommunicationServiceArgs.Empty : args, Utilities.withVersion(options));
     }

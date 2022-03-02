@@ -40,21 +40,21 @@ public final class InMageAzureV2ManagedDiskDetailsResponse {
     /**
      * The disk id.
      * 
-     */
+    */
     public Optional<String> getDiskId() {
         return Optional.ofNullable(this.diskId);
     }
     /**
      * The replica disk type.
      * 
-     */
+    */
     public Optional<String> getReplicaDiskType() {
         return Optional.ofNullable(this.replicaDiskType);
     }
     /**
      * Seed managed disk Id.
      * 
-     */
+    */
     public Optional<String> getSeedManagedDiskId() {
         return Optional.ofNullable(this.seedManagedDiskId);
     }

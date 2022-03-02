@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBucketPolicy {
-/**
- * Resource Type Definition for AWS::S3Outposts::BucketPolicy
+    private GetBucketPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetBucketPolicyArgs.Builder a);
+    }
+    private static GetBucketPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBucketPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type Definition for AWS::S3Outposts::BucketPolicy
  * 
- */
+     */
+    public static CompletableFuture<GetBucketPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type Definition for AWS::S3Outposts::BucketPolicy
+     * 
+     */
     public static CompletableFuture<GetBucketPolicyResult> invokeAsync(GetBucketPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:s3outposts:getBucketPolicy", TypeShape.of(GetBucketPolicyResult.class), args == null ? GetBucketPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

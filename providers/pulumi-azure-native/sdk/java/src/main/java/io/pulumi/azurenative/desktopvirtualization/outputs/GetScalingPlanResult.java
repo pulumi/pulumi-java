@@ -155,49 +155,49 @@ public final class GetScalingPlanResult {
     /**
      * Description of scaling plan.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Exclusion tag for scaling plan.
      * 
-     */
+    */
     public Optional<String> getExclusionTag() {
         return Optional.ofNullable(this.exclusionTag);
     }
     /**
      * User friendly name of scaling plan.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * List of ScalingHostPoolReference definitions.
      * 
-     */
+    */
     public List<ScalingHostPoolReferenceResponse> getHostPoolReferences() {
         return this.hostPoolReferences == null ? List.of() : this.hostPoolReferences;
     }
     /**
      * HostPool type for desktop.
      * 
-     */
+    */
     public Optional<String> getHostPoolType() {
         return Optional.ofNullable(this.hostPoolType);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -207,35 +207,35 @@ public final class GetScalingPlanResult {
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
      * 
-     */
+    */
     public Optional<String> getManagedBy() {
         return Optional.ofNullable(this.managedBy);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * ObjectId of scaling plan. (internal use)
      * 
-     */
+    */
     public String getObjectId() {
         return this.objectId;
     }
@@ -245,14 +245,14 @@ public final class GetScalingPlanResult {
     /**
      * The ring number of scaling plan.
      * 
-     */
+    */
     public Optional<Integer> getRing() {
         return Optional.ofNullable(this.ring);
     }
     /**
      * List of ScalingSchedule definitions.
      * 
-     */
+    */
     public List<ScalingScheduleResponse> getSchedules() {
         return this.schedules == null ? List.of() : this.schedules;
     }
@@ -262,21 +262,21 @@ public final class GetScalingPlanResult {
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Timezone of the scaling plan.
      * 
-     */
+    */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

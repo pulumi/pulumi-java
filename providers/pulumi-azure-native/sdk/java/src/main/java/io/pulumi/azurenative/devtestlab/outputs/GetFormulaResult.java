@@ -113,91 +113,91 @@ public final class GetFormulaResult {
     /**
      * The author of the formula.
      * 
-     */
+    */
     public String getAuthor() {
         return this.author;
     }
     /**
      * The creation date of the formula.
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * The description of the formula.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The content of the formula.
      * 
-     */
+    */
     public Optional<LabVirtualMachineCreationParameterResponse> getFormulaContent() {
         return Optional.ofNullable(this.formulaContent);
     }
     /**
      * The identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The OS type of the formula.
      * 
-     */
+    */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * The provisioning status of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
-     */
+    */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * Information about a VM from which a formula is to be created.
      * 
-     */
+    */
     public Optional<FormulaPropertiesFromVmResponse> getVm() {
         return Optional.ofNullable(this.vm);
     }

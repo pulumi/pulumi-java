@@ -85,63 +85,63 @@ public final class AppResourcePropertiesResponse {
     /**
      * Name of the active deployment of the App
      * 
-     */
+    */
     public Optional<String> getActiveDeploymentName() {
         return Optional.ofNullable(this.activeDeploymentName);
     }
     /**
      * Date time when the resource is created
      * 
-     */
+    */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * Fully qualified dns Name.
      * 
-     */
+    */
     public Optional<String> getFqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
      * Indicate if only https is allowed.
      * 
-     */
+    */
     public Optional<Boolean> getHttpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
     /**
      * Persistent disk settings
      * 
-     */
+    */
     public Optional<PersistentDiskResponse> getPersistentDisk() {
         return Optional.ofNullable(this.persistentDisk);
     }
     /**
      * Provisioning state of the App
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Indicates whether the App exposes public endpoint
      * 
-     */
+    */
     public Optional<Boolean> get$public() {
         return Optional.ofNullable(this.$public);
     }
     /**
      * Temporary disk settings
      * 
-     */
+    */
     public Optional<TemporaryDiskResponse> getTemporaryDisk() {
         return Optional.ofNullable(this.temporaryDisk);
     }
     /**
      * URL of the App
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

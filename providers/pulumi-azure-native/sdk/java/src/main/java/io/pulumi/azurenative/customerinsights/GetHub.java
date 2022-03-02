@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHub {
-/**
- * Hub resource.
+    private GetHub() {}
+    public interface BuilderApplicator {
+        public void apply(GetHubArgs.Builder a);
+    }
+    private static GetHubArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHubArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Hub resource.
  * API Version: 2017-04-26.
  * 
- *
- * Hub resource.
+     *
+     * Hub resource.
  * 
- */
+     */
+    public static CompletableFuture<GetHubResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Hub resource.
+     * API Version: 2017-04-26.
+     * 
+     *
+         * Hub resource.
+     * 
+     */
     public static CompletableFuture<GetHubResult> invokeAsync(GetHubArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getHub", TypeShape.of(GetHubResult.class), args == null ? GetHubArgs.Empty : args, Utilities.withVersion(options));
     }

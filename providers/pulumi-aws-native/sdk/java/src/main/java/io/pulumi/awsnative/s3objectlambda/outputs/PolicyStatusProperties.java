@@ -25,7 +25,7 @@ public final class PolicyStatusProperties {
     /**
      * Specifies whether the Object lambda Access Point Policy is Public or not. Object lambda Access Points are private by default.
      * 
-     */
+    */
     public Optional<Boolean> getIsPublic() {
         return Optional.ofNullable(this.isPublic);
     }

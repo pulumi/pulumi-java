@@ -34,14 +34,14 @@ public final class CustomerManagedKeyDetailsResponse {
     /**
      * The key object of the workspace
      * 
-     */
+    */
     public Optional<WorkspaceKeyDetailsResponse> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The customer managed key status on the workspace
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

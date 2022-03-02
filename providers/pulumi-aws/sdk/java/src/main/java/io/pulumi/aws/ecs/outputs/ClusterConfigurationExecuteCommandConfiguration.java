@@ -41,21 +41,21 @@ public final class ClusterConfigurationExecuteCommandConfiguration {
     /**
      * The AWS Key Management Service key ID to encrypt the data between the local client and the container.
      * 
-     */
+    */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * The log configuration for the results of the execute command actions Required when `logging` is `OVERRIDE`. Detailed below.
      * 
-     */
+    */
     public Optional<ClusterConfigurationExecuteCommandConfigurationLogConfiguration> getLogConfiguration() {
         return Optional.ofNullable(this.logConfiguration);
     }
     /**
      * The log setting to use for redirecting logs for your execute command results. Valid values are `NONE`, `DEFAULT`, and `OVERRIDE`.
      * 
-     */
+    */
     public Optional<String> getLogging() {
         return Optional.ofNullable(this.logging);
     }

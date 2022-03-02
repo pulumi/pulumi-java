@@ -33,14 +33,14 @@ public final class RoleInlinePolicy {
     /**
      * Name of the role policy.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Policy document as a JSON formatted string.
      * 
-     */
+    */
     public Optional<String> getPolicy() {
         return Optional.ofNullable(this.policy);
     }

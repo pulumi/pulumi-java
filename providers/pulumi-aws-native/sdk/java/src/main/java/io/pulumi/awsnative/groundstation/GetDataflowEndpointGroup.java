@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataflowEndpointGroup {
-/**
- * AWS Ground Station DataflowEndpointGroup schema for CloudFormation
+    private GetDataflowEndpointGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataflowEndpointGroupArgs.Builder a);
+    }
+    private static GetDataflowEndpointGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataflowEndpointGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * AWS Ground Station DataflowEndpointGroup schema for CloudFormation
  * 
- */
+     */
+    public static CompletableFuture<GetDataflowEndpointGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * AWS Ground Station DataflowEndpointGroup schema for CloudFormation
+     * 
+     */
     public static CompletableFuture<GetDataflowEndpointGroupResult> invokeAsync(GetDataflowEndpointGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:groundstation:getDataflowEndpointGroup", TypeShape.of(GetDataflowEndpointGroupResult.class), args == null ? GetDataflowEndpointGroupArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -31,14 +31,14 @@ public final class GetDefaultKmsKeyResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Amazon Resource Name (ARN) of the default KMS key uses to encrypt an EBS volume in this region when no key is specified in an API call that creates the volume and encryption by default is enabled.
      * 
-     */
+    */
     public String getKeyArn() {
         return this.keyArn;
     }

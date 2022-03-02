@@ -32,14 +32,14 @@ public final class ConnectorCustomPlugin {
     /**
      * The Amazon Resource Name (ARN) of the custom plugin to use.
      * 
-     */
+    */
     public String getCustomPluginArn() {
         return this.customPluginArn;
     }
     /**
      * The revision of the custom plugin to use.
      * 
-     */
+    */
     public Integer getRevision() {
         return this.revision;
     }

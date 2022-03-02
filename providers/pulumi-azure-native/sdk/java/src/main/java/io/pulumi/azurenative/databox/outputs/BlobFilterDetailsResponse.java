@@ -40,21 +40,21 @@ public final class BlobFilterDetailsResponse {
     /**
      * List of full path of the blobs to be transferred.
      * 
-     */
+    */
     public List<String> getBlobPathList() {
         return this.blobPathList == null ? List.of() : this.blobPathList;
     }
     /**
      * Prefix list of the Azure blobs to be transferred.
      * 
-     */
+    */
     public List<String> getBlobPrefixList() {
         return this.blobPrefixList == null ? List.of() : this.blobPrefixList;
     }
     /**
      * List of blob containers to be transferred.
      * 
-     */
+    */
     public List<String> getContainerList() {
         return this.containerList == null ? List.of() : this.containerList;
     }

@@ -46,28 +46,28 @@ public final class GoogleCloudMlV1__PredictionOutputResponse {
     /**
      * The number of data instances which resulted in errors.
      * 
-     */
+    */
     public String getErrorCount() {
         return this.errorCount;
     }
     /**
      * Node hours used by the batch prediction job.
      * 
-     */
+    */
     public Double getNodeHours() {
         return this.nodeHours;
     }
     /**
      * The output Google Cloud Storage location provided at the job creation time.
      * 
-     */
+    */
     public String getOutputPath() {
         return this.outputPath;
     }
     /**
      * The number of generated predictions.
      * 
-     */
+    */
     public String getPredictionCount() {
         return this.predictionCount;
     }

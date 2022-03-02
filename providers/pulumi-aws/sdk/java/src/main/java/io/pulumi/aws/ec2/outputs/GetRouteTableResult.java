@@ -88,14 +88,14 @@ public final class GetRouteTableResult {
     /**
      * ARN of the route table.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * List of associations with attributes detailed below.
      * 
-     */
+    */
     public List<GetRouteTableAssociation> getAssociations() {
         return this.associations;
     }
@@ -105,42 +105,42 @@ public final class GetRouteTableResult {
     /**
      * Gateway ID. Only set when associated with an Internet Gateway or Virtual Private Gateway.
      * 
-     */
+    */
     public String getGatewayId() {
         return this.gatewayId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * ID of the AWS account that owns the route table.
      * 
-     */
+    */
     public String getOwnerId() {
         return this.ownerId;
     }
     /**
      * Route Table ID.
      * 
-     */
+    */
     public String getRouteTableId() {
         return this.routeTableId;
     }
     /**
      * List of routes with attributes detailed below.
      * 
-     */
+    */
     public List<GetRouteTableRoute> getRoutes() {
         return this.routes;
     }
     /**
      * Subnet ID. Only set when associated with a subnet.
      * 
-     */
+    */
     public String getSubnetId() {
         return this.subnetId;
     }

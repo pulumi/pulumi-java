@@ -25,7 +25,7 @@ public final class SubnetDetailsResponse {
     /**
      * subnet arm resource id
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

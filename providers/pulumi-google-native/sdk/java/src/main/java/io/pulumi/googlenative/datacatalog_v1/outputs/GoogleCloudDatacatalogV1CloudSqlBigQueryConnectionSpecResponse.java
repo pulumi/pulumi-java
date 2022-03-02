@@ -38,21 +38,21 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
     /**
      * Database name.
      * 
-     */
+    */
     public String getDatabase() {
         return this.database;
     }
     /**
      * Cloud SQL instance ID in the format of `project:location:instance`.
      * 
-     */
+    */
     public String getInstanceId() {
         return this.instanceId;
     }
     /**
      * Type of the Cloud SQL database.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -246,6 +246,22 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
         return this.vendorProvisioningState;
     }
 
+    public interface BuilderApplicator {
+        public void apply(NetworkFunctionArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.hybridnetwork.NetworkFunctionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.hybridnetwork.NetworkFunctionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public NetworkFunction(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

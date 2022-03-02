@@ -52,35 +52,35 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse {
     /**
      * The IP address range of the public delegated prefix
      * 
-     */
+    */
     public String getIpRange() {
         return this.ipRange;
     }
     /**
      * The name of the public delegated prefix
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The project number of the public delegated prefix
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * The region of the public delegated prefix if it is regional. If absent, the prefix is global.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * The status of the public delegated prefix. Possible values are: INITIALIZING: The public delegated prefix is being initialized and addresses cannot be created yet. ANNOUNCED: The public delegated prefix is active.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

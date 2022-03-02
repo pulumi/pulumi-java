@@ -63,21 +63,21 @@ public final class GetSubnetGroupResult {
     /**
      * The Amazon Resource Name (ARN) for the DB subnet group.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Provides the description of the DB subnet group.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -87,21 +87,21 @@ public final class GetSubnetGroupResult {
     /**
      * Provides the status of the DB subnet group.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Contains a list of subnet identifiers.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }
     /**
      * Provides the VPC ID of the subnet group.
      * 
-     */
+    */
     public String getVpcId() {
         return this.vpcId;
     }

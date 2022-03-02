@@ -68,49 +68,49 @@ public final class JobTargetResponse {
     /**
      * The target database name.
      * 
-     */
+    */
     public Optional<String> getDatabaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * The target elastic pool name.
      * 
-     */
+    */
     public Optional<String> getElasticPoolName() {
         return Optional.ofNullable(this.elasticPoolName);
     }
     /**
      * Whether the target is included or excluded from the group.
      * 
-     */
+    */
     public Optional<String> getMembershipType() {
         return Optional.ofNullable(this.membershipType);
     }
     /**
      * The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
      * 
-     */
+    */
     public Optional<String> getRefreshCredential() {
         return Optional.ofNullable(this.refreshCredential);
     }
     /**
      * The target server name.
      * 
-     */
+    */
     public Optional<String> getServerName() {
         return Optional.ofNullable(this.serverName);
     }
     /**
      * The target shard map.
      * 
-     */
+    */
     public Optional<String> getShardMapName() {
         return Optional.ofNullable(this.shardMapName);
     }
     /**
      * The target type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

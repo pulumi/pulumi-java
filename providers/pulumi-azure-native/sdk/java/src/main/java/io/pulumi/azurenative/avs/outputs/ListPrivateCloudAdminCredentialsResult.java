@@ -45,28 +45,28 @@ public final class ListPrivateCloudAdminCredentialsResult {
     /**
      * NSX-T Manager password
      * 
-     */
+    */
     public String getNsxtPassword() {
         return this.nsxtPassword;
     }
     /**
      * NSX-T Manager username
      * 
-     */
+    */
     public String getNsxtUsername() {
         return this.nsxtUsername;
     }
     /**
      * vCenter admin password
      * 
-     */
+    */
     public String getVcenterPassword() {
         return this.vcenterPassword;
     }
     /**
      * vCenter admin username
      * 
-     */
+    */
     public String getVcenterUsername() {
         return this.vcenterUsername;
     }

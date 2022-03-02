@@ -31,14 +31,14 @@ public final class ListRemoteRenderingAccountKeysResult {
     /**
      * value of primary key.
      * 
-     */
+    */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
     /**
      * value of secondary key.
      * 
-     */
+    */
     public String getSecondaryKey() {
         return this.secondaryKey;
     }

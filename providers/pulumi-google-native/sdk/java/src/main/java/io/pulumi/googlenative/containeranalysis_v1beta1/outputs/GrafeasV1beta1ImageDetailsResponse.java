@@ -23,7 +23,7 @@ public final class GrafeasV1beta1ImageDetailsResponse {
     /**
      * Immutable. The child image derived from the base image.
      * 
-     */
+    */
     public DerivedResponse getDerivedImage() {
         return this.derivedImage;
     }

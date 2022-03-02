@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGatewayAdvertisedRoutes {
-/**
- * List of virtual network gateway routes.
+    private GetVirtualNetworkGatewayAdvertisedRoutes() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualNetworkGatewayAdvertisedRoutesArgs.Builder a);
+    }
+    private static GetVirtualNetworkGatewayAdvertisedRoutesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualNetworkGatewayAdvertisedRoutesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * List of virtual network gateway routes.
  * API Version: 2020-11-01.
  * 
- *
- * List of virtual network gateway routes.
+     *
+     * List of virtual network gateway routes.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualNetworkGatewayAdvertisedRoutesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * List of virtual network gateway routes.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * List of virtual network gateway routes.
+     * 
+     */
     public static CompletableFuture<GetVirtualNetworkGatewayAdvertisedRoutesResult> invokeAsync(GetVirtualNetworkGatewayAdvertisedRoutesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayAdvertisedRoutes", TypeShape.of(GetVirtualNetworkGatewayAdvertisedRoutesResult.class), args == null ? GetVirtualNetworkGatewayAdvertisedRoutesArgs.Empty : args, Utilities.withVersion(options));
     }

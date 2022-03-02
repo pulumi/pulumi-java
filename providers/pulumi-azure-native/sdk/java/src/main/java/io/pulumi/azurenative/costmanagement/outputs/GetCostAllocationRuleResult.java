@@ -46,28 +46,28 @@ public final class GetCostAllocationRuleResult {
     /**
      * Azure Resource Manager Id for the rule. This is a read ony value.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the rule. This is a read only value.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Cost allocation rule properties
      * 
-     */
+    */
     public CostAllocationRulePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource type of the rule. This is a read only value of Microsoft.CostManagement/CostAllocationRule.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

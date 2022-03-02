@@ -40,21 +40,21 @@ public final class UserInfoResponse {
     /**
      * The email of the user.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * The name of the user.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The object id of the user.
      * 
-     */
+    */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }

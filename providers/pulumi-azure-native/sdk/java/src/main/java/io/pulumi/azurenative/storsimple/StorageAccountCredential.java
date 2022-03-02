@@ -132,6 +132,22 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
         return this.volumesCount;
     }
 
+    public interface BuilderApplicator {
+        public void apply(StorageAccountCredentialArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.storsimple.StorageAccountCredentialArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.storsimple.StorageAccountCredentialArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public StorageAccountCredential(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

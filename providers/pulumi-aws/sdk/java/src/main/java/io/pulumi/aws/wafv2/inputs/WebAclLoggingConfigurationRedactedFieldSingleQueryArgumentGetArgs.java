@@ -16,7 +16,7 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGet
     /**
      * The name of the query header to redact. This setting must be provided as lower case characters.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by WAFv2 API
      * 
      */

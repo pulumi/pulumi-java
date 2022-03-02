@@ -29,7 +29,7 @@ public final class PolicyAdmissionWhitelistPattern {
      * wildcard, but this is allowed only in text after the registry/
      * part.
      * 
-     */
+    */
     public String getNamePattern() {
         return this.namePattern;
     }

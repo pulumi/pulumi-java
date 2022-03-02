@@ -49,28 +49,28 @@ public final class RecoveryPlanGroupResponse {
     /**
      * The end group actions.
      * 
-     */
+    */
     public List<RecoveryPlanActionResponse> getEndGroupActions() {
         return this.endGroupActions == null ? List.of() : this.endGroupActions;
     }
     /**
      * The group type.
      * 
-     */
+    */
     public String getGroupType() {
         return this.groupType;
     }
     /**
      * The list of protected items.
      * 
-     */
+    */
     public List<RecoveryPlanProtectedItemResponse> getReplicationProtectedItems() {
         return this.replicationProtectedItems == null ? List.of() : this.replicationProtectedItems;
     }
     /**
      * The start group actions.
      * 
-     */
+    */
     public List<RecoveryPlanActionResponse> getStartGroupActions() {
         return this.startGroupActions == null ? List.of() : this.startGroupActions;
     }

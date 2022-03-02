@@ -38,21 +38,21 @@ public final class CatalogTableTargetTable {
     /**
      * ID of the Data Catalog in which the table resides.
      * 
-     */
+    */
     public String getCatalogId() {
         return this.catalogId;
     }
     /**
      * Name of the catalog database that contains the target table.
      * 
-     */
+    */
     public String getDatabaseName() {
         return this.databaseName;
     }
     /**
      * Name of the target table.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

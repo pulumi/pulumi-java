@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssetFilter {
-/**
- * An Asset Filter.
+    private GetAssetFilter() {}
+    public interface BuilderApplicator {
+        public void apply(GetAssetFilterArgs.Builder a);
+    }
+    private static GetAssetFilterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAssetFilterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Asset Filter.
  * API Version: 2020-05-01.
  * 
- *
- * An Asset Filter.
+     *
+     * An Asset Filter.
  * 
- */
+     */
+    public static CompletableFuture<GetAssetFilterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Asset Filter.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * An Asset Filter.
+     * 
+     */
     public static CompletableFuture<GetAssetFilterResult> invokeAsync(GetAssetFilterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getAssetFilter", TypeShape.of(GetAssetFilterResult.class), args == null ? GetAssetFilterArgs.Empty : args, Utilities.withVersion(options));
     }

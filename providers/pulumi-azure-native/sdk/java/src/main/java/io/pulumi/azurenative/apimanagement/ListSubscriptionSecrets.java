@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSubscriptionSecrets {
-/**
- * Subscription keys.
+    private ListSubscriptionSecrets() {}
+    public interface BuilderApplicator {
+        public void apply(ListSubscriptionSecretsArgs.Builder a);
+    }
+    private static ListSubscriptionSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListSubscriptionSecretsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Subscription keys.
  * API Version: 2020-12-01.
  * 
- *
- * Subscription keys.
+     *
+     * Subscription keys.
  * 
- */
+     */
+    public static CompletableFuture<ListSubscriptionSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Subscription keys.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Subscription keys.
+     * 
+     */
     public static CompletableFuture<ListSubscriptionSecretsResult> invokeAsync(ListSubscriptionSecretsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listSubscriptionSecrets", TypeShape.of(ListSubscriptionSecretsResult.class), args == null ? ListSubscriptionSecretsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -25,7 +25,7 @@ public final class FleetSpotOptionsMaintenanceStrategiesCapacityRebalance {
     /**
      * The replacement strategy to use. Only available for fleets of `type` set to `maintain`. Valid values: `launch`.
      * 
-     */
+    */
     public Optional<String> getReplacementStrategy() {
         return Optional.ofNullable(this.replacementStrategy);
     }

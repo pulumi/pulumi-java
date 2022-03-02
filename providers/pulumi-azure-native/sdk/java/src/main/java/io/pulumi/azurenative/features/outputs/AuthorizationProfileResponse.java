@@ -52,35 +52,35 @@ public final class AuthorizationProfileResponse {
     /**
      * The approved time
      * 
-     */
+    */
     public String getApprovedTime() {
         return this.approvedTime;
     }
     /**
      * The approver
      * 
-     */
+    */
     public String getApprover() {
         return this.approver;
     }
     /**
      * The requested time
      * 
-     */
+    */
     public String getRequestedTime() {
         return this.requestedTime;
     }
     /**
      * The requester
      * 
-     */
+    */
     public String getRequester() {
         return this.requester;
     }
     /**
      * The requester object id
      * 
-     */
+    */
     public String getRequesterObjectId() {
         return this.requesterObjectId;
     }

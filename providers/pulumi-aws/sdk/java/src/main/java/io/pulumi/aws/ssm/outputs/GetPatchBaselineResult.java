@@ -56,21 +56,21 @@ public final class GetPatchBaselineResult {
     /**
      * The description of the baseline.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the baseline.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

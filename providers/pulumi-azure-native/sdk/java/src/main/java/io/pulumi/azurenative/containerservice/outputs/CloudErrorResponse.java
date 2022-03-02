@@ -25,7 +25,7 @@ public final class CloudErrorResponse {
     /**
      * Details about the error.
      * 
-     */
+    */
     public Optional<CloudErrorBodyResponse> getError() {
         return Optional.ofNullable(this.error);
     }

@@ -25,7 +25,7 @@ public final class RemediationFiltersResponse {
     /**
      * The resource locations that will be remediated.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }

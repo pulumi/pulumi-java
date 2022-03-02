@@ -33,14 +33,14 @@ public final class ImageBuilderVpcConfig {
     /**
      * Identifiers of the security groups for the image builder or image builder.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
     /**
      * Identifiers of the subnets to which a network interface is attached from the image builder instance or image builder instance.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds == null ? List.of() : this.subnetIds;
     }

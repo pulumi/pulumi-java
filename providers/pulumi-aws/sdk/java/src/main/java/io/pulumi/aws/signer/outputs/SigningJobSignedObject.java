@@ -25,7 +25,7 @@ public final class SigningJobSignedObject {
     /**
      * A configuration block describing the S3 Destination object: See S3 Destination below for details.
      * 
-     */
+    */
     public List<SigningJobSignedObjectS3> getS3s() {
         return this.s3s == null ? List.of() : this.s3s;
     }

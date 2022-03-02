@@ -31,14 +31,14 @@ public final class ConnectorProfileSnowflakeConnectorProfileCredentials {
     /**
      * The password that corresponds to the username.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * The name of the user.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }

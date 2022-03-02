@@ -34,14 +34,14 @@ public final class ConnectorMappingAvailabilityResponse {
     /**
      * The frequency to update.
      * 
-     */
+    */
     public Optional<String> getFrequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
      * The interval of the given frequency to use.
      * 
-     */
+    */
     public Integer getInterval() {
         return this.interval;
     }

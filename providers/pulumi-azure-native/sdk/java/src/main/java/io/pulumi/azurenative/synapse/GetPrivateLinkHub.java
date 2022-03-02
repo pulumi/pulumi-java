@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateLinkHub {
-/**
- * A privateLinkHub
+    private GetPrivateLinkHub() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateLinkHubArgs.Builder a);
+    }
+    private static GetPrivateLinkHubArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateLinkHubArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A privateLinkHub
  * API Version: 2021-03-01.
  * 
- *
- * A privateLinkHub
+     *
+     * A privateLinkHub
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateLinkHubResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A privateLinkHub
+     * API Version: 2021-03-01.
+     * 
+     *
+         * A privateLinkHub
+     * 
+     */
     public static CompletableFuture<GetPrivateLinkHubResult> invokeAsync(GetPrivateLinkHubArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getPrivateLinkHub", TypeShape.of(GetPrivateLinkHubResult.class), args == null ? GetPrivateLinkHubArgs.Empty : args, Utilities.withVersion(options));
     }

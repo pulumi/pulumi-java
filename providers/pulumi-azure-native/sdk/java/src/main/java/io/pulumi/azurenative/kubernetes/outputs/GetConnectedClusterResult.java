@@ -156,133 +156,133 @@ public final class GetConnectedClusterResult {
     /**
      * Base64 encoded public certificate used by the agent to do the initial handshake to the backend services in Azure.
      * 
-     */
+    */
     public String getAgentPublicKeyCertificate() {
         return this.agentPublicKeyCertificate;
     }
     /**
      * Version of the agent running on the connected cluster resource
      * 
-     */
+    */
     public String getAgentVersion() {
         return this.agentVersion;
     }
     /**
      * Represents the connectivity status of the connected cluster.
      * 
-     */
+    */
     public String getConnectivityStatus() {
         return this.connectivityStatus;
     }
     /**
      * The Kubernetes distribution running on this connected cluster.
      * 
-     */
+    */
     public Optional<String> getDistribution() {
         return Optional.ofNullable(this.distribution);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the connected cluster.
      * 
-     */
+    */
     public ConnectedClusterIdentityResponse getIdentity() {
         return this.identity;
     }
     /**
      * The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.
      * 
-     */
+    */
     public Optional<String> getInfrastructure() {
         return Optional.ofNullable(this.infrastructure);
     }
     /**
      * The Kubernetes version of the connected cluster resource
      * 
-     */
+    */
     public String getKubernetesVersion() {
         return this.kubernetesVersion;
     }
     /**
      * Time representing the last instance when heart beat was received from the cluster
      * 
-     */
+    */
     public String getLastConnectivityTime() {
         return this.lastConnectivityTime;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Expiration time of the managed identity certificate
      * 
-     */
+    */
     public String getManagedIdentityCertificateExpirationTime() {
         return this.managedIdentityCertificateExpirationTime;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Connected cluster offering
      * 
-     */
+    */
     public String getOffering() {
         return this.offering;
     }
     /**
      * Provisioning state of the connected cluster resource.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Number of CPU cores present in the connected cluster resource
      * 
-     */
+    */
     public Integer getTotalCoreCount() {
         return this.totalCoreCount;
     }
     /**
      * Number of nodes present in the connected cluster resource
      * 
-     */
+    */
     public Integer getTotalNodeCount() {
         return this.totalNodeCount;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -42,7 +42,7 @@ public final class DatabaseInstanceRestoreBackupContext {
     /**
      * The ID of the backup run to restore from.
      * 
-     */
+    */
     public Integer getBackupRunId() {
         return this.backupRunId;
     }
@@ -50,14 +50,14 @@ public final class DatabaseInstanceRestoreBackupContext {
      * The ID of the instance that the backup was taken from. If left empty,
      * this instance's ID will be used.
      * 
-     */
+    */
     public Optional<String> getInstanceId() {
         return Optional.ofNullable(this.instanceId);
     }
     /**
      * The full project ID of the source instance.`
      * 
-     */
+    */
     public Optional<String> getProject() {
         return Optional.ofNullable(this.project);
     }

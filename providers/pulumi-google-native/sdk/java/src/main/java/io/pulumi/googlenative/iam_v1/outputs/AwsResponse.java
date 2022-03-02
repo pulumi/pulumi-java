@@ -23,7 +23,7 @@ public final class AwsResponse {
     /**
      * The AWS account ID.
      * 
-     */
+    */
     public String getAccountId() {
         return this.accountId;
     }

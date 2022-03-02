@@ -25,7 +25,7 @@ public final class DataLakeAnalyticsResponseProperties {
     /**
      * DataLake Store Account Name
      * 
-     */
+    */
     public Optional<String> getDataLakeStoreAccountName() {
         return Optional.ofNullable(this.dataLakeStoreAccountName);
     }

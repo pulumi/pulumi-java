@@ -36,7 +36,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
      * A representation of a Datastore kind.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind getKind() {
         return this.kind;
     }
@@ -45,7 +45,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
      * is always by project and namespace, however the namespace ID may be empty.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId getPartitionId() {
         return this.partitionId;
     }

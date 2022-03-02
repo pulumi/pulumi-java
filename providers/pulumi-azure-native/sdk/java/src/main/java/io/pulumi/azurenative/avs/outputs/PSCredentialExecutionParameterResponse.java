@@ -48,14 +48,14 @@ public final class PSCredentialExecutionParameterResponse {
     /**
      * The parameter name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * password for login
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
@@ -63,14 +63,14 @@ public final class PSCredentialExecutionParameterResponse {
      * The type of execution parameter
      * Expected value is 'Credential'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * username for login
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

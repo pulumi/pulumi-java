@@ -25,7 +25,7 @@ public final class RemediationConfigurationExecutionControls {
     /**
      * Configuration block for SSM controls. See below.
      * 
-     */
+    */
     public Optional<RemediationConfigurationExecutionControlsSsmControls> getSsmControls() {
         return Optional.ofNullable(this.ssmControls);
     }

@@ -139,112 +139,112 @@ public final class GetClusterResult {
     /**
      * The list of Log Analytics workspaces associated with the cluster
      * 
-     */
+    */
     public List<AssociatedWorkspaceResponse> getAssociatedWorkspaces() {
         return this.associatedWorkspaces == null ? List.of() : this.associatedWorkspaces;
     }
     /**
      * The cluster's billing type.
      * 
-     */
+    */
     public Optional<String> getBillingType() {
         return Optional.ofNullable(this.billingType);
     }
     /**
      * Additional properties for capacity reservation
      * 
-     */
+    */
     public Optional<CapacityReservationPropertiesResponse> getCapacityReservationProperties() {
         return Optional.ofNullable(this.capacityReservationProperties);
     }
     /**
      * The ID associated with the cluster.
      * 
-     */
+    */
     public String getClusterId() {
         return this.clusterId;
     }
     /**
      * The cluster creation time
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the resource.
      * 
-     */
+    */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
      * 
-     */
+    */
     public Optional<Boolean> getIsAvailabilityZonesEnabled() {
         return Optional.ofNullable(this.isAvailabilityZonesEnabled);
     }
     /**
      * The associated key properties.
      * 
-     */
+    */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
     /**
      * The last time the cluster was updated.
      * 
-     */
+    */
     public String getLastModifiedDate() {
         return this.lastModifiedDate;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the cluster.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The sku properties.
      * 
-     */
+    */
     public Optional<ClusterSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

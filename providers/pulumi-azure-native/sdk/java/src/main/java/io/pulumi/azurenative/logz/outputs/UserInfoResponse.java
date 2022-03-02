@@ -47,28 +47,28 @@ public final class UserInfoResponse {
     /**
      * Email of the user used by Logz for contacting them if needed
      * 
-     */
+    */
     public Optional<String> getEmailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
     /**
      * First Name of the user
      * 
-     */
+    */
     public Optional<String> getFirstName() {
         return Optional.ofNullable(this.firstName);
     }
     /**
      * Last Name of the user
      * 
-     */
+    */
     public Optional<String> getLastName() {
         return Optional.ofNullable(this.lastName);
     }
     /**
      * Phone number of the user used by Logz for contacting them if needed
      * 
-     */
+    */
     public Optional<String> getPhoneNumber() {
         return Optional.ofNullable(this.phoneNumber);
     }

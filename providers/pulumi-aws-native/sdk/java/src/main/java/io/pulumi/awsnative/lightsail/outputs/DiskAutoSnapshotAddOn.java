@@ -25,7 +25,7 @@ public final class DiskAutoSnapshotAddOn {
     /**
      * The daily time when an automatic snapshot will be created.
      * 
-     */
+    */
     public Optional<String> getSnapshotTimeOfDay() {
         return Optional.ofNullable(this.snapshotTimeOfDay);
     }

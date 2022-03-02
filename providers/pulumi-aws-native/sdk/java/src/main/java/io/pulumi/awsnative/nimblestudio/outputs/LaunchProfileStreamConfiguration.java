@@ -76,7 +76,7 @@ public final class LaunchProfileStreamConfiguration {
      * <p>The EC2 instance types that users can select from when launching a streaming session
      *             with this launch profile.</p>
      * 
-     */
+    */
     public List<LaunchProfileStreamingInstanceType> getEc2InstanceTypes() {
         return this.ec2InstanceTypes;
     }
@@ -86,7 +86,7 @@ public final class LaunchProfileStreamConfiguration {
      *             stops the session. The default length of time is 690 minutes, and the maximum length of
      *             time is 30 days.</p>
      * 
-     */
+    */
     public Optional<Double> getMaxSessionLengthInMinutes() {
         return Optional.ofNullable(this.maxSessionLengthInMinutes);
     }
@@ -102,7 +102,7 @@ public final class LaunchProfileStreamConfiguration {
      *             stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will
      *             automatically be stopped by AWS (instead of terminated).</p>
      * 
-     */
+    */
     public Optional<Double> getMaxStoppedSessionLengthInMinutes() {
         return Optional.ofNullable(this.maxStoppedSessionLengthInMinutes);
     }
@@ -113,7 +113,7 @@ public final class LaunchProfileStreamConfiguration {
      * <p>The streaming images that users can select from when launching a streaming session
      *             with this launch profile.</p>
      * 
-     */
+    */
     public List<String> getStreamingImageIds() {
         return this.streamingImageIds;
     }

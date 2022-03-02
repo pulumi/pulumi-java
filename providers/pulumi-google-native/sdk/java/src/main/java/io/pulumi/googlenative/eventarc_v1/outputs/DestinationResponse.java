@@ -40,21 +40,21 @@ public final class DestinationResponse {
     /**
      * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
      * 
-     */
+    */
     public String getCloudFunction() {
         return this.cloudFunction;
     }
     /**
      * Cloud Run fully-managed resource that receives the events. The resource should be in the same project as the trigger.
      * 
-     */
+    */
     public CloudRunResponse getCloudRun() {
         return this.cloudRun;
     }
     /**
      * A GKE service capable of receiving events. The service should be running in the same project as the trigger.
      * 
-     */
+    */
     public GKEResponse getGke() {
         return this.gke;
     }

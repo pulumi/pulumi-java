@@ -62,21 +62,21 @@ public final class FirewallPolicyFilterRuleCollectionResponse {
     /**
      * The action type of a Filter rule collection.
      * 
-     */
+    */
     public Optional<FirewallPolicyFilterRuleCollectionActionResponse> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * The name of the rule collection.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Priority of the Firewall Policy Rule Collection resource.
      * 
-     */
+    */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
@@ -84,14 +84,14 @@ public final class FirewallPolicyFilterRuleCollectionResponse {
      * The type of the rule collection.
      * Expected value is 'FirewallPolicyFilterRuleCollection'.
      * 
-     */
+    */
     public String getRuleCollectionType() {
         return this.ruleCollectionType;
     }
     /**
      * List of rules included in a rule collection.
      * 
-     */
+    */
     public List<Object> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

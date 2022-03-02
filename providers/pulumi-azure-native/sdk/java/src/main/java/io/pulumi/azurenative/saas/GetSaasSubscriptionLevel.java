@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSaasSubscriptionLevel {
-/**
- * SaaS REST API resource definition.
+    private GetSaasSubscriptionLevel() {}
+    public interface BuilderApplicator {
+        public void apply(GetSaasSubscriptionLevelArgs.Builder a);
+    }
+    private static GetSaasSubscriptionLevelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSaasSubscriptionLevelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * SaaS REST API resource definition.
  * API Version: 2018-03-01-beta.
  * 
- *
- * SaaS REST API resource definition.
+     *
+     * SaaS REST API resource definition.
  * 
- */
+     */
+    public static CompletableFuture<GetSaasSubscriptionLevelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * SaaS REST API resource definition.
+     * API Version: 2018-03-01-beta.
+     * 
+     *
+         * SaaS REST API resource definition.
+     * 
+     */
     public static CompletableFuture<GetSaasSubscriptionLevelResult> invokeAsync(GetSaasSubscriptionLevelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:saas:getSaasSubscriptionLevel", TypeShape.of(GetSaasSubscriptionLevelResult.class), args == null ? GetSaasSubscriptionLevelArgs.Empty : args, Utilities.withVersion(options));
     }

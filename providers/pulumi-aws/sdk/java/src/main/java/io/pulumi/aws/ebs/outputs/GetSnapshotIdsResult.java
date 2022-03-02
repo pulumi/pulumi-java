@@ -46,14 +46,14 @@ public final class GetSnapshotIdsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set of EBS snapshot IDs, sorted by creation time in descending order.
      * 
-     */
+    */
     public List<String> getIds() {
         return this.ids;
     }

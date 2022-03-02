@@ -25,7 +25,7 @@ public final class FhirServiceAcrConfigurationResponse {
     /**
      * The list of the Azure container registry login servers.
      * 
-     */
+    */
     public List<String> getLoginServers() {
         return this.loginServers == null ? List.of() : this.loginServers;
     }

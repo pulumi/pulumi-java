@@ -41,7 +41,7 @@ public final class DataSetRowLevelPermissionDataSet {
     /**
      * <p>The Amazon Resource Name (ARN) of the permission dataset.</p>
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
@@ -51,7 +51,7 @@ public final class DataSetRowLevelPermissionDataSet {
     /**
      * <p>The namespace associated with the row-level permissions dataset.</p>
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }

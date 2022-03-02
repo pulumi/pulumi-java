@@ -94,70 +94,70 @@ public final class GetVaultResult {
     /**
      * Optional ETag.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource Id represents the complete path to the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Identity for the resource.
      * 
-     */
+    */
     public Optional<IdentityDataResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name associated with the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the vault.
      * 
-     */
+    */
     public VaultPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Identifies the unique system identifier for each Azure resource.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

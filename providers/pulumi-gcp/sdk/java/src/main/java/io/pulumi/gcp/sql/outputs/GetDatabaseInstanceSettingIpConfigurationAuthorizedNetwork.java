@@ -33,7 +33,7 @@ public final class GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork {
     /**
      * The name of the instance.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

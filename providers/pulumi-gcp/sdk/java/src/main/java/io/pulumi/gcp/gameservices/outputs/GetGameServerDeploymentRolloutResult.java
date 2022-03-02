@@ -55,7 +55,7 @@ public final class GetGameServerDeploymentRolloutResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -66,7 +66,7 @@ public final class GetGameServerDeploymentRolloutResult {
      * The ID of the project in which the resource belongs.
      * If it is not provided, the provider project is used.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }

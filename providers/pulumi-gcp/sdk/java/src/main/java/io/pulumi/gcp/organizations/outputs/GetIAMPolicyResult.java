@@ -48,7 +48,7 @@ public final class GetIAMPolicyResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -56,7 +56,7 @@ public final class GetIAMPolicyResult {
      * The above bindings serialized in a format suitable for
      * referencing from a resource that supports IAM.
      * 
-     */
+    */
     public String getPolicyData() {
         return this.policyData;
     }

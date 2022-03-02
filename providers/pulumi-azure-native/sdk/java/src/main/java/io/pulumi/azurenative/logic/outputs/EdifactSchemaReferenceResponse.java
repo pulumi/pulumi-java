@@ -68,49 +68,49 @@ public final class EdifactSchemaReferenceResponse {
     /**
      * The association assigned code.
      * 
-     */
+    */
     public Optional<String> getAssociationAssignedCode() {
         return Optional.ofNullable(this.associationAssignedCode);
     }
     /**
      * The message id.
      * 
-     */
+    */
     public String getMessageId() {
         return this.messageId;
     }
     /**
      * The message release version.
      * 
-     */
+    */
     public String getMessageRelease() {
         return this.messageRelease;
     }
     /**
      * The message version.
      * 
-     */
+    */
     public String getMessageVersion() {
         return this.messageVersion;
     }
     /**
      * The schema name.
      * 
-     */
+    */
     public String getSchemaName() {
         return this.schemaName;
     }
     /**
      * The sender application id.
      * 
-     */
+    */
     public Optional<String> getSenderApplicationId() {
         return Optional.ofNullable(this.senderApplicationId);
     }
     /**
      * The sender application qualifier.
      * 
-     */
+    */
     public Optional<String> getSenderApplicationQualifier() {
         return Optional.ofNullable(this.senderApplicationQualifier);
     }

@@ -53,35 +53,35 @@ public final class GetCertificateResult {
     /**
      * The entity tag.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the certificate.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The description of an X509 CA Certificate.
      * 
-     */
+    */
     public CertificatePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

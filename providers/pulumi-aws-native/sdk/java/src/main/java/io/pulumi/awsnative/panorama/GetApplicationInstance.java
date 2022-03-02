@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplicationInstance {
-/**
- * Schema for ApplicationInstance CloudFormation Resource
+    private GetApplicationInstance() {}
+    public interface BuilderApplicator {
+        public void apply(GetApplicationInstanceArgs.Builder a);
+    }
+    private static GetApplicationInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApplicationInstanceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Schema for ApplicationInstance CloudFormation Resource
  * 
- */
+     */
+    public static CompletableFuture<GetApplicationInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Schema for ApplicationInstance CloudFormation Resource
+     * 
+     */
     public static CompletableFuture<GetApplicationInstanceResult> invokeAsync(GetApplicationInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:panorama:getApplicationInstance", TypeShape.of(GetApplicationInstanceResult.class), args == null ? GetApplicationInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

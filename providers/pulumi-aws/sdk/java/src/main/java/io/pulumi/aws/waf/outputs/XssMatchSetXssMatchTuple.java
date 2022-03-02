@@ -36,7 +36,7 @@ public final class XssMatchSetXssMatchTuple {
     /**
      * Specifies where in a web request to look for cross-site scripting attacks.
      * 
-     */
+    */
     public XssMatchSetXssMatchTupleFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
@@ -47,7 +47,7 @@ public final class XssMatchSetXssMatchTuple {
      * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_XssMatchTuple.html#WAF-Type-XssMatchTuple-TextTransformation)
      * for all supported values.
      * 
-     */
+    */
     public String getTextTransformation() {
         return this.textTransformation;
     }

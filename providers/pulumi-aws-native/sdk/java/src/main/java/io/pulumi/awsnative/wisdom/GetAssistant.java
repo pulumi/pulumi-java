@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssistant {
-/**
- * Definition of AWS::Wisdom::Assistant Resource Type
+    private GetAssistant() {}
+    public interface BuilderApplicator {
+        public void apply(GetAssistantArgs.Builder a);
+    }
+    private static GetAssistantArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAssistantArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of AWS::Wisdom::Assistant Resource Type
  * 
- */
+     */
+    public static CompletableFuture<GetAssistantResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of AWS::Wisdom::Assistant Resource Type
+     * 
+     */
     public static CompletableFuture<GetAssistantResult> invokeAsync(GetAssistantArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wisdom:getAssistant", TypeShape.of(GetAssistantResult.class), args == null ? GetAssistantArgs.Empty : args, Utilities.withVersion(options));
     }

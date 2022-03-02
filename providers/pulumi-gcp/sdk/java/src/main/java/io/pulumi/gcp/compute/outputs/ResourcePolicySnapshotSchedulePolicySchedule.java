@@ -46,7 +46,7 @@ public final class ResourcePolicySnapshotSchedulePolicySchedule {
      * The policy will execute every nth day at the specified time.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> getDailySchedule() {
         return Optional.ofNullable(this.dailySchedule);
     }
@@ -54,7 +54,7 @@ public final class ResourcePolicySnapshotSchedulePolicySchedule {
      * The policy will execute every nth hour starting at the specified time.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> getHourlySchedule() {
         return Optional.ofNullable(this.hourlySchedule);
     }
@@ -62,7 +62,7 @@ public final class ResourcePolicySnapshotSchedulePolicySchedule {
      * Allows specifying a snapshot time for each day of the week.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> getWeeklySchedule() {
         return Optional.ofNullable(this.weeklySchedule);
     }

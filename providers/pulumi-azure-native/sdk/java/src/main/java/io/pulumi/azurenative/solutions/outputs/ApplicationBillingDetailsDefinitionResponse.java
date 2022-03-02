@@ -25,7 +25,7 @@ public final class ApplicationBillingDetailsDefinitionResponse {
     /**
      * The managed application resource usage Id.
      * 
-     */
+    */
     public Optional<String> getResourceUsageId() {
         return Optional.ofNullable(this.resourceUsageId);
     }

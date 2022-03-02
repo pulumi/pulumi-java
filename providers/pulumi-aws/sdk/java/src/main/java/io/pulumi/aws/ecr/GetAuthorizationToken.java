@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAuthorizationToken {
-/**
- * The ECR Authorization Token data source allows the authorization token, proxy endpoint, token expiration date, user name and password to be retrieved for an ECR repository.
+    private GetAuthorizationToken() {}
+    public interface BuilderApplicator {
+        public void apply(GetAuthorizationTokenArgs.Builder a);
+    }
+    private static GetAuthorizationTokenArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAuthorizationTokenArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The ECR Authorization Token data source allows the authorization token, proxy endpoint, token expiration date, user name and password to be retrieved for an ECR repository.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getAuthorizationToken.
+     *
+     * A collection of arguments for invoking getAuthorizationToken.
  * 
- *
- * A collection of values returned by getAuthorizationToken.
+     *
+     * A collection of values returned by getAuthorizationToken.
  * 
- */
+     */
+    public static CompletableFuture<GetAuthorizationTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The ECR Authorization Token data source allows the authorization token, proxy endpoint, token expiration date, user name and password to be retrieved for an ECR repository.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getAuthorizationToken.
+     * 
+     *
+         * A collection of values returned by getAuthorizationToken.
+     * 
+     */
     public static CompletableFuture<GetAuthorizationTokenResult> invokeAsync(@Nullable GetAuthorizationTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ecr/getAuthorizationToken:getAuthorizationToken", TypeShape.of(GetAuthorizationTokenResult.class), args == null ? GetAuthorizationTokenArgs.Empty : args, Utilities.withVersion(options));
     }

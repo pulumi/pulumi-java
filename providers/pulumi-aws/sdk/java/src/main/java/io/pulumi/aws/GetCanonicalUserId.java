@@ -13,19 +13,20 @@ import javax.annotation.Nullable;
 
 @Deprecated /* aws.getCanonicalUserId has been deprecated in favor of aws.s3.getCanonicalUserId */
 public class GetCanonicalUserId {
-/**
- * The Canonical User ID data source allows access to the [canonical user ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html)
- * for the effective account in which this provider is working.
- * 
- * ## Example Usage
- * 
- *
- * A collection of values returned by getCanonicalUserId.
- * 
- * @deprecated
- * aws.getCanonicalUserId has been deprecated in favor of aws.s3.getCanonicalUserId
- * 
- */
+    private GetCanonicalUserId() {}
+    /**
+         * The Canonical User ID data source allows access to the [canonical user ID](http://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html)
+     * for the effective account in which this provider is working.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of values returned by getCanonicalUserId.
+     * 
+     * @Deprecated
+         * aws.getCanonicalUserId has been deprecated in favor of aws.s3.getCanonicalUserId
+     * 
+     */
     @Deprecated /* aws.getCanonicalUserId has been deprecated in favor of aws.s3.getCanonicalUserId */
     public static CompletableFuture<GetCanonicalUserIdResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getCanonicalUserId:getCanonicalUserId", TypeShape.of(GetCanonicalUserIdResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));

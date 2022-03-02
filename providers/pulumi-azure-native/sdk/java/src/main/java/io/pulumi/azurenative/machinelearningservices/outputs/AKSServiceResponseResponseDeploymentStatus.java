@@ -48,28 +48,28 @@ public final class AKSServiceResponseResponseDeploymentStatus {
     /**
      * The number of available replicas.
      * 
-     */
+    */
     public Optional<Integer> getAvailableReplicas() {
         return Optional.ofNullable(this.availableReplicas);
     }
     /**
      * The desired number of replicas.
      * 
-     */
+    */
     public Optional<Integer> getDesiredReplicas() {
         return Optional.ofNullable(this.desiredReplicas);
     }
     /**
      * The error details.
      * 
-     */
+    */
     public Optional<AKSReplicaStatusResponseError> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * The number of updated replicas.
      * 
-     */
+    */
     public Optional<Integer> getUpdatedReplicas() {
         return Optional.ofNullable(this.updatedReplicas);
     }

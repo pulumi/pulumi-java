@@ -53,35 +53,35 @@ public final class ConditionResponse {
     /**
      * Trusted attributes supplied by the IAM system.
      * 
-     */
+    */
     public String getIam() {
         return this.iam;
     }
     /**
      * An operator to apply the subject with.
      * 
-     */
+    */
     public String getOp() {
         return this.op;
     }
     /**
      * Trusted attributes discharged by the service.
      * 
-     */
+    */
     public String getSvc() {
         return this.svc;
     }
     /**
      * Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.
      * 
-     */
+    */
     public String getSys() {
         return this.sys;
     }
     /**
      * The objects of the condition.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }

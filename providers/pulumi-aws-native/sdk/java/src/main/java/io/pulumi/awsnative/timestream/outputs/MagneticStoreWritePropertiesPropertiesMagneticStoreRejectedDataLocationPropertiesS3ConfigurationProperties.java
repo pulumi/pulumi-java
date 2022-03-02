@@ -47,28 +47,28 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     /**
      * The bucket name used to store the data.
      * 
-     */
+    */
     public String getBucketName() {
         return this.bucketName;
     }
     /**
      * Either SSE_KMS or SSE_S3.
      * 
-     */
+    */
     public String getEncryptionOption() {
         return this.encryptionOption;
     }
     /**
      * Must be provided if SSE_KMS is specified as the encryption option
      * 
-     */
+    */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * String used to prefix all data in the bucket.
      * 
-     */
+    */
     public Optional<String> getObjectKeyPrefix() {
         return Optional.ofNullable(this.objectKeyPrefix);
     }

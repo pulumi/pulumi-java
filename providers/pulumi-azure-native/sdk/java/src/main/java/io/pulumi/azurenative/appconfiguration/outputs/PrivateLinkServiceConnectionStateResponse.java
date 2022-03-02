@@ -40,21 +40,21 @@ public final class PrivateLinkServiceConnectionStateResponse {
     /**
      * Any action that is required beyond basic workflow (approve/ reject/ disconnect)
      * 
-     */
+    */
     public String getActionsRequired() {
         return this.actionsRequired;
     }
     /**
      * The private link service connection description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The private link service connection status.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

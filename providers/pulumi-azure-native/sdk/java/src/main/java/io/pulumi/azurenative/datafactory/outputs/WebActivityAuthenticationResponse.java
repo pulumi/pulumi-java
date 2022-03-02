@@ -73,49 +73,49 @@ public final class WebActivityAuthenticationResponse {
     /**
      * The credential reference containing authentication information.
      * 
-     */
+    */
     public Optional<CredentialReferenceResponse> getCredential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * Password for the PFX file or basic authentication / Secret when used for ServicePrincipal
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPfx() {
         return Optional.ofNullable(this.pfx);
     }
     /**
      * Resource for which Azure Auth token will be requested when using MSI Authentication. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getResource() {
         return Optional.ofNullable(this.resource);
     }
     /**
      * Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal)
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getUserTenant() {
         return Optional.ofNullable(this.userTenant);
     }
     /**
      * Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getUsername() {
         return Optional.ofNullable(this.username);
     }

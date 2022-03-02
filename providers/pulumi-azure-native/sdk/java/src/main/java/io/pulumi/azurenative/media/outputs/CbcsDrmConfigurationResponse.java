@@ -42,21 +42,21 @@ public final class CbcsDrmConfigurationResponse {
     /**
      * FairPlay configurations
      * 
-     */
+    */
     public Optional<StreamingPolicyFairPlayConfigurationResponse> getFairPlay() {
         return Optional.ofNullable(this.fairPlay);
     }
     /**
      * PlayReady configurations
      * 
-     */
+    */
     public Optional<StreamingPolicyPlayReadyConfigurationResponse> getPlayReady() {
         return Optional.ofNullable(this.playReady);
     }
     /**
      * Widevine configurations
      * 
-     */
+    */
     public Optional<StreamingPolicyWidevineConfigurationResponse> getWidevine() {
         return Optional.ofNullable(this.widevine);
     }

@@ -236,6 +236,22 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
         return this.warmStoreConfiguration;
     }
 
+    public interface BuilderApplicator {
+        public void apply(Gen2EnvironmentArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.timeseriesinsights.Gen2EnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.timeseriesinsights.Gen2EnvironmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Gen2Environment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -23,7 +23,7 @@ public final class EventDestinationSnsDestination {
     /**
      * The ARN of the SNS topic
      * 
-     */
+    */
     public String getTopicArn() {
         return this.topicArn;
     }

@@ -73,7 +73,7 @@ public final class AttestorAttestationAuthorityNote {
      * account email; future versions may use an email based on a
      * different naming pattern.
      * 
-     */
+    */
     public Optional<String> getDelegationServiceAccountEmail() {
         return Optional.ofNullable(this.delegationServiceAccountEmail);
     }
@@ -86,7 +86,7 @@ public final class AttestorAttestationAuthorityNote {
      * ATTESTATION_AUTHORITY Occurrence that names a container image
      * and that links to this Note.
      * 
-     */
+    */
     public String getNoteReference() {
         return this.noteReference;
     }
@@ -100,7 +100,7 @@ public final class AttestorAttestationAuthorityNote {
      * attestations exist.
      * Structure is documented below.
      * 
-     */
+    */
     public List<AttestorAttestationAuthorityNotePublicKey> getPublicKeys() {
         return this.publicKeys == null ? List.of() : this.publicKeys;
     }

@@ -43,21 +43,21 @@ public final class DeploymentGroupLoadBalancerInfo {
     /**
      * The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
      * 
-     */
+    */
     public List<DeploymentGroupLoadBalancerInfoElbInfo> getElbInfos() {
         return this.elbInfos == null ? List.of() : this.elbInfos;
     }
     /**
      * The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
      * 
-     */
+    */
     public List<DeploymentGroupLoadBalancerInfoTargetGroupInfo> getTargetGroupInfos() {
         return this.targetGroupInfos == null ? List.of() : this.targetGroupInfos;
     }
     /**
      * The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
      * 
-     */
+    */
     public Optional<DeploymentGroupLoadBalancerInfoTargetGroupPairInfo> getTargetGroupPairInfo() {
         return Optional.ofNullable(this.targetGroupPairInfo);
     }

@@ -23,7 +23,7 @@ public final class CompanyDerivedInfoResponse {
     /**
      * A structured headquarters location of the company, resolved from Company.hq_location if provided.
      * 
-     */
+    */
     public LocationResponse getHeadquartersLocation() {
         return this.headquartersLocation;
     }

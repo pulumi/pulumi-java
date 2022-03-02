@@ -36,14 +36,14 @@ public final class RetentionDurationResponse {
      * Count of duration types. Retention duration is obtained by the counting the duration type Count times.
      * For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Retention duration type of retention policy.
      * 
-     */
+    */
     public Optional<String> getDurationType() {
         return Optional.ofNullable(this.durationType);
     }

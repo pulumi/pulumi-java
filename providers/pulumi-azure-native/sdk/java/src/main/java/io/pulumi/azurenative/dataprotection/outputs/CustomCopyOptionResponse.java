@@ -34,7 +34,7 @@ public final class CustomCopyOptionResponse {
     /**
      * Data copied after given timespan
      * 
-     */
+    */
     public Optional<String> getDuration() {
         return Optional.ofNullable(this.duration);
     }
@@ -42,7 +42,7 @@ public final class CustomCopyOptionResponse {
      * Type of the specific object - used for deserializing
      * Expected value is 'CustomCopyOption'.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }

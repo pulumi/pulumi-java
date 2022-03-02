@@ -112,28 +112,28 @@ public final class GetVpcEndpointServiceResult {
     /**
      * Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
      * 
-     */
+    */
     public Boolean getAcceptanceRequired() {
         return this.acceptanceRequired;
     }
     /**
      * The Amazon Resource Name (ARN) of the VPC endpoint service.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The Availability Zones in which the service is available.
      * 
-     */
+    */
     public List<String> getAvailabilityZones() {
         return this.availabilityZones;
     }
     /**
      * The DNS names for the service.
      * 
-     */
+    */
     public List<String> getBaseEndpointDnsNames() {
         return this.baseEndpointDnsNames;
     }
@@ -143,28 +143,28 @@ public final class GetVpcEndpointServiceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Whether or not the service manages its VPC endpoints - `true` or `false`.
      * 
-     */
+    */
     public Boolean getManagesVpcEndpoints() {
         return this.managesVpcEndpoints;
     }
     /**
      * The AWS account ID of the service owner or `amazon`.
      * 
-     */
+    */
     public String getOwner() {
         return this.owner;
     }
     /**
      * The private DNS name for the service.
      * 
-     */
+    */
     public String getPrivateDnsName() {
         return this.privateDnsName;
     }
@@ -174,7 +174,7 @@ public final class GetVpcEndpointServiceResult {
     /**
      * The ID of the endpoint service.
      * 
-     */
+    */
     public String getServiceId() {
         return this.serviceId;
     }
@@ -187,14 +187,14 @@ public final class GetVpcEndpointServiceResult {
     /**
      * A map of tags assigned to the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * Whether or not the service supports endpoint policies - `true` or `false`.
      * 
-     */
+    */
     public Boolean getVpcEndpointPolicySupported() {
         return this.vpcEndpointPolicySupported;
     }

@@ -36,7 +36,7 @@ public final class AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicas 
      * Specifies a fixed number of VM instances. This must be a positive
      * integer.
      * 
-     */
+    */
     public Optional<Integer> getFixed() {
         return Optional.ofNullable(this.fixed);
     }
@@ -44,7 +44,7 @@ public final class AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicas 
      * Specifies a percentage of instances between 0 to 100%, inclusive.
      * For example, specify 80 for 80%.
      * 
-     */
+    */
     public Optional<Integer> getPercent() {
         return Optional.ofNullable(this.percent);
     }

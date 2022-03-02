@@ -232,6 +232,22 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
         return this.vmProfile;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VirtualMachineImageTemplateArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.virtualmachineimages.VirtualMachineImageTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.virtualmachineimages.VirtualMachineImageTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VirtualMachineImageTemplate(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

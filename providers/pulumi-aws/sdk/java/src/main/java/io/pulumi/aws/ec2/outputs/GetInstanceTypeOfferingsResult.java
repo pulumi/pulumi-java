@@ -58,14 +58,14 @@ public final class GetInstanceTypeOfferingsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of EC2 Instance Types.
      * 
-     */
+    */
     public List<String> getInstanceTypes() {
         return this.instanceTypes;
     }
@@ -75,14 +75,14 @@ public final class GetInstanceTypeOfferingsResult {
     /**
      * List of location types.
      * 
-     */
+    */
     public List<String> getLocationTypes() {
         return this.locationTypes;
     }
     /**
      * List of locations.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations;
     }

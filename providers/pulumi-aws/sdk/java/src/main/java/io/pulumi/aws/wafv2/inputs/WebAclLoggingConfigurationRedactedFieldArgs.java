@@ -23,7 +23,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     /**
      * Redact all query arguments.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by WAFv2 API
      * 
      */
@@ -39,7 +39,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     /**
      * Redact the request body, which immediately follows the request headers.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by WAFv2 API
      * 
      */
@@ -88,7 +88,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     /**
      * Redact a single query argument. See Single Query Argument below for details.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by WAFv2 API
      * 
      */

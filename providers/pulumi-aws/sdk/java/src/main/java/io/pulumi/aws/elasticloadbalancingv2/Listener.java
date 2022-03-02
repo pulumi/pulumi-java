@@ -32,7 +32,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:elasticloadbalancingv2/listener:Listener front_end arn:aws:elasticloadbalancing:us-west-2:187416307283:listener/app/front-end-alb/8e4497da625e2d8a/9ab28ade35828f96
  * ```
  * 
- * @deprecated
+ * @Deprecated
  * aws.elasticloadbalancingv2.Listener has been deprecated in favor of aws.lb.Listener
  * 
  */
@@ -180,6 +180,22 @@ public class Listener extends io.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ListenerArgs.Builder a);
+    }
+    private static io.pulumi.aws.elasticloadbalancingv2.ListenerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.elasticloadbalancingv2.ListenerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Listener(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

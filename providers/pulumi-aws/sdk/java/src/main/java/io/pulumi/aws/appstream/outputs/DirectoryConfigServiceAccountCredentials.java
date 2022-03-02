@@ -31,14 +31,14 @@ public final class DirectoryConfigServiceAccountCredentials {
     /**
      * User name of the account. This account must have the following privileges: create computer objects, join computers to the domain, and change/reset the password on descendant computer objects for the organizational units specified.
      * 
-     */
+    */
     public String getAccountName() {
         return this.accountName;
     }
     /**
      * Password for the account.
      * 
-     */
+    */
     public String getAccountPassword() {
         return this.accountPassword;
     }

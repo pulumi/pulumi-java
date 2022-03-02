@@ -32,14 +32,14 @@ public final class ApplicationGatewayConnectionDrainingResponse {
     /**
      * The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
      * 
-     */
+    */
     public Integer getDrainTimeoutInSec() {
         return this.drainTimeoutInSec;
     }
     /**
      * Whether connection draining is enabled or not.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }

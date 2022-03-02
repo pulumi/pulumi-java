@@ -59,7 +59,7 @@ public final class DiskDiskEncryptionKey {
      * `roles/cloudkms.cryptoKeyEncrypterDecrypter` to use this feature.
      * See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
      * 
-     */
+    */
     public Optional<String> getKmsKeySelfLink() {
         return Optional.ofNullable(this.kmsKeySelfLink);
     }
@@ -67,7 +67,7 @@ public final class DiskDiskEncryptionKey {
      * The service account used for the encryption request for the given KMS key.
      * If absent, the Compute Engine Service Agent service account is used.
      * 
-     */
+    */
     public Optional<String> getKmsKeyServiceAccount() {
         return Optional.ofNullable(this.kmsKeyServiceAccount);
     }
@@ -75,7 +75,7 @@ public final class DiskDiskEncryptionKey {
      * Specifies a 256-bit customer-supplied encryption key, encoded in
      * RFC 4648 base64 to either encrypt or decrypt this resource.
      * 
-     */
+    */
     public Optional<String> getRawKey() {
         return Optional.ofNullable(this.rawKey);
     }
@@ -84,7 +84,7 @@ public final class DiskDiskEncryptionKey {
      * The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
      * encryption key that protects this resource.
      * 
-     */
+    */
     public Optional<String> getSha256() {
         return Optional.ofNullable(this.sha256);
     }

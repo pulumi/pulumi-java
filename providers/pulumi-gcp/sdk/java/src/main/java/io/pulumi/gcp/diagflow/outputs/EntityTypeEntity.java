@@ -43,7 +43,7 @@ public final class EntityTypeEntity {
      * For KIND_LIST entity types:
      * * This collection must contain exactly one synonym equal to value.
      * 
-     */
+    */
     public List<String> getSynonyms() {
         return this.synonyms;
     }
@@ -55,7 +55,7 @@ public final class EntityTypeEntity {
      *   For KIND_LIST entity types:
      * * A string that can contain references to other entity types (with or without aliases).
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

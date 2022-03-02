@@ -13,21 +13,48 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpcLink {
-/**
- * Use this data source to get the id of a VPC Link in
+    private GetVpcLink() {}
+    public interface BuilderApplicator {
+        public void apply(GetVpcLinkArgs.Builder a);
+    }
+    private static GetVpcLinkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVpcLinkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get the id of a VPC Link in
  * API Gateway. To fetch the VPC Link you must provide a name to match against.
  * As there is no unique name constraint on API Gateway VPC Links this data source will
  * error if there is more than one match.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getVpcLink.
+     *
+     * A collection of arguments for invoking getVpcLink.
  * 
- *
- * A collection of values returned by getVpcLink.
+     *
+     * A collection of values returned by getVpcLink.
  * 
- */
+     */
+    public static CompletableFuture<GetVpcLinkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get the id of a VPC Link in
+     * API Gateway. To fetch the VPC Link you must provide a name to match against.
+     * As there is no unique name constraint on API Gateway VPC Links this data source will
+     * error if there is more than one match.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getVpcLink.
+     * 
+     *
+         * A collection of values returned by getVpcLink.
+     * 
+     */
     public static CompletableFuture<GetVpcLinkResult> invokeAsync(GetVpcLinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:apigateway/getVpcLink:getVpcLink", TypeShape.of(GetVpcLinkResult.class), args == null ? GetVpcLinkArgs.Empty : args, Utilities.withVersion(options));
     }

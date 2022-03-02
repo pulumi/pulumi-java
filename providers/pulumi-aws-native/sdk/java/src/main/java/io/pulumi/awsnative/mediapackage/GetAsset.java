@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAsset {
-/**
- * Resource schema for AWS::MediaPackage::Asset
+    private GetAsset() {}
+    public interface BuilderApplicator {
+        public void apply(GetAssetArgs.Builder a);
+    }
+    private static GetAssetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAssetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::MediaPackage::Asset
  * 
- */
+     */
+    public static CompletableFuture<GetAssetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::MediaPackage::Asset
+     * 
+     */
     public static CompletableFuture<GetAssetResult> invokeAsync(GetAssetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getAsset", TypeShape.of(GetAssetResult.class), args == null ? GetAssetArgs.Empty : args, Utilities.withVersion(options));
     }

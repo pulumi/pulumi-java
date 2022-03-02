@@ -33,14 +33,14 @@ public final class BoundingPolyResponse {
     /**
      * A description of this polygon.
      * 
-     */
+    */
     public String getLabel() {
         return this.label;
     }
     /**
      * List of the vertices of this polygon.
      * 
-     */
+    */
     public List<VertexResponse> getVertices() {
         return this.vertices;
     }

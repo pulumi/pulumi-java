@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEncryptionScope {
-/**
- * The Encryption Scope resource.
+    private GetEncryptionScope() {}
+    public interface BuilderApplicator {
+        public void apply(GetEncryptionScopeArgs.Builder a);
+    }
+    private static GetEncryptionScopeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEncryptionScopeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Encryption Scope resource.
  * API Version: 2021-02-01.
  * 
- *
- * The Encryption Scope resource.
+     *
+     * The Encryption Scope resource.
  * 
- */
+     */
+    public static CompletableFuture<GetEncryptionScopeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Encryption Scope resource.
+     * API Version: 2021-02-01.
+     * 
+     *
+         * The Encryption Scope resource.
+     * 
+     */
     public static CompletableFuture<GetEncryptionScopeResult> invokeAsync(GetEncryptionScopeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getEncryptionScope", TypeShape.of(GetEncryptionScopeResult.class), args == null ? GetEncryptionScopeArgs.Empty : args, Utilities.withVersion(options));
     }

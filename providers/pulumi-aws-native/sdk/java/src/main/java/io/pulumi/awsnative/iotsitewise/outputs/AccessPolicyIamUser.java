@@ -25,7 +25,7 @@ public final class AccessPolicyIamUser {
     /**
      * The ARN of the IAM user.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }

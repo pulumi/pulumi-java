@@ -79,56 +79,56 @@ public final class GetContactFlowModuleResult {
     /**
      * The identifier of the contact flow module (ARN).
      * 
-     */
+    */
     public Optional<String> getContactFlowModuleArn() {
         return Optional.ofNullable(this.contactFlowModuleArn);
     }
     /**
      * The content of the contact flow module in JSON format.
      * 
-     */
+    */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The description of the contact flow module.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The identifier of the Amazon Connect instance (ARN).
      * 
-     */
+    */
     public Optional<String> getInstanceArn() {
         return Optional.ofNullable(this.instanceArn);
     }
     /**
      * The name of the contact flow module.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The state of the contact flow module.
      * 
-     */
+    */
     public Optional<ContactFlowModuleState> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The status of the contact flow module.
      * 
-     */
+    */
     public Optional<ContactFlowModuleStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * One or more tags.
      * 
-     */
+    */
     public List<ContactFlowModuleTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLoadBalancerBackendAddressPool {
-/**
- * Pool of backend IP addresses.
+    private GetLoadBalancerBackendAddressPool() {}
+    public interface BuilderApplicator {
+        public void apply(GetLoadBalancerBackendAddressPoolArgs.Builder a);
+    }
+    private static GetLoadBalancerBackendAddressPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLoadBalancerBackendAddressPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Pool of backend IP addresses.
  * API Version: 2020-11-01.
  * 
- *
- * Pool of backend IP addresses.
+     *
+     * Pool of backend IP addresses.
  * 
- */
+     */
+    public static CompletableFuture<GetLoadBalancerBackendAddressPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Pool of backend IP addresses.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Pool of backend IP addresses.
+     * 
+     */
     public static CompletableFuture<GetLoadBalancerBackendAddressPoolResult> invokeAsync(GetLoadBalancerBackendAddressPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getLoadBalancerBackendAddressPool", TypeShape.of(GetLoadBalancerBackendAddressPoolResult.class), args == null ? GetLoadBalancerBackendAddressPoolArgs.Empty : args, Utilities.withVersion(options));
     }
