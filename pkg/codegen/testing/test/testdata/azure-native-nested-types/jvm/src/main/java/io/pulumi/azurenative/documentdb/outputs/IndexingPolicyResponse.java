@@ -25,7 +25,7 @@ public final class IndexingPolicyResponse {
     /**
      * List of composite path list
      * 
-     */
+    */
     public List<List<CompositePathResponse>> getCompositeIndexes() {
         return this.compositeIndexes == null ? List.of() : this.compositeIndexes;
     }

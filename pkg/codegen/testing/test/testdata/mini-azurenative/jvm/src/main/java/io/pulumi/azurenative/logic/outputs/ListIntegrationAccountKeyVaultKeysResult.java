@@ -25,7 +25,7 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
     /**
      * The skip token.
      * 
-     */
+    */
     public Optional<String> getSkipToken() {
         return Optional.ofNullable(this.skipToken);
     }
