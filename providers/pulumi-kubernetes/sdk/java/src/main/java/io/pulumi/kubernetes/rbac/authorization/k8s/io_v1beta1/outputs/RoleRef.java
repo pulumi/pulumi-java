@@ -38,21 +38,21 @@ public final class RoleRef {
     /**
      * APIGroup is the group for the resource being referenced
      * 
-     */
+    */
     public String getApiGroup() {
         return this.apiGroup;
     }
     /**
      * Kind is the type of resource being referenced
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name is the name of resource being referenced
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

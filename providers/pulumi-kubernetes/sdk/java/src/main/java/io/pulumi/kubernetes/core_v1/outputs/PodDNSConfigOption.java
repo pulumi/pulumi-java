@@ -29,7 +29,7 @@ public final class PodDNSConfigOption {
     /**
      * Required.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

@@ -34,7 +34,7 @@ import javax.annotation.Nullable;
  * time out and mark the resource update as Failed. You can override the default timeout value
  * by setting the 'customTimeouts' option on the resource.
  * 
- * @deprecated
+ * @Deprecated
  * extensions/v1beta1/Ingress is deprecated by networking.k8s.io/v1beta1/Ingress and not supported by Kubernetes v1.20+ clusters.
  * 
  */
@@ -112,6 +112,22 @@ public class Ingress extends io.pulumi.resources.CustomResource {
         return this.status;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable IngressArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.extensions_v1beta1.IngressArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.extensions_v1beta1.IngressArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Ingress(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

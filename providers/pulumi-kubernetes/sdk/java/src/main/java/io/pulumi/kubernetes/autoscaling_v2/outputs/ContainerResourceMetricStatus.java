@@ -39,21 +39,21 @@ public final class ContainerResourceMetricStatus {
     /**
      * Container is the name of the container in the pods of the scaling target
      * 
-     */
+    */
     public String getContainer() {
         return this.container;
     }
     /**
      * current contains the current value for the given metric
      * 
-     */
+    */
     public MetricValueStatus getCurrent() {
         return this.current;
     }
     /**
      * Name is the name of the resource in question.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

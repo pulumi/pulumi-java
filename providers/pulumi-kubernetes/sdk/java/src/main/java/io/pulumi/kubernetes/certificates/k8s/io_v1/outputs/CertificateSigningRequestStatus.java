@@ -77,14 +77,14 @@ public final class CertificateSigningRequestStatus {
      *     -----END CERTIFICATE-----
      *     )
      * 
-     */
+    */
     public Optional<String> getCertificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
      * conditions applied to the request. Known conditions are "Approved", "Denied", and "Failed".
      * 
-     */
+    */
     public List<CertificateSigningRequestCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }

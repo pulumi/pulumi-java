@@ -42,21 +42,21 @@ public final class LifecycleHandler {
     /**
      * Exec specifies the action to take.
      * 
-     */
+    */
     public Optional<ExecAction> getExec() {
         return Optional.ofNullable(this.exec);
     }
     /**
      * HTTPGet specifies the http request to perform.
      * 
-     */
+    */
     public Optional<HTTPGetAction> getHttpGet() {
         return Optional.ofNullable(this.httpGet);
     }
     /**
      * Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.
      * 
-     */
+    */
     public Optional<TCPSocketAction> getTcpSocket() {
         return Optional.ofNullable(this.tcpSocket);
     }

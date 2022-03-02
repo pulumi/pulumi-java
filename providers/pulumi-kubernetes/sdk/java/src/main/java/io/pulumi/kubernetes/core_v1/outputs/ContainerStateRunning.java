@@ -25,7 +25,7 @@ public final class ContainerStateRunning {
     /**
      * Time at which the container was last (re-)started
      * 
-     */
+    */
     public Optional<String> getStartedAt() {
         return Optional.ofNullable(this.startedAt);
     }

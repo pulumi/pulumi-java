@@ -85,63 +85,63 @@ public final class ContainerStatus {
     /**
      * Container's ID in the format 'docker://<container_id>'.
      * 
-     */
+    */
     public Optional<String> getContainerID() {
         return Optional.ofNullable(this.containerID);
     }
     /**
      * The image the container is running. More info: https://kubernetes.io/docs/concepts/containers/images.
      * 
-     */
+    */
     public String getImage() {
         return this.image;
     }
     /**
      * ImageID of the container's image.
      * 
-     */
+    */
     public String getImageID() {
         return this.imageID;
     }
     /**
      * Details about the container's last termination condition.
      * 
-     */
+    */
     public Optional<ContainerState> getLastState() {
         return Optional.ofNullable(this.lastState);
     }
     /**
      * This must be a DNS_LABEL. Each container in a pod must have a unique name. Cannot be updated.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Specifies whether the container has passed its readiness probe.
      * 
-     */
+    */
     public Boolean getReady() {
         return this.ready;
     }
     /**
      * The number of times the container has been restarted.
      * 
-     */
+    */
     public Integer getRestartCount() {
         return this.restartCount;
     }
     /**
      * Specifies whether the container has passed its startup probe. Initialized as false, becomes true after startupProbe is considered successful. Resets to false when the container is restarted, or if kubelet loses state temporarily. Is always true when no startupProbe is defined.
      * 
-     */
+    */
     public Optional<Boolean> getStarted() {
         return Optional.ofNullable(this.started);
     }
     /**
      * Details about the container's current condition.
      * 
-     */
+    */
     public Optional<ContainerState> getState() {
         return Optional.ofNullable(this.state);
     }
