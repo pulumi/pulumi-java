@@ -48,14 +48,14 @@ public final class GetEnvironmentResult {
     /**
      * Configuration parameters for the environment.
      * 
-     */
+    */
     public List<GetEnvironmentConfig> getConfigs() {
         return this.configs;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

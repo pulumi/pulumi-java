@@ -38,7 +38,7 @@ public final class BackendServiceSecuritySettings {
      * connections to backends of a service. This resource itself does not affect
      * configuration unless it is attached to a backend service resource.
      * 
-     */
+    */
     public String getClientTlsPolicy() {
         return this.clientTlsPolicy;
     }
@@ -47,7 +47,7 @@ public final class BackendServiceSecuritySettings {
      * If specified, the client will verify that the server certificate's subject
      * alt name matches one of the specified values.
      * 
-     */
+    */
     public List<String> getSubjectAltNames() {
         return this.subjectAltNames;
     }

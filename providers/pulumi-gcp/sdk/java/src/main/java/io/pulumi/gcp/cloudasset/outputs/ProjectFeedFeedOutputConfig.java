@@ -25,7 +25,7 @@ public final class ProjectFeedFeedOutputConfig {
      * Destination on Cloud Pubsub.
      * Structure is documented below.
      * 
-     */
+    */
     public ProjectFeedFeedOutputConfigPubsubDestination getPubsubDestination() {
         return this.pubsubDestination;
     }

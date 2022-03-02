@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSSLPolicy {
-/**
- * Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Target SSL Proxies.
+    private GetSSLPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetSSLPolicyArgs.Builder a);
+    }
+    private static GetSSLPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSSLPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Target SSL Proxies.
  *     For more information see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies).
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getSSLPolicy.
+     *
+     * A collection of arguments for invoking getSSLPolicy.
  * 
- *
- * A collection of values returned by getSSLPolicy.
+     *
+     * A collection of values returned by getSSLPolicy.
  * 
- */
+     */
+    public static CompletableFuture<GetSSLPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Target SSL Proxies.
+     *     For more information see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies).
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getSSLPolicy.
+     * 
+     *
+         * A collection of values returned by getSSLPolicy.
+     * 
+     */
     public static CompletableFuture<GetSSLPolicyResult> invokeAsync(GetSSLPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getSSLPolicy:getSSLPolicy", TypeShape.of(GetSSLPolicyResult.class), args == null ? GetSSLPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

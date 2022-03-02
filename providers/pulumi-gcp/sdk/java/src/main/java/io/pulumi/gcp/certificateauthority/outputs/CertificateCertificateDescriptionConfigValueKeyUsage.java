@@ -46,7 +46,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsage {
      * Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage> getBaseKeyUsages() {
         return this.baseKeyUsages == null ? List.of() : this.baseKeyUsages;
     }
@@ -54,7 +54,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsage {
      * Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsage> getExtendedKeyUsages() {
         return this.extendedKeyUsages == null ? List.of() : this.extendedKeyUsages;
     }
@@ -62,7 +62,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsage {
      * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage> getUnknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }

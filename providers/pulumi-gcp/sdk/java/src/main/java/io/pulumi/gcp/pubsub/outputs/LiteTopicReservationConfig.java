@@ -25,7 +25,7 @@ public final class LiteTopicReservationConfig {
     /**
      * The Reservation to use for this topic's throughput capacity.
      * 
-     */
+    */
     public Optional<String> getThroughputReservation() {
         return Optional.ofNullable(this.throughputReservation);
     }

@@ -132,6 +132,22 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RecordSetArgs.Builder a);
+    }
+    private static io.pulumi.gcp.dns.RecordSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.dns.RecordSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RecordSet(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

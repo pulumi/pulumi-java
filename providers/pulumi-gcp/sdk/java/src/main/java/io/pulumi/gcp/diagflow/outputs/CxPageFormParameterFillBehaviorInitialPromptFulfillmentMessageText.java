@@ -37,14 +37,14 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
      * - 
      * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
      * 
-     */
+    */
     public Optional<Boolean> getAllowPlaybackInterruption() {
         return Optional.ofNullable(this.allowPlaybackInterruption);
     }
     /**
      * A collection of text responses.
      * 
-     */
+    */
     public List<String> getTexts() {
         return this.texts == null ? List.of() : this.texts;
     }

@@ -67,7 +67,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * It is expected
      * that the system will manipulate this based on routability and load.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by Cloud Run fully managed
      * 
      */

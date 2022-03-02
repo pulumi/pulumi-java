@@ -13,21 +13,48 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceTemplate {
-/**
- * Get information about a VM instance template resource within GCE. For more information see
+    private GetInstanceTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceTemplateArgs.Builder a);
+    }
+    private static GetInstanceTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get information about a VM instance template resource within GCE. For more information see
  * [the official documentation](https://cloud.google.com/compute/docs/instance-templates)
  * and
  * [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates).
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getInstanceTemplate.
+     *
+     * A collection of arguments for invoking getInstanceTemplate.
  * 
- *
- * A collection of values returned by getInstanceTemplate.
+     *
+     * A collection of values returned by getInstanceTemplate.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get information about a VM instance template resource within GCE. For more information see
+     * [the official documentation](https://cloud.google.com/compute/docs/instance-templates)
+     * and
+     * [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates).
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getInstanceTemplate.
+     * 
+     *
+         * A collection of values returned by getInstanceTemplate.
+     * 
+     */
     public static CompletableFuture<GetInstanceTemplateResult> invokeAsync(GetInstanceTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getInstanceTemplate:getInstanceTemplate", TypeShape.of(GetInstanceTemplateResult.class), args == null ? GetInstanceTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

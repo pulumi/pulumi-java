@@ -35,7 +35,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
      * Designated field in the BigQuery table.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField getField() {
         return this.field;
     }
@@ -43,7 +43,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
      * Field in a BigQuery table where each cell represents a dictionary phrase.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable getTable() {
         return this.table;
     }

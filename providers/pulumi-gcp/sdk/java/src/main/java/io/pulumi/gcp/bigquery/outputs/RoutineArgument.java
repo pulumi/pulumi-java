@@ -58,7 +58,7 @@ public final class RoutineArgument {
      * Default value is `FIXED_TYPE`.
      * Possible values are `FIXED_TYPE` and `ANY_TYPE`.
      * 
-     */
+    */
     public Optional<String> getArgumentKind() {
         return Optional.ofNullable(this.argumentKind);
     }
@@ -71,7 +71,7 @@ public final class RoutineArgument {
      * suppress the recurring diff this causes. As a workaround, we recommend using
      * the schema as returned by the API.
      * 
-     */
+    */
     public Optional<String> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -79,14 +79,14 @@ public final class RoutineArgument {
      * Specifies whether the argument is input or output. Can be set for procedures only.
      * Possible values are `IN`, `OUT`, and `INOUT`.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The name of this argument. Can be absent for function return argument.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

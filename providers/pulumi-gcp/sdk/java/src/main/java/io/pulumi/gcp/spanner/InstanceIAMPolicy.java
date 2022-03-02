@@ -121,6 +121,22 @@ public class InstanceIAMPolicy extends io.pulumi.resources.CustomResource {
         return this.project;
     }
 
+    public interface BuilderApplicator {
+        public void apply(InstanceIAMPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.spanner.InstanceIAMPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.spanner.InstanceIAMPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public InstanceIAMPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

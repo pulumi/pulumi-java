@@ -43,14 +43,14 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
     /**
      * Whether to perform a 'guest aware' snapshot.
      * 
-     */
+    */
     public Optional<Boolean> getGuestFlush() {
         return Optional.ofNullable(this.guestFlush);
     }
     /**
      * A set of key-value pairs.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
@@ -58,7 +58,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
      * Cloud Storage bucket location to store the auto snapshot
      * (regional or multi-regional)
      * 
-     */
+    */
     public Optional<String> getStorageLocations() {
         return Optional.ofNullable(this.storageLocations);
     }

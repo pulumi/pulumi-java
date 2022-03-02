@@ -33,14 +33,14 @@ public final class DeploymentLabel {
     /**
      * Key for label.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Value of label.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

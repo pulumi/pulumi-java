@@ -49,7 +49,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * (Optional, Deprecated)
      * Deprecated in favor of `project_id`
      * 
-     * @deprecated
+     * @Deprecated
      * Deprecated in favor of `project_id`
      * 
      */

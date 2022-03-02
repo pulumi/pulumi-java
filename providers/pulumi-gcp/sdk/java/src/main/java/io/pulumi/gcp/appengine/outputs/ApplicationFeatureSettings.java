@@ -25,7 +25,7 @@ public final class ApplicationFeatureSettings {
      * Set to false to use the legacy health check instead of the readiness
      * and liveness checks.
      * 
-     */
+    */
     public Boolean getSplitHealthChecks() {
         return this.splitHealthChecks;
     }

@@ -26,7 +26,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Transformation for each infoType. Cannot specify more than one for a given infoType.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation> getTransformations() {
         return this.transformations;
     }

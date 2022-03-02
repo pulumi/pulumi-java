@@ -33,14 +33,14 @@ public final class PolicySpecRuleValues {
     /**
      * List of values allowed at this resource.
      * 
-     */
+    */
     public List<String> getAllowedValues() {
         return this.allowedValues == null ? List.of() : this.allowedValues;
     }
     /**
      * List of values denied at this resource.
      * 
-     */
+    */
     public List<String> getDeniedValues() {
         return this.deniedValues == null ? List.of() : this.deniedValues;
     }

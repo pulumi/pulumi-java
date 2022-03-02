@@ -46,7 +46,7 @@ public final class CertificateConfigX509ConfigKeyUsage {
      * Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-     */
+    */
     public CertificateConfigX509ConfigKeyUsageBaseKeyUsage getBaseKeyUsage() {
         return this.baseKeyUsage;
     }
@@ -54,7 +54,7 @@ public final class CertificateConfigX509ConfigKeyUsage {
      * Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-     */
+    */
     public CertificateConfigX509ConfigKeyUsageExtendedKeyUsage getExtendedKeyUsage() {
         return this.extendedKeyUsage;
     }
@@ -62,7 +62,7 @@ public final class CertificateConfigX509ConfigKeyUsage {
      * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> getUnknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }

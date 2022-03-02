@@ -23,7 +23,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt {
     /**
      * Required. The name of the repository.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

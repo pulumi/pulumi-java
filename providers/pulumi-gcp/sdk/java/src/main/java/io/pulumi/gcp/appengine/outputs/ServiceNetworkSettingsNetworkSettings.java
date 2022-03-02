@@ -29,7 +29,7 @@ public final class ServiceNetworkSettingsNetworkSettings {
      * Default value is `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`.
      * Possible values are `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`, `INGRESS_TRAFFIC_ALLOWED_ALL`, `INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY`, and `INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB`.
      * 
-     */
+    */
     public Optional<String> getIngressTrafficAllowed() {
         return Optional.ofNullable(this.ingressTrafficAllowed);
     }

@@ -47,7 +47,7 @@ public final class GetAzureVersionsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -60,14 +60,14 @@ public final class GetAzureVersionsResult {
     /**
      * A list of Azure regions that are available for use with this project and GCP location.
      * 
-     */
+    */
     public List<String> getSupportedRegions() {
         return this.supportedRegions;
     }
     /**
      * A list of versions available for use with this project and location.
      * 
-     */
+    */
     public List<String> getValidVersions() {
         return this.validVersions;
     }

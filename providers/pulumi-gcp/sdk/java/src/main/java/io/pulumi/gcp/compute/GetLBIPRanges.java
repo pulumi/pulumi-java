@@ -12,17 +12,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLBIPRanges {
-/**
- * Use this data source to access IP ranges in your firewall rules.
- * 
- * https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_source_ips_and_firewall_rules
- * 
- * ## Example Usage
- * 
- *
- * A collection of values returned by getLBIPRanges.
- * 
- */
+    private GetLBIPRanges() {}
+    /**
+         * Use this data source to access IP ranges in your firewall rules.
+     * 
+     * https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_source_ips_and_firewall_rules
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of values returned by getLBIPRanges.
+     * 
+     */
     public static CompletableFuture<GetLBIPRangesResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getLBIPRanges:getLBIPRanges", TypeShape.of(GetLBIPRangesResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

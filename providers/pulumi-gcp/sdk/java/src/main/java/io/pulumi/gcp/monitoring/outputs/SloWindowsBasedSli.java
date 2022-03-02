@@ -85,7 +85,7 @@ public final class SloWindowsBasedSli {
      * `good_total_ratio_threshold`, `metric_mean_in_range`,
      * `metric_sum_in_range` must be set for `windows_based_sli`.
      * 
-     */
+    */
     public Optional<String> getGoodBadMetricFilter() {
         return Optional.ofNullable(this.goodBadMetricFilter);
     }
@@ -96,7 +96,7 @@ public final class SloWindowsBasedSli {
      * `metric_sum_in_range` must be set for `windows_based_sli`.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloWindowsBasedSliGoodTotalRatioThreshold> getGoodTotalRatioThreshold() {
         return Optional.ofNullable(this.goodTotalRatioThreshold);
     }
@@ -110,7 +110,7 @@ public final class SloWindowsBasedSli {
      * `range.min <= X <= range.max` for a good window.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloWindowsBasedSliMetricMeanInRange> getMetricMeanInRange() {
         return Optional.ofNullable(this.metricMeanInRange);
     }
@@ -124,7 +124,7 @@ public final class SloWindowsBasedSli {
      * `metric_sum_in_range` must be set for `windows_based_sli`.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloWindowsBasedSliMetricSumInRange> getMetricSumInRange() {
         return Optional.ofNullable(this.metricSumInRange);
     }
@@ -133,7 +133,7 @@ public final class SloWindowsBasedSli {
      * duration string "{X}s" representing X seconds. Must be an
      * integer fraction of a day and at least 60s.
      * 
-     */
+    */
     public Optional<String> getWindowPeriod() {
         return Optional.ofNullable(this.windowPeriod);
     }

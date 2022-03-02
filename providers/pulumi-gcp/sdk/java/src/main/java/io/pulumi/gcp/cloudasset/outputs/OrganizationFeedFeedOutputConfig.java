@@ -25,7 +25,7 @@ public final class OrganizationFeedFeedOutputConfig {
      * Destination on Cloud Pubsub.
      * Structure is documented below.
      * 
-     */
+    */
     public OrganizationFeedFeedOutputConfigPubsubDestination getPubsubDestination() {
         return this.pubsubDestination;
     }

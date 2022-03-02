@@ -34,14 +34,14 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi {
     /**
      * Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
      * 
-     */
+    */
     public List<String> getProperties() {
         return this.properties == null ? List.of() : this.properties;
     }
     /**
      * Required. An rpm package.
      * 
-     */
+    */
     public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource getSource() {
         return this.source;
     }

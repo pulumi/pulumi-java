@@ -37,7 +37,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicy {
      * The specification for how client requests are aborted as part of fault injection.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort> getAbort() {
         return Optional.ofNullable(this.abort);
     }
@@ -45,7 +45,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicy {
      * The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay> getDelay() {
         return Optional.ofNullable(this.delay);
     }

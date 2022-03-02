@@ -39,7 +39,7 @@ public final class TriggerBuildArtifactsObjectsTiming {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
      * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -48,7 +48,7 @@ public final class TriggerBuildArtifactsObjectsTiming {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to
      * nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }

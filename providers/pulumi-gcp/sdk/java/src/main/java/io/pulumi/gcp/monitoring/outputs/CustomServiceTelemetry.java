@@ -29,7 +29,7 @@ public final class CustomServiceTelemetry {
      * Formatted as described in
      * https://cloud.google.com/apis/design/resource_names.
      * 
-     */
+    */
     public Optional<String> getPropResourceName() {
         return Optional.ofNullable(this.resourceName);
     }

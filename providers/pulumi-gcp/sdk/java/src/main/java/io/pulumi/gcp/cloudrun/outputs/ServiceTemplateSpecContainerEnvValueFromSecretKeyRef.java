@@ -33,14 +33,14 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
      * The Cloud Secret Manager secret version.
      * Can be 'latest' for the latest value or an integer for a specific version.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Volume's name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

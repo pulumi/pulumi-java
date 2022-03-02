@@ -62,7 +62,7 @@ public final class ServiceTemplateSpecVolumeSecret {
      * this setting. This might be in conflict with other options that affect the
      * file mode, like fsGroup, and the result can be other mode bits set.
      * 
-     */
+    */
     public Optional<Integer> getDefaultMode() {
         return Optional.ofNullable(this.defaultMode);
     }
@@ -74,7 +74,7 @@ public final class ServiceTemplateSpecVolumeSecret {
      * volume. When items are defined, they must specify a key and a path.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServiceTemplateSpecVolumeSecretItem> getItems() {
         return this.items == null ? List.of() : this.items;
     }
@@ -89,7 +89,7 @@ public final class ServiceTemplateSpecVolumeSecret {
      * The alias definitions must be set on the run.googleapis.com/secrets
      * annotation.
      * 
-     */
+    */
     public String getSecretName() {
         return this.secretName;
     }

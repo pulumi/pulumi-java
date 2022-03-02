@@ -43,14 +43,14 @@ public final class GetZonesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A list of zones available in the given region
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }

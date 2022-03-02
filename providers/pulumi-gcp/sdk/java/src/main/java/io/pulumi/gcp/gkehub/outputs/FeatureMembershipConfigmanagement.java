@@ -58,35 +58,35 @@ public final class FeatureMembershipConfigmanagement {
     /**
      * Binauthz configuration for the cluster. Structure is documented below.
      * 
-     */
+    */
     public Optional<FeatureMembershipConfigmanagementBinauthz> getBinauthz() {
         return Optional.ofNullable(this.binauthz);
     }
     /**
      * Config Sync configuration for the cluster. Structure is documented below.
      * 
-     */
+    */
     public Optional<FeatureMembershipConfigmanagementConfigSync> getConfigSync() {
         return Optional.ofNullable(this.configSync);
     }
     /**
      * Hierarchy Controller configuration for the cluster. Structure is documented below.
      * 
-     */
+    */
     public Optional<FeatureMembershipConfigmanagementHierarchyController> getHierarchyController() {
         return Optional.ofNullable(this.hierarchyController);
     }
     /**
      * Policy Controller configuration for the cluster. Structure is documented below.
      * 
-     */
+    */
     public Optional<FeatureMembershipConfigmanagementPolicyController> getPolicyController() {
         return Optional.ofNullable(this.policyController);
     }
     /**
      * Version of ACM installed.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

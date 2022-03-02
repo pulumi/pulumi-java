@@ -36,7 +36,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
     /**
      * Count of cores of this accelerator.
      * 
-     */
+    */
     public Optional<Integer> getCoreCount() {
         return Optional.ofNullable(this.coreCount);
     }
@@ -45,7 +45,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
      * `https://cloud.google.com/vertex-ai/docs/workbench/reference/
      * rest/v1/projects.locations.runtimes#AcceleratorType`
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

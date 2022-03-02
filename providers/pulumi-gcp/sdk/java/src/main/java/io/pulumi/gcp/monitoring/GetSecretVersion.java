@@ -14,18 +14,42 @@ import javax.annotation.Nullable;
 
 @Deprecated /* gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion */
 public class GetSecretVersion {
-/**
+    private GetSecretVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecretVersionArgs.Builder a);
+    }
+    private static GetSecretVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecretVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * 
+     *
+     * A collection of arguments for invoking getSecretVersion.
  * 
- *
- * A collection of arguments for invoking getSecretVersion.
+     *
+     * A collection of values returned by getSecretVersion.
  * 
- *
- * A collection of values returned by getSecretVersion.
+     * @Deprecated
+     * gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion
  * 
- * @deprecated
- * gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion
- * 
- */
+     */
+    public static CompletableFuture<GetSecretVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * 
+     *
+         * A collection of arguments for invoking getSecretVersion.
+     * 
+     *
+         * A collection of values returned by getSecretVersion.
+     * 
+     * @Deprecated
+         * gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion
+     * 
+     */
     @Deprecated /* gcp.monitoring.getSecretVersion has been deprecated in favor of gcp.secretmanager.getSecretVersion */
     public static CompletableFuture<GetSecretVersionResult> invokeAsync(GetSecretVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:monitoring/getSecretVersion:getSecretVersion", TypeShape.of(GetSecretVersionResult.class), args == null ? GetSecretVersionArgs.Empty : args, Utilities.withVersion(options));

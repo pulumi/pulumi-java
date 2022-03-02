@@ -88,7 +88,7 @@ public final class GetClusterNodePool {
     /**
      * The name of the cluster.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

@@ -33,14 +33,14 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
      * The day of the week to create the snapshot. e.g. MONDAY
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
-     */
+    */
     public String getDay() {
         return this.day;
     }
     /**
      * The start time of the schedule. The timestamp is an RFC3339 string.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }

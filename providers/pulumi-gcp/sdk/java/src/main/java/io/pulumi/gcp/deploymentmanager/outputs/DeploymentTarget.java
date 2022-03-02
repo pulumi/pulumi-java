@@ -39,7 +39,7 @@ public final class DeploymentTarget {
      * The root configuration file to use for this deployment.
      * Structure is documented below.
      * 
-     */
+    */
     public DeploymentTargetConfig getConfig() {
         return this.config;
     }
@@ -49,7 +49,7 @@ public final class DeploymentTarget {
      * import a text file in order to use the file in a template.
      * Structure is documented below.
      * 
-     */
+    */
     public List<DeploymentTargetImport> getImports() {
         return this.imports == null ? List.of() : this.imports;
     }

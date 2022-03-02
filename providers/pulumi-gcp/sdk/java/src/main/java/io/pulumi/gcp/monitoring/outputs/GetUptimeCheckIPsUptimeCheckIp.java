@@ -45,7 +45,7 @@ public final class GetUptimeCheckIPsUptimeCheckIp {
      * rely on the IP addresses being in IPv4 format indefinitely, and should support interpreting this field in either
      * IPv4 or IPv6 format.
      * 
-     */
+    */
     public String getIpAddress() {
         return this.ipAddress;
     }
@@ -53,14 +53,14 @@ public final class GetUptimeCheckIPsUptimeCheckIp {
      * A more specific location within the region that typically encodes a particular city/town/metro
      * (and its containing state/province or country) within the broader umbrella region category.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * A broad region category in which the IP address is located.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }

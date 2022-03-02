@@ -46,11 +46,11 @@ public final class ServiceTemplateSpec {
      * It is expected
      * that the system will manipulate this based on routability and load.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by Cloud Run fully managed
      * 
      */
-    @Deprecated /* Not supported by Cloud Run fully managed */
+        @Deprecated /* Not supported by Cloud Run fully managed */
     private final @Nullable String servingState;
     /**
      * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
@@ -84,7 +84,7 @@ public final class ServiceTemplateSpec {
      * ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
      * requests per container of the Revision. Values are:
      * 
-     */
+    */
     public Optional<Integer> getContainerConcurrency() {
         return Optional.ofNullable(this.containerConcurrency);
     }
@@ -96,7 +96,7 @@ public final class ServiceTemplateSpec {
      * https://github.com/knative/serving/blob/master/docs/runtime-contract.md
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServiceTemplateSpecContainer> getContainers() {
         return this.containers == null ? List.of() : this.containers;
     }
@@ -106,7 +106,7 @@ public final class ServiceTemplateSpec {
      * and determines what permissions the revision has. If not provided, the revision
      * will use the project's default service account.
      * 
-     */
+    */
     public Optional<String> getServiceAccountName() {
         return Optional.ofNullable(this.serviceAccountName);
     }
@@ -117,10 +117,10 @@ public final class ServiceTemplateSpec {
      * It is expected
      * that the system will manipulate this based on routability and load.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by Cloud Run fully managed
      * 
-     */
+    */
     @Deprecated /* Not supported by Cloud Run fully managed */
     public Optional<String> getServingState() {
         return Optional.ofNullable(this.servingState);
@@ -128,7 +128,7 @@ public final class ServiceTemplateSpec {
     /**
      * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
      * 
-     */
+    */
     public Optional<Integer> getTimeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
@@ -136,7 +136,7 @@ public final class ServiceTemplateSpec {
      * Volume represents a named volume in a container.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServiceTemplateSpecVolume> getVolumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }

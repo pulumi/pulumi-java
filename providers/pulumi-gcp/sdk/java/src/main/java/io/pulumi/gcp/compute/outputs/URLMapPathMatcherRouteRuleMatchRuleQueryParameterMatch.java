@@ -58,7 +58,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch {
      * the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
      * must be set.
      * 
-     */
+    */
     public Optional<String> getExactMatch() {
         return Optional.ofNullable(this.exactMatch);
     }
@@ -66,7 +66,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch {
      * The name of the query parameter to match. The query parameter must exist in the
      * request, in the absence of which the request match fails.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -75,7 +75,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch {
      * parameter, irrespective of whether the parameter has a value or not. Only one of
      * presentMatch, exactMatch and regexMatch must be set.
      * 
-     */
+    */
     public Optional<Boolean> getPresentMatch() {
         return Optional.ofNullable(this.presentMatch);
     }
@@ -85,7 +85,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch {
      * please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
      * exactMatch and regexMatch must be set.
      * 
-     */
+    */
     public Optional<String> getRegexMatch() {
         return Optional.ofNullable(this.regexMatch);
     }

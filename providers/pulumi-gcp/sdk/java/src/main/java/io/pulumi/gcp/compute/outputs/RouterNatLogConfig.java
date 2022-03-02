@@ -33,7 +33,7 @@ public final class RouterNatLogConfig {
     /**
      * Indicates whether or not to export logs.
      * 
-     */
+    */
     public Boolean getEnable() {
         return this.enable;
     }
@@ -41,7 +41,7 @@ public final class RouterNatLogConfig {
      * Specifies the desired filtering of logs on this NAT.
      * Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
      * 
-     */
+    */
     public String getFilter() {
         return this.filter;
     }

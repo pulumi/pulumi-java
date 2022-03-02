@@ -32,14 +32,14 @@ public final class InstanceGroupNamedPort {
     /**
      * The name which the port will be mapped to.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The port number to map the name to.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }

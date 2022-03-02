@@ -25,7 +25,7 @@ public final class SecurityPolicyAdaptiveProtectionConfig {
     /**
      * Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
      * 
-     */
+    */
     public Optional<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig> getLayer7DdosDefenseConfig() {
         return Optional.ofNullable(this.layer7DdosDefenseConfig);
     }

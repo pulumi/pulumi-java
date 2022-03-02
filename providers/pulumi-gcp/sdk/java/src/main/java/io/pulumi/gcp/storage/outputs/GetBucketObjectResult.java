@@ -140,7 +140,7 @@ public final class GetBucketObjectResult {
      * (Computed) [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
      * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
      * 
-     */
+    */
     public String getCacheControl() {
         return this.cacheControl;
     }
@@ -150,35 +150,35 @@ public final class GetBucketObjectResult {
     /**
      * (Computed) [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
      * 
-     */
+    */
     public String getContentDisposition() {
         return this.contentDisposition;
     }
     /**
      * (Computed) [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
      * 
-     */
+    */
     public String getContentEncoding() {
         return this.contentEncoding;
     }
     /**
      * (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
      * 
-     */
+    */
     public String getContentLanguage() {
         return this.contentLanguage;
     }
     /**
      * (Computed) [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
      * 
-     */
+    */
     public String getContentType() {
         return this.contentType;
     }
     /**
      * (Computed) Base 64 CRC32 hash of the uploaded data.
      * 
-     */
+    */
     public String getCrc32c() {
         return this.crc32c;
     }
@@ -194,7 +194,7 @@ public final class GetBucketObjectResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -204,14 +204,14 @@ public final class GetBucketObjectResult {
     /**
      * (Computed) Base 64 MD5 hash of the uploaded data.
      * 
-     */
+    */
     public String getMd5hash() {
         return this.md5hash;
     }
     /**
      * (Computed) A url reference to download this object.
      * 
-     */
+    */
     public String getMediaLink() {
         return this.mediaLink;
     }
@@ -227,7 +227,7 @@ public final class GetBucketObjectResult {
     /**
      * (Computed) A url reference to this object.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
@@ -239,7 +239,7 @@ public final class GetBucketObjectResult {
      * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
      * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
      * 
-     */
+    */
     public String getStorageClass() {
         return this.storageClass;
     }

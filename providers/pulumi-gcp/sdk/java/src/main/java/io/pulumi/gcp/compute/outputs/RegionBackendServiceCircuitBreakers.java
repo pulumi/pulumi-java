@@ -71,7 +71,7 @@ public final class RegionBackendServiceCircuitBreakers {
      * The timeout for new network connections to hosts.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionBackendServiceCircuitBreakersConnectTimeout> getConnectTimeout() {
         return Optional.ofNullable(this.connectTimeout);
     }
@@ -79,7 +79,7 @@ public final class RegionBackendServiceCircuitBreakers {
      * The maximum number of connections to the backend cluster.
      * Defaults to 1024.
      * 
-     */
+    */
     public Optional<Integer> getMaxConnections() {
         return Optional.ofNullable(this.maxConnections);
     }
@@ -87,7 +87,7 @@ public final class RegionBackendServiceCircuitBreakers {
      * The maximum number of pending requests to the backend cluster.
      * Defaults to 1024.
      * 
-     */
+    */
     public Optional<Integer> getMaxPendingRequests() {
         return Optional.ofNullable(this.maxPendingRequests);
     }
@@ -95,7 +95,7 @@ public final class RegionBackendServiceCircuitBreakers {
      * The maximum number of parallel requests to the backend cluster.
      * Defaults to 1024.
      * 
-     */
+    */
     public Optional<Integer> getMaxRequests() {
         return Optional.ofNullable(this.maxRequests);
     }
@@ -105,7 +105,7 @@ public final class RegionBackendServiceCircuitBreakers {
      * not specified, there is no limit. Setting this parameter to 1
      * will effectively disable keep alive.
      * 
-     */
+    */
     public Optional<Integer> getMaxRequestsPerConnection() {
         return Optional.ofNullable(this.maxRequestsPerConnection);
     }
@@ -113,7 +113,7 @@ public final class RegionBackendServiceCircuitBreakers {
      * The maximum number of parallel retries to the backend cluster.
      * Defaults to 3.
      * 
-     */
+    */
     public Optional<Integer> getMaxRetries() {
         return Optional.ofNullable(this.maxRetries);
     }

@@ -23,7 +23,7 @@ public final class DataTransferConfigEmailPreferences {
     /**
      * If true, email notifications will be sent on transfer run failures.
      * 
-     */
+    */
     public Boolean getEnableFailureEmail() {
         return this.enableFailureEmail;
     }

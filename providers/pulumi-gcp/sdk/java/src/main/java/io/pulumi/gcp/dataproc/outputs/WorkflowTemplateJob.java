@@ -114,84 +114,84 @@ public final class WorkflowTemplateJob {
     /**
      * Optional. Job is a Hadoop job.
      * 
-     */
+    */
     public Optional<WorkflowTemplateJobHadoopJob> getHadoopJob() {
         return Optional.ofNullable(this.hadoopJob);
     }
     /**
      * Optional. Job is a Hive job.
      * 
-     */
+    */
     public Optional<WorkflowTemplateJobHiveJob> getHiveJob() {
         return Optional.ofNullable(this.hiveJob);
     }
     /**
      * Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
      * Optional. Job is a Pig job.
      * 
-     */
+    */
     public Optional<WorkflowTemplateJobPigJob> getPigJob() {
         return Optional.ofNullable(this.pigJob);
     }
     /**
      * Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
      * 
-     */
+    */
     public List<String> getPrerequisiteStepIds() {
         return this.prerequisiteStepIds == null ? List.of() : this.prerequisiteStepIds;
     }
     /**
      * Optional. Job is a Presto job.
      * 
-     */
+    */
     public Optional<WorkflowTemplateJobPrestoJob> getPrestoJob() {
         return Optional.ofNullable(this.prestoJob);
     }
     /**
      * Optional. Job is a PySpark job.
      * 
-     */
+    */
     public Optional<WorkflowTemplateJobPysparkJob> getPysparkJob() {
         return Optional.ofNullable(this.pysparkJob);
     }
     /**
      * Optional. Job scheduling configuration.
      * 
-     */
+    */
     public Optional<WorkflowTemplateJobScheduling> getScheduling() {
         return Optional.ofNullable(this.scheduling);
     }
     /**
      * Optional. Job is a Spark job.
      * 
-     */
+    */
     public Optional<WorkflowTemplateJobSparkJob> getSparkJob() {
         return Optional.ofNullable(this.sparkJob);
     }
     /**
      * Optional. Job is a SparkR job.
      * 
-     */
+    */
     public Optional<WorkflowTemplateJobSparkRJob> getSparkRJob() {
         return Optional.ofNullable(this.sparkRJob);
     }
     /**
      * Optional. Job is a SparkSql job.
      * 
-     */
+    */
     public Optional<WorkflowTemplateJobSparkSqlJob> getSparkSqlJob() {
         return Optional.ofNullable(this.sparkSqlJob);
     }
     /**
      * Required. The step id. The id must be unique among all jobs within the template. The step id is used as prefix for job id, as job `goog-dataproc-workflow-step-id` label, and in field from other steps. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
      * 
-     */
+    */
     public String getStepId() {
         return this.stepId;
     }

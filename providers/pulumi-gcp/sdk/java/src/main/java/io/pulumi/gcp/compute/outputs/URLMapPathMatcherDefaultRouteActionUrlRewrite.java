@@ -39,7 +39,7 @@ public final class URLMapPathMatcherDefaultRouteActionUrlRewrite {
      * with contents of hostRewrite.
      * The value must be between 1 and 255 characters.
      * 
-     */
+    */
     public Optional<String> getHostRewrite() {
         return Optional.ofNullable(this.hostRewrite);
     }
@@ -48,7 +48,7 @@ public final class URLMapPathMatcherDefaultRouteActionUrlRewrite {
      * request's path is replaced by pathPrefixRewrite.
      * The value must be between 1 and 1024 characters.
      * 
-     */
+    */
     public Optional<String> getPathPrefixRewrite() {
         return Optional.ofNullable(this.pathPrefixRewrite);
     }

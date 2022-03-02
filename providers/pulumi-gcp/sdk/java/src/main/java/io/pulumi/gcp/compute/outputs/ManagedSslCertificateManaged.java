@@ -26,7 +26,7 @@ public final class ManagedSslCertificateManaged {
      * Domains for which a managed SSL certificate will be valid.  Currently,
      * there can be up to 100 domains in this list.
      * 
-     */
+    */
     public List<String> getDomains() {
         return this.domains;
     }

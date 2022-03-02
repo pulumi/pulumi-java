@@ -33,14 +33,14 @@ public final class StandardAppVersionLibrary {
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Version of the library to select, or "latest".
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

@@ -32,7 +32,7 @@ public final class DomainMappingStatusResourceRecord {
     /**
      * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

@@ -38,7 +38,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressToOperationMethodSele
      * `serviceName` in `ApiOperation`. If `*` used as value for method,
      * then ALL methods and permissions are allowed.
      * 
-     */
+    */
     public Optional<String> getMethod() {
         return Optional.ofNullable(this.method);
     }
@@ -46,7 +46,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressToOperationMethodSele
      * Value for permission should be a valid Cloud IAM permission for the
      * corresponding `serviceName` in `ApiOperation`.
      * 
-     */
+    */
     public Optional<String> getPermission() {
         return Optional.ofNullable(this.permission);
     }

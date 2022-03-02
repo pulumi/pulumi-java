@@ -23,7 +23,7 @@ public final class GetInstanceScratchDisk {
     /**
      * The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
      * 
-     */
+    */
     public String get$interface() {
         return this.$interface;
     }

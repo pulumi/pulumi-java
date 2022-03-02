@@ -38,7 +38,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicy {
      * Defines conditions on the source of a request causing this `EgressPolicy` to apply.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom> getEgressFrom() {
         return Optional.ofNullable(this.egressFrom);
     }
@@ -47,7 +47,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicy {
      * cause this `EgressPolicy` to apply.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServicePerimetersServicePerimeterSpecEgressPolicyEgressTo> getEgressTo() {
         return Optional.ofNullable(this.egressTo);
     }

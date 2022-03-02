@@ -23,7 +23,7 @@ public final class TableColumnFamily {
     /**
      * The name of the column family.
      * 
-     */
+    */
     public String getFamily() {
         return this.family;
     }

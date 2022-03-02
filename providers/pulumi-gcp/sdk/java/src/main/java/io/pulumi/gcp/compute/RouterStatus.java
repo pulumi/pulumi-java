@@ -13,8 +13,17 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class RouterStatus {
-/**
- * Get a Cloud Router's status within GCE from its name and region. This data source exposes the
+    private RouterStatus() {}
+    public interface BuilderApplicator {
+        public void apply(RouterStatusArgs.Builder a);
+    }
+    private static RouterStatusArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = RouterStatusArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get a Cloud Router's status within GCE from its name and region. This data source exposes the
  * routes learned by a Cloud Router via BGP peers.
  * 
  * For more information see [the official documentation](https://cloud.google.com/network-connectivity/docs/router/how-to/viewing-router-details)
@@ -23,13 +32,33 @@ public class RouterStatus {
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking RouterStatus.
+     *
+     * A collection of arguments for invoking RouterStatus.
  * 
- *
- * A collection of values returned by RouterStatus.
+     *
+     * A collection of values returned by RouterStatus.
  * 
- */
+     */
+    public static CompletableFuture<RouterStatusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get a Cloud Router's status within GCE from its name and region. This data source exposes the
+     * routes learned by a Cloud Router via BGP peers.
+     * 
+     * For more information see [the official documentation](https://cloud.google.com/network-connectivity/docs/router/how-to/viewing-router-details)
+     * and
+     * [API](https://cloud.google.com/compute/docs/reference/rest/v1/routers/getRouterStatus).
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking RouterStatus.
+     * 
+     *
+         * A collection of values returned by RouterStatus.
+     * 
+     */
     public static CompletableFuture<RouterStatusResult> invokeAsync(RouterStatusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/routerStatus:RouterStatus", TypeShape.of(RouterStatusResult.class), args == null ? RouterStatusArgs.Empty : args, Utilities.withVersion(options));
     }

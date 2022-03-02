@@ -37,7 +37,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControl {
      * A nested object resource
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas> getMaxScaledInReplicas() {
         return Optional.ofNullable(this.maxScaledInReplicas);
     }
@@ -45,7 +45,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControl {
      * How long back autoscaling should look when computing recommendations
      * to include directives regarding slower scale down, as described above.
      * 
-     */
+    */
     public Optional<Integer> getTimeWindowSec() {
         return Optional.ofNullable(this.timeWindowSec);
     }

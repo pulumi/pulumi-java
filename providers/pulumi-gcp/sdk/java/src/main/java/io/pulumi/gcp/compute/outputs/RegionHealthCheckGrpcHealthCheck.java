@@ -69,7 +69,7 @@ public final class RegionHealthCheckGrpcHealthCheck {
      * * Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service.
      *   The grpcServiceName can only be ASCII.
      * 
-     */
+    */
     public Optional<String> getGrpcServiceName() {
         return Optional.ofNullable(this.grpcServiceName);
     }
@@ -78,7 +78,7 @@ public final class RegionHealthCheckGrpcHealthCheck {
      * Must be specified if portName and portSpecification are not set
      * or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
@@ -86,7 +86,7 @@ public final class RegionHealthCheckGrpcHealthCheck {
      * Port name as defined in InstanceGroup#NamedPort#name. If both port and
      * port_name are defined, port takes precedence.
      * 
-     */
+    */
     public Optional<String> getPortName() {
         return Optional.ofNullable(this.portName);
     }
@@ -103,7 +103,7 @@ public final class RegionHealthCheckGrpcHealthCheck {
      *   `portName` fields.
      *   Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
      * 
-     */
+    */
     public Optional<String> getPortSpecification() {
         return Optional.ofNullable(this.portSpecification);
     }

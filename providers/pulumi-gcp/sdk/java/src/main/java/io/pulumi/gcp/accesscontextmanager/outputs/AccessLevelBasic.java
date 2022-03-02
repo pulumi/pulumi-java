@@ -48,7 +48,7 @@ public final class AccessLevelBasic {
      * Default value is `AND`.
      * Possible values are `AND` and `OR`.
      * 
-     */
+    */
     public Optional<String> getCombiningFunction() {
         return Optional.ofNullable(this.combiningFunction);
     }
@@ -56,7 +56,7 @@ public final class AccessLevelBasic {
      * A set of requirements for the AccessLevel to be granted.
      * Structure is documented below.
      * 
-     */
+    */
     public List<AccessLevelBasicCondition> getConditions() {
         return this.conditions;
     }

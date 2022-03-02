@@ -45,7 +45,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
      * AND permissions for the service specified in `serviceName`.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToOperationMethodSelector> getMethodSelectors() {
         return this.methodSelectors == null ? List.of() : this.methodSelectors;
     }
@@ -54,7 +54,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressTo
      * `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
      * field set to `*` will allow all methods AND permissions for all services.
      * 
-     */
+    */
     public Optional<String> getServiceName() {
         return Optional.ofNullable(this.serviceName);
     }

@@ -39,14 +39,14 @@ public final class ManagedZoneForwardingConfigTargetNameServer {
      * to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
      * Possible values are `default` and `private`.
      * 
-     */
+    */
     public Optional<String> getForwardingPath() {
         return Optional.ofNullable(this.forwardingPath);
     }
     /**
      * IPv4 address of a target name server.
      * 
-     */
+    */
     public String getIpv4Address() {
         return this.ipv4Address;
     }

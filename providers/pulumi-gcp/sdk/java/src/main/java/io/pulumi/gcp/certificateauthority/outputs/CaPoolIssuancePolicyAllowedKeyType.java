@@ -37,7 +37,7 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
      * Represents an allowed Elliptic Curve key type.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve> getEllipticCurve() {
         return Optional.ofNullable(this.ellipticCurve);
     }
@@ -45,7 +45,7 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
      * Describes an RSA key that may be used in a Certificate issued from a CaPool.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<CaPoolIssuancePolicyAllowedKeyTypeRsa> getRsa() {
         return Optional.ofNullable(this.rsa);
     }

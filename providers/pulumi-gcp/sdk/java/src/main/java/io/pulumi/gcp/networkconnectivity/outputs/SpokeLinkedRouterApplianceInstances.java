@@ -33,14 +33,14 @@ public final class SpokeLinkedRouterApplianceInstances {
     /**
      * The list of router appliance instances
      * 
-     */
+    */
     public List<SpokeLinkedRouterApplianceInstancesInstance> getInstances() {
         return this.instances;
     }
     /**
      * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
      * 
-     */
+    */
     public Boolean getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
     }

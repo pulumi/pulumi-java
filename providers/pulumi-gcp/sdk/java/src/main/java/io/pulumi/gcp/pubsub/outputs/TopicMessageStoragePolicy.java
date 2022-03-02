@@ -34,7 +34,7 @@ public final class TopicMessageStoragePolicy {
      * allowed regions. An empty list means that no regions are allowed,
      * and is not a valid configuration.
      * 
-     */
+    */
     public List<String> getAllowedPersistenceRegions() {
         return this.allowedPersistenceRegions;
     }

@@ -52,28 +52,28 @@ public final class InboundSamlConfigIdpConfig {
      * The IdP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
      * Structure is documented below.
      * 
-     */
+    */
     public List<InboundSamlConfigIdpConfigIdpCertificate> getIdpCertificates() {
         return this.idpCertificates;
     }
     /**
      * Unique identifier for all SAML entities
      * 
-     */
+    */
     public String getIdpEntityId() {
         return this.idpEntityId;
     }
     /**
      * Indicates if outbounding SAMLRequest should be signed.
      * 
-     */
+    */
     public Optional<Boolean> getSignRequest() {
         return Optional.ofNullable(this.signRequest);
     }
     /**
      * URL to send Authentication request to.
      * 
-     */
+    */
     public String getSsoUrl() {
         return this.ssoUrl;
     }

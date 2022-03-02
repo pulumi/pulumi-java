@@ -40,7 +40,7 @@ public final class StandardAppVersionDeployment {
      * All files must be readable using the credentials supplied with this call.
      * Structure is documented below.
      * 
-     */
+    */
     public List<StandardAppVersionDeploymentFile> getFiles() {
         return this.files == null ? List.of() : this.files;
     }
@@ -48,7 +48,7 @@ public final class StandardAppVersionDeployment {
      * Zip File
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<StandardAppVersionDeploymentZip> getZip() {
         return Optional.ofNullable(this.zip);
     }
