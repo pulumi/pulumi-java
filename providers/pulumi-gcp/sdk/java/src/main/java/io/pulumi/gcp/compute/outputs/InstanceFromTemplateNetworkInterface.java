@@ -78,7 +78,7 @@ public final class InstanceFromTemplateNetworkInterface {
      * A unique name for the resource, required by GCE.
      * Changing this forces a new resource to be created.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

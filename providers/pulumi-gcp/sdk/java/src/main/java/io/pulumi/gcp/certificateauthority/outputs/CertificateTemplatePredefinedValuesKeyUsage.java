@@ -43,21 +43,21 @@ public final class CertificateTemplatePredefinedValuesKeyUsage {
     /**
      * Describes high-level ways in which a key may be used.
      * 
-     */
+    */
     public Optional<CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage> getBaseKeyUsage() {
         return Optional.ofNullable(this.baseKeyUsage);
     }
     /**
      * Detailed scenarios in which a key may be used.
      * 
-     */
+    */
     public Optional<CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage> getExtendedKeyUsage() {
         return Optional.ofNullable(this.extendedKeyUsage);
     }
     /**
      * Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
      * 
-     */
+    */
     public List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage> getUnknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }

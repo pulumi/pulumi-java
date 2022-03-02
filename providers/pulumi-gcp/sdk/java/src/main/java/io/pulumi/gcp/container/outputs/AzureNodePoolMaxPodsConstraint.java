@@ -23,7 +23,7 @@ public final class AzureNodePoolMaxPodsConstraint {
     /**
      * Required. The maximum number of pods to schedule on a single node.
      * 
-     */
+    */
     public Integer getMaxPodsPerNode() {
         return this.maxPodsPerNode;
     }

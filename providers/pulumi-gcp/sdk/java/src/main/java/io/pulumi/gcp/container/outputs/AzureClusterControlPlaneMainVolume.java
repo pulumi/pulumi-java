@@ -25,7 +25,7 @@ public final class AzureClusterControlPlaneMainVolume {
     /**
      * Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
      * 
-     */
+    */
     public Optional<Integer> getSizeGib() {
         return Optional.ofNullable(this.sizeGib);
     }

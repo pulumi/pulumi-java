@@ -33,14 +33,14 @@ public final class GetUptimeCheckIPsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A list of uptime check IPs used by Stackdriver Monitoring. Each `uptime_check_ip` contains:
      * 
-     */
+    */
     public List<GetUptimeCheckIPsUptimeCheckIp> getUptimeCheckIps() {
         return this.uptimeCheckIps;
     }

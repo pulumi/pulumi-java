@@ -33,7 +33,7 @@ public final class DatabaseInstanceSettingsDatabaseFlag {
     /**
      * A name for this whitelist entry.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -42,7 +42,7 @@ public final class DatabaseInstanceSettingsDatabaseFlag {
      * access this instance. Must be set even if other two attributes are not for
      * the whitelist to become active.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

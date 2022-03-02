@@ -32,7 +32,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     /**
      * The resource name of the KMS CryptoKey to use for unwrapping.
      * 
-     */
+    */
     public String getCryptoKeyName() {
         return this.cryptoKeyName;
     }
@@ -40,7 +40,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * The wrapped data crypto key.
      * A base64-encoded string.
      * 
-     */
+    */
     public String getWrappedKey() {
         return this.wrappedKey;
     }

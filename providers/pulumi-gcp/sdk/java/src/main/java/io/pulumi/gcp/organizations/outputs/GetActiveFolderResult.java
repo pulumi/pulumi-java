@@ -40,14 +40,14 @@ public final class GetActiveFolderResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name of the Folder. This uniquely identifies the folder.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

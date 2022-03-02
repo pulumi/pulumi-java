@@ -42,14 +42,14 @@ public final class MetricDescriptorLabel {
     /**
      * A human-readable description for the label.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The key for this label. The key must not exceed 100 characters. The first character of the key must be an upper- or lower-case letter, the remaining characters must be letters, digits or underscores, and the key must match the regular expression [a-zA-Z][a-zA-Z0-9_]*
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
@@ -58,7 +58,7 @@ public final class MetricDescriptorLabel {
      * Default value is `STRING`.
      * Possible values are `STRING`, `BOOL`, and `INT64`.
      * 
-     */
+    */
     public Optional<String> getValueType() {
         return Optional.ofNullable(this.valueType);
     }

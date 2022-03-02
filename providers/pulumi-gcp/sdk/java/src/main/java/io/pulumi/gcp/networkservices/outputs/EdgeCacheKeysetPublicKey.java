@@ -37,7 +37,7 @@ public final class EdgeCacheKeysetPublicKey {
      * The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]*
      * which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -46,7 +46,7 @@ public final class EdgeCacheKeysetPublicKey {
      * Representations or encodings of the public key other than this will be rejected with an error.
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

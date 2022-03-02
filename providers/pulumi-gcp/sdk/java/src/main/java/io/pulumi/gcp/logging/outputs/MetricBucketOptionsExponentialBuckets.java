@@ -41,21 +41,21 @@ public final class MetricBucketOptionsExponentialBuckets {
     /**
      * Must be greater than 1.
      * 
-     */
+    */
     public Optional<Double> getGrowthFactor() {
         return Optional.ofNullable(this.growthFactor);
     }
     /**
      * Must be greater than 0.
      * 
-     */
+    */
     public Optional<Integer> getNumFiniteBuckets() {
         return Optional.ofNullable(this.numFiniteBuckets);
     }
     /**
      * Must be greater than 0.
      * 
-     */
+    */
     public Optional<Double> getScale() {
         return Optional.ofNullable(this.scale);
     }

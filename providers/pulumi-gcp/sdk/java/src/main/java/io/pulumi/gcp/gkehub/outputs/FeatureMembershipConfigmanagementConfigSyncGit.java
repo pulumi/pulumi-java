@@ -74,49 +74,49 @@ public final class FeatureMembershipConfigmanagementConfigSyncGit {
     /**
      * URL for the HTTPS proxy to be used when communicating with the Git repo.
      * 
-     */
+    */
     public Optional<String> getHttpsProxy() {
         return Optional.ofNullable(this.httpsProxy);
     }
     /**
      * The path within the Git repository that represents the top level of the repo to sync. Default: the root directory of the repository.
      * 
-     */
+    */
     public Optional<String> getPolicyDir() {
         return Optional.ofNullable(this.policyDir);
     }
     /**
      * Type of secret configured for access to the Git repo.
      * 
-     */
+    */
     public Optional<String> getSecretType() {
         return Optional.ofNullable(this.secretType);
     }
     /**
      * The branch of the repository to sync from. Default: master.
      * 
-     */
+    */
     public Optional<String> getSyncBranch() {
         return Optional.ofNullable(this.syncBranch);
     }
     /**
      * The URL of the Git repository to use as the source of truth.
      * 
-     */
+    */
     public Optional<String> getSyncRepo() {
         return Optional.ofNullable(this.syncRepo);
     }
     /**
      * Git revision (tag or hash) to check out. Default HEAD.
      * 
-     */
+    */
     public Optional<String> getSyncRev() {
         return Optional.ofNullable(this.syncRev);
     }
     /**
      * Period in seconds between consecutive syncs. Default: 15.
      * 
-     */
+    */
     public Optional<String> getSyncWaitSecs() {
         return Optional.ofNullable(this.syncWaitSecs);
     }

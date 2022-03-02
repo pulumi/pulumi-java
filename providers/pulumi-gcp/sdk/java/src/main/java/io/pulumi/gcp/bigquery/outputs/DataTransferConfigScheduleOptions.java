@@ -56,7 +56,7 @@ public final class DataTransferConfigScheduleOptions {
      * scheduling is disabled, the TransferConfig.schedule field will
      * be ignored.
      * 
-     */
+    */
     public Optional<Boolean> getDisableAutoScheduling() {
         return Optional.ofNullable(this.disableAutoScheduling);
     }
@@ -66,7 +66,7 @@ public final class DataTransferConfigScheduleOptions {
      * moment. The time when a data transfer can be triggered manually is not
      * limited by this option.
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -77,7 +77,7 @@ public final class DataTransferConfigScheduleOptions {
      * moment. The time when a data transfer can be triggered manually is not
      * limited by this option.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }

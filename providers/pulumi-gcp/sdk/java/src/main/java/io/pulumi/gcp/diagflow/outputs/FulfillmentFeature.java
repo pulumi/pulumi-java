@@ -27,7 +27,7 @@ public final class FulfillmentFeature {
      * * SMALLTALK: Fulfillment is enabled for SmallTalk.
      *   Possible values are `SMALLTALK`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

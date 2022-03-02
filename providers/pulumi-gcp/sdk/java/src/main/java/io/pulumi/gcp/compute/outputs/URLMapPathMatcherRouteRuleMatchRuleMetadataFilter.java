@@ -45,7 +45,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilter {
      * most 64 entries.
      * Structure is documented below.
      * 
-     */
+    */
     public List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> getFilterLabels() {
         return this.filterLabels;
     }
@@ -58,7 +58,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilter {
      *   the provided metadata.
      *   Possible values are `MATCH_ALL` and `MATCH_ANY`.
      * 
-     */
+    */
     public String getFilterMatchCriteria() {
         return this.filterMatchCriteria;
     }

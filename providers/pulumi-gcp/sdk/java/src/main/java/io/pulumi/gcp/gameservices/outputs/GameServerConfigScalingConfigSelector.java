@@ -25,7 +25,7 @@ public final class GameServerConfigScalingConfigSelector {
     /**
      * Set of labels to group by.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }

@@ -33,14 +33,14 @@ public final class PatchDeploymentRecurringScheduleTimeZone {
     /**
      * IANA Time Zone Database time zone, e.g. "America/New_York".
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * IANA Time Zone Database version number, e.g. "2019a".
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

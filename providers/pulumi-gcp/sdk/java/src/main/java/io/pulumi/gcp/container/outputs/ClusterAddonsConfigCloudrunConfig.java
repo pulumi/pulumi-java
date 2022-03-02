@@ -37,7 +37,7 @@ public final class ClusterAddonsConfigCloudrunConfig {
      * The status of the Istio addon, which makes it easy to set up Istio for services in a
      * cluster. It is disabled by default. Set `disabled = false` to enable.
      * 
-     */
+    */
     public Boolean getDisabled() {
         return this.disabled;
     }
@@ -45,7 +45,7 @@ public final class ClusterAddonsConfigCloudrunConfig {
      * The load balancer type of CloudRun ingress service. It is external load balancer by default.
      * Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
      * 
-     */
+    */
     public Optional<String> getLoadBalancerType() {
         return Optional.ofNullable(this.loadBalancerType);
     }

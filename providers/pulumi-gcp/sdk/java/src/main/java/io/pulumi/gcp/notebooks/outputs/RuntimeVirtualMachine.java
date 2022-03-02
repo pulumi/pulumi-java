@@ -45,7 +45,7 @@ public final class RuntimeVirtualMachine {
      * - 
      * The unique identifier of the Managed Compute Engine instance.
      * 
-     */
+    */
     public Optional<String> getInstanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -53,7 +53,7 @@ public final class RuntimeVirtualMachine {
      * - 
      * The user-friendly name of the Managed Compute Engine instance.
      * 
-     */
+    */
     public Optional<String> getInstanceName() {
         return Optional.ofNullable(this.instanceName);
     }
@@ -61,7 +61,7 @@ public final class RuntimeVirtualMachine {
      * Virtual Machine configuration settings.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RuntimeVirtualMachineVirtualMachineConfig> getVirtualMachineConfig() {
         return Optional.ofNullable(this.virtualMachineConfig);
     }

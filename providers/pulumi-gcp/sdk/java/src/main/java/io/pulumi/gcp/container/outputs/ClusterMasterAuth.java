@@ -39,7 +39,7 @@ public final class ClusterMasterAuth {
     /**
      * Whether client certificate authorization is enabled for this cluster.  For example:
      * 
-     */
+    */
     public ClusterMasterAuthClientCertificateConfig getClientCertificateConfig() {
         return this.clientCertificateConfig;
     }

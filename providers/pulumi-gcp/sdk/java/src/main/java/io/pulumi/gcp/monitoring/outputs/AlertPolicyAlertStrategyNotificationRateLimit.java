@@ -25,7 +25,7 @@ public final class AlertPolicyAlertStrategyNotificationRateLimit {
     /**
      * Not more than one notification per period.
      * 
-     */
+    */
     public Optional<String> getPeriod() {
         return Optional.ofNullable(this.period);
     }

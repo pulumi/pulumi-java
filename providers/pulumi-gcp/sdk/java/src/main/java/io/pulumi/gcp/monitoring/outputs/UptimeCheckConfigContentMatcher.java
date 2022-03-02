@@ -35,7 +35,7 @@ public final class UptimeCheckConfigContentMatcher {
     /**
      * String or regex content to match (max 1024 bytes)
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
@@ -44,7 +44,7 @@ public final class UptimeCheckConfigContentMatcher {
      * Default value is `CONTAINS_STRING`.
      * Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NOT_MATCHES_REGEX`.
      * 
-     */
+    */
     public Optional<String> getMatcher() {
         return Optional.ofNullable(this.matcher);
     }

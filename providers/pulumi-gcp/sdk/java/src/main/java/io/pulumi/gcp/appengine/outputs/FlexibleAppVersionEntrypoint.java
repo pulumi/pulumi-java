@@ -23,7 +23,7 @@ public final class FlexibleAppVersionEntrypoint {
     /**
      * The format should be a shell command that can be fed to bash -c.
      * 
-     */
+    */
     public String getShell() {
         return this.shell;
     }

@@ -25,7 +25,7 @@ public final class ManagedZoneServiceDirectoryConfig {
      * The namespace associated with the zone.
      * Structure is documented below.
      * 
-     */
+    */
     public ManagedZoneServiceDirectoryConfigNamespace getNamespace() {
         return this.namespace;
     }

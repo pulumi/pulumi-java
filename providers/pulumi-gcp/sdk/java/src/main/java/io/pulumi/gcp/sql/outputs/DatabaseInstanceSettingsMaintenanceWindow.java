@@ -42,14 +42,14 @@ public final class DatabaseInstanceSettingsMaintenanceWindow {
     /**
      * Day of week (`1-7`), starting on Monday
      * 
-     */
+    */
     public Optional<Integer> getDay() {
         return Optional.ofNullable(this.day);
     }
     /**
      * Hour of day (`0-23`), ignored if `day` not set
      * 
-     */
+    */
     public Optional<Integer> getHour() {
         return Optional.ofNullable(this.hour);
     }
@@ -57,7 +57,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindow {
      * Receive updates earlier (`canary`) or later
      * (`stable`)
      * 
-     */
+    */
     public Optional<String> getUpdateTrack() {
         return Optional.ofNullable(this.updateTrack);
     }

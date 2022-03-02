@@ -44,7 +44,7 @@ public final class GetRepositoryResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

@@ -57,7 +57,7 @@ public final class ReservationSpecificReservationInstanceProperties {
      * Guest accelerator type and count.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ReservationSpecificReservationInstancePropertiesGuestAccelerator> getGuestAccelerators() {
         return this.guestAccelerators == null ? List.of() : this.guestAccelerators;
     }
@@ -66,14 +66,14 @@ public final class ReservationSpecificReservationInstanceProperties {
      * reserves disks of type `local-ssd`.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ReservationSpecificReservationInstancePropertiesLocalSsd> getLocalSsds() {
         return this.localSsds == null ? List.of() : this.localSsds;
     }
     /**
      * The name of the machine type to reserve.
      * 
-     */
+    */
     public String getMachineType() {
         return this.machineType;
     }
@@ -83,7 +83,7 @@ public final class ReservationSpecificReservationInstanceProperties {
      * the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
      * for information on available CPU platforms.
      * 
-     */
+    */
     public Optional<String> getMinCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }

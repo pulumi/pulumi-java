@@ -50,7 +50,7 @@ public final class InstanceShieldedInstanceConfig {
      * This baseline is initially derived from the implicitly trusted boot image when the instance is created.
      * Enabled by default.
      * 
-     */
+    */
     public Optional<Boolean> getEnableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
@@ -60,7 +60,7 @@ public final class InstanceShieldedInstanceConfig {
      * if signature verification fails.
      * Disabled by default.
      * 
-     */
+    */
     public Optional<Boolean> getEnableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
@@ -68,7 +68,7 @@ public final class InstanceShieldedInstanceConfig {
      * Defines whether the instance has the vTPM enabled.
      * Enabled by default.
      * 
-     */
+    */
     public Optional<Boolean> getEnableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }

@@ -25,7 +25,7 @@ public final class CxEntityTypeExcludedPhrase {
     /**
      * The word or phrase to be excluded.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

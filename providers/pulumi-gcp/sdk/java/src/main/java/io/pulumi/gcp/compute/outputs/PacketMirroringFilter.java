@@ -46,7 +46,7 @@ public final class PacketMirroringFilter {
      * IP CIDR ranges that apply as a filter on the source (ingress) or
      * destination (egress) IP in the IP header. Only IPv4 is supported.
      * 
-     */
+    */
     public List<String> getCidrRanges() {
         return this.cidrRanges == null ? List.of() : this.cidrRanges;
     }
@@ -55,7 +55,7 @@ public final class PacketMirroringFilter {
      * Default value is `BOTH`.
      * Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
      * 
-     */
+    */
     public Optional<String> getDirection() {
         return Optional.ofNullable(this.direction);
     }
@@ -63,7 +63,7 @@ public final class PacketMirroringFilter {
      * Protocols that apply as a filter on mirrored traffic.
      * Each value may be one of `tcp`, `udp`, and `icmp`.
      * 
-     */
+    */
     public List<String> getIpProtocols() {
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
     }

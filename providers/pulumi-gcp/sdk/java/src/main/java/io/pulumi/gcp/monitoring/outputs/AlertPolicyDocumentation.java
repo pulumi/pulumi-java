@@ -40,7 +40,7 @@ public final class AlertPolicyDocumentation {
      * exceed more than 10,240 bytes when encoded in UTF-8 format,
      * whichever is smaller.
      * 
-     */
+    */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
@@ -48,7 +48,7 @@ public final class AlertPolicyDocumentation {
      * The format of the content field. Presently, only the value
      * "text/markdown" is supported.
      * 
-     */
+    */
     public Optional<String> getMimeType() {
         return Optional.ofNullable(this.mimeType);
     }

@@ -33,14 +33,14 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
     /**
      * If not empty, the ID of the namespace to which the entities belong.
      * 
-     */
+    */
     public Optional<String> getNamespaceId() {
         return Optional.ofNullable(this.namespaceId);
     }
     /**
      * The Google Cloud Platform project ID of the project containing the table.
      * 
-     */
+    */
     public String getProjectId() {
         return this.projectId;
     }

@@ -49,7 +49,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformance {
      * measuring good service and total service.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut> getDistributionCut() {
         return Optional.ofNullable(this.distributionCut);
     }
@@ -61,7 +61,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformance {
      * will be assumed.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio> getGoodTotalRatio() {
         return Optional.ofNullable(this.goodTotalRatio);
     }

@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRepository {
+    private GetRepository() {}
+    public interface BuilderApplicator {
+        public void apply(GetRepositoryArgs.Builder a);
+    }
+    private static GetRepositoryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRepositoryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    public static CompletableFuture<GetRepositoryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
     public static CompletableFuture<GetRepositoryResult> invokeAsync(GetRepositoryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:sourcerepo/getRepository:getRepository", TypeShape.of(GetRepositoryResult.class), args == null ? GetRepositoryArgs.Empty : args, Utilities.withVersion(options));
     }

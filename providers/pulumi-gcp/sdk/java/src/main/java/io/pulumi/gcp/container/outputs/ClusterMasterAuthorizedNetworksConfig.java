@@ -27,7 +27,7 @@ public final class ClusterMasterAuthorizedNetworksConfig {
      * External networks that can access the
      * Kubernetes cluster master through HTTPS.
      * 
-     */
+    */
     public List<ClusterMasterAuthorizedNetworksConfigCidrBlock> getCidrBlocks() {
         return this.cidrBlocks == null ? List.of() : this.cidrBlocks;
     }

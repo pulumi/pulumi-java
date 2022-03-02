@@ -23,7 +23,7 @@ public final class DicomStoreStreamConfigBigqueryDestination {
     /**
      * a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
      * 
-     */
+    */
     public String getTableUri() {
         return this.tableUri;
     }

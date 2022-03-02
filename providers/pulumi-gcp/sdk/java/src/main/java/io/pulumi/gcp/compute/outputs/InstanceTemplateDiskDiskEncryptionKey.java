@@ -23,7 +23,7 @@ public final class InstanceTemplateDiskDiskEncryptionKey {
     /**
      * The self link of the encryption key that is stored in Google Cloud KMS
      * 
-     */
+    */
     public String getKmsKeySelfLink() {
         return this.kmsKeySelfLink;
     }

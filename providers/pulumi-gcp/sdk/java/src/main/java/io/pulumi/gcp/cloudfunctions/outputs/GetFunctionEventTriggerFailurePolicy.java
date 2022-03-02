@@ -23,7 +23,7 @@ public final class GetFunctionEventTriggerFailurePolicy {
     /**
      * Whether the function should be retried on failure.
      * 
-     */
+    */
     public Boolean getRetry() {
         return this.retry;
     }

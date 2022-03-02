@@ -42,7 +42,7 @@ public final class TriggerBuildSourceStorageSource {
     /**
      * Google Cloud Storage bucket containing the source.
      * 
-     */
+    */
     public String getBucket() {
         return this.bucket;
     }
@@ -50,7 +50,7 @@ public final class TriggerBuildSourceStorageSource {
      * Google Cloud Storage generation for the object.
      * If the generation is omitted, the latest generation will be used
      * 
-     */
+    */
     public Optional<String> getGeneration() {
         return Optional.ofNullable(this.generation);
     }
@@ -58,7 +58,7 @@ public final class TriggerBuildSourceStorageSource {
      * Google Cloud Storage object containing the source.
      * This object must be a gzipped archive file (.tar.gz) containing source to build.
      * 
-     */
+    */
     public String getObject() {
         return this.object;
     }

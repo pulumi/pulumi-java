@@ -67,6 +67,22 @@ public class ProjectDefaultNetworkTier extends io.pulumi.resources.CustomResourc
         return this.project;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ProjectDefaultNetworkTierArgs.Builder a);
+    }
+    private static io.pulumi.gcp.compute.ProjectDefaultNetworkTierArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.compute.ProjectDefaultNetworkTierArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ProjectDefaultNetworkTier(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

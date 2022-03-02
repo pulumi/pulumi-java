@@ -49,14 +49,14 @@ public final class GetRuleResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * specifies the list of one or more permissions to include in the custom role, such as - `iam.roles.get`
      * 
-     */
+    */
     public List<String> getIncludedPermissions() {
         return this.includedPermissions;
     }
@@ -66,14 +66,14 @@ public final class GetRuleResult {
     /**
      * indicates the stage of a role in the launch lifecycle, such as `GA`, `BETA` or `ALPHA`.
      * 
-     */
+    */
     public String getStage() {
         return this.stage;
     }
     /**
      * is a friendly title for the role, such as "Role Viewer"
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }

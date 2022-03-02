@@ -77,6 +77,22 @@ public class ProjectMetadataItem extends io.pulumi.resources.CustomResource {
         return this.value;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ProjectMetadataItemArgs.Builder a);
+    }
+    private static io.pulumi.gcp.compute.ProjectMetadataItemArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.compute.ProjectMetadataItemArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ProjectMetadataItem(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

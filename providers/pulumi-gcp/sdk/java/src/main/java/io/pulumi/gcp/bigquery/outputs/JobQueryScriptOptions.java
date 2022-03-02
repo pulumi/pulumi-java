@@ -44,21 +44,21 @@ public final class JobQueryScriptOptions {
      * used to populate the schema and query results of the script job.
      * Possible values are `LAST` and `FIRST_SELECT`.
      * 
-     */
+    */
     public Optional<String> getKeyResultStatement() {
         return Optional.ofNullable(this.keyResultStatement);
     }
     /**
      * Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
      * 
-     */
+    */
     public Optional<String> getStatementByteBudget() {
         return Optional.ofNullable(this.statementByteBudget);
     }
     /**
      * Timeout period for each statement in a script.
      * 
-     */
+    */
     public Optional<String> getStatementTimeoutMs() {
         return Optional.ofNullable(this.statementTimeoutMs);
     }

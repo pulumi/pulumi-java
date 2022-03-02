@@ -44,14 +44,14 @@ public final class PreventionJobTriggerInspectJob {
      * A task to execute on the completion of a job.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PreventionJobTriggerInspectJobAction> getActions() {
         return this.actions;
     }
     /**
      * The name of the template to run when this job is triggered.
      * 
-     */
+    */
     public String getInspectTemplateName() {
         return this.inspectTemplateName;
     }
@@ -59,7 +59,7 @@ public final class PreventionJobTriggerInspectJob {
      * Information on where to inspect
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionJobTriggerInspectJobStorageConfig getStorageConfig() {
         return this.storageConfig;
     }

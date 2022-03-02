@@ -46,7 +46,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsage {
      * Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-     */
+    */
     public CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage getBaseKeyUsage() {
         return this.baseKeyUsage;
     }
@@ -54,7 +54,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsage {
      * Describes high-level ways in which a key may be used.
      * Structure is documented below.
      * 
-     */
+    */
     public CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage getExtendedKeyUsage() {
         return this.extendedKeyUsage;
     }
@@ -62,7 +62,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsage {
      * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * Structure is documented below.
      * 
-     */
+    */
     public List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage> getUnknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages == null ? List.of() : this.unknownExtendedKeyUsages;
     }

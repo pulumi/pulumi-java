@@ -111,7 +111,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * A nested object resource
      * Structure is documented below.
      * 
-     * @deprecated
+     * @Deprecated
      * This field has been replaced by notificationConfigs
      * 
      */
@@ -180,6 +180,22 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
         return this.selfLink;
     }
 
+    public interface BuilderApplicator {
+        public void apply(Hl7StoreArgs.Builder a);
+    }
+    private static io.pulumi.gcp.healthcare.Hl7StoreArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.healthcare.Hl7StoreArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Hl7Store(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -102,6 +102,22 @@ public class TagKeyIamPolicy extends io.pulumi.resources.CustomResource {
         return this.tagKey;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TagKeyIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.gcp.tags.TagKeyIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.tags.TagKeyIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TagKeyIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

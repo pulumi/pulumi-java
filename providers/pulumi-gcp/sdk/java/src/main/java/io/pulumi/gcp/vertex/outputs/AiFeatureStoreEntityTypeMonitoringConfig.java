@@ -27,7 +27,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfig {
      * Configuration of how features in Featurestore are monitored.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis> getSnapshotAnalysis() {
         return Optional.ofNullable(this.snapshotAnalysis);
     }

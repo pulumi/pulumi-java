@@ -45,7 +45,7 @@ public final class MetastoreServiceHiveMetastoreConfig {
      * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml).
      * The mappings override system defaults (some keys cannot be overridden)
      * 
-     */
+    */
     public Map<String,String> getConfigOverrides() {
         return this.configOverrides == null ? Map.of() : this.configOverrides;
     }
@@ -53,14 +53,14 @@ public final class MetastoreServiceHiveMetastoreConfig {
      * Information used to configure the Hive metastore service as a service principal in a Kerberos realm.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<MetastoreServiceHiveMetastoreConfigKerberosConfig> getKerberosConfig() {
         return Optional.ofNullable(this.kerberosConfig);
     }
     /**
      * The Hive metastore schema version.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

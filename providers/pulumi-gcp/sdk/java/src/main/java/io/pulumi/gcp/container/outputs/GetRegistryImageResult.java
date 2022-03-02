@@ -47,7 +47,7 @@ public final class GetRegistryImageResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

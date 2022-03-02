@@ -25,7 +25,7 @@ public final class FolderFeedFeedOutputConfig {
      * Destination on Cloud Pubsub.
      * Structure is documented below.
      * 
-     */
+    */
     public FolderFeedFeedOutputConfigPubsubDestination getPubsubDestination() {
         return this.pubsubDestination;
     }

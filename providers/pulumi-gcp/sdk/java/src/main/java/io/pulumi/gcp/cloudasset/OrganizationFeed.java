@@ -201,6 +201,22 @@ public class OrganizationFeed extends io.pulumi.resources.CustomResource {
         return this.orgId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(OrganizationFeedArgs.Builder a);
+    }
+    private static io.pulumi.gcp.cloudasset.OrganizationFeedArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.cloudasset.OrganizationFeedArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public OrganizationFeed(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

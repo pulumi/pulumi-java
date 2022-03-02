@@ -34,7 +34,7 @@ public final class IntentFollowupIntentInfo {
      * The unique identifier of the parent intent in the chain of followup intents.
      * Format: projects/<Project ID>/agent/intents/<Intent ID>.
      * 
-     */
+    */
     public Optional<String> getParentFollowupIntentName() {
         return Optional.ofNullable(this.parentFollowupIntentName);
     }

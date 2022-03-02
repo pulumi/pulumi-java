@@ -41,7 +41,7 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange {
      * netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API
      * error.
      * 
-     */
+    */
     public String getIpCidrRange() {
         return this.ipCidrRange;
     }
@@ -50,7 +50,7 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange {
      * the secondary range from which to allocate the IP CIDR range for this alias IP
      * range. If left unspecified, the primary range of the subnetwork will be used.
      * 
-     */
+    */
     public String getSubnetworkRangeName() {
         return this.subnetworkRangeName;
     }

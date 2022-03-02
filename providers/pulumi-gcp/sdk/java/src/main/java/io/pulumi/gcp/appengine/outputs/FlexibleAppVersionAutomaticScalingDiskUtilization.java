@@ -47,28 +47,28 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilization {
     /**
      * Target bytes read per second.
      * 
-     */
+    */
     public Optional<Integer> getTargetReadBytesPerSecond() {
         return Optional.ofNullable(this.targetReadBytesPerSecond);
     }
     /**
      * Target ops read per seconds.
      * 
-     */
+    */
     public Optional<Integer> getTargetReadOpsPerSecond() {
         return Optional.ofNullable(this.targetReadOpsPerSecond);
     }
     /**
      * Target bytes written per second.
      * 
-     */
+    */
     public Optional<Integer> getTargetWriteBytesPerSecond() {
         return Optional.ofNullable(this.targetWriteBytesPerSecond);
     }
     /**
      * Target ops written per second.
      * 
-     */
+    */
     public Optional<Integer> getTargetWriteOpsPerSecond() {
         return Optional.ofNullable(this.targetWriteOpsPerSecond);
     }

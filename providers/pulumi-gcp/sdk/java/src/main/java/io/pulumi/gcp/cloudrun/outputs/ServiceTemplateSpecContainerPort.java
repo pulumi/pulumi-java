@@ -41,21 +41,21 @@ public final class ServiceTemplateSpecContainerPort {
     /**
      * Port number.
      * 
-     */
+    */
     public Integer getContainerPort() {
         return this.containerPort;
     }
     /**
      * Volume's name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Protocol used on port. Defaults to TCP.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }

@@ -24,7 +24,7 @@ public final class ClusterMonitoringConfig {
     /**
      * The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
      * 
-     */
+    */
     public List<String> getEnableComponents() {
         return this.enableComponents;
     }

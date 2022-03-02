@@ -67,7 +67,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
     /**
      * Provide this property when creating the disk.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -77,7 +77,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * instance name exists already in the given zone/region, a
      * new name will be automatically generated.
      * 
-     */
+    */
     public Optional<String> getDiskName() {
         return Optional.ofNullable(this.diskName);
     }
@@ -87,7 +87,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * (usually 10GB). If specified, the size must be equal to
      * or larger than 10GB. Default 100 GB.
      * 
-     */
+    */
     public Optional<Integer> getDiskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
@@ -97,7 +97,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * see `https://cloud.google.com/vertex-ai/docs/workbench/
      * reference/rest/v1/projects.locations.runtimes#disktype`
      * 
-     */
+    */
     public Optional<String> getDiskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -106,7 +106,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * by the disks.setLabels method. This field is only
      * applicable for persistent disks.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }

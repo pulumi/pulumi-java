@@ -13,16 +13,38 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganization {
-/**
- * Get information about a Google Cloud Organization. Note that you must have the `roles/resourcemanager.organizationViewer` role (or equivalent permissions) at the organization level to use this datasource.
+    private GetOrganization() {}
+    public interface BuilderApplicator {
+        public void apply(GetOrganizationArgs.Builder a);
+    }
+    private static GetOrganizationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOrganizationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get information about a Google Cloud Organization. Note that you must have the `roles/resourcemanager.organizationViewer` role (or equivalent permissions) at the organization level to use this datasource.
  * 
- *
- * A collection of arguments for invoking getOrganization.
+     *
+     * A collection of arguments for invoking getOrganization.
  * 
- *
- * A collection of values returned by getOrganization.
+     *
+     * A collection of values returned by getOrganization.
  * 
- */
+     */
+    public static CompletableFuture<GetOrganizationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get information about a Google Cloud Organization. Note that you must have the `roles/resourcemanager.organizationViewer` role (or equivalent permissions) at the organization level to use this datasource.
+     * 
+     *
+         * A collection of arguments for invoking getOrganization.
+     * 
+     *
+         * A collection of values returned by getOrganization.
+     * 
+     */
     public static CompletableFuture<GetOrganizationResult> invokeAsync(@Nullable GetOrganizationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getOrganization:getOrganization", TypeShape.of(GetOrganizationResult.class), args == null ? GetOrganizationArgs.Empty : args, Utilities.withVersion(options));
     }

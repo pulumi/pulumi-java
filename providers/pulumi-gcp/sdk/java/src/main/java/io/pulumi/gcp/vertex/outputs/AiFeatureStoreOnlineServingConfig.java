@@ -23,7 +23,7 @@ public final class AiFeatureStoreOnlineServingConfig {
     /**
      * The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating.
      * 
-     */
+    */
     public Integer getFixedNodeCount() {
         return this.fixedNodeCount;
     }

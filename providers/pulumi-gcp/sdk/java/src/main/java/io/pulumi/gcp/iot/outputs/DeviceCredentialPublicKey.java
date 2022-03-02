@@ -33,14 +33,14 @@ public final class DeviceCredentialPublicKey {
      * The format of the key.
      * Possible values are `RSA_PEM`, `RSA_X509_PEM`, `ES256_PEM`, and `ES256_X509_PEM`.
      * 
-     */
+    */
     public String getFormat() {
         return this.format;
     }
     /**
      * The key data.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }

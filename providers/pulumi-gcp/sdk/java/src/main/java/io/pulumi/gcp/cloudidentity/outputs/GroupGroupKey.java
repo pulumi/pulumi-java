@@ -48,7 +48,7 @@ public final class GroupGroupKey {
      * to the Identity Source's requirements.
      * Must be unique within a namespace.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -60,7 +60,7 @@ public final class GroupGroupKey {
      * The namespace must correspond to an identity source created in Admin Console
      * and must be in the form of `identitysources/{identity_source_id}`.
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }

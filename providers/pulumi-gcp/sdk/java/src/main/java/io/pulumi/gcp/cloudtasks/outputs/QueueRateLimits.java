@@ -55,7 +55,7 @@ public final class QueueRateLimits {
      * rate so processing starts shortly after a task is enqueued, but still limits
      * resource usage when many tasks are enqueued in a short period of time.
      * 
-     */
+    */
     public Optional<Integer> getMaxBurstSize() {
         return Optional.ofNullable(this.maxBurstSize);
     }
@@ -65,7 +65,7 @@ public final class QueueRateLimits {
      * reached, Cloud Tasks stops dispatching tasks until the number of
      * concurrent requests decreases.
      * 
-     */
+    */
     public Optional<Integer> getMaxConcurrentDispatches() {
         return Optional.ofNullable(this.maxConcurrentDispatches);
     }
@@ -73,7 +73,7 @@ public final class QueueRateLimits {
      * The maximum rate at which tasks are dispatched from this queue.
      * If unspecified when the queue is created, Cloud Tasks will pick the default.
      * 
-     */
+    */
     public Optional<Double> getMaxDispatchesPerSecond() {
         return Optional.ofNullable(this.maxDispatchesPerSecond);
     }

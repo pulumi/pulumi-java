@@ -136,7 +136,7 @@ public final class TriggerBuildOptions {
      * the build may run with a larger disk than requested. At present, the maximum disk size
      * is 1000GB; builds that request more than the maximum are rejected with an error.
      * 
-     */
+    */
     public Optional<Integer> getDiskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
@@ -144,7 +144,7 @@ public final class TriggerBuildOptions {
      * Option to specify whether or not to apply bash style string operations to the substitutions.
      * NOTE this is always enabled for triggered builds and cannot be overridden in the build configuration file.
      * 
-     */
+    */
     public Optional<Boolean> getDynamicSubstitutions() {
         return Optional.ofNullable(this.dynamicSubstitutions);
     }
@@ -154,7 +154,7 @@ public final class TriggerBuildOptions {
      * the variable will use the build step value.
      * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
      * 
-     */
+    */
     public List<String> getEnvs() {
         return this.envs == null ? List.of() : this.envs;
     }
@@ -162,7 +162,7 @@ public final class TriggerBuildOptions {
      * Option to define build log streaming behavior to Google Cloud Storage.
      * Possible values are `STREAM_DEFAULT`, `STREAM_ON`, and `STREAM_OFF`.
      * 
-     */
+    */
     public Optional<String> getLogStreamingOption() {
         return Optional.ofNullable(this.logStreamingOption);
     }
@@ -170,7 +170,7 @@ public final class TriggerBuildOptions {
      * Option to specify the logging mode, which determines if and where build logs are stored.
      * Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, and `NONE`.
      * 
-     */
+    */
     public Optional<String> getLogging() {
         return Optional.ofNullable(this.logging);
     }
@@ -178,7 +178,7 @@ public final class TriggerBuildOptions {
      * Compute Engine machine type on which to run the build.
      * Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, `N1_HIGHCPU_32`, `E2_HIGHCPU_8`, and `E2_HIGHCPU_32`.
      * 
-     */
+    */
     public Optional<String> getMachineType() {
         return Optional.ofNullable(this.machineType);
     }
@@ -186,7 +186,7 @@ public final class TriggerBuildOptions {
      * Requested verifiability options.
      * Possible values are `NOT_VERIFIED` and `VERIFIED`.
      * 
-     */
+    */
     public Optional<String> getRequestedVerifyOption() {
         return Optional.ofNullable(this.requestedVerifyOption);
     }
@@ -195,7 +195,7 @@ public final class TriggerBuildOptions {
      * Service crypto key. These values must be specified in the build's Secret. These variables
      * will be available to all build steps in this build.
      * 
-     */
+    */
     public List<String> getSecretEnvs() {
         return this.secretEnvs == null ? List.of() : this.secretEnvs;
     }
@@ -203,7 +203,7 @@ public final class TriggerBuildOptions {
      * Requested hash for SourceProvenance.
      * Each value may be one of `NONE`, `SHA256`, and `MD5`.
      * 
-     */
+    */
     public List<String> getSourceProvenanceHashes() {
         return this.sourceProvenanceHashes == null ? List.of() : this.sourceProvenanceHashes;
     }
@@ -213,7 +213,7 @@ public final class TriggerBuildOptions {
      * in the build configuration file.
      * Possible values are `MUST_MATCH` and `ALLOW_LOOSE`.
      * 
-     */
+    */
     public Optional<String> getSubstitutionOption() {
         return Optional.ofNullable(this.substitutionOption);
     }
@@ -226,7 +226,7 @@ public final class TriggerBuildOptions {
      * of a build request with an incorrect configuration.
      * Structure is documented below.
      * 
-     */
+    */
     public List<TriggerBuildOptionsVolume> getVolumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
@@ -234,7 +234,7 @@ public final class TriggerBuildOptions {
      * Option to specify a WorkerPool for the build. Format projects/{project}/workerPools/{workerPool}
      * This field is experimental.
      * 
-     */
+    */
     public Optional<String> getWorkerPool() {
         return Optional.ofNullable(this.workerPool);
     }

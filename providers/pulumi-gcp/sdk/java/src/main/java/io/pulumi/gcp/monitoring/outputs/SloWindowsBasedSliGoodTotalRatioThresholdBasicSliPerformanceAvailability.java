@@ -25,7 +25,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceA
     /**
      * Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }

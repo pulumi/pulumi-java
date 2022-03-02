@@ -37,7 +37,7 @@ public final class PreventionStoredInfoTypeDictionary {
      * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionStoredInfoTypeDictionaryCloudStoragePath> getCloudStoragePath() {
         return Optional.ofNullable(this.cloudStoragePath);
     }
@@ -45,7 +45,7 @@ public final class PreventionStoredInfoTypeDictionary {
      * List of words or phrases to search for.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionStoredInfoTypeDictionaryWordList> getWordList() {
         return Optional.ofNullable(this.wordList);
     }

@@ -39,7 +39,7 @@ public final class TriggerBuildOptionsVolume {
      * Volume names must be unique per build step and must be valid names for Docker volumes.
      * Each named volume must be used by at least two build steps.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -48,7 +48,7 @@ public final class TriggerBuildOptionsVolume {
      * Paths must be absolute and cannot conflict with other volume paths on the same
      * build step or with certain reserved volume paths.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }

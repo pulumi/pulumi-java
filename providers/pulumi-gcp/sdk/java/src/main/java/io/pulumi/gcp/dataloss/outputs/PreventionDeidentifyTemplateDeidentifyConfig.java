@@ -25,7 +25,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfig {
      * Specifies free-text based transformations to be applied to the dataset.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations getInfoTypeTransformations() {
         return this.infoTypeTransformations;
     }
