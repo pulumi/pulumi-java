@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotebookProxy {
-/**
- * A NotebookProxy resource.
+    private GetNotebookProxy() {}
+    public interface BuilderApplicator {
+        public void apply(GetNotebookProxyArgs.Builder a);
+    }
+    private static GetNotebookProxyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNotebookProxyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A NotebookProxy resource.
  * API Version: 2019-10-11-preview.
  * 
- *
- * A NotebookProxy resource.
+     *
+     * A NotebookProxy resource.
  * 
- */
+     */
+    public static CompletableFuture<GetNotebookProxyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A NotebookProxy resource.
+     * API Version: 2019-10-11-preview.
+     * 
+     *
+         * A NotebookProxy resource.
+     * 
+     */
     public static CompletableFuture<GetNotebookProxyResult> invokeAsync(GetNotebookProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notebooks:getNotebookProxy", TypeShape.of(GetNotebookProxyResult.class), args == null ? GetNotebookProxyArgs.Empty : args, Utilities.withVersion(options));
     }

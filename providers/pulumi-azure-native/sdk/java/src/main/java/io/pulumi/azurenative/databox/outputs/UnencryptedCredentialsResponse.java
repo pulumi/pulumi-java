@@ -35,14 +35,14 @@ public final class UnencryptedCredentialsResponse {
     /**
      * Name of the job.
      * 
-     */
+    */
     public String getJobName() {
         return this.jobName;
     }
     /**
      * Secrets related to this job.
      * 
-     */
+    */
     public Object getJobSecrets() {
         return this.jobSecrets;
     }

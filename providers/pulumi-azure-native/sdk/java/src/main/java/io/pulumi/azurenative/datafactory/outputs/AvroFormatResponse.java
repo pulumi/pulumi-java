@@ -42,14 +42,14 @@ public final class AvroFormatResponse {
     /**
      * Deserializer. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getDeserializer() {
         return Optional.ofNullable(this.deserializer);
     }
     /**
      * Serializer. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getSerializer() {
         return Optional.ofNullable(this.serializer);
     }
@@ -57,7 +57,7 @@ public final class AvroFormatResponse {
      * Type of dataset storage format.
      * Expected value is 'AvroFormat'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

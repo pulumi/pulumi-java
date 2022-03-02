@@ -40,21 +40,21 @@ public final class HybridComputePrivateLinkScopePropertiesResponse {
     /**
      * The Guid id of the private link scope.
      * 
-     */
+    */
     public String getPrivateLinkScopeId() {
         return this.privateLinkScopeId;
     }
     /**
      * Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }

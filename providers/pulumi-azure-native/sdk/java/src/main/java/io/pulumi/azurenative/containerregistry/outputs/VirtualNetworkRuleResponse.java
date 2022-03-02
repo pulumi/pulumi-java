@@ -33,14 +33,14 @@ public final class VirtualNetworkRuleResponse {
     /**
      * The action of virtual network rule.
      * 
-     */
+    */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
      * 
-     */
+    */
     public String getVirtualNetworkResourceId() {
         return this.virtualNetworkResourceId;
     }

@@ -155,105 +155,105 @@ public final class RestServiceLinkedServiceResponse {
     /**
      * The resource you are requesting authorization to use.
      * 
-     */
+    */
     public Optional<Object> getAadResourceId() {
         return Optional.ofNullable(this.aadResourceId);
     }
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
      * 
-     */
+    */
     public Optional<Object> getAuthHeaders() {
         return Optional.ofNullable(this.authHeaders);
     }
     /**
      * Type of authentication used to connect to the REST service.
      * 
-     */
+    */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
     /**
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getAzureCloudType() {
         return Optional.ofNullable(this.azureCloudType);
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The credential reference containing authentication information.
      * 
-     */
+    */
     public Optional<CredentialReferenceResponse> getCredential() {
         return Optional.ofNullable(this.credential);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Whether to validate server side SSL certificate when connecting to the endpoint.The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getEnableServerCertificateValidation() {
         return Optional.ofNullable(this.enableServerCertificateValidation);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The password used in Basic authentication type.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The application's client ID used in AadServicePrincipal authentication type.
      * 
-     */
+    */
     public Optional<Object> getServicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
     /**
      * The application's key used in AadServicePrincipal authentication type.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getServicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
     /**
      * The tenant information (domain name or tenant ID) used in AadServicePrincipal authentication type under which your application resides.
      * 
-     */
+    */
     public Optional<Object> getTenant() {
         return Optional.ofNullable(this.tenant);
     }
@@ -261,21 +261,21 @@ public final class RestServiceLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'RestService'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The base URL of the REST service.
      * 
-     */
+    */
     public Object getUrl() {
         return this.url;
     }
     /**
      * The user name used in Basic authentication type.
      * 
-     */
+    */
     public Optional<Object> getUserName() {
         return Optional.ofNullable(this.userName);
     }

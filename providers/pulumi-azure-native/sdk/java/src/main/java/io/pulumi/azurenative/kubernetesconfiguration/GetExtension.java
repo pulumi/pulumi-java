@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExtension {
-/**
- * The Extension Instance object.
+    private GetExtension() {}
+    public interface BuilderApplicator {
+        public void apply(GetExtensionArgs.Builder a);
+    }
+    private static GetExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExtensionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Extension Instance object.
  * API Version: 2020-07-01-preview.
  * 
- *
- * The Extension Instance object.
+     *
+     * The Extension Instance object.
  * 
- */
+     */
+    public static CompletableFuture<GetExtensionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Extension Instance object.
+     * API Version: 2020-07-01-preview.
+     * 
+     *
+         * The Extension Instance object.
+     * 
+     */
     public static CompletableFuture<GetExtensionResult> invokeAsync(GetExtensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getExtension", TypeShape.of(GetExtensionResult.class), args == null ? GetExtensionArgs.Empty : args, Utilities.withVersion(options));
     }

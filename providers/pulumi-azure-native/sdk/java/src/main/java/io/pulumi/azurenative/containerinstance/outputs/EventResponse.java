@@ -60,42 +60,42 @@ public final class EventResponse {
     /**
      * The count of the event.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * The date-time of the earliest logged event.
      * 
-     */
+    */
     public String getFirstTimestamp() {
         return this.firstTimestamp;
     }
     /**
      * The date-time of the latest logged event.
      * 
-     */
+    */
     public String getLastTimestamp() {
         return this.lastTimestamp;
     }
     /**
      * The event message.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * The event name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The event type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

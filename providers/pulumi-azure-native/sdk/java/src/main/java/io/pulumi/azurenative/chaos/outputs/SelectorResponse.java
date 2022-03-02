@@ -40,21 +40,21 @@ public final class SelectorResponse {
     /**
      * String of the selector ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of Target references.
      * 
-     */
+    */
     public List<TargetReferenceResponse> getTargets() {
         return this.targets;
     }
     /**
      * Enum of the selector type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

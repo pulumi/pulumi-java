@@ -128,105 +128,105 @@ public final class GetWatchlistItemResult {
     /**
      * The time the watchlist item was created
      * 
-     */
+    */
     public Optional<String> getCreated() {
         return Optional.ofNullable(this.created);
     }
     /**
      * Describes a user that created the watchlist item
      * 
-     */
+    */
     public Optional<WatchlistUserInfoResponse> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * key-value pairs for a watchlist item entity mapping
      * 
-     */
+    */
     public Optional<Object> getEntityMapping() {
         return Optional.ofNullable(this.entityMapping);
     }
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A flag that indicates if the watchlist item is deleted or not
      * 
-     */
+    */
     public Optional<Boolean> getIsDeleted() {
         return Optional.ofNullable(this.isDeleted);
     }
     /**
      * key-value pairs for a watchlist item
      * 
-     */
+    */
     public Object getItemsKeyValue() {
         return this.itemsKeyValue;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The tenantId to which the watchlist item belongs to
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The last time the watchlist item was updated
      * 
-     */
+    */
     public Optional<String> getUpdated() {
         return Optional.ofNullable(this.updated);
     }
     /**
      * Describes a user that updated the watchlist item
      * 
-     */
+    */
     public Optional<WatchlistUserInfoResponse> getUpdatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
     /**
      * The id (a Guid) of the watchlist item
      * 
-     */
+    */
     public Optional<String> getWatchlistItemId() {
         return Optional.ofNullable(this.watchlistItemId);
     }
     /**
      * The type of the watchlist item
      * 
-     */
+    */
     public Optional<String> getWatchlistItemType() {
         return Optional.ofNullable(this.watchlistItemType);
     }

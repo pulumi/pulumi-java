@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceFabricSchedule {
-/**
- * A schedule.
+    private GetServiceFabricSchedule() {}
+    public interface BuilderApplicator {
+        public void apply(GetServiceFabricScheduleArgs.Builder a);
+    }
+    private static GetServiceFabricScheduleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServiceFabricScheduleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A schedule.
  * API Version: 2018-09-15.
  * 
- *
- * A schedule.
+     *
+     * A schedule.
  * 
- */
+     */
+    public static CompletableFuture<GetServiceFabricScheduleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A schedule.
+     * API Version: 2018-09-15.
+     * 
+     *
+         * A schedule.
+     * 
+     */
     public static CompletableFuture<GetServiceFabricScheduleResult> invokeAsync(GetServiceFabricScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getServiceFabricSchedule", TypeShape.of(GetServiceFabricScheduleResult.class), args == null ? GetServiceFabricScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

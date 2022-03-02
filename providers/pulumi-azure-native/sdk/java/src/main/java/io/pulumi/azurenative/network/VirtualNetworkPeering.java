@@ -232,6 +232,22 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
         return this.useRemoteGateways;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VirtualNetworkPeeringArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.network.VirtualNetworkPeeringArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.network.VirtualNetworkPeeringArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VirtualNetworkPeering(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

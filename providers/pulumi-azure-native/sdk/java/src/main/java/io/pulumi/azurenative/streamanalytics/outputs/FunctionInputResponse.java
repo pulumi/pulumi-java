@@ -34,14 +34,14 @@ public final class FunctionInputResponse {
     /**
      * The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
      * 
-     */
+    */
     public Optional<String> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.
      * 
-     */
+    */
     public Optional<Boolean> getIsConfigurationParameter() {
         return Optional.ofNullable(this.isConfigurationParameter);
     }

@@ -25,7 +25,7 @@ public final class DatadogLogsAgentResponse {
     /**
      * The transport.
      * 
-     */
+    */
     public Optional<String> getTransport() {
         return Optional.ofNullable(this.transport);
     }

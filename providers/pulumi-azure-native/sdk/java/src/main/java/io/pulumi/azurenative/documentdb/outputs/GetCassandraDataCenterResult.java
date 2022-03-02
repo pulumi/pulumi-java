@@ -46,28 +46,28 @@ public final class GetCassandraDataCenterResult {
     /**
      * The unique resource identifier of the database account.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the database account.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of a managed Cassandra data center.
      * 
-     */
+    */
     public DataCenterResourceResponseProperties getProperties() {
         return this.properties;
     }
     /**
      * The type of Azure resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetActivityLogAlert {
-/**
- * An Activity Log Alert rule resource.
+    private GetActivityLogAlert() {}
+    public interface BuilderApplicator {
+        public void apply(GetActivityLogAlertArgs.Builder a);
+    }
+    private static GetActivityLogAlertArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetActivityLogAlertArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Activity Log Alert rule resource.
  * API Version: 2020-10-01.
  * 
- *
- * An Activity Log Alert rule resource.
+     *
+     * An Activity Log Alert rule resource.
  * 
- */
+     */
+    public static CompletableFuture<GetActivityLogAlertResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Activity Log Alert rule resource.
+     * API Version: 2020-10-01.
+     * 
+     *
+         * An Activity Log Alert rule resource.
+     * 
+     */
     public static CompletableFuture<GetActivityLogAlertResult> invokeAsync(GetActivityLogAlertArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getActivityLogAlert", TypeShape.of(GetActivityLogAlertResult.class), args == null ? GetActivityLogAlertArgs.Empty : args, Utilities.withVersion(options));
     }

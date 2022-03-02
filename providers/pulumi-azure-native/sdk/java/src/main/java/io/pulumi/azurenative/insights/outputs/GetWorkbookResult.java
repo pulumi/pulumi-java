@@ -133,112 +133,112 @@ public final class GetWorkbookResult {
     /**
      * Workbook category, as defined by the user at creation time.
      * 
-     */
+    */
     public String getCategory() {
         return this.category;
     }
     /**
      * The user-defined name (display name) of the workbook.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource etag
      * 
-     */
+    */
     public Map<String,String> getEtag() {
         return this.etag == null ? Map.of() : this.etag;
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Identity used for BYOS
      * 
-     */
+    */
     public Optional<WorkbookManagedIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The kind of workbook. Choices are user and shared.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Configuration of this particular workbook. Configuration data is a string containing valid JSON
      * 
-     */
+    */
     public String getSerializedData() {
         return this.serializedData;
     }
     /**
      * ResourceId for a source resource.
      * 
-     */
+    */
     public Optional<String> getSourceId() {
         return Optional.ofNullable(this.sourceId);
     }
     /**
      * BYOS Storage Account URI
      * 
-     */
+    */
     public Optional<String> getStorageUri() {
         return Optional.ofNullable(this.storageUri);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Date and time in UTC of the last modification that was made to this workbook definition.
      * 
-     */
+    */
     public String getTimeModified() {
         return this.timeModified;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Unique user id of the specific user that owns this workbook.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }
     /**
      * Workbook version
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

@@ -177,147 +177,147 @@ public final class GetJobResult {
     /**
      * Reason for cancellation.
      * 
-     */
+    */
     public String getCancellationReason() {
         return this.cancellationReason;
     }
     /**
      * Delivery Info of Job.
      * 
-     */
+    */
     public Optional<JobDeliveryInfoResponse> getDeliveryInfo() {
         return Optional.ofNullable(this.deliveryInfo);
     }
     /**
      * Delivery type of Job.
      * 
-     */
+    */
     public Optional<String> getDeliveryType() {
         return Optional.ofNullable(this.deliveryType);
     }
     /**
      * Details of a job run. This field will only be sent for expand details filter.
      * 
-     */
+    */
     public Optional<Object> getDetails() {
         return Optional.ofNullable(this.details);
     }
     /**
      * Top level error for the job.
      * 
-     */
+    */
     public CloudErrorResponse getError() {
         return this.error;
     }
     /**
      * Id of the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Msi identity of the resource
      * 
-     */
+    */
     public Optional<ResourceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Describes whether the job is cancellable or not.
      * 
-     */
+    */
     public Boolean getIsCancellable() {
         return this.isCancellable;
     }
     /**
      * Flag to indicate cancellation of scheduled job.
      * 
-     */
+    */
     public Boolean getIsCancellableWithoutFee() {
         return this.isCancellableWithoutFee;
     }
     /**
      * Describes whether the job is deletable or not.
      * 
-     */
+    */
     public Boolean getIsDeletable() {
         return this.isDeletable;
     }
     /**
      * Is Prepare To Ship Enabled on this job
      * 
-     */
+    */
     public Boolean getIsPrepareToShipEnabled() {
         return this.isPrepareToShipEnabled;
     }
     /**
      * Describes whether the shipping address is editable or not.
      * 
-     */
+    */
     public Boolean getIsShippingAddressEditable() {
         return this.isShippingAddressEditable;
     }
     /**
      * The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Name of the object.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The sku type.
      * 
-     */
+    */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * Time at which the job was started in UTC ISO 8601 format.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Name of the stage which is in progress.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Type of the data transfer.
      * 
-     */
+    */
     public String getTransferType() {
         return this.transferType;
     }
     /**
      * Type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

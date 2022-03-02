@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIpAllocation {
-/**
- * IpAllocation resource.
+    private GetIpAllocation() {}
+    public interface BuilderApplicator {
+        public void apply(GetIpAllocationArgs.Builder a);
+    }
+    private static GetIpAllocationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIpAllocationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * IpAllocation resource.
  * API Version: 2020-11-01.
  * 
- *
- * IpAllocation resource.
+     *
+     * IpAllocation resource.
  * 
- */
+     */
+    public static CompletableFuture<GetIpAllocationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * IpAllocation resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * IpAllocation resource.
+     * 
+     */
     public static CompletableFuture<GetIpAllocationResult> invokeAsync(GetIpAllocationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getIpAllocation", TypeShape.of(GetIpAllocationResult.class), args == null ? GetIpAllocationArgs.Empty : args, Utilities.withVersion(options));
     }

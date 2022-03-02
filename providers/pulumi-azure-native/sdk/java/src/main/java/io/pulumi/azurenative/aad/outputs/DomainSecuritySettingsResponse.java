@@ -68,49 +68,49 @@ public final class DomainSecuritySettingsResponse {
     /**
      * A flag to determine whether or not KerberosArmoring is enabled or disabled.
      * 
-     */
+    */
     public Optional<String> getKerberosArmoring() {
         return Optional.ofNullable(this.kerberosArmoring);
     }
     /**
      * A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
      * 
-     */
+    */
     public Optional<String> getKerberosRc4Encryption() {
         return Optional.ofNullable(this.kerberosRc4Encryption);
     }
     /**
      * A flag to determine whether or not NtlmV1 is enabled or disabled.
      * 
-     */
+    */
     public Optional<String> getNtlmV1() {
         return Optional.ofNullable(this.ntlmV1);
     }
     /**
      * A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
      * 
-     */
+    */
     public Optional<String> getSyncKerberosPasswords() {
         return Optional.ofNullable(this.syncKerberosPasswords);
     }
     /**
      * A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
      * 
-     */
+    */
     public Optional<String> getSyncNtlmPasswords() {
         return Optional.ofNullable(this.syncNtlmPasswords);
     }
     /**
      * A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
      * 
-     */
+    */
     public Optional<String> getSyncOnPremPasswords() {
         return Optional.ofNullable(this.syncOnPremPasswords);
     }
     /**
      * A flag to determine whether or not TlsV1 is enabled or disabled.
      * 
-     */
+    */
     public Optional<String> getTlsV1() {
         return Optional.ofNullable(this.tlsV1);
     }

@@ -46,28 +46,28 @@ public final class AclResponse {
     /**
      * iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
      * 
-     */
+    */
     public String getInitiatorIqn() {
         return this.initiatorIqn;
     }
     /**
      * List of LUN names mapped to the ACL.
      * 
-     */
+    */
     public List<String> getMappedLuns() {
         return this.mappedLuns;
     }
     /**
      * Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }

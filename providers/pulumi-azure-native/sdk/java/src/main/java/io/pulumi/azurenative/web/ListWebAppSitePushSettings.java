@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppSitePushSettings {
-/**
- * Push settings for the App.
+    private ListWebAppSitePushSettings() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppSitePushSettingsArgs.Builder a);
+    }
+    private static ListWebAppSitePushSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppSitePushSettingsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Push settings for the App.
  * API Version: 2020-12-01.
  * 
- *
- * Push settings for the App.
+     *
+     * Push settings for the App.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppSitePushSettingsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Push settings for the App.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Push settings for the App.
+     * 
+     */
     public static CompletableFuture<ListWebAppSitePushSettingsResult> invokeAsync(ListWebAppSitePushSettingsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSitePushSettings", TypeShape.of(ListWebAppSitePushSettingsResult.class), args == null ? ListWebAppSitePushSettingsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -102,77 +102,77 @@ public final class ApplicationPropertiesResponse {
     /**
      * The application state.
      * 
-     */
+    */
     public String getApplicationState() {
         return this.applicationState;
     }
     /**
      * The application type.
      * 
-     */
+    */
     public Optional<String> getApplicationType() {
         return Optional.ofNullable(this.applicationType);
     }
     /**
      * The list of roles in the cluster.
      * 
-     */
+    */
     public Optional<ComputeProfileResponse> getComputeProfile() {
         return Optional.ofNullable(this.computeProfile);
     }
     /**
      * The application create date time.
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The list of errors.
      * 
-     */
+    */
     public List<ErrorsResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * The list of application HTTPS endpoints.
      * 
-     */
+    */
     public List<ApplicationGetHttpsEndpointResponse> getHttpsEndpoints() {
         return this.httpsEndpoints == null ? List.of() : this.httpsEndpoints;
     }
     /**
      * The list of install script actions.
      * 
-     */
+    */
     public List<RuntimeScriptActionResponse> getInstallScriptActions() {
         return this.installScriptActions == null ? List.of() : this.installScriptActions;
     }
     /**
      * The marketplace identifier.
      * 
-     */
+    */
     public String getMarketplaceIdentifier() {
         return this.marketplaceIdentifier;
     }
     /**
      * The provisioning state of the application.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The list of application SSH endpoints.
      * 
-     */
+    */
     public List<ApplicationGetEndpointResponse> getSshEndpoints() {
         return this.sshEndpoints == null ? List.of() : this.sshEndpoints;
     }
     /**
      * The list of uninstall script actions.
      * 
-     */
+    */
     public List<RuntimeScriptActionResponse> getUninstallScriptActions() {
         return this.uninstallScriptActions == null ? List.of() : this.uninstallScriptActions;
     }

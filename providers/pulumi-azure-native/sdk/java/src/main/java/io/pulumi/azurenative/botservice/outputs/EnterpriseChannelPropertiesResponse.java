@@ -35,14 +35,14 @@ public final class EnterpriseChannelPropertiesResponse {
     /**
      * The nodes associated with the Enterprise Channel.
      * 
-     */
+    */
     public List<EnterpriseChannelNodeResponse> getNodes() {
         return this.nodes;
     }
     /**
      * The current state of the Enterprise Channel.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

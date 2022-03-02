@@ -62,42 +62,42 @@ public final class ServerExternalAdministratorResponse {
     /**
      * Type of the sever administrator.
      * 
-     */
+    */
     public Optional<String> getAdministratorType() {
         return Optional.ofNullable(this.administratorType);
     }
     /**
      * Azure Active Directory only Authentication enabled.
      * 
-     */
+    */
     public Optional<Boolean> getAzureADOnlyAuthentication() {
         return Optional.ofNullable(this.azureADOnlyAuthentication);
     }
     /**
      * Login name of the server administrator.
      * 
-     */
+    */
     public Optional<String> getLogin() {
         return Optional.ofNullable(this.login);
     }
     /**
      * Principal Type of the sever administrator.
      * 
-     */
+    */
     public Optional<String> getPrincipalType() {
         return Optional.ofNullable(this.principalType);
     }
     /**
      * SID (object ID) of the server administrator.
      * 
-     */
+    */
     public Optional<String> getSid() {
         return Optional.ofNullable(this.sid);
     }
     /**
      * Tenant ID of the administrator.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }

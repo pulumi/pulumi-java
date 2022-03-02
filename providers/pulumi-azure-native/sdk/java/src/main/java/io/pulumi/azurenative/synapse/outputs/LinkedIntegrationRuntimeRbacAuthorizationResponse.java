@@ -33,14 +33,14 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
      * The authorization type for integration runtime sharing.
      * Expected value is 'RBAC'.
      * 
-     */
+    */
     public String getAuthorizationType() {
         return this.authorizationType;
     }
     /**
      * The resource identifier of the integration runtime to be shared.
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }

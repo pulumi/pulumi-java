@@ -50,28 +50,28 @@ public final class SchemaComparisonValidationResultResponse {
     /**
      * List of schema differences between the source and target databases
      * 
-     */
+    */
     public SchemaComparisonValidationResultTypeResponse getSchemaDifferences() {
         return this.schemaDifferences;
     }
     /**
      * Count of source database objects
      * 
-     */
+    */
     public Map<String,Double> getSourceDatabaseObjectCount() {
         return this.sourceDatabaseObjectCount == null ? Map.of() : this.sourceDatabaseObjectCount;
     }
     /**
      * Count of target database objects
      * 
-     */
+    */
     public Map<String,Double> getTargetDatabaseObjectCount() {
         return this.targetDatabaseObjectCount == null ? Map.of() : this.targetDatabaseObjectCount;
     }
     /**
      * List of errors that happened while performing schema compare validation
      * 
-     */
+    */
     public ValidationErrorResponse getValidationErrors() {
         return this.validationErrors;
     }

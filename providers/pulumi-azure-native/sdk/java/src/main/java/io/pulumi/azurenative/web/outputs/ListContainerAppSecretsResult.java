@@ -24,7 +24,7 @@ public final class ListContainerAppSecretsResult {
     /**
      * Collection of resources.
      * 
-     */
+    */
     public List<ContainerAppSecretResponse> getValue() {
         return this.value;
     }

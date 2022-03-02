@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfigurationAssignment {
-/**
- * Configuration Assignment
+    private GetConfigurationAssignment() {}
+    public interface BuilderApplicator {
+        public void apply(GetConfigurationAssignmentArgs.Builder a);
+    }
+    private static GetConfigurationAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConfigurationAssignmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Configuration Assignment
  * API Version: 2021-04-01-preview.
  * 
- *
- * Configuration Assignment
+     *
+     * Configuration Assignment
  * 
- */
+     */
+    public static CompletableFuture<GetConfigurationAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Configuration Assignment
+     * API Version: 2021-04-01-preview.
+     * 
+     *
+         * Configuration Assignment
+     * 
+     */
     public static CompletableFuture<GetConfigurationAssignmentResult> invokeAsync(GetConfigurationAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:maintenance:getConfigurationAssignment", TypeShape.of(GetConfigurationAssignmentResult.class), args == null ? GetConfigurationAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

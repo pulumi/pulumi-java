@@ -82,63 +82,63 @@ public final class GetApiIssueResult {
     /**
      * A resource identifier for the API the issue was created for.
      * 
-     */
+    */
     public Optional<String> getApiId() {
         return Optional.ofNullable(this.apiId);
     }
     /**
      * Date and time when the issue was created.
      * 
-     */
+    */
     public Optional<String> getCreatedDate() {
         return Optional.ofNullable(this.createdDate);
     }
     /**
      * Text describing the issue.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Status of the issue.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The issue title.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * A resource identifier for the user created the issue.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }

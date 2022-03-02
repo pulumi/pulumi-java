@@ -114,91 +114,91 @@ public final class MigrationItemPropertiesResponse {
     /**
      * The allowed operations on the migration item, based on the current migration state of the item.
      * 
-     */
+    */
     public List<String> getAllowedOperations() {
         return this.allowedOperations;
     }
     /**
      * The current job details.
      * 
-     */
+    */
     public CurrentJobDetailsResponse getCurrentJob() {
         return this.currentJob;
     }
     /**
      * The consolidated health.
      * 
-     */
+    */
     public String getHealth() {
         return this.health;
     }
     /**
      * The list of health errors.
      * 
-     */
+    */
     public List<HealthErrorResponse> getHealthErrors() {
         return this.healthErrors;
     }
     /**
      * The on-premise virtual machine name.
      * 
-     */
+    */
     public String getMachineName() {
         return this.machineName;
     }
     /**
      * The migration status.
      * 
-     */
+    */
     public String getMigrationState() {
         return this.migrationState;
     }
     /**
      * The migration state description.
      * 
-     */
+    */
     public String getMigrationStateDescription() {
         return this.migrationStateDescription;
     }
     /**
      * The name of policy governing this item.
      * 
-     */
+    */
     public String getPolicyFriendlyName() {
         return this.policyFriendlyName;
     }
     /**
      * The ARM Id of policy governing this item.
      * 
-     */
+    */
     public String getPolicyId() {
         return this.policyId;
     }
     /**
      * The migration provider custom settings.
      * 
-     */
+    */
     public Optional<VMwareCbtMigrationDetailsResponse> getProviderSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }
     /**
      * The recovery services provider ARM Id.
      * 
-     */
+    */
     public String getRecoveryServicesProviderId() {
         return this.recoveryServicesProviderId;
     }
     /**
      * The test migrate state.
      * 
-     */
+    */
     public String getTestMigrateState() {
         return this.testMigrateState;
     }
     /**
      * The test migrate state description.
      * 
-     */
+    */
     public String getTestMigrateStateDescription() {
         return this.testMigrateStateDescription;
     }

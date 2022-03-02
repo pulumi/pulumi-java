@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListNamespaceKeys {
-/**
- * Namespace/Relay Connection String
+    private ListNamespaceKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListNamespaceKeysArgs.Builder a);
+    }
+    private static ListNamespaceKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListNamespaceKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Namespace/Relay Connection String
  * API Version: 2017-04-01.
  * 
- *
- * Namespace/Relay Connection String
+     *
+     * Namespace/Relay Connection String
  * 
- */
+     */
+    public static CompletableFuture<ListNamespaceKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Namespace/Relay Connection String
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Namespace/Relay Connection String
+     * 
+     */
     public static CompletableFuture<ListNamespaceKeysResult> invokeAsync(ListNamespaceKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:listNamespaceKeys", TypeShape.of(ListNamespaceKeysResult.class), args == null ? ListNamespaceKeysArgs.Empty : args, Utilities.withVersion(options));
     }

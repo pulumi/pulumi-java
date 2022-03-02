@@ -78,56 +78,56 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
     /**
      * Errors associated with the BackupFolder path
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getBackupFolderErrors() {
         return this.backupFolderErrors;
     }
     /**
      * Errors associated with backup share user name and password credentials
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getBackupShareCredentialsErrors() {
         return this.backupShareCredentialsErrors;
     }
     /**
      * Errors associated with the storage account provided.
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getBackupStorageAccountErrors() {
         return this.backupStorageAccountErrors;
     }
     /**
      * Information about backup files when existing backup mode is used.
      * 
-     */
+    */
     public Optional<DatabaseBackupInfoResponse> getDatabaseBackupInfo() {
         return Optional.ofNullable(this.databaseBackupInfo);
     }
     /**
      * Errors associated with existing backup files.
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getExistingBackupErrors() {
         return this.existingBackupErrors;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of database
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Errors associated with the RestoreDatabaseName
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getRestoreDatabaseNameErrors() {
         return this.restoreDatabaseNameErrors;
     }

@@ -23,7 +23,7 @@ public final class SkuResponse {
     /**
      * The SKU name of the configuration store.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

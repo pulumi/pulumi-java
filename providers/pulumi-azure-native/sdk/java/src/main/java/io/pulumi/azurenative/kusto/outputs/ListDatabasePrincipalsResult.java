@@ -25,7 +25,7 @@ public final class ListDatabasePrincipalsResult {
     /**
      * The list of Kusto database principals.
      * 
-     */
+    */
     public List<DatabasePrincipalResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

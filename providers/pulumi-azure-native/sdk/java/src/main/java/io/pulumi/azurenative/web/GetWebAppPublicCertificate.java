@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppPublicCertificate {
-/**
- * Public certificate object
+    private GetWebAppPublicCertificate() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppPublicCertificateArgs.Builder a);
+    }
+    private static GetWebAppPublicCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppPublicCertificateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Public certificate object
  * API Version: 2020-12-01.
  * 
- *
- * Public certificate object
+     *
+     * Public certificate object
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppPublicCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Public certificate object
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Public certificate object
+     * 
+     */
     public static CompletableFuture<GetWebAppPublicCertificateResult> invokeAsync(GetWebAppPublicCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPublicCertificate", TypeShape.of(GetWebAppPublicCertificateResult.class), args == null ? GetWebAppPublicCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

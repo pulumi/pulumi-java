@@ -114,91 +114,91 @@ public final class SchemaResponse {
     /**
      * Table category.
      * 
-     */
+    */
     public List<String> getCategories() {
         return this.categories;
     }
     /**
      * A list of table custom columns.
      * 
-     */
+    */
     public List<ColumnResponse> getColumns() {
         return this.columns == null ? List.of() : this.columns;
     }
     /**
      * Table description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Table display name.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * Table labels.
      * 
-     */
+    */
     public List<String> getLabels() {
         return this.labels;
     }
     /**
      * Table name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Parameters of the restore operation that initiated this table.
      * 
-     */
+    */
     public RestoredLogsResponse getRestoredLogs() {
         return this.restoredLogs;
     }
     /**
      * Parameters of the search job that initiated this table.
      * 
-     */
+    */
     public SearchResultsResponse getSearchResults() {
         return this.searchResults;
     }
     /**
      * List of solutions the table is affiliated with
      * 
-     */
+    */
     public List<String> getSolutions() {
         return this.solutions;
     }
     /**
      * Table's creator.
      * 
-     */
+    */
     public String getSource() {
         return this.source;
     }
     /**
      * A list of table standard columns.
      * 
-     */
+    */
     public List<ColumnResponse> getStandardColumns() {
         return this.standardColumns;
     }
     /**
      * The subtype describes what APIs can be used to interact with the table, and what features are available against it.
      * 
-     */
+    */
     public String getTableSubType() {
         return this.tableSubType;
     }
     /**
      * Table's creator.
      * 
-     */
+    */
     public String getTableType() {
         return this.tableType;
     }

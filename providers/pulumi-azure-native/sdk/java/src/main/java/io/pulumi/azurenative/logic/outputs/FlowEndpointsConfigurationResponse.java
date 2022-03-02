@@ -33,14 +33,14 @@ public final class FlowEndpointsConfigurationResponse {
     /**
      * The connector endpoints.
      * 
-     */
+    */
     public Optional<FlowEndpointsResponse> getConnector() {
         return Optional.ofNullable(this.connector);
     }
     /**
      * The workflow endpoints.
      * 
-     */
+    */
     public Optional<FlowEndpointsResponse> getWorkflow() {
         return Optional.ofNullable(this.workflow);
     }

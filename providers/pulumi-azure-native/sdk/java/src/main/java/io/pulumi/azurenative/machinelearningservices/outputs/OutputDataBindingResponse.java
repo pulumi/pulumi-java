@@ -47,28 +47,28 @@ public final class OutputDataBindingResponse {
     /**
      * ARM resource ID of the datastore where the data output will be stored.
      * 
-     */
+    */
     public Optional<String> getDatastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
     /**
      * Mechanism for data movement to datastore.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * Location of data inside the container process.
      * 
-     */
+    */
     public Optional<String> getPathOnCompute() {
         return Optional.ofNullable(this.pathOnCompute);
     }
     /**
      * Path within the datastore to the data.
      * 
-     */
+    */
     public Optional<String> getPathOnDatastore() {
         return Optional.ofNullable(this.pathOnDatastore);
     }

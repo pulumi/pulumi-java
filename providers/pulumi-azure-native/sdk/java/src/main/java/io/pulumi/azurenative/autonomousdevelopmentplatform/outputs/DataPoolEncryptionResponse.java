@@ -47,28 +47,28 @@ public final class DataPoolEncryptionResponse {
     /**
      * The name of Key Vault key
      * 
-     */
+    */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * The URI of a soft delete-enabled Key Vault that is in the same location as the Data Pool location
      * 
-     */
+    */
     public String getKeyVaultUri() {
         return this.keyVaultUri;
     }
     /**
      * The version of Key Vault key
      * 
-     */
+    */
     public Optional<String> getKeyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
     /**
      * The resource ID of a user-assigned Managed Identity used to access the encryption key in the Key Vault. Requires access to the key operations get, wrap, unwrap, and recover
      * 
-     */
+    */
     public String getUserAssignedIdentity() {
         return this.userAssignedIdentity;
     }

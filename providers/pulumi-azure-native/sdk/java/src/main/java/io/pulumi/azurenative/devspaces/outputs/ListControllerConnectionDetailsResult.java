@@ -25,7 +25,7 @@ public final class ListControllerConnectionDetailsResult {
     /**
      * List of Azure Dev Spaces Controller connection details.
      * 
-     */
+    */
     public List<ControllerConnectionDetailsResponse> getConnectionDetailsList() {
         return this.connectionDetailsList == null ? List.of() : this.connectionDetailsList;
     }

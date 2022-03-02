@@ -55,35 +55,35 @@ public final class StorageConfigurationSettingsResponse {
     /**
      * Disk configuration to apply to SQL Server.
      * 
-     */
+    */
     public Optional<String> getDiskConfigurationType() {
         return Optional.ofNullable(this.diskConfigurationType);
     }
     /**
      * SQL Server Data Storage Settings.
      * 
-     */
+    */
     public Optional<SQLStorageSettingsResponse> getSqlDataSettings() {
         return Optional.ofNullable(this.sqlDataSettings);
     }
     /**
      * SQL Server Log Storage Settings.
      * 
-     */
+    */
     public Optional<SQLStorageSettingsResponse> getSqlLogSettings() {
         return Optional.ofNullable(this.sqlLogSettings);
     }
     /**
      * SQL Server TempDb Storage Settings.
      * 
-     */
+    */
     public Optional<SQLStorageSettingsResponse> getSqlTempDbSettings() {
         return Optional.ofNullable(this.sqlTempDbSettings);
     }
     /**
      * Storage workload type.
      * 
-     */
+    */
     public Optional<String> getStorageWorkloadType() {
         return Optional.ofNullable(this.storageWorkloadType);
     }

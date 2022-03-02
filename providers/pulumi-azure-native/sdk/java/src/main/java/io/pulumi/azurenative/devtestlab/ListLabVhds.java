@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListLabVhds {
-/**
- * The response of a list operation.
+    private ListLabVhds() {}
+    public interface BuilderApplicator {
+        public void apply(ListLabVhdsArgs.Builder a);
+    }
+    private static ListLabVhdsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListLabVhdsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The response of a list operation.
  * API Version: 2018-09-15.
  * 
- *
- * The response of a list operation.
+     *
+     * The response of a list operation.
  * 
- */
+     */
+    public static CompletableFuture<ListLabVhdsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The response of a list operation.
+     * API Version: 2018-09-15.
+     * 
+     *
+         * The response of a list operation.
+     * 
+     */
     public static CompletableFuture<ListLabVhdsResult> invokeAsync(ListLabVhdsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:listLabVhds", TypeShape.of(ListLabVhdsResult.class), args == null ? ListLabVhdsArgs.Empty : args, Utilities.withVersion(options));
     }

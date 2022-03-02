@@ -101,77 +101,77 @@ public final class GetOrderResult {
     /**
      * The contact details.
      * 
-     */
+    */
     public ContactDetailsResponse getContactInformation() {
         return this.contactInformation;
     }
     /**
      * Current status of the order.
      * 
-     */
+    */
     public OrderStatusResponse getCurrentStatus() {
         return this.currentStatus;
     }
     /**
      * Tracking information for the package delivered to the customer whether it has an original or a replacement device.
      * 
-     */
+    */
     public List<TrackingInfoResponse> getDeliveryTrackingInfo() {
         return this.deliveryTrackingInfo;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of status changes in the order.
      * 
-     */
+    */
     public List<OrderStatusResponse> getOrderHistory() {
         return this.orderHistory;
     }
     /**
      * Tracking information for the package returned from the customer whether it has an original or a replacement device.
      * 
-     */
+    */
     public List<TrackingInfoResponse> getReturnTrackingInfo() {
         return this.returnTrackingInfo;
     }
     /**
      * Serial number of the device.
      * 
-     */
+    */
     public String getSerialNumber() {
         return this.serialNumber;
     }
     /**
      * ShipmentType of the order
      * 
-     */
+    */
     public Optional<String> getShipmentType() {
         return Optional.ofNullable(this.shipmentType);
     }
     /**
      * The shipping address.
      * 
-     */
+    */
     public Optional<AddressResponse> getShippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

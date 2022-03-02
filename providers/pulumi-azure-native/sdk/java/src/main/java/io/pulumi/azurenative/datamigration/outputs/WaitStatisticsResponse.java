@@ -39,21 +39,21 @@ public final class WaitStatisticsResponse {
     /**
      * Total no. of waits
      * 
-     */
+    */
     public Double getWaitCount() {
         return this.waitCount;
     }
     /**
      * Total wait time in millisecond(s)
      * 
-     */
+    */
     public Double getWaitTimeMs() {
         return this.waitTimeMs;
     }
     /**
      * Type of the Wait
      * 
-     */
+    */
     public String getWaitType() {
         return this.waitType;
     }

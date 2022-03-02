@@ -33,14 +33,14 @@ public final class ListStaticSiteUsersResult {
     /**
      * Link to next page of resources.
      * 
-     */
+    */
     public String getNextLink() {
         return this.nextLink;
     }
     /**
      * Collection of resources.
      * 
-     */
+    */
     public List<StaticSiteUserARMResourceResponse> getValue() {
         return this.value;
     }

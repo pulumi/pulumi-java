@@ -35,14 +35,14 @@ public final class FailoverSetResponse {
     /**
      * The eligibility result of the failover set, for failover.
      * 
-     */
+    */
     public Optional<FailoverSetEligibilityResultResponse> getEligibilityResult() {
         return Optional.ofNullable(this.eligibilityResult);
     }
     /**
      * The list of meta data of volume containers, which are part of the failover set.
      * 
-     */
+    */
     public List<VolumeContainerFailoverMetadataResponse> getVolumeContainers() {
         return this.volumeContainers == null ? List.of() : this.volumeContainers;
     }

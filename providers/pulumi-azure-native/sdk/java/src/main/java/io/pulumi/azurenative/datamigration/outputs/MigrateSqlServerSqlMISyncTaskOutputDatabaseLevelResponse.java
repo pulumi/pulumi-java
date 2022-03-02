@@ -113,70 +113,70 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse {
     /**
      * Backup sets that are currently active (Either being uploaded or getting restored)
      * 
-     */
+    */
     public List<BackupSetInfoResponse> getActiveBackupSets() {
         return this.activeBackupSets;
     }
     /**
      * Name of container created in the Azure Storage account where backups are copied to
      * 
-     */
+    */
     public String getContainerName() {
         return this.containerName;
     }
     /**
      * Database migration end time
      * 
-     */
+    */
     public String getEndedOn() {
         return this.endedOn;
     }
     /**
      * prefix string to use for querying errors for this database
      * 
-     */
+    */
     public String getErrorPrefix() {
         return this.errorPrefix;
     }
     /**
      * Migration exceptions and warnings
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Details of full backup set
      * 
-     */
+    */
     public BackupSetInfoResponse getFullBackupSetInfo() {
         return this.fullBackupSetInfo;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Whether full backup has been applied to the target database or not
      * 
-     */
+    */
     public Boolean getIsFullBackupRestored() {
         return this.isFullBackupRestored;
     }
     /**
      * Last applied backup set information
      * 
-     */
+    */
     public BackupSetInfoResponse getLastRestoredBackupSetInfo() {
         return this.lastRestoredBackupSetInfo;
     }
     /**
      * Current state of database
      * 
-     */
+    */
     public String getMigrationState() {
         return this.migrationState;
     }
@@ -184,21 +184,21 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse {
      * Result type
      * Expected value is 'DatabaseLevelOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
     /**
      * Name of the database
      * 
-     */
+    */
     public String getSourceDatabaseName() {
         return this.sourceDatabaseName;
     }
     /**
      * Database migration start time
      * 
-     */
+    */
     public String getStartedOn() {
         return this.startedOn;
     }

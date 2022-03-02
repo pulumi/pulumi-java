@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRouteFilterRule {
-/**
- * Route Filter Rule Resource.
+    private GetRouteFilterRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetRouteFilterRuleArgs.Builder a);
+    }
+    private static GetRouteFilterRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRouteFilterRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Route Filter Rule Resource.
  * API Version: 2020-11-01.
  * 
- *
- * Route Filter Rule Resource.
+     *
+     * Route Filter Rule Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetRouteFilterRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Route Filter Rule Resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Route Filter Rule Resource.
+     * 
+     */
     public static CompletableFuture<GetRouteFilterRuleResult> invokeAsync(GetRouteFilterRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRouteFilterRule", TypeShape.of(GetRouteFilterRuleResult.class), args == null ? GetRouteFilterRuleArgs.Empty : args, Utilities.withVersion(options));
     }

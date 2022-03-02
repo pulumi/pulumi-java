@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListNotificationHubKeys {
-/**
- * Namespace/NotificationHub Connection String
+    private ListNotificationHubKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListNotificationHubKeysArgs.Builder a);
+    }
+    private static ListNotificationHubKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListNotificationHubKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Namespace/NotificationHub Connection String
  * API Version: 2017-04-01.
  * 
- *
- * Namespace/NotificationHub Connection String
+     *
+     * Namespace/NotificationHub Connection String
  * 
- */
+     */
+    public static CompletableFuture<ListNotificationHubKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Namespace/NotificationHub Connection String
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Namespace/NotificationHub Connection String
+     * 
+     */
     public static CompletableFuture<ListNotificationHubKeysResult> invokeAsync(ListNotificationHubKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:listNotificationHubKeys", TypeShape.of(ListNotificationHubKeysResult.class), args == null ? ListNotificationHubKeysArgs.Empty : args, Utilities.withVersion(options));
     }

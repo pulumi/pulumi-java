@@ -25,7 +25,7 @@ public final class QuarantinePolicyResponse {
     /**
      * The value that indicates whether the policy is enabled or not.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

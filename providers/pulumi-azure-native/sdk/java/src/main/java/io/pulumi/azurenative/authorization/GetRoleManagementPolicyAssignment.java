@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoleManagementPolicyAssignment {
-/**
- * Role management policy
+    private GetRoleManagementPolicyAssignment() {}
+    public interface BuilderApplicator {
+        public void apply(GetRoleManagementPolicyAssignmentArgs.Builder a);
+    }
+    private static GetRoleManagementPolicyAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRoleManagementPolicyAssignmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Role management policy
  * API Version: 2020-10-01-preview.
  * 
- *
- * Role management policy
+     *
+     * Role management policy
  * 
- */
+     */
+    public static CompletableFuture<GetRoleManagementPolicyAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Role management policy
+     * API Version: 2020-10-01-preview.
+     * 
+     *
+         * Role management policy
+     * 
+     */
     public static CompletableFuture<GetRoleManagementPolicyAssignmentResult> invokeAsync(GetRoleManagementPolicyAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getRoleManagementPolicyAssignment", TypeShape.of(GetRoleManagementPolicyAssignmentResult.class), args == null ? GetRoleManagementPolicyAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

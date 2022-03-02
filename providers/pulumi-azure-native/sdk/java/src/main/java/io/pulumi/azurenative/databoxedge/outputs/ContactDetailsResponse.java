@@ -46,28 +46,28 @@ public final class ContactDetailsResponse {
     /**
      * The name of the company.
      * 
-     */
+    */
     public String getCompanyName() {
         return this.companyName;
     }
     /**
      * The contact person name.
      * 
-     */
+    */
     public String getContactPerson() {
         return this.contactPerson;
     }
     /**
      * The email list.
      * 
-     */
+    */
     public List<String> getEmailList() {
         return this.emailList;
     }
     /**
      * The phone number.
      * 
-     */
+    */
     public String getPhone() {
         return this.phone;
     }

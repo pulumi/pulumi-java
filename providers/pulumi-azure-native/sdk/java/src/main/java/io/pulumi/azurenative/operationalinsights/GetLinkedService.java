@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLinkedService {
-/**
- * The top level Linked service resource container.
+    private GetLinkedService() {}
+    public interface BuilderApplicator {
+        public void apply(GetLinkedServiceArgs.Builder a);
+    }
+    private static GetLinkedServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLinkedServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The top level Linked service resource container.
  * API Version: 2020-08-01.
  * 
- *
- * The top level Linked service resource container.
+     *
+     * The top level Linked service resource container.
  * 
- */
+     */
+    public static CompletableFuture<GetLinkedServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The top level Linked service resource container.
+     * API Version: 2020-08-01.
+     * 
+     *
+         * The top level Linked service resource container.
+     * 
+     */
     public static CompletableFuture<GetLinkedServiceResult> invokeAsync(GetLinkedServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getLinkedService", TypeShape.of(GetLinkedServiceResult.class), args == null ? GetLinkedServiceArgs.Empty : args, Utilities.withVersion(options));
     }

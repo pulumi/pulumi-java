@@ -38,21 +38,21 @@ public final class ScriptActionResponse {
     /**
      * The name of the script action.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The parameters for the script provided.
      * 
-     */
+    */
     public String getParameters() {
         return this.parameters;
     }
     /**
      * The URI to the script.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }

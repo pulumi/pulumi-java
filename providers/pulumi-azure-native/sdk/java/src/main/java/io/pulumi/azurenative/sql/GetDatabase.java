@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDatabase {
-/**
- * A database resource.
+    private GetDatabase() {}
+    public interface BuilderApplicator {
+        public void apply(GetDatabaseArgs.Builder a);
+    }
+    private static GetDatabaseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDatabaseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A database resource.
  * API Version: 2020-11-01-preview.
  * 
- *
- * A database resource.
+     *
+     * A database resource.
  * 
- */
+     */
+    public static CompletableFuture<GetDatabaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A database resource.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * A database resource.
+     * 
+     */
     public static CompletableFuture<GetDatabaseResult> invokeAsync(GetDatabaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDatabase", TypeShape.of(GetDatabaseResult.class), args == null ? GetDatabaseArgs.Empty : args, Utilities.withVersion(options));
     }

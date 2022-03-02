@@ -33,7 +33,7 @@ public final class TriggerDependencyReferenceResponse {
     /**
      * Referenced trigger.
      * 
-     */
+    */
     public TriggerReferenceResponse getReferenceTrigger() {
         return this.referenceTrigger;
     }
@@ -41,7 +41,7 @@ public final class TriggerDependencyReferenceResponse {
      * The type of dependency reference.
      * Expected value is 'TriggerDependencyReference'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

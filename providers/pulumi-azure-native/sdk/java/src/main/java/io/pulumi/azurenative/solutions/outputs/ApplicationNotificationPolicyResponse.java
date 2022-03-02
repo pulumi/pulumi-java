@@ -24,7 +24,7 @@ public final class ApplicationNotificationPolicyResponse {
     /**
      * The managed application notification endpoint.
      * 
-     */
+    */
     public List<ApplicationNotificationEndpointResponse> getNotificationEndpoints() {
         return this.notificationEndpoints;
     }

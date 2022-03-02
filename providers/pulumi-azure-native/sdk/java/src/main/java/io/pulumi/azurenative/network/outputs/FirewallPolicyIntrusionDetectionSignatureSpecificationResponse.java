@@ -33,14 +33,14 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
     /**
      * Signature id.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The signature state.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }

@@ -147,119 +147,119 @@ public final class GetServiceResult {
     /**
      * A list that describes the correlation of the service with other services.
      * 
-     */
+    */
     public List<ServiceCorrelationDescriptionResponse> getCorrelationScheme() {
         return this.correlationScheme == null ? List.of() : this.correlationScheme;
     }
     /**
      * Specifies the move cost for the service.
      * 
-     */
+    */
     public Optional<String> getDefaultMoveCost() {
         return Optional.ofNullable(this.defaultMoveCost);
     }
     /**
      * Azure resource etag.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Azure resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * It will be deprecated in New API, resource location depends on the parent resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Azure resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Describes how the service is partitioned.
      * 
-     */
+    */
     public Optional<Object> getPartitionDescription() {
         return Optional.ofNullable(this.partitionDescription);
     }
     /**
      * The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".
      * 
-     */
+    */
     public Optional<String> getPlacementConstraints() {
         return Optional.ofNullable(this.placementConstraints);
     }
     /**
      * The current deployment or provisioning state, which only appears in the response
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Dns name used for the service. If this is specified, then the service can be accessed via its DNS name instead of service name.
      * 
-     */
+    */
     public Optional<String> getServiceDnsName() {
         return Optional.ofNullable(this.serviceDnsName);
     }
     /**
      * The kind of service (Stateless or Stateful).
      * 
-     */
+    */
     public String getServiceKind() {
         return this.serviceKind;
     }
     /**
      * The service load metrics is given as an array of ServiceLoadMetricDescription objects.
      * 
-     */
+    */
     public List<ServiceLoadMetricDescriptionResponse> getServiceLoadMetrics() {
         return this.serviceLoadMetrics == null ? List.of() : this.serviceLoadMetrics;
     }
     /**
      * The activation Mode of the service package
      * 
-     */
+    */
     public Optional<String> getServicePackageActivationMode() {
         return Optional.ofNullable(this.servicePackageActivationMode);
     }
     /**
      * A list that describes the correlation of the service with other services.
      * 
-     */
+    */
     public List<ServicePlacementPolicyDescriptionResponse> getServicePlacementPolicies() {
         return this.servicePlacementPolicies == null ? List.of() : this.servicePlacementPolicies;
     }
     /**
      * The name of the service type
      * 
-     */
+    */
     public Optional<String> getServiceTypeName() {
         return Optional.ofNullable(this.serviceTypeName);
     }
     /**
      * Azure resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDiskAccess {
-/**
- * disk access resource.
+    private GetDiskAccess() {}
+    public interface BuilderApplicator {
+        public void apply(GetDiskAccessArgs.Builder a);
+    }
+    private static GetDiskAccessArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDiskAccessArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * disk access resource.
  * API Version: 2020-12-01.
  * 
- *
- * disk access resource.
+     *
+     * disk access resource.
  * 
- */
+     */
+    public static CompletableFuture<GetDiskAccessResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * disk access resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * disk access resource.
+     * 
+     */
     public static CompletableFuture<GetDiskAccessResult> invokeAsync(GetDiskAccessArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getDiskAccess", TypeShape.of(GetDiskAccessResult.class), args == null ? GetDiskAccessArgs.Empty : args, Utilities.withVersion(options));
     }

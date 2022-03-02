@@ -34,14 +34,14 @@ public final class DeliveryRuleCacheExpirationActionResponse {
      * The name of the action for the delivery rule.
      * Expected value is 'CacheExpiration'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the action.
      * 
-     */
+    */
     public CacheExpirationActionParametersResponse getParameters() {
         return this.parameters;
     }

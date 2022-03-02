@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFunction {
-/**
- * A function object, containing all information associated with the named function. All functions are contained under a streaming job.
+    private GetFunction() {}
+    public interface BuilderApplicator {
+        public void apply(GetFunctionArgs.Builder a);
+    }
+    private static GetFunctionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFunctionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A function object, containing all information associated with the named function. All functions are contained under a streaming job.
  * API Version: 2016-03-01.
  * 
- *
- * A function object, containing all information associated with the named function. All functions are contained under a streaming job.
+     *
+     * A function object, containing all information associated with the named function. All functions are contained under a streaming job.
  * 
- */
+     */
+    public static CompletableFuture<GetFunctionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A function object, containing all information associated with the named function. All functions are contained under a streaming job.
+     * API Version: 2016-03-01.
+     * 
+     *
+         * A function object, containing all information associated with the named function. All functions are contained under a streaming job.
+     * 
+     */
     public static CompletableFuture<GetFunctionResult> invokeAsync(GetFunctionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getFunction", TypeShape.of(GetFunctionResult.class), args == null ? GetFunctionArgs.Empty : args, Utilities.withVersion(options));
     }

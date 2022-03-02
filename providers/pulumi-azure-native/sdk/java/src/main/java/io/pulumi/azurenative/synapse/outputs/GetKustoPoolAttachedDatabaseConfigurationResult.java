@@ -99,77 +99,77 @@ public final class GetKustoPoolAttachedDatabaseConfigurationResult {
     /**
      * The list of databases from the clusterResourceId which are currently attached to the kusto pool.
      * 
-     */
+    */
     public List<String> getAttachedDatabaseNames() {
         return this.attachedDatabaseNames;
     }
     /**
      * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
      * 
-     */
+    */
     public String getDatabaseName() {
         return this.databaseName;
     }
     /**
      * The default principals modification kind
      * 
-     */
+    */
     public String getDefaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource id of the kusto pool where the databases you would like to attach reside.
      * 
-     */
+    */
     public String getKustoPoolResourceId() {
         return this.kustoPoolResourceId;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioned state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Table level sharing specifications
      * 
-     */
+    */
     public Optional<TableLevelSharingPropertiesResponse> getTableLevelSharingProperties() {
         return Optional.ofNullable(this.tableLevelSharingProperties);
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

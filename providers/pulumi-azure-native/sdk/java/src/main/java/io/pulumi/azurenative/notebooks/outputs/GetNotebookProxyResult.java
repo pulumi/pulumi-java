@@ -90,70 +90,70 @@ public final class GetNotebookProxyResult {
     /**
      * The friendly string identifier of the creator of the NotebookProxy resource.
      * 
-     */
+    */
     public Optional<String> getHostname() {
         return Optional.ofNullable(this.hostname);
     }
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The public DNS name
      * 
-     */
+    */
     public Optional<String> getPublicDns() {
         return Optional.ofNullable(this.publicDns);
     }
     /**
      * Allow public network access on a V-Net locked notebook resource
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * The region of the NotebookProxy resource.
      * 
-     */
+    */
     public Optional<String> getRegion() {
         return Optional.ofNullable(this.region);
     }
     /**
      * The unique identifier (a GUID) generated for every resource.
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }
     /**
      * The alternate application ID used for auth token request in the data plane
      * 
-     */
+    */
     public Optional<String> getSecondaryAppId() {
         return Optional.ofNullable(this.secondaryAppId);
     }
     /**
      * System data for notebook resource
      * 
-     */
+    */
     public Optional<NotebookResourceSystemDataResponse> getSystemData() {
         return Optional.ofNullable(this.systemData);
     }
     /**
      * The type of the resource. Ex- Microsoft.Storage/storageAccounts or Microsoft.Notebooks/notebookProxies.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

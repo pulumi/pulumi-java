@@ -43,21 +43,21 @@ public final class NetworkRuleSetResponse {
     /**
      * The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
      * 
-     */
+    */
     public Optional<String> getDefaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
     /**
      * The list of IP address rules.
      * 
-     */
+    */
     public List<IpRuleResponse> getIpRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
     /**
      * The list of virtual network rules.
      * 
-     */
+    */
     public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }

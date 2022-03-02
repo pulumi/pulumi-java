@@ -59,7 +59,7 @@ public final class EdgeProfileSubscriptionResponse {
     /**
      * ARM ID of the subscription
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -78,7 +78,7 @@ public final class EdgeProfileSubscriptionResponse {
     /**
      * Edge Subscription Registration ID
      * 
-     */
+    */
     public Optional<String> getRegistrationId() {
         return Optional.ofNullable(this.registrationId);
     }

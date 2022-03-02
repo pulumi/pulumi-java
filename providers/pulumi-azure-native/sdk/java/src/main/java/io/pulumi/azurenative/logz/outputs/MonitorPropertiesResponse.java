@@ -66,7 +66,7 @@ public final class MonitorPropertiesResponse {
     /**
      * The priority of the resource.
      * 
-     */
+    */
     public Integer getLiftrResourcePreference() {
         return this.liftrResourcePreference;
     }
@@ -76,14 +76,14 @@ public final class MonitorPropertiesResponse {
     /**
      * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
      * 
-     */
+    */
     public Optional<String> getMarketplaceSubscriptionStatus() {
         return Optional.ofNullable(this.marketplaceSubscriptionStatus);
     }
     /**
      * Flag specifying if the resource monitoring is enabled or disabled.
      * 
-     */
+    */
     public Optional<String> getMonitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
@@ -93,7 +93,7 @@ public final class MonitorPropertiesResponse {
     /**
      * Flag specifying if the resource provisioning state as tracked by ARM.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }

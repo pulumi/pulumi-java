@@ -34,14 +34,14 @@ public final class TwitterResponse {
     /**
      * <code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The configuration settings of the app registration for the Twitter provider.
      * 
-     */
+    */
     public Optional<TwitterRegistrationResponse> getRegistration() {
         return Optional.ofNullable(this.registration);
     }

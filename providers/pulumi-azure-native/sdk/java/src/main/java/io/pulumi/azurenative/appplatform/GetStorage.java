@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStorage {
-/**
- * Storage resource payload.
+    private GetStorage() {}
+    public interface BuilderApplicator {
+        public void apply(GetStorageArgs.Builder a);
+    }
+    private static GetStorageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStorageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Storage resource payload.
  * API Version: 2021-09-01-preview.
  * 
- *
- * Storage resource payload.
+     *
+     * Storage resource payload.
  * 
- */
+     */
+    public static CompletableFuture<GetStorageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Storage resource payload.
+     * API Version: 2021-09-01-preview.
+     * 
+     *
+         * Storage resource payload.
+     * 
+     */
     public static CompletableFuture<GetStorageResult> invokeAsync(GetStorageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getStorage", TypeShape.of(GetStorageResult.class), args == null ? GetStorageArgs.Empty : args, Utilities.withVersion(options));
     }

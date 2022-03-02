@@ -71,21 +71,21 @@ public final class GetUebaResult {
     /**
      * The relevant data sources that enriched by ueba
      * 
-     */
+    */
     public List<String> getDataSources() {
         return this.dataSources == null ? List.of() : this.dataSources;
     }
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -93,28 +93,28 @@ public final class GetUebaResult {
      * The kind of the setting
      * Expected value is 'Ueba'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

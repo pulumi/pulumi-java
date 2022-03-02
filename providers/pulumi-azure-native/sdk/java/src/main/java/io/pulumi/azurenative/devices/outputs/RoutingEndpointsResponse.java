@@ -50,28 +50,28 @@ public final class RoutingEndpointsResponse {
     /**
      * The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.
      * 
-     */
+    */
     public List<RoutingEventHubPropertiesResponse> getEventHubs() {
         return this.eventHubs == null ? List.of() : this.eventHubs;
     }
     /**
      * The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.
      * 
-     */
+    */
     public List<RoutingServiceBusQueueEndpointPropertiesResponse> getServiceBusQueues() {
         return this.serviceBusQueues == null ? List.of() : this.serviceBusQueues;
     }
     /**
      * The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.
      * 
-     */
+    */
     public List<RoutingServiceBusTopicEndpointPropertiesResponse> getServiceBusTopics() {
         return this.serviceBusTopics == null ? List.of() : this.serviceBusTopics;
     }
     /**
      * The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.
      * 
-     */
+    */
     public List<RoutingStorageContainerPropertiesResponse> getStorageContainers() {
         return this.storageContainers == null ? List.of() : this.storageContainers;
     }

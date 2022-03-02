@@ -40,21 +40,21 @@ public final class EncryptionDetailsResponse {
     /**
      * The key encryption key certificate expiry date.
      * 
-     */
+    */
     public Optional<String> getKekCertExpiryDate() {
         return Optional.ofNullable(this.kekCertExpiryDate);
     }
     /**
      * The key encryption key certificate thumbprint.
      * 
-     */
+    */
     public Optional<String> getKekCertThumbprint() {
         return Optional.ofNullable(this.kekCertThumbprint);
     }
     /**
      * The key encryption key state for the Vmm.
      * 
-     */
+    */
     public Optional<String> getKekState() {
         return Optional.ofNullable(this.kekState);
     }

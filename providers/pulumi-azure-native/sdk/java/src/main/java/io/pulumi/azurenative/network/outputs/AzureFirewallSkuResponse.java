@@ -33,14 +33,14 @@ public final class AzureFirewallSkuResponse {
     /**
      * Name of an Azure Firewall SKU.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Tier of an Azure Firewall.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

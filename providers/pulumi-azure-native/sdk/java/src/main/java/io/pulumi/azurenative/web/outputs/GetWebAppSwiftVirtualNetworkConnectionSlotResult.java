@@ -70,49 +70,49 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotResult {
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
      * 
-     */
+    */
     public Optional<String> getSubnetResourceId() {
         return Optional.ofNullable(this.subnetResourceId);
     }
     /**
      * A flag that specifies if the scale unit this Web App is on supports Swift integration.
      * 
-     */
+    */
     public Optional<Boolean> getSwiftSupported() {
         return Optional.ofNullable(this.swiftSupported);
     }
     /**
      * The system metadata relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

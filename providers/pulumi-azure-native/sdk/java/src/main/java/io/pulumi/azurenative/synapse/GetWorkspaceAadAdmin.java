@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkspaceAadAdmin {
-/**
- * Workspace active directory administrator
+    private GetWorkspaceAadAdmin() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkspaceAadAdminArgs.Builder a);
+    }
+    private static GetWorkspaceAadAdminArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkspaceAadAdminArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Workspace active directory administrator
  * API Version: 2021-03-01.
  * 
- *
- * Workspace active directory administrator
+     *
+     * Workspace active directory administrator
  * 
- */
+     */
+    public static CompletableFuture<GetWorkspaceAadAdminResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Workspace active directory administrator
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Workspace active directory administrator
+     * 
+     */
     public static CompletableFuture<GetWorkspaceAadAdminResult> invokeAsync(GetWorkspaceAadAdminArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getWorkspaceAadAdmin", TypeShape.of(GetWorkspaceAadAdminResult.class), args == null ? GetWorkspaceAadAdminArgs.Empty : args, Utilities.withVersion(options));
     }

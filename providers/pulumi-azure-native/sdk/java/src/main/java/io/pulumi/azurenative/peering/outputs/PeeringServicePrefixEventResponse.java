@@ -52,35 +52,35 @@ public final class PeeringServicePrefixEventResponse {
     /**
      * The description of the event associated with a prefix.
      * 
-     */
+    */
     public String getEventDescription() {
         return this.eventDescription;
     }
     /**
      * The level of the event associated with a prefix.
      * 
-     */
+    */
     public String getEventLevel() {
         return this.eventLevel;
     }
     /**
      * The summary of the event associated with a prefix.
      * 
-     */
+    */
     public String getEventSummary() {
         return this.eventSummary;
     }
     /**
      * The timestamp of the event associated with a prefix.
      * 
-     */
+    */
     public String getEventTimestamp() {
         return this.eventTimestamp;
     }
     /**
      * The type of the event associated with a prefix.
      * 
-     */
+    */
     public String getEventType() {
         return this.eventType;
     }

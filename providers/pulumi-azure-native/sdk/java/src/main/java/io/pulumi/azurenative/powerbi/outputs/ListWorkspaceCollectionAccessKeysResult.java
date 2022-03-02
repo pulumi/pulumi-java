@@ -33,14 +33,14 @@ public final class ListWorkspaceCollectionAccessKeysResult {
     /**
      * Access key 1
      * 
-     */
+    */
     public Optional<String> getKey1() {
         return Optional.ofNullable(this.key1);
     }
     /**
      * Access key 2
      * 
-     */
+    */
     public Optional<String> getKey2() {
         return Optional.ofNullable(this.key2);
     }

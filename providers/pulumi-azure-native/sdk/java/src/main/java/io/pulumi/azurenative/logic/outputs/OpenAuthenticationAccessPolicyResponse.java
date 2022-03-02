@@ -35,14 +35,14 @@ public final class OpenAuthenticationAccessPolicyResponse {
     /**
      * The access policy claims.
      * 
-     */
+    */
     public List<OpenAuthenticationPolicyClaimResponse> getClaims() {
         return this.claims == null ? List.of() : this.claims;
     }
     /**
      * Type of provider for OAuth.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

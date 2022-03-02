@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAvailabilityGroupListener {
-/**
- * A SQL Server availability group listener.
+    private GetAvailabilityGroupListener() {}
+    public interface BuilderApplicator {
+        public void apply(GetAvailabilityGroupListenerArgs.Builder a);
+    }
+    private static GetAvailabilityGroupListenerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAvailabilityGroupListenerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A SQL Server availability group listener.
  * API Version: 2017-03-01-preview.
  * 
- *
- * A SQL Server availability group listener.
+     *
+     * A SQL Server availability group listener.
  * 
- */
+     */
+    public static CompletableFuture<GetAvailabilityGroupListenerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A SQL Server availability group listener.
+     * API Version: 2017-03-01-preview.
+     * 
+     *
+         * A SQL Server availability group listener.
+     * 
+     */
     public static CompletableFuture<GetAvailabilityGroupListenerResult> invokeAsync(GetAvailabilityGroupListenerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sqlvirtualmachine:getAvailabilityGroupListener", TypeShape.of(GetAvailabilityGroupListenerResult.class), args == null ? GetAvailabilityGroupListenerArgs.Empty : args, Utilities.withVersion(options));
     }

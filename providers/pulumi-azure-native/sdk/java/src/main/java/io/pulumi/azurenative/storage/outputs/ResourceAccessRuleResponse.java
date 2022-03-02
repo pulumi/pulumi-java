@@ -33,14 +33,14 @@ public final class ResourceAccessRuleResponse {
     /**
      * Resource Id
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * Tenant Id
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }

@@ -188,6 +188,22 @@ public class Pool extends io.pulumi.resources.CustomResource {
         return this.utilizedThroughputMibps;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PoolArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.netapp.PoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.netapp.PoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Pool(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

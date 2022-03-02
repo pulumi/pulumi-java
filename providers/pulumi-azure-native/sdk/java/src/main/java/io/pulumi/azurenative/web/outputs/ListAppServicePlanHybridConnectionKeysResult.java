@@ -61,42 +61,42 @@ public final class ListAppServicePlanHybridConnectionKeysResult {
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name of the send key.
      * 
-     */
+    */
     public String getSendKeyName() {
         return this.sendKeyName;
     }
     /**
      * The value of the send key.
      * 
-     */
+    */
     public String getSendKeyValue() {
         return this.sendKeyValue;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

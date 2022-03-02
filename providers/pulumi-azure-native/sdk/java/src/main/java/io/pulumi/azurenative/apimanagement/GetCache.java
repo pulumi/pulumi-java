@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCache {
-/**
- * Cache details.
+    private GetCache() {}
+    public interface BuilderApplicator {
+        public void apply(GetCacheArgs.Builder a);
+    }
+    private static GetCacheArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCacheArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Cache details.
  * API Version: 2020-12-01.
  * 
- *
- * Cache details.
+     *
+     * Cache details.
  * 
- */
+     */
+    public static CompletableFuture<GetCacheResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Cache details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Cache details.
+     * 
+     */
     public static CompletableFuture<GetCacheResult> invokeAsync(GetCacheArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getCache", TypeShape.of(GetCacheResult.class), args == null ? GetCacheArgs.Empty : args, Utilities.withVersion(options));
     }

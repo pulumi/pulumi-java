@@ -33,14 +33,14 @@ public final class NWRuleSetIpRulesResponse {
     /**
      * The IP Filter Action
      * 
-     */
+    */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
     /**
      * IP Mask
      * 
-     */
+    */
     public Optional<String> getIpMask() {
         return Optional.ofNullable(this.ipMask);
     }

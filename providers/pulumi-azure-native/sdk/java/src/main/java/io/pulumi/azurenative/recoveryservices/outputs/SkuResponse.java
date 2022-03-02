@@ -33,14 +33,14 @@ public final class SkuResponse {
     /**
      * The Sku name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Sku tier.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

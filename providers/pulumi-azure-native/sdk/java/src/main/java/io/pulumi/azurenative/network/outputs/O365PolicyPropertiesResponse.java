@@ -25,7 +25,7 @@ public final class O365PolicyPropertiesResponse {
     /**
      * Office365 breakout categories.
      * 
-     */
+    */
     public Optional<O365BreakOutCategoryPoliciesResponse> getBreakOutCategories() {
         return Optional.ofNullable(this.breakOutCategories);
     }

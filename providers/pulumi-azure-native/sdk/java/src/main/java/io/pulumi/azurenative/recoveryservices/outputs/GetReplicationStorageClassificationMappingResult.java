@@ -55,35 +55,35 @@ public final class GetReplicationStorageClassificationMappingResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource Location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource Name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the storage mapping object.
      * 
-     */
+    */
     public StorageClassificationMappingPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource Type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -90,63 +90,63 @@ public final class ProductFamilyResponse {
     /**
      * Availability information of the product system.
      * 
-     */
+    */
     public AvailabilityInformationResponse getAvailabilityInformation() {
         return this.availabilityInformation;
     }
     /**
      * Cost information for the product system.
      * 
-     */
+    */
     public CostInformationResponse getCostInformation() {
         return this.costInformation;
     }
     /**
      * Description related to the product system.
      * 
-     */
+    */
     public DescriptionResponse getDescription() {
         return this.description;
     }
     /**
      * Display Name for the product system.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * list of filters supported for a product
      * 
-     */
+    */
     public List<FilterablePropertyResponse> getFilterableProperties() {
         return this.filterableProperties;
     }
     /**
      * Hierarchy information of a product.
      * 
-     */
+    */
     public HierarchyInformationResponse getHierarchyInformation() {
         return this.hierarchyInformation;
     }
     /**
      * Image information for the product system.
      * 
-     */
+    */
     public List<ImageInformationResponse> getImageInformation() {
         return this.imageInformation;
     }
     /**
      * List of product lines supported in the product family
      * 
-     */
+    */
     public List<ProductLineResponse> getProductLines() {
         return this.productLines;
     }
     /**
      * Contains details related to resource provider
      * 
-     */
+    */
     public List<ResourceProviderDetailsResponse> getResourceProviderDetails() {
         return this.resourceProviderDetails == null ? List.of() : this.resourceProviderDetails;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBitLockerKey {
-/**
- * GetBitLockerKeys response
+    private ListBitLockerKey() {}
+    public interface BuilderApplicator {
+        public void apply(ListBitLockerKeyArgs.Builder a);
+    }
+    private static ListBitLockerKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListBitLockerKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * GetBitLockerKeys response
  * API Version: 2020-08-01.
  * 
- *
- * GetBitLockerKeys response
+     *
+     * GetBitLockerKeys response
  * 
- */
+     */
+    public static CompletableFuture<ListBitLockerKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * GetBitLockerKeys response
+     * API Version: 2020-08-01.
+     * 
+     *
+         * GetBitLockerKeys response
+     * 
+     */
     public static CompletableFuture<ListBitLockerKeyResult> invokeAsync(ListBitLockerKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:importexport:listBitLockerKey", TypeShape.of(ListBitLockerKeyResult.class), args == null ? ListBitLockerKeyArgs.Empty : args, Utilities.withVersion(options));
     }

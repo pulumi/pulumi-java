@@ -42,21 +42,21 @@ public final class DeploymentPropertiesResponse {
     /**
      * Properties of Cognitive Services account deployment model.
      * 
-     */
+    */
     public Optional<DeploymentModelResponse> getModel() {
         return Optional.ofNullable(this.model);
     }
     /**
      * Gets the status of the resource at the time the operation was called.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Properties of Cognitive Services account deployment model.
      * 
-     */
+    */
     public Optional<DeploymentScaleSettingsResponse> getScaleSettings() {
         return Optional.ofNullable(this.scaleSettings);
     }

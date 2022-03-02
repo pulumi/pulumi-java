@@ -64,42 +64,42 @@ public final class GetBandwidthSettingResult {
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The name of the object.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The schedules.
      * 
-     */
+    */
     public List<BandwidthScheduleResponse> getSchedules() {
         return this.schedules;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The number of volumes that uses the bandwidth setting.
      * 
-     */
+    */
     public Integer getVolumeCount() {
         return this.volumeCount;
     }

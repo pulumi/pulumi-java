@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataPool {
-/**
- * ADP Data Pool
+    private GetDataPool() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataPoolArgs.Builder a);
+    }
+    private static GetDataPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * ADP Data Pool
  * API Version: 2021-02-01-preview.
  * 
- *
- * ADP Data Pool
+     *
+     * ADP Data Pool
  * 
- */
+     */
+    public static CompletableFuture<GetDataPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * ADP Data Pool
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * ADP Data Pool
+     * 
+     */
     public static CompletableFuture<GetDataPoolResult> invokeAsync(GetDataPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:autonomousdevelopmentplatform:getDataPool", TypeShape.of(GetDataPoolResult.class), args == null ? GetDataPoolArgs.Empty : args, Utilities.withVersion(options));
     }

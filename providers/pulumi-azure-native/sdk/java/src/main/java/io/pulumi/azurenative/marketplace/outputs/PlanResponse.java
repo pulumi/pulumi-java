@@ -61,42 +61,42 @@ public final class PlanResponse {
     /**
      * Plan accessibility
      * 
-     */
+    */
     public Optional<String> getAccessibility() {
         return Optional.ofNullable(this.accessibility);
     }
     /**
      * Alternative stack type
      * 
-     */
+    */
     public String getAltStackReference() {
         return this.altStackReference;
     }
     /**
      * Friendly name for the plan for display in the marketplace
      * 
-     */
+    */
     public String getPlanDisplayName() {
         return this.planDisplayName;
     }
     /**
      * Text identifier for this plan
      * 
-     */
+    */
     public String getPlanId() {
         return this.planId;
     }
     /**
      * Identifier for this plan
      * 
-     */
+    */
     public String getSkuId() {
         return this.skuId;
     }
     /**
      * Stack type (classic or arm)
      * 
-     */
+    */
     public String getStackType() {
         return this.stackType;
     }

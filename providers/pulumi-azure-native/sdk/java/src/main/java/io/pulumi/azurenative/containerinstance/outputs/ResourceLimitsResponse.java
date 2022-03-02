@@ -41,21 +41,21 @@ public final class ResourceLimitsResponse {
     /**
      * The CPU limit of this container instance.
      * 
-     */
+    */
     public Optional<Double> getCpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
      * The GPU limit of this container instance.
      * 
-     */
+    */
     public Optional<GpuResourceResponse> getGpu() {
         return Optional.ofNullable(this.gpu);
     }
     /**
      * The memory limit in GB of this container instance.
      * 
-     */
+    */
     public Optional<Double> getMemoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }

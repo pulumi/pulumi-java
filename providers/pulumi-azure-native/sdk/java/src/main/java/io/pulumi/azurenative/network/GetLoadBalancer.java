@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLoadBalancer {
-/**
- * LoadBalancer resource.
+    private GetLoadBalancer() {}
+    public interface BuilderApplicator {
+        public void apply(GetLoadBalancerArgs.Builder a);
+    }
+    private static GetLoadBalancerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLoadBalancerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * LoadBalancer resource.
  * API Version: 2020-11-01.
  * 
- *
- * LoadBalancer resource.
+     *
+     * LoadBalancer resource.
  * 
- */
+     */
+    public static CompletableFuture<GetLoadBalancerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * LoadBalancer resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * LoadBalancer resource.
+     * 
+     */
     public static CompletableFuture<GetLoadBalancerResult> invokeAsync(GetLoadBalancerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args == null ? GetLoadBalancerArgs.Empty : args, Utilities.withVersion(options));
     }

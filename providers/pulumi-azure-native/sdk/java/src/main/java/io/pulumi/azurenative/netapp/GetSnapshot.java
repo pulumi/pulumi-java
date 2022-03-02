@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSnapshot {
-/**
- * Snapshot of a Volume
+    private GetSnapshot() {}
+    public interface BuilderApplicator {
+        public void apply(GetSnapshotArgs.Builder a);
+    }
+    private static GetSnapshotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSnapshotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Snapshot of a Volume
  * API Version: 2020-12-01.
  * 
- *
- * Snapshot of a Volume
+     *
+     * Snapshot of a Volume
  * 
- */
+     */
+    public static CompletableFuture<GetSnapshotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Snapshot of a Volume
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Snapshot of a Volume
+     * 
+     */
     public static CompletableFuture<GetSnapshotResult> invokeAsync(GetSnapshotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getSnapshot", TypeShape.of(GetSnapshotResult.class), args == null ? GetSnapshotArgs.Empty : args, Utilities.withVersion(options));
     }

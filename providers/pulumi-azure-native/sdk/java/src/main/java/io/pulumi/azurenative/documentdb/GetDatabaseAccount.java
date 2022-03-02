@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDatabaseAccount {
-/**
- * An Azure Cosmos DB database account.
+    private GetDatabaseAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetDatabaseAccountArgs.Builder a);
+    }
+    private static GetDatabaseAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDatabaseAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure Cosmos DB database account.
  * API Version: 2021-03-15.
  * 
- *
- * An Azure Cosmos DB database account.
+     *
+     * An Azure Cosmos DB database account.
  * 
- */
+     */
+    public static CompletableFuture<GetDatabaseAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure Cosmos DB database account.
+     * API Version: 2021-03-15.
+     * 
+     *
+         * An Azure Cosmos DB database account.
+     * 
+     */
     public static CompletableFuture<GetDatabaseAccountResult> invokeAsync(GetDatabaseAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getDatabaseAccount", TypeShape.of(GetDatabaseAccountResult.class), args == null ? GetDatabaseAccountArgs.Empty : args, Utilities.withVersion(options));
     }

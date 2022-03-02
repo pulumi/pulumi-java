@@ -43,21 +43,21 @@ public final class TriggerPropertiesResponse {
     /**
      * The trigger based on base image dependencies.
      * 
-     */
+    */
     public Optional<BaseImageTriggerResponse> getBaseImageTrigger() {
         return Optional.ofNullable(this.baseImageTrigger);
     }
     /**
      * The collection of triggers based on source code repository.
      * 
-     */
+    */
     public List<SourceTriggerResponse> getSourceTriggers() {
         return this.sourceTriggers == null ? List.of() : this.sourceTriggers;
     }
     /**
      * The collection of timer triggers.
      * 
-     */
+    */
     public List<TimerTriggerResponse> getTimerTriggers() {
         return this.timerTriggers == null ? List.of() : this.timerTriggers;
     }

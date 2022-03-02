@@ -40,21 +40,21 @@ public final class EnterprisePolicyIdentityResponse {
     /**
      * The principal id of EnterprisePolicy identity.
      * 
-     */
+    */
     public String getSystemAssignedIdentityPrincipalId() {
         return this.systemAssignedIdentityPrincipalId;
     }
     /**
      * The tenant id associated with the EnterprisePolicy.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

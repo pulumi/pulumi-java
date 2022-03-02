@@ -173,6 +173,22 @@ public class WorkloadNetworkDnsService extends io.pulumi.resources.CustomResourc
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WorkloadNetworkDnsServiceArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.avs.WorkloadNetworkDnsServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.avs.WorkloadNetworkDnsServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public WorkloadNetworkDnsService(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

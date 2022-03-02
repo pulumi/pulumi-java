@@ -81,56 +81,56 @@ public final class NicIpConfigurationResourceSettingsResponse {
     /**
      * Gets or sets the references of the load balancer backend address pools.
      * 
-     */
+    */
     public List<LoadBalancerBackendAddressPoolReferenceResponse> getLoadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
     }
     /**
      * Gets or sets the references of the load balancer NAT rules.
      * 
-     */
+    */
     public List<LoadBalancerNatRuleReferenceResponse> getLoadBalancerNatRules() {
         return this.loadBalancerNatRules == null ? List.of() : this.loadBalancerNatRules;
     }
     /**
      * Gets or sets the IP configuration name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Gets or sets a value indicating whether this IP configuration is the primary.
      * 
-     */
+    */
     public Optional<Boolean> getPrimary() {
         return Optional.ofNullable(this.primary);
     }
     /**
      * Gets or sets the private IP address of the network interface IP Configuration.
      * 
-     */
+    */
     public Optional<String> getPrivateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
      * Gets or sets the private IP address allocation method.
      * 
-     */
+    */
     public Optional<String> getPrivateIpAllocationMethod() {
         return Optional.ofNullable(this.privateIpAllocationMethod);
     }
     /**
      * Defines reference to a public IP.
      * 
-     */
+    */
     public Optional<PublicIpReferenceResponse> getPublicIp() {
         return Optional.ofNullable(this.publicIp);
     }
     /**
      * Defines reference to subnet.
      * 
-     */
+    */
     public Optional<SubnetReferenceResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }

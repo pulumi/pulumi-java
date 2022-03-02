@@ -36,7 +36,7 @@ public final class PolicyInfoResponse {
     /**
      * Policy parameters for the backup instance
      * 
-     */
+    */
     public Optional<PolicyParametersResponse> getPolicyParameters() {
         return Optional.ofNullable(this.policyParameters);
     }

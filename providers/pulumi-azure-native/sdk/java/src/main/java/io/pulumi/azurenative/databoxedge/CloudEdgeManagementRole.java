@@ -134,6 +134,22 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(CloudEdgeManagementRoleArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.databoxedge.CloudEdgeManagementRoleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.databoxedge.CloudEdgeManagementRoleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public CloudEdgeManagementRole(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

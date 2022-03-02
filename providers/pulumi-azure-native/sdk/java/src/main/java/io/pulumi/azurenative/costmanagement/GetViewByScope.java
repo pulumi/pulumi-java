@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetViewByScope {
-/**
- * States and configurations of Cost Analysis.
+    private GetViewByScope() {}
+    public interface BuilderApplicator {
+        public void apply(GetViewByScopeArgs.Builder a);
+    }
+    private static GetViewByScopeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetViewByScopeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * States and configurations of Cost Analysis.
  * API Version: 2019-11-01.
  * 
- *
- * States and configurations of Cost Analysis.
+     *
+     * States and configurations of Cost Analysis.
  * 
- */
+     */
+    public static CompletableFuture<GetViewByScopeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * States and configurations of Cost Analysis.
+     * API Version: 2019-11-01.
+     * 
+     *
+         * States and configurations of Cost Analysis.
+     * 
+     */
     public static CompletableFuture<GetViewByScopeResult> invokeAsync(GetViewByScopeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getViewByScope", TypeShape.of(GetViewByScopeResult.class), args == null ? GetViewByScopeArgs.Empty : args, Utilities.withVersion(options));
     }

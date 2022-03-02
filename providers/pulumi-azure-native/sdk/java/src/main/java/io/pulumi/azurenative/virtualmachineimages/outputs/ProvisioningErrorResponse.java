@@ -33,14 +33,14 @@ public final class ProvisioningErrorResponse {
     /**
      * Verbose error message about the provisioning failure
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Error code of the provisioning failure
      * 
-     */
+    */
     public Optional<String> getProvisioningErrorCode() {
         return Optional.ofNullable(this.provisioningErrorCode);
     }

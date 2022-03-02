@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStorageAccountKeys {
-/**
- * API Version: 2021-01-01.
+    private ListStorageAccountKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListStorageAccountKeysArgs.Builder a);
+    }
+    private static ListStorageAccountKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListStorageAccountKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2021-01-01.
  * 
- */
+     */
+    public static CompletableFuture<ListStorageAccountKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<ListStorageAccountKeysResult> invokeAsync(ListStorageAccountKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listStorageAccountKeys", TypeShape.of(ListStorageAccountKeysResult.class), args == null ? ListStorageAccountKeysArgs.Empty : args, Utilities.withVersion(options));
     }

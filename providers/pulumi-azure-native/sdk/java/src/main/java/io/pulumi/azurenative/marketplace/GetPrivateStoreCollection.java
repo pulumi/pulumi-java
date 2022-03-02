@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateStoreCollection {
-/**
- * The Collection data structure.
+    private GetPrivateStoreCollection() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateStoreCollectionArgs.Builder a);
+    }
+    private static GetPrivateStoreCollectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateStoreCollectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Collection data structure.
  * API Version: 2021-06-01.
  * 
- *
- * The Collection data structure.
+     *
+     * The Collection data structure.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateStoreCollectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Collection data structure.
+     * API Version: 2021-06-01.
+     * 
+     *
+         * The Collection data structure.
+     * 
+     */
     public static CompletableFuture<GetPrivateStoreCollectionResult> invokeAsync(GetPrivateStoreCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:marketplace:getPrivateStoreCollection", TypeShape.of(GetPrivateStoreCollectionResult.class), args == null ? GetPrivateStoreCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

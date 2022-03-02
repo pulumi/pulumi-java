@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProfileSupportedOptimizationTypes {
-/**
- * The result of the GetSupportedOptimizationTypes API
+    private GetProfileSupportedOptimizationTypes() {}
+    public interface BuilderApplicator {
+        public void apply(GetProfileSupportedOptimizationTypesArgs.Builder a);
+    }
+    private static GetProfileSupportedOptimizationTypesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProfileSupportedOptimizationTypesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The result of the GetSupportedOptimizationTypes API
  * API Version: 2020-09-01.
  * 
- *
- * The result of the GetSupportedOptimizationTypes API
+     *
+     * The result of the GetSupportedOptimizationTypes API
  * 
- */
+     */
+    public static CompletableFuture<GetProfileSupportedOptimizationTypesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The result of the GetSupportedOptimizationTypes API
+     * API Version: 2020-09-01.
+     * 
+     *
+         * The result of the GetSupportedOptimizationTypes API
+     * 
+     */
     public static CompletableFuture<GetProfileSupportedOptimizationTypesResult> invokeAsync(GetProfileSupportedOptimizationTypesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getProfileSupportedOptimizationTypes", TypeShape.of(GetProfileSupportedOptimizationTypesResult.class), args == null ? GetProfileSupportedOptimizationTypesArgs.Empty : args, Utilities.withVersion(options));
     }

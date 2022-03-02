@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListChannelWithKeys {
-/**
- * The ARM channel of list channel with keys operation response.
+    private ListChannelWithKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListChannelWithKeysArgs.Builder a);
+    }
+    private static ListChannelWithKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListChannelWithKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The ARM channel of list channel with keys operation response.
  * API Version: 2021-03-01.
  * 
- *
- * The ARM channel of list channel with keys operation response.
+     *
+     * The ARM channel of list channel with keys operation response.
  * 
- */
+     */
+    public static CompletableFuture<ListChannelWithKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The ARM channel of list channel with keys operation response.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * The ARM channel of list channel with keys operation response.
+     * 
+     */
     public static CompletableFuture<ListChannelWithKeysResult> invokeAsync(ListChannelWithKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:listChannelWithKeys", TypeShape.of(ListChannelWithKeysResult.class), args == null ? ListChannelWithKeysArgs.Empty : args, Utilities.withVersion(options));
     }

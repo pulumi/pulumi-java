@@ -25,7 +25,7 @@ public final class AkamaiAccessControlResponse {
     /**
      * authentication key list
      * 
-     */
+    */
     public List<AkamaiSignatureHeaderAuthenticationKeyResponse> getAkamaiSignatureHeaderAuthenticationKeyList() {
         return this.akamaiSignatureHeaderAuthenticationKeyList == null ? List.of() : this.akamaiSignatureHeaderAuthenticationKeyList;
     }

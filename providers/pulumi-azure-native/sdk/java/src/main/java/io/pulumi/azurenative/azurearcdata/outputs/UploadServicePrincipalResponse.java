@@ -40,21 +40,21 @@ public final class UploadServicePrincipalResponse {
     /**
      * Authority for the service principal. Example: https://login.microsoftonline.com/
      * 
-     */
+    */
     public Optional<String> getAuthority() {
         return Optional.ofNullable(this.authority);
     }
     /**
      * Client ID of the service principal for uploading data.
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * Tenant ID of the service principal.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }

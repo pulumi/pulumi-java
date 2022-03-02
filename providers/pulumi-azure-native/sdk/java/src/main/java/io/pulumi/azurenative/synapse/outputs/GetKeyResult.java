@@ -55,35 +55,35 @@ public final class GetKeyResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Used to activate the workspace after a customer managed key is provided.
      * 
-     */
+    */
     public Optional<Boolean> getIsActiveCMK() {
         return Optional.ofNullable(this.isActiveCMK);
     }
     /**
      * The Key Vault Url of the workspace key.
      * 
-     */
+    */
     public Optional<String> getKeyVaultUrl() {
         return Optional.ofNullable(this.keyVaultUrl);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

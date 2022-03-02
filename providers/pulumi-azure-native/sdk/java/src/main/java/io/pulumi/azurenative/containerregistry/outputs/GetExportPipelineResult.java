@@ -86,63 +86,63 @@ public final class GetExportPipelineResult {
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the export pipeline.
      * 
-     */
+    */
     public Optional<IdentityPropertiesResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The location of the export pipeline.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The list of all options configured for the pipeline.
      * 
-     */
+    */
     public List<String> getOptions() {
         return this.options == null ? List.of() : this.options;
     }
     /**
      * The provisioning state of the pipeline at the time the operation was called.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The target properties of the export pipeline.
      * 
-     */
+    */
     public ExportPipelineTargetPropertiesResponse getTarget() {
         return this.target;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

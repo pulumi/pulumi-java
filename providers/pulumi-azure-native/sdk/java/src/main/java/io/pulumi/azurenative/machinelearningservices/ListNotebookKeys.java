@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListNotebookKeys {
-/**
- * API Version: 2021-01-01.
+    private ListNotebookKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListNotebookKeysArgs.Builder a);
+    }
+    private static ListNotebookKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListNotebookKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2021-01-01.
  * 
- */
+     */
+    public static CompletableFuture<ListNotebookKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2021-01-01.
+     * 
+     */
     public static CompletableFuture<ListNotebookKeysResult> invokeAsync(ListNotebookKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listNotebookKeys", TypeShape.of(ListNotebookKeysResult.class), args == null ? ListNotebookKeysArgs.Empty : args, Utilities.withVersion(options));
     }

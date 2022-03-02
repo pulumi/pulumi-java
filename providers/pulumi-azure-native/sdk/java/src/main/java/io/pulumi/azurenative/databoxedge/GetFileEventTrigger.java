@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFileEventTrigger {
-/**
- * Trigger details.
+    private GetFileEventTrigger() {}
+    public interface BuilderApplicator {
+        public void apply(GetFileEventTriggerArgs.Builder a);
+    }
+    private static GetFileEventTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFileEventTriggerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Trigger details.
  * API Version: 2020-12-01.
  * 
- *
- * Trigger details.
+     *
+     * Trigger details.
  * 
- */
+     */
+    public static CompletableFuture<GetFileEventTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Trigger details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Trigger details.
+     * 
+     */
     public static CompletableFuture<GetFileEventTriggerResult> invokeAsync(GetFileEventTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getFileEventTrigger", TypeShape.of(GetFileEventTriggerResult.class), args == null ? GetFileEventTriggerArgs.Empty : args, Utilities.withVersion(options));
     }

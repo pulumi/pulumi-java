@@ -33,14 +33,14 @@ public final class AKSServiceResponseResponseDataCollection {
     /**
      * Option for enabling/disabling Event Hub.
      * 
-     */
+    */
     public Optional<Boolean> getEventHubEnabled() {
         return Optional.ofNullable(this.eventHubEnabled);
     }
     /**
      * Option for enabling/disabling storage.
      * 
-     */
+    */
     public Optional<Boolean> getStorageEnabled() {
         return Optional.ofNullable(this.storageEnabled);
     }

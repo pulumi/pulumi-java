@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationRuntimeObjectMetadatum {
-/**
- * A list of SSIS object metadata.
+    private GetIntegrationRuntimeObjectMetadatum() {}
+    public interface BuilderApplicator {
+        public void apply(GetIntegrationRuntimeObjectMetadatumArgs.Builder a);
+    }
+    private static GetIntegrationRuntimeObjectMetadatumArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIntegrationRuntimeObjectMetadatumArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A list of SSIS object metadata.
  * API Version: 2021-03-01.
  * 
- *
- * A list of SSIS object metadata.
+     *
+     * A list of SSIS object metadata.
  * 
- */
+     */
+    public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A list of SSIS object metadata.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * A list of SSIS object metadata.
+     * 
+     */
     public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> invokeAsync(GetIntegrationRuntimeObjectMetadatumArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getIntegrationRuntimeObjectMetadatum", TypeShape.of(GetIntegrationRuntimeObjectMetadatumResult.class), args == null ? GetIntegrationRuntimeObjectMetadatumArgs.Empty : args, Utilities.withVersion(options));
     }

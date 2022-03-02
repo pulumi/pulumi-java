@@ -91,49 +91,49 @@ public final class FileServerLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Host name of the server. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getHost() {
         return this.host;
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password to logon the server.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
@@ -141,14 +141,14 @@ public final class FileServerLinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'FileServer'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * User ID to logon the server. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getUserId() {
         return Optional.ofNullable(this.userId);
     }

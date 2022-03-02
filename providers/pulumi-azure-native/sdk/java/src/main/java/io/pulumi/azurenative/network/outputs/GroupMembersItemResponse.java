@@ -25,7 +25,7 @@ public final class GroupMembersItemResponse {
     /**
      * Resource Id.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

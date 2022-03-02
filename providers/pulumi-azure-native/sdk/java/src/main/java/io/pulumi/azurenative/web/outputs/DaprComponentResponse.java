@@ -49,28 +49,28 @@ public final class DaprComponentResponse {
     /**
      * Component metadata
      * 
-     */
+    */
     public List<DaprMetadataResponse> getMetadata() {
         return this.metadata == null ? List.of() : this.metadata;
     }
     /**
      * Component name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Component type
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Component version
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

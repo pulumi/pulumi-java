@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGalleryImage {
-/**
- * Represents an image from the Azure Marketplace
+    private GetGalleryImage() {}
+    public interface BuilderApplicator {
+        public void apply(GetGalleryImageArgs.Builder a);
+    }
+    private static GetGalleryImageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGalleryImageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents an image from the Azure Marketplace
  * API Version: 2018-10-15.
  * 
- *
- * Represents an image from the Azure Marketplace
+     *
+     * Represents an image from the Azure Marketplace
  * 
- */
+     */
+    public static CompletableFuture<GetGalleryImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents an image from the Azure Marketplace
+     * API Version: 2018-10-15.
+     * 
+     *
+         * Represents an image from the Azure Marketplace
+     * 
+     */
     public static CompletableFuture<GetGalleryImageResult> invokeAsync(GetGalleryImageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getGalleryImage", TypeShape.of(GetGalleryImageResult.class), args == null ? GetGalleryImageArgs.Empty : args, Utilities.withVersion(options));
     }

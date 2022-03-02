@@ -34,14 +34,14 @@ public final class AccountResponseSku {
     /**
      * Gets or sets the sku capacity.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Gets or sets the sku name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

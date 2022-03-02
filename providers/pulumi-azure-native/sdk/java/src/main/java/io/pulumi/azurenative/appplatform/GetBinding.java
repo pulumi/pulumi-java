@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBinding {
-/**
- * Binding resource payload
+    private GetBinding() {}
+    public interface BuilderApplicator {
+        public void apply(GetBindingArgs.Builder a);
+    }
+    private static GetBindingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBindingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Binding resource payload
  * API Version: 2020-07-01.
  * 
- *
- * Binding resource payload
+     *
+     * Binding resource payload
  * 
- */
+     */
+    public static CompletableFuture<GetBindingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Binding resource payload
+     * API Version: 2020-07-01.
+     * 
+     *
+         * Binding resource payload
+     * 
+     */
     public static CompletableFuture<GetBindingResult> invokeAsync(GetBindingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBinding", TypeShape.of(GetBindingResult.class), args == null ? GetBindingArgs.Empty : args, Utilities.withVersion(options));
     }

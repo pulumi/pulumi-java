@@ -57,35 +57,35 @@ public final class DirectLineSpeechChannelResponse {
      * The channel name
      * Expected value is 'DirectLineSpeechChannel'.
      * 
-     */
+    */
     public String getChannelName() {
         return this.channelName;
     }
     /**
      * Entity Tag of the resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Specifies the location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The set of properties specific to DirectLine Speech channel resource
      * 
-     */
+    */
     public Optional<DirectLineSpeechChannelPropertiesResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }
     /**
      * Provisioning state of the resource
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }

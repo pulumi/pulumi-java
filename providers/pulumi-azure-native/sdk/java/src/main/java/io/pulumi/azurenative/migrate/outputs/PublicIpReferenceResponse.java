@@ -23,7 +23,7 @@ public final class PublicIpReferenceResponse {
     /**
      * Gets the ARM resource ID of the tracked resource being referenced.
      * 
-     */
+    */
     public String getSourceArmResourceId() {
         return this.sourceArmResourceId;
     }

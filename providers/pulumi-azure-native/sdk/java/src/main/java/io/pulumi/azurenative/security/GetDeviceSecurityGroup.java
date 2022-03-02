@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeviceSecurityGroup {
-/**
- * The device security group resource
+    private GetDeviceSecurityGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeviceSecurityGroupArgs.Builder a);
+    }
+    private static GetDeviceSecurityGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeviceSecurityGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The device security group resource
  * API Version: 2019-08-01.
  * 
- *
- * The device security group resource
+     *
+     * The device security group resource
  * 
- */
+     */
+    public static CompletableFuture<GetDeviceSecurityGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The device security group resource
+     * API Version: 2019-08-01.
+     * 
+     *
+         * The device security group resource
+     * 
+     */
     public static CompletableFuture<GetDeviceSecurityGroupResult> invokeAsync(GetDeviceSecurityGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getDeviceSecurityGroup", TypeShape.of(GetDeviceSecurityGroupResult.class), args == null ? GetDeviceSecurityGroupArgs.Empty : args, Utilities.withVersion(options));
     }

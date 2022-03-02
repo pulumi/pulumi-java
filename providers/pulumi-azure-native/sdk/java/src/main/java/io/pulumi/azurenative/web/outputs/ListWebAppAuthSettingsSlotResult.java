@@ -368,7 +368,7 @@ public final class ListWebAppAuthSettingsSlotResult {
     /**
      * Gets a JSON string containing the Azure AD Acl settings.
      * 
-     */
+    */
     public Optional<String> getAadClaimsAuthorization() {
         return Optional.ofNullable(this.aadClaimsAuthorization);
     }
@@ -376,7 +376,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * Login parameters to send to the OpenID Connect authorization endpoint when
      * a user logs in. Each parameter must be in the form "key=value".
      * 
-     */
+    */
     public List<String> getAdditionalLoginParams() {
         return this.additionalLoginParams == null ? List.of() : this.additionalLoginParams;
     }
@@ -385,7 +385,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * Azure Active Directory. Note that the <code>ClientID</code> value is always considered an
      * allowed audience, regardless of this setting.
      * 
-     */
+    */
     public List<String> getAllowedAudiences() {
         return this.allowedAudiences == null ? List.of() : this.allowedAudiences;
     }
@@ -394,7 +394,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * This is an advanced setting typically only needed by Windows Store application backends.
      * Note that URLs within the current domain are always implicitly allowed.
      * 
-     */
+    */
     public List<String> getAllowedExternalRedirectUrls() {
         return this.allowedExternalRedirectUrls == null ? List.of() : this.allowedExternalRedirectUrls;
     }
@@ -402,7 +402,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * The path of the config file containing auth settings.
      * If the path is relative, base will the site's root directory.
      * 
-     */
+    */
     public Optional<String> getAuthFilePath() {
         return Optional.ofNullable(this.authFilePath);
     }
@@ -412,7 +412,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * other 3rd party OpenID Connect providers.
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -422,7 +422,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * Otherwise, the OpenID Connect Authorization Code Flow is used to authenticate end users.
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
      * 
-     */
+    */
     public Optional<String> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -430,14 +430,14 @@ public final class ListWebAppAuthSettingsSlotResult {
      * An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
      * a replacement for the Client Secret. It is also optional.
      * 
-     */
+    */
     public Optional<String> getClientSecretCertificateThumbprint() {
         return Optional.ofNullable(this.clientSecretCertificateThumbprint);
     }
     /**
      * The app setting name that contains the client secret of the relying party application.
      * 
-     */
+    */
     public Optional<String> getClientSecretSettingName() {
         return Optional.ofNullable(this.clientSecretSettingName);
     }
@@ -445,7 +445,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * The ConfigVersion of the Authentication / Authorization feature in use for the current app.
      * The setting in this value can control the behavior of the control plane for Authentication / Authorization.
      * 
-     */
+    */
     public Optional<String> getConfigVersion() {
         return Optional.ofNullable(this.configVersion);
     }
@@ -454,14 +454,14 @@ public final class ListWebAppAuthSettingsSlotResult {
      * This setting is only needed if multiple providers are configured and the unauthenticated client
      * action is set to "RedirectToLoginPage".
      * 
-     */
+    */
     public Optional<String> getDefaultProvider() {
         return Optional.ofNullable(this.defaultProvider);
     }
     /**
      * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -470,7 +470,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * This setting is required for enabling Facebook Login.
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
-     */
+    */
     public Optional<String> getFacebookAppId() {
         return Optional.ofNullable(this.facebookAppId);
     }
@@ -479,14 +479,14 @@ public final class ListWebAppAuthSettingsSlotResult {
      * This setting is required for enabling Facebook Login.
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
-     */
+    */
     public Optional<String> getFacebookAppSecret() {
         return Optional.ofNullable(this.facebookAppSecret);
     }
     /**
      * The app setting name that contains the app secret used for Facebook Login.
      * 
-     */
+    */
     public Optional<String> getFacebookAppSecretSettingName() {
         return Optional.ofNullable(this.facebookAppSecretSettingName);
     }
@@ -495,7 +495,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * This setting is optional.
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
-     */
+    */
     public List<String> getFacebookOAuthScopes() {
         return this.facebookOAuthScopes == null ? List.of() : this.facebookOAuthScopes;
     }
@@ -503,7 +503,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * The Client Id of the GitHub app used for login.
      * This setting is required for enabling Github login
      * 
-     */
+    */
     public Optional<String> getGitHubClientId() {
         return Optional.ofNullable(this.gitHubClientId);
     }
@@ -511,7 +511,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * The Client Secret of the GitHub app used for Github Login.
      * This setting is required for enabling Github login.
      * 
-     */
+    */
     public Optional<String> getGitHubClientSecret() {
         return Optional.ofNullable(this.gitHubClientSecret);
     }
@@ -519,7 +519,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * The app setting name that contains the client secret of the Github
      * app used for GitHub Login.
      * 
-     */
+    */
     public Optional<String> getGitHubClientSecretSettingName() {
         return Optional.ofNullable(this.gitHubClientSecretSettingName);
     }
@@ -527,7 +527,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * The OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
      * This setting is optional
      * 
-     */
+    */
     public List<String> getGitHubOAuthScopes() {
         return this.gitHubOAuthScopes == null ? List.of() : this.gitHubOAuthScopes;
     }
@@ -536,7 +536,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * This setting is required for enabling Google Sign-In.
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
-     */
+    */
     public Optional<String> getGoogleClientId() {
         return Optional.ofNullable(this.googleClientId);
     }
@@ -545,7 +545,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * This setting is required for enabling Google Sign-In.
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
-     */
+    */
     public Optional<String> getGoogleClientSecret() {
         return Optional.ofNullable(this.googleClientSecret);
     }
@@ -553,7 +553,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * The app setting name that contains the client secret associated with
      * the Google web application.
      * 
-     */
+    */
     public Optional<String> getGoogleClientSecretSettingName() {
         return Optional.ofNullable(this.googleClientSecretSettingName);
     }
@@ -562,14 +562,14 @@ public final class ListWebAppAuthSettingsSlotResult {
      * This setting is optional. If not specified, "openid", "profile", and "email" are used as default scopes.
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
-     */
+    */
     public List<String> getGoogleOAuthScopes() {
         return this.googleOAuthScopes == null ? List.of() : this.googleOAuthScopes;
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -577,7 +577,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * "true" if the auth config settings should be read from a file,
      * "false" otherwise
      * 
-     */
+    */
     public Optional<String> getIsAuthFromFile() {
         return Optional.ofNullable(this.isAuthFromFile);
     }
@@ -587,14 +587,14 @@ public final class ListWebAppAuthSettingsSlotResult {
      * This URI is a case-sensitive identifier for the token issuer.
      * More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
      * 
-     */
+    */
     public Optional<String> getIssuer() {
         return Optional.ofNullable(this.issuer);
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
@@ -603,7 +603,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * This setting is required for enabling Microsoft Account authentication.
      * Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
      * 
-     */
+    */
     public Optional<String> getMicrosoftAccountClientId() {
         return Optional.ofNullable(this.microsoftAccountClientId);
     }
@@ -612,7 +612,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * This setting is required for enabling Microsoft Account authentication.
      * Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
      * 
-     */
+    */
     public Optional<String> getMicrosoftAccountClientSecret() {
         return Optional.ofNullable(this.microsoftAccountClientSecret);
     }
@@ -620,7 +620,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * The app setting name containing the OAuth 2.0 client secret that was created for the
      * app used for authentication.
      * 
-     */
+    */
     public Optional<String> getMicrosoftAccountClientSecretSettingName() {
         return Optional.ofNullable(this.microsoftAccountClientSecretSettingName);
     }
@@ -629,14 +629,14 @@ public final class ListWebAppAuthSettingsSlotResult {
      * This setting is optional. If not specified, "wl.basic" is used as the default scope.
      * Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx
      * 
-     */
+    */
     public List<String> getMicrosoftAccountOAuthScopes() {
         return this.microsoftAccountOAuthScopes == null ? List.of() : this.microsoftAccountOAuthScopes;
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -644,7 +644,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
      * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
      * 
-     */
+    */
     public Optional<String> getRuntimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
@@ -652,7 +652,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * The number of hours after session token expiration that a session token can be used to
      * call the token refresh API. The default is 72 hours.
      * 
-     */
+    */
     public Optional<Double> getTokenRefreshExtensionHours() {
         return Optional.ofNullable(this.tokenRefreshExtensionHours);
     }
@@ -660,7 +660,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * <code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
      *  The default is <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getTokenStoreEnabled() {
         return Optional.ofNullable(this.tokenStoreEnabled);
     }
@@ -669,7 +669,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * This setting is required for enabling Twitter Sign-In.
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
      * 
-     */
+    */
     public Optional<String> getTwitterConsumerKey() {
         return Optional.ofNullable(this.twitterConsumerKey);
     }
@@ -678,7 +678,7 @@ public final class ListWebAppAuthSettingsSlotResult {
      * This setting is required for enabling Twitter Sign-In.
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
      * 
-     */
+    */
     public Optional<String> getTwitterConsumerSecret() {
         return Optional.ofNullable(this.twitterConsumerSecret);
     }
@@ -686,28 +686,28 @@ public final class ListWebAppAuthSettingsSlotResult {
      * The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
      * application used for sign-in.
      * 
-     */
+    */
     public Optional<String> getTwitterConsumerSecretSettingName() {
         return Optional.ofNullable(this.twitterConsumerSecretSettingName);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The action to take when an unauthenticated client attempts to access the app.
      * 
-     */
+    */
     public Optional<String> getUnauthenticatedClientAction() {
         return Optional.ofNullable(this.unauthenticatedClientAction);
     }
     /**
      * Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.
      * 
-     */
+    */
     public Optional<Boolean> getValidateIssuer() {
         return Optional.ofNullable(this.validateIssuer);
     }

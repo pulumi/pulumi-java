@@ -41,21 +41,21 @@ public final class AzureSkuResponse {
     /**
      * The number of instances of the cluster.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * SKU name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * SKU tier.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }

@@ -41,14 +41,14 @@ public final class ImageTemplateVhdDistributorResponse {
     /**
      * Tags that will be applied to the artifact once it has been created/updated by the distributor.
      * 
-     */
+    */
     public Map<String,String> getArtifactTags() {
         return this.artifactTags == null ? Map.of() : this.artifactTags;
     }
     /**
      * The name to be used for the associated RunOutput.
      * 
-     */
+    */
     public String getRunOutputName() {
         return this.runOutputName;
     }
@@ -56,7 +56,7 @@ public final class ImageTemplateVhdDistributorResponse {
      * Type of distribution.
      * Expected value is 'VHD'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -23,7 +23,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputResponse {
     /**
      * Connection information for source PostgreSQL server
      * 
-     */
+    */
     public PostgreSqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }

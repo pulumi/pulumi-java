@@ -57,35 +57,35 @@ public final class BackendCredentialsContractResponse {
     /**
      * Authorization header authentication
      * 
-     */
+    */
     public Optional<BackendAuthorizationHeaderCredentialsResponse> getAuthorization() {
         return Optional.ofNullable(this.authorization);
     }
     /**
      * List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
      * 
-     */
+    */
     public List<String> getCertificate() {
         return this.certificate == null ? List.of() : this.certificate;
     }
     /**
      * List of Client Certificate Ids.
      * 
-     */
+    */
     public List<String> getCertificateIds() {
         return this.certificateIds == null ? List.of() : this.certificateIds;
     }
     /**
      * Header Parameter description.
      * 
-     */
+    */
     public Map<String,List<String>> getHeader() {
         return this.header == null ? Map.of() : this.header;
     }
     /**
      * Query Parameter description.
      * 
-     */
+    */
     public Map<String,List<String>> getQuery() {
         return this.query == null ? Map.of() : this.query;
     }

@@ -32,14 +32,14 @@ public final class ServerPrivateEndpointConnectionResponse {
     /**
      * Resource Id of the private endpoint connection.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Private endpoint connection properties
      * 
-     */
+    */
     public ServerPrivateEndpointConnectionPropertiesResponse getProperties() {
         return this.properties;
     }

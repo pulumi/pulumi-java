@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebhookCallbackConfig {
-/**
- * The configuration of service URI and custom headers for the webhook.
+    private GetWebhookCallbackConfig() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebhookCallbackConfigArgs.Builder a);
+    }
+    private static GetWebhookCallbackConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebhookCallbackConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The configuration of service URI and custom headers for the webhook.
  * API Version: 2019-05-01.
  * 
- *
- * The configuration of service URI and custom headers for the webhook.
+     *
+     * The configuration of service URI and custom headers for the webhook.
  * 
- */
+     */
+    public static CompletableFuture<GetWebhookCallbackConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The configuration of service URI and custom headers for the webhook.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The configuration of service URI and custom headers for the webhook.
+     * 
+     */
     public static CompletableFuture<GetWebhookCallbackConfigResult> invokeAsync(GetWebhookCallbackConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getWebhookCallbackConfig", TypeShape.of(GetWebhookCallbackConfigResult.class), args == null ? GetWebhookCallbackConfigArgs.Empty : args, Utilities.withVersion(options));
     }

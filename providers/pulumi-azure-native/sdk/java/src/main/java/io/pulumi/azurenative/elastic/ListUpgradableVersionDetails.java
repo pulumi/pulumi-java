@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListUpgradableVersionDetails {
-/**
- * Stack Versions that this version can upgrade to
+    private ListUpgradableVersionDetails() {}
+    public interface BuilderApplicator {
+        public void apply(ListUpgradableVersionDetailsArgs.Builder a);
+    }
+    private static ListUpgradableVersionDetailsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListUpgradableVersionDetailsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Stack Versions that this version can upgrade to
  * API Version: 2021-10-01-preview.
  * 
- *
- * Stack Versions that this version can upgrade to
+     *
+     * Stack Versions that this version can upgrade to
  * 
- */
+     */
+    public static CompletableFuture<ListUpgradableVersionDetailsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Stack Versions that this version can upgrade to
+     * API Version: 2021-10-01-preview.
+     * 
+     *
+         * Stack Versions that this version can upgrade to
+     * 
+     */
     public static CompletableFuture<ListUpgradableVersionDetailsResult> invokeAsync(ListUpgradableVersionDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:elastic:listUpgradableVersionDetails", TypeShape.of(ListUpgradableVersionDetailsResult.class), args == null ? ListUpgradableVersionDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -54,35 +54,35 @@ public final class GetTimeSeriesDatabaseConnectionResult {
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Extension resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of a specific time series database connection.
      * 
-     */
+    */
     public AzureDataExplorerConnectionPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

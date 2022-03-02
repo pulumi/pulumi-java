@@ -43,21 +43,21 @@ public final class DiagnosticsDescriptionResponse {
     /**
      * The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.
      * 
-     */
+    */
     public List<String> getDefaultSinkRefs() {
         return this.defaultSinkRefs == null ? List.of() : this.defaultSinkRefs;
     }
     /**
      * Status of whether or not sinks are enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * List of supported sinks that can be referenced.
      * 
-     */
+    */
     public List<AzureInternalMonitoringPipelineSinkDescriptionResponse> getSinks() {
         return this.sinks == null ? List.of() : this.sinks;
     }

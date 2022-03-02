@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHierarchySetting {
-/**
- * Settings defined at the Management Group scope.
+    private GetHierarchySetting() {}
+    public interface BuilderApplicator {
+        public void apply(GetHierarchySettingArgs.Builder a);
+    }
+    private static GetHierarchySettingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHierarchySettingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Settings defined at the Management Group scope.
  * API Version: 2020-05-01.
  * 
- *
- * Settings defined at the Management Group scope.
+     *
+     * Settings defined at the Management Group scope.
  * 
- */
+     */
+    public static CompletableFuture<GetHierarchySettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Settings defined at the Management Group scope.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * Settings defined at the Management Group scope.
+     * 
+     */
     public static CompletableFuture<GetHierarchySettingResult> invokeAsync(GetHierarchySettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:management:getHierarchySetting", TypeShape.of(GetHierarchySettingResult.class), args == null ? GetHierarchySettingArgs.Empty : args, Utilities.withVersion(options));
     }

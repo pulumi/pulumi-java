@@ -54,35 +54,35 @@ public final class GetApiOperationPolicyResult {
     /**
      * Format of the policyContent.
      * 
-     */
+    */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Contents of the Policy as defined by the format.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

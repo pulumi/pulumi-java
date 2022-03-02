@@ -33,14 +33,14 @@ public final class ConnectionMonitorEndpointFilterItemResponse {
     /**
      * The address of the filter item.
      * 
-     */
+    */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
     /**
      * The type of item included in the filter. Currently only 'AgentAddress' is supported.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

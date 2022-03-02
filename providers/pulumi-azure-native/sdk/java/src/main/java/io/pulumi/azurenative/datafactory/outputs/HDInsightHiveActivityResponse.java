@@ -133,84 +133,84 @@ public final class HDInsightHiveActivityResponse {
     /**
      * User specified arguments to HDInsightActivity.
      * 
-     */
+    */
     public List<Object> getArguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
     /**
      * Allows user to specify defines for Hive job request.
      * 
-     */
+    */
     public Map<String,Object> getDefines() {
         return this.defines == null ? Map.of() : this.defines;
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Debug info option.
      * 
-     */
+    */
     public Optional<String> getGetDebugInfo() {
         return Optional.ofNullable(this.getDebugInfo);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * Query timeout value (in minutes).  Effective when the HDInsight cluster is with ESP (Enterprise Security Package)
      * 
-     */
+    */
     public Optional<Integer> getQueryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
     /**
      * Script linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getScriptLinkedService() {
         return Optional.ofNullable(this.scriptLinkedService);
     }
     /**
      * Script path. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getScriptPath() {
         return Optional.ofNullable(this.scriptPath);
     }
     /**
      * Storage linked service references.
      * 
-     */
+    */
     public List<LinkedServiceReferenceResponse> getStorageLinkedServices() {
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
@@ -218,21 +218,21 @@ public final class HDInsightHiveActivityResponse {
      * Type of activity.
      * Expected value is 'HDInsightHive'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
     /**
      * User specified arguments under hivevar namespace.
      * 
-     */
+    */
     public List<Object> getVariables() {
         return this.variables == null ? List.of() : this.variables;
     }

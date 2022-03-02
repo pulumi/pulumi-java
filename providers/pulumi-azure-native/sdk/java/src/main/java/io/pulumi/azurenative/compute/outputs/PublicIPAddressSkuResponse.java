@@ -33,14 +33,14 @@ public final class PublicIPAddressSkuResponse {
     /**
      * Specify public IP sku name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Specify public IP sku tier
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

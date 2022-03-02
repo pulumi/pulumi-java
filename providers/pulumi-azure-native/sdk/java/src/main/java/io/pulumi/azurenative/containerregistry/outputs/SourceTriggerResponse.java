@@ -49,28 +49,28 @@ public final class SourceTriggerResponse {
     /**
      * The name of the trigger.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The properties that describes the source(code) for the task.
      * 
-     */
+    */
     public SourcePropertiesResponse getSourceRepository() {
         return this.sourceRepository;
     }
     /**
      * The source event corresponding to the trigger.
      * 
-     */
+    */
     public List<String> getSourceTriggerEvents() {
         return this.sourceTriggerEvents;
     }
     /**
      * The current status of trigger.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

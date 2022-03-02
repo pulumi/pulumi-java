@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCertificate {
-/**
- * SSL certificate for an app.
+    private GetCertificate() {}
+    public interface BuilderApplicator {
+        public void apply(GetCertificateArgs.Builder a);
+    }
+    private static GetCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCertificateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * SSL certificate for an app.
  * API Version: 2020-12-01.
  * 
- *
- * SSL certificate for an app.
+     *
+     * SSL certificate for an app.
  * 
- */
+     */
+    public static CompletableFuture<GetCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * SSL certificate for an app.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * SSL certificate for an app.
+     * 
+     */
     public static CompletableFuture<GetCertificateResult> invokeAsync(GetCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getCertificate", TypeShape.of(GetCertificateResult.class), args == null ? GetCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -40,21 +40,21 @@ public final class DatadogInstallMethodResponse {
     /**
      * The installer version.
      * 
-     */
+    */
     public Optional<String> getInstallerVersion() {
         return Optional.ofNullable(this.installerVersion);
     }
     /**
      * The tool.
      * 
-     */
+    */
     public Optional<String> getTool() {
         return Optional.ofNullable(this.tool);
     }
     /**
      * The tool version.
      * 
-     */
+    */
     public Optional<String> getToolVersion() {
         return Optional.ofNullable(this.toolVersion);
     }

@@ -23,7 +23,7 @@ public final class GetConsoleResult {
     /**
      * Cloud shell console properties.
      * 
-     */
+    */
     public ConsolePropertiesResponse getProperties() {
         return this.properties;
     }

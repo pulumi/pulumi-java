@@ -24,7 +24,7 @@ public final class RelationshipTypeMappingResponse {
     /**
      * Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
      * 
-     */
+    */
     public List<RelationshipTypeFieldMappingResponse> getFieldMappings() {
         return this.fieldMappings;
     }

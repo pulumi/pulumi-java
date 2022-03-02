@@ -62,42 +62,42 @@ public final class SearchResultsResponse {
     /**
      * Search results table's Description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The timestamp to end the search by (UTC)
      * 
-     */
+    */
     public Optional<String> getEndSearchTime() {
         return Optional.ofNullable(this.endSearchTime);
     }
     /**
      * Limit the search job to return up to specified number of rows.
      * 
-     */
+    */
     public Optional<Integer> getLimit() {
         return Optional.ofNullable(this.limit);
     }
     /**
      * Search job query.
      * 
-     */
+    */
     public Optional<String> getQuery() {
         return Optional.ofNullable(this.query);
     }
     /**
      * The table to search data from.
      * 
-     */
+    */
     public String getSourceTable() {
         return this.sourceTable;
     }
     /**
      * The timestamp to start the search from (UTC)
      * 
-     */
+    */
     public Optional<String> getStartSearchTime() {
         return Optional.ofNullable(this.startSearchTime);
     }

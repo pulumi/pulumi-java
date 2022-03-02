@@ -25,7 +25,7 @@ public final class ManagedClusterAutoUpgradeProfileResponse {
     /**
      * upgrade channel for auto upgrade.
      * 
-     */
+    */
     public Optional<String> getUpgradeChannel() {
         return Optional.ofNullable(this.upgradeChannel);
     }

@@ -25,7 +25,7 @@ public final class EncryptionPreferencesResponse {
     /**
      * Defines secondary layer of software-based encryption enablement.
      * 
-     */
+    */
     public Optional<String> getDoubleEncryption() {
         return Optional.ofNullable(this.doubleEncryption);
     }

@@ -23,7 +23,7 @@ public final class ConnectionPropertiesResponsePrivateEndpoint {
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

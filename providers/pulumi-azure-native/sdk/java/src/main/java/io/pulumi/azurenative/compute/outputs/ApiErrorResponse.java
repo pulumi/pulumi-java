@@ -57,35 +57,35 @@ public final class ApiErrorResponse {
     /**
      * The error code.
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
     /**
      * The Api error details
      * 
-     */
+    */
     public List<ApiErrorBaseResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
     /**
      * The Api inner error
      * 
-     */
+    */
     public Optional<InnerErrorResponse> getInnererror() {
         return Optional.ofNullable(this.innererror);
     }
     /**
      * The error message.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * The target of the particular error.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

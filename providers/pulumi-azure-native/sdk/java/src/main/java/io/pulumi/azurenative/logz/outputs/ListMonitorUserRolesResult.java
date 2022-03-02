@@ -35,14 +35,14 @@ public final class ListMonitorUserRolesResult {
     /**
      * Link to the next set of results, if any.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * List of user roles for Logz.io account.
      * 
-     */
+    */
     public List<UserRoleResponseResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

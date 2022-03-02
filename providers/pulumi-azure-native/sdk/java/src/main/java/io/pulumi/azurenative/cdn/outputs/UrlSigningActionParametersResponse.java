@@ -38,7 +38,7 @@ public final class UrlSigningActionParametersResponse {
     /**
      * Algorithm to use for URL signing
      * 
-     */
+    */
     public Optional<String> getAlgorithm() {
         return Optional.ofNullable(this.algorithm);
     }
@@ -48,7 +48,7 @@ public final class UrlSigningActionParametersResponse {
     /**
      * Defines which query string parameters in the url to be considered for expires, key id etc.
      * 
-     */
+    */
     public List<UrlSigningParamIdentifierResponse> getParameterNameOverride() {
         return this.parameterNameOverride == null ? List.of() : this.parameterNameOverride;
     }

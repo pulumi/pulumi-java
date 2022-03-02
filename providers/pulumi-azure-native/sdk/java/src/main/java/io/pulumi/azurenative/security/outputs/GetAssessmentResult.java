@@ -98,70 +98,70 @@ public final class GetAssessmentResult {
     /**
      * Additional data regarding the assessment
      * 
-     */
+    */
     public Map<String,String> getAdditionalData() {
         return this.additionalData == null ? Map.of() : this.additionalData;
     }
     /**
      * User friendly display name of the assessment
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Links relevant to the assessment
      * 
-     */
+    */
     public AssessmentLinksResponse getLinks() {
         return this.links;
     }
     /**
      * Describes properties of an assessment metadata.
      * 
-     */
+    */
     public Optional<SecurityAssessmentMetadataPropertiesResponse> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Data regarding 3rd party partner integration
      * 
-     */
+    */
     public Optional<SecurityAssessmentPartnerDataResponse> getPartnersData() {
         return Optional.ofNullable(this.partnersData);
     }
     /**
      * Details of the resource that was assessed
      * 
-     */
+    */
     public Object getResourceDetails() {
         return this.resourceDetails;
     }
     /**
      * The result of the assessment
      * 
-     */
+    */
     public AssessmentStatusResponse getStatus() {
         return this.status;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

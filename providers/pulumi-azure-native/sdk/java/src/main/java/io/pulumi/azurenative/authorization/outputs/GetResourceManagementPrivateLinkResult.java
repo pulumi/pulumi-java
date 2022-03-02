@@ -51,21 +51,21 @@ public final class GetResourceManagementPrivateLinkResult {
     /**
      * The rmplResourceID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * the region of the rmpl
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The rmpl Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -75,7 +75,7 @@ public final class GetResourceManagementPrivateLinkResult {
     /**
      * The operation type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

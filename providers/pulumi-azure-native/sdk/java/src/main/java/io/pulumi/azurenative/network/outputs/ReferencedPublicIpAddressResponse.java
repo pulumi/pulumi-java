@@ -25,7 +25,7 @@ public final class ReferencedPublicIpAddressResponse {
     /**
      * The PublicIPAddress Reference.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

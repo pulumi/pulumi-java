@@ -47,28 +47,28 @@ public final class ProtocolCustomSettingsFormatResponse {
     /**
      * The protocol for which the DDoS protection policy is being customized.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * The customized DDoS protection source rate.
      * 
-     */
+    */
     public Optional<String> getSourceRateOverride() {
         return Optional.ofNullable(this.sourceRateOverride);
     }
     /**
      * The customized DDoS protection trigger rate.
      * 
-     */
+    */
     public Optional<String> getTriggerRateOverride() {
         return Optional.ofNullable(this.triggerRateOverride);
     }
     /**
      * The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.
      * 
-     */
+    */
     public Optional<String> getTriggerSensitivityOverride() {
         return Optional.ofNullable(this.triggerSensitivityOverride);
     }

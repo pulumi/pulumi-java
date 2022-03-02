@@ -33,14 +33,14 @@ public final class TimerTriggerDescriptorResponse {
     /**
      * The occurrence that triggered the run.
      * 
-     */
+    */
     public Optional<String> getScheduleOccurrence() {
         return Optional.ofNullable(this.scheduleOccurrence);
     }
     /**
      * The timer trigger name that caused the run.
      * 
-     */
+    */
     public Optional<String> getTimerTriggerName() {
         return Optional.ofNullable(this.timerTriggerName);
     }

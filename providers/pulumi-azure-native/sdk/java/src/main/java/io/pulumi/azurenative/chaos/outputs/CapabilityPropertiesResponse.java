@@ -52,35 +52,35 @@ public final class CapabilityPropertiesResponse {
     /**
      * Localized string of the description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * URL to retrieve JSON schema of the Capability parameters.
      * 
-     */
+    */
     public String getParametersSchema() {
         return this.parametersSchema;
     }
     /**
      * String of the Publisher that this Capability extends.
      * 
-     */
+    */
     public String getPublisher() {
         return this.publisher;
     }
     /**
      * String of the Target Type that this Capability extends.
      * 
-     */
+    */
     public String getTargetType() {
         return this.targetType;
     }
     /**
      * String of the URN for this Capability Type.
      * 
-     */
+    */
     public String getUrn() {
         return this.urn;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSchedule {
-/**
- * Schedule for automatically turning virtual machines in a lab on and off at specified times.
+    private GetSchedule() {}
+    public interface BuilderApplicator {
+        public void apply(GetScheduleArgs.Builder a);
+    }
+    private static GetScheduleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetScheduleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Schedule for automatically turning virtual machines in a lab on and off at specified times.
  * API Version: 2021-10-01-preview.
  * 
- *
- * Schedule for automatically turning virtual machines in a lab on and off at specified times.
+     *
+     * Schedule for automatically turning virtual machines in a lab on and off at specified times.
  * 
- */
+     */
+    public static CompletableFuture<GetScheduleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Schedule for automatically turning virtual machines in a lab on and off at specified times.
+     * API Version: 2021-10-01-preview.
+     * 
+     *
+         * Schedule for automatically turning virtual machines in a lab on and off at specified times.
+     * 
+     */
     public static CompletableFuture<GetScheduleResult> invokeAsync(GetScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getSchedule", TypeShape.of(GetScheduleResult.class), args == null ? GetScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

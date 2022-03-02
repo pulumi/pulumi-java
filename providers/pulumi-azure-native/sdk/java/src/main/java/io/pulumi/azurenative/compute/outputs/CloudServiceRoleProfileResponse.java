@@ -25,7 +25,7 @@ public final class CloudServiceRoleProfileResponse {
     /**
      * List of roles for the cloud service.
      * 
-     */
+    */
     public List<CloudServiceRoleProfilePropertiesResponse> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }

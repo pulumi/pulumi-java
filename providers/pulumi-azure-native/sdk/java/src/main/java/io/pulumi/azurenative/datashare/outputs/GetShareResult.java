@@ -97,77 +97,77 @@ public final class GetShareResult {
     /**
      * Time at which the share was created.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Share description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The resource id of the azure resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the azure resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the provisioning state
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Share kind.
      * 
-     */
+    */
     public Optional<String> getShareKind() {
         return Optional.ofNullable(this.shareKind);
     }
     /**
      * System Data of the Azure resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Share terms.
      * 
-     */
+    */
     public Optional<String> getTerms() {
         return Optional.ofNullable(this.terms);
     }
     /**
      * Type of the azure resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Email of the user who created the resource
      * 
-     */
+    */
     public String getUserEmail() {
         return this.userEmail;
     }
     /**
      * Name of the user who created the resource
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }

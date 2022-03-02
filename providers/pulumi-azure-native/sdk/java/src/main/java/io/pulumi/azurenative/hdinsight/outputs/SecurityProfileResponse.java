@@ -83,63 +83,63 @@ public final class SecurityProfileResponse {
     /**
      * The resource ID of the user's Azure Active Directory Domain Service.
      * 
-     */
+    */
     public Optional<String> getAaddsResourceId() {
         return Optional.ofNullable(this.aaddsResourceId);
     }
     /**
      * Optional. The Distinguished Names for cluster user groups
      * 
-     */
+    */
     public List<String> getClusterUsersGroupDNs() {
         return this.clusterUsersGroupDNs == null ? List.of() : this.clusterUsersGroupDNs;
     }
     /**
      * The directory type.
      * 
-     */
+    */
     public Optional<String> getDirectoryType() {
         return Optional.ofNullable(this.directoryType);
     }
     /**
      * The organization's active directory domain.
      * 
-     */
+    */
     public Optional<String> getDomain() {
         return Optional.ofNullable(this.domain);
     }
     /**
      * The domain admin password.
      * 
-     */
+    */
     public Optional<String> getDomainUserPassword() {
         return Optional.ofNullable(this.domainUserPassword);
     }
     /**
      * The domain user account that will have admin privileges on the cluster.
      * 
-     */
+    */
     public Optional<String> getDomainUsername() {
         return Optional.ofNullable(this.domainUsername);
     }
     /**
      * The LDAPS protocol URLs to communicate with the Active Directory.
      * 
-     */
+    */
     public List<String> getLdapsUrls() {
         return this.ldapsUrls == null ? List.of() : this.ldapsUrls;
     }
     /**
      * User assigned identity that has permissions to read and create cluster-related artifacts in the user's AADDS.
      * 
-     */
+    */
     public Optional<String> getMsiResourceId() {
         return Optional.ofNullable(this.msiResourceId);
     }
     /**
      * The organizational unit within the Active Directory to place the cluster and service accounts.
      * 
-     */
+    */
     public Optional<String> getOrganizationalUnitDN() {
         return Optional.ofNullable(this.organizationalUnitDN);
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecurityRule {
-/**
- * Network security rule.
+    private GetSecurityRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecurityRuleArgs.Builder a);
+    }
+    private static GetSecurityRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecurityRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Network security rule.
  * API Version: 2020-11-01.
  * 
- *
- * Network security rule.
+     *
+     * Network security rule.
  * 
- */
+     */
+    public static CompletableFuture<GetSecurityRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Network security rule.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Network security rule.
+     * 
+     */
     public static CompletableFuture<GetSecurityRuleResult> invokeAsync(GetSecurityRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getSecurityRule", TypeShape.of(GetSecurityRuleResult.class), args == null ? GetSecurityRuleArgs.Empty : args, Utilities.withVersion(options));
     }

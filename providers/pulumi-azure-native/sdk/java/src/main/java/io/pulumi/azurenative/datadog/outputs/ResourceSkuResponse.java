@@ -23,7 +23,7 @@ public final class ResourceSkuResponse {
     /**
      * Name of the SKU.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

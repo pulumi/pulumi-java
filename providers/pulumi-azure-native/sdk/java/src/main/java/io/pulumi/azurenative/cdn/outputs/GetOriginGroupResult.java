@@ -95,70 +95,70 @@ public final class GetOriginGroupResult {
     /**
      * Health probe settings to the origin that is used to determine the health of the origin.
      * 
-     */
+    */
     public Optional<HealthProbeParametersResponse> getHealthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The source of the content being delivered via CDN within given origin group.
      * 
-     */
+    */
     public List<ResourceReferenceResponse> getOrigins() {
         return this.origins;
     }
     /**
      * Provisioning status of the origin group.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource status of the origin group.
      * 
-     */
+    */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
      * 
-     */
+    */
     public Optional<ResponseBasedOriginErrorDetectionParametersResponse> getResponseBasedOriginErrorDetectionSettings() {
         return Optional.ofNullable(this.responseBasedOriginErrorDetectionSettings);
     }
     /**
      * Read only system data
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
-     */
+    */
     public Optional<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

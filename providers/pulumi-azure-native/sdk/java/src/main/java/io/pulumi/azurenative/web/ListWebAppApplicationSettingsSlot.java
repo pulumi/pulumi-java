@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppApplicationSettingsSlot {
-/**
- * String dictionary resource.
+    private ListWebAppApplicationSettingsSlot() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppApplicationSettingsSlotArgs.Builder a);
+    }
+    private static ListWebAppApplicationSettingsSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppApplicationSettingsSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * String dictionary resource.
  * API Version: 2020-12-01.
  * 
- *
- * String dictionary resource.
+     *
+     * String dictionary resource.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppApplicationSettingsSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * String dictionary resource.
+     * 
+     */
     public static CompletableFuture<ListWebAppApplicationSettingsSlotResult> invokeAsync(ListWebAppApplicationSettingsSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppApplicationSettingsSlot", TypeShape.of(ListWebAppApplicationSettingsSlotResult.class), args == null ? ListWebAppApplicationSettingsSlotArgs.Empty : args, Utilities.withVersion(options));
     }
