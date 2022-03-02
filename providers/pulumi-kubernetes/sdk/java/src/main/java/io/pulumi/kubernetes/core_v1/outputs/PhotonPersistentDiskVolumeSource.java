@@ -33,14 +33,14 @@ public final class PhotonPersistentDiskVolumeSource {
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
      * 
-     */
+    */
     public Optional<String> getFsType() {
         return Optional.ofNullable(this.fsType);
     }
     /**
      * ID that identifies Photon Controller persistent disk
      * 
-     */
+    */
     public String getPdID() {
         return this.pdID;
     }

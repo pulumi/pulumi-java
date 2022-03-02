@@ -34,14 +34,14 @@ public final class RunAsGroupStrategyOptions {
     /**
      * ranges are the allowed ranges of gids that may be used. If you would like to force a single gid then supply a single range with the same start and end. Required for MustRunAs.
      * 
-     */
+    */
     public List<IDRange> getRanges() {
         return this.ranges == null ? List.of() : this.ranges;
     }
     /**
      * rule is the strategy that will dictate the allowable RunAsGroup values that may be set.
      * 
-     */
+    */
     public String getRule() {
         return this.rule;
     }

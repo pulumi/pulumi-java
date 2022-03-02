@@ -54,35 +54,35 @@ public final class HelmReleaseSettingsArgs {
     /**
      * The backend storage driver for Helm. Values are: configmap, secret, memory, sql.
      * 
-     */
+    */
     public @Nullable Input<String> getDriver() {
         return this.driver;
     }
     /**
      * The path to the helm plugins directory.
      * 
-     */
+    */
     public @Nullable Input<String> getPluginsPath() {
         return this.pluginsPath;
     }
     /**
      * The path to the registry config file.
      * 
-     */
+    */
     public @Nullable Input<String> getRegistryConfigPath() {
         return this.registryConfigPath;
     }
     /**
      * The path to the file containing cached repository indexes.
      * 
-     */
+    */
     public @Nullable Input<String> getRepositoryCache() {
         return this.repositoryCache;
     }
     /**
      * The path to the file containing repository names and URLs.
      * 
-     */
+    */
     public @Nullable Input<String> getRepositoryConfigPath() {
         return this.repositoryConfigPath;
     }

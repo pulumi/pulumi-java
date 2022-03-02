@@ -34,14 +34,14 @@ public final class TokenRequest {
     /**
      * Audience is the intended audience of the token in "TokenRequestSpec". It will default to the audiences of kube apiserver.
      * 
-     */
+    */
     public String getAudience() {
         return this.audience;
     }
     /**
      * ExpirationSeconds is the duration of validity of the token in "TokenRequestSpec". It has the same default value of "ExpirationSeconds" in "TokenRequestSpec"
      * 
-     */
+    */
     public Optional<Integer> getExpirationSeconds() {
         return Optional.ofNullable(this.expirationSeconds);
     }

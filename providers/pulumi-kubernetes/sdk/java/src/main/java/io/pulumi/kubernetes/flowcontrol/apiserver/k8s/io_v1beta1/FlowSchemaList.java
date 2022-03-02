@@ -78,6 +78,22 @@ public class FlowSchemaList extends io.pulumi.resources.CustomResource {
         return this.metadata;
     }
 
+    public interface BuilderApplicator {
+        public void apply(FlowSchemaListArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.FlowSchemaListArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.FlowSchemaListArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public FlowSchemaList(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

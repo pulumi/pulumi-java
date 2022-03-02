@@ -62,42 +62,42 @@ public final class QuobyteVolumeSource {
     /**
      * Group to map volume access to Default is no group
      * 
-     */
+    */
     public Optional<String> getGroup() {
         return Optional.ofNullable(this.group);
     }
     /**
      * ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
      * 
-     */
+    */
     public String getRegistry() {
         return this.registry;
     }
     /**
      * Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
      * 
-     */
+    */
     public Optional<String> getTenant() {
         return Optional.ofNullable(this.tenant);
     }
     /**
      * User to map volume access to Defaults to serivceaccount user
      * 
-     */
+    */
     public Optional<String> getUser() {
         return Optional.ofNullable(this.user);
     }
     /**
      * Volume is a string that references an already created Quobyte volume by name.
      * 
-     */
+    */
     public String getVolume() {
         return this.volume;
     }
