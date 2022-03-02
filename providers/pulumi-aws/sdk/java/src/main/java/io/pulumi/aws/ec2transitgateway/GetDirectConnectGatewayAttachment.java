@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDirectConnectGatewayAttachment {
-/**
- * Get information on an EC2 Transit Gateway's attachment to a Direct Connect Gateway.
+    private GetDirectConnectGatewayAttachment() {}
+    public interface BuilderApplicator {
+        public void apply(GetDirectConnectGatewayAttachmentArgs.Builder a);
+    }
+    private static GetDirectConnectGatewayAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDirectConnectGatewayAttachmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get information on an EC2 Transit Gateway's attachment to a Direct Connect Gateway.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getDirectConnectGatewayAttachment.
+     *
+     * A collection of arguments for invoking getDirectConnectGatewayAttachment.
  * 
- *
- * A collection of values returned by getDirectConnectGatewayAttachment.
+     *
+     * A collection of values returned by getDirectConnectGatewayAttachment.
  * 
- */
+     */
+    public static CompletableFuture<GetDirectConnectGatewayAttachmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get information on an EC2 Transit Gateway's attachment to a Direct Connect Gateway.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getDirectConnectGatewayAttachment.
+     * 
+     *
+         * A collection of values returned by getDirectConnectGatewayAttachment.
+     * 
+     */
     public static CompletableFuture<GetDirectConnectGatewayAttachmentResult> invokeAsync(@Nullable GetDirectConnectGatewayAttachmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2transitgateway/getDirectConnectGatewayAttachment:getDirectConnectGatewayAttachment", TypeShape.of(GetDirectConnectGatewayAttachmentResult.class), args == null ? GetDirectConnectGatewayAttachmentArgs.Empty : args, Utilities.withVersion(options));
     }

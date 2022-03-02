@@ -23,7 +23,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     /**
      * Configuration for an AWS Lambda function. See AWS Lambda below for more details.
      * 
-     */
+    */
     public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda getAwsLambda() {
         return this.awsLambda;
     }

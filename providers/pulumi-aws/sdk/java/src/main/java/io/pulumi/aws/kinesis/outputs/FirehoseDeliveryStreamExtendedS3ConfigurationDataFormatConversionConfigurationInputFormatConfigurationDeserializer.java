@@ -34,14 +34,14 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     /**
      * Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
      * 
-     */
+    */
     public Optional<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe> getHiveJsonSerDe() {
         return Optional.ofNullable(this.hiveJsonSerDe);
     }
     /**
      * Nested argument that specifies the OpenX SerDe. More details below.
      * 
-     */
+    */
     public Optional<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe> getOpenXJsonSerDe() {
         return Optional.ofNullable(this.openXJsonSerDe);
     }

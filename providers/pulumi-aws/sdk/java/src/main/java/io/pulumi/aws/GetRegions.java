@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegions {
-/**
- * Provides information about AWS Regions. Can be used to filter regions i.e., by Opt-In status or only regions enabled for current account. To get details like endpoint and description of each region the data source can be combined with the `aws.getRegion` data source.
+    private GetRegions() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionsArgs.Builder a);
+    }
+    private static GetRegionsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information about AWS Regions. Can be used to filter regions i.e., by Opt-In status or only regions enabled for current account. To get details like endpoint and description of each region the data source can be combined with the `aws.getRegion` data source.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getRegions.
+     *
+     * A collection of arguments for invoking getRegions.
  * 
- *
- * A collection of values returned by getRegions.
+     *
+     * A collection of values returned by getRegions.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information about AWS Regions. Can be used to filter regions i.e., by Opt-In status or only regions enabled for current account. To get details like endpoint and description of each region the data source can be combined with the `aws.getRegion` data source.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getRegions.
+     * 
+     *
+         * A collection of values returned by getRegions.
+     * 
+     */
     public static CompletableFuture<GetRegionsResult> invokeAsync(@Nullable GetRegionsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getRegions:getRegions", TypeShape.of(GetRegionsResult.class), args == null ? GetRegionsArgs.Empty : args, Utilities.withVersion(options));
     }

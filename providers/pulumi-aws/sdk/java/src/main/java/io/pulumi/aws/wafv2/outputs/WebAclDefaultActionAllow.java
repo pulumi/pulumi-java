@@ -25,7 +25,7 @@ public final class WebAclDefaultActionAllow {
     /**
      * Defines custom handling for the web request. See Custom Request Handling below for details.
      * 
-     */
+    */
     public Optional<WebAclDefaultActionAllowCustomRequestHandling> getCustomRequestHandling() {
         return Optional.ofNullable(this.customRequestHandling);
     }

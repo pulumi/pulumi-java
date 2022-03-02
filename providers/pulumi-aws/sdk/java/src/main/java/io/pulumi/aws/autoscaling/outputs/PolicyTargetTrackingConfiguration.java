@@ -50,28 +50,28 @@ public final class PolicyTargetTrackingConfiguration {
     /**
      * A customized metric. Conflicts with `predefined_metric_specification`.
      * 
-     */
+    */
     public Optional<PolicyTargetTrackingConfigurationCustomizedMetricSpecification> getCustomizedMetricSpecification() {
         return Optional.ofNullable(this.customizedMetricSpecification);
     }
     /**
      * Indicates whether scale in by the target tracking policy is disabled.
      * 
-     */
+    */
     public Optional<Boolean> getDisableScaleIn() {
         return Optional.ofNullable(this.disableScaleIn);
     }
     /**
      * A predefined metric. Conflicts with `customized_metric_specification`.
      * 
-     */
+    */
     public Optional<PolicyTargetTrackingConfigurationPredefinedMetricSpecification> getPredefinedMetricSpecification() {
         return Optional.ofNullable(this.predefinedMetricSpecification);
     }
     /**
      * The target value for the metric.
      * 
-     */
+    */
     public Double getTargetValue() {
         return this.targetValue;
     }

@@ -44,21 +44,21 @@ public final class GetRuleGroupResult {
     /**
      * The Amazon Resource Name (ARN) of the entity.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The description of the rule group that helps with identification.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

@@ -32,14 +32,14 @@ public final class RouteRequestParameter {
     /**
      * Request parameter key. This is a [request data mapping parameter](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-data-mapping.html#websocket-mapping-request-parameters).
      * 
-     */
+    */
     public String getRequestParameterKey() {
         return this.requestParameterKey;
     }
     /**
      * Boolean whether or not the parameter is required.
      * 
-     */
+    */
     public Boolean getRequired() {
         return this.required;
     }

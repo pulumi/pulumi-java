@@ -13,8 +13,17 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecurityGroup {
-/**
- * `aws.ec2.SecurityGroup` provides details about a specific Security Group.
+    private GetSecurityGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecurityGroupArgs.Builder a);
+    }
+    private static GetSecurityGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecurityGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `aws.ec2.SecurityGroup` provides details about a specific Security Group.
  * 
  * This resource can prove useful when a module accepts a Security Group id as
  * an input variable and needs to, for example, determine the id of the
@@ -22,13 +31,32 @@ public class GetSecurityGroup {
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getSecurityGroup.
+     *
+     * A collection of arguments for invoking getSecurityGroup.
  * 
- *
- * A collection of values returned by getSecurityGroup.
+     *
+     * A collection of values returned by getSecurityGroup.
  * 
- */
+     */
+    public static CompletableFuture<GetSecurityGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `aws.ec2.SecurityGroup` provides details about a specific Security Group.
+     * 
+     * This resource can prove useful when a module accepts a Security Group id as
+     * an input variable and needs to, for example, determine the id of the
+     * VPC that the security group belongs to.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getSecurityGroup.
+     * 
+     *
+         * A collection of values returned by getSecurityGroup.
+     * 
+     */
     public static CompletableFuture<GetSecurityGroupResult> invokeAsync(@Nullable GetSecurityGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getSecurityGroup:getSecurityGroup", TypeShape.of(GetSecurityGroupResult.class), args == null ? GetSecurityGroupArgs.Empty : args, Utilities.withVersion(options));
     }

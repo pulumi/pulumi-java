@@ -54,35 +54,35 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfig {
     /**
      * AWS secret store ARN for database credentials.
      * 
-     */
+    */
     public String getAwsSecretStoreArn() {
         return this.awsSecretStoreArn;
     }
     /**
      * Logical database name.
      * 
-     */
+    */
     public Optional<String> getDatabaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * Amazon RDS cluster identifier.
      * 
-     */
+    */
     public String getDbClusterIdentifier() {
         return this.dbClusterIdentifier;
     }
     /**
      * AWS Region for RDS HTTP endpoint. Defaults to current region.
      * 
-     */
+    */
     public Optional<String> getRegion() {
         return Optional.ofNullable(this.region);
     }
     /**
      * Logical schema name.
      * 
-     */
+    */
     public Optional<String> getSchema() {
         return Optional.ofNullable(this.schema);
     }

@@ -25,7 +25,7 @@ public final class DistributionOriginS3OriginConfig {
      * The [CloudFront origin access
      * identity][5] to associate with the origin.
      * 
-     */
+    */
     public String getOriginAccessIdentity() {
         return this.originAccessIdentity;
     }

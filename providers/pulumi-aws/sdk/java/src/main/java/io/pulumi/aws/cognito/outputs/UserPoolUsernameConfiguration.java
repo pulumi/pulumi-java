@@ -23,7 +23,7 @@ public final class UserPoolUsernameConfiguration {
     /**
      * Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
      * 
-     */
+    */
     public Boolean getCaseSensitive() {
         return this.caseSensitive;
     }

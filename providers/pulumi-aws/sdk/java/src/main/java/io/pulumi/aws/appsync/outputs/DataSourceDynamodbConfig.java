@@ -51,21 +51,21 @@ public final class DataSourceDynamodbConfig {
     /**
      * AWS Region for RDS HTTP endpoint. Defaults to current region.
      * 
-     */
+    */
     public Optional<String> getRegion() {
         return Optional.ofNullable(this.region);
     }
     /**
      * Name of the DynamoDB table.
      * 
-     */
+    */
     public String getTableName() {
         return this.tableName;
     }
     /**
      * Set to `true` to use Amazon Cognito credentials with this data source.
      * 
-     */
+    */
     public Optional<Boolean> getUseCallerCredentials() {
         return Optional.ofNullable(this.useCallerCredentials);
     }

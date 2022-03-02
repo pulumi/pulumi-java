@@ -41,21 +41,21 @@ public final class RuleSource {
     /**
      * Indicates whether AWS or the customer owns and manages the AWS Config rule. Valid values are `AWS` or `CUSTOM_LAMBDA`. For more information about managed rules, see the [AWS Config Managed Rules documentation](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html). For more information about custom rules, see the [AWS Config Custom Rules documentation](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html). Custom Lambda Functions require permissions to allow the AWS Config service to invoke them, e.g. via the `aws.lambda.Permission` resource.
      * 
-     */
+    */
     public String getOwner() {
         return this.owner;
     }
     /**
      * Provides the source and type of the event that causes AWS Config to evaluate your AWS resources. Only valid if `owner` is `CUSTOM_LAMBDA`.
      * 
-     */
+    */
     public List<RuleSourceSourceDetail> getSourceDetails() {
         return this.sourceDetails == null ? List.of() : this.sourceDetails;
     }
     /**
      * For AWS Config managed rules, a predefined identifier, e.g `IAM_PASSWORD_POLICY`. For custom Lambda rules, the identifier is the ARN of the Lambda Function, such as `arn:aws:lambda:us-east-1:123456789012:function:custom_rule_name` or the `arn` attribute of the `aws.lambda.Function` resource.
      * 
-     */
+    */
     public String getSourceIdentifier() {
         return this.sourceIdentifier;
     }

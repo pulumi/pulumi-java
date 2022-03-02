@@ -44,14 +44,14 @@ public final class GetNetworkInterfacesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A list of all the network interface ids found. This data source will fail if none are found.
      * 
-     */
+    */
     public List<String> getIds() {
         return this.ids;
     }

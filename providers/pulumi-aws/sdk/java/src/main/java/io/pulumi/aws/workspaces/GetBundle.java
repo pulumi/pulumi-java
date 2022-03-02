@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBundle {
-/**
- * Retrieve information about an AWS WorkSpaces bundle.
+    private GetBundle() {}
+    public interface BuilderApplicator {
+        public void apply(GetBundleArgs.Builder a);
+    }
+    private static GetBundleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBundleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieve information about an AWS WorkSpaces bundle.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getBundle.
+     *
+     * A collection of arguments for invoking getBundle.
  * 
- *
- * A collection of values returned by getBundle.
+     *
+     * A collection of values returned by getBundle.
  * 
- */
+     */
+    public static CompletableFuture<GetBundleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieve information about an AWS WorkSpaces bundle.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getBundle.
+     * 
+     *
+         * A collection of values returned by getBundle.
+     * 
+     */
     public static CompletableFuture<GetBundleResult> invokeAsync(@Nullable GetBundleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:workspaces/getBundle:getBundle", TypeShape.of(GetBundleResult.class), args == null ? GetBundleArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -23,7 +23,7 @@ public final class GetNodeGroupResourceAutoscalingGroup {
     /**
      * Name of the AutoScaling Group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

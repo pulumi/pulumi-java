@@ -40,21 +40,21 @@ public final class HumanTaskUIUiTemplate {
     /**
      * The content of the Liquid template for the worker user interface.
      * 
-     */
+    */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
     /**
      * The SHA-256 digest of the contents of the template.
      * 
-     */
+    */
     public Optional<String> getContentSha256() {
         return Optional.ofNullable(this.contentSha256);
     }
     /**
      * The URL for the user interface template.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }

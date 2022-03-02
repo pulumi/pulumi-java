@@ -67,7 +67,7 @@ public final class AnalyticsApplicationOutput {
     /**
      * The ARN of the Kinesis Analytics Application.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -75,7 +75,7 @@ public final class AnalyticsApplicationOutput {
      * The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
      * See Kinesis Firehose below for more details.
      * 
-     */
+    */
     public Optional<AnalyticsApplicationOutputKinesisFirehose> getKinesisFirehose() {
         return Optional.ofNullable(this.kinesisFirehose);
     }
@@ -83,28 +83,28 @@ public final class AnalyticsApplicationOutput {
      * The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
      * See Kinesis Stream below for more details.
      * 
-     */
+    */
     public Optional<AnalyticsApplicationOutputKinesisStream> getKinesisStream() {
         return Optional.ofNullable(this.kinesisStream);
     }
     /**
      * The Lambda function destination. See Lambda below for more details.
      * 
-     */
+    */
     public Optional<AnalyticsApplicationOutputLambda> getLambda() {
         return Optional.ofNullable(this.lambda);
     }
     /**
      * The Name of the in-application stream.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Schema format of the data written to the destination. See Destination Schema below for more details.
      * 
-     */
+    */
     public AnalyticsApplicationOutputSchema getSchema() {
         return this.schema;
     }

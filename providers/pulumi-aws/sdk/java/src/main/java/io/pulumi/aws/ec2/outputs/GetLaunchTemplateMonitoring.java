@@ -23,7 +23,7 @@ public final class GetLaunchTemplateMonitoring {
     /**
      * Whether Nitro Enclaves are enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }

@@ -25,7 +25,7 @@ public final class ClusterConfiguration {
     /**
      * The details of the execute command configuration. Detailed below.
      * 
-     */
+    */
     public Optional<ClusterConfigurationExecuteCommandConfiguration> getExecuteCommandConfiguration() {
         return Optional.ofNullable(this.executeCommandConfiguration);
     }

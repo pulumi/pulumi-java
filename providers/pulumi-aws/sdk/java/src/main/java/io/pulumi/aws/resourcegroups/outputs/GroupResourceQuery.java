@@ -33,14 +33,14 @@ public final class GroupResourceQuery {
     /**
      * The resource query as a JSON string.
      * 
-     */
+    */
     public String getQuery() {
         return this.query;
     }
     /**
      * The type of the resource query. Defaults to `TAG_FILTERS_1_0`.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

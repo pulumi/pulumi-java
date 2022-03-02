@@ -42,21 +42,21 @@ public final class VirtualGatewaySpecListenerTlsCertificate {
     /**
      * An AWS Certificate Manager (ACM) certificate.
      * 
-     */
+    */
     public Optional<VirtualGatewaySpecListenerTlsCertificateAcm> getAcm() {
         return Optional.ofNullable(this.acm);
     }
     /**
      * A local file certificate.
      * 
-     */
+    */
     public Optional<VirtualGatewaySpecListenerTlsCertificateFile> getFile() {
         return Optional.ofNullable(this.file);
     }
     /**
      * A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
      * 
-     */
+    */
     public Optional<VirtualGatewaySpecListenerTlsCertificateSds> getSds() {
         return Optional.ofNullable(this.sds);
     }

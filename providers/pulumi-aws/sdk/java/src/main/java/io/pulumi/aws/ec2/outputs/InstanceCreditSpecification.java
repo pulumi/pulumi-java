@@ -25,7 +25,7 @@ public final class InstanceCreditSpecification {
     /**
      * Credit option for CPU usage. Valid values include `standard` or `unlimited`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
      * 
-     */
+    */
     public Optional<String> getCpuCredits() {
         return Optional.ofNullable(this.cpuCredits);
     }

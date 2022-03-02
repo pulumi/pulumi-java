@@ -66,7 +66,7 @@ public final class MetricAlarmMetricQueryMetric {
     /**
      * The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
-     */
+    */
     public Map<String,String> getDimensions() {
         return this.dimensions == null ? Map.of() : this.dimensions;
     }
@@ -74,7 +74,7 @@ public final class MetricAlarmMetricQueryMetric {
      * The name for this metric.
      * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
-     */
+    */
     public String getMetricName() {
         return this.metricName;
     }
@@ -82,14 +82,14 @@ public final class MetricAlarmMetricQueryMetric {
      * The namespace for this metric. See docs for the [list of namespaces](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html).
      * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * The period in seconds over which the specified `stat` is applied.
      * 
-     */
+    */
     public Integer getPeriod() {
         return this.period;
     }
@@ -97,14 +97,14 @@ public final class MetricAlarmMetricQueryMetric {
      * The statistic to apply to this metric.
      * See docs for [supported statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html).
      * 
-     */
+    */
     public String getStat() {
         return this.stat;
     }
     /**
      * The unit for this metric.
      * 
-     */
+    */
     public Optional<String> getUnit() {
         return Optional.ofNullable(this.unit);
     }

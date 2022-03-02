@@ -24,7 +24,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     /**
      * The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
      * 
-     */
+    */
     public List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementOrStatementStatement> getStatements() {
         return this.statements;
     }

@@ -55,7 +55,7 @@ public final class GetExportResult {
     /**
      * The id of the API.
      * 
-     */
+    */
     public String getBody() {
         return this.body;
     }
@@ -65,7 +65,7 @@ public final class GetExportResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

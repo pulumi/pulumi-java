@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProduct {
-/**
- * Provides information on a Service Catalog Product.
+    private GetProduct() {}
+    public interface BuilderApplicator {
+        public void apply(GetProductArgs.Builder a);
+    }
+    private static GetProductArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProductArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information on a Service Catalog Product.
  * 
  * > **Tip:** A "provisioning artifact" is also referred to as a "version." A "distributor" is also referred to as a "vendor."
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getProduct.
+     *
+     * A collection of arguments for invoking getProduct.
  * 
- *
- * A collection of values returned by getProduct.
+     *
+     * A collection of values returned by getProduct.
  * 
- */
+     */
+    public static CompletableFuture<GetProductResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information on a Service Catalog Product.
+     * 
+     * > **Tip:** A "provisioning artifact" is also referred to as a "version." A "distributor" is also referred to as a "vendor."
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getProduct.
+     * 
+     *
+         * A collection of values returned by getProduct.
+     * 
+     */
     public static CompletableFuture<GetProductResult> invokeAsync(GetProductArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicecatalog/getProduct:getProduct", TypeShape.of(GetProductResult.class), args == null ? GetProductArgs.Empty : args, Utilities.withVersion(options));
     }

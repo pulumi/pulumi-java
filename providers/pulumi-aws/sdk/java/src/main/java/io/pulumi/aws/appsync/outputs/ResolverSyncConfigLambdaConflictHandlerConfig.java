@@ -25,7 +25,7 @@ public final class ResolverSyncConfigLambdaConflictHandlerConfig {
     /**
      * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
      * 
-     */
+    */
     public Optional<String> getLambdaConflictHandlerArn() {
         return Optional.ofNullable(this.lambdaConflictHandlerArn);
     }

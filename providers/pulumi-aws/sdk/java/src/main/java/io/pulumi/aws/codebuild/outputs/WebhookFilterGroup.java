@@ -25,7 +25,7 @@ public final class WebhookFilterGroup {
     /**
      * A webhook filter for the group. Filter blocks are documented below.
      * 
-     */
+    */
     public List<WebhookFilterGroupFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
     }

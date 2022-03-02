@@ -44,6 +44,22 @@ public class InvitationAccepter extends io.pulumi.resources.CustomResource {
         return this.graphArn;
     }
 
+    public interface BuilderApplicator {
+        public void apply(InvitationAccepterArgs.Builder a);
+    }
+    private static io.pulumi.aws.detective.InvitationAccepterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.detective.InvitationAccepterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public InvitationAccepter(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

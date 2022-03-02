@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLaunchConfiguration {
-/**
- * Provides information about a Launch Configuration.
+    private GetLaunchConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetLaunchConfigurationArgs.Builder a);
+    }
+    private static GetLaunchConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLaunchConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information about a Launch Configuration.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getLaunchConfiguration.
+     *
+     * A collection of arguments for invoking getLaunchConfiguration.
  * 
- *
- * A collection of values returned by getLaunchConfiguration.
+     *
+     * A collection of values returned by getLaunchConfiguration.
  * 
- */
+     */
+    public static CompletableFuture<GetLaunchConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information about a Launch Configuration.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getLaunchConfiguration.
+     * 
+     *
+         * A collection of values returned by getLaunchConfiguration.
+     * 
+     */
     public static CompletableFuture<GetLaunchConfigurationResult> invokeAsync(GetLaunchConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getLaunchConfiguration:getLaunchConfiguration", TypeShape.of(GetLaunchConfigurationResult.class), args == null ? GetLaunchConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -38,7 +38,7 @@ public final class RegexMatchSetRegexMatchTupleFieldToMatch {
      * When `type` is `HEADER`, enter the name of the header that you want to search, e.g., `User-Agent` or `Referer`.
      * If `type` is any other value, omit this field.
      * 
-     */
+    */
     public Optional<String> getData() {
         return Optional.ofNullable(this.data);
     }
@@ -48,7 +48,7 @@ public final class RegexMatchSetRegexMatchTupleFieldToMatch {
      * See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
      * for all supported values.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

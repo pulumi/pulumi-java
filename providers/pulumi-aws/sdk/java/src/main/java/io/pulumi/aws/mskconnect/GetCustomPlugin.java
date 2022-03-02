@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomPlugin {
-/**
- * Get information on an Amazon MSK Connect custom plugin.
+    private GetCustomPlugin() {}
+    public interface BuilderApplicator {
+        public void apply(GetCustomPluginArgs.Builder a);
+    }
+    private static GetCustomPluginArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCustomPluginArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get information on an Amazon MSK Connect custom plugin.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getCustomPlugin.
+     *
+     * A collection of arguments for invoking getCustomPlugin.
  * 
- *
- * A collection of values returned by getCustomPlugin.
+     *
+     * A collection of values returned by getCustomPlugin.
  * 
- */
+     */
+    public static CompletableFuture<GetCustomPluginResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get information on an Amazon MSK Connect custom plugin.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getCustomPlugin.
+     * 
+     *
+         * A collection of values returned by getCustomPlugin.
+     * 
+     */
     public static CompletableFuture<GetCustomPluginResult> invokeAsync(GetCustomPluginArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:mskconnect/getCustomPlugin:getCustomPlugin", TypeShape.of(GetCustomPluginResult.class), args == null ? GetCustomPluginArgs.Empty : args, Utilities.withVersion(options));
     }

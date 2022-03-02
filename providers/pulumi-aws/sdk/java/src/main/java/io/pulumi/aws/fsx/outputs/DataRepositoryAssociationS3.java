@@ -34,14 +34,14 @@ public final class DataRepositoryAssociationS3 {
     /**
      * Specifies the type of updated objects that will be automatically exported from your file system to the linked S3 bucket. See the `events` configuration block.
      * 
-     */
+    */
     public Optional<DataRepositoryAssociationS3AutoExportPolicy> getAutoExportPolicy() {
         return Optional.ofNullable(this.autoExportPolicy);
     }
     /**
      * Specifies the type of updated objects that will be automatically imported from the linked S3 bucket to your file system. See the `events` configuration block.
      * 
-     */
+    */
     public Optional<DataRepositoryAssociationS3AutoImportPolicy> getAutoImportPolicy() {
         return Optional.ofNullable(this.autoImportPolicy);
     }

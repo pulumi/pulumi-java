@@ -62,42 +62,42 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     /**
      * Key-value map of tags to apply to distributed AMI.
      * 
-     */
+    */
     public Map<String,String> getAmiTags() {
         return this.amiTags;
     }
     /**
      * Description to apply to distributed AMI.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Amazon Resource Name (ARN) of Key Management Service (KMS) Key to encrypt AMI.
      * 
-     */
+    */
     public String getKmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * Nested list of EC2 launch permissions.
      * 
-     */
+    */
     public List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> getLaunchPermissions() {
         return this.launchPermissions;
     }
     /**
      * Name of the distribution configuration.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Set of target AWS Account identifiers.
      * 
-     */
+    */
     public List<String> getTargetAccountIds() {
         return this.targetAccountIds;
     }

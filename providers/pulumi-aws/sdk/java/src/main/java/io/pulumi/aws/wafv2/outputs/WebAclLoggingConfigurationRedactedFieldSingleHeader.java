@@ -23,7 +23,7 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleHeader {
     /**
      * The name of the query header to redact. This setting must be provided as lower case characters.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

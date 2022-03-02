@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransitGatewayRouteTables {
-/**
- * Provides information for multiple EC2 Transit Gateway Route Tables, such as their identifiers.
+    private GetTransitGatewayRouteTables() {}
+    public interface BuilderApplicator {
+        public void apply(GetTransitGatewayRouteTablesArgs.Builder a);
+    }
+    private static GetTransitGatewayRouteTablesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTransitGatewayRouteTablesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information for multiple EC2 Transit Gateway Route Tables, such as their identifiers.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getTransitGatewayRouteTables.
+     *
+     * A collection of arguments for invoking getTransitGatewayRouteTables.
  * 
- *
- * A collection of values returned by getTransitGatewayRouteTables.
+     *
+     * A collection of values returned by getTransitGatewayRouteTables.
  * 
- */
+     */
+    public static CompletableFuture<GetTransitGatewayRouteTablesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information for multiple EC2 Transit Gateway Route Tables, such as their identifiers.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getTransitGatewayRouteTables.
+     * 
+     *
+         * A collection of values returned by getTransitGatewayRouteTables.
+     * 
+     */
     public static CompletableFuture<GetTransitGatewayRouteTablesResult> invokeAsync(@Nullable GetTransitGatewayRouteTablesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getTransitGatewayRouteTables:getTransitGatewayRouteTables", TypeShape.of(GetTransitGatewayRouteTablesResult.class), args == null ? GetTransitGatewayRouteTablesArgs.Empty : args, Utilities.withVersion(options));
     }

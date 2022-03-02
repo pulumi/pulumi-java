@@ -78,56 +78,56 @@ public final class FirehoseDeliveryStreamSplunkConfiguration {
     /**
      * The CloudWatch Logging Options for the delivery stream. More details are given below.
      * 
-     */
+    */
     public Optional<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptions> getCloudwatchLoggingOptions() {
         return Optional.ofNullable(this.cloudwatchLoggingOptions);
     }
     /**
      * The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
      * 
-     */
+    */
     public Optional<Integer> getHecAcknowledgmentTimeout() {
         return Optional.ofNullable(this.hecAcknowledgmentTimeout);
     }
     /**
      * The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
      * 
-     */
+    */
     public String getHecEndpoint() {
         return this.hecEndpoint;
     }
     /**
      * The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
      * 
-     */
+    */
     public Optional<String> getHecEndpointType() {
         return Optional.ofNullable(this.hecEndpointType);
     }
     /**
      * The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
      * 
-     */
+    */
     public String getHecToken() {
         return this.hecToken;
     }
     /**
      * The data processing configuration.  More details are given below.
      * 
-     */
+    */
     public Optional<FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration> getProcessingConfiguration() {
         return Optional.ofNullable(this.processingConfiguration);
     }
     /**
      * After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
      * 
-     */
+    */
     public Optional<Integer> getRetryDuration() {
         return Optional.ofNullable(this.retryDuration);
     }
     /**
      * Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
      * 
-     */
+    */
     public Optional<String> getS3BackupMode() {
         return Optional.ofNullable(this.s3BackupMode);
     }

@@ -267,6 +267,22 @@ public class FileSystem extends io.pulumi.resources.CustomResource {
         return this.throughputMode;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable FileSystemArgs.Builder a);
+    }
+    private static io.pulumi.aws.efs.FileSystemArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.efs.FileSystemArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public FileSystem(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

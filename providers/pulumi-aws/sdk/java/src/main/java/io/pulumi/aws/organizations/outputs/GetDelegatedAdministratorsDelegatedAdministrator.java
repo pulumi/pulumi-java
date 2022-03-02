@@ -73,56 +73,56 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator {
     /**
      * The Amazon Resource Name (ARN) of the delegated administrator's account.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The date when the account was made a delegated administrator.
      * 
-     */
+    */
     public String getDelegationEnabledDate() {
         return this.delegationEnabledDate;
     }
     /**
      * The email address that is associated with the delegated administrator's AWS account.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * The unique identifier (ID) of the delegated administrator's account.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The method by which the delegated administrator's account joined the organization.
      * 
-     */
+    */
     public String getJoinedMethod() {
         return this.joinedMethod;
     }
     /**
      * The date when the delegated administrator's account became a part of the organization.
      * 
-     */
+    */
     public String getJoinedTimestamp() {
         return this.joinedTimestamp;
     }
     /**
      * The friendly name of the delegated administrator's account.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The status of the delegated administrator's account in the organization.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

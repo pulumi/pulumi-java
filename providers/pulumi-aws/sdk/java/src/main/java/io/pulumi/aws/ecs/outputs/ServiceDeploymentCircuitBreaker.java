@@ -31,14 +31,14 @@ public final class ServiceDeploymentCircuitBreaker {
     /**
      * Whether to enable the deployment circuit breaker logic for the service.
      * 
-     */
+    */
     public Boolean getEnable() {
         return this.enable;
     }
     /**
      * Whether to enable Amazon ECS to roll back the service if a service deployment fails. If rollback is enabled, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.
      * 
-     */
+    */
     public Boolean getRollback() {
         return this.rollback;
     }

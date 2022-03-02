@@ -40,21 +40,21 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptions {
     /**
      * ARN for the main user. Only specify if `internal_user_database_enabled` is not set or set to `false`.
      * 
-     */
+    */
     public Optional<String> getMasterUserArn() {
         return Optional.ofNullable(this.masterUserArn);
     }
     /**
      * Main user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
      * 
-     */
+    */
     public Optional<String> getMasterUserName() {
         return Optional.ofNullable(this.masterUserName);
     }
     /**
      * Main user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
      * 
-     */
+    */
     public Optional<String> getMasterUserPassword() {
         return Optional.ofNullable(this.masterUserPassword);
     }

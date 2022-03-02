@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStateMachine {
-/**
- * Use this data source to get the ARN of a State Machine in AWS Step
+    private GetStateMachine() {}
+    public interface BuilderApplicator {
+        public void apply(GetStateMachineArgs.Builder a);
+    }
+    private static GetStateMachineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStateMachineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get the ARN of a State Machine in AWS Step
  * Function (SFN). By using this data source, you can reference a
  * state machine without having to hard code the ARNs as input.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getStateMachine.
+     *
+     * A collection of arguments for invoking getStateMachine.
  * 
- *
- * A collection of values returned by getStateMachine.
+     *
+     * A collection of values returned by getStateMachine.
  * 
- */
+     */
+    public static CompletableFuture<GetStateMachineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get the ARN of a State Machine in AWS Step
+     * Function (SFN). By using this data source, you can reference a
+     * state machine without having to hard code the ARNs as input.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getStateMachine.
+     * 
+     *
+         * A collection of values returned by getStateMachine.
+     * 
+     */
     public static CompletableFuture<GetStateMachineResult> invokeAsync(GetStateMachineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:sfn/getStateMachine:getStateMachine", TypeShape.of(GetStateMachineResult.class), args == null ? GetStateMachineArgs.Empty : args, Utilities.withVersion(options));
     }

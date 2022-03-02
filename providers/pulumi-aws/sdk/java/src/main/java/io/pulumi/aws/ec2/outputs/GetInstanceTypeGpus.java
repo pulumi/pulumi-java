@@ -40,7 +40,7 @@ public final class GetInstanceTypeGpus {
     /**
      * Size of the instance memory, in MiB.
      * 
-     */
+    */
     public Integer getMemorySize() {
         return this.memorySize;
     }

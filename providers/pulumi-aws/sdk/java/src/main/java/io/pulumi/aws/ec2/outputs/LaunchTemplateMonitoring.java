@@ -25,7 +25,7 @@ public final class LaunchTemplateMonitoring {
     /**
      * If `true`, the launched EC2 instance will have detailed monitoring enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }

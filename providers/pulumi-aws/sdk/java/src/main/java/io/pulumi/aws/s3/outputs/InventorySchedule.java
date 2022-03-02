@@ -23,7 +23,7 @@ public final class InventorySchedule {
     /**
      * Specifies how frequently inventory results are produced. Valid values: `Daily`, `Weekly`.
      * 
-     */
+    */
     public String getFrequency() {
         return this.frequency;
     }

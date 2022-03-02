@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecret {
-/**
- * Retrieve metadata information about a Secrets Manager secret. To retrieve a secret value, see the `aws.secretsmanager.SecretVersion`.
+    private GetSecret() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecretArgs.Builder a);
+    }
+    private static GetSecretArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecretArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieve metadata information about a Secrets Manager secret. To retrieve a secret value, see the `aws.secretsmanager.SecretVersion`.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getSecret.
+     *
+     * A collection of arguments for invoking getSecret.
  * 
- *
- * A collection of values returned by getSecret.
+     *
+     * A collection of values returned by getSecret.
  * 
- */
+     */
+    public static CompletableFuture<GetSecretResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieve metadata information about a Secrets Manager secret. To retrieve a secret value, see the `aws.secretsmanager.SecretVersion`.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getSecret.
+     * 
+     *
+         * A collection of values returned by getSecret.
+     * 
+     */
     public static CompletableFuture<GetSecretResult> invokeAsync(@Nullable GetSecretArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:secretsmanager/getSecret:getSecret", TypeShape.of(GetSecretResult.class), args == null ? GetSecretArgs.Empty : args, Utilities.withVersion(options));
     }

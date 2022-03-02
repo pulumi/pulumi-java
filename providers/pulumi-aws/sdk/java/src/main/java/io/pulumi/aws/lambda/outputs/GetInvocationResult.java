@@ -45,7 +45,7 @@ public final class GetInvocationResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -58,7 +58,7 @@ public final class GetInvocationResult {
     /**
      * String result of the lambda function invocation.
      * 
-     */
+    */
     public String getResult() {
         return this.result;
     }

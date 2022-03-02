@@ -50,28 +50,28 @@ public final class RouteSpecHttpRoute {
     /**
      * The action to take if a match is determined.
      * 
-     */
+    */
     public RouteSpecHttpRouteAction getAction() {
         return this.action;
     }
     /**
      * The criteria for determining an HTTP request match.
      * 
-     */
+    */
     public RouteSpecHttpRouteMatch getMatch() {
         return this.match;
     }
     /**
      * The retry policy.
      * 
-     */
+    */
     public Optional<RouteSpecHttpRouteRetryPolicy> getRetryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
      * The types of timeouts.
      * 
-     */
+    */
     public Optional<RouteSpecHttpRouteTimeout> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }

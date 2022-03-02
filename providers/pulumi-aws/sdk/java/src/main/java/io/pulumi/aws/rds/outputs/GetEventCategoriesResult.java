@@ -37,14 +37,14 @@ public final class GetEventCategoriesResult {
     /**
      * A list of the event categories.
      * 
-     */
+    */
     public List<String> getEventCategories() {
         return this.eventCategories;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

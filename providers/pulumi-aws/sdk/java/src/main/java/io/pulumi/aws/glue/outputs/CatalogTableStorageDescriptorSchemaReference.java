@@ -42,21 +42,21 @@ public final class CatalogTableStorageDescriptorSchemaReference {
     /**
      * Configuration block that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See `schema_id` below.
      * 
-     */
+    */
     public Optional<CatalogTableStorageDescriptorSchemaReferenceSchemaId> getSchemaId() {
         return Optional.ofNullable(this.schemaId);
     }
     /**
      * Unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
      * 
-     */
+    */
     public Optional<String> getSchemaVersionId() {
         return Optional.ofNullable(this.schemaVersionId);
     }
     /**
      * Version number of the schema.
      * 
-     */
+    */
     public Integer getSchemaVersionNumber() {
         return this.schemaVersionNumber;
     }

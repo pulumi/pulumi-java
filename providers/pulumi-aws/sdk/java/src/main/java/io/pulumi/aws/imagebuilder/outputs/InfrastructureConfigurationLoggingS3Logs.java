@@ -33,14 +33,14 @@ public final class InfrastructureConfigurationLoggingS3Logs {
     /**
      * Name of the S3 Bucket.
      * 
-     */
+    */
     public String getS3BucketName() {
         return this.s3BucketName;
     }
     /**
      * Prefix to use for S3 logs. Defaults to `/`.
      * 
-     */
+    */
     public Optional<String> getS3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }

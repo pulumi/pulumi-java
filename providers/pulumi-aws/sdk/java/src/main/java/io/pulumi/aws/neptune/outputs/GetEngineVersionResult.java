@@ -92,21 +92,21 @@ public final class GetEngineVersionResult {
     /**
      * The description of the database engine.
      * 
-     */
+    */
     public String getEngineDescription() {
         return this.engineDescription;
     }
     /**
      * Set of log types that the database engine has available for export to CloudWatch Logs.
      * 
-     */
+    */
     public List<String> getExportableLogTypes() {
         return this.exportableLogTypes;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -119,28 +119,28 @@ public final class GetEngineVersionResult {
     /**
      * Set of the time zones supported by this engine.
      * 
-     */
+    */
     public List<String> getSupportedTimezones() {
         return this.supportedTimezones;
     }
     /**
      * Indicates whether the engine version supports exporting the log types specified by `exportable_log_types` to CloudWatch Logs.
      * 
-     */
+    */
     public Boolean getSupportsLogExportsToCloudwatch() {
         return this.supportsLogExportsToCloudwatch;
     }
     /**
      * Indicates whether the database engine version supports read replicas.
      * 
-     */
+    */
     public Boolean getSupportsReadReplica() {
         return this.supportsReadReplica;
     }
     /**
      * Set of engine versions that this database engine version can be upgraded to.
      * 
-     */
+    */
     public List<String> getValidUpgradeTargets() {
         return this.validUpgradeTargets;
     }
@@ -150,7 +150,7 @@ public final class GetEngineVersionResult {
     /**
      * The description of the database engine version.
      * 
-     */
+    */
     public String getVersionDescription() {
         return this.versionDescription;
     }

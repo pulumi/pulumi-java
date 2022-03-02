@@ -34,14 +34,14 @@ public final class ApplicationApplicationConfigurationRunConfiguration {
     /**
      * The restore behavior of a restarting application.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration> getApplicationRestoreConfiguration() {
         return Optional.ofNullable(this.applicationRestoreConfiguration);
     }
     /**
      * The starting parameters for a Flink-based Kinesis Data Analytics application.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration> getFlinkRunConfiguration() {
         return Optional.ofNullable(this.flinkRunConfiguration);
     }

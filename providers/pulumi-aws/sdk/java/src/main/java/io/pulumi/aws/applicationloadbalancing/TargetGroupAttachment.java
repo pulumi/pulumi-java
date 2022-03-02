@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
  * 
  * Target Group Attachments cannot be imported.
  * 
- * @deprecated
+ * @Deprecated
  * aws.applicationloadbalancing.TargetGroupAttachment has been deprecated in favor of aws.alb.TargetGroupAttachment
  * 
  */
@@ -90,6 +90,22 @@ public class TargetGroupAttachment extends io.pulumi.resources.CustomResource {
         return this.targetId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TargetGroupAttachmentArgs.Builder a);
+    }
+    private static io.pulumi.aws.applicationloadbalancing.TargetGroupAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.applicationloadbalancing.TargetGroupAttachmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TargetGroupAttachment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -48,28 +48,28 @@ public final class CatalogTableStorageDescriptorColumn {
     /**
      * Free-form text comment.
      * 
-     */
+    */
     public Optional<String> getComment() {
         return Optional.ofNullable(this.comment);
     }
     /**
      * Name of the target table.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Map of initialization parameters for the SerDe, in key-value form.
      * 
-     */
+    */
     public Map<String,String> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Datatype of data in the Column.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

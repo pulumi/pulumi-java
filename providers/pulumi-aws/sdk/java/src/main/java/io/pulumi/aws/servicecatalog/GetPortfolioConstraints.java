@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPortfolioConstraints {
-/**
- * Provides information on Service Catalog Portfolio Constraints.
+    private GetPortfolioConstraints() {}
+    public interface BuilderApplicator {
+        public void apply(GetPortfolioConstraintsArgs.Builder a);
+    }
+    private static GetPortfolioConstraintsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPortfolioConstraintsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information on Service Catalog Portfolio Constraints.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getPortfolioConstraints.
+     *
+     * A collection of arguments for invoking getPortfolioConstraints.
  * 
- *
- * A collection of values returned by getPortfolioConstraints.
+     *
+     * A collection of values returned by getPortfolioConstraints.
  * 
- */
+     */
+    public static CompletableFuture<GetPortfolioConstraintsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information on Service Catalog Portfolio Constraints.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getPortfolioConstraints.
+     * 
+     *
+         * A collection of values returned by getPortfolioConstraints.
+     * 
+     */
     public static CompletableFuture<GetPortfolioConstraintsResult> invokeAsync(GetPortfolioConstraintsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicecatalog/getPortfolioConstraints:getPortfolioConstraints", TypeShape.of(GetPortfolioConstraintsResult.class), args == null ? GetPortfolioConstraintsArgs.Empty : args, Utilities.withVersion(options));
     }

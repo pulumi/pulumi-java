@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRole {
-/**
- * This data source can be used to fetch information about a specific
+    private GetRole() {}
+    public interface BuilderApplicator {
+        public void apply(GetRoleArgs.Builder a);
+    }
+    private static GetRoleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRoleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This data source can be used to fetch information about a specific
  * IAM role. By using this data source, you can reference IAM role
  * properties without having to hard code ARNs as input.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getRole.
+     *
+     * A collection of arguments for invoking getRole.
  * 
- *
- * A collection of values returned by getRole.
+     *
+     * A collection of values returned by getRole.
  * 
- */
+     */
+    public static CompletableFuture<GetRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This data source can be used to fetch information about a specific
+     * IAM role. By using this data source, you can reference IAM role
+     * properties without having to hard code ARNs as input.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getRole.
+     * 
+     *
+         * A collection of values returned by getRole.
+     * 
+     */
     public static CompletableFuture<GetRoleResult> invokeAsync(GetRoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getRole:getRole", TypeShape.of(GetRoleResult.class), args == null ? GetRoleArgs.Empty : args, Utilities.withVersion(options));
     }

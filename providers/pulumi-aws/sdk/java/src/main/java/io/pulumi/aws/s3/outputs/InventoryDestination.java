@@ -23,7 +23,7 @@ public final class InventoryDestination {
     /**
      * The S3 bucket configuration where inventory results are published (documented below).
      * 
-     */
+    */
     public InventoryDestinationBucket getBucket() {
         return this.bucket;
     }

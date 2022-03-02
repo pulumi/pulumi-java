@@ -48,21 +48,21 @@ public final class ResourceSetResource {
     /**
      * Component for DNS/Routing Control Readiness Checks.
      * 
-     */
+    */
     public Optional<ResourceSetResourceDnsTargetResource> getDnsTargetResource() {
         return Optional.ofNullable(this.dnsTargetResource);
     }
     /**
      * Recovery group ARN or cell ARN that contains this resource set.
      * 
-     */
+    */
     public List<String> getReadinessScopes() {
         return this.readinessScopes == null ? List.of() : this.readinessScopes;
     }
     /**
      * ARN of the resource.
      * 
-     */
+    */
     public Optional<String> getResourceArn() {
         return Optional.ofNullable(this.resourceArn);
     }

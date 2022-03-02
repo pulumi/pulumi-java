@@ -83,63 +83,63 @@ public final class DefaultNetworkAclIngress {
     /**
      * The action to take.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * The CIDR block to match. This must be a valid network mask.
      * 
-     */
+    */
     public Optional<String> getCidrBlock() {
         return Optional.ofNullable(this.cidrBlock);
     }
     /**
      * The from port to match.
      * 
-     */
+    */
     public Integer getFromPort() {
         return this.fromPort;
     }
     /**
      * The ICMP type code to be used. Default 0.
      * 
-     */
+    */
     public Optional<Integer> getIcmpCode() {
         return Optional.ofNullable(this.icmpCode);
     }
     /**
      * The ICMP type to be used. Default 0.
      * 
-     */
+    */
     public Optional<Integer> getIcmpType() {
         return Optional.ofNullable(this.icmpType);
     }
     /**
      * The IPv6 CIDR block.
      * 
-     */
+    */
     public Optional<String> getIpv6CidrBlock() {
         return Optional.ofNullable(this.ipv6CidrBlock);
     }
     /**
      * The protocol to match. If using the -1 'all' protocol, you must specify a from and to port of 0.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
     /**
      * The rule number. Used for ordering.
      * 
-     */
+    */
     public Integer getRuleNo() {
         return this.ruleNo;
     }
     /**
      * The to port to match.
      * 
-     */
+    */
     public Integer getToPort() {
         return this.toPort;
     }

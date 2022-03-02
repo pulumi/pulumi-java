@@ -93,70 +93,70 @@ public final class GetDomainClusterConfig {
     /**
      * Number of dedicated master nodes in the cluster.
      * 
-     */
+    */
     public Integer getDedicatedMasterCount() {
         return this.dedicatedMasterCount;
     }
     /**
      * Indicates whether dedicated master nodes are enabled for the cluster.
      * 
-     */
+    */
     public Boolean getDedicatedMasterEnabled() {
         return this.dedicatedMasterEnabled;
     }
     /**
      * Instance type of the dedicated master nodes in the cluster.
      * 
-     */
+    */
     public String getDedicatedMasterType() {
         return this.dedicatedMasterType;
     }
     /**
      * Number of instances in the cluster.
      * 
-     */
+    */
     public Integer getInstanceCount() {
         return this.instanceCount;
     }
     /**
      * Instance type of data nodes in the cluster.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The number of warm nodes in the cluster.
      * 
-     */
+    */
     public Integer getWarmCount() {
         return this.warmCount;
     }
     /**
      * Indicates warm storage is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getWarmEnabled() {
         return Optional.ofNullable(this.warmEnabled);
     }
     /**
      * The instance type for the Elasticsearch cluster's warm nodes.
      * 
-     */
+    */
     public String getWarmType() {
         return this.warmType;
     }
     /**
      * Configuration block containing zone awareness settings.
      * 
-     */
+    */
     public List<GetDomainClusterConfigZoneAwarenessConfig> getZoneAwarenessConfigs() {
         return this.zoneAwarenessConfigs;
     }
     /**
      * Indicates whether zone awareness is enabled.
      * 
-     */
+    */
     public Boolean getZoneAwarenessEnabled() {
         return this.zoneAwarenessEnabled;
     }

@@ -25,7 +25,7 @@ public final class ClusterIdentity {
     /**
      * Nested block containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
      * 
-     */
+    */
     public List<ClusterIdentityOidc> getOidcs() {
         return this.oidcs == null ? List.of() : this.oidcs;
     }

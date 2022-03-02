@@ -35,14 +35,14 @@ public final class ListenerRuleActionForward {
     /**
      * The target group stickiness for the rule.
      * 
-     */
+    */
     public Optional<ListenerRuleActionForwardStickiness> getStickiness() {
         return Optional.ofNullable(this.stickiness);
     }
     /**
      * One or more target groups block.
      * 
-     */
+    */
     public List<ListenerRuleActionForwardTargetGroup> getTargetGroups() {
         return this.targetGroups;
     }

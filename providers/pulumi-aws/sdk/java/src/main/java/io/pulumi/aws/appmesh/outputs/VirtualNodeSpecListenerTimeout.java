@@ -50,28 +50,28 @@ public final class VirtualNodeSpecListenerTimeout {
     /**
      * Timeouts for gRPC listeners.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTimeoutGrpc> getGrpc() {
         return Optional.ofNullable(this.grpc);
     }
     /**
      * Timeouts for HTTP listeners.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTimeoutHttp> getHttp() {
         return Optional.ofNullable(this.http);
     }
     /**
      * Timeouts for HTTP2 listeners.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTimeoutHttp2> getHttp2() {
         return Optional.ofNullable(this.http2);
     }
     /**
      * Timeouts for TCP listeners.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTimeoutTcp> getTcp() {
         return Optional.ofNullable(this.tcp);
     }

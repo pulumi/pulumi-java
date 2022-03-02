@@ -55,14 +55,14 @@ public final class GetPortfolioConstraintsDetail {
     /**
      * Identifier of the constraint.
      * 
-     */
+    */
     public String getConstraintId() {
         return this.constraintId;
     }
     /**
      * Description of the constraint.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -72,21 +72,21 @@ public final class GetPortfolioConstraintsDetail {
     /**
      * Portfolio identifier.
      * 
-     */
+    */
     public String getPortfolioId() {
         return this.portfolioId;
     }
     /**
      * Product identifier.
      * 
-     */
+    */
     public String getProductId() {
         return this.productId;
     }
     /**
      * Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `STACKSET`, and `TEMPLATE`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

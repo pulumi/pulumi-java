@@ -330,6 +330,22 @@ public class NodejsAppLayer extends io.pulumi.resources.CustomResource {
         return this.useEbsOptimizedInstances;
     }
 
+    public interface BuilderApplicator {
+        public void apply(NodejsAppLayerArgs.Builder a);
+    }
+    private static io.pulumi.aws.opsworks.NodejsAppLayerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.opsworks.NodejsAppLayerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public NodejsAppLayer(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

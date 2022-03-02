@@ -46,7 +46,7 @@ public final class GetEndpointResult {
      * * `iot:Data-ATS`: `IDENTIFIER-ats.iot.REGION.amazonaws.com`
      * * `iot:Jobs`: `IDENTIFIER.jobs.iot.REGION.amazonaws.com`
      * 
-     */
+    */
     public String getEndpointAddress() {
         return this.endpointAddress;
     }
@@ -56,7 +56,7 @@ public final class GetEndpointResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

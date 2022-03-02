@@ -61,42 +61,42 @@ public final class TopicRuleCloudwatchMetric {
     /**
      * The CloudWatch metric name.
      * 
-     */
+    */
     public String getMetricName() {
         return this.metricName;
     }
     /**
      * The CloudWatch metric namespace name.
      * 
-     */
+    */
     public String getMetricNamespace() {
         return this.metricNamespace;
     }
     /**
      * An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
      * 
-     */
+    */
     public Optional<String> getMetricTimestamp() {
         return Optional.ofNullable(this.metricTimestamp);
     }
     /**
      * The metric unit (supported units can be found here: http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit)
      * 
-     */
+    */
     public String getMetricUnit() {
         return this.metricUnit;
     }
     /**
      * The CloudWatch metric value.
      * 
-     */
+    */
     public String getMetricValue() {
         return this.metricValue;
     }
     /**
      * The IAM role ARN that allows access to the CloudWatch metric.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }

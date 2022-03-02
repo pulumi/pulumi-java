@@ -23,7 +23,7 @@ public final class SigningJobDestination {
     /**
      * A configuration block describing the S3 Destination object: See S3 Destination below for details.
      * 
-     */
+    */
     public SigningJobDestinationS3 getS3() {
         return this.s3;
     }

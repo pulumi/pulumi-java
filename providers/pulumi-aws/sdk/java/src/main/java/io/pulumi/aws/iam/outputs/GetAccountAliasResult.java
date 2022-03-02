@@ -31,14 +31,14 @@ public final class GetAccountAliasResult {
     /**
      * The alias associated with the AWS account.
      * 
-     */
+    */
     public String getAccountAlias() {
         return this.accountAlias;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

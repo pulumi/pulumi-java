@@ -40,7 +40,7 @@ public final class GetLocalDiskResult {
     /**
      * The disk identifierE.g., `pci-0000:03:00.0-scsi-0:0:0:0`
      * 
-     */
+    */
     public String getDiskId() {
         return this.diskId;
     }
@@ -56,7 +56,7 @@ public final class GetLocalDiskResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

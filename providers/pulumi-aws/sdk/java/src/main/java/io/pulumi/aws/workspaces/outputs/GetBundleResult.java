@@ -79,56 +79,56 @@ public final class GetBundleResult {
     /**
      * The ID of the bundle.
      * 
-     */
+    */
     public Optional<String> getBundleId() {
         return Optional.ofNullable(this.bundleId);
     }
     /**
      * The compute type. See supported fields below.
      * 
-     */
+    */
     public List<GetBundleComputeType> getComputeTypes() {
         return this.computeTypes;
     }
     /**
      * The description of the bundle.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the compute type.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The owner of the bundle.
      * 
-     */
+    */
     public Optional<String> getOwner() {
         return Optional.ofNullable(this.owner);
     }
     /**
      * The root volume. See supported fields below.
      * 
-     */
+    */
     public List<GetBundleRootStorage> getRootStorages() {
         return this.rootStorages;
     }
     /**
      * The user storage. See supported fields below.
      * 
-     */
+    */
     public List<GetBundleUserStorage> getUserStorages() {
         return this.userStorages;
     }

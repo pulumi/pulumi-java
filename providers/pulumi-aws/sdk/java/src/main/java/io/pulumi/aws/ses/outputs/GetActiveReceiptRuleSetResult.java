@@ -38,21 +38,21 @@ public final class GetActiveReceiptRuleSetResult {
     /**
      * The SES receipt rule set ARN.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the rule set
      * 
-     */
+    */
     public String getRuleSetName() {
         return this.ruleSetName;
     }

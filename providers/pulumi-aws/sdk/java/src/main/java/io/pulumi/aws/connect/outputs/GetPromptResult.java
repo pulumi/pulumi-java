@@ -44,14 +44,14 @@ public final class GetPromptResult {
     /**
      * The Amazon Resource Name (ARN) of the Prompt.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -64,7 +64,7 @@ public final class GetPromptResult {
     /**
      * The identifier for the prompt.
      * 
-     */
+    */
     public String getPromptId() {
         return this.promptId;
     }

@@ -87,6 +87,22 @@ public class VoiceConnector extends io.pulumi.resources.CustomResource {
         return this.requireEncryption;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VoiceConnectorArgs.Builder a);
+    }
+    private static io.pulumi.aws.chime.VoiceConnectorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.chime.VoiceConnectorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VoiceConnector(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

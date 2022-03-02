@@ -48,7 +48,7 @@ public final class GetImageRecipesResult {
     /**
      * Set of ARNs of the matched Image Builder Image Recipes.
      * 
-     */
+    */
     public List<String> getArns() {
         return this.arns;
     }
@@ -58,14 +58,14 @@ public final class GetImageRecipesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set of names of the matched Image Builder Image Recipes.
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }

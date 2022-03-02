@@ -44,14 +44,14 @@ public final class GetCoipPoolsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set of COIP Pool Identifiers
      * 
-     */
+    */
     public List<String> getPoolIds() {
         return this.poolIds;
     }

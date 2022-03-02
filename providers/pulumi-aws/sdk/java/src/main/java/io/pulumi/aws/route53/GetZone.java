@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetZone {
-/**
- * `aws.route53.Zone` provides details about a specific Route 53 Hosted Zone.
+    private GetZone() {}
+    public interface BuilderApplicator {
+        public void apply(GetZoneArgs.Builder a);
+    }
+    private static GetZoneArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetZoneArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `aws.route53.Zone` provides details about a specific Route 53 Hosted Zone.
  * 
  * This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getZone.
+     *
+     * A collection of arguments for invoking getZone.
  * 
- *
- * A collection of values returned by getZone.
+     *
+     * A collection of values returned by getZone.
  * 
- */
+     */
+    public static CompletableFuture<GetZoneResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `aws.route53.Zone` provides details about a specific Route 53 Hosted Zone.
+     * 
+     * This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getZone.
+     * 
+     *
+         * A collection of values returned by getZone.
+     * 
+     */
     public static CompletableFuture<GetZoneResult> invokeAsync(@Nullable GetZoneArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:route53/getZone:getZone", TypeShape.of(GetZoneResult.class), args == null ? GetZoneArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -141,119 +141,119 @@ public final class GetBotResult {
     /**
      * The ARN of the bot.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Checksum of the bot used to identify a specific revision of the bot's `$LATEST` version.
      * 
-     */
+    */
     public String getChecksum() {
         return this.checksum;
     }
     /**
      * Specifies if this Amazon Lex Bot is related to a website, program, or other application that is directed or targeted, in whole or in part, to children under age 13 and subject to COPPA.
      * 
-     */
+    */
     public Boolean getChildDirected() {
         return this.childDirected;
     }
     /**
      * The date that the bot was created.
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * A description of the bot.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * When set to true user utterances are sent to Amazon Comprehend for sentiment analysis.
      * 
-     */
+    */
     public Boolean getDetectSentiment() {
         return this.detectSentiment;
     }
     /**
      * Set to true if natural language understanding improvements are enabled.
      * 
-     */
+    */
     public Boolean getEnableModelImprovements() {
         return this.enableModelImprovements;
     }
     /**
      * If the `status` is `FAILED`, the reason why the bot failed to build.
      * 
-     */
+    */
     public String getFailureReason() {
         return this.failureReason;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The maximum time in seconds that Amazon Lex retains the data gathered in a conversation.
      * 
-     */
+    */
     public Integer getIdleSessionTtlInSeconds() {
         return this.idleSessionTtlInSeconds;
     }
     /**
      * The date that the bot was updated.
      * 
-     */
+    */
     public String getLastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
      * Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot.
      * 
-     */
+    */
     public String getLocale() {
         return this.locale;
     }
     /**
      * The name of the bot, case sensitive.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot.
      * 
-     */
+    */
     public Double getNluIntentConfidenceThreshold() {
         return this.nluIntentConfidenceThreshold;
     }
     /**
      * The status of the bot.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * The version of the bot. For a new bot, the version is always `$LATEST`.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }
     /**
      * The Amazon Polly voice ID that the Amazon Lex Bot uses for voice interactions with the user.
      * 
-     */
+    */
     public String getVoiceId() {
         return this.voiceId;
     }

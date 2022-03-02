@@ -55,35 +55,35 @@ public final class ScalingPlanScalingInstructionCustomizedLoadMetricSpecificatio
     /**
      * The dimensions of the metric.
      * 
-     */
+    */
     public Map<String,String> getDimensions() {
         return this.dimensions == null ? Map.of() : this.dimensions;
     }
     /**
      * The name of the metric.
      * 
-     */
+    */
     public String getMetricName() {
         return this.metricName;
     }
     /**
      * The namespace of the metric.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }
     /**
      * The statistic of the metric. Currently, the value must always be `Sum`.
      * 
-     */
+    */
     public String getStatistic() {
         return this.statistic;
     }
     /**
      * The unit of the metric.
      * 
-     */
+    */
     public Optional<String> getUnit() {
         return Optional.ofNullable(this.unit);
     }

@@ -31,14 +31,14 @@ public final class BudgetActionSubscriber {
     /**
      * The address that AWS sends budget notifications to, either an SNS topic or an email.
      * 
-     */
+    */
     public String getAddress() {
         return this.address;
     }
     /**
      * The type of notification that AWS sends to a subscriber. Valid values are `SNS` or `EMAIL`.
      * 
-     */
+    */
     public String getSubscriptionType() {
         return this.subscriptionType;
     }

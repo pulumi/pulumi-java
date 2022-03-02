@@ -34,14 +34,14 @@ public final class GetTopicResult {
     /**
      * Amazon Resource Name (ARN) of the found topic, suitable for referencing in other resources that support SNS topics.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

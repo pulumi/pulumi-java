@@ -31,14 +31,14 @@ public final class OptionGroupOptionOptionSetting {
     /**
      * The Name of the setting.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Value of the setting.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

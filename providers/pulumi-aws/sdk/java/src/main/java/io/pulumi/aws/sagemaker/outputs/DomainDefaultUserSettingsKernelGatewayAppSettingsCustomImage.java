@@ -41,21 +41,21 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage 
     /**
      * The name of the App Image Config.
      * 
-     */
+    */
     public String getAppImageConfigName() {
         return this.appImageConfigName;
     }
     /**
      * The name of the Custom Image.
      * 
-     */
+    */
     public String getImageName() {
         return this.imageName;
     }
     /**
      * The version number of the Custom Image.
      * 
-     */
+    */
     public Optional<Integer> getImageVersionNumber() {
         return Optional.ofNullable(this.imageVersionNumber);
     }

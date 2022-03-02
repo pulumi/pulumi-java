@@ -45,28 +45,28 @@ public final class GetDomainIdentityResult {
     /**
      * The ARN of the domain identity.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The name of the domain
      * 
-     */
+    */
     public String getDomain() {
         return this.domain;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A code which when added to the domain as a TXT record will signal to SES that the owner of the domain has authorized SES to act on their behalf.
      * 
-     */
+    */
     public String getVerificationToken() {
         return this.verificationToken;
     }

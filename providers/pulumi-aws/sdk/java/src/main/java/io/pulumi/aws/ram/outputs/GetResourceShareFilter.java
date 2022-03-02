@@ -32,14 +32,14 @@ public final class GetResourceShareFilter {
     /**
      * The name of the tag key to filter on.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The value of the tag key.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }

@@ -23,7 +23,7 @@ public final class MetricStreamExcludeFilter {
     /**
      * Name of the metric namespace in the filter.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }

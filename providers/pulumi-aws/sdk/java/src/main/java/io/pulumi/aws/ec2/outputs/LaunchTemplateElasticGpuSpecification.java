@@ -23,7 +23,7 @@ public final class LaunchTemplateElasticGpuSpecification {
     /**
      * The [Elastic GPU Type](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-gpus.html#elastic-gpus-basics)
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRateBasedRule {
-/**
- * `aws.waf.RateBasedRule` Retrieves a WAF Rate Based Rule Resource Id.
+    private GetRateBasedRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetRateBasedRuleArgs.Builder a);
+    }
+    private static GetRateBasedRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRateBasedRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `aws.waf.RateBasedRule` Retrieves a WAF Rate Based Rule Resource Id.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getRateBasedRule.
+     *
+     * A collection of arguments for invoking getRateBasedRule.
  * 
- *
- * A collection of values returned by getRateBasedRule.
+     *
+     * A collection of values returned by getRateBasedRule.
  * 
- */
+     */
+    public static CompletableFuture<GetRateBasedRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `aws.waf.RateBasedRule` Retrieves a WAF Rate Based Rule Resource Id.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getRateBasedRule.
+     * 
+     *
+         * A collection of values returned by getRateBasedRule.
+     * 
+     */
     public static CompletableFuture<GetRateBasedRuleResult> invokeAsync(GetRateBasedRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:waf/getRateBasedRule:getRateBasedRule", TypeShape.of(GetRateBasedRuleResult.class), args == null ? GetRateBasedRuleArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -23,7 +23,7 @@ public final class RepositoryImageScanningConfiguration {
     /**
      * Indicates whether images are scanned after being pushed to the repository (true) or not scanned (false).
      * 
-     */
+    */
     public Boolean getScanOnPush() {
         return this.scanOnPush;
     }

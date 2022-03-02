@@ -41,21 +41,21 @@ public final class FunctionImageConfig {
     /**
      * Parameters that you want to pass in with `entry_point`.
      * 
-     */
+    */
     public List<String> getCommands() {
         return this.commands == null ? List.of() : this.commands;
     }
     /**
      * Entry point to your application, which is typically the location of the runtime executable.
      * 
-     */
+    */
     public List<String> getEntryPoints() {
         return this.entryPoints == null ? List.of() : this.entryPoints;
     }
     /**
      * Working directory.
      * 
-     */
+    */
     public Optional<String> getWorkingDirectory() {
         return Optional.ofNullable(this.workingDirectory);
     }

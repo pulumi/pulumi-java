@@ -31,14 +31,14 @@ public final class FirehoseDeliveryStreamKinesisSourceConfiguration {
     /**
      * The kinesis stream used as the source of the firehose delivery stream.
      * 
-     */
+    */
     public String getKinesisStreamArn() {
         return this.kinesisStreamArn;
     }
     /**
      * The ARN of the role that provides access to the source Kinesis stream.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }

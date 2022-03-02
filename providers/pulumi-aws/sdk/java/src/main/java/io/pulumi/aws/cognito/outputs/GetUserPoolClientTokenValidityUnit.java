@@ -38,21 +38,21 @@ public final class GetUserPoolClientTokenValidityUnit {
     /**
      * (Optional) Time unit in for the value in `access_token_validity`, defaults to `hours`.
      * 
-     */
+    */
     public String getAccessToken() {
         return this.accessToken;
     }
     /**
      * (Optional) Time unit in for the value in `id_token_validity`, defaults to `hours`.
      * 
-     */
+    */
     public String getIdToken() {
         return this.idToken;
     }
     /**
      * (Optional) Time unit in for the value in `refresh_token_validity`, defaults to `days`.
      * 
-     */
+    */
     public String getRefreshToken() {
         return this.refreshToken;
     }

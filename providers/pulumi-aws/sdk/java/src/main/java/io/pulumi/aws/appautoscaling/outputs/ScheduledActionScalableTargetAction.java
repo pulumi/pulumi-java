@@ -33,14 +33,14 @@ public final class ScheduledActionScalableTargetAction {
     /**
      * The maximum capacity. At least one of `max_capacity` or `min_capacity` must be set.
      * 
-     */
+    */
     public Optional<Integer> getMaxCapacity() {
         return Optional.ofNullable(this.maxCapacity);
     }
     /**
      * The minimum capacity. At least one of `min_capacity` or `max_capacity` must be set.
      * 
-     */
+    */
     public Optional<Integer> getMinCapacity() {
         return Optional.ofNullable(this.minCapacity);
     }

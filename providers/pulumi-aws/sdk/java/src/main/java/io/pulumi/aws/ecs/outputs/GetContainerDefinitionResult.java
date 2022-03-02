@@ -92,63 +92,63 @@ public final class GetContainerDefinitionResult {
     /**
      * The CPU limit for this container definition
      * 
-     */
+    */
     public Integer getCpu() {
         return this.cpu;
     }
     /**
      * Indicator if networking is disabled
      * 
-     */
+    */
     public Boolean getDisableNetworking() {
         return this.disableNetworking;
     }
     /**
      * Set docker labels
      * 
-     */
+    */
     public Map<String,String> getDockerLabels() {
         return this.dockerLabels;
     }
     /**
      * The environment in use
      * 
-     */
+    */
     public Map<String,String> getEnvironment() {
         return this.environment;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The docker image in use, including the digest
      * 
-     */
+    */
     public String getImage() {
         return this.image;
     }
     /**
      * The digest of the docker image in use
      * 
-     */
+    */
     public String getImageDigest() {
         return this.imageDigest;
     }
     /**
      * The memory limit for this container definition
      * 
-     */
+    */
     public Integer getMemory() {
         return this.memory;
     }
     /**
      * The soft limit (in MiB) of memory to reserve for the container. When system memory is under contention, Docker attempts to keep the container memory to this soft limit
      * 
-     */
+    */
     public Integer getMemoryReservation() {
         return this.memoryReservation;
     }

@@ -44,7 +44,7 @@ public final class GetDistributionConfigurationsResult {
     /**
      * Set of ARNs of the matched Image Builder Distribution Configurations.
      * 
-     */
+    */
     public List<String> getArns() {
         return this.arns;
     }
@@ -54,14 +54,14 @@ public final class GetDistributionConfigurationsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set of names of the matched Image Builder Distribution Configurations.
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }

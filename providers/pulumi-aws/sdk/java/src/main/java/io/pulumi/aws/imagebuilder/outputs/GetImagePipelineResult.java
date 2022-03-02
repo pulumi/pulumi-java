@@ -140,112 +140,112 @@ public final class GetImagePipelineResult {
     /**
      * Date the image pipeline was created.
      * 
-     */
+    */
     public String getDateCreated() {
         return this.dateCreated;
     }
     /**
      * Date the image pipeline was last run.
      * 
-     */
+    */
     public String getDateLastRun() {
         return this.dateLastRun;
     }
     /**
      * Date the image pipeline will run next.
      * 
-     */
+    */
     public String getDateNextRun() {
         return this.dateNextRun;
     }
     /**
      * Date the image pipeline was updated.
      * 
-     */
+    */
     public String getDateUpdated() {
         return this.dateUpdated;
     }
     /**
      * Description of the image pipeline.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
      * 
-     */
+    */
     public String getDistributionConfigurationArn() {
         return this.distributionConfigurationArn;
     }
     /**
      * Whether additional information about the image being created is collected.
      * 
-     */
+    */
     public Boolean getEnhancedImageMetadataEnabled() {
         return this.enhancedImageMetadataEnabled;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
      * 
-     */
+    */
     public String getImageRecipeArn() {
         return this.imageRecipeArn;
     }
     /**
      * List of an object with image tests configuration.
      * 
-     */
+    */
     public List<GetImagePipelineImageTestsConfiguration> getImageTestsConfigurations() {
         return this.imageTestsConfigurations;
     }
     /**
      * Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
      * 
-     */
+    */
     public String getInfrastructureConfigurationArn() {
         return this.infrastructureConfigurationArn;
     }
     /**
      * Name of the image pipeline.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Platform of the image pipeline.
      * 
-     */
+    */
     public String getPlatform() {
         return this.platform;
     }
     /**
      * List of an object with schedule settings.
      * 
-     */
+    */
     public List<GetImagePipelineSchedule> getSchedules() {
         return this.schedules;
     }
     /**
      * Status of the image pipeline.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Key-value map of resource tags for the image pipeline.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

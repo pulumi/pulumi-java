@@ -32,14 +32,14 @@ public final class GetDefaultTagsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Blocks of default tags set on the provider. See details below.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

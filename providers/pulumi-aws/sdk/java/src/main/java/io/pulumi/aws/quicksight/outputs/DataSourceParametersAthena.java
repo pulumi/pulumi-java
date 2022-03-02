@@ -25,7 +25,7 @@ public final class DataSourceParametersAthena {
     /**
      * The work-group to which to connect.
      * 
-     */
+    */
     public Optional<String> getWorkGroup() {
         return Optional.ofNullable(this.workGroup);
     }

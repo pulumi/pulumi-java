@@ -58,6 +58,22 @@ public class ContainerPolicy extends io.pulumi.resources.CustomResource {
         return this.policy;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ContainerPolicyArgs.Builder a);
+    }
+    private static io.pulumi.aws.mediastore.ContainerPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.mediastore.ContainerPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ContainerPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

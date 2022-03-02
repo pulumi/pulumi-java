@@ -33,14 +33,14 @@ public final class GameSessionQueuePlayerLatencyPolicy {
     /**
      * Maximum latency value that is allowed for any player.
      * 
-     */
+    */
     public Integer getMaximumIndividualPlayerLatencyMilliseconds() {
         return this.maximumIndividualPlayerLatencyMilliseconds;
     }
     /**
      * Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
      * 
-     */
+    */
     public Optional<Integer> getPolicyDurationSeconds() {
         return Optional.ofNullable(this.policyDurationSeconds);
     }

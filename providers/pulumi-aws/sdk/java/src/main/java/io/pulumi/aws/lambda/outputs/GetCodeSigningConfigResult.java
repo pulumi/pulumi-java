@@ -65,7 +65,7 @@ public final class GetCodeSigningConfigResult {
     /**
      * List of allowed publishers as signing profiles for this code signing configuration.
      * 
-     */
+    */
     public List<GetCodeSigningConfigAllowedPublisher> getAllowedPublishers() {
         return this.allowedPublishers;
     }
@@ -75,35 +75,35 @@ public final class GetCodeSigningConfigResult {
     /**
      * Unique identifier for the code signing configuration.
      * 
-     */
+    */
     public String getConfigId() {
         return this.configId;
     }
     /**
      * Code signing configuration description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The date and time that the code signing configuration was last modified.
      * 
-     */
+    */
     public String getLastModified() {
         return this.lastModified;
     }
     /**
      * List of code signing policies that control the validation failure action for signature mismatch or expiry.
      * 
-     */
+    */
     public List<GetCodeSigningConfigPolicy> getPolicies() {
         return this.policies;
     }

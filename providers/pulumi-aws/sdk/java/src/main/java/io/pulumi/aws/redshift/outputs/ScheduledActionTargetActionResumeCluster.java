@@ -23,7 +23,7 @@ public final class ScheduledActionTargetActionResumeCluster {
     /**
      * The identifier of the cluster to be resumed.
      * 
-     */
+    */
     public String getClusterIdentifier() {
         return this.clusterIdentifier;
     }

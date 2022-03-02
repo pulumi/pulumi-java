@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnetGroup {
-/**
- * Use this data source to get information about an RDS subnet group.
+    private GetSubnetGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetSubnetGroupArgs.Builder a);
+    }
+    private static GetSubnetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSubnetGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get information about an RDS subnet group.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getSubnetGroup.
+     *
+     * A collection of arguments for invoking getSubnetGroup.
  * 
- *
- * A collection of values returned by getSubnetGroup.
+     *
+     * A collection of values returned by getSubnetGroup.
  * 
- */
+     */
+    public static CompletableFuture<GetSubnetGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get information about an RDS subnet group.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getSubnetGroup.
+     * 
+     *
+         * A collection of values returned by getSubnetGroup.
+     * 
+     */
     public static CompletableFuture<GetSubnetGroupResult> invokeAsync(GetSubnetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getSubnetGroup:getSubnetGroup", TypeShape.of(GetSubnetGroupResult.class), args == null ? GetSubnetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

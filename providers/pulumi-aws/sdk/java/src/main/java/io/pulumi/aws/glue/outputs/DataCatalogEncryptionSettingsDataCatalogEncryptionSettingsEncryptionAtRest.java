@@ -33,14 +33,14 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEnc
     /**
      * The encryption-at-rest mode for encrypting Data Catalog data. Valid values are `DISABLED` and `SSE-KMS`.
      * 
-     */
+    */
     public String getCatalogEncryptionMode() {
         return this.catalogEncryptionMode;
     }
     /**
      * The ARN of the AWS KMS key to use for encryption at rest.
      * 
-     */
+    */
     public Optional<String> getSseAwsKmsKeyId() {
         return Optional.ofNullable(this.sseAwsKmsKeyId);
     }

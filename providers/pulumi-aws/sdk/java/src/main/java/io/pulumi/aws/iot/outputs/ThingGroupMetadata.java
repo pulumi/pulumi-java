@@ -37,7 +37,7 @@ public final class ThingGroupMetadata {
     /**
      * The name of the parent Thing Group.
      * 
-     */
+    */
     public Optional<String> getParentGroupName() {
         return Optional.ofNullable(this.parentGroupName);
     }

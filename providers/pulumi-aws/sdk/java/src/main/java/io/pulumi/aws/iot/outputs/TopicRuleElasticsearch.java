@@ -52,35 +52,35 @@ public final class TopicRuleElasticsearch {
     /**
      * The endpoint of your Elasticsearch domain.
      * 
-     */
+    */
     public String getEndpoint() {
         return this.endpoint;
     }
     /**
      * The unique identifier for the document you are storing.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Elasticsearch index where you want to store your data.
      * 
-     */
+    */
     public String getIndex() {
         return this.index;
     }
     /**
      * The IAM role ARN that has access to Elasticsearch.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The type of document you are storing.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

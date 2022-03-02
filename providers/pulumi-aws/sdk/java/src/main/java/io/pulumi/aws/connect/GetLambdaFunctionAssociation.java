@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLambdaFunctionAssociation {
-/**
- * Provides details about a specific Connect Lambda Function Association.
+    private GetLambdaFunctionAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetLambdaFunctionAssociationArgs.Builder a);
+    }
+    private static GetLambdaFunctionAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLambdaFunctionAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about a specific Connect Lambda Function Association.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getLambdaFunctionAssociation.
+     *
+     * A collection of arguments for invoking getLambdaFunctionAssociation.
  * 
- *
- * A collection of values returned by getLambdaFunctionAssociation.
+     *
+     * A collection of values returned by getLambdaFunctionAssociation.
  * 
- */
+     */
+    public static CompletableFuture<GetLambdaFunctionAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about a specific Connect Lambda Function Association.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getLambdaFunctionAssociation.
+     * 
+     *
+         * A collection of values returned by getLambdaFunctionAssociation.
+     * 
+     */
     public static CompletableFuture<GetLambdaFunctionAssociationResult> invokeAsync(GetLambdaFunctionAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getLambdaFunctionAssociation:getLambdaFunctionAssociation", TypeShape.of(GetLambdaFunctionAssociationResult.class), args == null ? GetLambdaFunctionAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

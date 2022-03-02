@@ -66,42 +66,42 @@ public final class UserProfileUserSettings {
     /**
      * The execution role ARN for the user.
      * 
-     */
+    */
     public String getExecutionRole() {
         return this.executionRole;
     }
     /**
      * The Jupyter server's app settings. See Jupyter Server App Settings below.
      * 
-     */
+    */
     public Optional<UserProfileUserSettingsJupyterServerAppSettings> getJupyterServerAppSettings() {
         return Optional.ofNullable(this.jupyterServerAppSettings);
     }
     /**
      * The kernel gateway app settings. See Kernel Gateway App Settings below.
      * 
-     */
+    */
     public Optional<UserProfileUserSettingsKernelGatewayAppSettings> getKernelGatewayAppSettings() {
         return Optional.ofNullable(this.kernelGatewayAppSettings);
     }
     /**
      * The security groups.
      * 
-     */
+    */
     public List<String> getSecurityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
     /**
      * The sharing settings. See Sharing Settings below.
      * 
-     */
+    */
     public Optional<UserProfileUserSettingsSharingSettings> getSharingSettings() {
         return Optional.ofNullable(this.sharingSettings);
     }
     /**
      * The TensorBoard app settings. See TensorBoard App Settings below.
      * 
-     */
+    */
     public Optional<UserProfileUserSettingsTensorBoardAppSettings> getTensorBoardAppSettings() {
         return Optional.ofNullable(this.tensorBoardAppSettings);
     }

@@ -49,7 +49,7 @@ public final class GetLocalGatewayVirtualInterfaceGroupResult {
     /**
      * Set of EC2 Local Gateway Virtual Interface identifiers.
      * 
-     */
+    */
     public List<String> getLocalGatewayVirtualInterfaceIds() {
         return this.localGatewayVirtualInterfaceIds;
     }

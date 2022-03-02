@@ -40,21 +40,21 @@ public final class ClusterBootstrapAction {
     /**
      * List of command line arguments passed to the JAR file's main function when executed.
      * 
-     */
+    */
     public List<String> getArgs() {
         return this.args == null ? List.of() : this.args;
     }
     /**
      * Name of the step.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a local file system.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }

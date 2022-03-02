@@ -44,21 +44,21 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig {
     /**
      * The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary [IAM permissions](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-es-vpc)
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * A list of security group IDs to associate with Kinesis Firehose.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * A list of subnet IDs to associate with Kinesis Firehose.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }

@@ -23,7 +23,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
     /**
      * The value to use in the custom metric dimension.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

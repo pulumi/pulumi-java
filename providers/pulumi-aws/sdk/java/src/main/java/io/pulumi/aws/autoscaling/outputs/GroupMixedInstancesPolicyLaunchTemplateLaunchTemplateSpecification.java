@@ -40,21 +40,21 @@ public final class GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecific
     /**
      * The ID of the launch template. Conflicts with `launch_template_name`.
      * 
-     */
+    */
     public Optional<String> getLaunchTemplateId() {
         return Optional.ofNullable(this.launchTemplateId);
     }
     /**
      * The name of the launch template. Conflicts with `launch_template_id`.
      * 
-     */
+    */
     public Optional<String> getLaunchTemplateName() {
         return Optional.ofNullable(this.launchTemplateName);
     }
     /**
      * Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

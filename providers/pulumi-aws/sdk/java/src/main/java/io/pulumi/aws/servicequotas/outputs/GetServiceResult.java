@@ -34,14 +34,14 @@ public final class GetServiceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Code of the service.
      * 
-     */
+    */
     public String getServiceCode() {
         return this.serviceCode;
     }

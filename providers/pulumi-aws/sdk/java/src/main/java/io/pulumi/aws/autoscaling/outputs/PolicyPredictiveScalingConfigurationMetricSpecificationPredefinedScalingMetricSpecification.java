@@ -31,14 +31,14 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
     /**
      * Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
      * 
-     */
+    */
     public String getPredefinedMetricType() {
         return this.predefinedMetricType;
     }
     /**
      * A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
      * 
-     */
+    */
     public String getResourceLabel() {
         return this.resourceLabel;
     }

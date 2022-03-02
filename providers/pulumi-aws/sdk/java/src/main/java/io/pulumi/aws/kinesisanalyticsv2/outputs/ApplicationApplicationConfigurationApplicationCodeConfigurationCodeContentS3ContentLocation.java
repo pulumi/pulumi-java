@@ -40,21 +40,21 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     /**
      * The ARN for the S3 bucket containing the application code.
      * 
-     */
+    */
     public String getBucketArn() {
         return this.bucketArn;
     }
     /**
      * The file key for the object containing the application code.
      * 
-     */
+    */
     public String getFileKey() {
         return this.fileKey;
     }
     /**
      * The version of the object containing the application code.
      * 
-     */
+    */
     public Optional<String> getObjectVersion() {
         return Optional.ofNullable(this.objectVersion);
     }

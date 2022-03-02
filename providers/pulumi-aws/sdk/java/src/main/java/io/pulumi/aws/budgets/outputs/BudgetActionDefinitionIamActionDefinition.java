@@ -47,28 +47,28 @@ public final class BudgetActionDefinitionIamActionDefinition {
     /**
      * A list of groups to be attached. There must be at least one group.
      * 
-     */
+    */
     public List<String> getGroups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
      * The Amazon Resource Name (ARN) of the policy to be attached.
      * 
-     */
+    */
     public String getPolicyArn() {
         return this.policyArn;
     }
     /**
      * A list of roles to be attached. There must be at least one role.
      * 
-     */
+    */
     public List<String> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }
     /**
      * A list of users to be attached. There must be at least one user.
      * 
-     */
+    */
     public List<String> getUsers() {
         return this.users == null ? List.of() : this.users;
     }

@@ -41,21 +41,21 @@ public final class AcceleratorAttributes {
     /**
      * Indicates whether flow logs are enabled. Defaults to `false`. Valid values: `true`, `false`.
      * 
-     */
+    */
     public Optional<Boolean> getFlowLogsEnabled() {
         return Optional.ofNullable(this.flowLogsEnabled);
     }
     /**
      * The name of the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
      * 
-     */
+    */
     public Optional<String> getFlowLogsS3Bucket() {
         return Optional.ofNullable(this.flowLogsS3Bucket);
     }
     /**
      * The prefix for the location in the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
      * 
-     */
+    */
     public Optional<String> getFlowLogsS3Prefix() {
         return Optional.ofNullable(this.flowLogsS3Prefix);
     }

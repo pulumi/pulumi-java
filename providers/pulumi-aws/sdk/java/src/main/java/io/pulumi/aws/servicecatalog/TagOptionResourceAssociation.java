@@ -116,6 +116,22 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
         return this.tagOptionId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(TagOptionResourceAssociationArgs.Builder a);
+    }
+    private static io.pulumi.aws.servicecatalog.TagOptionResourceAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.servicecatalog.TagOptionResourceAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TagOptionResourceAssociation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

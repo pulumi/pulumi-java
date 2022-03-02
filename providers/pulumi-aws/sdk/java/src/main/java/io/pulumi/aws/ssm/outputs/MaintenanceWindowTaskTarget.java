@@ -31,7 +31,7 @@ public final class MaintenanceWindowTaskTarget {
     /**
      * The array of strings.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }

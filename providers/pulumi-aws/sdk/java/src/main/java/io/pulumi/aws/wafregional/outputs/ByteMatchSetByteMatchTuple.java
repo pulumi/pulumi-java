@@ -48,28 +48,28 @@ public final class ByteMatchSetByteMatchTuple {
     /**
      * Settings for the ByteMatchTuple. FieldToMatch documented below.
      * 
-     */
+    */
     public ByteMatchSetByteMatchTupleFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
     /**
      * Within the portion of a web request that you want to search.
      * 
-     */
+    */
     public String getPositionalConstraint() {
         return this.positionalConstraint;
     }
     /**
      * The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.
      * 
-     */
+    */
     public Optional<String> getTargetString() {
         return Optional.ofNullable(this.targetString);
     }
     /**
      * The formatting way for web request.
      * 
-     */
+    */
     public String getTextTransformation() {
         return this.textTransformation;
     }

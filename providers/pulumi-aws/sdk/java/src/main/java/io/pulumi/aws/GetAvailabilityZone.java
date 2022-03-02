@@ -13,8 +13,17 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAvailabilityZone {
-/**
- * `aws.getAvailabilityZone` provides details about a specific availability zone (AZ)
+    private GetAvailabilityZone() {}
+    public interface BuilderApplicator {
+        public void apply(GetAvailabilityZoneArgs.Builder a);
+    }
+    private static GetAvailabilityZoneArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAvailabilityZoneArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `aws.getAvailabilityZone` provides details about a specific availability zone (AZ)
  * in the current region.
  * 
  * This can be used both to validate an availability zone given in a variable
@@ -26,13 +35,36 @@ public class GetAvailabilityZone {
  * This is different from the `aws.getAvailabilityZones` (plural) data source,
  * which provides a list of the available zones.
  * 
- *
- * A collection of arguments for invoking getAvailabilityZone.
+     *
+     * A collection of arguments for invoking getAvailabilityZone.
  * 
- *
- * A collection of values returned by getAvailabilityZone.
+     *
+     * A collection of values returned by getAvailabilityZone.
  * 
- */
+     */
+    public static CompletableFuture<GetAvailabilityZoneResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `aws.getAvailabilityZone` provides details about a specific availability zone (AZ)
+     * in the current region.
+     * 
+     * This can be used both to validate an availability zone given in a variable
+     * and to split the AZ name into its component parts of an AWS region and an
+     * AZ identifier letter. The latter may be useful e.g., for implementing a
+     * consistent subnet numbering scheme across several regions by mapping both
+     * the region and the subnet letter to network numbers.
+     * 
+     * This is different from the `aws.getAvailabilityZones` (plural) data source,
+     * which provides a list of the available zones.
+     * 
+     *
+         * A collection of arguments for invoking getAvailabilityZone.
+     * 
+     *
+         * A collection of values returned by getAvailabilityZone.
+     * 
+     */
     public static CompletableFuture<GetAvailabilityZoneResult> invokeAsync(@Nullable GetAvailabilityZoneArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getAvailabilityZone:getAvailabilityZone", TypeShape.of(GetAvailabilityZoneResult.class), args == null ? GetAvailabilityZoneArgs.Empty : args, Utilities.withVersion(options));
     }

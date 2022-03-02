@@ -253,14 +253,14 @@ public final class GetLaunchTemplateResult {
     /**
      * Amazon Resource Name (ARN) of the launch template.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Specify volumes to attach to the instance besides the volumes specified by the AMI.
      * 
-     */
+    */
     public List<GetLaunchTemplateBlockDeviceMapping> getBlockDeviceMappings() {
         return this.blockDeviceMappings;
     }
@@ -268,21 +268,21 @@ public final class GetLaunchTemplateResult {
      * Customize the credit specification of the instance. See Credit
      * Specification below for more details.
      * 
-     */
+    */
     public List<GetLaunchTemplateCreditSpecification> getCreditSpecifications() {
         return this.creditSpecifications;
     }
     /**
      * The default version of the launch template.
      * 
-     */
+    */
     public Integer getDefaultVersion() {
         return this.defaultVersion;
     }
     /**
      * Description of the launch template.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -290,14 +290,14 @@ public final class GetLaunchTemplateResult {
      * If `true`, enables [EC2 Instance
      * Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
      * 
-     */
+    */
     public Boolean getDisableApiTermination() {
         return this.disableApiTermination;
     }
     /**
      * If `true`, the launched EC2 instance will be EBS-optimized.
      * 
-     */
+    */
     public String getEbsOptimized() {
         return this.ebsOptimized;
     }
@@ -305,14 +305,14 @@ public final class GetLaunchTemplateResult {
      * The elastic GPU to attach to the instance. See Elastic GPU
      * below for more details.
      * 
-     */
+    */
     public List<GetLaunchTemplateElasticGpuSpecification> getElasticGpuSpecifications() {
         return this.elasticGpuSpecifications;
     }
     /**
      * The enclave options of the Instance.
      * 
-     */
+    */
     public List<GetLaunchTemplateEnclaveOption> getEnclaveOptions() {
         return this.enclaveOptions;
     }
@@ -322,7 +322,7 @@ public final class GetLaunchTemplateResult {
     /**
      * The hibernation options for the instance.
      * 
-     */
+    */
     public List<GetLaunchTemplateHibernationOption> getHibernationOptions() {
         return this.hibernationOptions;
     }
@@ -330,21 +330,21 @@ public final class GetLaunchTemplateResult {
      * The IAM Instance Profile to launch the instance with. See Instance Profile
      * below for more details.
      * 
-     */
+    */
     public List<GetLaunchTemplateIamInstanceProfile> getIamInstanceProfiles() {
         return this.iamInstanceProfiles;
     }
     /**
      * The ID of the launch template.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The AMI from which to launch the instance.
      * 
-     */
+    */
     public String getImageId() {
         return this.imageId;
     }
@@ -352,7 +352,7 @@ public final class GetLaunchTemplateResult {
      * Shutdown behavior for the instance. Can be `stop` or `terminate`.
      * (Default: `stop`).
      * 
-     */
+    */
     public String getInstanceInitiatedShutdownBehavior() {
         return this.instanceInitiatedShutdownBehavior;
     }
@@ -360,49 +360,49 @@ public final class GetLaunchTemplateResult {
      * The market (purchasing) option for the instance.
      * below for details.
      * 
-     */
+    */
     public List<GetLaunchTemplateInstanceMarketOption> getInstanceMarketOptions() {
         return this.instanceMarketOptions;
     }
     /**
      * The type of the instance.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The kernel ID.
      * 
-     */
+    */
     public String getKernelId() {
         return this.kernelId;
     }
     /**
      * The key name to use for the instance.
      * 
-     */
+    */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * The latest version of the launch template.
      * 
-     */
+    */
     public Integer getLatestVersion() {
         return this.latestVersion;
     }
     /**
      * The metadata options for the instance.
      * 
-     */
+    */
     public List<GetLaunchTemplateMetadataOption> getMetadataOptions() {
         return this.metadataOptions;
     }
     /**
      * The monitoring option for the instance.
      * 
-     */
+    */
     public List<GetLaunchTemplateMonitoring> getMonitorings() {
         return this.monitorings;
     }
@@ -413,21 +413,21 @@ public final class GetLaunchTemplateResult {
      * Customize network interfaces to be attached at instance boot time. See Network
      * Interfaces below for more details.
      * 
-     */
+    */
     public List<GetLaunchTemplateNetworkInterface> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
     /**
      * The placement of the instance.
      * 
-     */
+    */
     public List<GetLaunchTemplatePlacement> getPlacements() {
         return this.placements;
     }
     /**
      * The ID of the RAM disk.
      * 
-     */
+    */
     public String getRamDiskId() {
         return this.ramDiskId;
     }
@@ -435,35 +435,35 @@ public final class GetLaunchTemplateResult {
      * A list of security group names to associate with. If you are creating Instances in a VPC, use
      * `vpc_security_group_ids` instead.
      * 
-     */
+    */
     public List<String> getSecurityGroupNames() {
         return this.securityGroupNames;
     }
     /**
      * The tags to apply to the resources during launch.
      * 
-     */
+    */
     public List<GetLaunchTemplateTagSpecification> getTagSpecifications() {
         return this.tagSpecifications;
     }
     /**
      * (Optional) A map of tags to assign to the launch template.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * The Base64-encoded user data to provide when launching the instance.
      * 
-     */
+    */
     public String getUserData() {
         return this.userData;
     }
     /**
      * A list of security group IDs to associate with.
      * 
-     */
+    */
     public List<String> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }

@@ -24,7 +24,7 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetPortSet {
     /**
      * Set of port ranges.
      * 
-     */
+    */
     public List<String> getDefinitions() {
         return this.definitions;
     }

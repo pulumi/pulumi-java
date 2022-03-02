@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOriginAccessIdentity {
+    private GetOriginAccessIdentity() {}
+    public interface BuilderApplicator {
+        public void apply(GetOriginAccessIdentityArgs.Builder a);
+    }
+    private static GetOriginAccessIdentityArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOriginAccessIdentityArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    public static CompletableFuture<GetOriginAccessIdentityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
     public static CompletableFuture<GetOriginAccessIdentityResult> invokeAsync(GetOriginAccessIdentityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudfront/getOriginAccessIdentity:getOriginAccessIdentity", TypeShape.of(GetOriginAccessIdentityResult.class), args == null ? GetOriginAccessIdentityArgs.Empty : args, Utilities.withVersion(options));
     }

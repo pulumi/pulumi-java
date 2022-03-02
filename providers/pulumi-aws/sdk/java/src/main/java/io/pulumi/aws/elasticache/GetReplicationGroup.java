@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReplicationGroup {
-/**
- * Use this data source to get information about an Elasticache Replication Group.
+    private GetReplicationGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetReplicationGroupArgs.Builder a);
+    }
+    private static GetReplicationGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReplicationGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get information about an Elasticache Replication Group.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getReplicationGroup.
+     *
+     * A collection of arguments for invoking getReplicationGroup.
  * 
- *
- * A collection of values returned by getReplicationGroup.
+     *
+     * A collection of values returned by getReplicationGroup.
  * 
- */
+     */
+    public static CompletableFuture<GetReplicationGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get information about an Elasticache Replication Group.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getReplicationGroup.
+     * 
+     *
+         * A collection of values returned by getReplicationGroup.
+     * 
+     */
     public static CompletableFuture<GetReplicationGroupResult> invokeAsync(GetReplicationGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticache/getReplicationGroup:getReplicationGroup", TypeShape.of(GetReplicationGroupResult.class), args == null ? GetReplicationGroupArgs.Empty : args, Utilities.withVersion(options));
     }

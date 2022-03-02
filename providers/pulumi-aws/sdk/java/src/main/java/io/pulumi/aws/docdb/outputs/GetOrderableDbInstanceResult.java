@@ -53,7 +53,7 @@ public final class GetOrderableDbInstanceResult {
     /**
      * Availability zones where the instance is available.
      * 
-     */
+    */
     public List<String> getAvailabilityZones() {
         return this.availabilityZones;
     }
@@ -66,7 +66,7 @@ public final class GetOrderableDbInstanceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

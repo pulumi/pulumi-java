@@ -31,14 +31,14 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
     /**
      * The name of the HTTP endpoint common attribute.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The value of the HTTP endpoint common attribute.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

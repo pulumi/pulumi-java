@@ -23,7 +23,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleRetainRule {
     /**
      * How many snapshots to keep. Must be an integer between 1 and 1000.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
