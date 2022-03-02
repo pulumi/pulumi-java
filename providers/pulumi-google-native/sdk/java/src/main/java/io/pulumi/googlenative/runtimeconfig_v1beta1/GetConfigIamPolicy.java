@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfigIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetConfigIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetConfigIamPolicyArgs.Builder a);
+    }
+    private static GetConfigIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConfigIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetConfigIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetConfigIamPolicyResult> invokeAsync(GetConfigIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:runtimeconfig/v1beta1:getConfigIamPolicy", TypeShape.of(GetConfigIamPolicyResult.class), args == null ? GetConfigIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

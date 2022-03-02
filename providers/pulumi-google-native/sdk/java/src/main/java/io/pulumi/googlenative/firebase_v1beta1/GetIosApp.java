@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIosApp {
-/**
- * Gets the specified IosApp.
+    private GetIosApp() {}
+    public interface BuilderApplicator {
+        public void apply(GetIosAppArgs.Builder a);
+    }
+    private static GetIosAppArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIosAppArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified IosApp.
  * 
- */
+     */
+    public static CompletableFuture<GetIosAppResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified IosApp.
+     * 
+     */
     public static CompletableFuture<GetIosAppResult> invokeAsync(GetIosAppArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebase/v1beta1:getIosApp", TypeShape.of(GetIosAppResult.class), args == null ? GetIosAppArgs.Empty : args, Utilities.withVersion(options));
     }

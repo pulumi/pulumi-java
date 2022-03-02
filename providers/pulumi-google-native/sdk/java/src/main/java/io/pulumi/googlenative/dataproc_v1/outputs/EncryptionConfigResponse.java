@@ -23,7 +23,7 @@ public final class EncryptionConfigResponse {
     /**
      * Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
      * 
-     */
+    */
     public String getGcePdKmsKeyName() {
         return this.gcePdKmsKeyName;
     }

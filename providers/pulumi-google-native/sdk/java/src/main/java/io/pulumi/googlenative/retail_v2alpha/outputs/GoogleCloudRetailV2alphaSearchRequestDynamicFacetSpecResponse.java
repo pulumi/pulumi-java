@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse
     /**
      * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }

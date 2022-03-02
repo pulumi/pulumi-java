@@ -23,7 +23,7 @@ public final class ConfidentialInstanceConfigResponse {
     /**
      * Defines whether the instance should have confidential compute enabled.
      * 
-     */
+    */
     public Boolean getEnableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }

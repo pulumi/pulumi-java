@@ -63,6 +63,22 @@ public class ReferenceImage extends io.pulumi.resources.CustomResource {
         return this.uri;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ReferenceImageArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.vision_v1.ReferenceImageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.vision_v1.ReferenceImageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ReferenceImage(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

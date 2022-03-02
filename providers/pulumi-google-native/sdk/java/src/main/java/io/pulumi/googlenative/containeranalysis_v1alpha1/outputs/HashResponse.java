@@ -31,14 +31,14 @@ public final class HashResponse {
     /**
      * The type of hash that was performed.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The hash value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

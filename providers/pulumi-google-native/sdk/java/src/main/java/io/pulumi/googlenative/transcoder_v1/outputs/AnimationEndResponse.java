@@ -23,7 +23,7 @@ public final class AnimationEndResponse {
     /**
      * The time to end overlay object, in seconds. Default: 0
      * 
-     */
+    */
     public String getStartTimeOffset() {
         return this.startTimeOffset;
     }

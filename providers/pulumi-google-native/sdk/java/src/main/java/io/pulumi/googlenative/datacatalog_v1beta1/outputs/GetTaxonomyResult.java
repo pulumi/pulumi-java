@@ -62,42 +62,42 @@ public final class GetTaxonomyResult {
     /**
      * Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
      * 
-     */
+    */
     public List<String> getActivatedPolicyTypes() {
         return this.activatedPolicyTypes;
     }
     /**
      * Optional. Description of this taxonomy. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * User defined name of this taxonomy. It must: contain only unicode letters, numbers, underscores, dashes and spaces; not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource name of this taxonomy, whose format is: "projects/{project_number}/locations/{location_id}/taxonomies/{id}".
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Number of policy tags contained in this taxonomy.
      * 
-     */
+    */
     public Integer getPolicyTagCount() {
         return this.policyTagCount;
     }
     /**
      * Timestamps about this taxonomy. Only create_time and update_time are used.
      * 
-     */
+    */
     public GoogleCloudDatacatalogV1beta1SystemTimestampsResponse getTaxonomyTimestamps() {
         return this.taxonomyTimestamps;
     }

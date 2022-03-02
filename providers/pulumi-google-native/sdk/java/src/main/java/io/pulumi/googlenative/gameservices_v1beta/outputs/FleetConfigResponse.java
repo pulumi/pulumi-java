@@ -31,14 +31,14 @@ public final class FleetConfigResponse {
     /**
      * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
      * 
-     */
+    */
     public String getFleetSpec() {
         return this.fleetSpec;
     }
     /**
      * The name of the FleetConfig.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

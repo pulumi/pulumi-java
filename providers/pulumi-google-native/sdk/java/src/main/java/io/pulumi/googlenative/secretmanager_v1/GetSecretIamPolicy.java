@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecretIamPolicy {
-/**
- * Gets the access control policy for a secret. Returns empty policy if the secret exists and does not have a policy set.
+    private GetSecretIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecretIamPolicyArgs.Builder a);
+    }
+    private static GetSecretIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecretIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a secret. Returns empty policy if the secret exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetSecretIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a secret. Returns empty policy if the secret exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetSecretIamPolicyResult> invokeAsync(GetSecretIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:secretmanager/v1:getSecretIamPolicy", TypeShape.of(GetSecretIamPolicyResult.class), args == null ? GetSecretIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -45,28 +45,28 @@ public final class ErrorProtoResponse {
     /**
      * Debugging information. This property is internal to Google and should not be used.
      * 
-     */
+    */
     public String getDebugInfo() {
         return this.debugInfo;
     }
     /**
      * Specifies where the error occurred, if present.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * A human-readable description of the error.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * A short error code that summarizes the error.
      * 
-     */
+    */
     public String getReason() {
         return this.reason;
     }

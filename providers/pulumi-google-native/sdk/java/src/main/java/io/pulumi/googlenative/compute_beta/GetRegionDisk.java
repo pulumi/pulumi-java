@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionDisk {
-/**
- * Returns a specified regional persistent disk.
+    private GetRegionDisk() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionDiskArgs.Builder a);
+    }
+    private static GetRegionDiskArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionDiskArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns a specified regional persistent disk.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionDiskResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns a specified regional persistent disk.
+     * 
+     */
     public static CompletableFuture<GetRegionDiskResult> invokeAsync(GetRegionDiskArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getRegionDisk", TypeShape.of(GetRegionDiskResult.class), args == null ? GetRegionDiskArgs.Empty : args, Utilities.withVersion(options));
     }

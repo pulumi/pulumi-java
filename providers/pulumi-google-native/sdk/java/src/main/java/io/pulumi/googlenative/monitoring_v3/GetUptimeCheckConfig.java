@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUptimeCheckConfig {
-/**
- * Gets a single Uptime check configuration.
+    private GetUptimeCheckConfig() {}
+    public interface BuilderApplicator {
+        public void apply(GetUptimeCheckConfigArgs.Builder a);
+    }
+    private static GetUptimeCheckConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUptimeCheckConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a single Uptime check configuration.
  * 
- */
+     */
+    public static CompletableFuture<GetUptimeCheckConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a single Uptime check configuration.
+     * 
+     */
     public static CompletableFuture<GetUptimeCheckConfigResult> invokeAsync(GetUptimeCheckConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getUptimeCheckConfig", TypeShape.of(GetUptimeCheckConfigResult.class), args == null ? GetUptimeCheckConfigArgs.Empty : args, Utilities.withVersion(options));
     }

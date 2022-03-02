@@ -34,7 +34,7 @@ public final class RouterApplianceInstanceResponse {
     /**
      * The IP address of the network interface to use for peering.
      * 
-     */
+    */
     public String getIpAddress() {
         return this.ipAddress;
     }
@@ -44,7 +44,7 @@ public final class RouterApplianceInstanceResponse {
     /**
      * The URI of the virtual machine resource
      * 
-     */
+    */
     public String getVirtualMachine() {
         return this.virtualMachine;
     }

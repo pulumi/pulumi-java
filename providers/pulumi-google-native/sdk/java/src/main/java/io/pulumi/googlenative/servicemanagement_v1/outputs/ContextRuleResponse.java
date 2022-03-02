@@ -53,35 +53,35 @@ public final class ContextRuleResponse {
     /**
      * A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
      * 
-     */
+    */
     public List<String> getAllowedRequestExtensions() {
         return this.allowedRequestExtensions;
     }
     /**
      * A list of full type names or extension IDs of extensions allowed in grpc side channel from backend to client.
      * 
-     */
+    */
     public List<String> getAllowedResponseExtensions() {
         return this.allowedResponseExtensions;
     }
     /**
      * A list of full type names of provided contexts.
      * 
-     */
+    */
     public List<String> getProvided() {
         return this.provided;
     }
     /**
      * A list of full type names of requested contexts.
      * 
-     */
+    */
     public List<String> getRequested() {
         return this.requested;
     }
     /**
      * Selects the methods to which this rule applies. Refer to selector for syntax details.
      * 
-     */
+    */
     public String getSelector() {
         return this.selector;
     }

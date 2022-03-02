@@ -23,7 +23,7 @@ public final class ScanRunWarningTraceResponse {
     /**
      * Indicates the warning code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }

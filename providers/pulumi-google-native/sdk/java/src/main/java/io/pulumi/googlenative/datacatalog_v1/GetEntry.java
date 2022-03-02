@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEntry {
-/**
- * Gets an entry.
+    private GetEntry() {}
+    public interface BuilderApplicator {
+        public void apply(GetEntryArgs.Builder a);
+    }
+    private static GetEntryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEntryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets an entry.
  * 
- */
+     */
+    public static CompletableFuture<GetEntryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets an entry.
+     * 
+     */
     public static CompletableFuture<GetEntryResult> invokeAsync(GetEntryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1:getEntry", TypeShape.of(GetEntryResult.class), args == null ? GetEntryArgs.Empty : args, Utilities.withVersion(options));
     }

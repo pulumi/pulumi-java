@@ -43,7 +43,7 @@ public final class GetResponsePolicyResult {
     /**
      * User-provided description for this Response Policy.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -53,14 +53,14 @@ public final class GetResponsePolicyResult {
     /**
      * List of network names specifying networks to which this policy is applied.
      * 
-     */
+    */
     public List<ResponsePolicyNetworkResponse> getNetworks() {
         return this.networks;
     }
     /**
      * User assigned name for this Response Policy.
      * 
-     */
+    */
     public String getResponsePolicyName() {
         return this.responsePolicyName;
     }

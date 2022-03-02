@@ -158,133 +158,133 @@ public final class GetNodeResult {
     /**
      * The type of hardware accelerators associated with this node.
      * 
-     */
+    */
     public String getAcceleratorType() {
         return this.acceleratorType;
     }
     /**
      * The API version that created this Node.
      * 
-     */
+    */
     public String getApiVersion() {
         return this.apiVersion;
     }
     /**
      * The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network that is using that CIDR block.
      * 
-     */
+    */
     public String getCidrBlock() {
         return this.cidrBlock;
     }
     /**
      * The time when the node was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The additional data disks for the Node.
      * 
-     */
+    */
     public List<AttachedDiskResponse> getDataDisks() {
         return this.dataDisks;
     }
     /**
      * The user-supplied description of the TPU. Maximum of 512 characters.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The health status of the TPU node.
      * 
-     */
+    */
     public String getHealth() {
         return this.health;
     }
     /**
      * If this field is populated, it contains a description of why the TPU Node is unhealthy.
      * 
-     */
+    */
     public String getHealthDescription() {
         return this.healthDescription;
     }
     /**
      * Resource labels to represent user-provided metadata.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * Custom metadata to apply to the TPU Node. Can set startup-script and shutdown-script
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
     /**
      * Immutable. The name of the TPU.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Network configurations for the TPU node.
      * 
-     */
+    */
     public NetworkConfigResponse getNetworkConfig() {
         return this.networkConfig;
     }
     /**
      * The network endpoints where TPU workers can be accessed and sent work. It is recommended that runtime clients of the node reach out to the 0th entry in this map first.
      * 
-     */
+    */
     public List<NetworkEndpointResponse> getNetworkEndpoints() {
         return this.networkEndpoints;
     }
     /**
      * The runtime version running in the Node.
      * 
-     */
+    */
     public String getRuntimeVersion() {
         return this.runtimeVersion;
     }
     /**
      * The scheduling options for this node.
      * 
-     */
+    */
     public SchedulingConfigResponse getSchedulingConfig() {
         return this.schedulingConfig;
     }
     /**
      * The Google Cloud Platform Service Account to be used by the TPU node VMs. If None is specified, the default compute service account will be used.
      * 
-     */
+    */
     public ServiceAccountResponse getServiceAccount() {
         return this.serviceAccount;
     }
     /**
      * The current state for the TPU Node.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The Symptoms that have occurred to the TPU Node.
      * 
-     */
+    */
     public List<SymptomResponse> getSymptoms() {
         return this.symptoms;
     }
     /**
      * Tags to apply to the TPU Node. Tags are used to identify valid sources or targets for network firewalls.
      * 
-     */
+    */
     public List<String> getTags() {
         return this.tags;
     }

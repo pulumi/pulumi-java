@@ -39,21 +39,21 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryResponse {
     /**
      * The location of the repository directory.
      * 
-     */
+    */
     public String getBaseUrl() {
         return this.baseUrl;
     }
     /**
      * The display name of the repository.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * URIs of GPG keys.
      * 
-     */
+    */
     public List<String> getGpgKeys() {
         return this.gpgKeys;
     }

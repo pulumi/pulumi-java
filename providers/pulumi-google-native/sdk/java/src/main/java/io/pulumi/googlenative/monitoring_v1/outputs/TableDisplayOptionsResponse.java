@@ -24,7 +24,7 @@ public final class TableDisplayOptionsResponse {
     /**
      * Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.
      * 
-     */
+    */
     public List<String> getShownColumns() {
         return this.shownColumns;
     }

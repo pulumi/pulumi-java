@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPhraseMatcher {
-/**
- * Gets a phrase matcher.
+    private GetPhraseMatcher() {}
+    public interface BuilderApplicator {
+        public void apply(GetPhraseMatcherArgs.Builder a);
+    }
+    private static GetPhraseMatcherArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPhraseMatcherArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a phrase matcher.
  * 
- */
+     */
+    public static CompletableFuture<GetPhraseMatcherResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a phrase matcher.
+     * 
+     */
     public static CompletableFuture<GetPhraseMatcherResult> invokeAsync(GetPhraseMatcherArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getPhraseMatcher", TypeShape.of(GetPhraseMatcherResult.class), args == null ? GetPhraseMatcherArgs.Empty : args, Utilities.withVersion(options));
     }

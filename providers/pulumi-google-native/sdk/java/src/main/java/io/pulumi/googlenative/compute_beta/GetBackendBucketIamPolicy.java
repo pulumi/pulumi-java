@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackendBucketIamPolicy {
-/**
- * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+    private GetBackendBucketIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackendBucketIamPolicyArgs.Builder a);
+    }
+    private static GetBackendBucketIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackendBucketIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
  * 
- */
+     */
+    public static CompletableFuture<GetBackendBucketIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static CompletableFuture<GetBackendBucketIamPolicyResult> invokeAsync(GetBackendBucketIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getBackendBucketIamPolicy", TypeShape.of(GetBackendBucketIamPolicyResult.class), args == null ? GetBackendBucketIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

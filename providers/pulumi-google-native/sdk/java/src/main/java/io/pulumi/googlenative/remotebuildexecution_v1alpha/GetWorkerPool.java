@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkerPool {
-/**
- * Returns the specified worker pool.
+    private GetWorkerPool() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkerPoolArgs.Builder a);
+    }
+    private static GetWorkerPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkerPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified worker pool.
  * 
- */
+     */
+    public static CompletableFuture<GetWorkerPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified worker pool.
+     * 
+     */
     public static CompletableFuture<GetWorkerPoolResult> invokeAsync(GetWorkerPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:remotebuildexecution/v1alpha:getWorkerPool", TypeShape.of(GetWorkerPoolResult.class), args == null ? GetWorkerPoolArgs.Empty : args, Utilities.withVersion(options));
     }

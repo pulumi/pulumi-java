@@ -31,14 +31,14 @@ public final class CloudRunRewriteResponse {
     /**
      * Optional. User-provided region where the Cloud Run service is hosted. Defaults to `us-central1` if not supplied.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * User-defined ID of the Cloud Run service.
      * 
-     */
+    */
     public String getServiceId() {
         return this.serviceId;
     }

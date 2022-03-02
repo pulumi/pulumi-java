@@ -40,21 +40,21 @@ public final class GetTransitionRouteGroupResult {
     /**
      * The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The unique identifier of the transition route group. TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format: `projects//locations//agents//flows//transitionRouteGroups/`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Transition routes associated with the TransitionRouteGroup.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> getTransitionRoutes() {
         return this.transitionRoutes;
     }

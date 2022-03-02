@@ -41,21 +41,21 @@ public final class DnsSettingsResponse {
     /**
      * An arbitrary DNS provider identified by its name servers.
      * 
-     */
+    */
     public CustomDnsResponse getCustomDns() {
         return this.customDns;
     }
     /**
      * The list of glue records for this `Registration`. Commonly empty.
      * 
-     */
+    */
     public List<GlueRecordResponse> getGlueRecords() {
         return this.glueRecords;
     }
     /**
      * The free DNS zone provided by [Google Domains](https://domains.google/).
      * 
-     */
+    */
     public GoogleDomainsDnsResponse getGoogleDomainsDns() {
         return this.googleDomainsDns;
     }

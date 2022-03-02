@@ -33,14 +33,14 @@ public final class PackageOccurrenceResponse {
     /**
      * All of the places within the filesystem versions of this package have been found.
      * 
-     */
+    */
     public List<LocationResponse> getLocation() {
         return this.location;
     }
     /**
      * The name of the installed package.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

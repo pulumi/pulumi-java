@@ -32,14 +32,14 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse {
     /**
      * Set of quasi-identifiers indicating how equivalence classes are defined for the l-diversity computation. When multiple fields are specified, they are considered a single composite key.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2FieldIdResponse> getQuasiIds() {
         return this.quasiIds;
     }
     /**
      * Sensitive field for computing the l-value.
      * 
-     */
+    */
     public GooglePrivacyDlpV2FieldIdResponse getSensitiveAttribute() {
         return this.sensitiveAttribute;
     }

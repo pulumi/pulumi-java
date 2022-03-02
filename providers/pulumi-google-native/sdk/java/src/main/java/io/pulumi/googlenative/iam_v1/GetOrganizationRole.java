@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganizationRole {
-/**
- * Gets the definition of a Role.
+    private GetOrganizationRole() {}
+    public interface BuilderApplicator {
+        public void apply(GetOrganizationRoleArgs.Builder a);
+    }
+    private static GetOrganizationRoleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOrganizationRoleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the definition of a Role.
  * 
- */
+     */
+    public static CompletableFuture<GetOrganizationRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the definition of a Role.
+     * 
+     */
     public static CompletableFuture<GetOrganizationRoleResult> invokeAsync(GetOrganizationRoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getOrganizationRole", TypeShape.of(GetOrganizationRoleResult.class), args == null ? GetOrganizationRoleArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -46,28 +46,28 @@ public final class MaintenanceWindowResponse {
     /**
      * day of week (1-7), starting on Monday.
      * 
-     */
+    */
     public Integer getDay() {
         return this.day;
     }
     /**
      * hour of day - 0 to 23.
      * 
-     */
+    */
     public Integer getHour() {
         return this.hour;
     }
     /**
      * This is always `sql#maintenanceWindow`.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Maintenance timing setting: `canary` (Earlier) or `stable` (Later). [Learn more](https://cloud.google.com/sql/docs/mysql/instance-settings#maintenance-timing-2ndgen).
      * 
-     */
+    */
     public String getUpdateTrack() {
         return this.updateTrack;
     }

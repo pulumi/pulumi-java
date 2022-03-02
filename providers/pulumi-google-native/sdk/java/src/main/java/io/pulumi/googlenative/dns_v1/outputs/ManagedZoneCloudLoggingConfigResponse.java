@@ -28,7 +28,7 @@ public final class ManagedZoneCloudLoggingConfigResponse {
     /**
      * If set, enable query logging for this ManagedZone. False by default, making logging opt-in.
      * 
-     */
+    */
     public Boolean getEnableLogging() {
         return this.enableLogging;
     }

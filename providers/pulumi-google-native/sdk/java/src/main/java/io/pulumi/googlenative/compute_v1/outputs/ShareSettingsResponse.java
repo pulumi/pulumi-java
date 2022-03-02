@@ -32,14 +32,14 @@ public final class ShareSettingsResponse {
     /**
      * A map of project id and project config. This is only valid when share_type's value is SPECIFIC_PROJECTS.
      * 
-     */
+    */
     public Map<String,String> getProjectMap() {
         return this.projectMap;
     }
     /**
      * Type of sharing for this shared-reservation
      * 
-     */
+    */
     public String getShareType() {
         return this.shareType;
     }

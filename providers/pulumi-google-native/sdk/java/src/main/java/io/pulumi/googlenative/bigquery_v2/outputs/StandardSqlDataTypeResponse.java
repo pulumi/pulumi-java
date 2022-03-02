@@ -39,21 +39,21 @@ public final class StandardSqlDataTypeResponse {
     /**
      * The type of the array's elements, if type_kind = "ARRAY".
      * 
-     */
+    */
     public StandardSqlDataTypeResponse getArrayElementType() {
         return this.arrayElementType;
     }
     /**
      * The fields of this struct, in order, if type_kind = "STRUCT".
      * 
-     */
+    */
     public StandardSqlStructTypeResponse getStructType() {
         return this.structType;
     }
     /**
      * The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").
      * 
-     */
+    */
     public String getTypeKind() {
         return this.typeKind;
     }

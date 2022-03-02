@@ -32,14 +32,14 @@ public final class PipelineConditionResponse {
     /**
      * Details around the Pipeline's overall status.
      * 
-     */
+    */
     public PipelineReadyConditionResponse getPipelineReadyCondition() {
         return this.pipelineReadyCondition;
     }
     /**
      * Detalis around targets enumerated in the pipeline.
      * 
-     */
+    */
     public TargetsPresentConditionResponse getTargetsPresentCondition() {
         return this.targetsPresentCondition;
     }

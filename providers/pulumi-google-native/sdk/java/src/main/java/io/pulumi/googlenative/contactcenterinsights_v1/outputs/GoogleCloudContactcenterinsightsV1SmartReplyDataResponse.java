@@ -47,28 +47,28 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse {
     /**
      * The system's confidence score that this reply is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
-     */
+    */
     public Double getConfidenceScore() {
         return this.confidenceScore;
     }
     /**
      * Map that contains metadata about the Smart Reply and the document from which it originates.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
     /**
      * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
      * 
-     */
+    */
     public String getQueryRecord() {
         return this.queryRecord;
     }
     /**
      * The content of the reply.
      * 
-     */
+    */
     public String getReply() {
         return this.reply;
     }

@@ -32,14 +32,14 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
     /**
      * Indicates SAA enrollment setup error if any.
      * 
-     */
+    */
     public List<String> getSetupErrors() {
         return this.setupErrors;
     }
     /**
      * Indicates SAA enrollment status of a given workload.
      * 
-     */
+    */
     public String getSetupStatus() {
         return this.setupStatus;
     }

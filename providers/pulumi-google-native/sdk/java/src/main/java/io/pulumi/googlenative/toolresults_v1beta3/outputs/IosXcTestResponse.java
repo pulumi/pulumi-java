@@ -31,14 +31,14 @@ public final class IosXcTestResponse {
     /**
      * Bundle ID of the app.
      * 
-     */
+    */
     public String getBundleId() {
         return this.bundleId;
     }
     /**
      * Xcode version that the test was run with.
      * 
-     */
+    */
     public String getXcodeVersion() {
         return this.xcodeVersion;
     }

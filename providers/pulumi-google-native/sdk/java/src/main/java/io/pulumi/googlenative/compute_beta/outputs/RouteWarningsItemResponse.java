@@ -40,21 +40,21 @@ public final class RouteWarningsItemResponse {
     /**
      * A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" }
      * 
-     */
+    */
     public List<RouteWarningsItemDataItemResponse> getData() {
         return this.data;
     }
     /**
      * A human-readable description of the warning code.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }

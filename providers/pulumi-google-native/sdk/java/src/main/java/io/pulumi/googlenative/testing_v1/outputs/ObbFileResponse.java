@@ -32,14 +32,14 @@ public final class ObbFileResponse {
     /**
      * Opaque Binary Blob (OBB) file(s) to install on the device.
      * 
-     */
+    */
     public FileReferenceResponse getObb() {
         return this.obb;
     }
     /**
      * OBB file name which must conform to the format as specified by Android e.g. [main|patch].0300110.com.example.android.obb which will be installed into \/Android/obb/\/ on the device.
      * 
-     */
+    */
     public String getObbFileName() {
         return this.obbFileName;
     }

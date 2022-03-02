@@ -60,42 +60,42 @@ public final class PySparkBatchResponse {
     /**
      * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
-     */
+    */
     public List<String> getArchiveUris() {
         return this.archiveUris;
     }
     /**
      * Optional. The arguments to pass to the driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
      * 
-     */
+    */
     public List<String> getArgs() {
         return this.args;
     }
     /**
      * Optional. HCFS URIs of files to be placed in the working directory of each executor.
      * 
-     */
+    */
     public List<String> getFileUris() {
         return this.fileUris;
     }
     /**
      * Optional. HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
      * 
-     */
+    */
     public List<String> getJarFileUris() {
         return this.jarFileUris;
     }
     /**
      * The HCFS URI of the main Python file to use as the Spark driver. Must be a .py file.
      * 
-     */
+    */
     public String getMainPythonFileUri() {
         return this.mainPythonFileUri;
     }
     /**
      * Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
      * 
-     */
+    */
     public List<String> getPythonFileUris() {
         return this.pythonFileUris;
     }

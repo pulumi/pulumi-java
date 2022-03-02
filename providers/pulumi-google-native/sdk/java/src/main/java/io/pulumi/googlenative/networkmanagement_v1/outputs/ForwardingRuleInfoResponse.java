@@ -66,49 +66,49 @@ public final class ForwardingRuleInfoResponse {
     /**
      * Name of a Compute Engine forwarding rule.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Port range defined in the forwarding rule that matches the test.
      * 
-     */
+    */
     public String getMatchedPortRange() {
         return this.matchedPortRange;
     }
     /**
      * Protocol defined in the forwarding rule that matches the test.
      * 
-     */
+    */
     public String getMatchedProtocol() {
         return this.matchedProtocol;
     }
     /**
      * Network URI. Only valid for Internal Load Balancer.
      * 
-     */
+    */
     public String getNetworkUri() {
         return this.networkUri;
     }
     /**
      * Target type of the forwarding rule.
      * 
-     */
+    */
     public String getTarget() {
         return this.target;
     }
     /**
      * URI of a Compute Engine forwarding rule.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }
     /**
      * VIP of the forwarding rule.
      * 
-     */
+    */
     public String getVip() {
         return this.vip;
     }

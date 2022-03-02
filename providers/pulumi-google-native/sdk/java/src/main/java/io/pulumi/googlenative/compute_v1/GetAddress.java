@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAddress {
-/**
- * Returns the specified address resource.
+    private GetAddress() {}
+    public interface BuilderApplicator {
+        public void apply(GetAddressArgs.Builder a);
+    }
+    private static GetAddressArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAddressArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified address resource.
  * 
- */
+     */
+    public static CompletableFuture<GetAddressResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified address resource.
+     * 
+     */
     public static CompletableFuture<GetAddressResult> invokeAsync(GetAddressArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getAddress", TypeShape.of(GetAddressResult.class), args == null ? GetAddressArgs.Empty : args, Utilities.withVersion(options));
     }

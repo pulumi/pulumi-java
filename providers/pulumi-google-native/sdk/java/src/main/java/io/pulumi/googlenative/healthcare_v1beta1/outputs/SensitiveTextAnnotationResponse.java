@@ -24,7 +24,7 @@ public final class SensitiveTextAnnotationResponse {
     /**
      * Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --> {findings_1, findings_2, findings_3}
      * 
-     */
+    */
     public Map<String,String> getDetails() {
         return this.details;
     }

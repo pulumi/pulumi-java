@@ -31,14 +31,14 @@ public final class NormalizedCoordinateResponse {
     /**
      * Normalized x coordinate.
      * 
-     */
+    */
     public Double getX() {
         return this.x;
     }
     /**
      * Normalized y coordinate.
      * 
-     */
+    */
     public Double getY() {
         return this.y;
     }

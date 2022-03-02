@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlossary {
-/**
- * Gets a glossary. Returns NOT_FOUND, if the glossary doesn't exist.
+    private GetGlossary() {}
+    public interface BuilderApplicator {
+        public void apply(GetGlossaryArgs.Builder a);
+    }
+    private static GetGlossaryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGlossaryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a glossary. Returns NOT_FOUND, if the glossary doesn't exist.
  * 
- */
+     */
+    public static CompletableFuture<GetGlossaryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a glossary. Returns NOT_FOUND, if the glossary doesn't exist.
+     * 
+     */
     public static CompletableFuture<GetGlossaryResult> invokeAsync(GetGlossaryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:translate/v3beta1:getGlossary", TypeShape.of(GetGlossaryResult.class), args == null ? GetGlossaryArgs.Empty : args, Utilities.withVersion(options));
     }

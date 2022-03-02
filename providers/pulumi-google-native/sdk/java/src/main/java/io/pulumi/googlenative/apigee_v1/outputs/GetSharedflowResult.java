@@ -47,28 +47,28 @@ public final class GetSharedflowResult {
     /**
      * The id of the most recently created revision for this shared flow.
      * 
-     */
+    */
     public String getLatestRevisionId() {
         return this.latestRevisionId;
     }
     /**
      * Metadata describing the shared flow.
      * 
-     */
+    */
     public GoogleCloudApigeeV1EntityMetadataResponse getMetaData() {
         return this.metaData;
     }
     /**
      * The ID of the shared flow.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A list of revisions of this shared flow.
      * 
-     */
+    */
     public List<String> getRevision() {
         return this.revision;
     }

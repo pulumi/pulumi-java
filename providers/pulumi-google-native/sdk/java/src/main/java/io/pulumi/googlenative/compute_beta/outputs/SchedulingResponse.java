@@ -98,77 +98,77 @@ public final class SchedulingResponse {
     /**
      * Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
      * 
-     */
+    */
     public Boolean getAutomaticRestart() {
         return this.automaticRestart;
     }
     /**
      * Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.
      * 
-     */
+    */
     public Integer getHostErrorTimeoutSeconds() {
         return this.hostErrorTimeoutSeconds;
     }
     /**
      * Specifies the termination action for the instance.
      * 
-     */
+    */
     public String getInstanceTerminationAction() {
         return this.instanceTerminationAction;
     }
     /**
      * An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
      * 
-     */
+    */
     public String getLocationHint() {
         return this.locationHint;
     }
     /**
      * Specifies the number of hours after VM instance creation where the VM won't be scheduled for maintenance.
      * 
-     */
+    */
     public Integer getMaintenanceFreezeDurationHours() {
         return this.maintenanceFreezeDurationHours;
     }
     /**
      * For more information about maintenance intervals, see Setting maintenance intervals.
      * 
-     */
+    */
     public String getMaintenanceInterval() {
         return this.maintenanceInterval;
     }
     /**
      * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
      * 
-     */
+    */
     public Integer getMinNodeCpus() {
         return this.minNodeCpus;
     }
     /**
      * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
      * 
-     */
+    */
     public List<SchedulingNodeAffinityResponse> getNodeAffinities() {
         return this.nodeAffinities;
     }
     /**
      * Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
      * 
-     */
+    */
     public String getOnHostMaintenance() {
         return this.onHostMaintenance;
     }
     /**
      * Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
      * 
-     */
+    */
     public Boolean getPreemptible() {
         return this.preemptible;
     }
     /**
      * Specifies the provisioning model of the instance.
      * 
-     */
+    */
     public String getProvisioningModel() {
         return this.provisioningModel;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReport {
-/**
- * Retrieve a custom report definition.
+    private GetReport() {}
+    public interface BuilderApplicator {
+        public void apply(GetReportArgs.Builder a);
+    }
+    private static GetReportArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReportArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieve a custom report definition.
  * 
- */
+     */
+    public static CompletableFuture<GetReportResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieve a custom report definition.
+     * 
+     */
     public static CompletableFuture<GetReportResult> invokeAsync(GetReportArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getReport", TypeShape.of(GetReportResult.class), args == null ? GetReportArgs.Empty : args, Utilities.withVersion(options));
     }

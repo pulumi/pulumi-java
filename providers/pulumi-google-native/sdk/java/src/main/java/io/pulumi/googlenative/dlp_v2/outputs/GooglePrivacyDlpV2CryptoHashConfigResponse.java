@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse {
     /**
      * The key used by the hash function.
      * 
-     */
+    */
     public GooglePrivacyDlpV2CryptoKeyResponse getCryptoKey() {
         return this.cryptoKey;
     }

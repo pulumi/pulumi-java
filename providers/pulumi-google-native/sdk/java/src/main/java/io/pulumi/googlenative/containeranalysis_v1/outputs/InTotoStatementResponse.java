@@ -44,7 +44,7 @@ public final class InTotoStatementResponse {
     /**
      * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
      * 
-     */
+    */
     public String getPredicateType() {
         return this.predicateType;
     }
@@ -60,7 +60,7 @@ public final class InTotoStatementResponse {
     /**
      * Always "https://in-toto.io/Statement/v0.1".
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

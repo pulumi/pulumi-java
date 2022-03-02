@@ -31,14 +31,14 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
     /**
      * The number of guest accelerator cards exposed to each VM.
      * 
-     */
+    */
     public String getAcceleratorCount() {
         return this.acceleratorCount;
     }
     /**
      * The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.
      * 
-     */
+    */
     public String getAcceleratorType() {
         return this.acceleratorType;
     }

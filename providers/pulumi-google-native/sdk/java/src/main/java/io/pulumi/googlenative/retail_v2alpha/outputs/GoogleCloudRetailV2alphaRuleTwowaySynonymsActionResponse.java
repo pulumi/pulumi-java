@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse {
     /**
      * Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at least 2 synonyms.
      * 
-     */
+    */
     public List<String> getSynonyms() {
         return this.synonyms;
     }

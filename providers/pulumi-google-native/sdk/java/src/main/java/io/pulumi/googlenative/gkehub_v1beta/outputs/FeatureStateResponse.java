@@ -38,21 +38,21 @@ public final class FeatureStateResponse {
     /**
      * The high-level, machine-readable status of this Feature.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * A human-readable description of the current status.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The time this status and any related Feature-specific details were updated.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }

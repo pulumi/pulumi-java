@@ -38,21 +38,21 @@ public final class ConnectionStatusResponse {
     /**
      * Description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * State.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Status provides detailed information for the state.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

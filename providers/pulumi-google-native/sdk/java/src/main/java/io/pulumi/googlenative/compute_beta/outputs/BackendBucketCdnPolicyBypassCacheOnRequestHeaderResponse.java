@@ -23,7 +23,7 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse {
     /**
      * The header field name to match on when bypassing cache. Values are case-insensitive.
      * 
-     */
+    */
     public String getHeaderName() {
         return this.headerName;
     }

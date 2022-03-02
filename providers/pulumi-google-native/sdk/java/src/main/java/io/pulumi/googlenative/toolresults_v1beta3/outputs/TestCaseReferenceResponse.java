@@ -38,21 +38,21 @@ public final class TestCaseReferenceResponse {
     /**
      * The name of the class.
      * 
-     */
+    */
     public String getClassName() {
         return this.className;
     }
     /**
      * The name of the test case. Required.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The name of the test suite to which this test case belongs.
      * 
-     */
+    */
     public String getTestSuiteName() {
         return this.testSuiteName;
     }

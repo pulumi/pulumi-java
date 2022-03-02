@@ -32,14 +32,14 @@ public final class RangePartitioningResponse {
     /**
      * [TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
      * 
-     */
+    */
     public String getField() {
         return this.field;
     }
     /**
      * [TrustedTester] [Required] Defines the ranges for range partitioning.
      * 
-     */
+    */
     public RangePartitioningRangeResponse getRange() {
         return this.range;
     }

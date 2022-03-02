@@ -23,7 +23,7 @@ public final class FeedOutputConfigResponse {
     /**
      * Destination on Pub/Sub.
      * 
-     */
+    */
     public PubsubDestinationResponse getPubsubDestination() {
         return this.pubsubDestination;
     }

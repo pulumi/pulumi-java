@@ -32,14 +32,14 @@ public final class PeripheralsConfigResponse {
     /**
      * Optional. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[region]/services/[service_id]
      * 
-     */
+    */
     public String getMetastoreService() {
         return this.metastoreService;
     }
     /**
      * Optional. The Spark History Server configuration for the workload.
      * 
-     */
+    */
     public SparkHistoryServerConfigResponse getSparkHistoryServerConfig() {
         return this.sparkHistoryServerConfig;
     }

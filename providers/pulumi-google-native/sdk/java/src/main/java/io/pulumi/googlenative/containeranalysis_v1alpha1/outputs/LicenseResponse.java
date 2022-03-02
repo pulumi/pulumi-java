@@ -31,14 +31,14 @@ public final class LicenseResponse {
     /**
      * Comments
      * 
-     */
+    */
     public String getComments() {
         return this.comments;
     }
     /**
      * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
      * 
-     */
+    */
     public String getExpression() {
         return this.expression;
     }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureResponse {
     /**
      * The type of the feature that enabled for fulfillment.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

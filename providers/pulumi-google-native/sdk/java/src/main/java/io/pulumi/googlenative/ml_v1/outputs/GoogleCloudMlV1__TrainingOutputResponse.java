@@ -79,56 +79,56 @@ public final class GoogleCloudMlV1__TrainingOutputResponse {
     /**
      * Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.
      * 
-     */
+    */
     public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse getBuiltInAlgorithmOutput() {
         return this.builtInAlgorithmOutput;
     }
     /**
      * The number of hyperparameter tuning trials that completed successfully. Only set for hyperparameter tuning jobs.
      * 
-     */
+    */
     public String getCompletedTrialCount() {
         return this.completedTrialCount;
     }
     /**
      * The amount of ML units consumed by the job.
      * 
-     */
+    */
     public Double getConsumedMLUnits() {
         return this.consumedMLUnits;
     }
     /**
      * The TensorFlow summary tag name used for optimizing hyperparameter tuning trials. See [`HyperparameterSpec.hyperparameterMetricTag`](#HyperparameterSpec.FIELDS.hyperparameter_metric_tag) for more information. Only set for hyperparameter tuning jobs.
      * 
-     */
+    */
     public String getHyperparameterMetricTag() {
         return this.hyperparameterMetricTag;
     }
     /**
      * Whether this job is a built-in Algorithm job.
      * 
-     */
+    */
     public Boolean getIsBuiltInAlgorithmJob() {
         return this.isBuiltInAlgorithmJob;
     }
     /**
      * Whether this job is a hyperparameter tuning job.
      * 
-     */
+    */
     public Boolean getIsHyperparameterTuningJob() {
         return this.isHyperparameterTuningJob;
     }
     /**
      * Results for individual Hyperparameter trials. Only set for hyperparameter tuning jobs.
      * 
-     */
+    */
     public List<GoogleCloudMlV1__HyperparameterOutputResponse> getTrials() {
         return this.trials;
     }
     /**
      * URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node's interactive shell.
      * 
-     */
+    */
     public Map<String,String> getWebAccessUris() {
         return this.webAccessUris;
     }

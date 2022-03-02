@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRouter {
-/**
- * Returns the specified Router resource. Gets a list of available routers by making a list() request.
+    private GetRouter() {}
+    public interface BuilderApplicator {
+        public void apply(GetRouterArgs.Builder a);
+    }
+    private static GetRouterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRouterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified Router resource. Gets a list of available routers by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetRouterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified Router resource. Gets a list of available routers by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetRouterResult> invokeAsync(GetRouterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getRouter", TypeShape.of(GetRouterResult.class), args == null ? GetRouterArgs.Empty : args, Utilities.withVersion(options));
     }

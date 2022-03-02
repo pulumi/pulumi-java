@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGatewayIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetGatewayIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetGatewayIamPolicyArgs.Builder a);
+    }
+    private static GetGatewayIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGatewayIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetGatewayIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetGatewayIamPolicyResult> invokeAsync(GetGatewayIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigateway/v1beta:getGatewayIamPolicy", TypeShape.of(GetGatewayIamPolicyResult.class), args == null ? GetGatewayIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

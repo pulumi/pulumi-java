@@ -80,56 +80,56 @@ public final class WidgetResponse {
     /**
      * A chart of alert policy data.
      * 
-     */
+    */
     public AlertChartResponse getAlertChart() {
         return this.alertChart;
     }
     /**
      * A blank space.
      * 
-     */
+    */
     public EmptyResponse getBlank() {
         return this.blank;
     }
     /**
      * A widget that shows a stream of logs.
      * 
-     */
+    */
     public LogsPanelResponse getLogsPanel() {
         return this.logsPanel;
     }
     /**
      * A scorecard summarizing time series data.
      * 
-     */
+    */
     public ScorecardResponse getScorecard() {
         return this.scorecard;
     }
     /**
      * A raw string or markdown displaying textual content.
      * 
-     */
+    */
     public TextResponse getText() {
         return this.text;
     }
     /**
      * A widget that displays time series data in a tabular format.
      * 
-     */
+    */
     public TimeSeriesTableResponse getTimeSeriesTable() {
         return this.timeSeriesTable;
     }
     /**
      * Optional. The title of the widget.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }
     /**
      * A chart of time series data.
      * 
-     */
+    */
     public XyChartResponse getXyChart() {
         return this.xyChart;
     }

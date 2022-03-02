@@ -23,7 +23,7 @@ public final class OSPolicyResourcePackageResourceGooGetResponse {
     /**
      * Package name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

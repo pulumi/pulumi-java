@@ -32,14 +32,14 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     /**
      * A list of acceptable values. Only effective when the policy is `RESTRICTED`.
      * 
-     */
+    */
     public List<String> getAllowedValues() {
         return this.allowedValues;
     }
     /**
      * The policy of the feature.
      * 
-     */
+    */
     public String getPolicy() {
         return this.policy;
     }

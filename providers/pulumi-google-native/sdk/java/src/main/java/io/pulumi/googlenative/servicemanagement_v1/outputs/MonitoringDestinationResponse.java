@@ -32,14 +32,14 @@ public final class MonitoringDestinationResponse {
     /**
      * Types of the metrics to report to this monitoring destination. Each type must be defined in Service.metrics section.
      * 
-     */
+    */
     public List<String> getMetrics() {
         return this.metrics;
     }
     /**
      * The monitored resource type. The type must be defined in Service.monitored_resources section.
      * 
-     */
+    */
     public String getMonitoredResource() {
         return this.monitoredResource;
     }

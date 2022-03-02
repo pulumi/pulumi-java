@@ -52,35 +52,35 @@ public final class MethodMapResponse {
     /**
      * The action identifier for the create method to be used for this collection
      * 
-     */
+    */
     public String getCreate() {
         return this.create;
     }
     /**
      * The action identifier for the delete method to be used for this collection
      * 
-     */
+    */
     public String getDelete() {
         return this.delete;
     }
     /**
      * The action identifier for the get method to be used for this collection
      * 
-     */
+    */
     public String getGet() {
         return this.get;
     }
     /**
      * The action identifier for the setIamPolicy method to be used for this collection
      * 
-     */
+    */
     public String getSetIamPolicy() {
         return this.setIamPolicy;
     }
     /**
      * The action identifier for the update method to be used for this collection
      * 
-     */
+    */
     public String getUpdate() {
         return this.update;
     }

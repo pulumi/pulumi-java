@@ -54,35 +54,35 @@ public final class ConfigVariableResponse {
     /**
      * Value is a bool.
      * 
-     */
+    */
     public Boolean getBoolValue() {
         return this.boolValue;
     }
     /**
      * Value is an integer
      * 
-     */
+    */
     public String getIntValue() {
         return this.intValue;
     }
     /**
      * Key of the config variable.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Value is a secret.
      * 
-     */
+    */
     public SecretResponse getSecretValue() {
         return this.secretValue;
     }
     /**
      * Value is a string.
      * 
-     */
+    */
     public String getStringValue() {
         return this.stringValue;
     }

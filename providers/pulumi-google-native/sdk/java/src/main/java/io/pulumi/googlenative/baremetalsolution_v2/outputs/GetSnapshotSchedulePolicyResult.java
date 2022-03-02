@@ -48,28 +48,28 @@ public final class GetSnapshotSchedulePolicyResult {
     /**
      * The description of the snapshot schedule policy.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Labels as key value pairs.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
     /**
      * The name of the snapshot schedule policy.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The snapshot schedules contained in this policy. You can specify a maximum of 5 schedules.
      * 
-     */
+    */
     public List<ScheduleResponse> getSchedules() {
         return this.schedules;
     }

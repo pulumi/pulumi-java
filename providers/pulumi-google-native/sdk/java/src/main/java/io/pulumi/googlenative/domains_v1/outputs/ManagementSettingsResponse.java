@@ -31,14 +31,14 @@ public final class ManagementSettingsResponse {
     /**
      * The renewal method for this `Registration`.
      * 
-     */
+    */
     public String getRenewalMethod() {
         return this.renewalMethod;
     }
     /**
      * Controls whether the domain can be transferred to another registrar.
      * 
-     */
+    */
     public String getTransferLockState() {
         return this.transferLockState;
     }

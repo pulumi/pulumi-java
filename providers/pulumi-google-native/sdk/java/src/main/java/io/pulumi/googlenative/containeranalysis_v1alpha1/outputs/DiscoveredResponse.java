@@ -46,28 +46,28 @@ public final class DiscoveredResponse {
     /**
      * The status of discovery for the resource.
      * 
-     */
+    */
     public String getAnalysisStatus() {
         return this.analysisStatus;
     }
     /**
      * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage output only and populated by the API.
      * 
-     */
+    */
     public StatusResponse getAnalysisStatusError() {
         return this.analysisStatusError;
     }
     /**
      * Whether the resource is continuously analyzed.
      * 
-     */
+    */
     public String getContinuousAnalysis() {
         return this.continuousAnalysis;
     }
     /**
      * The CPE of the resource being scanned.
      * 
-     */
+    */
     public String getCpe() {
         return this.cpe;
     }
