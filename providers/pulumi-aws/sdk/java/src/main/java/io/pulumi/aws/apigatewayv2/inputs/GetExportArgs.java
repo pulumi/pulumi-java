@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final String apiId;
+      private final String apiId;
 
     public String getApiId() {
         return this.apiId;
@@ -31,7 +31,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="exportVersion")
-    private final @Nullable String exportVersion;
+      private final @Nullable String exportVersion;
 
     public Optional<String> getExportVersion() {
         return this.exportVersion == null ? Optional.empty() : Optional.ofNullable(this.exportVersion);
@@ -42,7 +42,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="includeExtensions")
-    private final @Nullable Boolean includeExtensions;
+      private final @Nullable Boolean includeExtensions;
 
     public Optional<Boolean> getIncludeExtensions() {
         return this.includeExtensions == null ? Optional.empty() : Optional.ofNullable(this.includeExtensions);
@@ -53,7 +53,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="outputType", required=true)
-    private final String outputType;
+      private final String outputType;
 
     public String getOutputType() {
         return this.outputType;
@@ -64,7 +64,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="specification", required=true)
-    private final String specification;
+      private final String specification;
 
     public String getSpecification() {
         return this.specification;
@@ -75,7 +75,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stageName")
-    private final @Nullable String stageName;
+      private final @Nullable String stageName;
 
     public Optional<String> getStageName() {
         return this.stageName == null ? Optional.empty() : Optional.ofNullable(this.stageName);

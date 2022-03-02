@@ -8,8 +8,8 @@ import io.pulumi.aws.cloudwatch.LogDestinationArgs;
 import io.pulumi.aws.cloudwatch.inputs.LogDestinationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -86,6 +86,21 @@ public class LogDestination extends io.pulumi.resources.CustomResource {
         return this.targetArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public LogDestination(String name) {
+        this(name, LogDestinationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public LogDestination(String name, LogDestinationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetListenerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable String arn;
+      private final @Nullable String arn;
 
     public Optional<String> getArn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
@@ -32,7 +32,7 @@ public final class GetListenerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="loadBalancerArn")
-    private final @Nullable String loadBalancerArn;
+      private final @Nullable String loadBalancerArn;
 
     public Optional<String> getLoadBalancerArn() {
         return this.loadBalancerArn == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerArn);
@@ -43,14 +43,14 @@ public final class GetListenerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Integer port;
+      private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

@@ -5,7 +5,7 @@ package io.pulumi.aws.dax.inputs;
 
 import io.pulumi.aws.dax.inputs.ParameterGroupParameterGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<ParameterGroupParameterGetArgs>> parameters;
+      private final @Nullable Input<List<ParameterGroupParameterGetArgs>> parameters;
 
     public Input<List<ParameterGroupParameterGetArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;

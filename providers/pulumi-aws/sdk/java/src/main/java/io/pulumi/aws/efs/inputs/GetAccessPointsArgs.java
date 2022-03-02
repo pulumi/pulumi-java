@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.efs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAccessPointsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fileSystemId", required=true)
-    private final String fileSystemId;
+      private final String fileSystemId;
 
     public String getFileSystemId() {
         return this.fileSystemId;

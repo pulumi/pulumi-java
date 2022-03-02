@@ -5,7 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
      * 
      */
     @InputImport(name="metricDimensions")
-    private final @Nullable Input<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> metricDimensions;
+      private final @Nullable Input<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> metricDimensions;
 
     public Input<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> getMetricDimensions() {
         return this.metricDimensions == null ? Input.empty() : this.metricDimensions;
@@ -32,7 +32,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+      private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -43,7 +43,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final Input<String> namespace;
+      private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;
@@ -54,7 +54,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
      * 
      */
     @InputImport(name="statistic", required=true)
-    private final Input<String> statistic;
+      private final Input<String> statistic;
 
     public Input<String> getStatistic() {
         return this.statistic;
@@ -65,7 +65,7 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable Input<String> unit;
+      private final @Nullable Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;

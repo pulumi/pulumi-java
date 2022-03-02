@@ -4,7 +4,7 @@
 package io.pulumi.aws.transfer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class UserHomeDirectoryMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="entry", required=true)
-    private final Input<String> entry;
+      private final Input<String> entry;
 
     public Input<String> getEntry() {
         return this.entry;
@@ -29,7 +29,7 @@ public final class UserHomeDirectoryMappingArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="target", required=true)
-    private final Input<String> target;
+      private final Input<String> target;
 
     public Input<String> getTarget() {
         return this.target;

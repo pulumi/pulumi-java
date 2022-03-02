@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends io.pulumi.resou
      * 
      */
     @InputImport(name="deleteOnTermination", required=true)
-    private final Boolean deleteOnTermination;
+      private final Boolean deleteOnTermination;
 
     public Boolean getDeleteOnTermination() {
         return this.deleteOnTermination;
@@ -30,7 +30,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends io.pulumi.resou
      * 
      */
     @InputImport(name="encrypted", required=true)
-    private final Boolean encrypted;
+      private final Boolean encrypted;
 
     public Boolean getEncrypted() {
         return this.encrypted;
@@ -41,7 +41,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends io.pulumi.resou
      * 
      */
     @InputImport(name="iops", required=true)
-    private final Integer iops;
+      private final Integer iops;
 
     public Integer getIops() {
         return this.iops;
@@ -52,7 +52,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends io.pulumi.resou
      * 
      */
     @InputImport(name="throughput", required=true)
-    private final Boolean throughput;
+      private final Boolean throughput;
 
     public Boolean getThroughput() {
         return this.throughput;
@@ -63,7 +63,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends io.pulumi.resou
      * 
      */
     @InputImport(name="volumeSize", required=true)
-    private final Integer volumeSize;
+      private final Integer volumeSize;
 
     public Integer getVolumeSize() {
         return this.volumeSize;
@@ -74,7 +74,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends io.pulumi.resou
      * 
      */
     @InputImport(name="volumeType", required=true)
-    private final String volumeType;
+      private final String volumeType;
 
     public String getVolumeType() {
         return this.volumeType;

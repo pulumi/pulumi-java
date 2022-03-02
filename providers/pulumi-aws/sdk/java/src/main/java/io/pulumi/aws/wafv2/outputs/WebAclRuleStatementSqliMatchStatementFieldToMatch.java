@@ -10,7 +10,7 @@ import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementSqliMatchStatementFieldToM
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementSqliMatchStatementFieldToMatchSingleHeader;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgument;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementSqliMatchStatementFieldToMatchUriPath;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

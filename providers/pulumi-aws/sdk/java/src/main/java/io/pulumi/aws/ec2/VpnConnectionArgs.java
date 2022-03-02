@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerGatewayId", required=true)
-    private final Input<String> customerGatewayId;
+      private final Input<String> customerGatewayId;
 
     public Input<String> getCustomerGatewayId() {
         return this.customerGatewayId;
@@ -34,7 +34,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableAcceleration")
-    private final @Nullable Input<Boolean> enableAcceleration;
+      private final @Nullable Input<Boolean> enableAcceleration;
 
     public Input<Boolean> getEnableAcceleration() {
         return this.enableAcceleration == null ? Input.empty() : this.enableAcceleration;
@@ -45,7 +45,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localIpv4NetworkCidr")
-    private final @Nullable Input<String> localIpv4NetworkCidr;
+      private final @Nullable Input<String> localIpv4NetworkCidr;
 
     public Input<String> getLocalIpv4NetworkCidr() {
         return this.localIpv4NetworkCidr == null ? Input.empty() : this.localIpv4NetworkCidr;
@@ -56,7 +56,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localIpv6NetworkCidr")
-    private final @Nullable Input<String> localIpv6NetworkCidr;
+      private final @Nullable Input<String> localIpv6NetworkCidr;
 
     public Input<String> getLocalIpv6NetworkCidr() {
         return this.localIpv6NetworkCidr == null ? Input.empty() : this.localIpv6NetworkCidr;
@@ -67,7 +67,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remoteIpv4NetworkCidr")
-    private final @Nullable Input<String> remoteIpv4NetworkCidr;
+      private final @Nullable Input<String> remoteIpv4NetworkCidr;
 
     public Input<String> getRemoteIpv4NetworkCidr() {
         return this.remoteIpv4NetworkCidr == null ? Input.empty() : this.remoteIpv4NetworkCidr;
@@ -78,7 +78,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remoteIpv6NetworkCidr")
-    private final @Nullable Input<String> remoteIpv6NetworkCidr;
+      private final @Nullable Input<String> remoteIpv6NetworkCidr;
 
     public Input<String> getRemoteIpv6NetworkCidr() {
         return this.remoteIpv6NetworkCidr == null ? Input.empty() : this.remoteIpv6NetworkCidr;
@@ -89,7 +89,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="staticRoutesOnly")
-    private final @Nullable Input<Boolean> staticRoutesOnly;
+      private final @Nullable Input<Boolean> staticRoutesOnly;
 
     public Input<Boolean> getStaticRoutesOnly() {
         return this.staticRoutesOnly == null ? Input.empty() : this.staticRoutesOnly;
@@ -100,7 +100,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -111,7 +111,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitGatewayId")
-    private final @Nullable Input<String> transitGatewayId;
+      private final @Nullable Input<String> transitGatewayId;
 
     public Input<String> getTransitGatewayId() {
         return this.transitGatewayId == null ? Input.empty() : this.transitGatewayId;
@@ -122,7 +122,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1DpdTimeoutAction")
-    private final @Nullable Input<String> tunnel1DpdTimeoutAction;
+      private final @Nullable Input<String> tunnel1DpdTimeoutAction;
 
     public Input<String> getTunnel1DpdTimeoutAction() {
         return this.tunnel1DpdTimeoutAction == null ? Input.empty() : this.tunnel1DpdTimeoutAction;
@@ -133,7 +133,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1DpdTimeoutSeconds")
-    private final @Nullable Input<Integer> tunnel1DpdTimeoutSeconds;
+      private final @Nullable Input<Integer> tunnel1DpdTimeoutSeconds;
 
     public Input<Integer> getTunnel1DpdTimeoutSeconds() {
         return this.tunnel1DpdTimeoutSeconds == null ? Input.empty() : this.tunnel1DpdTimeoutSeconds;
@@ -144,7 +144,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1IkeVersions")
-    private final @Nullable Input<List<String>> tunnel1IkeVersions;
+      private final @Nullable Input<List<String>> tunnel1IkeVersions;
 
     public Input<List<String>> getTunnel1IkeVersions() {
         return this.tunnel1IkeVersions == null ? Input.empty() : this.tunnel1IkeVersions;
@@ -155,7 +155,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1InsideCidr")
-    private final @Nullable Input<String> tunnel1InsideCidr;
+      private final @Nullable Input<String> tunnel1InsideCidr;
 
     public Input<String> getTunnel1InsideCidr() {
         return this.tunnel1InsideCidr == null ? Input.empty() : this.tunnel1InsideCidr;
@@ -166,7 +166,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1InsideIpv6Cidr")
-    private final @Nullable Input<String> tunnel1InsideIpv6Cidr;
+      private final @Nullable Input<String> tunnel1InsideIpv6Cidr;
 
     public Input<String> getTunnel1InsideIpv6Cidr() {
         return this.tunnel1InsideIpv6Cidr == null ? Input.empty() : this.tunnel1InsideIpv6Cidr;
@@ -177,7 +177,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1Phase1DhGroupNumbers")
-    private final @Nullable Input<List<Integer>> tunnel1Phase1DhGroupNumbers;
+      private final @Nullable Input<List<Integer>> tunnel1Phase1DhGroupNumbers;
 
     public Input<List<Integer>> getTunnel1Phase1DhGroupNumbers() {
         return this.tunnel1Phase1DhGroupNumbers == null ? Input.empty() : this.tunnel1Phase1DhGroupNumbers;
@@ -188,7 +188,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1Phase1EncryptionAlgorithms")
-    private final @Nullable Input<List<String>> tunnel1Phase1EncryptionAlgorithms;
+      private final @Nullable Input<List<String>> tunnel1Phase1EncryptionAlgorithms;
 
     public Input<List<String>> getTunnel1Phase1EncryptionAlgorithms() {
         return this.tunnel1Phase1EncryptionAlgorithms == null ? Input.empty() : this.tunnel1Phase1EncryptionAlgorithms;
@@ -199,7 +199,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1Phase1IntegrityAlgorithms")
-    private final @Nullable Input<List<String>> tunnel1Phase1IntegrityAlgorithms;
+      private final @Nullable Input<List<String>> tunnel1Phase1IntegrityAlgorithms;
 
     public Input<List<String>> getTunnel1Phase1IntegrityAlgorithms() {
         return this.tunnel1Phase1IntegrityAlgorithms == null ? Input.empty() : this.tunnel1Phase1IntegrityAlgorithms;
@@ -210,7 +210,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1Phase1LifetimeSeconds")
-    private final @Nullable Input<Integer> tunnel1Phase1LifetimeSeconds;
+      private final @Nullable Input<Integer> tunnel1Phase1LifetimeSeconds;
 
     public Input<Integer> getTunnel1Phase1LifetimeSeconds() {
         return this.tunnel1Phase1LifetimeSeconds == null ? Input.empty() : this.tunnel1Phase1LifetimeSeconds;
@@ -221,7 +221,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1Phase2DhGroupNumbers")
-    private final @Nullable Input<List<Integer>> tunnel1Phase2DhGroupNumbers;
+      private final @Nullable Input<List<Integer>> tunnel1Phase2DhGroupNumbers;
 
     public Input<List<Integer>> getTunnel1Phase2DhGroupNumbers() {
         return this.tunnel1Phase2DhGroupNumbers == null ? Input.empty() : this.tunnel1Phase2DhGroupNumbers;
@@ -232,7 +232,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1Phase2EncryptionAlgorithms")
-    private final @Nullable Input<List<String>> tunnel1Phase2EncryptionAlgorithms;
+      private final @Nullable Input<List<String>> tunnel1Phase2EncryptionAlgorithms;
 
     public Input<List<String>> getTunnel1Phase2EncryptionAlgorithms() {
         return this.tunnel1Phase2EncryptionAlgorithms == null ? Input.empty() : this.tunnel1Phase2EncryptionAlgorithms;
@@ -243,7 +243,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1Phase2IntegrityAlgorithms")
-    private final @Nullable Input<List<String>> tunnel1Phase2IntegrityAlgorithms;
+      private final @Nullable Input<List<String>> tunnel1Phase2IntegrityAlgorithms;
 
     public Input<List<String>> getTunnel1Phase2IntegrityAlgorithms() {
         return this.tunnel1Phase2IntegrityAlgorithms == null ? Input.empty() : this.tunnel1Phase2IntegrityAlgorithms;
@@ -254,7 +254,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1Phase2LifetimeSeconds")
-    private final @Nullable Input<Integer> tunnel1Phase2LifetimeSeconds;
+      private final @Nullable Input<Integer> tunnel1Phase2LifetimeSeconds;
 
     public Input<Integer> getTunnel1Phase2LifetimeSeconds() {
         return this.tunnel1Phase2LifetimeSeconds == null ? Input.empty() : this.tunnel1Phase2LifetimeSeconds;
@@ -265,7 +265,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1PresharedKey")
-    private final @Nullable Input<String> tunnel1PresharedKey;
+      private final @Nullable Input<String> tunnel1PresharedKey;
 
     public Input<String> getTunnel1PresharedKey() {
         return this.tunnel1PresharedKey == null ? Input.empty() : this.tunnel1PresharedKey;
@@ -276,7 +276,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1RekeyFuzzPercentage")
-    private final @Nullable Input<Integer> tunnel1RekeyFuzzPercentage;
+      private final @Nullable Input<Integer> tunnel1RekeyFuzzPercentage;
 
     public Input<Integer> getTunnel1RekeyFuzzPercentage() {
         return this.tunnel1RekeyFuzzPercentage == null ? Input.empty() : this.tunnel1RekeyFuzzPercentage;
@@ -287,7 +287,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1RekeyMarginTimeSeconds")
-    private final @Nullable Input<Integer> tunnel1RekeyMarginTimeSeconds;
+      private final @Nullable Input<Integer> tunnel1RekeyMarginTimeSeconds;
 
     public Input<Integer> getTunnel1RekeyMarginTimeSeconds() {
         return this.tunnel1RekeyMarginTimeSeconds == null ? Input.empty() : this.tunnel1RekeyMarginTimeSeconds;
@@ -298,7 +298,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1ReplayWindowSize")
-    private final @Nullable Input<Integer> tunnel1ReplayWindowSize;
+      private final @Nullable Input<Integer> tunnel1ReplayWindowSize;
 
     public Input<Integer> getTunnel1ReplayWindowSize() {
         return this.tunnel1ReplayWindowSize == null ? Input.empty() : this.tunnel1ReplayWindowSize;
@@ -309,7 +309,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel1StartupAction")
-    private final @Nullable Input<String> tunnel1StartupAction;
+      private final @Nullable Input<String> tunnel1StartupAction;
 
     public Input<String> getTunnel1StartupAction() {
         return this.tunnel1StartupAction == null ? Input.empty() : this.tunnel1StartupAction;
@@ -320,7 +320,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2DpdTimeoutAction")
-    private final @Nullable Input<String> tunnel2DpdTimeoutAction;
+      private final @Nullable Input<String> tunnel2DpdTimeoutAction;
 
     public Input<String> getTunnel2DpdTimeoutAction() {
         return this.tunnel2DpdTimeoutAction == null ? Input.empty() : this.tunnel2DpdTimeoutAction;
@@ -331,7 +331,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2DpdTimeoutSeconds")
-    private final @Nullable Input<Integer> tunnel2DpdTimeoutSeconds;
+      private final @Nullable Input<Integer> tunnel2DpdTimeoutSeconds;
 
     public Input<Integer> getTunnel2DpdTimeoutSeconds() {
         return this.tunnel2DpdTimeoutSeconds == null ? Input.empty() : this.tunnel2DpdTimeoutSeconds;
@@ -342,7 +342,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2IkeVersions")
-    private final @Nullable Input<List<String>> tunnel2IkeVersions;
+      private final @Nullable Input<List<String>> tunnel2IkeVersions;
 
     public Input<List<String>> getTunnel2IkeVersions() {
         return this.tunnel2IkeVersions == null ? Input.empty() : this.tunnel2IkeVersions;
@@ -353,7 +353,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2InsideCidr")
-    private final @Nullable Input<String> tunnel2InsideCidr;
+      private final @Nullable Input<String> tunnel2InsideCidr;
 
     public Input<String> getTunnel2InsideCidr() {
         return this.tunnel2InsideCidr == null ? Input.empty() : this.tunnel2InsideCidr;
@@ -364,7 +364,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2InsideIpv6Cidr")
-    private final @Nullable Input<String> tunnel2InsideIpv6Cidr;
+      private final @Nullable Input<String> tunnel2InsideIpv6Cidr;
 
     public Input<String> getTunnel2InsideIpv6Cidr() {
         return this.tunnel2InsideIpv6Cidr == null ? Input.empty() : this.tunnel2InsideIpv6Cidr;
@@ -375,7 +375,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2Phase1DhGroupNumbers")
-    private final @Nullable Input<List<Integer>> tunnel2Phase1DhGroupNumbers;
+      private final @Nullable Input<List<Integer>> tunnel2Phase1DhGroupNumbers;
 
     public Input<List<Integer>> getTunnel2Phase1DhGroupNumbers() {
         return this.tunnel2Phase1DhGroupNumbers == null ? Input.empty() : this.tunnel2Phase1DhGroupNumbers;
@@ -386,7 +386,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2Phase1EncryptionAlgorithms")
-    private final @Nullable Input<List<String>> tunnel2Phase1EncryptionAlgorithms;
+      private final @Nullable Input<List<String>> tunnel2Phase1EncryptionAlgorithms;
 
     public Input<List<String>> getTunnel2Phase1EncryptionAlgorithms() {
         return this.tunnel2Phase1EncryptionAlgorithms == null ? Input.empty() : this.tunnel2Phase1EncryptionAlgorithms;
@@ -397,7 +397,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2Phase1IntegrityAlgorithms")
-    private final @Nullable Input<List<String>> tunnel2Phase1IntegrityAlgorithms;
+      private final @Nullable Input<List<String>> tunnel2Phase1IntegrityAlgorithms;
 
     public Input<List<String>> getTunnel2Phase1IntegrityAlgorithms() {
         return this.tunnel2Phase1IntegrityAlgorithms == null ? Input.empty() : this.tunnel2Phase1IntegrityAlgorithms;
@@ -408,7 +408,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2Phase1LifetimeSeconds")
-    private final @Nullable Input<Integer> tunnel2Phase1LifetimeSeconds;
+      private final @Nullable Input<Integer> tunnel2Phase1LifetimeSeconds;
 
     public Input<Integer> getTunnel2Phase1LifetimeSeconds() {
         return this.tunnel2Phase1LifetimeSeconds == null ? Input.empty() : this.tunnel2Phase1LifetimeSeconds;
@@ -419,7 +419,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2Phase2DhGroupNumbers")
-    private final @Nullable Input<List<Integer>> tunnel2Phase2DhGroupNumbers;
+      private final @Nullable Input<List<Integer>> tunnel2Phase2DhGroupNumbers;
 
     public Input<List<Integer>> getTunnel2Phase2DhGroupNumbers() {
         return this.tunnel2Phase2DhGroupNumbers == null ? Input.empty() : this.tunnel2Phase2DhGroupNumbers;
@@ -430,7 +430,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2Phase2EncryptionAlgorithms")
-    private final @Nullable Input<List<String>> tunnel2Phase2EncryptionAlgorithms;
+      private final @Nullable Input<List<String>> tunnel2Phase2EncryptionAlgorithms;
 
     public Input<List<String>> getTunnel2Phase2EncryptionAlgorithms() {
         return this.tunnel2Phase2EncryptionAlgorithms == null ? Input.empty() : this.tunnel2Phase2EncryptionAlgorithms;
@@ -441,7 +441,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2Phase2IntegrityAlgorithms")
-    private final @Nullable Input<List<String>> tunnel2Phase2IntegrityAlgorithms;
+      private final @Nullable Input<List<String>> tunnel2Phase2IntegrityAlgorithms;
 
     public Input<List<String>> getTunnel2Phase2IntegrityAlgorithms() {
         return this.tunnel2Phase2IntegrityAlgorithms == null ? Input.empty() : this.tunnel2Phase2IntegrityAlgorithms;
@@ -452,7 +452,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2Phase2LifetimeSeconds")
-    private final @Nullable Input<Integer> tunnel2Phase2LifetimeSeconds;
+      private final @Nullable Input<Integer> tunnel2Phase2LifetimeSeconds;
 
     public Input<Integer> getTunnel2Phase2LifetimeSeconds() {
         return this.tunnel2Phase2LifetimeSeconds == null ? Input.empty() : this.tunnel2Phase2LifetimeSeconds;
@@ -463,7 +463,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2PresharedKey")
-    private final @Nullable Input<String> tunnel2PresharedKey;
+      private final @Nullable Input<String> tunnel2PresharedKey;
 
     public Input<String> getTunnel2PresharedKey() {
         return this.tunnel2PresharedKey == null ? Input.empty() : this.tunnel2PresharedKey;
@@ -474,7 +474,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2RekeyFuzzPercentage")
-    private final @Nullable Input<Integer> tunnel2RekeyFuzzPercentage;
+      private final @Nullable Input<Integer> tunnel2RekeyFuzzPercentage;
 
     public Input<Integer> getTunnel2RekeyFuzzPercentage() {
         return this.tunnel2RekeyFuzzPercentage == null ? Input.empty() : this.tunnel2RekeyFuzzPercentage;
@@ -485,7 +485,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2RekeyMarginTimeSeconds")
-    private final @Nullable Input<Integer> tunnel2RekeyMarginTimeSeconds;
+      private final @Nullable Input<Integer> tunnel2RekeyMarginTimeSeconds;
 
     public Input<Integer> getTunnel2RekeyMarginTimeSeconds() {
         return this.tunnel2RekeyMarginTimeSeconds == null ? Input.empty() : this.tunnel2RekeyMarginTimeSeconds;
@@ -496,7 +496,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2ReplayWindowSize")
-    private final @Nullable Input<Integer> tunnel2ReplayWindowSize;
+      private final @Nullable Input<Integer> tunnel2ReplayWindowSize;
 
     public Input<Integer> getTunnel2ReplayWindowSize() {
         return this.tunnel2ReplayWindowSize == null ? Input.empty() : this.tunnel2ReplayWindowSize;
@@ -507,7 +507,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel2StartupAction")
-    private final @Nullable Input<String> tunnel2StartupAction;
+      private final @Nullable Input<String> tunnel2StartupAction;
 
     public Input<String> getTunnel2StartupAction() {
         return this.tunnel2StartupAction == null ? Input.empty() : this.tunnel2StartupAction;
@@ -518,7 +518,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnelInsideIpVersion")
-    private final @Nullable Input<String> tunnelInsideIpVersion;
+      private final @Nullable Input<String> tunnelInsideIpVersion;
 
     public Input<String> getTunnelInsideIpVersion() {
         return this.tunnelInsideIpVersion == null ? Input.empty() : this.tunnelInsideIpVersion;
@@ -529,7 +529,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -540,7 +540,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpnGatewayId")
-    private final @Nullable Input<String> vpnGatewayId;
+      private final @Nullable Input<String> vpnGatewayId;
 
     public Input<String> getVpnGatewayId() {
         return this.vpnGatewayId == null ? Input.empty() : this.vpnGatewayId;

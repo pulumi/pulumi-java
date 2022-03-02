@@ -5,7 +5,7 @@ package io.pulumi.aws.mskconnect.inputs;
 
 import io.pulumi.aws.mskconnect.inputs.CustomPluginLocationS3GetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class CustomPluginLocationGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="s3", required=true)
-    private final Input<CustomPluginLocationS3GetArgs> s3;
+      private final Input<CustomPluginLocationS3GetArgs> s3;
 
     public Input<CustomPluginLocationS3GetArgs> getS3() {
         return this.s3;

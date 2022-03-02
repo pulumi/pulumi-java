@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class BrokerUserGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consoleAccess")
-    private final @Nullable Input<Boolean> consoleAccess;
+      private final @Nullable Input<Boolean> consoleAccess;
 
     public Input<Boolean> getConsoleAccess() {
         return this.consoleAccess == null ? Input.empty() : this.consoleAccess;
@@ -32,7 +32,7 @@ public final class BrokerUserGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groups")
-    private final @Nullable Input<List<String>> groups;
+      private final @Nullable Input<List<String>> groups;
 
     public Input<List<String>> getGroups() {
         return this.groups == null ? Input.empty() : this.groups;
@@ -43,7 +43,7 @@ public final class BrokerUserGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -54,7 +54,7 @@ public final class BrokerUserGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;

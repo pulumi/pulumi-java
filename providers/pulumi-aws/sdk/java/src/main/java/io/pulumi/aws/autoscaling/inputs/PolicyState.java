@@ -7,7 +7,7 @@ import io.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationGetA
 import io.pulumi.aws.autoscaling.inputs.PolicyStepAdjustmentGetArgs;
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adjustmentType")
-    private final @Nullable Input<String> adjustmentType;
+      private final @Nullable Input<String> adjustmentType;
 
     public Input<String> getAdjustmentType() {
         return this.adjustmentType == null ? Input.empty() : this.adjustmentType;
@@ -35,7 +35,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -46,7 +46,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingGroupName")
-    private final @Nullable Input<String> autoscalingGroupName;
+      private final @Nullable Input<String> autoscalingGroupName;
 
     public Input<String> getAutoscalingGroupName() {
         return this.autoscalingGroupName == null ? Input.empty() : this.autoscalingGroupName;
@@ -57,7 +57,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cooldown")
-    private final @Nullable Input<Integer> cooldown;
+      private final @Nullable Input<Integer> cooldown;
 
     public Input<Integer> getCooldown() {
         return this.cooldown == null ? Input.empty() : this.cooldown;
@@ -68,7 +68,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="estimatedInstanceWarmup")
-    private final @Nullable Input<Integer> estimatedInstanceWarmup;
+      private final @Nullable Input<Integer> estimatedInstanceWarmup;
 
     public Input<Integer> getEstimatedInstanceWarmup() {
         return this.estimatedInstanceWarmup == null ? Input.empty() : this.estimatedInstanceWarmup;
@@ -79,7 +79,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricAggregationType")
-    private final @Nullable Input<String> metricAggregationType;
+      private final @Nullable Input<String> metricAggregationType;
 
     public Input<String> getMetricAggregationType() {
         return this.metricAggregationType == null ? Input.empty() : this.metricAggregationType;
@@ -90,7 +90,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minAdjustmentMagnitude")
-    private final @Nullable Input<Integer> minAdjustmentMagnitude;
+      private final @Nullable Input<Integer> minAdjustmentMagnitude;
 
     public Input<Integer> getMinAdjustmentMagnitude() {
         return this.minAdjustmentMagnitude == null ? Input.empty() : this.minAdjustmentMagnitude;
@@ -101,7 +101,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -112,7 +112,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyType")
-    private final @Nullable Input<String> policyType;
+      private final @Nullable Input<String> policyType;
 
     public Input<String> getPolicyType() {
         return this.policyType == null ? Input.empty() : this.policyType;
@@ -123,7 +123,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predictiveScalingConfiguration")
-    private final @Nullable Input<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration;
+      private final @Nullable Input<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration;
 
     public Input<PolicyPredictiveScalingConfigurationGetArgs> getPredictiveScalingConfiguration() {
         return this.predictiveScalingConfiguration == null ? Input.empty() : this.predictiveScalingConfiguration;
@@ -136,7 +136,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingAdjustment")
-    private final @Nullable Input<Integer> scalingAdjustment;
+      private final @Nullable Input<Integer> scalingAdjustment;
 
     public Input<Integer> getScalingAdjustment() {
         return this.scalingAdjustment == null ? Input.empty() : this.scalingAdjustment;
@@ -148,7 +148,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepAdjustments")
-    private final @Nullable Input<List<PolicyStepAdjustmentGetArgs>> stepAdjustments;
+      private final @Nullable Input<List<PolicyStepAdjustmentGetArgs>> stepAdjustments;
 
     public Input<List<PolicyStepAdjustmentGetArgs>> getStepAdjustments() {
         return this.stepAdjustments == null ? Input.empty() : this.stepAdjustments;
@@ -159,7 +159,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetTrackingConfiguration")
-    private final @Nullable Input<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration;
+      private final @Nullable Input<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration;
 
     public Input<PolicyTargetTrackingConfigurationGetArgs> getTargetTrackingConfiguration() {
         return this.targetTrackingConfiguration == null ? Input.empty() : this.targetTrackingConfiguration;

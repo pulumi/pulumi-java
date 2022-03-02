@@ -12,8 +12,8 @@ import io.pulumi.aws.glue.outputs.CatalogTableStorageDescriptor;
 import io.pulumi.aws.glue.outputs.CatalogTableTargetTable;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -247,6 +247,21 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
         return this.viewOriginalText;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CatalogTable(String name) {
+        this(name, CatalogTableArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CatalogTable(String name, CatalogTableArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

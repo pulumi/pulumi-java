@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementByteMatchStatementTextTransformationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WebAclRuleStatementAndStatementStatementByteMatchStatementGet
      * 
      */
     @InputImport(name="fieldToMatch")
-    private final @Nullable Input<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchGetArgs> fieldToMatch;
+      private final @Nullable Input<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchGetArgs> fieldToMatch;
 
     public Input<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchGetArgs> getFieldToMatch() {
         return this.fieldToMatch == null ? Input.empty() : this.fieldToMatch;
@@ -33,7 +33,7 @@ public final class WebAclRuleStatementAndStatementStatementByteMatchStatementGet
      * 
      */
     @InputImport(name="positionalConstraint", required=true)
-    private final Input<String> positionalConstraint;
+      private final Input<String> positionalConstraint;
 
     public Input<String> getPositionalConstraint() {
         return this.positionalConstraint;
@@ -44,7 +44,7 @@ public final class WebAclRuleStatementAndStatementStatementByteMatchStatementGet
      * 
      */
     @InputImport(name="searchString", required=true)
-    private final Input<String> searchString;
+      private final Input<String> searchString;
 
     public Input<String> getSearchString() {
         return this.searchString;
@@ -55,7 +55,7 @@ public final class WebAclRuleStatementAndStatementStatementByteMatchStatementGet
      * 
      */
     @InputImport(name="textTransformations", required=true)
-    private final Input<List<WebAclRuleStatementAndStatementStatementByteMatchStatementTextTransformationGetArgs>> textTransformations;
+      private final Input<List<WebAclRuleStatementAndStatementStatementByteMatchStatementTextTransformationGetArgs>> textTransformations;
 
     public Input<List<WebAclRuleStatementAndStatementStatementByteMatchStatementTextTransformationGetArgs>> getTextTransformations() {
         return this.textTransformations;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.GetNodeGroupResourceAutoscalingGroup;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetNodeGroupResource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="autoscalingGroups", required=true)
-    private final List<GetNodeGroupResourceAutoscalingGroup> autoscalingGroups;
+      private final List<GetNodeGroupResourceAutoscalingGroup> autoscalingGroups;
 
     public List<GetNodeGroupResourceAutoscalingGroup> getAutoscalingGroups() {
         return this.autoscalingGroups;
@@ -30,7 +30,7 @@ public final class GetNodeGroupResource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="remoteAccessSecurityGroupId", required=true)
-    private final String remoteAccessSecurityGroupId;
+      private final String remoteAccessSecurityGroupId;
 
     public String getRemoteAccessSecurityGroupId() {
         return this.remoteAccessSecurityGroupId;

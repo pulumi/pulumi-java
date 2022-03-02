@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.aws.dynamodb.inputs.GetTableServerSideEncryption;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,21 +21,21 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="serverSideEncryption")
-    private final @Nullable GetTableServerSideEncryption serverSideEncryption;
+      private final @Nullable GetTableServerSideEncryption serverSideEncryption;
 
     public Optional<GetTableServerSideEncryption> getServerSideEncryption() {
         return this.serverSideEncryption == null ? Optional.empty() : Optional.ofNullable(this.serverSideEncryption);
     }
 
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

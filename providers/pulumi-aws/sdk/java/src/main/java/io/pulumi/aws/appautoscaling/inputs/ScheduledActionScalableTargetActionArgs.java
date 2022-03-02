@@ -4,7 +4,7 @@
 package io.pulumi.aws.appautoscaling.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ScheduledActionScalableTargetActionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="maxCapacity")
-    private final @Nullable Input<Integer> maxCapacity;
+      private final @Nullable Input<Integer> maxCapacity;
 
     public Input<Integer> getMaxCapacity() {
         return this.maxCapacity == null ? Input.empty() : this.maxCapacity;
@@ -30,7 +30,7 @@ public final class ScheduledActionScalableTargetActionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="minCapacity")
-    private final @Nullable Input<Integer> minCapacity;
+      private final @Nullable Input<Integer> minCapacity;
 
     public Input<Integer> getMinCapacity() {
         return this.minCapacity == null ? Input.empty() : this.minCapacity;

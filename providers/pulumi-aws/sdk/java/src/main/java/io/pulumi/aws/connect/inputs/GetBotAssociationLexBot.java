@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetBotAssociationLexBot extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="lexRegion", required=true)
-    private final String lexRegion;
+      private final String lexRegion;
 
     public String getLexRegion() {
         return this.lexRegion;
@@ -28,7 +28,7 @@ public final class GetBotAssociationLexBot extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;

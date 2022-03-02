@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallFirewallStatusSyncStateAttachmentGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FirewallFirewallStatusSyncStateGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="attachments")
-    private final @Nullable Input<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments;
+      private final @Nullable Input<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> attachments;
 
     public Input<List<FirewallFirewallStatusSyncStateAttachmentGetArgs>> getAttachments() {
         return this.attachments == null ? Input.empty() : this.attachments;
@@ -32,7 +32,7 @@ public final class FirewallFirewallStatusSyncStateGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;

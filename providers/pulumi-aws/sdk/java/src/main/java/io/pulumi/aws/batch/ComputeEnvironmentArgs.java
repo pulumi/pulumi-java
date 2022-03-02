@@ -5,7 +5,7 @@ package io.pulumi.aws.batch;
 
 import io.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="computeEnvironmentName")
-    private final @Nullable Input<String> computeEnvironmentName;
+      private final @Nullable Input<String> computeEnvironmentName;
 
     public Input<String> getComputeEnvironmentName() {
         return this.computeEnvironmentName == null ? Input.empty() : this.computeEnvironmentName;
@@ -32,7 +32,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="computeEnvironmentNamePrefix")
-    private final @Nullable Input<String> computeEnvironmentNamePrefix;
+      private final @Nullable Input<String> computeEnvironmentNamePrefix;
 
     public Input<String> getComputeEnvironmentNamePrefix() {
         return this.computeEnvironmentNamePrefix == null ? Input.empty() : this.computeEnvironmentNamePrefix;
@@ -43,7 +43,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="computeResources")
-    private final @Nullable Input<ComputeEnvironmentComputeResourcesArgs> computeResources;
+      private final @Nullable Input<ComputeEnvironmentComputeResourcesArgs> computeResources;
 
     public Input<ComputeEnvironmentComputeResourcesArgs> getComputeResources() {
         return this.computeResources == null ? Input.empty() : this.computeResources;
@@ -54,7 +54,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceRole")
-    private final @Nullable Input<String> serviceRole;
+      private final @Nullable Input<String> serviceRole;
 
     public Input<String> getServiceRole() {
         return this.serviceRole == null ? Input.empty() : this.serviceRole;
@@ -65,7 +65,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -76,7 +76,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

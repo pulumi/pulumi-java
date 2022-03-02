@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cidrBlock", required=true)
-    private final Input<String> cidrBlock;
+      private final Input<String> cidrBlock;
 
     public Input<String> getCidrBlock() {
         return this.cidrBlock;
@@ -30,7 +30,7 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="reservationType", required=true)
-    private final Input<String> reservationType;
+      private final Input<String> reservationType;
 
     public Input<String> getReservationType() {
         return this.reservationType;
@@ -52,7 +52,7 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;

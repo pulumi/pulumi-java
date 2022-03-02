@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudsearch.inputs.DomainEndpointOptionsGetArgs;
 import io.pulumi.aws.cloudsearch.inputs.DomainIndexFieldGetArgs;
 import io.pulumi.aws.cloudsearch.inputs.DomainScalingParametersGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -35,7 +35,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentServiceEndpoint")
-    private final @Nullable Input<String> documentServiceEndpoint;
+      private final @Nullable Input<String> documentServiceEndpoint;
 
     public Input<String> getDocumentServiceEndpoint() {
         return this.documentServiceEndpoint == null ? Input.empty() : this.documentServiceEndpoint;
@@ -46,7 +46,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainId")
-    private final @Nullable Input<String> domainId;
+      private final @Nullable Input<String> domainId;
 
     public Input<String> getDomainId() {
         return this.domainId == null ? Input.empty() : this.domainId;
@@ -57,7 +57,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointOptions")
-    private final @Nullable Input<DomainEndpointOptionsGetArgs> endpointOptions;
+      private final @Nullable Input<DomainEndpointOptionsGetArgs> endpointOptions;
 
     public Input<DomainEndpointOptionsGetArgs> getEndpointOptions() {
         return this.endpointOptions == null ? Input.empty() : this.endpointOptions;
@@ -68,7 +68,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="indexFields")
-    private final @Nullable Input<List<DomainIndexFieldGetArgs>> indexFields;
+      private final @Nullable Input<List<DomainIndexFieldGetArgs>> indexFields;
 
     public Input<List<DomainIndexFieldGetArgs>> getIndexFields() {
         return this.indexFields == null ? Input.empty() : this.indexFields;
@@ -79,7 +79,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiAz")
-    private final @Nullable Input<Boolean> multiAz;
+      private final @Nullable Input<Boolean> multiAz;
 
     public Input<Boolean> getMultiAz() {
         return this.multiAz == null ? Input.empty() : this.multiAz;
@@ -90,7 +90,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -101,7 +101,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingParameters")
-    private final @Nullable Input<DomainScalingParametersGetArgs> scalingParameters;
+      private final @Nullable Input<DomainScalingParametersGetArgs> scalingParameters;
 
     public Input<DomainScalingParametersGetArgs> getScalingParameters() {
         return this.scalingParameters == null ? Input.empty() : this.scalingParameters;
@@ -112,7 +112,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="searchServiceEndpoint")
-    private final @Nullable Input<String> searchServiceEndpoint;
+      private final @Nullable Input<String> searchServiceEndpoint;
 
     public Input<String> getSearchServiceEndpoint() {
         return this.searchServiceEndpoint == null ? Input.empty() : this.searchServiceEndpoint;

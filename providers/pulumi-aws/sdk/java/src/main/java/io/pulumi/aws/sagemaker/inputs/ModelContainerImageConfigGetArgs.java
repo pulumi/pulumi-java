@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ModelContainerImageConfigGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="repositoryAccessMode", required=true)
-    private final Input<String> repositoryAccessMode;
+      private final Input<String> repositoryAccessMode;
 
     public Input<String> getRepositoryAccessMode() {
         return this.repositoryAccessMode;

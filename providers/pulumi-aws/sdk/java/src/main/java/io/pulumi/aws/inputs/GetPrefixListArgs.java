@@ -4,7 +4,7 @@
 package io.pulumi.aws.inputs;
 
 import io.pulumi.aws.inputs.GetPrefixListFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetPrefixListArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetPrefixListFilter> filters;
+      private final @Nullable List<GetPrefixListFilter> filters;
 
     public List<GetPrefixListFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -32,7 +32,7 @@ public final class GetPrefixListArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -43,7 +43,7 @@ public final class GetPrefixListArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="prefixListId")
-    private final @Nullable String prefixListId;
+      private final @Nullable String prefixListId;
 
     public Optional<String> getPrefixListId() {
         return this.prefixListId == null ? Optional.empty() : Optional.ofNullable(this.prefixListId);

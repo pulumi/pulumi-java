@@ -5,7 +5,7 @@ package io.pulumi.aws.route53recoveryreadiness.inputs;
 
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class ResourceSetResourceGetArgs extends io.pulumi.resources.Resour
     public static final ResourceSetResourceGetArgs Empty = new ResourceSetResourceGetArgs();
 
     @InputImport(name="componentId")
-    private final @Nullable Input<String> componentId;
+      private final @Nullable Input<String> componentId;
 
     public Input<String> getComponentId() {
         return this.componentId == null ? Input.empty() : this.componentId;
@@ -28,7 +28,7 @@ public final class ResourceSetResourceGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dnsTargetResource")
-    private final @Nullable Input<ResourceSetResourceDnsTargetResourceGetArgs> dnsTargetResource;
+      private final @Nullable Input<ResourceSetResourceDnsTargetResourceGetArgs> dnsTargetResource;
 
     public Input<ResourceSetResourceDnsTargetResourceGetArgs> getDnsTargetResource() {
         return this.dnsTargetResource == null ? Input.empty() : this.dnsTargetResource;
@@ -39,7 +39,7 @@ public final class ResourceSetResourceGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="readinessScopes")
-    private final @Nullable Input<List<String>> readinessScopes;
+      private final @Nullable Input<List<String>> readinessScopes;
 
     public Input<List<String>> getReadinessScopes() {
         return this.readinessScopes == null ? Input.empty() : this.readinessScopes;
@@ -50,7 +50,7 @@ public final class ResourceSetResourceGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceArn")
-    private final @Nullable Input<String> resourceArn;
+      private final @Nullable Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn == null ? Input.empty() : this.resourceArn;

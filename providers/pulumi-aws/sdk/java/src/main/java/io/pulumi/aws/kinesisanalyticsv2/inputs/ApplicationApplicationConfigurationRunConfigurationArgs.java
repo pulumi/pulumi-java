@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationArgs exten
      * 
      */
     @InputImport(name="applicationRestoreConfiguration")
-    private final @Nullable Input<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration;
+      private final @Nullable Input<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration;
 
     public Input<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> getApplicationRestoreConfiguration() {
         return this.applicationRestoreConfiguration == null ? Input.empty() : this.applicationRestoreConfiguration;
@@ -31,7 +31,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationArgs exten
      * 
      */
     @InputImport(name="flinkRunConfiguration")
-    private final @Nullable Input<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration;
+      private final @Nullable Input<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration;
 
     public Input<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> getFlinkRunConfiguration() {
         return this.flinkRunConfiguration == null ? Input.empty() : this.flinkRunConfiguration;

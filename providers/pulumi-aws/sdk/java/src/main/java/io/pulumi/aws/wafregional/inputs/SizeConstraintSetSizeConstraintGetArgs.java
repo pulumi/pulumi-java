@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.SizeConstraintSetSizeConstraintFieldToMatchGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="comparisonOperator", required=true)
-    private final Input<String> comparisonOperator;
+      private final Input<String> comparisonOperator;
 
     public Input<String> getComparisonOperator() {
         return this.comparisonOperator;
@@ -33,7 +33,7 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="fieldToMatch", required=true)
-    private final Input<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch;
+      private final Input<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> fieldToMatch;
 
     public Input<SizeConstraintSetSizeConstraintFieldToMatchGetArgs> getFieldToMatch() {
         return this.fieldToMatch;
@@ -45,7 +45,7 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="size", required=true)
-    private final Input<Integer> size;
+      private final Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size;
@@ -61,7 +61,7 @@ public final class SizeConstraintSetSizeConstraintGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="textTransformation", required=true)
-    private final Input<String> textTransformation;
+      private final Input<String> textTransformation;
 
     public Input<String> getTextTransformation() {
         return this.textTransformation;

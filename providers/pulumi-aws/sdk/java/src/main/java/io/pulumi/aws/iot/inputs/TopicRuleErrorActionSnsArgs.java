@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TopicRuleErrorActionSnsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageFormat")
-    private final @Nullable Input<String> messageFormat;
+      private final @Nullable Input<String> messageFormat;
 
     public Input<String> getMessageFormat() {
         return this.messageFormat == null ? Input.empty() : this.messageFormat;
@@ -30,7 +30,7 @@ public final class TopicRuleErrorActionSnsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -41,7 +41,7 @@ public final class TopicRuleErrorActionSnsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="targetArn", required=true)
-    private final Input<String> targetArn;
+      private final Input<String> targetArn;
 
     public Input<String> getTargetArn() {
         return this.targetArn;

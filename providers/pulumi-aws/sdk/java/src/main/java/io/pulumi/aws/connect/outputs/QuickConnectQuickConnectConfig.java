@@ -6,7 +6,7 @@ package io.pulumi.aws.connect.outputs;
 import io.pulumi.aws.connect.outputs.QuickConnectQuickConnectConfigPhoneConfig;
 import io.pulumi.aws.connect.outputs.QuickConnectQuickConnectConfigQueueConfig;
 import io.pulumi.aws.connect.outputs.QuickConnectQuickConnectConfigUserConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

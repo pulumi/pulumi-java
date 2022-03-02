@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationId")
-    private final @Nullable Input<String> allocationId;
+      private final @Nullable Input<String> allocationId;
 
     public Input<String> getAllocationId() {
         return this.allocationId == null ? Input.empty() : this.allocationId;
@@ -31,7 +31,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectivityType")
-    private final @Nullable Input<String> connectivityType;
+      private final @Nullable Input<String> connectivityType;
 
     public Input<String> getConnectivityType() {
         return this.connectivityType == null ? Input.empty() : this.connectivityType;
@@ -42,7 +42,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -53,7 +53,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

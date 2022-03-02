@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudtrail.inputs;
 
 import io.pulumi.aws.cloudtrail.inputs.TrailEventSelectorDataResourceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TrailEventSelectorGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dataResources")
-    private final @Nullable Input<List<TrailEventSelectorDataResourceGetArgs>> dataResources;
+      private final @Nullable Input<List<TrailEventSelectorDataResourceGetArgs>> dataResources;
 
     public Input<List<TrailEventSelectorDataResourceGetArgs>> getDataResources() {
         return this.dataResources == null ? Input.empty() : this.dataResources;
@@ -33,7 +33,7 @@ public final class TrailEventSelectorGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="excludeManagementEventSources")
-    private final @Nullable Input<List<String>> excludeManagementEventSources;
+      private final @Nullable Input<List<String>> excludeManagementEventSources;
 
     public Input<List<String>> getExcludeManagementEventSources() {
         return this.excludeManagementEventSources == null ? Input.empty() : this.excludeManagementEventSources;
@@ -44,7 +44,7 @@ public final class TrailEventSelectorGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="includeManagementEvents")
-    private final @Nullable Input<Boolean> includeManagementEvents;
+      private final @Nullable Input<Boolean> includeManagementEvents;
 
     public Input<Boolean> getIncludeManagementEvents() {
         return this.includeManagementEvents == null ? Input.empty() : this.includeManagementEvents;
@@ -55,7 +55,7 @@ public final class TrailEventSelectorGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="readWriteType")
-    private final @Nullable Input<String> readWriteType;
+      private final @Nullable Input<String> readWriteType;
 
     public Input<String> getReadWriteType() {
         return this.readWriteType == null ? Input.empty() : this.readWriteType;

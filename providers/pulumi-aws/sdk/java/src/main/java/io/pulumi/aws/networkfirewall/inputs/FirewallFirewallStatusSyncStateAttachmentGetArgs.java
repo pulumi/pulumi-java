@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
      * 
      */
     @InputImport(name="endpointId")
-    private final @Nullable Input<String> endpointId;
+      private final @Nullable Input<String> endpointId;
 
     public Input<String> getEndpointId() {
         return this.endpointId == null ? Input.empty() : this.endpointId;
@@ -30,7 +30,7 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;

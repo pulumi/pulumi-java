@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class EventDestinationCloudwatchDestinationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="defaultValue", required=true)
-    private final Input<String> defaultValue;
+      private final Input<String> defaultValue;
 
     public Input<String> getDefaultValue() {
         return this.defaultValue;
@@ -29,7 +29,7 @@ public final class EventDestinationCloudwatchDestinationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="dimensionName", required=true)
-    private final Input<String> dimensionName;
+      private final Input<String> dimensionName;
 
     public Input<String> getDimensionName() {
         return this.dimensionName;
@@ -40,7 +40,7 @@ public final class EventDestinationCloudwatchDestinationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="valueSource", required=true)
-    private final Input<String> valueSource;
+      private final Input<String> valueSource;
 
     public Input<String> getValueSource() {
         return this.valueSource;

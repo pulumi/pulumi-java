@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class UserPoolUsernameConfigurationGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="caseSensitive", required=true)
-    private final Input<Boolean> caseSensitive;
+      private final Input<Boolean> caseSensitive;
 
     public Input<Boolean> getCaseSensitive() {
         return this.caseSensitive;

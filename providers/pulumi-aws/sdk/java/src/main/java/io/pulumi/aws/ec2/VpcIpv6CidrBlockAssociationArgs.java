@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VpcIpv6CidrBlockAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipv6CidrBlock")
-    private final @Nullable Input<String> ipv6CidrBlock;
+      private final @Nullable Input<String> ipv6CidrBlock;
 
     public Input<String> getIpv6CidrBlock() {
         return this.ipv6CidrBlock == null ? Input.empty() : this.ipv6CidrBlock;
@@ -31,7 +31,7 @@ public final class VpcIpv6CidrBlockAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipv6IpamPoolId", required=true)
-    private final Input<String> ipv6IpamPoolId;
+      private final Input<String> ipv6IpamPoolId;
 
     public Input<String> getIpv6IpamPoolId() {
         return this.ipv6IpamPoolId;
@@ -42,7 +42,7 @@ public final class VpcIpv6CidrBlockAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipv6NetmaskLength")
-    private final @Nullable Input<Integer> ipv6NetmaskLength;
+      private final @Nullable Input<Integer> ipv6NetmaskLength;
 
     public Input<Integer> getIpv6NetmaskLength() {
         return this.ipv6NetmaskLength == null ? Input.empty() : this.ipv6NetmaskLength;
@@ -53,7 +53,7 @@ public final class VpcIpv6CidrBlockAssociationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+      private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;

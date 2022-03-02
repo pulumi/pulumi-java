@@ -19,7 +19,7 @@ import io.pulumi.aws.iot.inputs.TopicRuleErrorActionSnsArgs;
 import io.pulumi.aws.iot.inputs.TopicRuleErrorActionSqsArgs;
 import io.pulumi.aws.iot.inputs.TopicRuleErrorActionStepFunctionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -29,105 +29,105 @@ public final class TopicRuleErrorActionArgs extends io.pulumi.resources.Resource
     public static final TopicRuleErrorActionArgs Empty = new TopicRuleErrorActionArgs();
 
     @InputImport(name="cloudwatchAlarm")
-    private final @Nullable Input<TopicRuleErrorActionCloudwatchAlarmArgs> cloudwatchAlarm;
+      private final @Nullable Input<TopicRuleErrorActionCloudwatchAlarmArgs> cloudwatchAlarm;
 
     public Input<TopicRuleErrorActionCloudwatchAlarmArgs> getCloudwatchAlarm() {
         return this.cloudwatchAlarm == null ? Input.empty() : this.cloudwatchAlarm;
     }
 
     @InputImport(name="cloudwatchMetric")
-    private final @Nullable Input<TopicRuleErrorActionCloudwatchMetricArgs> cloudwatchMetric;
+      private final @Nullable Input<TopicRuleErrorActionCloudwatchMetricArgs> cloudwatchMetric;
 
     public Input<TopicRuleErrorActionCloudwatchMetricArgs> getCloudwatchMetric() {
         return this.cloudwatchMetric == null ? Input.empty() : this.cloudwatchMetric;
     }
 
     @InputImport(name="dynamodb")
-    private final @Nullable Input<TopicRuleErrorActionDynamodbArgs> dynamodb;
+      private final @Nullable Input<TopicRuleErrorActionDynamodbArgs> dynamodb;
 
     public Input<TopicRuleErrorActionDynamodbArgs> getDynamodb() {
         return this.dynamodb == null ? Input.empty() : this.dynamodb;
     }
 
     @InputImport(name="dynamodbv2")
-    private final @Nullable Input<TopicRuleErrorActionDynamodbv2Args> dynamodbv2;
+      private final @Nullable Input<TopicRuleErrorActionDynamodbv2Args> dynamodbv2;
 
     public Input<TopicRuleErrorActionDynamodbv2Args> getDynamodbv2() {
         return this.dynamodbv2 == null ? Input.empty() : this.dynamodbv2;
     }
 
     @InputImport(name="elasticsearch")
-    private final @Nullable Input<TopicRuleErrorActionElasticsearchArgs> elasticsearch;
+      private final @Nullable Input<TopicRuleErrorActionElasticsearchArgs> elasticsearch;
 
     public Input<TopicRuleErrorActionElasticsearchArgs> getElasticsearch() {
         return this.elasticsearch == null ? Input.empty() : this.elasticsearch;
     }
 
     @InputImport(name="firehose")
-    private final @Nullable Input<TopicRuleErrorActionFirehoseArgs> firehose;
+      private final @Nullable Input<TopicRuleErrorActionFirehoseArgs> firehose;
 
     public Input<TopicRuleErrorActionFirehoseArgs> getFirehose() {
         return this.firehose == null ? Input.empty() : this.firehose;
     }
 
     @InputImport(name="iotAnalytics")
-    private final @Nullable Input<TopicRuleErrorActionIotAnalyticsArgs> iotAnalytics;
+      private final @Nullable Input<TopicRuleErrorActionIotAnalyticsArgs> iotAnalytics;
 
     public Input<TopicRuleErrorActionIotAnalyticsArgs> getIotAnalytics() {
         return this.iotAnalytics == null ? Input.empty() : this.iotAnalytics;
     }
 
     @InputImport(name="iotEvents")
-    private final @Nullable Input<TopicRuleErrorActionIotEventsArgs> iotEvents;
+      private final @Nullable Input<TopicRuleErrorActionIotEventsArgs> iotEvents;
 
     public Input<TopicRuleErrorActionIotEventsArgs> getIotEvents() {
         return this.iotEvents == null ? Input.empty() : this.iotEvents;
     }
 
     @InputImport(name="kinesis")
-    private final @Nullable Input<TopicRuleErrorActionKinesisArgs> kinesis;
+      private final @Nullable Input<TopicRuleErrorActionKinesisArgs> kinesis;
 
     public Input<TopicRuleErrorActionKinesisArgs> getKinesis() {
         return this.kinesis == null ? Input.empty() : this.kinesis;
     }
 
     @InputImport(name="lambda")
-    private final @Nullable Input<TopicRuleErrorActionLambdaArgs> lambda;
+      private final @Nullable Input<TopicRuleErrorActionLambdaArgs> lambda;
 
     public Input<TopicRuleErrorActionLambdaArgs> getLambda() {
         return this.lambda == null ? Input.empty() : this.lambda;
     }
 
     @InputImport(name="republish")
-    private final @Nullable Input<TopicRuleErrorActionRepublishArgs> republish;
+      private final @Nullable Input<TopicRuleErrorActionRepublishArgs> republish;
 
     public Input<TopicRuleErrorActionRepublishArgs> getRepublish() {
         return this.republish == null ? Input.empty() : this.republish;
     }
 
     @InputImport(name="s3")
-    private final @Nullable Input<TopicRuleErrorActionS3Args> s3;
+      private final @Nullable Input<TopicRuleErrorActionS3Args> s3;
 
     public Input<TopicRuleErrorActionS3Args> getS3() {
         return this.s3 == null ? Input.empty() : this.s3;
     }
 
     @InputImport(name="sns")
-    private final @Nullable Input<TopicRuleErrorActionSnsArgs> sns;
+      private final @Nullable Input<TopicRuleErrorActionSnsArgs> sns;
 
     public Input<TopicRuleErrorActionSnsArgs> getSns() {
         return this.sns == null ? Input.empty() : this.sns;
     }
 
     @InputImport(name="sqs")
-    private final @Nullable Input<TopicRuleErrorActionSqsArgs> sqs;
+      private final @Nullable Input<TopicRuleErrorActionSqsArgs> sqs;
 
     public Input<TopicRuleErrorActionSqsArgs> getSqs() {
         return this.sqs == null ? Input.empty() : this.sqs;
     }
 
     @InputImport(name="stepFunctions")
-    private final @Nullable Input<TopicRuleErrorActionStepFunctionsArgs> stepFunctions;
+      private final @Nullable Input<TopicRuleErrorActionStepFunctionsArgs> stepFunctions;
 
     public Input<TopicRuleErrorActionStepFunctionsArgs> getStepFunctions() {
         return this.stepFunctions == null ? Input.empty() : this.stepFunctions;

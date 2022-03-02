@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class MemberAccountAssociationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="memberAccountId", required=true)
-    private final Input<String> memberAccountId;
+      private final Input<String> memberAccountId;
 
     public Input<String> getMemberAccountId() {
         return this.memberAccountId;

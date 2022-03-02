@@ -10,7 +10,7 @@ import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementAndStatementStatementXssMa
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleHeader;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementAndStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementAndStatementStatementXssMatchStatementFieldToMatchUriPath;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

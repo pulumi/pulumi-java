@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.FeatureGroupOfflineStoreConfigDataCatalogConfig;
 import io.pulumi.aws.sagemaker.outputs.FeatureGroupOfflineStoreConfigS3StorageConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;

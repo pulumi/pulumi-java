@@ -7,7 +7,7 @@ import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleAbortIncom
 import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleExpirationGetArgs;
 import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleFilterGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="abortIncompleteMultipartUpload")
-    private final @Nullable Input<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload;
+      private final @Nullable Input<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload;
 
     public Input<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> getAbortIncompleteMultipartUpload() {
         return this.abortIncompleteMultipartUpload == null ? Input.empty() : this.abortIncompleteMultipartUpload;
@@ -33,7 +33,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="expiration")
-    private final @Nullable Input<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration;
+      private final @Nullable Input<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration;
 
     public Input<BucketLifecycleConfigurationRuleExpirationGetArgs> getExpiration() {
         return this.expiration == null ? Input.empty() : this.expiration;
@@ -44,7 +44,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<BucketLifecycleConfigurationRuleFilterGetArgs> filter;
+      private final @Nullable Input<BucketLifecycleConfigurationRuleFilterGetArgs> filter;
 
     public Input<BucketLifecycleConfigurationRuleFilterGetArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -55,7 +55,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -66,7 +66,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoResolveBestVoicesEnabled")
-    private final @Nullable Input<Boolean> autoResolveBestVoicesEnabled;
+      private final @Nullable Input<Boolean> autoResolveBestVoicesEnabled;
 
     public Input<Boolean> getAutoResolveBestVoicesEnabled() {
         return this.autoResolveBestVoicesEnabled == null ? Input.empty() : this.autoResolveBestVoicesEnabled;
@@ -31,7 +31,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactFlowLogsEnabled")
-    private final @Nullable Input<Boolean> contactFlowLogsEnabled;
+      private final @Nullable Input<Boolean> contactFlowLogsEnabled;
 
     public Input<Boolean> getContactFlowLogsEnabled() {
         return this.contactFlowLogsEnabled == null ? Input.empty() : this.contactFlowLogsEnabled;
@@ -42,7 +42,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactLensEnabled")
-    private final @Nullable Input<Boolean> contactLensEnabled;
+      private final @Nullable Input<Boolean> contactLensEnabled;
 
     public Input<Boolean> getContactLensEnabled() {
         return this.contactLensEnabled == null ? Input.empty() : this.contactLensEnabled;
@@ -53,7 +53,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directoryId")
-    private final @Nullable Input<String> directoryId;
+      private final @Nullable Input<String> directoryId;
 
     public Input<String> getDirectoryId() {
         return this.directoryId == null ? Input.empty() : this.directoryId;
@@ -64,7 +64,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="earlyMediaEnabled")
-    private final @Nullable Input<Boolean> earlyMediaEnabled;
+      private final @Nullable Input<Boolean> earlyMediaEnabled;
 
     public Input<Boolean> getEarlyMediaEnabled() {
         return this.earlyMediaEnabled == null ? Input.empty() : this.earlyMediaEnabled;
@@ -75,7 +75,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityManagementType", required=true)
-    private final Input<String> identityManagementType;
+      private final Input<String> identityManagementType;
 
     public Input<String> getIdentityManagementType() {
         return this.identityManagementType;
@@ -86,7 +86,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inboundCallsEnabled", required=true)
-    private final Input<Boolean> inboundCallsEnabled;
+      private final Input<Boolean> inboundCallsEnabled;
 
     public Input<Boolean> getInboundCallsEnabled() {
         return this.inboundCallsEnabled;
@@ -97,7 +97,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceAlias")
-    private final @Nullable Input<String> instanceAlias;
+      private final @Nullable Input<String> instanceAlias;
 
     public Input<String> getInstanceAlias() {
         return this.instanceAlias == null ? Input.empty() : this.instanceAlias;
@@ -109,7 +109,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outboundCallsEnabled", required=true)
-    private final Input<Boolean> outboundCallsEnabled;
+      private final Input<Boolean> outboundCallsEnabled;
 
     public Input<Boolean> getOutboundCallsEnabled() {
         return this.outboundCallsEnabled;

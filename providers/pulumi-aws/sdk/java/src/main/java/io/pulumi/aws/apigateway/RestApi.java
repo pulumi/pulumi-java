@@ -9,8 +9,8 @@ import io.pulumi.aws.apigateway.inputs.RestApiState;
 import io.pulumi.aws.apigateway.outputs.RestApiEndpointConfiguration;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -265,6 +265,21 @@ public class RestApi extends io.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RestApi(String name) {
+        this(name, RestApiArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RestApi(String name, @Nullable RestApiArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

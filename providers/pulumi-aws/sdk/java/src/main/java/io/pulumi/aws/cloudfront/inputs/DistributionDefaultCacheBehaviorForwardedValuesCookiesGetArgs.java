@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DistributionDefaultCacheBehaviorForwardedValuesCookiesGetArgs
      * 
      */
     @InputImport(name="forward", required=true)
-    private final Input<String> forward;
+      private final Input<String> forward;
 
     public Input<String> getForward() {
         return this.forward;
@@ -36,7 +36,7 @@ public final class DistributionDefaultCacheBehaviorForwardedValuesCookiesGetArgs
      * 
      */
     @InputImport(name="whitelistedNames")
-    private final @Nullable Input<List<String>> whitelistedNames;
+      private final @Nullable Input<List<String>> whitelistedNames;
 
     public Input<List<String>> getWhitelistedNames() {
         return this.whitelistedNames == null ? Input.empty() : this.whitelistedNames;

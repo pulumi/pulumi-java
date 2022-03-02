@@ -6,7 +6,7 @@ package io.pulumi.aws.ecr;
 import io.pulumi.aws.ecr.inputs.RepositoryEncryptionConfigurationArgs;
 import io.pulumi.aws.ecr.inputs.RepositoryImageScanningConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfigurations")
-    private final @Nullable Input<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations;
+      private final @Nullable Input<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations;
 
     public Input<List<RepositoryEncryptionConfigurationArgs>> getEncryptionConfigurations() {
         return this.encryptionConfigurations == null ? Input.empty() : this.encryptionConfigurations;
@@ -34,7 +34,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageScanningConfiguration")
-    private final @Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
+      private final @Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
 
     public Input<RepositoryImageScanningConfigurationArgs> getImageScanningConfiguration() {
         return this.imageScanningConfiguration == null ? Input.empty() : this.imageScanningConfiguration;
@@ -45,7 +45,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageTagMutability")
-    private final @Nullable Input<String> imageTagMutability;
+      private final @Nullable Input<String> imageTagMutability;
 
     public Input<String> getImageTagMutability() {
         return this.imageTagMutability == null ? Input.empty() : this.imageTagMutability;
@@ -56,7 +56,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TopicRuleErrorActionKinesisArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="partitionKey")
-    private final @Nullable Input<String> partitionKey;
+      private final @Nullable Input<String> partitionKey;
 
     public Input<String> getPartitionKey() {
         return this.partitionKey == null ? Input.empty() : this.partitionKey;
@@ -30,7 +30,7 @@ public final class TopicRuleErrorActionKinesisArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -41,7 +41,7 @@ public final class TopicRuleErrorActionKinesisArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="streamName", required=true)
-    private final Input<String> streamName;
+      private final Input<String> streamName;
 
     public Input<String> getStreamName() {
         return this.streamName;

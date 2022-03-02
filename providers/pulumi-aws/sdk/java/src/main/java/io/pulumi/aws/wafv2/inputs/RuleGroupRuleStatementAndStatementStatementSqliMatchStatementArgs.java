@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class RuleGroupRuleStatementAndStatementStatementSqliMatchStatement
      * 
      */
     @InputImport(name="fieldToMatch")
-    private final @Nullable Input<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch;
+      private final @Nullable Input<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch;
 
     public Input<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch == null ? Input.empty() : this.fieldToMatch;
@@ -32,7 +32,7 @@ public final class RuleGroupRuleStatementAndStatementStatementSqliMatchStatement
      * 
      */
     @InputImport(name="textTransformations", required=true)
-    private final Input<List<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs>> textTransformations;
+      private final Input<List<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs>> textTransformations;
 
     public Input<List<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;

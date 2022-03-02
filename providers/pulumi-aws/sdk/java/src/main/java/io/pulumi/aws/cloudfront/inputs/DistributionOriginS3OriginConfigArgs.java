@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class DistributionOriginS3OriginConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="originAccessIdentity", required=true)
-    private final Input<String> originAccessIdentity;
+      private final Input<String> originAccessIdentity;
 
     public Input<String> getOriginAccessIdentity() {
         return this.originAccessIdentity;

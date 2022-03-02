@@ -11,7 +11,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationVpcConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="applicationCodeConfiguration", required=true)
-    private final Input<ApplicationApplicationConfigurationApplicationCodeConfigurationGetArgs> applicationCodeConfiguration;
+      private final Input<ApplicationApplicationConfigurationApplicationCodeConfigurationGetArgs> applicationCodeConfiguration;
 
     public Input<ApplicationApplicationConfigurationApplicationCodeConfigurationGetArgs> getApplicationCodeConfiguration() {
         return this.applicationCodeConfiguration;
@@ -36,7 +36,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="applicationSnapshotConfiguration")
-    private final @Nullable Input<ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs> applicationSnapshotConfiguration;
+      private final @Nullable Input<ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs> applicationSnapshotConfiguration;
 
     public Input<ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs> getApplicationSnapshotConfiguration() {
         return this.applicationSnapshotConfiguration == null ? Input.empty() : this.applicationSnapshotConfiguration;
@@ -47,7 +47,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="environmentProperties")
-    private final @Nullable Input<ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs> environmentProperties;
+      private final @Nullable Input<ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs> environmentProperties;
 
     public Input<ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs> getEnvironmentProperties() {
         return this.environmentProperties == null ? Input.empty() : this.environmentProperties;
@@ -58,7 +58,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="flinkApplicationConfiguration")
-    private final @Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationGetArgs> flinkApplicationConfiguration;
+      private final @Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationGetArgs> flinkApplicationConfiguration;
 
     public Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationGetArgs> getFlinkApplicationConfiguration() {
         return this.flinkApplicationConfiguration == null ? Input.empty() : this.flinkApplicationConfiguration;
@@ -69,7 +69,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="runConfiguration")
-    private final @Nullable Input<ApplicationApplicationConfigurationRunConfigurationGetArgs> runConfiguration;
+      private final @Nullable Input<ApplicationApplicationConfigurationRunConfigurationGetArgs> runConfiguration;
 
     public Input<ApplicationApplicationConfigurationRunConfigurationGetArgs> getRunConfiguration() {
         return this.runConfiguration == null ? Input.empty() : this.runConfiguration;
@@ -80,7 +80,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="sqlApplicationConfiguration")
-    private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs> sqlApplicationConfiguration;
+      private final @Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs> sqlApplicationConfiguration;
 
     public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs> getSqlApplicationConfiguration() {
         return this.sqlApplicationConfiguration == null ? Input.empty() : this.sqlApplicationConfiguration;
@@ -91,7 +91,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="vpcConfiguration")
-    private final @Nullable Input<ApplicationApplicationConfigurationVpcConfigurationGetArgs> vpcConfiguration;
+      private final @Nullable Input<ApplicationApplicationConfigurationVpcConfigurationGetArgs> vpcConfiguration;
 
     public Input<ApplicationApplicationConfigurationVpcConfigurationGetArgs> getVpcConfiguration() {
         return this.vpcConfiguration == null ? Input.empty() : this.vpcConfiguration;

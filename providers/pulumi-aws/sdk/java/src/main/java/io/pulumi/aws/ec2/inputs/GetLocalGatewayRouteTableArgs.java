@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetLocalGatewayRouteTableFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
     public static final GetLocalGatewayRouteTableArgs Empty = new GetLocalGatewayRouteTableArgs();
 
     @InputImport(name="filters")
-    private final @Nullable List<GetLocalGatewayRouteTableFilter> filters;
+      private final @Nullable List<GetLocalGatewayRouteTableFilter> filters;
 
     public List<GetLocalGatewayRouteTableFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -29,7 +29,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="localGatewayId")
-    private final @Nullable String localGatewayId;
+      private final @Nullable String localGatewayId;
 
     public Optional<String> getLocalGatewayId() {
         return this.localGatewayId == null ? Optional.empty() : Optional.ofNullable(this.localGatewayId);
@@ -40,7 +40,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="localGatewayRouteTableId")
-    private final @Nullable String localGatewayRouteTableId;
+      private final @Nullable String localGatewayRouteTableId;
 
     public Optional<String> getLocalGatewayRouteTableId() {
         return this.localGatewayRouteTableId == null ? Optional.empty() : Optional.ofNullable(this.localGatewayRouteTableId);
@@ -51,7 +51,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="outpostArn")
-    private final @Nullable String outpostArn;
+      private final @Nullable String outpostArn;
 
     public Optional<String> getOutpostArn() {
         return this.outpostArn == null ? Optional.empty() : Optional.ofNullable(this.outpostArn);
@@ -62,7 +62,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+      private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -74,7 +74,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

@@ -5,7 +5,7 @@ package io.pulumi.aws.lambda;
 
 import io.pulumi.core.Archive;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="code")
-    private final @Nullable Input<Archive> code;
+      private final @Nullable Input<Archive> code;
 
     public Input<Archive> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -33,7 +33,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compatibleArchitectures")
-    private final @Nullable Input<List<String>> compatibleArchitectures;
+      private final @Nullable Input<List<String>> compatibleArchitectures;
 
     public Input<List<String>> getCompatibleArchitectures() {
         return this.compatibleArchitectures == null ? Input.empty() : this.compatibleArchitectures;
@@ -44,7 +44,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compatibleRuntimes")
-    private final @Nullable Input<List<String>> compatibleRuntimes;
+      private final @Nullable Input<List<String>> compatibleRuntimes;
 
     public Input<List<String>> getCompatibleRuntimes() {
         return this.compatibleRuntimes == null ? Input.empty() : this.compatibleRuntimes;
@@ -55,7 +55,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -66,7 +66,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="layerName", required=true)
-    private final Input<String> layerName;
+      private final Input<String> layerName;
 
     public Input<String> getLayerName() {
         return this.layerName;
@@ -77,7 +77,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseInfo")
-    private final @Nullable Input<String> licenseInfo;
+      private final @Nullable Input<String> licenseInfo;
 
     public Input<String> getLicenseInfo() {
         return this.licenseInfo == null ? Input.empty() : this.licenseInfo;
@@ -88,7 +88,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Bucket")
-    private final @Nullable Input<String> s3Bucket;
+      private final @Nullable Input<String> s3Bucket;
 
     public Input<String> getS3Bucket() {
         return this.s3Bucket == null ? Input.empty() : this.s3Bucket;
@@ -99,7 +99,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Key")
-    private final @Nullable Input<String> s3Key;
+      private final @Nullable Input<String> s3Key;
 
     public Input<String> getS3Key() {
         return this.s3Key == null ? Input.empty() : this.s3Key;
@@ -110,7 +110,7 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3ObjectVersion")
-    private final @Nullable Input<String> s3ObjectVersion;
+      private final @Nullable Input<String> s3ObjectVersion;
 
     public Input<String> getS3ObjectVersion() {
         return this.s3ObjectVersion == null ? Input.empty() : this.s3ObjectVersion;
@@ -121,14 +121,14 @@ public final class LayerVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipDestroy")
-    private final @Nullable Input<Boolean> skipDestroy;
+      private final @Nullable Input<Boolean> skipDestroy;
 
     public Input<Boolean> getSkipDestroy() {
         return this.skipDestroy == null ? Input.empty() : this.skipDestroy;
     }
 
     @InputImport(name="sourceCodeHash")
-    private final @Nullable Input<String> sourceCodeHash;
+      private final @Nullable Input<String> sourceCodeHash;
 
     public Input<String> getSourceCodeHash() {
         return this.sourceCodeHash == null ? Input.empty() : this.sourceCodeHash;

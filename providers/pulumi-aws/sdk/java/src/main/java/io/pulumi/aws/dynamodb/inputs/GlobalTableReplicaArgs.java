@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class GlobalTableReplicaArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="regionName", required=true)
-    private final Input<String> regionName;
+      private final Input<String> regionName;
 
     public Input<String> getRegionName() {
         return this.regionName;

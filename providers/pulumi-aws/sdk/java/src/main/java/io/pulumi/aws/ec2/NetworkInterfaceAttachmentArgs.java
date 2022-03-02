@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NetworkInterfaceAttachmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="deviceIndex", required=true)
-    private final Input<Integer> deviceIndex;
+      private final Input<Integer> deviceIndex;
 
     public Input<Integer> getDeviceIndex() {
         return this.deviceIndex;
@@ -30,7 +30,7 @@ public final class NetworkInterfaceAttachmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -41,7 +41,7 @@ public final class NetworkInterfaceAttachmentArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="networkInterfaceId", required=true)
-    private final Input<String> networkInterfaceId;
+      private final Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId;

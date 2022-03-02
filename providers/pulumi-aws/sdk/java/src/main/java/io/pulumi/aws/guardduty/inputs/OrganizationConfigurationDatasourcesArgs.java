@@ -5,7 +5,7 @@ package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.aws.guardduty.inputs.OrganizationConfigurationDatasourcesS3LogsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class OrganizationConfigurationDatasourcesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="s3Logs")
-    private final @Nullable Input<OrganizationConfigurationDatasourcesS3LogsArgs> s3Logs;
+      private final @Nullable Input<OrganizationConfigurationDatasourcesS3LogsArgs> s3Logs;
 
     public Input<OrganizationConfigurationDatasourcesS3LogsArgs> getS3Logs() {
         return this.s3Logs == null ? Input.empty() : this.s3Logs;

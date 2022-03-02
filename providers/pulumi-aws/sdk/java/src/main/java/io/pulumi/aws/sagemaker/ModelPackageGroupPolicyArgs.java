@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,14 +18,14 @@ public final class ModelPackageGroupPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="modelPackageGroupName", required=true)
-    private final Input<String> modelPackageGroupName;
+      private final Input<String> modelPackageGroupName;
 
     public Input<String> getModelPackageGroupName() {
         return this.modelPackageGroupName;
     }
 
     @InputImport(name="resourcePolicy", required=true)
-    private final Input<String> resourcePolicy;
+      private final Input<String> resourcePolicy;
 
     public Input<String> getResourcePolicy() {
         return this.resourcePolicy;

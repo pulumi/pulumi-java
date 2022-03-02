@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-    private final @Nullable Input<String> address;
+      private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -32,7 +32,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationId")
-    private final @Nullable Input<String> allocationId;
+      private final @Nullable Input<String> allocationId;
 
     public Input<String> getAllocationId() {
         return this.allocationId == null ? Input.empty() : this.allocationId;
@@ -43,7 +43,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associateWithPrivateIp")
-    private final @Nullable Input<String> associateWithPrivateIp;
+      private final @Nullable Input<String> associateWithPrivateIp;
 
     public Input<String> getAssociateWithPrivateIp() {
         return this.associateWithPrivateIp == null ? Input.empty() : this.associateWithPrivateIp;
@@ -54,7 +54,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associationId")
-    private final @Nullable Input<String> associationId;
+      private final @Nullable Input<String> associationId;
 
     public Input<String> getAssociationId() {
         return this.associationId == null ? Input.empty() : this.associationId;
@@ -65,7 +65,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="carrierIp")
-    private final @Nullable Input<String> carrierIp;
+      private final @Nullable Input<String> carrierIp;
 
     public Input<String> getCarrierIp() {
         return this.carrierIp == null ? Input.empty() : this.carrierIp;
@@ -76,7 +76,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerOwnedIp")
-    private final @Nullable Input<String> customerOwnedIp;
+      private final @Nullable Input<String> customerOwnedIp;
 
     public Input<String> getCustomerOwnedIp() {
         return this.customerOwnedIp == null ? Input.empty() : this.customerOwnedIp;
@@ -87,7 +87,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerOwnedIpv4Pool")
-    private final @Nullable Input<String> customerOwnedIpv4Pool;
+      private final @Nullable Input<String> customerOwnedIpv4Pool;
 
     public Input<String> getCustomerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool == null ? Input.empty() : this.customerOwnedIpv4Pool;
@@ -98,7 +98,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -109,7 +109,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+      private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
@@ -120,7 +120,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkBorderGroup")
-    private final @Nullable Input<String> networkBorderGroup;
+      private final @Nullable Input<String> networkBorderGroup;
 
     public Input<String> getNetworkBorderGroup() {
         return this.networkBorderGroup == null ? Input.empty() : this.networkBorderGroup;
@@ -131,7 +131,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterface")
-    private final @Nullable Input<String> networkInterface;
+      private final @Nullable Input<String> networkInterface;
 
     public Input<String> getNetworkInterface() {
         return this.networkInterface == null ? Input.empty() : this.networkInterface;
@@ -142,7 +142,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateDns")
-    private final @Nullable Input<String> privateDns;
+      private final @Nullable Input<String> privateDns;
 
     public Input<String> getPrivateDns() {
         return this.privateDns == null ? Input.empty() : this.privateDns;
@@ -153,7 +153,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIp")
-    private final @Nullable Input<String> privateIp;
+      private final @Nullable Input<String> privateIp;
 
     public Input<String> getPrivateIp() {
         return this.privateIp == null ? Input.empty() : this.privateIp;
@@ -164,7 +164,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicDns")
-    private final @Nullable Input<String> publicDns;
+      private final @Nullable Input<String> publicDns;
 
     public Input<String> getPublicDns() {
         return this.publicDns == null ? Input.empty() : this.publicDns;
@@ -175,7 +175,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIp")
-    private final @Nullable Input<String> publicIp;
+      private final @Nullable Input<String> publicIp;
 
     public Input<String> getPublicIp() {
         return this.publicIp == null ? Input.empty() : this.publicIp;
@@ -186,7 +186,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIpv4Pool")
-    private final @Nullable Input<String> publicIpv4Pool;
+      private final @Nullable Input<String> publicIpv4Pool;
 
     public Input<String> getPublicIpv4Pool() {
         return this.publicIpv4Pool == null ? Input.empty() : this.publicIpv4Pool;
@@ -197,7 +197,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -208,7 +208,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -219,7 +219,7 @@ public final class EipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpc")
-    private final @Nullable Input<Boolean> vpc;
+      private final @Nullable Input<Boolean> vpc;
 
     public Input<Boolean> getVpc() {
         return this.vpc == null ? Input.empty() : this.vpc;

@@ -11,7 +11,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementByteMatchStatementFieldToMa
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementByteMatchStatementFieldToMatchUriPathArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class WebAclRuleStatementByteMatchStatementFieldToMatchArgs extends
      * 
      */
     @InputImport(name="allQueryArguments")
-    private final @Nullable Input<WebAclRuleStatementByteMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
+      private final @Nullable Input<WebAclRuleStatementByteMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
     public Input<WebAclRuleStatementByteMatchStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
         return this.allQueryArguments == null ? Input.empty() : this.allQueryArguments;
@@ -36,7 +36,7 @@ public final class WebAclRuleStatementByteMatchStatementFieldToMatchArgs extends
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<WebAclRuleStatementByteMatchStatementFieldToMatchBodyArgs> body;
+      private final @Nullable Input<WebAclRuleStatementByteMatchStatementFieldToMatchBodyArgs> body;
 
     public Input<WebAclRuleStatementByteMatchStatementFieldToMatchBodyArgs> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -47,7 +47,7 @@ public final class WebAclRuleStatementByteMatchStatementFieldToMatchArgs extends
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<WebAclRuleStatementByteMatchStatementFieldToMatchMethodArgs> method;
+      private final @Nullable Input<WebAclRuleStatementByteMatchStatementFieldToMatchMethodArgs> method;
 
     public Input<WebAclRuleStatementByteMatchStatementFieldToMatchMethodArgs> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -58,7 +58,7 @@ public final class WebAclRuleStatementByteMatchStatementFieldToMatchArgs extends
      * 
      */
     @InputImport(name="queryString")
-    private final @Nullable Input<WebAclRuleStatementByteMatchStatementFieldToMatchQueryStringArgs> queryString;
+      private final @Nullable Input<WebAclRuleStatementByteMatchStatementFieldToMatchQueryStringArgs> queryString;
 
     public Input<WebAclRuleStatementByteMatchStatementFieldToMatchQueryStringArgs> getQueryString() {
         return this.queryString == null ? Input.empty() : this.queryString;
@@ -69,7 +69,7 @@ public final class WebAclRuleStatementByteMatchStatementFieldToMatchArgs extends
      * 
      */
     @InputImport(name="singleHeader")
-    private final @Nullable Input<WebAclRuleStatementByteMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
+      private final @Nullable Input<WebAclRuleStatementByteMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
     public Input<WebAclRuleStatementByteMatchStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
         return this.singleHeader == null ? Input.empty() : this.singleHeader;
@@ -80,7 +80,7 @@ public final class WebAclRuleStatementByteMatchStatementFieldToMatchArgs extends
      * 
      */
     @InputImport(name="singleQueryArgument")
-    private final @Nullable Input<WebAclRuleStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
+      private final @Nullable Input<WebAclRuleStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
     public Input<WebAclRuleStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
         return this.singleQueryArgument == null ? Input.empty() : this.singleQueryArgument;
@@ -91,7 +91,7 @@ public final class WebAclRuleStatementByteMatchStatementFieldToMatchArgs extends
      * 
      */
     @InputImport(name="uriPath")
-    private final @Nullable Input<WebAclRuleStatementByteMatchStatementFieldToMatchUriPathArgs> uriPath;
+      private final @Nullable Input<WebAclRuleStatementByteMatchStatementFieldToMatchUriPathArgs> uriPath;
 
     public Input<WebAclRuleStatementByteMatchStatementFieldToMatchUriPathArgs> getUriPath() {
         return this.uriPath == null ? Input.empty() : this.uriPath;

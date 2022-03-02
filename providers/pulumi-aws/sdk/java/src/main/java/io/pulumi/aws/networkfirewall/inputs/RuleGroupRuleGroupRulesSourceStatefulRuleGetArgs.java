@@ -6,7 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends io.p
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<String> action;
+      private final Input<String> action;
 
     public Input<String> getAction() {
         return this.action;
@@ -32,7 +32,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends io.p
      * 
      */
     @InputImport(name="header", required=true)
-    private final Input<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> header;
+      private final Input<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> header;
 
     public Input<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs> getHeader() {
         return this.header;
@@ -43,7 +43,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs extends io.p
      * 
      */
     @InputImport(name="ruleOptions", required=true)
-    private final Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> ruleOptions;
+      private final Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> ruleOptions;
 
     public Input<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs>> getRuleOptions() {
         return this.ruleOptions;

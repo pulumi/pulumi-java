@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EndpointElasticsearchSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="endpointUri", required=true)
-    private final Input<String> endpointUri;
+      private final Input<String> endpointUri;
 
     public Input<String> getEndpointUri() {
         return this.endpointUri;
@@ -31,7 +31,7 @@ public final class EndpointElasticsearchSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="errorRetryDuration")
-    private final @Nullable Input<Integer> errorRetryDuration;
+      private final @Nullable Input<Integer> errorRetryDuration;
 
     public Input<Integer> getErrorRetryDuration() {
         return this.errorRetryDuration == null ? Input.empty() : this.errorRetryDuration;
@@ -42,7 +42,7 @@ public final class EndpointElasticsearchSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="fullLoadErrorPercentage")
-    private final @Nullable Input<Integer> fullLoadErrorPercentage;
+      private final @Nullable Input<Integer> fullLoadErrorPercentage;
 
     public Input<Integer> getFullLoadErrorPercentage() {
         return this.fullLoadErrorPercentage == null ? Input.empty() : this.fullLoadErrorPercentage;
@@ -53,7 +53,7 @@ public final class EndpointElasticsearchSettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="serviceAccessRoleArn", required=true)
-    private final Input<String> serviceAccessRoleArn;
+      private final Input<String> serviceAccessRoleArn;
 
     public Input<String> getServiceAccessRoleArn() {
         return this.serviceAccessRoleArn;

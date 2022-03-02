@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeoutGrpc;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeoutHttp2;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeoutHttp;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeoutTcp;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

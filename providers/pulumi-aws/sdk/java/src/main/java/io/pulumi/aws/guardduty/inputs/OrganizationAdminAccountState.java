@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class OrganizationAdminAccountState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="adminAccountId")
-    private final @Nullable Input<String> adminAccountId;
+      private final @Nullable Input<String> adminAccountId;
 
     public Input<String> getAdminAccountId() {
         return this.adminAccountId == null ? Input.empty() : this.adminAccountId;

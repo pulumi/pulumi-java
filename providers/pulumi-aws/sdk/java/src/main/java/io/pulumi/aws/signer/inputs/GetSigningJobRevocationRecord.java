@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.signer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class GetSigningJobRevocationRecord extends io.pulumi.resources.Inv
     public static final GetSigningJobRevocationRecord Empty = new GetSigningJobRevocationRecord();
 
     @InputImport(name="reason", required=true)
-    private final String reason;
+      private final String reason;
 
     public String getReason() {
         return this.reason;
     }
 
     @InputImport(name="revokedAt", required=true)
-    private final String revokedAt;
+      private final String revokedAt;
 
     public String getRevokedAt() {
         return this.revokedAt;
     }
 
     @InputImport(name="revokedBy", required=true)
-    private final String revokedBy;
+      private final String revokedBy;
 
     public String getRevokedBy() {
         return this.revokedBy;

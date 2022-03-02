@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGet
      * 
      */
     @InputImport(name="mappingParameters")
-    private final @Nullable Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs> mappingParameters;
+      private final @Nullable Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs> mappingParameters;
 
     public Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs> getMappingParameters() {
         return this.mappingParameters == null ? Input.empty() : this.mappingParameters;
@@ -32,7 +32,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGet
      * 
      */
     @InputImport(name="recordFormatType")
-    private final @Nullable Input<String> recordFormatType;
+      private final @Nullable Input<String> recordFormatType;
 
     public Input<String> getRecordFormatType() {
         return this.recordFormatType == null ? Input.empty() : this.recordFormatType;

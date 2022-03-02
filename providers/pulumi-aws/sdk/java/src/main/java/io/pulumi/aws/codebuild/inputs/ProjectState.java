@@ -15,7 +15,7 @@ import io.pulumi.aws.codebuild.inputs.ProjectSecondarySourceVersionGetArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectSourceGetArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectVpcConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -45,7 +45,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifacts")
-    private final @Nullable Input<ProjectArtifactsGetArgs> artifacts;
+      private final @Nullable Input<ProjectArtifactsGetArgs> artifacts;
 
     public Input<ProjectArtifactsGetArgs> getArtifacts() {
         return this.artifacts == null ? Input.empty() : this.artifacts;
@@ -56,7 +56,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="badgeEnabled")
-    private final @Nullable Input<Boolean> badgeEnabled;
+      private final @Nullable Input<Boolean> badgeEnabled;
 
     public Input<Boolean> getBadgeEnabled() {
         return this.badgeEnabled == null ? Input.empty() : this.badgeEnabled;
@@ -67,7 +67,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="badgeUrl")
-    private final @Nullable Input<String> badgeUrl;
+      private final @Nullable Input<String> badgeUrl;
 
     public Input<String> getBadgeUrl() {
         return this.badgeUrl == null ? Input.empty() : this.badgeUrl;
@@ -78,7 +78,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildBatchConfig")
-    private final @Nullable Input<ProjectBuildBatchConfigGetArgs> buildBatchConfig;
+      private final @Nullable Input<ProjectBuildBatchConfigGetArgs> buildBatchConfig;
 
     public Input<ProjectBuildBatchConfigGetArgs> getBuildBatchConfig() {
         return this.buildBatchConfig == null ? Input.empty() : this.buildBatchConfig;
@@ -89,7 +89,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildTimeout")
-    private final @Nullable Input<Integer> buildTimeout;
+      private final @Nullable Input<Integer> buildTimeout;
 
     public Input<Integer> getBuildTimeout() {
         return this.buildTimeout == null ? Input.empty() : this.buildTimeout;
@@ -100,7 +100,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cache")
-    private final @Nullable Input<ProjectCacheGetArgs> cache;
+      private final @Nullable Input<ProjectCacheGetArgs> cache;
 
     public Input<ProjectCacheGetArgs> getCache() {
         return this.cache == null ? Input.empty() : this.cache;
@@ -111,7 +111,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="concurrentBuildLimit")
-    private final @Nullable Input<Integer> concurrentBuildLimit;
+      private final @Nullable Input<Integer> concurrentBuildLimit;
 
     public Input<Integer> getConcurrentBuildLimit() {
         return this.concurrentBuildLimit == null ? Input.empty() : this.concurrentBuildLimit;
@@ -122,7 +122,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -133,7 +133,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionKey")
-    private final @Nullable Input<String> encryptionKey;
+      private final @Nullable Input<String> encryptionKey;
 
     public Input<String> getEncryptionKey() {
         return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
@@ -144,7 +144,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<ProjectEnvironmentGetArgs> environment;
+      private final @Nullable Input<ProjectEnvironmentGetArgs> environment;
 
     public Input<ProjectEnvironmentGetArgs> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -155,7 +155,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystemLocations")
-    private final @Nullable Input<List<ProjectFileSystemLocationGetArgs>> fileSystemLocations;
+      private final @Nullable Input<List<ProjectFileSystemLocationGetArgs>> fileSystemLocations;
 
     public Input<List<ProjectFileSystemLocationGetArgs>> getFileSystemLocations() {
         return this.fileSystemLocations == null ? Input.empty() : this.fileSystemLocations;
@@ -166,7 +166,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logsConfig")
-    private final @Nullable Input<ProjectLogsConfigGetArgs> logsConfig;
+      private final @Nullable Input<ProjectLogsConfigGetArgs> logsConfig;
 
     public Input<ProjectLogsConfigGetArgs> getLogsConfig() {
         return this.logsConfig == null ? Input.empty() : this.logsConfig;
@@ -177,7 +177,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -188,7 +188,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectVisibility")
-    private final @Nullable Input<String> projectVisibility;
+      private final @Nullable Input<String> projectVisibility;
 
     public Input<String> getProjectVisibility() {
         return this.projectVisibility == null ? Input.empty() : this.projectVisibility;
@@ -199,7 +199,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicProjectAlias")
-    private final @Nullable Input<String> publicProjectAlias;
+      private final @Nullable Input<String> publicProjectAlias;
 
     public Input<String> getPublicProjectAlias() {
         return this.publicProjectAlias == null ? Input.empty() : this.publicProjectAlias;
@@ -210,7 +210,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queuedTimeout")
-    private final @Nullable Input<Integer> queuedTimeout;
+      private final @Nullable Input<Integer> queuedTimeout;
 
     public Input<Integer> getQueuedTimeout() {
         return this.queuedTimeout == null ? Input.empty() : this.queuedTimeout;
@@ -221,7 +221,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceAccessRole")
-    private final @Nullable Input<String> resourceAccessRole;
+      private final @Nullable Input<String> resourceAccessRole;
 
     public Input<String> getResourceAccessRole() {
         return this.resourceAccessRole == null ? Input.empty() : this.resourceAccessRole;
@@ -232,7 +232,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryArtifacts")
-    private final @Nullable Input<List<ProjectSecondaryArtifactGetArgs>> secondaryArtifacts;
+      private final @Nullable Input<List<ProjectSecondaryArtifactGetArgs>> secondaryArtifacts;
 
     public Input<List<ProjectSecondaryArtifactGetArgs>> getSecondaryArtifacts() {
         return this.secondaryArtifacts == null ? Input.empty() : this.secondaryArtifacts;
@@ -243,7 +243,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondarySourceVersions")
-    private final @Nullable Input<List<ProjectSecondarySourceVersionGetArgs>> secondarySourceVersions;
+      private final @Nullable Input<List<ProjectSecondarySourceVersionGetArgs>> secondarySourceVersions;
 
     public Input<List<ProjectSecondarySourceVersionGetArgs>> getSecondarySourceVersions() {
         return this.secondarySourceVersions == null ? Input.empty() : this.secondarySourceVersions;
@@ -254,7 +254,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondarySources")
-    private final @Nullable Input<List<ProjectSecondarySourceGetArgs>> secondarySources;
+      private final @Nullable Input<List<ProjectSecondarySourceGetArgs>> secondarySources;
 
     public Input<List<ProjectSecondarySourceGetArgs>> getSecondarySources() {
         return this.secondarySources == null ? Input.empty() : this.secondarySources;
@@ -265,7 +265,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRole")
-    private final @Nullable Input<String> serviceRole;
+      private final @Nullable Input<String> serviceRole;
 
     public Input<String> getServiceRole() {
         return this.serviceRole == null ? Input.empty() : this.serviceRole;
@@ -276,7 +276,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<ProjectSourceGetArgs> source;
+      private final @Nullable Input<ProjectSourceGetArgs> source;
 
     public Input<ProjectSourceGetArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -287,7 +287,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceVersion")
-    private final @Nullable Input<String> sourceVersion;
+      private final @Nullable Input<String> sourceVersion;
 
     public Input<String> getSourceVersion() {
         return this.sourceVersion == null ? Input.empty() : this.sourceVersion;
@@ -298,7 +298,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -309,7 +309,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -320,7 +320,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-    private final @Nullable Input<ProjectVpcConfigGetArgs> vpcConfig;
+      private final @Nullable Input<ProjectVpcConfigGetArgs> vpcConfig;
 
     public Input<ProjectVpcConfigGetArgs> getVpcConfig() {
         return this.vpcConfig == null ? Input.empty() : this.vpcConfig;

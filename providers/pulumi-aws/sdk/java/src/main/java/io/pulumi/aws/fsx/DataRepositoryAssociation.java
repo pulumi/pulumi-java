@@ -9,8 +9,8 @@ import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationState;
 import io.pulumi.aws.fsx.outputs.DataRepositoryAssociationS3;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -184,6 +184,21 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
         return this.tagsAll;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DataRepositoryAssociation(String name) {
+        this(name, DataRepositoryAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DataRepositoryAssociation(String name, DataRepositoryAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetVpcPeeringConnectionsFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GetVpcPeeringConnectionsArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetVpcPeeringConnectionsFilter> filters;
+      private final @Nullable List<GetVpcPeeringConnectionsFilter> filters;
 
     public List<GetVpcPeeringConnectionsFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -34,7 +34,7 @@ public final class GetVpcPeeringConnectionsArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

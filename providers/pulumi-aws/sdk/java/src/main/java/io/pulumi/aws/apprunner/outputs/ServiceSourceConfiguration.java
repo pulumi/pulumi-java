@@ -6,7 +6,7 @@ package io.pulumi.aws.apprunner.outputs;
 import io.pulumi.aws.apprunner.outputs.ServiceSourceConfigurationAuthenticationConfiguration;
 import io.pulumi.aws.apprunner.outputs.ServiceSourceConfigurationCodeRepository;
 import io.pulumi.aws.apprunner.outputs.ServiceSourceConfigurationImageRepository;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;

@@ -5,7 +5,7 @@ package io.pulumi.aws.appautoscaling.outputs;
 
 import io.pulumi.aws.appautoscaling.outputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification;
 import io.pulumi.aws.appautoscaling.outputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;

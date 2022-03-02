@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="precedence")
-    private final @Nullable Input<Integer> precedence;
+      private final @Nullable Input<Integer> precedence;
 
     public Input<Integer> getPrecedence() {
         return this.precedence == null ? Input.empty() : this.precedence;
@@ -53,7 +53,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -64,7 +64,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userPoolId")
-    private final @Nullable Input<String> userPoolId;
+      private final @Nullable Input<String> userPoolId;
 
     public Input<String> getUserPoolId() {
         return this.userPoolId == null ? Input.empty() : this.userPoolId;

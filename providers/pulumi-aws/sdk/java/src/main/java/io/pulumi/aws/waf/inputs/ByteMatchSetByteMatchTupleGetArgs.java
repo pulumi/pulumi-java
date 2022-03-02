@@ -5,7 +5,7 @@ package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.aws.waf.inputs.ByteMatchSetByteMatchTupleFieldToMatchGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ByteMatchSetByteMatchTupleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="fieldToMatch", required=true)
-    private final Input<ByteMatchSetByteMatchTupleFieldToMatchGetArgs> fieldToMatch;
+      private final Input<ByteMatchSetByteMatchTupleFieldToMatchGetArgs> fieldToMatch;
 
     public Input<ByteMatchSetByteMatchTupleFieldToMatchGetArgs> getFieldToMatch() {
         return this.fieldToMatch;
@@ -35,7 +35,7 @@ public final class ByteMatchSetByteMatchTupleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="positionalConstraint", required=true)
-    private final Input<String> positionalConstraint;
+      private final Input<String> positionalConstraint;
 
     public Input<String> getPositionalConstraint() {
         return this.positionalConstraint;
@@ -48,7 +48,7 @@ public final class ByteMatchSetByteMatchTupleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetString")
-    private final @Nullable Input<String> targetString;
+      private final @Nullable Input<String> targetString;
 
     public Input<String> getTargetString() {
         return this.targetString == null ? Input.empty() : this.targetString;
@@ -63,7 +63,7 @@ public final class ByteMatchSetByteMatchTupleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="textTransformation", required=true)
-    private final Input<String> textTransformation;
+      private final Input<String> textTransformation;
 
     public Input<String> getTextTransformation() {
         return this.textTransformation;

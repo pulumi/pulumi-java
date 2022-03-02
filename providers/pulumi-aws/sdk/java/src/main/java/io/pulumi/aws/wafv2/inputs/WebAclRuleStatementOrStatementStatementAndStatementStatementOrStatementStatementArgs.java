@@ -12,7 +12,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementAndStat
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementSqliMatchStatementArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementXssMatchStatementArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +26,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementO
      * 
      */
     @InputImport(name="byteMatchStatement")
-    private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementByteMatchStatementArgs> byteMatchStatement;
+      private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementByteMatchStatementArgs> byteMatchStatement;
 
     public Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementByteMatchStatementArgs> getByteMatchStatement() {
         return this.byteMatchStatement == null ? Input.empty() : this.byteMatchStatement;
@@ -37,7 +37,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementO
      * 
      */
     @InputImport(name="geoMatchStatement")
-    private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementGeoMatchStatementArgs> geoMatchStatement;
+      private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementGeoMatchStatementArgs> geoMatchStatement;
 
     public Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementGeoMatchStatementArgs> getGeoMatchStatement() {
         return this.geoMatchStatement == null ? Input.empty() : this.geoMatchStatement;
@@ -48,7 +48,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementO
      * 
      */
     @InputImport(name="ipSetReferenceStatement")
-    private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementArgs> ipSetReferenceStatement;
+      private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementArgs> ipSetReferenceStatement;
 
     public Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementIpSetReferenceStatementArgs> getIpSetReferenceStatement() {
         return this.ipSetReferenceStatement == null ? Input.empty() : this.ipSetReferenceStatement;
@@ -59,7 +59,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementO
      * 
      */
     @InputImport(name="labelMatchStatement")
-    private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementLabelMatchStatementArgs> labelMatchStatement;
+      private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementLabelMatchStatementArgs> labelMatchStatement;
 
     public Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementLabelMatchStatementArgs> getLabelMatchStatement() {
         return this.labelMatchStatement == null ? Input.empty() : this.labelMatchStatement;
@@ -70,7 +70,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementO
      * 
      */
     @InputImport(name="regexPatternSetReferenceStatement")
-    private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement;
+      private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement;
 
     public Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementRegexPatternSetReferenceStatementArgs> getRegexPatternSetReferenceStatement() {
         return this.regexPatternSetReferenceStatement == null ? Input.empty() : this.regexPatternSetReferenceStatement;
@@ -81,7 +81,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementO
      * 
      */
     @InputImport(name="sizeConstraintStatement")
-    private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementSizeConstraintStatementArgs> sizeConstraintStatement;
+      private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementSizeConstraintStatementArgs> sizeConstraintStatement;
 
     public Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementSizeConstraintStatementArgs> getSizeConstraintStatement() {
         return this.sizeConstraintStatement == null ? Input.empty() : this.sizeConstraintStatement;
@@ -92,7 +92,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementO
      * 
      */
     @InputImport(name="sqliMatchStatement")
-    private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementSqliMatchStatementArgs> sqliMatchStatement;
+      private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementSqliMatchStatementArgs> sqliMatchStatement;
 
     public Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementSqliMatchStatementArgs> getSqliMatchStatement() {
         return this.sqliMatchStatement == null ? Input.empty() : this.sqliMatchStatement;
@@ -103,7 +103,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementO
      * 
      */
     @InputImport(name="xssMatchStatement")
-    private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementXssMatchStatementArgs> xssMatchStatement;
+      private final @Nullable Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementXssMatchStatementArgs> xssMatchStatement;
 
     public Input<WebAclRuleStatementOrStatementStatementAndStatementStatementOrStatementStatementXssMatchStatementArgs> getXssMatchStatement() {
         return this.xssMatchStatement == null ? Input.empty() : this.xssMatchStatement;

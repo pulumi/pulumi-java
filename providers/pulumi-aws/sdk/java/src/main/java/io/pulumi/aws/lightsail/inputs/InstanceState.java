@@ -4,7 +4,7 @@
 package io.pulumi.aws.lightsail.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -36,7 +36,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -47,7 +47,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blueprintId")
-    private final @Nullable Input<String> blueprintId;
+      private final @Nullable Input<String> blueprintId;
 
     public Input<String> getBlueprintId() {
         return this.blueprintId == null ? Input.empty() : this.blueprintId;
@@ -58,7 +58,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId")
-    private final @Nullable Input<String> bundleId;
+      private final @Nullable Input<String> bundleId;
 
     public Input<String> getBundleId() {
         return this.bundleId == null ? Input.empty() : this.bundleId;
@@ -69,7 +69,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpuCount")
-    private final @Nullable Input<Integer> cpuCount;
+      private final @Nullable Input<Integer> cpuCount;
 
     public Input<Integer> getCpuCount() {
         return this.cpuCount == null ? Input.empty() : this.cpuCount;
@@ -80,7 +80,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -95,7 +95,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* use `ipv6_addresses` attribute instead */
     @InputImport(name="ipv6Address")
-    private final @Nullable Input<String> ipv6Address;
+      private final @Nullable Input<String> ipv6Address;
 
     @Deprecated /* use `ipv6_addresses` attribute instead */
     public Input<String> getIpv6Address() {
@@ -107,7 +107,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6Addresses")
-    private final @Nullable Input<List<String>> ipv6Addresses;
+      private final @Nullable Input<List<String>> ipv6Addresses;
 
     public Input<List<String>> getIpv6Addresses() {
         return this.ipv6Addresses == null ? Input.empty() : this.ipv6Addresses;
@@ -118,7 +118,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isStaticIp")
-    private final @Nullable Input<Boolean> isStaticIp;
+      private final @Nullable Input<Boolean> isStaticIp;
 
     public Input<Boolean> getIsStaticIp() {
         return this.isStaticIp == null ? Input.empty() : this.isStaticIp;
@@ -130,7 +130,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPairName")
-    private final @Nullable Input<String> keyPairName;
+      private final @Nullable Input<String> keyPairName;
 
     public Input<String> getKeyPairName() {
         return this.keyPairName == null ? Input.empty() : this.keyPairName;
@@ -141,7 +141,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -152,7 +152,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateIpAddress")
-    private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Input<String> privateIpAddress;
 
     public Input<String> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
@@ -163,7 +163,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIpAddress")
-    private final @Nullable Input<String> publicIpAddress;
+      private final @Nullable Input<String> publicIpAddress;
 
     public Input<String> getPublicIpAddress() {
         return this.publicIpAddress == null ? Input.empty() : this.publicIpAddress;
@@ -174,7 +174,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ramSize")
-    private final @Nullable Input<Double> ramSize;
+      private final @Nullable Input<Double> ramSize;
 
     public Input<Double> getRamSize() {
         return this.ramSize == null ? Input.empty() : this.ramSize;
@@ -185,7 +185,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -196,7 +196,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -207,7 +207,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userData")
-    private final @Nullable Input<String> userData;
+      private final @Nullable Input<String> userData;
 
     public Input<String> getUserData() {
         return this.userData == null ? Input.empty() : this.userData;
@@ -218,7 +218,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;

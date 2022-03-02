@@ -7,7 +7,7 @@ import io.pulumi.aws.ssm.inputs.PatchBaselineApprovalRuleGetArgs;
 import io.pulumi.aws.ssm.inputs.PatchBaselineGlobalFilterGetArgs;
 import io.pulumi.aws.ssm.inputs.PatchBaselineSourceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvalRules")
-    private final @Nullable Input<List<PatchBaselineApprovalRuleGetArgs>> approvalRules;
+      private final @Nullable Input<List<PatchBaselineApprovalRuleGetArgs>> approvalRules;
 
     public Input<List<PatchBaselineApprovalRuleGetArgs>> getApprovalRules() {
         return this.approvalRules == null ? Input.empty() : this.approvalRules;
@@ -36,7 +36,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvedPatches")
-    private final @Nullable Input<List<String>> approvedPatches;
+      private final @Nullable Input<List<String>> approvedPatches;
 
     public Input<List<String>> getApprovedPatches() {
         return this.approvedPatches == null ? Input.empty() : this.approvedPatches;
@@ -47,7 +47,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvedPatchesComplianceLevel")
-    private final @Nullable Input<String> approvedPatchesComplianceLevel;
+      private final @Nullable Input<String> approvedPatchesComplianceLevel;
 
     public Input<String> getApprovedPatchesComplianceLevel() {
         return this.approvedPatchesComplianceLevel == null ? Input.empty() : this.approvedPatchesComplianceLevel;
@@ -58,7 +58,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvedPatchesEnableNonSecurity")
-    private final @Nullable Input<Boolean> approvedPatchesEnableNonSecurity;
+      private final @Nullable Input<Boolean> approvedPatchesEnableNonSecurity;
 
     public Input<Boolean> getApprovedPatchesEnableNonSecurity() {
         return this.approvedPatchesEnableNonSecurity == null ? Input.empty() : this.approvedPatchesEnableNonSecurity;
@@ -69,7 +69,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -80,7 +80,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -91,7 +91,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalFilters")
-    private final @Nullable Input<List<PatchBaselineGlobalFilterGetArgs>> globalFilters;
+      private final @Nullable Input<List<PatchBaselineGlobalFilterGetArgs>> globalFilters;
 
     public Input<List<PatchBaselineGlobalFilterGetArgs>> getGlobalFilters() {
         return this.globalFilters == null ? Input.empty() : this.globalFilters;
@@ -102,7 +102,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -113,7 +113,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatingSystem")
-    private final @Nullable Input<String> operatingSystem;
+      private final @Nullable Input<String> operatingSystem;
 
     public Input<String> getOperatingSystem() {
         return this.operatingSystem == null ? Input.empty() : this.operatingSystem;
@@ -124,7 +124,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rejectedPatches")
-    private final @Nullable Input<List<String>> rejectedPatches;
+      private final @Nullable Input<List<String>> rejectedPatches;
 
     public Input<List<String>> getRejectedPatches() {
         return this.rejectedPatches == null ? Input.empty() : this.rejectedPatches;
@@ -135,7 +135,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rejectedPatchesAction")
-    private final @Nullable Input<String> rejectedPatchesAction;
+      private final @Nullable Input<String> rejectedPatchesAction;
 
     public Input<String> getRejectedPatchesAction() {
         return this.rejectedPatchesAction == null ? Input.empty() : this.rejectedPatchesAction;
@@ -146,7 +146,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sources")
-    private final @Nullable Input<List<PatchBaselineSourceGetArgs>> sources;
+      private final @Nullable Input<List<PatchBaselineSourceGetArgs>> sources;
 
     public Input<List<PatchBaselineSourceGetArgs>> getSources() {
         return this.sources == null ? Input.empty() : this.sources;
@@ -157,7 +157,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -168,7 +168,7 @@ public final class PatchBaselineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

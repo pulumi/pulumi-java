@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="configurationType", required=true)
-    private final Input<String> configurationType;
+      private final Input<String> configurationType;
 
     public Input<String> getConfigurationType() {
         return this.configurationType;
@@ -30,7 +30,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="logLevel")
-    private final @Nullable Input<String> logLevel;
+      private final @Nullable Input<String> logLevel;
 
     public Input<String> getLogLevel() {
         return this.logLevel == null ? Input.empty() : this.logLevel;
@@ -41,7 +41,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="metricsLevel")
-    private final @Nullable Input<String> metricsLevel;
+      private final @Nullable Input<String> metricsLevel;
 
     public Input<String> getMetricsLevel() {
         return this.metricsLevel == null ? Input.empty() : this.metricsLevel;

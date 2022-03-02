@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientIdLists")
-    private final @Nullable Input<List<String>> clientIdLists;
+      private final @Nullable Input<List<String>> clientIdLists;
 
     public Input<List<String>> getClientIdLists() {
         return this.clientIdLists == null ? Input.empty() : this.clientIdLists;
@@ -43,7 +43,7 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -54,7 +54,7 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -65,7 +65,7 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="thumbprintLists")
-    private final @Nullable Input<List<String>> thumbprintLists;
+      private final @Nullable Input<List<String>> thumbprintLists;
 
     public Input<List<String>> getThumbprintLists() {
         return this.thumbprintLists == null ? Input.empty() : this.thumbprintLists;
@@ -76,7 +76,7 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;

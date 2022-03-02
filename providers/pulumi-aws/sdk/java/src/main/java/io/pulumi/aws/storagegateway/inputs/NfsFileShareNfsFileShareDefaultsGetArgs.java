@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="directoryMode")
-    private final @Nullable Input<String> directoryMode;
+      private final @Nullable Input<String> directoryMode;
 
     public Input<String> getDirectoryMode() {
         return this.directoryMode == null ? Input.empty() : this.directoryMode;
@@ -30,7 +30,7 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="fileMode")
-    private final @Nullable Input<String> fileMode;
+      private final @Nullable Input<String> fileMode;
 
     public Input<String> getFileMode() {
         return this.fileMode == null ? Input.empty() : this.fileMode;
@@ -41,7 +41,7 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="groupId")
-    private final @Nullable Input<String> groupId;
+      private final @Nullable Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId == null ? Input.empty() : this.groupId;
@@ -52,7 +52,7 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;

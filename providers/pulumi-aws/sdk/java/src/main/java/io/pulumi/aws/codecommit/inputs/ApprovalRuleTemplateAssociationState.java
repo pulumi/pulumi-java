@@ -4,7 +4,7 @@
 package io.pulumi.aws.codecommit.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
      * 
      */
     @InputImport(name="approvalRuleTemplateName")
-    private final @Nullable Input<String> approvalRuleTemplateName;
+      private final @Nullable Input<String> approvalRuleTemplateName;
 
     public Input<String> getApprovalRuleTemplateName() {
         return this.approvalRuleTemplateName == null ? Input.empty() : this.approvalRuleTemplateName;
@@ -30,7 +30,7 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
      * 
      */
     @InputImport(name="repositoryName")
-    private final @Nullable Input<String> repositoryName;
+      private final @Nullable Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName == null ? Input.empty() : this.repositoryName;

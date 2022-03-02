@@ -5,7 +5,7 @@ package io.pulumi.aws.secretsmanager.inputs;
 
 import io.pulumi.aws.secretsmanager.inputs.SecretRotationRotationRulesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rotationEnabled")
-    private final @Nullable Input<Boolean> rotationEnabled;
+      private final @Nullable Input<Boolean> rotationEnabled;
 
     public Input<Boolean> getRotationEnabled() {
         return this.rotationEnabled == null ? Input.empty() : this.rotationEnabled;
@@ -33,7 +33,7 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rotationLambdaArn")
-    private final @Nullable Input<String> rotationLambdaArn;
+      private final @Nullable Input<String> rotationLambdaArn;
 
     public Input<String> getRotationLambdaArn() {
         return this.rotationLambdaArn == null ? Input.empty() : this.rotationLambdaArn;
@@ -44,7 +44,7 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rotationRules")
-    private final @Nullable Input<SecretRotationRotationRulesGetArgs> rotationRules;
+      private final @Nullable Input<SecretRotationRotationRulesGetArgs> rotationRules;
 
     public Input<SecretRotationRotationRulesGetArgs> getRotationRules() {
         return this.rotationRules == null ? Input.empty() : this.rotationRules;
@@ -55,14 +55,14 @@ public final class SecretRotationState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="secretId")
-    private final @Nullable Input<String> secretId;
+      private final @Nullable Input<String> secretId;
 
     public Input<String> getSecretId() {
         return this.secretId == null ? Input.empty() : this.secretId;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

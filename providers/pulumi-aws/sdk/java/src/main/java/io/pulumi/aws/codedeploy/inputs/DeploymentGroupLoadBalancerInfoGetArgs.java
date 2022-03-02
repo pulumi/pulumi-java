@@ -7,7 +7,7 @@ import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoElbInfoGet
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupInfoGetArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DeploymentGroupLoadBalancerInfoGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="elbInfos")
-    private final @Nullable Input<List<DeploymentGroupLoadBalancerInfoElbInfoGetArgs>> elbInfos;
+      private final @Nullable Input<List<DeploymentGroupLoadBalancerInfoElbInfoGetArgs>> elbInfos;
 
     public Input<List<DeploymentGroupLoadBalancerInfoElbInfoGetArgs>> getElbInfos() {
         return this.elbInfos == null ? Input.empty() : this.elbInfos;
@@ -33,7 +33,7 @@ public final class DeploymentGroupLoadBalancerInfoGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetGroupInfos")
-    private final @Nullable Input<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoGetArgs>> targetGroupInfos;
+      private final @Nullable Input<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoGetArgs>> targetGroupInfos;
 
     public Input<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoGetArgs>> getTargetGroupInfos() {
         return this.targetGroupInfos == null ? Input.empty() : this.targetGroupInfos;
@@ -44,7 +44,7 @@ public final class DeploymentGroupLoadBalancerInfoGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetGroupPairInfo")
-    private final @Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs> targetGroupPairInfo;
+      private final @Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs> targetGroupPairInfo;
 
     public Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs> getTargetGroupPairInfo() {
         return this.targetGroupPairInfo == null ? Input.empty() : this.targetGroupPairInfo;

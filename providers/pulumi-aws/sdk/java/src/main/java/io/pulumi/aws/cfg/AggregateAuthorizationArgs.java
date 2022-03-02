@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+      private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
@@ -31,7 +31,7 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
@@ -42,7 +42,7 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

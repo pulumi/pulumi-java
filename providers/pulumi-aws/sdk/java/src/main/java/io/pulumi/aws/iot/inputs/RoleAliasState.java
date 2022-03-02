@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-    private final @Nullable Input<String> alias;
+      private final @Nullable Input<String> alias;
 
     public Input<String> getAlias() {
         return this.alias == null ? Input.empty() : this.alias;
@@ -31,7 +31,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -42,7 +42,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentialDuration")
-    private final @Nullable Input<Integer> credentialDuration;
+      private final @Nullable Input<Integer> credentialDuration;
 
     public Input<Integer> getCredentialDuration() {
         return this.credentialDuration == null ? Input.empty() : this.credentialDuration;
@@ -53,7 +53,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;

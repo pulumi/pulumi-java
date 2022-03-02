@@ -6,7 +6,7 @@ package io.pulumi.aws.ssm;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ssm.inputs.GetPatchBaselineArgs;
 import io.pulumi.aws.ssm.outputs.GetPatchBaselineResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

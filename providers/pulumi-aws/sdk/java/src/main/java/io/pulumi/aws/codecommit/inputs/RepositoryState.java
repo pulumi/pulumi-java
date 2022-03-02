@@ -4,7 +4,7 @@
 package io.pulumi.aws.codecommit.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloneUrlHttp")
-    private final @Nullable Input<String> cloneUrlHttp;
+      private final @Nullable Input<String> cloneUrlHttp;
 
     public Input<String> getCloneUrlHttp() {
         return this.cloneUrlHttp == null ? Input.empty() : this.cloneUrlHttp;
@@ -42,7 +42,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloneUrlSsh")
-    private final @Nullable Input<String> cloneUrlSsh;
+      private final @Nullable Input<String> cloneUrlSsh;
 
     public Input<String> getCloneUrlSsh() {
         return this.cloneUrlSsh == null ? Input.empty() : this.cloneUrlSsh;
@@ -53,7 +53,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultBranch")
-    private final @Nullable Input<String> defaultBranch;
+      private final @Nullable Input<String> defaultBranch;
 
     public Input<String> getDefaultBranch() {
         return this.defaultBranch == null ? Input.empty() : this.defaultBranch;
@@ -64,7 +64,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -75,7 +75,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryId")
-    private final @Nullable Input<String> repositoryId;
+      private final @Nullable Input<String> repositoryId;
 
     public Input<String> getRepositoryId() {
         return this.repositoryId == null ? Input.empty() : this.repositoryId;
@@ -86,7 +86,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryName")
-    private final @Nullable Input<String> repositoryName;
+      private final @Nullable Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName == null ? Input.empty() : this.repositoryName;
@@ -97,7 +97,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -108,7 +108,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

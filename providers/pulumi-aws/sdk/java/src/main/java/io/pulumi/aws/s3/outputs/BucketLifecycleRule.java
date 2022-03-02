@@ -7,7 +7,7 @@ import io.pulumi.aws.s3.outputs.BucketLifecycleRuleExpiration;
 import io.pulumi.aws.s3.outputs.BucketLifecycleRuleNoncurrentVersionExpiration;
 import io.pulumi.aws.s3.outputs.BucketLifecycleRuleNoncurrentVersionTransition;
 import io.pulumi.aws.s3.outputs.BucketLifecycleRuleTransition;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

@@ -6,7 +6,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 import io.pulumi.aws.servicecatalog.inputs.ProvisionedProductProvisioningParameterGetArgs;
 import io.pulumi.aws.servicecatalog.inputs.ProvisionedProductStackSetProvisioningPreferencesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="acceptLanguage")
-    private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Input<String> acceptLanguage;
 
     public Input<String> getAcceptLanguage() {
         return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
@@ -35,7 +35,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -46,7 +46,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="cloudwatchDashboardNames")
-    private final @Nullable Input<List<String>> cloudwatchDashboardNames;
+      private final @Nullable Input<List<String>> cloudwatchDashboardNames;
 
     public Input<List<String>> getCloudwatchDashboardNames() {
         return this.cloudwatchDashboardNames == null ? Input.empty() : this.cloudwatchDashboardNames;
@@ -57,7 +57,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable Input<String> createdTime;
+      private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
@@ -68,7 +68,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ignoreErrors")
-    private final @Nullable Input<Boolean> ignoreErrors;
+      private final @Nullable Input<Boolean> ignoreErrors;
 
     public Input<Boolean> getIgnoreErrors() {
         return this.ignoreErrors == null ? Input.empty() : this.ignoreErrors;
@@ -79,7 +79,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="lastProvisioningRecordId")
-    private final @Nullable Input<String> lastProvisioningRecordId;
+      private final @Nullable Input<String> lastProvisioningRecordId;
 
     public Input<String> getLastProvisioningRecordId() {
         return this.lastProvisioningRecordId == null ? Input.empty() : this.lastProvisioningRecordId;
@@ -90,7 +90,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="lastRecordId")
-    private final @Nullable Input<String> lastRecordId;
+      private final @Nullable Input<String> lastRecordId;
 
     public Input<String> getLastRecordId() {
         return this.lastRecordId == null ? Input.empty() : this.lastRecordId;
@@ -101,7 +101,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="lastSuccessfulProvisioningRecordId")
-    private final @Nullable Input<String> lastSuccessfulProvisioningRecordId;
+      private final @Nullable Input<String> lastSuccessfulProvisioningRecordId;
 
     public Input<String> getLastSuccessfulProvisioningRecordId() {
         return this.lastSuccessfulProvisioningRecordId == null ? Input.empty() : this.lastSuccessfulProvisioningRecordId;
@@ -112,7 +112,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="launchRoleArn")
-    private final @Nullable Input<String> launchRoleArn;
+      private final @Nullable Input<String> launchRoleArn;
 
     public Input<String> getLaunchRoleArn() {
         return this.launchRoleArn == null ? Input.empty() : this.launchRoleArn;
@@ -123,7 +123,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -134,7 +134,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="notificationArns")
-    private final @Nullable Input<List<String>> notificationArns;
+      private final @Nullable Input<List<String>> notificationArns;
 
     public Input<List<String>> getNotificationArns() {
         return this.notificationArns == null ? Input.empty() : this.notificationArns;
@@ -145,7 +145,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="pathId")
-    private final @Nullable Input<String> pathId;
+      private final @Nullable Input<String> pathId;
 
     public Input<String> getPathId() {
         return this.pathId == null ? Input.empty() : this.pathId;
@@ -156,7 +156,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="pathName")
-    private final @Nullable Input<String> pathName;
+      private final @Nullable Input<String> pathName;
 
     public Input<String> getPathName() {
         return this.pathName == null ? Input.empty() : this.pathName;
@@ -167,7 +167,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="productId")
-    private final @Nullable Input<String> productId;
+      private final @Nullable Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId == null ? Input.empty() : this.productId;
@@ -178,7 +178,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="productName")
-    private final @Nullable Input<String> productName;
+      private final @Nullable Input<String> productName;
 
     public Input<String> getProductName() {
         return this.productName == null ? Input.empty() : this.productName;
@@ -189,7 +189,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="provisioningArtifactId")
-    private final @Nullable Input<String> provisioningArtifactId;
+      private final @Nullable Input<String> provisioningArtifactId;
 
     public Input<String> getProvisioningArtifactId() {
         return this.provisioningArtifactId == null ? Input.empty() : this.provisioningArtifactId;
@@ -200,7 +200,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="provisioningArtifactName")
-    private final @Nullable Input<String> provisioningArtifactName;
+      private final @Nullable Input<String> provisioningArtifactName;
 
     public Input<String> getProvisioningArtifactName() {
         return this.provisioningArtifactName == null ? Input.empty() : this.provisioningArtifactName;
@@ -211,7 +211,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="provisioningParameters")
-    private final @Nullable Input<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters;
+      private final @Nullable Input<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters;
 
     public Input<List<ProvisionedProductProvisioningParameterGetArgs>> getProvisioningParameters() {
         return this.provisioningParameters == null ? Input.empty() : this.provisioningParameters;
@@ -222,7 +222,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="retainPhysicalResources")
-    private final @Nullable Input<Boolean> retainPhysicalResources;
+      private final @Nullable Input<Boolean> retainPhysicalResources;
 
     public Input<Boolean> getRetainPhysicalResources() {
         return this.retainPhysicalResources == null ? Input.empty() : this.retainPhysicalResources;
@@ -233,7 +233,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="stackSetProvisioningPreferences")
-    private final @Nullable Input<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences;
+      private final @Nullable Input<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences;
 
     public Input<ProvisionedProductStackSetProvisioningPreferencesGetArgs> getStackSetProvisioningPreferences() {
         return this.stackSetProvisioningPreferences == null ? Input.empty() : this.stackSetProvisioningPreferences;
@@ -244,7 +244,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -255,7 +255,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="statusMessage")
-    private final @Nullable Input<String> statusMessage;
+      private final @Nullable Input<String> statusMessage;
 
     public Input<String> getStatusMessage() {
         return this.statusMessage == null ? Input.empty() : this.statusMessage;
@@ -266,7 +266,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -277,7 +277,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -288,7 +288,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

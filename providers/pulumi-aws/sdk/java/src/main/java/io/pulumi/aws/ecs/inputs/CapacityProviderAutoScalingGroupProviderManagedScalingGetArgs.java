@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
      * 
      */
     @InputImport(name="instanceWarmupPeriod")
-    private final @Nullable Input<Integer> instanceWarmupPeriod;
+      private final @Nullable Input<Integer> instanceWarmupPeriod;
 
     public Input<Integer> getInstanceWarmupPeriod() {
         return this.instanceWarmupPeriod == null ? Input.empty() : this.instanceWarmupPeriod;
@@ -31,7 +31,7 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
      * 
      */
     @InputImport(name="maximumScalingStepSize")
-    private final @Nullable Input<Integer> maximumScalingStepSize;
+      private final @Nullable Input<Integer> maximumScalingStepSize;
 
     public Input<Integer> getMaximumScalingStepSize() {
         return this.maximumScalingStepSize == null ? Input.empty() : this.maximumScalingStepSize;
@@ -42,7 +42,7 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
      * 
      */
     @InputImport(name="minimumScalingStepSize")
-    private final @Nullable Input<Integer> minimumScalingStepSize;
+      private final @Nullable Input<Integer> minimumScalingStepSize;
 
     public Input<Integer> getMinimumScalingStepSize() {
         return this.minimumScalingStepSize == null ? Input.empty() : this.minimumScalingStepSize;
@@ -53,7 +53,7 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -64,7 +64,7 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs
      * 
      */
     @InputImport(name="targetCapacity")
-    private final @Nullable Input<Integer> targetCapacity;
+      private final @Nullable Input<Integer> targetCapacity;
 
     public Input<Integer> getTargetCapacity() {
         return this.targetCapacity == null ? Input.empty() : this.targetCapacity;

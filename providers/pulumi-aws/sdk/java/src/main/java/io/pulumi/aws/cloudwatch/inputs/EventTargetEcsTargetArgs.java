@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 import io.pulumi.aws.cloudwatch.inputs.EventTargetEcsTargetNetworkConfigurationArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventTargetEcsTargetPlacementConstraintArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enableEcsManagedTags")
-    private final @Nullable Input<Boolean> enableEcsManagedTags;
+      private final @Nullable Input<Boolean> enableEcsManagedTags;
 
     public Input<Boolean> getEnableEcsManagedTags() {
         return this.enableEcsManagedTags == null ? Input.empty() : this.enableEcsManagedTags;
@@ -36,7 +36,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enableExecuteCommand")
-    private final @Nullable Input<Boolean> enableExecuteCommand;
+      private final @Nullable Input<Boolean> enableExecuteCommand;
 
     public Input<Boolean> getEnableExecuteCommand() {
         return this.enableExecuteCommand == null ? Input.empty() : this.enableExecuteCommand;
@@ -47,7 +47,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="group")
-    private final @Nullable Input<String> group;
+      private final @Nullable Input<String> group;
 
     public Input<String> getGroup() {
         return this.group == null ? Input.empty() : this.group;
@@ -58,7 +58,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="launchType")
-    private final @Nullable Input<String> launchType;
+      private final @Nullable Input<String> launchType;
 
     public Input<String> getLaunchType() {
         return this.launchType == null ? Input.empty() : this.launchType;
@@ -69,7 +69,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkConfiguration")
-    private final @Nullable Input<EventTargetEcsTargetNetworkConfigurationArgs> networkConfiguration;
+      private final @Nullable Input<EventTargetEcsTargetNetworkConfigurationArgs> networkConfiguration;
 
     public Input<EventTargetEcsTargetNetworkConfigurationArgs> getNetworkConfiguration() {
         return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
@@ -80,7 +80,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="placementConstraints")
-    private final @Nullable Input<List<EventTargetEcsTargetPlacementConstraintArgs>> placementConstraints;
+      private final @Nullable Input<List<EventTargetEcsTargetPlacementConstraintArgs>> placementConstraints;
 
     public Input<List<EventTargetEcsTargetPlacementConstraintArgs>> getPlacementConstraints() {
         return this.placementConstraints == null ? Input.empty() : this.placementConstraints;
@@ -91,7 +91,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="platformVersion")
-    private final @Nullable Input<String> platformVersion;
+      private final @Nullable Input<String> platformVersion;
 
     public Input<String> getPlatformVersion() {
         return this.platformVersion == null ? Input.empty() : this.platformVersion;
@@ -102,7 +102,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="propagateTags")
-    private final @Nullable Input<String> propagateTags;
+      private final @Nullable Input<String> propagateTags;
 
     public Input<String> getPropagateTags() {
         return this.propagateTags == null ? Input.empty() : this.propagateTags;
@@ -113,7 +113,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -124,7 +124,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="taskCount")
-    private final @Nullable Input<Integer> taskCount;
+      private final @Nullable Input<Integer> taskCount;
 
     public Input<Integer> getTaskCount() {
         return this.taskCount == null ? Input.empty() : this.taskCount;
@@ -135,7 +135,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="taskDefinitionArn", required=true)
-    private final Input<String> taskDefinitionArn;
+      private final Input<String> taskDefinitionArn;
 
     public Input<String> getTaskDefinitionArn() {
         return this.taskDefinitionArn;

@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerConnectionPoolHttp2Ge
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerConnectionPoolHttpGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerConnectionPoolTcpGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends io.pulum
      * 
      */
     @InputImport(name="grpc")
-    private final @Nullable Input<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs> grpc;
+      private final @Nullable Input<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs> grpc;
 
     public Input<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs> getGrpc() {
         return this.grpc == null ? Input.empty() : this.grpc;
@@ -33,7 +33,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends io.pulum
      * 
      */
     @InputImport(name="http")
-    private final @Nullable Input<VirtualNodeSpecListenerConnectionPoolHttpGetArgs> http;
+      private final @Nullable Input<VirtualNodeSpecListenerConnectionPoolHttpGetArgs> http;
 
     public Input<VirtualNodeSpecListenerConnectionPoolHttpGetArgs> getHttp() {
         return this.http == null ? Input.empty() : this.http;
@@ -44,7 +44,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends io.pulum
      * 
      */
     @InputImport(name="http2")
-    private final @Nullable Input<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs> http2;
+      private final @Nullable Input<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs> http2;
 
     public Input<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs> getHttp2() {
         return this.http2 == null ? Input.empty() : this.http2;
@@ -55,7 +55,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends io.pulum
      * 
      */
     @InputImport(name="tcp")
-    private final @Nullable Input<VirtualNodeSpecListenerConnectionPoolTcpGetArgs> tcp;
+      private final @Nullable Input<VirtualNodeSpecListenerConnectionPoolTcpGetArgs> tcp;
 
     public Input<VirtualNodeSpecListenerConnectionPoolTcpGetArgs> getTcp() {
         return this.tcp == null ? Input.empty() : this.tcp;

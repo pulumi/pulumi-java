@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressFamily")
-    private final @Nullable Input<String> addressFamily;
+      private final @Nullable Input<String> addressFamily;
 
     public Input<String> getAddressFamily() {
         return this.addressFamily == null ? Input.empty() : this.addressFamily;
@@ -33,7 +33,7 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationDefaultNetmaskLength")
-    private final @Nullable Input<Integer> allocationDefaultNetmaskLength;
+      private final @Nullable Input<Integer> allocationDefaultNetmaskLength;
 
     public Input<Integer> getAllocationDefaultNetmaskLength() {
         return this.allocationDefaultNetmaskLength == null ? Input.empty() : this.allocationDefaultNetmaskLength;
@@ -44,7 +44,7 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationMaxNetmaskLength")
-    private final @Nullable Input<Integer> allocationMaxNetmaskLength;
+      private final @Nullable Input<Integer> allocationMaxNetmaskLength;
 
     public Input<Integer> getAllocationMaxNetmaskLength() {
         return this.allocationMaxNetmaskLength == null ? Input.empty() : this.allocationMaxNetmaskLength;
@@ -55,7 +55,7 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationMinNetmaskLength")
-    private final @Nullable Input<Integer> allocationMinNetmaskLength;
+      private final @Nullable Input<Integer> allocationMinNetmaskLength;
 
     public Input<Integer> getAllocationMinNetmaskLength() {
         return this.allocationMinNetmaskLength == null ? Input.empty() : this.allocationMinNetmaskLength;
@@ -66,7 +66,7 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocationResourceTags")
-    private final @Nullable Input<Map<String,String>> allocationResourceTags;
+      private final @Nullable Input<Map<String,String>> allocationResourceTags;
 
     public Input<Map<String,String>> getAllocationResourceTags() {
         return this.allocationResourceTags == null ? Input.empty() : this.allocationResourceTags;
@@ -77,7 +77,7 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -89,7 +89,7 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoImport")
-    private final @Nullable Input<Boolean> autoImport;
+      private final @Nullable Input<Boolean> autoImport;
 
     public Input<Boolean> getAutoImport() {
         return this.autoImport == null ? Input.empty() : this.autoImport;
@@ -100,7 +100,7 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsService")
-    private final @Nullable Input<String> awsService;
+      private final @Nullable Input<String> awsService;
 
     public Input<String> getAwsService() {
         return this.awsService == null ? Input.empty() : this.awsService;
@@ -111,7 +111,7 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -122,14 +122,14 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipamScopeId")
-    private final @Nullable Input<String> ipamScopeId;
+      private final @Nullable Input<String> ipamScopeId;
 
     public Input<String> getIpamScopeId() {
         return this.ipamScopeId == null ? Input.empty() : this.ipamScopeId;
     }
 
     @InputImport(name="ipamScopeType")
-    private final @Nullable Input<String> ipamScopeType;
+      private final @Nullable Input<String> ipamScopeType;
 
     public Input<String> getIpamScopeType() {
         return this.ipamScopeType == null ? Input.empty() : this.ipamScopeType;
@@ -140,14 +140,14 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locale")
-    private final @Nullable Input<String> locale;
+      private final @Nullable Input<String> locale;
 
     public Input<String> getLocale() {
         return this.locale == null ? Input.empty() : this.locale;
     }
 
     @InputImport(name="poolDepth")
-    private final @Nullable Input<Integer> poolDepth;
+      private final @Nullable Input<Integer> poolDepth;
 
     public Input<Integer> getPoolDepth() {
         return this.poolDepth == null ? Input.empty() : this.poolDepth;
@@ -158,7 +158,7 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publiclyAdvertisable")
-    private final @Nullable Input<Boolean> publiclyAdvertisable;
+      private final @Nullable Input<Boolean> publiclyAdvertisable;
 
     public Input<Boolean> getPubliclyAdvertisable() {
         return this.publiclyAdvertisable == null ? Input.empty() : this.publiclyAdvertisable;
@@ -169,7 +169,7 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceIpamPoolId")
-    private final @Nullable Input<String> sourceIpamPoolId;
+      private final @Nullable Input<String> sourceIpamPoolId;
 
     public Input<String> getSourceIpamPoolId() {
         return this.sourceIpamPoolId == null ? Input.empty() : this.sourceIpamPoolId;
@@ -180,7 +180,7 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -191,7 +191,7 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -202,7 +202,7 @@ public final class VpcIpamPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

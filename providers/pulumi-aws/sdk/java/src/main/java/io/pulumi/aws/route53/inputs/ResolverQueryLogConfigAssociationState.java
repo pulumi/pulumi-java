@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ResolverQueryLogConfigAssociationState extends io.pulumi.reso
      * 
      */
     @InputImport(name="resolverQueryLogConfigId")
-    private final @Nullable Input<String> resolverQueryLogConfigId;
+      private final @Nullable Input<String> resolverQueryLogConfigId;
 
     public Input<String> getResolverQueryLogConfigId() {
         return this.resolverQueryLogConfigId == null ? Input.empty() : this.resolverQueryLogConfigId;
@@ -30,7 +30,7 @@ public final class ResolverQueryLogConfigAssociationState extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;

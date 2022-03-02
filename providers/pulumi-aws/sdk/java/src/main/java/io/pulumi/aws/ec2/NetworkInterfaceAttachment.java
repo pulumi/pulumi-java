@@ -8,8 +8,8 @@ import io.pulumi.aws.ec2.NetworkInterfaceAttachmentArgs;
 import io.pulumi.aws.ec2.inputs.NetworkInterfaceAttachmentState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -93,6 +93,21 @@ public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResour
         return this.status;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public NetworkInterfaceAttachment(String name) {
+        this(name, NetworkInterfaceAttachmentArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public NetworkInterfaceAttachment(String name, NetworkInterfaceAttachmentArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

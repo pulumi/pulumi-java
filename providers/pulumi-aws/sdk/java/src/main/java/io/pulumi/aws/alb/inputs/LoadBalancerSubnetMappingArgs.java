@@ -4,7 +4,7 @@
 package io.pulumi.aws.alb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class LoadBalancerSubnetMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="allocationId")
-    private final @Nullable Input<String> allocationId;
+      private final @Nullable Input<String> allocationId;
 
     public Input<String> getAllocationId() {
         return this.allocationId == null ? Input.empty() : this.allocationId;
@@ -30,14 +30,14 @@ public final class LoadBalancerSubnetMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ipv6Address")
-    private final @Nullable Input<String> ipv6Address;
+      private final @Nullable Input<String> ipv6Address;
 
     public Input<String> getIpv6Address() {
         return this.ipv6Address == null ? Input.empty() : this.ipv6Address;
     }
 
     @InputImport(name="outpostId")
-    private final @Nullable Input<String> outpostId;
+      private final @Nullable Input<String> outpostId;
 
     public Input<String> getOutpostId() {
         return this.outpostId == null ? Input.empty() : this.outpostId;
@@ -48,7 +48,7 @@ public final class LoadBalancerSubnetMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateIpv4Address")
-    private final @Nullable Input<String> privateIpv4Address;
+      private final @Nullable Input<String> privateIpv4Address;
 
     public Input<String> getPrivateIpv4Address() {
         return this.privateIpv4Address == null ? Input.empty() : this.privateIpv4Address;
@@ -59,7 +59,7 @@ public final class LoadBalancerSubnetMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;

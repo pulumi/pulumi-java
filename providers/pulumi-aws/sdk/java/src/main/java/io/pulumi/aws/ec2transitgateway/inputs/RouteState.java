@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blackhole")
-    private final @Nullable Input<Boolean> blackhole;
+      private final @Nullable Input<Boolean> blackhole;
 
     public Input<Boolean> getBlackhole() {
         return this.blackhole == null ? Input.empty() : this.blackhole;
@@ -31,7 +31,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationCidrBlock")
-    private final @Nullable Input<String> destinationCidrBlock;
+      private final @Nullable Input<String> destinationCidrBlock;
 
     public Input<String> getDestinationCidrBlock() {
         return this.destinationCidrBlock == null ? Input.empty() : this.destinationCidrBlock;
@@ -42,7 +42,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitGatewayAttachmentId")
-    private final @Nullable Input<String> transitGatewayAttachmentId;
+      private final @Nullable Input<String> transitGatewayAttachmentId;
 
     public Input<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId == null ? Input.empty() : this.transitGatewayAttachmentId;
@@ -53,7 +53,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitGatewayRouteTableId")
-    private final @Nullable Input<String> transitGatewayRouteTableId;
+      private final @Nullable Input<String> transitGatewayRouteTableId;
 
     public Input<String> getTransitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId == null ? Input.empty() : this.transitGatewayRouteTableId;

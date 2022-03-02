@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteMatchHeaderArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Input<List<RouteSpecHttpRouteMatchHeaderArgs>> headers;
+      private final @Nullable Input<List<RouteSpecHttpRouteMatchHeaderArgs>> headers;
 
     public Input<List<RouteSpecHttpRouteMatchHeaderArgs>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -32,7 +32,7 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<String> method;
+      private final @Nullable Input<String> method;
 
     public Input<String> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -44,7 +44,7 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="prefix", required=true)
-    private final Input<String> prefix;
+      private final Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix;
@@ -55,7 +55,7 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="scheme")
-    private final @Nullable Input<String> scheme;
+      private final @Nullable Input<String> scheme;
 
     public Input<String> getScheme() {
         return this.scheme == null ? Input.empty() : this.scheme;

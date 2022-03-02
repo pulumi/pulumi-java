@@ -5,7 +5,7 @@ package io.pulumi.aws.datasync;
 
 import io.pulumi.aws.datasync.inputs.LocationSmbMountOptionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentArns", required=true)
-    private final Input<List<String>> agentArns;
+      private final Input<List<String>> agentArns;
 
     public Input<List<String>> getAgentArns() {
         return this.agentArns;
@@ -33,7 +33,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -44,7 +44,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountOptions")
-    private final @Nullable Input<LocationSmbMountOptionsArgs> mountOptions;
+      private final @Nullable Input<LocationSmbMountOptionsArgs> mountOptions;
 
     public Input<LocationSmbMountOptionsArgs> getMountOptions() {
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
@@ -55,7 +55,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -66,7 +66,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverHostname", required=true)
-    private final Input<String> serverHostname;
+      private final Input<String> serverHostname;
 
     public Input<String> getServerHostname() {
         return this.serverHostname;
@@ -77,7 +77,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdirectory", required=true)
-    private final Input<String> subdirectory;
+      private final Input<String> subdirectory;
 
     public Input<String> getSubdirectory() {
         return this.subdirectory;
@@ -88,7 +88,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -99,7 +99,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="user", required=true)
-    private final Input<String> user;
+      private final Input<String> user;
 
     public Input<String> getUser() {
         return this.user;

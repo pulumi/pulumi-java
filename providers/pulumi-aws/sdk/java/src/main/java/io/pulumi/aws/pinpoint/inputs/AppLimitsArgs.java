@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="daily")
-    private final @Nullable Input<Integer> daily;
+      private final @Nullable Input<Integer> daily;
 
     public Input<Integer> getDaily() {
         return this.daily == null ? Input.empty() : this.daily;
@@ -30,7 +30,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumDuration")
-    private final @Nullable Input<Integer> maximumDuration;
+      private final @Nullable Input<Integer> maximumDuration;
 
     public Input<Integer> getMaximumDuration() {
         return this.maximumDuration == null ? Input.empty() : this.maximumDuration;
@@ -41,7 +41,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messagesPerSecond")
-    private final @Nullable Input<Integer> messagesPerSecond;
+      private final @Nullable Input<Integer> messagesPerSecond;
 
     public Input<Integer> getMessagesPerSecond() {
         return this.messagesPerSecond == null ? Input.empty() : this.messagesPerSecond;
@@ -52,7 +52,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="total")
-    private final @Nullable Input<Integer> total;
+      private final @Nullable Input<Integer> total;
 
     public Input<Integer> getTotal() {
         return this.total == null ? Input.empty() : this.total;

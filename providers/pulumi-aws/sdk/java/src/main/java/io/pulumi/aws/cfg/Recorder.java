@@ -9,8 +9,8 @@ import io.pulumi.aws.cfg.inputs.RecorderState;
 import io.pulumi.aws.cfg.outputs.RecorderRecordingGroup;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -75,6 +75,21 @@ public class Recorder extends io.pulumi.resources.CustomResource {
         return this.roleArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Recorder(String name) {
+        this(name, RecorderArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Recorder(String name, RecorderArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -6,7 +6,7 @@ package io.pulumi.aws.ssm;
 import io.pulumi.aws.ssm.enums.ParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedPattern")
-    private final @Nullable Input<String> allowedPattern;
+      private final @Nullable Input<String> allowedPattern;
 
     public Input<String> getAllowedPattern() {
         return this.allowedPattern == null ? Input.empty() : this.allowedPattern;
@@ -34,7 +34,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -46,7 +46,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataType")
-    private final @Nullable Input<String> dataType;
+      private final @Nullable Input<String> dataType;
 
     public Input<String> getDataType() {
         return this.dataType == null ? Input.empty() : this.dataType;
@@ -57,7 +57,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -68,7 +68,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+      private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
@@ -79,7 +79,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -90,7 +90,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overwrite")
-    private final @Nullable Input<Boolean> overwrite;
+      private final @Nullable Input<Boolean> overwrite;
 
     public Input<Boolean> getOverwrite() {
         return this.overwrite == null ? Input.empty() : this.overwrite;
@@ -101,7 +101,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -112,7 +112,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<String> tier;
+      private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -123,7 +123,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ParameterType>> type;
+      private final Input<Either<String,ParameterType>> type;
 
     public Input<Either<String,ParameterType>> getType() {
         return this.type;
@@ -134,7 +134,7 @@ public final class ParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

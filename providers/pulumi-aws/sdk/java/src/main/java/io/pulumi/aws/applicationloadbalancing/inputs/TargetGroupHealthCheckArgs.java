@@ -4,7 +4,7 @@
 package io.pulumi.aws.applicationloadbalancing.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -32,7 +32,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="healthyThreshold")
-    private final @Nullable Input<Integer> healthyThreshold;
+      private final @Nullable Input<Integer> healthyThreshold;
 
     public Input<Integer> getHealthyThreshold() {
         return this.healthyThreshold == null ? Input.empty() : this.healthyThreshold;
@@ -43,7 +43,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<Integer> interval;
+      private final @Nullable Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -54,7 +54,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="matcher")
-    private final @Nullable Input<String> matcher;
+      private final @Nullable Input<String> matcher;
 
     public Input<String> getMatcher() {
         return this.matcher == null ? Input.empty() : this.matcher;
@@ -65,7 +65,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -76,7 +76,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<String> port;
+      private final @Nullable Input<String> port;
 
     public Input<String> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -87,7 +87,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -98,7 +98,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<Integer> timeout;
+      private final @Nullable Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -109,7 +109,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="unhealthyThreshold")
-    private final @Nullable Input<Integer> unhealthyThreshold;
+      private final @Nullable Input<Integer> unhealthyThreshold;
 
     public Input<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold == null ? Input.empty() : this.unhealthyThreshold;

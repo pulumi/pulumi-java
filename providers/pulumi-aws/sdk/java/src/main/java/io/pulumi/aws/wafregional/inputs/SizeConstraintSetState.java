@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.SizeConstraintSetSizeConstraintGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class SizeConstraintSetState extends io.pulumi.resources.ResourceAr
     public static final SizeConstraintSetState Empty = new SizeConstraintSetState();
 
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -28,7 +28,7 @@ public final class SizeConstraintSetState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -39,7 +39,7 @@ public final class SizeConstraintSetState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sizeConstraints")
-    private final @Nullable Input<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints;
+      private final @Nullable Input<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints;
 
     public Input<List<SizeConstraintSetSizeConstraintGetArgs>> getSizeConstraints() {
         return this.sizeConstraints == null ? Input.empty() : this.sizeConstraints;

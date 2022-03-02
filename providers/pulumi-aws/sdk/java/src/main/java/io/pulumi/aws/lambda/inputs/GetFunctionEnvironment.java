@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +14,7 @@ public final class GetFunctionEnvironment extends io.pulumi.resources.InvokeArgs
     public static final GetFunctionEnvironment Empty = new GetFunctionEnvironment();
 
     @InputImport(name="variables", required=true)
-    private final Map<String,String> variables;
+      private final Map<String,String> variables;
 
     public Map<String,String> getVariables() {
         return this.variables;

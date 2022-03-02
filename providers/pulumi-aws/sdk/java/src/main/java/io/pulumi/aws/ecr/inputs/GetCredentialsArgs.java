@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetCredentialsArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCredentialsArgs Empty = new GetCredentialsArgs();
 
     @InputImport(name="registryId", required=true)
-    private final String registryId;
+      private final String registryId;
 
     public String getRegistryId() {
         return this.registryId;

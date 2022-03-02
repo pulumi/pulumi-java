@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetClusterIdentityOidc extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="issuer", required=true)
-    private final String issuer;
+      private final String issuer;
 
     public String getIssuer() {
         return this.issuer;

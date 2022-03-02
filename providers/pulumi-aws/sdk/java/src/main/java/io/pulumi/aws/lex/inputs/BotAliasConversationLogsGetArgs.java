@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.BotAliasConversationLogsLogSettingGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BotAliasConversationLogsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="iamRoleArn", required=true)
-    private final Input<String> iamRoleArn;
+      private final Input<String> iamRoleArn;
 
     public Input<String> getIamRoleArn() {
         return this.iamRoleArn;
@@ -32,7 +32,7 @@ public final class BotAliasConversationLogsGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="logSettings")
-    private final @Nullable Input<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings;
+      private final @Nullable Input<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings;
 
     public Input<List<BotAliasConversationLogsLogSettingGetArgs>> getLogSettings() {
         return this.logSettings == null ? Input.empty() : this.logSettings;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticache.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
     public static final UserGroupState Empty = new UserGroupState();
 
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -28,21 +28,21 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engine")
-    private final @Nullable Input<String> engine;
+      private final @Nullable Input<String> engine;
 
     public Input<String> getEngine() {
         return this.engine == null ? Input.empty() : this.engine;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -53,7 +53,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userGroupId")
-    private final @Nullable Input<String> userGroupId;
+      private final @Nullable Input<String> userGroupId;
 
     public Input<String> getUserGroupId() {
         return this.userGroupId == null ? Input.empty() : this.userGroupId;
@@ -64,7 +64,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userIds")
-    private final @Nullable Input<List<String>> userIds;
+      private final @Nullable Input<List<String>> userIds;
 
     public Input<List<String>> getUserIds() {
         return this.userIds == null ? Input.empty() : this.userIds;

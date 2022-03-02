@@ -5,7 +5,7 @@ package io.pulumi.aws.codebuild;
 
 import io.pulumi.aws.codebuild.inputs.WebhookFilterGroupArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branchFilter")
-    private final @Nullable Input<String> branchFilter;
+      private final @Nullable Input<String> branchFilter;
 
     public Input<String> getBranchFilter() {
         return this.branchFilter == null ? Input.empty() : this.branchFilter;
@@ -32,7 +32,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildType")
-    private final @Nullable Input<String> buildType;
+      private final @Nullable Input<String> buildType;
 
     public Input<String> getBuildType() {
         return this.buildType == null ? Input.empty() : this.buildType;
@@ -43,7 +43,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterGroups")
-    private final @Nullable Input<List<WebhookFilterGroupArgs>> filterGroups;
+      private final @Nullable Input<List<WebhookFilterGroupArgs>> filterGroups;
 
     public Input<List<WebhookFilterGroupArgs>> getFilterGroups() {
         return this.filterGroups == null ? Input.empty() : this.filterGroups;
@@ -54,7 +54,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName", required=true)
-    private final Input<String> projectName;
+      private final Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName;

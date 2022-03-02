@@ -16,7 +16,7 @@ import io.pulumi.aws.cognito.inputs.UserPoolUserPoolAddOnsArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolUsernameConfigurationArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolVerificationMessageTemplateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -33,7 +33,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountRecoverySetting")
-    private final @Nullable Input<UserPoolAccountRecoverySettingArgs> accountRecoverySetting;
+      private final @Nullable Input<UserPoolAccountRecoverySettingArgs> accountRecoverySetting;
 
     public Input<UserPoolAccountRecoverySettingArgs> getAccountRecoverySetting() {
         return this.accountRecoverySetting == null ? Input.empty() : this.accountRecoverySetting;
@@ -44,7 +44,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminCreateUserConfig")
-    private final @Nullable Input<UserPoolAdminCreateUserConfigArgs> adminCreateUserConfig;
+      private final @Nullable Input<UserPoolAdminCreateUserConfigArgs> adminCreateUserConfig;
 
     public Input<UserPoolAdminCreateUserConfigArgs> getAdminCreateUserConfig() {
         return this.adminCreateUserConfig == null ? Input.empty() : this.adminCreateUserConfig;
@@ -55,7 +55,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aliasAttributes")
-    private final @Nullable Input<List<String>> aliasAttributes;
+      private final @Nullable Input<List<String>> aliasAttributes;
 
     public Input<List<String>> getAliasAttributes() {
         return this.aliasAttributes == null ? Input.empty() : this.aliasAttributes;
@@ -66,7 +66,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoVerifiedAttributes")
-    private final @Nullable Input<List<String>> autoVerifiedAttributes;
+      private final @Nullable Input<List<String>> autoVerifiedAttributes;
 
     public Input<List<String>> getAutoVerifiedAttributes() {
         return this.autoVerifiedAttributes == null ? Input.empty() : this.autoVerifiedAttributes;
@@ -77,7 +77,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceConfiguration")
-    private final @Nullable Input<UserPoolDeviceConfigurationArgs> deviceConfiguration;
+      private final @Nullable Input<UserPoolDeviceConfigurationArgs> deviceConfiguration;
 
     public Input<UserPoolDeviceConfigurationArgs> getDeviceConfiguration() {
         return this.deviceConfiguration == null ? Input.empty() : this.deviceConfiguration;
@@ -88,7 +88,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailConfiguration")
-    private final @Nullable Input<UserPoolEmailConfigurationArgs> emailConfiguration;
+      private final @Nullable Input<UserPoolEmailConfigurationArgs> emailConfiguration;
 
     public Input<UserPoolEmailConfigurationArgs> getEmailConfiguration() {
         return this.emailConfiguration == null ? Input.empty() : this.emailConfiguration;
@@ -99,7 +99,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailVerificationMessage")
-    private final @Nullable Input<String> emailVerificationMessage;
+      private final @Nullable Input<String> emailVerificationMessage;
 
     public Input<String> getEmailVerificationMessage() {
         return this.emailVerificationMessage == null ? Input.empty() : this.emailVerificationMessage;
@@ -110,7 +110,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailVerificationSubject")
-    private final @Nullable Input<String> emailVerificationSubject;
+      private final @Nullable Input<String> emailVerificationSubject;
 
     public Input<String> getEmailVerificationSubject() {
         return this.emailVerificationSubject == null ? Input.empty() : this.emailVerificationSubject;
@@ -121,7 +121,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lambdaConfig")
-    private final @Nullable Input<UserPoolLambdaConfigArgs> lambdaConfig;
+      private final @Nullable Input<UserPoolLambdaConfigArgs> lambdaConfig;
 
     public Input<UserPoolLambdaConfigArgs> getLambdaConfig() {
         return this.lambdaConfig == null ? Input.empty() : this.lambdaConfig;
@@ -132,7 +132,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mfaConfiguration")
-    private final @Nullable Input<String> mfaConfiguration;
+      private final @Nullable Input<String> mfaConfiguration;
 
     public Input<String> getMfaConfiguration() {
         return this.mfaConfiguration == null ? Input.empty() : this.mfaConfiguration;
@@ -143,7 +143,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -154,7 +154,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="passwordPolicy")
-    private final @Nullable Input<UserPoolPasswordPolicyArgs> passwordPolicy;
+      private final @Nullable Input<UserPoolPasswordPolicyArgs> passwordPolicy;
 
     public Input<UserPoolPasswordPolicyArgs> getPasswordPolicy() {
         return this.passwordPolicy == null ? Input.empty() : this.passwordPolicy;
@@ -165,7 +165,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemas")
-    private final @Nullable Input<List<UserPoolSchemaArgs>> schemas;
+      private final @Nullable Input<List<UserPoolSchemaArgs>> schemas;
 
     public Input<List<UserPoolSchemaArgs>> getSchemas() {
         return this.schemas == null ? Input.empty() : this.schemas;
@@ -176,7 +176,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smsAuthenticationMessage")
-    private final @Nullable Input<String> smsAuthenticationMessage;
+      private final @Nullable Input<String> smsAuthenticationMessage;
 
     public Input<String> getSmsAuthenticationMessage() {
         return this.smsAuthenticationMessage == null ? Input.empty() : this.smsAuthenticationMessage;
@@ -187,7 +187,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smsConfiguration")
-    private final @Nullable Input<UserPoolSmsConfigurationArgs> smsConfiguration;
+      private final @Nullable Input<UserPoolSmsConfigurationArgs> smsConfiguration;
 
     public Input<UserPoolSmsConfigurationArgs> getSmsConfiguration() {
         return this.smsConfiguration == null ? Input.empty() : this.smsConfiguration;
@@ -198,7 +198,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smsVerificationMessage")
-    private final @Nullable Input<String> smsVerificationMessage;
+      private final @Nullable Input<String> smsVerificationMessage;
 
     public Input<String> getSmsVerificationMessage() {
         return this.smsVerificationMessage == null ? Input.empty() : this.smsVerificationMessage;
@@ -209,7 +209,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="softwareTokenMfaConfiguration")
-    private final @Nullable Input<UserPoolSoftwareTokenMfaConfigurationArgs> softwareTokenMfaConfiguration;
+      private final @Nullable Input<UserPoolSoftwareTokenMfaConfigurationArgs> softwareTokenMfaConfiguration;
 
     public Input<UserPoolSoftwareTokenMfaConfigurationArgs> getSoftwareTokenMfaConfiguration() {
         return this.softwareTokenMfaConfiguration == null ? Input.empty() : this.softwareTokenMfaConfiguration;
@@ -220,7 +220,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -231,7 +231,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userPoolAddOns")
-    private final @Nullable Input<UserPoolUserPoolAddOnsArgs> userPoolAddOns;
+      private final @Nullable Input<UserPoolUserPoolAddOnsArgs> userPoolAddOns;
 
     public Input<UserPoolUserPoolAddOnsArgs> getUserPoolAddOns() {
         return this.userPoolAddOns == null ? Input.empty() : this.userPoolAddOns;
@@ -242,7 +242,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usernameAttributes")
-    private final @Nullable Input<List<String>> usernameAttributes;
+      private final @Nullable Input<List<String>> usernameAttributes;
 
     public Input<List<String>> getUsernameAttributes() {
         return this.usernameAttributes == null ? Input.empty() : this.usernameAttributes;
@@ -253,7 +253,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usernameConfiguration")
-    private final @Nullable Input<UserPoolUsernameConfigurationArgs> usernameConfiguration;
+      private final @Nullable Input<UserPoolUsernameConfigurationArgs> usernameConfiguration;
 
     public Input<UserPoolUsernameConfigurationArgs> getUsernameConfiguration() {
         return this.usernameConfiguration == null ? Input.empty() : this.usernameConfiguration;
@@ -264,7 +264,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="verificationMessageTemplate")
-    private final @Nullable Input<UserPoolVerificationMessageTemplateArgs> verificationMessageTemplate;
+      private final @Nullable Input<UserPoolVerificationMessageTemplateArgs> verificationMessageTemplate;
 
     public Input<UserPoolVerificationMessageTemplateArgs> getVerificationMessageTemplate() {
         return this.verificationMessageTemplate == null ? Input.empty() : this.verificationMessageTemplate;

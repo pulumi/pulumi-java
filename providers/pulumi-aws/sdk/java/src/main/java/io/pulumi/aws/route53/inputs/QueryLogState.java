@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -30,7 +30,7 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchLogGroupArn")
-    private final @Nullable Input<String> cloudwatchLogGroupArn;
+      private final @Nullable Input<String> cloudwatchLogGroupArn;
 
     public Input<String> getCloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn == null ? Input.empty() : this.cloudwatchLogGroupArn;
@@ -41,7 +41,7 @@ public final class QueryLogState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneId")
-    private final @Nullable Input<String> zoneId;
+      private final @Nullable Input<String> zoneId;
 
     public Input<String> getZoneId() {
         return this.zoneId == null ? Input.empty() : this.zoneId;

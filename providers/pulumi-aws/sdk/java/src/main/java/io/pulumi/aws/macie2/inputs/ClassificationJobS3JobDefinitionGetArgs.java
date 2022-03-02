@@ -6,7 +6,7 @@ package io.pulumi.aws.macie2.inputs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionBucketDefinitionGetArgs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ClassificationJobS3JobDefinitionGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="bucketDefinitions")
-    private final @Nullable Input<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> bucketDefinitions;
+      private final @Nullable Input<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> bucketDefinitions;
 
     public Input<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> getBucketDefinitions() {
         return this.bucketDefinitions == null ? Input.empty() : this.bucketDefinitions;
@@ -32,7 +32,7 @@ public final class ClassificationJobS3JobDefinitionGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="scoping")
-    private final @Nullable Input<ClassificationJobS3JobDefinitionScopingGetArgs> scoping;
+      private final @Nullable Input<ClassificationJobS3JobDefinitionScopingGetArgs> scoping;
 
     public Input<ClassificationJobS3JobDefinitionScopingGetArgs> getScoping() {
         return this.scoping == null ? Input.empty() : this.scoping;

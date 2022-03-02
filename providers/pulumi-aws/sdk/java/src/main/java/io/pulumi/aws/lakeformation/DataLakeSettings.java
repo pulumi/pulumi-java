@@ -10,8 +10,8 @@ import io.pulumi.aws.lakeformation.outputs.DataLakeSettingsCreateDatabaseDefault
 import io.pulumi.aws.lakeformation.outputs.DataLakeSettingsCreateTableDefaultPermission;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -97,6 +97,21 @@ public class DataLakeSettings extends io.pulumi.resources.CustomResource {
         return this.trustedResourceOwners;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public DataLakeSettings(String name) {
+        this(name, DataLakeSettingsArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public DataLakeSettings(String name, @Nullable DataLakeSettingsArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

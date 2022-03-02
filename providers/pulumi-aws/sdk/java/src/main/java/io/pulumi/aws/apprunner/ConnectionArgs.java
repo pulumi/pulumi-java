@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionName", required=true)
-    private final Input<String> connectionName;
+      private final Input<String> connectionName;
 
     public Input<String> getConnectionName() {
         return this.connectionName;
@@ -31,7 +31,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerType", required=true)
-    private final Input<String> providerType;
+      private final Input<String> providerType;
 
     public Input<String> getProviderType() {
         return this.providerType;
@@ -42,7 +42,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

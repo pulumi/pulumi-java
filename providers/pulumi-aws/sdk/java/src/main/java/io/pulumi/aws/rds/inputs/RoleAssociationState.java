@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dbInstanceIdentifier")
-    private final @Nullable Input<String> dbInstanceIdentifier;
+      private final @Nullable Input<String> dbInstanceIdentifier;
 
     public Input<String> getDbInstanceIdentifier() {
         return this.dbInstanceIdentifier == null ? Input.empty() : this.dbInstanceIdentifier;
@@ -30,7 +30,7 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="featureName")
-    private final @Nullable Input<String> featureName;
+      private final @Nullable Input<String> featureName;
 
     public Input<String> getFeatureName() {
         return this.featureName == null ? Input.empty() : this.featureName;
@@ -41,7 +41,7 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NodeGroupRemoteAccessArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ec2SshKey")
-    private final @Nullable Input<String> ec2SshKey;
+      private final @Nullable Input<String> ec2SshKey;
 
     public Input<String> getEc2SshKey() {
         return this.ec2SshKey == null ? Input.empty() : this.ec2SshKey;
@@ -31,7 +31,7 @@ public final class NodeGroupRemoteAccessArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourceSecurityGroupIds")
-    private final @Nullable Input<List<String>> sourceSecurityGroupIds;
+      private final @Nullable Input<List<String>> sourceSecurityGroupIds;
 
     public Input<List<String>> getSourceSecurityGroupIds() {
         return this.sourceSecurityGroupIds == null ? Input.empty() : this.sourceSecurityGroupIds;

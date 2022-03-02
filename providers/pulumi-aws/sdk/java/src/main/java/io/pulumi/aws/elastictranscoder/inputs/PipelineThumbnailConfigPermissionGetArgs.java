@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PipelineThumbnailConfigPermissionGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="accesses")
-    private final @Nullable Input<List<String>> accesses;
+      private final @Nullable Input<List<String>> accesses;
 
     public Input<List<String>> getAccesses() {
         return this.accesses == null ? Input.empty() : this.accesses;
@@ -31,7 +31,7 @@ public final class PipelineThumbnailConfigPermissionGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="grantee")
-    private final @Nullable Input<String> grantee;
+      private final @Nullable Input<String> grantee;
 
     public Input<String> getGrantee() {
         return this.grantee == null ? Input.empty() : this.grantee;
@@ -42,7 +42,7 @@ public final class PipelineThumbnailConfigPermissionGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="granteeType")
-    private final @Nullable Input<String> granteeType;
+      private final @Nullable Input<String> granteeType;
 
     public Input<String> getGranteeType() {
         return this.granteeType == null ? Input.empty() : this.granteeType;

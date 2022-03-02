@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersBasicGetArgs
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersInvocationHttpParametersGetArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class EventConnectionAuthParametersGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="apiKey")
-    private final @Nullable Input<EventConnectionAuthParametersApiKeyGetArgs> apiKey;
+      private final @Nullable Input<EventConnectionAuthParametersApiKeyGetArgs> apiKey;
 
     public Input<EventConnectionAuthParametersApiKeyGetArgs> getApiKey() {
         return this.apiKey == null ? Input.empty() : this.apiKey;
@@ -33,7 +33,7 @@ public final class EventConnectionAuthParametersGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="basic")
-    private final @Nullable Input<EventConnectionAuthParametersBasicGetArgs> basic;
+      private final @Nullable Input<EventConnectionAuthParametersBasicGetArgs> basic;
 
     public Input<EventConnectionAuthParametersBasicGetArgs> getBasic() {
         return this.basic == null ? Input.empty() : this.basic;
@@ -44,7 +44,7 @@ public final class EventConnectionAuthParametersGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="invocationHttpParameters")
-    private final @Nullable Input<EventConnectionAuthParametersInvocationHttpParametersGetArgs> invocationHttpParameters;
+      private final @Nullable Input<EventConnectionAuthParametersInvocationHttpParametersGetArgs> invocationHttpParameters;
 
     public Input<EventConnectionAuthParametersInvocationHttpParametersGetArgs> getInvocationHttpParameters() {
         return this.invocationHttpParameters == null ? Input.empty() : this.invocationHttpParameters;
@@ -55,7 +55,7 @@ public final class EventConnectionAuthParametersGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="oauth")
-    private final @Nullable Input<EventConnectionAuthParametersOauthGetArgs> oauth;
+      private final @Nullable Input<EventConnectionAuthParametersOauthGetArgs> oauth;
 
     public Input<EventConnectionAuthParametersOauthGetArgs> getOauth() {
         return this.oauth == null ? Input.empty() : this.oauth;

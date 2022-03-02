@@ -4,7 +4,7 @@
 package io.pulumi.aws.lightsail;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,14 +20,14 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -39,7 +39,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pgpKey")
-    private final @Nullable Input<String> pgpKey;
+      private final @Nullable Input<String> pgpKey;
 
     public Input<String> getPgpKey() {
         return this.pgpKey == null ? Input.empty() : this.pgpKey;
@@ -51,7 +51,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-    private final @Nullable Input<String> publicKey;
+      private final @Nullable Input<String> publicKey;
 
     public Input<String> getPublicKey() {
         return this.publicKey == null ? Input.empty() : this.publicKey;

@@ -6,7 +6,7 @@ package io.pulumi.aws.sqs;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sqs.inputs.GetQueueArgs;
 import io.pulumi.aws.sqs.outputs.GetQueueResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

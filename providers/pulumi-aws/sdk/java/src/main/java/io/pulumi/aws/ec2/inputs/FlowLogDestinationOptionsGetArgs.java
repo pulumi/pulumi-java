@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FlowLogDestinationOptionsGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="fileFormat")
-    private final @Nullable Input<String> fileFormat;
+      private final @Nullable Input<String> fileFormat;
 
     public Input<String> getFileFormat() {
         return this.fileFormat == null ? Input.empty() : this.fileFormat;
@@ -31,7 +31,7 @@ public final class FlowLogDestinationOptionsGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="hiveCompatiblePartitions")
-    private final @Nullable Input<Boolean> hiveCompatiblePartitions;
+      private final @Nullable Input<Boolean> hiveCompatiblePartitions;
 
     public Input<Boolean> getHiveCompatiblePartitions() {
         return this.hiveCompatiblePartitions == null ? Input.empty() : this.hiveCompatiblePartitions;
@@ -42,7 +42,7 @@ public final class FlowLogDestinationOptionsGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="perHourPartition")
-    private final @Nullable Input<Boolean> perHourPartition;
+      private final @Nullable Input<Boolean> perHourPartition;
 
     public Input<Boolean> getPerHourPartition() {
         return this.perHourPartition == null ? Input.empty() : this.perHourPartition;

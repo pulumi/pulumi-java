@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="bucketArn", required=true)
-    private final Input<String> bucketArn;
+      private final Input<String> bucketArn;
 
     public Input<String> getBucketArn() {
         return this.bucketArn;
@@ -29,7 +29,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="fileKey", required=true)
-    private final Input<String> fileKey;
+      private final Input<String> fileKey;
 
     public Input<String> getFileKey() {
         return this.fileKey;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.chime.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class VoiceConnectorTerminationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="callingRegions")
-    private final @Nullable Input<List<String>> callingRegions;
+      private final @Nullable Input<List<String>> callingRegions;
 
     public Input<List<String>> getCallingRegions() {
         return this.callingRegions == null ? Input.empty() : this.callingRegions;
@@ -33,7 +33,7 @@ public final class VoiceConnectorTerminationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cidrAllowLists")
-    private final @Nullable Input<List<String>> cidrAllowLists;
+      private final @Nullable Input<List<String>> cidrAllowLists;
 
     public Input<List<String>> getCidrAllowLists() {
         return this.cidrAllowLists == null ? Input.empty() : this.cidrAllowLists;
@@ -44,7 +44,7 @@ public final class VoiceConnectorTerminationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cpsLimit")
-    private final @Nullable Input<Integer> cpsLimit;
+      private final @Nullable Input<Integer> cpsLimit;
 
     public Input<Integer> getCpsLimit() {
         return this.cpsLimit == null ? Input.empty() : this.cpsLimit;
@@ -55,7 +55,7 @@ public final class VoiceConnectorTerminationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="defaultPhoneNumber")
-    private final @Nullable Input<String> defaultPhoneNumber;
+      private final @Nullable Input<String> defaultPhoneNumber;
 
     public Input<String> getDefaultPhoneNumber() {
         return this.defaultPhoneNumber == null ? Input.empty() : this.defaultPhoneNumber;
@@ -66,7 +66,7 @@ public final class VoiceConnectorTerminationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -77,7 +77,7 @@ public final class VoiceConnectorTerminationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="voiceConnectorId")
-    private final @Nullable Input<String> voiceConnectorId;
+      private final @Nullable Input<String> voiceConnectorId;
 
     public Input<String> getVoiceConnectorId() {
         return this.voiceConnectorId == null ? Input.empty() : this.voiceConnectorId;

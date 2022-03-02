@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aspectRatio")
-    private final @Nullable Input<String> aspectRatio;
+      private final @Nullable Input<String> aspectRatio;
 
     public Input<String> getAspectRatio() {
         return this.aspectRatio == null ? Input.empty() : this.aspectRatio;
@@ -30,7 +30,7 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitRate")
-    private final @Nullable Input<String> bitRate;
+      private final @Nullable Input<String> bitRate;
 
     public Input<String> getBitRate() {
         return this.bitRate == null ? Input.empty() : this.bitRate;
@@ -41,7 +41,7 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="codec")
-    private final @Nullable Input<String> codec;
+      private final @Nullable Input<String> codec;
 
     public Input<String> getCodec() {
         return this.codec == null ? Input.empty() : this.codec;
@@ -52,7 +52,7 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayAspectRatio")
-    private final @Nullable Input<String> displayAspectRatio;
+      private final @Nullable Input<String> displayAspectRatio;
 
     public Input<String> getDisplayAspectRatio() {
         return this.displayAspectRatio == null ? Input.empty() : this.displayAspectRatio;
@@ -63,7 +63,7 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedGop")
-    private final @Nullable Input<String> fixedGop;
+      private final @Nullable Input<String> fixedGop;
 
     public Input<String> getFixedGop() {
         return this.fixedGop == null ? Input.empty() : this.fixedGop;
@@ -74,7 +74,7 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frameRate")
-    private final @Nullable Input<String> frameRate;
+      private final @Nullable Input<String> frameRate;
 
     public Input<String> getFrameRate() {
         return this.frameRate == null ? Input.empty() : this.frameRate;
@@ -85,7 +85,7 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyframesMaxDist")
-    private final @Nullable Input<String> keyframesMaxDist;
+      private final @Nullable Input<String> keyframesMaxDist;
 
     public Input<String> getKeyframesMaxDist() {
         return this.keyframesMaxDist == null ? Input.empty() : this.keyframesMaxDist;
@@ -96,7 +96,7 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxFrameRate")
-    private final @Nullable Input<String> maxFrameRate;
+      private final @Nullable Input<String> maxFrameRate;
 
     public Input<String> getMaxFrameRate() {
         return this.maxFrameRate == null ? Input.empty() : this.maxFrameRate;
@@ -107,7 +107,7 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxHeight")
-    private final @Nullable Input<String> maxHeight;
+      private final @Nullable Input<String> maxHeight;
 
     public Input<String> getMaxHeight() {
         return this.maxHeight == null ? Input.empty() : this.maxHeight;
@@ -118,7 +118,7 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxWidth")
-    private final @Nullable Input<String> maxWidth;
+      private final @Nullable Input<String> maxWidth;
 
     public Input<String> getMaxWidth() {
         return this.maxWidth == null ? Input.empty() : this.maxWidth;
@@ -129,7 +129,7 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="paddingPolicy")
-    private final @Nullable Input<String> paddingPolicy;
+      private final @Nullable Input<String> paddingPolicy;
 
     public Input<String> getPaddingPolicy() {
         return this.paddingPolicy == null ? Input.empty() : this.paddingPolicy;
@@ -140,7 +140,7 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resolution")
-    private final @Nullable Input<String> resolution;
+      private final @Nullable Input<String> resolution;
 
     public Input<String> getResolution() {
         return this.resolution == null ? Input.empty() : this.resolution;
@@ -151,7 +151,7 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizingPolicy")
-    private final @Nullable Input<String> sizingPolicy;
+      private final @Nullable Input<String> sizingPolicy;
 
     public Input<String> getSizingPolicy() {
         return this.sizingPolicy == null ? Input.empty() : this.sizingPolicy;

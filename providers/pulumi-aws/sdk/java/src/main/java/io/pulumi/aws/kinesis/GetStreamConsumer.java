@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesis;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.kinesis.inputs.GetStreamConsumerArgs;
 import io.pulumi.aws.kinesis.outputs.GetStreamConsumerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

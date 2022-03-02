@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GatewayAssociationProposalState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allowedPrefixes")
-    private final @Nullable Input<List<String>> allowedPrefixes;
+      private final @Nullable Input<List<String>> allowedPrefixes;
 
     public Input<List<String>> getAllowedPrefixes() {
         return this.allowedPrefixes == null ? Input.empty() : this.allowedPrefixes;
@@ -31,7 +31,7 @@ public final class GatewayAssociationProposalState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="associatedGatewayId")
-    private final @Nullable Input<String> associatedGatewayId;
+      private final @Nullable Input<String> associatedGatewayId;
 
     public Input<String> getAssociatedGatewayId() {
         return this.associatedGatewayId == null ? Input.empty() : this.associatedGatewayId;
@@ -42,7 +42,7 @@ public final class GatewayAssociationProposalState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="associatedGatewayOwnerAccountId")
-    private final @Nullable Input<String> associatedGatewayOwnerAccountId;
+      private final @Nullable Input<String> associatedGatewayOwnerAccountId;
 
     public Input<String> getAssociatedGatewayOwnerAccountId() {
         return this.associatedGatewayOwnerAccountId == null ? Input.empty() : this.associatedGatewayOwnerAccountId;
@@ -53,7 +53,7 @@ public final class GatewayAssociationProposalState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="associatedGatewayType")
-    private final @Nullable Input<String> associatedGatewayType;
+      private final @Nullable Input<String> associatedGatewayType;
 
     public Input<String> getAssociatedGatewayType() {
         return this.associatedGatewayType == null ? Input.empty() : this.associatedGatewayType;
@@ -64,7 +64,7 @@ public final class GatewayAssociationProposalState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dxGatewayId")
-    private final @Nullable Input<String> dxGatewayId;
+      private final @Nullable Input<String> dxGatewayId;
 
     public Input<String> getDxGatewayId() {
         return this.dxGatewayId == null ? Input.empty() : this.dxGatewayId;
@@ -75,7 +75,7 @@ public final class GatewayAssociationProposalState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dxGatewayOwnerAccountId")
-    private final @Nullable Input<String> dxGatewayOwnerAccountId;
+      private final @Nullable Input<String> dxGatewayOwnerAccountId;
 
     public Input<String> getDxGatewayOwnerAccountId() {
         return this.dxGatewayOwnerAccountId == null ? Input.empty() : this.dxGatewayOwnerAccountId;

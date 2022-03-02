@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -30,7 +30,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expires")
-    private final @Nullable Input<String> expires;
+      private final @Nullable Input<String> expires;
 
     public Input<String> getExpires() {
         return this.expires == null ? Input.empty() : this.expires;

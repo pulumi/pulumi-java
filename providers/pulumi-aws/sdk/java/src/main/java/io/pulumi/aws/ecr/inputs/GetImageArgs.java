@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="imageDigest")
-    private final @Nullable String imageDigest;
+      private final @Nullable String imageDigest;
 
     public Optional<String> getImageDigest() {
         return this.imageDigest == null ? Optional.empty() : Optional.ofNullable(this.imageDigest);
@@ -30,7 +30,7 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="imageTag")
-    private final @Nullable String imageTag;
+      private final @Nullable String imageTag;
 
     public Optional<String> getImageTag() {
         return this.imageTag == null ? Optional.empty() : Optional.ofNullable(this.imageTag);
@@ -41,7 +41,7 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="registryId")
-    private final @Nullable String registryId;
+      private final @Nullable String registryId;
 
     public Optional<String> getRegistryId() {
         return this.registryId == null ? Optional.empty() : Optional.ofNullable(this.registryId);
@@ -52,7 +52,7 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="repositoryName", required=true)
-    private final String repositoryName;
+      private final String repositoryName;
 
     public String getRepositoryName() {
         return this.repositoryName;

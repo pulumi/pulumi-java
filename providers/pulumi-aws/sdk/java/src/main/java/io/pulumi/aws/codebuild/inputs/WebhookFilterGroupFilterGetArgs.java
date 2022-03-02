@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WebhookFilterGroupFilterGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="excludeMatchedPattern")
-    private final @Nullable Input<Boolean> excludeMatchedPattern;
+      private final @Nullable Input<Boolean> excludeMatchedPattern;
 
     public Input<Boolean> getExcludeMatchedPattern() {
         return this.excludeMatchedPattern == null ? Input.empty() : this.excludeMatchedPattern;
@@ -31,7 +31,7 @@ public final class WebhookFilterGroupFilterGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="pattern", required=true)
-    private final Input<String> pattern;
+      private final Input<String> pattern;
 
     public Input<String> getPattern() {
         return this.pattern;
@@ -42,7 +42,7 @@ public final class WebhookFilterGroupFilterGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

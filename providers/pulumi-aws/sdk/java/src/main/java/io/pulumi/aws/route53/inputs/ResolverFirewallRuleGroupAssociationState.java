@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="firewallRuleGroupId")
-    private final @Nullable Input<String> firewallRuleGroupId;
+      private final @Nullable Input<String> firewallRuleGroupId;
 
     public Input<String> getFirewallRuleGroupId() {
         return this.firewallRuleGroupId == null ? Input.empty() : this.firewallRuleGroupId;
@@ -43,7 +43,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="mutationProtection")
-    private final @Nullable Input<String> mutationProtection;
+      private final @Nullable Input<String> mutationProtection;
 
     public Input<String> getMutationProtection() {
         return this.mutationProtection == null ? Input.empty() : this.mutationProtection;
@@ -54,7 +54,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -76,7 +76,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -98,7 +98,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

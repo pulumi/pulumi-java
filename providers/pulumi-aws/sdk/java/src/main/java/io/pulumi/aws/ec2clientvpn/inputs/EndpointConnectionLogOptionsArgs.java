@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EndpointConnectionLogOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cloudwatchLogGroup")
-    private final @Nullable Input<String> cloudwatchLogGroup;
+      private final @Nullable Input<String> cloudwatchLogGroup;
 
     public Input<String> getCloudwatchLogGroup() {
         return this.cloudwatchLogGroup == null ? Input.empty() : this.cloudwatchLogGroup;
@@ -31,7 +31,7 @@ public final class EndpointConnectionLogOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cloudwatchLogStream")
-    private final @Nullable Input<String> cloudwatchLogStream;
+      private final @Nullable Input<String> cloudwatchLogStream;
 
     public Input<String> getCloudwatchLogStream() {
         return this.cloudwatchLogStream == null ? Input.empty() : this.cloudwatchLogStream;
@@ -42,7 +42,7 @@ public final class EndpointConnectionLogOptionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+      private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;

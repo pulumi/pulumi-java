@@ -5,7 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.aws.appsync.inputs.ResolverSyncConfigLambdaConflictHandlerConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ResolverSyncConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="conflictDetection")
-    private final @Nullable Input<String> conflictDetection;
+      private final @Nullable Input<String> conflictDetection;
 
     public Input<String> getConflictDetection() {
         return this.conflictDetection == null ? Input.empty() : this.conflictDetection;
@@ -31,7 +31,7 @@ public final class ResolverSyncConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="conflictHandler")
-    private final @Nullable Input<String> conflictHandler;
+      private final @Nullable Input<String> conflictHandler;
 
     public Input<String> getConflictHandler() {
         return this.conflictHandler == null ? Input.empty() : this.conflictHandler;
@@ -42,7 +42,7 @@ public final class ResolverSyncConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="lambdaConflictHandlerConfig")
-    private final @Nullable Input<ResolverSyncConfigLambdaConflictHandlerConfigArgs> lambdaConflictHandlerConfig;
+      private final @Nullable Input<ResolverSyncConfigLambdaConflictHandlerConfigArgs> lambdaConflictHandlerConfig;
 
     public Input<ResolverSyncConfigLambdaConflictHandlerConfigArgs> getLambdaConflictHandlerConfig() {
         return this.lambdaConflictHandlerConfig == null ? Input.empty() : this.lambdaConflictHandlerConfig;

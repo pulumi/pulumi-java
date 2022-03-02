@@ -6,7 +6,7 @@ package io.pulumi.aws.appsync.outputs;
 import io.pulumi.aws.appsync.outputs.GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfig;
 import io.pulumi.aws.appsync.outputs.GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig;
 import io.pulumi.aws.appsync.outputs.GraphQLApiAdditionalAuthenticationProviderUserPoolConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

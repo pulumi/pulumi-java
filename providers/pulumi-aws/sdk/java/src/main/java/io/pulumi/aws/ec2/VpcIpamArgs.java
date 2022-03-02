@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.aws.ec2.inputs.VpcIpamOperatingRegionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class VpcIpamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class VpcIpamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatingRegions", required=true)
-    private final Input<List<VpcIpamOperatingRegionArgs>> operatingRegions;
+      private final Input<List<VpcIpamOperatingRegionArgs>> operatingRegions;
 
     public Input<List<VpcIpamOperatingRegionArgs>> getOperatingRegions() {
         return this.operatingRegions;
@@ -44,7 +44,7 @@ public final class VpcIpamArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

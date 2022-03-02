@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleActionBlockCustomResponseResponseHeaderGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class WebAclRuleActionBlockCustomResponseGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="customResponseBodyKey")
-    private final @Nullable Input<String> customResponseBodyKey;
+      private final @Nullable Input<String> customResponseBodyKey;
 
     public Input<String> getCustomResponseBodyKey() {
         return this.customResponseBodyKey == null ? Input.empty() : this.customResponseBodyKey;
@@ -33,7 +33,7 @@ public final class WebAclRuleActionBlockCustomResponseGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="responseCode", required=true)
-    private final Input<Integer> responseCode;
+      private final Input<Integer> responseCode;
 
     public Input<Integer> getResponseCode() {
         return this.responseCode;
@@ -44,7 +44,7 @@ public final class WebAclRuleActionBlockCustomResponseGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="responseHeaders")
-    private final @Nullable Input<List<WebAclRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders;
+      private final @Nullable Input<List<WebAclRuleActionBlockCustomResponseResponseHeaderGetArgs>> responseHeaders;
 
     public Input<List<WebAclRuleActionBlockCustomResponseResponseHeaderGetArgs>> getResponseHeaders() {
         return this.responseHeaders == null ? Input.empty() : this.responseHeaders;

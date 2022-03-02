@@ -4,7 +4,7 @@
 package io.pulumi.aws.xray.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<Map<String,String>> attributes;
+      private final @Nullable Input<Map<String,String>> attributes;
 
     public Input<Map<String,String>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -44,7 +44,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedRate")
-    private final @Nullable Input<Double> fixedRate;
+      private final @Nullable Input<Double> fixedRate;
 
     public Input<Double> getFixedRate() {
         return this.fixedRate == null ? Input.empty() : this.fixedRate;
@@ -55,7 +55,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -66,7 +66,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpMethod")
-    private final @Nullable Input<String> httpMethod;
+      private final @Nullable Input<String> httpMethod;
 
     public Input<String> getHttpMethod() {
         return this.httpMethod == null ? Input.empty() : this.httpMethod;
@@ -77,7 +77,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -88,7 +88,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservoirSize")
-    private final @Nullable Input<Integer> reservoirSize;
+      private final @Nullable Input<Integer> reservoirSize;
 
     public Input<Integer> getReservoirSize() {
         return this.reservoirSize == null ? Input.empty() : this.reservoirSize;
@@ -99,7 +99,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceArn")
-    private final @Nullable Input<String> resourceArn;
+      private final @Nullable Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn == null ? Input.empty() : this.resourceArn;
@@ -110,7 +110,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-    private final @Nullable Input<String> ruleName;
+      private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -121,7 +121,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -132,7 +132,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceType")
-    private final @Nullable Input<String> serviceType;
+      private final @Nullable Input<String> serviceType;
 
     public Input<String> getServiceType() {
         return this.serviceType == null ? Input.empty() : this.serviceType;
@@ -143,7 +143,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -154,7 +154,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -165,7 +165,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlPath")
-    private final @Nullable Input<String> urlPath;
+      private final @Nullable Input<String> urlPath;
 
     public Input<String> getUrlPath() {
         return this.urlPath == null ? Input.empty() : this.urlPath;
@@ -176,7 +176,7 @@ public final class SamplingRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;

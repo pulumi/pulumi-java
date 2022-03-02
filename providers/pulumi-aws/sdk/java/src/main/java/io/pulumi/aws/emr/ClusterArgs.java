@@ -13,7 +13,7 @@ import io.pulumi.aws.emr.inputs.ClusterMasterInstanceFleetArgs;
 import io.pulumi.aws.emr.inputs.ClusterMasterInstanceGroupArgs;
 import io.pulumi.aws.emr.inputs.ClusterStepArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +32,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalInfo")
-    private final @Nullable Input<String> additionalInfo;
+      private final @Nullable Input<String> additionalInfo;
 
     public Input<String> getAdditionalInfo() {
         return this.additionalInfo == null ? Input.empty() : this.additionalInfo;
@@ -43,7 +43,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applications")
-    private final @Nullable Input<List<String>> applications;
+      private final @Nullable Input<List<String>> applications;
 
     public Input<List<String>> getApplications() {
         return this.applications == null ? Input.empty() : this.applications;
@@ -54,7 +54,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoTerminationPolicy")
-    private final @Nullable Input<ClusterAutoTerminationPolicyArgs> autoTerminationPolicy;
+      private final @Nullable Input<ClusterAutoTerminationPolicyArgs> autoTerminationPolicy;
 
     public Input<ClusterAutoTerminationPolicyArgs> getAutoTerminationPolicy() {
         return this.autoTerminationPolicy == null ? Input.empty() : this.autoTerminationPolicy;
@@ -65,7 +65,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingRole")
-    private final @Nullable Input<String> autoscalingRole;
+      private final @Nullable Input<String> autoscalingRole;
 
     public Input<String> getAutoscalingRole() {
         return this.autoscalingRole == null ? Input.empty() : this.autoscalingRole;
@@ -76,7 +76,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootstrapActions")
-    private final @Nullable Input<List<ClusterBootstrapActionArgs>> bootstrapActions;
+      private final @Nullable Input<List<ClusterBootstrapActionArgs>> bootstrapActions;
 
     public Input<List<ClusterBootstrapActionArgs>> getBootstrapActions() {
         return this.bootstrapActions == null ? Input.empty() : this.bootstrapActions;
@@ -87,7 +87,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurations")
-    private final @Nullable Input<String> configurations;
+      private final @Nullable Input<String> configurations;
 
     public Input<String> getConfigurations() {
         return this.configurations == null ? Input.empty() : this.configurations;
@@ -98,7 +98,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationsJson")
-    private final @Nullable Input<String> configurationsJson;
+      private final @Nullable Input<String> configurationsJson;
 
     public Input<String> getConfigurationsJson() {
         return this.configurationsJson == null ? Input.empty() : this.configurationsJson;
@@ -109,7 +109,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="coreInstanceFleet")
-    private final @Nullable Input<ClusterCoreInstanceFleetArgs> coreInstanceFleet;
+      private final @Nullable Input<ClusterCoreInstanceFleetArgs> coreInstanceFleet;
 
     public Input<ClusterCoreInstanceFleetArgs> getCoreInstanceFleet() {
         return this.coreInstanceFleet == null ? Input.empty() : this.coreInstanceFleet;
@@ -120,7 +120,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="coreInstanceGroup")
-    private final @Nullable Input<ClusterCoreInstanceGroupArgs> coreInstanceGroup;
+      private final @Nullable Input<ClusterCoreInstanceGroupArgs> coreInstanceGroup;
 
     public Input<ClusterCoreInstanceGroupArgs> getCoreInstanceGroup() {
         return this.coreInstanceGroup == null ? Input.empty() : this.coreInstanceGroup;
@@ -131,7 +131,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customAmiId")
-    private final @Nullable Input<String> customAmiId;
+      private final @Nullable Input<String> customAmiId;
 
     public Input<String> getCustomAmiId() {
         return this.customAmiId == null ? Input.empty() : this.customAmiId;
@@ -142,7 +142,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsRootVolumeSize")
-    private final @Nullable Input<Integer> ebsRootVolumeSize;
+      private final @Nullable Input<Integer> ebsRootVolumeSize;
 
     public Input<Integer> getEbsRootVolumeSize() {
         return this.ebsRootVolumeSize == null ? Input.empty() : this.ebsRootVolumeSize;
@@ -153,7 +153,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ec2Attributes")
-    private final @Nullable Input<ClusterEc2AttributesArgs> ec2Attributes;
+      private final @Nullable Input<ClusterEc2AttributesArgs> ec2Attributes;
 
     public Input<ClusterEc2AttributesArgs> getEc2Attributes() {
         return this.ec2Attributes == null ? Input.empty() : this.ec2Attributes;
@@ -164,7 +164,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepJobFlowAliveWhenNoSteps")
-    private final @Nullable Input<Boolean> keepJobFlowAliveWhenNoSteps;
+      private final @Nullable Input<Boolean> keepJobFlowAliveWhenNoSteps;
 
     public Input<Boolean> getKeepJobFlowAliveWhenNoSteps() {
         return this.keepJobFlowAliveWhenNoSteps == null ? Input.empty() : this.keepJobFlowAliveWhenNoSteps;
@@ -175,7 +175,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kerberosAttributes")
-    private final @Nullable Input<ClusterKerberosAttributesArgs> kerberosAttributes;
+      private final @Nullable Input<ClusterKerberosAttributesArgs> kerberosAttributes;
 
     public Input<ClusterKerberosAttributesArgs> getKerberosAttributes() {
         return this.kerberosAttributes == null ? Input.empty() : this.kerberosAttributes;
@@ -186,7 +186,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logEncryptionKmsKeyId")
-    private final @Nullable Input<String> logEncryptionKmsKeyId;
+      private final @Nullable Input<String> logEncryptionKmsKeyId;
 
     public Input<String> getLogEncryptionKmsKeyId() {
         return this.logEncryptionKmsKeyId == null ? Input.empty() : this.logEncryptionKmsKeyId;
@@ -197,7 +197,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logUri")
-    private final @Nullable Input<String> logUri;
+      private final @Nullable Input<String> logUri;
 
     public Input<String> getLogUri() {
         return this.logUri == null ? Input.empty() : this.logUri;
@@ -208,7 +208,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterInstanceFleet")
-    private final @Nullable Input<ClusterMasterInstanceFleetArgs> masterInstanceFleet;
+      private final @Nullable Input<ClusterMasterInstanceFleetArgs> masterInstanceFleet;
 
     public Input<ClusterMasterInstanceFleetArgs> getMasterInstanceFleet() {
         return this.masterInstanceFleet == null ? Input.empty() : this.masterInstanceFleet;
@@ -219,7 +219,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterInstanceGroup")
-    private final @Nullable Input<ClusterMasterInstanceGroupArgs> masterInstanceGroup;
+      private final @Nullable Input<ClusterMasterInstanceGroupArgs> masterInstanceGroup;
 
     public Input<ClusterMasterInstanceGroupArgs> getMasterInstanceGroup() {
         return this.masterInstanceGroup == null ? Input.empty() : this.masterInstanceGroup;
@@ -230,7 +230,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -241,7 +241,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="releaseLabel", required=true)
-    private final Input<String> releaseLabel;
+      private final Input<String> releaseLabel;
 
     public Input<String> getReleaseLabel() {
         return this.releaseLabel;
@@ -252,7 +252,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scaleDownBehavior")
-    private final @Nullable Input<String> scaleDownBehavior;
+      private final @Nullable Input<String> scaleDownBehavior;
 
     public Input<String> getScaleDownBehavior() {
         return this.scaleDownBehavior == null ? Input.empty() : this.scaleDownBehavior;
@@ -263,7 +263,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityConfiguration")
-    private final @Nullable Input<String> securityConfiguration;
+      private final @Nullable Input<String> securityConfiguration;
 
     public Input<String> getSecurityConfiguration() {
         return this.securityConfiguration == null ? Input.empty() : this.securityConfiguration;
@@ -274,7 +274,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRole", required=true)
-    private final Input<String> serviceRole;
+      private final Input<String> serviceRole;
 
     public Input<String> getServiceRole() {
         return this.serviceRole;
@@ -285,7 +285,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepConcurrencyLevel")
-    private final @Nullable Input<Integer> stepConcurrencyLevel;
+      private final @Nullable Input<Integer> stepConcurrencyLevel;
 
     public Input<Integer> getStepConcurrencyLevel() {
         return this.stepConcurrencyLevel == null ? Input.empty() : this.stepConcurrencyLevel;
@@ -296,7 +296,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="steps")
-    private final @Nullable Input<List<ClusterStepArgs>> steps;
+      private final @Nullable Input<List<ClusterStepArgs>> steps;
 
     public Input<List<ClusterStepArgs>> getSteps() {
         return this.steps == null ? Input.empty() : this.steps;
@@ -307,7 +307,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -318,7 +318,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminationProtection")
-    private final @Nullable Input<Boolean> terminationProtection;
+      private final @Nullable Input<Boolean> terminationProtection;
 
     public Input<Boolean> getTerminationProtection() {
         return this.terminationProtection == null ? Input.empty() : this.terminationProtection;
@@ -329,7 +329,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="visibleToAllUsers")
-    private final @Nullable Input<Boolean> visibleToAllUsers;
+      private final @Nullable Input<Boolean> visibleToAllUsers;
 
     public Input<Boolean> getVisibleToAllUsers() {
         return this.visibleToAllUsers == null ? Input.empty() : this.visibleToAllUsers;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fingerprint")
-    private final @Nullable Input<String> fingerprint;
+      private final @Nullable Input<String> fingerprint;
 
     public Input<String> getFingerprint() {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
@@ -42,7 +42,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable Input<String> keyName;
+      private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -53,7 +53,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyNamePrefix")
-    private final @Nullable Input<String> keyNamePrefix;
+      private final @Nullable Input<String> keyNamePrefix;
 
     public Input<String> getKeyNamePrefix() {
         return this.keyNamePrefix == null ? Input.empty() : this.keyNamePrefix;
@@ -64,7 +64,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPairId")
-    private final @Nullable Input<String> keyPairId;
+      private final @Nullable Input<String> keyPairId;
 
     public Input<String> getKeyPairId() {
         return this.keyPairId == null ? Input.empty() : this.keyPairId;
@@ -75,7 +75,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey")
-    private final @Nullable Input<String> publicKey;
+      private final @Nullable Input<String> publicKey;
 
     public Input<String> getPublicKey() {
         return this.publicKey == null ? Input.empty() : this.publicKey;
@@ -86,7 +86,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -97,7 +97,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

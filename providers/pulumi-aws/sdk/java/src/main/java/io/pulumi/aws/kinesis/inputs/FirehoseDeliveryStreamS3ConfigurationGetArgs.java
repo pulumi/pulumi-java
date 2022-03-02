@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
      * 
      */
     @InputImport(name="bucketArn", required=true)
-    private final Input<String> bucketArn;
+      private final Input<String> bucketArn;
 
     public Input<String> getBucketArn() {
         return this.bucketArn;
@@ -32,7 +32,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
      * 
      */
     @InputImport(name="bufferInterval")
-    private final @Nullable Input<Integer> bufferInterval;
+      private final @Nullable Input<Integer> bufferInterval;
 
     public Input<Integer> getBufferInterval() {
         return this.bufferInterval == null ? Input.empty() : this.bufferInterval;
@@ -44,7 +44,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
      * 
      */
     @InputImport(name="bufferSize")
-    private final @Nullable Input<Integer> bufferSize;
+      private final @Nullable Input<Integer> bufferSize;
 
     public Input<Integer> getBufferSize() {
         return this.bufferSize == null ? Input.empty() : this.bufferSize;
@@ -55,7 +55,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
      * 
      */
     @InputImport(name="cloudwatchLoggingOptions")
-    private final @Nullable Input<FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
+      private final @Nullable Input<FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
     public Input<FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions == null ? Input.empty() : this.cloudwatchLoggingOptions;
@@ -66,7 +66,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
      * 
      */
     @InputImport(name="compressionFormat")
-    private final @Nullable Input<String> compressionFormat;
+      private final @Nullable Input<String> compressionFormat;
 
     public Input<String> getCompressionFormat() {
         return this.compressionFormat == null ? Input.empty() : this.compressionFormat;
@@ -77,7 +77,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
      * 
      */
     @InputImport(name="errorOutputPrefix")
-    private final @Nullable Input<String> errorOutputPrefix;
+      private final @Nullable Input<String> errorOutputPrefix;
 
     public Input<String> getErrorOutputPrefix() {
         return this.errorOutputPrefix == null ? Input.empty() : this.errorOutputPrefix;
@@ -89,7 +89,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -100,7 +100,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -111,7 +111,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;

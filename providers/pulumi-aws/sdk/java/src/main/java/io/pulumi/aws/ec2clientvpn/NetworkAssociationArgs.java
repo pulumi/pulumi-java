@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clientVpnEndpointId", required=true)
-    private final Input<String> clientVpnEndpointId;
+      private final Input<String> clientVpnEndpointId;
 
     public Input<String> getClientVpnEndpointId() {
         return this.clientVpnEndpointId;
@@ -31,7 +31,7 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+      private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -42,7 +42,7 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;

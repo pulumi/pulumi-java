@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetDomainCognitoOption extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -29,7 +29,7 @@ public final class GetDomainCognitoOption extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="identityPoolId", required=true)
-    private final String identityPoolId;
+      private final String identityPoolId;
 
     public String getIdentityPoolId() {
         return this.identityPoolId;
@@ -40,7 +40,7 @@ public final class GetDomainCognitoOption extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
@@ -51,7 +51,7 @@ public final class GetDomainCognitoOption extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="userPoolId", required=true)
-    private final String userPoolId;
+      private final String userPoolId;
 
     public String getUserPoolId() {
         return this.userPoolId;

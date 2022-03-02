@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetPrebuiltEcrImageArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="dnsSuffix")
-    private final @Nullable String dnsSuffix;
+      private final @Nullable String dnsSuffix;
 
     public Optional<String> getDnsSuffix() {
         return this.dnsSuffix == null ? Optional.empty() : Optional.ofNullable(this.dnsSuffix);
@@ -30,7 +30,7 @@ public final class GetPrebuiltEcrImageArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="imageTag")
-    private final @Nullable String imageTag;
+      private final @Nullable String imageTag;
 
     public Optional<String> getImageTag() {
         return this.imageTag == null ? Optional.empty() : Optional.ofNullable(this.imageTag);
@@ -41,7 +41,7 @@ public final class GetPrebuiltEcrImageArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="region")
-    private final @Nullable String region;
+      private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
@@ -52,7 +52,7 @@ public final class GetPrebuiltEcrImageArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="repositoryName", required=true)
-    private final String repositoryName;
+      private final String repositoryName;
 
     public String getRepositoryName() {
         return this.repositoryName;

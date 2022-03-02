@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVpcEndpointDnsEntry extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dnsName", required=true)
-    private final String dnsName;
+      private final String dnsName;
 
     public String getDnsName() {
         return this.dnsName;
@@ -28,7 +28,7 @@ public final class GetVpcEndpointDnsEntry extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="hostedZoneId", required=true)
-    private final String hostedZoneId;
+      private final String hostedZoneId;
 
     public String getHostedZoneId() {
         return this.hostedZoneId;

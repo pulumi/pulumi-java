@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hashKey")
-    private final @Nullable Input<String> hashKey;
+      private final @Nullable Input<String> hashKey;
 
     public Input<String> getHashKey() {
         return this.hashKey == null ? Input.empty() : this.hashKey;
@@ -31,7 +31,7 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="item")
-    private final @Nullable Input<String> item;
+      private final @Nullable Input<String> item;
 
     public Input<String> getItem() {
         return this.item == null ? Input.empty() : this.item;
@@ -42,7 +42,7 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rangeKey")
-    private final @Nullable Input<String> rangeKey;
+      private final @Nullable Input<String> rangeKey;
 
     public Input<String> getRangeKey() {
         return this.rangeKey == null ? Input.empty() : this.rangeKey;
@@ -53,7 +53,7 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName")
-    private final @Nullable Input<String> tableName;
+      private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;

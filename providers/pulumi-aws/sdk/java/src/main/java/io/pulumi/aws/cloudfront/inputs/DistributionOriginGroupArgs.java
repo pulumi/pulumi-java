@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.DistributionOriginGroupFailoverCriteriaArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionOriginGroupMemberArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DistributionOriginGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="failoverCriteria", required=true)
-    private final Input<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria;
+      private final Input<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria;
 
     public Input<DistributionOriginGroupFailoverCriteriaArgs> getFailoverCriteria() {
         return this.failoverCriteria;
@@ -32,7 +32,7 @@ public final class DistributionOriginGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="members", required=true)
-    private final Input<List<DistributionOriginGroupMemberArgs>> members;
+      private final Input<List<DistributionOriginGroupMemberArgs>> members;
 
     public Input<List<DistributionOriginGroupMemberArgs>> getMembers() {
         return this.members;
@@ -43,7 +43,7 @@ public final class DistributionOriginGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="originId", required=true)
-    private final Input<String> originId;
+      private final Input<String> originId;
 
     public Input<String> getOriginId() {
         return this.originId;

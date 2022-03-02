@@ -6,7 +6,7 @@ package io.pulumi.aws.ssm.inputs;
 import io.pulumi.aws.ssm.inputs.AssociationOutputLocationGetArgs;
 import io.pulumi.aws.ssm.inputs.AssociationTargetGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applyOnlyAtCronInterval")
-    private final @Nullable Input<Boolean> applyOnlyAtCronInterval;
+      private final @Nullable Input<Boolean> applyOnlyAtCronInterval;
 
     public Input<Boolean> getApplyOnlyAtCronInterval() {
         return this.applyOnlyAtCronInterval == null ? Input.empty() : this.applyOnlyAtCronInterval;
@@ -35,7 +35,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associationId")
-    private final @Nullable Input<String> associationId;
+      private final @Nullable Input<String> associationId;
 
     public Input<String> getAssociationId() {
         return this.associationId == null ? Input.empty() : this.associationId;
@@ -46,7 +46,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associationName")
-    private final @Nullable Input<String> associationName;
+      private final @Nullable Input<String> associationName;
 
     public Input<String> getAssociationName() {
         return this.associationName == null ? Input.empty() : this.associationName;
@@ -57,7 +57,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationTargetParameterName")
-    private final @Nullable Input<String> automationTargetParameterName;
+      private final @Nullable Input<String> automationTargetParameterName;
 
     public Input<String> getAutomationTargetParameterName() {
         return this.automationTargetParameterName == null ? Input.empty() : this.automationTargetParameterName;
@@ -68,7 +68,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="complianceSeverity")
-    private final @Nullable Input<String> complianceSeverity;
+      private final @Nullable Input<String> complianceSeverity;
 
     public Input<String> getComplianceSeverity() {
         return this.complianceSeverity == null ? Input.empty() : this.complianceSeverity;
@@ -79,7 +79,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentVersion")
-    private final @Nullable Input<String> documentVersion;
+      private final @Nullable Input<String> documentVersion;
 
     public Input<String> getDocumentVersion() {
         return this.documentVersion == null ? Input.empty() : this.documentVersion;
@@ -90,7 +90,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -101,7 +101,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrency")
-    private final @Nullable Input<String> maxConcurrency;
+      private final @Nullable Input<String> maxConcurrency;
 
     public Input<String> getMaxConcurrency() {
         return this.maxConcurrency == null ? Input.empty() : this.maxConcurrency;
@@ -112,7 +112,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxErrors")
-    private final @Nullable Input<String> maxErrors;
+      private final @Nullable Input<String> maxErrors;
 
     public Input<String> getMaxErrors() {
         return this.maxErrors == null ? Input.empty() : this.maxErrors;
@@ -123,7 +123,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -134,7 +134,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputLocation")
-    private final @Nullable Input<AssociationOutputLocationGetArgs> outputLocation;
+      private final @Nullable Input<AssociationOutputLocationGetArgs> outputLocation;
 
     public Input<AssociationOutputLocationGetArgs> getOutputLocation() {
         return this.outputLocation == null ? Input.empty() : this.outputLocation;
@@ -145,7 +145,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -156,7 +156,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleExpression")
-    private final @Nullable Input<String> scheduleExpression;
+      private final @Nullable Input<String> scheduleExpression;
 
     public Input<String> getScheduleExpression() {
         return this.scheduleExpression == null ? Input.empty() : this.scheduleExpression;
@@ -167,7 +167,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targets")
-    private final @Nullable Input<List<AssociationTargetGetArgs>> targets;
+      private final @Nullable Input<List<AssociationTargetGetArgs>> targets;
 
     public Input<List<AssociationTargetGetArgs>> getTargets() {
         return this.targets == null ? Input.empty() : this.targets;

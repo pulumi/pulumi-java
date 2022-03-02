@@ -6,7 +6,7 @@ package io.pulumi.aws.connect.inputs;
 import io.pulumi.aws.connect.inputs.GetQuickConnectQuickConnectConfigPhoneConfig;
 import io.pulumi.aws.connect.inputs.GetQuickConnectQuickConnectConfigQueueConfig;
 import io.pulumi.aws.connect.inputs.GetQuickConnectQuickConnectConfigUserConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetQuickConnectQuickConnectConfig extends io.pulumi.resources
      * 
      */
     @InputImport(name="phoneConfigs", required=true)
-    private final List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs;
+      private final List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs;
 
     public List<GetQuickConnectQuickConnectConfigPhoneConfig> getPhoneConfigs() {
         return this.phoneConfigs;
@@ -32,7 +32,7 @@ public final class GetQuickConnectQuickConnectConfig extends io.pulumi.resources
      * 
      */
     @InputImport(name="queueConfigs", required=true)
-    private final List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs;
+      private final List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs;
 
     public List<GetQuickConnectQuickConnectConfigQueueConfig> getQueueConfigs() {
         return this.queueConfigs;
@@ -43,7 +43,7 @@ public final class GetQuickConnectQuickConnectConfig extends io.pulumi.resources
      * 
      */
     @InputImport(name="quickConnectType", required=true)
-    private final String quickConnectType;
+      private final String quickConnectType;
 
     public String getQuickConnectType() {
         return this.quickConnectType;
@@ -54,7 +54,7 @@ public final class GetQuickConnectQuickConnectConfig extends io.pulumi.resources
      * 
      */
     @InputImport(name="userConfigs", required=true)
-    private final List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs;
+      private final List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs;
 
     public List<GetQuickConnectQuickConnectConfigUserConfig> getUserConfigs() {
         return this.userConfigs;

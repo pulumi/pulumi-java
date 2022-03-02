@@ -8,8 +8,8 @@ import io.pulumi.aws.ec2.EipAssociationArgs;
 import io.pulumi.aws.ec2.inputs.EipAssociationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -139,6 +139,21 @@ public class EipAssociation extends io.pulumi.resources.CustomResource {
         return this.publicIp;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public EipAssociation(String name) {
+        this(name, EipAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public EipAssociation(String name, @Nullable EipAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

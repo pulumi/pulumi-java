@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
      * 
      */
     @InputImport(name="logDestination", required=true)
-    private final Input<Map<String,String>> logDestination;
+      private final Input<Map<String,String>> logDestination;
 
     public Input<Map<String,String>> getLogDestination() {
         return this.logDestination;
@@ -33,7 +33,7 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
      * 
      */
     @InputImport(name="logDestinationType", required=true)
-    private final Input<String> logDestinationType;
+      private final Input<String> logDestinationType;
 
     public Input<String> getLogDestinationType() {
         return this.logDestinationType;
@@ -44,7 +44,7 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
      * 
      */
     @InputImport(name="logType", required=true)
-    private final Input<String> logType;
+      private final Input<String> logType;
 
     public Input<String> getLogType() {
         return this.logType;

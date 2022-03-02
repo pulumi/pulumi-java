@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+      private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -29,7 +29,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
      * 
      */
     @InputImport(name="filterType", required=true)
-    private final Input<String> filterType;
+      private final Input<String> filterType;
 
     public Input<String> getFilterType() {
         return this.filterType;

@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control;
 
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointPolicyDetailsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
     public static final MultiRegionAccessPointPolicyArgs Empty = new MultiRegionAccessPointPolicyArgs();
 
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -27,7 +27,7 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="details", required=true)
-    private final Input<MultiRegionAccessPointPolicyDetailsArgs> details;
+      private final Input<MultiRegionAccessPointPolicyDetailsArgs> details;
 
     public Input<MultiRegionAccessPointPolicyDetailsArgs> getDetails() {
         return this.details;

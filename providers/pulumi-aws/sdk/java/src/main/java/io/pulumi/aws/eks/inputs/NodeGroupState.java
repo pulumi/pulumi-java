@@ -10,7 +10,7 @@ import io.pulumi.aws.eks.inputs.NodeGroupScalingConfigGetArgs;
 import io.pulumi.aws.eks.inputs.NodeGroupTaintGetArgs;
 import io.pulumi.aws.eks.inputs.NodeGroupUpdateConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amiType")
-    private final @Nullable Input<String> amiType;
+      private final @Nullable Input<String> amiType;
 
     public Input<String> getAmiType() {
         return this.amiType == null ? Input.empty() : this.amiType;
@@ -40,7 +40,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -51,7 +51,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityType")
-    private final @Nullable Input<String> capacityType;
+      private final @Nullable Input<String> capacityType;
 
     public Input<String> getCapacityType() {
         return this.capacityType == null ? Input.empty() : this.capacityType;
@@ -62,7 +62,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-    private final @Nullable Input<String> clusterName;
+      private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -73,7 +73,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSize")
-    private final @Nullable Input<Integer> diskSize;
+      private final @Nullable Input<Integer> diskSize;
 
     public Input<Integer> getDiskSize() {
         return this.diskSize == null ? Input.empty() : this.diskSize;
@@ -84,7 +84,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceUpdateVersion")
-    private final @Nullable Input<Boolean> forceUpdateVersion;
+      private final @Nullable Input<Boolean> forceUpdateVersion;
 
     public Input<Boolean> getForceUpdateVersion() {
         return this.forceUpdateVersion == null ? Input.empty() : this.forceUpdateVersion;
@@ -95,7 +95,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceTypes")
-    private final @Nullable Input<List<String>> instanceTypes;
+      private final @Nullable Input<List<String>> instanceTypes;
 
     public Input<List<String>> getInstanceTypes() {
         return this.instanceTypes == null ? Input.empty() : this.instanceTypes;
@@ -106,7 +106,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -117,7 +117,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchTemplate")
-    private final @Nullable Input<NodeGroupLaunchTemplateGetArgs> launchTemplate;
+      private final @Nullable Input<NodeGroupLaunchTemplateGetArgs> launchTemplate;
 
     public Input<NodeGroupLaunchTemplateGetArgs> getLaunchTemplate() {
         return this.launchTemplate == null ? Input.empty() : this.launchTemplate;
@@ -128,7 +128,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeGroupName")
-    private final @Nullable Input<String> nodeGroupName;
+      private final @Nullable Input<String> nodeGroupName;
 
     public Input<String> getNodeGroupName() {
         return this.nodeGroupName == null ? Input.empty() : this.nodeGroupName;
@@ -139,7 +139,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeGroupNamePrefix")
-    private final @Nullable Input<String> nodeGroupNamePrefix;
+      private final @Nullable Input<String> nodeGroupNamePrefix;
 
     public Input<String> getNodeGroupNamePrefix() {
         return this.nodeGroupNamePrefix == null ? Input.empty() : this.nodeGroupNamePrefix;
@@ -150,7 +150,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeRoleArn")
-    private final @Nullable Input<String> nodeRoleArn;
+      private final @Nullable Input<String> nodeRoleArn;
 
     public Input<String> getNodeRoleArn() {
         return this.nodeRoleArn == null ? Input.empty() : this.nodeRoleArn;
@@ -161,7 +161,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="releaseVersion")
-    private final @Nullable Input<String> releaseVersion;
+      private final @Nullable Input<String> releaseVersion;
 
     public Input<String> getReleaseVersion() {
         return this.releaseVersion == null ? Input.empty() : this.releaseVersion;
@@ -172,7 +172,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remoteAccess")
-    private final @Nullable Input<NodeGroupRemoteAccessGetArgs> remoteAccess;
+      private final @Nullable Input<NodeGroupRemoteAccessGetArgs> remoteAccess;
 
     public Input<NodeGroupRemoteAccessGetArgs> getRemoteAccess() {
         return this.remoteAccess == null ? Input.empty() : this.remoteAccess;
@@ -183,7 +183,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<List<NodeGroupResourceGetArgs>> resources;
+      private final @Nullable Input<List<NodeGroupResourceGetArgs>> resources;
 
     public Input<List<NodeGroupResourceGetArgs>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -194,7 +194,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingConfig")
-    private final @Nullable Input<NodeGroupScalingConfigGetArgs> scalingConfig;
+      private final @Nullable Input<NodeGroupScalingConfigGetArgs> scalingConfig;
 
     public Input<NodeGroupScalingConfigGetArgs> getScalingConfig() {
         return this.scalingConfig == null ? Input.empty() : this.scalingConfig;
@@ -205,7 +205,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -216,7 +216,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -227,7 +227,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -238,7 +238,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -249,14 +249,14 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taints")
-    private final @Nullable Input<List<NodeGroupTaintGetArgs>> taints;
+      private final @Nullable Input<List<NodeGroupTaintGetArgs>> taints;
 
     public Input<List<NodeGroupTaintGetArgs>> getTaints() {
         return this.taints == null ? Input.empty() : this.taints;
     }
 
     @InputImport(name="updateConfig")
-    private final @Nullable Input<NodeGroupUpdateConfigGetArgs> updateConfig;
+      private final @Nullable Input<NodeGroupUpdateConfigGetArgs> updateConfig;
 
     public Input<NodeGroupUpdateConfigGetArgs> getUpdateConfig() {
         return this.updateConfig == null ? Input.empty() : this.updateConfig;
@@ -267,7 +267,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

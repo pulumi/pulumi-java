@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryDnsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class VirtualNodeSpecServiceDiscoveryGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="awsCloudMap")
-    private final @Nullable Input<VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs> awsCloudMap;
+      private final @Nullable Input<VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs> awsCloudMap;
 
     public Input<VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs> getAwsCloudMap() {
         return this.awsCloudMap == null ? Input.empty() : this.awsCloudMap;
@@ -31,7 +31,7 @@ public final class VirtualNodeSpecServiceDiscoveryGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="dns")
-    private final @Nullable Input<VirtualNodeSpecServiceDiscoveryDnsGetArgs> dns;
+      private final @Nullable Input<VirtualNodeSpecServiceDiscoveryDnsGetArgs> dns;
 
     public Input<VirtualNodeSpecServiceDiscoveryDnsGetArgs> getDns() {
         return this.dns == null ? Input.empty() : this.dns;

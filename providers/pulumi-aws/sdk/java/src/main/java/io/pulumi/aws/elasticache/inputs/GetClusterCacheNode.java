@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticache.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,7 +14,7 @@ public final class GetClusterCacheNode extends io.pulumi.resources.InvokeArgs {
     public static final GetClusterCacheNode Empty = new GetClusterCacheNode();
 
     @InputImport(name="address", required=true)
-    private final String address;
+      private final String address;
 
     public String getAddress() {
         return this.address;
@@ -25,14 +25,14 @@ public final class GetClusterCacheNode extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="availabilityZone", required=true)
-    private final String availabilityZone;
+      private final String availabilityZone;
 
     public String getAvailabilityZone() {
         return this.availabilityZone;
     }
 
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
@@ -44,7 +44,7 @@ public final class GetClusterCacheNode extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Integer port;
+      private final Integer port;
 
     public Integer getPort() {
         return this.port;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encoding", required=true)
-    private final Input<String> encoding;
+      private final Input<String> encoding;
 
     public Input<String> getEncoding() {
         return this.encoding;
@@ -30,7 +30,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKey", required=true)
-    private final Input<String> publicKey;
+      private final Input<String> publicKey;
 
     public Input<String> getPublicKey() {
         return this.publicKey;
@@ -41,7 +41,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -52,7 +52,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;

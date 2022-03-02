@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetInstanceTypesFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class GetInstanceTypesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetInstanceTypesFilter> filters;
+      private final @Nullable List<GetInstanceTypesFilter> filters;
 
     public List<GetInstanceTypesFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;

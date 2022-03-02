@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DataSourceParametersTeradataArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="database", required=true)
-    private final Input<String> database;
+      private final Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database;
@@ -30,7 +30,7 @@ public final class DataSourceParametersTeradataArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="host", required=true)
-    private final Input<String> host;
+      private final Input<String> host;
 
     public Input<String> getHost() {
         return this.host;
@@ -41,7 +41,7 @@ public final class DataSourceParametersTeradataArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+      private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;

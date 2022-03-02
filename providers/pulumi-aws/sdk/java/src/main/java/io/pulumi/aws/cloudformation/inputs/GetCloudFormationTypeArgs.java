@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudformation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetCloudFormationTypeArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable String arn;
+      private final @Nullable String arn;
 
     public Optional<String> getArn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
@@ -30,7 +30,7 @@ public final class GetCloudFormationTypeArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+      private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -41,7 +41,7 @@ public final class GetCloudFormationTypeArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="typeName")
-    private final @Nullable String typeName;
+      private final @Nullable String typeName;
 
     public Optional<String> getTypeName() {
         return this.typeName == null ? Optional.empty() : Optional.ofNullable(this.typeName);
@@ -52,7 +52,7 @@ public final class GetCloudFormationTypeArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="versionId")
-    private final @Nullable String versionId;
+      private final @Nullable String versionId;
 
     public Optional<String> getVersionId() {
         return this.versionId == null ? Optional.empty() : Optional.ofNullable(this.versionId);

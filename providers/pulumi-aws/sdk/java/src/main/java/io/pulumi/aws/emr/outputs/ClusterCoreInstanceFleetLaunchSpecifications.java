@@ -5,7 +5,7 @@ package io.pulumi.aws.emr.outputs;
 
 import io.pulumi.aws.emr.outputs.ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification;
 import io.pulumi.aws.emr.outputs.ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

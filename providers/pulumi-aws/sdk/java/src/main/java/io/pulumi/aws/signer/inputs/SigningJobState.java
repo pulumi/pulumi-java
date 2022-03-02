@@ -8,7 +8,7 @@ import io.pulumi.aws.signer.inputs.SigningJobRevocationRecordGetArgs;
 import io.pulumi.aws.signer.inputs.SigningJobSignedObjectGetArgs;
 import io.pulumi.aws.signer.inputs.SigningJobSourceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completedAt")
-    private final @Nullable Input<String> completedAt;
+      private final @Nullable Input<String> completedAt;
 
     public Input<String> getCompletedAt() {
         return this.completedAt == null ? Input.empty() : this.completedAt;
@@ -36,7 +36,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -47,7 +47,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<SigningJobDestinationGetArgs> destination;
+      private final @Nullable Input<SigningJobDestinationGetArgs> destination;
 
     public Input<SigningJobDestinationGetArgs> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -58,7 +58,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreSigningJobFailure")
-    private final @Nullable Input<Boolean> ignoreSigningJobFailure;
+      private final @Nullable Input<Boolean> ignoreSigningJobFailure;
 
     public Input<Boolean> getIgnoreSigningJobFailure() {
         return this.ignoreSigningJobFailure == null ? Input.empty() : this.ignoreSigningJobFailure;
@@ -69,7 +69,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobId")
-    private final @Nullable Input<String> jobId;
+      private final @Nullable Input<String> jobId;
 
     public Input<String> getJobId() {
         return this.jobId == null ? Input.empty() : this.jobId;
@@ -80,7 +80,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobInvoker")
-    private final @Nullable Input<String> jobInvoker;
+      private final @Nullable Input<String> jobInvoker;
 
     public Input<String> getJobInvoker() {
         return this.jobInvoker == null ? Input.empty() : this.jobInvoker;
@@ -91,7 +91,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobOwner")
-    private final @Nullable Input<String> jobOwner;
+      private final @Nullable Input<String> jobOwner;
 
     public Input<String> getJobOwner() {
         return this.jobOwner == null ? Input.empty() : this.jobOwner;
@@ -102,7 +102,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformDisplayName")
-    private final @Nullable Input<String> platformDisplayName;
+      private final @Nullable Input<String> platformDisplayName;
 
     public Input<String> getPlatformDisplayName() {
         return this.platformDisplayName == null ? Input.empty() : this.platformDisplayName;
@@ -113,7 +113,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformId")
-    private final @Nullable Input<String> platformId;
+      private final @Nullable Input<String> platformId;
 
     public Input<String> getPlatformId() {
         return this.platformId == null ? Input.empty() : this.platformId;
@@ -124,7 +124,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName")
-    private final @Nullable Input<String> profileName;
+      private final @Nullable Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName == null ? Input.empty() : this.profileName;
@@ -135,7 +135,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileVersion")
-    private final @Nullable Input<String> profileVersion;
+      private final @Nullable Input<String> profileVersion;
 
     public Input<String> getProfileVersion() {
         return this.profileVersion == null ? Input.empty() : this.profileVersion;
@@ -146,7 +146,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestedBy")
-    private final @Nullable Input<String> requestedBy;
+      private final @Nullable Input<String> requestedBy;
 
     public Input<String> getRequestedBy() {
         return this.requestedBy == null ? Input.empty() : this.requestedBy;
@@ -157,7 +157,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revocationRecords")
-    private final @Nullable Input<List<SigningJobRevocationRecordGetArgs>> revocationRecords;
+      private final @Nullable Input<List<SigningJobRevocationRecordGetArgs>> revocationRecords;
 
     public Input<List<SigningJobRevocationRecordGetArgs>> getRevocationRecords() {
         return this.revocationRecords == null ? Input.empty() : this.revocationRecords;
@@ -168,7 +168,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signatureExpiresAt")
-    private final @Nullable Input<String> signatureExpiresAt;
+      private final @Nullable Input<String> signatureExpiresAt;
 
     public Input<String> getSignatureExpiresAt() {
         return this.signatureExpiresAt == null ? Input.empty() : this.signatureExpiresAt;
@@ -179,7 +179,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signedObjects")
-    private final @Nullable Input<List<SigningJobSignedObjectGetArgs>> signedObjects;
+      private final @Nullable Input<List<SigningJobSignedObjectGetArgs>> signedObjects;
 
     public Input<List<SigningJobSignedObjectGetArgs>> getSignedObjects() {
         return this.signedObjects == null ? Input.empty() : this.signedObjects;
@@ -190,7 +190,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<SigningJobSourceGetArgs> source;
+      private final @Nullable Input<SigningJobSourceGetArgs> source;
 
     public Input<SigningJobSourceGetArgs> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -201,7 +201,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -212,7 +212,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statusReason")
-    private final @Nullable Input<String> statusReason;
+      private final @Nullable Input<String> statusReason;
 
     public Input<String> getStatusReason() {
         return this.statusReason == null ? Input.empty() : this.statusReason;

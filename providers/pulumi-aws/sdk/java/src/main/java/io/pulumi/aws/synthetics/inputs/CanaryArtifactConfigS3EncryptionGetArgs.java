@@ -4,7 +4,7 @@
 package io.pulumi.aws.synthetics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CanaryArtifactConfigS3EncryptionGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="encryptionMode")
-    private final @Nullable Input<String> encryptionMode;
+      private final @Nullable Input<String> encryptionMode;
 
     public Input<String> getEncryptionMode() {
         return this.encryptionMode == null ? Input.empty() : this.encryptionMode;
@@ -30,7 +30,7 @@ public final class CanaryArtifactConfigS3EncryptionGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;

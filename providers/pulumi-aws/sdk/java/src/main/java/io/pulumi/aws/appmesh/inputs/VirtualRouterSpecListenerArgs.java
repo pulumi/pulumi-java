@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualRouterSpecListenerPortMappingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class VirtualRouterSpecListenerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="portMapping", required=true)
-    private final Input<VirtualRouterSpecListenerPortMappingArgs> portMapping;
+      private final Input<VirtualRouterSpecListenerPortMappingArgs> portMapping;
 
     public Input<VirtualRouterSpecListenerPortMappingArgs> getPortMapping() {
         return this.portMapping;

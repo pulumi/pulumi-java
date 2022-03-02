@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="group", required=true)
-    private final Input<String> group;
+      private final Input<String> group;
 
     public Input<String> getGroup() {
         return this.group;
@@ -31,7 +31,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -42,7 +42,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="users", required=true)
-    private final Input<List<String>> users;
+      private final Input<List<String>> users;
 
     public Input<List<String>> getUsers() {
         return this.users;

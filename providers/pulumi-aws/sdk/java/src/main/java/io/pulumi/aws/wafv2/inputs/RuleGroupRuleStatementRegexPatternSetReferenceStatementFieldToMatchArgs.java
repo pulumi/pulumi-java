@@ -11,7 +11,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementRegexPatternSetReference
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
      * 
      */
     @InputImport(name="allQueryArguments")
-    private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
+      private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
     public Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
         return this.allQueryArguments == null ? Input.empty() : this.allQueryArguments;
@@ -36,7 +36,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs> body;
+      private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs> body;
 
     public Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -47,7 +47,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodArgs> method;
+      private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodArgs> method;
 
     public Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodArgs> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -58,7 +58,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
      * 
      */
     @InputImport(name="queryString")
-    private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringArgs> queryString;
+      private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringArgs> queryString;
 
     public Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringArgs> getQueryString() {
         return this.queryString == null ? Input.empty() : this.queryString;
@@ -69,7 +69,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
      * 
      */
     @InputImport(name="singleHeader")
-    private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs> singleHeader;
+      private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
     public Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
         return this.singleHeader == null ? Input.empty() : this.singleHeader;
@@ -80,7 +80,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
      * 
      */
     @InputImport(name="singleQueryArgument")
-    private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
+      private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
     public Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
         return this.singleQueryArgument == null ? Input.empty() : this.singleQueryArgument;
@@ -91,7 +91,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldT
      * 
      */
     @InputImport(name="uriPath")
-    private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathArgs> uriPath;
+      private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathArgs> uriPath;
 
     public Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathArgs> getUriPath() {
         return this.uriPath == null ? Input.empty() : this.uriPath;

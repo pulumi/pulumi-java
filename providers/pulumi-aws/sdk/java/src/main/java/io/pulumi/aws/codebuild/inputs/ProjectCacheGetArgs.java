@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ProjectCacheGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -31,7 +31,7 @@ public final class ProjectCacheGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="modes")
-    private final @Nullable Input<List<String>> modes;
+      private final @Nullable Input<List<String>> modes;
 
     public Input<List<String>> getModes() {
         return this.modes == null ? Input.empty() : this.modes;
@@ -42,7 +42,7 @@ public final class ProjectCacheGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

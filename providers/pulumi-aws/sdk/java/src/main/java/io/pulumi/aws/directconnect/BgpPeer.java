@@ -8,8 +8,8 @@ import io.pulumi.aws.directconnect.BgpPeerArgs;
 import io.pulumi.aws.directconnect.inputs.BgpPeerState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -153,6 +153,21 @@ public class BgpPeer extends io.pulumi.resources.CustomResource {
         return this.virtualInterfaceId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public BgpPeer(String name) {
+        this(name, BgpPeerArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public BgpPeer(String name, BgpPeerArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

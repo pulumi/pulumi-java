@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ProjectSecondarySourceVersionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sourceIdentifier", required=true)
-    private final Input<String> sourceIdentifier;
+      private final Input<String> sourceIdentifier;
 
     public Input<String> getSourceIdentifier() {
         return this.sourceIdentifier;
@@ -29,7 +29,7 @@ public final class ProjectSecondarySourceVersionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sourceVersion", required=true)
-    private final Input<String> sourceVersion;
+      private final Input<String> sourceVersion;
 
     public Input<String> getSourceVersion() {
         return this.sourceVersion;

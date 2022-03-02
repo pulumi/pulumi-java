@@ -6,7 +6,7 @@ package io.pulumi.aws.emr.inputs;
 import io.pulumi.aws.emr.inputs.ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs;
 import io.pulumi.aws.emr.inputs.ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsGetArgs extends i
      * 
      */
     @InputImport(name="onDemandSpecifications")
-    private final @Nullable Input<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>> onDemandSpecifications;
+      private final @Nullable Input<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>> onDemandSpecifications;
 
     public Input<List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs>> getOnDemandSpecifications() {
         return this.onDemandSpecifications == null ? Input.empty() : this.onDemandSpecifications;
@@ -32,7 +32,7 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsGetArgs extends i
      * 
      */
     @InputImport(name="spotSpecifications")
-    private final @Nullable Input<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications;
+      private final @Nullable Input<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> spotSpecifications;
 
     public Input<List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecificationGetArgs>> getSpotSpecifications() {
         return this.spotSpecifications == null ? Input.empty() : this.spotSpecifications;

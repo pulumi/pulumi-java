@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementGetArg
      * 
      */
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
@@ -33,7 +33,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementGetArg
      * 
      */
     @InputImport(name="fieldToMatch")
-    private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> fieldToMatch;
+      private final @Nullable Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> fieldToMatch;
 
     public Input<RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> getFieldToMatch() {
         return this.fieldToMatch == null ? Input.empty() : this.fieldToMatch;
@@ -44,7 +44,7 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementGetArg
      * 
      */
     @InputImport(name="textTransformations", required=true)
-    private final Input<List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> textTransformations;
+      private final Input<List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> textTransformations;
 
     public Input<List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> getTextTransformations() {
         return this.textTransformations;

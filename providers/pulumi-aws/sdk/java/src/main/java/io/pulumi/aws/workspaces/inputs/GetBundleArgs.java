@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.workspaces.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetBundleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bundleId")
-    private final @Nullable String bundleId;
+      private final @Nullable String bundleId;
 
     public Optional<String> getBundleId() {
         return this.bundleId == null ? Optional.empty() : Optional.ofNullable(this.bundleId);
@@ -30,7 +30,7 @@ public final class GetBundleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+      private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -41,7 +41,7 @@ public final class GetBundleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable String owner;
+      private final @Nullable String owner;
 
     public Optional<String> getOwner() {
         return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);

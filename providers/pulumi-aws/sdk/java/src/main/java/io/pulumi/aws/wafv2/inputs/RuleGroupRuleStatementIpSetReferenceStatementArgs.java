@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class RuleGroupRuleStatementIpSetReferenceStatementArgs extends io.
      * 
      */
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
@@ -31,7 +31,7 @@ public final class RuleGroupRuleStatementIpSetReferenceStatementArgs extends io.
      * 
      */
     @InputImport(name="ipSetForwardedIpConfig")
-    private final @Nullable Input<RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig;
+      private final @Nullable Input<RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig;
 
     public Input<RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> getIpSetForwardedIpConfig() {
         return this.ipSetForwardedIpConfig == null ? Input.empty() : this.ipSetForwardedIpConfig;

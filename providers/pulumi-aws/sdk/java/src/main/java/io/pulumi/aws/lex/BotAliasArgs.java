@@ -5,7 +5,7 @@ package io.pulumi.aws.lex;
 
 import io.pulumi.aws.lex.inputs.BotAliasConversationLogsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="botName", required=true)
-    private final Input<String> botName;
+      private final Input<String> botName;
 
     public Input<String> getBotName() {
         return this.botName;
@@ -31,7 +31,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="botVersion", required=true)
-    private final Input<String> botVersion;
+      private final Input<String> botVersion;
 
     public Input<String> getBotVersion() {
         return this.botVersion;
@@ -42,7 +42,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conversationLogs")
-    private final @Nullable Input<BotAliasConversationLogsArgs> conversationLogs;
+      private final @Nullable Input<BotAliasConversationLogsArgs> conversationLogs;
 
     public Input<BotAliasConversationLogsArgs> getConversationLogs() {
         return this.conversationLogs == null ? Input.empty() : this.conversationLogs;
@@ -53,7 +53,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -64,7 +64,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="backupVaultArn")
-    private final @Nullable Input<String> backupVaultArn;
+      private final @Nullable Input<String> backupVaultArn;
 
     public Input<String> getBackupVaultArn() {
         return this.backupVaultArn == null ? Input.empty() : this.backupVaultArn;
@@ -31,7 +31,7 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="backupVaultEvents")
-    private final @Nullable Input<List<String>> backupVaultEvents;
+      private final @Nullable Input<List<String>> backupVaultEvents;
 
     public Input<List<String>> getBackupVaultEvents() {
         return this.backupVaultEvents == null ? Input.empty() : this.backupVaultEvents;
@@ -42,7 +42,7 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="backupVaultName")
-    private final @Nullable Input<String> backupVaultName;
+      private final @Nullable Input<String> backupVaultName;
 
     public Input<String> getBackupVaultName() {
         return this.backupVaultName == null ? Input.empty() : this.backupVaultName;
@@ -53,7 +53,7 @@ public final class VaultNotificationsState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="snsTopicArn")
-    private final @Nullable Input<String> snsTopicArn;
+      private final @Nullable Input<String> snsTopicArn;
 
     public Input<String> getSnsTopicArn() {
         return this.snsTopicArn == null ? Input.empty() : this.snsTopicArn;

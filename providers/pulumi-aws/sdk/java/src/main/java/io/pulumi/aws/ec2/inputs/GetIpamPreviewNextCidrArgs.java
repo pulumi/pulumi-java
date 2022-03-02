@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GetIpamPreviewNextCidrArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="disallowedCidrs")
-    private final @Nullable List<String> disallowedCidrs;
+      private final @Nullable List<String> disallowedCidrs;
 
     public List<String> getDisallowedCidrs() {
         return this.disallowedCidrs == null ? List.of() : this.disallowedCidrs;
@@ -32,7 +32,7 @@ public final class GetIpamPreviewNextCidrArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="ipamPoolId", required=true)
-    private final String ipamPoolId;
+      private final String ipamPoolId;
 
     public String getIpamPoolId() {
         return this.ipamPoolId;
@@ -43,7 +43,7 @@ public final class GetIpamPreviewNextCidrArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="netmaskLength")
-    private final @Nullable Integer netmaskLength;
+      private final @Nullable Integer netmaskLength;
 
     public Optional<Integer> getNetmaskLength() {
         return this.netmaskLength == null ? Optional.empty() : Optional.ofNullable(this.netmaskLength);

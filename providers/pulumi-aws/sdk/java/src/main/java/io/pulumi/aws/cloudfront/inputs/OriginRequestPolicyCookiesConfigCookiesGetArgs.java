@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class OriginRequestPolicyCookiesConfigCookiesGetArgs extends io.pul
     public static final OriginRequestPolicyCookiesConfigCookiesGetArgs Empty = new OriginRequestPolicyCookiesConfigCookiesGetArgs();
 
     @InputImport(name="items")
-    private final @Nullable Input<List<String>> items;
+      private final @Nullable Input<List<String>> items;
 
     public Input<List<String>> getItems() {
         return this.items == null ? Input.empty() : this.items;

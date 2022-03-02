@@ -9,8 +9,8 @@ import io.pulumi.aws.athena.inputs.DatabaseState;
 import io.pulumi.aws.athena.outputs.DatabaseEncryptionConfiguration;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -80,6 +80,21 @@ public class Database extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Database(String name) {
+        this(name, DatabaseArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Database(String name, DatabaseArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

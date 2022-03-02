@@ -5,7 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.aws.securityhub.inputs.InsightFiltersGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable Input<InsightFiltersGetArgs> filters;
+      private final @Nullable Input<InsightFiltersGetArgs> filters;
 
     public Input<InsightFiltersGetArgs> getFilters() {
         return this.filters == null ? Input.empty() : this.filters;
@@ -42,7 +42,7 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupByAttribute")
-    private final @Nullable Input<String> groupByAttribute;
+      private final @Nullable Input<String> groupByAttribute;
 
     public Input<String> getGroupByAttribute() {
         return this.groupByAttribute == null ? Input.empty() : this.groupByAttribute;
@@ -53,7 +53,7 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetPolicyDocumentStatementCondition extends io.pulumi.resourc
      * 
      */
     @InputImport(name="test", required=true)
-    private final String test;
+      private final String test;
 
     public String getTest() {
         return this.test;
@@ -29,7 +29,7 @@ public final class GetPolicyDocumentStatementCondition extends io.pulumi.resourc
      * 
      */
     @InputImport(name="values", required=true)
-    private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -40,7 +40,7 @@ public final class GetPolicyDocumentStatementCondition extends io.pulumi.resourc
      * 
      */
     @InputImport(name="variable", required=true)
-    private final String variable;
+      private final String variable;
 
     public String getVariable() {
         return this.variable;

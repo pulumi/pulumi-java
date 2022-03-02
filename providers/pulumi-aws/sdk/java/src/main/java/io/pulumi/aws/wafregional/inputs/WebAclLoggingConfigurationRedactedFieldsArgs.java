@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class WebAclLoggingConfigurationRedactedFieldsArgs extends io.pulum
      * 
      */
     @InputImport(name="fieldToMatches", required=true)
-    private final Input<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs>> fieldToMatches;
+      private final Input<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs>> fieldToMatches;
 
     public Input<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs>> getFieldToMatches() {
         return this.fieldToMatches;

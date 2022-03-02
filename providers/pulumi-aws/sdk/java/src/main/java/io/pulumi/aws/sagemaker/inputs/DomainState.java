@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsGetArgs;
 import io.pulumi.aws.sagemaker.inputs.DomainRetentionPolicyGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appNetworkAccessType")
-    private final @Nullable Input<String> appNetworkAccessType;
+      private final @Nullable Input<String> appNetworkAccessType;
 
     public Input<String> getAppNetworkAccessType() {
         return this.appNetworkAccessType == null ? Input.empty() : this.appNetworkAccessType;
@@ -34,7 +34,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -45,7 +45,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authMode")
-    private final @Nullable Input<String> authMode;
+      private final @Nullable Input<String> authMode;
 
     public Input<String> getAuthMode() {
         return this.authMode == null ? Input.empty() : this.authMode;
@@ -56,7 +56,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultUserSettings")
-    private final @Nullable Input<DomainDefaultUserSettingsGetArgs> defaultUserSettings;
+      private final @Nullable Input<DomainDefaultUserSettingsGetArgs> defaultUserSettings;
 
     public Input<DomainDefaultUserSettingsGetArgs> getDefaultUserSettings() {
         return this.defaultUserSettings == null ? Input.empty() : this.defaultUserSettings;
@@ -67,7 +67,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -78,7 +78,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeEfsFileSystemId")
-    private final @Nullable Input<String> homeEfsFileSystemId;
+      private final @Nullable Input<String> homeEfsFileSystemId;
 
     public Input<String> getHomeEfsFileSystemId() {
         return this.homeEfsFileSystemId == null ? Input.empty() : this.homeEfsFileSystemId;
@@ -89,7 +89,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -100,7 +100,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-    private final @Nullable Input<DomainRetentionPolicyGetArgs> retentionPolicy;
+      private final @Nullable Input<DomainRetentionPolicyGetArgs> retentionPolicy;
 
     public Input<DomainRetentionPolicyGetArgs> getRetentionPolicy() {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
@@ -111,7 +111,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="singleSignOnManagedApplicationInstanceId")
-    private final @Nullable Input<String> singleSignOnManagedApplicationInstanceId;
+      private final @Nullable Input<String> singleSignOnManagedApplicationInstanceId;
 
     public Input<String> getSingleSignOnManagedApplicationInstanceId() {
         return this.singleSignOnManagedApplicationInstanceId == null ? Input.empty() : this.singleSignOnManagedApplicationInstanceId;
@@ -122,7 +122,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -133,7 +133,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -144,7 +144,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -155,7 +155,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -166,7 +166,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecTcpRouteArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grpcRoute")
-    private final @Nullable Input<RouteSpecGrpcRouteArgs> grpcRoute;
+      private final @Nullable Input<RouteSpecGrpcRouteArgs> grpcRoute;
 
     public Input<RouteSpecGrpcRouteArgs> getGrpcRoute() {
         return this.grpcRoute == null ? Input.empty() : this.grpcRoute;
@@ -34,7 +34,7 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="http2Route")
-    private final @Nullable Input<RouteSpecHttp2RouteArgs> http2Route;
+      private final @Nullable Input<RouteSpecHttp2RouteArgs> http2Route;
 
     public Input<RouteSpecHttp2RouteArgs> getHttp2Route() {
         return this.http2Route == null ? Input.empty() : this.http2Route;
@@ -45,7 +45,7 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpRoute")
-    private final @Nullable Input<RouteSpecHttpRouteArgs> httpRoute;
+      private final @Nullable Input<RouteSpecHttpRouteArgs> httpRoute;
 
     public Input<RouteSpecHttpRouteArgs> getHttpRoute() {
         return this.httpRoute == null ? Input.empty() : this.httpRoute;
@@ -57,7 +57,7 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -68,7 +68,7 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tcpRoute")
-    private final @Nullable Input<RouteSpecTcpRouteArgs> tcpRoute;
+      private final @Nullable Input<RouteSpecTcpRouteArgs> tcpRoute;
 
     public Input<RouteSpecTcpRouteArgs> getTcpRoute() {
         return this.tcpRoute == null ? Input.empty() : this.tcpRoute;

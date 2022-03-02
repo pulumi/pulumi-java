@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
     public static final GatewaySmbActiveDirectorySettingsArgs Empty = new GatewaySmbActiveDirectorySettingsArgs();
 
     @InputImport(name="activeDirectoryStatus")
-    private final @Nullable Input<String> activeDirectoryStatus;
+      private final @Nullable Input<String> activeDirectoryStatus;
 
     public Input<String> getActiveDirectoryStatus() {
         return this.activeDirectoryStatus == null ? Input.empty() : this.activeDirectoryStatus;
@@ -29,7 +29,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="domainControllers")
-    private final @Nullable Input<List<String>> domainControllers;
+      private final @Nullable Input<List<String>> domainControllers;
 
     public Input<List<String>> getDomainControllers() {
         return this.domainControllers == null ? Input.empty() : this.domainControllers;
@@ -40,7 +40,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -52,7 +52,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="organizationalUnit")
-    private final @Nullable Input<String> organizationalUnit;
+      private final @Nullable Input<String> organizationalUnit;
 
     public Input<String> getOrganizationalUnit() {
         return this.organizationalUnit == null ? Input.empty() : this.organizationalUnit;
@@ -63,7 +63,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -74,7 +74,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="timeoutInSeconds")
-    private final @Nullable Input<Integer> timeoutInSeconds;
+      private final @Nullable Input<Integer> timeoutInSeconds;
 
     public Input<Integer> getTimeoutInSeconds() {
         return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;
@@ -85,7 +85,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;

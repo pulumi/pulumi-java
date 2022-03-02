@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetQuickConnectQuickConnectConfigUserConfig extends io.pulumi
      * 
      */
     @InputImport(name="contactFlowId", required=true)
-    private final String contactFlowId;
+      private final String contactFlowId;
 
     public String getContactFlowId() {
         return this.contactFlowId;
@@ -28,7 +28,7 @@ public final class GetQuickConnectQuickConnectConfigUserConfig extends io.pulumi
      * 
      */
     @InputImport(name="userId", required=true)
-    private final String userId;
+      private final String userId;
 
     public String getUserId() {
         return this.userId;

@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
      * 
      */
     @InputImport(name="subjectAlternativeNames")
-    private final @Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesArgs> subjectAlternativeNames;
+      private final @Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesArgs> subjectAlternativeNames;
 
     public Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesArgs> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
@@ -31,7 +31,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
      * 
      */
     @InputImport(name="trust", required=true)
-    private final Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs> trust;
+      private final Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs> trust;
 
     public Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustArgs> getTrust() {
         return this.trust;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -43,7 +43,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationDate")
-    private final @Nullable Input<String> creationDate;
+      private final @Nullable Input<String> creationDate;
 
     public Input<String> getCreationDate() {
         return this.creationDate == null ? Input.empty() : this.creationDate;
@@ -54,7 +54,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostId")
-    private final @Nullable Input<String> outpostId;
+      private final @Nullable Input<String> outpostId;
 
     public Input<String> getOutpostId() {
         return this.outpostId == null ? Input.empty() : this.outpostId;
@@ -65,7 +65,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicAccessBlockEnabled")
-    private final @Nullable Input<Boolean> publicAccessBlockEnabled;
+      private final @Nullable Input<Boolean> publicAccessBlockEnabled;
 
     public Input<Boolean> getPublicAccessBlockEnabled() {
         return this.publicAccessBlockEnabled == null ? Input.empty() : this.publicAccessBlockEnabled;
@@ -76,7 +76,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

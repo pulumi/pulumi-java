@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.BotAbortStatementMessageGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BotAbortStatementGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="messages", required=true)
-    private final Input<List<BotAbortStatementMessageGetArgs>> messages;
+      private final Input<List<BotAbortStatementMessageGetArgs>> messages;
 
     public Input<List<BotAbortStatementMessageGetArgs>> getMessages() {
         return this.messages;
@@ -36,7 +36,7 @@ public final class BotAbortStatementGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="responseCard")
-    private final @Nullable Input<String> responseCard;
+      private final @Nullable Input<String> responseCard;
 
     public Input<String> getResponseCard() {
         return this.responseCard == null ? Input.empty() : this.responseCard;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="excludedAccounts")
-    private final @Nullable Input<List<String>> excludedAccounts;
+      private final @Nullable Input<List<String>> excludedAccounts;
 
     public Input<List<String>> getExcludedAccounts() {
         return this.excludedAccounts == null ? Input.empty() : this.excludedAccounts;
@@ -42,7 +42,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="inputParameters")
-    private final @Nullable Input<String> inputParameters;
+      private final @Nullable Input<String> inputParameters;
 
     public Input<String> getInputParameters() {
         return this.inputParameters == null ? Input.empty() : this.inputParameters;
@@ -53,7 +53,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maximumExecutionFrequency")
-    private final @Nullable Input<String> maximumExecutionFrequency;
+      private final @Nullable Input<String> maximumExecutionFrequency;
 
     public Input<String> getMaximumExecutionFrequency() {
         return this.maximumExecutionFrequency == null ? Input.empty() : this.maximumExecutionFrequency;
@@ -64,7 +64,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -75,7 +75,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceIdScope")
-    private final @Nullable Input<String> resourceIdScope;
+      private final @Nullable Input<String> resourceIdScope;
 
     public Input<String> getResourceIdScope() {
         return this.resourceIdScope == null ? Input.empty() : this.resourceIdScope;
@@ -86,7 +86,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceTypesScopes")
-    private final @Nullable Input<List<String>> resourceTypesScopes;
+      private final @Nullable Input<List<String>> resourceTypesScopes;
 
     public Input<List<String>> getResourceTypesScopes() {
         return this.resourceTypesScopes == null ? Input.empty() : this.resourceTypesScopes;
@@ -97,7 +97,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleIdentifier", required=true)
-    private final Input<String> ruleIdentifier;
+      private final Input<String> ruleIdentifier;
 
     public Input<String> getRuleIdentifier() {
         return this.ruleIdentifier;
@@ -108,7 +108,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tagKeyScope")
-    private final @Nullable Input<String> tagKeyScope;
+      private final @Nullable Input<String> tagKeyScope;
 
     public Input<String> getTagKeyScope() {
         return this.tagKeyScope == null ? Input.empty() : this.tagKeyScope;
@@ -119,7 +119,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tagValueScope")
-    private final @Nullable Input<String> tagValueScope;
+      private final @Nullable Input<String> tagValueScope;
 
     public Input<String> getTagValueScope() {
         return this.tagValueScope == null ? Input.empty() : this.tagValueScope;

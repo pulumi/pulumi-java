@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudtrail.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="endsWiths")
-    private final @Nullable Input<List<String>> endsWiths;
+      private final @Nullable Input<List<String>> endsWiths;
 
     public Input<List<String>> getEndsWiths() {
         return this.endsWiths == null ? Input.empty() : this.endsWiths;
@@ -31,7 +31,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="equals")
-    private final @Nullable Input<List<String>> equals;
+      private final @Nullable Input<List<String>> equals;
 
     public Input<List<String>> getEquals() {
         return this.equals == null ? Input.empty() : this.equals;
@@ -42,7 +42,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="field", required=true)
-    private final Input<String> field;
+      private final Input<String> field;
 
     public Input<String> getField() {
         return this.field;
@@ -53,7 +53,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="notEndsWiths")
-    private final @Nullable Input<List<String>> notEndsWiths;
+      private final @Nullable Input<List<String>> notEndsWiths;
 
     public Input<List<String>> getNotEndsWiths() {
         return this.notEndsWiths == null ? Input.empty() : this.notEndsWiths;
@@ -64,7 +64,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="notEquals")
-    private final @Nullable Input<List<String>> notEquals;
+      private final @Nullable Input<List<String>> notEquals;
 
     public Input<List<String>> getNotEquals() {
         return this.notEquals == null ? Input.empty() : this.notEquals;
@@ -75,7 +75,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="notStartsWiths")
-    private final @Nullable Input<List<String>> notStartsWiths;
+      private final @Nullable Input<List<String>> notStartsWiths;
 
     public Input<List<String>> getNotStartsWiths() {
         return this.notStartsWiths == null ? Input.empty() : this.notStartsWiths;
@@ -86,7 +86,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="startsWiths")
-    private final @Nullable Input<List<String>> startsWiths;
+      private final @Nullable Input<List<String>> startsWiths;
 
     public Input<List<String>> getStartsWiths() {
         return this.startsWiths == null ? Input.empty() : this.startsWiths;

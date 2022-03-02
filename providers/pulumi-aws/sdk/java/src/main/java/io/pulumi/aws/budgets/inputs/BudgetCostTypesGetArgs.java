@@ -4,7 +4,7 @@
 package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="includeCredit")
-    private final @Nullable Input<Boolean> includeCredit;
+      private final @Nullable Input<Boolean> includeCredit;
 
     public Input<Boolean> getIncludeCredit() {
         return this.includeCredit == null ? Input.empty() : this.includeCredit;
@@ -30,7 +30,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="includeDiscount")
-    private final @Nullable Input<Boolean> includeDiscount;
+      private final @Nullable Input<Boolean> includeDiscount;
 
     public Input<Boolean> getIncludeDiscount() {
         return this.includeDiscount == null ? Input.empty() : this.includeDiscount;
@@ -41,7 +41,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="includeOtherSubscription")
-    private final @Nullable Input<Boolean> includeOtherSubscription;
+      private final @Nullable Input<Boolean> includeOtherSubscription;
 
     public Input<Boolean> getIncludeOtherSubscription() {
         return this.includeOtherSubscription == null ? Input.empty() : this.includeOtherSubscription;
@@ -52,7 +52,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="includeRecurring")
-    private final @Nullable Input<Boolean> includeRecurring;
+      private final @Nullable Input<Boolean> includeRecurring;
 
     public Input<Boolean> getIncludeRecurring() {
         return this.includeRecurring == null ? Input.empty() : this.includeRecurring;
@@ -63,7 +63,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="includeRefund")
-    private final @Nullable Input<Boolean> includeRefund;
+      private final @Nullable Input<Boolean> includeRefund;
 
     public Input<Boolean> getIncludeRefund() {
         return this.includeRefund == null ? Input.empty() : this.includeRefund;
@@ -74,7 +74,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="includeSubscription")
-    private final @Nullable Input<Boolean> includeSubscription;
+      private final @Nullable Input<Boolean> includeSubscription;
 
     public Input<Boolean> getIncludeSubscription() {
         return this.includeSubscription == null ? Input.empty() : this.includeSubscription;
@@ -85,7 +85,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="includeSupport")
-    private final @Nullable Input<Boolean> includeSupport;
+      private final @Nullable Input<Boolean> includeSupport;
 
     public Input<Boolean> getIncludeSupport() {
         return this.includeSupport == null ? Input.empty() : this.includeSupport;
@@ -96,7 +96,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="includeTax")
-    private final @Nullable Input<Boolean> includeTax;
+      private final @Nullable Input<Boolean> includeTax;
 
     public Input<Boolean> getIncludeTax() {
         return this.includeTax == null ? Input.empty() : this.includeTax;
@@ -107,7 +107,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="includeUpfront")
-    private final @Nullable Input<Boolean> includeUpfront;
+      private final @Nullable Input<Boolean> includeUpfront;
 
     public Input<Boolean> getIncludeUpfront() {
         return this.includeUpfront == null ? Input.empty() : this.includeUpfront;
@@ -118,7 +118,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="useAmortized")
-    private final @Nullable Input<Boolean> useAmortized;
+      private final @Nullable Input<Boolean> useAmortized;
 
     public Input<Boolean> getUseAmortized() {
         return this.useAmortized == null ? Input.empty() : this.useAmortized;
@@ -129,7 +129,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="useBlended")
-    private final @Nullable Input<Boolean> useBlended;
+      private final @Nullable Input<Boolean> useBlended;
 
     public Input<Boolean> getUseBlended() {
         return this.useBlended == null ? Input.empty() : this.useBlended;

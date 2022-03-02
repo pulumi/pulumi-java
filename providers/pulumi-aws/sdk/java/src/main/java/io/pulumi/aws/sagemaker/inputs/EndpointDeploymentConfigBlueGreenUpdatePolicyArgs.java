@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
      * 
      */
     @InputImport(name="maximumExecutionTimeoutInSeconds")
-    private final @Nullable Input<Integer> maximumExecutionTimeoutInSeconds;
+      private final @Nullable Input<Integer> maximumExecutionTimeoutInSeconds;
 
     public Input<Integer> getMaximumExecutionTimeoutInSeconds() {
         return this.maximumExecutionTimeoutInSeconds == null ? Input.empty() : this.maximumExecutionTimeoutInSeconds;
@@ -31,7 +31,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
      * 
      */
     @InputImport(name="terminationWaitInSeconds")
-    private final @Nullable Input<Integer> terminationWaitInSeconds;
+      private final @Nullable Input<Integer> terminationWaitInSeconds;
 
     public Input<Integer> getTerminationWaitInSeconds() {
         return this.terminationWaitInSeconds == null ? Input.empty() : this.terminationWaitInSeconds;
@@ -42,7 +42,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
      * 
      */
     @InputImport(name="trafficRoutingConfiguration", required=true)
-    private final Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs> trafficRoutingConfiguration;
+      private final Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs> trafficRoutingConfiguration;
 
     public Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs> getTrafficRoutingConfiguration() {
         return this.trafficRoutingConfiguration;

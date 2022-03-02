@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetInvocationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="functionName", required=true)
-    private final String functionName;
+      private final String functionName;
 
     public String getFunctionName() {
         return this.functionName;
@@ -30,7 +30,7 @@ public final class GetInvocationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="input", required=true)
-    private final String input;
+      private final String input;
 
     public String getInput() {
         return this.input;
@@ -42,7 +42,7 @@ public final class GetInvocationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="qualifier")
-    private final @Nullable String qualifier;
+      private final @Nullable String qualifier;
 
     public Optional<String> getQualifier() {
         return this.qualifier == null ? Optional.empty() : Optional.ofNullable(this.qualifier);

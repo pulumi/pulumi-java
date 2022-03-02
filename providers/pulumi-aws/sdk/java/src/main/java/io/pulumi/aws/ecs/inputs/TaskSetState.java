@@ -9,7 +9,7 @@ import io.pulumi.aws.ecs.inputs.TaskSetNetworkConfigurationGetArgs;
 import io.pulumi.aws.ecs.inputs.TaskSetScaleGetArgs;
 import io.pulumi.aws.ecs.inputs.TaskSetServiceRegistriesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -38,7 +38,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityProviderStrategies")
-    private final @Nullable Input<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
+      private final @Nullable Input<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
 
     public Input<List<TaskSetCapacityProviderStrategyGetArgs>> getCapacityProviderStrategies() {
         return this.capacityProviderStrategies == null ? Input.empty() : this.capacityProviderStrategies;
@@ -49,7 +49,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cluster")
-    private final @Nullable Input<String> cluster;
+      private final @Nullable Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster == null ? Input.empty() : this.cluster;
@@ -60,14 +60,14 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalId")
-    private final @Nullable Input<String> externalId;
+      private final @Nullable Input<String> externalId;
 
     public Input<String> getExternalId() {
         return this.externalId == null ? Input.empty() : this.externalId;
     }
 
     @InputImport(name="forceDelete")
-    private final @Nullable Input<Boolean> forceDelete;
+      private final @Nullable Input<Boolean> forceDelete;
 
     public Input<Boolean> getForceDelete() {
         return this.forceDelete == null ? Input.empty() : this.forceDelete;
@@ -78,7 +78,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="launchType")
-    private final @Nullable Input<String> launchType;
+      private final @Nullable Input<String> launchType;
 
     public Input<String> getLaunchType() {
         return this.launchType == null ? Input.empty() : this.launchType;
@@ -89,7 +89,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancers")
-    private final @Nullable Input<List<TaskSetLoadBalancerGetArgs>> loadBalancers;
+      private final @Nullable Input<List<TaskSetLoadBalancerGetArgs>> loadBalancers;
 
     public Input<List<TaskSetLoadBalancerGetArgs>> getLoadBalancers() {
         return this.loadBalancers == null ? Input.empty() : this.loadBalancers;
@@ -100,7 +100,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfiguration")
-    private final @Nullable Input<TaskSetNetworkConfigurationGetArgs> networkConfiguration;
+      private final @Nullable Input<TaskSetNetworkConfigurationGetArgs> networkConfiguration;
 
     public Input<TaskSetNetworkConfigurationGetArgs> getNetworkConfiguration() {
         return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
@@ -111,7 +111,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformVersion")
-    private final @Nullable Input<String> platformVersion;
+      private final @Nullable Input<String> platformVersion;
 
     public Input<String> getPlatformVersion() {
         return this.platformVersion == null ? Input.empty() : this.platformVersion;
@@ -122,7 +122,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scale")
-    private final @Nullable Input<TaskSetScaleGetArgs> scale;
+      private final @Nullable Input<TaskSetScaleGetArgs> scale;
 
     public Input<TaskSetScaleGetArgs> getScale() {
         return this.scale == null ? Input.empty() : this.scale;
@@ -133,7 +133,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -144,7 +144,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRegistries")
-    private final @Nullable Input<TaskSetServiceRegistriesGetArgs> serviceRegistries;
+      private final @Nullable Input<TaskSetServiceRegistriesGetArgs> serviceRegistries;
 
     public Input<TaskSetServiceRegistriesGetArgs> getServiceRegistries() {
         return this.serviceRegistries == null ? Input.empty() : this.serviceRegistries;
@@ -155,7 +155,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stabilityStatus")
-    private final @Nullable Input<String> stabilityStatus;
+      private final @Nullable Input<String> stabilityStatus;
 
     public Input<String> getStabilityStatus() {
         return this.stabilityStatus == null ? Input.empty() : this.stabilityStatus;
@@ -166,7 +166,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -177,7 +177,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -188,7 +188,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -199,7 +199,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskDefinition")
-    private final @Nullable Input<String> taskDefinition;
+      private final @Nullable Input<String> taskDefinition;
 
     public Input<String> getTaskDefinition() {
         return this.taskDefinition == null ? Input.empty() : this.taskDefinition;
@@ -210,14 +210,14 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskSetId")
-    private final @Nullable Input<String> taskSetId;
+      private final @Nullable Input<String> taskSetId;
 
     public Input<String> getTaskSetId() {
         return this.taskSetId == null ? Input.empty() : this.taskSetId;
     }
 
     @InputImport(name="waitUntilStable")
-    private final @Nullable Input<Boolean> waitUntilStable;
+      private final @Nullable Input<Boolean> waitUntilStable;
 
     public Input<Boolean> getWaitUntilStable() {
         return this.waitUntilStable == null ? Input.empty() : this.waitUntilStable;
@@ -228,7 +228,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitUntilStableTimeout")
-    private final @Nullable Input<String> waitUntilStableTimeout;
+      private final @Nullable Input<String> waitUntilStableTimeout;
 
     public Input<String> getWaitUntilStableTimeout() {
         return this.waitUntilStableTimeout == null ? Input.empty() : this.waitUntilStableTimeout;

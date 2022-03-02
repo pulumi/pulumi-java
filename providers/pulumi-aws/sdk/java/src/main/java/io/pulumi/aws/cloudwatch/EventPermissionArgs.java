@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.aws.cloudwatch.inputs.EventPermissionConditionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<String> action;
+      private final @Nullable Input<String> action;
 
     public Input<String> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -31,7 +31,7 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<EventPermissionConditionArgs> condition;
+      private final @Nullable Input<EventPermissionConditionArgs> condition;
 
     public Input<EventPermissionConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -42,7 +42,7 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="eventBusName")
-    private final @Nullable Input<String> eventBusName;
+      private final @Nullable Input<String> eventBusName;
 
     public Input<String> getEventBusName() {
         return this.eventBusName == null ? Input.empty() : this.eventBusName;
@@ -53,7 +53,7 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="principal", required=true)
-    private final Input<String> principal;
+      private final Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal;
@@ -64,7 +64,7 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="statementId", required=true)
-    private final Input<String> statementId;
+      private final Input<String> statementId;
 
     public Input<String> getStatementId() {
         return this.statementId;

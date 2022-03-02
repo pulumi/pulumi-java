@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourc
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+      private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -30,7 +30,7 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourc
      * 
      */
     @InputImport(name="lifecycleConfigArn")
-    private final @Nullable Input<String> lifecycleConfigArn;
+      private final @Nullable Input<String> lifecycleConfigArn;
 
     public Input<String> getLifecycleConfigArn() {
         return this.lifecycleConfigArn == null ? Input.empty() : this.lifecycleConfigArn;
@@ -41,7 +41,7 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourc
      * 
      */
     @InputImport(name="sagemakerImageArn")
-    private final @Nullable Input<String> sagemakerImageArn;
+      private final @Nullable Input<String> sagemakerImageArn;
 
     public Input<String> getSagemakerImageArn() {
         return this.sagemakerImageArn == null ? Input.empty() : this.sagemakerImageArn;
@@ -52,7 +52,7 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourc
      * 
      */
     @InputImport(name="sagemakerImageVersionArn")
-    private final @Nullable Input<String> sagemakerImageVersionArn;
+      private final @Nullable Input<String> sagemakerImageVersionArn;
 
     public Input<String> getSagemakerImageVersionArn() {
         return this.sagemakerImageVersionArn == null ? Input.empty() : this.sagemakerImageVersionArn;

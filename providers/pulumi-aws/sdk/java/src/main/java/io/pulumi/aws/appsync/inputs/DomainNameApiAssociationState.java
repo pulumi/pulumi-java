@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainNameApiAssociationState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="apiId")
-    private final @Nullable Input<String> apiId;
+      private final @Nullable Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId == null ? Input.empty() : this.apiId;
@@ -30,7 +30,7 @@ public final class DomainNameApiAssociationState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;

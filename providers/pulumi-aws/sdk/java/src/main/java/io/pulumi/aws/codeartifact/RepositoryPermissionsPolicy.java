@@ -8,8 +8,8 @@ import io.pulumi.aws.codeartifact.RepositoryPermissionsPolicyArgs;
 import io.pulumi.aws.codeartifact.inputs.RepositoryPermissionsPolicyState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -114,6 +114,21 @@ public class RepositoryPermissionsPolicy extends io.pulumi.resources.CustomResou
         return this.resourceArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public RepositoryPermissionsPolicy(String name) {
+        this(name, RepositoryPermissionsPolicyArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public RepositoryPermissionsPolicy(String name, RepositoryPermissionsPolicyArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

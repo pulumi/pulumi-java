@@ -8,8 +8,8 @@ import io.pulumi.aws.sns.TopicSubscriptionArgs;
 import io.pulumi.aws.sns.inputs.TopicSubscriptionState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -238,6 +238,21 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
         return this.topic;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public TopicSubscription(String name) {
+        this(name, TopicSubscriptionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public TopicSubscription(String name, TopicSubscriptionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

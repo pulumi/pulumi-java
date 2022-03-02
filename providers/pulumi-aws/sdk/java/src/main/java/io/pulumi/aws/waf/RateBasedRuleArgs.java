@@ -5,7 +5,7 @@ package io.pulumi.aws.waf;
 
 import io.pulumi.aws.waf.inputs.RateBasedRulePredicateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+      private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -34,7 +34,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predicates")
-    private final @Nullable Input<List<RateBasedRulePredicateArgs>> predicates;
+      private final @Nullable Input<List<RateBasedRulePredicateArgs>> predicates;
 
     public Input<List<RateBasedRulePredicateArgs>> getPredicates() {
         return this.predicates == null ? Input.empty() : this.predicates;
@@ -56,7 +56,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateKey", required=true)
-    private final Input<String> rateKey;
+      private final Input<String> rateKey;
 
     public Input<String> getRateKey() {
         return this.rateKey;
@@ -67,7 +67,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rateLimit", required=true)
-    private final Input<Integer> rateLimit;
+      private final Input<Integer> rateLimit;
 
     public Input<Integer> getRateLimit() {
         return this.rateLimit;
@@ -78,7 +78,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

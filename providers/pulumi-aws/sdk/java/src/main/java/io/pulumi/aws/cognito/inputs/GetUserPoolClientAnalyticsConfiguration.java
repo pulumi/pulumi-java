@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetUserPoolClientAnalyticsConfiguration extends io.pulumi.res
      * 
      */
     @InputImport(name="applicationArn", required=true)
-    private final String applicationArn;
+      private final String applicationArn;
 
     public String getApplicationArn() {
         return this.applicationArn;
@@ -29,7 +29,7 @@ public final class GetUserPoolClientAnalyticsConfiguration extends io.pulumi.res
      * 
      */
     @InputImport(name="applicationId", required=true)
-    private final String applicationId;
+      private final String applicationId;
 
     public String getApplicationId() {
         return this.applicationId;
@@ -40,7 +40,7 @@ public final class GetUserPoolClientAnalyticsConfiguration extends io.pulumi.res
      * 
      */
     @InputImport(name="externalId", required=true)
-    private final String externalId;
+      private final String externalId;
 
     public String getExternalId() {
         return this.externalId;
@@ -52,14 +52,14 @@ public final class GetUserPoolClientAnalyticsConfiguration extends io.pulumi.res
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="userDataShared", required=true)
-    private final Boolean userDataShared;
+      private final Boolean userDataShared;
 
     public Boolean getUserDataShared() {
         return this.userDataShared;

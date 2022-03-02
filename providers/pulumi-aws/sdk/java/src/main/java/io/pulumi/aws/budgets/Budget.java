@@ -10,8 +10,8 @@ import io.pulumi.aws.budgets.outputs.BudgetCostTypes;
 import io.pulumi.aws.budgets.outputs.BudgetNotification;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -216,6 +216,21 @@ public class Budget extends io.pulumi.resources.CustomResource {
         return this.timeUnit;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Budget(String name) {
+        this(name, BudgetArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Budget(String name, BudgetArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

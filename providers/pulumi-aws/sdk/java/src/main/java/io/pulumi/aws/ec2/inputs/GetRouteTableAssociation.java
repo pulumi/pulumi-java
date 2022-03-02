@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetRouteTableAssociation extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="gatewayId", required=true)
-    private final String gatewayId;
+      private final String gatewayId;
 
     public String getGatewayId() {
         return this.gatewayId;
@@ -29,7 +29,7 @@ public final class GetRouteTableAssociation extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="main", required=true)
-    private final Boolean main;
+      private final Boolean main;
 
     public Boolean getMain() {
         return this.main;
@@ -40,7 +40,7 @@ public final class GetRouteTableAssociation extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="routeTableAssociationId", required=true)
-    private final String routeTableAssociationId;
+      private final String routeTableAssociationId;
 
     public String getRouteTableAssociationId() {
         return this.routeTableAssociationId;
@@ -51,7 +51,7 @@ public final class GetRouteTableAssociation extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="routeTableId", required=true)
-    private final String routeTableId;
+      private final String routeTableId;
 
     public String getRouteTableId() {
         return this.routeTableId;
@@ -62,7 +62,7 @@ public final class GetRouteTableAssociation extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final String subnetId;
+      private final String subnetId;
 
     public String getSubnetId() {
         return this.subnetId;

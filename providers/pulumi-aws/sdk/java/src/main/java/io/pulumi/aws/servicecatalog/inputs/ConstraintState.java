@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceptLanguage")
-    private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Input<String> acceptLanguage;
 
     public Input<String> getAcceptLanguage() {
         return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
@@ -30,7 +30,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable Input<String> owner;
+      private final @Nullable Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner == null ? Input.empty() : this.owner;
@@ -52,7 +52,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<String> parameters;
+      private final @Nullable Input<String> parameters;
 
     public Input<String> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -63,7 +63,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portfolioId")
-    private final @Nullable Input<String> portfolioId;
+      private final @Nullable Input<String> portfolioId;
 
     public Input<String> getPortfolioId() {
         return this.portfolioId == null ? Input.empty() : this.portfolioId;
@@ -74,14 +74,14 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productId")
-    private final @Nullable Input<String> productId;
+      private final @Nullable Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId == null ? Input.empty() : this.productId;
     }
 
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -92,7 +92,7 @@ public final class ConstraintState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

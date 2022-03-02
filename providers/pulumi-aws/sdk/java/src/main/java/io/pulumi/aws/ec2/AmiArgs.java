@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.AmiEbsBlockDeviceArgs;
 import io.pulumi.aws.ec2.inputs.AmiEphemeralBlockDeviceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="architecture")
-    private final @Nullable Input<String> architecture;
+      private final @Nullable Input<String> architecture;
 
     public Input<String> getArchitecture() {
         return this.architecture == null ? Input.empty() : this.architecture;
@@ -35,7 +35,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsBlockDevices")
-    private final @Nullable Input<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices;
+      private final @Nullable Input<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices;
 
     public Input<List<AmiEbsBlockDeviceArgs>> getEbsBlockDevices() {
         return this.ebsBlockDevices == null ? Input.empty() : this.ebsBlockDevices;
@@ -58,7 +58,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enaSupport")
-    private final @Nullable Input<Boolean> enaSupport;
+      private final @Nullable Input<Boolean> enaSupport;
 
     public Input<Boolean> getEnaSupport() {
         return this.enaSupport == null ? Input.empty() : this.enaSupport;
@@ -70,7 +70,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ephemeralBlockDevices")
-    private final @Nullable Input<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
+      private final @Nullable Input<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
     public Input<List<AmiEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Input.empty() : this.ephemeralBlockDevices;
@@ -82,7 +82,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageLocation")
-    private final @Nullable Input<String> imageLocation;
+      private final @Nullable Input<String> imageLocation;
 
     public Input<String> getImageLocation() {
         return this.imageLocation == null ? Input.empty() : this.imageLocation;
@@ -94,7 +94,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kernelId")
-    private final @Nullable Input<String> kernelId;
+      private final @Nullable Input<String> kernelId;
 
     public Input<String> getKernelId() {
         return this.kernelId == null ? Input.empty() : this.kernelId;
@@ -105,7 +105,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -117,7 +117,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ramdiskId")
-    private final @Nullable Input<String> ramdiskId;
+      private final @Nullable Input<String> ramdiskId;
 
     public Input<String> getRamdiskId() {
         return this.ramdiskId == null ? Input.empty() : this.ramdiskId;
@@ -128,7 +128,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootDeviceName")
-    private final @Nullable Input<String> rootDeviceName;
+      private final @Nullable Input<String> rootDeviceName;
 
     public Input<String> getRootDeviceName() {
         return this.rootDeviceName == null ? Input.empty() : this.rootDeviceName;
@@ -140,7 +140,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sriovNetSupport")
-    private final @Nullable Input<String> sriovNetSupport;
+      private final @Nullable Input<String> sriovNetSupport;
 
     public Input<String> getSriovNetSupport() {
         return this.sriovNetSupport == null ? Input.empty() : this.sriovNetSupport;
@@ -151,7 +151,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -164,7 +164,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualizationType")
-    private final @Nullable Input<String> virtualizationType;
+      private final @Nullable Input<String> virtualizationType;
 
     public Input<String> getVirtualizationType() {
         return this.virtualizationType == null ? Input.empty() : this.virtualizationType;

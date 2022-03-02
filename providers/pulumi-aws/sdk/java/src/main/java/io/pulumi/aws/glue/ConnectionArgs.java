@@ -5,7 +5,7 @@ package io.pulumi.aws.glue;
 
 import io.pulumi.aws.glue.inputs.ConnectionPhysicalConnectionRequirementsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
@@ -33,7 +33,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionProperties")
-    private final @Nullable Input<Map<String,String>> connectionProperties;
+      private final @Nullable Input<Map<String,String>> connectionProperties;
 
     public Input<Map<String,String>> getConnectionProperties() {
         return this.connectionProperties == null ? Input.empty() : this.connectionProperties;
@@ -44,7 +44,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionType")
-    private final @Nullable Input<String> connectionType;
+      private final @Nullable Input<String> connectionType;
 
     public Input<String> getConnectionType() {
         return this.connectionType == null ? Input.empty() : this.connectionType;
@@ -55,7 +55,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -66,7 +66,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchCriterias")
-    private final @Nullable Input<List<String>> matchCriterias;
+      private final @Nullable Input<List<String>> matchCriterias;
 
     public Input<List<String>> getMatchCriterias() {
         return this.matchCriterias == null ? Input.empty() : this.matchCriterias;
@@ -77,7 +77,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,7 +88,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="physicalConnectionRequirements")
-    private final @Nullable Input<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements;
+      private final @Nullable Input<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements;
 
     public Input<ConnectionPhysicalConnectionRequirementsArgs> getPhysicalConnectionRequirements() {
         return this.physicalConnectionRequirements == null ? Input.empty() : this.physicalConnectionRequirements;
@@ -99,7 +99,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

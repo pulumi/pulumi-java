@@ -5,7 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="containerTags")
-    private final @Nullable Input<List<String>> containerTags;
+      private final @Nullable Input<List<String>> containerTags;
 
     public Input<List<String>> getContainerTags() {
         return this.containerTags == null ? Input.empty() : this.containerTags;
@@ -32,7 +32,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @InputImport(name="targetRepository", required=true)
-    private final Input<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs> targetRepository;
+      private final Input<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs> targetRepository;
 
     public Input<DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs> getTargetRepository() {
         return this.targetRepository;

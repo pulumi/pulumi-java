@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.aws.cloudwatch.inputs.MetricAlarmMetricQueryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionsEnabled")
-    private final @Nullable Input<Boolean> actionsEnabled;
+      private final @Nullable Input<Boolean> actionsEnabled;
 
     public Input<Boolean> getActionsEnabled() {
         return this.actionsEnabled == null ? Input.empty() : this.actionsEnabled;
@@ -36,7 +36,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarmActions")
-    private final @Nullable Input<List<String>> alarmActions;
+      private final @Nullable Input<List<String>> alarmActions;
 
     public Input<List<String>> getAlarmActions() {
         return this.alarmActions == null ? Input.empty() : this.alarmActions;
@@ -47,7 +47,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarmDescription")
-    private final @Nullable Input<String> alarmDescription;
+      private final @Nullable Input<String> alarmDescription;
 
     public Input<String> getAlarmDescription() {
         return this.alarmDescription == null ? Input.empty() : this.alarmDescription;
@@ -58,7 +58,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comparisonOperator", required=true)
-    private final Input<String> comparisonOperator;
+      private final Input<String> comparisonOperator;
 
     public Input<String> getComparisonOperator() {
         return this.comparisonOperator;
@@ -69,7 +69,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datapointsToAlarm")
-    private final @Nullable Input<Integer> datapointsToAlarm;
+      private final @Nullable Input<Integer> datapointsToAlarm;
 
     public Input<Integer> getDatapointsToAlarm() {
         return this.datapointsToAlarm == null ? Input.empty() : this.datapointsToAlarm;
@@ -80,7 +80,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable Input<Map<String,String>> dimensions;
+      private final @Nullable Input<Map<String,String>> dimensions;
 
     public Input<Map<String,String>> getDimensions() {
         return this.dimensions == null ? Input.empty() : this.dimensions;
@@ -96,7 +96,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluateLowSampleCountPercentiles")
-    private final @Nullable Input<String> evaluateLowSampleCountPercentiles;
+      private final @Nullable Input<String> evaluateLowSampleCountPercentiles;
 
     public Input<String> getEvaluateLowSampleCountPercentiles() {
         return this.evaluateLowSampleCountPercentiles == null ? Input.empty() : this.evaluateLowSampleCountPercentiles;
@@ -107,7 +107,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluationPeriods", required=true)
-    private final Input<Integer> evaluationPeriods;
+      private final Input<Integer> evaluationPeriods;
 
     public Input<Integer> getEvaluationPeriods() {
         return this.evaluationPeriods;
@@ -118,7 +118,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedStatistic")
-    private final @Nullable Input<String> extendedStatistic;
+      private final @Nullable Input<String> extendedStatistic;
 
     public Input<String> getExtendedStatistic() {
         return this.extendedStatistic == null ? Input.empty() : this.extendedStatistic;
@@ -129,7 +129,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insufficientDataActions")
-    private final @Nullable Input<List<String>> insufficientDataActions;
+      private final @Nullable Input<List<String>> insufficientDataActions;
 
     public Input<List<String>> getInsufficientDataActions() {
         return this.insufficientDataActions == null ? Input.empty() : this.insufficientDataActions;
@@ -141,7 +141,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName")
-    private final @Nullable Input<String> metricName;
+      private final @Nullable Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName == null ? Input.empty() : this.metricName;
@@ -152,7 +152,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricQueries")
-    private final @Nullable Input<List<MetricAlarmMetricQueryArgs>> metricQueries;
+      private final @Nullable Input<List<MetricAlarmMetricQueryArgs>> metricQueries;
 
     public Input<List<MetricAlarmMetricQueryArgs>> getMetricQueries() {
         return this.metricQueries == null ? Input.empty() : this.metricQueries;
@@ -163,7 +163,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -175,7 +175,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -186,7 +186,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="okActions")
-    private final @Nullable Input<List<String>> okActions;
+      private final @Nullable Input<List<String>> okActions;
 
     public Input<List<String>> getOkActions() {
         return this.okActions == null ? Input.empty() : this.okActions;
@@ -197,7 +197,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="period")
-    private final @Nullable Input<Integer> period;
+      private final @Nullable Input<Integer> period;
 
     public Input<Integer> getPeriod() {
         return this.period == null ? Input.empty() : this.period;
@@ -209,7 +209,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="statistic")
-    private final @Nullable Input<String> statistic;
+      private final @Nullable Input<String> statistic;
 
     public Input<String> getStatistic() {
         return this.statistic == null ? Input.empty() : this.statistic;
@@ -220,7 +220,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -231,7 +231,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threshold")
-    private final @Nullable Input<Double> threshold;
+      private final @Nullable Input<Double> threshold;
 
     public Input<Double> getThreshold() {
         return this.threshold == null ? Input.empty() : this.threshold;
@@ -242,7 +242,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thresholdMetricId")
-    private final @Nullable Input<String> thresholdMetricId;
+      private final @Nullable Input<String> thresholdMetricId;
 
     public Input<String> getThresholdMetricId() {
         return this.thresholdMetricId == null ? Input.empty() : this.thresholdMetricId;
@@ -253,7 +253,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="treatMissingData")
-    private final @Nullable Input<String> treatMissingData;
+      private final @Nullable Input<String> treatMissingData;
 
     public Input<String> getTreatMissingData() {
         return this.treatMissingData == null ? Input.empty() : this.treatMissingData;
@@ -264,7 +264,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable Input<String> unit;
+      private final @Nullable Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;

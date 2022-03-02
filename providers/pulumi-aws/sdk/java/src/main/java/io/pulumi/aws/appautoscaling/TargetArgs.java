@@ -4,7 +4,7 @@
 package io.pulumi.aws.appautoscaling;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxCapacity", required=true)
-    private final Input<Integer> maxCapacity;
+      private final Input<Integer> maxCapacity;
 
     public Input<Integer> getMaxCapacity() {
         return this.maxCapacity;
@@ -31,7 +31,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minCapacity", required=true)
-    private final Input<Integer> minCapacity;
+      private final Input<Integer> minCapacity;
 
     public Input<Integer> getMinCapacity() {
         return this.minCapacity;
@@ -42,7 +42,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -53,7 +53,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -64,7 +64,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalableDimension", required=true)
-    private final Input<String> scalableDimension;
+      private final Input<String> scalableDimension;
 
     public Input<String> getScalableDimension() {
         return this.scalableDimension;
@@ -75,7 +75,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceNamespace", required=true)
-    private final Input<String> serviceNamespace;
+      private final Input<String> serviceNamespace;
 
     public Input<String> getServiceNamespace() {
         return this.serviceNamespace;

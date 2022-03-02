@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceGetArgs
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -31,7 +31,7 @@ public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceGetArgs
      * 
      */
     @InputImport(name="resourceArn", required=true)
-    private final Input<String> resourceArn;
+      private final Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn;

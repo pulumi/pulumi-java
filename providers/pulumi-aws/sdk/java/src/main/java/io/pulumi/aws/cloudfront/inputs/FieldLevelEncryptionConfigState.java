@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="callerReference")
-    private final @Nullable Input<String> callerReference;
+      private final @Nullable Input<String> callerReference;
 
     public Input<String> getCallerReference() {
         return this.callerReference == null ? Input.empty() : this.callerReference;
@@ -32,7 +32,7 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+      private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -43,7 +43,7 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="contentTypeProfileConfig")
-    private final @Nullable Input<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig;
+      private final @Nullable Input<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig;
 
     public Input<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> getContentTypeProfileConfig() {
         return this.contentTypeProfileConfig == null ? Input.empty() : this.contentTypeProfileConfig;
@@ -54,7 +54,7 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -65,7 +65,7 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="queryArgProfileConfig")
-    private final @Nullable Input<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig;
+      private final @Nullable Input<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig;
 
     public Input<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> getQueryArgProfileConfig() {
         return this.queryArgProfileConfig == null ? Input.empty() : this.queryArgProfileConfig;

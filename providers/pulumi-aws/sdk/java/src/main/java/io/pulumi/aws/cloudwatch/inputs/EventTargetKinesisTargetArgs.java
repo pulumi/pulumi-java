@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EventTargetKinesisTargetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="partitionKeyPath")
-    private final @Nullable Input<String> partitionKeyPath;
+      private final @Nullable Input<String> partitionKeyPath;
 
     public Input<String> getPartitionKeyPath() {
         return this.partitionKeyPath == null ? Input.empty() : this.partitionKeyPath;

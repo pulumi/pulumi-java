@@ -6,7 +6,7 @@ package io.pulumi.aws.rds;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.rds.inputs.GetClusterArgs;
 import io.pulumi.aws.rds.outputs.GetClusterResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

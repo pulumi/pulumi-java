@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TaskDefinitionRuntimePlatformGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="cpuArchitecture")
-    private final @Nullable Input<String> cpuArchitecture;
+      private final @Nullable Input<String> cpuArchitecture;
 
     public Input<String> getCpuArchitecture() {
         return this.cpuArchitecture == null ? Input.empty() : this.cpuArchitecture;
@@ -30,7 +30,7 @@ public final class TaskDefinitionRuntimePlatformGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="operatingSystemFamily")
-    private final @Nullable Input<String> operatingSystemFamily;
+      private final @Nullable Input<String> operatingSystemFamily;
 
     public Input<String> getOperatingSystemFamily() {
         return this.operatingSystemFamily == null ? Input.empty() : this.operatingSystemFamily;

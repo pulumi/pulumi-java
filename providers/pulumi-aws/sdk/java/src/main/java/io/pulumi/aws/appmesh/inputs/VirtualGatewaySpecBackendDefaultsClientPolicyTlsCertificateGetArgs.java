@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateGe
      * 
      */
     @InputImport(name="file")
-    private final @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs> file;
+      private final @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs> file;
 
     public Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -31,7 +31,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateGe
      * 
      */
     @InputImport(name="sds")
-    private final @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs> sds;
+      private final @Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs> sds;
 
     public Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs> getSds() {
         return this.sds == null ? Input.empty() : this.sds;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bandwidth", required=true)
-    private final Input<String> bandwidth;
+      private final Input<String> bandwidth;
 
     public Input<String> getBandwidth() {
         return this.bandwidth;
@@ -31,7 +31,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectionId", required=true)
-    private final Input<String> connectionId;
+      private final Input<String> connectionId;
 
     public Input<String> getConnectionId() {
         return this.connectionId;
@@ -42,7 +42,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ownerAccountId", required=true)
-    private final Input<String> ownerAccountId;
+      private final Input<String> ownerAccountId;
 
     public Input<String> getOwnerAccountId() {
         return this.ownerAccountId;
@@ -64,7 +64,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vlan", required=true)
-    private final Input<Integer> vlan;
+      private final Input<Integer> vlan;
 
     public Input<Integer> getVlan() {
         return this.vlan;

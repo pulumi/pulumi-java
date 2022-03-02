@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx.outputs;
 
 import io.pulumi.aws.fsx.outputs.OntapFileSystemEndpointIntercluster;
 import io.pulumi.aws.fsx.outputs.OntapFileSystemEndpointManagement;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

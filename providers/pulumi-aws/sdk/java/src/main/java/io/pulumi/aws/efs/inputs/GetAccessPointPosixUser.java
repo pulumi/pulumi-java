@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.efs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetAccessPointPosixUser extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="gid", required=true)
-    private final Integer gid;
+      private final Integer gid;
 
     public Integer getGid() {
         return this.gid;
@@ -29,7 +29,7 @@ public final class GetAccessPointPosixUser extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="secondaryGids", required=true)
-    private final List<Integer> secondaryGids;
+      private final List<Integer> secondaryGids;
 
     public List<Integer> getSecondaryGids() {
         return this.secondaryGids;
@@ -41,7 +41,7 @@ public final class GetAccessPointPosixUser extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="uid", required=true)
-    private final Integer uid;
+      private final Integer uid;
 
     public Integer getUid() {
         return this.uid;

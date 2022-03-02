@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -31,7 +31,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="contentHandlingStrategy")
-    private final @Nullable Input<String> contentHandlingStrategy;
+      private final @Nullable Input<String> contentHandlingStrategy;
 
     public Input<String> getContentHandlingStrategy() {
         return this.contentHandlingStrategy == null ? Input.empty() : this.contentHandlingStrategy;
@@ -42,7 +42,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="integrationId", required=true)
-    private final Input<String> integrationId;
+      private final Input<String> integrationId;
 
     public Input<String> getIntegrationId() {
         return this.integrationId;
@@ -53,7 +53,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="integrationResponseKey", required=true)
-    private final Input<String> integrationResponseKey;
+      private final Input<String> integrationResponseKey;
 
     public Input<String> getIntegrationResponseKey() {
         return this.integrationResponseKey;
@@ -64,7 +64,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="responseTemplates")
-    private final @Nullable Input<Map<String,String>> responseTemplates;
+      private final @Nullable Input<Map<String,String>> responseTemplates;
 
     public Input<Map<String,String>> getResponseTemplates() {
         return this.responseTemplates == null ? Input.empty() : this.responseTemplates;
@@ -75,7 +75,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="templateSelectionExpression")
-    private final @Nullable Input<String> templateSelectionExpression;
+      private final @Nullable Input<String> templateSelectionExpression;
 
     public Input<String> getTemplateSelectionExpression() {
         return this.templateSelectionExpression == null ? Input.empty() : this.templateSelectionExpression;

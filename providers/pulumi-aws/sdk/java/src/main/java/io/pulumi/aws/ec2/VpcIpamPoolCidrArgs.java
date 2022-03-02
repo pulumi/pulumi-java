@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.aws.ec2.inputs.VpcIpamPoolCidrCidrAuthorizationContextArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class VpcIpamPoolCidrArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="cidr")
-    private final @Nullable Input<String> cidr;
+      private final @Nullable Input<String> cidr;
 
     public Input<String> getCidr() {
         return this.cidr == null ? Input.empty() : this.cidr;
@@ -31,7 +31,7 @@ public final class VpcIpamPoolCidrArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="cidrAuthorizationContext")
-    private final @Nullable Input<VpcIpamPoolCidrCidrAuthorizationContextArgs> cidrAuthorizationContext;
+      private final @Nullable Input<VpcIpamPoolCidrCidrAuthorizationContextArgs> cidrAuthorizationContext;
 
     public Input<VpcIpamPoolCidrCidrAuthorizationContextArgs> getCidrAuthorizationContext() {
         return this.cidrAuthorizationContext == null ? Input.empty() : this.cidrAuthorizationContext;
@@ -42,7 +42,7 @@ public final class VpcIpamPoolCidrArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ipamPoolId", required=true)
-    private final Input<String> ipamPoolId;
+      private final Input<String> ipamPoolId;
 
     public Input<String> getIpamPoolId() {
         return this.ipamPoolId;

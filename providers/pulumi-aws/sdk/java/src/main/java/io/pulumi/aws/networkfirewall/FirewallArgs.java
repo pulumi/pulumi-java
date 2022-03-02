@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallSubnetMappingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteProtection")
-    private final @Nullable Input<Boolean> deleteProtection;
+      private final @Nullable Input<Boolean> deleteProtection;
 
     public Input<Boolean> getDeleteProtection() {
         return this.deleteProtection == null ? Input.empty() : this.deleteProtection;
@@ -34,7 +34,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallPolicyArn", required=true)
-    private final Input<String> firewallPolicyArn;
+      private final Input<String> firewallPolicyArn;
 
     public Input<String> getFirewallPolicyArn() {
         return this.firewallPolicyArn;
@@ -56,7 +56,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firewallPolicyChangeProtection")
-    private final @Nullable Input<Boolean> firewallPolicyChangeProtection;
+      private final @Nullable Input<Boolean> firewallPolicyChangeProtection;
 
     public Input<Boolean> getFirewallPolicyChangeProtection() {
         return this.firewallPolicyChangeProtection == null ? Input.empty() : this.firewallPolicyChangeProtection;
@@ -67,7 +67,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetChangeProtection")
-    private final @Nullable Input<Boolean> subnetChangeProtection;
+      private final @Nullable Input<Boolean> subnetChangeProtection;
 
     public Input<Boolean> getSubnetChangeProtection() {
         return this.subnetChangeProtection == null ? Input.empty() : this.subnetChangeProtection;
@@ -89,7 +89,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetMappings", required=true)
-    private final Input<List<FirewallSubnetMappingArgs>> subnetMappings;
+      private final Input<List<FirewallSubnetMappingArgs>> subnetMappings;
 
     public Input<List<FirewallSubnetMappingArgs>> getSubnetMappings() {
         return this.subnetMappings;
@@ -100,7 +100,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -111,7 +111,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+      private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;

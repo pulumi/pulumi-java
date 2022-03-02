@@ -9,8 +9,8 @@ import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationState;
 import io.pulumi.aws.s3control.outputs.BucketLifecycleConfigurationRule;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -64,6 +64,21 @@ public class BucketLifecycleConfiguration extends io.pulumi.resources.CustomReso
         return this.rules;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public BucketLifecycleConfiguration(String name) {
+        this(name, BucketLifecycleConfigurationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public BucketLifecycleConfiguration(String name, BucketLifecycleConfigurationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

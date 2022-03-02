@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClusterClientAuthenticationSaslGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="iam")
-    private final @Nullable Input<Boolean> iam;
+      private final @Nullable Input<Boolean> iam;
 
     public Input<Boolean> getIam() {
         return this.iam == null ? Input.empty() : this.iam;
@@ -30,7 +30,7 @@ public final class ClusterClientAuthenticationSaslGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="scram")
-    private final @Nullable Input<Boolean> scram;
+      private final @Nullable Input<Boolean> scram;
 
     public Input<Boolean> getScram() {
         return this.scram == null ? Input.empty() : this.scram;

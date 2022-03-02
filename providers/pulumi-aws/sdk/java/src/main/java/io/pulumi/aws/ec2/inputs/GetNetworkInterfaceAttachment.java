@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,28 +14,28 @@ public final class GetNetworkInterfaceAttachment extends io.pulumi.resources.Inv
     public static final GetNetworkInterfaceAttachment Empty = new GetNetworkInterfaceAttachment();
 
     @InputImport(name="attachmentId", required=true)
-    private final String attachmentId;
+      private final String attachmentId;
 
     public String getAttachmentId() {
         return this.attachmentId;
     }
 
     @InputImport(name="deviceIndex", required=true)
-    private final Integer deviceIndex;
+      private final Integer deviceIndex;
 
     public Integer getDeviceIndex() {
         return this.deviceIndex;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="instanceOwnerId", required=true)
-    private final String instanceOwnerId;
+      private final String instanceOwnerId;
 
     public String getInstanceOwnerId() {
         return this.instanceOwnerId;

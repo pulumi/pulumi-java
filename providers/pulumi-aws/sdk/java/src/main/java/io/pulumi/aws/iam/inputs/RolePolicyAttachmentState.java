@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RolePolicyAttachmentState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policyArn")
-    private final @Nullable Input<String> policyArn;
+      private final @Nullable Input<String> policyArn;
 
     public Input<String> getPolicyArn() {
         return this.policyArn == null ? Input.empty() : this.policyArn;
@@ -30,7 +30,7 @@ public final class RolePolicyAttachmentState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.inspector.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable Input<Integer> duration;
+      private final @Nullable Input<Integer> duration;
 
     public Input<Integer> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
@@ -44,7 +44,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rulesPackageArns")
-    private final @Nullable Input<List<String>> rulesPackageArns;
+      private final @Nullable Input<List<String>> rulesPackageArns;
 
     public Input<List<String>> getRulesPackageArns() {
         return this.rulesPackageArns == null ? Input.empty() : this.rulesPackageArns;
@@ -66,7 +66,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -77,7 +77,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -88,7 +88,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="targetArn")
-    private final @Nullable Input<String> targetArn;
+      private final @Nullable Input<String> targetArn;
 
     public Input<String> getTargetArn() {
         return this.targetArn == null ? Input.empty() : this.targetArn;

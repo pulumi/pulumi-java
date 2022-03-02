@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * 
      */
     @InputImport(name="functionArn", required=true)
-    private final Input<String> functionArn;
+      private final Input<String> functionArn;
 
     public Input<String> getFunctionArn() {
         return this.functionArn;
@@ -30,7 +30,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * 
      */
     @InputImport(name="functionPayload")
-    private final @Nullable Input<String> functionPayload;
+      private final @Nullable Input<String> functionPayload;
 
     public Input<String> getFunctionPayload() {
         return this.functionPayload == null ? Input.empty() : this.functionPayload;

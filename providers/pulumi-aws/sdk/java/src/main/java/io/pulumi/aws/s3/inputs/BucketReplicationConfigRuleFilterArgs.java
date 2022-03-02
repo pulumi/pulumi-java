@@ -6,7 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleFilterAndArgs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleFilterTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class BucketReplicationConfigRuleFilterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="and")
-    private final @Nullable Input<BucketReplicationConfigRuleFilterAndArgs> and;
+      private final @Nullable Input<BucketReplicationConfigRuleFilterAndArgs> and;
 
     public Input<BucketReplicationConfigRuleFilterAndArgs> getAnd() {
         return this.and == null ? Input.empty() : this.and;
@@ -32,7 +32,7 @@ public final class BucketReplicationConfigRuleFilterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -43,7 +43,7 @@ public final class BucketReplicationConfigRuleFilterArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<BucketReplicationConfigRuleFilterTagArgs> tag;
+      private final @Nullable Input<BucketReplicationConfigRuleFilterTagArgs> tag;
 
     public Input<BucketReplicationConfigRuleFilterTagArgs> getTag() {
         return this.tag == null ? Input.empty() : this.tag;

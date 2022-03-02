@@ -8,7 +8,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -39,7 +39,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cloudwatchLoggingOptions")
-    private final @Nullable Input<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
+      private final @Nullable Input<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
     public Input<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions == null ? Input.empty() : this.cloudwatchLoggingOptions;
@@ -50,7 +50,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="code")
-    private final @Nullable Input<String> code;
+      private final @Nullable Input<String> code;
 
     public Input<String> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -61,7 +61,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="createTimestamp")
-    private final @Nullable Input<String> createTimestamp;
+      private final @Nullable Input<String> createTimestamp;
 
     public Input<String> getCreateTimestamp() {
         return this.createTimestamp == null ? Input.empty() : this.createTimestamp;
@@ -72,7 +72,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -83,7 +83,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="inputs")
-    private final @Nullable Input<AnalyticsApplicationInputsGetArgs> inputs;
+      private final @Nullable Input<AnalyticsApplicationInputsGetArgs> inputs;
 
     public Input<AnalyticsApplicationInputsGetArgs> getInputs() {
         return this.inputs == null ? Input.empty() : this.inputs;
@@ -94,7 +94,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lastUpdateTimestamp")
-    private final @Nullable Input<String> lastUpdateTimestamp;
+      private final @Nullable Input<String> lastUpdateTimestamp;
 
     public Input<String> getLastUpdateTimestamp() {
         return this.lastUpdateTimestamp == null ? Input.empty() : this.lastUpdateTimestamp;
@@ -105,7 +105,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -116,7 +116,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="outputs")
-    private final @Nullable Input<List<AnalyticsApplicationOutputGetArgs>> outputs;
+      private final @Nullable Input<List<AnalyticsApplicationOutputGetArgs>> outputs;
 
     public Input<List<AnalyticsApplicationOutputGetArgs>> getOutputs() {
         return this.outputs == null ? Input.empty() : this.outputs;
@@ -128,7 +128,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="referenceDataSources")
-    private final @Nullable Input<AnalyticsApplicationReferenceDataSourcesGetArgs> referenceDataSources;
+      private final @Nullable Input<AnalyticsApplicationReferenceDataSourcesGetArgs> referenceDataSources;
 
     public Input<AnalyticsApplicationReferenceDataSourcesGetArgs> getReferenceDataSources() {
         return this.referenceDataSources == null ? Input.empty() : this.referenceDataSources;
@@ -140,7 +140,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="startApplication")
-    private final @Nullable Input<Boolean> startApplication;
+      private final @Nullable Input<Boolean> startApplication;
 
     public Input<Boolean> getStartApplication() {
         return this.startApplication == null ? Input.empty() : this.startApplication;
@@ -151,7 +151,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -162,7 +162,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -173,7 +173,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -184,7 +184,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;

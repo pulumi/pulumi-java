@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="childHealthThreshold")
-    private final @Nullable Input<Integer> childHealthThreshold;
+      private final @Nullable Input<Integer> childHealthThreshold;
 
     public Input<Integer> getChildHealthThreshold() {
         return this.childHealthThreshold == null ? Input.empty() : this.childHealthThreshold;
@@ -45,7 +45,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="childHealthchecks")
-    private final @Nullable Input<List<String>> childHealthchecks;
+      private final @Nullable Input<List<String>> childHealthchecks;
 
     public Input<List<String>> getChildHealthchecks() {
         return this.childHealthchecks == null ? Input.empty() : this.childHealthchecks;
@@ -56,7 +56,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchAlarmName")
-    private final @Nullable Input<String> cloudwatchAlarmName;
+      private final @Nullable Input<String> cloudwatchAlarmName;
 
     public Input<String> getCloudwatchAlarmName() {
         return this.cloudwatchAlarmName == null ? Input.empty() : this.cloudwatchAlarmName;
@@ -67,7 +67,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchAlarmRegion")
-    private final @Nullable Input<String> cloudwatchAlarmRegion;
+      private final @Nullable Input<String> cloudwatchAlarmRegion;
 
     public Input<String> getCloudwatchAlarmRegion() {
         return this.cloudwatchAlarmRegion == null ? Input.empty() : this.cloudwatchAlarmRegion;
@@ -81,7 +81,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -92,7 +92,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableSni")
-    private final @Nullable Input<Boolean> enableSni;
+      private final @Nullable Input<Boolean> enableSni;
 
     public Input<Boolean> getEnableSni() {
         return this.enableSni == null ? Input.empty() : this.enableSni;
@@ -103,7 +103,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failureThreshold")
-    private final @Nullable Input<Integer> failureThreshold;
+      private final @Nullable Input<Integer> failureThreshold;
 
     public Input<Integer> getFailureThreshold() {
         return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
@@ -114,7 +114,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fqdn")
-    private final @Nullable Input<String> fqdn;
+      private final @Nullable Input<String> fqdn;
 
     public Input<String> getFqdn() {
         return this.fqdn == null ? Input.empty() : this.fqdn;
@@ -125,7 +125,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insufficientDataHealthStatus")
-    private final @Nullable Input<String> insufficientDataHealthStatus;
+      private final @Nullable Input<String> insufficientDataHealthStatus;
 
     public Input<String> getInsufficientDataHealthStatus() {
         return this.insufficientDataHealthStatus == null ? Input.empty() : this.insufficientDataHealthStatus;
@@ -136,7 +136,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invertHealthcheck")
-    private final @Nullable Input<Boolean> invertHealthcheck;
+      private final @Nullable Input<Boolean> invertHealthcheck;
 
     public Input<Boolean> getInvertHealthcheck() {
         return this.invertHealthcheck == null ? Input.empty() : this.invertHealthcheck;
@@ -147,7 +147,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -158,7 +158,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="measureLatency")
-    private final @Nullable Input<Boolean> measureLatency;
+      private final @Nullable Input<Boolean> measureLatency;
 
     public Input<Boolean> getMeasureLatency() {
         return this.measureLatency == null ? Input.empty() : this.measureLatency;
@@ -169,7 +169,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -181,7 +181,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="referenceName")
-    private final @Nullable Input<String> referenceName;
+      private final @Nullable Input<String> referenceName;
 
     public Input<String> getReferenceName() {
         return this.referenceName == null ? Input.empty() : this.referenceName;
@@ -192,7 +192,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regions")
-    private final @Nullable Input<List<String>> regions;
+      private final @Nullable Input<List<String>> regions;
 
     public Input<List<String>> getRegions() {
         return this.regions == null ? Input.empty() : this.regions;
@@ -203,7 +203,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestInterval")
-    private final @Nullable Input<Integer> requestInterval;
+      private final @Nullable Input<Integer> requestInterval;
 
     public Input<Integer> getRequestInterval() {
         return this.requestInterval == null ? Input.empty() : this.requestInterval;
@@ -214,7 +214,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourcePath")
-    private final @Nullable Input<String> resourcePath;
+      private final @Nullable Input<String> resourcePath;
 
     public Input<String> getResourcePath() {
         return this.resourcePath == null ? Input.empty() : this.resourcePath;
@@ -225,7 +225,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingControlArn")
-    private final @Nullable Input<String> routingControlArn;
+      private final @Nullable Input<String> routingControlArn;
 
     public Input<String> getRoutingControlArn() {
         return this.routingControlArn == null ? Input.empty() : this.routingControlArn;
@@ -236,7 +236,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="searchString")
-    private final @Nullable Input<String> searchString;
+      private final @Nullable Input<String> searchString;
 
     public Input<String> getSearchString() {
         return this.searchString == null ? Input.empty() : this.searchString;
@@ -247,7 +247,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -258,7 +258,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -269,7 +269,7 @@ public final class HealthCheckState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

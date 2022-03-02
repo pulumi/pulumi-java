@@ -9,7 +9,7 @@ import io.pulumi.aws.eks.inputs.ClusterIdentityGetArgs;
 import io.pulumi.aws.eks.inputs.ClusterKubernetesNetworkConfigGetArgs;
 import io.pulumi.aws.eks.inputs.ClusterVpcConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -37,7 +37,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthority")
-    private final @Nullable Input<ClusterCertificateAuthorityGetArgs> certificateAuthority;
+      private final @Nullable Input<ClusterCertificateAuthorityGetArgs> certificateAuthority;
 
     public Input<ClusterCertificateAuthorityGetArgs> getCertificateAuthority() {
         return this.certificateAuthority == null ? Input.empty() : this.certificateAuthority;
@@ -48,7 +48,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -59,7 +59,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledClusterLogTypes")
-    private final @Nullable Input<List<String>> enabledClusterLogTypes;
+      private final @Nullable Input<List<String>> enabledClusterLogTypes;
 
     public Input<List<String>> getEnabledClusterLogTypes() {
         return this.enabledClusterLogTypes == null ? Input.empty() : this.enabledClusterLogTypes;
@@ -70,7 +70,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfig")
-    private final @Nullable Input<ClusterEncryptionConfigGetArgs> encryptionConfig;
+      private final @Nullable Input<ClusterEncryptionConfigGetArgs> encryptionConfig;
 
     public Input<ClusterEncryptionConfigGetArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
@@ -81,7 +81,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<String> endpoint;
+      private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -92,7 +92,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identities")
-    private final @Nullable Input<List<ClusterIdentityGetArgs>> identities;
+      private final @Nullable Input<List<ClusterIdentityGetArgs>> identities;
 
     public Input<List<ClusterIdentityGetArgs>> getIdentities() {
         return this.identities == null ? Input.empty() : this.identities;
@@ -103,7 +103,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubernetesNetworkConfig")
-    private final @Nullable Input<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig;
+      private final @Nullable Input<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig;
 
     public Input<ClusterKubernetesNetworkConfigGetArgs> getKubernetesNetworkConfig() {
         return this.kubernetesNetworkConfig == null ? Input.empty() : this.kubernetesNetworkConfig;
@@ -114,7 +114,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -125,7 +125,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformVersion")
-    private final @Nullable Input<String> platformVersion;
+      private final @Nullable Input<String> platformVersion;
 
     public Input<String> getPlatformVersion() {
         return this.platformVersion == null ? Input.empty() : this.platformVersion;
@@ -136,7 +136,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -147,7 +147,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -158,7 +158,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -169,7 +169,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -180,7 +180,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -191,7 +191,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfig")
-    private final @Nullable Input<ClusterVpcConfigGetArgs> vpcConfig;
+      private final @Nullable Input<ClusterVpcConfigGetArgs> vpcConfig;
 
     public Input<ClusterVpcConfigGetArgs> getVpcConfig() {
         return this.vpcConfig == null ? Input.empty() : this.vpcConfig;

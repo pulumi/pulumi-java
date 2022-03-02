@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.securityhub.AccountArgs;
 import io.pulumi.aws.securityhub.inputs.AccountState;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import javax.annotation.Nullable;
 
 /**
@@ -28,6 +28,21 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:securityhub/account:Account")
 public class Account extends io.pulumi.resources.CustomResource {
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Account(String name) {
+        this(name, AccountArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Account(String name, @Nullable AccountArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

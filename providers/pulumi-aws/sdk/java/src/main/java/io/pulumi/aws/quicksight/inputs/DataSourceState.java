@@ -9,7 +9,7 @@ import io.pulumi.aws.quicksight.inputs.DataSourcePermissionGetArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourceSslPropertiesGetArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourceVpcConnectionPropertiesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -37,7 +37,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsAccountId")
-    private final @Nullable Input<String> awsAccountId;
+      private final @Nullable Input<String> awsAccountId;
 
     public Input<String> getAwsAccountId() {
         return this.awsAccountId == null ? Input.empty() : this.awsAccountId;
@@ -48,7 +48,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<DataSourceCredentialsGetArgs> credentials;
+      private final @Nullable Input<DataSourceCredentialsGetArgs> credentials;
 
     public Input<DataSourceCredentialsGetArgs> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -59,7 +59,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceId")
-    private final @Nullable Input<String> dataSourceId;
+      private final @Nullable Input<String> dataSourceId;
 
     public Input<String> getDataSourceId() {
         return this.dataSourceId == null ? Input.empty() : this.dataSourceId;
@@ -70,7 +70,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -81,7 +81,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<DataSourceParametersGetArgs> parameters;
+      private final @Nullable Input<DataSourceParametersGetArgs> parameters;
 
     public Input<DataSourceParametersGetArgs> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -92,7 +92,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<List<DataSourcePermissionGetArgs>> permissions;
+      private final @Nullable Input<List<DataSourcePermissionGetArgs>> permissions;
 
     public Input<List<DataSourcePermissionGetArgs>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -103,7 +103,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslProperties")
-    private final @Nullable Input<DataSourceSslPropertiesGetArgs> sslProperties;
+      private final @Nullable Input<DataSourceSslPropertiesGetArgs> sslProperties;
 
     public Input<DataSourceSslPropertiesGetArgs> getSslProperties() {
         return this.sslProperties == null ? Input.empty() : this.sslProperties;
@@ -114,7 +114,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -125,7 +125,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -136,7 +136,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -147,7 +147,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConnectionProperties")
-    private final @Nullable Input<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties;
+      private final @Nullable Input<DataSourceVpcConnectionPropertiesGetArgs> vpcConnectionProperties;
 
     public Input<DataSourceVpcConnectionPropertiesGetArgs> getVpcConnectionProperties() {
         return this.vpcConnectionProperties == null ? Input.empty() : this.vpcConnectionProperties;

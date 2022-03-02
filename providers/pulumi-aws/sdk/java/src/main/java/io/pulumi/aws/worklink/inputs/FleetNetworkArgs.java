@@ -4,7 +4,7 @@
 package io.pulumi.aws.worklink.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FleetNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-    private final Input<List<String>> securityGroupIds;
+      private final Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
@@ -30,7 +30,7 @@ public final class FleetNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final Input<List<String>> subnetIds;
+      private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
@@ -41,7 +41,7 @@ public final class FleetNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+      private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DeploymentGroupDeploymentStyleGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="deploymentOption")
-    private final @Nullable Input<String> deploymentOption;
+      private final @Nullable Input<String> deploymentOption;
 
     public Input<String> getDeploymentOption() {
         return this.deploymentOption == null ? Input.empty() : this.deploymentOption;
@@ -30,7 +30,7 @@ public final class DeploymentGroupDeploymentStyleGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="deploymentType")
-    private final @Nullable Input<String> deploymentType;
+      private final @Nullable Input<String> deploymentType;
 
     public Input<String> getDeploymentType() {
         return this.deploymentType == null ? Input.empty() : this.deploymentType;

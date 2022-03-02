@@ -7,7 +7,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="checkpointConfiguration")
-    private final @Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs> checkpointConfiguration;
+      private final @Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs> checkpointConfiguration;
 
     public Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs> getCheckpointConfiguration() {
         return this.checkpointConfiguration == null ? Input.empty() : this.checkpointConfiguration;
@@ -32,7 +32,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="monitoringConfiguration")
-    private final @Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs> monitoringConfiguration;
+      private final @Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs> monitoringConfiguration;
 
     public Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs> getMonitoringConfiguration() {
         return this.monitoringConfiguration == null ? Input.empty() : this.monitoringConfiguration;
@@ -43,7 +43,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @InputImport(name="parallelismConfiguration")
-    private final @Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationGetArgs> parallelismConfiguration;
+      private final @Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationGetArgs> parallelismConfiguration;
 
     public Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationGetArgs> getParallelismConfiguration() {
         return this.parallelismConfiguration == null ? Input.empty() : this.parallelismConfiguration;

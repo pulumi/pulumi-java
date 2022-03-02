@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudfront.outputs.GetResponseHeadersPolicyCorsConfigAccess
 import io.pulumi.aws.cloudfront.outputs.GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod;
 import io.pulumi.aws.cloudfront.outputs.GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin;
 import io.pulumi.aws.cloudfront.outputs.GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;

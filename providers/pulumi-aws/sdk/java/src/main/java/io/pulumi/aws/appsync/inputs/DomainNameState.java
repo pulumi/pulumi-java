@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appsyncDomainName")
-    private final @Nullable Input<String> appsyncDomainName;
+      private final @Nullable Input<String> appsyncDomainName;
 
     public Input<String> getAppsyncDomainName() {
         return this.appsyncDomainName == null ? Input.empty() : this.appsyncDomainName;
@@ -30,7 +30,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateArn")
-    private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
@@ -41,7 +41,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -52,7 +52,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -63,7 +63,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostedZoneId")
-    private final @Nullable Input<String> hostedZoneId;
+      private final @Nullable Input<String> hostedZoneId;
 
     public Input<String> getHostedZoneId() {
         return this.hostedZoneId == null ? Input.empty() : this.hostedZoneId;

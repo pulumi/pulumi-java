@@ -7,7 +7,7 @@ import io.pulumi.aws.budgets.inputs.BudgetActionActionThresholdGetArgs;
 import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionGetArgs;
 import io.pulumi.aws.budgets.inputs.BudgetActionSubscriberGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -34,7 +34,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionId")
-    private final @Nullable Input<String> actionId;
+      private final @Nullable Input<String> actionId;
 
     public Input<String> getActionId() {
         return this.actionId == null ? Input.empty() : this.actionId;
@@ -45,7 +45,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionThreshold")
-    private final @Nullable Input<BudgetActionActionThresholdGetArgs> actionThreshold;
+      private final @Nullable Input<BudgetActionActionThresholdGetArgs> actionThreshold;
 
     public Input<BudgetActionActionThresholdGetArgs> getActionThreshold() {
         return this.actionThreshold == null ? Input.empty() : this.actionThreshold;
@@ -56,7 +56,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionType")
-    private final @Nullable Input<String> actionType;
+      private final @Nullable Input<String> actionType;
 
     public Input<String> getActionType() {
         return this.actionType == null ? Input.empty() : this.actionType;
@@ -67,7 +67,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvalModel")
-    private final @Nullable Input<String> approvalModel;
+      private final @Nullable Input<String> approvalModel;
 
     public Input<String> getApprovalModel() {
         return this.approvalModel == null ? Input.empty() : this.approvalModel;
@@ -78,7 +78,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -89,7 +89,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="budgetName")
-    private final @Nullable Input<String> budgetName;
+      private final @Nullable Input<String> budgetName;
 
     public Input<String> getBudgetName() {
         return this.budgetName == null ? Input.empty() : this.budgetName;
@@ -100,7 +100,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definition")
-    private final @Nullable Input<BudgetActionDefinitionGetArgs> definition;
+      private final @Nullable Input<BudgetActionDefinitionGetArgs> definition;
 
     public Input<BudgetActionDefinitionGetArgs> getDefinition() {
         return this.definition == null ? Input.empty() : this.definition;
@@ -111,7 +111,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionRoleArn")
-    private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Input<String> executionRoleArn;
 
     public Input<String> getExecutionRoleArn() {
         return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
@@ -122,7 +122,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationType")
-    private final @Nullable Input<String> notificationType;
+      private final @Nullable Input<String> notificationType;
 
     public Input<String> getNotificationType() {
         return this.notificationType == null ? Input.empty() : this.notificationType;
@@ -133,7 +133,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -144,7 +144,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscribers")
-    private final @Nullable Input<List<BudgetActionSubscriberGetArgs>> subscribers;
+      private final @Nullable Input<List<BudgetActionSubscriberGetArgs>> subscribers;
 
     public Input<List<BudgetActionSubscriberGetArgs>> getSubscribers() {
         return this.subscribers == null ? Input.empty() : this.subscribers;

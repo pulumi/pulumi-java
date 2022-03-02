@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dynamodb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,28 +18,28 @@ public final class GetTableLocalSecondaryIndex extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="nonKeyAttributes", required=true)
-    private final List<String> nonKeyAttributes;
+      private final List<String> nonKeyAttributes;
 
     public List<String> getNonKeyAttributes() {
         return this.nonKeyAttributes;
     }
 
     @InputImport(name="projectionType", required=true)
-    private final String projectionType;
+      private final String projectionType;
 
     public String getProjectionType() {
         return this.projectionType;
     }
 
     @InputImport(name="rangeKey", required=true)
-    private final String rangeKey;
+      private final String rangeKey;
 
     public String getRangeKey() {
         return this.rangeKey;

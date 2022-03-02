@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class CatalogTableTargetTableGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="catalogId", required=true)
-    private final Input<String> catalogId;
+      private final Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId;
@@ -29,7 +29,7 @@ public final class CatalogTableTargetTableGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -40,7 +40,7 @@ public final class CatalogTableTargetTableGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

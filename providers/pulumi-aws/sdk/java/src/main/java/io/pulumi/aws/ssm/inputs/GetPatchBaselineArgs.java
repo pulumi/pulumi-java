@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetPatchBaselineArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="defaultBaseline")
-    private final @Nullable Boolean defaultBaseline;
+      private final @Nullable Boolean defaultBaseline;
 
     public Optional<Boolean> getDefaultBaseline() {
         return this.defaultBaseline == null ? Optional.empty() : Optional.ofNullable(this.defaultBaseline);
@@ -31,7 +31,7 @@ public final class GetPatchBaselineArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable String namePrefix;
+      private final @Nullable String namePrefix;
 
     public Optional<String> getNamePrefix() {
         return this.namePrefix == null ? Optional.empty() : Optional.ofNullable(this.namePrefix);
@@ -42,7 +42,7 @@ public final class GetPatchBaselineArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="operatingSystem")
-    private final @Nullable String operatingSystem;
+      private final @Nullable String operatingSystem;
 
     public Optional<String> getOperatingSystem() {
         return this.operatingSystem == null ? Optional.empty() : Optional.ofNullable(this.operatingSystem);
@@ -53,7 +53,7 @@ public final class GetPatchBaselineArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="owner", required=true)
-    private final String owner;
+      private final String owner;
 
     public String getOwner() {
         return this.owner;

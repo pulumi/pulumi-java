@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudformation;
 
 import io.pulumi.aws.cloudformation.inputs.StackSetInstanceDeploymentTargetsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -33,7 +33,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deploymentTargets")
-    private final @Nullable Input<StackSetInstanceDeploymentTargetsArgs> deploymentTargets;
+      private final @Nullable Input<StackSetInstanceDeploymentTargetsArgs> deploymentTargets;
 
     public Input<StackSetInstanceDeploymentTargetsArgs> getDeploymentTargets() {
         return this.deploymentTargets == null ? Input.empty() : this.deploymentTargets;
@@ -44,7 +44,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameterOverrides")
-    private final @Nullable Input<Map<String,String>> parameterOverrides;
+      private final @Nullable Input<Map<String,String>> parameterOverrides;
 
     public Input<Map<String,String>> getParameterOverrides() {
         return this.parameterOverrides == null ? Input.empty() : this.parameterOverrides;
@@ -55,7 +55,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -66,7 +66,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="retainStack")
-    private final @Nullable Input<Boolean> retainStack;
+      private final @Nullable Input<Boolean> retainStack;
 
     public Input<Boolean> getRetainStack() {
         return this.retainStack == null ? Input.empty() : this.retainStack;
@@ -77,7 +77,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="stackSetName", required=true)
-    private final Input<String> stackSetName;
+      private final Input<String> stackSetName;
 
     public Input<String> getStackSetName() {
         return this.stackSetName;

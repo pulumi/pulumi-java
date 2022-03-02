@@ -7,7 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.WorkforceCognitoConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkforceOidcConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkforceSourceIpConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cognitoConfig")
-    private final @Nullable Input<WorkforceCognitoConfigGetArgs> cognitoConfig;
+      private final @Nullable Input<WorkforceCognitoConfigGetArgs> cognitoConfig;
 
     public Input<WorkforceCognitoConfigGetArgs> getCognitoConfig() {
         return this.cognitoConfig == null ? Input.empty() : this.cognitoConfig;
@@ -44,7 +44,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oidcConfig")
-    private final @Nullable Input<WorkforceOidcConfigGetArgs> oidcConfig;
+      private final @Nullable Input<WorkforceOidcConfigGetArgs> oidcConfig;
 
     public Input<WorkforceOidcConfigGetArgs> getOidcConfig() {
         return this.oidcConfig == null ? Input.empty() : this.oidcConfig;
@@ -55,7 +55,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceIpConfig")
-    private final @Nullable Input<WorkforceSourceIpConfigGetArgs> sourceIpConfig;
+      private final @Nullable Input<WorkforceSourceIpConfigGetArgs> sourceIpConfig;
 
     public Input<WorkforceSourceIpConfigGetArgs> getSourceIpConfig() {
         return this.sourceIpConfig == null ? Input.empty() : this.sourceIpConfig;
@@ -66,7 +66,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdomain")
-    private final @Nullable Input<String> subdomain;
+      private final @Nullable Input<String> subdomain;
 
     public Input<String> getSubdomain() {
         return this.subdomain == null ? Input.empty() : this.subdomain;
@@ -77,7 +77,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workforceName")
-    private final @Nullable Input<String> workforceName;
+      private final @Nullable Input<String> workforceName;
 
     public Input<String> getWorkforceName() {
         return this.workforceName == null ? Input.empty() : this.workforceName;

@@ -8,7 +8,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleRuleLabelGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleVisibilityConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<RuleGroupRuleActionGetArgs> action;
+      private final Input<RuleGroupRuleActionGetArgs> action;
 
     public Input<RuleGroupRuleActionGetArgs> getAction() {
         return this.action;
@@ -36,7 +36,7 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -58,7 +58,7 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ruleLabels")
-    private final @Nullable Input<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels;
+      private final @Nullable Input<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels;
 
     public Input<List<RuleGroupRuleRuleLabelGetArgs>> getRuleLabels() {
         return this.ruleLabels == null ? Input.empty() : this.ruleLabels;
@@ -69,7 +69,7 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="statement", required=true)
-    private final Input<RuleGroupRuleStatementGetArgs> statement;
+      private final Input<RuleGroupRuleStatementGetArgs> statement;
 
     public Input<RuleGroupRuleStatementGetArgs> getStatement() {
         return this.statement;
@@ -80,7 +80,7 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="visibilityConfig", required=true)
-    private final Input<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig;
+      private final Input<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig;
 
     public Input<RuleGroupRuleVisibilityConfigGetArgs> getVisibilityConfig() {
         return this.visibilityConfig;

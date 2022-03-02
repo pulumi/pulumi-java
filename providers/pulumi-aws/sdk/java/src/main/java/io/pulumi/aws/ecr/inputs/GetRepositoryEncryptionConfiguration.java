@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetRepositoryEncryptionConfiguration extends io.pulumi.resour
      * 
      */
     @InputImport(name="encryptionType", required=true)
-    private final String encryptionType;
+      private final String encryptionType;
 
     public String getEncryptionType() {
         return this.encryptionType;
@@ -28,7 +28,7 @@ public final class GetRepositoryEncryptionConfiguration extends io.pulumi.resour
      * 
      */
     @InputImport(name="kmsKey", required=true)
-    private final String kmsKey;
+      private final String kmsKey;
 
     public String getKmsKey() {
         return this.kmsKey;

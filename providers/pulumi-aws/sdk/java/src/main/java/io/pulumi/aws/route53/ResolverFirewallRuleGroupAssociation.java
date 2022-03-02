@@ -8,8 +8,8 @@ import io.pulumi.aws.route53.ResolverFirewallRuleGroupAssociationArgs;
 import io.pulumi.aws.route53.inputs.ResolverFirewallRuleGroupAssociationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -144,6 +144,21 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
         return this.vpcId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ResolverFirewallRuleGroupAssociation(String name) {
+        this(name, ResolverFirewallRuleGroupAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ResolverFirewallRuleGroupAssociation(String name, ResolverFirewallRuleGroupAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -9,8 +9,8 @@ import io.pulumi.aws.cloudwatch.inputs.EventPermissionState;
 import io.pulumi.aws.cloudwatch.outputs.EventPermissionCondition;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -105,6 +105,21 @@ public class EventPermission extends io.pulumi.resources.CustomResource {
         return this.statementId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public EventPermission(String name) {
+        this(name, EventPermissionArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public EventPermission(String name, EventPermissionArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

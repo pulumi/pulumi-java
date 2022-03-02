@@ -5,7 +5,7 @@ package io.pulumi.aws.storagegateway;
 
 import io.pulumi.aws.storagegateway.inputs.SmbFileShareCacheAttributesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessBasedEnumeration")
-    private final @Nullable Input<Boolean> accessBasedEnumeration;
+      private final @Nullable Input<Boolean> accessBasedEnumeration;
 
     public Input<Boolean> getAccessBasedEnumeration() {
         return this.accessBasedEnumeration == null ? Input.empty() : this.accessBasedEnumeration;
@@ -34,7 +34,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminUserLists")
-    private final @Nullable Input<List<String>> adminUserLists;
+      private final @Nullable Input<List<String>> adminUserLists;
 
     public Input<List<String>> getAdminUserLists() {
         return this.adminUserLists == null ? Input.empty() : this.adminUserLists;
@@ -45,7 +45,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditDestinationArn")
-    private final @Nullable Input<String> auditDestinationArn;
+      private final @Nullable Input<String> auditDestinationArn;
 
     public Input<String> getAuditDestinationArn() {
         return this.auditDestinationArn == null ? Input.empty() : this.auditDestinationArn;
@@ -56,7 +56,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-    private final @Nullable Input<String> authentication;
+      private final @Nullable Input<String> authentication;
 
     public Input<String> getAuthentication() {
         return this.authentication == null ? Input.empty() : this.authentication;
@@ -67,7 +67,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketRegion")
-    private final @Nullable Input<String> bucketRegion;
+      private final @Nullable Input<String> bucketRegion;
 
     public Input<String> getBucketRegion() {
         return this.bucketRegion == null ? Input.empty() : this.bucketRegion;
@@ -78,7 +78,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheAttributes")
-    private final @Nullable Input<SmbFileShareCacheAttributesArgs> cacheAttributes;
+      private final @Nullable Input<SmbFileShareCacheAttributesArgs> cacheAttributes;
 
     public Input<SmbFileShareCacheAttributesArgs> getCacheAttributes() {
         return this.cacheAttributes == null ? Input.empty() : this.cacheAttributes;
@@ -89,7 +89,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caseSensitivity")
-    private final @Nullable Input<String> caseSensitivity;
+      private final @Nullable Input<String> caseSensitivity;
 
     public Input<String> getCaseSensitivity() {
         return this.caseSensitivity == null ? Input.empty() : this.caseSensitivity;
@@ -100,7 +100,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultStorageClass")
-    private final @Nullable Input<String> defaultStorageClass;
+      private final @Nullable Input<String> defaultStorageClass;
 
     public Input<String> getDefaultStorageClass() {
         return this.defaultStorageClass == null ? Input.empty() : this.defaultStorageClass;
@@ -111,7 +111,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileShareName")
-    private final @Nullable Input<String> fileShareName;
+      private final @Nullable Input<String> fileShareName;
 
     public Input<String> getFileShareName() {
         return this.fileShareName == null ? Input.empty() : this.fileShareName;
@@ -122,7 +122,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayArn", required=true)
-    private final Input<String> gatewayArn;
+      private final Input<String> gatewayArn;
 
     public Input<String> getGatewayArn() {
         return this.gatewayArn;
@@ -133,7 +133,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="guessMimeTypeEnabled")
-    private final @Nullable Input<Boolean> guessMimeTypeEnabled;
+      private final @Nullable Input<Boolean> guessMimeTypeEnabled;
 
     public Input<Boolean> getGuessMimeTypeEnabled() {
         return this.guessMimeTypeEnabled == null ? Input.empty() : this.guessMimeTypeEnabled;
@@ -144,7 +144,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invalidUserLists")
-    private final @Nullable Input<List<String>> invalidUserLists;
+      private final @Nullable Input<List<String>> invalidUserLists;
 
     public Input<List<String>> getInvalidUserLists() {
         return this.invalidUserLists == null ? Input.empty() : this.invalidUserLists;
@@ -155,7 +155,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsEncrypted")
-    private final @Nullable Input<Boolean> kmsEncrypted;
+      private final @Nullable Input<Boolean> kmsEncrypted;
 
     public Input<Boolean> getKmsEncrypted() {
         return this.kmsEncrypted == null ? Input.empty() : this.kmsEncrypted;
@@ -166,7 +166,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -177,7 +177,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationArn", required=true)
-    private final Input<String> locationArn;
+      private final Input<String> locationArn;
 
     public Input<String> getLocationArn() {
         return this.locationArn;
@@ -188,7 +188,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationPolicy")
-    private final @Nullable Input<String> notificationPolicy;
+      private final @Nullable Input<String> notificationPolicy;
 
     public Input<String> getNotificationPolicy() {
         return this.notificationPolicy == null ? Input.empty() : this.notificationPolicy;
@@ -199,7 +199,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectAcl")
-    private final @Nullable Input<String> objectAcl;
+      private final @Nullable Input<String> objectAcl;
 
     public Input<String> getObjectAcl() {
         return this.objectAcl == null ? Input.empty() : this.objectAcl;
@@ -210,7 +210,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oplocksEnabled")
-    private final @Nullable Input<Boolean> oplocksEnabled;
+      private final @Nullable Input<Boolean> oplocksEnabled;
 
     public Input<Boolean> getOplocksEnabled() {
         return this.oplocksEnabled == null ? Input.empty() : this.oplocksEnabled;
@@ -221,7 +221,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -232,7 +232,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requesterPays")
-    private final @Nullable Input<Boolean> requesterPays;
+      private final @Nullable Input<Boolean> requesterPays;
 
     public Input<Boolean> getRequesterPays() {
         return this.requesterPays == null ? Input.empty() : this.requesterPays;
@@ -243,7 +243,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -254,7 +254,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smbAclEnabled")
-    private final @Nullable Input<Boolean> smbAclEnabled;
+      private final @Nullable Input<Boolean> smbAclEnabled;
 
     public Input<Boolean> getSmbAclEnabled() {
         return this.smbAclEnabled == null ? Input.empty() : this.smbAclEnabled;
@@ -265,7 +265,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -276,7 +276,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validUserLists")
-    private final @Nullable Input<List<String>> validUserLists;
+      private final @Nullable Input<List<String>> validUserLists;
 
     public Input<List<String>> getValidUserLists() {
         return this.validUserLists == null ? Input.empty() : this.validUserLists;
@@ -287,7 +287,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcEndpointDnsName")
-    private final @Nullable Input<String> vpcEndpointDnsName;
+      private final @Nullable Input<String> vpcEndpointDnsName;
 
     public Input<String> getVpcEndpointDnsName() {
         return this.vpcEndpointDnsName == null ? Input.empty() : this.vpcEndpointDnsName;

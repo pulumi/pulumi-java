@@ -8,8 +8,8 @@ import io.pulumi.aws.s3.AccountPublicAccessBlockArgs;
 import io.pulumi.aws.s3.inputs.AccountPublicAccessBlockState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -115,6 +115,21 @@ public class AccountPublicAccessBlock extends io.pulumi.resources.CustomResource
         return this.restrictPublicBuckets;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public AccountPublicAccessBlock(String name) {
+        this(name, AccountPublicAccessBlockArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public AccountPublicAccessBlock(String name, @Nullable AccountPublicAccessBlockArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

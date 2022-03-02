@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class PartitionIndexPartitionIndexGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="indexName")
-    private final @Nullable Input<String> indexName;
+      private final @Nullable Input<String> indexName;
 
     public Input<String> getIndexName() {
         return this.indexName == null ? Input.empty() : this.indexName;
     }
 
     @InputImport(name="indexStatus")
-    private final @Nullable Input<String> indexStatus;
+      private final @Nullable Input<String> indexStatus;
 
     public Input<String> getIndexStatus() {
         return this.indexStatus == null ? Input.empty() : this.indexStatus;
@@ -38,7 +38,7 @@ public final class PartitionIndexPartitionIndexGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable Input<List<String>> keys;
+      private final @Nullable Input<List<String>> keys;
 
     public Input<List<String>> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;

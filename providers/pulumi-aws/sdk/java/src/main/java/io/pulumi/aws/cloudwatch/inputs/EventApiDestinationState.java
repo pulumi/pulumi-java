@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="connectionArn")
-    private final @Nullable Input<String> connectionArn;
+      private final @Nullable Input<String> connectionArn;
 
     public Input<String> getConnectionArn() {
         return this.connectionArn == null ? Input.empty() : this.connectionArn;
@@ -42,7 +42,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -53,7 +53,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="httpMethod")
-    private final @Nullable Input<String> httpMethod;
+      private final @Nullable Input<String> httpMethod;
 
     public Input<String> getHttpMethod() {
         return this.httpMethod == null ? Input.empty() : this.httpMethod;
@@ -64,7 +64,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="invocationEndpoint")
-    private final @Nullable Input<String> invocationEndpoint;
+      private final @Nullable Input<String> invocationEndpoint;
 
     public Input<String> getInvocationEndpoint() {
         return this.invocationEndpoint == null ? Input.empty() : this.invocationEndpoint;
@@ -75,7 +75,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="invocationRateLimitPerSecond")
-    private final @Nullable Input<Integer> invocationRateLimitPerSecond;
+      private final @Nullable Input<Integer> invocationRateLimitPerSecond;
 
     public Input<Integer> getInvocationRateLimitPerSecond() {
         return this.invocationRateLimitPerSecond == null ? Input.empty() : this.invocationRateLimitPerSecond;
@@ -86,7 +86,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

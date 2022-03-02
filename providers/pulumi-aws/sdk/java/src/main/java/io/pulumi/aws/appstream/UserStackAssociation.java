@@ -8,8 +8,8 @@ import io.pulumi.aws.appstream.UserStackAssociationArgs;
 import io.pulumi.aws.appstream.inputs.UserStackAssociationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -87,6 +87,21 @@ public class UserStackAssociation extends io.pulumi.resources.CustomResource {
         return this.userName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public UserStackAssociation(String name) {
+        this(name, UserStackAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public UserStackAssociation(String name, UserStackAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

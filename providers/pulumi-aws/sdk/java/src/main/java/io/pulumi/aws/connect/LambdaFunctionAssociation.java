@@ -8,8 +8,8 @@ import io.pulumi.aws.connect.LambdaFunctionAssociationArgs;
 import io.pulumi.aws.connect.inputs.LambdaFunctionAssociationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -59,6 +59,21 @@ public class LambdaFunctionAssociation extends io.pulumi.resources.CustomResourc
         return this.instanceId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public LambdaFunctionAssociation(String name) {
+        this(name, LambdaFunctionAssociationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public LambdaFunctionAssociation(String name, LambdaFunctionAssociationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

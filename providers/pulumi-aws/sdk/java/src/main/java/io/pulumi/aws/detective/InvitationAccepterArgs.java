@@ -4,7 +4,7 @@
 package io.pulumi.aws.detective;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="graphArn", required=true)
-    private final Input<String> graphArn;
+      private final Input<String> graphArn;
 
     public Input<String> getGraphArn() {
         return this.graphArn;

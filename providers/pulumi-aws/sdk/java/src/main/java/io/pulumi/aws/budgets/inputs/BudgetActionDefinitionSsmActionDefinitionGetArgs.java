@@ -4,7 +4,7 @@
 package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends io.p
      * 
      */
     @InputImport(name="actionSubType", required=true)
-    private final Input<String> actionSubType;
+      private final Input<String> actionSubType;
 
     public Input<String> getActionSubType() {
         return this.actionSubType;
@@ -30,7 +30,7 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends io.p
      * 
      */
     @InputImport(name="instanceIds", required=true)
-    private final Input<List<String>> instanceIds;
+      private final Input<List<String>> instanceIds;
 
     public Input<List<String>> getInstanceIds() {
         return this.instanceIds;
@@ -41,7 +41,7 @@ public final class BudgetActionDefinitionSsmActionDefinitionGetArgs extends io.p
      * 
      */
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;

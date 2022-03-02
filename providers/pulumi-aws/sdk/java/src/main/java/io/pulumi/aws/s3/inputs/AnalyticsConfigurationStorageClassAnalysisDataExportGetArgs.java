@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs e
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination;
+      private final Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> destination;
 
     public Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationGetArgs> getDestination() {
         return this.destination;
@@ -31,7 +31,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs e
      * 
      */
     @InputImport(name="outputSchemaVersion")
-    private final @Nullable Input<String> outputSchemaVersion;
+      private final @Nullable Input<String> outputSchemaVersion;
 
     public Input<String> getOutputSchemaVersion() {
         return this.outputSchemaVersion == null ? Input.empty() : this.outputSchemaVersion;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetVpcPeeringConnectionFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="cidrBlock")
-    private final @Nullable String cidrBlock;
+      private final @Nullable String cidrBlock;
 
     public Optional<String> getCidrBlock() {
         return this.cidrBlock == null ? Optional.empty() : Optional.ofNullable(this.cidrBlock);
@@ -33,7 +33,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetVpcPeeringConnectionFilter> filters;
+      private final @Nullable List<GetVpcPeeringConnectionFilter> filters;
 
     public List<GetVpcPeeringConnectionFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -44,7 +44,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -55,7 +55,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable String ownerId;
+      private final @Nullable String ownerId;
 
     public Optional<String> getOwnerId() {
         return this.ownerId == null ? Optional.empty() : Optional.ofNullable(this.ownerId);
@@ -66,7 +66,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="peerCidrBlock")
-    private final @Nullable String peerCidrBlock;
+      private final @Nullable String peerCidrBlock;
 
     public Optional<String> getPeerCidrBlock() {
         return this.peerCidrBlock == null ? Optional.empty() : Optional.ofNullable(this.peerCidrBlock);
@@ -77,7 +77,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="peerOwnerId")
-    private final @Nullable String peerOwnerId;
+      private final @Nullable String peerOwnerId;
 
     public Optional<String> getPeerOwnerId() {
         return this.peerOwnerId == null ? Optional.empty() : Optional.ofNullable(this.peerOwnerId);
@@ -88,7 +88,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="peerRegion")
-    private final @Nullable String peerRegion;
+      private final @Nullable String peerRegion;
 
     public Optional<String> getPeerRegion() {
         return this.peerRegion == null ? Optional.empty() : Optional.ofNullable(this.peerRegion);
@@ -99,7 +99,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="peerVpcId")
-    private final @Nullable String peerVpcId;
+      private final @Nullable String peerVpcId;
 
     public Optional<String> getPeerVpcId() {
         return this.peerVpcId == null ? Optional.empty() : Optional.ofNullable(this.peerVpcId);
@@ -110,7 +110,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="region")
-    private final @Nullable String region;
+      private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
@@ -121,7 +121,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+      private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -133,7 +133,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -144,7 +144,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable String vpcId;
+      private final @Nullable String vpcId;
 
     public Optional<String> getVpcId() {
         return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);

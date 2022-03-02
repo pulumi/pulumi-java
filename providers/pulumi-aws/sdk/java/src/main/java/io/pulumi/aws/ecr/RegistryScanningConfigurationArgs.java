@@ -5,7 +5,7 @@ package io.pulumi.aws.ecr;
 
 import io.pulumi.aws.ecr.inputs.RegistryScanningConfigurationRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RegistryScanningConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<RegistryScanningConfigurationRuleArgs>> rules;
+      private final @Nullable Input<List<RegistryScanningConfigurationRuleArgs>> rules;
 
     public Input<List<RegistryScanningConfigurationRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -32,7 +32,7 @@ public final class RegistryScanningConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="scanType", required=true)
-    private final Input<String> scanType;
+      private final Input<String> scanType;
 
     public Input<String> getScanType() {
         return this.scanType;

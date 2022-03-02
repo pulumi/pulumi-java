@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="blockSizeBytes")
-    private final @Nullable Input<Integer> blockSizeBytes;
+      private final @Nullable Input<Integer> blockSizeBytes;
 
     public Input<Integer> getBlockSizeBytes() {
         return this.blockSizeBytes == null ? Input.empty() : this.blockSizeBytes;
@@ -32,7 +32,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="compression")
-    private final @Nullable Input<String> compression;
+      private final @Nullable Input<String> compression;
 
     public Input<String> getCompression() {
         return this.compression == null ? Input.empty() : this.compression;
@@ -43,7 +43,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="enableDictionaryCompression")
-    private final @Nullable Input<Boolean> enableDictionaryCompression;
+      private final @Nullable Input<Boolean> enableDictionaryCompression;
 
     public Input<Boolean> getEnableDictionaryCompression() {
         return this.enableDictionaryCompression == null ? Input.empty() : this.enableDictionaryCompression;
@@ -54,7 +54,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="maxPaddingBytes")
-    private final @Nullable Input<Integer> maxPaddingBytes;
+      private final @Nullable Input<Integer> maxPaddingBytes;
 
     public Input<Integer> getMaxPaddingBytes() {
         return this.maxPaddingBytes == null ? Input.empty() : this.maxPaddingBytes;
@@ -65,7 +65,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="pageSizeBytes")
-    private final @Nullable Input<Integer> pageSizeBytes;
+      private final @Nullable Input<Integer> pageSizeBytes;
 
     public Input<Integer> getPageSizeBytes() {
         return this.pageSizeBytes == null ? Input.empty() : this.pageSizeBytes;
@@ -76,7 +76,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @InputImport(name="writerVersion")
-    private final @Nullable Input<String> writerVersion;
+      private final @Nullable Input<String> writerVersion;
 
     public Input<String> getWriterVersion() {
         return this.writerVersion == null ? Input.empty() : this.writerVersion;

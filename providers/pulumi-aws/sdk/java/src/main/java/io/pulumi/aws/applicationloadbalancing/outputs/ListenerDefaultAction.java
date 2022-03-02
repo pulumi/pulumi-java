@@ -8,7 +8,7 @@ import io.pulumi.aws.applicationloadbalancing.outputs.ListenerDefaultActionAuthe
 import io.pulumi.aws.applicationloadbalancing.outputs.ListenerDefaultActionFixedResponse;
 import io.pulumi.aws.applicationloadbalancing.outputs.ListenerDefaultActionForward;
 import io.pulumi.aws.applicationloadbalancing.outputs.ListenerDefaultActionRedirect;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;

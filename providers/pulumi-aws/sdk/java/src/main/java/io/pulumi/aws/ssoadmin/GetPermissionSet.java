@@ -6,7 +6,7 @@ package io.pulumi.aws.ssoadmin;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ssoadmin.inputs.GetPermissionSetArgs;
 import io.pulumi.aws.ssoadmin.outputs.GetPermissionSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigAccessCont
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs;
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResponseHeadersPolicyCorsConfigGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accessControlAllowCredentials", required=true)
-    private final Input<Boolean> accessControlAllowCredentials;
+      private final Input<Boolean> accessControlAllowCredentials;
 
     public Input<Boolean> getAccessControlAllowCredentials() {
         return this.accessControlAllowCredentials;
@@ -35,7 +35,7 @@ public final class ResponseHeadersPolicyCorsConfigGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accessControlAllowHeaders", required=true)
-    private final Input<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersGetArgs> accessControlAllowHeaders;
+      private final Input<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersGetArgs> accessControlAllowHeaders;
 
     public Input<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersGetArgs> getAccessControlAllowHeaders() {
         return this.accessControlAllowHeaders;
@@ -46,7 +46,7 @@ public final class ResponseHeadersPolicyCorsConfigGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accessControlAllowMethods", required=true)
-    private final Input<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsGetArgs> accessControlAllowMethods;
+      private final Input<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsGetArgs> accessControlAllowMethods;
 
     public Input<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsGetArgs> getAccessControlAllowMethods() {
         return this.accessControlAllowMethods;
@@ -57,7 +57,7 @@ public final class ResponseHeadersPolicyCorsConfigGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accessControlAllowOrigins", required=true)
-    private final Input<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs> accessControlAllowOrigins;
+      private final Input<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs> accessControlAllowOrigins;
 
     public Input<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs> getAccessControlAllowOrigins() {
         return this.accessControlAllowOrigins;
@@ -68,7 +68,7 @@ public final class ResponseHeadersPolicyCorsConfigGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accessControlExposeHeaders")
-    private final @Nullable Input<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersGetArgs> accessControlExposeHeaders;
+      private final @Nullable Input<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersGetArgs> accessControlExposeHeaders;
 
     public Input<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersGetArgs> getAccessControlExposeHeaders() {
         return this.accessControlExposeHeaders == null ? Input.empty() : this.accessControlExposeHeaders;
@@ -79,7 +79,7 @@ public final class ResponseHeadersPolicyCorsConfigGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accessControlMaxAgeSec")
-    private final @Nullable Input<Integer> accessControlMaxAgeSec;
+      private final @Nullable Input<Integer> accessControlMaxAgeSec;
 
     public Input<Integer> getAccessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec == null ? Input.empty() : this.accessControlMaxAgeSec;
@@ -90,7 +90,7 @@ public final class ResponseHeadersPolicyCorsConfigGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="originOverride", required=true)
-    private final Input<Boolean> originOverride;
+      private final Input<Boolean> originOverride;
 
     public Input<Boolean> getOriginOverride() {
         return this.originOverride;

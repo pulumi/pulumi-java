@@ -5,7 +5,7 @@ package io.pulumi.aws.macie.inputs;
 
 import io.pulumi.aws.macie.inputs.S3BucketAssociationClassificationTypeGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class S3BucketAssociationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="bucketName")
-    private final @Nullable Input<String> bucketName;
+      private final @Nullable Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName == null ? Input.empty() : this.bucketName;
@@ -31,7 +31,7 @@ public final class S3BucketAssociationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="classificationType")
-    private final @Nullable Input<S3BucketAssociationClassificationTypeGetArgs> classificationType;
+      private final @Nullable Input<S3BucketAssociationClassificationTypeGetArgs> classificationType;
 
     public Input<S3BucketAssociationClassificationTypeGetArgs> getClassificationType() {
         return this.classificationType == null ? Input.empty() : this.classificationType;
@@ -42,7 +42,7 @@ public final class S3BucketAssociationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="memberAccountId")
-    private final @Nullable Input<String> memberAccountId;
+      private final @Nullable Input<String> memberAccountId;
 
     public Input<String> getMemberAccountId() {
         return this.memberAccountId == null ? Input.empty() : this.memberAccountId;
@@ -53,7 +53,7 @@ public final class S3BucketAssociationState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;

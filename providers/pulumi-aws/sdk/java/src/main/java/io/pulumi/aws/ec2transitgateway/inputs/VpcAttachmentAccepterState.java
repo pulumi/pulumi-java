@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="applianceModeSupport")
-    private final @Nullable Input<String> applianceModeSupport;
+      private final @Nullable Input<String> applianceModeSupport;
 
     public Input<String> getApplianceModeSupport() {
         return this.applianceModeSupport == null ? Input.empty() : this.applianceModeSupport;
@@ -33,7 +33,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dnsSupport")
-    private final @Nullable Input<String> dnsSupport;
+      private final @Nullable Input<String> dnsSupport;
 
     public Input<String> getDnsSupport() {
         return this.dnsSupport == null ? Input.empty() : this.dnsSupport;
@@ -44,7 +44,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ipv6Support")
-    private final @Nullable Input<String> ipv6Support;
+      private final @Nullable Input<String> ipv6Support;
 
     public Input<String> getIpv6Support() {
         return this.ipv6Support == null ? Input.empty() : this.ipv6Support;
@@ -55,7 +55,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -66,7 +66,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -77,7 +77,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -88,7 +88,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="transitGatewayAttachmentId")
-    private final @Nullable Input<String> transitGatewayAttachmentId;
+      private final @Nullable Input<String> transitGatewayAttachmentId;
 
     public Input<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId == null ? Input.empty() : this.transitGatewayAttachmentId;
@@ -99,7 +99,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="transitGatewayDefaultRouteTableAssociation")
-    private final @Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation;
+      private final @Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation;
 
     public Input<Boolean> getTransitGatewayDefaultRouteTableAssociation() {
         return this.transitGatewayDefaultRouteTableAssociation == null ? Input.empty() : this.transitGatewayDefaultRouteTableAssociation;
@@ -110,7 +110,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="transitGatewayDefaultRouteTablePropagation")
-    private final @Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation;
+      private final @Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation;
 
     public Input<Boolean> getTransitGatewayDefaultRouteTablePropagation() {
         return this.transitGatewayDefaultRouteTablePropagation == null ? Input.empty() : this.transitGatewayDefaultRouteTablePropagation;
@@ -121,7 +121,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="transitGatewayId")
-    private final @Nullable Input<String> transitGatewayId;
+      private final @Nullable Input<String> transitGatewayId;
 
     public Input<String> getTransitGatewayId() {
         return this.transitGatewayId == null ? Input.empty() : this.transitGatewayId;
@@ -132,7 +132,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;
@@ -143,7 +143,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vpcOwnerId")
-    private final @Nullable Input<String> vpcOwnerId;
+      private final @Nullable Input<String> vpcOwnerId;
 
     public Input<String> getVpcOwnerId() {
         return this.vpcOwnerId == null ? Input.empty() : this.vpcOwnerId;

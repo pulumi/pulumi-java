@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
      * 
      */
     @InputImport(name="csvContentTypes")
-    private final @Nullable Input<List<String>> csvContentTypes;
+      private final @Nullable Input<List<String>> csvContentTypes;
 
     public Input<List<String>> getCsvContentTypes() {
         return this.csvContentTypes == null ? Input.empty() : this.csvContentTypes;
@@ -31,7 +31,7 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
      * 
      */
     @InputImport(name="jsonContentTypes")
-    private final @Nullable Input<List<String>> jsonContentTypes;
+      private final @Nullable Input<List<String>> jsonContentTypes;
 
     public Input<List<String>> getJsonContentTypes() {
         return this.jsonContentTypes == null ? Input.empty() : this.jsonContentTypes;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable Input<Map<String,String>> dimensions;
+      private final @Nullable Input<Map<String,String>> dimensions;
 
     public Input<Map<String,String>> getDimensions() {
         return this.dimensions == null ? Input.empty() : this.dimensions;
@@ -33,7 +33,7 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+      private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -45,7 +45,7 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -56,7 +56,7 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="period", required=true)
-    private final Input<Integer> period;
+      private final Input<Integer> period;
 
     public Input<Integer> getPeriod() {
         return this.period;
@@ -68,7 +68,7 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="stat", required=true)
-    private final Input<String> stat;
+      private final Input<String> stat;
 
     public Input<String> getStat() {
         return this.stat;
@@ -79,7 +79,7 @@ public final class MetricAlarmMetricQueryMetricGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable Input<String> unit;
+      private final @Nullable Input<String> unit;
 
     public Input<String> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;

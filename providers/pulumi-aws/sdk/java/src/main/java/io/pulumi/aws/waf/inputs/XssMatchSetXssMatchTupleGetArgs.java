@@ -5,7 +5,7 @@ package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.aws.waf.inputs.XssMatchSetXssMatchTupleFieldToMatchGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class XssMatchSetXssMatchTupleGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fieldToMatch", required=true)
-    private final Input<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch;
+      private final Input<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch;
 
     public Input<XssMatchSetXssMatchTupleFieldToMatchGetArgs> getFieldToMatch() {
         return this.fieldToMatch;
@@ -34,7 +34,7 @@ public final class XssMatchSetXssMatchTupleGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="textTransformation", required=true)
-    private final Input<String> textTransformation;
+      private final Input<String> textTransformation;
 
     public Input<String> getTextTransformation() {
         return this.textTransformation;

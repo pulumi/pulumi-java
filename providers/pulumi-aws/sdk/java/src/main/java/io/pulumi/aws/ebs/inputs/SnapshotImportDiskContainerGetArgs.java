@@ -5,7 +5,7 @@ package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.aws.ebs.inputs.SnapshotImportDiskContainerUserBucketGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="format", required=true)
-    private final Input<String> format;
+      private final Input<String> format;
 
     public Input<String> getFormat() {
         return this.format;
@@ -42,7 +42,7 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -53,7 +53,7 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="userBucket")
-    private final @Nullable Input<SnapshotImportDiskContainerUserBucketGetArgs> userBucket;
+      private final @Nullable Input<SnapshotImportDiskContainerUserBucketGetArgs> userBucket;
 
     public Input<SnapshotImportDiskContainerUserBucketGetArgs> getUserBucket() {
         return this.userBucket == null ? Input.empty() : this.userBucket;

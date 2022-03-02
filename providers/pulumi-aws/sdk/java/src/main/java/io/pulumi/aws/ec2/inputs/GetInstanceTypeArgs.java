@@ -7,7 +7,7 @@ import io.pulumi.aws.ec2.inputs.GetInstanceTypeFpga;
 import io.pulumi.aws.ec2.inputs.GetInstanceTypeGpus;
 import io.pulumi.aws.ec2.inputs.GetInstanceTypeInferenceAccelerator;
 import io.pulumi.aws.ec2.inputs.GetInstanceTypeInstanceDisk;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="defaultCores")
-    private final @Nullable Integer defaultCores;
+      private final @Nullable Integer defaultCores;
 
     public Optional<Integer> getDefaultCores() {
         return this.defaultCores == null ? Optional.empty() : Optional.ofNullable(this.defaultCores);
@@ -36,7 +36,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="defaultThreadsPerCore")
-    private final @Nullable Integer defaultThreadsPerCore;
+      private final @Nullable Integer defaultThreadsPerCore;
 
     public Optional<Integer> getDefaultThreadsPerCore() {
         return this.defaultThreadsPerCore == null ? Optional.empty() : Optional.ofNullable(this.defaultThreadsPerCore);
@@ -51,7 +51,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fpgas")
-    private final @Nullable List<GetInstanceTypeFpga> fpgas;
+      private final @Nullable List<GetInstanceTypeFpga> fpgas;
 
     public List<GetInstanceTypeFpga> getFpgas() {
         return this.fpgas == null ? List.of() : this.fpgas;
@@ -66,7 +66,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gpuses")
-    private final @Nullable List<GetInstanceTypeGpus> gpuses;
+      private final @Nullable List<GetInstanceTypeGpus> gpuses;
 
     public List<GetInstanceTypeGpus> getGpuses() {
         return this.gpuses == null ? List.of() : this.gpuses;
@@ -81,14 +81,14 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hypervisor")
-    private final @Nullable String hypervisor;
+      private final @Nullable String hypervisor;
 
     public Optional<String> getHypervisor() {
         return this.hypervisor == null ? Optional.empty() : Optional.ofNullable(this.hypervisor);
     }
 
     @InputImport(name="inferenceAccelerators")
-    private final @Nullable List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators;
+      private final @Nullable List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators;
 
     public List<GetInstanceTypeInferenceAccelerator> getInferenceAccelerators() {
         return this.inferenceAccelerators == null ? List.of() : this.inferenceAccelerators;
@@ -102,7 +102,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceDisks")
-    private final @Nullable List<GetInstanceTypeInstanceDisk> instanceDisks;
+      private final @Nullable List<GetInstanceTypeInstanceDisk> instanceDisks;
 
     public List<GetInstanceTypeInstanceDisk> getInstanceDisks() {
         return this.instanceDisks == null ? List.of() : this.instanceDisks;
@@ -113,7 +113,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+      private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -124,7 +124,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maximumIpv6AddressesPerInterface")
-    private final @Nullable Integer maximumIpv6AddressesPerInterface;
+      private final @Nullable Integer maximumIpv6AddressesPerInterface;
 
     public Optional<Integer> getMaximumIpv6AddressesPerInterface() {
         return this.maximumIpv6AddressesPerInterface == null ? Optional.empty() : Optional.ofNullable(this.maximumIpv6AddressesPerInterface);
@@ -135,7 +135,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="totalFpgaMemory")
-    private final @Nullable Integer totalFpgaMemory;
+      private final @Nullable Integer totalFpgaMemory;
 
     public Optional<Integer> getTotalFpgaMemory() {
         return this.totalFpgaMemory == null ? Optional.empty() : Optional.ofNullable(this.totalFpgaMemory);
@@ -146,7 +146,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="totalGpuMemory")
-    private final @Nullable Integer totalGpuMemory;
+      private final @Nullable Integer totalGpuMemory;
 
     public Optional<Integer> getTotalGpuMemory() {
         return this.totalGpuMemory == null ? Optional.empty() : Optional.ofNullable(this.totalGpuMemory);
@@ -157,7 +157,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="totalInstanceStorage")
-    private final @Nullable Integer totalInstanceStorage;
+      private final @Nullable Integer totalInstanceStorage;
 
     public Optional<Integer> getTotalInstanceStorage() {
         return this.totalInstanceStorage == null ? Optional.empty() : Optional.ofNullable(this.totalInstanceStorage);

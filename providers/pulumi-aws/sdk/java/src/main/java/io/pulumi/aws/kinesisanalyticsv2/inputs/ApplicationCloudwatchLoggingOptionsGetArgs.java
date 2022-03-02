@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class ApplicationCloudwatchLoggingOptionsGetArgs extends io.pulumi.
     public static final ApplicationCloudwatchLoggingOptionsGetArgs Empty = new ApplicationCloudwatchLoggingOptionsGetArgs();
 
     @InputImport(name="cloudwatchLoggingOptionId")
-    private final @Nullable Input<String> cloudwatchLoggingOptionId;
+      private final @Nullable Input<String> cloudwatchLoggingOptionId;
 
     public Input<String> getCloudwatchLoggingOptionId() {
         return this.cloudwatchLoggingOptionId == null ? Input.empty() : this.cloudwatchLoggingOptionId;
@@ -26,7 +26,7 @@ public final class ApplicationCloudwatchLoggingOptionsGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="logStreamArn", required=true)
-    private final Input<String> logStreamArn;
+      private final Input<String> logStreamArn;
 
     public Input<String> getLogStreamArn() {
         return this.logStreamArn;

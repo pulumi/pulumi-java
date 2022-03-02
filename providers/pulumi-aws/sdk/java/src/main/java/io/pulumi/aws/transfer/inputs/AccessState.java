@@ -6,7 +6,7 @@ package io.pulumi.aws.transfer.inputs;
 import io.pulumi.aws.transfer.inputs.AccessHomeDirectoryMappingGetArgs;
 import io.pulumi.aws.transfer.inputs.AccessPosixProfileGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalId")
-    private final @Nullable Input<String> externalId;
+      private final @Nullable Input<String> externalId;
 
     public Input<String> getExternalId() {
         return this.externalId == null ? Input.empty() : this.externalId;
@@ -33,7 +33,7 @@ public final class AccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeDirectory")
-    private final @Nullable Input<String> homeDirectory;
+      private final @Nullable Input<String> homeDirectory;
 
     public Input<String> getHomeDirectory() {
         return this.homeDirectory == null ? Input.empty() : this.homeDirectory;
@@ -44,7 +44,7 @@ public final class AccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeDirectoryMappings")
-    private final @Nullable Input<List<AccessHomeDirectoryMappingGetArgs>> homeDirectoryMappings;
+      private final @Nullable Input<List<AccessHomeDirectoryMappingGetArgs>> homeDirectoryMappings;
 
     public Input<List<AccessHomeDirectoryMappingGetArgs>> getHomeDirectoryMappings() {
         return this.homeDirectoryMappings == null ? Input.empty() : this.homeDirectoryMappings;
@@ -55,14 +55,14 @@ public final class AccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="homeDirectoryType")
-    private final @Nullable Input<String> homeDirectoryType;
+      private final @Nullable Input<String> homeDirectoryType;
 
     public Input<String> getHomeDirectoryType() {
         return this.homeDirectoryType == null ? Input.empty() : this.homeDirectoryType;
     }
 
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -73,7 +73,7 @@ public final class AccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="posixProfile")
-    private final @Nullable Input<AccessPosixProfileGetArgs> posixProfile;
+      private final @Nullable Input<AccessPosixProfileGetArgs> posixProfile;
 
     public Input<AccessPosixProfileGetArgs> getPosixProfile() {
         return this.posixProfile == null ? Input.empty() : this.posixProfile;
@@ -84,7 +84,7 @@ public final class AccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -95,7 +95,7 @@ public final class AccessState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverId")
-    private final @Nullable Input<String> serverId;
+      private final @Nullable Input<String> serverId;
 
     public Input<String> getServerId() {
         return this.serverId == null ? Input.empty() : this.serverId;

@@ -9,8 +9,8 @@ import io.pulumi.aws.route53.inputs.ResolverRuleState;
 import io.pulumi.aws.route53.outputs.ResolverRuleTargetIp;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -179,6 +179,21 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
         return this.targetIps;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ResolverRule(String name) {
+        this(name, ResolverRuleArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ResolverRule(String name, ResolverRuleArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

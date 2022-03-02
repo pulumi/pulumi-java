@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClassificationJobS3JobDefinitionBucketDefinitionGetArgs exten
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+      private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
@@ -30,7 +30,7 @@ public final class ClassificationJobS3JobDefinitionBucketDefinitionGetArgs exten
      * 
      */
     @InputImport(name="buckets", required=true)
-    private final Input<List<String>> buckets;
+      private final Input<List<String>> buckets;
 
     public Input<List<String>> getBuckets() {
         return this.buckets;

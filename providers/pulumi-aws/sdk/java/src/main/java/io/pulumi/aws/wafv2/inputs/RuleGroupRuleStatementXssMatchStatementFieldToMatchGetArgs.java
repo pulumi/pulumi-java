@@ -11,7 +11,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementXssMatchStatementFieldTo
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementXssMatchStatementFieldToMatchUriPathGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchGetArgs ex
      * 
      */
     @InputImport(name="allQueryArguments")
-    private final @Nullable Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
+      private final @Nullable Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
 
     public Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchAllQueryArgumentsGetArgs> getAllQueryArguments() {
         return this.allQueryArguments == null ? Input.empty() : this.allQueryArguments;
@@ -36,7 +36,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchGetArgs ex
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchBodyGetArgs> body;
+      private final @Nullable Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchBodyGetArgs> body;
 
     public Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchBodyGetArgs> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -47,7 +47,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchGetArgs ex
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchMethodGetArgs> method;
+      private final @Nullable Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchMethodGetArgs> method;
 
     public Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchMethodGetArgs> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -58,7 +58,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchGetArgs ex
      * 
      */
     @InputImport(name="queryString")
-    private final @Nullable Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchQueryStringGetArgs> queryString;
+      private final @Nullable Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchQueryStringGetArgs> queryString;
 
     public Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchQueryStringGetArgs> getQueryString() {
         return this.queryString == null ? Input.empty() : this.queryString;
@@ -69,7 +69,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchGetArgs ex
      * 
      */
     @InputImport(name="singleHeader")
-    private final @Nullable Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
+      private final @Nullable Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
 
     public Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleHeaderGetArgs> getSingleHeader() {
         return this.singleHeader == null ? Input.empty() : this.singleHeader;
@@ -80,7 +80,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchGetArgs ex
      * 
      */
     @InputImport(name="singleQueryArgument")
-    private final @Nullable Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
+      private final @Nullable Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
 
     public Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchSingleQueryArgumentGetArgs> getSingleQueryArgument() {
         return this.singleQueryArgument == null ? Input.empty() : this.singleQueryArgument;
@@ -91,7 +91,7 @@ public final class RuleGroupRuleStatementXssMatchStatementFieldToMatchGetArgs ex
      * 
      */
     @InputImport(name="uriPath")
-    private final @Nullable Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchUriPathGetArgs> uriPath;
+      private final @Nullable Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchUriPathGetArgs> uriPath;
 
     public Input<RuleGroupRuleStatementXssMatchStatementFieldToMatchUriPathGetArgs> getUriPath() {
         return this.uriPath == null ? Input.empty() : this.uriPath;

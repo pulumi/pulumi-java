@@ -7,7 +7,7 @@ import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionCustom
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs;
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="customizedLoadMetricSpecification")
-    private final @Nullable Input<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs> customizedLoadMetricSpecification;
+      private final @Nullable Input<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs> customizedLoadMetricSpecification;
 
     public Input<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs> getCustomizedLoadMetricSpecification() {
         return this.customizedLoadMetricSpecification == null ? Input.empty() : this.customizedLoadMetricSpecification;
@@ -37,7 +37,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="disableDynamicScaling")
-    private final @Nullable Input<Boolean> disableDynamicScaling;
+      private final @Nullable Input<Boolean> disableDynamicScaling;
 
     public Input<Boolean> getDisableDynamicScaling() {
         return this.disableDynamicScaling == null ? Input.empty() : this.disableDynamicScaling;
@@ -48,7 +48,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxCapacity", required=true)
-    private final Input<Integer> maxCapacity;
+      private final Input<Integer> maxCapacity;
 
     public Input<Integer> getMaxCapacity() {
         return this.maxCapacity;
@@ -59,7 +59,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minCapacity", required=true)
-    private final Input<Integer> minCapacity;
+      private final Input<Integer> minCapacity;
 
     public Input<Integer> getMinCapacity() {
         return this.minCapacity;
@@ -71,7 +71,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="predefinedLoadMetricSpecification")
-    private final @Nullable Input<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification;
+      private final @Nullable Input<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification;
 
     public Input<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs> getPredefinedLoadMetricSpecification() {
         return this.predefinedLoadMetricSpecification == null ? Input.empty() : this.predefinedLoadMetricSpecification;
@@ -83,7 +83,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="predictiveScalingMaxCapacityBehavior")
-    private final @Nullable Input<String> predictiveScalingMaxCapacityBehavior;
+      private final @Nullable Input<String> predictiveScalingMaxCapacityBehavior;
 
     public Input<String> getPredictiveScalingMaxCapacityBehavior() {
         return this.predictiveScalingMaxCapacityBehavior == null ? Input.empty() : this.predictiveScalingMaxCapacityBehavior;
@@ -94,7 +94,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="predictiveScalingMaxCapacityBuffer")
-    private final @Nullable Input<Integer> predictiveScalingMaxCapacityBuffer;
+      private final @Nullable Input<Integer> predictiveScalingMaxCapacityBuffer;
 
     public Input<Integer> getPredictiveScalingMaxCapacityBuffer() {
         return this.predictiveScalingMaxCapacityBuffer == null ? Input.empty() : this.predictiveScalingMaxCapacityBuffer;
@@ -105,7 +105,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="predictiveScalingMode")
-    private final @Nullable Input<String> predictiveScalingMode;
+      private final @Nullable Input<String> predictiveScalingMode;
 
     public Input<String> getPredictiveScalingMode() {
         return this.predictiveScalingMode == null ? Input.empty() : this.predictiveScalingMode;
@@ -116,7 +116,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -127,7 +127,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="scalableDimension", required=true)
-    private final Input<String> scalableDimension;
+      private final Input<String> scalableDimension;
 
     public Input<String> getScalableDimension() {
         return this.scalableDimension;
@@ -138,7 +138,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="scalingPolicyUpdateBehavior")
-    private final @Nullable Input<String> scalingPolicyUpdateBehavior;
+      private final @Nullable Input<String> scalingPolicyUpdateBehavior;
 
     public Input<String> getScalingPolicyUpdateBehavior() {
         return this.scalingPolicyUpdateBehavior == null ? Input.empty() : this.scalingPolicyUpdateBehavior;
@@ -149,7 +149,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="scheduledActionBufferTime")
-    private final @Nullable Input<Integer> scheduledActionBufferTime;
+      private final @Nullable Input<Integer> scheduledActionBufferTime;
 
     public Input<Integer> getScheduledActionBufferTime() {
         return this.scheduledActionBufferTime == null ? Input.empty() : this.scheduledActionBufferTime;
@@ -160,7 +160,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="serviceNamespace", required=true)
-    private final Input<String> serviceNamespace;
+      private final Input<String> serviceNamespace;
 
     public Input<String> getServiceNamespace() {
         return this.serviceNamespace;
@@ -172,7 +172,7 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="targetTrackingConfigurations", required=true)
-    private final Input<List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs>> targetTrackingConfigurations;
+      private final Input<List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs>> targetTrackingConfigurations;
 
     public Input<List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs>> getTargetTrackingConfigurations() {
         return this.targetTrackingConfigurations;

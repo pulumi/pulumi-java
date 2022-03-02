@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.BotClarificationPromptMessageGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class BotClarificationPromptGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="maxAttempts", required=true)
-    private final Input<Integer> maxAttempts;
+      private final Input<Integer> maxAttempts;
 
     public Input<Integer> getMaxAttempts() {
         return this.maxAttempts;
@@ -35,7 +35,7 @@ public final class BotClarificationPromptGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="messages", required=true)
-    private final Input<List<BotClarificationPromptMessageGetArgs>> messages;
+      private final Input<List<BotClarificationPromptMessageGetArgs>> messages;
 
     public Input<List<BotClarificationPromptMessageGetArgs>> getMessages() {
         return this.messages;
@@ -48,7 +48,7 @@ public final class BotClarificationPromptGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="responseCard")
-    private final @Nullable Input<String> responseCard;
+      private final @Nullable Input<String> responseCard;
 
     public Input<String> getResponseCard() {
         return this.responseCard == null ? Input.empty() : this.responseCard;

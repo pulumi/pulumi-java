@@ -9,7 +9,7 @@ import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputsParallelism;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputsProcessingConfiguration;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputsSchema;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputsStartingPositionConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

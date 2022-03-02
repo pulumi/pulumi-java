@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class MonitoringSubscriptionMonitoringSubscriptionGetArgs extends i
      * 
      */
     @InputImport(name="realtimeMetricsSubscriptionConfig", required=true)
-    private final Input<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig;
+      private final Input<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> realtimeMetricsSubscriptionConfig;
 
     public Input<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigGetArgs> getRealtimeMetricsSubscriptionConfig() {
         return this.realtimeMetricsSubscriptionConfig;

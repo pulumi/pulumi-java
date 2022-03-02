@@ -5,7 +5,7 @@ package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.aws.memorydb.inputs.ClusterShardNodeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ClusterShardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class ClusterShardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodes")
-    private final @Nullable Input<List<ClusterShardNodeArgs>> nodes;
+      private final @Nullable Input<List<ClusterShardNodeArgs>> nodes;
 
     public Input<List<ClusterShardNodeArgs>> getNodes() {
         return this.nodes == null ? Input.empty() : this.nodes;
@@ -45,7 +45,7 @@ public final class ClusterShardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numNodes")
-    private final @Nullable Input<Integer> numNodes;
+      private final @Nullable Input<Integer> numNodes;
 
     public Input<Integer> getNumNodes() {
         return this.numNodes == null ? Input.empty() : this.numNodes;
@@ -56,7 +56,7 @@ public final class ClusterShardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slots")
-    private final @Nullable Input<String> slots;
+      private final @Nullable Input<String> slots;
 
     public Input<String> getSlots() {
         return this.slots == null ? Input.empty() : this.slots;

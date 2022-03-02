@@ -5,7 +5,7 @@ package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.aws.cfg.inputs.DeliveryChannelSnapshotDeliveryPropertiesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DeliveryChannelState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class DeliveryChannelState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="s3BucketName")
-    private final @Nullable Input<String> s3BucketName;
+      private final @Nullable Input<String> s3BucketName;
 
     public Input<String> getS3BucketName() {
         return this.s3BucketName == null ? Input.empty() : this.s3BucketName;
@@ -42,7 +42,7 @@ public final class DeliveryChannelState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="s3KeyPrefix")
-    private final @Nullable Input<String> s3KeyPrefix;
+      private final @Nullable Input<String> s3KeyPrefix;
 
     public Input<String> getS3KeyPrefix() {
         return this.s3KeyPrefix == null ? Input.empty() : this.s3KeyPrefix;
@@ -53,7 +53,7 @@ public final class DeliveryChannelState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="s3KmsKeyArn")
-    private final @Nullable Input<String> s3KmsKeyArn;
+      private final @Nullable Input<String> s3KmsKeyArn;
 
     public Input<String> getS3KmsKeyArn() {
         return this.s3KmsKeyArn == null ? Input.empty() : this.s3KmsKeyArn;
@@ -64,7 +64,7 @@ public final class DeliveryChannelState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="snapshotDeliveryProperties")
-    private final @Nullable Input<DeliveryChannelSnapshotDeliveryPropertiesGetArgs> snapshotDeliveryProperties;
+      private final @Nullable Input<DeliveryChannelSnapshotDeliveryPropertiesGetArgs> snapshotDeliveryProperties;
 
     public Input<DeliveryChannelSnapshotDeliveryPropertiesGetArgs> getSnapshotDeliveryProperties() {
         return this.snapshotDeliveryProperties == null ? Input.empty() : this.snapshotDeliveryProperties;
@@ -75,7 +75,7 @@ public final class DeliveryChannelState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="snsTopicArn")
-    private final @Nullable Input<String> snsTopicArn;
+      private final @Nullable Input<String> snsTopicArn;
 
     public Input<String> getSnsTopicArn() {
         return this.snsTopicArn == null ? Input.empty() : this.snsTopicArn;

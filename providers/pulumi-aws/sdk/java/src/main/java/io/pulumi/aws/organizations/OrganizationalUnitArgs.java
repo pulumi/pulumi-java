@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class OrganizationalUnitArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class OrganizationalUnitArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parentId", required=true)
-    private final Input<String> parentId;
+      private final Input<String> parentId;
 
     public Input<String> getParentId() {
         return this.parentId;
@@ -42,7 +42,7 @@ public final class OrganizationalUnitArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

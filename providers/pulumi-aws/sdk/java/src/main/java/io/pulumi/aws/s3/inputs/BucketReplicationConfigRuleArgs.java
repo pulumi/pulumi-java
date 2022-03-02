@@ -9,7 +9,7 @@ import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleExistingObjectReplicat
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleFilterArgs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleSourceSelectionCriteriaArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class BucketReplicationConfigRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deleteMarkerReplication")
-    private final @Nullable Input<BucketReplicationConfigRuleDeleteMarkerReplicationArgs> deleteMarkerReplication;
+      private final @Nullable Input<BucketReplicationConfigRuleDeleteMarkerReplicationArgs> deleteMarkerReplication;
 
     public Input<BucketReplicationConfigRuleDeleteMarkerReplicationArgs> getDeleteMarkerReplication() {
         return this.deleteMarkerReplication == null ? Input.empty() : this.deleteMarkerReplication;
@@ -36,7 +36,7 @@ public final class BucketReplicationConfigRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<BucketReplicationConfigRuleDestinationArgs> destination;
+      private final Input<BucketReplicationConfigRuleDestinationArgs> destination;
 
     public Input<BucketReplicationConfigRuleDestinationArgs> getDestination() {
         return this.destination;
@@ -47,7 +47,7 @@ public final class BucketReplicationConfigRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="existingObjectReplication")
-    private final @Nullable Input<BucketReplicationConfigRuleExistingObjectReplicationArgs> existingObjectReplication;
+      private final @Nullable Input<BucketReplicationConfigRuleExistingObjectReplicationArgs> existingObjectReplication;
 
     public Input<BucketReplicationConfigRuleExistingObjectReplicationArgs> getExistingObjectReplication() {
         return this.existingObjectReplication == null ? Input.empty() : this.existingObjectReplication;
@@ -58,7 +58,7 @@ public final class BucketReplicationConfigRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<BucketReplicationConfigRuleFilterArgs> filter;
+      private final @Nullable Input<BucketReplicationConfigRuleFilterArgs> filter;
 
     public Input<BucketReplicationConfigRuleFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -69,7 +69,7 @@ public final class BucketReplicationConfigRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -80,7 +80,7 @@ public final class BucketReplicationConfigRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -91,7 +91,7 @@ public final class BucketReplicationConfigRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -102,7 +102,7 @@ public final class BucketReplicationConfigRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sourceSelectionCriteria")
-    private final @Nullable Input<BucketReplicationConfigRuleSourceSelectionCriteriaArgs> sourceSelectionCriteria;
+      private final @Nullable Input<BucketReplicationConfigRuleSourceSelectionCriteriaArgs> sourceSelectionCriteria;
 
     public Input<BucketReplicationConfigRuleSourceSelectionCriteriaArgs> getSourceSelectionCriteria() {
         return this.sourceSelectionCriteria == null ? Input.empty() : this.sourceSelectionCriteria;
@@ -113,7 +113,7 @@ public final class BucketReplicationConfigRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<String> status;
+      private final Input<String> status;
 
     public Input<String> getStatus() {
         return this.status;

@@ -5,7 +5,7 @@ package io.pulumi.aws.codestarconnections;
 
 import io.pulumi.aws.codestarconnections.inputs.HostVpcConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerEndpoint", required=true)
-    private final Input<String> providerEndpoint;
+      private final Input<String> providerEndpoint;
 
     public Input<String> getProviderEndpoint() {
         return this.providerEndpoint;
@@ -42,7 +42,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerType", required=true)
-    private final Input<String> providerType;
+      private final Input<String> providerType;
 
     public Input<String> getProviderType() {
         return this.providerType;
@@ -53,7 +53,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfiguration")
-    private final @Nullable Input<HostVpcConfigurationArgs> vpcConfiguration;
+      private final @Nullable Input<HostVpcConfigurationArgs> vpcConfiguration;
 
     public Input<HostVpcConfigurationArgs> getVpcConfiguration() {
         return this.vpcConfiguration == null ? Input.empty() : this.vpcConfiguration;

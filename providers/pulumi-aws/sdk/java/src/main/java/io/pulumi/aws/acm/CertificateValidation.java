@@ -8,8 +8,8 @@ import io.pulumi.aws.acm.CertificateValidationArgs;
 import io.pulumi.aws.acm.inputs.CertificateValidationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -58,6 +58,21 @@ public class CertificateValidation extends io.pulumi.resources.CustomResource {
         return this.validationRecordFqdns;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public CertificateValidation(String name) {
+        this(name, CertificateValidationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public CertificateValidation(String name, CertificateValidationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -8,8 +8,8 @@ import io.pulumi.aws.ec2.ManagedPrefixListEntryArgs;
 import io.pulumi.aws.ec2.inputs.ManagedPrefixListEntryState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -68,6 +68,21 @@ public class ManagedPrefixListEntry extends io.pulumi.resources.CustomResource {
         return this.prefixListId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public ManagedPrefixListEntry(String name) {
+        this(name, ManagedPrefixListEntryArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public ManagedPrefixListEntry(String name, ManagedPrefixListEntryArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

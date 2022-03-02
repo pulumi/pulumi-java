@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.NetworkAclEgressArgs;
 import io.pulumi.aws.ec2.inputs.NetworkAclIngressArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egress")
-    private final @Nullable Input<List<NetworkAclEgressArgs>> egress;
+      private final @Nullable Input<List<NetworkAclEgressArgs>> egress;
 
     public Input<List<NetworkAclEgressArgs>> getEgress() {
         return this.egress == null ? Input.empty() : this.egress;
@@ -34,7 +34,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingress")
-    private final @Nullable Input<List<NetworkAclIngressArgs>> ingress;
+      private final @Nullable Input<List<NetworkAclIngressArgs>> ingress;
 
     public Input<List<NetworkAclIngressArgs>> getIngress() {
         return this.ingress == null ? Input.empty() : this.ingress;
@@ -45,7 +45,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+      private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
@@ -56,7 +56,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -67,7 +67,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+      private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;

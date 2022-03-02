@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudfront.inputs.DistributionOrderedCacheBehaviorForwarded
 import io.pulumi.aws.cloudfront.inputs.DistributionOrderedCacheBehaviorFunctionAssociationArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="allowedMethods", required=true)
-    private final Input<List<String>> allowedMethods;
+      private final Input<List<String>> allowedMethods;
 
     public Input<List<String>> getAllowedMethods() {
         return this.allowedMethods;
@@ -38,7 +38,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="cachePolicyId")
-    private final @Nullable Input<String> cachePolicyId;
+      private final @Nullable Input<String> cachePolicyId;
 
     public Input<String> getCachePolicyId() {
         return this.cachePolicyId == null ? Input.empty() : this.cachePolicyId;
@@ -50,7 +50,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="cachedMethods", required=true)
-    private final Input<List<String>> cachedMethods;
+      private final Input<List<String>> cachedMethods;
 
     public Input<List<String>> getCachedMethods() {
         return this.cachedMethods;
@@ -63,7 +63,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="compress")
-    private final @Nullable Input<Boolean> compress;
+      private final @Nullable Input<Boolean> compress;
 
     public Input<Boolean> getCompress() {
         return this.compress == null ? Input.empty() : this.compress;
@@ -76,7 +76,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultTtl")
-    private final @Nullable Input<Integer> defaultTtl;
+      private final @Nullable Input<Integer> defaultTtl;
 
     public Input<Integer> getDefaultTtl() {
         return this.defaultTtl == null ? Input.empty() : this.defaultTtl;
@@ -87,7 +87,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fieldLevelEncryptionId")
-    private final @Nullable Input<String> fieldLevelEncryptionId;
+      private final @Nullable Input<String> fieldLevelEncryptionId;
 
     public Input<String> getFieldLevelEncryptionId() {
         return this.fieldLevelEncryptionId == null ? Input.empty() : this.fieldLevelEncryptionId;
@@ -99,7 +99,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="forwardedValues")
-    private final @Nullable Input<DistributionOrderedCacheBehaviorForwardedValuesArgs> forwardedValues;
+      private final @Nullable Input<DistributionOrderedCacheBehaviorForwardedValuesArgs> forwardedValues;
 
     public Input<DistributionOrderedCacheBehaviorForwardedValuesArgs> getForwardedValues() {
         return this.forwardedValues == null ? Input.empty() : this.forwardedValues;
@@ -111,7 +111,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="functionAssociations")
-    private final @Nullable Input<List<DistributionOrderedCacheBehaviorFunctionAssociationArgs>> functionAssociations;
+      private final @Nullable Input<List<DistributionOrderedCacheBehaviorFunctionAssociationArgs>> functionAssociations;
 
     public Input<List<DistributionOrderedCacheBehaviorFunctionAssociationArgs>> getFunctionAssociations() {
         return this.functionAssociations == null ? Input.empty() : this.functionAssociations;
@@ -123,7 +123,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="lambdaFunctionAssociations")
-    private final @Nullable Input<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations;
+      private final @Nullable Input<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs>> lambdaFunctionAssociations;
 
     public Input<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs>> getLambdaFunctionAssociations() {
         return this.lambdaFunctionAssociations == null ? Input.empty() : this.lambdaFunctionAssociations;
@@ -138,7 +138,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxTtl")
-    private final @Nullable Input<Integer> maxTtl;
+      private final @Nullable Input<Integer> maxTtl;
 
     public Input<Integer> getMaxTtl() {
         return this.maxTtl == null ? Input.empty() : this.maxTtl;
@@ -151,7 +151,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minTtl")
-    private final @Nullable Input<Integer> minTtl;
+      private final @Nullable Input<Integer> minTtl;
 
     public Input<Integer> getMinTtl() {
         return this.minTtl == null ? Input.empty() : this.minTtl;
@@ -163,7 +163,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="originRequestPolicyId")
-    private final @Nullable Input<String> originRequestPolicyId;
+      private final @Nullable Input<String> originRequestPolicyId;
 
     public Input<String> getOriginRequestPolicyId() {
         return this.originRequestPolicyId == null ? Input.empty() : this.originRequestPolicyId;
@@ -175,7 +175,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="pathPattern", required=true)
-    private final Input<String> pathPattern;
+      private final Input<String> pathPattern;
 
     public Input<String> getPathPattern() {
         return this.pathPattern;
@@ -187,7 +187,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="realtimeLogConfigArn")
-    private final @Nullable Input<String> realtimeLogConfigArn;
+      private final @Nullable Input<String> realtimeLogConfigArn;
 
     public Input<String> getRealtimeLogConfigArn() {
         return this.realtimeLogConfigArn == null ? Input.empty() : this.realtimeLogConfigArn;
@@ -198,7 +198,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="responseHeadersPolicyId")
-    private final @Nullable Input<String> responseHeadersPolicyId;
+      private final @Nullable Input<String> responseHeadersPolicyId;
 
     public Input<String> getResponseHeadersPolicyId() {
         return this.responseHeadersPolicyId == null ? Input.empty() : this.responseHeadersPolicyId;
@@ -211,7 +211,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="smoothStreaming")
-    private final @Nullable Input<Boolean> smoothStreaming;
+      private final @Nullable Input<Boolean> smoothStreaming;
 
     public Input<Boolean> getSmoothStreaming() {
         return this.smoothStreaming == null ? Input.empty() : this.smoothStreaming;
@@ -224,7 +224,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="targetOriginId", required=true)
-    private final Input<String> targetOriginId;
+      private final Input<String> targetOriginId;
 
     public Input<String> getTargetOriginId() {
         return this.targetOriginId;
@@ -236,7 +236,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="trustedKeyGroups")
-    private final @Nullable Input<List<String>> trustedKeyGroups;
+      private final @Nullable Input<List<String>> trustedKeyGroups;
 
     public Input<List<String>> getTrustedKeyGroups() {
         return this.trustedKeyGroups == null ? Input.empty() : this.trustedKeyGroups;
@@ -248,7 +248,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="trustedSigners")
-    private final @Nullable Input<List<String>> trustedSigners;
+      private final @Nullable Input<List<String>> trustedSigners;
 
     public Input<List<String>> getTrustedSigners() {
         return this.trustedSigners == null ? Input.empty() : this.trustedSigners;
@@ -262,7 +262,7 @@ public final class DistributionOrderedCacheBehaviorArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="viewerProtocolPolicy", required=true)
-    private final Input<String> viewerProtocolPolicy;
+      private final Input<String> viewerProtocolPolicy;
 
     public Input<String> getViewerProtocolPolicy() {
         return this.viewerProtocolPolicy;

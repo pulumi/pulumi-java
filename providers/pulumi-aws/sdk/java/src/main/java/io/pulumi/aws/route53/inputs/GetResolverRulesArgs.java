@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetResolverRulesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable String ownerId;
+      private final @Nullable String ownerId;
 
     public Optional<String> getOwnerId() {
         return this.ownerId == null ? Optional.empty() : Optional.ofNullable(this.ownerId);
@@ -30,7 +30,7 @@ public final class GetResolverRulesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resolverEndpointId")
-    private final @Nullable String resolverEndpointId;
+      private final @Nullable String resolverEndpointId;
 
     public Optional<String> getResolverEndpointId() {
         return this.resolverEndpointId == null ? Optional.empty() : Optional.ofNullable(this.resolverEndpointId);
@@ -41,7 +41,7 @@ public final class GetResolverRulesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ruleType")
-    private final @Nullable String ruleType;
+      private final @Nullable String ruleType;
 
     public Optional<String> getRuleType() {
         return this.ruleType == null ? Optional.empty() : Optional.ofNullable(this.ruleType);
@@ -52,7 +52,7 @@ public final class GetResolverRulesArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="shareStatus")
-    private final @Nullable String shareStatus;
+      private final @Nullable String shareStatus;
 
     public Optional<String> getShareStatus() {
         return this.shareStatus == null ? Optional.empty() : Optional.ofNullable(this.shareStatus);

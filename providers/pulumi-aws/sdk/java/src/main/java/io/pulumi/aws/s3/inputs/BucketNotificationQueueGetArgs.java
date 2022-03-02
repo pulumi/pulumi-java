@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BucketNotificationQueueGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="events", required=true)
-    private final Input<List<String>> events;
+      private final Input<List<String>> events;
 
     public Input<List<String>> getEvents() {
         return this.events;
@@ -31,7 +31,7 @@ public final class BucketNotificationQueueGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="filterPrefix")
-    private final @Nullable Input<String> filterPrefix;
+      private final @Nullable Input<String> filterPrefix;
 
     public Input<String> getFilterPrefix() {
         return this.filterPrefix == null ? Input.empty() : this.filterPrefix;
@@ -42,7 +42,7 @@ public final class BucketNotificationQueueGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="filterSuffix")
-    private final @Nullable Input<String> filterSuffix;
+      private final @Nullable Input<String> filterSuffix;
 
     public Input<String> getFilterSuffix() {
         return this.filterSuffix == null ? Input.empty() : this.filterSuffix;
@@ -53,7 +53,7 @@ public final class BucketNotificationQueueGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -64,7 +64,7 @@ public final class BucketNotificationQueueGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="queueArn", required=true)
-    private final Input<String> queueArn;
+      private final Input<String> queueArn;
 
     public Input<String> getQueueArn() {
         return this.queueArn;

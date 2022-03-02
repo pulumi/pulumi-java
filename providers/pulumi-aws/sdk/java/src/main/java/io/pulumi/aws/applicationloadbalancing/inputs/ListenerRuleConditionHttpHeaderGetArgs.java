@@ -4,7 +4,7 @@
 package io.pulumi.aws.applicationloadbalancing.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ListenerRuleConditionHttpHeaderGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="httpHeaderName", required=true)
-    private final Input<String> httpHeaderName;
+      private final Input<String> httpHeaderName;
 
     public Input<String> getHttpHeaderName() {
         return this.httpHeaderName;
@@ -30,7 +30,7 @@ public final class ListenerRuleConditionHttpHeaderGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="values", required=true)
-    private final Input<List<String>> values;
+      private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;

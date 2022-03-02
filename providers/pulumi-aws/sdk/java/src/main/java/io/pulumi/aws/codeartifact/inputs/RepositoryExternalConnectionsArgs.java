@@ -4,7 +4,7 @@
 package io.pulumi.aws.codeartifact.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,21 +19,21 @@ public final class RepositoryExternalConnectionsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="externalConnectionName", required=true)
-    private final Input<String> externalConnectionName;
+      private final Input<String> externalConnectionName;
 
     public Input<String> getExternalConnectionName() {
         return this.externalConnectionName;
     }
 
     @InputImport(name="packageFormat")
-    private final @Nullable Input<String> packageFormat;
+      private final @Nullable Input<String> packageFormat;
 
     public Input<String> getPackageFormat() {
         return this.packageFormat == null ? Input.empty() : this.packageFormat;
     }
 
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

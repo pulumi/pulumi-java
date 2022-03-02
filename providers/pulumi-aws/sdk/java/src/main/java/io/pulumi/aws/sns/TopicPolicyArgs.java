@@ -4,7 +4,7 @@
 package io.pulumi.aws.sns;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TopicPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+      private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
@@ -29,7 +29,7 @@ public final class TopicPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy", required=true)
-    private final Input<String> policy;
+      private final Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy;

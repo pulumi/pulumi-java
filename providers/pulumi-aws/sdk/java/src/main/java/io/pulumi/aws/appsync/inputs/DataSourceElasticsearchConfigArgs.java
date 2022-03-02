@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DataSourceElasticsearchConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final Input<String> endpoint;
+      private final Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint;
@@ -30,7 +30,7 @@ public final class DataSourceElasticsearchConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class HostedTransitVirtualInterfaceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="addressFamily", required=true)
-    private final Input<String> addressFamily;
+      private final Input<String> addressFamily;
 
     public Input<String> getAddressFamily() {
         return this.addressFamily;
@@ -31,7 +31,7 @@ public final class HostedTransitVirtualInterfaceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="amazonAddress")
-    private final @Nullable Input<String> amazonAddress;
+      private final @Nullable Input<String> amazonAddress;
 
     public Input<String> getAmazonAddress() {
         return this.amazonAddress == null ? Input.empty() : this.amazonAddress;
@@ -42,7 +42,7 @@ public final class HostedTransitVirtualInterfaceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="bgpAsn", required=true)
-    private final Input<Integer> bgpAsn;
+      private final Input<Integer> bgpAsn;
 
     public Input<Integer> getBgpAsn() {
         return this.bgpAsn;
@@ -53,7 +53,7 @@ public final class HostedTransitVirtualInterfaceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="bgpAuthKey")
-    private final @Nullable Input<String> bgpAuthKey;
+      private final @Nullable Input<String> bgpAuthKey;
 
     public Input<String> getBgpAuthKey() {
         return this.bgpAuthKey == null ? Input.empty() : this.bgpAuthKey;
@@ -64,7 +64,7 @@ public final class HostedTransitVirtualInterfaceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="connectionId", required=true)
-    private final Input<String> connectionId;
+      private final Input<String> connectionId;
 
     public Input<String> getConnectionId() {
         return this.connectionId;
@@ -75,7 +75,7 @@ public final class HostedTransitVirtualInterfaceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="customerAddress")
-    private final @Nullable Input<String> customerAddress;
+      private final @Nullable Input<String> customerAddress;
 
     public Input<String> getCustomerAddress() {
         return this.customerAddress == null ? Input.empty() : this.customerAddress;
@@ -86,7 +86,7 @@ public final class HostedTransitVirtualInterfaceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="mtu")
-    private final @Nullable Input<Integer> mtu;
+      private final @Nullable Input<Integer> mtu;
 
     public Input<Integer> getMtu() {
         return this.mtu == null ? Input.empty() : this.mtu;
@@ -97,7 +97,7 @@ public final class HostedTransitVirtualInterfaceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -108,7 +108,7 @@ public final class HostedTransitVirtualInterfaceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ownerAccountId", required=true)
-    private final Input<String> ownerAccountId;
+      private final Input<String> ownerAccountId;
 
     public Input<String> getOwnerAccountId() {
         return this.ownerAccountId;
@@ -119,7 +119,7 @@ public final class HostedTransitVirtualInterfaceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="vlan", required=true)
-    private final Input<Integer> vlan;
+      private final Input<Integer> vlan;
 
     public Input<Integer> getVlan() {
         return this.vlan;

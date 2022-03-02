@@ -5,7 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.aws.opsworks.inputs.CustomLayerCloudwatchConfigurationLogStreamGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class CustomLayerCloudwatchConfigurationGetArgs extends io.pulumi.r
     public static final CustomLayerCloudwatchConfigurationGetArgs Empty = new CustomLayerCloudwatchConfigurationGetArgs();
 
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -28,7 +28,7 @@ public final class CustomLayerCloudwatchConfigurationGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="logStreams")
-    private final @Nullable Input<List<CustomLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
+      private final @Nullable Input<List<CustomLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
 
     public Input<List<CustomLayerCloudwatchConfigurationLogStreamGetArgs>> getLogStreams() {
         return this.logStreams == null ? Input.empty() : this.logStreams;

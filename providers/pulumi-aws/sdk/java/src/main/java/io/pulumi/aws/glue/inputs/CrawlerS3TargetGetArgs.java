@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="connectionName")
-    private final @Nullable Input<String> connectionName;
+      private final @Nullable Input<String> connectionName;
 
     public Input<String> getConnectionName() {
         return this.connectionName == null ? Input.empty() : this.connectionName;
@@ -32,7 +32,7 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dlqEventQueueArn")
-    private final @Nullable Input<String> dlqEventQueueArn;
+      private final @Nullable Input<String> dlqEventQueueArn;
 
     public Input<String> getDlqEventQueueArn() {
         return this.dlqEventQueueArn == null ? Input.empty() : this.dlqEventQueueArn;
@@ -43,7 +43,7 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eventQueueArn")
-    private final @Nullable Input<String> eventQueueArn;
+      private final @Nullable Input<String> eventQueueArn;
 
     public Input<String> getEventQueueArn() {
         return this.eventQueueArn == null ? Input.empty() : this.eventQueueArn;
@@ -54,7 +54,7 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="exclusions")
-    private final @Nullable Input<List<String>> exclusions;
+      private final @Nullable Input<List<String>> exclusions;
 
     public Input<List<String>> getExclusions() {
         return this.exclusions == null ? Input.empty() : this.exclusions;
@@ -65,7 +65,7 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+      private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -76,7 +76,7 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sampleSize")
-    private final @Nullable Input<Integer> sampleSize;
+      private final @Nullable Input<Integer> sampleSize;
 
     public Input<Integer> getSampleSize() {
         return this.sampleSize == null ? Input.empty() : this.sampleSize;

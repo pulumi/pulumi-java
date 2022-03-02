@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ClusterOpenMonitoringPrometheusNodeExporterGetArgs extends io
      * 
      */
     @InputImport(name="enabledInBroker", required=true)
-    private final Input<Boolean> enabledInBroker;
+      private final Input<Boolean> enabledInBroker;
 
     public Input<Boolean> getEnabledInBroker() {
         return this.enabledInBroker;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RepositoryEncryptionConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="encryptionType")
-    private final @Nullable Input<String> encryptionType;
+      private final @Nullable Input<String> encryptionType;
 
     public Input<String> getEncryptionType() {
         return this.encryptionType == null ? Input.empty() : this.encryptionType;
@@ -30,7 +30,7 @@ public final class RepositoryEncryptionConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="kmsKey")
-    private final @Nullable Input<String> kmsKey;
+      private final @Nullable Input<String> kmsKey;
 
     public Input<String> getKmsKey() {
         return this.kmsKey == null ? Input.empty() : this.kmsKey;

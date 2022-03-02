@@ -6,7 +6,7 @@ package io.pulumi.aws.directoryservice;
 import io.pulumi.aws.directoryservice.inputs.DirectoryConnectSettingsArgs;
 import io.pulumi.aws.directoryservice.inputs.DirectoryVpcSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-    private final @Nullable Input<String> alias;
+      private final @Nullable Input<String> alias;
 
     public Input<String> getAlias() {
         return this.alias == null ? Input.empty() : this.alias;
@@ -34,7 +34,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectSettings")
-    private final @Nullable Input<DirectoryConnectSettingsArgs> connectSettings;
+      private final @Nullable Input<DirectoryConnectSettingsArgs> connectSettings;
 
     public Input<DirectoryConnectSettingsArgs> getConnectSettings() {
         return this.connectSettings == null ? Input.empty() : this.connectSettings;
@@ -45,7 +45,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -56,7 +56,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="edition")
-    private final @Nullable Input<String> edition;
+      private final @Nullable Input<String> edition;
 
     public Input<String> getEdition() {
         return this.edition == null ? Input.empty() : this.edition;
@@ -67,7 +67,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableSso")
-    private final @Nullable Input<Boolean> enableSso;
+      private final @Nullable Input<Boolean> enableSso;
 
     public Input<Boolean> getEnableSso() {
         return this.enableSso == null ? Input.empty() : this.enableSso;
@@ -78,7 +78,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -89,7 +89,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -100,7 +100,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortName")
-    private final @Nullable Input<String> shortName;
+      private final @Nullable Input<String> shortName;
 
     public Input<String> getShortName() {
         return this.shortName == null ? Input.empty() : this.shortName;
@@ -111,7 +111,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Input<String> size;
+      private final @Nullable Input<String> size;
 
     public Input<String> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -122,7 +122,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -133,7 +133,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -144,7 +144,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSettings")
-    private final @Nullable Input<DirectoryVpcSettingsArgs> vpcSettings;
+      private final @Nullable Input<DirectoryVpcSettingsArgs> vpcSettings;
 
     public Input<DirectoryVpcSettingsArgs> getVpcSettings() {
         return this.vpcSettings == null ? Input.empty() : this.vpcSettings;

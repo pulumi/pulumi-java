@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.secretsmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSecretRotationArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="secretId", required=true)
-    private final String secretId;
+      private final String secretId;
 
     public String getSecretId() {
         return this.secretId;

@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionCognitoMemberDefinitionArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionOidcMemberDefinitionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class WorkteamMemberDefinitionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cognitoMemberDefinition")
-    private final @Nullable Input<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> cognitoMemberDefinition;
+      private final @Nullable Input<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> cognitoMemberDefinition;
 
     public Input<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> getCognitoMemberDefinition() {
         return this.cognitoMemberDefinition == null ? Input.empty() : this.cognitoMemberDefinition;
@@ -31,7 +31,7 @@ public final class WorkteamMemberDefinitionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="oidcMemberDefinition")
-    private final @Nullable Input<WorkteamMemberDefinitionOidcMemberDefinitionArgs> oidcMemberDefinition;
+      private final @Nullable Input<WorkteamMemberDefinitionOidcMemberDefinitionArgs> oidcMemberDefinition;
 
     public Input<WorkteamMemberDefinitionOidcMemberDefinitionArgs> getOidcMemberDefinition() {
         return this.oidcMemberDefinition == null ? Input.empty() : this.oidcMemberDefinition;

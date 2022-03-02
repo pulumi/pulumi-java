@@ -7,7 +7,7 @@ import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGrou
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs extend
      * 
      */
     @InputImport(name="prodTrafficRoute", required=true)
-    private final Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs> prodTrafficRoute;
+      private final Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs> prodTrafficRoute;
 
     public Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs> getProdTrafficRoute() {
         return this.prodTrafficRoute;
@@ -33,7 +33,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs extend
      * 
      */
     @InputImport(name="targetGroups", required=true)
-    private final Input<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs>> targetGroups;
+      private final Input<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs>> targetGroups;
 
     public Input<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs>> getTargetGroups() {
         return this.targetGroups;
@@ -44,7 +44,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs extend
      * 
      */
     @InputImport(name="testTrafficRoute")
-    private final @Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs> testTrafficRoute;
+      private final @Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs> testTrafficRoute;
 
     public Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs> getTestTrafficRoute() {
         return this.testTrafficRoute == null ? Input.empty() : this.testTrafficRoute;

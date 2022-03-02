@@ -5,7 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.ImageOutputResourceAmiArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ImageOutputResourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="amis")
-    private final @Nullable Input<List<ImageOutputResourceAmiArgs>> amis;
+      private final @Nullable Input<List<ImageOutputResourceAmiArgs>> amis;
 
     public Input<List<ImageOutputResourceAmiArgs>> getAmis() {
         return this.amis == null ? Input.empty() : this.amis;

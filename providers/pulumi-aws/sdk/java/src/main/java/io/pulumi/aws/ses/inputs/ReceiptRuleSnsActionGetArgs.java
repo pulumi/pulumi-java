@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ReceiptRuleSnsActionGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable Input<String> encoding;
+      private final @Nullable Input<String> encoding;
 
     public Input<String> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -31,7 +31,7 @@ public final class ReceiptRuleSnsActionGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="position", required=true)
-    private final Input<Integer> position;
+      private final Input<Integer> position;
 
     public Input<Integer> getPosition() {
         return this.position;
@@ -42,7 +42,7 @@ public final class ReceiptRuleSnsActionGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="topicArn", required=true)
-    private final Input<String> topicArn;
+      private final Input<String> topicArn;
 
     public Input<String> getTopicArn() {
         return this.topicArn;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TaskDefinitionInferenceAcceleratorGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -29,7 +29,7 @@ public final class TaskDefinitionInferenceAcceleratorGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="deviceType", required=true)
-    private final Input<String> deviceType;
+      private final Input<String> deviceType;
 
     public Input<String> getDeviceType() {
         return this.deviceType;

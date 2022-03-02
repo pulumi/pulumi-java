@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonName", required=true)
-    private final Input<String> addonName;
+      private final Input<String> addonName;
 
     public Input<String> getAddonName() {
         return this.addonName;
@@ -33,7 +33,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonVersion")
-    private final @Nullable Input<String> addonVersion;
+      private final @Nullable Input<String> addonVersion;
 
     public Input<String> getAddonVersion() {
         return this.addonVersion == null ? Input.empty() : this.addonVersion;
@@ -44,7 +44,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+      private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -57,7 +57,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resolveConflicts")
-    private final @Nullable Input<String> resolveConflicts;
+      private final @Nullable Input<String> resolveConflicts;
 
     public Input<String> getResolveConflicts() {
         return this.resolveConflicts == null ? Input.empty() : this.resolveConflicts;
@@ -73,7 +73,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountRoleArn")
-    private final @Nullable Input<String> serviceAccountRoleArn;
+      private final @Nullable Input<String> serviceAccountRoleArn;
 
     public Input<String> getServiceAccountRoleArn() {
         return this.serviceAccountRoleArn == null ? Input.empty() : this.serviceAccountRoleArn;
@@ -84,7 +84,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

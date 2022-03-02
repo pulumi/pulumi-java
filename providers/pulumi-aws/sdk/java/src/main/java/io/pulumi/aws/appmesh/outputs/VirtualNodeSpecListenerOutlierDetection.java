@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerOutlierDetectionInterval;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 

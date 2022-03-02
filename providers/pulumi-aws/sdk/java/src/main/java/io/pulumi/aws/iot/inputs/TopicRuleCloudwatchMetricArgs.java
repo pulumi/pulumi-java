@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+      private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -30,7 +30,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metricNamespace", required=true)
-    private final Input<String> metricNamespace;
+      private final Input<String> metricNamespace;
 
     public Input<String> getMetricNamespace() {
         return this.metricNamespace;
@@ -41,7 +41,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metricTimestamp")
-    private final @Nullable Input<String> metricTimestamp;
+      private final @Nullable Input<String> metricTimestamp;
 
     public Input<String> getMetricTimestamp() {
         return this.metricTimestamp == null ? Input.empty() : this.metricTimestamp;
@@ -52,7 +52,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metricUnit", required=true)
-    private final Input<String> metricUnit;
+      private final Input<String> metricUnit;
 
     public Input<String> getMetricUnit() {
         return this.metricUnit;
@@ -63,7 +63,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metricValue", required=true)
-    private final Input<String> metricValue;
+      private final Input<String> metricValue;
 
     public Input<String> getMetricValue() {
         return this.metricValue;
@@ -74,7 +74,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;

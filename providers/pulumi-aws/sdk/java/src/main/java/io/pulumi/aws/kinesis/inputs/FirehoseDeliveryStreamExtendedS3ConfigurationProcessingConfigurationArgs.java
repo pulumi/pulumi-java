@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -32,7 +32,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
      * 
      */
     @InputImport(name="processors")
-    private final @Nullable Input<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs>> processors;
+      private final @Nullable Input<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs>> processors;
 
     public Input<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorArgs>> getProcessors() {
         return this.processors == null ? Input.empty() : this.processors;

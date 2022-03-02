@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs e
     public static final SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs Empty = new SpotFleetRequestLaunchSpecificationEphemeralBlockDeviceArgs();
 
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
     }
 
     @InputImport(name="virtualName", required=true)
-    private final Input<String> virtualName;
+      private final Input<String> virtualName;
 
     public Input<String> getVirtualName() {
         return this.virtualName;

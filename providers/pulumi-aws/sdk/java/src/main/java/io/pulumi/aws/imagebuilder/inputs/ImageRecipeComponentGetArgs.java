@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ImageRecipeComponentGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="componentArn", required=true)
-    private final Input<String> componentArn;
+      private final Input<String> componentArn;
 
     public Input<String> getComponentArn() {
         return this.componentArn;

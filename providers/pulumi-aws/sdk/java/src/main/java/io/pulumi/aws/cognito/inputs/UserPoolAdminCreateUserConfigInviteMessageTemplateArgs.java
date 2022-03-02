@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
      * 
      */
     @InputImport(name="emailMessage")
-    private final @Nullable Input<String> emailMessage;
+      private final @Nullable Input<String> emailMessage;
 
     public Input<String> getEmailMessage() {
         return this.emailMessage == null ? Input.empty() : this.emailMessage;
@@ -30,7 +30,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
      * 
      */
     @InputImport(name="emailSubject")
-    private final @Nullable Input<String> emailSubject;
+      private final @Nullable Input<String> emailSubject;
 
     public Input<String> getEmailSubject() {
         return this.emailSubject == null ? Input.empty() : this.emailSubject;
@@ -41,7 +41,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
      * 
      */
     @InputImport(name="smsMessage")
-    private final @Nullable Input<String> smsMessage;
+      private final @Nullable Input<String> smsMessage;
 
     public Input<String> getSmsMessage() {
         return this.smsMessage == null ? Input.empty() : this.smsMessage;

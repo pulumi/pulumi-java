@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="netbiosNameServers")
-    private final @Nullable Input<List<String>> netbiosNameServers;
+      private final @Nullable Input<List<String>> netbiosNameServers;
 
     public Input<List<String>> getNetbiosNameServers() {
         return this.netbiosNameServers == null ? Input.empty() : this.netbiosNameServers;
@@ -32,7 +32,7 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="netbiosNodeType")
-    private final @Nullable Input<String> netbiosNodeType;
+      private final @Nullable Input<String> netbiosNodeType;
 
     public Input<String> getNetbiosNodeType() {
         return this.netbiosNodeType == null ? Input.empty() : this.netbiosNodeType;
@@ -43,7 +43,7 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -54,7 +54,7 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

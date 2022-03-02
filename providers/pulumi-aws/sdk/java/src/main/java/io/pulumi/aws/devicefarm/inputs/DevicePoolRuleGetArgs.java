@@ -4,7 +4,7 @@
 package io.pulumi.aws.devicefarm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DevicePoolRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="attribute")
-    private final @Nullable Input<String> attribute;
+      private final @Nullable Input<String> attribute;
 
     public Input<String> getAttribute() {
         return this.attribute == null ? Input.empty() : this.attribute;
@@ -30,7 +30,7 @@ public final class DevicePoolRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="operator")
-    private final @Nullable Input<String> operator;
+      private final @Nullable Input<String> operator;
 
     public Input<String> getOperator() {
         return this.operator == null ? Input.empty() : this.operator;
@@ -41,7 +41,7 @@ public final class DevicePoolRuleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

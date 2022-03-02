@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="peerAccountId")
-    private final @Nullable Input<String> peerAccountId;
+      private final @Nullable Input<String> peerAccountId;
 
     public Input<String> getPeerAccountId() {
         return this.peerAccountId == null ? Input.empty() : this.peerAccountId;
@@ -31,7 +31,7 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="peerRegion", required=true)
-    private final Input<String> peerRegion;
+      private final Input<String> peerRegion;
 
     public Input<String> getPeerRegion() {
         return this.peerRegion;
@@ -42,7 +42,7 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="peerTransitGatewayId", required=true)
-    private final Input<String> peerTransitGatewayId;
+      private final Input<String> peerTransitGatewayId;
 
     public Input<String> getPeerTransitGatewayId() {
         return this.peerTransitGatewayId;
@@ -53,7 +53,7 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -64,7 +64,7 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="transitGatewayId", required=true)
-    private final Input<String> transitGatewayId;
+      private final Input<String> transitGatewayId;
 
     public Input<String> getTransitGatewayId() {
         return this.transitGatewayId;

@@ -7,7 +7,7 @@ import io.pulumi.aws.ecs.inputs.ClusterConfigurationArgs;
 import io.pulumi.aws.ecs.inputs.ClusterDefaultCapacityProviderStrategyArgs;
 import io.pulumi.aws.ecs.inputs.ClusterSettingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityProviders")
-    private final @Nullable Input<List<String>> capacityProviders;
+      private final @Nullable Input<List<String>> capacityProviders;
 
     public Input<List<String>> getCapacityProviders() {
         return this.capacityProviders == null ? Input.empty() : this.capacityProviders;
@@ -35,7 +35,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<ClusterConfigurationArgs> configuration;
+      private final @Nullable Input<ClusterConfigurationArgs> configuration;
 
     public Input<ClusterConfigurationArgs> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -46,7 +46,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultCapacityProviderStrategies")
-    private final @Nullable Input<List<ClusterDefaultCapacityProviderStrategyArgs>> defaultCapacityProviderStrategies;
+      private final @Nullable Input<List<ClusterDefaultCapacityProviderStrategyArgs>> defaultCapacityProviderStrategies;
 
     public Input<List<ClusterDefaultCapacityProviderStrategyArgs>> getDefaultCapacityProviderStrategies() {
         return this.defaultCapacityProviderStrategies == null ? Input.empty() : this.defaultCapacityProviderStrategies;
@@ -57,7 +57,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -68,7 +68,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<List<ClusterSettingArgs>> settings;
+      private final @Nullable Input<List<ClusterSettingArgs>> settings;
 
     public Input<List<ClusterSettingArgs>> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -79,7 +79,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

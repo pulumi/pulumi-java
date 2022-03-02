@@ -5,7 +5,7 @@ package io.pulumi.aws.redshift;
 
 import io.pulumi.aws.redshift.inputs.ScheduledActionTargetActionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+      private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -43,7 +43,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -54,7 +54,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="iamRole", required=true)
-    private final Input<String> iamRole;
+      private final Input<String> iamRole;
 
     public Input<String> getIamRole() {
         return this.iamRole;
@@ -65,7 +65,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -76,7 +76,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final Input<String> schedule;
+      private final Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule;
@@ -87,7 +87,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -98,7 +98,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetAction", required=true)
-    private final Input<ScheduledActionTargetActionArgs> targetAction;
+      private final Input<ScheduledActionTargetActionArgs> targetAction;
 
     public Input<ScheduledActionTargetActionArgs> getTargetAction() {
         return this.targetAction;

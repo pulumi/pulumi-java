@@ -4,7 +4,7 @@
 package io.pulumi.aws.xray;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+      private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
@@ -30,7 +30,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

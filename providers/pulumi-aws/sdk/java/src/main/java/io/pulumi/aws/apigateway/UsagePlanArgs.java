@@ -7,7 +7,7 @@ import io.pulumi.aws.apigateway.inputs.UsagePlanApiStageArgs;
 import io.pulumi.aws.apigateway.inputs.UsagePlanQuotaSettingsArgs;
 import io.pulumi.aws.apigateway.inputs.UsagePlanThrottleSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiStages")
-    private final @Nullable Input<List<UsagePlanApiStageArgs>> apiStages;
+      private final @Nullable Input<List<UsagePlanApiStageArgs>> apiStages;
 
     public Input<List<UsagePlanApiStageArgs>> getApiStages() {
         return this.apiStages == null ? Input.empty() : this.apiStages;
@@ -35,7 +35,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productCode")
-    private final @Nullable Input<String> productCode;
+      private final @Nullable Input<String> productCode;
 
     public Input<String> getProductCode() {
         return this.productCode == null ? Input.empty() : this.productCode;
@@ -68,7 +68,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quotaSettings")
-    private final @Nullable Input<UsagePlanQuotaSettingsArgs> quotaSettings;
+      private final @Nullable Input<UsagePlanQuotaSettingsArgs> quotaSettings;
 
     public Input<UsagePlanQuotaSettingsArgs> getQuotaSettings() {
         return this.quotaSettings == null ? Input.empty() : this.quotaSettings;
@@ -79,7 +79,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -90,7 +90,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="throttleSettings")
-    private final @Nullable Input<UsagePlanThrottleSettingsArgs> throttleSettings;
+      private final @Nullable Input<UsagePlanThrottleSettingsArgs> throttleSettings;
 
     public Input<UsagePlanThrottleSettingsArgs> getThrottleSettings() {
         return this.throttleSettings == null ? Input.empty() : this.throttleSettings;

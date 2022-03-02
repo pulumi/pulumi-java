@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TopicRuleIotAnalyticArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="channelName", required=true)
-    private final Input<String> channelName;
+      private final Input<String> channelName;
 
     public Input<String> getChannelName() {
         return this.channelName;
@@ -29,7 +29,7 @@ public final class TopicRuleIotAnalyticArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;

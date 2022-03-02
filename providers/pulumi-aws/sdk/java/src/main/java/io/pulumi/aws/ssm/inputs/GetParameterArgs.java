@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetParameterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -31,7 +31,7 @@ public final class GetParameterArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="withDecryption")
-    private final @Nullable Boolean withDecryption;
+      private final @Nullable Boolean withDecryption;
 
     public Optional<Boolean> getWithDecryption() {
         return this.withDecryption == null ? Optional.empty() : Optional.ofNullable(this.withDecryption);

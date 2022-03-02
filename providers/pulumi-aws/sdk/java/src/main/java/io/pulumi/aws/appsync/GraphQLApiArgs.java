@@ -9,7 +9,7 @@ import io.pulumi.aws.appsync.inputs.GraphQLApiLogConfigArgs;
 import io.pulumi.aws.appsync.inputs.GraphQLApiOpenidConnectConfigArgs;
 import io.pulumi.aws.appsync.inputs.GraphQLApiUserPoolConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalAuthenticationProviders")
-    private final @Nullable Input<List<GraphQLApiAdditionalAuthenticationProviderArgs>> additionalAuthenticationProviders;
+      private final @Nullable Input<List<GraphQLApiAdditionalAuthenticationProviderArgs>> additionalAuthenticationProviders;
 
     public Input<List<GraphQLApiAdditionalAuthenticationProviderArgs>> getAdditionalAuthenticationProviders() {
         return this.additionalAuthenticationProviders == null ? Input.empty() : this.additionalAuthenticationProviders;
@@ -38,7 +38,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationType", required=true)
-    private final Input<String> authenticationType;
+      private final Input<String> authenticationType;
 
     public Input<String> getAuthenticationType() {
         return this.authenticationType;
@@ -49,7 +49,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lambdaAuthorizerConfig")
-    private final @Nullable Input<GraphQLApiLambdaAuthorizerConfigArgs> lambdaAuthorizerConfig;
+      private final @Nullable Input<GraphQLApiLambdaAuthorizerConfigArgs> lambdaAuthorizerConfig;
 
     public Input<GraphQLApiLambdaAuthorizerConfigArgs> getLambdaAuthorizerConfig() {
         return this.lambdaAuthorizerConfig == null ? Input.empty() : this.lambdaAuthorizerConfig;
@@ -60,7 +60,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfig")
-    private final @Nullable Input<GraphQLApiLogConfigArgs> logConfig;
+      private final @Nullable Input<GraphQLApiLogConfigArgs> logConfig;
 
     public Input<GraphQLApiLogConfigArgs> getLogConfig() {
         return this.logConfig == null ? Input.empty() : this.logConfig;
@@ -71,7 +71,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -82,7 +82,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="openidConnectConfig")
-    private final @Nullable Input<GraphQLApiOpenidConnectConfigArgs> openidConnectConfig;
+      private final @Nullable Input<GraphQLApiOpenidConnectConfigArgs> openidConnectConfig;
 
     public Input<GraphQLApiOpenidConnectConfigArgs> getOpenidConnectConfig() {
         return this.openidConnectConfig == null ? Input.empty() : this.openidConnectConfig;
@@ -93,7 +93,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<String> schema;
+      private final @Nullable Input<String> schema;
 
     public Input<String> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -104,7 +104,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -115,7 +115,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userPoolConfig")
-    private final @Nullable Input<GraphQLApiUserPoolConfigArgs> userPoolConfig;
+      private final @Nullable Input<GraphQLApiUserPoolConfigArgs> userPoolConfig;
 
     public Input<GraphQLApiUserPoolConfigArgs> getUserPoolConfig() {
         return this.userPoolConfig == null ? Input.empty() : this.userPoolConfig;
@@ -126,7 +126,7 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xrayEnabled")
-    private final @Nullable Input<Boolean> xrayEnabled;
+      private final @Nullable Input<Boolean> xrayEnabled;
 
     public Input<Boolean> getXrayEnabled() {
         return this.xrayEnabled == null ? Input.empty() : this.xrayEnabled;

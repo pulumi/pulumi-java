@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
      * 
      */
     @InputImport(name="kmsMasterKeyId")
-    private final @Nullable Input<String> kmsMasterKeyId;
+      private final @Nullable Input<String> kmsMasterKeyId;
 
     public Input<String> getKmsMasterKeyId() {
         return this.kmsMasterKeyId == null ? Input.empty() : this.kmsMasterKeyId;
@@ -30,7 +30,7 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
      * 
      */
     @InputImport(name="sseAlgorithm", required=true)
-    private final Input<String> sseAlgorithm;
+      private final Input<String> sseAlgorithm;
 
     public Input<String> getSseAlgorithm() {
         return this.sseAlgorithm;

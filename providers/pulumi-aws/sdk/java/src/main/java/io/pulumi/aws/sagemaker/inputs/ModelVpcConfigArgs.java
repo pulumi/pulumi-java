@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ModelVpcConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final ModelVpcConfigArgs Empty = new ModelVpcConfigArgs();
 
     @InputImport(name="securityGroupIds", required=true)
-    private final Input<List<String>> securityGroupIds;
+      private final Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
     @InputImport(name="subnets", required=true)
-    private final Input<List<String>> subnets;
+      private final Input<List<String>> subnets;
 
     public Input<List<String>> getSubnets() {
         return this.subnets;

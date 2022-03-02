@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoverycontrol.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="inverted", required=true)
-    private final Input<Boolean> inverted;
+      private final Input<Boolean> inverted;
 
     public Input<Boolean> getInverted() {
         return this.inverted;
@@ -31,7 +31,7 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="threshold", required=true)
-    private final Input<Integer> threshold;
+      private final Input<Integer> threshold;
 
     public Input<Integer> getThreshold() {
         return this.threshold;
@@ -42,7 +42,7 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticache;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessString", required=true)
-    private final Input<String> accessString;
+      private final Input<String> accessString;
 
     public Input<String> getAccessString() {
         return this.accessString;
@@ -33,7 +33,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -44,7 +44,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engine", required=true)
-    private final Input<String> engine;
+      private final Input<String> engine;
 
     public Input<String> getEngine() {
         return this.engine;
@@ -55,7 +55,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="noPasswordRequired")
-    private final @Nullable Input<Boolean> noPasswordRequired;
+      private final @Nullable Input<Boolean> noPasswordRequired;
 
     public Input<Boolean> getNoPasswordRequired() {
         return this.noPasswordRequired == null ? Input.empty() : this.noPasswordRequired;
@@ -66,7 +66,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="passwords")
-    private final @Nullable Input<List<String>> passwords;
+      private final @Nullable Input<List<String>> passwords;
 
     public Input<List<String>> getPasswords() {
         return this.passwords == null ? Input.empty() : this.passwords;
@@ -77,7 +77,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -88,7 +88,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userId", required=true)
-    private final Input<String> userId;
+      private final Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId;
@@ -99,7 +99,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-    private final Input<String> userName;
+      private final Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName;

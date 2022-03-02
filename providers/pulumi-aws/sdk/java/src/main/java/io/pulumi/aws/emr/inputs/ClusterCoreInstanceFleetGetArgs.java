@@ -6,7 +6,7 @@ package io.pulumi.aws.emr.inputs;
 import io.pulumi.aws.emr.inputs.ClusterCoreInstanceFleetInstanceTypeConfigGetArgs;
 import io.pulumi.aws.emr.inputs.ClusterCoreInstanceFleetLaunchSpecificationsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -34,7 +34,7 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="instanceTypeConfigs")
-    private final @Nullable Input<List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs;
+      private final @Nullable Input<List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs>> instanceTypeConfigs;
 
     public Input<List<ClusterCoreInstanceFleetInstanceTypeConfigGetArgs>> getInstanceTypeConfigs() {
         return this.instanceTypeConfigs == null ? Input.empty() : this.instanceTypeConfigs;
@@ -45,7 +45,7 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="launchSpecifications")
-    private final @Nullable Input<ClusterCoreInstanceFleetLaunchSpecificationsGetArgs> launchSpecifications;
+      private final @Nullable Input<ClusterCoreInstanceFleetLaunchSpecificationsGetArgs> launchSpecifications;
 
     public Input<ClusterCoreInstanceFleetLaunchSpecificationsGetArgs> getLaunchSpecifications() {
         return this.launchSpecifications == null ? Input.empty() : this.launchSpecifications;
@@ -56,21 +56,21 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="provisionedOnDemandCapacity")
-    private final @Nullable Input<Integer> provisionedOnDemandCapacity;
+      private final @Nullable Input<Integer> provisionedOnDemandCapacity;
 
     public Input<Integer> getProvisionedOnDemandCapacity() {
         return this.provisionedOnDemandCapacity == null ? Input.empty() : this.provisionedOnDemandCapacity;
     }
 
     @InputImport(name="provisionedSpotCapacity")
-    private final @Nullable Input<Integer> provisionedSpotCapacity;
+      private final @Nullable Input<Integer> provisionedSpotCapacity;
 
     public Input<Integer> getProvisionedSpotCapacity() {
         return this.provisionedSpotCapacity == null ? Input.empty() : this.provisionedSpotCapacity;
@@ -81,7 +81,7 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targetOnDemandCapacity")
-    private final @Nullable Input<Integer> targetOnDemandCapacity;
+      private final @Nullable Input<Integer> targetOnDemandCapacity;
 
     public Input<Integer> getTargetOnDemandCapacity() {
         return this.targetOnDemandCapacity == null ? Input.empty() : this.targetOnDemandCapacity;
@@ -92,7 +92,7 @@ public final class ClusterCoreInstanceFleetGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targetSpotCapacity")
-    private final @Nullable Input<Integer> targetSpotCapacity;
+      private final @Nullable Input<Integer> targetSpotCapacity;
 
     public Input<Integer> getTargetSpotCapacity() {
         return this.targetSpotCapacity == null ? Input.empty() : this.targetSpotCapacity;

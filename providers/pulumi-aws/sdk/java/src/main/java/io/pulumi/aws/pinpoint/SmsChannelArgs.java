@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId", required=true)
-    private final Input<String> applicationId;
+      private final Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId;
@@ -31,7 +31,7 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -42,7 +42,7 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="senderId")
-    private final @Nullable Input<String> senderId;
+      private final @Nullable Input<String> senderId;
 
     public Input<String> getSenderId() {
         return this.senderId == null ? Input.empty() : this.senderId;
@@ -53,7 +53,7 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortCode")
-    private final @Nullable Input<String> shortCode;
+      private final @Nullable Input<String> shortCode;
 
     public Input<String> getShortCode() {
         return this.shortCode == null ? Input.empty() : this.shortCode;

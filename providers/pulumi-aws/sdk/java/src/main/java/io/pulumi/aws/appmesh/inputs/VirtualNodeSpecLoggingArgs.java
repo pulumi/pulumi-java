@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecLoggingAccessLogArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class VirtualNodeSpecLoggingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accessLog")
-    private final @Nullable Input<VirtualNodeSpecLoggingAccessLogArgs> accessLog;
+      private final @Nullable Input<VirtualNodeSpecLoggingAccessLogArgs> accessLog;
 
     public Input<VirtualNodeSpecLoggingAccessLogArgs> getAccessLog() {
         return this.accessLog == null ? Input.empty() : this.accessLog;

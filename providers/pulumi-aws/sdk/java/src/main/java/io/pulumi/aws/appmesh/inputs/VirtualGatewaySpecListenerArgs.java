@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerHealthCheckArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerPortMappingArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="connectionPool")
-    private final @Nullable Input<VirtualGatewaySpecListenerConnectionPoolArgs> connectionPool;
+      private final @Nullable Input<VirtualGatewaySpecListenerConnectionPoolArgs> connectionPool;
 
     public Input<VirtualGatewaySpecListenerConnectionPoolArgs> getConnectionPool() {
         return this.connectionPool == null ? Input.empty() : this.connectionPool;
@@ -33,7 +33,7 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="healthCheck")
-    private final @Nullable Input<VirtualGatewaySpecListenerHealthCheckArgs> healthCheck;
+      private final @Nullable Input<VirtualGatewaySpecListenerHealthCheckArgs> healthCheck;
 
     public Input<VirtualGatewaySpecListenerHealthCheckArgs> getHealthCheck() {
         return this.healthCheck == null ? Input.empty() : this.healthCheck;
@@ -44,7 +44,7 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="portMapping", required=true)
-    private final Input<VirtualGatewaySpecListenerPortMappingArgs> portMapping;
+      private final Input<VirtualGatewaySpecListenerPortMappingArgs> portMapping;
 
     public Input<VirtualGatewaySpecListenerPortMappingArgs> getPortMapping() {
         return this.portMapping;
@@ -55,7 +55,7 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tls")
-    private final @Nullable Input<VirtualGatewaySpecListenerTlsArgs> tls;
+      private final @Nullable Input<VirtualGatewaySpecListenerTlsArgs> tls;
 
     public Input<VirtualGatewaySpecListenerTlsArgs> getTls() {
         return this.tls == null ? Input.empty() : this.tls;

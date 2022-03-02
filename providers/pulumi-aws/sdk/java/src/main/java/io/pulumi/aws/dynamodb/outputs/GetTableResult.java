@@ -10,7 +10,7 @@ import io.pulumi.aws.dynamodb.outputs.GetTablePointInTimeRecovery;
 import io.pulumi.aws.dynamodb.outputs.GetTableReplica;
 import io.pulumi.aws.dynamodb.outputs.GetTableServerSideEncryption;
 import io.pulumi.aws.dynamodb.outputs.GetTableTtl;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

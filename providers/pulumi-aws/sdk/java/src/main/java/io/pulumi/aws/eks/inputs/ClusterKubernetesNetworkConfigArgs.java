@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ipFamily")
-    private final @Nullable Input<String> ipFamily;
+      private final @Nullable Input<String> ipFamily;
 
     public Input<String> getIpFamily() {
         return this.ipFamily == null ? Input.empty() : this.ipFamily;
@@ -30,7 +30,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="serviceIpv4Cidr")
-    private final @Nullable Input<String> serviceIpv4Cidr;
+      private final @Nullable Input<String> serviceIpv4Cidr;
 
     public Input<String> getServiceIpv4Cidr() {
         return this.serviceIpv4Cidr == null ? Input.empty() : this.serviceIpv4Cidr;

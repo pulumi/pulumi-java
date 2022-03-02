@@ -6,7 +6,7 @@ package io.pulumi.aws.ecr.inputs;
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs;
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleGetArgs e
      * 
      */
     @InputImport(name="destinations", required=true)
-    private final Input<List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs>> destinations;
+      private final Input<List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs>> destinations;
 
     public Input<List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs>> getDestinations() {
         return this.destinations;
@@ -32,7 +32,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleGetArgs e
      * 
      */
     @InputImport(name="repositoryFilters")
-    private final @Nullable Input<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters;
+      private final @Nullable Input<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters;
 
     public Input<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs>> getRepositoryFilters() {
         return this.repositoryFilters == null ? Input.empty() : this.repositoryFilters;

@@ -5,7 +5,7 @@ package io.pulumi.aws.docdb.inputs;
 
 import io.pulumi.aws.docdb.inputs.GlobalClusterGlobalClusterMemberGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+      private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -44,14 +44,14 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionProtection")
-    private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Input<Boolean> deletionProtection;
 
     public Input<Boolean> getDeletionProtection() {
         return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
     }
 
     @InputImport(name="engine")
-    private final @Nullable Input<String> engine;
+      private final @Nullable Input<String> engine;
 
     public Input<String> getEngine() {
         return this.engine == null ? Input.empty() : this.engine;
@@ -63,7 +63,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineVersion")
-    private final @Nullable Input<String> engineVersion;
+      private final @Nullable Input<String> engineVersion;
 
     public Input<String> getEngineVersion() {
         return this.engineVersion == null ? Input.empty() : this.engineVersion;
@@ -74,7 +74,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalClusterIdentifier")
-    private final @Nullable Input<String> globalClusterIdentifier;
+      private final @Nullable Input<String> globalClusterIdentifier;
 
     public Input<String> getGlobalClusterIdentifier() {
         return this.globalClusterIdentifier == null ? Input.empty() : this.globalClusterIdentifier;
@@ -85,7 +85,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalClusterMembers")
-    private final @Nullable Input<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers;
+      private final @Nullable Input<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers;
 
     public Input<List<GlobalClusterGlobalClusterMemberGetArgs>> getGlobalClusterMembers() {
         return this.globalClusterMembers == null ? Input.empty() : this.globalClusterMembers;
@@ -96,28 +96,28 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalClusterResourceId")
-    private final @Nullable Input<String> globalClusterResourceId;
+      private final @Nullable Input<String> globalClusterResourceId;
 
     public Input<String> getGlobalClusterResourceId() {
         return this.globalClusterResourceId == null ? Input.empty() : this.globalClusterResourceId;
     }
 
     @InputImport(name="sourceDbClusterIdentifier")
-    private final @Nullable Input<String> sourceDbClusterIdentifier;
+      private final @Nullable Input<String> sourceDbClusterIdentifier;
 
     public Input<String> getSourceDbClusterIdentifier() {
         return this.sourceDbClusterIdentifier == null ? Input.empty() : this.sourceDbClusterIdentifier;
     }
 
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
     }
 
     @InputImport(name="storageEncrypted")
-    private final @Nullable Input<Boolean> storageEncrypted;
+      private final @Nullable Input<Boolean> storageEncrypted;
 
     public Input<Boolean> getStorageEncrypted() {
         return this.storageEncrypted == null ? Input.empty() : this.storageEncrypted;

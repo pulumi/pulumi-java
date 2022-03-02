@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationTrustFileArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationTrustSdsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustArgs extends io.p
      * 
      */
     @InputImport(name="file")
-    private final @Nullable Input<VirtualGatewaySpecListenerTlsValidationTrustFileArgs> file;
+      private final @Nullable Input<VirtualGatewaySpecListenerTlsValidationTrustFileArgs> file;
 
     public Input<VirtualGatewaySpecListenerTlsValidationTrustFileArgs> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -31,7 +31,7 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustArgs extends io.p
      * 
      */
     @InputImport(name="sds")
-    private final @Nullable Input<VirtualGatewaySpecListenerTlsValidationTrustSdsArgs> sds;
+      private final @Nullable Input<VirtualGatewaySpecListenerTlsValidationTrustSdsArgs> sds;
 
     public Input<VirtualGatewaySpecListenerTlsValidationTrustSdsArgs> getSds() {
         return this.sds == null ? Input.empty() : this.sds;

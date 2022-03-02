@@ -5,7 +5,7 @@ package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsSsmControlsGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class RemediationConfigurationExecutionControlsGetArgs extends io.p
      * 
      */
     @InputImport(name="ssmControls")
-    private final @Nullable Input<RemediationConfigurationExecutionControlsSsmControlsGetArgs> ssmControls;
+      private final @Nullable Input<RemediationConfigurationExecutionControlsSsmControlsGetArgs> ssmControls;
 
     public Input<RemediationConfigurationExecutionControlsSsmControlsGetArgs> getSsmControls() {
         return this.ssmControls == null ? Input.empty() : this.ssmControls;

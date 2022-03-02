@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="carrierGatewayId")
-    private final @Nullable Input<String> carrierGatewayId;
+      private final @Nullable Input<String> carrierGatewayId;
 
     public Input<String> getCarrierGatewayId() {
         return this.carrierGatewayId == null ? Input.empty() : this.carrierGatewayId;
@@ -30,7 +30,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationCidrBlock")
-    private final @Nullable Input<String> destinationCidrBlock;
+      private final @Nullable Input<String> destinationCidrBlock;
 
     public Input<String> getDestinationCidrBlock() {
         return this.destinationCidrBlock == null ? Input.empty() : this.destinationCidrBlock;
@@ -41,7 +41,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationIpv6CidrBlock")
-    private final @Nullable Input<String> destinationIpv6CidrBlock;
+      private final @Nullable Input<String> destinationIpv6CidrBlock;
 
     public Input<String> getDestinationIpv6CidrBlock() {
         return this.destinationIpv6CidrBlock == null ? Input.empty() : this.destinationIpv6CidrBlock;
@@ -52,7 +52,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationPrefixListId")
-    private final @Nullable Input<String> destinationPrefixListId;
+      private final @Nullable Input<String> destinationPrefixListId;
 
     public Input<String> getDestinationPrefixListId() {
         return this.destinationPrefixListId == null ? Input.empty() : this.destinationPrefixListId;
@@ -63,7 +63,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="egressOnlyGatewayId")
-    private final @Nullable Input<String> egressOnlyGatewayId;
+      private final @Nullable Input<String> egressOnlyGatewayId;
 
     public Input<String> getEgressOnlyGatewayId() {
         return this.egressOnlyGatewayId == null ? Input.empty() : this.egressOnlyGatewayId;
@@ -74,7 +74,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayId")
-    private final @Nullable Input<String> gatewayId;
+      private final @Nullable Input<String> gatewayId;
 
     public Input<String> getGatewayId() {
         return this.gatewayId == null ? Input.empty() : this.gatewayId;
@@ -85,7 +85,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -96,7 +96,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceOwnerId")
-    private final @Nullable Input<String> instanceOwnerId;
+      private final @Nullable Input<String> instanceOwnerId;
 
     public Input<String> getInstanceOwnerId() {
         return this.instanceOwnerId == null ? Input.empty() : this.instanceOwnerId;
@@ -107,7 +107,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localGatewayId")
-    private final @Nullable Input<String> localGatewayId;
+      private final @Nullable Input<String> localGatewayId;
 
     public Input<String> getLocalGatewayId() {
         return this.localGatewayId == null ? Input.empty() : this.localGatewayId;
@@ -118,7 +118,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="natGatewayId")
-    private final @Nullable Input<String> natGatewayId;
+      private final @Nullable Input<String> natGatewayId;
 
     public Input<String> getNatGatewayId() {
         return this.natGatewayId == null ? Input.empty() : this.natGatewayId;
@@ -129,7 +129,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkInterfaceId")
-    private final @Nullable Input<String> networkInterfaceId;
+      private final @Nullable Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
@@ -140,7 +140,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origin")
-    private final @Nullable Input<String> origin;
+      private final @Nullable Input<String> origin;
 
     public Input<String> getOrigin() {
         return this.origin == null ? Input.empty() : this.origin;
@@ -151,7 +151,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeTableId")
-    private final @Nullable Input<String> routeTableId;
+      private final @Nullable Input<String> routeTableId;
 
     public Input<String> getRouteTableId() {
         return this.routeTableId == null ? Input.empty() : this.routeTableId;
@@ -162,7 +162,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -173,7 +173,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitGatewayId")
-    private final @Nullable Input<String> transitGatewayId;
+      private final @Nullable Input<String> transitGatewayId;
 
     public Input<String> getTransitGatewayId() {
         return this.transitGatewayId == null ? Input.empty() : this.transitGatewayId;
@@ -184,7 +184,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcEndpointId")
-    private final @Nullable Input<String> vpcEndpointId;
+      private final @Nullable Input<String> vpcEndpointId;
 
     public Input<String> getVpcEndpointId() {
         return this.vpcEndpointId == null ? Input.empty() : this.vpcEndpointId;
@@ -195,7 +195,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcPeeringConnectionId")
-    private final @Nullable Input<String> vpcPeeringConnectionId;
+      private final @Nullable Input<String> vpcPeeringConnectionId;
 
     public Input<String> getVpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId == null ? Input.empty() : this.vpcPeeringConnectionId;

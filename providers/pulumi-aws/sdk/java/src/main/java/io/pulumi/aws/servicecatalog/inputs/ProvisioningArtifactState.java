@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="acceptLanguage")
-    private final @Nullable Input<String> acceptLanguage;
+      private final @Nullable Input<String> acceptLanguage;
 
     public Input<String> getAcceptLanguage() {
         return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
@@ -31,7 +31,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="active")
-    private final @Nullable Input<Boolean> active;
+      private final @Nullable Input<Boolean> active;
 
     public Input<Boolean> getActive() {
         return this.active == null ? Input.empty() : this.active;
@@ -42,7 +42,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable Input<String> createdTime;
+      private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
@@ -53,7 +53,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -64,7 +64,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="disableTemplateValidation")
-    private final @Nullable Input<Boolean> disableTemplateValidation;
+      private final @Nullable Input<Boolean> disableTemplateValidation;
 
     public Input<Boolean> getDisableTemplateValidation() {
         return this.disableTemplateValidation == null ? Input.empty() : this.disableTemplateValidation;
@@ -75,7 +75,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="guidance")
-    private final @Nullable Input<String> guidance;
+      private final @Nullable Input<String> guidance;
 
     public Input<String> getGuidance() {
         return this.guidance == null ? Input.empty() : this.guidance;
@@ -86,7 +86,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -97,7 +97,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="productId")
-    private final @Nullable Input<String> productId;
+      private final @Nullable Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId == null ? Input.empty() : this.productId;
@@ -108,7 +108,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="templatePhysicalId")
-    private final @Nullable Input<String> templatePhysicalId;
+      private final @Nullable Input<String> templatePhysicalId;
 
     public Input<String> getTemplatePhysicalId() {
         return this.templatePhysicalId == null ? Input.empty() : this.templatePhysicalId;
@@ -119,7 +119,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="templateUrl")
-    private final @Nullable Input<String> templateUrl;
+      private final @Nullable Input<String> templateUrl;
 
     public Input<String> getTemplateUrl() {
         return this.templateUrl == null ? Input.empty() : this.templateUrl;
@@ -130,7 +130,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

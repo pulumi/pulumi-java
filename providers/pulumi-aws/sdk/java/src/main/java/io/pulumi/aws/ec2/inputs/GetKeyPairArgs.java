@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetKeyPairFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GetKeyPairArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetKeyPairFilter> filters;
+      private final @Nullable List<GetKeyPairFilter> filters;
 
     public List<GetKeyPairFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -33,14 +33,14 @@ public final class GetKeyPairArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable String keyName;
+      private final @Nullable String keyName;
 
     public Optional<String> getKeyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
     }
 
     @InputImport(name="keyPairId")
-    private final @Nullable String keyPairId;
+      private final @Nullable String keyPairId;
 
     public Optional<String> getKeyPairId() {
         return this.keyPairId == null ? Optional.empty() : Optional.ofNullable(this.keyPairId);
@@ -51,7 +51,7 @@ public final class GetKeyPairArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

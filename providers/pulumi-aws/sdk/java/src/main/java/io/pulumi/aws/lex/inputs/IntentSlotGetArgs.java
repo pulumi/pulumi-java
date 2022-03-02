@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.IntentSlotValueElicitationPromptGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class IntentSlotGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class IntentSlotGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class IntentSlotGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -60,7 +60,7 @@ public final class IntentSlotGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseCard")
-    private final @Nullable Input<String> responseCard;
+      private final @Nullable Input<String> responseCard;
 
     public Input<String> getResponseCard() {
         return this.responseCard == null ? Input.empty() : this.responseCard;
@@ -73,7 +73,7 @@ public final class IntentSlotGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sampleUtterances")
-    private final @Nullable Input<List<String>> sampleUtterances;
+      private final @Nullable Input<List<String>> sampleUtterances;
 
     public Input<List<String>> getSampleUtterances() {
         return this.sampleUtterances == null ? Input.empty() : this.sampleUtterances;
@@ -84,7 +84,7 @@ public final class IntentSlotGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slotConstraint", required=true)
-    private final Input<String> slotConstraint;
+      private final Input<String> slotConstraint;
 
     public Input<String> getSlotConstraint() {
         return this.slotConstraint;
@@ -96,7 +96,7 @@ public final class IntentSlotGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slotType", required=true)
-    private final Input<String> slotType;
+      private final Input<String> slotType;
 
     public Input<String> getSlotType() {
         return this.slotType;
@@ -107,7 +107,7 @@ public final class IntentSlotGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slotTypeVersion")
-    private final @Nullable Input<String> slotTypeVersion;
+      private final @Nullable Input<String> slotTypeVersion;
 
     public Input<String> getSlotTypeVersion() {
         return this.slotTypeVersion == null ? Input.empty() : this.slotTypeVersion;
@@ -119,7 +119,7 @@ public final class IntentSlotGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="valueElicitationPrompt")
-    private final @Nullable Input<IntentSlotValueElicitationPromptGetArgs> valueElicitationPrompt;
+      private final @Nullable Input<IntentSlotValueElicitationPromptGetArgs> valueElicitationPrompt;
 
     public Input<IntentSlotValueElicitationPromptGetArgs> getValueElicitationPrompt() {
         return this.valueElicitationPrompt == null ? Input.empty() : this.valueElicitationPrompt;

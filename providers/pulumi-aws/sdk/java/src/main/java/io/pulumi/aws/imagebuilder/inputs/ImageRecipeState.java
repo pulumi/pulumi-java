@@ -6,7 +6,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 import io.pulumi.aws.imagebuilder.inputs.ImageRecipeBlockDeviceMappingGetArgs;
 import io.pulumi.aws.imagebuilder.inputs.ImageRecipeComponentGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blockDeviceMappings")
-    private final @Nullable Input<List<ImageRecipeBlockDeviceMappingGetArgs>> blockDeviceMappings;
+      private final @Nullable Input<List<ImageRecipeBlockDeviceMappingGetArgs>> blockDeviceMappings;
 
     public Input<List<ImageRecipeBlockDeviceMappingGetArgs>> getBlockDeviceMappings() {
         return this.blockDeviceMappings == null ? Input.empty() : this.blockDeviceMappings;
@@ -45,7 +45,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="components")
-    private final @Nullable Input<List<ImageRecipeComponentGetArgs>> components;
+      private final @Nullable Input<List<ImageRecipeComponentGetArgs>> components;
 
     public Input<List<ImageRecipeComponentGetArgs>> getComponents() {
         return this.components == null ? Input.empty() : this.components;
@@ -56,7 +56,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dateCreated")
-    private final @Nullable Input<String> dateCreated;
+      private final @Nullable Input<String> dateCreated;
 
     public Input<String> getDateCreated() {
         return this.dateCreated == null ? Input.empty() : this.dateCreated;
@@ -67,7 +67,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -78,7 +78,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -89,7 +89,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable Input<String> owner;
+      private final @Nullable Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner == null ? Input.empty() : this.owner;
@@ -100,7 +100,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentImage")
-    private final @Nullable Input<String> parentImage;
+      private final @Nullable Input<String> parentImage;
 
     public Input<String> getParentImage() {
         return this.parentImage == null ? Input.empty() : this.parentImage;
@@ -111,7 +111,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable Input<String> platform;
+      private final @Nullable Input<String> platform;
 
     public Input<String> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -122,7 +122,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -133,7 +133,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -144,7 +144,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userDataBase64")
-    private final @Nullable Input<String> userDataBase64;
+      private final @Nullable Input<String> userDataBase64;
 
     public Input<String> getUserDataBase64() {
         return this.userDataBase64 == null ? Input.empty() : this.userDataBase64;
@@ -155,7 +155,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -166,7 +166,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workingDirectory")
-    private final @Nullable Input<String> workingDirectory;
+      private final @Nullable Input<String> workingDirectory;
 
     public Input<String> getWorkingDirectory() {
         return this.workingDirectory == null ? Input.empty() : this.workingDirectory;

@@ -7,7 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.FeatureGroupFeatureDefinitionArgs;
 import io.pulumi.aws.sagemaker.inputs.FeatureGroupOfflineStoreConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.FeatureGroupOnlineStoreConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventTimeFeatureName", required=true)
-    private final Input<String> eventTimeFeatureName;
+      private final Input<String> eventTimeFeatureName;
 
     public Input<String> getEventTimeFeatureName() {
         return this.eventTimeFeatureName;
@@ -46,7 +46,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="featureDefinitions", required=true)
-    private final Input<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions;
+      private final Input<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions;
 
     public Input<List<FeatureGroupFeatureDefinitionArgs>> getFeatureDefinitions() {
         return this.featureDefinitions;
@@ -57,7 +57,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="featureGroupName", required=true)
-    private final Input<String> featureGroupName;
+      private final Input<String> featureGroupName;
 
     public Input<String> getFeatureGroupName() {
         return this.featureGroupName;
@@ -68,7 +68,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="offlineStoreConfig")
-    private final @Nullable Input<FeatureGroupOfflineStoreConfigArgs> offlineStoreConfig;
+      private final @Nullable Input<FeatureGroupOfflineStoreConfigArgs> offlineStoreConfig;
 
     public Input<FeatureGroupOfflineStoreConfigArgs> getOfflineStoreConfig() {
         return this.offlineStoreConfig == null ? Input.empty() : this.offlineStoreConfig;
@@ -79,7 +79,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onlineStoreConfig")
-    private final @Nullable Input<FeatureGroupOnlineStoreConfigArgs> onlineStoreConfig;
+      private final @Nullable Input<FeatureGroupOnlineStoreConfigArgs> onlineStoreConfig;
 
     public Input<FeatureGroupOnlineStoreConfigArgs> getOnlineStoreConfig() {
         return this.onlineStoreConfig == null ? Input.empty() : this.onlineStoreConfig;
@@ -90,7 +90,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recordIdentifierFeatureName", required=true)
-    private final Input<String> recordIdentifierFeatureName;
+      private final Input<String> recordIdentifierFeatureName;
 
     public Input<String> getRecordIdentifierFeatureName() {
         return this.recordIdentifierFeatureName;
@@ -101,7 +101,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -112,7 +112,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

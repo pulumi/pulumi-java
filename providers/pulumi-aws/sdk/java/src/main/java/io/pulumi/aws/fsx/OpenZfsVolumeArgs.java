@@ -7,7 +7,7 @@ import io.pulumi.aws.fsx.inputs.OpenZfsVolumeNfsExportsArgs;
 import io.pulumi.aws.fsx.inputs.OpenZfsVolumeOriginSnapshotArgs;
 import io.pulumi.aws.fsx.inputs.OpenZfsVolumeUserAndGroupQuotaArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="copyTagsToSnapshots")
-    private final @Nullable Input<Boolean> copyTagsToSnapshots;
+      private final @Nullable Input<Boolean> copyTagsToSnapshots;
 
     public Input<Boolean> getCopyTagsToSnapshots() {
         return this.copyTagsToSnapshots == null ? Input.empty() : this.copyTagsToSnapshots;
@@ -37,7 +37,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataCompressionType")
-    private final @Nullable Input<String> dataCompressionType;
+      private final @Nullable Input<String> dataCompressionType;
 
     public Input<String> getDataCompressionType() {
         return this.dataCompressionType == null ? Input.empty() : this.dataCompressionType;
@@ -48,7 +48,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -59,7 +59,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nfsExports")
-    private final @Nullable Input<OpenZfsVolumeNfsExportsArgs> nfsExports;
+      private final @Nullable Input<OpenZfsVolumeNfsExportsArgs> nfsExports;
 
     public Input<OpenZfsVolumeNfsExportsArgs> getNfsExports() {
         return this.nfsExports == null ? Input.empty() : this.nfsExports;
@@ -70,7 +70,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originSnapshot")
-    private final @Nullable Input<OpenZfsVolumeOriginSnapshotArgs> originSnapshot;
+      private final @Nullable Input<OpenZfsVolumeOriginSnapshotArgs> originSnapshot;
 
     public Input<OpenZfsVolumeOriginSnapshotArgs> getOriginSnapshot() {
         return this.originSnapshot == null ? Input.empty() : this.originSnapshot;
@@ -81,7 +81,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentVolumeId", required=true)
-    private final Input<String> parentVolumeId;
+      private final Input<String> parentVolumeId;
 
     public Input<String> getParentVolumeId() {
         return this.parentVolumeId;
@@ -92,7 +92,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+      private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -103,7 +103,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageCapacityQuotaGib")
-    private final @Nullable Input<Integer> storageCapacityQuotaGib;
+      private final @Nullable Input<Integer> storageCapacityQuotaGib;
 
     public Input<Integer> getStorageCapacityQuotaGib() {
         return this.storageCapacityQuotaGib == null ? Input.empty() : this.storageCapacityQuotaGib;
@@ -114,7 +114,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageCapacityReservationGib")
-    private final @Nullable Input<Integer> storageCapacityReservationGib;
+      private final @Nullable Input<Integer> storageCapacityReservationGib;
 
     public Input<Integer> getStorageCapacityReservationGib() {
         return this.storageCapacityReservationGib == null ? Input.empty() : this.storageCapacityReservationGib;
@@ -125,7 +125,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -136,7 +136,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -147,14 +147,14 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAndGroupQuotas")
-    private final @Nullable Input<List<OpenZfsVolumeUserAndGroupQuotaArgs>> userAndGroupQuotas;
+      private final @Nullable Input<List<OpenZfsVolumeUserAndGroupQuotaArgs>> userAndGroupQuotas;
 
     public Input<List<OpenZfsVolumeUserAndGroupQuotaArgs>> getUserAndGroupQuotas() {
         return this.userAndGroupQuotas == null ? Input.empty() : this.userAndGroupQuotas;
     }
 
     @InputImport(name="volumeType")
-    private final @Nullable Input<String> volumeType;
+      private final @Nullable Input<String> volumeType;
 
     public Input<String> getVolumeType() {
         return this.volumeType == null ? Input.empty() : this.volumeType;

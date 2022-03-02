@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="allocatedStorage")
-    private final @Nullable Input<Integer> allocatedStorage;
+      private final @Nullable Input<Integer> allocatedStorage;
 
     public Input<Integer> getAllocatedStorage() {
         return this.allocatedStorage == null ? Input.empty() : this.allocatedStorage;
@@ -34,7 +34,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="availabilityZones")
-    private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Input<List<String>> availabilityZones;
 
     public Input<List<String>> getAvailabilityZones() {
         return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
@@ -45,7 +45,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dbClusterIdentifier")
-    private final @Nullable Input<String> dbClusterIdentifier;
+      private final @Nullable Input<String> dbClusterIdentifier;
 
     public Input<String> getDbClusterIdentifier() {
         return this.dbClusterIdentifier == null ? Input.empty() : this.dbClusterIdentifier;
@@ -56,7 +56,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dbClusterSnapshotArn")
-    private final @Nullable Input<String> dbClusterSnapshotArn;
+      private final @Nullable Input<String> dbClusterSnapshotArn;
 
     public Input<String> getDbClusterSnapshotArn() {
         return this.dbClusterSnapshotArn == null ? Input.empty() : this.dbClusterSnapshotArn;
@@ -67,7 +67,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dbClusterSnapshotIdentifier")
-    private final @Nullable Input<String> dbClusterSnapshotIdentifier;
+      private final @Nullable Input<String> dbClusterSnapshotIdentifier;
 
     public Input<String> getDbClusterSnapshotIdentifier() {
         return this.dbClusterSnapshotIdentifier == null ? Input.empty() : this.dbClusterSnapshotIdentifier;
@@ -78,7 +78,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="engine")
-    private final @Nullable Input<String> engine;
+      private final @Nullable Input<String> engine;
 
     public Input<String> getEngine() {
         return this.engine == null ? Input.empty() : this.engine;
@@ -89,7 +89,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="engineVersion")
-    private final @Nullable Input<String> engineVersion;
+      private final @Nullable Input<String> engineVersion;
 
     public Input<String> getEngineVersion() {
         return this.engineVersion == null ? Input.empty() : this.engineVersion;
@@ -100,7 +100,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -111,7 +111,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="licenseModel")
-    private final @Nullable Input<String> licenseModel;
+      private final @Nullable Input<String> licenseModel;
 
     public Input<String> getLicenseModel() {
         return this.licenseModel == null ? Input.empty() : this.licenseModel;
@@ -122,21 +122,21 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
     }
 
     @InputImport(name="snapshotType")
-    private final @Nullable Input<String> snapshotType;
+      private final @Nullable Input<String> snapshotType;
 
     public Input<String> getSnapshotType() {
         return this.snapshotType == null ? Input.empty() : this.snapshotType;
     }
 
     @InputImport(name="sourceDbClusterSnapshotArn")
-    private final @Nullable Input<String> sourceDbClusterSnapshotArn;
+      private final @Nullable Input<String> sourceDbClusterSnapshotArn;
 
     public Input<String> getSourceDbClusterSnapshotArn() {
         return this.sourceDbClusterSnapshotArn == null ? Input.empty() : this.sourceDbClusterSnapshotArn;
@@ -147,7 +147,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -158,7 +158,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="storageEncrypted")
-    private final @Nullable Input<Boolean> storageEncrypted;
+      private final @Nullable Input<Boolean> storageEncrypted;
 
     public Input<Boolean> getStorageEncrypted() {
         return this.storageEncrypted == null ? Input.empty() : this.storageEncrypted;
@@ -169,7 +169,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -180,7 +180,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -191,7 +191,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

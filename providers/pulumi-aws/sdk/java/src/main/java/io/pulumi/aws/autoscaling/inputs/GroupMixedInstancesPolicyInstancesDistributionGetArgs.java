@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
      * 
      */
     @InputImport(name="onDemandAllocationStrategy")
-    private final @Nullable Input<String> onDemandAllocationStrategy;
+      private final @Nullable Input<String> onDemandAllocationStrategy;
 
     public Input<String> getOnDemandAllocationStrategy() {
         return this.onDemandAllocationStrategy == null ? Input.empty() : this.onDemandAllocationStrategy;
@@ -31,7 +31,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
      * 
      */
     @InputImport(name="onDemandBaseCapacity")
-    private final @Nullable Input<Integer> onDemandBaseCapacity;
+      private final @Nullable Input<Integer> onDemandBaseCapacity;
 
     public Input<Integer> getOnDemandBaseCapacity() {
         return this.onDemandBaseCapacity == null ? Input.empty() : this.onDemandBaseCapacity;
@@ -42,7 +42,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
      * 
      */
     @InputImport(name="onDemandPercentageAboveBaseCapacity")
-    private final @Nullable Input<Integer> onDemandPercentageAboveBaseCapacity;
+      private final @Nullable Input<Integer> onDemandPercentageAboveBaseCapacity;
 
     public Input<Integer> getOnDemandPercentageAboveBaseCapacity() {
         return this.onDemandPercentageAboveBaseCapacity == null ? Input.empty() : this.onDemandPercentageAboveBaseCapacity;
@@ -53,7 +53,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
      * 
      */
     @InputImport(name="spotAllocationStrategy")
-    private final @Nullable Input<String> spotAllocationStrategy;
+      private final @Nullable Input<String> spotAllocationStrategy;
 
     public Input<String> getSpotAllocationStrategy() {
         return this.spotAllocationStrategy == null ? Input.empty() : this.spotAllocationStrategy;
@@ -64,7 +64,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
      * 
      */
     @InputImport(name="spotInstancePools")
-    private final @Nullable Input<Integer> spotInstancePools;
+      private final @Nullable Input<Integer> spotInstancePools;
 
     public Input<Integer> getSpotInstancePools() {
         return this.spotInstancePools == null ? Input.empty() : this.spotInstancePools;
@@ -75,7 +75,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
      * 
      */
     @InputImport(name="spotMaxPrice")
-    private final @Nullable Input<String> spotMaxPrice;
+      private final @Nullable Input<String> spotMaxPrice;
 
     public Input<String> getSpotMaxPrice() {
         return this.spotMaxPrice == null ? Input.empty() : this.spotMaxPrice;

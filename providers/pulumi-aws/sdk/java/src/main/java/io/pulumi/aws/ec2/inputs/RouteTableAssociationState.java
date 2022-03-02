@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gatewayId")
-    private final @Nullable Input<String> gatewayId;
+      private final @Nullable Input<String> gatewayId;
 
     public Input<String> getGatewayId() {
         return this.gatewayId == null ? Input.empty() : this.gatewayId;
@@ -30,7 +30,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="routeTableId")
-    private final @Nullable Input<String> routeTableId;
+      private final @Nullable Input<String> routeTableId;
 
     public Input<String> getRouteTableId() {
         return this.routeTableId == null ? Input.empty() : this.routeTableId;
@@ -41,7 +41,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+      private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;

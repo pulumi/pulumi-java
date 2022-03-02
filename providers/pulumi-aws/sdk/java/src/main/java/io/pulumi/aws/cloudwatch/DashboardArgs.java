@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardBody", required=true)
-    private final Input<String> dashboardBody;
+      private final Input<String> dashboardBody;
 
     public Input<String> getDashboardBody() {
         return this.dashboardBody;
@@ -29,7 +29,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dashboardName", required=true)
-    private final Input<String> dashboardName;
+      private final Input<String> dashboardName;
 
     public Input<String> getDashboardName() {
         return this.dashboardName;

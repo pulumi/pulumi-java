@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecrpublic.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
     public static final RepositoryPolicyState Empty = new RepositoryPolicyState();
 
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -26,7 +26,7 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="registryId")
-    private final @Nullable Input<String> registryId;
+      private final @Nullable Input<String> registryId;
 
     public Input<String> getRegistryId() {
         return this.registryId == null ? Input.empty() : this.registryId;
@@ -37,7 +37,7 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="repositoryName")
-    private final @Nullable Input<String> repositoryName;
+      private final @Nullable Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName == null ? Input.empty() : this.repositoryName;

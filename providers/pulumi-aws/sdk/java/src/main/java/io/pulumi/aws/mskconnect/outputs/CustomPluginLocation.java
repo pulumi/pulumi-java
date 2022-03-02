@@ -4,7 +4,7 @@
 package io.pulumi.aws.mskconnect.outputs;
 
 import io.pulumi.aws.mskconnect.outputs.CustomPluginLocationS3;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType

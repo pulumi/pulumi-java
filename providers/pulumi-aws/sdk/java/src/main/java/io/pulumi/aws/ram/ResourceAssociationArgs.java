@@ -4,7 +4,7 @@
 package io.pulumi.aws.ram;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceArn", required=true)
-    private final Input<String> resourceArn;
+      private final Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn;
@@ -29,7 +29,7 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceShareArn", required=true)
-    private final Input<String> resourceShareArn;
+      private final Input<String> resourceShareArn;
 
     public Input<String> getResourceShareArn() {
         return this.resourceShareArn;

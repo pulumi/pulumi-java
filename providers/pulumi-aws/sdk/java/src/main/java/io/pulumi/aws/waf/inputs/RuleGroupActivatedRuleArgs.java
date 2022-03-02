@@ -5,7 +5,7 @@ package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.aws.waf.inputs.RuleGroupActivatedRuleActionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<RuleGroupActivatedRuleActionArgs> action;
+      private final Input<RuleGroupActivatedRuleActionArgs> action;
 
     public Input<RuleGroupActivatedRuleActionArgs> getAction() {
         return this.action;
@@ -32,7 +32,7 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -43,7 +43,7 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ruleId", required=true)
-    private final Input<String> ruleId;
+      private final Input<String> ruleId;
 
     public Input<String> getRuleId() {
         return this.ruleId;
@@ -54,7 +54,7 @@ public final class RuleGroupActivatedRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

@@ -6,7 +6,7 @@ package io.pulumi.aws.lambda;
 import io.pulumi.aws.lambda.inputs.CodeSigningConfigAllowedPublishersArgs;
 import io.pulumi.aws.lambda.inputs.CodeSigningConfigPoliciesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowedPublishers", required=true)
-    private final Input<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
+      private final Input<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
 
     public Input<CodeSigningConfigAllowedPublishersArgs> getAllowedPublishers() {
         return this.allowedPublishers;
@@ -32,7 +32,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policies")
-    private final @Nullable Input<CodeSigningConfigPoliciesArgs> policies;
+      private final @Nullable Input<CodeSigningConfigPoliciesArgs> policies;
 
     public Input<CodeSigningConfigPoliciesArgs> getPolicies() {
         return this.policies == null ? Input.empty() : this.policies;

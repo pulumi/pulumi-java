@@ -6,7 +6,7 @@ package io.pulumi.aws.glue.outputs;
 import io.pulumi.aws.glue.outputs.SecurityConfigurationEncryptionConfigurationCloudwatchEncryption;
 import io.pulumi.aws.glue.outputs.SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption;
 import io.pulumi.aws.glue.outputs.SecurityConfigurationEncryptionConfigurationS3Encryption;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType

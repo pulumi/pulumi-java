@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class FlowDefinitionHumanLoopActivationConfigGetArgs extends io.pul
      * 
      */
     @InputImport(name="humanLoopActivationConditionsConfig")
-    private final @Nullable Input<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs> humanLoopActivationConditionsConfig;
+      private final @Nullable Input<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs> humanLoopActivationConditionsConfig;
 
     public Input<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs> getHumanLoopActivationConditionsConfig() {
         return this.humanLoopActivationConditionsConfig == null ? Input.empty() : this.humanLoopActivationConditionsConfig;

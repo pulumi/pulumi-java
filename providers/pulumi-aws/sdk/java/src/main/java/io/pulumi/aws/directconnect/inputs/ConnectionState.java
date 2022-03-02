@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsDevice")
-    private final @Nullable Input<String> awsDevice;
+      private final @Nullable Input<String> awsDevice;
 
     public Input<String> getAwsDevice() {
         return this.awsDevice == null ? Input.empty() : this.awsDevice;
@@ -43,7 +43,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bandwidth")
-    private final @Nullable Input<String> bandwidth;
+      private final @Nullable Input<String> bandwidth;
 
     public Input<String> getBandwidth() {
         return this.bandwidth == null ? Input.empty() : this.bandwidth;
@@ -54,7 +54,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasLogicalRedundancy")
-    private final @Nullable Input<String> hasLogicalRedundancy;
+      private final @Nullable Input<String> hasLogicalRedundancy;
 
     public Input<String> getHasLogicalRedundancy() {
         return this.hasLogicalRedundancy == null ? Input.empty() : this.hasLogicalRedundancy;
@@ -65,7 +65,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jumboFrameCapable")
-    private final @Nullable Input<Boolean> jumboFrameCapable;
+      private final @Nullable Input<Boolean> jumboFrameCapable;
 
     public Input<Boolean> getJumboFrameCapable() {
         return this.jumboFrameCapable == null ? Input.empty() : this.jumboFrameCapable;
@@ -76,7 +76,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -87,7 +87,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -98,7 +98,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerAccountId")
-    private final @Nullable Input<String> ownerAccountId;
+      private final @Nullable Input<String> ownerAccountId;
 
     public Input<String> getOwnerAccountId() {
         return this.ownerAccountId == null ? Input.empty() : this.ownerAccountId;
@@ -109,7 +109,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerName")
-    private final @Nullable Input<String> providerName;
+      private final @Nullable Input<String> providerName;
 
     public Input<String> getProviderName() {
         return this.providerName == null ? Input.empty() : this.providerName;
@@ -120,7 +120,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -131,7 +131,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

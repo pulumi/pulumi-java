@@ -4,7 +4,7 @@
 package io.pulumi.aws.memorydb;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
     public static final AclArgs Empty = new AclArgs();
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -28,7 +28,7 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+      private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -39,7 +39,7 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -50,7 +50,7 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -61,7 +61,7 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userNames")
-    private final @Nullable Input<List<String>> userNames;
+      private final @Nullable Input<List<String>> userNames;
 
     public Input<List<String>> getUserNames() {
         return this.userNames == null ? Input.empty() : this.userNames;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final Input<String> containerName;
+      private final Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName;
@@ -31,7 +31,7 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+      private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

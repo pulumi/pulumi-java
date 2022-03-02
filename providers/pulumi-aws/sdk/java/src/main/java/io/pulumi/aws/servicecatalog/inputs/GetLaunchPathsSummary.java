@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.aws.servicecatalog.inputs.GetLaunchPathsSummaryConstraintSummary;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class GetLaunchPathsSummary extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="constraintSummaries", required=true)
-    private final List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries;
+      private final List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries;
 
     public List<GetLaunchPathsSummaryConstraintSummary> getConstraintSummaries() {
         return this.constraintSummaries;
@@ -31,7 +31,7 @@ public final class GetLaunchPathsSummary extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -42,7 +42,7 @@ public final class GetLaunchPathsSummary extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="pathId", required=true)
-    private final String pathId;
+      private final String pathId;
 
     public String getPathId() {
         return this.pathId;
@@ -53,7 +53,7 @@ public final class GetLaunchPathsSummary extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="tags", required=true)
-    private final Map<String,String> tags;
+      private final Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags;

@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.LaunchTemplateBlockDeviceMappingEbsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class LaunchTemplateBlockDeviceMappingArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+      private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
@@ -31,7 +31,7 @@ public final class LaunchTemplateBlockDeviceMappingArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ebs")
-    private final @Nullable Input<LaunchTemplateBlockDeviceMappingEbsArgs> ebs;
+      private final @Nullable Input<LaunchTemplateBlockDeviceMappingEbsArgs> ebs;
 
     public Input<LaunchTemplateBlockDeviceMappingEbsArgs> getEbs() {
         return this.ebs == null ? Input.empty() : this.ebs;
@@ -42,7 +42,7 @@ public final class LaunchTemplateBlockDeviceMappingArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="noDevice")
-    private final @Nullable Input<String> noDevice;
+      private final @Nullable Input<String> noDevice;
 
     public Input<String> getNoDevice() {
         return this.noDevice == null ? Input.empty() : this.noDevice;
@@ -55,7 +55,7 @@ public final class LaunchTemplateBlockDeviceMappingArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="virtualName")
-    private final @Nullable Input<String> virtualName;
+      private final @Nullable Input<String> virtualName;
 
     public Input<String> getVirtualName() {
         return this.virtualName == null ? Input.empty() : this.virtualName;

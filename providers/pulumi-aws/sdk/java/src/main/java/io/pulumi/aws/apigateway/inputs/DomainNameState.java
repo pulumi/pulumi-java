@@ -6,7 +6,7 @@ package io.pulumi.aws.apigateway.inputs;
 import io.pulumi.aws.apigateway.inputs.DomainNameEndpointConfigurationGetArgs;
 import io.pulumi.aws.apigateway.inputs.DomainNameMutualTlsAuthenticationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -33,7 +33,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateArn")
-    private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
@@ -46,7 +46,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateBody")
-    private final @Nullable Input<String> certificateBody;
+      private final @Nullable Input<String> certificateBody;
 
     public Input<String> getCertificateBody() {
         return this.certificateBody == null ? Input.empty() : this.certificateBody;
@@ -60,7 +60,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateChain")
-    private final @Nullable Input<String> certificateChain;
+      private final @Nullable Input<String> certificateChain;
 
     public Input<String> getCertificateChain() {
         return this.certificateChain == null ? Input.empty() : this.certificateChain;
@@ -73,7 +73,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateName")
-    private final @Nullable Input<String> certificateName;
+      private final @Nullable Input<String> certificateName;
 
     public Input<String> getCertificateName() {
         return this.certificateName == null ? Input.empty() : this.certificateName;
@@ -85,7 +85,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificatePrivateKey")
-    private final @Nullable Input<String> certificatePrivateKey;
+      private final @Nullable Input<String> certificatePrivateKey;
 
     public Input<String> getCertificatePrivateKey() {
         return this.certificatePrivateKey == null ? Input.empty() : this.certificatePrivateKey;
@@ -96,7 +96,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateUploadDate")
-    private final @Nullable Input<String> certificateUploadDate;
+      private final @Nullable Input<String> certificateUploadDate;
 
     public Input<String> getCertificateUploadDate() {
         return this.certificateUploadDate == null ? Input.empty() : this.certificateUploadDate;
@@ -108,7 +108,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudfrontDomainName")
-    private final @Nullable Input<String> cloudfrontDomainName;
+      private final @Nullable Input<String> cloudfrontDomainName;
 
     public Input<String> getCloudfrontDomainName() {
         return this.cloudfrontDomainName == null ? Input.empty() : this.cloudfrontDomainName;
@@ -120,7 +120,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudfrontZoneId")
-    private final @Nullable Input<String> cloudfrontZoneId;
+      private final @Nullable Input<String> cloudfrontZoneId;
 
     public Input<String> getCloudfrontZoneId() {
         return this.cloudfrontZoneId == null ? Input.empty() : this.cloudfrontZoneId;
@@ -131,7 +131,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -142,7 +142,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointConfiguration")
-    private final @Nullable Input<DomainNameEndpointConfigurationGetArgs> endpointConfiguration;
+      private final @Nullable Input<DomainNameEndpointConfigurationGetArgs> endpointConfiguration;
 
     public Input<DomainNameEndpointConfigurationGetArgs> getEndpointConfiguration() {
         return this.endpointConfiguration == null ? Input.empty() : this.endpointConfiguration;
@@ -153,7 +153,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mutualTlsAuthentication")
-    private final @Nullable Input<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
+      private final @Nullable Input<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
 
     public Input<DomainNameMutualTlsAuthenticationGetArgs> getMutualTlsAuthentication() {
         return this.mutualTlsAuthentication == null ? Input.empty() : this.mutualTlsAuthentication;
@@ -164,7 +164,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regionalCertificateArn")
-    private final @Nullable Input<String> regionalCertificateArn;
+      private final @Nullable Input<String> regionalCertificateArn;
 
     public Input<String> getRegionalCertificateArn() {
         return this.regionalCertificateArn == null ? Input.empty() : this.regionalCertificateArn;
@@ -176,7 +176,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regionalCertificateName")
-    private final @Nullable Input<String> regionalCertificateName;
+      private final @Nullable Input<String> regionalCertificateName;
 
     public Input<String> getRegionalCertificateName() {
         return this.regionalCertificateName == null ? Input.empty() : this.regionalCertificateName;
@@ -187,7 +187,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regionalDomainName")
-    private final @Nullable Input<String> regionalDomainName;
+      private final @Nullable Input<String> regionalDomainName;
 
     public Input<String> getRegionalDomainName() {
         return this.regionalDomainName == null ? Input.empty() : this.regionalDomainName;
@@ -198,7 +198,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regionalZoneId")
-    private final @Nullable Input<String> regionalZoneId;
+      private final @Nullable Input<String> regionalZoneId;
 
     public Input<String> getRegionalZoneId() {
         return this.regionalZoneId == null ? Input.empty() : this.regionalZoneId;
@@ -209,7 +209,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityPolicy")
-    private final @Nullable Input<String> securityPolicy;
+      private final @Nullable Input<String> securityPolicy;
 
     public Input<String> getSecurityPolicy() {
         return this.securityPolicy == null ? Input.empty() : this.securityPolicy;
@@ -220,7 +220,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -231,7 +231,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

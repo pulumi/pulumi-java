@@ -5,7 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.aws.rds.inputs.ProxyAuthGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ProxyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -35,7 +35,7 @@ public final class ProxyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auths")
-    private final @Nullable Input<List<ProxyAuthGetArgs>> auths;
+      private final @Nullable Input<List<ProxyAuthGetArgs>> auths;
 
     public Input<List<ProxyAuthGetArgs>> getAuths() {
         return this.auths == null ? Input.empty() : this.auths;
@@ -46,7 +46,7 @@ public final class ProxyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="debugLogging")
-    private final @Nullable Input<Boolean> debugLogging;
+      private final @Nullable Input<Boolean> debugLogging;
 
     public Input<Boolean> getDebugLogging() {
         return this.debugLogging == null ? Input.empty() : this.debugLogging;
@@ -57,7 +57,7 @@ public final class ProxyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<String> endpoint;
+      private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -68,7 +68,7 @@ public final class ProxyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineFamily")
-    private final @Nullable Input<String> engineFamily;
+      private final @Nullable Input<String> engineFamily;
 
     public Input<String> getEngineFamily() {
         return this.engineFamily == null ? Input.empty() : this.engineFamily;
@@ -79,7 +79,7 @@ public final class ProxyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleClientTimeout")
-    private final @Nullable Input<Integer> idleClientTimeout;
+      private final @Nullable Input<Integer> idleClientTimeout;
 
     public Input<Integer> getIdleClientTimeout() {
         return this.idleClientTimeout == null ? Input.empty() : this.idleClientTimeout;
@@ -90,7 +90,7 @@ public final class ProxyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -101,7 +101,7 @@ public final class ProxyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireTls")
-    private final @Nullable Input<Boolean> requireTls;
+      private final @Nullable Input<Boolean> requireTls;
 
     public Input<Boolean> getRequireTls() {
         return this.requireTls == null ? Input.empty() : this.requireTls;
@@ -112,7 +112,7 @@ public final class ProxyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -123,7 +123,7 @@ public final class ProxyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -134,7 +134,7 @@ public final class ProxyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -145,7 +145,7 @@ public final class ProxyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-    private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
 
     public Input<List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
@@ -156,7 +156,7 @@ public final class ProxyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSubnetIds")
-    private final @Nullable Input<List<String>> vpcSubnetIds;
+      private final @Nullable Input<List<String>> vpcSubnetIds;
 
     public Input<List<String>> getVpcSubnetIds() {
         return this.vpcSubnetIds == null ? Input.empty() : this.vpcSubnetIds;

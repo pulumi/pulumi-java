@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone", required=true)
-    private final Input<String> availabilityZone;
+      private final Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone;
@@ -33,7 +33,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encrypted")
-    private final @Nullable Input<Boolean> encrypted;
+      private final @Nullable Input<Boolean> encrypted;
 
     public Input<Boolean> getEncrypted() {
         return this.encrypted == null ? Input.empty() : this.encrypted;
@@ -44,14 +44,14 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iops")
-    private final @Nullable Input<Integer> iops;
+      private final @Nullable Input<Integer> iops;
 
     public Input<Integer> getIops() {
         return this.iops == null ? Input.empty() : this.iops;
     }
 
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -62,7 +62,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiAttachEnabled")
-    private final @Nullable Input<Boolean> multiAttachEnabled;
+      private final @Nullable Input<Boolean> multiAttachEnabled;
 
     public Input<Boolean> getMultiAttachEnabled() {
         return this.multiAttachEnabled == null ? Input.empty() : this.multiAttachEnabled;
@@ -73,7 +73,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostArn")
-    private final @Nullable Input<String> outpostArn;
+      private final @Nullable Input<String> outpostArn;
 
     public Input<String> getOutpostArn() {
         return this.outpostArn == null ? Input.empty() : this.outpostArn;
@@ -84,7 +84,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Input<Integer> size;
+      private final @Nullable Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -95,7 +95,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotId")
-    private final @Nullable Input<String> snapshotId;
+      private final @Nullable Input<String> snapshotId;
 
     public Input<String> getSnapshotId() {
         return this.snapshotId == null ? Input.empty() : this.snapshotId;
@@ -106,7 +106,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -117,7 +117,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="throughput")
-    private final @Nullable Input<Integer> throughput;
+      private final @Nullable Input<Integer> throughput;
 
     public Input<Integer> getThroughput() {
         return this.throughput == null ? Input.empty() : this.throughput;
@@ -128,7 +128,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

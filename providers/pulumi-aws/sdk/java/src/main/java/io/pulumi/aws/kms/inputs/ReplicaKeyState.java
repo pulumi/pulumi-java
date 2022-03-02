@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -36,7 +36,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bypassPolicyLockoutSafetyCheck")
-    private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
+      private final @Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck;
 
     public Input<Boolean> getBypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck == null ? Input.empty() : this.bypassPolicyLockoutSafetyCheck;
@@ -48,7 +48,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionWindowInDays")
-    private final @Nullable Input<Integer> deletionWindowInDays;
+      private final @Nullable Input<Integer> deletionWindowInDays;
 
     public Input<Integer> getDeletionWindowInDays() {
         return this.deletionWindowInDays == null ? Input.empty() : this.deletionWindowInDays;
@@ -59,7 +59,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -70,7 +70,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -81,7 +81,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+      private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
@@ -92,7 +92,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyRotationEnabled")
-    private final @Nullable Input<Boolean> keyRotationEnabled;
+      private final @Nullable Input<Boolean> keyRotationEnabled;
 
     public Input<Boolean> getKeyRotationEnabled() {
         return this.keyRotationEnabled == null ? Input.empty() : this.keyRotationEnabled;
@@ -103,7 +103,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keySpec")
-    private final @Nullable Input<String> keySpec;
+      private final @Nullable Input<String> keySpec;
 
     public Input<String> getKeySpec() {
         return this.keySpec == null ? Input.empty() : this.keySpec;
@@ -114,14 +114,14 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyUsage")
-    private final @Nullable Input<String> keyUsage;
+      private final @Nullable Input<String> keyUsage;
 
     public Input<String> getKeyUsage() {
         return this.keyUsage == null ? Input.empty() : this.keyUsage;
     }
 
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -132,7 +132,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryKeyArn")
-    private final @Nullable Input<String> primaryKeyArn;
+      private final @Nullable Input<String> primaryKeyArn;
 
     public Input<String> getPrimaryKeyArn() {
         return this.primaryKeyArn == null ? Input.empty() : this.primaryKeyArn;
@@ -143,7 +143,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -154,7 +154,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.lakeformation.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PermissionsTableGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
@@ -31,7 +31,7 @@ public final class PermissionsTableGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -42,14 +42,14 @@ public final class PermissionsTableGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="wildcard")
-    private final @Nullable Input<Boolean> wildcard;
+      private final @Nullable Input<Boolean> wildcard;
 
     public Input<Boolean> getWildcard() {
         return this.wildcard == null ? Input.empty() : this.wildcard;

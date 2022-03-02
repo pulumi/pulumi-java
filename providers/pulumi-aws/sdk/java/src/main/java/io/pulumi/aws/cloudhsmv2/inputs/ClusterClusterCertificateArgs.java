@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudhsmv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,35 +15,35 @@ public final class ClusterClusterCertificateArgs extends io.pulumi.resources.Res
     public static final ClusterClusterCertificateArgs Empty = new ClusterClusterCertificateArgs();
 
     @InputImport(name="awsHardwareCertificate")
-    private final @Nullable Input<String> awsHardwareCertificate;
+      private final @Nullable Input<String> awsHardwareCertificate;
 
     public Input<String> getAwsHardwareCertificate() {
         return this.awsHardwareCertificate == null ? Input.empty() : this.awsHardwareCertificate;
     }
 
     @InputImport(name="clusterCertificate")
-    private final @Nullable Input<String> clusterCertificate;
+      private final @Nullable Input<String> clusterCertificate;
 
     public Input<String> getClusterCertificate() {
         return this.clusterCertificate == null ? Input.empty() : this.clusterCertificate;
     }
 
     @InputImport(name="clusterCsr")
-    private final @Nullable Input<String> clusterCsr;
+      private final @Nullable Input<String> clusterCsr;
 
     public Input<String> getClusterCsr() {
         return this.clusterCsr == null ? Input.empty() : this.clusterCsr;
     }
 
     @InputImport(name="hsmCertificate")
-    private final @Nullable Input<String> hsmCertificate;
+      private final @Nullable Input<String> hsmCertificate;
 
     public Input<String> getHsmCertificate() {
         return this.hsmCertificate == null ? Input.empty() : this.hsmCertificate;
     }
 
     @InputImport(name="manufacturerHardwareCertificate")
-    private final @Nullable Input<String> manufacturerHardwareCertificate;
+      private final @Nullable Input<String> manufacturerHardwareCertificate;
 
     public Input<String> getManufacturerHardwareCertificate() {
         return this.manufacturerHardwareCertificate == null ? Input.empty() : this.manufacturerHardwareCertificate;

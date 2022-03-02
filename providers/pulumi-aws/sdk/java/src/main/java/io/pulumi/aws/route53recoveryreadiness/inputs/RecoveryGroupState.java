@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoveryreadiness.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class RecoveryGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,7 +32,7 @@ public final class RecoveryGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cells")
-    private final @Nullable Input<List<String>> cells;
+      private final @Nullable Input<List<String>> cells;
 
     public Input<List<String>> getCells() {
         return this.cells == null ? Input.empty() : this.cells;
@@ -43,7 +43,7 @@ public final class RecoveryGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recoveryGroupName")
-    private final @Nullable Input<String> recoveryGroupName;
+      private final @Nullable Input<String> recoveryGroupName;
 
     public Input<String> getRecoveryGroupName() {
         return this.recoveryGroupName == null ? Input.empty() : this.recoveryGroupName;
@@ -54,7 +54,7 @@ public final class RecoveryGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -65,7 +65,7 @@ public final class RecoveryGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

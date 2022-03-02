@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.AmiEbsBlockDeviceGetArgs;
 import io.pulumi.aws.ec2.inputs.AmiEphemeralBlockDeviceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="architecture")
-    private final @Nullable Input<String> architecture;
+      private final @Nullable Input<String> architecture;
 
     public Input<String> getArchitecture() {
         return this.architecture == null ? Input.empty() : this.architecture;
@@ -35,7 +35,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -46,7 +46,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -58,7 +58,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ebsBlockDevices")
-    private final @Nullable Input<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices;
+      private final @Nullable Input<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
     public Input<List<AmiEbsBlockDeviceGetArgs>> getEbsBlockDevices() {
         return this.ebsBlockDevices == null ? Input.empty() : this.ebsBlockDevices;
@@ -69,7 +69,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enaSupport")
-    private final @Nullable Input<Boolean> enaSupport;
+      private final @Nullable Input<Boolean> enaSupport;
 
     public Input<Boolean> getEnaSupport() {
         return this.enaSupport == null ? Input.empty() : this.enaSupport;
@@ -81,7 +81,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ephemeralBlockDevices")
-    private final @Nullable Input<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
+      private final @Nullable Input<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
     public Input<List<AmiEphemeralBlockDeviceGetArgs>> getEphemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Input.empty() : this.ephemeralBlockDevices;
@@ -92,7 +92,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hypervisor")
-    private final @Nullable Input<String> hypervisor;
+      private final @Nullable Input<String> hypervisor;
 
     public Input<String> getHypervisor() {
         return this.hypervisor == null ? Input.empty() : this.hypervisor;
@@ -104,7 +104,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageLocation")
-    private final @Nullable Input<String> imageLocation;
+      private final @Nullable Input<String> imageLocation;
 
     public Input<String> getImageLocation() {
         return this.imageLocation == null ? Input.empty() : this.imageLocation;
@@ -115,7 +115,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageOwnerAlias")
-    private final @Nullable Input<String> imageOwnerAlias;
+      private final @Nullable Input<String> imageOwnerAlias;
 
     public Input<String> getImageOwnerAlias() {
         return this.imageOwnerAlias == null ? Input.empty() : this.imageOwnerAlias;
@@ -126,7 +126,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageType")
-    private final @Nullable Input<String> imageType;
+      private final @Nullable Input<String> imageType;
 
     public Input<String> getImageType() {
         return this.imageType == null ? Input.empty() : this.imageType;
@@ -138,14 +138,14 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kernelId")
-    private final @Nullable Input<String> kernelId;
+      private final @Nullable Input<String> kernelId;
 
     public Input<String> getKernelId() {
         return this.kernelId == null ? Input.empty() : this.kernelId;
     }
 
     @InputImport(name="manageEbsSnapshots")
-    private final @Nullable Input<Boolean> manageEbsSnapshots;
+      private final @Nullable Input<Boolean> manageEbsSnapshots;
 
     public Input<Boolean> getManageEbsSnapshots() {
         return this.manageEbsSnapshots == null ? Input.empty() : this.manageEbsSnapshots;
@@ -156,7 +156,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -167,7 +167,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -178,7 +178,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable Input<String> platform;
+      private final @Nullable Input<String> platform;
 
     public Input<String> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -189,7 +189,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformDetails")
-    private final @Nullable Input<String> platformDetails;
+      private final @Nullable Input<String> platformDetails;
 
     public Input<String> getPlatformDetails() {
         return this.platformDetails == null ? Input.empty() : this.platformDetails;
@@ -200,7 +200,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="public")
-    private final @Nullable Input<Boolean> $public;
+      private final @Nullable Input<Boolean> $public;
 
     public Input<Boolean> get$public() {
         return this.$public == null ? Input.empty() : this.$public;
@@ -212,7 +212,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ramdiskId")
-    private final @Nullable Input<String> ramdiskId;
+      private final @Nullable Input<String> ramdiskId;
 
     public Input<String> getRamdiskId() {
         return this.ramdiskId == null ? Input.empty() : this.ramdiskId;
@@ -223,7 +223,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootDeviceName")
-    private final @Nullable Input<String> rootDeviceName;
+      private final @Nullable Input<String> rootDeviceName;
 
     public Input<String> getRootDeviceName() {
         return this.rootDeviceName == null ? Input.empty() : this.rootDeviceName;
@@ -234,7 +234,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootSnapshotId")
-    private final @Nullable Input<String> rootSnapshotId;
+      private final @Nullable Input<String> rootSnapshotId;
 
     public Input<String> getRootSnapshotId() {
         return this.rootSnapshotId == null ? Input.empty() : this.rootSnapshotId;
@@ -246,7 +246,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sriovNetSupport")
-    private final @Nullable Input<String> sriovNetSupport;
+      private final @Nullable Input<String> sriovNetSupport;
 
     public Input<String> getSriovNetSupport() {
         return this.sriovNetSupport == null ? Input.empty() : this.sriovNetSupport;
@@ -257,7 +257,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -268,7 +268,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -279,7 +279,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usageOperation")
-    private final @Nullable Input<String> usageOperation;
+      private final @Nullable Input<String> usageOperation;
 
     public Input<String> getUsageOperation() {
         return this.usageOperation == null ? Input.empty() : this.usageOperation;
@@ -292,7 +292,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualizationType")
-    private final @Nullable Input<String> virtualizationType;
+      private final @Nullable Input<String> virtualizationType;
 
     public Input<String> getVirtualizationType() {
         return this.virtualizationType == null ? Input.empty() : this.virtualizationType;

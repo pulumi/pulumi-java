@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clusterArn")
-    private final @Nullable Input<String> clusterArn;
+      private final @Nullable Input<String> clusterArn;
 
     public Input<String> getClusterArn() {
         return this.clusterArn == null ? Input.empty() : this.clusterArn;
@@ -31,7 +31,7 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="secretArnLists")
-    private final @Nullable Input<List<String>> secretArnLists;
+      private final @Nullable Input<List<String>> secretArnLists;
 
     public Input<List<String>> getSecretArnLists() {
         return this.secretArnLists == null ? Input.empty() : this.secretArnLists;

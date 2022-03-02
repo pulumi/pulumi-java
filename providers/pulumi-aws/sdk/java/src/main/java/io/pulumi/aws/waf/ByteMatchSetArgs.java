@@ -5,7 +5,7 @@ package io.pulumi.aws.waf;
 
 import io.pulumi.aws.waf.inputs.ByteMatchSetByteMatchTupleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ByteMatchSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="byteMatchTuples")
-    private final @Nullable Input<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples;
+      private final @Nullable Input<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples;
 
     public Input<List<ByteMatchSetByteMatchTupleArgs>> getByteMatchTuples() {
         return this.byteMatchTuples == null ? Input.empty() : this.byteMatchTuples;
@@ -34,7 +34,7 @@ public final class ByteMatchSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

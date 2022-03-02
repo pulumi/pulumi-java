@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementByteMatchStatementFieldToMatchArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementByteMatchStatementTextTransformationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RuleGroupRuleStatementByteMatchStatementArgs extends io.pulum
      * 
      */
     @InputImport(name="fieldToMatch")
-    private final @Nullable Input<RuleGroupRuleStatementByteMatchStatementFieldToMatchArgs> fieldToMatch;
+      private final @Nullable Input<RuleGroupRuleStatementByteMatchStatementFieldToMatchArgs> fieldToMatch;
 
     public Input<RuleGroupRuleStatementByteMatchStatementFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch == null ? Input.empty() : this.fieldToMatch;
@@ -33,7 +33,7 @@ public final class RuleGroupRuleStatementByteMatchStatementArgs extends io.pulum
      * 
      */
     @InputImport(name="positionalConstraint", required=true)
-    private final Input<String> positionalConstraint;
+      private final Input<String> positionalConstraint;
 
     public Input<String> getPositionalConstraint() {
         return this.positionalConstraint;
@@ -44,7 +44,7 @@ public final class RuleGroupRuleStatementByteMatchStatementArgs extends io.pulum
      * 
      */
     @InputImport(name="searchString", required=true)
-    private final Input<String> searchString;
+      private final Input<String> searchString;
 
     public Input<String> getSearchString() {
         return this.searchString;
@@ -55,7 +55,7 @@ public final class RuleGroupRuleStatementByteMatchStatementArgs extends io.pulum
      * 
      */
     @InputImport(name="textTransformations", required=true)
-    private final Input<List<RuleGroupRuleStatementByteMatchStatementTextTransformationArgs>> textTransformations;
+      private final Input<List<RuleGroupRuleStatementByteMatchStatementTextTransformationArgs>> textTransformations;
 
     public Input<List<RuleGroupRuleStatementByteMatchStatementTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;

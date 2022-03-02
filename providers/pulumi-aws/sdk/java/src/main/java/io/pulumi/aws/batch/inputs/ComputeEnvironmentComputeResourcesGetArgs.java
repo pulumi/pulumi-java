@@ -6,7 +6,7 @@ package io.pulumi.aws.batch.inputs;
 import io.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs;
 import io.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="allocationStrategy")
-    private final @Nullable Input<String> allocationStrategy;
+      private final @Nullable Input<String> allocationStrategy;
 
     public Input<String> getAllocationStrategy() {
         return this.allocationStrategy == null ? Input.empty() : this.allocationStrategy;
@@ -35,7 +35,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="bidPercentage")
-    private final @Nullable Input<Integer> bidPercentage;
+      private final @Nullable Input<Integer> bidPercentage;
 
     public Input<Integer> getBidPercentage() {
         return this.bidPercentage == null ? Input.empty() : this.bidPercentage;
@@ -46,7 +46,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="desiredVcpus")
-    private final @Nullable Input<Integer> desiredVcpus;
+      private final @Nullable Input<Integer> desiredVcpus;
 
     public Input<Integer> getDesiredVcpus() {
         return this.desiredVcpus == null ? Input.empty() : this.desiredVcpus;
@@ -57,7 +57,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="ec2Configuration")
-    private final @Nullable Input<ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs> ec2Configuration;
+      private final @Nullable Input<ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs> ec2Configuration;
 
     public Input<ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs> getEc2Configuration() {
         return this.ec2Configuration == null ? Input.empty() : this.ec2Configuration;
@@ -68,7 +68,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="ec2KeyPair")
-    private final @Nullable Input<String> ec2KeyPair;
+      private final @Nullable Input<String> ec2KeyPair;
 
     public Input<String> getEc2KeyPair() {
         return this.ec2KeyPair == null ? Input.empty() : this.ec2KeyPair;
@@ -79,7 +79,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="imageId")
-    private final @Nullable Input<String> imageId;
+      private final @Nullable Input<String> imageId;
 
     public Input<String> getImageId() {
         return this.imageId == null ? Input.empty() : this.imageId;
@@ -90,7 +90,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="instanceRole")
-    private final @Nullable Input<String> instanceRole;
+      private final @Nullable Input<String> instanceRole;
 
     public Input<String> getInstanceRole() {
         return this.instanceRole == null ? Input.empty() : this.instanceRole;
@@ -101,7 +101,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="instanceTypes")
-    private final @Nullable Input<List<String>> instanceTypes;
+      private final @Nullable Input<List<String>> instanceTypes;
 
     public Input<List<String>> getInstanceTypes() {
         return this.instanceTypes == null ? Input.empty() : this.instanceTypes;
@@ -112,7 +112,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="launchTemplate")
-    private final @Nullable Input<ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs> launchTemplate;
+      private final @Nullable Input<ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs> launchTemplate;
 
     public Input<ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs> getLaunchTemplate() {
         return this.launchTemplate == null ? Input.empty() : this.launchTemplate;
@@ -123,7 +123,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="maxVcpus", required=true)
-    private final Input<Integer> maxVcpus;
+      private final Input<Integer> maxVcpus;
 
     public Input<Integer> getMaxVcpus() {
         return this.maxVcpus;
@@ -134,7 +134,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="minVcpus")
-    private final @Nullable Input<Integer> minVcpus;
+      private final @Nullable Input<Integer> minVcpus;
 
     public Input<Integer> getMinVcpus() {
         return this.minVcpus == null ? Input.empty() : this.minVcpus;
@@ -145,7 +145,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-    private final Input<List<String>> securityGroupIds;
+      private final Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
@@ -156,7 +156,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="spotIamFleetRole")
-    private final @Nullable Input<String> spotIamFleetRole;
+      private final @Nullable Input<String> spotIamFleetRole;
 
     public Input<String> getSpotIamFleetRole() {
         return this.spotIamFleetRole == null ? Input.empty() : this.spotIamFleetRole;
@@ -167,7 +167,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="subnets", required=true)
-    private final Input<List<String>> subnets;
+      private final Input<List<String>> subnets;
 
     public Input<List<String>> getSubnets() {
         return this.subnets;
@@ -178,7 +178,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -189,7 +189,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

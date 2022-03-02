@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+      private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
@@ -31,7 +31,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-    private final Input<String> email;
+      private final Input<String> email;
 
     public Input<String> getEmail() {
         return this.email;
@@ -42,7 +42,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invite")
-    private final @Nullable Input<Boolean> invite;
+      private final @Nullable Input<Boolean> invite;
 
     public Input<Boolean> getInvite() {
         return this.invite == null ? Input.empty() : this.invite;

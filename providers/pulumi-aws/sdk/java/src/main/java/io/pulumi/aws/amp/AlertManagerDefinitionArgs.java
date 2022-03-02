@@ -4,7 +4,7 @@
 package io.pulumi.aws.amp;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AlertManagerDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="definition", required=true)
-    private final Input<String> definition;
+      private final Input<String> definition;
 
     public Input<String> getDefinition() {
         return this.definition;
@@ -29,7 +29,7 @@ public final class AlertManagerDefinitionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="workspaceId", required=true)
-    private final Input<String> workspaceId;
+      private final Input<String> workspaceId;
 
     public Input<String> getWorkspaceId() {
         return this.workspaceId;

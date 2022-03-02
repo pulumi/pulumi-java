@@ -6,7 +6,7 @@ package io.pulumi.aws.autoscaling.inputs;
 import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyInstancesDistributionArgs;
 import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class GroupMixedInstancesPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="instancesDistribution")
-    private final @Nullable Input<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution;
+      private final @Nullable Input<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution;
 
     public Input<GroupMixedInstancesPolicyInstancesDistributionArgs> getInstancesDistribution() {
         return this.instancesDistribution == null ? Input.empty() : this.instancesDistribution;
@@ -31,7 +31,7 @@ public final class GroupMixedInstancesPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="launchTemplate", required=true)
-    private final Input<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate;
+      private final Input<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate;
 
     public Input<GroupMixedInstancesPolicyLaunchTemplateArgs> getLaunchTemplate() {
         return this.launchTemplate;

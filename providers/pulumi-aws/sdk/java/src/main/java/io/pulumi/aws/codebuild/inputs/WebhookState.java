@@ -5,7 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.aws.codebuild.inputs.WebhookFilterGroupGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branchFilter")
-    private final @Nullable Input<String> branchFilter;
+      private final @Nullable Input<String> branchFilter;
 
     public Input<String> getBranchFilter() {
         return this.branchFilter == null ? Input.empty() : this.branchFilter;
@@ -32,7 +32,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildType")
-    private final @Nullable Input<String> buildType;
+      private final @Nullable Input<String> buildType;
 
     public Input<String> getBuildType() {
         return this.buildType == null ? Input.empty() : this.buildType;
@@ -43,7 +43,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterGroups")
-    private final @Nullable Input<List<WebhookFilterGroupGetArgs>> filterGroups;
+      private final @Nullable Input<List<WebhookFilterGroupGetArgs>> filterGroups;
 
     public Input<List<WebhookFilterGroupGetArgs>> getFilterGroups() {
         return this.filterGroups == null ? Input.empty() : this.filterGroups;
@@ -54,7 +54,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="payloadUrl")
-    private final @Nullable Input<String> payloadUrl;
+      private final @Nullable Input<String> payloadUrl;
 
     public Input<String> getPayloadUrl() {
         return this.payloadUrl == null ? Input.empty() : this.payloadUrl;
@@ -65,7 +65,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName")
-    private final @Nullable Input<String> projectName;
+      private final @Nullable Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName == null ? Input.empty() : this.projectName;
@@ -76,7 +76,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable Input<String> secret;
+      private final @Nullable Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -87,7 +87,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;

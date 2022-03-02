@@ -8,8 +8,8 @@ import io.pulumi.aws.cloudwatch.DashboardArgs;
 import io.pulumi.aws.cloudwatch.inputs.DashboardState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -72,6 +72,21 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
         return this.dashboardName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Dashboard(String name) {
+        this(name, DashboardArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Dashboard(String name, DashboardArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

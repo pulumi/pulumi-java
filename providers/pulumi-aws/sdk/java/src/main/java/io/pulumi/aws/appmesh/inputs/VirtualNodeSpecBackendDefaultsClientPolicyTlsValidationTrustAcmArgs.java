@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
      * 
      */
     @InputImport(name="certificateAuthorityArns", required=true)
-    private final Input<List<String>> certificateAuthorityArns;
+      private final Input<List<String>> certificateAuthorityArns;
 
     public Input<List<String>> getCertificateAuthorityArns() {
         return this.certificateAuthorityArns;

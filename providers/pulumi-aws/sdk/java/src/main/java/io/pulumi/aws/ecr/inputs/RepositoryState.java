@@ -6,7 +6,7 @@ package io.pulumi.aws.ecr.inputs;
 import io.pulumi.aws.ecr.inputs.RepositoryEncryptionConfigurationGetArgs;
 import io.pulumi.aws.ecr.inputs.RepositoryImageScanningConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfigurations")
-    private final @Nullable Input<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations;
+      private final @Nullable Input<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations;
 
     public Input<List<RepositoryEncryptionConfigurationGetArgs>> getEncryptionConfigurations() {
         return this.encryptionConfigurations == null ? Input.empty() : this.encryptionConfigurations;
@@ -45,7 +45,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageScanningConfiguration")
-    private final @Nullable Input<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration;
+      private final @Nullable Input<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration;
 
     public Input<RepositoryImageScanningConfigurationGetArgs> getImageScanningConfiguration() {
         return this.imageScanningConfiguration == null ? Input.empty() : this.imageScanningConfiguration;
@@ -56,7 +56,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageTagMutability")
-    private final @Nullable Input<String> imageTagMutability;
+      private final @Nullable Input<String> imageTagMutability;
 
     public Input<String> getImageTagMutability() {
         return this.imageTagMutability == null ? Input.empty() : this.imageTagMutability;
@@ -67,7 +67,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryId")
-    private final @Nullable Input<String> registryId;
+      private final @Nullable Input<String> registryId;
 
     public Input<String> getRegistryId() {
         return this.registryId == null ? Input.empty() : this.registryId;
@@ -89,7 +89,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryUrl")
-    private final @Nullable Input<String> repositoryUrl;
+      private final @Nullable Input<String> repositoryUrl;
 
     public Input<String> getRepositoryUrl() {
         return this.repositoryUrl == null ? Input.empty() : this.repositoryUrl;
@@ -100,7 +100,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -111,7 +111,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

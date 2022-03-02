@@ -7,7 +7,7 @@ import io.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationArgs
 import io.pulumi.aws.autoscaling.inputs.PolicyStepAdjustmentArgs;
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adjustmentType")
-    private final @Nullable Input<String> adjustmentType;
+      private final @Nullable Input<String> adjustmentType;
 
     public Input<String> getAdjustmentType() {
         return this.adjustmentType == null ? Input.empty() : this.adjustmentType;
@@ -35,7 +35,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingGroupName", required=true)
-    private final Input<String> autoscalingGroupName;
+      private final Input<String> autoscalingGroupName;
 
     public Input<String> getAutoscalingGroupName() {
         return this.autoscalingGroupName;
@@ -46,7 +46,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cooldown")
-    private final @Nullable Input<Integer> cooldown;
+      private final @Nullable Input<Integer> cooldown;
 
     public Input<Integer> getCooldown() {
         return this.cooldown == null ? Input.empty() : this.cooldown;
@@ -57,7 +57,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="estimatedInstanceWarmup")
-    private final @Nullable Input<Integer> estimatedInstanceWarmup;
+      private final @Nullable Input<Integer> estimatedInstanceWarmup;
 
     public Input<Integer> getEstimatedInstanceWarmup() {
         return this.estimatedInstanceWarmup == null ? Input.empty() : this.estimatedInstanceWarmup;
@@ -68,7 +68,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricAggregationType")
-    private final @Nullable Input<String> metricAggregationType;
+      private final @Nullable Input<String> metricAggregationType;
 
     public Input<String> getMetricAggregationType() {
         return this.metricAggregationType == null ? Input.empty() : this.metricAggregationType;
@@ -79,7 +79,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minAdjustmentMagnitude")
-    private final @Nullable Input<Integer> minAdjustmentMagnitude;
+      private final @Nullable Input<Integer> minAdjustmentMagnitude;
 
     public Input<Integer> getMinAdjustmentMagnitude() {
         return this.minAdjustmentMagnitude == null ? Input.empty() : this.minAdjustmentMagnitude;
@@ -90,7 +90,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -101,7 +101,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyType")
-    private final @Nullable Input<String> policyType;
+      private final @Nullable Input<String> policyType;
 
     public Input<String> getPolicyType() {
         return this.policyType == null ? Input.empty() : this.policyType;
@@ -112,7 +112,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predictiveScalingConfiguration")
-    private final @Nullable Input<PolicyPredictiveScalingConfigurationArgs> predictiveScalingConfiguration;
+      private final @Nullable Input<PolicyPredictiveScalingConfigurationArgs> predictiveScalingConfiguration;
 
     public Input<PolicyPredictiveScalingConfigurationArgs> getPredictiveScalingConfiguration() {
         return this.predictiveScalingConfiguration == null ? Input.empty() : this.predictiveScalingConfiguration;
@@ -125,7 +125,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scalingAdjustment")
-    private final @Nullable Input<Integer> scalingAdjustment;
+      private final @Nullable Input<Integer> scalingAdjustment;
 
     public Input<Integer> getScalingAdjustment() {
         return this.scalingAdjustment == null ? Input.empty() : this.scalingAdjustment;
@@ -137,7 +137,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepAdjustments")
-    private final @Nullable Input<List<PolicyStepAdjustmentArgs>> stepAdjustments;
+      private final @Nullable Input<List<PolicyStepAdjustmentArgs>> stepAdjustments;
 
     public Input<List<PolicyStepAdjustmentArgs>> getStepAdjustments() {
         return this.stepAdjustments == null ? Input.empty() : this.stepAdjustments;
@@ -148,7 +148,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetTrackingConfiguration")
-    private final @Nullable Input<PolicyTargetTrackingConfigurationArgs> targetTrackingConfiguration;
+      private final @Nullable Input<PolicyTargetTrackingConfigurationArgs> targetTrackingConfiguration;
 
     public Input<PolicyTargetTrackingConfigurationArgs> getTargetTrackingConfiguration() {
         return this.targetTrackingConfiguration == null ? Input.empty() : this.targetTrackingConfiguration;

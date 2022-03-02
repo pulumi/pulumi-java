@@ -6,7 +6,7 @@ package io.pulumi.aws.ssm.outputs;
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig;
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig;
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;

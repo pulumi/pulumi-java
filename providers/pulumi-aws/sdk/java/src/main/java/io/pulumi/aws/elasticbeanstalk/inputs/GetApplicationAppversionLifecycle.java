@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticbeanstalk.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class GetApplicationAppversionLifecycle extends io.pulumi.resources
      * 
      */
     @InputImport(name="deleteSourceFromS3", required=true)
-    private final Boolean deleteSourceFromS3;
+      private final Boolean deleteSourceFromS3;
 
     public Boolean getDeleteSourceFromS3() {
         return this.deleteSourceFromS3;
@@ -30,7 +30,7 @@ public final class GetApplicationAppversionLifecycle extends io.pulumi.resources
      * 
      */
     @InputImport(name="maxAgeInDays", required=true)
-    private final Integer maxAgeInDays;
+      private final Integer maxAgeInDays;
 
     public Integer getMaxAgeInDays() {
         return this.maxAgeInDays;
@@ -41,7 +41,7 @@ public final class GetApplicationAppversionLifecycle extends io.pulumi.resources
      * 
      */
     @InputImport(name="maxCount", required=true)
-    private final Integer maxCount;
+      private final Integer maxCount;
 
     public Integer getMaxCount() {
         return this.maxCount;
@@ -52,7 +52,7 @@ public final class GetApplicationAppversionLifecycle extends io.pulumi.resources
      * 
      */
     @InputImport(name="serviceRole", required=true)
-    private final String serviceRole;
+      private final String serviceRole;
 
     public String getServiceRole() {
         return this.serviceRole;

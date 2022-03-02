@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="addonName", required=true)
-    private final String addonName;
+      private final String addonName;
 
     public String getAddonName() {
         return this.addonName;
@@ -32,14 +32,14 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

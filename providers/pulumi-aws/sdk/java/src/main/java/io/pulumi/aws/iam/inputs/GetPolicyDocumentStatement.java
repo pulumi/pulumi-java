@@ -6,7 +6,7 @@ package io.pulumi.aws.iam.inputs;
 import io.pulumi.aws.iam.inputs.GetPolicyDocumentStatementCondition;
 import io.pulumi.aws.iam.inputs.GetPolicyDocumentStatementNotPrincipal;
 import io.pulumi.aws.iam.inputs.GetPolicyDocumentStatementPrincipal;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable List<String> actions;
+      private final @Nullable List<String> actions;
 
     public List<String> getActions() {
         return this.actions == null ? List.of() : this.actions;
@@ -34,7 +34,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable List<GetPolicyDocumentStatementCondition> conditions;
+      private final @Nullable List<GetPolicyDocumentStatementCondition> conditions;
 
     public List<GetPolicyDocumentStatementCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
@@ -45,7 +45,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="effect")
-    private final @Nullable String effect;
+      private final @Nullable String effect;
 
     public Optional<String> getEffect() {
         return this.effect == null ? Optional.empty() : Optional.ofNullable(this.effect);
@@ -56,7 +56,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="notActions")
-    private final @Nullable List<String> notActions;
+      private final @Nullable List<String> notActions;
 
     public List<String> getNotActions() {
         return this.notActions == null ? List.of() : this.notActions;
@@ -67,7 +67,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="notPrincipals")
-    private final @Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals;
+      private final @Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals;
 
     public List<GetPolicyDocumentStatementNotPrincipal> getNotPrincipals() {
         return this.notPrincipals == null ? List.of() : this.notPrincipals;
@@ -78,7 +78,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="notResources")
-    private final @Nullable List<String> notResources;
+      private final @Nullable List<String> notResources;
 
     public List<String> getNotResources() {
         return this.notResources == null ? List.of() : this.notResources;
@@ -89,7 +89,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="principals")
-    private final @Nullable List<GetPolicyDocumentStatementPrincipal> principals;
+      private final @Nullable List<GetPolicyDocumentStatementPrincipal> principals;
 
     public List<GetPolicyDocumentStatementPrincipal> getPrincipals() {
         return this.principals == null ? List.of() : this.principals;
@@ -100,7 +100,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable List<String> resources;
+      private final @Nullable List<String> resources;
 
     public List<String> getResources() {
         return this.resources == null ? List.of() : this.resources;
@@ -111,7 +111,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="sid")
-    private final @Nullable String sid;
+      private final @Nullable String sid;
 
     public Optional<String> getSid() {
         return this.sid == null ? Optional.empty() : Optional.ofNullable(this.sid);

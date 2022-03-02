@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ListenerCertificateState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="certificateArn")
-    private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
@@ -30,7 +30,7 @@ public final class ListenerCertificateState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="listenerArn")
-    private final @Nullable Input<String> listenerArn;
+      private final @Nullable Input<String> listenerArn;
 
     public Input<String> getListenerArn() {
         return this.listenerArn == null ? Input.empty() : this.listenerArn;

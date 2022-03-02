@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -32,7 +32,7 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<BucketLifecycleConfigurationRuleGetArgs>> rules;
+      private final @Nullable Input<List<BucketLifecycleConfigurationRuleGetArgs>> rules;
 
     public Input<List<BucketLifecycleConfigurationRuleGetArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;

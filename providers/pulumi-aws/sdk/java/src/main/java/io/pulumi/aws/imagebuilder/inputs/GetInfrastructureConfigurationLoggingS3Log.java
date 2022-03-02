@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetInfrastructureConfigurationLoggingS3Log extends io.pulumi.
      * 
      */
     @InputImport(name="s3BucketName", required=true)
-    private final String s3BucketName;
+      private final String s3BucketName;
 
     public String getS3BucketName() {
         return this.s3BucketName;
@@ -28,7 +28,7 @@ public final class GetInfrastructureConfigurationLoggingS3Log extends io.pulumi.
      * 
      */
     @InputImport(name="s3KeyPrefix", required=true)
-    private final String s3KeyPrefix;
+      private final String s3KeyPrefix;
 
     public String getS3KeyPrefix() {
         return this.s3KeyPrefix;

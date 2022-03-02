@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3GetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,14 +23,14 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
     }
 
     @InputImport(name="associationId")
-    private final @Nullable Input<String> associationId;
+      private final @Nullable Input<String> associationId;
 
     public Input<String> getAssociationId() {
         return this.associationId == null ? Input.empty() : this.associationId;
@@ -41,7 +41,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="batchImportMetaDataOnCreate")
-    private final @Nullable Input<Boolean> batchImportMetaDataOnCreate;
+      private final @Nullable Input<Boolean> batchImportMetaDataOnCreate;
 
     public Input<Boolean> getBatchImportMetaDataOnCreate() {
         return this.batchImportMetaDataOnCreate == null ? Input.empty() : this.batchImportMetaDataOnCreate;
@@ -52,7 +52,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dataRepositoryPath")
-    private final @Nullable Input<String> dataRepositoryPath;
+      private final @Nullable Input<String> dataRepositoryPath;
 
     public Input<String> getDataRepositoryPath() {
         return this.dataRepositoryPath == null ? Input.empty() : this.dataRepositoryPath;
@@ -63,7 +63,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="deleteDataInFilesystem")
-    private final @Nullable Input<Boolean> deleteDataInFilesystem;
+      private final @Nullable Input<Boolean> deleteDataInFilesystem;
 
     public Input<Boolean> getDeleteDataInFilesystem() {
         return this.deleteDataInFilesystem == null ? Input.empty() : this.deleteDataInFilesystem;
@@ -74,7 +74,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fileSystemId")
-    private final @Nullable Input<String> fileSystemId;
+      private final @Nullable Input<String> fileSystemId;
 
     public Input<String> getFileSystemId() {
         return this.fileSystemId == null ? Input.empty() : this.fileSystemId;
@@ -85,7 +85,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fileSystemPath")
-    private final @Nullable Input<String> fileSystemPath;
+      private final @Nullable Input<String> fileSystemPath;
 
     public Input<String> getFileSystemPath() {
         return this.fileSystemPath == null ? Input.empty() : this.fileSystemPath;
@@ -96,7 +96,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="importedFileChunkSize")
-    private final @Nullable Input<Integer> importedFileChunkSize;
+      private final @Nullable Input<Integer> importedFileChunkSize;
 
     public Input<Integer> getImportedFileChunkSize() {
         return this.importedFileChunkSize == null ? Input.empty() : this.importedFileChunkSize;
@@ -108,7 +108,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="s3")
-    private final @Nullable Input<DataRepositoryAssociationS3GetArgs> s3;
+      private final @Nullable Input<DataRepositoryAssociationS3GetArgs> s3;
 
     public Input<DataRepositoryAssociationS3GetArgs> getS3() {
         return this.s3 == null ? Input.empty() : this.s3;
@@ -119,7 +119,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -130,7 +130,7 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

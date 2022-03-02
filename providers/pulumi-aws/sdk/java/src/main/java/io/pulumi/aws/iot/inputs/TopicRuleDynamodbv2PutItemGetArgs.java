@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TopicRuleDynamodbv2PutItemGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+      private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;

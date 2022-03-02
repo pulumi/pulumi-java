@@ -4,7 +4,7 @@
 package io.pulumi.aws.elb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="healthyThreshold", required=true)
-    private final Input<Integer> healthyThreshold;
+      private final Input<Integer> healthyThreshold;
 
     public Input<Integer> getHealthyThreshold() {
         return this.healthyThreshold;
@@ -30,7 +30,7 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="interval", required=true)
-    private final Input<Integer> interval;
+      private final Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval;
@@ -44,7 +44,7 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="target", required=true)
-    private final Input<String> target;
+      private final Input<String> target;
 
     public Input<String> getTarget() {
         return this.target;
@@ -55,7 +55,7 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="timeout", required=true)
-    private final Input<Integer> timeout;
+      private final Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout;
@@ -66,7 +66,7 @@ public final class LoadBalancerHealthCheckGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="unhealthyThreshold", required=true)
-    private final Input<Integer> unhealthyThreshold;
+      private final Input<Integer> unhealthyThreshold;
 
     public Input<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold;

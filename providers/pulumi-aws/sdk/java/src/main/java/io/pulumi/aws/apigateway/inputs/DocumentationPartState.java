@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.aws.apigateway.inputs.DocumentationPartLocationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<DocumentationPartLocationGetArgs> location;
+      private final @Nullable Input<DocumentationPartLocationGetArgs> location;
 
     public Input<DocumentationPartLocationGetArgs> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -31,7 +31,7 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<String> properties;
+      private final @Nullable Input<String> properties;
 
     public Input<String> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="restApiId")
-    private final @Nullable Input<String> restApiId;
+      private final @Nullable Input<String> restApiId;
 
     public Input<String> getRestApiId() {
         return this.restApiId == null ? Input.empty() : this.restApiId;

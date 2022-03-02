@@ -6,7 +6,7 @@ package io.pulumi.aws.waf.inputs;
 import io.pulumi.aws.waf.inputs.WebAclRuleActionArgs;
 import io.pulumi.aws.waf.inputs.WebAclRuleOverrideActionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<WebAclRuleActionArgs> action;
+      private final @Nullable Input<WebAclRuleActionArgs> action;
 
     public Input<WebAclRuleActionArgs> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -33,7 +33,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overrideAction")
-    private final @Nullable Input<WebAclRuleOverrideActionArgs> overrideAction;
+      private final @Nullable Input<WebAclRuleOverrideActionArgs> overrideAction;
 
     public Input<WebAclRuleOverrideActionArgs> getOverrideAction() {
         return this.overrideAction == null ? Input.empty() : this.overrideAction;
@@ -45,7 +45,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+      private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -56,7 +56,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleId", required=true)
-    private final Input<String> ruleId;
+      private final Input<String> ruleId;
 
     public Input<String> getRuleId() {
         return this.ruleId;
@@ -67,7 +67,7 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

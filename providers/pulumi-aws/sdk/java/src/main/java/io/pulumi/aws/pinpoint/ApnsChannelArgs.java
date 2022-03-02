@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ApnsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationId", required=true)
-    private final Input<String> applicationId;
+      private final Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId;
@@ -31,7 +31,7 @@ public final class ApnsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId")
-    private final @Nullable Input<String> bundleId;
+      private final @Nullable Input<String> bundleId;
 
     public Input<String> getBundleId() {
         return this.bundleId == null ? Input.empty() : this.bundleId;
@@ -42,7 +42,7 @@ public final class ApnsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<String> certificate;
+      private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -56,7 +56,7 @@ public final class ApnsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAuthenticationMethod")
-    private final @Nullable Input<String> defaultAuthenticationMethod;
+      private final @Nullable Input<String> defaultAuthenticationMethod;
 
     public Input<String> getDefaultAuthenticationMethod() {
         return this.defaultAuthenticationMethod == null ? Input.empty() : this.defaultAuthenticationMethod;
@@ -67,7 +67,7 @@ public final class ApnsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -78,7 +78,7 @@ public final class ApnsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKey")
-    private final @Nullable Input<String> privateKey;
+      private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
@@ -89,7 +89,7 @@ public final class ApnsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="teamId")
-    private final @Nullable Input<String> teamId;
+      private final @Nullable Input<String> teamId;
 
     public Input<String> getTeamId() {
         return this.teamId == null ? Input.empty() : this.teamId;
@@ -100,7 +100,7 @@ public final class ApnsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenKey")
-    private final @Nullable Input<String> tokenKey;
+      private final @Nullable Input<String> tokenKey;
 
     public Input<String> getTokenKey() {
         return this.tokenKey == null ? Input.empty() : this.tokenKey;
@@ -111,7 +111,7 @@ public final class ApnsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenKeyId")
-    private final @Nullable Input<String> tokenKeyId;
+      private final @Nullable Input<String> tokenKeyId;
 
     public Input<String> getTokenKeyId() {
         return this.tokenKeyId == null ? Input.empty() : this.tokenKeyId;

@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.outputs;
 
 import io.pulumi.aws.glue.outputs.GetScriptDagEdge;
 import io.pulumi.aws.glue.outputs.GetScriptDagNode;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;

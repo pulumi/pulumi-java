@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dynamodb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ public final class GetTableGlobalSecondaryIndex extends io.pulumi.resources.Invo
     public static final GetTableGlobalSecondaryIndex Empty = new GetTableGlobalSecondaryIndex();
 
     @InputImport(name="hashKey", required=true)
-    private final String hashKey;
+      private final String hashKey;
 
     public String getHashKey() {
         return this.hashKey;
@@ -26,42 +26,42 @@ public final class GetTableGlobalSecondaryIndex extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="nonKeyAttributes", required=true)
-    private final List<String> nonKeyAttributes;
+      private final List<String> nonKeyAttributes;
 
     public List<String> getNonKeyAttributes() {
         return this.nonKeyAttributes;
     }
 
     @InputImport(name="projectionType", required=true)
-    private final String projectionType;
+      private final String projectionType;
 
     public String getProjectionType() {
         return this.projectionType;
     }
 
     @InputImport(name="rangeKey", required=true)
-    private final String rangeKey;
+      private final String rangeKey;
 
     public String getRangeKey() {
         return this.rangeKey;
     }
 
     @InputImport(name="readCapacity", required=true)
-    private final Integer readCapacity;
+      private final Integer readCapacity;
 
     public Integer getReadCapacity() {
         return this.readCapacity;
     }
 
     @InputImport(name="writeCapacity", required=true)
-    private final Integer writeCapacity;
+      private final Integer writeCapacity;
 
     public Integer getWriteCapacity() {
         return this.writeCapacity;

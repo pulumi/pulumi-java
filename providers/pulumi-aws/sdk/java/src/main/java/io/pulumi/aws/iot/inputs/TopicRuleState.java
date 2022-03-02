@@ -20,7 +20,7 @@ import io.pulumi.aws.iot.inputs.TopicRuleSnsGetArgs;
 import io.pulumi.aws.iot.inputs.TopicRuleSqsGetArgs;
 import io.pulumi.aws.iot.inputs.TopicRuleStepFunctionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -38,21 +38,21 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
     }
 
     @InputImport(name="cloudwatchAlarm")
-    private final @Nullable Input<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm;
+      private final @Nullable Input<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm;
 
     public Input<TopicRuleCloudwatchAlarmGetArgs> getCloudwatchAlarm() {
         return this.cloudwatchAlarm == null ? Input.empty() : this.cloudwatchAlarm;
     }
 
     @InputImport(name="cloudwatchMetric")
-    private final @Nullable Input<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric;
+      private final @Nullable Input<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric;
 
     public Input<TopicRuleCloudwatchMetricGetArgs> getCloudwatchMetric() {
         return this.cloudwatchMetric == null ? Input.empty() : this.cloudwatchMetric;
@@ -63,28 +63,28 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="dynamodb")
-    private final @Nullable Input<TopicRuleDynamodbGetArgs> dynamodb;
+      private final @Nullable Input<TopicRuleDynamodbGetArgs> dynamodb;
 
     public Input<TopicRuleDynamodbGetArgs> getDynamodb() {
         return this.dynamodb == null ? Input.empty() : this.dynamodb;
     }
 
     @InputImport(name="dynamodbv2s")
-    private final @Nullable Input<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s;
+      private final @Nullable Input<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s;
 
     public Input<List<TopicRuleDynamodbv2GetArgs>> getDynamodbv2s() {
         return this.dynamodbv2s == null ? Input.empty() : this.dynamodbv2s;
     }
 
     @InputImport(name="elasticsearch")
-    private final @Nullable Input<TopicRuleElasticsearchGetArgs> elasticsearch;
+      private final @Nullable Input<TopicRuleElasticsearchGetArgs> elasticsearch;
 
     public Input<TopicRuleElasticsearchGetArgs> getElasticsearch() {
         return this.elasticsearch == null ? Input.empty() : this.elasticsearch;
@@ -95,7 +95,7 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -106,42 +106,42 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="errorAction")
-    private final @Nullable Input<TopicRuleErrorActionGetArgs> errorAction;
+      private final @Nullable Input<TopicRuleErrorActionGetArgs> errorAction;
 
     public Input<TopicRuleErrorActionGetArgs> getErrorAction() {
         return this.errorAction == null ? Input.empty() : this.errorAction;
     }
 
     @InputImport(name="firehose")
-    private final @Nullable Input<TopicRuleFirehoseGetArgs> firehose;
+      private final @Nullable Input<TopicRuleFirehoseGetArgs> firehose;
 
     public Input<TopicRuleFirehoseGetArgs> getFirehose() {
         return this.firehose == null ? Input.empty() : this.firehose;
     }
 
     @InputImport(name="iotAnalytics")
-    private final @Nullable Input<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics;
+      private final @Nullable Input<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics;
 
     public Input<List<TopicRuleIotAnalyticGetArgs>> getIotAnalytics() {
         return this.iotAnalytics == null ? Input.empty() : this.iotAnalytics;
     }
 
     @InputImport(name="iotEvents")
-    private final @Nullable Input<List<TopicRuleIotEventGetArgs>> iotEvents;
+      private final @Nullable Input<List<TopicRuleIotEventGetArgs>> iotEvents;
 
     public Input<List<TopicRuleIotEventGetArgs>> getIotEvents() {
         return this.iotEvents == null ? Input.empty() : this.iotEvents;
     }
 
     @InputImport(name="kinesis")
-    private final @Nullable Input<TopicRuleKinesisGetArgs> kinesis;
+      private final @Nullable Input<TopicRuleKinesisGetArgs> kinesis;
 
     public Input<TopicRuleKinesisGetArgs> getKinesis() {
         return this.kinesis == null ? Input.empty() : this.kinesis;
     }
 
     @InputImport(name="lambda")
-    private final @Nullable Input<TopicRuleLambdaGetArgs> lambda;
+      private final @Nullable Input<TopicRuleLambdaGetArgs> lambda;
 
     public Input<TopicRuleLambdaGetArgs> getLambda() {
         return this.lambda == null ? Input.empty() : this.lambda;
@@ -152,28 +152,28 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="republish")
-    private final @Nullable Input<TopicRuleRepublishGetArgs> republish;
+      private final @Nullable Input<TopicRuleRepublishGetArgs> republish;
 
     public Input<TopicRuleRepublishGetArgs> getRepublish() {
         return this.republish == null ? Input.empty() : this.republish;
     }
 
     @InputImport(name="s3")
-    private final @Nullable Input<TopicRuleS3GetArgs> s3;
+      private final @Nullable Input<TopicRuleS3GetArgs> s3;
 
     public Input<TopicRuleS3GetArgs> getS3() {
         return this.s3 == null ? Input.empty() : this.s3;
     }
 
     @InputImport(name="sns")
-    private final @Nullable Input<TopicRuleSnsGetArgs> sns;
+      private final @Nullable Input<TopicRuleSnsGetArgs> sns;
 
     public Input<TopicRuleSnsGetArgs> getSns() {
         return this.sns == null ? Input.empty() : this.sns;
@@ -184,7 +184,7 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sql")
-    private final @Nullable Input<String> sql;
+      private final @Nullable Input<String> sql;
 
     public Input<String> getSql() {
         return this.sql == null ? Input.empty() : this.sql;
@@ -195,21 +195,21 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlVersion")
-    private final @Nullable Input<String> sqlVersion;
+      private final @Nullable Input<String> sqlVersion;
 
     public Input<String> getSqlVersion() {
         return this.sqlVersion == null ? Input.empty() : this.sqlVersion;
     }
 
     @InputImport(name="sqs")
-    private final @Nullable Input<TopicRuleSqsGetArgs> sqs;
+      private final @Nullable Input<TopicRuleSqsGetArgs> sqs;
 
     public Input<TopicRuleSqsGetArgs> getSqs() {
         return this.sqs == null ? Input.empty() : this.sqs;
     }
 
     @InputImport(name="stepFunctions")
-    private final @Nullable Input<List<TopicRuleStepFunctionGetArgs>> stepFunctions;
+      private final @Nullable Input<List<TopicRuleStepFunctionGetArgs>> stepFunctions;
 
     public Input<List<TopicRuleStepFunctionGetArgs>> getStepFunctions() {
         return this.stepFunctions == null ? Input.empty() : this.stepFunctions;
@@ -220,7 +220,7 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -231,7 +231,7 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

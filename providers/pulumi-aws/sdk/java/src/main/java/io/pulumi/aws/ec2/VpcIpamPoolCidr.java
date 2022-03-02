@@ -9,8 +9,8 @@ import io.pulumi.aws.ec2.inputs.VpcIpamPoolCidrState;
 import io.pulumi.aws.ec2.outputs.VpcIpamPoolCidrCidrAuthorizationContext;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -78,6 +78,21 @@ public class VpcIpamPoolCidr extends io.pulumi.resources.CustomResource {
         return this.ipamPoolId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VpcIpamPoolCidr(String name) {
+        this(name, VpcIpamPoolCidrArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VpcIpamPoolCidr(String name, VpcIpamPoolCidrArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

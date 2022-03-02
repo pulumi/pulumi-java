@@ -6,7 +6,7 @@ package io.pulumi.aws.globalaccelerator.inputs;
 import io.pulumi.aws.globalaccelerator.inputs.AcceleratorAttributesGetArgs;
 import io.pulumi.aws.globalaccelerator.inputs.AcceleratorIpSetGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<AcceleratorAttributesGetArgs> attributes;
+      private final @Nullable Input<AcceleratorAttributesGetArgs> attributes;
 
     public Input<AcceleratorAttributesGetArgs> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -38,7 +38,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsName")
-    private final @Nullable Input<String> dnsName;
+      private final @Nullable Input<String> dnsName;
 
     public Input<String> getDnsName() {
         return this.dnsName == null ? Input.empty() : this.dnsName;
@@ -49,14 +49,14 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
     @InputImport(name="hostedZoneId")
-    private final @Nullable Input<String> hostedZoneId;
+      private final @Nullable Input<String> hostedZoneId;
 
     public Input<String> getHostedZoneId() {
         return this.hostedZoneId == null ? Input.empty() : this.hostedZoneId;
@@ -67,7 +67,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddressType")
-    private final @Nullable Input<String> ipAddressType;
+      private final @Nullable Input<String> ipAddressType;
 
     public Input<String> getIpAddressType() {
         return this.ipAddressType == null ? Input.empty() : this.ipAddressType;
@@ -78,7 +78,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipSets")
-    private final @Nullable Input<List<AcceleratorIpSetGetArgs>> ipSets;
+      private final @Nullable Input<List<AcceleratorIpSetGetArgs>> ipSets;
 
     public Input<List<AcceleratorIpSetGetArgs>> getIpSets() {
         return this.ipSets == null ? Input.empty() : this.ipSets;
@@ -89,7 +89,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -100,7 +100,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -111,7 +111,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

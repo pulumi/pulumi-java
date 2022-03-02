@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetLaunchTemplateCreditSpecification extends io.pulumi.resour
     public static final GetLaunchTemplateCreditSpecification Empty = new GetLaunchTemplateCreditSpecification();
 
     @InputImport(name="cpuCredits", required=true)
-    private final String cpuCredits;
+      private final String cpuCredits;
 
     public String getCpuCredits() {
         return this.cpuCredits;

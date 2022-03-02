@@ -10,8 +10,8 @@ import io.pulumi.aws.wafv2.outputs.WebAclLoggingConfigurationLoggingFilter;
 import io.pulumi.aws.wafv2.outputs.WebAclLoggingConfigurationRedactedField;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -93,6 +93,21 @@ public class WebAclLoggingConfiguration extends io.pulumi.resources.CustomResour
         return this.resourceArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public WebAclLoggingConfiguration(String name) {
+        this(name, WebAclLoggingConfigurationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public WebAclLoggingConfiguration(String name, WebAclLoggingConfigurationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

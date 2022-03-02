@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="groupName")
-    private final @Nullable Input<String> groupName;
+      private final @Nullable Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName == null ? Input.empty() : this.groupName;
@@ -30,7 +30,7 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -41,7 +41,7 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="streamName")
-    private final @Nullable Input<String> streamName;
+      private final @Nullable Input<String> streamName;
 
     public Input<String> getStreamName() {
         return this.streamName == null ? Input.empty() : this.streamName;

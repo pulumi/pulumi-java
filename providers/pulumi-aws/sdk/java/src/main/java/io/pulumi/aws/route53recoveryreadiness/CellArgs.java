@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoveryreadiness;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cellName", required=true)
-    private final Input<String> cellName;
+      private final Input<String> cellName;
 
     public Input<String> getCellName() {
         return this.cellName;
@@ -32,7 +32,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cells")
-    private final @Nullable Input<List<String>> cells;
+      private final @Nullable Input<List<String>> cells;
 
     public Input<List<String>> getCells() {
         return this.cells == null ? Input.empty() : this.cells;
@@ -43,7 +43,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

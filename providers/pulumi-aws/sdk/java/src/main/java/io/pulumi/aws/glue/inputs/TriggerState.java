@@ -6,7 +6,7 @@ package io.pulumi.aws.glue.inputs;
 import io.pulumi.aws.glue.inputs.TriggerActionGetArgs;
 import io.pulumi.aws.glue.inputs.TriggerPredicateGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable Input<List<TriggerActionGetArgs>> actions;
+      private final @Nullable Input<List<TriggerActionGetArgs>> actions;
 
     public Input<List<TriggerActionGetArgs>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -35,7 +35,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -46,7 +46,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -57,7 +57,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -68,7 +68,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -79,7 +79,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predicate")
-    private final @Nullable Input<TriggerPredicateGetArgs> predicate;
+      private final @Nullable Input<TriggerPredicateGetArgs> predicate;
 
     public Input<TriggerPredicateGetArgs> getPredicate() {
         return this.predicate == null ? Input.empty() : this.predicate;
@@ -90,7 +90,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<String> schedule;
+      private final @Nullable Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -101,7 +101,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startOnCreation")
-    private final @Nullable Input<Boolean> startOnCreation;
+      private final @Nullable Input<Boolean> startOnCreation;
 
     public Input<Boolean> getStartOnCreation() {
         return this.startOnCreation == null ? Input.empty() : this.startOnCreation;
@@ -112,7 +112,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+      private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -123,7 +123,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -134,7 +134,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -145,7 +145,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -156,7 +156,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workflowName")
-    private final @Nullable Input<String> workflowName;
+      private final @Nullable Input<String> workflowName;
 
     public Input<String> getWorkflowName() {
         return this.workflowName == null ? Input.empty() : this.workflowName;

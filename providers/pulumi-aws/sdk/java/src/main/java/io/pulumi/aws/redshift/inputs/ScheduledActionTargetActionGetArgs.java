@@ -7,7 +7,7 @@ import io.pulumi.aws.redshift.inputs.ScheduledActionTargetActionPauseClusterGetA
 import io.pulumi.aws.redshift.inputs.ScheduledActionTargetActionResizeClusterGetArgs;
 import io.pulumi.aws.redshift.inputs.ScheduledActionTargetActionResumeClusterGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="pauseCluster")
-    private final @Nullable Input<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster;
+      private final @Nullable Input<ScheduledActionTargetActionPauseClusterGetArgs> pauseCluster;
 
     public Input<ScheduledActionTargetActionPauseClusterGetArgs> getPauseCluster() {
         return this.pauseCluster == null ? Input.empty() : this.pauseCluster;
@@ -32,7 +32,7 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resizeCluster")
-    private final @Nullable Input<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster;
+      private final @Nullable Input<ScheduledActionTargetActionResizeClusterGetArgs> resizeCluster;
 
     public Input<ScheduledActionTargetActionResizeClusterGetArgs> getResizeCluster() {
         return this.resizeCluster == null ? Input.empty() : this.resizeCluster;
@@ -43,7 +43,7 @@ public final class ScheduledActionTargetActionGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resumeCluster")
-    private final @Nullable Input<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster;
+      private final @Nullable Input<ScheduledActionTargetActionResumeClusterGetArgs> resumeCluster;
 
     public Input<ScheduledActionTargetActionResumeClusterGetArgs> getResumeCluster() {
         return this.resumeCluster == null ? Input.empty() : this.resumeCluster;

@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteMatchHeaderMatchRangeGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class RouteSpecHttpRouteMatchHeaderMatchGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="exact")
-    private final @Nullable Input<String> exact;
+      private final @Nullable Input<String> exact;
 
     public Input<String> getExact() {
         return this.exact == null ? Input.empty() : this.exact;
@@ -32,7 +32,7 @@ public final class RouteSpecHttpRouteMatchHeaderMatchGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -43,7 +43,7 @@ public final class RouteSpecHttpRouteMatchHeaderMatchGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="range")
-    private final @Nullable Input<RouteSpecHttpRouteMatchHeaderMatchRangeGetArgs> range;
+      private final @Nullable Input<RouteSpecHttpRouteMatchHeaderMatchRangeGetArgs> range;
 
     public Input<RouteSpecHttpRouteMatchHeaderMatchRangeGetArgs> getRange() {
         return this.range == null ? Input.empty() : this.range;
@@ -54,7 +54,7 @@ public final class RouteSpecHttpRouteMatchHeaderMatchGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="regex")
-    private final @Nullable Input<String> regex;
+      private final @Nullable Input<String> regex;
 
     public Input<String> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -65,7 +65,7 @@ public final class RouteSpecHttpRouteMatchHeaderMatchGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="suffix")
-    private final @Nullable Input<String> suffix;
+      private final @Nullable Input<String> suffix;
 
     public Input<String> getSuffix() {
         return this.suffix == null ? Input.empty() : this.suffix;

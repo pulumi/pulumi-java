@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.ProjectServiceCatalogProvisioningDetailsProvisioningParameterGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ProjectServiceCatalogProvisioningDetailsGetArgs extends io.pu
      * 
      */
     @InputImport(name="pathId")
-    private final @Nullable Input<String> pathId;
+      private final @Nullable Input<String> pathId;
 
     public Input<String> getPathId() {
         return this.pathId == null ? Input.empty() : this.pathId;
@@ -32,7 +32,7 @@ public final class ProjectServiceCatalogProvisioningDetailsGetArgs extends io.pu
      * 
      */
     @InputImport(name="productId", required=true)
-    private final Input<String> productId;
+      private final Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId;
@@ -43,7 +43,7 @@ public final class ProjectServiceCatalogProvisioningDetailsGetArgs extends io.pu
      * 
      */
     @InputImport(name="provisioningArtifactId")
-    private final @Nullable Input<String> provisioningArtifactId;
+      private final @Nullable Input<String> provisioningArtifactId;
 
     public Input<String> getProvisioningArtifactId() {
         return this.provisioningArtifactId == null ? Input.empty() : this.provisioningArtifactId;
@@ -54,7 +54,7 @@ public final class ProjectServiceCatalogProvisioningDetailsGetArgs extends io.pu
      * 
      */
     @InputImport(name="provisioningParameters")
-    private final @Nullable Input<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterGetArgs>> provisioningParameters;
+      private final @Nullable Input<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterGetArgs>> provisioningParameters;
 
     public Input<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterGetArgs>> getProvisioningParameters() {
         return this.provisioningParameters == null ? Input.empty() : this.provisioningParameters;

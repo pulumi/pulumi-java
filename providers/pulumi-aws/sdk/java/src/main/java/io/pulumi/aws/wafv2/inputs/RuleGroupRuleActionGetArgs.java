@@ -7,7 +7,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionAllowGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionBlockGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionCountGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class RuleGroupRuleActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allow")
-    private final @Nullable Input<RuleGroupRuleActionAllowGetArgs> allow;
+      private final @Nullable Input<RuleGroupRuleActionAllowGetArgs> allow;
 
     public Input<RuleGroupRuleActionAllowGetArgs> getAllow() {
         return this.allow == null ? Input.empty() : this.allow;
@@ -32,7 +32,7 @@ public final class RuleGroupRuleActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="block")
-    private final @Nullable Input<RuleGroupRuleActionBlockGetArgs> block;
+      private final @Nullable Input<RuleGroupRuleActionBlockGetArgs> block;
 
     public Input<RuleGroupRuleActionBlockGetArgs> getBlock() {
         return this.block == null ? Input.empty() : this.block;
@@ -43,7 +43,7 @@ public final class RuleGroupRuleActionGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<RuleGroupRuleActionCountGetArgs> count;
+      private final @Nullable Input<RuleGroupRuleActionCountGetArgs> count;
 
     public Input<RuleGroupRuleActionCountGetArgs> getCount() {
         return this.count == null ? Input.empty() : this.count;

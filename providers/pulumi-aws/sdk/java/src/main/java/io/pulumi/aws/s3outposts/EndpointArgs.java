@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3outposts;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostId", required=true)
-    private final Input<String> outpostId;
+      private final Input<String> outpostId;
 
     public Input<String> getOutpostId() {
         return this.outpostId;
@@ -29,7 +29,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupId", required=true)
-    private final Input<String> securityGroupId;
+      private final Input<String> securityGroupId;
 
     public Input<String> getSecurityGroupId() {
         return this.securityGroupId;
@@ -40,7 +40,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+      private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;

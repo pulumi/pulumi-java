@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="recordColumns", required=true)
-    private final Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnArgs>> recordColumns;
+      private final Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnArgs>> recordColumns;
 
     public Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnArgs>> getRecordColumns() {
         return this.recordColumns;
@@ -33,7 +33,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="recordEncoding")
-    private final @Nullable Input<String> recordEncoding;
+      private final @Nullable Input<String> recordEncoding;
 
     public Input<String> getRecordEncoding() {
         return this.recordEncoding == null ? Input.empty() : this.recordEncoding;
@@ -44,7 +44,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @InputImport(name="recordFormat", required=true)
-    private final Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs> recordFormat;
+      private final Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs> recordFormat;
 
     public Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs> getRecordFormat() {
         return this.recordFormat;

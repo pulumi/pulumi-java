@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClassifierGrokClassifierGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="classification", required=true)
-    private final Input<String> classification;
+      private final Input<String> classification;
 
     public Input<String> getClassification() {
         return this.classification;
@@ -30,7 +30,7 @@ public final class ClassifierGrokClassifierGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customPatterns")
-    private final @Nullable Input<String> customPatterns;
+      private final @Nullable Input<String> customPatterns;
 
     public Input<String> getCustomPatterns() {
         return this.customPatterns == null ? Input.empty() : this.customPatterns;
@@ -41,7 +41,7 @@ public final class ClassifierGrokClassifierGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="grokPattern", required=true)
-    private final Input<String> grokPattern;
+      private final Input<String> grokPattern;
 
     public Input<String> getGrokPattern() {
         return this.grokPattern;

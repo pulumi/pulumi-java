@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activationCode")
-    private final @Nullable Input<String> activationCode;
+      private final @Nullable Input<String> activationCode;
 
     public Input<String> getActivationCode() {
         return this.activationCode == null ? Input.empty() : this.activationCode;
@@ -33,7 +33,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationDate")
-    private final @Nullable Input<String> expirationDate;
+      private final @Nullable Input<String> expirationDate;
 
     public Input<String> getExpirationDate() {
         return this.expirationDate == null ? Input.empty() : this.expirationDate;
@@ -55,7 +55,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expired")
-    private final @Nullable Input<Boolean> expired;
+      private final @Nullable Input<Boolean> expired;
 
     public Input<Boolean> getExpired() {
         return this.expired == null ? Input.empty() : this.expired;
@@ -66,7 +66,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRole")
-    private final @Nullable Input<String> iamRole;
+      private final @Nullable Input<String> iamRole;
 
     public Input<String> getIamRole() {
         return this.iamRole == null ? Input.empty() : this.iamRole;
@@ -77,7 +77,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,7 +88,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationCount")
-    private final @Nullable Input<Integer> registrationCount;
+      private final @Nullable Input<Integer> registrationCount;
 
     public Input<Integer> getRegistrationCount() {
         return this.registrationCount == null ? Input.empty() : this.registrationCount;
@@ -99,7 +99,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationLimit")
-    private final @Nullable Input<Integer> registrationLimit;
+      private final @Nullable Input<Integer> registrationLimit;
 
     public Input<Integer> getRegistrationLimit() {
         return this.registrationLimit == null ? Input.empty() : this.registrationLimit;
@@ -110,7 +110,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -121,7 +121,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

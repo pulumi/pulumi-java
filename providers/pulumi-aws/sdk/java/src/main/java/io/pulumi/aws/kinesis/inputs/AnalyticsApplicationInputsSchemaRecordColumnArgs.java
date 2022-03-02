@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AnalyticsApplicationInputsSchemaRecordColumnArgs extends io.p
      * 
      */
     @InputImport(name="mapping")
-    private final @Nullable Input<String> mapping;
+      private final @Nullable Input<String> mapping;
 
     public Input<String> getMapping() {
         return this.mapping == null ? Input.empty() : this.mapping;
@@ -30,7 +30,7 @@ public final class AnalyticsApplicationInputsSchemaRecordColumnArgs extends io.p
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -41,7 +41,7 @@ public final class AnalyticsApplicationInputsSchemaRecordColumnArgs extends io.p
      * 
      */
     @InputImport(name="sqlType", required=true)
-    private final Input<String> sqlType;
+      private final Input<String> sqlType;
 
     public Input<String> getSqlType() {
         return this.sqlType;

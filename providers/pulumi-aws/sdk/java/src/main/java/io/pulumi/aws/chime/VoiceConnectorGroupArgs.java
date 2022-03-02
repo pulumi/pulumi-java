@@ -5,7 +5,7 @@ package io.pulumi.aws.chime;
 
 import io.pulumi.aws.chime.inputs.VoiceConnectorGroupConnectorArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class VoiceConnectorGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="connectors")
-    private final @Nullable Input<List<VoiceConnectorGroupConnectorArgs>> connectors;
+      private final @Nullable Input<List<VoiceConnectorGroupConnectorArgs>> connectors;
 
     public Input<List<VoiceConnectorGroupConnectorArgs>> getConnectors() {
         return this.connectors == null ? Input.empty() : this.connectors;
@@ -32,7 +32,7 @@ public final class VoiceConnectorGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito.outputs;
 
 import io.pulumi.aws.cognito.outputs.GetUserPoolClientAnalyticsConfiguration;
 import io.pulumi.aws.cognito.outputs.GetUserPoolClientTokenValidityUnit;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;

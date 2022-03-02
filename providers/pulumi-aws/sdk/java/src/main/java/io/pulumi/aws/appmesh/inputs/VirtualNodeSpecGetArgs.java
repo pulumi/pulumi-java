@@ -9,7 +9,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecLoggingGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="backendDefaults")
-    private final @Nullable Input<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults;
+      private final @Nullable Input<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults;
 
     public Input<VirtualNodeSpecBackendDefaultsGetArgs> getBackendDefaults() {
         return this.backendDefaults == null ? Input.empty() : this.backendDefaults;
@@ -35,7 +35,7 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="backends")
-    private final @Nullable Input<List<VirtualNodeSpecBackendGetArgs>> backends;
+      private final @Nullable Input<List<VirtualNodeSpecBackendGetArgs>> backends;
 
     public Input<List<VirtualNodeSpecBackendGetArgs>> getBackends() {
         return this.backends == null ? Input.empty() : this.backends;
@@ -46,7 +46,7 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="listener")
-    private final @Nullable Input<VirtualNodeSpecListenerGetArgs> listener;
+      private final @Nullable Input<VirtualNodeSpecListenerGetArgs> listener;
 
     public Input<VirtualNodeSpecListenerGetArgs> getListener() {
         return this.listener == null ? Input.empty() : this.listener;
@@ -57,7 +57,7 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logging")
-    private final @Nullable Input<VirtualNodeSpecLoggingGetArgs> logging;
+      private final @Nullable Input<VirtualNodeSpecLoggingGetArgs> logging;
 
     public Input<VirtualNodeSpecLoggingGetArgs> getLogging() {
         return this.logging == null ? Input.empty() : this.logging;
@@ -68,7 +68,7 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceDiscovery")
-    private final @Nullable Input<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery;
+      private final @Nullable Input<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery;
 
     public Input<VirtualNodeSpecServiceDiscoveryGetArgs> getServiceDiscovery() {
         return this.serviceDiscovery == null ? Input.empty() : this.serviceDiscovery;

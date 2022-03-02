@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PlanAdvancedBackupSettingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="backupOptions", required=true)
-    private final Input<Map<String,String>> backupOptions;
+      private final Input<Map<String,String>> backupOptions;
 
     public Input<Map<String,String>> getBackupOptions() {
         return this.backupOptions;
@@ -30,7 +30,7 @@ public final class PlanAdvancedBackupSettingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final Input<String> resourceType;
+      private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;

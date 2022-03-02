@@ -15,7 +15,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementSiz
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -29,7 +29,7 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="andStatement")
-    private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementAndStatementGetArgs> andStatement;
+      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementAndStatementGetArgs> andStatement;
 
     public Input<RuleGroupRuleStatementNotStatementStatementAndStatementGetArgs> getAndStatement() {
         return this.andStatement == null ? Input.empty() : this.andStatement;
@@ -40,7 +40,7 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="byteMatchStatement")
-    private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementByteMatchStatementGetArgs> byteMatchStatement;
+      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementByteMatchStatementGetArgs> byteMatchStatement;
 
     public Input<RuleGroupRuleStatementNotStatementStatementByteMatchStatementGetArgs> getByteMatchStatement() {
         return this.byteMatchStatement == null ? Input.empty() : this.byteMatchStatement;
@@ -51,7 +51,7 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="geoMatchStatement")
-    private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementGeoMatchStatementGetArgs> geoMatchStatement;
+      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementGeoMatchStatementGetArgs> geoMatchStatement;
 
     public Input<RuleGroupRuleStatementNotStatementStatementGeoMatchStatementGetArgs> getGeoMatchStatement() {
         return this.geoMatchStatement == null ? Input.empty() : this.geoMatchStatement;
@@ -62,7 +62,7 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="ipSetReferenceStatement")
-    private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
+      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
 
     public Input<RuleGroupRuleStatementNotStatementStatementIpSetReferenceStatementGetArgs> getIpSetReferenceStatement() {
         return this.ipSetReferenceStatement == null ? Input.empty() : this.ipSetReferenceStatement;
@@ -73,7 +73,7 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="labelMatchStatement")
-    private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementLabelMatchStatementGetArgs> labelMatchStatement;
+      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementLabelMatchStatementGetArgs> labelMatchStatement;
 
     public Input<RuleGroupRuleStatementNotStatementStatementLabelMatchStatementGetArgs> getLabelMatchStatement() {
         return this.labelMatchStatement == null ? Input.empty() : this.labelMatchStatement;
@@ -84,7 +84,7 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="notStatement")
-    private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementNotStatementGetArgs> notStatement;
+      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementNotStatementGetArgs> notStatement;
 
     public Input<RuleGroupRuleStatementNotStatementStatementNotStatementGetArgs> getNotStatement() {
         return this.notStatement == null ? Input.empty() : this.notStatement;
@@ -95,7 +95,7 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="orStatement")
-    private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs> orStatement;
+      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs> orStatement;
 
     public Input<RuleGroupRuleStatementNotStatementStatementOrStatementGetArgs> getOrStatement() {
         return this.orStatement == null ? Input.empty() : this.orStatement;
@@ -106,7 +106,7 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="regexPatternSetReferenceStatement")
-    private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
+      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
 
     public Input<RuleGroupRuleStatementNotStatementStatementRegexPatternSetReferenceStatementGetArgs> getRegexPatternSetReferenceStatement() {
         return this.regexPatternSetReferenceStatement == null ? Input.empty() : this.regexPatternSetReferenceStatement;
@@ -117,7 +117,7 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="sizeConstraintStatement")
-    private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
+      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
 
     public Input<RuleGroupRuleStatementNotStatementStatementSizeConstraintStatementGetArgs> getSizeConstraintStatement() {
         return this.sizeConstraintStatement == null ? Input.empty() : this.sizeConstraintStatement;
@@ -128,7 +128,7 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="sqliMatchStatement")
-    private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement;
+      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs> sqliMatchStatement;
 
     public Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementGetArgs> getSqliMatchStatement() {
         return this.sqliMatchStatement == null ? Input.empty() : this.sqliMatchStatement;
@@ -139,7 +139,7 @@ public final class RuleGroupRuleStatementNotStatementStatementGetArgs extends io
      * 
      */
     @InputImport(name="xssMatchStatement")
-    private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs> xssMatchStatement;
+      private final @Nullable Input<RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs> xssMatchStatement;
 
     public Input<RuleGroupRuleStatementNotStatementStatementXssMatchStatementGetArgs> getXssMatchStatement() {
         return this.xssMatchStatement == null ? Input.empty() : this.xssMatchStatement;

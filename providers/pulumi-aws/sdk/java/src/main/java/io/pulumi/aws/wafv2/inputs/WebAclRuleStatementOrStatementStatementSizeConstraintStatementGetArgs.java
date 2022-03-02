@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementSizeConstraintStatementTextTransformationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class WebAclRuleStatementOrStatementStatementSizeConstraintStatemen
      * 
      */
     @InputImport(name="comparisonOperator", required=true)
-    private final Input<String> comparisonOperator;
+      private final Input<String> comparisonOperator;
 
     public Input<String> getComparisonOperator() {
         return this.comparisonOperator;
@@ -34,7 +34,7 @@ public final class WebAclRuleStatementOrStatementStatementSizeConstraintStatemen
      * 
      */
     @InputImport(name="fieldToMatch")
-    private final @Nullable Input<WebAclRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch;
+      private final @Nullable Input<WebAclRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchGetArgs> fieldToMatch;
 
     public Input<WebAclRuleStatementOrStatementStatementSizeConstraintStatementFieldToMatchGetArgs> getFieldToMatch() {
         return this.fieldToMatch == null ? Input.empty() : this.fieldToMatch;
@@ -45,7 +45,7 @@ public final class WebAclRuleStatementOrStatementStatementSizeConstraintStatemen
      * 
      */
     @InputImport(name="size", required=true)
-    private final Input<Integer> size;
+      private final Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size;
@@ -56,7 +56,7 @@ public final class WebAclRuleStatementOrStatementStatementSizeConstraintStatemen
      * 
      */
     @InputImport(name="textTransformations", required=true)
-    private final Input<List<WebAclRuleStatementOrStatementStatementSizeConstraintStatementTextTransformationGetArgs>> textTransformations;
+      private final Input<List<WebAclRuleStatementOrStatementStatementSizeConstraintStatementTextTransformationGetArgs>> textTransformations;
 
     public Input<List<WebAclRuleStatementOrStatementStatementSizeConstraintStatementTextTransformationGetArgs>> getTextTransformations() {
         return this.textTransformations;

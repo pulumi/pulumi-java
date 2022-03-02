@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.GetImageRecipeBlockDeviceMappingEb;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetImageRecipeBlockDeviceMapping extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final String deviceName;
+      private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
@@ -30,7 +30,7 @@ public final class GetImageRecipeBlockDeviceMapping extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ebs", required=true)
-    private final List<GetImageRecipeBlockDeviceMappingEb> ebs;
+      private final List<GetImageRecipeBlockDeviceMappingEb> ebs;
 
     public List<GetImageRecipeBlockDeviceMappingEb> getEbs() {
         return this.ebs;
@@ -41,7 +41,7 @@ public final class GetImageRecipeBlockDeviceMapping extends io.pulumi.resources.
      * 
      */
     @InputImport(name="noDevice", required=true)
-    private final String noDevice;
+      private final String noDevice;
 
     public String getNoDevice() {
         return this.noDevice;
@@ -52,7 +52,7 @@ public final class GetImageRecipeBlockDeviceMapping extends io.pulumi.resources.
      * 
      */
     @InputImport(name="virtualName", required=true)
-    private final String virtualName;
+      private final String virtualName;
 
     public String getVirtualName() {
         return this.virtualName;

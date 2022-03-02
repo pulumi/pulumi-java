@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class CatalogTableStorageDescriptorSkewedInfoGetArgs extends io.pul
      * 
      */
     @InputImport(name="skewedColumnNames")
-    private final @Nullable Input<List<String>> skewedColumnNames;
+      private final @Nullable Input<List<String>> skewedColumnNames;
 
     public Input<List<String>> getSkewedColumnNames() {
         return this.skewedColumnNames == null ? Input.empty() : this.skewedColumnNames;
@@ -32,7 +32,7 @@ public final class CatalogTableStorageDescriptorSkewedInfoGetArgs extends io.pul
      * 
      */
     @InputImport(name="skewedColumnValueLocationMaps")
-    private final @Nullable Input<Map<String,String>> skewedColumnValueLocationMaps;
+      private final @Nullable Input<Map<String,String>> skewedColumnValueLocationMaps;
 
     public Input<Map<String,String>> getSkewedColumnValueLocationMaps() {
         return this.skewedColumnValueLocationMaps == null ? Input.empty() : this.skewedColumnValueLocationMaps;
@@ -43,7 +43,7 @@ public final class CatalogTableStorageDescriptorSkewedInfoGetArgs extends io.pul
      * 
      */
     @InputImport(name="skewedColumnValues")
-    private final @Nullable Input<List<String>> skewedColumnValues;
+      private final @Nullable Input<List<String>> skewedColumnValues;
 
     public Input<List<String>> getSkewedColumnValues() {
         return this.skewedColumnValues == null ? Input.empty() : this.skewedColumnValues;

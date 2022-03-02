@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+      private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -35,7 +35,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="forceDetach")
-    private final @Nullable Input<Boolean> forceDetach;
+      private final @Nullable Input<Boolean> forceDetach;
 
     public Input<Boolean> getForceDetach() {
         return this.forceDetach == null ? Input.empty() : this.forceDetach;
@@ -46,7 +46,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -61,7 +61,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="skipDestroy")
-    private final @Nullable Input<Boolean> skipDestroy;
+      private final @Nullable Input<Boolean> skipDestroy;
 
     public Input<Boolean> getSkipDestroy() {
         return this.skipDestroy == null ? Input.empty() : this.skipDestroy;
@@ -73,7 +73,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="stopInstanceBeforeDetaching")
-    private final @Nullable Input<Boolean> stopInstanceBeforeDetaching;
+      private final @Nullable Input<Boolean> stopInstanceBeforeDetaching;
 
     public Input<Boolean> getStopInstanceBeforeDetaching() {
         return this.stopInstanceBeforeDetaching == null ? Input.empty() : this.stopInstanceBeforeDetaching;
@@ -84,7 +84,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="volumeId", required=true)
-    private final Input<String> volumeId;
+      private final Input<String> volumeId;
 
     public Input<String> getVolumeId() {
         return this.volumeId;

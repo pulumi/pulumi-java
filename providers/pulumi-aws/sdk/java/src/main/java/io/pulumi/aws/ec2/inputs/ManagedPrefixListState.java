@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.ManagedPrefixListEntryGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="addressFamily")
-    private final @Nullable Input<String> addressFamily;
+      private final @Nullable Input<String> addressFamily;
 
     public Input<String> getAddressFamily() {
         return this.addressFamily == null ? Input.empty() : this.addressFamily;
@@ -34,7 +34,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -45,7 +45,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="entries")
-    private final @Nullable Input<List<ManagedPrefixListEntryGetArgs>> entries;
+      private final @Nullable Input<List<ManagedPrefixListEntryGetArgs>> entries;
 
     public Input<List<ManagedPrefixListEntryGetArgs>> getEntries() {
         return this.entries == null ? Input.empty() : this.entries;
@@ -56,7 +56,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maxEntries")
-    private final @Nullable Input<Integer> maxEntries;
+      private final @Nullable Input<Integer> maxEntries;
 
     public Input<Integer> getMaxEntries() {
         return this.maxEntries == null ? Input.empty() : this.maxEntries;
@@ -67,7 +67,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+      private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -89,14 +89,14 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -107,7 +107,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;

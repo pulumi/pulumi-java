@@ -4,7 +4,7 @@
 package io.pulumi.aws.synthetics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CanaryScheduleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="durationInSeconds")
-    private final @Nullable Input<Integer> durationInSeconds;
+      private final @Nullable Input<Integer> durationInSeconds;
 
     public Input<Integer> getDurationInSeconds() {
         return this.durationInSeconds == null ? Input.empty() : this.durationInSeconds;
@@ -31,7 +31,7 @@ public final class CanaryScheduleGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expression", required=true)
-    private final Input<String> expression;
+      private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;

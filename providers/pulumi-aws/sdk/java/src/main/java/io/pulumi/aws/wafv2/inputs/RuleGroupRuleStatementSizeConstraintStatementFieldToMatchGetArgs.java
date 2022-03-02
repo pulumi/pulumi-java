@@ -11,7 +11,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementSizeConstraintStatementF
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementSizeConstraintStatementFieldToMatchUriPathGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class RuleGroupRuleStatementSizeConstraintStatementFieldToMatchGetA
      * 
      */
     @InputImport(name="allQueryArguments")
-    private final @Nullable Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
+      private final @Nullable Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
 
     public Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchAllQueryArgumentsGetArgs> getAllQueryArguments() {
         return this.allQueryArguments == null ? Input.empty() : this.allQueryArguments;
@@ -36,7 +36,7 @@ public final class RuleGroupRuleStatementSizeConstraintStatementFieldToMatchGetA
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchBodyGetArgs> body;
+      private final @Nullable Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchBodyGetArgs> body;
 
     public Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchBodyGetArgs> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -47,7 +47,7 @@ public final class RuleGroupRuleStatementSizeConstraintStatementFieldToMatchGetA
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchMethodGetArgs> method;
+      private final @Nullable Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchMethodGetArgs> method;
 
     public Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchMethodGetArgs> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -58,7 +58,7 @@ public final class RuleGroupRuleStatementSizeConstraintStatementFieldToMatchGetA
      * 
      */
     @InputImport(name="queryString")
-    private final @Nullable Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchQueryStringGetArgs> queryString;
+      private final @Nullable Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchQueryStringGetArgs> queryString;
 
     public Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchQueryStringGetArgs> getQueryString() {
         return this.queryString == null ? Input.empty() : this.queryString;
@@ -69,7 +69,7 @@ public final class RuleGroupRuleStatementSizeConstraintStatementFieldToMatchGetA
      * 
      */
     @InputImport(name="singleHeader")
-    private final @Nullable Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
+      private final @Nullable Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
 
     public Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleHeaderGetArgs> getSingleHeader() {
         return this.singleHeader == null ? Input.empty() : this.singleHeader;
@@ -80,7 +80,7 @@ public final class RuleGroupRuleStatementSizeConstraintStatementFieldToMatchGetA
      * 
      */
     @InputImport(name="singleQueryArgument")
-    private final @Nullable Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
+      private final @Nullable Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
 
     public Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentGetArgs> getSingleQueryArgument() {
         return this.singleQueryArgument == null ? Input.empty() : this.singleQueryArgument;
@@ -91,7 +91,7 @@ public final class RuleGroupRuleStatementSizeConstraintStatementFieldToMatchGetA
      * 
      */
     @InputImport(name="uriPath")
-    private final @Nullable Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchUriPathGetArgs> uriPath;
+      private final @Nullable Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchUriPathGetArgs> uriPath;
 
     public Input<RuleGroupRuleStatementSizeConstraintStatementFieldToMatchUriPathGetArgs> getUriPath() {
         return this.uriPath == null ? Input.empty() : this.uriPath;

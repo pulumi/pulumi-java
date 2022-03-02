@@ -5,7 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.aws.appsync.inputs.DataSourceDynamodbConfigDeltaSyncConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
     public static final DataSourceDynamodbConfigArgs Empty = new DataSourceDynamodbConfigArgs();
 
     @InputImport(name="deltaSyncConfig")
-    private final @Nullable Input<DataSourceDynamodbConfigDeltaSyncConfigArgs> deltaSyncConfig;
+      private final @Nullable Input<DataSourceDynamodbConfigDeltaSyncConfigArgs> deltaSyncConfig;
 
     public Input<DataSourceDynamodbConfigDeltaSyncConfigArgs> getDeltaSyncConfig() {
         return this.deltaSyncConfig == null ? Input.empty() : this.deltaSyncConfig;
@@ -28,7 +28,7 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -39,7 +39,7 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+      private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;
@@ -50,14 +50,14 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="useCallerCredentials")
-    private final @Nullable Input<Boolean> useCallerCredentials;
+      private final @Nullable Input<Boolean> useCallerCredentials;
 
     public Input<Boolean> getUseCallerCredentials() {
         return this.useCallerCredentials == null ? Input.empty() : this.useCallerCredentials;
     }
 
     @InputImport(name="versioned")
-    private final @Nullable Input<Boolean> versioned;
+      private final @Nullable Input<Boolean> versioned;
 
     public Input<Boolean> getVersioned() {
         return this.versioned == null ? Input.empty() : this.versioned;

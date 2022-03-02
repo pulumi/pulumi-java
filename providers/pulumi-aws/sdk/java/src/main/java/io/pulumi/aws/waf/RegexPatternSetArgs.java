@@ -4,7 +4,7 @@
 package io.pulumi.aws.waf;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="regexPatternStrings")
-    private final @Nullable Input<List<String>> regexPatternStrings;
+      private final @Nullable Input<List<String>> regexPatternStrings;
 
     public Input<List<String>> getRegexPatternStrings() {
         return this.regexPatternStrings == null ? Input.empty() : this.regexPatternStrings;

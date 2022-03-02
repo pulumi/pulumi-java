@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="autoPause")
-    private final @Nullable Input<Boolean> autoPause;
+      private final @Nullable Input<Boolean> autoPause;
 
     public Input<Boolean> getAutoPause() {
         return this.autoPause == null ? Input.empty() : this.autoPause;
@@ -32,7 +32,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="maxCapacity")
-    private final @Nullable Input<Integer> maxCapacity;
+      private final @Nullable Input<Integer> maxCapacity;
 
     public Input<Integer> getMaxCapacity() {
         return this.maxCapacity == null ? Input.empty() : this.maxCapacity;
@@ -43,7 +43,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="minCapacity")
-    private final @Nullable Input<Integer> minCapacity;
+      private final @Nullable Input<Integer> minCapacity;
 
     public Input<Integer> getMinCapacity() {
         return this.minCapacity == null ? Input.empty() : this.minCapacity;
@@ -54,7 +54,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="secondsUntilAutoPause")
-    private final @Nullable Input<Integer> secondsUntilAutoPause;
+      private final @Nullable Input<Integer> secondsUntilAutoPause;
 
     public Input<Integer> getSecondsUntilAutoPause() {
         return this.secondsUntilAutoPause == null ? Input.empty() : this.secondsUntilAutoPause;
@@ -65,7 +65,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="timeoutAction")
-    private final @Nullable Input<String> timeoutAction;
+      private final @Nullable Input<String> timeoutAction;
 
     public Input<String> getTimeoutAction() {
         return this.timeoutAction == null ? Input.empty() : this.timeoutAction;

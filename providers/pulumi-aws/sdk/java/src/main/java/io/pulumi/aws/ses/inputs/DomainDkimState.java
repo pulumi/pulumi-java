@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DomainDkimState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dkimTokens")
-    private final @Nullable Input<List<String>> dkimTokens;
+      private final @Nullable Input<List<String>> dkimTokens;
 
     public Input<List<String>> getDkimTokens() {
         return this.dkimTokens == null ? Input.empty() : this.dkimTokens;
@@ -36,7 +36,7 @@ public final class DomainDkimState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;

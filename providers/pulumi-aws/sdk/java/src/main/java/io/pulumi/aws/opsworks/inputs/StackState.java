@@ -5,7 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.aws.opsworks.inputs.StackCustomCookbooksSourceGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,14 +23,14 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentVersion")
-    private final @Nullable Input<String> agentVersion;
+      private final @Nullable Input<String> agentVersion;
 
     public Input<String> getAgentVersion() {
         return this.agentVersion == null ? Input.empty() : this.agentVersion;
     }
 
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -41,7 +41,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="berkshelfVersion")
-    private final @Nullable Input<String> berkshelfVersion;
+      private final @Nullable Input<String> berkshelfVersion;
 
     public Input<String> getBerkshelfVersion() {
         return this.berkshelfVersion == null ? Input.empty() : this.berkshelfVersion;
@@ -52,7 +52,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="color")
-    private final @Nullable Input<String> color;
+      private final @Nullable Input<String> color;
 
     public Input<String> getColor() {
         return this.color == null ? Input.empty() : this.color;
@@ -63,7 +63,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationManagerName")
-    private final @Nullable Input<String> configurationManagerName;
+      private final @Nullable Input<String> configurationManagerName;
 
     public Input<String> getConfigurationManagerName() {
         return this.configurationManagerName == null ? Input.empty() : this.configurationManagerName;
@@ -74,7 +74,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationManagerVersion")
-    private final @Nullable Input<String> configurationManagerVersion;
+      private final @Nullable Input<String> configurationManagerVersion;
 
     public Input<String> getConfigurationManagerVersion() {
         return this.configurationManagerVersion == null ? Input.empty() : this.configurationManagerVersion;
@@ -86,7 +86,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customCookbooksSources")
-    private final @Nullable Input<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources;
+      private final @Nullable Input<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources;
 
     public Input<List<StackCustomCookbooksSourceGetArgs>> getCustomCookbooksSources() {
         return this.customCookbooksSources == null ? Input.empty() : this.customCookbooksSources;
@@ -97,7 +97,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customJson")
-    private final @Nullable Input<String> customJson;
+      private final @Nullable Input<String> customJson;
 
     public Input<String> getCustomJson() {
         return this.customJson == null ? Input.empty() : this.customJson;
@@ -109,7 +109,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAvailabilityZone")
-    private final @Nullable Input<String> defaultAvailabilityZone;
+      private final @Nullable Input<String> defaultAvailabilityZone;
 
     public Input<String> getDefaultAvailabilityZone() {
         return this.defaultAvailabilityZone == null ? Input.empty() : this.defaultAvailabilityZone;
@@ -121,7 +121,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultInstanceProfileArn")
-    private final @Nullable Input<String> defaultInstanceProfileArn;
+      private final @Nullable Input<String> defaultInstanceProfileArn;
 
     public Input<String> getDefaultInstanceProfileArn() {
         return this.defaultInstanceProfileArn == null ? Input.empty() : this.defaultInstanceProfileArn;
@@ -132,7 +132,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultOs")
-    private final @Nullable Input<String> defaultOs;
+      private final @Nullable Input<String> defaultOs;
 
     public Input<String> getDefaultOs() {
         return this.defaultOs == null ? Input.empty() : this.defaultOs;
@@ -143,7 +143,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRootDeviceType")
-    private final @Nullable Input<String> defaultRootDeviceType;
+      private final @Nullable Input<String> defaultRootDeviceType;
 
     public Input<String> getDefaultRootDeviceType() {
         return this.defaultRootDeviceType == null ? Input.empty() : this.defaultRootDeviceType;
@@ -154,7 +154,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultSshKeyName")
-    private final @Nullable Input<String> defaultSshKeyName;
+      private final @Nullable Input<String> defaultSshKeyName;
 
     public Input<String> getDefaultSshKeyName() {
         return this.defaultSshKeyName == null ? Input.empty() : this.defaultSshKeyName;
@@ -166,7 +166,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultSubnetId")
-    private final @Nullable Input<String> defaultSubnetId;
+      private final @Nullable Input<String> defaultSubnetId;
 
     public Input<String> getDefaultSubnetId() {
         return this.defaultSubnetId == null ? Input.empty() : this.defaultSubnetId;
@@ -178,7 +178,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostnameTheme")
-    private final @Nullable Input<String> hostnameTheme;
+      private final @Nullable Input<String> hostnameTheme;
 
     public Input<String> getHostnameTheme() {
         return this.hostnameTheme == null ? Input.empty() : this.hostnameTheme;
@@ -189,7 +189,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manageBerkshelf")
-    private final @Nullable Input<Boolean> manageBerkshelf;
+      private final @Nullable Input<Boolean> manageBerkshelf;
 
     public Input<Boolean> getManageBerkshelf() {
         return this.manageBerkshelf == null ? Input.empty() : this.manageBerkshelf;
@@ -200,7 +200,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -211,7 +211,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -222,14 +222,14 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRoleArn")
-    private final @Nullable Input<String> serviceRoleArn;
+      private final @Nullable Input<String> serviceRoleArn;
 
     public Input<String> getServiceRoleArn() {
         return this.serviceRoleArn == null ? Input.empty() : this.serviceRoleArn;
     }
 
     @InputImport(name="stackEndpoint")
-    private final @Nullable Input<String> stackEndpoint;
+      private final @Nullable Input<String> stackEndpoint;
 
     public Input<String> getStackEndpoint() {
         return this.stackEndpoint == null ? Input.empty() : this.stackEndpoint;
@@ -240,7 +240,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -251,7 +251,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -263,7 +263,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useCustomCookbooks")
-    private final @Nullable Input<Boolean> useCustomCookbooks;
+      private final @Nullable Input<Boolean> useCustomCookbooks;
 
     public Input<Boolean> getUseCustomCookbooks() {
         return this.useCustomCookbooks == null ? Input.empty() : this.useCustomCookbooks;
@@ -275,7 +275,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useOpsworksSecurityGroups")
-    private final @Nullable Input<Boolean> useOpsworksSecurityGroups;
+      private final @Nullable Input<Boolean> useOpsworksSecurityGroups;
 
     public Input<Boolean> getUseOpsworksSecurityGroups() {
         return this.useOpsworksSecurityGroups == null ? Input.empty() : this.useOpsworksSecurityGroups;
@@ -286,7 +286,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+      private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.workspaces.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="computeTypeName", required=true)
-    private final String computeTypeName;
+      private final String computeTypeName;
 
     public String getComputeTypeName() {
         return this.computeTypeName;
@@ -29,7 +29,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="rootVolumeSizeGib", required=true)
-    private final Integer rootVolumeSizeGib;
+      private final Integer rootVolumeSizeGib;
 
     public Integer getRootVolumeSizeGib() {
         return this.rootVolumeSizeGib;
@@ -40,7 +40,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="runningMode", required=true)
-    private final String runningMode;
+      private final String runningMode;
 
     public String getRunningMode() {
         return this.runningMode;
@@ -51,7 +51,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="runningModeAutoStopTimeoutInMinutes", required=true)
-    private final Integer runningModeAutoStopTimeoutInMinutes;
+      private final Integer runningModeAutoStopTimeoutInMinutes;
 
     public Integer getRunningModeAutoStopTimeoutInMinutes() {
         return this.runningModeAutoStopTimeoutInMinutes;
@@ -62,7 +62,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="userVolumeSizeGib", required=true)
-    private final Integer userVolumeSizeGib;
+      private final Integer userVolumeSizeGib;
 
     public Integer getUserVolumeSizeGib() {
         return this.userVolumeSizeGib;

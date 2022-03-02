@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
      * 
      */
     @InputImport(name="cookies", required=true)
-    private final Input<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> cookies;
+      private final Input<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> cookies;
 
     public Input<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> getCookies() {
         return this.cookies;
@@ -36,7 +36,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Input<List<String>> headers;
+      private final @Nullable Input<List<String>> headers;
 
     public Input<List<String>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -48,7 +48,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
      * 
      */
     @InputImport(name="queryString", required=true)
-    private final Input<Boolean> queryString;
+      private final Input<Boolean> queryString;
 
     public Input<Boolean> getQueryString() {
         return this.queryString;
@@ -62,7 +62,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
      * 
      */
     @InputImport(name="queryStringCacheKeys")
-    private final @Nullable Input<List<String>> queryStringCacheKeys;
+      private final @Nullable Input<List<String>> queryStringCacheKeys;
 
     public Input<List<String>> getQueryStringCacheKeys() {
         return this.queryStringCacheKeys == null ? Input.empty() : this.queryStringCacheKeys;

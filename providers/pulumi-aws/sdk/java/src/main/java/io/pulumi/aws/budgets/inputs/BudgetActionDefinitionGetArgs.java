@@ -7,7 +7,7 @@ import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionIamActionDefinitionGet
 import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionScpActionDefinitionGetArgs;
 import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionSsmActionDefinitionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class BudgetActionDefinitionGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="iamActionDefinition")
-    private final @Nullable Input<BudgetActionDefinitionIamActionDefinitionGetArgs> iamActionDefinition;
+      private final @Nullable Input<BudgetActionDefinitionIamActionDefinitionGetArgs> iamActionDefinition;
 
     public Input<BudgetActionDefinitionIamActionDefinitionGetArgs> getIamActionDefinition() {
         return this.iamActionDefinition == null ? Input.empty() : this.iamActionDefinition;
@@ -32,7 +32,7 @@ public final class BudgetActionDefinitionGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="scpActionDefinition")
-    private final @Nullable Input<BudgetActionDefinitionScpActionDefinitionGetArgs> scpActionDefinition;
+      private final @Nullable Input<BudgetActionDefinitionScpActionDefinitionGetArgs> scpActionDefinition;
 
     public Input<BudgetActionDefinitionScpActionDefinitionGetArgs> getScpActionDefinition() {
         return this.scpActionDefinition == null ? Input.empty() : this.scpActionDefinition;
@@ -43,7 +43,7 @@ public final class BudgetActionDefinitionGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ssmActionDefinition")
-    private final @Nullable Input<BudgetActionDefinitionSsmActionDefinitionGetArgs> ssmActionDefinition;
+      private final @Nullable Input<BudgetActionDefinitionSsmActionDefinitionGetArgs> ssmActionDefinition;
 
     public Input<BudgetActionDefinitionSsmActionDefinitionGetArgs> getSsmActionDefinition() {
         return this.ssmActionDefinition == null ? Input.empty() : this.ssmActionDefinition;

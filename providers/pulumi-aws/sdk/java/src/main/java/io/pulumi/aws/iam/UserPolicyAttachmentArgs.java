@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class UserPolicyAttachmentArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyArn", required=true)
-    private final Input<String> policyArn;
+      private final Input<String> policyArn;
 
     public Input<String> getPolicyArn() {
         return this.policyArn;
@@ -29,7 +29,7 @@ public final class UserPolicyAttachmentArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="user", required=true)
-    private final Input<String> user;
+      private final Input<String> user;
 
     public Input<String> getUser() {
         return this.user;

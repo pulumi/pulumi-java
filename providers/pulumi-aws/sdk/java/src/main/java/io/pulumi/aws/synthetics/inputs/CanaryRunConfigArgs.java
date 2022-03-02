@@ -4,7 +4,7 @@
 package io.pulumi.aws.synthetics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CanaryRunConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="activeTracing")
-    private final @Nullable Input<Boolean> activeTracing;
+      private final @Nullable Input<Boolean> activeTracing;
 
     public Input<Boolean> getActiveTracing() {
         return this.activeTracing == null ? Input.empty() : this.activeTracing;
@@ -31,7 +31,7 @@ public final class CanaryRunConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="memoryInMb")
-    private final @Nullable Input<Integer> memoryInMb;
+      private final @Nullable Input<Integer> memoryInMb;
 
     public Input<Integer> getMemoryInMb() {
         return this.memoryInMb == null ? Input.empty() : this.memoryInMb;
@@ -42,7 +42,7 @@ public final class CanaryRunConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeoutInSeconds")
-    private final @Nullable Input<Integer> timeoutInSeconds;
+      private final @Nullable Input<Integer> timeoutInSeconds;
 
     public Input<Integer> getTimeoutInSeconds() {
         return this.timeoutInSeconds == null ? Input.empty() : this.timeoutInSeconds;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloud9.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="environmentId")
-    private final @Nullable Input<String> environmentId;
+      private final @Nullable Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId == null ? Input.empty() : this.environmentId;
@@ -30,7 +30,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<String> permissions;
+      private final @Nullable Input<String> permissions;
 
     public Input<String> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
@@ -41,7 +41,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="userArn")
-    private final @Nullable Input<String> userArn;
+      private final @Nullable Input<String> userArn;
 
     public Input<String> getUserArn() {
         return this.userArn == null ? Input.empty() : this.userArn;
@@ -52,7 +52,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="userId")
-    private final @Nullable Input<String> userId;
+      private final @Nullable Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId == null ? Input.empty() : this.userId;

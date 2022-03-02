@@ -9,7 +9,7 @@ import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorSerDeInfoGetArgs;
 import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorSkewedInfoGetArgs;
 import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorSortColumnGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="bucketColumns")
-    private final @Nullable Input<List<String>> bucketColumns;
+      private final @Nullable Input<List<String>> bucketColumns;
 
     public Input<List<String>> getBucketColumns() {
         return this.bucketColumns == null ? Input.empty() : this.bucketColumns;
@@ -39,7 +39,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable Input<List<CatalogTableStorageDescriptorColumnGetArgs>> columns;
+      private final @Nullable Input<List<CatalogTableStorageDescriptorColumnGetArgs>> columns;
 
     public Input<List<CatalogTableStorageDescriptorColumnGetArgs>> getColumns() {
         return this.columns == null ? Input.empty() : this.columns;
@@ -50,7 +50,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="compressed")
-    private final @Nullable Input<Boolean> compressed;
+      private final @Nullable Input<Boolean> compressed;
 
     public Input<Boolean> getCompressed() {
         return this.compressed == null ? Input.empty() : this.compressed;
@@ -61,7 +61,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="inputFormat")
-    private final @Nullable Input<String> inputFormat;
+      private final @Nullable Input<String> inputFormat;
 
     public Input<String> getInputFormat() {
         return this.inputFormat == null ? Input.empty() : this.inputFormat;
@@ -72,7 +72,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -83,7 +83,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="numberOfBuckets")
-    private final @Nullable Input<Integer> numberOfBuckets;
+      private final @Nullable Input<Integer> numberOfBuckets;
 
     public Input<Integer> getNumberOfBuckets() {
         return this.numberOfBuckets == null ? Input.empty() : this.numberOfBuckets;
@@ -94,7 +94,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="outputFormat")
-    private final @Nullable Input<String> outputFormat;
+      private final @Nullable Input<String> outputFormat;
 
     public Input<String> getOutputFormat() {
         return this.outputFormat == null ? Input.empty() : this.outputFormat;
@@ -105,7 +105,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -116,7 +116,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="schemaReference")
-    private final @Nullable Input<CatalogTableStorageDescriptorSchemaReferenceGetArgs> schemaReference;
+      private final @Nullable Input<CatalogTableStorageDescriptorSchemaReferenceGetArgs> schemaReference;
 
     public Input<CatalogTableStorageDescriptorSchemaReferenceGetArgs> getSchemaReference() {
         return this.schemaReference == null ? Input.empty() : this.schemaReference;
@@ -127,7 +127,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="serDeInfo")
-    private final @Nullable Input<CatalogTableStorageDescriptorSerDeInfoGetArgs> serDeInfo;
+      private final @Nullable Input<CatalogTableStorageDescriptorSerDeInfoGetArgs> serDeInfo;
 
     public Input<CatalogTableStorageDescriptorSerDeInfoGetArgs> getSerDeInfo() {
         return this.serDeInfo == null ? Input.empty() : this.serDeInfo;
@@ -138,7 +138,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="skewedInfo")
-    private final @Nullable Input<CatalogTableStorageDescriptorSkewedInfoGetArgs> skewedInfo;
+      private final @Nullable Input<CatalogTableStorageDescriptorSkewedInfoGetArgs> skewedInfo;
 
     public Input<CatalogTableStorageDescriptorSkewedInfoGetArgs> getSkewedInfo() {
         return this.skewedInfo == null ? Input.empty() : this.skewedInfo;
@@ -149,7 +149,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sortColumns")
-    private final @Nullable Input<List<CatalogTableStorageDescriptorSortColumnGetArgs>> sortColumns;
+      private final @Nullable Input<List<CatalogTableStorageDescriptorSortColumnGetArgs>> sortColumns;
 
     public Input<List<CatalogTableStorageDescriptorSortColumnGetArgs>> getSortColumns() {
         return this.sortColumns == null ? Input.empty() : this.sortColumns;
@@ -160,7 +160,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="storedAsSubDirectories")
-    private final @Nullable Input<Boolean> storedAsSubDirectories;
+      private final @Nullable Input<Boolean> storedAsSubDirectories;
 
     public Input<Boolean> getStoredAsSubDirectories() {
         return this.storedAsSubDirectories == null ? Input.empty() : this.storedAsSubDirectories;

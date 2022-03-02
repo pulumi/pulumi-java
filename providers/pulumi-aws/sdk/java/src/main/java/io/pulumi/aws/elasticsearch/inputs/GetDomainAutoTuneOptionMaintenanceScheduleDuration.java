@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetDomainAutoTuneOptionMaintenanceScheduleDuration extends io
      * 
      */
     @InputImport(name="unit", required=true)
-    private final String unit;
+      private final String unit;
 
     public String getUnit() {
         return this.unit;
@@ -29,7 +29,7 @@ public final class GetDomainAutoTuneOptionMaintenanceScheduleDuration extends io
      * 
      */
     @InputImport(name="value", required=true)
-    private final Integer value;
+      private final Integer value;
 
     public Integer getValue() {
         return this.value;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class GroupInitialLifecycleHookGetArgs extends io.pulumi.resources.
     public static final GroupInitialLifecycleHookGetArgs Empty = new GroupInitialLifecycleHookGetArgs();
 
     @InputImport(name="defaultResult")
-    private final @Nullable Input<String> defaultResult;
+      private final @Nullable Input<String> defaultResult;
 
     public Input<String> getDefaultResult() {
         return this.defaultResult == null ? Input.empty() : this.defaultResult;
     }
 
     @InputImport(name="heartbeatTimeout")
-    private final @Nullable Input<Integer> heartbeatTimeout;
+      private final @Nullable Input<Integer> heartbeatTimeout;
 
     public Input<Integer> getHeartbeatTimeout() {
         return this.heartbeatTimeout == null ? Input.empty() : this.heartbeatTimeout;
     }
 
     @InputImport(name="lifecycleTransition", required=true)
-    private final Input<String> lifecycleTransition;
+      private final Input<String> lifecycleTransition;
 
     public Input<String> getLifecycleTransition() {
         return this.lifecycleTransition;
@@ -41,28 +41,28 @@ public final class GroupInitialLifecycleHookGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="notificationMetadata")
-    private final @Nullable Input<String> notificationMetadata;
+      private final @Nullable Input<String> notificationMetadata;
 
     public Input<String> getNotificationMetadata() {
         return this.notificationMetadata == null ? Input.empty() : this.notificationMetadata;
     }
 
     @InputImport(name="notificationTargetArn")
-    private final @Nullable Input<String> notificationTargetArn;
+      private final @Nullable Input<String> notificationTargetArn;
 
     public Input<String> getNotificationTargetArn() {
         return this.notificationTargetArn == null ? Input.empty() : this.notificationTargetArn;
     }
 
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;

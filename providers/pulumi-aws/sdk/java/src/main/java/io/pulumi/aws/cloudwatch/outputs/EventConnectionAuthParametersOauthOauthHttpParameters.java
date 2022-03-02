@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudwatch.outputs;
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersOauthOauthHttpParametersBody;
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersOauthOauthHttpParametersHeader;
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersOauthOauthHttpParametersQueryString;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;

@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class MonitoringSubscriptionState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="distributionId")
-    private final @Nullable Input<String> distributionId;
+      private final @Nullable Input<String> distributionId;
 
     public Input<String> getDistributionId() {
         return this.distributionId == null ? Input.empty() : this.distributionId;
@@ -31,7 +31,7 @@ public final class MonitoringSubscriptionState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="monitoringSubscription")
-    private final @Nullable Input<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription;
+      private final @Nullable Input<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription;
 
     public Input<MonitoringSubscriptionMonitoringSubscriptionGetArgs> getMonitoringSubscription() {
         return this.monitoringSubscription == null ? Input.empty() : this.monitoringSubscription;

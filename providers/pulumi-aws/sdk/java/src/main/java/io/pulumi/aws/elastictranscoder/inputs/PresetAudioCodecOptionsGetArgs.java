@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bitDepth")
-    private final @Nullable Input<String> bitDepth;
+      private final @Nullable Input<String> bitDepth;
 
     public Input<String> getBitDepth() {
         return this.bitDepth == null ? Input.empty() : this.bitDepth;
@@ -30,7 +30,7 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bitOrder")
-    private final @Nullable Input<String> bitOrder;
+      private final @Nullable Input<String> bitOrder;
 
     public Input<String> getBitOrder() {
         return this.bitOrder == null ? Input.empty() : this.bitOrder;
@@ -41,7 +41,7 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="profile")
-    private final @Nullable Input<String> profile;
+      private final @Nullable Input<String> profile;
 
     public Input<String> getProfile() {
         return this.profile == null ? Input.empty() : this.profile;
@@ -52,7 +52,7 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="signed")
-    private final @Nullable Input<String> signed;
+      private final @Nullable Input<String> signed;
 
     public Input<String> getSigned() {
         return this.signed == null ? Input.empty() : this.signed;

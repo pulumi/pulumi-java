@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class HumanTaskUIUiTemplateGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+      private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -30,7 +30,7 @@ public final class HumanTaskUIUiTemplateGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="contentSha256")
-    private final @Nullable Input<String> contentSha256;
+      private final @Nullable Input<String> contentSha256;
 
     public Input<String> getContentSha256() {
         return this.contentSha256 == null ? Input.empty() : this.contentSha256;
@@ -41,7 +41,7 @@ public final class HumanTaskUIUiTemplateGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;

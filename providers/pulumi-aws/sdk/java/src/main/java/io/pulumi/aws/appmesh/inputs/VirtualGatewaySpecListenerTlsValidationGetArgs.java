@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationTrustGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class VirtualGatewaySpecListenerTlsValidationGetArgs extends io.pul
      * 
      */
     @InputImport(name="subjectAlternativeNames")
-    private final @Nullable Input<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
+      private final @Nullable Input<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
 
     public Input<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesGetArgs> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? Input.empty() : this.subjectAlternativeNames;
@@ -31,7 +31,7 @@ public final class VirtualGatewaySpecListenerTlsValidationGetArgs extends io.pul
      * 
      */
     @InputImport(name="trust", required=true)
-    private final Input<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust;
+      private final Input<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> trust;
 
     public Input<VirtualGatewaySpecListenerTlsValidationTrustGetArgs> getTrust() {
         return this.trust;

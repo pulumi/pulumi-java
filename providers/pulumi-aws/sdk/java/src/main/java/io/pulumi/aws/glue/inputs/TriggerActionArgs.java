@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.TriggerActionNotificationPropertyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-    private final @Nullable Input<Map<String,String>> arguments;
+      private final @Nullable Input<Map<String,String>> arguments;
 
     public Input<Map<String,String>> getArguments() {
         return this.arguments == null ? Input.empty() : this.arguments;
@@ -33,7 +33,7 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crawlerName")
-    private final @Nullable Input<String> crawlerName;
+      private final @Nullable Input<String> crawlerName;
 
     public Input<String> getCrawlerName() {
         return this.crawlerName == null ? Input.empty() : this.crawlerName;
@@ -44,7 +44,7 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName")
-    private final @Nullable Input<String> jobName;
+      private final @Nullable Input<String> jobName;
 
     public Input<String> getJobName() {
         return this.jobName == null ? Input.empty() : this.jobName;
@@ -55,7 +55,7 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationProperty")
-    private final @Nullable Input<TriggerActionNotificationPropertyArgs> notificationProperty;
+      private final @Nullable Input<TriggerActionNotificationPropertyArgs> notificationProperty;
 
     public Input<TriggerActionNotificationPropertyArgs> getNotificationProperty() {
         return this.notificationProperty == null ? Input.empty() : this.notificationProperty;
@@ -66,7 +66,7 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityConfiguration")
-    private final @Nullable Input<String> securityConfiguration;
+      private final @Nullable Input<String> securityConfiguration;
 
     public Input<String> getSecurityConfiguration() {
         return this.securityConfiguration == null ? Input.empty() : this.securityConfiguration;
@@ -77,7 +77,7 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<Integer> timeout;
+      private final @Nullable Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;

@@ -7,7 +7,7 @@ import io.pulumi.aws.opsworks.inputs.ApplicationAppSourceArgs;
 import io.pulumi.aws.opsworks.inputs.ApplicationEnvironmentArgs;
 import io.pulumi.aws.opsworks.inputs.ApplicationSslConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appSources")
-    private final @Nullable Input<List<ApplicationAppSourceArgs>> appSources;
+      private final @Nullable Input<List<ApplicationAppSourceArgs>> appSources;
 
     public Input<List<ApplicationAppSourceArgs>> getAppSources() {
         return this.appSources == null ? Input.empty() : this.appSources;
@@ -35,7 +35,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoBundleOnDeploy")
-    private final @Nullable Input<String> autoBundleOnDeploy;
+      private final @Nullable Input<String> autoBundleOnDeploy;
 
     public Input<String> getAutoBundleOnDeploy() {
         return this.autoBundleOnDeploy == null ? Input.empty() : this.autoBundleOnDeploy;
@@ -46,7 +46,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsFlowRubySettings")
-    private final @Nullable Input<String> awsFlowRubySettings;
+      private final @Nullable Input<String> awsFlowRubySettings;
 
     public Input<String> getAwsFlowRubySettings() {
         return this.awsFlowRubySettings == null ? Input.empty() : this.awsFlowRubySettings;
@@ -57,7 +57,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceArn")
-    private final @Nullable Input<String> dataSourceArn;
+      private final @Nullable Input<String> dataSourceArn;
 
     public Input<String> getDataSourceArn() {
         return this.dataSourceArn == null ? Input.empty() : this.dataSourceArn;
@@ -68,7 +68,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceDatabaseName")
-    private final @Nullable Input<String> dataSourceDatabaseName;
+      private final @Nullable Input<String> dataSourceDatabaseName;
 
     public Input<String> getDataSourceDatabaseName() {
         return this.dataSourceDatabaseName == null ? Input.empty() : this.dataSourceDatabaseName;
@@ -79,7 +79,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceType")
-    private final @Nullable Input<String> dataSourceType;
+      private final @Nullable Input<String> dataSourceType;
 
     public Input<String> getDataSourceType() {
         return this.dataSourceType == null ? Input.empty() : this.dataSourceType;
@@ -90,7 +90,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -101,7 +101,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentRoot")
-    private final @Nullable Input<String> documentRoot;
+      private final @Nullable Input<String> documentRoot;
 
     public Input<String> getDocumentRoot() {
         return this.documentRoot == null ? Input.empty() : this.documentRoot;
@@ -112,7 +112,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domains")
-    private final @Nullable Input<List<String>> domains;
+      private final @Nullable Input<List<String>> domains;
 
     public Input<List<String>> getDomains() {
         return this.domains == null ? Input.empty() : this.domains;
@@ -123,7 +123,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableSsl")
-    private final @Nullable Input<Boolean> enableSsl;
+      private final @Nullable Input<Boolean> enableSsl;
 
     public Input<Boolean> getEnableSsl() {
         return this.enableSsl == null ? Input.empty() : this.enableSsl;
@@ -134,7 +134,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environments")
-    private final @Nullable Input<List<ApplicationEnvironmentArgs>> environments;
+      private final @Nullable Input<List<ApplicationEnvironmentArgs>> environments;
 
     public Input<List<ApplicationEnvironmentArgs>> getEnvironments() {
         return this.environments == null ? Input.empty() : this.environments;
@@ -145,7 +145,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -156,7 +156,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="railsEnv")
-    private final @Nullable Input<String> railsEnv;
+      private final @Nullable Input<String> railsEnv;
 
     public Input<String> getRailsEnv() {
         return this.railsEnv == null ? Input.empty() : this.railsEnv;
@@ -167,7 +167,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortName")
-    private final @Nullable Input<String> shortName;
+      private final @Nullable Input<String> shortName;
 
     public Input<String> getShortName() {
         return this.shortName == null ? Input.empty() : this.shortName;
@@ -178,7 +178,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslConfigurations")
-    private final @Nullable Input<List<ApplicationSslConfigurationArgs>> sslConfigurations;
+      private final @Nullable Input<List<ApplicationSslConfigurationArgs>> sslConfigurations;
 
     public Input<List<ApplicationSslConfigurationArgs>> getSslConfigurations() {
         return this.sslConfigurations == null ? Input.empty() : this.sslConfigurations;
@@ -189,7 +189,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackId", required=true)
-    private final Input<String> stackId;
+      private final Input<String> stackId;
 
     public Input<String> getStackId() {
         return this.stackId;
@@ -200,7 +200,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

@@ -9,8 +9,8 @@ import io.pulumi.aws.resourcegroups.inputs.GroupState;
 import io.pulumi.aws.resourcegroups.outputs.GroupResourceQuery;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -116,6 +116,21 @@ public class Group extends io.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Group(String name) {
+        this(name, GroupArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Group(String name, GroupArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VirtualNodeSpecListenerConnectionPoolHttpGetArgs extends io.p
      * 
      */
     @InputImport(name="maxConnections", required=true)
-    private final Input<Integer> maxConnections;
+      private final Input<Integer> maxConnections;
 
     public Input<Integer> getMaxConnections() {
         return this.maxConnections;
@@ -30,7 +30,7 @@ public final class VirtualNodeSpecListenerConnectionPoolHttpGetArgs extends io.p
      * 
      */
     @InputImport(name="maxPendingRequests")
-    private final @Nullable Input<Integer> maxPendingRequests;
+      private final @Nullable Input<Integer> maxPendingRequests;
 
     public Input<Integer> getMaxPendingRequests() {
         return this.maxPendingRequests == null ? Input.empty() : this.maxPendingRequests;

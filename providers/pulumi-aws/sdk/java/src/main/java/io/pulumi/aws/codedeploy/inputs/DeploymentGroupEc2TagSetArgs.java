@@ -5,7 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupEc2TagSetEc2TagFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DeploymentGroupEc2TagSetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ec2TagFilters")
-    private final @Nullable Input<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters;
+      private final @Nullable Input<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters;
 
     public Input<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> getEc2TagFilters() {
         return this.ec2TagFilters == null ? Input.empty() : this.ec2TagFilters;

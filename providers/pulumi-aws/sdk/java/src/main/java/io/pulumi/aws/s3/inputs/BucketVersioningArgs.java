@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BucketVersioningArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -30,7 +30,7 @@ public final class BucketVersioningArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mfaDelete")
-    private final @Nullable Input<Boolean> mfaDelete;
+      private final @Nullable Input<Boolean> mfaDelete;
 
     public Input<Boolean> getMfaDelete() {
         return this.mfaDelete == null ? Input.empty() : this.mfaDelete;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.alb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetListenerDefaultActionRedirect extends io.pulumi.resources.
     public static final GetListenerDefaultActionRedirect Empty = new GetListenerDefaultActionRedirect();
 
     @InputImport(name="host", required=true)
-    private final String host;
+      private final String host;
 
     public String getHost() {
         return this.host;
     }
 
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -31,28 +31,28 @@ public final class GetListenerDefaultActionRedirect extends io.pulumi.resources.
      * 
      */
     @InputImport(name="port", required=true)
-    private final String port;
+      private final String port;
 
     public String getPort() {
         return this.port;
     }
 
     @InputImport(name="protocol", required=true)
-    private final String protocol;
+      private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
     }
 
     @InputImport(name="query", required=true)
-    private final String query;
+      private final String query;
 
     public String getQuery() {
         return this.query;
     }
 
     @InputImport(name="statusCode", required=true)
-    private final String statusCode;
+      private final String statusCode;
 
     public String getStatusCode() {
         return this.statusCode;

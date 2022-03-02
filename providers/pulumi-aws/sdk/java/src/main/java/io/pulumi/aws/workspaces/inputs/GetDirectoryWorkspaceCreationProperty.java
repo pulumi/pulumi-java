@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.workspaces.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends io.pulumi.resou
      * 
      */
     @InputImport(name="customSecurityGroupId", required=true)
-    private final String customSecurityGroupId;
+      private final String customSecurityGroupId;
 
     public String getCustomSecurityGroupId() {
         return this.customSecurityGroupId;
@@ -29,7 +29,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends io.pulumi.resou
      * 
      */
     @InputImport(name="defaultOu", required=true)
-    private final String defaultOu;
+      private final String defaultOu;
 
     public String getDefaultOu() {
         return this.defaultOu;
@@ -40,7 +40,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends io.pulumi.resou
      * 
      */
     @InputImport(name="enableInternetAccess", required=true)
-    private final Boolean enableInternetAccess;
+      private final Boolean enableInternetAccess;
 
     public Boolean getEnableInternetAccess() {
         return this.enableInternetAccess;
@@ -51,7 +51,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends io.pulumi.resou
      * 
      */
     @InputImport(name="enableMaintenanceMode", required=true)
-    private final Boolean enableMaintenanceMode;
+      private final Boolean enableMaintenanceMode;
 
     public Boolean getEnableMaintenanceMode() {
         return this.enableMaintenanceMode;
@@ -62,7 +62,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends io.pulumi.resou
      * 
      */
     @InputImport(name="userEnabledAsLocalAdministrator", required=true)
-    private final Boolean userEnabledAsLocalAdministrator;
+      private final Boolean userEnabledAsLocalAdministrator;
 
     public Boolean getUserEnabledAsLocalAdministrator() {
         return this.userEnabledAsLocalAdministrator;

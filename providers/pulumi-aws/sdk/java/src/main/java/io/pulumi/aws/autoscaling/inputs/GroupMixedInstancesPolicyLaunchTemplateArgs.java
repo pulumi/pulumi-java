@@ -6,7 +6,7 @@ package io.pulumi.aws.autoscaling.inputs;
 import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs;
 import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateOverrideArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateArgs extends io.pulumi
      * 
      */
     @InputImport(name="launchTemplateSpecification", required=true)
-    private final Input<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs> launchTemplateSpecification;
+      private final Input<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs> launchTemplateSpecification;
 
     public Input<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs> getLaunchTemplateSpecification() {
         return this.launchTemplateSpecification;
@@ -32,7 +32,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateArgs extends io.pulumi
      * 
      */
     @InputImport(name="overrides")
-    private final @Nullable Input<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> overrides;
+      private final @Nullable Input<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> overrides;
 
     public Input<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> getOverrides() {
         return this.overrides == null ? Input.empty() : this.overrides;

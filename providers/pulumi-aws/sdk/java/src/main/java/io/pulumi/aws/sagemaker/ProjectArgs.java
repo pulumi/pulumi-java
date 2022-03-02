@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.ProjectServiceCatalogProvisioningDetailsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectDescription")
-    private final @Nullable Input<String> projectDescription;
+      private final @Nullable Input<String> projectDescription;
 
     public Input<String> getProjectDescription() {
         return this.projectDescription == null ? Input.empty() : this.projectDescription;
@@ -32,7 +32,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectName", required=true)
-    private final Input<String> projectName;
+      private final Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName;
@@ -43,7 +43,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceCatalogProvisioningDetails", required=true)
-    private final Input<ProjectServiceCatalogProvisioningDetailsArgs> serviceCatalogProvisioningDetails;
+      private final Input<ProjectServiceCatalogProvisioningDetailsArgs> serviceCatalogProvisioningDetails;
 
     public Input<ProjectServiceCatalogProvisioningDetailsArgs> getServiceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails;
@@ -54,7 +54,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -65,7 +65,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

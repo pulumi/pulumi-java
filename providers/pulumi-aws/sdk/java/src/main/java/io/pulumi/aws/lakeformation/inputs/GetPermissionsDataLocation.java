@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPermissionsDataLocation extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="arn", required=true)
-    private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;
@@ -28,7 +28,7 @@ public final class GetPermissionsDataLocation extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="catalogId", required=true)
-    private final String catalogId;
+      private final String catalogId;
 
     public String getCatalogId() {
         return this.catalogId;

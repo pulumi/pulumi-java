@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,56 +14,56 @@ public final class GetLaunchTemplatePlacement extends io.pulumi.resources.Invoke
     public static final GetLaunchTemplatePlacement Empty = new GetLaunchTemplatePlacement();
 
     @InputImport(name="affinity", required=true)
-    private final String affinity;
+      private final String affinity;
 
     public String getAffinity() {
         return this.affinity;
     }
 
     @InputImport(name="availabilityZone", required=true)
-    private final String availabilityZone;
+      private final String availabilityZone;
 
     public String getAvailabilityZone() {
         return this.availabilityZone;
     }
 
     @InputImport(name="groupName", required=true)
-    private final String groupName;
+      private final String groupName;
 
     public String getGroupName() {
         return this.groupName;
     }
 
     @InputImport(name="hostId", required=true)
-    private final String hostId;
+      private final String hostId;
 
     public String getHostId() {
         return this.hostId;
     }
 
     @InputImport(name="hostResourceGroupArn", required=true)
-    private final String hostResourceGroupArn;
+      private final String hostResourceGroupArn;
 
     public String getHostResourceGroupArn() {
         return this.hostResourceGroupArn;
     }
 
     @InputImport(name="partitionNumber", required=true)
-    private final Integer partitionNumber;
+      private final Integer partitionNumber;
 
     public Integer getPartitionNumber() {
         return this.partitionNumber;
     }
 
     @InputImport(name="spreadDomain", required=true)
-    private final String spreadDomain;
+      private final String spreadDomain;
 
     public String getSpreadDomain() {
         return this.spreadDomain;
     }
 
     @InputImport(name="tenancy", required=true)
-    private final String tenancy;
+      private final String tenancy;
 
     public String getTenancy() {
         return this.tenancy;

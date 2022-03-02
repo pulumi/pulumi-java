@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DistributionLoggingConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -33,7 +33,7 @@ public final class DistributionLoggingConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="includeCookies")
-    private final @Nullable Input<Boolean> includeCookies;
+      private final @Nullable Input<Boolean> includeCookies;
 
     public Input<Boolean> getIncludeCookies() {
         return this.includeCookies == null ? Input.empty() : this.includeCookies;
@@ -45,7 +45,7 @@ public final class DistributionLoggingConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;

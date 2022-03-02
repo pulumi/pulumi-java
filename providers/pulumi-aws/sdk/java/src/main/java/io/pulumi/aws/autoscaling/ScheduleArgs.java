@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingGroupName", required=true)
-    private final Input<String> autoscalingGroupName;
+      private final Input<String> autoscalingGroupName;
 
     public Input<String> getAutoscalingGroupName() {
         return this.autoscalingGroupName;
@@ -31,7 +31,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="desiredCapacity")
-    private final @Nullable Input<Integer> desiredCapacity;
+      private final @Nullable Input<Integer> desiredCapacity;
 
     public Input<Integer> getDesiredCapacity() {
         return this.desiredCapacity == null ? Input.empty() : this.desiredCapacity;
@@ -43,7 +43,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -55,7 +55,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSize")
-    private final @Nullable Input<Integer> maxSize;
+      private final @Nullable Input<Integer> maxSize;
 
     public Input<Integer> getMaxSize() {
         return this.maxSize == null ? Input.empty() : this.maxSize;
@@ -67,7 +67,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minSize")
-    private final @Nullable Input<Integer> minSize;
+      private final @Nullable Input<Integer> minSize;
 
     public Input<Integer> getMinSize() {
         return this.minSize == null ? Input.empty() : this.minSize;
@@ -78,7 +78,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recurrence")
-    private final @Nullable Input<String> recurrence;
+      private final @Nullable Input<String> recurrence;
 
     public Input<String> getRecurrence() {
         return this.recurrence == null ? Input.empty() : this.recurrence;
@@ -89,7 +89,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduledActionName", required=true)
-    private final Input<String> scheduledActionName;
+      private final Input<String> scheduledActionName;
 
     public Input<String> getScheduledActionName() {
         return this.scheduledActionName;
@@ -101,7 +101,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -112,7 +112,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;

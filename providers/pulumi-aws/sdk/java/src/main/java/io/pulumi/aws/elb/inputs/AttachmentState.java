@@ -4,7 +4,7 @@
 package io.pulumi.aws.elb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elb")
-    private final @Nullable Input<String> elb;
+      private final @Nullable Input<String> elb;
 
     public Input<String> getElb() {
         return this.elb == null ? Input.empty() : this.elb;
@@ -30,7 +30,7 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+      private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;

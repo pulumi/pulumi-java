@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class EventConnectionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="authParameters", required=true)
-    private final Input<EventConnectionAuthParametersArgs> authParameters;
+      private final Input<EventConnectionAuthParametersArgs> authParameters;
 
     public Input<EventConnectionAuthParametersArgs> getAuthParameters() {
         return this.authParameters;
@@ -31,7 +31,7 @@ public final class EventConnectionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="authorizationType", required=true)
-    private final Input<String> authorizationType;
+      private final Input<String> authorizationType;
 
     public Input<String> getAuthorizationType() {
         return this.authorizationType;
@@ -42,7 +42,7 @@ public final class EventConnectionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -53,7 +53,7 @@ public final class EventConnectionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

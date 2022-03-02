@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
      * 
      */
     @InputImport(name="accessPointId")
-    private final @Nullable Input<String> accessPointId;
+      private final @Nullable Input<String> accessPointId;
 
     public Input<String> getAccessPointId() {
         return this.accessPointId == null ? Input.empty() : this.accessPointId;
@@ -30,7 +30,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
      * 
      */
     @InputImport(name="iam")
-    private final @Nullable Input<String> iam;
+      private final @Nullable Input<String> iam;
 
     public Input<String> getIam() {
         return this.iam == null ? Input.empty() : this.iam;

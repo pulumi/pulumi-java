@@ -8,7 +8,7 @@ import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorSerDeInfoGetArgs;
 import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorSkewedInfoGetArgs;
 import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorSortColumnGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class PartitionStorageDescriptorGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="bucketColumns")
-    private final @Nullable Input<List<String>> bucketColumns;
+      private final @Nullable Input<List<String>> bucketColumns;
 
     public Input<List<String>> getBucketColumns() {
         return this.bucketColumns == null ? Input.empty() : this.bucketColumns;
@@ -38,7 +38,7 @@ public final class PartitionStorageDescriptorGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable Input<List<PartitionStorageDescriptorColumnGetArgs>> columns;
+      private final @Nullable Input<List<PartitionStorageDescriptorColumnGetArgs>> columns;
 
     public Input<List<PartitionStorageDescriptorColumnGetArgs>> getColumns() {
         return this.columns == null ? Input.empty() : this.columns;
@@ -49,7 +49,7 @@ public final class PartitionStorageDescriptorGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="compressed")
-    private final @Nullable Input<Boolean> compressed;
+      private final @Nullable Input<Boolean> compressed;
 
     public Input<Boolean> getCompressed() {
         return this.compressed == null ? Input.empty() : this.compressed;
@@ -60,7 +60,7 @@ public final class PartitionStorageDescriptorGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="inputFormat")
-    private final @Nullable Input<String> inputFormat;
+      private final @Nullable Input<String> inputFormat;
 
     public Input<String> getInputFormat() {
         return this.inputFormat == null ? Input.empty() : this.inputFormat;
@@ -71,7 +71,7 @@ public final class PartitionStorageDescriptorGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -82,7 +82,7 @@ public final class PartitionStorageDescriptorGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="numberOfBuckets")
-    private final @Nullable Input<Integer> numberOfBuckets;
+      private final @Nullable Input<Integer> numberOfBuckets;
 
     public Input<Integer> getNumberOfBuckets() {
         return this.numberOfBuckets == null ? Input.empty() : this.numberOfBuckets;
@@ -93,7 +93,7 @@ public final class PartitionStorageDescriptorGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="outputFormat")
-    private final @Nullable Input<String> outputFormat;
+      private final @Nullable Input<String> outputFormat;
 
     public Input<String> getOutputFormat() {
         return this.outputFormat == null ? Input.empty() : this.outputFormat;
@@ -104,7 +104,7 @@ public final class PartitionStorageDescriptorGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -115,7 +115,7 @@ public final class PartitionStorageDescriptorGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="serDeInfo")
-    private final @Nullable Input<PartitionStorageDescriptorSerDeInfoGetArgs> serDeInfo;
+      private final @Nullable Input<PartitionStorageDescriptorSerDeInfoGetArgs> serDeInfo;
 
     public Input<PartitionStorageDescriptorSerDeInfoGetArgs> getSerDeInfo() {
         return this.serDeInfo == null ? Input.empty() : this.serDeInfo;
@@ -126,7 +126,7 @@ public final class PartitionStorageDescriptorGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="skewedInfo")
-    private final @Nullable Input<PartitionStorageDescriptorSkewedInfoGetArgs> skewedInfo;
+      private final @Nullable Input<PartitionStorageDescriptorSkewedInfoGetArgs> skewedInfo;
 
     public Input<PartitionStorageDescriptorSkewedInfoGetArgs> getSkewedInfo() {
         return this.skewedInfo == null ? Input.empty() : this.skewedInfo;
@@ -137,7 +137,7 @@ public final class PartitionStorageDescriptorGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sortColumns")
-    private final @Nullable Input<List<PartitionStorageDescriptorSortColumnGetArgs>> sortColumns;
+      private final @Nullable Input<List<PartitionStorageDescriptorSortColumnGetArgs>> sortColumns;
 
     public Input<List<PartitionStorageDescriptorSortColumnGetArgs>> getSortColumns() {
         return this.sortColumns == null ? Input.empty() : this.sortColumns;
@@ -148,7 +148,7 @@ public final class PartitionStorageDescriptorGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="storedAsSubDirectories")
-    private final @Nullable Input<Boolean> storedAsSubDirectories;
+      private final @Nullable Input<Boolean> storedAsSubDirectories;
 
     public Input<Boolean> getStoredAsSubDirectories() {
         return this.storedAsSubDirectories == null ? Input.empty() : this.storedAsSubDirectories;

@@ -5,7 +5,7 @@ package io.pulumi.aws.timestreamwrite.inputs;
 
 import io.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      * 
      */
     @InputImport(name="s3Configuration")
-    private final @Nullable Input<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> s3Configuration;
+      private final @Nullable Input<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> s3Configuration;
 
     public Input<TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3ConfigurationArgs> getS3Configuration() {
         return this.s3Configuration == null ? Input.empty() : this.s3Configuration;

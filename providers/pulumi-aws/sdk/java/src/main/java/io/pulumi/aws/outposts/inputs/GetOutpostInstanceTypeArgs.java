@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.outposts.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetOutpostInstanceTypeArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="arn", required=true)
-    private final String arn;
+      private final String arn;
 
     public String getArn() {
         return this.arn;
@@ -31,7 +31,7 @@ public final class GetOutpostInstanceTypeArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable String instanceType;
+      private final @Nullable String instanceType;
 
     public Optional<String> getInstanceType() {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
@@ -42,7 +42,7 @@ public final class GetOutpostInstanceTypeArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="preferredInstanceTypes")
-    private final @Nullable List<String> preferredInstanceTypes;
+      private final @Nullable List<String> preferredInstanceTypes;
 
     public List<String> getPreferredInstanceTypes() {
         return this.preferredInstanceTypes == null ? List.of() : this.preferredInstanceTypes;

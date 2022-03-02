@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticbeanstalk.inputs;
 
 import io.pulumi.aws.elasticbeanstalk.inputs.ConfigurationTemplateSettingGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="application")
-    private final @Nullable Input<String> application;
+      private final @Nullable Input<String> application;
 
     public Input<String> getApplication() {
         return this.application == null ? Input.empty() : this.application;
@@ -32,7 +32,7 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="environmentId")
-    private final @Nullable Input<String> environmentId;
+      private final @Nullable Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId == null ? Input.empty() : this.environmentId;
@@ -54,7 +54,7 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<List<ConfigurationTemplateSettingGetArgs>> settings;
+      private final @Nullable Input<List<ConfigurationTemplateSettingGetArgs>> settings;
 
     public Input<List<ConfigurationTemplateSettingGetArgs>> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -79,7 +79,7 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="solutionStackName")
-    private final @Nullable Input<String> solutionStackName;
+      private final @Nullable Input<String> solutionStackName;
 
     public Input<String> getSolutionStackName() {
         return this.solutionStackName == null ? Input.empty() : this.solutionStackName;

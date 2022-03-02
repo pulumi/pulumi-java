@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="includeControlDetails")
-    private final @Nullable Input<Boolean> includeControlDetails;
+      private final @Nullable Input<Boolean> includeControlDetails;
 
     public Input<Boolean> getIncludeControlDetails() {
         return this.includeControlDetails == null ? Input.empty() : this.includeControlDetails;
@@ -31,7 +31,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="includeNullAndEmpty")
-    private final @Nullable Input<Boolean> includeNullAndEmpty;
+      private final @Nullable Input<Boolean> includeNullAndEmpty;
 
     public Input<Boolean> getIncludeNullAndEmpty() {
         return this.includeNullAndEmpty == null ? Input.empty() : this.includeNullAndEmpty;
@@ -42,7 +42,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="includePartitionValue")
-    private final @Nullable Input<Boolean> includePartitionValue;
+      private final @Nullable Input<Boolean> includePartitionValue;
 
     public Input<Boolean> getIncludePartitionValue() {
         return this.includePartitionValue == null ? Input.empty() : this.includePartitionValue;
@@ -53,7 +53,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="includeTableAlterOperations")
-    private final @Nullable Input<Boolean> includeTableAlterOperations;
+      private final @Nullable Input<Boolean> includeTableAlterOperations;
 
     public Input<Boolean> getIncludeTableAlterOperations() {
         return this.includeTableAlterOperations == null ? Input.empty() : this.includeTableAlterOperations;
@@ -64,7 +64,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="includeTransactionDetails")
-    private final @Nullable Input<Boolean> includeTransactionDetails;
+      private final @Nullable Input<Boolean> includeTransactionDetails;
 
     public Input<Boolean> getIncludeTransactionDetails() {
         return this.includeTransactionDetails == null ? Input.empty() : this.includeTransactionDetails;
@@ -75,7 +75,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="messageFormat")
-    private final @Nullable Input<String> messageFormat;
+      private final @Nullable Input<String> messageFormat;
 
     public Input<String> getMessageFormat() {
         return this.messageFormat == null ? Input.empty() : this.messageFormat;
@@ -86,7 +86,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="partitionIncludeSchemaTable")
-    private final @Nullable Input<Boolean> partitionIncludeSchemaTable;
+      private final @Nullable Input<Boolean> partitionIncludeSchemaTable;
 
     public Input<Boolean> getPartitionIncludeSchemaTable() {
         return this.partitionIncludeSchemaTable == null ? Input.empty() : this.partitionIncludeSchemaTable;
@@ -97,7 +97,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceAccessRoleArn")
-    private final @Nullable Input<String> serviceAccessRoleArn;
+      private final @Nullable Input<String> serviceAccessRoleArn;
 
     public Input<String> getServiceAccessRoleArn() {
         return this.serviceAccessRoleArn == null ? Input.empty() : this.serviceAccessRoleArn;
@@ -108,7 +108,7 @@ public final class EndpointKinesisSettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="streamArn")
-    private final @Nullable Input<String> streamArn;
+      private final @Nullable Input<String> streamArn;
 
     public Input<String> getStreamArn() {
         return this.streamArn == null ? Input.empty() : this.streamArn;

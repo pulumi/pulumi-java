@@ -7,7 +7,7 @@ import io.pulumi.aws.appsync.inputs.GraphQLApiAdditionalAuthenticationProviderLa
 import io.pulumi.aws.appsync.inputs.GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigArgs;
 import io.pulumi.aws.appsync.inputs.GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderArgs extends io.pul
      * 
      */
     @InputImport(name="authenticationType", required=true)
-    private final Input<String> authenticationType;
+      private final Input<String> authenticationType;
 
     public Input<String> getAuthenticationType() {
         return this.authenticationType;
@@ -33,7 +33,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderArgs extends io.pul
      * 
      */
     @InputImport(name="lambdaAuthorizerConfig")
-    private final @Nullable Input<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigArgs> lambdaAuthorizerConfig;
+      private final @Nullable Input<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigArgs> lambdaAuthorizerConfig;
 
     public Input<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigArgs> getLambdaAuthorizerConfig() {
         return this.lambdaAuthorizerConfig == null ? Input.empty() : this.lambdaAuthorizerConfig;
@@ -44,7 +44,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderArgs extends io.pul
      * 
      */
     @InputImport(name="openidConnectConfig")
-    private final @Nullable Input<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigArgs> openidConnectConfig;
+      private final @Nullable Input<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigArgs> openidConnectConfig;
 
     public Input<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigArgs> getOpenidConnectConfig() {
         return this.openidConnectConfig == null ? Input.empty() : this.openidConnectConfig;
@@ -55,7 +55,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderArgs extends io.pul
      * 
      */
     @InputImport(name="userPoolConfig")
-    private final @Nullable Input<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs> userPoolConfig;
+      private final @Nullable Input<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs> userPoolConfig;
 
     public Input<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs> getUserPoolConfig() {
         return this.userPoolConfig == null ? Input.empty() : this.userPoolConfig;

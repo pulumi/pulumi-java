@@ -6,7 +6,7 @@ package io.pulumi.aws.backup;
 import io.pulumi.aws.backup.inputs.SelectionConditionArgs;
 import io.pulumi.aws.backup.inputs.SelectionSelectionTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<SelectionConditionArgs>> conditions;
+      private final @Nullable Input<List<SelectionConditionArgs>> conditions;
 
     public Input<List<SelectionConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -33,7 +33,7 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamRoleArn", required=true)
-    private final Input<String> iamRoleArn;
+      private final Input<String> iamRoleArn;
 
     public Input<String> getIamRoleArn() {
         return this.iamRoleArn;
@@ -44,7 +44,7 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notResources")
-    private final @Nullable Input<List<String>> notResources;
+      private final @Nullable Input<List<String>> notResources;
 
     public Input<List<String>> getNotResources() {
         return this.notResources == null ? Input.empty() : this.notResources;
@@ -66,7 +66,7 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="planId", required=true)
-    private final Input<String> planId;
+      private final Input<String> planId;
 
     public Input<String> getPlanId() {
         return this.planId;
@@ -77,7 +77,7 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<List<String>> resources;
+      private final @Nullable Input<List<String>> resources;
 
     public Input<List<String>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -88,7 +88,7 @@ public final class SelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selectionTags")
-    private final @Nullable Input<List<SelectionSelectionTagArgs>> selectionTags;
+      private final @Nullable Input<List<SelectionSelectionTagArgs>> selectionTags;
 
     public Input<List<SelectionSelectionTagArgs>> getSelectionTags() {
         return this.selectionTags == null ? Input.empty() : this.selectionTags;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class CrawlerDeltaTargetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="connectionName", required=true)
-    private final Input<String> connectionName;
+      private final Input<String> connectionName;
 
     public Input<String> getConnectionName() {
         return this.connectionName;
@@ -31,7 +31,7 @@ public final class CrawlerDeltaTargetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="deltaTables", required=true)
-    private final Input<List<String>> deltaTables;
+      private final Input<List<String>> deltaTables;
 
     public Input<List<String>> getDeltaTables() {
         return this.deltaTables;
@@ -42,7 +42,7 @@ public final class CrawlerDeltaTargetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="writeManifest", required=true)
-    private final Input<Boolean> writeManifest;
+      private final Input<Boolean> writeManifest;
 
     public Input<Boolean> getWriteManifest() {
         return this.writeManifest;

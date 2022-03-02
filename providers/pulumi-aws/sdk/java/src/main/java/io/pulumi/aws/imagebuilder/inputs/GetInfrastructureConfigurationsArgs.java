@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.GetInfrastructureConfigurationsFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class GetInfrastructureConfigurationsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetInfrastructureConfigurationsFilter> filters;
+      private final @Nullable List<GetInfrastructureConfigurationsFilter> filters;
 
     public List<GetInfrastructureConfigurationsFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;

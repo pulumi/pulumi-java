@@ -9,8 +9,8 @@ import io.pulumi.aws.route53recoverycontrol.inputs.SafetyRuleState;
 import io.pulumi.aws.route53recoverycontrol.outputs.SafetyRuleRuleConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -159,6 +159,21 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
         return this.waitPeriodMs;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public SafetyRule(String name) {
+        this(name, SafetyRuleArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public SafetyRule(String name, SafetyRuleArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

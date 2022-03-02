@@ -11,8 +11,8 @@ import io.pulumi.aws.opsworks.outputs.InstanceEphemeralBlockDevice;
 import io.pulumi.aws.opsworks.outputs.InstanceRootBlockDevice;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -590,6 +590,21 @@ public class Instance extends io.pulumi.resources.CustomResource {
         return this.virtualizationType;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public Instance(String name) {
+        this(name, InstanceArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public Instance(String name, InstanceArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsServiceAccessPrincipals")
-    private final @Nullable Input<List<String>> awsServiceAccessPrincipals;
+      private final @Nullable Input<List<String>> awsServiceAccessPrincipals;
 
     public Input<List<String>> getAwsServiceAccessPrincipals() {
         return this.awsServiceAccessPrincipals == null ? Input.empty() : this.awsServiceAccessPrincipals;
@@ -31,7 +31,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledPolicyTypes")
-    private final @Nullable Input<List<String>> enabledPolicyTypes;
+      private final @Nullable Input<List<String>> enabledPolicyTypes;
 
     public Input<List<String>> getEnabledPolicyTypes() {
         return this.enabledPolicyTypes == null ? Input.empty() : this.enabledPolicyTypes;
@@ -42,7 +42,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="featureSet")
-    private final @Nullable Input<String> featureSet;
+      private final @Nullable Input<String> featureSet;
 
     public Input<String> getFeatureSet() {
         return this.featureSet == null ? Input.empty() : this.featureSet;

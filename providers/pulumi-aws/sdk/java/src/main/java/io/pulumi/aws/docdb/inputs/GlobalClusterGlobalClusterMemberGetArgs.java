@@ -4,7 +4,7 @@
 package io.pulumi.aws.docdb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="dbClusterArn")
-    private final @Nullable Input<String> dbClusterArn;
+      private final @Nullable Input<String> dbClusterArn;
 
     public Input<String> getDbClusterArn() {
         return this.dbClusterArn == null ? Input.empty() : this.dbClusterArn;
@@ -31,7 +31,7 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="isWriter")
-    private final @Nullable Input<Boolean> isWriter;
+      private final @Nullable Input<Boolean> isWriter;
 
     public Input<Boolean> getIsWriter() {
         return this.isWriter == null ? Input.empty() : this.isWriter;

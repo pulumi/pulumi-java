@@ -6,7 +6,7 @@ package io.pulumi.aws.fsx.inputs;
 import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3AutoExportPolicyGetArgs;
 import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3AutoImportPolicyGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class DataRepositoryAssociationS3GetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="autoExportPolicy")
-    private final @Nullable Input<DataRepositoryAssociationS3AutoExportPolicyGetArgs> autoExportPolicy;
+      private final @Nullable Input<DataRepositoryAssociationS3AutoExportPolicyGetArgs> autoExportPolicy;
 
     public Input<DataRepositoryAssociationS3AutoExportPolicyGetArgs> getAutoExportPolicy() {
         return this.autoExportPolicy == null ? Input.empty() : this.autoExportPolicy;
@@ -31,7 +31,7 @@ public final class DataRepositoryAssociationS3GetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="autoImportPolicy")
-    private final @Nullable Input<DataRepositoryAssociationS3AutoImportPolicyGetArgs> autoImportPolicy;
+      private final @Nullable Input<DataRepositoryAssociationS3AutoImportPolicyGetArgs> autoImportPolicy;
 
     public Input<DataRepositoryAssociationS3AutoImportPolicyGetArgs> getAutoImportPolicy() {
         return this.autoImportPolicy == null ? Input.empty() : this.autoImportPolicy;

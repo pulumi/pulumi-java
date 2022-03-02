@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecGrpcRouteActionTargetVirtualServiceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class GatewayRouteSpecGrpcRouteActionTargetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="virtualService", required=true)
-    private final Input<GatewayRouteSpecGrpcRouteActionTargetVirtualServiceArgs> virtualService;
+      private final Input<GatewayRouteSpecGrpcRouteActionTargetVirtualServiceArgs> virtualService;
 
     public Input<GatewayRouteSpecGrpcRouteActionTargetVirtualServiceArgs> getVirtualService() {
         return this.virtualService;

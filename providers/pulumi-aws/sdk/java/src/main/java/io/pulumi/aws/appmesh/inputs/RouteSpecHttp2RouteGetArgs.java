@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteMatchGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteRetryPolicyGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteTimeoutGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class RouteSpecHttp2RouteGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<RouteSpecHttp2RouteActionGetArgs> action;
+      private final Input<RouteSpecHttp2RouteActionGetArgs> action;
 
     public Input<RouteSpecHttp2RouteActionGetArgs> getAction() {
         return this.action;
@@ -33,7 +33,7 @@ public final class RouteSpecHttp2RouteGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="match", required=true)
-    private final Input<RouteSpecHttp2RouteMatchGetArgs> match;
+      private final Input<RouteSpecHttp2RouteMatchGetArgs> match;
 
     public Input<RouteSpecHttp2RouteMatchGetArgs> getMatch() {
         return this.match;
@@ -44,7 +44,7 @@ public final class RouteSpecHttp2RouteGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="retryPolicy")
-    private final @Nullable Input<RouteSpecHttp2RouteRetryPolicyGetArgs> retryPolicy;
+      private final @Nullable Input<RouteSpecHttp2RouteRetryPolicyGetArgs> retryPolicy;
 
     public Input<RouteSpecHttp2RouteRetryPolicyGetArgs> getRetryPolicy() {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
@@ -55,7 +55,7 @@ public final class RouteSpecHttp2RouteGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<RouteSpecHttp2RouteTimeoutGetArgs> timeout;
+      private final @Nullable Input<RouteSpecHttp2RouteTimeoutGetArgs> timeout;
 
     public Input<RouteSpecHttp2RouteTimeoutGetArgs> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;

@@ -11,7 +11,7 @@ import io.pulumi.aws.route53.inputs.RecordLatencyRoutingPolicyArgs;
 import io.pulumi.aws.route53.inputs.RecordWeightedRoutingPolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aliases")
-    private final @Nullable Input<List<RecordAliasArgs>> aliases;
+      private final @Nullable Input<List<RecordAliasArgs>> aliases;
 
     public Input<List<RecordAliasArgs>> getAliases() {
         return this.aliases == null ? Input.empty() : this.aliases;
@@ -41,7 +41,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowOverwrite")
-    private final @Nullable Input<Boolean> allowOverwrite;
+      private final @Nullable Input<Boolean> allowOverwrite;
 
     public Input<Boolean> getAllowOverwrite() {
         return this.allowOverwrite == null ? Input.empty() : this.allowOverwrite;
@@ -52,7 +52,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failoverRoutingPolicies")
-    private final @Nullable Input<List<RecordFailoverRoutingPolicyArgs>> failoverRoutingPolicies;
+      private final @Nullable Input<List<RecordFailoverRoutingPolicyArgs>> failoverRoutingPolicies;
 
     public Input<List<RecordFailoverRoutingPolicyArgs>> getFailoverRoutingPolicies() {
         return this.failoverRoutingPolicies == null ? Input.empty() : this.failoverRoutingPolicies;
@@ -63,7 +63,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="geolocationRoutingPolicies")
-    private final @Nullable Input<List<RecordGeolocationRoutingPolicyArgs>> geolocationRoutingPolicies;
+      private final @Nullable Input<List<RecordGeolocationRoutingPolicyArgs>> geolocationRoutingPolicies;
 
     public Input<List<RecordGeolocationRoutingPolicyArgs>> getGeolocationRoutingPolicies() {
         return this.geolocationRoutingPolicies == null ? Input.empty() : this.geolocationRoutingPolicies;
@@ -74,7 +74,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckId")
-    private final @Nullable Input<String> healthCheckId;
+      private final @Nullable Input<String> healthCheckId;
 
     public Input<String> getHealthCheckId() {
         return this.healthCheckId == null ? Input.empty() : this.healthCheckId;
@@ -85,7 +85,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latencyRoutingPolicies")
-    private final @Nullable Input<List<RecordLatencyRoutingPolicyArgs>> latencyRoutingPolicies;
+      private final @Nullable Input<List<RecordLatencyRoutingPolicyArgs>> latencyRoutingPolicies;
 
     public Input<List<RecordLatencyRoutingPolicyArgs>> getLatencyRoutingPolicies() {
         return this.latencyRoutingPolicies == null ? Input.empty() : this.latencyRoutingPolicies;
@@ -96,7 +96,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multivalueAnswerRoutingPolicy")
-    private final @Nullable Input<Boolean> multivalueAnswerRoutingPolicy;
+      private final @Nullable Input<Boolean> multivalueAnswerRoutingPolicy;
 
     public Input<Boolean> getMultivalueAnswerRoutingPolicy() {
         return this.multivalueAnswerRoutingPolicy == null ? Input.empty() : this.multivalueAnswerRoutingPolicy;
@@ -107,7 +107,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -118,7 +118,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="records")
-    private final @Nullable Input<List<String>> records;
+      private final @Nullable Input<List<String>> records;
 
     public Input<List<String>> getRecords() {
         return this.records == null ? Input.empty() : this.records;
@@ -129,7 +129,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="setIdentifier")
-    private final @Nullable Input<String> setIdentifier;
+      private final @Nullable Input<String> setIdentifier;
 
     public Input<String> getSetIdentifier() {
         return this.setIdentifier == null ? Input.empty() : this.setIdentifier;
@@ -140,7 +140,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<Integer> ttl;
+      private final @Nullable Input<Integer> ttl;
 
     public Input<Integer> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -151,7 +151,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,RecordType>> type;
+      private final Input<Either<String,RecordType>> type;
 
     public Input<Either<String,RecordType>> getType() {
         return this.type;
@@ -162,7 +162,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weightedRoutingPolicies")
-    private final @Nullable Input<List<RecordWeightedRoutingPolicyArgs>> weightedRoutingPolicies;
+      private final @Nullable Input<List<RecordWeightedRoutingPolicyArgs>> weightedRoutingPolicies;
 
     public Input<List<RecordWeightedRoutingPolicyArgs>> getWeightedRoutingPolicies() {
         return this.weightedRoutingPolicies == null ? Input.empty() : this.weightedRoutingPolicies;
@@ -173,7 +173,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneId", required=true)
-    private final Input<String> zoneId;
+      private final Input<String> zoneId;
 
     public Input<String> getZoneId() {
         return this.zoneId;

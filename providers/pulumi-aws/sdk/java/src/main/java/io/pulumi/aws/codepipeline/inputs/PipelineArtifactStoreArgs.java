@@ -5,7 +5,7 @@ package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreEncryptionKeyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="encryptionKey")
-    private final @Nullable Input<PipelineArtifactStoreEncryptionKeyArgs> encryptionKey;
+      private final @Nullable Input<PipelineArtifactStoreEncryptionKeyArgs> encryptionKey;
 
     public Input<PipelineArtifactStoreEncryptionKeyArgs> getEncryptionKey() {
         return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
@@ -31,7 +31,7 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -42,7 +42,7 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+      private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -53,7 +53,7 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

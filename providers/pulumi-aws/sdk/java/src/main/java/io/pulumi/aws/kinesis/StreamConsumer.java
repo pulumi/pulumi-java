@@ -8,8 +8,8 @@ import io.pulumi.aws.kinesis.StreamConsumerArgs;
 import io.pulumi.aws.kinesis.inputs.StreamConsumerState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -92,6 +92,21 @@ public class StreamConsumer extends io.pulumi.resources.CustomResource {
         return this.streamArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public StreamConsumer(String name) {
+        this(name, StreamConsumerArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public StreamConsumer(String name, StreamConsumerArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

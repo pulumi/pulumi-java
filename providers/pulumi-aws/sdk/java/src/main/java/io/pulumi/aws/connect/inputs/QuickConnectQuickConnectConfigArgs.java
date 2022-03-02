@@ -7,7 +7,7 @@ import io.pulumi.aws.connect.inputs.QuickConnectQuickConnectConfigPhoneConfigArg
 import io.pulumi.aws.connect.inputs.QuickConnectQuickConnectConfigQueueConfigArgs;
 import io.pulumi.aws.connect.inputs.QuickConnectQuickConnectConfigUserConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class QuickConnectQuickConnectConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="phoneConfigs")
-    private final @Nullable Input<List<QuickConnectQuickConnectConfigPhoneConfigArgs>> phoneConfigs;
+      private final @Nullable Input<List<QuickConnectQuickConnectConfigPhoneConfigArgs>> phoneConfigs;
 
     public Input<List<QuickConnectQuickConnectConfigPhoneConfigArgs>> getPhoneConfigs() {
         return this.phoneConfigs == null ? Input.empty() : this.phoneConfigs;
@@ -34,7 +34,7 @@ public final class QuickConnectQuickConnectConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="queueConfigs")
-    private final @Nullable Input<List<QuickConnectQuickConnectConfigQueueConfigArgs>> queueConfigs;
+      private final @Nullable Input<List<QuickConnectQuickConnectConfigQueueConfigArgs>> queueConfigs;
 
     public Input<List<QuickConnectQuickConnectConfigQueueConfigArgs>> getQueueConfigs() {
         return this.queueConfigs == null ? Input.empty() : this.queueConfigs;
@@ -45,7 +45,7 @@ public final class QuickConnectQuickConnectConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="quickConnectType", required=true)
-    private final Input<String> quickConnectType;
+      private final Input<String> quickConnectType;
 
     public Input<String> getQuickConnectType() {
         return this.quickConnectType;
@@ -56,7 +56,7 @@ public final class QuickConnectQuickConnectConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="userConfigs")
-    private final @Nullable Input<List<QuickConnectQuickConnectConfigUserConfigArgs>> userConfigs;
+      private final @Nullable Input<List<QuickConnectQuickConnectConfigUserConfigArgs>> userConfigs;
 
     public Input<List<QuickConnectQuickConnectConfigUserConfigArgs>> getUserConfigs() {
         return this.userConfigs == null ? Input.empty() : this.userConfigs;

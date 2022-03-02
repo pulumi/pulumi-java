@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType", required=true)
-    private final Input<String> contentType;
+      private final Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType;
@@ -30,7 +30,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -52,7 +52,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi", required=true)
-    private final Input<String> restApi;
+      private final Input<String> restApi;
 
     public Input<String> getRestApi() {
         return this.restApi;
@@ -63,7 +63,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<String> schema;
+      private final @Nullable Input<String> schema;
 
     public Input<String> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;

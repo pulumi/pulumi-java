@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="invitationId")
-    private final @Nullable Input<String> invitationId;
+      private final @Nullable Input<String> invitationId;
 
     public Input<String> getInvitationId() {
         return this.invitationId == null ? Input.empty() : this.invitationId;
@@ -30,7 +30,7 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="masterId")
-    private final @Nullable Input<String> masterId;
+      private final @Nullable Input<String> masterId;
 
     public Input<String> getMasterId() {
         return this.masterId == null ? Input.empty() : this.masterId;

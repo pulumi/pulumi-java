@@ -6,7 +6,7 @@ package io.pulumi.aws.fsx.inputs;
 import io.pulumi.aws.fsx.inputs.OntapFileSystemEndpointInterclusterArgs;
 import io.pulumi.aws.fsx.inputs.OntapFileSystemEndpointManagementArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class OntapFileSystemEndpointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="interclusters")
-    private final @Nullable Input<List<OntapFileSystemEndpointInterclusterArgs>> interclusters;
+      private final @Nullable Input<List<OntapFileSystemEndpointInterclusterArgs>> interclusters;
 
     public Input<List<OntapFileSystemEndpointInterclusterArgs>> getInterclusters() {
         return this.interclusters == null ? Input.empty() : this.interclusters;
@@ -32,7 +32,7 @@ public final class OntapFileSystemEndpointArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="managements")
-    private final @Nullable Input<List<OntapFileSystemEndpointManagementArgs>> managements;
+      private final @Nullable Input<List<OntapFileSystemEndpointManagementArgs>> managements;
 
     public Input<List<OntapFileSystemEndpointManagementArgs>> getManagements() {
         return this.managements == null ? Input.empty() : this.managements;

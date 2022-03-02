@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.aws.fsx.inputs.OpenZfsVolumeNfsExportsClientConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class OpenZfsVolumeNfsExportsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientConfigurations", required=true)
-    private final Input<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations;
+      private final Input<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> clientConfigurations;
 
     public Input<List<OpenZfsVolumeNfsExportsClientConfigurationArgs>> getClientConfigurations() {
         return this.clientConfigurations;

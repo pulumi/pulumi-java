@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketServerSideEncryptionConfigurationRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class BucketServerSideEncryptionConfigurationArgs extends io.pulumi
      * 
      */
     @InputImport(name="rule", required=true)
-    private final Input<BucketServerSideEncryptionConfigurationRuleArgs> rule;
+      private final Input<BucketServerSideEncryptionConfigurationRuleArgs> rule;
 
     public Input<BucketServerSideEncryptionConfigurationRuleArgs> getRule() {
         return this.rule;

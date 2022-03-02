@@ -9,7 +9,7 @@ import io.pulumi.aws.appsync.inputs.DataSourceHttpConfigGetArgs;
 import io.pulumi.aws.appsync.inputs.DataSourceLambdaConfigGetArgs;
 import io.pulumi.aws.appsync.inputs.DataSourceRelationalDatabaseConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiId")
-    private final @Nullable Input<String> apiId;
+      private final @Nullable Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId == null ? Input.empty() : this.apiId;
@@ -35,7 +35,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -46,7 +46,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -57,7 +57,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dynamodbConfig")
-    private final @Nullable Input<DataSourceDynamodbConfigGetArgs> dynamodbConfig;
+      private final @Nullable Input<DataSourceDynamodbConfigGetArgs> dynamodbConfig;
 
     public Input<DataSourceDynamodbConfigGetArgs> getDynamodbConfig() {
         return this.dynamodbConfig == null ? Input.empty() : this.dynamodbConfig;
@@ -68,7 +68,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elasticsearchConfig")
-    private final @Nullable Input<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig;
+      private final @Nullable Input<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig;
 
     public Input<DataSourceElasticsearchConfigGetArgs> getElasticsearchConfig() {
         return this.elasticsearchConfig == null ? Input.empty() : this.elasticsearchConfig;
@@ -79,7 +79,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpConfig")
-    private final @Nullable Input<DataSourceHttpConfigGetArgs> httpConfig;
+      private final @Nullable Input<DataSourceHttpConfigGetArgs> httpConfig;
 
     public Input<DataSourceHttpConfigGetArgs> getHttpConfig() {
         return this.httpConfig == null ? Input.empty() : this.httpConfig;
@@ -90,7 +90,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lambdaConfig")
-    private final @Nullable Input<DataSourceLambdaConfigGetArgs> lambdaConfig;
+      private final @Nullable Input<DataSourceLambdaConfigGetArgs> lambdaConfig;
 
     public Input<DataSourceLambdaConfigGetArgs> getLambdaConfig() {
         return this.lambdaConfig == null ? Input.empty() : this.lambdaConfig;
@@ -101,7 +101,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -112,7 +112,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationalDatabaseConfig")
-    private final @Nullable Input<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig;
+      private final @Nullable Input<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig;
 
     public Input<DataSourceRelationalDatabaseConfigGetArgs> getRelationalDatabaseConfig() {
         return this.relationalDatabaseConfig == null ? Input.empty() : this.relationalDatabaseConfig;
@@ -123,7 +123,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRoleArn")
-    private final @Nullable Input<String> serviceRoleArn;
+      private final @Nullable Input<String> serviceRoleArn;
 
     public Input<String> getServiceRoleArn() {
         return this.serviceRoleArn == null ? Input.empty() : this.serviceRoleArn;
@@ -134,7 +134,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;

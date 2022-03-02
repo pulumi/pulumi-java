@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticbeanstalk.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,28 +20,28 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="namespace", required=true)
-    private final Input<String> namespace;
+      private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;
     }
 
     @InputImport(name="resource")
-    private final @Nullable Input<String> resource;
+      private final @Nullable Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

@@ -6,7 +6,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 import io.pulumi.aws.apigatewayv2.inputs.DomainNameDomainNameConfigurationGetArgs;
 import io.pulumi.aws.apigatewayv2.inputs.DomainNameMutualTlsAuthenticationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiMappingSelectionExpression")
-    private final @Nullable Input<String> apiMappingSelectionExpression;
+      private final @Nullable Input<String> apiMappingSelectionExpression;
 
     public Input<String> getApiMappingSelectionExpression() {
         return this.apiMappingSelectionExpression == null ? Input.empty() : this.apiMappingSelectionExpression;
@@ -33,7 +33,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -44,7 +44,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -55,7 +55,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainNameConfiguration")
-    private final @Nullable Input<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration;
+      private final @Nullable Input<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration;
 
     public Input<DomainNameDomainNameConfigurationGetArgs> getDomainNameConfiguration() {
         return this.domainNameConfiguration == null ? Input.empty() : this.domainNameConfiguration;
@@ -66,7 +66,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mutualTlsAuthentication")
-    private final @Nullable Input<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
+      private final @Nullable Input<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
 
     public Input<DomainNameMutualTlsAuthenticationGetArgs> getMutualTlsAuthentication() {
         return this.mutualTlsAuthentication == null ? Input.empty() : this.mutualTlsAuthentication;
@@ -77,7 +77,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -88,7 +88,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

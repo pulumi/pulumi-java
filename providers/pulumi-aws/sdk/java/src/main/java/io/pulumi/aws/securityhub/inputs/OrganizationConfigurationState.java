@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="autoEnable")
-    private final @Nullable Input<Boolean> autoEnable;
+      private final @Nullable Input<Boolean> autoEnable;
 
     public Input<Boolean> getAutoEnable() {
         return this.autoEnable == null ? Input.empty() : this.autoEnable;

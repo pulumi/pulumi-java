@@ -4,7 +4,7 @@
 package io.pulumi.aws.timestreamwrite.outputs;
 
 import io.pulumi.aws.timestreamwrite.outputs.TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

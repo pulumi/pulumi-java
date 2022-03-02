@@ -6,7 +6,7 @@ package io.pulumi.aws.kms;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.kms.inputs.GetSecretArgs;
 import io.pulumi.aws.kms.outputs.GetSecretResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

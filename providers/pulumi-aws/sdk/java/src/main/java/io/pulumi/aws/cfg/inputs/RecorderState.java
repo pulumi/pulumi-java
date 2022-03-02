@@ -5,7 +5,7 @@ package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.aws.cfg.inputs.RecorderRecordingGroupGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recordingGroup")
-    private final @Nullable Input<RecorderRecordingGroupGetArgs> recordingGroup;
+      private final @Nullable Input<RecorderRecordingGroupGetArgs> recordingGroup;
 
     public Input<RecorderRecordingGroupGetArgs> getRecordingGroup() {
         return this.recordingGroup == null ? Input.empty() : this.recordingGroup;
@@ -42,7 +42,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;

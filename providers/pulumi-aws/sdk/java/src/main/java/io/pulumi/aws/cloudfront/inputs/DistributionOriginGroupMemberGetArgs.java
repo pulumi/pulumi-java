@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DistributionOriginGroupMemberGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="originId", required=true)
-    private final Input<String> originId;
+      private final Input<String> originId;
 
     public Input<String> getOriginId() {
         return this.originId;

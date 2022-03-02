@@ -7,7 +7,7 @@ import io.pulumi.aws.msk.inputs.ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs;
 import io.pulumi.aws.msk.inputs.ClusterLoggingInfoBrokerLogsFirehoseArgs;
 import io.pulumi.aws.msk.inputs.ClusterLoggingInfoBrokerLogsS3Args;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,21 +17,21 @@ public final class ClusterLoggingInfoBrokerLogsArgs extends io.pulumi.resources.
     public static final ClusterLoggingInfoBrokerLogsArgs Empty = new ClusterLoggingInfoBrokerLogsArgs();
 
     @InputImport(name="cloudwatchLogs")
-    private final @Nullable Input<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> cloudwatchLogs;
+      private final @Nullable Input<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> cloudwatchLogs;
 
     public Input<ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs> getCloudwatchLogs() {
         return this.cloudwatchLogs == null ? Input.empty() : this.cloudwatchLogs;
     }
 
     @InputImport(name="firehose")
-    private final @Nullable Input<ClusterLoggingInfoBrokerLogsFirehoseArgs> firehose;
+      private final @Nullable Input<ClusterLoggingInfoBrokerLogsFirehoseArgs> firehose;
 
     public Input<ClusterLoggingInfoBrokerLogsFirehoseArgs> getFirehose() {
         return this.firehose == null ? Input.empty() : this.firehose;
     }
 
     @InputImport(name="s3")
-    private final @Nullable Input<ClusterLoggingInfoBrokerLogsS3Args> s3;
+      private final @Nullable Input<ClusterLoggingInfoBrokerLogsS3Args> s3;
 
     public Input<ClusterLoggingInfoBrokerLogsS3Args> getS3() {
         return this.s3 == null ? Input.empty() : this.s3;

@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettingsArgs extends
      * 
      */
     @InputImport(name="defaultResourceSpec")
-    private final @Nullable Input<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
+      private final @Nullable Input<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
 
     public Input<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs> getDefaultResourceSpec() {
         return this.defaultResourceSpec == null ? Input.empty() : this.defaultResourceSpec;
@@ -32,7 +32,7 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettingsArgs extends
      * 
      */
     @InputImport(name="lifecycleConfigArns")
-    private final @Nullable Input<List<String>> lifecycleConfigArns;
+      private final @Nullable Input<List<String>> lifecycleConfigArns;
 
     public Input<List<String>> getLifecycleConfigArns() {
         return this.lifecycleConfigArns == null ? Input.empty() : this.lifecycleConfigArns;

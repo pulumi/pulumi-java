@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DataSourceSslPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="disableSsl", required=true)
-    private final Input<Boolean> disableSsl;
+      private final Input<Boolean> disableSsl;
 
     public Input<Boolean> getDisableSsl() {
         return this.disableSsl;

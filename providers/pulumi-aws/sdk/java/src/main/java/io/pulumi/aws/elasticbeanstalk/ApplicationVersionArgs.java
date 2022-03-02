@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticbeanstalk;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="application", required=true)
-    private final Input<String> application;
+      private final Input<String> application;
 
     public Input<String> getApplication() {
         return this.application;
@@ -32,7 +32,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+      private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -43,7 +43,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -54,7 +54,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="forceDelete")
-    private final @Nullable Input<Boolean> forceDelete;
+      private final @Nullable Input<Boolean> forceDelete;
 
     public Input<Boolean> getForceDelete() {
         return this.forceDelete == null ? Input.empty() : this.forceDelete;
@@ -65,7 +65,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -76,7 +76,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -87,7 +87,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

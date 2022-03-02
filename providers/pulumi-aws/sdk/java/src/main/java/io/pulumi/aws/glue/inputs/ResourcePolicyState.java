@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
     public static final ResourcePolicyState Empty = new ResourcePolicyState();
 
     @InputImport(name="enableHybrid")
-    private final @Nullable Input<String> enableHybrid;
+      private final @Nullable Input<String> enableHybrid;
 
     public Input<String> getEnableHybrid() {
         return this.enableHybrid == null ? Input.empty() : this.enableHybrid;
@@ -26,7 +26,7 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+      private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;

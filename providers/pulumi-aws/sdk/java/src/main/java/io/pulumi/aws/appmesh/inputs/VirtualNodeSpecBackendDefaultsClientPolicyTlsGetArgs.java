@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsGetArgs extends 
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateGetArgs> certificate;
+      private final @Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateGetArgs> certificate;
 
     public Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateGetArgs> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsGetArgs extends 
      * 
      */
     @InputImport(name="enforce")
-    private final @Nullable Input<Boolean> enforce;
+      private final @Nullable Input<Boolean> enforce;
 
     public Input<Boolean> getEnforce() {
         return this.enforce == null ? Input.empty() : this.enforce;
@@ -45,7 +45,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsGetArgs extends 
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<Integer>> ports;
+      private final @Nullable Input<List<Integer>> ports;
 
     public Input<List<Integer>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -56,7 +56,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsGetArgs extends 
      * 
      */
     @InputImport(name="validation", required=true)
-    private final Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs> validation;
+      private final Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs> validation;
 
     public Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationGetArgs> getValidation() {
         return this.validation;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetDelegatedAdministratorsArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="servicePrincipal")
-    private final @Nullable String servicePrincipal;
+      private final @Nullable String servicePrincipal;
 
     public Optional<String> getServicePrincipal() {
         return this.servicePrincipal == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipal);

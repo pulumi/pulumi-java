@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FleetDomainJoinInfoGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="directoryName")
-    private final @Nullable Input<String> directoryName;
+      private final @Nullable Input<String> directoryName;
 
     public Input<String> getDirectoryName() {
         return this.directoryName == null ? Input.empty() : this.directoryName;
@@ -30,7 +30,7 @@ public final class FleetDomainJoinInfoGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="organizationalUnitDistinguishedName")
-    private final @Nullable Input<String> organizationalUnitDistinguishedName;
+      private final @Nullable Input<String> organizationalUnitDistinguishedName;
 
     public Input<String> getOrganizationalUnitDistinguishedName() {
         return this.organizationalUnitDistinguishedName == null ? Input.empty() : this.organizationalUnitDistinguishedName;

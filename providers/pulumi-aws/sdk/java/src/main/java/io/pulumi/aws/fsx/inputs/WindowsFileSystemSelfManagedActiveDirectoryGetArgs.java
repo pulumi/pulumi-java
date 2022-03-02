@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
      * 
      */
     @InputImport(name="dnsIps", required=true)
-    private final Input<List<String>> dnsIps;
+      private final Input<List<String>> dnsIps;
 
     public Input<List<String>> getDnsIps() {
         return this.dnsIps;
@@ -31,7 +31,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -42,7 +42,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
      * 
      */
     @InputImport(name="fileSystemAdministratorsGroup")
-    private final @Nullable Input<String> fileSystemAdministratorsGroup;
+      private final @Nullable Input<String> fileSystemAdministratorsGroup;
 
     public Input<String> getFileSystemAdministratorsGroup() {
         return this.fileSystemAdministratorsGroup == null ? Input.empty() : this.fileSystemAdministratorsGroup;
@@ -53,7 +53,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
      * 
      */
     @InputImport(name="organizationalUnitDistinguishedName")
-    private final @Nullable Input<String> organizationalUnitDistinguishedName;
+      private final @Nullable Input<String> organizationalUnitDistinguishedName;
 
     public Input<String> getOrganizationalUnitDistinguishedName() {
         return this.organizationalUnitDistinguishedName == null ? Input.empty() : this.organizationalUnitDistinguishedName;
@@ -64,7 +64,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+      private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -75,7 +75,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+      private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;

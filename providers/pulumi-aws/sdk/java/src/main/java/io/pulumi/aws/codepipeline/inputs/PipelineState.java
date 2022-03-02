@@ -6,7 +6,7 @@ package io.pulumi.aws.codepipeline.inputs;
 import io.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreGetArgs;
 import io.pulumi.aws.codepipeline.inputs.PipelineStageGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -34,7 +34,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactStore")
-    private final @Nullable Input<PipelineArtifactStoreGetArgs> artifactStore;
+      private final @Nullable Input<PipelineArtifactStoreGetArgs> artifactStore;
 
     public Input<PipelineArtifactStoreGetArgs> getArtifactStore() {
         return this.artifactStore == null ? Input.empty() : this.artifactStore;
@@ -45,7 +45,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+      private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -67,7 +67,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stages")
-    private final @Nullable Input<List<PipelineStageGetArgs>> stages;
+      private final @Nullable Input<List<PipelineStageGetArgs>> stages;
 
     public Input<List<PipelineStageGetArgs>> getStages() {
         return this.stages == null ? Input.empty() : this.stages;
@@ -78,7 +78,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -89,7 +89,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

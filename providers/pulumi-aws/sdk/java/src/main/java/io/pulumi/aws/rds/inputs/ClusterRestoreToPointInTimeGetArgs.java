@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="restoreToTime")
-    private final @Nullable Input<String> restoreToTime;
+      private final @Nullable Input<String> restoreToTime;
 
     public Input<String> getRestoreToTime() {
         return this.restoreToTime == null ? Input.empty() : this.restoreToTime;
@@ -32,7 +32,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="restoreType")
-    private final @Nullable Input<String> restoreType;
+      private final @Nullable Input<String> restoreType;
 
     public Input<String> getRestoreType() {
         return this.restoreType == null ? Input.empty() : this.restoreType;
@@ -43,7 +43,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sourceClusterIdentifier", required=true)
-    private final Input<String> sourceClusterIdentifier;
+      private final Input<String> sourceClusterIdentifier;
 
     public Input<String> getSourceClusterIdentifier() {
         return this.sourceClusterIdentifier;
@@ -54,7 +54,7 @@ public final class ClusterRestoreToPointInTimeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="useLatestRestorableTime")
-    private final @Nullable Input<Boolean> useLatestRestorableTime;
+      private final @Nullable Input<Boolean> useLatestRestorableTime;
 
     public Input<Boolean> getUseLatestRestorableTime() {
         return this.useLatestRestorableTime == null ? Input.empty() : this.useLatestRestorableTime;

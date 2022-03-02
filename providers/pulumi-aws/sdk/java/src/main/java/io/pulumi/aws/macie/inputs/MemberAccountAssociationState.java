@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MemberAccountAssociationState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="memberAccountId")
-    private final @Nullable Input<String> memberAccountId;
+      private final @Nullable Input<String> memberAccountId;
 
     public Input<String> getMemberAccountId() {
         return this.memberAccountId == null ? Input.empty() : this.memberAccountId;

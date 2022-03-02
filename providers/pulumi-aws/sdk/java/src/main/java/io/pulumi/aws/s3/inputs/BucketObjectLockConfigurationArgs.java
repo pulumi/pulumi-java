@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketObjectLockConfigurationRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="objectLockEnabled", required=true)
-    private final Input<String> objectLockEnabled;
+      private final Input<String> objectLockEnabled;
 
     public Input<String> getObjectLockEnabled() {
         return this.objectLockEnabled;
@@ -31,7 +31,7 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="rule")
-    private final @Nullable Input<BucketObjectLockConfigurationRuleArgs> rule;
+      private final @Nullable Input<BucketObjectLockConfigurationRuleArgs> rule;
 
     public Input<BucketObjectLockConfigurationRuleArgs> getRule() {
         return this.rule == null ? Input.empty() : this.rule;

@@ -8,8 +8,8 @@ import io.pulumi.aws.cloudwatch.LogSubscriptionFilterArgs;
 import io.pulumi.aws.cloudwatch.inputs.LogSubscriptionFilterState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -114,6 +114,21 @@ public class LogSubscriptionFilter extends io.pulumi.resources.CustomResource {
         return this.roleArn;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public LogSubscriptionFilter(String name) {
+        this(name, LogSubscriptionFilterArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public LogSubscriptionFilter(String name, LogSubscriptionFilterArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

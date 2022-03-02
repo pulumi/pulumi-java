@@ -5,7 +5,7 @@ package io.pulumi.aws.autoscalingplans.inputs;
 
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanApplicationSourceTagFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ScalingPlanApplicationSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="cloudformationStackArn")
-    private final @Nullable Input<String> cloudformationStackArn;
+      private final @Nullable Input<String> cloudformationStackArn;
 
     public Input<String> getCloudformationStackArn() {
         return this.cloudformationStackArn == null ? Input.empty() : this.cloudformationStackArn;
@@ -32,7 +32,7 @@ public final class ScalingPlanApplicationSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tagFilters")
-    private final @Nullable Input<List<ScalingPlanApplicationSourceTagFilterArgs>> tagFilters;
+      private final @Nullable Input<List<ScalingPlanApplicationSourceTagFilterArgs>> tagFilters;
 
     public Input<List<ScalingPlanApplicationSourceTagFilterArgs>> getTagFilters() {
         return this.tagFilters == null ? Input.empty() : this.tagFilters;

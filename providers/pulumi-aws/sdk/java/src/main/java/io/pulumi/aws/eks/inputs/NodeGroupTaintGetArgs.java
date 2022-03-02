@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class NodeGroupTaintGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="effect", required=true)
-    private final Input<String> effect;
+      private final Input<String> effect;
 
     public Input<String> getEffect() {
         return this.effect;
@@ -30,7 +30,7 @@ public final class NodeGroupTaintGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+      private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -41,7 +41,7 @@ public final class NodeGroupTaintGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;

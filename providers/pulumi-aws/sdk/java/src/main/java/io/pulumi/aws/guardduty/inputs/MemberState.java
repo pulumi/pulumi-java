@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable Input<String> accountId;
+      private final @Nullable Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId == null ? Input.empty() : this.accountId;
@@ -31,7 +31,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detectorId")
-    private final @Nullable Input<String> detectorId;
+      private final @Nullable Input<String> detectorId;
 
     public Input<String> getDetectorId() {
         return this.detectorId == null ? Input.empty() : this.detectorId;
@@ -42,7 +42,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableEmailNotification")
-    private final @Nullable Input<Boolean> disableEmailNotification;
+      private final @Nullable Input<Boolean> disableEmailNotification;
 
     public Input<Boolean> getDisableEmailNotification() {
         return this.disableEmailNotification == null ? Input.empty() : this.disableEmailNotification;
@@ -53,7 +53,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -64,7 +64,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invitationMessage")
-    private final @Nullable Input<String> invitationMessage;
+      private final @Nullable Input<String> invitationMessage;
 
     public Input<String> getInvitationMessage() {
         return this.invitationMessage == null ? Input.empty() : this.invitationMessage;
@@ -75,7 +75,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invite")
-    private final @Nullable Input<Boolean> invite;
+      private final @Nullable Input<Boolean> invite;
 
     public Input<Boolean> getInvite() {
         return this.invite == null ? Input.empty() : this.invite;
@@ -86,7 +86,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationshipStatus")
-    private final @Nullable Input<String> relationshipStatus;
+      private final @Nullable Input<String> relationshipStatus;
 
     public Input<String> getRelationshipStatus() {
         return this.relationshipStatus == null ? Input.empty() : this.relationshipStatus;

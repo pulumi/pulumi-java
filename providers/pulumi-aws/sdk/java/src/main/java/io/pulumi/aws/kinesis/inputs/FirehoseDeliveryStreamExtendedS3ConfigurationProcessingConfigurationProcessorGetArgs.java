@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
+      private final @Nullable Input<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
 
     public Input<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterGetArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -32,7 +32,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;

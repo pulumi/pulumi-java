@@ -4,7 +4,7 @@
 package io.pulumi.aws.amp.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-    private final @Nullable Input<String> alias;
+      private final @Nullable Input<String> alias;
 
     public Input<String> getAlias() {
         return this.alias == null ? Input.empty() : this.alias;
@@ -30,7 +30,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -41,7 +41,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prometheusEndpoint")
-    private final @Nullable Input<String> prometheusEndpoint;
+      private final @Nullable Input<String> prometheusEndpoint;
 
     public Input<String> getPrometheusEndpoint() {
         return this.prometheusEndpoint == null ? Input.empty() : this.prometheusEndpoint;

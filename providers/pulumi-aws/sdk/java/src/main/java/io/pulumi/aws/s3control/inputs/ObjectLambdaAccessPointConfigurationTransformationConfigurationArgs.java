@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * 
      */
     @InputImport(name="actions", required=true)
-    private final Input<List<String>> actions;
+      private final Input<List<String>> actions;
 
     public Input<List<String>> getActions() {
         return this.actions;
@@ -31,7 +31,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * 
      */
     @InputImport(name="contentTransformation", required=true)
-    private final Input<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs> contentTransformation;
+      private final Input<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs> contentTransformation;
 
     public Input<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs> getContentTransformation() {
         return this.contentTransformation;

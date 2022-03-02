@@ -4,7 +4,7 @@
 package io.pulumi.aws.lb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="authenticationRequestExtraParams")
-    private final @Nullable Input<Map<String,String>> authenticationRequestExtraParams;
+      private final @Nullable Input<Map<String,String>> authenticationRequestExtraParams;
 
     public Input<Map<String,String>> getAuthenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Input.empty() : this.authenticationRequestExtraParams;
@@ -32,7 +32,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="authorizationEndpoint", required=true)
-    private final Input<String> authorizationEndpoint;
+      private final Input<String> authorizationEndpoint;
 
     public Input<String> getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
@@ -43,7 +43,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final Input<String> clientId;
+      private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
@@ -54,7 +54,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="clientSecret", required=true)
-    private final Input<String> clientSecret;
+      private final Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret;
@@ -65,7 +65,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="issuer", required=true)
-    private final Input<String> issuer;
+      private final Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer;
@@ -76,7 +76,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="onUnauthenticatedRequest")
-    private final @Nullable Input<String> onUnauthenticatedRequest;
+      private final @Nullable Input<String> onUnauthenticatedRequest;
 
     public Input<String> getOnUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest == null ? Input.empty() : this.onUnauthenticatedRequest;
@@ -87,7 +87,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+      private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -98,7 +98,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="sessionCookieName")
-    private final @Nullable Input<String> sessionCookieName;
+      private final @Nullable Input<String> sessionCookieName;
 
     public Input<String> getSessionCookieName() {
         return this.sessionCookieName == null ? Input.empty() : this.sessionCookieName;
@@ -109,7 +109,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="sessionTimeout")
-    private final @Nullable Input<Integer> sessionTimeout;
+      private final @Nullable Input<Integer> sessionTimeout;
 
     public Input<Integer> getSessionTimeout() {
         return this.sessionTimeout == null ? Input.empty() : this.sessionTimeout;
@@ -120,7 +120,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tokenEndpoint", required=true)
-    private final Input<String> tokenEndpoint;
+      private final Input<String> tokenEndpoint;
 
     public Input<String> getTokenEndpoint() {
         return this.tokenEndpoint;
@@ -131,7 +131,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="userInfoEndpoint", required=true)
-    private final Input<String> userInfoEndpoint;
+      private final Input<String> userInfoEndpoint;
 
     public Input<String> getUserInfoEndpoint() {
         return this.userInfoEndpoint;

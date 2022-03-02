@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="certificate", required=true)
-    private final Input<String> certificate;
+      private final Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate;
@@ -30,7 +30,7 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="chain")
-    private final @Nullable Input<String> chain;
+      private final @Nullable Input<String> chain;
 
     public Input<String> getChain() {
         return this.chain == null ? Input.empty() : this.chain;
@@ -41,7 +41,7 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="privateKey", required=true)
-    private final Input<String> privateKey;
+      private final Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey;

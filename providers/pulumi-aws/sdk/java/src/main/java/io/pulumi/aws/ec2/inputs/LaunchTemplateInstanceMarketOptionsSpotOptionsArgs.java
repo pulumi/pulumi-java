@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
      * 
      */
     @InputImport(name="blockDurationMinutes")
-    private final @Nullable Input<Integer> blockDurationMinutes;
+      private final @Nullable Input<Integer> blockDurationMinutes;
 
     public Input<Integer> getBlockDurationMinutes() {
         return this.blockDurationMinutes == null ? Input.empty() : this.blockDurationMinutes;
@@ -32,7 +32,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
      * 
      */
     @InputImport(name="instanceInterruptionBehavior")
-    private final @Nullable Input<String> instanceInterruptionBehavior;
+      private final @Nullable Input<String> instanceInterruptionBehavior;
 
     public Input<String> getInstanceInterruptionBehavior() {
         return this.instanceInterruptionBehavior == null ? Input.empty() : this.instanceInterruptionBehavior;
@@ -43,7 +43,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
      * 
      */
     @InputImport(name="maxPrice")
-    private final @Nullable Input<String> maxPrice;
+      private final @Nullable Input<String> maxPrice;
 
     public Input<String> getMaxPrice() {
         return this.maxPrice == null ? Input.empty() : this.maxPrice;
@@ -54,7 +54,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
      * 
      */
     @InputImport(name="spotInstanceType")
-    private final @Nullable Input<String> spotInstanceType;
+      private final @Nullable Input<String> spotInstanceType;
 
     public Input<String> getSpotInstanceType() {
         return this.spotInstanceType == null ? Input.empty() : this.spotInstanceType;
@@ -65,7 +65,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
      * 
      */
     @InputImport(name="validUntil")
-    private final @Nullable Input<String> validUntil;
+      private final @Nullable Input<String> validUntil;
 
     public Input<String> getValidUntil() {
         return this.validUntil == null ? Input.empty() : this.validUntil;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ApiCorsConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowCredentials")
-    private final @Nullable Input<Boolean> allowCredentials;
+      private final @Nullable Input<Boolean> allowCredentials;
 
     public Input<Boolean> getAllowCredentials() {
         return this.allowCredentials == null ? Input.empty() : this.allowCredentials;
@@ -33,7 +33,7 @@ public final class ApiCorsConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowHeaders")
-    private final @Nullable Input<List<String>> allowHeaders;
+      private final @Nullable Input<List<String>> allowHeaders;
 
     public Input<List<String>> getAllowHeaders() {
         return this.allowHeaders == null ? Input.empty() : this.allowHeaders;
@@ -44,7 +44,7 @@ public final class ApiCorsConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowMethods")
-    private final @Nullable Input<List<String>> allowMethods;
+      private final @Nullable Input<List<String>> allowMethods;
 
     public Input<List<String>> getAllowMethods() {
         return this.allowMethods == null ? Input.empty() : this.allowMethods;
@@ -55,7 +55,7 @@ public final class ApiCorsConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="allowOrigins")
-    private final @Nullable Input<List<String>> allowOrigins;
+      private final @Nullable Input<List<String>> allowOrigins;
 
     public Input<List<String>> getAllowOrigins() {
         return this.allowOrigins == null ? Input.empty() : this.allowOrigins;
@@ -66,7 +66,7 @@ public final class ApiCorsConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="exposeHeaders")
-    private final @Nullable Input<List<String>> exposeHeaders;
+      private final @Nullable Input<List<String>> exposeHeaders;
 
     public Input<List<String>> getExposeHeaders() {
         return this.exposeHeaders == null ? Input.empty() : this.exposeHeaders;
@@ -77,7 +77,7 @@ public final class ApiCorsConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxAge")
-    private final @Nullable Input<Integer> maxAge;
+      private final @Nullable Input<Integer> maxAge;
 
     public Input<Integer> getMaxAge() {
         return this.maxAge == null ? Input.empty() : this.maxAge;

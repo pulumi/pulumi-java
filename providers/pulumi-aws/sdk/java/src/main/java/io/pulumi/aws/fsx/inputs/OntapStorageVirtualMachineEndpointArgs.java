@@ -8,7 +8,7 @@ import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointManagementArgs
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointNfArgs;
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointSmbArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OntapStorageVirtualMachineEndpointArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="iscses")
-    private final @Nullable Input<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses;
+      private final @Nullable Input<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses;
 
     public Input<List<OntapStorageVirtualMachineEndpointIscseArgs>> getIscses() {
         return this.iscses == null ? Input.empty() : this.iscses;
@@ -34,7 +34,7 @@ public final class OntapStorageVirtualMachineEndpointArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="managements")
-    private final @Nullable Input<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements;
+      private final @Nullable Input<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements;
 
     public Input<List<OntapStorageVirtualMachineEndpointManagementArgs>> getManagements() {
         return this.managements == null ? Input.empty() : this.managements;
@@ -45,7 +45,7 @@ public final class OntapStorageVirtualMachineEndpointArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="nfs")
-    private final @Nullable Input<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs;
+      private final @Nullable Input<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs;
 
     public Input<List<OntapStorageVirtualMachineEndpointNfArgs>> getNfs() {
         return this.nfs == null ? Input.empty() : this.nfs;
@@ -56,7 +56,7 @@ public final class OntapStorageVirtualMachineEndpointArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="smbs")
-    private final @Nullable Input<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs;
+      private final @Nullable Input<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs;
 
     public Input<List<OntapStorageVirtualMachineEndpointSmbArgs>> getSmbs() {
         return this.smbs == null ? Input.empty() : this.smbs;

@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesisanalyticsv2;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationCloudwatchLoggingOptionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationConfiguration")
-    private final @Nullable Input<ApplicationApplicationConfigurationArgs> applicationConfiguration;
+      private final @Nullable Input<ApplicationApplicationConfigurationArgs> applicationConfiguration;
 
     public Input<ApplicationApplicationConfigurationArgs> getApplicationConfiguration() {
         return this.applicationConfiguration == null ? Input.empty() : this.applicationConfiguration;
@@ -34,7 +34,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudwatchLoggingOptions")
-    private final @Nullable Input<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
+      private final @Nullable Input<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
     public Input<ApplicationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
         return this.cloudwatchLoggingOptions == null ? Input.empty() : this.cloudwatchLoggingOptions;
@@ -45,7 +45,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -56,7 +56,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceStop")
-    private final @Nullable Input<Boolean> forceStop;
+      private final @Nullable Input<Boolean> forceStop;
 
     public Input<Boolean> getForceStop() {
         return this.forceStop == null ? Input.empty() : this.forceStop;
@@ -67,7 +67,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeEnvironment", required=true)
-    private final Input<String> runtimeEnvironment;
+      private final Input<String> runtimeEnvironment;
 
     public Input<String> getRuntimeEnvironment() {
         return this.runtimeEnvironment;
@@ -89,7 +89,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceExecutionRole", required=true)
-    private final Input<String> serviceExecutionRole;
+      private final Input<String> serviceExecutionRole;
 
     public Input<String> getServiceExecutionRole() {
         return this.serviceExecutionRole;
@@ -100,7 +100,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startApplication")
-    private final @Nullable Input<Boolean> startApplication;
+      private final @Nullable Input<Boolean> startApplication;
 
     public Input<Boolean> getStartApplication() {
         return this.startApplication == null ? Input.empty() : this.startApplication;
@@ -111,7 +111,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

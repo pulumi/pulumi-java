@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs exten
      * 
      */
     @InputImport(name="keyword", required=true)
-    private final Input<String> keyword;
+      private final Input<String> keyword;
 
     public Input<String> getKeyword() {
         return this.keyword;
@@ -32,7 +32,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs exten
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<List<String>> settings;
+      private final @Nullable Input<List<String>> settings;
 
     public Input<List<String>> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;

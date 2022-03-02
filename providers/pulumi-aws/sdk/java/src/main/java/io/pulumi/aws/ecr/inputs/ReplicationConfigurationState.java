@@ -5,7 +5,7 @@ package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ReplicationConfigurationState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="registryId")
-    private final @Nullable Input<String> registryId;
+      private final @Nullable Input<String> registryId;
 
     public Input<String> getRegistryId() {
         return this.registryId == null ? Input.empty() : this.registryId;
@@ -31,7 +31,7 @@ public final class ReplicationConfigurationState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="replicationConfiguration")
-    private final @Nullable Input<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration;
+      private final @Nullable Input<ReplicationConfigurationReplicationConfigurationGetArgs> replicationConfiguration;
 
     public Input<ReplicationConfigurationReplicationConfigurationGetArgs> getReplicationConfiguration() {
         return this.replicationConfiguration == null ? Input.empty() : this.replicationConfiguration;

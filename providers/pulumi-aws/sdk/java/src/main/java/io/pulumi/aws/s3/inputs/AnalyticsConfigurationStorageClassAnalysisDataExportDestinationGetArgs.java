@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      * 
      */
     @InputImport(name="s3BucketDestination", required=true)
-    private final Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> s3BucketDestination;
+      private final Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> s3BucketDestination;
 
     public Input<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationGetArgs> getS3BucketDestination() {
         return this.s3BucketDestination;

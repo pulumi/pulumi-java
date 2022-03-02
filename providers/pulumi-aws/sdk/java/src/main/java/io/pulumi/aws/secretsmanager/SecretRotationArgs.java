@@ -5,7 +5,7 @@ package io.pulumi.aws.secretsmanager;
 
 import io.pulumi.aws.secretsmanager.inputs.SecretRotationRotationRulesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotationLambdaArn", required=true)
-    private final Input<String> rotationLambdaArn;
+      private final Input<String> rotationLambdaArn;
 
     public Input<String> getRotationLambdaArn() {
         return this.rotationLambdaArn;
@@ -32,7 +32,7 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotationRules", required=true)
-    private final Input<SecretRotationRotationRulesArgs> rotationRules;
+      private final Input<SecretRotationRotationRulesArgs> rotationRules;
 
     public Input<SecretRotationRotationRulesArgs> getRotationRules() {
         return this.rotationRules;
@@ -43,14 +43,14 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretId", required=true)
-    private final Input<String> secretId;
+      private final Input<String> secretId;
 
     public Input<String> getSecretId() {
         return this.secretId;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

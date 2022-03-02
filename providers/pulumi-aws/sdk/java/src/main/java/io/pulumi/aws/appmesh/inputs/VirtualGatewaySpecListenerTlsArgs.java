@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsCertificateArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class VirtualGatewaySpecListenerTlsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="certificate", required=true)
-    private final Input<VirtualGatewaySpecListenerTlsCertificateArgs> certificate;
+      private final Input<VirtualGatewaySpecListenerTlsCertificateArgs> certificate;
 
     public Input<VirtualGatewaySpecListenerTlsCertificateArgs> getCertificate() {
         return this.certificate;
@@ -32,7 +32,7 @@ public final class VirtualGatewaySpecListenerTlsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="mode", required=true)
-    private final Input<String> mode;
+      private final Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode;
@@ -43,7 +43,7 @@ public final class VirtualGatewaySpecListenerTlsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="validation")
-    private final @Nullable Input<VirtualGatewaySpecListenerTlsValidationArgs> validation;
+      private final @Nullable Input<VirtualGatewaySpecListenerTlsValidationArgs> validation;
 
     public Input<VirtualGatewaySpecListenerTlsValidationArgs> getValidation() {
         return this.validation == null ? Input.empty() : this.validation;

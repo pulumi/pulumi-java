@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudhsmv2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hsmType", required=true)
-    private final Input<String> hsmType;
+      private final Input<String> hsmType;
 
     public Input<String> getHsmType() {
         return this.hsmType;
@@ -32,7 +32,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceBackupIdentifier")
-    private final @Nullable Input<String> sourceBackupIdentifier;
+      private final @Nullable Input<String> sourceBackupIdentifier;
 
     public Input<String> getSourceBackupIdentifier() {
         return this.sourceBackupIdentifier == null ? Input.empty() : this.sourceBackupIdentifier;
@@ -43,7 +43,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final Input<List<String>> subnetIds;
+      private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
@@ -54,7 +54,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

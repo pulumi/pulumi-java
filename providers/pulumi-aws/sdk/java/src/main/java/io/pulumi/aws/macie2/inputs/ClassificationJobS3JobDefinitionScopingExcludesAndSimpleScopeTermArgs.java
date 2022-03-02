@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
      * 
      */
     @InputImport(name="comparator")
-    private final @Nullable Input<String> comparator;
+      private final @Nullable Input<String> comparator;
 
     public Input<String> getComparator() {
         return this.comparator == null ? Input.empty() : this.comparator;
@@ -31,7 +31,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -42,7 +42,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<List<String>> values;
+      private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;

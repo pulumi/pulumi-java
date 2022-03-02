@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class EventSourceMappingDestinationConfigOnFailureArgs extends io.p
      * 
      */
     @InputImport(name="destinationArn", required=true)
-    private final Input<String> destinationArn;
+      private final Input<String> destinationArn;
 
     public Input<String> getDestinationArn() {
         return this.destinationArn;

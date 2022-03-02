@@ -5,7 +5,7 @@ package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.aws.appconfig.inputs.ConfigurationProfileValidatorGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+      private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
@@ -33,7 +33,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -44,7 +44,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="configurationProfileId")
-    private final @Nullable Input<String> configurationProfileId;
+      private final @Nullable Input<String> configurationProfileId;
 
     public Input<String> getConfigurationProfileId() {
         return this.configurationProfileId == null ? Input.empty() : this.configurationProfileId;
@@ -55,7 +55,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -66,7 +66,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="locationUri")
-    private final @Nullable Input<String> locationUri;
+      private final @Nullable Input<String> locationUri;
 
     public Input<String> getLocationUri() {
         return this.locationUri == null ? Input.empty() : this.locationUri;
@@ -77,7 +77,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,7 +88,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="retrievalRoleArn")
-    private final @Nullable Input<String> retrievalRoleArn;
+      private final @Nullable Input<String> retrievalRoleArn;
 
     public Input<String> getRetrievalRoleArn() {
         return this.retrievalRoleArn == null ? Input.empty() : this.retrievalRoleArn;
@@ -99,7 +99,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -110,7 +110,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -121,7 +121,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validators")
-    private final @Nullable Input<List<ConfigurationProfileValidatorGetArgs>> validators;
+      private final @Nullable Input<List<ConfigurationProfileValidatorGetArgs>> validators;
 
     public Input<List<ConfigurationProfileValidatorGetArgs>> getValidators() {
         return this.validators == null ? Input.empty() : this.validators;

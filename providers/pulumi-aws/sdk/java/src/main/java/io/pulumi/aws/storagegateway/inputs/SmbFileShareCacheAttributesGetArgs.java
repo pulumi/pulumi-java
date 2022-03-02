@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class SmbFileShareCacheAttributesGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="cacheStaleTimeoutInSeconds")
-    private final @Nullable Input<Integer> cacheStaleTimeoutInSeconds;
+      private final @Nullable Input<Integer> cacheStaleTimeoutInSeconds;
 
     public Input<Integer> getCacheStaleTimeoutInSeconds() {
         return this.cacheStaleTimeoutInSeconds == null ? Input.empty() : this.cacheStaleTimeoutInSeconds;

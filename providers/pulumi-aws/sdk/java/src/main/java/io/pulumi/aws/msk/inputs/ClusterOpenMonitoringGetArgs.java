@@ -5,7 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.aws.msk.inputs.ClusterOpenMonitoringPrometheusGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class ClusterOpenMonitoringGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="prometheus", required=true)
-    private final Input<ClusterOpenMonitoringPrometheusGetArgs> prometheus;
+      private final Input<ClusterOpenMonitoringPrometheusGetArgs> prometheus;
 
     public Input<ClusterOpenMonitoringPrometheusGetArgs> getPrometheus() {
         return this.prometheus;

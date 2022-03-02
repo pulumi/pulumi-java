@@ -4,7 +4,7 @@
 package io.pulumi.aws.neptune;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="applyImmediately")
-    private final @Nullable Input<Boolean> applyImmediately;
+      private final @Nullable Input<Boolean> applyImmediately;
 
     public Input<Boolean> getApplyImmediately() {
         return this.applyImmediately == null ? Input.empty() : this.applyImmediately;
@@ -34,7 +34,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="autoMinorVersionUpgrade")
-    private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
+      private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
 
     public Input<Boolean> getAutoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade == null ? Input.empty() : this.autoMinorVersionUpgrade;
@@ -45,7 +45,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
@@ -56,7 +56,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterIdentifier", required=true)
-    private final Input<String> clusterIdentifier;
+      private final Input<String> clusterIdentifier;
 
     public Input<String> getClusterIdentifier() {
         return this.clusterIdentifier;
@@ -67,7 +67,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="engine")
-    private final @Nullable Input<String> engine;
+      private final @Nullable Input<String> engine;
 
     public Input<String> getEngine() {
         return this.engine == null ? Input.empty() : this.engine;
@@ -78,7 +78,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="engineVersion")
-    private final @Nullable Input<String> engineVersion;
+      private final @Nullable Input<String> engineVersion;
 
     public Input<String> getEngineVersion() {
         return this.engineVersion == null ? Input.empty() : this.engineVersion;
@@ -89,7 +89,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identifier")
-    private final @Nullable Input<String> identifier;
+      private final @Nullable Input<String> identifier;
 
     public Input<String> getIdentifier() {
         return this.identifier == null ? Input.empty() : this.identifier;
@@ -100,7 +100,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identifierPrefix")
-    private final @Nullable Input<String> identifierPrefix;
+      private final @Nullable Input<String> identifierPrefix;
 
     public Input<String> getIdentifierPrefix() {
         return this.identifierPrefix == null ? Input.empty() : this.identifierPrefix;
@@ -111,7 +111,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instanceClass", required=true)
-    private final Input<String> instanceClass;
+      private final Input<String> instanceClass;
 
     public Input<String> getInstanceClass() {
         return this.instanceClass;
@@ -122,7 +122,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="neptuneParameterGroupName")
-    private final @Nullable Input<String> neptuneParameterGroupName;
+      private final @Nullable Input<String> neptuneParameterGroupName;
 
     public Input<String> getNeptuneParameterGroupName() {
         return this.neptuneParameterGroupName == null ? Input.empty() : this.neptuneParameterGroupName;
@@ -133,7 +133,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="neptuneSubnetGroupName")
-    private final @Nullable Input<String> neptuneSubnetGroupName;
+      private final @Nullable Input<String> neptuneSubnetGroupName;
 
     public Input<String> getNeptuneSubnetGroupName() {
         return this.neptuneSubnetGroupName == null ? Input.empty() : this.neptuneSubnetGroupName;
@@ -144,7 +144,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -155,7 +155,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="preferredBackupWindow")
-    private final @Nullable Input<String> preferredBackupWindow;
+      private final @Nullable Input<String> preferredBackupWindow;
 
     public Input<String> getPreferredBackupWindow() {
         return this.preferredBackupWindow == null ? Input.empty() : this.preferredBackupWindow;
@@ -167,7 +167,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="preferredMaintenanceWindow")
-    private final @Nullable Input<String> preferredMaintenanceWindow;
+      private final @Nullable Input<String> preferredMaintenanceWindow;
 
     public Input<String> getPreferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow == null ? Input.empty() : this.preferredMaintenanceWindow;
@@ -178,7 +178,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="promotionTier")
-    private final @Nullable Input<Integer> promotionTier;
+      private final @Nullable Input<Integer> promotionTier;
 
     public Input<Integer> getPromotionTier() {
         return this.promotionTier == null ? Input.empty() : this.promotionTier;
@@ -189,7 +189,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publiclyAccessible")
-    private final @Nullable Input<Boolean> publiclyAccessible;
+      private final @Nullable Input<Boolean> publiclyAccessible;
 
     public Input<Boolean> getPubliclyAccessible() {
         return this.publiclyAccessible == null ? Input.empty() : this.publiclyAccessible;
@@ -200,7 +200,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

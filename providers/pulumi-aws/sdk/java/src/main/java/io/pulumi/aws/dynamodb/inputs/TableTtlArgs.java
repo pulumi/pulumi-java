@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TableTtlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributeName", required=true)
-    private final Input<String> attributeName;
+      private final Input<String> attributeName;
 
     public Input<String> getAttributeName() {
         return this.attributeName;
@@ -31,7 +31,7 @@ public final class TableTtlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;

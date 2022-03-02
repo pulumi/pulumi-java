@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="policyId")
-    private final @Nullable Input<String> policyId;
+      private final @Nullable Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId == null ? Input.empty() : this.policyId;
@@ -30,7 +30,7 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="targetId")
-    private final @Nullable Input<String> targetId;
+      private final @Nullable Input<String> targetId;
 
     public Input<String> getTargetId() {
         return this.targetId == null ? Input.empty() : this.targetId;

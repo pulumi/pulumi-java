@@ -4,7 +4,7 @@
 package io.pulumi.aws.chime;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VoiceConnectorLoggingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enableSipLogs")
-    private final @Nullable Input<Boolean> enableSipLogs;
+      private final @Nullable Input<Boolean> enableSipLogs;
 
     public Input<Boolean> getEnableSipLogs() {
         return this.enableSipLogs == null ? Input.empty() : this.enableSipLogs;
@@ -31,7 +31,7 @@ public final class VoiceConnectorLoggingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="voiceConnectorId", required=true)
-    private final Input<String> voiceConnectorId;
+      private final Input<String> voiceConnectorId;
 
     public Input<String> getVoiceConnectorId() {
         return this.voiceConnectorId;

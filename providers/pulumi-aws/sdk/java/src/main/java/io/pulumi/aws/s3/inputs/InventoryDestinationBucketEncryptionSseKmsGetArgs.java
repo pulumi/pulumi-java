@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class InventoryDestinationBucketEncryptionSseKmsGetArgs extends io.
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final Input<String> keyId;
+      private final Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
      * 
      */
     @InputImport(name="classic")
-    private final @Nullable Input<Boolean> classic;
+      private final @Nullable Input<Boolean> classic;
 
     public Input<Boolean> getClassic() {
         return this.classic == null ? Input.empty() : this.classic;
@@ -32,7 +32,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
      * 
      */
     @InputImport(name="clusterIdentifier", required=true)
-    private final Input<String> clusterIdentifier;
+      private final Input<String> clusterIdentifier;
 
     public Input<String> getClusterIdentifier() {
         return this.clusterIdentifier;
@@ -43,7 +43,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
      * 
      */
     @InputImport(name="clusterType")
-    private final @Nullable Input<String> clusterType;
+      private final @Nullable Input<String> clusterType;
 
     public Input<String> getClusterType() {
         return this.clusterType == null ? Input.empty() : this.clusterType;
@@ -54,7 +54,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
      * 
      */
     @InputImport(name="nodeType")
-    private final @Nullable Input<String> nodeType;
+      private final @Nullable Input<String> nodeType;
 
     public Input<String> getNodeType() {
         return this.nodeType == null ? Input.empty() : this.nodeType;
@@ -65,7 +65,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
      * 
      */
     @InputImport(name="numberOfNodes")
-    private final @Nullable Input<Integer> numberOfNodes;
+      private final @Nullable Input<Integer> numberOfNodes;
 
     public Input<Integer> getNumberOfNodes() {
         return this.numberOfNodes == null ? Input.empty() : this.numberOfNodes;

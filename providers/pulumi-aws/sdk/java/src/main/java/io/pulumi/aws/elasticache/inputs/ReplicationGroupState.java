@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticache.inputs;
 
 import io.pulumi.aws.elasticache.inputs.ReplicationGroupClusterModeGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="applyImmediately")
-    private final @Nullable Input<Boolean> applyImmediately;
+      private final @Nullable Input<Boolean> applyImmediately;
 
     public Input<Boolean> getApplyImmediately() {
         return this.applyImmediately == null ? Input.empty() : this.applyImmediately;
@@ -35,7 +35,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+      private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -46,7 +46,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="atRestEncryptionEnabled")
-    private final @Nullable Input<Boolean> atRestEncryptionEnabled;
+      private final @Nullable Input<Boolean> atRestEncryptionEnabled;
 
     public Input<Boolean> getAtRestEncryptionEnabled() {
         return this.atRestEncryptionEnabled == null ? Input.empty() : this.atRestEncryptionEnabled;
@@ -57,7 +57,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="authToken")
-    private final @Nullable Input<String> authToken;
+      private final @Nullable Input<String> authToken;
 
     public Input<String> getAuthToken() {
         return this.authToken == null ? Input.empty() : this.authToken;
@@ -68,7 +68,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="autoMinorVersionUpgrade")
-    private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
+      private final @Nullable Input<Boolean> autoMinorVersionUpgrade;
 
     public Input<Boolean> getAutoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade == null ? Input.empty() : this.autoMinorVersionUpgrade;
@@ -79,7 +79,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="automaticFailoverEnabled")
-    private final @Nullable Input<Boolean> automaticFailoverEnabled;
+      private final @Nullable Input<Boolean> automaticFailoverEnabled;
 
     public Input<Boolean> getAutomaticFailoverEnabled() {
         return this.automaticFailoverEnabled == null ? Input.empty() : this.automaticFailoverEnabled;
@@ -90,7 +90,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="availabilityZones")
-    private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Input<List<String>> availabilityZones;
 
     public Input<List<String>> getAvailabilityZones() {
         return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
@@ -101,7 +101,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterEnabled")
-    private final @Nullable Input<Boolean> clusterEnabled;
+      private final @Nullable Input<Boolean> clusterEnabled;
 
     public Input<Boolean> getClusterEnabled() {
         return this.clusterEnabled == null ? Input.empty() : this.clusterEnabled;
@@ -112,7 +112,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterMode")
-    private final @Nullable Input<ReplicationGroupClusterModeGetArgs> clusterMode;
+      private final @Nullable Input<ReplicationGroupClusterModeGetArgs> clusterMode;
 
     public Input<ReplicationGroupClusterModeGetArgs> getClusterMode() {
         return this.clusterMode == null ? Input.empty() : this.clusterMode;
@@ -123,7 +123,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="configurationEndpointAddress")
-    private final @Nullable Input<String> configurationEndpointAddress;
+      private final @Nullable Input<String> configurationEndpointAddress;
 
     public Input<String> getConfigurationEndpointAddress() {
         return this.configurationEndpointAddress == null ? Input.empty() : this.configurationEndpointAddress;
@@ -134,7 +134,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataTieringEnabled")
-    private final @Nullable Input<Boolean> dataTieringEnabled;
+      private final @Nullable Input<Boolean> dataTieringEnabled;
 
     public Input<Boolean> getDataTieringEnabled() {
         return this.dataTieringEnabled == null ? Input.empty() : this.dataTieringEnabled;
@@ -145,7 +145,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="engine")
-    private final @Nullable Input<String> engine;
+      private final @Nullable Input<String> engine;
 
     public Input<String> getEngine() {
         return this.engine == null ? Input.empty() : this.engine;
@@ -156,7 +156,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="engineVersion")
-    private final @Nullable Input<String> engineVersion;
+      private final @Nullable Input<String> engineVersion;
 
     public Input<String> getEngineVersion() {
         return this.engineVersion == null ? Input.empty() : this.engineVersion;
@@ -167,7 +167,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="engineVersionActual")
-    private final @Nullable Input<String> engineVersionActual;
+      private final @Nullable Input<String> engineVersionActual;
 
     public Input<String> getEngineVersionActual() {
         return this.engineVersionActual == null ? Input.empty() : this.engineVersionActual;
@@ -178,7 +178,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="finalSnapshotIdentifier")
-    private final @Nullable Input<String> finalSnapshotIdentifier;
+      private final @Nullable Input<String> finalSnapshotIdentifier;
 
     public Input<String> getFinalSnapshotIdentifier() {
         return this.finalSnapshotIdentifier == null ? Input.empty() : this.finalSnapshotIdentifier;
@@ -189,7 +189,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="globalReplicationGroupId")
-    private final @Nullable Input<String> globalReplicationGroupId;
+      private final @Nullable Input<String> globalReplicationGroupId;
 
     public Input<String> getGlobalReplicationGroupId() {
         return this.globalReplicationGroupId == null ? Input.empty() : this.globalReplicationGroupId;
@@ -200,7 +200,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -211,7 +211,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maintenanceWindow")
-    private final @Nullable Input<String> maintenanceWindow;
+      private final @Nullable Input<String> maintenanceWindow;
 
     public Input<String> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
@@ -222,7 +222,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="memberClusters")
-    private final @Nullable Input<List<String>> memberClusters;
+      private final @Nullable Input<List<String>> memberClusters;
 
     public Input<List<String>> getMemberClusters() {
         return this.memberClusters == null ? Input.empty() : this.memberClusters;
@@ -233,7 +233,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="multiAzEnabled")
-    private final @Nullable Input<Boolean> multiAzEnabled;
+      private final @Nullable Input<Boolean> multiAzEnabled;
 
     public Input<Boolean> getMultiAzEnabled() {
         return this.multiAzEnabled == null ? Input.empty() : this.multiAzEnabled;
@@ -244,7 +244,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nodeType")
-    private final @Nullable Input<String> nodeType;
+      private final @Nullable Input<String> nodeType;
 
     public Input<String> getNodeType() {
         return this.nodeType == null ? Input.empty() : this.nodeType;
@@ -255,7 +255,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="notificationTopicArn")
-    private final @Nullable Input<String> notificationTopicArn;
+      private final @Nullable Input<String> notificationTopicArn;
 
     public Input<String> getNotificationTopicArn() {
         return this.notificationTopicArn == null ? Input.empty() : this.notificationTopicArn;
@@ -266,7 +266,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="numberCacheClusters")
-    private final @Nullable Input<Integer> numberCacheClusters;
+      private final @Nullable Input<Integer> numberCacheClusters;
 
     public Input<Integer> getNumberCacheClusters() {
         return this.numberCacheClusters == null ? Input.empty() : this.numberCacheClusters;
@@ -277,7 +277,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameterGroupName")
-    private final @Nullable Input<String> parameterGroupName;
+      private final @Nullable Input<String> parameterGroupName;
 
     public Input<String> getParameterGroupName() {
         return this.parameterGroupName == null ? Input.empty() : this.parameterGroupName;
@@ -288,7 +288,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+      private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -299,7 +299,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="primaryEndpointAddress")
-    private final @Nullable Input<String> primaryEndpointAddress;
+      private final @Nullable Input<String> primaryEndpointAddress;
 
     public Input<String> getPrimaryEndpointAddress() {
         return this.primaryEndpointAddress == null ? Input.empty() : this.primaryEndpointAddress;
@@ -310,7 +310,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="readerEndpointAddress")
-    private final @Nullable Input<String> readerEndpointAddress;
+      private final @Nullable Input<String> readerEndpointAddress;
 
     public Input<String> getReaderEndpointAddress() {
         return this.readerEndpointAddress == null ? Input.empty() : this.readerEndpointAddress;
@@ -321,7 +321,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replicationGroupDescription")
-    private final @Nullable Input<String> replicationGroupDescription;
+      private final @Nullable Input<String> replicationGroupDescription;
 
     public Input<String> getReplicationGroupDescription() {
         return this.replicationGroupDescription == null ? Input.empty() : this.replicationGroupDescription;
@@ -332,7 +332,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replicationGroupId")
-    private final @Nullable Input<String> replicationGroupId;
+      private final @Nullable Input<String> replicationGroupId;
 
     public Input<String> getReplicationGroupId() {
         return this.replicationGroupId == null ? Input.empty() : this.replicationGroupId;
@@ -343,7 +343,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+      private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
@@ -354,7 +354,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityGroupNames")
-    private final @Nullable Input<List<String>> securityGroupNames;
+      private final @Nullable Input<List<String>> securityGroupNames;
 
     public Input<List<String>> getSecurityGroupNames() {
         return this.securityGroupNames == null ? Input.empty() : this.securityGroupNames;
@@ -365,7 +365,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snapshotArns")
-    private final @Nullable Input<List<String>> snapshotArns;
+      private final @Nullable Input<List<String>> snapshotArns;
 
     public Input<List<String>> getSnapshotArns() {
         return this.snapshotArns == null ? Input.empty() : this.snapshotArns;
@@ -376,7 +376,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snapshotName")
-    private final @Nullable Input<String> snapshotName;
+      private final @Nullable Input<String> snapshotName;
 
     public Input<String> getSnapshotName() {
         return this.snapshotName == null ? Input.empty() : this.snapshotName;
@@ -387,7 +387,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snapshotRetentionLimit")
-    private final @Nullable Input<Integer> snapshotRetentionLimit;
+      private final @Nullable Input<Integer> snapshotRetentionLimit;
 
     public Input<Integer> getSnapshotRetentionLimit() {
         return this.snapshotRetentionLimit == null ? Input.empty() : this.snapshotRetentionLimit;
@@ -398,7 +398,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="snapshotWindow")
-    private final @Nullable Input<String> snapshotWindow;
+      private final @Nullable Input<String> snapshotWindow;
 
     public Input<String> getSnapshotWindow() {
         return this.snapshotWindow == null ? Input.empty() : this.snapshotWindow;
@@ -409,21 +409,21 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subnetGroupName")
-    private final @Nullable Input<String> subnetGroupName;
+      private final @Nullable Input<String> subnetGroupName;
 
     public Input<String> getSubnetGroupName() {
         return this.subnetGroupName == null ? Input.empty() : this.subnetGroupName;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;
@@ -434,7 +434,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="transitEncryptionEnabled")
-    private final @Nullable Input<Boolean> transitEncryptionEnabled;
+      private final @Nullable Input<Boolean> transitEncryptionEnabled;
 
     public Input<Boolean> getTransitEncryptionEnabled() {
         return this.transitEncryptionEnabled == null ? Input.empty() : this.transitEncryptionEnabled;
@@ -445,7 +445,7 @@ public final class ReplicationGroupState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userGroupIds")
-    private final @Nullable Input<List<String>> userGroupIds;
+      private final @Nullable Input<List<String>> userGroupIds;
 
     public Input<List<String>> getUserGroupIds() {
         return this.userGroupIds == null ? Input.empty() : this.userGroupIds;

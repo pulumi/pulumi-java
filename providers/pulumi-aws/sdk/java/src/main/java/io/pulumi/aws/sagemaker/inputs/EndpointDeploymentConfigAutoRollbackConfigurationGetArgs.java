@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigAutoRollbackConfigurationAlarmGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationGetArgs exte
      * 
      */
     @InputImport(name="alarms")
-    private final @Nullable Input<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmGetArgs>> alarms;
+      private final @Nullable Input<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmGetArgs>> alarms;
 
     public Input<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmGetArgs>> getAlarms() {
         return this.alarms == null ? Input.empty() : this.alarms;

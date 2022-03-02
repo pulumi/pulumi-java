@@ -5,7 +5,7 @@ package io.pulumi.aws.msk.outputs;
 
 import io.pulumi.aws.msk.outputs.ClusterOpenMonitoringPrometheusJmxExporter;
 import io.pulumi.aws.msk.outputs.ClusterOpenMonitoringPrometheusNodeExporter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;

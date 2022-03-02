@@ -10,7 +10,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsProcessingConfigur
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsStartingPositionConfigurationGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -38,7 +38,7 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="kinesisFirehose")
-    private final @Nullable Input<AnalyticsApplicationInputsKinesisFirehoseGetArgs> kinesisFirehose;
+      private final @Nullable Input<AnalyticsApplicationInputsKinesisFirehoseGetArgs> kinesisFirehose;
 
     public Input<AnalyticsApplicationInputsKinesisFirehoseGetArgs> getKinesisFirehose() {
         return this.kinesisFirehose == null ? Input.empty() : this.kinesisFirehose;
@@ -50,7 +50,7 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="kinesisStream")
-    private final @Nullable Input<AnalyticsApplicationInputsKinesisStreamGetArgs> kinesisStream;
+      private final @Nullable Input<AnalyticsApplicationInputsKinesisStreamGetArgs> kinesisStream;
 
     public Input<AnalyticsApplicationInputsKinesisStreamGetArgs> getKinesisStream() {
         return this.kinesisStream == null ? Input.empty() : this.kinesisStream;
@@ -61,7 +61,7 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="namePrefix", required=true)
-    private final Input<String> namePrefix;
+      private final Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix;
@@ -73,7 +73,7 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="parallelism")
-    private final @Nullable Input<AnalyticsApplicationInputsParallelismGetArgs> parallelism;
+      private final @Nullable Input<AnalyticsApplicationInputsParallelismGetArgs> parallelism;
 
     public Input<AnalyticsApplicationInputsParallelismGetArgs> getParallelism() {
         return this.parallelism == null ? Input.empty() : this.parallelism;
@@ -85,7 +85,7 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="processingConfiguration")
-    private final @Nullable Input<AnalyticsApplicationInputsProcessingConfigurationGetArgs> processingConfiguration;
+      private final @Nullable Input<AnalyticsApplicationInputsProcessingConfigurationGetArgs> processingConfiguration;
 
     public Input<AnalyticsApplicationInputsProcessingConfigurationGetArgs> getProcessingConfiguration() {
         return this.processingConfiguration == null ? Input.empty() : this.processingConfiguration;
@@ -96,7 +96,7 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="schema", required=true)
-    private final Input<AnalyticsApplicationInputsSchemaGetArgs> schema;
+      private final Input<AnalyticsApplicationInputsSchemaGetArgs> schema;
 
     public Input<AnalyticsApplicationInputsSchemaGetArgs> getSchema() {
         return this.schema;
@@ -108,14 +108,14 @@ public final class AnalyticsApplicationInputsGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="startingPositionConfigurations")
-    private final @Nullable Input<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> startingPositionConfigurations;
+      private final @Nullable Input<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> startingPositionConfigurations;
 
     public Input<List<AnalyticsApplicationInputsStartingPositionConfigurationGetArgs>> getStartingPositionConfigurations() {
         return this.startingPositionConfigurations == null ? Input.empty() : this.startingPositionConfigurations;
     }
 
     @InputImport(name="streamNames")
-    private final @Nullable Input<List<String>> streamNames;
+      private final @Nullable Input<List<String>> streamNames;
 
     public Input<List<String>> getStreamNames() {
         return this.streamNames == null ? Input.empty() : this.streamNames;

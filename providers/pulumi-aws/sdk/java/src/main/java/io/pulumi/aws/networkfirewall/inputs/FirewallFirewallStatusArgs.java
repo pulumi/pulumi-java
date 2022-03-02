@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallFirewallStatusSyncStateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class FirewallFirewallStatusArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="syncStates")
-    private final @Nullable Input<List<FirewallFirewallStatusSyncStateArgs>> syncStates;
+      private final @Nullable Input<List<FirewallFirewallStatusSyncStateArgs>> syncStates;
 
     public Input<List<FirewallFirewallStatusSyncStateArgs>> getSyncStates() {
         return this.syncStates == null ? Input.empty() : this.syncStates;

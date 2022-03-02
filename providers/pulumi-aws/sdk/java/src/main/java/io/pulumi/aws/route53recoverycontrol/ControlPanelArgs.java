@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoverycontrol;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterArn", required=true)
-    private final Input<String> clusterArn;
+      private final Input<String> clusterArn;
 
     public Input<String> getClusterArn() {
         return this.clusterArn;
@@ -30,7 +30,7 @@ public final class ControlPanelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;

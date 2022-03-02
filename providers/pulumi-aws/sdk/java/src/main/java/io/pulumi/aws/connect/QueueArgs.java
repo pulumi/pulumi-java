@@ -5,7 +5,7 @@ package io.pulumi.aws.connect;
 
 import io.pulumi.aws.connect.inputs.QueueOutboundCallerConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hoursOfOperationId", required=true)
-    private final Input<String> hoursOfOperationId;
+      private final Input<String> hoursOfOperationId;
 
     public Input<String> getHoursOfOperationId() {
         return this.hoursOfOperationId;
@@ -45,7 +45,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -56,7 +56,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxContacts")
-    private final @Nullable Input<Integer> maxContacts;
+      private final @Nullable Input<Integer> maxContacts;
 
     public Input<Integer> getMaxContacts() {
         return this.maxContacts == null ? Input.empty() : this.maxContacts;
@@ -67,7 +67,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outboundCallerConfig")
-    private final @Nullable Input<QueueOutboundCallerConfigArgs> outboundCallerConfig;
+      private final @Nullable Input<QueueOutboundCallerConfigArgs> outboundCallerConfig;
 
     public Input<QueueOutboundCallerConfigArgs> getOutboundCallerConfig() {
         return this.outboundCallerConfig == null ? Input.empty() : this.outboundCallerConfig;
@@ -89,7 +89,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quickConnectIds")
-    private final @Nullable Input<List<String>> quickConnectIds;
+      private final @Nullable Input<List<String>> quickConnectIds;
 
     public Input<List<String>> getQuickConnectIds() {
         return this.quickConnectIds == null ? Input.empty() : this.quickConnectIds;
@@ -100,7 +100,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -111,7 +111,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -122,7 +122,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

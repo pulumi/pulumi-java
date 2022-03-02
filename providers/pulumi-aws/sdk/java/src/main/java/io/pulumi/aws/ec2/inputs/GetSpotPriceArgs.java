@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetSpotPriceFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetSpotPriceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-    private final @Nullable String availabilityZone;
+      private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
@@ -32,7 +32,7 @@ public final class GetSpotPriceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetSpotPriceFilter> filters;
+      private final @Nullable List<GetSpotPriceFilter> filters;
 
     public List<GetSpotPriceFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -43,7 +43,7 @@ public final class GetSpotPriceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable String instanceType;
+      private final @Nullable String instanceType;
 
     public Optional<String> getInstanceType() {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);

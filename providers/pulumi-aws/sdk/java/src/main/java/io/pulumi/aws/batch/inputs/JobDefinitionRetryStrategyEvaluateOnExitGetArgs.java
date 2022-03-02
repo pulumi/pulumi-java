@@ -4,7 +4,7 @@
 package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitGetArgs extends io.pu
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<String> action;
+      private final Input<String> action;
 
     public Input<String> getAction() {
         return this.action;
@@ -30,7 +30,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitGetArgs extends io.pu
      * 
      */
     @InputImport(name="onExitCode")
-    private final @Nullable Input<String> onExitCode;
+      private final @Nullable Input<String> onExitCode;
 
     public Input<String> getOnExitCode() {
         return this.onExitCode == null ? Input.empty() : this.onExitCode;
@@ -41,7 +41,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitGetArgs extends io.pu
      * 
      */
     @InputImport(name="onReason")
-    private final @Nullable Input<String> onReason;
+      private final @Nullable Input<String> onReason;
 
     public Input<String> getOnReason() {
         return this.onReason == null ? Input.empty() : this.onReason;
@@ -52,7 +52,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitGetArgs extends io.pu
      * 
      */
     @InputImport(name="onStatusReason")
-    private final @Nullable Input<String> onStatusReason;
+      private final @Nullable Input<String> onStatusReason;
 
     public Input<String> getOnStatusReason() {
         return this.onStatusReason == null ? Input.empty() : this.onStatusReason;

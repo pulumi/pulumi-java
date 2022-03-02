@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetParametersByPathArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -31,7 +31,7 @@ public final class GetParametersByPathArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="recursive")
-    private final @Nullable Boolean recursive;
+      private final @Nullable Boolean recursive;
 
     public Optional<Boolean> getRecursive() {
         return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
@@ -42,7 +42,7 @@ public final class GetParametersByPathArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="withDecryption")
-    private final @Nullable Boolean withDecryption;
+      private final @Nullable Boolean withDecryption;
 
     public Optional<Boolean> getWithDecryption() {
         return this.withDecryption == null ? Optional.empty() : Optional.ofNullable(this.withDecryption);

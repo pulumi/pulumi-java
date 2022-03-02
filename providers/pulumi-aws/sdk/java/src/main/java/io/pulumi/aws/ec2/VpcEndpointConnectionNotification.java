@@ -8,8 +8,8 @@ import io.pulumi.aws.ec2.VpcEndpointConnectionNotificationArgs;
 import io.pulumi.aws.ec2.inputs.VpcEndpointConnectionNotificationState;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -116,6 +116,21 @@ public class VpcEndpointConnectionNotification extends io.pulumi.resources.Custo
         return this.vpcEndpointServiceId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public VpcEndpointConnectionNotification(String name) {
+        this(name, VpcEndpointConnectionNotificationArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public VpcEndpointConnectionNotification(String name, VpcEndpointConnectionNotificationArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="groupName", required=true)
-    private final String groupName;
+      private final String groupName;
 
     public String getGroupName() {
         return this.groupName;

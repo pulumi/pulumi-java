@@ -7,7 +7,7 @@ import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleDestinationAccessCont
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleDestinationEncryptionConfiguration;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleDestinationMetrics;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleDestinationReplicationTime;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;

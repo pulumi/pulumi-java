@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId", required=true)
-    private final Input<String> appId;
+      private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
@@ -32,7 +32,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendEnvironmentArn")
-    private final @Nullable Input<String> backendEnvironmentArn;
+      private final @Nullable Input<String> backendEnvironmentArn;
 
     public Input<String> getBackendEnvironmentArn() {
         return this.backendEnvironmentArn == null ? Input.empty() : this.backendEnvironmentArn;
@@ -43,7 +43,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basicAuthCredentials")
-    private final @Nullable Input<String> basicAuthCredentials;
+      private final @Nullable Input<String> basicAuthCredentials;
 
     public Input<String> getBasicAuthCredentials() {
         return this.basicAuthCredentials == null ? Input.empty() : this.basicAuthCredentials;
@@ -54,7 +54,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branchName", required=true)
-    private final Input<String> branchName;
+      private final Input<String> branchName;
 
     public Input<String> getBranchName() {
         return this.branchName;
@@ -65,7 +65,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -76,7 +76,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -87,7 +87,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableAutoBuild")
-    private final @Nullable Input<Boolean> enableAutoBuild;
+      private final @Nullable Input<Boolean> enableAutoBuild;
 
     public Input<Boolean> getEnableAutoBuild() {
         return this.enableAutoBuild == null ? Input.empty() : this.enableAutoBuild;
@@ -98,7 +98,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableBasicAuth")
-    private final @Nullable Input<Boolean> enableBasicAuth;
+      private final @Nullable Input<Boolean> enableBasicAuth;
 
     public Input<Boolean> getEnableBasicAuth() {
         return this.enableBasicAuth == null ? Input.empty() : this.enableBasicAuth;
@@ -109,7 +109,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableNotification")
-    private final @Nullable Input<Boolean> enableNotification;
+      private final @Nullable Input<Boolean> enableNotification;
 
     public Input<Boolean> getEnableNotification() {
         return this.enableNotification == null ? Input.empty() : this.enableNotification;
@@ -120,7 +120,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enablePerformanceMode")
-    private final @Nullable Input<Boolean> enablePerformanceMode;
+      private final @Nullable Input<Boolean> enablePerformanceMode;
 
     public Input<Boolean> getEnablePerformanceMode() {
         return this.enablePerformanceMode == null ? Input.empty() : this.enablePerformanceMode;
@@ -131,7 +131,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enablePullRequestPreview")
-    private final @Nullable Input<Boolean> enablePullRequestPreview;
+      private final @Nullable Input<Boolean> enablePullRequestPreview;
 
     public Input<Boolean> getEnablePullRequestPreview() {
         return this.enablePullRequestPreview == null ? Input.empty() : this.enablePullRequestPreview;
@@ -142,7 +142,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<Map<String,String>> environmentVariables;
+      private final @Nullable Input<Map<String,String>> environmentVariables;
 
     public Input<Map<String,String>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -153,7 +153,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="framework")
-    private final @Nullable Input<String> framework;
+      private final @Nullable Input<String> framework;
 
     public Input<String> getFramework() {
         return this.framework == null ? Input.empty() : this.framework;
@@ -164,7 +164,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pullRequestEnvironmentName")
-    private final @Nullable Input<String> pullRequestEnvironmentName;
+      private final @Nullable Input<String> pullRequestEnvironmentName;
 
     public Input<String> getPullRequestEnvironmentName() {
         return this.pullRequestEnvironmentName == null ? Input.empty() : this.pullRequestEnvironmentName;
@@ -175,7 +175,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stage")
-    private final @Nullable Input<String> stage;
+      private final @Nullable Input<String> stage;
 
     public Input<String> getStage() {
         return this.stage == null ? Input.empty() : this.stage;
@@ -186,7 +186,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -197,7 +197,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<String> ttl;
+      private final @Nullable Input<String> ttl;
 
     public Input<String> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;

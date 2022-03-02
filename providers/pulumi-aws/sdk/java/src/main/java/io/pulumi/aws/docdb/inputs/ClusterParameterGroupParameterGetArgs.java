@@ -4,7 +4,7 @@
 package io.pulumi.aws.docdb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClusterParameterGroupParameterGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="applyMethod")
-    private final @Nullable Input<String> applyMethod;
+      private final @Nullable Input<String> applyMethod;
 
     public Input<String> getApplyMethod() {
         return this.applyMethod == null ? Input.empty() : this.applyMethod;
@@ -30,7 +30,7 @@ public final class ClusterParameterGroupParameterGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -41,7 +41,7 @@ public final class ClusterParameterGroupParameterGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;

@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.aws.apigateway.inputs.IntegrationTlsConfigGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheKeyParameters")
-    private final @Nullable Input<List<String>> cacheKeyParameters;
+      private final @Nullable Input<List<String>> cacheKeyParameters;
 
     public Input<List<String>> getCacheKeyParameters() {
         return this.cacheKeyParameters == null ? Input.empty() : this.cacheKeyParameters;
@@ -34,7 +34,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheNamespace")
-    private final @Nullable Input<String> cacheNamespace;
+      private final @Nullable Input<String> cacheNamespace;
 
     public Input<String> getCacheNamespace() {
         return this.cacheNamespace == null ? Input.empty() : this.cacheNamespace;
@@ -45,7 +45,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionId")
-    private final @Nullable Input<String> connectionId;
+      private final @Nullable Input<String> connectionId;
 
     public Input<String> getConnectionId() {
         return this.connectionId == null ? Input.empty() : this.connectionId;
@@ -56,7 +56,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionType")
-    private final @Nullable Input<String> connectionType;
+      private final @Nullable Input<String> connectionType;
 
     public Input<String> getConnectionType() {
         return this.connectionType == null ? Input.empty() : this.connectionType;
@@ -67,7 +67,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentHandling")
-    private final @Nullable Input<String> contentHandling;
+      private final @Nullable Input<String> contentHandling;
 
     public Input<String> getContentHandling() {
         return this.contentHandling == null ? Input.empty() : this.contentHandling;
@@ -78,7 +78,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<String> credentials;
+      private final @Nullable Input<String> credentials;
 
     public Input<String> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -90,7 +90,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpMethod")
-    private final @Nullable Input<String> httpMethod;
+      private final @Nullable Input<String> httpMethod;
 
     public Input<String> getHttpMethod() {
         return this.httpMethod == null ? Input.empty() : this.httpMethod;
@@ -105,7 +105,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="integrationHttpMethod")
-    private final @Nullable Input<String> integrationHttpMethod;
+      private final @Nullable Input<String> integrationHttpMethod;
 
     public Input<String> getIntegrationHttpMethod() {
         return this.integrationHttpMethod == null ? Input.empty() : this.integrationHttpMethod;
@@ -116,7 +116,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="passthroughBehavior")
-    private final @Nullable Input<String> passthroughBehavior;
+      private final @Nullable Input<String> passthroughBehavior;
 
     public Input<String> getPassthroughBehavior() {
         return this.passthroughBehavior == null ? Input.empty() : this.passthroughBehavior;
@@ -128,7 +128,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestParameters")
-    private final @Nullable Input<Map<String,String>> requestParameters;
+      private final @Nullable Input<Map<String,String>> requestParameters;
 
     public Input<Map<String,String>> getRequestParameters() {
         return this.requestParameters == null ? Input.empty() : this.requestParameters;
@@ -139,7 +139,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestTemplates")
-    private final @Nullable Input<Map<String,String>> requestTemplates;
+      private final @Nullable Input<Map<String,String>> requestTemplates;
 
     public Input<Map<String,String>> getRequestTemplates() {
         return this.requestTemplates == null ? Input.empty() : this.requestTemplates;
@@ -150,7 +150,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+      private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -161,7 +161,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApi")
-    private final @Nullable Input<String> restApi;
+      private final @Nullable Input<String> restApi;
 
     public Input<String> getRestApi() {
         return this.restApi == null ? Input.empty() : this.restApi;
@@ -172,7 +172,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutMilliseconds")
-    private final @Nullable Input<Integer> timeoutMilliseconds;
+      private final @Nullable Input<Integer> timeoutMilliseconds;
 
     public Input<Integer> getTimeoutMilliseconds() {
         return this.timeoutMilliseconds == null ? Input.empty() : this.timeoutMilliseconds;
@@ -183,7 +183,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tlsConfig")
-    private final @Nullable Input<IntegrationTlsConfigGetArgs> tlsConfig;
+      private final @Nullable Input<IntegrationTlsConfigGetArgs> tlsConfig;
 
     public Input<IntegrationTlsConfigGetArgs> getTlsConfig() {
         return this.tlsConfig == null ? Input.empty() : this.tlsConfig;
@@ -194,7 +194,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -207,7 +207,7 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;

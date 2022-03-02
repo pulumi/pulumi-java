@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointType")
-    private final @Nullable String endpointType;
+      private final @Nullable String endpointType;
 
     public Optional<String> getEndpointType() {
         return this.endpointType == null ? Optional.empty() : Optional.ofNullable(this.endpointType);

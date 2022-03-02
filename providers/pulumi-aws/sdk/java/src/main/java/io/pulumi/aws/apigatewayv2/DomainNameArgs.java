@@ -6,7 +6,7 @@ package io.pulumi.aws.apigatewayv2;
 import io.pulumi.aws.apigatewayv2.inputs.DomainNameDomainNameConfigurationArgs;
 import io.pulumi.aws.apigatewayv2.inputs.DomainNameMutualTlsAuthenticationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -33,7 +33,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainNameConfiguration", required=true)
-    private final Input<DomainNameDomainNameConfigurationArgs> domainNameConfiguration;
+      private final Input<DomainNameDomainNameConfigurationArgs> domainNameConfiguration;
 
     public Input<DomainNameDomainNameConfigurationArgs> getDomainNameConfiguration() {
         return this.domainNameConfiguration;
@@ -44,7 +44,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mutualTlsAuthentication")
-    private final @Nullable Input<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
+      private final @Nullable Input<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
     public Input<DomainNameMutualTlsAuthenticationArgs> getMutualTlsAuthentication() {
         return this.mutualTlsAuthentication == null ? Input.empty() : this.mutualTlsAuthentication;
@@ -55,7 +55,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;

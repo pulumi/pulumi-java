@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PrefixListReferenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="blackhole")
-    private final @Nullable Input<Boolean> blackhole;
+      private final @Nullable Input<Boolean> blackhole;
 
     public Input<Boolean> getBlackhole() {
         return this.blackhole == null ? Input.empty() : this.blackhole;
@@ -31,7 +31,7 @@ public final class PrefixListReferenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="prefixListId", required=true)
-    private final Input<String> prefixListId;
+      private final Input<String> prefixListId;
 
     public Input<String> getPrefixListId() {
         return this.prefixListId;
@@ -42,7 +42,7 @@ public final class PrefixListReferenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="transitGatewayAttachmentId")
-    private final @Nullable Input<String> transitGatewayAttachmentId;
+      private final @Nullable Input<String> transitGatewayAttachmentId;
 
     public Input<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId == null ? Input.empty() : this.transitGatewayAttachmentId;
@@ -53,7 +53,7 @@ public final class PrefixListReferenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="transitGatewayRouteTableId", required=true)
-    private final Input<String> transitGatewayRouteTableId;
+      private final Input<String> transitGatewayRouteTableId;
 
     public Input<String> getTransitGatewayRouteTableId() {
         return this.transitGatewayRouteTableId;

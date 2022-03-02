@@ -5,7 +5,7 @@ package io.pulumi.aws.mwaa.inputs;
 
 import io.pulumi.aws.mwaa.inputs.EnvironmentLastUpdatedErrorArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,14 +22,14 @@ public final class EnvironmentLastUpdatedArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+      private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
     }
 
     @InputImport(name="errors")
-    private final @Nullable Input<List<EnvironmentLastUpdatedErrorArgs>> errors;
+      private final @Nullable Input<List<EnvironmentLastUpdatedErrorArgs>> errors;
 
     public Input<List<EnvironmentLastUpdatedErrorArgs>> getErrors() {
         return this.errors == null ? Input.empty() : this.errors;
@@ -40,7 +40,7 @@ public final class EnvironmentLastUpdatedArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+      private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;

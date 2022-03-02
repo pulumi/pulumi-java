@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GetLocalGatewayVirtualInterfaceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters;
+      private final @Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters;
 
     public List<GetLocalGatewayVirtualInterfaceFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -33,7 +33,7 @@ public final class GetLocalGatewayVirtualInterfaceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+      private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -44,7 +44,7 @@ public final class GetLocalGatewayVirtualInterfaceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

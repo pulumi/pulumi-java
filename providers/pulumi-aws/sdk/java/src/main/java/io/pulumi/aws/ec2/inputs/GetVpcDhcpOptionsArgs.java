@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetVpcDhcpOptionsFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GetVpcDhcpOptionsArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="dhcpOptionsId")
-    private final @Nullable String dhcpOptionsId;
+      private final @Nullable String dhcpOptionsId;
 
     public Optional<String> getDhcpOptionsId() {
         return this.dhcpOptionsId == null ? Optional.empty() : Optional.ofNullable(this.dhcpOptionsId);
@@ -33,7 +33,7 @@ public final class GetVpcDhcpOptionsArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetVpcDhcpOptionsFilter> filters;
+      private final @Nullable List<GetVpcDhcpOptionsFilter> filters;
 
     public List<GetVpcDhcpOptionsFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -44,7 +44,7 @@ public final class GetVpcDhcpOptionsArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;

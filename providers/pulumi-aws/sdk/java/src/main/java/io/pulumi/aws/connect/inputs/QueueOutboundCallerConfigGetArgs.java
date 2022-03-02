@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class QueueOutboundCallerConfigGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="outboundCallerIdName")
-    private final @Nullable Input<String> outboundCallerIdName;
+      private final @Nullable Input<String> outboundCallerIdName;
 
     public Input<String> getOutboundCallerIdName() {
         return this.outboundCallerIdName == null ? Input.empty() : this.outboundCallerIdName;
@@ -30,7 +30,7 @@ public final class QueueOutboundCallerConfigGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="outboundCallerIdNumberId")
-    private final @Nullable Input<String> outboundCallerIdNumberId;
+      private final @Nullable Input<String> outboundCallerIdNumberId;
 
     public Input<String> getOutboundCallerIdNumberId() {
         return this.outboundCallerIdNumberId == null ? Input.empty() : this.outboundCallerIdNumberId;
@@ -41,7 +41,7 @@ public final class QueueOutboundCallerConfigGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="outboundFlowId")
-    private final @Nullable Input<String> outboundFlowId;
+      private final @Nullable Input<String> outboundFlowId;
 
     public Input<String> getOutboundFlowId() {
         return this.outboundFlowId == null ? Input.empty() : this.outboundFlowId;

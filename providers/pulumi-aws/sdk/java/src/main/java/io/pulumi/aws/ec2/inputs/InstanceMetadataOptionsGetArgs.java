@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InstanceMetadataOptionsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="httpEndpoint")
-    private final @Nullable Input<String> httpEndpoint;
+      private final @Nullable Input<String> httpEndpoint;
 
     public Input<String> getHttpEndpoint() {
         return this.httpEndpoint == null ? Input.empty() : this.httpEndpoint;
@@ -31,7 +31,7 @@ public final class InstanceMetadataOptionsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="httpPutResponseHopLimit")
-    private final @Nullable Input<Integer> httpPutResponseHopLimit;
+      private final @Nullable Input<Integer> httpPutResponseHopLimit;
 
     public Input<Integer> getHttpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit == null ? Input.empty() : this.httpPutResponseHopLimit;
@@ -42,7 +42,7 @@ public final class InstanceMetadataOptionsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="httpTokens")
-    private final @Nullable Input<String> httpTokens;
+      private final @Nullable Input<String> httpTokens;
 
     public Input<String> getHttpTokens() {
         return this.httpTokens == null ? Input.empty() : this.httpTokens;
@@ -53,7 +53,7 @@ public final class InstanceMetadataOptionsGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="instanceMetadataTags")
-    private final @Nullable Input<String> instanceMetadataTags;
+      private final @Nullable Input<String> instanceMetadataTags;
 
     public Input<String> getInstanceMetadataTags() {
         return this.instanceMetadataTags == null ? Input.empty() : this.instanceMetadataTags;

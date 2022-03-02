@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TagOptionResourceAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+      private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -29,7 +29,7 @@ public final class TagOptionResourceAssociationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tagOptionId", required=true)
-    private final Input<String> tagOptionId;
+      private final Input<String> tagOptionId;
 
     public Input<String> getTagOptionId() {
         return this.tagOptionId;

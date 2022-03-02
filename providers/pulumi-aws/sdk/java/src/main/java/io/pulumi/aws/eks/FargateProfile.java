@@ -9,8 +9,8 @@ import io.pulumi.aws.eks.inputs.FargateProfileState;
 import io.pulumi.aws.eks.outputs.FargateProfileSelector;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -159,6 +159,21 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     */
+    public FargateProfile(String name) {
+        this(name, FargateProfileArgs.Empty);
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     */
+    public FargateProfile(String name, FargateProfileArgs args) {
+        this(name, args, null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

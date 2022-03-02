@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ReceiptRuleBounceActionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="message", required=true)
-    private final Input<String> message;
+      private final Input<String> message;
 
     public Input<String> getMessage() {
         return this.message;
@@ -31,7 +31,7 @@ public final class ReceiptRuleBounceActionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="position", required=true)
-    private final Input<Integer> position;
+      private final Input<Integer> position;
 
     public Input<Integer> getPosition() {
         return this.position;
@@ -42,7 +42,7 @@ public final class ReceiptRuleBounceActionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sender", required=true)
-    private final Input<String> sender;
+      private final Input<String> sender;
 
     public Input<String> getSender() {
         return this.sender;
@@ -53,7 +53,7 @@ public final class ReceiptRuleBounceActionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="smtpReplyCode", required=true)
-    private final Input<String> smtpReplyCode;
+      private final Input<String> smtpReplyCode;
 
     public Input<String> getSmtpReplyCode() {
         return this.smtpReplyCode;
@@ -64,7 +64,7 @@ public final class ReceiptRuleBounceActionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="statusCode")
-    private final @Nullable Input<String> statusCode;
+      private final @Nullable Input<String> statusCode;
 
     public Input<String> getStatusCode() {
         return this.statusCode == null ? Input.empty() : this.statusCode;
@@ -75,7 +75,7 @@ public final class ReceiptRuleBounceActionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="topicArn")
-    private final @Nullable Input<String> topicArn;
+      private final @Nullable Input<String> topicArn;
 
     public Input<String> getTopicArn() {
         return this.topicArn == null ? Input.empty() : this.topicArn;

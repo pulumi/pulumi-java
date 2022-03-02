@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetSubnetIdsFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GetSubnetIdsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<GetSubnetIdsFilter> filters;
+      private final @Nullable List<GetSubnetIdsFilter> filters;
 
     public List<GetSubnetIdsFilter> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -34,7 +34,7 @@ public final class GetSubnetIdsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+      private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -45,7 +45,7 @@ public final class GetSubnetIdsArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final String vpcId;
+      private final String vpcId;
 
     public String getVpcId() {
         return this.vpcId;

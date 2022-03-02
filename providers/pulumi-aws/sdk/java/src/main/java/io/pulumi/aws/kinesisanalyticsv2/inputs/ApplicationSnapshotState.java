@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="applicationName")
-    private final @Nullable Input<String> applicationName;
+      private final @Nullable Input<String> applicationName;
 
     public Input<String> getApplicationName() {
         return this.applicationName == null ? Input.empty() : this.applicationName;
@@ -31,7 +31,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="applicationVersionId")
-    private final @Nullable Input<Integer> applicationVersionId;
+      private final @Nullable Input<Integer> applicationVersionId;
 
     public Input<Integer> getApplicationVersionId() {
         return this.applicationVersionId == null ? Input.empty() : this.applicationVersionId;
@@ -42,7 +42,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="snapshotCreationTimestamp")
-    private final @Nullable Input<String> snapshotCreationTimestamp;
+      private final @Nullable Input<String> snapshotCreationTimestamp;
 
     public Input<String> getSnapshotCreationTimestamp() {
         return this.snapshotCreationTimestamp == null ? Input.empty() : this.snapshotCreationTimestamp;
@@ -53,7 +53,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="snapshotName")
-    private final @Nullable Input<String> snapshotName;
+      private final @Nullable Input<String> snapshotName;
 
     public Input<String> getSnapshotName() {
         return this.snapshotName == null ? Input.empty() : this.snapshotName;

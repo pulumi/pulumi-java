@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CrawlerCatalogTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -30,7 +30,7 @@ public final class CrawlerCatalogTargetGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tables", required=true)
-    private final Input<List<String>> tables;
+      private final Input<List<String>> tables;
 
     public Input<List<String>> getTables() {
         return this.tables;

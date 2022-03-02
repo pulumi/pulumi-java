@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
      * 
      */
     @InputImport(name="allRegions")
-    private final @Nullable Input<Boolean> allRegions;
+      private final @Nullable Input<Boolean> allRegions;
 
     public Input<Boolean> getAllRegions() {
         return this.allRegions == null ? Input.empty() : this.allRegions;
@@ -32,7 +32,7 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
      * 
      */
     @InputImport(name="regions")
-    private final @Nullable Input<List<String>> regions;
+      private final @Nullable Input<List<String>> regions;
 
     public Input<List<String>> getRegions() {
         return this.regions == null ? Input.empty() : this.regions;
@@ -43,7 +43,7 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+      private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceArn")
-    private final @Nullable Input<String> resourceArn;
+      private final @Nullable Input<String> resourceArn;
 
     public Input<String> getResourceArn() {
         return this.resourceArn == null ? Input.empty() : this.resourceArn;
@@ -30,7 +30,7 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="webAclId")
-    private final @Nullable Input<String> webAclId;
+      private final @Nullable Input<String> webAclId;
 
     public Input<String> getWebAclId() {
         return this.webAclId == null ? Input.empty() : this.webAclId;

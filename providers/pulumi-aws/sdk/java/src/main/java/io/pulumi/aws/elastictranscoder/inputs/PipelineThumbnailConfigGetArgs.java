@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PipelineThumbnailConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -30,7 +30,7 @@ public final class PipelineThumbnailConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="storageClass")
-    private final @Nullable Input<String> storageClass;
+      private final @Nullable Input<String> storageClass;
 
     public Input<String> getStorageClass() {
         return this.storageClass == null ? Input.empty() : this.storageClass;

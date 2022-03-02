@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MLTransformInputRecordTableGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="catalogId")
-    private final @Nullable Input<String> catalogId;
+      private final @Nullable Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId == null ? Input.empty() : this.catalogId;
@@ -30,7 +30,7 @@ public final class MLTransformInputRecordTableGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="connectionName")
-    private final @Nullable Input<String> connectionName;
+      private final @Nullable Input<String> connectionName;
 
     public Input<String> getConnectionName() {
         return this.connectionName == null ? Input.empty() : this.connectionName;
@@ -41,7 +41,7 @@ public final class MLTransformInputRecordTableGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+      private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -52,7 +52,7 @@ public final class MLTransformInputRecordTableGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+      private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;

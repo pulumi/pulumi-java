@@ -4,7 +4,7 @@
 package io.pulumi.aws.codecommit.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="branches")
-    private final @Nullable Input<List<String>> branches;
+      private final @Nullable Input<List<String>> branches;
 
     public Input<List<String>> getBranches() {
         return this.branches == null ? Input.empty() : this.branches;
@@ -31,7 +31,7 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="customData")
-    private final @Nullable Input<String> customData;
+      private final @Nullable Input<String> customData;
 
     public Input<String> getCustomData() {
         return this.customData == null ? Input.empty() : this.customData;
@@ -42,7 +42,7 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationArn", required=true)
-    private final Input<String> destinationArn;
+      private final Input<String> destinationArn;
 
     public Input<String> getDestinationArn() {
         return this.destinationArn;
@@ -53,7 +53,7 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="events", required=true)
-    private final Input<List<String>> events;
+      private final Input<List<String>> events;
 
     public Input<List<String>> getEvents() {
         return this.events;
@@ -64,7 +64,7 @@ public final class TriggerTriggerGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;

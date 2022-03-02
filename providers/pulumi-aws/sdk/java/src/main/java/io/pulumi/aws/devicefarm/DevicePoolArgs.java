@@ -5,7 +5,7 @@ package io.pulumi.aws.devicefarm;
 
 import io.pulumi.aws.devicefarm.inputs.DevicePoolRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxDevices")
-    private final @Nullable Input<Integer> maxDevices;
+      private final @Nullable Input<Integer> maxDevices;
 
     public Input<Integer> getMaxDevices() {
         return this.maxDevices == null ? Input.empty() : this.maxDevices;
@@ -45,7 +45,7 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="projectArn", required=true)
-    private final Input<String> projectArn;
+      private final Input<String> projectArn;
 
     public Input<String> getProjectArn() {
         return this.projectArn;
@@ -67,7 +67,7 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules", required=true)
-    private final Input<List<DevicePoolRuleArgs>> rules;
+      private final Input<List<DevicePoolRuleArgs>> rules;
 
     public Input<List<DevicePoolRuleArgs>> getRules() {
         return this.rules;
@@ -78,7 +78,7 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -89,7 +89,7 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagsAll")
-    private final @Nullable Input<Map<String,String>> tagsAll;
+      private final @Nullable Input<Map<String,String>> tagsAll;
 
     public Input<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Input.empty() : this.tagsAll;

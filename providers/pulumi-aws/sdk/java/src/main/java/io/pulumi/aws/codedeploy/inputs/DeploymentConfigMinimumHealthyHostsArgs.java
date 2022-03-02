@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DeploymentConfigMinimumHealthyHostsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -34,7 +34,7 @@ public final class DeploymentConfigMinimumHealthyHostsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<Integer> value;
+      private final @Nullable Input<Integer> value;
 
     public Input<Integer> getValue() {
         return this.value == null ? Input.empty() : this.value;

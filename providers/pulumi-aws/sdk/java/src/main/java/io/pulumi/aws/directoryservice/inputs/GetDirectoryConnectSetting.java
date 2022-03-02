@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directoryservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +14,7 @@ public final class GetDirectoryConnectSetting extends io.pulumi.resources.Invoke
     public static final GetDirectoryConnectSetting Empty = new GetDirectoryConnectSetting();
 
     @InputImport(name="availabilityZones", required=true)
-    private final List<String> availabilityZones;
+      private final List<String> availabilityZones;
 
     public List<String> getAvailabilityZones() {
         return this.availabilityZones;
@@ -25,7 +25,7 @@ public final class GetDirectoryConnectSetting extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="connectIps", required=true)
-    private final List<String> connectIps;
+      private final List<String> connectIps;
 
     public List<String> getConnectIps() {
         return this.connectIps;
@@ -36,7 +36,7 @@ public final class GetDirectoryConnectSetting extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="customerDnsIps", required=true)
-    private final List<String> customerDnsIps;
+      private final List<String> customerDnsIps;
 
     public List<String> getCustomerDnsIps() {
         return this.customerDnsIps;
@@ -47,7 +47,7 @@ public final class GetDirectoryConnectSetting extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="customerUsername", required=true)
-    private final String customerUsername;
+      private final String customerUsername;
 
     public String getCustomerUsername() {
         return this.customerUsername;
@@ -58,7 +58,7 @@ public final class GetDirectoryConnectSetting extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final List<String> subnetIds;
+      private final List<String> subnetIds;
 
     public List<String> getSubnetIds() {
         return this.subnetIds;
@@ -69,7 +69,7 @@ public final class GetDirectoryConnectSetting extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final String vpcId;
+      private final String vpcId;
 
     public String getVpcId() {
         return this.vpcId;

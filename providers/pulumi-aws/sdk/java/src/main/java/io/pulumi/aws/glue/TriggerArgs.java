@@ -6,7 +6,7 @@ package io.pulumi.aws.glue;
 import io.pulumi.aws.glue.inputs.TriggerActionArgs;
 import io.pulumi.aws.glue.inputs.TriggerPredicateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions", required=true)
-    private final Input<List<TriggerActionArgs>> actions;
+      private final Input<List<TriggerActionArgs>> actions;
 
     public Input<List<TriggerActionArgs>> getActions() {
         return this.actions;
@@ -35,7 +35,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -57,7 +57,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -68,7 +68,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predicate")
-    private final @Nullable Input<TriggerPredicateArgs> predicate;
+      private final @Nullable Input<TriggerPredicateArgs> predicate;
 
     public Input<TriggerPredicateArgs> getPredicate() {
         return this.predicate == null ? Input.empty() : this.predicate;
@@ -79,7 +79,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<String> schedule;
+      private final @Nullable Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -90,7 +90,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startOnCreation")
-    private final @Nullable Input<Boolean> startOnCreation;
+      private final @Nullable Input<Boolean> startOnCreation;
 
     public Input<Boolean> getStartOnCreation() {
         return this.startOnCreation == null ? Input.empty() : this.startOnCreation;
@@ -101,7 +101,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -112,7 +112,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+      private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -123,7 +123,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workflowName")
-    private final @Nullable Input<String> workflowName;
+      private final @Nullable Input<String> workflowName;
 
     public Input<String> getWorkflowName() {
         return this.workflowName == null ? Input.empty() : this.workflowName;

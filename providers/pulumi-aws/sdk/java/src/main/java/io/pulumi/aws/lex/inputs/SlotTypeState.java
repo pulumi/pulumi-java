@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.SlotTypeEnumerationValueGetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="checksum")
-    private final @Nullable Input<String> checksum;
+      private final @Nullable Input<String> checksum;
 
     public Input<String> getChecksum() {
         return this.checksum == null ? Input.empty() : this.checksum;
@@ -35,7 +35,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createVersion")
-    private final @Nullable Input<Boolean> createVersion;
+      private final @Nullable Input<Boolean> createVersion;
 
     public Input<Boolean> getCreateVersion() {
         return this.createVersion == null ? Input.empty() : this.createVersion;
@@ -46,7 +46,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdDate")
-    private final @Nullable Input<String> createdDate;
+      private final @Nullable Input<String> createdDate;
 
     public Input<String> getCreatedDate() {
         return this.createdDate == null ? Input.empty() : this.createdDate;
@@ -57,7 +57,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -71,7 +71,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enumerationValues")
-    private final @Nullable Input<List<SlotTypeEnumerationValueGetArgs>> enumerationValues;
+      private final @Nullable Input<List<SlotTypeEnumerationValueGetArgs>> enumerationValues;
 
     public Input<List<SlotTypeEnumerationValueGetArgs>> getEnumerationValues() {
         return this.enumerationValues == null ? Input.empty() : this.enumerationValues;
@@ -82,7 +82,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastUpdatedDate")
-    private final @Nullable Input<String> lastUpdatedDate;
+      private final @Nullable Input<String> lastUpdatedDate;
 
     public Input<String> getLastUpdatedDate() {
         return this.lastUpdatedDate == null ? Input.empty() : this.lastUpdatedDate;
@@ -93,7 +93,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -107,7 +107,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="valueSelectionStrategy")
-    private final @Nullable Input<String> valueSelectionStrategy;
+      private final @Nullable Input<String> valueSelectionStrategy;
 
     public Input<String> getValueSelectionStrategy() {
         return this.valueSelectionStrategy == null ? Input.empty() : this.valueSelectionStrategy;
@@ -118,7 +118,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;

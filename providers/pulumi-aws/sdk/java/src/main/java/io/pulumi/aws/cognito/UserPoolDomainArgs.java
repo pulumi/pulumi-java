@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateArn")
-    private final @Nullable Input<String> certificateArn;
+      private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
@@ -30,7 +30,7 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain", required=true)
-    private final Input<String> domain;
+      private final Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain;
@@ -41,7 +41,7 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userPoolId", required=true)
-    private final Input<String> userPoolId;
+      private final Input<String> userPoolId;
 
     public Input<String> getUserPoolId() {
         return this.userPoolId;

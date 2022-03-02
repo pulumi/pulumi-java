@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ProjectSecondarySourceGitSubmodulesConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="fetchSubmodules", required=true)
-    private final Input<Boolean> fetchSubmodules;
+      private final Input<Boolean> fetchSubmodules;
 
     public Input<Boolean> getFetchSubmodules() {
         return this.fetchSubmodules;

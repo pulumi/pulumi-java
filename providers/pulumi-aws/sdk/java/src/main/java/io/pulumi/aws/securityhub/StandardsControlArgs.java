@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="controlStatus", required=true)
-    private final Input<String> controlStatus;
+      private final Input<String> controlStatus;
 
     public Input<String> getControlStatus() {
         return this.controlStatus;
@@ -30,7 +30,7 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disabledReason")
-    private final @Nullable Input<String> disabledReason;
+      private final @Nullable Input<String> disabledReason;
 
     public Input<String> getDisabledReason() {
         return this.disabledReason == null ? Input.empty() : this.disabledReason;
@@ -41,7 +41,7 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="standardsControlArn", required=true)
-    private final Input<String> standardsControlArn;
+      private final Input<String> standardsControlArn;
 
     public Input<String> getStandardsControlArn() {
         return this.standardsControlArn;

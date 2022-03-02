@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ApplicationSnapshotArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="applicationName", required=true)
-    private final Input<String> applicationName;
+      private final Input<String> applicationName;
 
     public Input<String> getApplicationName() {
         return this.applicationName;
@@ -29,7 +29,7 @@ public final class ApplicationSnapshotArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="snapshotName", required=true)
-    private final Input<String> snapshotName;
+      private final Input<String> snapshotName;
 
     public Input<String> getSnapshotName() {
         return this.snapshotName;
