@@ -40,21 +40,21 @@ public final class ServiceInstanceConfiguration {
     /**
      * CPU
      * 
-     */
+    */
     public Optional<String> getCpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
      * Instance Role Arn
      * 
-     */
+    */
     public Optional<String> getInstanceRoleArn() {
         return Optional.ofNullable(this.instanceRoleArn);
     }
     /**
      * Memory
      * 
-     */
+    */
     public Optional<String> getMemory() {
         return Optional.ofNullable(this.memory);
     }

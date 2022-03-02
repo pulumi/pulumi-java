@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoutingControl {
-/**
- * AWS Route53 Recovery Control Routing Control resource schema .
+    private GetRoutingControl() {}
+    public interface BuilderApplicator {
+        public void apply(GetRoutingControlArgs.Builder a);
+    }
+    private static GetRoutingControlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRoutingControlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * AWS Route53 Recovery Control Routing Control resource schema .
  * 
- */
+     */
+    public static CompletableFuture<GetRoutingControlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * AWS Route53 Recovery Control Routing Control resource schema .
+     * 
+     */
     public static CompletableFuture<GetRoutingControlResult> invokeAsync(GetRoutingControlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53recoverycontrol:getRoutingControl", TypeShape.of(GetRoutingControlResult.class), args == null ? GetRoutingControlArgs.Empty : args, Utilities.withVersion(options));
     }

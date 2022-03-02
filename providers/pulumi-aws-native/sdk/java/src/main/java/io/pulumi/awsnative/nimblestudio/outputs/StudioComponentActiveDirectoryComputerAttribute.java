@@ -33,14 +33,14 @@ public final class StudioComponentActiveDirectoryComputerAttribute {
     /**
      * <p>The name for the LDAP attribute.</p>
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * <p>The value for the LDAP attribute.</p>
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

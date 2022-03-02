@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkspace {
-/**
- * Resource Type definition for AWS::APS::Workspace
+    private GetWorkspace() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkspaceArgs.Builder a);
+    }
+    private static GetWorkspaceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkspaceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::APS::Workspace
  * 
- */
+     */
+    public static CompletableFuture<GetWorkspaceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::APS::Workspace
+     * 
+     */
     public static CompletableFuture<GetWorkspaceResult> invokeAsync(GetWorkspaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:aps:getWorkspace", TypeShape.of(GetWorkspaceResult.class), args == null ? GetWorkspaceArgs.Empty : args, Utilities.withVersion(options));
     }

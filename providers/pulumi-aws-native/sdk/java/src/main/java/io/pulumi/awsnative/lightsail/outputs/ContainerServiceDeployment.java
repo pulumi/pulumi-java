@@ -35,14 +35,14 @@ public final class ContainerServiceDeployment {
     /**
      * An object that describes the configuration for the containers of the deployment.
      * 
-     */
+    */
     public List<Container> getContainers() {
         return this.containers == null ? List.of() : this.containers;
     }
     /**
      * An object that describes the endpoint of the deployment.
      * 
-     */
+    */
     public Optional<ContainerPublicEndpoint> getPublicEndpoint() {
         return Optional.ofNullable(this.publicEndpoint);
     }

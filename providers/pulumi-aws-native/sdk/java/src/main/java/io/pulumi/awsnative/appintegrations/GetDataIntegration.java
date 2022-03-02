@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataIntegration {
-/**
- * Resource Type definition for AWS::AppIntegrations::DataIntegration
+    private GetDataIntegration() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataIntegrationArgs.Builder a);
+    }
+    private static GetDataIntegrationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataIntegrationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::AppIntegrations::DataIntegration
  * 
- */
+     */
+    public static CompletableFuture<GetDataIntegrationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::AppIntegrations::DataIntegration
+     * 
+     */
     public static CompletableFuture<GetDataIntegrationResult> invokeAsync(GetDataIntegrationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appintegrations:getDataIntegration", TypeShape.of(GetDataIntegrationResult.class), args == null ? GetDataIntegrationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -42,21 +42,21 @@ public final class GetPlaybackKeyPairResult {
     /**
      * Key-pair identifier.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Key-pair identifier.
      * 
-     */
+    */
     public Optional<String> getFingerprint() {
         return Optional.ofNullable(this.fingerprint);
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
      * 
-     */
+    */
     public List<PlaybackKeyPairTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

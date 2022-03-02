@@ -40,7 +40,7 @@ public final class GetFaqResult {
     /**
      * Tags for labeling the FAQ
      * 
-     */
+    */
     public List<FaqTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

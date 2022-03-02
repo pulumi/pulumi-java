@@ -57,7 +57,7 @@ public final class GetLaunchProfileResult {
     /**
      * <p>The description.</p>
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -68,14 +68,14 @@ public final class GetLaunchProfileResult {
      * <p>The version number of the protocol that is used by the launch profile. The only valid
      *             version is "2021-03-31".</p>
      * 
-     */
+    */
     public List<String> getLaunchProfileProtocolVersions() {
         return this.launchProfileProtocolVersions == null ? List.of() : this.launchProfileProtocolVersions;
     }
     /**
      * <p>The name for the launch profile.</p>
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -86,7 +86,7 @@ public final class GetLaunchProfileResult {
      * <p>Unique identifiers for a collection of studio components that can be used with this
      *             launch profile.</p>
      * 
-     */
+    */
     public List<String> getStudioComponentIds() {
         return this.studioComponentIds == null ? List.of() : this.studioComponentIds;
     }

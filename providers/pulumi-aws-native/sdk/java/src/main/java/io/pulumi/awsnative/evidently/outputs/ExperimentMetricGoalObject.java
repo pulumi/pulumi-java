@@ -53,14 +53,14 @@ public final class ExperimentMetricGoalObject {
     /**
      * The JSON path to reference the entity id in the event.
      * 
-     */
+    */
     public String getEntityIdKey() {
         return this.entityIdKey;
     }
     /**
      * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn't.
      * 
-     */
+    */
     public String getEventPattern() {
         return this.eventPattern;
     }
@@ -73,7 +73,7 @@ public final class ExperimentMetricGoalObject {
     /**
      * The JSON path to reference the numerical metric value in the event.
      * 
-     */
+    */
     public String getValueKey() {
         return this.valueKey;
     }

@@ -34,14 +34,14 @@ public final class InfrastructureConfigurationInstanceMetadataOptions {
     /**
      * Limit the number of hops that an instance metadata request can traverse to reach its destination.
      * 
-     */
+    */
     public Optional<Integer> getHttpPutResponseHopLimit() {
         return Optional.ofNullable(this.httpPutResponseHopLimit);
     }
     /**
      * Indicates whether a signed token header is required for instance metadata retrieval requests. The values affect the response as follows:
      * 
-     */
+    */
     public Optional<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> getHttpTokens() {
         return Optional.ofNullable(this.httpTokens);
     }

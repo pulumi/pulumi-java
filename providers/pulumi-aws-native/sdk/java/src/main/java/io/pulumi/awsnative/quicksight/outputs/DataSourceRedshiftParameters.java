@@ -50,28 +50,28 @@ public final class DataSourceRedshiftParameters {
      * <p>Cluster ID. This field can be blank if the <code>Host</code> and <code>Port</code> are
      *             provided.</p>
      * 
-     */
+    */
     public Optional<String> getClusterId() {
         return Optional.ofNullable(this.clusterId);
     }
     /**
      * <p>Database.</p>
      * 
-     */
+    */
     public String getDatabase() {
         return this.database;
     }
     /**
      * <p>Host. This field can be blank if <code>ClusterId</code> is provided.</p>
      * 
-     */
+    */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
     /**
      * <p>Port. This field can be blank if the <code>ClusterId</code> is provided.</p>
      * 
-     */
+    */
     public Optional<Double> getPort() {
         return Optional.ofNullable(this.port);
     }

@@ -49,28 +49,28 @@ public final class GetCarrierGatewayResult {
     /**
      * The ID of the carrier gateway.
      * 
-     */
+    */
     public Optional<String> getCarrierGatewayId() {
         return Optional.ofNullable(this.carrierGatewayId);
     }
     /**
      * The ID of the owner.
      * 
-     */
+    */
     public Optional<String> getOwnerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
      * The state of the carrier gateway.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The tags for the carrier gateway.
      * 
-     */
+    */
     public List<CarrierGatewayTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

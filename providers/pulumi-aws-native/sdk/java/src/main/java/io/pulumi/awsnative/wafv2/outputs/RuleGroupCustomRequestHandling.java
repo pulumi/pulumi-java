@@ -24,7 +24,7 @@ public final class RuleGroupCustomRequestHandling {
     /**
      * Collection of HTTP headers.
      * 
-     */
+    */
     public List<RuleGroupCustomHTTPHeader> getInsertHeaders() {
         return this.insertHeaders;
     }

@@ -23,7 +23,7 @@ public final class PolicyStatusProperties {
     /**
      * Specifies whether the policy is public or not.
      * 
-     */
+    */
     public MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic getIsPublic() {
         return this.isPublic;
     }

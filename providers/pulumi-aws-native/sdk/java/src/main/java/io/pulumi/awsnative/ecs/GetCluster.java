@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCluster {
-/**
- * Create an Elastic Container Service (ECS) cluster.
+    private GetCluster() {}
+    public interface BuilderApplicator {
+        public void apply(GetClusterArgs.Builder a);
+    }
+    private static GetClusterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetClusterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Create an Elastic Container Service (ECS) cluster.
  * 
- */
+     */
+    public static CompletableFuture<GetClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Create an Elastic Container Service (ECS) cluster.
+     * 
+     */
     public static CompletableFuture<GetClusterResult> invokeAsync(GetClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecs:getCluster", TypeShape.of(GetClusterResult.class), args == null ? GetClusterArgs.Empty : args, Utilities.withVersion(options));
     }

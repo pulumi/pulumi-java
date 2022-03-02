@@ -34,7 +34,7 @@ public final class GetServerCertificateResult {
     /**
      * Amazon Resource Name (ARN) of the server certificate
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }

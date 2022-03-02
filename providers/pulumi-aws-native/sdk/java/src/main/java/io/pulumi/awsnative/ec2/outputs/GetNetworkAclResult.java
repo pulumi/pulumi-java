@@ -34,7 +34,7 @@ public final class GetNetworkAclResult {
     /**
      * The tags to assign to the network ACL.
      * 
-     */
+    */
     public List<NetworkAclTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

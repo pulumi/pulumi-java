@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCollection {
-/**
- * The AWS::Rekognition::Collection type creates an Amazon Rekognition Collection. A collection is a logical grouping of information about detected faces which can later be referenced for searches on the group
+    private GetCollection() {}
+    public interface BuilderApplicator {
+        public void apply(GetCollectionArgs.Builder a);
+    }
+    private static GetCollectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCollectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::Rekognition::Collection type creates an Amazon Rekognition Collection. A collection is a logical grouping of information about detected faces which can later be referenced for searches on the group
  * 
- */
+     */
+    public static CompletableFuture<GetCollectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::Rekognition::Collection type creates an Amazon Rekognition Collection. A collection is a logical grouping of information about detected faces which can later be referenced for searches on the group
+     * 
+     */
     public static CompletableFuture<GetCollectionResult> invokeAsync(GetCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:rekognition:getCollection", TypeShape.of(GetCollectionResult.class), args == null ? GetCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

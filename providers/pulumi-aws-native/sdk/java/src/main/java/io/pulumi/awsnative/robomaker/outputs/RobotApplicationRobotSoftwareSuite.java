@@ -34,14 +34,14 @@ public final class RobotApplicationRobotSoftwareSuite {
     /**
      * The name of robot software suite.
      * 
-     */
+    */
     public RobotApplicationRobotSoftwareSuiteName getName() {
         return this.name;
     }
     /**
      * The version of robot software suite.
      * 
-     */
+    */
     public Optional<RobotApplicationRobotSoftwareSuiteVersion> getVersion() {
         return Optional.ofNullable(this.version);
     }

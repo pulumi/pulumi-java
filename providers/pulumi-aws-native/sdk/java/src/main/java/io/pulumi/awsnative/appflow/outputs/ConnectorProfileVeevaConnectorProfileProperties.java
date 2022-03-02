@@ -23,7 +23,7 @@ public final class ConnectorProfileVeevaConnectorProfileProperties {
     /**
      * The location of the Veeva resource
      * 
-     */
+    */
     public String getInstanceUrl() {
         return this.instanceUrl;
     }

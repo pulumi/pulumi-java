@@ -41,21 +41,21 @@ public final class WorkflowStepCustomStepDetailsProperties {
     /**
      * The name of the step, used as an identifier.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The ARN for the lambda function that is being called.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
     /**
      * Timeout, in seconds, for the step.
      * 
-     */
+    */
     public Optional<Integer> getTimeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }

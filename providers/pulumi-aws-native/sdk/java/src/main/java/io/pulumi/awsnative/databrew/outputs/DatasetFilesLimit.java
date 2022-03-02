@@ -42,21 +42,21 @@ public final class DatasetFilesLimit {
     /**
      * Maximum number of files
      * 
-     */
+    */
     public Integer getMaxFiles() {
         return this.maxFiles;
     }
     /**
      * Order
      * 
-     */
+    */
     public Optional<DatasetFilesLimitOrder> getOrder() {
         return Optional.ofNullable(this.order);
     }
     /**
      * Ordered by
      * 
-     */
+    */
     public Optional<DatasetFilesLimitOrderedBy> getOrderedBy() {
         return Optional.ofNullable(this.orderedBy);
     }

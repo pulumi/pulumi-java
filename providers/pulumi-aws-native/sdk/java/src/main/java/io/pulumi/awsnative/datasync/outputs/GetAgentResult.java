@@ -50,28 +50,28 @@ public final class GetAgentResult {
     /**
      * The DataSync Agent ARN.
      * 
-     */
+    */
     public Optional<String> getAgentArn() {
         return Optional.ofNullable(this.agentArn);
     }
     /**
      * The name configured for the agent. Text reference used to identify the agent in the console.
      * 
-     */
+    */
     public Optional<String> getAgentName() {
         return Optional.ofNullable(this.agentName);
     }
     /**
      * The service endpoints that the agent will connect to.
      * 
-     */
+    */
     public Optional<AgentEndpointType> getEndpointType() {
         return Optional.ofNullable(this.endpointType);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<AgentTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

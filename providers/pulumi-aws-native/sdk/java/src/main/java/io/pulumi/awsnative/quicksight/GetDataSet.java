@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataSet {
-/**
- * Definition of the AWS::QuickSight::DataSet Resource Type.
+    private GetDataSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataSetArgs.Builder a);
+    }
+    private static GetDataSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of the AWS::QuickSight::DataSet Resource Type.
  * 
- */
+     */
+    public static CompletableFuture<GetDataSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of the AWS::QuickSight::DataSet Resource Type.
+     * 
+     */
     public static CompletableFuture<GetDataSetResult> invokeAsync(GetDataSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:quicksight:getDataSet", TypeShape.of(GetDataSetResult.class), args == null ? GetDataSetArgs.Empty : args, Utilities.withVersion(options));
     }

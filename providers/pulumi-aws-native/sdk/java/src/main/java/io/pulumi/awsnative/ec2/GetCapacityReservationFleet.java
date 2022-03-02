@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCapacityReservationFleet {
-/**
- * Resource Type definition for AWS::EC2::CapacityReservationFleet
+    private GetCapacityReservationFleet() {}
+    public interface BuilderApplicator {
+        public void apply(GetCapacityReservationFleetArgs.Builder a);
+    }
+    private static GetCapacityReservationFleetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCapacityReservationFleetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::EC2::CapacityReservationFleet
  * 
- */
+     */
+    public static CompletableFuture<GetCapacityReservationFleetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::EC2::CapacityReservationFleet
+     * 
+     */
     public static CompletableFuture<GetCapacityReservationFleetResult> invokeAsync(GetCapacityReservationFleetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getCapacityReservationFleet", TypeShape.of(GetCapacityReservationFleetResult.class), args == null ? GetCapacityReservationFleetArgs.Empty : args, Utilities.withVersion(options));
     }

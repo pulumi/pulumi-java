@@ -45,28 +45,28 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentials {
     /**
      * The Access Key portion of the credentials.
      * 
-     */
+    */
     public String getAccessKeyId() {
         return this.accessKeyId;
     }
     /**
      * The encryption keys used to encrypt data.
      * 
-     */
+    */
     public String getDatakey() {
         return this.datakey;
     }
     /**
      * The secret key used to sign requests.
      * 
-     */
+    */
     public String getSecretAccessKey() {
         return this.secretAccessKey;
     }
     /**
      * The identiﬁer for the user.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }

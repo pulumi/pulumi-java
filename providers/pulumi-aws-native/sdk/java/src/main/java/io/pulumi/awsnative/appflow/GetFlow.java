@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFlow {
-/**
- * Resource schema for AWS::AppFlow::Flow.
+    private GetFlow() {}
+    public interface BuilderApplicator {
+        public void apply(GetFlowArgs.Builder a);
+    }
+    private static GetFlowArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFlowArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::AppFlow::Flow.
  * 
- */
+     */
+    public static CompletableFuture<GetFlowResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::AppFlow::Flow.
+     * 
+     */
     public static CompletableFuture<GetFlowResult> invokeAsync(GetFlowArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appflow:getFlow", TypeShape.of(GetFlowResult.class), args == null ? GetFlowArgs.Empty : args, Utilities.withVersion(options));
     }

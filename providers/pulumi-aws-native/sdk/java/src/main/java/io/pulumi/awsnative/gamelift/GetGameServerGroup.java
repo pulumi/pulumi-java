@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGameServerGroup {
-/**
- * The AWS::GameLift::GameServerGroup resource creates an Amazon GameLift (GameLift) GameServerGroup.
+    private GetGameServerGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetGameServerGroupArgs.Builder a);
+    }
+    private static GetGameServerGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGameServerGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::GameLift::GameServerGroup resource creates an Amazon GameLift (GameLift) GameServerGroup.
  * 
- */
+     */
+    public static CompletableFuture<GetGameServerGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::GameLift::GameServerGroup resource creates an Amazon GameLift (GameLift) GameServerGroup.
+     * 
+     */
     public static CompletableFuture<GetGameServerGroupResult> invokeAsync(GetGameServerGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:gamelift:getGameServerGroup", TypeShape.of(GetGameServerGroupResult.class), args == null ? GetGameServerGroupArgs.Empty : args, Utilities.withVersion(options));
     }

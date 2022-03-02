@@ -33,7 +33,7 @@ public final class RecipeStep {
     /**
      * Condition expressions applied to the step action
      * 
-     */
+    */
     public List<RecipeConditionExpression> getConditionExpressions() {
         return this.conditionExpressions == null ? List.of() : this.conditionExpressions;
     }

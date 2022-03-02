@@ -25,7 +25,7 @@ public final class InstanceMonthlyTransfer {
     /**
      * GbPerMonthAllocated of the Instance.
      * 
-     */
+    */
     public Optional<String> getGbPerMonthAllocated() {
         return Optional.ofNullable(this.gbPerMonthAllocated);
     }

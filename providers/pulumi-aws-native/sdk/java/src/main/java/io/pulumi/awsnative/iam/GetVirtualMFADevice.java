@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMFADevice {
-/**
- * Resource Type definition for AWS::IAM::VirtualMFADevice
+    private GetVirtualMFADevice() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualMFADeviceArgs.Builder a);
+    }
+    private static GetVirtualMFADeviceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualMFADeviceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::IAM::VirtualMFADevice
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualMFADeviceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::IAM::VirtualMFADevice
+     * 
+     */
     public static CompletableFuture<GetVirtualMFADeviceResult> invokeAsync(GetVirtualMFADeviceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iam:getVirtualMFADevice", TypeShape.of(GetVirtualMFADeviceResult.class), args == null ? GetVirtualMFADeviceArgs.Empty : args, Utilities.withVersion(options));
     }

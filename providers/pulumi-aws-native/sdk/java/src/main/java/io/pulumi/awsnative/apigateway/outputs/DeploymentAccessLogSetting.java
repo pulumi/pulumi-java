@@ -33,14 +33,14 @@ public final class DeploymentAccessLogSetting {
     /**
      * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-.
      * 
-     */
+    */
     public Optional<String> getDestinationArn() {
         return Optional.ofNullable(this.destinationArn);
     }
     /**
      * A single line format of the access logs of data, as specified by selected $context variables. The format must include at least $context.requestId.
      * 
-     */
+    */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }

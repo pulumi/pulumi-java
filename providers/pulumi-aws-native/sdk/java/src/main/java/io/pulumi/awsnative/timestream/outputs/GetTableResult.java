@@ -57,28 +57,28 @@ public final class GetTableResult {
     /**
      * The properties that determine whether magnetic store writes are enabled.
      * 
-     */
+    */
     public Optional<MagneticStoreWritePropertiesProperties> getMagneticStoreWriteProperties() {
         return Optional.ofNullable(this.magneticStoreWriteProperties);
     }
     /**
      * The table name exposed as a read-only attribute.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The retention duration of the memory store and the magnetic store.
      * 
-     */
+    */
     public Optional<RetentionPropertiesProperties> getRetentionProperties() {
         return Optional.ofNullable(this.retentionProperties);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<TableTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -35,14 +35,14 @@ public final class TestGridProjectVpcConfig {
     /**
      * A list of VPC security group IDs in your Amazon VPC.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * A list of VPC subnet IDs in your Amazon VPC.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }

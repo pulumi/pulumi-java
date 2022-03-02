@@ -108,7 +108,7 @@ public final class DetectorModelDynamoDB {
     /**
      * The name of the hash key (also called the partition key).
      * 
-     */
+    */
     public String getHashKeyField() {
         return this.hashKeyField;
     }
@@ -121,14 +121,14 @@ public final class DetectorModelDynamoDB {
      * 
      * If you don't specify `hashKeyType`, the default value is `STRING`.
      * 
-     */
+    */
     public Optional<String> getHashKeyType() {
         return Optional.ofNullable(this.hashKeyType);
     }
     /**
      * The value of the hash key (also called the partition key).
      * 
-     */
+    */
     public String getHashKeyValue() {
         return this.hashKeyValue;
     }
@@ -143,7 +143,7 @@ public final class DetectorModelDynamoDB {
      * 
      * If you don't specify this parameter, AWS IoT Events triggers the `INSERT` operation.
      * 
-     */
+    */
     public Optional<String> getOperation() {
         return Optional.ofNullable(this.operation);
     }
@@ -155,14 +155,14 @@ public final class DetectorModelDynamoDB {
      * 
      * If you don't specify this parameter, the name of the DynamoDB column is `payload`.
      * 
-     */
+    */
     public Optional<String> getPayloadField() {
         return Optional.ofNullable(this.payloadField);
     }
     /**
      * The name of the range key (also called the sort key).
      * 
-     */
+    */
     public Optional<String> getRangeKeyField() {
         return Optional.ofNullable(this.rangeKeyField);
     }
@@ -175,21 +175,21 @@ public final class DetectorModelDynamoDB {
      * 
      * If you don't specify `rangeKeyField`, the default value is `STRING`.
      * 
-     */
+    */
     public Optional<String> getRangeKeyType() {
         return Optional.ofNullable(this.rangeKeyType);
     }
     /**
      * The value of the range key (also called the sort key).
      * 
-     */
+    */
     public Optional<String> getRangeKeyValue() {
         return Optional.ofNullable(this.rangeKeyValue);
     }
     /**
      * The name of the DynamoDB table.
      * 
-     */
+    */
     public String getTableName() {
         return this.tableName;
     }

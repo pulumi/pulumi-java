@@ -38,14 +38,14 @@ public final class PackagingConfigurationSpekeKeyProvider {
     /**
      * The system IDs to include in key requests.
      * 
-     */
+    */
     public List<String> getSystemIds() {
         return this.systemIds;
     }
     /**
      * The URL of the external key provider service.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

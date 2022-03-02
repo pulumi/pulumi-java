@@ -62,14 +62,14 @@ public final class DetectorLabel {
     /**
      * The time when the label was created.
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -79,7 +79,7 @@ public final class DetectorLabel {
     /**
      * The time when the label was last updated.
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -89,7 +89,7 @@ public final class DetectorLabel {
     /**
      * Tags associated with this label.
      * 
-     */
+    */
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

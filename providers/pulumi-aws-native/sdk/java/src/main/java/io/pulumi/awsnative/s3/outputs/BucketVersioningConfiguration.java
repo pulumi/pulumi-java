@@ -23,7 +23,7 @@ public final class BucketVersioningConfiguration {
     /**
      * The versioning state of the bucket.
      * 
-     */
+    */
     public BucketVersioningConfigurationStatus getStatus() {
         return this.status;
     }

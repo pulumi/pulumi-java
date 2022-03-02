@@ -35,14 +35,14 @@ public final class GetFlowLogResult {
     /**
      * The Flow Log ID
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The tags to apply to the flow logs.
      * 
-     */
+    */
     public List<FlowLogTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

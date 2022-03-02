@@ -33,14 +33,14 @@ public final class AssetModelTransform {
     /**
      * The mathematical expression that defines the transformation function. You can specify up to 10 functions per expression.
      * 
-     */
+    */
     public String getExpression() {
         return this.expression;
     }
     /**
      * The list of variables used in the expression.
      * 
-     */
+    */
     public List<AssetModelExpressionVariable> getVariables() {
         return this.variables;
     }

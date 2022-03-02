@@ -92,6 +92,22 @@ public class RecordingConfiguration extends io.pulumi.resources.CustomResource {
         return this.thumbnailConfiguration;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RecordingConfigurationArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.ivs.RecordingConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.ivs.RecordingConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RecordingConfiguration(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

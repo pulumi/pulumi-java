@@ -41,21 +41,21 @@ public final class AliasRoutingStrategy {
     /**
      * A unique identifier for a fleet that the alias points to. If you specify SIMPLE for the Type property, you must specify this property.
      * 
-     */
+    */
     public Optional<String> getFleetId() {
         return Optional.ofNullable(this.fleetId);
     }
     /**
      * The message text to be used with a terminal routing strategy. If you specify TERMINAL for the Type property, you must specify this property.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * Simple routing strategy. The alias resolves to one specific fleet. Use this type when routing to active fleets.
      * 
-     */
+    */
     public AliasRoutingStrategyType getType() {
         return this.type;
     }

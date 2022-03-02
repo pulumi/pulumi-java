@@ -33,14 +33,14 @@ public final class GetLocalGatewayRouteResult {
     /**
      * The state of the route.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The route type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

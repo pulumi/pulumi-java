@@ -39,14 +39,14 @@ public final class GetBasePathMappingResult {
     /**
      * The ID of the API.
      * 
-     */
+    */
     public Optional<String> getRestApiId() {
         return Optional.ofNullable(this.restApiId);
     }
     /**
      * The name of the API's stage.
      * 
-     */
+    */
     public Optional<String> getStage() {
         return Optional.ofNullable(this.stage);
     }

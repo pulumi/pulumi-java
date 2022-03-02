@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStream {
-/**
- * Resource Type definition for AWS::Kinesis::Stream
+    private GetStream() {}
+    public interface BuilderApplicator {
+        public void apply(GetStreamArgs.Builder a);
+    }
+    private static GetStreamArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStreamArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Kinesis::Stream
  * 
- */
+     */
+    public static CompletableFuture<GetStreamResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Kinesis::Stream
+     * 
+     */
     public static CompletableFuture<GetStreamResult> invokeAsync(GetStreamArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:kinesis:getStream", TypeShape.of(GetStreamResult.class), args == null ? GetStreamArgs.Empty : args, Utilities.withVersion(options));
     }

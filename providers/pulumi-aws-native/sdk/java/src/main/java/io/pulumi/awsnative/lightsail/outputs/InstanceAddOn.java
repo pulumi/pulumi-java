@@ -38,7 +38,7 @@ public final class InstanceAddOn {
     /**
      * The add-on type
      * 
-     */
+    */
     public String getAddOnType() {
         return this.addOnType;
     }
@@ -48,7 +48,7 @@ public final class InstanceAddOn {
     /**
      * Status of the Addon
      * 
-     */
+    */
     public Optional<InstanceAddOnStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }

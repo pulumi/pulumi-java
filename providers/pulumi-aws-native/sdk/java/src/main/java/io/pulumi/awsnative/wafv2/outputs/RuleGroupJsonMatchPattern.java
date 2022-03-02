@@ -31,7 +31,7 @@ public final class RuleGroupJsonMatchPattern {
     /**
      * Inspect all parts of the web request's JSON body.
      * 
-     */
+    */
     public Optional<Object> getAll() {
         return Optional.ofNullable(this.all);
     }

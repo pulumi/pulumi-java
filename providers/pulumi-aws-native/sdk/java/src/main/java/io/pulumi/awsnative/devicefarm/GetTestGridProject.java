@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTestGridProject {
-/**
- * AWS::DeviceFarm::TestGridProject creates a new TestGrid Project
+    private GetTestGridProject() {}
+    public interface BuilderApplicator {
+        public void apply(GetTestGridProjectArgs.Builder a);
+    }
+    private static GetTestGridProjectArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTestGridProjectArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * AWS::DeviceFarm::TestGridProject creates a new TestGrid Project
  * 
- */
+     */
+    public static CompletableFuture<GetTestGridProjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * AWS::DeviceFarm::TestGridProject creates a new TestGrid Project
+     * 
+     */
     public static CompletableFuture<GetTestGridProjectResult> invokeAsync(GetTestGridProjectArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devicefarm:getTestGridProject", TypeShape.of(GetTestGridProjectResult.class), args == null ? GetTestGridProjectArgs.Empty : args, Utilities.withVersion(options));
     }
