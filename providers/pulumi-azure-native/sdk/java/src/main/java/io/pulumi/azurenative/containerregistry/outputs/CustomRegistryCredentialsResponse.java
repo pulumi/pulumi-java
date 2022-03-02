@@ -50,7 +50,7 @@ public final class CustomRegistryCredentialsResponse {
      * identity may be used to authenticate to key vault to retrieve credentials or it may be the only
      * source of authentication used for accessing the registry.
      * 
-     */
+    */
     public Optional<String> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
@@ -58,14 +58,14 @@ public final class CustomRegistryCredentialsResponse {
      * The password for logging into the custom registry. The password is a secret
      * object that allows multiple ways of providing the value for it.
      * 
-     */
+    */
     public Optional<SecretObjectResponse> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The username for logging into the custom registry.
      * 
-     */
+    */
     public Optional<SecretObjectResponse> getUserName() {
         return Optional.ofNullable(this.userName);
     }

@@ -85,35 +85,35 @@ public final class BookmarkTimelineItemResponse {
     /**
      * The bookmark azure resource id.
      * 
-     */
+    */
     public String getAzureResourceId() {
         return this.azureResourceId;
     }
     /**
      * Describes a user that created the bookmark
      * 
-     */
+    */
     public Optional<UserInfoResponse> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The bookmark display name.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The bookmark end time.
      * 
-     */
+    */
     public Optional<String> getEndTimeUtc() {
         return Optional.ofNullable(this.endTimeUtc);
     }
     /**
      * The bookmark event time.
      * 
-     */
+    */
     public Optional<String> getEventTime() {
         return Optional.ofNullable(this.eventTime);
     }
@@ -121,28 +121,28 @@ public final class BookmarkTimelineItemResponse {
      * The entity query kind
      * Expected value is 'Bookmark'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * List of labels relevant to this bookmark
      * 
-     */
+    */
     public List<String> getLabels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * The notes of the bookmark
      * 
-     */
+    */
     public Optional<String> getNotes() {
         return Optional.ofNullable(this.notes);
     }
     /**
      * The bookmark start time.
      * 
-     */
+    */
     public Optional<String> getStartTimeUtc() {
         return Optional.ofNullable(this.startTimeUtc);
     }

@@ -34,14 +34,14 @@ public final class DeliveryRuleIsDeviceConditionResponse {
      * The name of the condition for the delivery rule.
      * Expected value is 'IsDevice'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
-     */
+    */
     public IsDeviceMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

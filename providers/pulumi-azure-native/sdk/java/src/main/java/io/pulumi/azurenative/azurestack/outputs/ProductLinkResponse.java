@@ -33,14 +33,14 @@ public final class ProductLinkResponse {
     /**
      * The description of the link.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The URI corresponding to the link.
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }

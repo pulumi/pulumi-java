@@ -34,14 +34,14 @@ public final class DeliveryRuleRequestUriConditionResponse {
      * The name of the condition for the delivery rule.
      * Expected value is 'RequestUri'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
-     */
+    */
     public RequestUriMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

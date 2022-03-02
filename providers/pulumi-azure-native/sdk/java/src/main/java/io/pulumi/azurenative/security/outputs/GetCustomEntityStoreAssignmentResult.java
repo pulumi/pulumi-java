@@ -62,42 +62,42 @@ public final class GetCustomEntityStoreAssignmentResult {
     /**
      * The link to entity store database.
      * 
-     */
+    */
     public Optional<String> getEntityStoreDatabaseLink() {
         return Optional.ofNullable(this.entityStoreDatabaseLink);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The principal assigned with entity store. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
      * 
-     */
+    */
     public Optional<String> getPrincipal() {
         return Optional.ofNullable(this.principal);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -41,21 +41,21 @@ public final class WorkspaceCappingResponse {
     /**
      * The workspace daily quota for ingestion.
      * 
-     */
+    */
     public Optional<Double> getDailyQuotaGb() {
         return Optional.ofNullable(this.dailyQuotaGb);
     }
     /**
      * The status of data ingestion for this workspace.
      * 
-     */
+    */
     public String getDataIngestionStatus() {
         return this.dataIngestionStatus;
     }
     /**
      * The time when the quota will be rest.
      * 
-     */
+    */
     public String getQuotaNextResetTime() {
         return this.quotaNextResetTime;
     }

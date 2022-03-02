@@ -27,7 +27,7 @@ public final class GetSystemTopicEventSubscriptionDeliveryAttributesResult {
     /**
      * A collection of DeliveryAttributeMapping
      * 
-     */
+    */
     public List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> getValue() {
         return this.value == null ? List.of() : this.value;
     }

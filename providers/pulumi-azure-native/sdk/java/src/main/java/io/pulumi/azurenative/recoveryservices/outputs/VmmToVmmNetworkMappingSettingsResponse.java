@@ -25,7 +25,7 @@ public final class VmmToVmmNetworkMappingSettingsResponse {
      * Gets the Instance type.
      * Expected value is 'VmmToVmm'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }

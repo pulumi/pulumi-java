@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLogProfile {
-/**
- * The log profile resource.
+    private GetLogProfile() {}
+    public interface BuilderApplicator {
+        public void apply(GetLogProfileArgs.Builder a);
+    }
+    private static GetLogProfileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLogProfileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The log profile resource.
  * API Version: 2016-03-01.
  * 
- *
- * The log profile resource.
+     *
+     * The log profile resource.
  * 
- */
+     */
+    public static CompletableFuture<GetLogProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The log profile resource.
+     * API Version: 2016-03-01.
+     * 
+     *
+         * The log profile resource.
+     * 
+     */
     public static CompletableFuture<GetLogProfileResult> invokeAsync(GetLogProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getLogProfile", TypeShape.of(GetLogProfileResult.class), args == null ? GetLogProfileArgs.Empty : args, Utilities.withVersion(options));
     }

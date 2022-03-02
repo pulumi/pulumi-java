@@ -23,7 +23,7 @@ public final class ApplicationNotificationEndpointResponse {
     /**
      * The managed application notification endpoint uri.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }

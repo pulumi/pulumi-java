@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMoveCollection {
-/**
- * Define the move collection.
+    private GetMoveCollection() {}
+    public interface BuilderApplicator {
+        public void apply(GetMoveCollectionArgs.Builder a);
+    }
+    private static GetMoveCollectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMoveCollectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Define the move collection.
  * API Version: 2021-01-01.
  * 
- *
- * Define the move collection.
+     *
+     * Define the move collection.
  * 
- */
+     */
+    public static CompletableFuture<GetMoveCollectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Define the move collection.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Define the move collection.
+     * 
+     */
     public static CompletableFuture<GetMoveCollectionResult> invokeAsync(GetMoveCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getMoveCollection", TypeShape.of(GetMoveCollectionResult.class), args == null ? GetMoveCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

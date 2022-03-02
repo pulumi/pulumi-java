@@ -34,14 +34,14 @@ public final class ConnectorMappingErrorManagementResponse {
     /**
      * The error limit allowed while importing data.
      * 
-     */
+    */
     public Optional<Integer> getErrorLimit() {
         return Optional.ofNullable(this.errorLimit);
     }
     /**
      * The type of error management to use for the mapping.
      * 
-     */
+    */
     public String getErrorManagementType() {
         return this.errorManagementType;
     }

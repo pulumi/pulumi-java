@@ -41,21 +41,21 @@ public final class MessagingEndpointPropertiesResponse {
     /**
      * The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
      * 
-     */
+    */
     public Optional<String> getLockDurationAsIso8601() {
         return Optional.ofNullable(this.lockDurationAsIso8601);
     }
     /**
      * The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
      * 
-     */
+    */
     public Optional<Integer> getMaxDeliveryCount() {
         return Optional.ofNullable(this.maxDeliveryCount);
     }
     /**
      * The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
      * 
-     */
+    */
     public Optional<String> getTtlAsIso8601() {
         return Optional.ofNullable(this.ttlAsIso8601);
     }

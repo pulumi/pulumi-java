@@ -23,7 +23,7 @@ public final class ServiceResponseBaseResponseError {
     /**
      * The error response.
      * 
-     */
+    */
     public ErrorResponseResponse getError() {
         return this.error;
     }

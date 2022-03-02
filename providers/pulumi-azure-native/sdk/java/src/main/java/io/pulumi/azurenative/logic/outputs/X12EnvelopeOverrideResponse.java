@@ -89,70 +89,70 @@ public final class X12EnvelopeOverrideResponse {
     /**
      * The date format.
      * 
-     */
+    */
     public String getDateFormat() {
         return this.dateFormat;
     }
     /**
      * The functional identifier code.
      * 
-     */
+    */
     public Optional<String> getFunctionalIdentifierCode() {
         return Optional.ofNullable(this.functionalIdentifierCode);
     }
     /**
      * The header version.
      * 
-     */
+    */
     public String getHeaderVersion() {
         return this.headerVersion;
     }
     /**
      * The message id on which this envelope settings has to be applied.
      * 
-     */
+    */
     public String getMessageId() {
         return this.messageId;
     }
     /**
      * The protocol version on which this envelope settings has to be applied.
      * 
-     */
+    */
     public String getProtocolVersion() {
         return this.protocolVersion;
     }
     /**
      * The receiver application id.
      * 
-     */
+    */
     public String getReceiverApplicationId() {
         return this.receiverApplicationId;
     }
     /**
      * The responsible agency code.
      * 
-     */
+    */
     public String getResponsibleAgencyCode() {
         return this.responsibleAgencyCode;
     }
     /**
      * The sender application id.
      * 
-     */
+    */
     public String getSenderApplicationId() {
         return this.senderApplicationId;
     }
     /**
      * The target namespace on which this envelope settings has to be applied.
      * 
-     */
+    */
     public String getTargetNamespace() {
         return this.targetNamespace;
     }
     /**
      * The time format.
      * 
-     */
+    */
     public String getTimeFormat() {
         return this.timeFormat;
     }

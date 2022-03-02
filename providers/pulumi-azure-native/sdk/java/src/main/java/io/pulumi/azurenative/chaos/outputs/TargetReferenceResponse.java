@@ -31,14 +31,14 @@ public final class TargetReferenceResponse {
     /**
      * String of the resource ID of a Target resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Enum of the Target reference type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

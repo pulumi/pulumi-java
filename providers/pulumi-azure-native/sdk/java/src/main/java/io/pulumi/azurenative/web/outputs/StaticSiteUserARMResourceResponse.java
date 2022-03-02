@@ -75,56 +75,56 @@ public final class StaticSiteUserARMResourceResponse {
     /**
      * The display name for the static site user.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The identity provider for the static site user.
      * 
-     */
+    */
     public String getProvider() {
         return this.provider;
     }
     /**
      * The roles for the static site user, in free-form string format
      * 
-     */
+    */
     public Optional<String> getRoles() {
         return Optional.ofNullable(this.roles);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The user id for the static site user.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }

@@ -35,14 +35,14 @@ public final class TargetCopySettingResponse {
     /**
      * It can be CustomCopyOption or ImmediateCopyOption.
      * 
-     */
+    */
     public Object getCopyAfter() {
         return this.copyAfter;
     }
     /**
      * Info of target datastore
      * 
-     */
+    */
     public DataStoreInfoBaseResponse getDataStore() {
         return this.dataStore;
     }

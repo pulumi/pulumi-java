@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBlockchainMemberApiKeys {
-/**
- * Collection of the API key payload which is exposed in the response of the resource provider.
+    private ListBlockchainMemberApiKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListBlockchainMemberApiKeysArgs.Builder a);
+    }
+    private static ListBlockchainMemberApiKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListBlockchainMemberApiKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Collection of the API key payload which is exposed in the response of the resource provider.
  * API Version: 2018-06-01-preview.
  * 
- *
- * Collection of the API key payload which is exposed in the response of the resource provider.
+     *
+     * Collection of the API key payload which is exposed in the response of the resource provider.
  * 
- */
+     */
+    public static CompletableFuture<ListBlockchainMemberApiKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Collection of the API key payload which is exposed in the response of the resource provider.
+     * API Version: 2018-06-01-preview.
+     * 
+     *
+         * Collection of the API key payload which is exposed in the response of the resource provider.
+     * 
+     */
     public static CompletableFuture<ListBlockchainMemberApiKeysResult> invokeAsync(ListBlockchainMemberApiKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blockchain:listBlockchainMemberApiKeys", TypeShape.of(ListBlockchainMemberApiKeysResult.class), args == null ? ListBlockchainMemberApiKeysArgs.Empty : args, Utilities.withVersion(options));
     }

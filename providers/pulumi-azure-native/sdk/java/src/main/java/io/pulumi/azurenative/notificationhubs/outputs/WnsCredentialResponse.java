@@ -40,21 +40,21 @@ public final class WnsCredentialResponse {
     /**
      * The package ID for this credential.
      * 
-     */
+    */
     public Optional<String> getPackageSid() {
         return Optional.ofNullable(this.packageSid);
     }
     /**
      * The secret key.
      * 
-     */
+    */
     public Optional<String> getSecretKey() {
         return Optional.ofNullable(this.secretKey);
     }
     /**
      * The Windows Live endpoint.
      * 
-     */
+    */
     public Optional<String> getWindowsLiveEndpoint() {
         return Optional.ofNullable(this.windowsLiveEndpoint);
     }

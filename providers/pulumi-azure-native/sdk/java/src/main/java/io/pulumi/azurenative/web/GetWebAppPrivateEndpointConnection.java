@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppPrivateEndpointConnection {
-/**
- * Remote Private Endpoint Connection ARM resource.
+    private GetWebAppPrivateEndpointConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppPrivateEndpointConnectionArgs.Builder a);
+    }
+    private static GetWebAppPrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppPrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Remote Private Endpoint Connection ARM resource.
  * API Version: 2020-12-01.
  * 
- *
- * Remote Private Endpoint Connection ARM resource.
+     *
+     * Remote Private Endpoint Connection ARM resource.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppPrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Remote Private Endpoint Connection ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Remote Private Endpoint Connection ARM resource.
+     * 
+     */
     public static CompletableFuture<GetWebAppPrivateEndpointConnectionResult> invokeAsync(GetWebAppPrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppPrivateEndpointConnection", TypeShape.of(GetWebAppPrivateEndpointConnectionResult.class), args == null ? GetWebAppPrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

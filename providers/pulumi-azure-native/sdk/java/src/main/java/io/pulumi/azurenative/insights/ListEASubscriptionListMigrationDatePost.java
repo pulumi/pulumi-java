@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListEASubscriptionListMigrationDatePost {
-/**
- * Subscription migrate date information properties
+    private ListEASubscriptionListMigrationDatePost() {}
+    public interface BuilderApplicator {
+        public void apply(ListEASubscriptionListMigrationDatePostArgs.Builder a);
+    }
+    private static ListEASubscriptionListMigrationDatePostArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListEASubscriptionListMigrationDatePostArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Subscription migrate date information properties
  * API Version: 2017-10-01.
  * 
- *
- * Subscription migrate date information properties
+     *
+     * Subscription migrate date information properties
  * 
- */
+     */
+    public static CompletableFuture<ListEASubscriptionListMigrationDatePostResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Subscription migrate date information properties
+     * API Version: 2017-10-01.
+     * 
+     *
+         * Subscription migrate date information properties
+     * 
+     */
     public static CompletableFuture<ListEASubscriptionListMigrationDatePostResult> invokeAsync(@Nullable ListEASubscriptionListMigrationDatePostArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:listEASubscriptionListMigrationDatePost", TypeShape.of(ListEASubscriptionListMigrationDatePostResult.class), args == null ? ListEASubscriptionListMigrationDatePostArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -33,14 +33,14 @@ public final class SkuResponse {
     /**
      * Name of the sku
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Tier of the sku like Basic or Enterprise
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

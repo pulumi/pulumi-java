@@ -25,7 +25,7 @@ public final class VpnNatRuleMappingResponse {
     /**
      * Address space for Vpn NatRule mapping.
      * 
-     */
+    */
     public Optional<String> getAddressSpace() {
         return Optional.ofNullable(this.addressSpace);
     }

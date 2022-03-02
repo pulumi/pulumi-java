@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStaticSiteAppSettings {
-/**
- * String dictionary resource.
+    private ListStaticSiteAppSettings() {}
+    public interface BuilderApplicator {
+        public void apply(ListStaticSiteAppSettingsArgs.Builder a);
+    }
+    private static ListStaticSiteAppSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListStaticSiteAppSettingsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * String dictionary resource.
  * API Version: 2020-12-01.
  * 
- *
- * String dictionary resource.
+     *
+     * String dictionary resource.
  * 
- */
+     */
+    public static CompletableFuture<ListStaticSiteAppSettingsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * String dictionary resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * String dictionary resource.
+     * 
+     */
     public static CompletableFuture<ListStaticSiteAppSettingsResult> invokeAsync(ListStaticSiteAppSettingsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteAppSettings", TypeShape.of(ListStaticSiteAppSettingsResult.class), args == null ? ListStaticSiteAppSettingsArgs.Empty : args, Utilities.withVersion(options));
     }

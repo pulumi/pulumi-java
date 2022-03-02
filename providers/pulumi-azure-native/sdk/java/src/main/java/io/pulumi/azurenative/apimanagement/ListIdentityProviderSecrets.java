@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListIdentityProviderSecrets {
-/**
- * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+    private ListIdentityProviderSecrets() {}
+    public interface BuilderApplicator {
+        public void apply(ListIdentityProviderSecretsArgs.Builder a);
+    }
+    private static ListIdentityProviderSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListIdentityProviderSecretsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
  * API Version: 2020-12-01.
  * 
- *
- * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     *
+     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
  * 
- */
+     */
+    public static CompletableFuture<ListIdentityProviderSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     * 
+     */
     public static CompletableFuture<ListIdentityProviderSecretsResult> invokeAsync(ListIdentityProviderSecretsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listIdentityProviderSecrets", TypeShape.of(ListIdentityProviderSecretsResult.class), args == null ? ListIdentityProviderSecretsArgs.Empty : args, Utilities.withVersion(options));
     }

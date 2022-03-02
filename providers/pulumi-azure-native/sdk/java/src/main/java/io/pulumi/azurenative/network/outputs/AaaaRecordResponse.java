@@ -25,7 +25,7 @@ public final class AaaaRecordResponse {
     /**
      * The IPv6 address of this AAAA record.
      * 
-     */
+    */
     public Optional<String> getIpv6Address() {
         return Optional.ofNullable(this.ipv6Address);
     }

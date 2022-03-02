@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlResourceSqlTrigger {
-/**
- * An Azure Cosmos DB trigger.
+    private GetSqlResourceSqlTrigger() {}
+    public interface BuilderApplicator {
+        public void apply(GetSqlResourceSqlTriggerArgs.Builder a);
+    }
+    private static GetSqlResourceSqlTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSqlResourceSqlTriggerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure Cosmos DB trigger.
  * API Version: 2021-03-15.
  * 
- *
- * An Azure Cosmos DB trigger.
+     *
+     * An Azure Cosmos DB trigger.
  * 
- */
+     */
+    public static CompletableFuture<GetSqlResourceSqlTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure Cosmos DB trigger.
+     * API Version: 2021-03-15.
+     * 
+     *
+         * An Azure Cosmos DB trigger.
+     * 
+     */
     public static CompletableFuture<GetSqlResourceSqlTriggerResult> invokeAsync(GetSqlResourceSqlTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlTrigger", TypeShape.of(GetSqlResourceSqlTriggerResult.class), args == null ? GetSqlResourceSqlTriggerArgs.Empty : args, Utilities.withVersion(options));
     }

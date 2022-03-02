@@ -23,7 +23,7 @@ public final class GraphResourceGetPropertiesResponseResource {
     /**
      * Name of the Cosmos DB Graph
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

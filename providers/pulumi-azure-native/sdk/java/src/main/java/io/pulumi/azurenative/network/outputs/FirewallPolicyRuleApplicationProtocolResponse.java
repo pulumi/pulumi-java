@@ -34,14 +34,14 @@ public final class FirewallPolicyRuleApplicationProtocolResponse {
     /**
      * Port number for the protocol, cannot be greater than 64000.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * Protocol type.
      * 
-     */
+    */
     public Optional<String> getProtocolType() {
         return Optional.ofNullable(this.protocolType);
     }

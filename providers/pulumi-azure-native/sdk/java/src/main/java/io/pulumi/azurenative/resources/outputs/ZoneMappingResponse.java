@@ -30,7 +30,7 @@ public final class ZoneMappingResponse {
     /**
      * The location of the zone mapping.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }

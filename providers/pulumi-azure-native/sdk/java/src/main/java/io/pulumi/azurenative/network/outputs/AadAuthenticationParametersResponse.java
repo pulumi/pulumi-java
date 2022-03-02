@@ -40,21 +40,21 @@ public final class AadAuthenticationParametersResponse {
     /**
      * AAD Vpn authentication parameter AAD audience.
      * 
-     */
+    */
     public Optional<String> getAadAudience() {
         return Optional.ofNullable(this.aadAudience);
     }
     /**
      * AAD Vpn authentication parameter AAD issuer.
      * 
-     */
+    */
     public Optional<String> getAadIssuer() {
         return Optional.ofNullable(this.aadIssuer);
     }
     /**
      * AAD Vpn authentication parameter AAD tenant.
      * 
-     */
+    */
     public Optional<String> getAadTenant() {
         return Optional.ofNullable(this.aadTenant);
     }

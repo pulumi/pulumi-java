@@ -41,21 +41,21 @@ public final class IotHubSkuInfoResponse {
     /**
      * The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
      * 
-     */
+    */
     public Optional<Double> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The name of the SKU.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The billing tier for the IoT hub.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }

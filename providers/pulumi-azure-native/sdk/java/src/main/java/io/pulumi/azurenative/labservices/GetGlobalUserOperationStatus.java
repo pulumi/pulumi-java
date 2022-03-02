@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalUserOperationStatus {
-/**
- * Status Details of the long running operation for an environment
+    private GetGlobalUserOperationStatus() {}
+    public interface BuilderApplicator {
+        public void apply(GetGlobalUserOperationStatusArgs.Builder a);
+    }
+    private static GetGlobalUserOperationStatusArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGlobalUserOperationStatusArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Status Details of the long running operation for an environment
  * API Version: 2018-10-15.
  * 
- *
- * Status Details of the long running operation for an environment
+     *
+     * Status Details of the long running operation for an environment
  * 
- */
+     */
+    public static CompletableFuture<GetGlobalUserOperationStatusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Status Details of the long running operation for an environment
+     * API Version: 2018-10-15.
+     * 
+     *
+         * Status Details of the long running operation for an environment
+     * 
+     */
     public static CompletableFuture<GetGlobalUserOperationStatusResult> invokeAsync(GetGlobalUserOperationStatusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getGlobalUserOperationStatus", TypeShape.of(GetGlobalUserOperationStatusResult.class), args == null ? GetGlobalUserOperationStatusArgs.Empty : args, Utilities.withVersion(options));
     }

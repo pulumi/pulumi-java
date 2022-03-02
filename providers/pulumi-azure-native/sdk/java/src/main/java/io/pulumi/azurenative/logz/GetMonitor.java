@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMonitor {
-/**
- * API Version: 2020-10-01.
+    private GetMonitor() {}
+    public interface BuilderApplicator {
+        public void apply(GetMonitorArgs.Builder a);
+    }
+    private static GetMonitorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMonitorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2020-10-01.
  * 
- */
+     */
+    public static CompletableFuture<GetMonitorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2020-10-01.
+     * 
+     */
     public static CompletableFuture<GetMonitorResult> invokeAsync(GetMonitorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:getMonitor", TypeShape.of(GetMonitorResult.class), args == null ? GetMonitorArgs.Empty : args, Utilities.withVersion(options));
     }

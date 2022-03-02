@@ -46,28 +46,28 @@ public final class GetNamespaceAuthorizationRuleResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The rights associated with the rule.
      * 
-     */
+    */
     public List<String> getRights() {
         return this.rights;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

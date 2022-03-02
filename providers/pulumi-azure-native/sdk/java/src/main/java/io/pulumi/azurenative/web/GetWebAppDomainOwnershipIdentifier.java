@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppDomainOwnershipIdentifier {
-/**
- * A domain specific resource identifier.
+    private GetWebAppDomainOwnershipIdentifier() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppDomainOwnershipIdentifierArgs.Builder a);
+    }
+    private static GetWebAppDomainOwnershipIdentifierArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppDomainOwnershipIdentifierArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A domain specific resource identifier.
  * API Version: 2020-12-01.
  * 
- *
- * A domain specific resource identifier.
+     *
+     * A domain specific resource identifier.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppDomainOwnershipIdentifierResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A domain specific resource identifier.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * A domain specific resource identifier.
+     * 
+     */
     public static CompletableFuture<GetWebAppDomainOwnershipIdentifierResult> invokeAsync(GetWebAppDomainOwnershipIdentifierArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDomainOwnershipIdentifier", TypeShape.of(GetWebAppDomainOwnershipIdentifierResult.class), args == null ? GetWebAppDomainOwnershipIdentifierArgs.Empty : args, Utilities.withVersion(options));
     }

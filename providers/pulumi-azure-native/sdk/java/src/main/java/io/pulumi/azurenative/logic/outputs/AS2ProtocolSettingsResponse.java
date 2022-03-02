@@ -72,49 +72,49 @@ public final class AS2ProtocolSettingsResponse {
     /**
      * The acknowledgement connection settings.
      * 
-     */
+    */
     public AS2AcknowledgementConnectionSettingsResponse getAcknowledgementConnectionSettings() {
         return this.acknowledgementConnectionSettings;
     }
     /**
      * The envelope settings.
      * 
-     */
+    */
     public AS2EnvelopeSettingsResponse getEnvelopeSettings() {
         return this.envelopeSettings;
     }
     /**
      * The error settings.
      * 
-     */
+    */
     public AS2ErrorSettingsResponse getErrorSettings() {
         return this.errorSettings;
     }
     /**
      * The MDN settings.
      * 
-     */
+    */
     public AS2MdnSettingsResponse getMdnSettings() {
         return this.mdnSettings;
     }
     /**
      * The message connection settings.
      * 
-     */
+    */
     public AS2MessageConnectionSettingsResponse getMessageConnectionSettings() {
         return this.messageConnectionSettings;
     }
     /**
      * The security settings.
      * 
-     */
+    */
     public AS2SecuritySettingsResponse getSecuritySettings() {
         return this.securitySettings;
     }
     /**
      * The validation settings.
      * 
-     */
+    */
     public AS2ValidationSettingsResponse getValidationSettings() {
         return this.validationSettings;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPipeline {
-/**
- * Pipeline resource type.
+    private GetPipeline() {}
+    public interface BuilderApplicator {
+        public void apply(GetPipelineArgs.Builder a);
+    }
+    private static GetPipelineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPipelineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Pipeline resource type.
  * API Version: 2018-06-01.
  * 
- *
- * Pipeline resource type.
+     *
+     * Pipeline resource type.
  * 
- */
+     */
+    public static CompletableFuture<GetPipelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Pipeline resource type.
+     * API Version: 2018-06-01.
+     * 
+     *
+         * Pipeline resource type.
+     * 
+     */
     public static CompletableFuture<GetPipelineResult> invokeAsync(GetPipelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getPipeline", TypeShape.of(GetPipelineResult.class), args == null ? GetPipelineArgs.Empty : args, Utilities.withVersion(options));
     }

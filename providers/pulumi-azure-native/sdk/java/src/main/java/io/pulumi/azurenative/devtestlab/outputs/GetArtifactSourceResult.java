@@ -132,112 +132,112 @@ public final class GetArtifactSourceResult {
     /**
      * The folder containing Azure Resource Manager templates.
      * 
-     */
+    */
     public Optional<String> getArmTemplateFolderPath() {
         return Optional.ofNullable(this.armTemplateFolderPath);
     }
     /**
      * The artifact source's branch reference.
      * 
-     */
+    */
     public Optional<String> getBranchRef() {
         return Optional.ofNullable(this.branchRef);
     }
     /**
      * The artifact source's creation date.
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The artifact source's display name.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The folder containing artifacts.
      * 
-     */
+    */
     public Optional<String> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
     /**
      * The identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The security token to authenticate to the artifact source.
      * 
-     */
+    */
     public Optional<String> getSecurityToken() {
         return Optional.ofNullable(this.securityToken);
     }
     /**
      * The artifact source's type.
      * 
-     */
+    */
     public Optional<String> getSourceType() {
         return Optional.ofNullable(this.sourceType);
     }
     /**
      * Indicates if the artifact source is enabled (values: Enabled, Disabled).
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
-     */
+    */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
      * The artifact source's URI.
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }

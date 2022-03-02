@@ -70,21 +70,21 @@ public final class GetAADDataConnectorResult {
     /**
      * The available data types for the connector.
      * 
-     */
+    */
     public Optional<AlertsDataTypeOfDataConnectorResponse> getDataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -92,28 +92,28 @@ public final class GetAADDataConnectorResult {
      * The kind of the data connector
      * Expected value is 'AzureActiveDirectory'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The tenant id to connect to, and get the data from.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

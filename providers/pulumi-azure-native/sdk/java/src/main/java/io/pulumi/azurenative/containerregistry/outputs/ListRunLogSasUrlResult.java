@@ -33,14 +33,14 @@ public final class ListRunLogSasUrlResult {
     /**
      * The link to logs in registry for a run on a azure container registry.
      * 
-     */
+    */
     public Optional<String> getLogArtifactLink() {
         return Optional.ofNullable(this.logArtifactLink);
     }
     /**
      * The link to logs for a run on a azure container registry.
      * 
-     */
+    */
     public Optional<String> getLogLink() {
         return Optional.ofNullable(this.logLink);
     }

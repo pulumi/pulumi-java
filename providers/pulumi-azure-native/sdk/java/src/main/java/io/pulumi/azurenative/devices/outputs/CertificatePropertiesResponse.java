@@ -67,49 +67,49 @@ public final class CertificatePropertiesResponse {
     /**
      * base-64 representation of X509 certificate .cer file or just .pem file content.
      * 
-     */
+    */
     public String getCertificate() {
         return this.certificate;
     }
     /**
      * The certificate's creation date and time.
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * The certificate's expiration date and time.
      * 
-     */
+    */
     public String getExpiry() {
         return this.expiry;
     }
     /**
      * Determines whether certificate has been verified.
      * 
-     */
+    */
     public Boolean getIsVerified() {
         return this.isVerified;
     }
     /**
      * The certificate's subject name.
      * 
-     */
+    */
     public String getSubject() {
         return this.subject;
     }
     /**
      * The certificate's thumbprint.
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * The certificate's last update date and time.
      * 
-     */
+    */
     public String getUpdated() {
         return this.updated;
     }

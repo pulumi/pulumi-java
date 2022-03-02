@@ -25,7 +25,7 @@ public final class RateLimitRuleListResponse {
     /**
      * List of rules
      * 
-     */
+    */
     public List<RateLimitRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

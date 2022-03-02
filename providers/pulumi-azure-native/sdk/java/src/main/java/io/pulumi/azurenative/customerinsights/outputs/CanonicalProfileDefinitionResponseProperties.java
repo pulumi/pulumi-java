@@ -55,35 +55,35 @@ public final class CanonicalProfileDefinitionResponseProperties {
     /**
      * Profile name.
      * 
-     */
+    */
     public Optional<String> getProfileName() {
         return Optional.ofNullable(this.profileName);
     }
     /**
      * Property name of profile.
      * 
-     */
+    */
     public Optional<String> getProfilePropertyName() {
         return Optional.ofNullable(this.profilePropertyName);
     }
     /**
      * The rank.
      * 
-     */
+    */
     public Optional<Integer> getRank() {
         return Optional.ofNullable(this.rank);
     }
     /**
      * Type of canonical property value.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Value of the canonical property.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

@@ -33,14 +33,14 @@ public final class PrincipalsResponse {
     /**
      * Object Id for the user
      * 
-     */
+    */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * UPN of the user.
      * 
-     */
+    */
     public Optional<String> getUpn() {
         return Optional.ofNullable(this.upn);
     }

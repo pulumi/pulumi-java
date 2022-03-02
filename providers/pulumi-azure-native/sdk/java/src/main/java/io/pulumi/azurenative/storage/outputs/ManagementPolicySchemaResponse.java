@@ -24,7 +24,7 @@ public final class ManagementPolicySchemaResponse {
     /**
      * The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
      * 
-     */
+    */
     public List<ManagementPolicyRuleResponse> getRules() {
         return this.rules;
     }

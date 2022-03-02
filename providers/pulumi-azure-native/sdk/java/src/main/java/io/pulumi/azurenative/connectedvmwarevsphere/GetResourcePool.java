@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourcePool {
-/**
- * Define the resourcePool.
+    private GetResourcePool() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourcePoolArgs.Builder a);
+    }
+    private static GetResourcePoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourcePoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Define the resourcePool.
  * API Version: 2020-10-01-preview.
  * 
- *
- * Define the resourcePool.
+     *
+     * Define the resourcePool.
  * 
- */
+     */
+    public static CompletableFuture<GetResourcePoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Define the resourcePool.
+     * API Version: 2020-10-01-preview.
+     * 
+     *
+         * Define the resourcePool.
+     * 
+     */
     public static CompletableFuture<GetResourcePoolResult> invokeAsync(GetResourcePoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getResourcePool", TypeShape.of(GetResourcePoolResult.class), args == null ? GetResourcePoolArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -25,7 +25,7 @@ public final class RuleResultsPropertiesResponse {
     /**
      * Expected results in the baseline.
      * 
-     */
+    */
     public List<List<String>> getResults() {
         return this.results == null ? List.of() : this.results;
     }

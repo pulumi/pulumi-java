@@ -51,28 +51,28 @@ public final class WebBasicAuthenticationResponse {
      * Type of authentication used to connect to the web table source.
      * Expected value is 'Basic'.
      * 
-     */
+    */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
     /**
      * The password for Basic authentication.
      * 
-     */
+    */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password;
     }
     /**
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getUrl() {
         return this.url;
     }
     /**
      * User name for Basic authentication. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getUsername() {
         return this.username;
     }

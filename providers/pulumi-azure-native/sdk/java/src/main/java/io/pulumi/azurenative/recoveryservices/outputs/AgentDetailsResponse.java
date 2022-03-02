@@ -54,35 +54,35 @@ public final class AgentDetailsResponse {
     /**
      * The Id of the agent running on the server.
      * 
-     */
+    */
     public String getAgentId() {
         return this.agentId;
     }
     /**
      * The machine BIOS Id.
      * 
-     */
+    */
     public String getBiosId() {
         return this.biosId;
     }
     /**
      * The details of agent disks.
      * 
-     */
+    */
     public List<AgentDiskDetailsResponse> getDisks() {
         return this.disks;
     }
     /**
      * The machine FQDN.
      * 
-     */
+    */
     public String getFqdn() {
         return this.fqdn;
     }
     /**
      * The Id of the machine to which the agent is registered.
      * 
-     */
+    */
     public String getMachineId() {
         return this.machineId;
     }

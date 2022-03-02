@@ -25,7 +25,7 @@ public final class ApiPortalCustomDomainPropertiesResponse {
     /**
      * The thumbprint of bound certificate.
      * 
-     */
+    */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }

@@ -41,21 +41,21 @@ public final class EndpointPropertiesResponseSubnets {
     /**
      * First address in the subnet.
      * 
-     */
+    */
     public Optional<String> getFirst() {
         return Optional.ofNullable(this.first);
     }
     /**
      * Last address in the subnet.
      * 
-     */
+    */
     public Optional<String> getLast() {
         return Optional.ofNullable(this.last);
     }
     /**
      * Block size (number of leading bits in the subnet mask).
      * 
-     */
+    */
     public Optional<Integer> getScope() {
         return Optional.ofNullable(this.scope);
     }

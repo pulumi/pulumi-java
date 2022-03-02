@@ -40,21 +40,21 @@ public final class IotHubSettingsResponse {
     /**
      * EventHub connection string.
      * 
-     */
+    */
     public Optional<String> getEventHubConnectionString() {
         return Optional.ofNullable(this.eventHubConnectionString);
     }
     /**
      * IoTHub connection string.
      * 
-     */
+    */
     public Optional<String> getIoTHubConnectionString() {
         return Optional.ofNullable(this.ioTHubConnectionString);
     }
     /**
      * IoTHub resource ID
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }

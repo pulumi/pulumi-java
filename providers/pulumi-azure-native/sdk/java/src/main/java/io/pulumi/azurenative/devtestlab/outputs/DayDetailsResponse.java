@@ -25,7 +25,7 @@ public final class DayDetailsResponse {
     /**
      * The time of day the schedule will occur.
      * 
-     */
+    */
     public Optional<String> getTime() {
         return Optional.ofNullable(this.time);
     }

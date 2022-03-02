@@ -40,21 +40,21 @@ public final class ManagedIdentityResponse {
     /**
      * The principal ID of the workspace managed identity
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of the workspace managed identity
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of managed identity for the workspace
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

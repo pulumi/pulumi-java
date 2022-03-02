@@ -23,7 +23,7 @@ public final class X12MessageFilterResponse {
     /**
      * The message filter type.
      * 
-     */
+    */
     public String getMessageFilterType() {
         return this.messageFilterType;
     }

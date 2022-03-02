@@ -46,28 +46,28 @@ public final class SpacecraftLinkResponse {
     /**
      * Bandwidth in MHz
      * 
-     */
+    */
     public Double getBandwidthMHz() {
         return this.bandwidthMHz;
     }
     /**
      * Center Frequency in MHz
      * 
-     */
+    */
     public Double getCenterFrequencyMHz() {
         return this.centerFrequencyMHz;
     }
     /**
      * Direction (uplink or downlink)
      * 
-     */
+    */
     public String getDirection() {
         return this.direction;
     }
     /**
      * polarization. eg (RHCP, LHCP)
      * 
-     */
+    */
     public String getPolarization() {
         return this.polarization;
     }

@@ -66,35 +66,35 @@ public final class GetHyperVSiteResult {
     /**
      * eTag for concurrency control.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Azure location in which Sites is created.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of the Hyper-V site.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Nested properties of Hyper-V site.
      * 
-     */
+    */
     public SitePropertiesResponse getProperties() {
         return this.properties;
     }
@@ -104,7 +104,7 @@ public final class GetHyperVSiteResult {
     /**
      * Type of resource. Type = Microsoft.OffAzure/HyperVSites.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

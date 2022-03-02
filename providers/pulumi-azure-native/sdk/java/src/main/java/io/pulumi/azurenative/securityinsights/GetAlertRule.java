@@ -14,17 +14,40 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: FusionAlertRule, MicrosoftSecurityIncidentCreationAlertRule, ScheduledAlertRule. */
 public class GetAlertRule {
-/**
- * Alert rule.
+    private GetAlertRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetAlertRuleArgs.Builder a);
+    }
+    private static GetAlertRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAlertRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Alert rule.
  * API Version: 2020-01-01.
  * 
- *
- * Alert rule.
+     *
+     * Alert rule.
  * 
- * @deprecated
- * Please use one of the variants: FusionAlertRule, MicrosoftSecurityIncidentCreationAlertRule, ScheduledAlertRule.
+     * @Deprecated
+     * Please use one of the variants: FusionAlertRule, MicrosoftSecurityIncidentCreationAlertRule, ScheduledAlertRule.
  * 
- */
+     */
+    public static CompletableFuture<GetAlertRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Alert rule.
+     * API Version: 2020-01-01.
+     * 
+     *
+         * Alert rule.
+     * 
+     * @Deprecated
+         * Please use one of the variants: FusionAlertRule, MicrosoftSecurityIncidentCreationAlertRule, ScheduledAlertRule.
+     * 
+     */
     @Deprecated /* Please use one of the variants: FusionAlertRule, MicrosoftSecurityIncidentCreationAlertRule, ScheduledAlertRule. */
     public static CompletableFuture<GetAlertRuleResult> invokeAsync(GetAlertRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAlertRule", TypeShape.of(GetAlertRuleResult.class), args == null ? GetAlertRuleArgs.Empty : args, Utilities.withVersion(options));

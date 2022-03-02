@@ -31,14 +31,14 @@ public final class DomainValidationPropertiesResponse {
     /**
      * The date time that the token expires
      * 
-     */
+    */
     public String getExpirationDate() {
         return this.expirationDate;
     }
     /**
      * Challenge used for DNS TXT record or file based validation
      * 
-     */
+    */
     public String getValidationToken() {
         return this.validationToken;
     }

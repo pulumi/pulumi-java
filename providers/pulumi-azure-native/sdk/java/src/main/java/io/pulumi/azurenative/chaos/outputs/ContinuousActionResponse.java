@@ -55,28 +55,28 @@ public final class ContinuousActionResponse {
     /**
      * ISO8601 formatted string that represents a duration.
      * 
-     */
+    */
     public String getDuration() {
         return this.duration;
     }
     /**
      * String that represents a Capability URN.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of key value pairs.
      * 
-     */
+    */
     public List<KeyValuePairResponse> getParameters() {
         return this.parameters;
     }
     /**
      * String that represents a selector.
      * 
-     */
+    */
     public String getSelectorId() {
         return this.selectorId;
     }
@@ -84,7 +84,7 @@ public final class ContinuousActionResponse {
      * Enum that discriminates between action models.
      * Expected value is 'continuous'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHybridConnectionAuthorizationRule {
-/**
- * Description of a namespace authorization rule.
+    private GetHybridConnectionAuthorizationRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetHybridConnectionAuthorizationRuleArgs.Builder a);
+    }
+    private static GetHybridConnectionAuthorizationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHybridConnectionAuthorizationRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Description of a namespace authorization rule.
  * API Version: 2017-04-01.
  * 
- *
- * Description of a namespace authorization rule.
+     *
+     * Description of a namespace authorization rule.
  * 
- */
+     */
+    public static CompletableFuture<GetHybridConnectionAuthorizationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Description of a namespace authorization rule.
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Description of a namespace authorization rule.
+     * 
+     */
     public static CompletableFuture<GetHybridConnectionAuthorizationRuleResult> invokeAsync(GetHybridConnectionAuthorizationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:getHybridConnectionAuthorizationRule", TypeShape.of(GetHybridConnectionAuthorizationRuleResult.class), args == null ? GetHybridConnectionAuthorizationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

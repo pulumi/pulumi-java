@@ -38,21 +38,21 @@ public final class TemplateSpecVersionInfoResponse {
     /**
      * Template Spec version description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The timestamp of when the version was created.
      * 
-     */
+    */
     public String getTimeCreated() {
         return this.timeCreated;
     }
     /**
      * The timestamp of when the version was last modified.
      * 
-     */
+    */
     public String getTimeModified() {
         return this.timeModified;
     }

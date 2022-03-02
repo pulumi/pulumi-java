@@ -91,49 +91,49 @@ public final class AzureDataExplorerSinkResponse {
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * If set to true, any aggregation will be skipped. Default is false. Type: boolean.
      * 
-     */
+    */
     public Optional<Object> getFlushImmediately() {
         return Optional.ofNullable(this.flushImmediately);
     }
     /**
      * An explicit column mapping description provided in a json format. Type: string.
      * 
-     */
+    */
     public Optional<Object> getIngestionMappingAsJson() {
         return Optional.ofNullable(this.ingestionMappingAsJson);
     }
     /**
      * A name of a pre-created csv mapping that was defined on the target Kusto table. Type: string.
      * 
-     */
+    */
     public Optional<Object> getIngestionMappingName() {
         return Optional.ofNullable(this.ingestionMappingName);
     }
     /**
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Sink retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
     /**
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
@@ -141,21 +141,21 @@ public final class AzureDataExplorerSinkResponse {
      * Copy sink type.
      * Expected value is 'AzureDataExplorerSink'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-     */
+    */
     public Optional<Object> getWriteBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
     /**
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getWriteBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }

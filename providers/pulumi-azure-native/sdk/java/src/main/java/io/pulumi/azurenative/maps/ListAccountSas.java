@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListAccountSas {
-/**
- * A new Sas token which can be used to access the Maps REST APIs and is controlled by the specified Managed identity permissions on Azure (IAM) Role Based Access Control.
+    private ListAccountSas() {}
+    public interface BuilderApplicator {
+        public void apply(ListAccountSasArgs.Builder a);
+    }
+    private static ListAccountSasArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListAccountSasArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A new Sas token which can be used to access the Maps REST APIs and is controlled by the specified Managed identity permissions on Azure (IAM) Role Based Access Control.
  * API Version: 2021-12-01-preview.
  * 
- *
- * A new Sas token which can be used to access the Maps REST APIs and is controlled by the specified Managed identity permissions on Azure (IAM) Role Based Access Control.
+     *
+     * A new Sas token which can be used to access the Maps REST APIs and is controlled by the specified Managed identity permissions on Azure (IAM) Role Based Access Control.
  * 
- */
+     */
+    public static CompletableFuture<ListAccountSasResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A new Sas token which can be used to access the Maps REST APIs and is controlled by the specified Managed identity permissions on Azure (IAM) Role Based Access Control.
+     * API Version: 2021-12-01-preview.
+     * 
+     *
+         * A new Sas token which can be used to access the Maps REST APIs and is controlled by the specified Managed identity permissions on Azure (IAM) Role Based Access Control.
+     * 
+     */
     public static CompletableFuture<ListAccountSasResult> invokeAsync(ListAccountSasArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:maps:listAccountSas", TypeShape.of(ListAccountSasResult.class), args == null ? ListAccountSasArgs.Empty : args, Utilities.withVersion(options));
     }

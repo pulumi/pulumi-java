@@ -31,14 +31,14 @@ public final class CloudTieringDatePolicyStatusResponse {
     /**
      * Last updated timestamp
      * 
-     */
+    */
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
      * Most recent access time of tiered files
      * 
-     */
+    */
     public String getTieredFilesMostRecentAccessTimestamp() {
         return this.tieredFilesMostRecentAccessTimestamp;
     }

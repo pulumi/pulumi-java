@@ -33,14 +33,14 @@ public final class ResourceGroupValueResponse {
     /**
      * Location of the resource group.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of the resource group.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

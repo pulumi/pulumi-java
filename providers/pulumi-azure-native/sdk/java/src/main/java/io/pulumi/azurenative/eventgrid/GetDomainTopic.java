@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomainTopic {
-/**
- * Domain Topic.
+    private GetDomainTopic() {}
+    public interface BuilderApplicator {
+        public void apply(GetDomainTopicArgs.Builder a);
+    }
+    private static GetDomainTopicArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDomainTopicArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Domain Topic.
  * API Version: 2020-06-01.
  * 
- *
- * Domain Topic.
+     *
+     * Domain Topic.
  * 
- */
+     */
+    public static CompletableFuture<GetDomainTopicResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Domain Topic.
+     * API Version: 2020-06-01.
+     * 
+     *
+         * Domain Topic.
+     * 
+     */
     public static CompletableFuture<GetDomainTopicResult> invokeAsync(GetDomainTopicArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getDomainTopic", TypeShape.of(GetDomainTopicResult.class), args == null ? GetDomainTopicArgs.Empty : args, Utilities.withVersion(options));
     }

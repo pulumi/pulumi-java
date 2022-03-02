@@ -25,7 +25,7 @@ public final class UserObjectReceiverValueResponse {
     /**
      * user object ids.
      * 
-     */
+    */
     public List<String> getUserObjectIds() {
         return this.userObjectIds == null ? List.of() : this.userObjectIds;
     }

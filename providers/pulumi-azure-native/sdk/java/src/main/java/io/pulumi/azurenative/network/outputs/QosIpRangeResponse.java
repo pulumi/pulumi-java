@@ -33,14 +33,14 @@ public final class QosIpRangeResponse {
     /**
      * End IP Address.
      * 
-     */
+    */
     public Optional<String> getEndIP() {
         return Optional.ofNullable(this.endIP);
     }
     /**
      * Start IP Address.
      * 
-     */
+    */
     public Optional<String> getStartIP() {
         return Optional.ofNullable(this.startIP);
     }

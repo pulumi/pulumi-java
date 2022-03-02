@@ -63,42 +63,42 @@ public final class RecordSetResponse {
     /**
      * Fqdn that resolves to private endpoint ip address.
      * 
-     */
+    */
     public Optional<String> getFqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
      * The private ip address of the private endpoint.
      * 
-     */
+    */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
      * The provisioning state of the recordset.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Recordset name.
      * 
-     */
+    */
     public Optional<String> getRecordSetName() {
         return Optional.ofNullable(this.recordSetName);
     }
     /**
      * Resource record type.
      * 
-     */
+    */
     public Optional<String> getRecordType() {
         return Optional.ofNullable(this.recordType);
     }
     /**
      * Recordset time to live.
      * 
-     */
+    */
     public Optional<Integer> getTtl() {
         return Optional.ofNullable(this.ttl);
     }

@@ -143,119 +143,119 @@ public final class ListWebAppBackupStatusSecretsSlotResult {
     /**
      * Id of the backup.
      * 
-     */
+    */
     public Integer getBackupId() {
         return this.backupId;
     }
     /**
      * Name of the blob which contains data for this backup.
      * 
-     */
+    */
     public String getBlobName() {
         return this.blobName;
     }
     /**
      * Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.
      * 
-     */
+    */
     public String getCorrelationId() {
         return this.correlationId;
     }
     /**
      * Timestamp of the backup creation.
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * List of databases included in the backup.
      * 
-     */
+    */
     public List<DatabaseBackupSettingResponse> getDatabases() {
         return this.databases;
     }
     /**
      * Timestamp when this backup finished.
      * 
-     */
+    */
     public String getFinishedTimeStamp() {
         return this.finishedTimeStamp;
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Timestamp of a last restore operation which used this backup.
      * 
-     */
+    */
     public String getLastRestoreTimeStamp() {
         return this.lastRestoreTimeStamp;
     }
     /**
      * Details regarding this backup. Might contain an error message.
      * 
-     */
+    */
     public String getLog() {
         return this.log;
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * True if this backup has been created due to a schedule being triggered.
      * 
-     */
+    */
     public Boolean getScheduled() {
         return this.scheduled;
     }
     /**
      * Size of the backup in bytes.
      * 
-     */
+    */
     public Double getSizeInBytes() {
         return this.sizeInBytes;
     }
     /**
      * Backup status.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * SAS URL for the storage account container which contains this backup.
      * 
-     */
+    */
     public String getStorageAccountUrl() {
         return this.storageAccountUrl;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Size of the original web app which has been backed up.
      * 
-     */
+    */
     public Double getWebsiteSizeInBytes() {
         return this.websiteSizeInBytes;
     }

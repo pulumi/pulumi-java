@@ -61,42 +61,42 @@ public final class GetSuppressionResult {
     /**
      * Gets or sets the expiration time stamp.
      * 
-     */
+    */
     public String getExpirationTimeStamp() {
         return this.expirationTimeStamp;
     }
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The GUID of the suppression.
      * 
-     */
+    */
     public Optional<String> getSuppressionId() {
         return Optional.ofNullable(this.suppressionId);
     }
     /**
      * The duration for which the suppression is valid.
      * 
-     */
+    */
     public Optional<String> getTtl() {
         return Optional.ofNullable(this.ttl);
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

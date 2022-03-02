@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationRuntimeStatus {
-/**
- * Integration runtime status response.
+    private GetIntegrationRuntimeStatus() {}
+    public interface BuilderApplicator {
+        public void apply(GetIntegrationRuntimeStatusArgs.Builder a);
+    }
+    private static GetIntegrationRuntimeStatusArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIntegrationRuntimeStatusArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Integration runtime status response.
  * API Version: 2021-03-01.
  * 
- *
- * Integration runtime status response.
+     *
+     * Integration runtime status response.
  * 
- */
+     */
+    public static CompletableFuture<GetIntegrationRuntimeStatusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Integration runtime status response.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Integration runtime status response.
+     * 
+     */
     public static CompletableFuture<GetIntegrationRuntimeStatusResult> invokeAsync(GetIntegrationRuntimeStatusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getIntegrationRuntimeStatus", TypeShape.of(GetIntegrationRuntimeStatusResult.class), args == null ? GetIntegrationRuntimeStatusArgs.Empty : args, Utilities.withVersion(options));
     }

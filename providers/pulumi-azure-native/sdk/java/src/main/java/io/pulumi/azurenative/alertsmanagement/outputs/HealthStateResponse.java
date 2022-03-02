@@ -32,14 +32,14 @@ public final class HealthStateResponse {
     /**
      * Health state name
      * 
-     */
+    */
     public String getHealthStateName() {
         return this.healthStateName;
     }
     /**
      * Severity of alert fired
      * 
-     */
+    */
     public Double getSeverity() {
         return this.severity;
     }

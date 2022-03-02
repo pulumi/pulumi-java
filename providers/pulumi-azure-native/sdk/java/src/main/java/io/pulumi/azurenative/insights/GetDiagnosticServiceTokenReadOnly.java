@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDiagnosticServiceTokenReadOnly {
-/**
- * The response to a diagnostic services token query.
+    private GetDiagnosticServiceTokenReadOnly() {}
+    public interface BuilderApplicator {
+        public void apply(GetDiagnosticServiceTokenReadOnlyArgs.Builder a);
+    }
+    private static GetDiagnosticServiceTokenReadOnlyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDiagnosticServiceTokenReadOnlyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The response to a diagnostic services token query.
  * API Version: 2021-03-03-preview.
  * 
- *
- * The response to a diagnostic services token query.
+     *
+     * The response to a diagnostic services token query.
  * 
- */
+     */
+    public static CompletableFuture<GetDiagnosticServiceTokenReadOnlyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The response to a diagnostic services token query.
+     * API Version: 2021-03-03-preview.
+     * 
+     *
+         * The response to a diagnostic services token query.
+     * 
+     */
     public static CompletableFuture<GetDiagnosticServiceTokenReadOnlyResult> invokeAsync(GetDiagnosticServiceTokenReadOnlyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getDiagnosticServiceTokenReadOnly", TypeShape.of(GetDiagnosticServiceTokenReadOnlyResult.class), args == null ? GetDiagnosticServiceTokenReadOnlyArgs.Empty : args, Utilities.withVersion(options));
     }

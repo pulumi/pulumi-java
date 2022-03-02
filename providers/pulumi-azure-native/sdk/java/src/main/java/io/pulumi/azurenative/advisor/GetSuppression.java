@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSuppression {
-/**
- * The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
+    private GetSuppression() {}
+    public interface BuilderApplicator {
+        public void apply(GetSuppressionArgs.Builder a);
+    }
+    private static GetSuppressionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSuppressionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
  * API Version: 2020-01-01.
  * 
- *
- * The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
+     *
+     * The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
  * 
- */
+     */
+    public static CompletableFuture<GetSuppressionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
+     * API Version: 2020-01-01.
+     * 
+     *
+         * The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
+     * 
+     */
     public static CompletableFuture<GetSuppressionResult> invokeAsync(GetSuppressionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:advisor:getSuppression", TypeShape.of(GetSuppressionResult.class), args == null ? GetSuppressionArgs.Empty : args, Utilities.withVersion(options));
     }

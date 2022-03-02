@@ -31,14 +31,14 @@ public final class DatabaseAccountConnectionStringResponse {
     /**
      * Value of the connection string
      * 
-     */
+    */
     public String getConnectionString() {
         return this.connectionString;
     }
     /**
      * Description of the connection string
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }

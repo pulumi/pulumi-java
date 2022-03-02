@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAnomalies {
-/**
- * Settings with single toggle.
+    private GetAnomalies() {}
+    public interface BuilderApplicator {
+        public void apply(GetAnomaliesArgs.Builder a);
+    }
+    private static GetAnomaliesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAnomaliesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Settings with single toggle.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Settings with single toggle.
+     *
+     * Settings with single toggle.
  * 
- */
+     */
+    public static CompletableFuture<GetAnomaliesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Settings with single toggle.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Settings with single toggle.
+     * 
+     */
     public static CompletableFuture<GetAnomaliesResult> invokeAsync(GetAnomaliesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAnomalies", TypeShape.of(GetAnomaliesResult.class), args == null ? GetAnomaliesArgs.Empty : args, Utilities.withVersion(options));
     }

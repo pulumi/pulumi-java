@@ -141,119 +141,119 @@ public final class GetWebAppFunctionResult {
     /**
      * Config information.
      * 
-     */
+    */
     public Optional<Object> getConfig() {
         return Optional.ofNullable(this.config);
     }
     /**
      * Config URI.
      * 
-     */
+    */
     public Optional<String> getConfigHref() {
         return Optional.ofNullable(this.configHref);
     }
     /**
      * File list.
      * 
-     */
+    */
     public Map<String,String> getFiles() {
         return this.files == null ? Map.of() : this.files;
     }
     /**
      * Function App ID.
      * 
-     */
+    */
     public Optional<String> getFunctionAppId() {
         return Optional.ofNullable(this.functionAppId);
     }
     /**
      * Function URI.
      * 
-     */
+    */
     public Optional<String> getHref() {
         return Optional.ofNullable(this.href);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The invocation URL
      * 
-     */
+    */
     public Optional<String> getInvokeUrlTemplate() {
         return Optional.ofNullable(this.invokeUrlTemplate);
     }
     /**
      * Gets or sets a value indicating whether the function is disabled
      * 
-     */
+    */
     public Optional<Boolean> getIsDisabled() {
         return Optional.ofNullable(this.isDisabled);
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The function language
      * 
-     */
+    */
     public Optional<String> getLanguage() {
         return Optional.ofNullable(this.language);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Script URI.
      * 
-     */
+    */
     public Optional<String> getScriptHref() {
         return Optional.ofNullable(this.scriptHref);
     }
     /**
      * Script root path URI.
      * 
-     */
+    */
     public Optional<String> getScriptRootPathHref() {
         return Optional.ofNullable(this.scriptRootPathHref);
     }
     /**
      * Secrets file URI.
      * 
-     */
+    */
     public Optional<String> getSecretsFileHref() {
         return Optional.ofNullable(this.secretsFileHref);
     }
     /**
      * Test data used when testing via the Azure Portal.
      * 
-     */
+    */
     public Optional<String> getTestData() {
         return Optional.ofNullable(this.testData);
     }
     /**
      * Test data URI.
      * 
-     */
+    */
     public Optional<String> getTestDataHref() {
         return Optional.ofNullable(this.testDataHref);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

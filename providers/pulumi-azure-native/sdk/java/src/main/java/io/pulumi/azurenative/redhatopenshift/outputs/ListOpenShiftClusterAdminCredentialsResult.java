@@ -25,7 +25,7 @@ public final class ListOpenShiftClusterAdminCredentialsResult {
     /**
      * The base64-encoded kubeconfig file.
      * 
-     */
+    */
     public Optional<String> getKubeconfig() {
         return Optional.ofNullable(this.kubeconfig);
     }

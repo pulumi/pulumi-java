@@ -65,42 +65,42 @@ public final class ExecutionStatisticsResponse {
     /**
      * CPU Time in millisecond(s) for the query execution
      * 
-     */
+    */
     public Double getCpuTimeMs() {
         return this.cpuTimeMs;
     }
     /**
      * Time taken in millisecond(s) for executing the query
      * 
-     */
+    */
     public Double getElapsedTimeMs() {
         return this.elapsedTimeMs;
     }
     /**
      * No. of query executions
      * 
-     */
+    */
     public Double getExecutionCount() {
         return this.executionCount;
     }
     /**
      * Indicates whether the query resulted in an error
      * 
-     */
+    */
     public Boolean getHasErrors() {
         return this.hasErrors;
     }
     /**
      * List of sql Errors
      * 
-     */
+    */
     public List<String> getSqlErrors() {
         return this.sqlErrors;
     }
     /**
      * Dictionary of sql query execution wait types and the respective statistics
      * 
-     */
+    */
     public Map<String,WaitStatisticsResponse> getWaitStats() {
         return this.waitStats == null ? Map.of() : this.waitStats;
     }

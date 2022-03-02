@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConsoleWithLocation {
-/**
- * Cloud shell console
+    private GetConsoleWithLocation() {}
+    public interface BuilderApplicator {
+        public void apply(GetConsoleWithLocationArgs.Builder a);
+    }
+    private static GetConsoleWithLocationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConsoleWithLocationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Cloud shell console
  * API Version: 2018-10-01.
  * 
- *
- * Cloud shell console
+     *
+     * Cloud shell console
  * 
- */
+     */
+    public static CompletableFuture<GetConsoleWithLocationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Cloud shell console
+     * API Version: 2018-10-01.
+     * 
+     *
+         * Cloud shell console
+     * 
+     */
     public static CompletableFuture<GetConsoleWithLocationResult> invokeAsync(GetConsoleWithLocationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:getConsoleWithLocation", TypeShape.of(GetConsoleWithLocationResult.class), args == null ? GetConsoleWithLocationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -97,70 +97,70 @@ public final class GatewayPropertiesResponse {
     /**
      * API metadata property for Spring Cloud Gateway
      * 
-     */
+    */
     public Optional<GatewayApiMetadataPropertiesResponse> getApiMetadataProperties() {
         return Optional.ofNullable(this.apiMetadataProperties);
     }
     /**
      * Cross-Origin Resource Sharing property
      * 
-     */
+    */
     public Optional<GatewayCorsPropertiesResponse> getCorsProperties() {
         return Optional.ofNullable(this.corsProperties);
     }
     /**
      * Indicate if only https is allowed.
      * 
-     */
+    */
     public Optional<Boolean> getHttpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
     /**
      * Collection of instances belong to Spring Cloud Gateway.
      * 
-     */
+    */
     public List<GatewayInstanceResponse> getInstances() {
         return this.instances;
     }
     /**
      * Properties of the Spring Cloud Gateway Operator.
      * 
-     */
+    */
     public GatewayOperatorPropertiesResponse getOperatorProperties() {
         return this.operatorProperties;
     }
     /**
      * State of the Spring Cloud Gateway.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Indicates whether the Spring Cloud Gateway exposes endpoint.
      * 
-     */
+    */
     public Optional<Boolean> get$public() {
         return Optional.ofNullable(this.$public);
     }
     /**
      * The requested resource quantity for required CPU and Memory.
      * 
-     */
+    */
     public Optional<GatewayResourceRequestsResponse> getResourceRequests() {
         return Optional.ofNullable(this.resourceRequests);
     }
     /**
      * Single sign-on related configuration
      * 
-     */
+    */
     public Optional<SsoPropertiesResponse> getSsoProperties() {
         return Optional.ofNullable(this.ssoProperties);
     }
     /**
      * URL of the Spring Cloud Gateway, exposed when 'public' is true.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

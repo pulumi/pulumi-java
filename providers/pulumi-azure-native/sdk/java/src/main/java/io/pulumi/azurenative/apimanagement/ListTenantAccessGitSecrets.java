@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListTenantAccessGitSecrets {
-/**
- * Tenant access information contract of the API Management service.
+    private ListTenantAccessGitSecrets() {}
+    public interface BuilderApplicator {
+        public void apply(ListTenantAccessGitSecretsArgs.Builder a);
+    }
+    private static ListTenantAccessGitSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListTenantAccessGitSecretsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Tenant access information contract of the API Management service.
  * API Version: 2019-12-01.
  * 
- *
- * Tenant access information contract of the API Management service.
+     *
+     * Tenant access information contract of the API Management service.
  * 
- */
+     */
+    public static CompletableFuture<ListTenantAccessGitSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Tenant access information contract of the API Management service.
+     * API Version: 2019-12-01.
+     * 
+     *
+         * Tenant access information contract of the API Management service.
+     * 
+     */
     public static CompletableFuture<ListTenantAccessGitSecretsResult> invokeAsync(ListTenantAccessGitSecretsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listTenantAccessGitSecrets", TypeShape.of(ListTenantAccessGitSecretsResult.class), args == null ? ListTenantAccessGitSecretsArgs.Empty : args, Utilities.withVersion(options));
     }

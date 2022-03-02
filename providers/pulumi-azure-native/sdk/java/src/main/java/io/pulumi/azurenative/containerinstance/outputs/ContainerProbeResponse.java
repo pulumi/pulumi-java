@@ -70,49 +70,49 @@ public final class ContainerProbeResponse {
     /**
      * The execution command to probe
      * 
-     */
+    */
     public Optional<ContainerExecResponse> getExec() {
         return Optional.ofNullable(this.exec);
     }
     /**
      * The failure threshold.
      * 
-     */
+    */
     public Optional<Integer> getFailureThreshold() {
         return Optional.ofNullable(this.failureThreshold);
     }
     /**
      * The Http Get settings to probe
      * 
-     */
+    */
     public Optional<ContainerHttpGetResponse> getHttpGet() {
         return Optional.ofNullable(this.httpGet);
     }
     /**
      * The initial delay seconds.
      * 
-     */
+    */
     public Optional<Integer> getInitialDelaySeconds() {
         return Optional.ofNullable(this.initialDelaySeconds);
     }
     /**
      * The period seconds.
      * 
-     */
+    */
     public Optional<Integer> getPeriodSeconds() {
         return Optional.ofNullable(this.periodSeconds);
     }
     /**
      * The success threshold.
      * 
-     */
+    */
     public Optional<Integer> getSuccessThreshold() {
         return Optional.ofNullable(this.successThreshold);
     }
     /**
      * The timeout seconds.
      * 
-     */
+    */
     public Optional<Integer> getTimeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }

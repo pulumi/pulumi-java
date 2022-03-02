@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineScaleSet {
-/**
- * Describes a Virtual Machine Scale Set.
+    private GetVirtualMachineScaleSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualMachineScaleSetArgs.Builder a);
+    }
+    private static GetVirtualMachineScaleSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualMachineScaleSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a Virtual Machine Scale Set.
  * API Version: 2021-03-01.
  * 
- *
- * Describes a Virtual Machine Scale Set.
+     *
+     * Describes a Virtual Machine Scale Set.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualMachineScaleSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a Virtual Machine Scale Set.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Describes a Virtual Machine Scale Set.
+     * 
+     */
     public static CompletableFuture<GetVirtualMachineScaleSetResult> invokeAsync(GetVirtualMachineScaleSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSet", TypeShape.of(GetVirtualMachineScaleSetResult.class), args == null ? GetVirtualMachineScaleSetArgs.Empty : args, Utilities.withVersion(options));
     }

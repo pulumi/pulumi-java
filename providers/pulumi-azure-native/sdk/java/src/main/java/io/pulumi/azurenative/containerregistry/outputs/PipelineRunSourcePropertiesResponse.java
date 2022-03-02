@@ -33,14 +33,14 @@ public final class PipelineRunSourcePropertiesResponse {
     /**
      * The name of the source.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The type of the source.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

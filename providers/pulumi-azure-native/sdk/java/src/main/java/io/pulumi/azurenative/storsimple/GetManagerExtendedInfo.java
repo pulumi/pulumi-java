@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagerExtendedInfo {
-/**
- * The extended info of the manager.
+    private GetManagerExtendedInfo() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagerExtendedInfoArgs.Builder a);
+    }
+    private static GetManagerExtendedInfoArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagerExtendedInfoArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The extended info of the manager.
  * API Version: 2017-06-01.
  * 
- *
- * The extended info of the manager.
+     *
+     * The extended info of the manager.
  * 
- */
+     */
+    public static CompletableFuture<GetManagerExtendedInfoResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The extended info of the manager.
+     * API Version: 2017-06-01.
+     * 
+     *
+         * The extended info of the manager.
+     * 
+     */
     public static CompletableFuture<GetManagerExtendedInfoResult> invokeAsync(GetManagerExtendedInfoArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:getManagerExtendedInfo", TypeShape.of(GetManagerExtendedInfoResult.class), args == null ? GetManagerExtendedInfoArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetprivateLinkServicesForM365ComplianceCenter {
-/**
- * The description of the service.
+    private GetprivateLinkServicesForM365ComplianceCenter() {}
+    public interface BuilderApplicator {
+        public void apply(GetprivateLinkServicesForM365ComplianceCenterArgs.Builder a);
+    }
+    private static GetprivateLinkServicesForM365ComplianceCenterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetprivateLinkServicesForM365ComplianceCenterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The description of the service.
  * API Version: 2021-03-25-preview.
  * 
- *
- * The description of the service.
+     *
+     * The description of the service.
  * 
- */
+     */
+    public static CompletableFuture<GetprivateLinkServicesForM365ComplianceCenterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The description of the service.
+     * API Version: 2021-03-25-preview.
+     * 
+     *
+         * The description of the service.
+     * 
+     */
     public static CompletableFuture<GetprivateLinkServicesForM365ComplianceCenterResult> invokeAsync(GetprivateLinkServicesForM365ComplianceCenterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:m365securityandcompliance:getprivateLinkServicesForM365ComplianceCenter", TypeShape.of(GetprivateLinkServicesForM365ComplianceCenterResult.class), args == null ? GetprivateLinkServicesForM365ComplianceCenterArgs.Empty : args, Utilities.withVersion(options));
     }

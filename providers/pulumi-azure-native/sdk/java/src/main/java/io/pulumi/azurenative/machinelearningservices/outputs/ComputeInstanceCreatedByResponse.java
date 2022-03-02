@@ -38,21 +38,21 @@ public final class ComputeInstanceCreatedByResponse {
     /**
      * Uniquely identifies the user within his/her organization.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }
     /**
      * Name of the user.
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }
     /**
      * Uniquely identifies user' Azure Active Directory organization.
      * 
-     */
+    */
     public String getUserOrgId() {
         return this.userOrgId;
     }

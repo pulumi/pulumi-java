@@ -112,91 +112,91 @@ public final class SiteResponse {
     /**
      * Entity Tag
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Whether this site is enabled for block user upload.
      * 
-     */
+    */
     public Optional<Boolean> getIsBlockUserUploadEnabled() {
         return Optional.ofNullable(this.isBlockUserUploadEnabled);
     }
     /**
      * Whether this site is enabled for DirectLine channel.
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * Whether this site is enabled for authentication with Bot Framework.
      * 
-     */
+    */
     public Optional<Boolean> getIsSecureSiteEnabled() {
         return Optional.ofNullable(this.isSecureSiteEnabled);
     }
     /**
      * Whether this site is token enabled for channel
      * 
-     */
+    */
     public Optional<Boolean> getIsTokenEnabled() {
         return Optional.ofNullable(this.isTokenEnabled);
     }
     /**
      * Whether this site is enabled for Bot Framework V1 protocol.
      * 
-     */
+    */
     public Boolean getIsV1Enabled() {
         return this.isV1Enabled;
     }
     /**
      * Whether this site is enabled for Bot Framework V1 protocol.
      * 
-     */
+    */
     public Boolean getIsV3Enabled() {
         return this.isV3Enabled;
     }
     /**
      * Whether this site is enabled for preview versions of Webchat
      * 
-     */
+    */
     public Boolean getIsWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
     /**
      * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-     */
+    */
     public String getKey2() {
         return this.key2;
     }
     /**
      * Site Id
      * 
-     */
+    */
     public String getSiteId() {
         return this.siteId;
     }
     /**
      * Site name
      * 
-     */
+    */
     public String getSiteName() {
         return this.siteName;
     }
     /**
      * List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
      * 
-     */
+    */
     public List<String> getTrustedOrigins() {
         return this.trustedOrigins == null ? List.of() : this.trustedOrigins;
     }

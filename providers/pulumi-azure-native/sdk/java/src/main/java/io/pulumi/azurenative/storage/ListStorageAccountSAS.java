@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStorageAccountSAS {
-/**
- * The List SAS credentials operation response.
+    private ListStorageAccountSAS() {}
+    public interface BuilderApplicator {
+        public void apply(ListStorageAccountSASArgs.Builder a);
+    }
+    private static ListStorageAccountSASArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListStorageAccountSASArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The List SAS credentials operation response.
  * API Version: 2021-02-01.
  * 
- *
- * The List SAS credentials operation response.
+     *
+     * The List SAS credentials operation response.
  * 
- */
+     */
+    public static CompletableFuture<ListStorageAccountSASResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The List SAS credentials operation response.
+     * API Version: 2021-02-01.
+     * 
+     *
+         * The List SAS credentials operation response.
+     * 
+     */
     public static CompletableFuture<ListStorageAccountSASResult> invokeAsync(ListStorageAccountSASArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:listStorageAccountSAS", TypeShape.of(ListStorageAccountSASResult.class), args == null ? ListStorageAccountSASArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -87,6 +87,22 @@ public class WebAppConnectionStringsSlot extends io.pulumi.resources.CustomResou
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WebAppConnectionStringsSlotArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.web.WebAppConnectionStringsSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.web.WebAppConnectionStringsSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public WebAppConnectionStringsSlot(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

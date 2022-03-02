@@ -114,91 +114,91 @@ public final class GetSpatialAnchorsAccountResult {
     /**
      * Correspond domain name of certain Spatial Anchors Account
      * 
-     */
+    */
     public String getAccountDomain() {
         return this.accountDomain;
     }
     /**
      * unique id of certain account.
      * 
-     */
+    */
     public String getAccountId() {
         return this.accountId;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity associated with this account
      * 
-     */
+    */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The kind of account, if supported
      * 
-     */
+    */
     public Optional<SkuResponse> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The plan associated with this account
      * 
-     */
+    */
     public Optional<IdentityResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
     /**
      * The sku associated with this account
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The name of the storage account associated with this accountId
      * 
-     */
+    */
     public Optional<String> getStorageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
     /**
      * System metadata for this account
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

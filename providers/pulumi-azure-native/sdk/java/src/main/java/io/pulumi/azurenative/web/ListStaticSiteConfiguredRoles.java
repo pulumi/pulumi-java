@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListStaticSiteConfiguredRoles {
-/**
- * String list resource.
+    private ListStaticSiteConfiguredRoles() {}
+    public interface BuilderApplicator {
+        public void apply(ListStaticSiteConfiguredRolesArgs.Builder a);
+    }
+    private static ListStaticSiteConfiguredRolesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListStaticSiteConfiguredRolesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * String list resource.
  * API Version: 2020-12-01.
  * 
- *
- * String list resource.
+     *
+     * String list resource.
  * 
- */
+     */
+    public static CompletableFuture<ListStaticSiteConfiguredRolesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * String list resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * String list resource.
+     * 
+     */
     public static CompletableFuture<ListStaticSiteConfiguredRolesResult> invokeAsync(ListStaticSiteConfiguredRolesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listStaticSiteConfiguredRoles", TypeShape.of(ListStaticSiteConfiguredRolesResult.class), args == null ? ListStaticSiteConfiguredRolesArgs.Empty : args, Utilities.withVersion(options));
     }

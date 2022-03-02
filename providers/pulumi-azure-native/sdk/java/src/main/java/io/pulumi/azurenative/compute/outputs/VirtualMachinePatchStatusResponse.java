@@ -43,21 +43,21 @@ public final class VirtualMachinePatchStatusResponse {
     /**
      * The available patch summary of the latest assessment operation for the virtual machine.
      * 
-     */
+    */
     public Optional<AvailablePatchSummaryResponse> getAvailablePatchSummary() {
         return Optional.ofNullable(this.availablePatchSummary);
     }
     /**
      * The enablement status of the specified patchMode
      * 
-     */
+    */
     public List<InstanceViewStatusResponse> getConfigurationStatuses() {
         return this.configurationStatuses;
     }
     /**
      * The installation summary of the latest installation operation for the virtual machine.
      * 
-     */
+    */
     public Optional<LastPatchInstallationSummaryResponse> getLastPatchInstallationSummary() {
         return Optional.ofNullable(this.lastPatchInstallationSummary);
     }

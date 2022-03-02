@@ -40,21 +40,21 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
     /**
      * expiration date of service principal secret
      * 
-     */
+    */
     public Optional<String> getExpiryDate() {
         return Optional.ofNullable(this.expiryDate);
     }
     /**
      * name of secret resource in parameter store
      * 
-     */
+    */
     public Optional<String> getParameterNameInStore() {
         return Optional.ofNullable(this.parameterNameInStore);
     }
     /**
      * region of parameter store where secret is kept
      * 
-     */
+    */
     public Optional<String> getParameterStoreRegion() {
         return Optional.ofNullable(this.parameterStoreRegion);
     }

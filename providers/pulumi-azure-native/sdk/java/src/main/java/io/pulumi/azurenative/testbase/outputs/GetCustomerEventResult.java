@@ -62,42 +62,42 @@ public final class GetCustomerEventResult {
     /**
      * The name of the event subscribed to.
      * 
-     */
+    */
     public String getEventName() {
         return this.eventName;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The notification event receivers.
      * 
-     */
+    */
     public List<NotificationEventReceiverResponse> getReceivers() {
         return this.receivers;
     }
     /**
      * The system metadata relating to this resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

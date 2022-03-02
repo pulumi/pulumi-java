@@ -35,14 +35,14 @@ public final class SQLStorageSettingsResponse {
     /**
      * SQL Server default file path
      * 
-     */
+    */
     public Optional<String> getDefaultFilePath() {
         return Optional.ofNullable(this.defaultFilePath);
     }
     /**
      * Logical Unit Numbers for the disks.
      * 
-     */
+    */
     public List<Integer> getLuns() {
         return this.luns == null ? List.of() : this.luns;
     }

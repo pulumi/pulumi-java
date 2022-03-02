@@ -34,14 +34,14 @@ public final class NetworkProfileResponse {
     /**
      * Specifies the circuit id for connecting to express route.
      * 
-     */
+    */
     public String getCircuitId() {
         return this.circuitId;
     }
     /**
      * Specifies the network interfaces for the HANA instance.
      * 
-     */
+    */
     public List<IpAddressResponse> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }

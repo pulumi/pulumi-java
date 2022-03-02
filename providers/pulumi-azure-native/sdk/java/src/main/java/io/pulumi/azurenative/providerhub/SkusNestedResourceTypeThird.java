@@ -66,6 +66,22 @@ public class SkusNestedResourceTypeThird extends io.pulumi.resources.CustomResou
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SkusNestedResourceTypeThirdArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.providerhub.SkusNestedResourceTypeThirdArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.providerhub.SkusNestedResourceTypeThirdArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public SkusNestedResourceTypeThird(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

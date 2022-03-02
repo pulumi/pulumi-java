@@ -71,14 +71,14 @@ public final class GetMECRoleResult {
     /**
      * Activation key of the MEC.
      * 
-     */
+    */
     public Optional<AsymmetricEncryptedSecretResponse> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -86,35 +86,35 @@ public final class GetMECRoleResult {
      * Role type.
      * Expected value is 'MEC'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Role status.
      * 
-     */
+    */
     public String getRoleStatus() {
         return this.roleStatus;
     }
     /**
      * Role configured on ASE resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

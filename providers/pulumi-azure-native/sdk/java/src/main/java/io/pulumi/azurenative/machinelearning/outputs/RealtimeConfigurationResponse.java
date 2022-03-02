@@ -25,7 +25,7 @@ public final class RealtimeConfigurationResponse {
     /**
      * Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
      * 
-     */
+    */
     public Optional<Integer> getMaxConcurrentCalls() {
         return Optional.ofNullable(this.maxConcurrentCalls);
     }

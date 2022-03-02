@@ -218,6 +218,22 @@ public class IntegrationAccountAgreement extends io.pulumi.resources.CustomResou
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(IntegrationAccountAgreementArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.logic.IntegrationAccountAgreementArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.logic.IntegrationAccountAgreementArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public IntegrationAccountAgreement(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -45,28 +45,28 @@ public final class ConnectorCollectionErrorInfoResponse {
     /**
      * Short error code
      * 
-     */
+    */
     public String getErrorCode() {
         return this.errorCode;
     }
     /**
      * External Provider error message
      * 
-     */
+    */
     public String getErrorInnerMessage() {
         return this.errorInnerMessage;
     }
     /**
      * Detailed error message
      * 
-     */
+    */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * Time the error started occurring (Last time error occurred in lastChecked)
      * 
-     */
+    */
     public String getErrorStartTime() {
         return this.errorStartTime;
     }

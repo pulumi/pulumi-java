@@ -24,7 +24,7 @@ public final class NetworkProfileResponseOutboundIPs {
     /**
      * A list of public IP addresses.
      * 
-     */
+    */
     public List<String> getPublicIPs() {
         return this.publicIPs;
     }

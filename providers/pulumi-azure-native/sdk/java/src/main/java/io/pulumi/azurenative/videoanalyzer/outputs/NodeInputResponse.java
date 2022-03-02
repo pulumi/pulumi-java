@@ -23,7 +23,7 @@ public final class NodeInputResponse {
     /**
      * The name of the upstream node in the pipeline which output is used as input of the current node.
      * 
-     */
+    */
     public String getNodeName() {
         return this.nodeName;
     }

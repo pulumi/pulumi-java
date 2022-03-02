@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkDnsZone {
-/**
- * NSX DNS Zone
+    private GetWorkloadNetworkDnsZone() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkloadNetworkDnsZoneArgs.Builder a);
+    }
+    private static GetWorkloadNetworkDnsZoneArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkloadNetworkDnsZoneArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * NSX DNS Zone
  * API Version: 2020-07-17-preview.
  * 
- *
- * NSX DNS Zone
+     *
+     * NSX DNS Zone
  * 
- */
+     */
+    public static CompletableFuture<GetWorkloadNetworkDnsZoneResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * NSX DNS Zone
+     * API Version: 2020-07-17-preview.
+     * 
+     *
+         * NSX DNS Zone
+     * 
+     */
     public static CompletableFuture<GetWorkloadNetworkDnsZoneResult> invokeAsync(GetWorkloadNetworkDnsZoneArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkDnsZone", TypeShape.of(GetWorkloadNetworkDnsZoneResult.class), args == null ? GetWorkloadNetworkDnsZoneArgs.Empty : args, Utilities.withVersion(options));
     }

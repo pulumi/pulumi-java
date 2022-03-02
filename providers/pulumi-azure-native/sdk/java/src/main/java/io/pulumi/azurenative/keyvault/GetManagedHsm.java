@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedHsm {
-/**
- * Resource information with extended details.
+    private GetManagedHsm() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagedHsmArgs.Builder a);
+    }
+    private static GetManagedHsmArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagedHsmArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource information with extended details.
  * API Version: 2021-06-01-preview.
  * 
- *
- * Resource information with extended details.
+     *
+     * Resource information with extended details.
  * 
- */
+     */
+    public static CompletableFuture<GetManagedHsmResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource information with extended details.
+     * API Version: 2021-06-01-preview.
+     * 
+     *
+         * Resource information with extended details.
+     * 
+     */
     public static CompletableFuture<GetManagedHsmResult> invokeAsync(GetManagedHsmArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:keyvault:getManagedHsm", TypeShape.of(GetManagedHsmResult.class), args == null ? GetManagedHsmArgs.Empty : args, Utilities.withVersion(options));
     }

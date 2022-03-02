@@ -40,21 +40,21 @@ public final class ManagedClusterPropertiesResponseIdentityProfile {
     /**
      * The client id of the user assigned identity.
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The object id of the user assigned identity.
      * 
-     */
+    */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * The resource id of the user assigned identity.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

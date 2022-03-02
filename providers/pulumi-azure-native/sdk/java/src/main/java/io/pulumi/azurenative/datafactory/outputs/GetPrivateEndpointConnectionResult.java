@@ -53,35 +53,35 @@ public final class GetPrivateEndpointConnectionResult {
     /**
      * Etag identifies change in the resource.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Core resource properties
      * 
-     */
+    */
     public RemotePrivateEndpointConnectionResponse getProperties() {
         return this.properties;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -34,14 +34,14 @@ public final class DeliveryRuleRequestBodyConditionResponse {
      * The name of the condition for the delivery rule.
      * Expected value is 'RequestBody'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
-     */
+    */
     public RequestBodyMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

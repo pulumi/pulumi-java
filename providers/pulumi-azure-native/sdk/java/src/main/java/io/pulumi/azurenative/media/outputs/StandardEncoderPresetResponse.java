@@ -67,21 +67,21 @@ public final class StandardEncoderPresetResponse {
     /**
      * The list of codecs to be used when encoding the input video.
      * 
-     */
+    */
     public List<Object> getCodecs() {
         return this.codecs;
     }
     /**
      * One or more filtering operations that are applied to the input media before encoding.
      * 
-     */
+    */
     public Optional<FiltersResponse> getFilters() {
         return Optional.ofNullable(this.filters);
     }
     /**
      * The list of outputs to be produced by the encoder.
      * 
-     */
+    */
     public List<Object> getFormats() {
         return this.formats;
     }
@@ -89,7 +89,7 @@ public final class StandardEncoderPresetResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.StandardEncoderPreset'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }

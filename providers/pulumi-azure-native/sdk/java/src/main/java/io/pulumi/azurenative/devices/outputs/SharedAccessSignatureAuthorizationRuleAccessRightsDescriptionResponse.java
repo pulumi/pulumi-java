@@ -47,28 +47,28 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     /**
      * Name of the key.
      * 
-     */
+    */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * Primary SAS key value.
      * 
-     */
+    */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * Rights that this key has.
      * 
-     */
+    */
     public String getRights() {
         return this.rights;
     }
     /**
      * Secondary SAS key value.
      * 
-     */
+    */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }

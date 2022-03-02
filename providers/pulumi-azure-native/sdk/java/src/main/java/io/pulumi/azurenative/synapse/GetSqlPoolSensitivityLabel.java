@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlPoolSensitivityLabel {
-/**
- * A sensitivity label.
+    private GetSqlPoolSensitivityLabel() {}
+    public interface BuilderApplicator {
+        public void apply(GetSqlPoolSensitivityLabelArgs.Builder a);
+    }
+    private static GetSqlPoolSensitivityLabelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSqlPoolSensitivityLabelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A sensitivity label.
  * API Version: 2021-03-01.
  * 
- *
- * A sensitivity label.
+     *
+     * A sensitivity label.
  * 
- */
+     */
+    public static CompletableFuture<GetSqlPoolSensitivityLabelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A sensitivity label.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * A sensitivity label.
+     * 
+     */
     public static CompletableFuture<GetSqlPoolSensitivityLabelResult> invokeAsync(GetSqlPoolSensitivityLabelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolSensitivityLabel", TypeShape.of(GetSqlPoolSensitivityLabelResult.class), args == null ? GetSqlPoolSensitivityLabelArgs.Empty : args, Utilities.withVersion(options));
     }

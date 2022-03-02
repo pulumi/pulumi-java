@@ -90,70 +90,70 @@ public final class SlackChannelPropertiesResponse {
     /**
      * The Slack client id
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-     */
+    */
     public Optional<String> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
      * Whether this channel is enabled for the bot
      * 
-     */
+    */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
     /**
      * Whether this channel is validated for the bot
      * 
-     */
+    */
     public Boolean getIsValidated() {
         return this.isValidated;
     }
     /**
      * The Slack landing page Url
      * 
-     */
+    */
     public Optional<String> getLandingPageUrl() {
         return Optional.ofNullable(this.landingPageUrl);
     }
     /**
      * The Sms auth token
      * 
-     */
+    */
     public String getLastSubmissionId() {
         return this.lastSubmissionId;
     }
     /**
      * The Slack redirect action
      * 
-     */
+    */
     public String getRedirectAction() {
         return this.redirectAction;
     }
     /**
      * Whether to register the settings before OAuth validation is performed. Recommended to True.
      * 
-     */
+    */
     public Boolean getRegisterBeforeOAuthFlow() {
         return this.registerBeforeOAuthFlow;
     }
     /**
      * The Slack signing secret.
      * 
-     */
+    */
     public Optional<String> getSigningSecret() {
         return Optional.ofNullable(this.signingSecret);
     }
     /**
      * The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-     */
+    */
     public Optional<String> getVerificationToken() {
         return Optional.ofNullable(this.verificationToken);
     }

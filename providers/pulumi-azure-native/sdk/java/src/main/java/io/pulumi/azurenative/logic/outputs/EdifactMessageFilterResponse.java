@@ -23,7 +23,7 @@ public final class EdifactMessageFilterResponse {
     /**
      * The message filter type.
      * 
-     */
+    */
     public String getMessageFilterType() {
         return this.messageFilterType;
     }

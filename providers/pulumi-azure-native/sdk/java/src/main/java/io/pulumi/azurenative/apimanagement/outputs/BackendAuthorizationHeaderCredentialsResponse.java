@@ -31,14 +31,14 @@ public final class BackendAuthorizationHeaderCredentialsResponse {
     /**
      * Authentication Parameter value.
      * 
-     */
+    */
     public String getParameter() {
         return this.parameter;
     }
     /**
      * Authentication Scheme name.
      * 
-     */
+    */
     public String getScheme() {
         return this.scheme;
     }

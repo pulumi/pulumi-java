@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStep {
-/**
- * The resource representation of a rollout step.
+    private GetStep() {}
+    public interface BuilderApplicator {
+        public void apply(GetStepArgs.Builder a);
+    }
+    private static GetStepArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStepArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The resource representation of a rollout step.
  * API Version: 2019-11-01-preview.
  * 
- *
- * The resource representation of a rollout step.
+     *
+     * The resource representation of a rollout step.
  * 
- */
+     */
+    public static CompletableFuture<GetStepResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The resource representation of a rollout step.
+     * API Version: 2019-11-01-preview.
+     * 
+     *
+         * The resource representation of a rollout step.
+     * 
+     */
     public static CompletableFuture<GetStepResult> invokeAsync(GetStepArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getStep", TypeShape.of(GetStepResult.class), args == null ? GetStepArgs.Empty : args, Utilities.withVersion(options));
     }

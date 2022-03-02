@@ -31,14 +31,14 @@ public final class MigrationReportResultResponse {
     /**
      * Migration validation result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The url of the report.
      * 
-     */
+    */
     public String getReportUrl() {
         return this.reportUrl;
     }

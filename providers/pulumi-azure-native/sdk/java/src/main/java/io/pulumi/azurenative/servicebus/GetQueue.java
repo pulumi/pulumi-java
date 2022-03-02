@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetQueue {
-/**
- * Description of queue Resource.
+    private GetQueue() {}
+    public interface BuilderApplicator {
+        public void apply(GetQueueArgs.Builder a);
+    }
+    private static GetQueueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetQueueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Description of queue Resource.
  * API Version: 2017-04-01.
  * 
- *
- * Description of queue Resource.
+     *
+     * Description of queue Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetQueueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Description of queue Resource.
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Description of queue Resource.
+     * 
+     */
     public static CompletableFuture<GetQueueResult> invokeAsync(GetQueueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getQueue", TypeShape.of(GetQueueResult.class), args == null ? GetQueueArgs.Empty : args, Utilities.withVersion(options));
     }

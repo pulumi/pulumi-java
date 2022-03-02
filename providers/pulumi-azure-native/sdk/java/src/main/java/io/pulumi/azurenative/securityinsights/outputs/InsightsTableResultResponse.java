@@ -34,14 +34,14 @@ public final class InsightsTableResultResponse {
     /**
      * Columns Metadata of the table
      * 
-     */
+    */
     public List<InsightsTableResultResponseColumns> getColumns() {
         return this.columns == null ? List.of() : this.columns;
     }
     /**
      * Rows data of the table
      * 
-     */
+    */
     public List<List<String>> getRows() {
         return this.rows == null ? List.of() : this.rows;
     }

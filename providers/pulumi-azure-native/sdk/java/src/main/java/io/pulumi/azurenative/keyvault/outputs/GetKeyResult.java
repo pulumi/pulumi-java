@@ -103,21 +103,21 @@ public final class GetKeyResult {
     /**
      * The attributes of the key.
      * 
-     */
+    */
     public Optional<KeyAttributesResponse> getAttributes() {
         return Optional.ofNullable(this.attributes);
     }
     /**
      * The elliptic curve name. For valid values, see JsonWebKeyCurveName.
      * 
-     */
+    */
     public Optional<String> getCurveName() {
         return Optional.ofNullable(this.curveName);
     }
     /**
      * Fully qualified identifier of the key vault resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -127,56 +127,56 @@ public final class GetKeyResult {
     /**
      * The key size in bits. For example: 2048, 3072, or 4096 for RSA.
      * 
-     */
+    */
     public Optional<Integer> getKeySize() {
         return Optional.ofNullable(this.keySize);
     }
     /**
      * The URI to retrieve the current version of the key.
      * 
-     */
+    */
     public String getKeyUri() {
         return this.keyUri;
     }
     /**
      * The URI to retrieve the specific version of the key.
      * 
-     */
+    */
     public String getKeyUriWithVersion() {
         return this.keyUriWithVersion;
     }
     /**
      * The type of the key. For valid values, see JsonWebKeyType.
      * 
-     */
+    */
     public Optional<String> getKty() {
         return Optional.ofNullable(this.kty);
     }
     /**
      * Azure location of the key vault resource.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Name of the key vault resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Tags assigned to the key vault resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * Resource type of the key vault resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

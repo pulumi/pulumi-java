@@ -63,28 +63,28 @@ public final class SftpWriteSettingsResponse {
     /**
      * The type of copy behavior for copy sink.
      * 
-     */
+    */
     public Optional<Object> getCopyBehavior() {
         return Optional.ofNullable(this.copyBehavior);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Specifies the timeout for writing each chunk to SFTP server. Default value: 01:00:00 (one hour). Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getOperationTimeout() {
         return Optional.ofNullable(this.operationTimeout);
     }
@@ -92,14 +92,14 @@ public final class SftpWriteSettingsResponse {
      * The write setting type.
      * Expected value is 'SftpWriteSettings'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn't support rename operation. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getUseTempFileRename() {
         return Optional.ofNullable(this.useTempFileRename);
     }

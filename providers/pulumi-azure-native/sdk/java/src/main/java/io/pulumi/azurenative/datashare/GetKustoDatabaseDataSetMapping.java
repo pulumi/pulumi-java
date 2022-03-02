@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKustoDatabaseDataSetMapping {
-/**
- * A Kusto database data set mapping
+    private GetKustoDatabaseDataSetMapping() {}
+    public interface BuilderApplicator {
+        public void apply(GetKustoDatabaseDataSetMappingArgs.Builder a);
+    }
+    private static GetKustoDatabaseDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetKustoDatabaseDataSetMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Kusto database data set mapping
  * API Version: 2020-09-01.
  * 
- *
- * A Kusto database data set mapping
+     *
+     * A Kusto database data set mapping
  * 
- */
+     */
+    public static CompletableFuture<GetKustoDatabaseDataSetMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Kusto database data set mapping
+     * API Version: 2020-09-01.
+     * 
+     *
+         * A Kusto database data set mapping
+     * 
+     */
     public static CompletableFuture<GetKustoDatabaseDataSetMappingResult> invokeAsync(GetKustoDatabaseDataSetMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getKustoDatabaseDataSetMapping", TypeShape.of(GetKustoDatabaseDataSetMappingResult.class), args == null ? GetKustoDatabaseDataSetMappingArgs.Empty : args, Utilities.withVersion(options));
     }

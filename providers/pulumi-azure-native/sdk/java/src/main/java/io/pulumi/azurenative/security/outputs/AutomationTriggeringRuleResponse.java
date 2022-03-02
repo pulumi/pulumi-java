@@ -47,28 +47,28 @@ public final class AutomationTriggeringRuleResponse {
     /**
      * The expected value.
      * 
-     */
+    */
     public Optional<String> getExpectedValue() {
         return Optional.ofNullable(this.expectedValue);
     }
     /**
      * A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
      * 
-     */
+    */
     public Optional<String> getOperator() {
         return Optional.ofNullable(this.operator);
     }
     /**
      * The JPath of the entity model property that should be checked.
      * 
-     */
+    */
     public Optional<String> getPropertyJPath() {
         return Optional.ofNullable(this.propertyJPath);
     }
     /**
      * The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
      * 
-     */
+    */
     public Optional<String> getPropertyType() {
         return Optional.ofNullable(this.propertyType);
     }

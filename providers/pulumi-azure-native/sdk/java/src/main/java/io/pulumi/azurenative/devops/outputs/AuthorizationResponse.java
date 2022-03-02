@@ -33,14 +33,14 @@ public final class AuthorizationResponse {
     /**
      * Type of authorization.
      * 
-     */
+    */
     public String getAuthorizationType() {
         return this.authorizationType;
     }
     /**
      * Authorization parameters corresponding to the authorization type.
      * 
-     */
+    */
     public Map<String,String> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }

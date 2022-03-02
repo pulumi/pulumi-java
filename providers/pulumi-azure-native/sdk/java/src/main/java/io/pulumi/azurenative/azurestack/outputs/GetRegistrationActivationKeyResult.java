@@ -25,7 +25,7 @@ public final class GetRegistrationActivationKeyResult {
     /**
      * Azure Stack activation key.
      * 
-     */
+    */
     public Optional<String> getActivationKey() {
         return Optional.ofNullable(this.activationKey);
     }

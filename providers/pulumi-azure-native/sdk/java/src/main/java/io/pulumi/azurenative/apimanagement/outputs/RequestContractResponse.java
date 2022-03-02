@@ -50,28 +50,28 @@ public final class RequestContractResponse {
     /**
      * Operation request description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Collection of operation request headers.
      * 
-     */
+    */
     public List<ParameterContractResponse> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
      * Collection of operation request query parameters.
      * 
-     */
+    */
     public List<ParameterContractResponse> getQueryParameters() {
         return this.queryParameters == null ? List.of() : this.queryParameters;
     }
     /**
      * Collection of operation request representations.
      * 
-     */
+    */
     public List<RepresentationContractResponse> getRepresentations() {
         return this.representations == null ? List.of() : this.representations;
     }

@@ -134,91 +134,91 @@ public final class HttpDatasetResponse {
      * ...
      * request-header-name-n:request-header-value-n Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getAdditionalHeaders() {
         return Optional.ofNullable(this.additionalHeaders);
     }
     /**
      * List of tags that can be used for describing the Dataset.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The data compression method used on files.
      * 
-     */
+    */
     public Optional<DatasetCompressionResponse> getCompression() {
         return Optional.ofNullable(this.compression);
     }
     /**
      * Dataset description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
-     */
+    */
     public Optional<DatasetResponseFolder> getFolder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * The format of files.
      * 
-     */
+    */
     public Optional<Object> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
     /**
      * Parameters for dataset.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The relative URL based on the URL in the HttpLinkedService refers to an HTTP file Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getRelativeUrl() {
         return Optional.ofNullable(this.relativeUrl);
     }
     /**
      * The body for the HTTP request. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getRequestBody() {
         return Optional.ofNullable(this.requestBody);
     }
     /**
      * The HTTP method for the HTTP request. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getRequestMethod() {
         return Optional.ofNullable(this.requestMethod);
     }
     /**
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
-     */
+    */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
-     */
+    */
     public Optional<Object> getStructure() {
         return Optional.ofNullable(this.structure);
     }
@@ -226,7 +226,7 @@ public final class HttpDatasetResponse {
      * Type of dataset.
      * Expected value is 'HttpFile'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

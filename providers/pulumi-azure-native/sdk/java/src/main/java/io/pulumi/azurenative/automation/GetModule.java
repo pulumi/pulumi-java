@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetModule {
-/**
- * Definition of the module type.
+    private GetModule() {}
+    public interface BuilderApplicator {
+        public void apply(GetModuleArgs.Builder a);
+    }
+    private static GetModuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetModuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of the module type.
  * API Version: 2019-06-01.
  * 
- *
- * Definition of the module type.
+     *
+     * Definition of the module type.
  * 
- */
+     */
+    public static CompletableFuture<GetModuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of the module type.
+     * API Version: 2019-06-01.
+     * 
+     *
+         * Definition of the module type.
+     * 
+     */
     public static CompletableFuture<GetModuleResult> invokeAsync(GetModuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getModule", TypeShape.of(GetModuleResult.class), args == null ? GetModuleArgs.Empty : args, Utilities.withVersion(options));
     }

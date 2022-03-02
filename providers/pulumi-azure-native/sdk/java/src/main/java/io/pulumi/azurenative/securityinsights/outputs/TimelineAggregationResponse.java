@@ -32,14 +32,14 @@ public final class TimelineAggregationResponse {
     /**
      * the total items found for a kind
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * the query kind
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }

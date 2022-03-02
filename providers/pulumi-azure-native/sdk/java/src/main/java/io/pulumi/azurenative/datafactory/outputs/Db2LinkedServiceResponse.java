@@ -126,84 +126,84 @@ public final class Db2LinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
      * 
-     */
+    */
     public Optional<String> getAuthenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
      * Certificate Common Name when TLS is enabled. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getCertificateCommonName() {
         return Optional.ofNullable(this.certificateCommonName);
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * The connection string. It is mutually exclusive with server, database, authenticationType, userName, packageCollection and certificateCommonName property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
-     */
+    */
     public Optional<Object> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
      * Database name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getDatabase() {
         return Optional.ofNullable(this.database);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Under where packages are created when querying database. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPackageCollection() {
         return Optional.ofNullable(this.packageCollection);
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Password for authentication.
      * 
-     */
+    */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Server name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getServer() {
         return Optional.ofNullable(this.server);
     }
@@ -211,14 +211,14 @@ public final class Db2LinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'Db2'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Username for authentication. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getUsername() {
         return Optional.ofNullable(this.username);
     }

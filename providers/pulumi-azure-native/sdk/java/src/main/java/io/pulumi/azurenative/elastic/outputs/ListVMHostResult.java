@@ -35,14 +35,14 @@ public final class ListVMHostResult {
     /**
      * Link to the next Vm resource Id, if any.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Results of a list operation.
      * 
-     */
+    */
     public List<VMResourcesResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

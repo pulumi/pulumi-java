@@ -110,21 +110,21 @@ public final class GetArcAddonResult {
     /**
      * Host OS supported by the Arc addon.
      * 
-     */
+    */
     public String getHostPlatform() {
         return this.hostPlatform;
     }
     /**
      * Platform where the runtime is hosted.
      * 
-     */
+    */
     public String getHostPlatformType() {
         return this.hostPlatformType;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -132,70 +132,70 @@ public final class GetArcAddonResult {
      * Addon type.
      * Expected value is 'ArcForKubernetes'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The object name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Addon Provisioning State
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Arc resource group name
      * 
-     */
+    */
     public String getResourceGroupName() {
         return this.resourceGroupName;
     }
     /**
      * Arc resource location
      * 
-     */
+    */
     public String getResourceLocation() {
         return this.resourceLocation;
     }
     /**
      * Arc resource Name
      * 
-     */
+    */
     public String getPropResourceName() {
         return this.resourceName;
     }
     /**
      * Arc resource subscription Id
      * 
-     */
+    */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
     /**
      * Addon type
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Arc resource version
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

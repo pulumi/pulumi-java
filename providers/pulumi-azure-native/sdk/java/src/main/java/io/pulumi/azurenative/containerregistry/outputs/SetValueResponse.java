@@ -41,21 +41,21 @@ public final class SetValueResponse {
     /**
      * Flag to indicate whether the value represents a secret or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsSecret() {
         return Optional.ofNullable(this.isSecret);
     }
     /**
      * The name of the overridable value.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The overridable value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

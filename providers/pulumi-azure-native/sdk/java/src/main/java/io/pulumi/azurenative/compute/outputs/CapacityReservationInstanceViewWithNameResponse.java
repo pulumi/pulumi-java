@@ -43,21 +43,21 @@ public final class CapacityReservationInstanceViewWithNameResponse {
     /**
      * The name of the capacity reservation.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource status information.
      * 
-     */
+    */
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
      * Unutilized capacity of the capacity reservation.
      * 
-     */
+    */
     public Optional<CapacityReservationUtilizationResponse> getUtilizationInfo() {
         return Optional.ofNullable(this.utilizationInfo);
     }

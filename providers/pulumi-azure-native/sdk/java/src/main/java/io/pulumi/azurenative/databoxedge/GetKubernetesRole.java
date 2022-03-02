@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKubernetesRole {
-/**
- * Kubernetes role.
+    private GetKubernetesRole() {}
+    public interface BuilderApplicator {
+        public void apply(GetKubernetesRoleArgs.Builder a);
+    }
+    private static GetKubernetesRoleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetKubernetesRoleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Kubernetes role.
  * API Version: 2020-12-01.
  * 
- *
- * Kubernetes role.
+     *
+     * Kubernetes role.
  * 
- */
+     */
+    public static CompletableFuture<GetKubernetesRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Kubernetes role.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Kubernetes role.
+     * 
+     */
     public static CompletableFuture<GetKubernetesRoleResult> invokeAsync(GetKubernetesRoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getKubernetesRole", TypeShape.of(GetKubernetesRoleResult.class), args == null ? GetKubernetesRoleArgs.Empty : args, Utilities.withVersion(options));
     }

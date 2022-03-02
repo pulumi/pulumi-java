@@ -48,28 +48,28 @@ public final class ConnectorMappingStructureResponse {
     /**
      * The column name of the import file.
      * 
-     */
+    */
     public String getColumnName() {
         return this.columnName;
     }
     /**
      * Custom format specifier for input parsing.
      * 
-     */
+    */
     public Optional<String> getCustomFormatSpecifier() {
         return Optional.ofNullable(this.customFormatSpecifier);
     }
     /**
      * Indicates if the column is encrypted.
      * 
-     */
+    */
     public Optional<Boolean> getIsEncrypted() {
         return Optional.ofNullable(this.isEncrypted);
     }
     /**
      * The property name of the mapping entity.
      * 
-     */
+    */
     public String getPropertyName() {
         return this.propertyName;
     }

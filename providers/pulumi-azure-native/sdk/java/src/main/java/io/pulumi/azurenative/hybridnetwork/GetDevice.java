@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDevice {
-/**
- * Device resource.
+    private GetDevice() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeviceArgs.Builder a);
+    }
+    private static GetDeviceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeviceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Device resource.
  * API Version: 2020-01-01-preview.
  * 
- *
- * Device resource.
+     *
+     * Device resource.
  * 
- */
+     */
+    public static CompletableFuture<GetDeviceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Device resource.
+     * API Version: 2020-01-01-preview.
+     * 
+     *
+         * Device resource.
+     * 
+     */
     public static CompletableFuture<GetDeviceResult> invokeAsync(GetDeviceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getDevice", TypeShape.of(GetDeviceResult.class), args == null ? GetDeviceArgs.Empty : args, Utilities.withVersion(options));
     }

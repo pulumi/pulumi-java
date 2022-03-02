@@ -34,14 +34,14 @@ public final class ComputeBindingResponse {
     /**
      * ID of the compute resource.
      * 
-     */
+    */
     public Optional<String> getComputeId() {
         return Optional.ofNullable(this.computeId);
     }
     /**
      * Number of nodes.
      * 
-     */
+    */
     public Optional<Integer> getNodeCount() {
         return Optional.ofNullable(this.nodeCount);
     }

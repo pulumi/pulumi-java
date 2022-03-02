@@ -85,63 +85,63 @@ public final class GetMediaGraphResult {
     /**
      * Date the Media Graph was created.
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * Media Graph description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fully qualified resource ID for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Date the Media Graph was last modified.
      * 
-     */
+    */
     public String getLastModified() {
         return this.lastModified;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Media Graph sinks.
      * 
-     */
+    */
     public List<MediaGraphAssetSinkResponse> getSinks() {
         return this.sinks;
     }
     /**
      * Media Graph sources.
      * 
-     */
+    */
     public List<MediaGraphRtspSourceResponse> getSources() {
         return this.sources;
     }
     /**
      * Media Graph state which indicates the resource allocation status for running the media graph pipeline.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

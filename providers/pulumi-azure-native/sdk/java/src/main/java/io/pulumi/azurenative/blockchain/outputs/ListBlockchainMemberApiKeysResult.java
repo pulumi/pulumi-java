@@ -25,7 +25,7 @@ public final class ListBlockchainMemberApiKeysResult {
     /**
      * Gets or sets the collection of API key.
      * 
-     */
+    */
     public List<ApiKeyResponse> getKeys() {
         return this.keys == null ? List.of() : this.keys;
     }

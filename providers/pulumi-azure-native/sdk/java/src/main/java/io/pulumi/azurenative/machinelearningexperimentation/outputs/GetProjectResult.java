@@ -111,91 +111,91 @@ public final class GetProjectResult {
     /**
      * The immutable id of the team account which contains this project.
      * 
-     */
+    */
     public String getAccountId() {
         return this.accountId;
     }
     /**
      * The creation date of the project in ISO8601 format.
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * The description of this project.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The friendly name for this project.
      * 
-     */
+    */
     public String getFriendlyName() {
         return this.friendlyName;
     }
     /**
      * The reference to git repo for this project.
      * 
-     */
+    */
     public Optional<String> getGitrepo() {
         return Optional.ofNullable(this.gitrepo);
     }
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The immutable id of this project.
      * 
-     */
+    */
     public String getProjectId() {
         return this.projectId;
     }
     /**
      * The current deployment state of project resource. The provisioningState is to indicate states for resource provisioning.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The immutable id of the workspace which contains this project.
      * 
-     */
+    */
     public String getWorkspaceId() {
         return this.workspaceId;
     }

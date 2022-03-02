@@ -136,112 +136,112 @@ public final class PropertyDefinitionResponse {
     /**
      * Array value separator for properties with isArray set.
      * 
-     */
+    */
     public Optional<String> getArrayValueSeparator() {
         return Optional.ofNullable(this.arrayValueSeparator);
     }
     /**
      * This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.
      * 
-     */
+    */
     public List<DataSourcePrecedenceResponse> getDataSourcePrecedenceRules() {
         return this.dataSourcePrecedenceRules;
     }
     /**
      * Describes valid values for an enum property.
      * 
-     */
+    */
     public List<ProfileEnumValidValuesFormatResponse> getEnumValidValues() {
         return this.enumValidValues == null ? List.of() : this.enumValidValues;
     }
     /**
      * Name of the property.
      * 
-     */
+    */
     public String getFieldName() {
         return this.fieldName;
     }
     /**
      * Type of the property.
      * 
-     */
+    */
     public String getFieldType() {
         return this.fieldType;
     }
     /**
      * Indicates if the property is actually an array of the fieldType above on the data api.
      * 
-     */
+    */
     public Optional<Boolean> getIsArray() {
         return Optional.ofNullable(this.isArray);
     }
     /**
      * Whether property is available in graph or not.
      * 
-     */
+    */
     public Optional<Boolean> getIsAvailableInGraph() {
         return Optional.ofNullable(this.isAvailableInGraph);
     }
     /**
      * Indicates if the property is an enum.
      * 
-     */
+    */
     public Optional<Boolean> getIsEnum() {
         return Optional.ofNullable(this.isEnum);
     }
     /**
      * Indicates if the property is an flag enum.
      * 
-     */
+    */
     public Optional<Boolean> getIsFlagEnum() {
         return Optional.ofNullable(this.isFlagEnum);
     }
     /**
      * Whether the property is an Image.
      * 
-     */
+    */
     public Optional<Boolean> getIsImage() {
         return Optional.ofNullable(this.isImage);
     }
     /**
      * Whether the property is a localized string.
      * 
-     */
+    */
     public Optional<Boolean> getIsLocalizedString() {
         return Optional.ofNullable(this.isLocalizedString);
     }
     /**
      * Whether the property is a name or a part of name.
      * 
-     */
+    */
     public Optional<Boolean> getIsName() {
         return Optional.ofNullable(this.isName);
     }
     /**
      * Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.
      * 
-     */
+    */
     public Optional<Boolean> getIsRequired() {
         return Optional.ofNullable(this.isRequired);
     }
     /**
      * Max length of string. Used only if type is string.
      * 
-     */
+    */
     public Optional<Integer> getMaxLength() {
         return Optional.ofNullable(this.maxLength);
     }
     /**
      * The ID associated with the property.
      * 
-     */
+    */
     public Optional<String> getPropertyId() {
         return Optional.ofNullable(this.propertyId);
     }
     /**
      * URL encoded schema.org item prop link for the property.
      * 
-     */
+    */
     public Optional<String> getSchemaItemPropLink() {
         return Optional.ofNullable(this.schemaItemPropLink);
     }

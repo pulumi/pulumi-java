@@ -34,14 +34,14 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse {
     /**
      * List of domains.
      * 
-     */
+    */
     public List<ResourceReferenceResponse> getDomains() {
         return this.domains == null ? List.of() : this.domains;
     }
     /**
      * List of paths
      * 
-     */
+    */
     public List<String> getPatternsToMatch() {
         return this.patternsToMatch == null ? List.of() : this.patternsToMatch;
     }

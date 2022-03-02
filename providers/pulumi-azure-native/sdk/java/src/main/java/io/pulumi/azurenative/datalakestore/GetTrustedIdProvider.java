@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTrustedIdProvider {
-/**
- * Data Lake Store trusted identity provider information.
+    private GetTrustedIdProvider() {}
+    public interface BuilderApplicator {
+        public void apply(GetTrustedIdProviderArgs.Builder a);
+    }
+    private static GetTrustedIdProviderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTrustedIdProviderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Data Lake Store trusted identity provider information.
  * API Version: 2016-11-01.
  * 
- *
- * Data Lake Store trusted identity provider information.
+     *
+     * Data Lake Store trusted identity provider information.
  * 
- */
+     */
+    public static CompletableFuture<GetTrustedIdProviderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Data Lake Store trusted identity provider information.
+     * API Version: 2016-11-01.
+     * 
+     *
+         * Data Lake Store trusted identity provider information.
+     * 
+     */
     public static CompletableFuture<GetTrustedIdProviderResult> invokeAsync(GetTrustedIdProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakestore:getTrustedIdProvider", TypeShape.of(GetTrustedIdProviderResult.class), args == null ? GetTrustedIdProviderArgs.Empty : args, Utilities.withVersion(options));
     }

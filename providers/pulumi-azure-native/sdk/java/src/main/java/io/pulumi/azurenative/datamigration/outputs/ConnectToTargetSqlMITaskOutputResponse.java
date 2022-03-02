@@ -61,42 +61,42 @@ public final class ConnectToTargetSqlMITaskOutputResponse {
     /**
      * List of agent jobs on the target server.
      * 
-     */
+    */
     public List<String> getAgentJobs() {
         return this.agentJobs;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of logins on the target server.
      * 
-     */
+    */
     public List<String> getLogins() {
         return this.logins;
     }
     /**
      * Target server brand version
      * 
-     */
+    */
     public String getTargetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
     /**
      * Target server version
      * 
-     */
+    */
     public String getTargetServerVersion() {
         return this.targetServerVersion;
     }
     /**
      * Validation errors
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }

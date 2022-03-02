@@ -46,28 +46,28 @@ public final class GetJobResult {
     /**
      * Gets the job resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Gets the job resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets or sets the job properties.
      * 
-     */
+    */
     public JobPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Gets the job resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

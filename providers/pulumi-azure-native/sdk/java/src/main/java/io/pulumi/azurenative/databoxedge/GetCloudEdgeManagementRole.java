@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCloudEdgeManagementRole {
-/**
- * CloudEdgeManagementRole role.
+    private GetCloudEdgeManagementRole() {}
+    public interface BuilderApplicator {
+        public void apply(GetCloudEdgeManagementRoleArgs.Builder a);
+    }
+    private static GetCloudEdgeManagementRoleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCloudEdgeManagementRoleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * CloudEdgeManagementRole role.
  * API Version: 2020-12-01.
  * 
- *
- * CloudEdgeManagementRole role.
+     *
+     * CloudEdgeManagementRole role.
  * 
- */
+     */
+    public static CompletableFuture<GetCloudEdgeManagementRoleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * CloudEdgeManagementRole role.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * CloudEdgeManagementRole role.
+     * 
+     */
     public static CompletableFuture<GetCloudEdgeManagementRoleResult> invokeAsync(GetCloudEdgeManagementRoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getCloudEdgeManagementRole", TypeShape.of(GetCloudEdgeManagementRoleResult.class), args == null ? GetCloudEdgeManagementRoleArgs.Empty : args, Utilities.withVersion(options));
     }

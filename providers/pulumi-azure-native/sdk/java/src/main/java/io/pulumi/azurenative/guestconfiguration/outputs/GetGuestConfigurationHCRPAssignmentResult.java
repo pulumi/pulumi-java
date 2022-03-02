@@ -55,35 +55,35 @@ public final class GetGuestConfigurationHCRPAssignmentResult {
     /**
      * ARM resource id of the guest configuration assignment.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Region where the VM is located.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of the guest configuration assignment.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Properties of the Guest configuration assignment.
      * 
-     */
+    */
     public GuestConfigurationAssignmentPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

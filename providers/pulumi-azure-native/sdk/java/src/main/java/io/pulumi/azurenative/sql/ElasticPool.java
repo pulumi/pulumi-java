@@ -223,6 +223,22 @@ public class ElasticPool extends io.pulumi.resources.CustomResource {
         return this.zoneRedundant;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ElasticPoolArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.sql.ElasticPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.sql.ElasticPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ElasticPool(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

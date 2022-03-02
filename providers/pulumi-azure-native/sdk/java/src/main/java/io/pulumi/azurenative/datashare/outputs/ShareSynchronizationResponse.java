@@ -90,70 +90,70 @@ public final class ShareSynchronizationResponse {
     /**
      * Email of the user who created the synchronization
      * 
-     */
+    */
     public Optional<String> getConsumerEmail() {
         return Optional.ofNullable(this.consumerEmail);
     }
     /**
      * Name of the user who created the synchronization
      * 
-     */
+    */
     public Optional<String> getConsumerName() {
         return Optional.ofNullable(this.consumerName);
     }
     /**
      * Tenant name of the consumer who created the synchronization
      * 
-     */
+    */
     public Optional<String> getConsumerTenantName() {
         return Optional.ofNullable(this.consumerTenantName);
     }
     /**
      * synchronization duration
      * 
-     */
+    */
     public Optional<Integer> getDurationMs() {
         return Optional.ofNullable(this.durationMs);
     }
     /**
      * End time of synchronization
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * message of synchronization
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * start time of synchronization
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * Raw Status
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Synchronization id
      * 
-     */
+    */
     public Optional<String> getSynchronizationId() {
         return Optional.ofNullable(this.synchronizationId);
     }
     /**
      * Synchronization mode
      * 
-     */
+    */
     public String getSynchronizationMode() {
         return this.synchronizationMode;
     }

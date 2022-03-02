@@ -25,7 +25,7 @@ public final class PipelineTriggerDescriptorResponse {
     /**
      * The source trigger that caused the pipeline run.
      * 
-     */
+    */
     public Optional<PipelineSourceTriggerDescriptorResponse> getSourceTrigger() {
         return Optional.ofNullable(this.sourceTrigger);
     }

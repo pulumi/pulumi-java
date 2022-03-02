@@ -46,28 +46,28 @@ public final class BastionShareableLinkResponse {
     /**
      * The unique Bastion Shareable Link to the virtual machine.
      * 
-     */
+    */
     public String getBsl() {
         return this.bsl;
     }
     /**
      * The time when the link was created.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Optional field indicating the warning or error message related to the vm in case of partial failure.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * Reference of the virtual machine resource.
      * 
-     */
+    */
     public VMResponse getVm() {
         return this.vm;
     }

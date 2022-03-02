@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPackage {
-/**
- * The Test Base Package resource.
+    private GetPackage() {}
+    public interface BuilderApplicator {
+        public void apply(GetPackageArgs.Builder a);
+    }
+    private static GetPackageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPackageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Test Base Package resource.
  * API Version: 2020-12-16-preview.
  * 
- *
- * The Test Base Package resource.
+     *
+     * The Test Base Package resource.
  * 
- */
+     */
+    public static CompletableFuture<GetPackageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Test Base Package resource.
+     * API Version: 2020-12-16-preview.
+     * 
+     *
+         * The Test Base Package resource.
+     * 
+     */
     public static CompletableFuture<GetPackageResult> invokeAsync(GetPackageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getPackage", TypeShape.of(GetPackageResult.class), args == null ? GetPackageArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrderItemByName {
-/**
- * Represents order item contract
+    private GetOrderItemByName() {}
+    public interface BuilderApplicator {
+        public void apply(GetOrderItemByNameArgs.Builder a);
+    }
+    private static GetOrderItemByNameArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOrderItemByNameArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents order item contract
  * API Version: 2021-12-01.
  * 
- *
- * Represents order item contract
+     *
+     * Represents order item contract
  * 
- */
+     */
+    public static CompletableFuture<GetOrderItemByNameResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents order item contract
+     * API Version: 2021-12-01.
+     * 
+     *
+         * Represents order item contract
+     * 
+     */
     public static CompletableFuture<GetOrderItemByNameResult> invokeAsync(GetOrderItemByNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:edgeorder:getOrderItemByName", TypeShape.of(GetOrderItemByNameResult.class), args == null ? GetOrderItemByNameArgs.Empty : args, Utilities.withVersion(options));
     }

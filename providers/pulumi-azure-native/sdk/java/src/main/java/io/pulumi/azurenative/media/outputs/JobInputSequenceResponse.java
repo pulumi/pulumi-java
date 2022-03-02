@@ -35,7 +35,7 @@ public final class JobInputSequenceResponse {
     /**
      * JobInputs that make up the timeline.
      * 
-     */
+    */
     public List<JobInputClipResponse> getInputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
@@ -43,7 +43,7 @@ public final class JobInputSequenceResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.JobInputSequence'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }

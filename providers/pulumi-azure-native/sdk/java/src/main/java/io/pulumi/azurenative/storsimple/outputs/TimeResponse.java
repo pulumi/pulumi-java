@@ -38,21 +38,21 @@ public final class TimeResponse {
     /**
      * The hour.
      * 
-     */
+    */
     public Integer getHours() {
         return this.hours;
     }
     /**
      * The minute.
      * 
-     */
+    */
     public Integer getMinutes() {
         return this.minutes;
     }
     /**
      * The second.
      * 
-     */
+    */
     public Integer getSeconds() {
         return this.seconds;
     }

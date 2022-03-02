@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBillingRoleAssignmentByDepartment {
-/**
- * The role assignment
+    private GetBillingRoleAssignmentByDepartment() {}
+    public interface BuilderApplicator {
+        public void apply(GetBillingRoleAssignmentByDepartmentArgs.Builder a);
+    }
+    private static GetBillingRoleAssignmentByDepartmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBillingRoleAssignmentByDepartmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The role assignment
  * API Version: 2019-10-01-preview.
  * 
- *
- * The role assignment
+     *
+     * The role assignment
  * 
- */
+     */
+    public static CompletableFuture<GetBillingRoleAssignmentByDepartmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The role assignment
+     * API Version: 2019-10-01-preview.
+     * 
+     *
+         * The role assignment
+     * 
+     */
     public static CompletableFuture<GetBillingRoleAssignmentByDepartmentResult> invokeAsync(GetBillingRoleAssignmentByDepartmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:billing:getBillingRoleAssignmentByDepartment", TypeShape.of(GetBillingRoleAssignmentByDepartmentResult.class), args == null ? GetBillingRoleAssignmentByDepartmentArgs.Empty : args, Utilities.withVersion(options));
     }

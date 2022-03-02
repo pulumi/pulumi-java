@@ -163,6 +163,22 @@ public class PolicySetDefinitionAtManagementGroup extends io.pulumi.resources.Cu
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PolicySetDefinitionAtManagementGroupArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.authorization.PolicySetDefinitionAtManagementGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.authorization.PolicySetDefinitionAtManagementGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PolicySetDefinitionAtManagementGroup(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

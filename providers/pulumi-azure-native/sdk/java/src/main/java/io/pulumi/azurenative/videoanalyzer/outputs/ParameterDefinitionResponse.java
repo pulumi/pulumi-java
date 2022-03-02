@@ -33,14 +33,14 @@ public final class ParameterDefinitionResponse {
     /**
      * Name of the parameter declared in the pipeline topology.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Parameter value to be applied on this specific pipeline.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

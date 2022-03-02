@@ -34,14 +34,14 @@ public final class ResourceRequirementsResponse {
     /**
      * The resource limits of this container instance.
      * 
-     */
+    */
     public Optional<ResourceLimitsResponse> getLimits() {
         return Optional.ofNullable(this.limits);
     }
     /**
      * The resource requests of this container instance.
      * 
-     */
+    */
     public ResourceRequestsResponse getRequests() {
         return this.requests;
     }

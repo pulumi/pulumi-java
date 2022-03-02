@@ -75,56 +75,56 @@ public final class GetWorkspaceConnectionResult {
     /**
      * Authorization type of the workspace connection.
      * 
-     */
+    */
     public Optional<String> getAuthType() {
         return Optional.ofNullable(this.authType);
     }
     /**
      * Category of the workspace connection.
      * 
-     */
+    */
     public Optional<String> getCategory() {
         return Optional.ofNullable(this.category);
     }
     /**
      * ResourceId of the workspace connection.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Friendly name of the workspace connection.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Target of the workspace connection.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
     /**
      * Resource type of workspace connection.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Value details of the workspace connection.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }
     /**
      * format for the workspace connection value
      * 
-     */
+    */
     public Optional<String> getValueFormat() {
         return Optional.ofNullable(this.valueFormat);
     }

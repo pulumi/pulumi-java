@@ -25,7 +25,7 @@ public final class ScopeClusterResponse {
     /**
      * Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created
      * 
-     */
+    */
     public Optional<String> getReleaseNamespace() {
         return Optional.ofNullable(this.releaseNamespace);
     }

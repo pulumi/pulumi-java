@@ -112,84 +112,84 @@ public final class GetAutomationResult {
     /**
      * A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
      * 
-     */
+    */
     public List<Object> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * The security automation description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Entity tag is used for comparing two or more entities from the same requested resource.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Indicates whether the security automation is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getIsEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
      * Kind of the resource
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Location where the resource is stored
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
      * 
-     */
+    */
     public List<AutomationScopeResponse> getScopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }
     /**
      * A collection of the source event types which evaluate the security automation set of rules.
      * 
-     */
+    */
     public List<AutomationSourceResponse> getSources() {
         return this.sources == null ? List.of() : this.sources;
     }
     /**
      * A list of key value pairs that describe the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

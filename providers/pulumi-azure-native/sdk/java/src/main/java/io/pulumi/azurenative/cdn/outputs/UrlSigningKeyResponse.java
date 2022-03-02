@@ -32,14 +32,14 @@ public final class UrlSigningKeyResponse {
     /**
      * Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
      * 
-     */
+    */
     public String getKeyId() {
         return this.keyId;
     }
     /**
      * Defines the parameters for using customer key vault for Url Signing Key.
      * 
-     */
+    */
     public KeyVaultSigningKeyParametersResponse getKeySourceParameters() {
         return this.keySourceParameters;
     }

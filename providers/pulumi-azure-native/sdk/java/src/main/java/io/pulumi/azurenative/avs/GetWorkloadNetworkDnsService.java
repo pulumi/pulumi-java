@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkloadNetworkDnsService {
-/**
- * NSX DNS Service
+    private GetWorkloadNetworkDnsService() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkloadNetworkDnsServiceArgs.Builder a);
+    }
+    private static GetWorkloadNetworkDnsServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkloadNetworkDnsServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * NSX DNS Service
  * API Version: 2020-07-17-preview.
  * 
- *
- * NSX DNS Service
+     *
+     * NSX DNS Service
  * 
- */
+     */
+    public static CompletableFuture<GetWorkloadNetworkDnsServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * NSX DNS Service
+     * API Version: 2020-07-17-preview.
+     * 
+     *
+         * NSX DNS Service
+     * 
+     */
     public static CompletableFuture<GetWorkloadNetworkDnsServiceResult> invokeAsync(GetWorkloadNetworkDnsServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getWorkloadNetworkDnsService", TypeShape.of(GetWorkloadNetworkDnsServiceResult.class), args == null ? GetWorkloadNetworkDnsServiceArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -71,42 +71,42 @@ public final class AzureDatabricksDeltaLakeSourceResponse {
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * Azure Databricks Delta Lake export settings.
      * 
-     */
+    */
     public Optional<AzureDatabricksDeltaLakeExportCommandResponse> getExportSettings() {
         return Optional.ofNullable(this.exportSettings);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Azure Databricks Delta Lake Sql query. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getQuery() {
         return Optional.ofNullable(this.query);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -114,7 +114,7 @@ public final class AzureDatabricksDeltaLakeSourceResponse {
      * Copy source type.
      * Expected value is 'AzureDatabricksDeltaLakeSource'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

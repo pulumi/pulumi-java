@@ -62,35 +62,35 @@ public final class IoTHubStreamInputDataSourceResponse {
     /**
      * The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.
      * 
-     */
+    */
     public Optional<String> getConsumerGroupName() {
         return Optional.ofNullable(this.consumerGroupName);
     }
     /**
      * The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).
      * 
-     */
+    */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getIotHubNamespace() {
         return Optional.ofNullable(this.iotHubNamespace);
     }
     /**
      * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getSharedAccessPolicyKey() {
         return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
     /**
      * The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getSharedAccessPolicyName() {
         return Optional.ofNullable(this.sharedAccessPolicyName);
     }
@@ -98,7 +98,7 @@ public final class IoTHubStreamInputDataSourceResponse {
      * Indicates the type of input data source containing stream data. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Microsoft.Devices/IotHubs'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

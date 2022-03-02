@@ -61,42 +61,42 @@ public final class SiteSpnPropertiesResponse {
     /**
      * AAD Authority URL which was used to request the token for the service principal.
      * 
-     */
+    */
     public Optional<String> getAadAuthority() {
         return Optional.ofNullable(this.aadAuthority);
     }
     /**
      * Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
-     */
+    */
     public Optional<String> getApplicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
      * Intended audience for the service principal.
      * 
-     */
+    */
     public Optional<String> getAudience() {
         return Optional.ofNullable(this.audience);
     }
     /**
      * Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
-     */
+    */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
     /**
      * Raw certificate data for building certificate expiry flows.
      * 
-     */
+    */
     public Optional<String> getRawCertData() {
         return Optional.ofNullable(this.rawCertData);
     }
     /**
      * Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }

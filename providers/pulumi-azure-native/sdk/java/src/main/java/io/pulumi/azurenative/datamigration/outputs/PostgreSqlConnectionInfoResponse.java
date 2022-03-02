@@ -63,28 +63,28 @@ public final class PostgreSqlConnectionInfoResponse {
     /**
      * Name of the database
      * 
-     */
+    */
     public Optional<String> getDatabaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
      * Password credential.
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Port for Server
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * Name of the server
      * 
-     */
+    */
     public String getServerName() {
         return this.serverName;
     }
@@ -92,14 +92,14 @@ public final class PostgreSqlConnectionInfoResponse {
      * Type of connection info
      * Expected value is 'PostgreSqlConnectionInfo'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * User name
      * 
-     */
+    */
     public Optional<String> getUserName() {
         return Optional.ofNullable(this.userName);
     }

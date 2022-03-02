@@ -33,14 +33,14 @@ public final class ReferenceDataSetKeyPropertyResponse {
     /**
      * The name of the key property.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The type of the key property.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

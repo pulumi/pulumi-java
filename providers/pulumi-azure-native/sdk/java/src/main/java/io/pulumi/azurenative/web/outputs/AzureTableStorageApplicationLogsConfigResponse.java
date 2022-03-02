@@ -33,14 +33,14 @@ public final class AzureTableStorageApplicationLogsConfigResponse {
     /**
      * Log level.
      * 
-     */
+    */
     public Optional<String> getLevel() {
         return Optional.ofNullable(this.level);
     }
     /**
      * SAS URL to an Azure table with add/query/delete permissions.
      * 
-     */
+    */
     public String getSasUrl() {
         return this.sasUrl;
     }

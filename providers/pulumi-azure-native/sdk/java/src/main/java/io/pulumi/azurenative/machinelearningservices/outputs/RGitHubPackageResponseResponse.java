@@ -25,7 +25,7 @@ public final class RGitHubPackageResponseResponse {
     /**
      * Repository address in the format username/repo[/subdir][@ref|#pull].
      * 
-     */
+    */
     public Optional<String> getRepository() {
         return Optional.ofNullable(this.repository);
     }

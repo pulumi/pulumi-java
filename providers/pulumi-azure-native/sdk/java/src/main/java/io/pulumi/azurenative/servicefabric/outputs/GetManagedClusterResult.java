@@ -188,161 +188,161 @@ public final class GetManagedClusterResult {
     /**
      * client certificates for the cluster.
      * 
-     */
+    */
     public List<String> getAddonFeatures() {
         return this.addonFeatures == null ? List.of() : this.addonFeatures;
     }
     /**
      * vm admin user password.
      * 
-     */
+    */
     public Optional<String> getAdminPassword() {
         return Optional.ofNullable(this.adminPassword);
     }
     /**
      * vm admin user name.
      * 
-     */
+    */
     public String getAdminUserName() {
         return this.adminUserName;
     }
     /**
      * Azure active directory.
      * 
-     */
+    */
     public Optional<AzureActiveDirectoryResponse> getAzureActiveDirectory() {
         return Optional.ofNullable(this.azureActiveDirectory);
     }
     /**
      * The port used for client connections to the cluster.
      * 
-     */
+    */
     public Optional<Integer> getClientConnectionPort() {
         return Optional.ofNullable(this.clientConnectionPort);
     }
     /**
      * client certificates for the cluster.
      * 
-     */
+    */
     public List<ClientCertificateResponse> getClients() {
         return this.clients == null ? List.of() : this.clients;
     }
     /**
      * The cluster certificate thumbprint used node to node communication.
      * 
-     */
+    */
     public String getClusterCertificateThumbprint() {
         return this.clusterCertificateThumbprint;
     }
     /**
      * The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
      * 
-     */
+    */
     public Optional<String> getClusterCodeVersion() {
         return Optional.ofNullable(this.clusterCodeVersion);
     }
     /**
      * A service generated unique identifier for the cluster resource.
      * 
-     */
+    */
     public String getClusterId() {
         return this.clusterId;
     }
     /**
      * The current state of the cluster.
      * 
-     */
+    */
     public String getClusterState() {
         return this.clusterState;
     }
     /**
      * The cluster dns name.
      * 
-     */
+    */
     public String getDnsName() {
         return this.dnsName;
     }
     /**
      * Azure resource etag.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The list of custom fabric settings to configure the cluster.
      * 
-     */
+    */
     public List<SettingsSectionDescriptionResponse> getFabricSettings() {
         return this.fabricSettings == null ? List.of() : this.fabricSettings;
     }
     /**
      * the cluster Fully qualified domain name.
      * 
-     */
+    */
     public String getFqdn() {
         return this.fqdn;
     }
     /**
      * The port used for http connections to the cluster.
      * 
-     */
+    */
     public Optional<Integer> getHttpGatewayConnectionPort() {
         return Optional.ofNullable(this.httpGatewayConnectionPort);
     }
     /**
      * Azure resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Describes load balancing rules.
      * 
-     */
+    */
     public List<LoadBalancingRuleResponse> getLoadBalancingRules() {
         return this.loadBalancingRules == null ? List.of() : this.loadBalancingRules;
     }
     /**
      * Azure resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Azure resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the managed cluster resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The sku of the managed cluster
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Azure resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

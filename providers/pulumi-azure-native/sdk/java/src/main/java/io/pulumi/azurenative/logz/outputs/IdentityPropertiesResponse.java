@@ -36,14 +36,14 @@ public final class IdentityPropertiesResponse {
     /**
      * The identity ID.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of resource.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }

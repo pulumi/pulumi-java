@@ -56,35 +56,35 @@ public final class GetDeploymentResult {
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the Deployment resource
      * 
-     */
+    */
     public DeploymentResourcePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Sku of the Deployment resource
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

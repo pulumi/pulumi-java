@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReplicationFabric {
-/**
- * Fabric definition.
+    private GetReplicationFabric() {}
+    public interface BuilderApplicator {
+        public void apply(GetReplicationFabricArgs.Builder a);
+    }
+    private static GetReplicationFabricArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReplicationFabricArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Fabric definition.
  * API Version: 2018-07-10.
  * 
- *
- * Fabric definition.
+     *
+     * Fabric definition.
  * 
- */
+     */
+    public static CompletableFuture<GetReplicationFabricResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Fabric definition.
+     * API Version: 2018-07-10.
+     * 
+     *
+         * Fabric definition.
+     * 
+     */
     public static CompletableFuture<GetReplicationFabricResult> invokeAsync(GetReplicationFabricArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationFabric", TypeShape.of(GetReplicationFabricResult.class), args == null ? GetReplicationFabricArgs.Empty : args, Utilities.withVersion(options));
     }

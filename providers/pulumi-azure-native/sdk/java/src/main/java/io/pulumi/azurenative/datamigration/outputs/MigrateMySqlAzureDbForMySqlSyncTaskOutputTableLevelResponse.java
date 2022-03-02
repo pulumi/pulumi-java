@@ -124,77 +124,77 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse {
     /**
      * Number of applied deletes
      * 
-     */
+    */
     public String getCdcDeleteCounter() {
         return this.cdcDeleteCounter;
     }
     /**
      * Number of applied inserts
      * 
-     */
+    */
     public String getCdcInsertCounter() {
         return this.cdcInsertCounter;
     }
     /**
      * Number of applied updates
      * 
-     */
+    */
     public String getCdcUpdateCounter() {
         return this.cdcUpdateCounter;
     }
     /**
      * Number of data errors occurred
      * 
-     */
+    */
     public Double getDataErrorsCounter() {
         return this.dataErrorsCounter;
     }
     /**
      * Name of the database
      * 
-     */
+    */
     public String getDatabaseName() {
         return this.databaseName;
     }
     /**
      * Full load end time
      * 
-     */
+    */
     public String getFullLoadEndedOn() {
         return this.fullLoadEndedOn;
     }
     /**
      * Estimate to finish full load
      * 
-     */
+    */
     public String getFullLoadEstFinishTime() {
         return this.fullLoadEstFinishTime;
     }
     /**
      * Full load start time
      * 
-     */
+    */
     public String getFullLoadStartedOn() {
         return this.fullLoadStartedOn;
     }
     /**
      * Number of rows applied in full load
      * 
-     */
+    */
     public Double getFullLoadTotalRows() {
         return this.fullLoadTotalRows;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Last modified time on target
      * 
-     */
+    */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
@@ -202,28 +202,28 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse {
      * Result type
      * Expected value is 'TableLevelOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
     /**
      * Current state of the table migration
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Name of the table
      * 
-     */
+    */
     public String getTableName() {
         return this.tableName;
     }
     /**
      * Total number of applied changes
      * 
-     */
+    */
     public Double getTotalChangesApplied() {
         return this.totalChangesApplied;
     }

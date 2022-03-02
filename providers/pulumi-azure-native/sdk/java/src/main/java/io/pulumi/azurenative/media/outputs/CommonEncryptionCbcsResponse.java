@@ -51,28 +51,28 @@ public final class CommonEncryptionCbcsResponse {
     /**
      * Representing which tracks should not be encrypted
      * 
-     */
+    */
     public List<TrackSelectionResponse> getClearTracks() {
         return this.clearTracks == null ? List.of() : this.clearTracks;
     }
     /**
      * Representing default content key for each encryption scheme and separate content keys for specific tracks
      * 
-     */
+    */
     public Optional<StreamingPolicyContentKeysResponse> getContentKeys() {
         return Optional.ofNullable(this.contentKeys);
     }
     /**
      * Configuration of DRMs for current encryption scheme
      * 
-     */
+    */
     public Optional<CbcsDrmConfigurationResponse> getDrm() {
         return Optional.ofNullable(this.drm);
     }
     /**
      * Representing supported protocols
      * 
-     */
+    */
     public Optional<EnabledProtocolsResponse> getEnabledProtocols() {
         return Optional.ofNullable(this.enabledProtocols);
     }

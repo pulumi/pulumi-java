@@ -63,42 +63,42 @@ public final class GetAppResult {
     /**
      * Fully qualified resource Id for the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Managed Identity type of the app resource
      * 
-     */
+    */
     public Optional<ManagedIdentityPropertiesResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The GEO location of the application, always the same with its parent resource
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the App resource
      * 
-     */
+    */
     public AppResourcePropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

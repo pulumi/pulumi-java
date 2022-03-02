@@ -31,14 +31,14 @@ public final class AzureSkuResponse {
     /**
      * SKU name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * SKU tier
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }

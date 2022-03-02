@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReplicationProtectionContainerMapping {
-/**
- * Protection container mapping object.
+    private GetReplicationProtectionContainerMapping() {}
+    public interface BuilderApplicator {
+        public void apply(GetReplicationProtectionContainerMappingArgs.Builder a);
+    }
+    private static GetReplicationProtectionContainerMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReplicationProtectionContainerMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Protection container mapping object.
  * API Version: 2018-07-10.
  * 
- *
- * Protection container mapping object.
+     *
+     * Protection container mapping object.
  * 
- */
+     */
+    public static CompletableFuture<GetReplicationProtectionContainerMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Protection container mapping object.
+     * API Version: 2018-07-10.
+     * 
+     *
+         * Protection container mapping object.
+     * 
+     */
     public static CompletableFuture<GetReplicationProtectionContainerMappingResult> invokeAsync(GetReplicationProtectionContainerMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationProtectionContainerMapping", TypeShape.of(GetReplicationProtectionContainerMappingResult.class), args == null ? GetReplicationProtectionContainerMappingArgs.Empty : args, Utilities.withVersion(options));
     }

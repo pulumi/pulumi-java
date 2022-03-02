@@ -25,7 +25,7 @@ public final class QuotaInfoResponse {
     /**
      * The cores used by the cluster.
      * 
-     */
+    */
     public Optional<Integer> getCoresUsed() {
         return Optional.ofNullable(this.coresUsed);
     }

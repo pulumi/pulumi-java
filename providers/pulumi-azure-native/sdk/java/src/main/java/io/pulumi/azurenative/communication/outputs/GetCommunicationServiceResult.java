@@ -105,84 +105,84 @@ public final class GetCommunicationServiceResult {
     /**
      * The location where the communication service stores its data at rest.
      * 
-     */
+    */
     public String getDataLocation() {
         return this.dataLocation;
     }
     /**
      * FQDN of the CommunicationService instance.
      * 
-     */
+    */
     public String getHostName() {
         return this.hostName;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The immutable resource Id of the communication service.
      * 
-     */
+    */
     public String getImmutableResourceId() {
         return this.immutableResourceId;
     }
     /**
      * The Azure location where the CommunicationService is running.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource ID of an Azure Notification Hub linked to this resource.
      * 
-     */
+    */
     public String getNotificationHubId() {
         return this.notificationHubId;
     }
     /**
      * Provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Tags of the service which is a list of key value pairs that describe the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Version of the CommunicationService resource. Probably you need the same or higher version of client SDKs.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

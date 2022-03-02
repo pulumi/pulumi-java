@@ -25,7 +25,7 @@ public final class ConnectionTypeAssociationPropertyResponse {
     /**
      * Gets or sets the name of the connection type.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

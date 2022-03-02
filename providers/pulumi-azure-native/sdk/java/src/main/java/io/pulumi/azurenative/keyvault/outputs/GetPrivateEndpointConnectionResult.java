@@ -85,63 +85,63 @@ public final class GetPrivateEndpointConnectionResult {
     /**
      * Modified whenever there is a change in the state of private endpoint connection.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fully qualified identifier of the key vault resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Azure location of the key vault resource.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Name of the key vault resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the private endpoint object.
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * Approval state of the private link connection.
      * 
-     */
+    */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Provisioning state of the private endpoint connection.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Tags assigned to the key vault resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * Resource type of the key vault resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

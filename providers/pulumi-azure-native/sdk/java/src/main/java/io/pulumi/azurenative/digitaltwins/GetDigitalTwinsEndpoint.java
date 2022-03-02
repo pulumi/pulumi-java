@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDigitalTwinsEndpoint {
-/**
- * DigitalTwinsInstance endpoint resource.
+    private GetDigitalTwinsEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetDigitalTwinsEndpointArgs.Builder a);
+    }
+    private static GetDigitalTwinsEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDigitalTwinsEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * DigitalTwinsInstance endpoint resource.
  * API Version: 2020-12-01.
  * 
- *
- * DigitalTwinsInstance endpoint resource.
+     *
+     * DigitalTwinsInstance endpoint resource.
  * 
- */
+     */
+    public static CompletableFuture<GetDigitalTwinsEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * DigitalTwinsInstance endpoint resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * DigitalTwinsInstance endpoint resource.
+     * 
+     */
     public static CompletableFuture<GetDigitalTwinsEndpointResult> invokeAsync(GetDigitalTwinsEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:digitaltwins:getDigitalTwinsEndpoint", TypeShape.of(GetDigitalTwinsEndpointResult.class), args == null ? GetDigitalTwinsEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -87,63 +87,63 @@ public final class GetInstanceFailoverGroupResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of managed instance pairs in the failover group.
      * 
-     */
+    */
     public List<ManagedInstancePairInfoResponse> getManagedInstancePairs() {
         return this.managedInstancePairs;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Partner region information for the failover group.
      * 
-     */
+    */
     public List<PartnerRegionInfoResponse> getPartnerRegions() {
         return this.partnerRegions;
     }
     /**
      * Read-only endpoint of the failover group instance.
      * 
-     */
+    */
     public Optional<InstanceFailoverGroupReadOnlyEndpointResponse> getReadOnlyEndpoint() {
         return Optional.ofNullable(this.readOnlyEndpoint);
     }
     /**
      * Read-write endpoint of the failover group instance.
      * 
-     */
+    */
     public InstanceFailoverGroupReadWriteEndpointResponse getReadWriteEndpoint() {
         return this.readWriteEndpoint;
     }
     /**
      * Local replication role of the failover group instance.
      * 
-     */
+    */
     public String getReplicationRole() {
         return this.replicationRole;
     }
     /**
      * Replication state of the failover group instance.
      * 
-     */
+    */
     public String getReplicationState() {
         return this.replicationState;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -40,21 +40,21 @@ public final class IdentityDetailsResponse {
     /**
      * Specifies the principal id for the identity for the job.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * Specifies the tenant id for the identity for the job.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The type of identity
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

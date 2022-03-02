@@ -31,14 +31,14 @@ public final class ConfigurationServiceInstanceResponse {
     /**
      * Name of the Application Configuration Service instance
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Status of the Application Configuration Service instance
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

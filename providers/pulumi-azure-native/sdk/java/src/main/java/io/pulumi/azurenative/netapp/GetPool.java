@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPool {
-/**
- * Capacity pool resource
+    private GetPool() {}
+    public interface BuilderApplicator {
+        public void apply(GetPoolArgs.Builder a);
+    }
+    private static GetPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Capacity pool resource
  * API Version: 2020-12-01.
  * 
- *
- * Capacity pool resource
+     *
+     * Capacity pool resource
  * 
- */
+     */
+    public static CompletableFuture<GetPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Capacity pool resource
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Capacity pool resource
+     * 
+     */
     public static CompletableFuture<GetPoolResult> invokeAsync(GetPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getPool", TypeShape.of(GetPoolResult.class), args == null ? GetPoolArgs.Empty : args, Utilities.withVersion(options));
     }

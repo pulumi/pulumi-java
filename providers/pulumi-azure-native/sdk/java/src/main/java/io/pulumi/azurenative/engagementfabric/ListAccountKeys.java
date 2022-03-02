@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListAccountKeys {
-/**
- * The list of the EngagementFabric account keys
+    private ListAccountKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListAccountKeysArgs.Builder a);
+    }
+    private static ListAccountKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListAccountKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The list of the EngagementFabric account keys
  * API Version: 2018-09-01-preview.
  * 
- *
- * The list of the EngagementFabric account keys
+     *
+     * The list of the EngagementFabric account keys
  * 
- */
+     */
+    public static CompletableFuture<ListAccountKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The list of the EngagementFabric account keys
+     * API Version: 2018-09-01-preview.
+     * 
+     *
+         * The list of the EngagementFabric account keys
+     * 
+     */
     public static CompletableFuture<ListAccountKeysResult> invokeAsync(ListAccountKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:engagementfabric:listAccountKeys", TypeShape.of(ListAccountKeysResult.class), args == null ? ListAccountKeysArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListKustoPoolFollowerDatabases {
-/**
- * The list Kusto database principals operation response.
+    private ListKustoPoolFollowerDatabases() {}
+    public interface BuilderApplicator {
+        public void apply(ListKustoPoolFollowerDatabasesArgs.Builder a);
+    }
+    private static ListKustoPoolFollowerDatabasesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListKustoPoolFollowerDatabasesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The list Kusto database principals operation response.
  * API Version: 2021-06-01-preview.
  * 
- *
- * The list Kusto database principals operation response.
+     *
+     * The list Kusto database principals operation response.
  * 
- */
+     */
+    public static CompletableFuture<ListKustoPoolFollowerDatabasesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The list Kusto database principals operation response.
+     * API Version: 2021-06-01-preview.
+     * 
+     *
+         * The list Kusto database principals operation response.
+     * 
+     */
     public static CompletableFuture<ListKustoPoolFollowerDatabasesResult> invokeAsync(ListKustoPoolFollowerDatabasesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:listKustoPoolFollowerDatabases", TypeShape.of(ListKustoPoolFollowerDatabasesResult.class), args == null ? ListKustoPoolFollowerDatabasesArgs.Empty : args, Utilities.withVersion(options));
     }

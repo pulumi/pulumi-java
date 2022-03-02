@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiOperation {
-/**
- * Api Operation details.
+    private GetApiOperation() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiOperationArgs.Builder a);
+    }
+    private static GetApiOperationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiOperationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Api Operation details.
  * API Version: 2020-12-01.
  * 
- *
- * Api Operation details.
+     *
+     * Api Operation details.
  * 
- */
+     */
+    public static CompletableFuture<GetApiOperationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Api Operation details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Api Operation details.
+     * 
+     */
     public static CompletableFuture<GetApiOperationResult> invokeAsync(GetApiOperationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiOperation", TypeShape.of(GetApiOperationResult.class), args == null ? GetApiOperationArgs.Empty : args, Utilities.withVersion(options));
     }

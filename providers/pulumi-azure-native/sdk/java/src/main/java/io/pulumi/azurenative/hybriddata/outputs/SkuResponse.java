@@ -33,14 +33,14 @@ public final class SkuResponse {
     /**
      * The sku name. Required for data manager creation, optional for update.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The sku tier. This is based on the SKU name.
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

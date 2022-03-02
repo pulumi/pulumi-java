@@ -76,56 +76,56 @@ public final class GetRouteFilterRuleResult {
     /**
      * The access type of the rule.
      * 
-     */
+    */
     public String getAccess() {
         return this.access;
     }
     /**
      * The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
      * 
-     */
+    */
     public List<String> getCommunities() {
         return this.communities;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the route filter rule resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The rule type of the rule.
      * 
-     */
+    */
     public String getRouteFilterRuleType() {
         return this.routeFilterRuleType;
     }

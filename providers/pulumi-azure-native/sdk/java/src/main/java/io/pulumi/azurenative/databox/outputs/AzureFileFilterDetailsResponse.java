@@ -40,21 +40,21 @@ public final class AzureFileFilterDetailsResponse {
     /**
      * List of full path of the files to be transferred.
      * 
-     */
+    */
     public List<String> getFilePathList() {
         return this.filePathList == null ? List.of() : this.filePathList;
     }
     /**
      * Prefix list of the Azure files to be transferred.
      * 
-     */
+    */
     public List<String> getFilePrefixList() {
         return this.filePrefixList == null ? List.of() : this.filePrefixList;
     }
     /**
      * List of file shares to be transferred.
      * 
-     */
+    */
     public List<String> getFileShareList() {
         return this.fileShareList == null ? List.of() : this.fileShareList;
     }

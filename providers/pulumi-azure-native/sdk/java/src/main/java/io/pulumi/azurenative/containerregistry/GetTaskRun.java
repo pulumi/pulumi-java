@@ -13,16 +13,38 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTaskRun {
-/**
- * The task run that has the ARM resource and properties.
+    private GetTaskRun() {}
+    public interface BuilderApplicator {
+        public void apply(GetTaskRunArgs.Builder a);
+    }
+    private static GetTaskRunArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTaskRunArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The task run that has the ARM resource and properties.
  * The task run will have the information of request and result of a run.
  * API Version: 2019-06-01-preview.
  * 
- *
- * The task run that has the ARM resource and properties.
+     *
+     * The task run that has the ARM resource and properties.
  * The task run will have the information of request and result of a run.
  * 
- */
+     */
+    public static CompletableFuture<GetTaskRunResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The task run that has the ARM resource and properties.
+     * The task run will have the information of request and result of a run.
+     * API Version: 2019-06-01-preview.
+     * 
+     *
+         * The task run that has the ARM resource and properties.
+     * The task run will have the information of request and result of a run.
+     * 
+     */
     public static CompletableFuture<GetTaskRunResult> invokeAsync(GetTaskRunArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getTaskRun", TypeShape.of(GetTaskRunResult.class), args == null ? GetTaskRunArgs.Empty : args, Utilities.withVersion(options));
     }

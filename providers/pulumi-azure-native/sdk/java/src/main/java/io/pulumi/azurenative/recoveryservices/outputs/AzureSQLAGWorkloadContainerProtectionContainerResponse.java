@@ -94,7 +94,7 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse {
     /**
      * Type of backup management for the container.
      * 
-     */
+    */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -105,63 +105,63 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse {
      * Backup is VMAppContainer
      * Expected value is 'SQLAGWorkLoadContainer'.
      * 
-     */
+    */
     public String getContainerType() {
         return this.containerType;
     }
     /**
      * Additional details of a workload container.
      * 
-     */
+    */
     public Optional<AzureWorkloadContainerExtendedInfoResponse> getExtendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
     /**
      * Friendly name of the container.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
      * 
-     */
+    */
     public Optional<String> getHealthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Time stamp when this container was updated.
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * Re-Do Operation
      * 
-     */
+    */
     public Optional<String> getOperationType() {
         return Optional.ofNullable(this.operationType);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
      * 
-     */
+    */
     public Optional<String> getRegistrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
     /**
      * ARM ID of the virtual machine represented by this Azure Workload Container
      * 
-     */
+    */
     public Optional<String> getSourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
     /**
      * Workload type for which registration was sent.
      * 
-     */
+    */
     public Optional<String> getWorkloadType() {
         return Optional.ofNullable(this.workloadType);
     }

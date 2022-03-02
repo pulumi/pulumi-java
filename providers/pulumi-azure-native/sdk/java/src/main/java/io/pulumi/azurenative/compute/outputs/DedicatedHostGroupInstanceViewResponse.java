@@ -25,7 +25,7 @@ public final class DedicatedHostGroupInstanceViewResponse {
     /**
      * List of instance view of the dedicated hosts under the dedicated host group.
      * 
-     */
+    */
     public List<DedicatedHostInstanceViewWithNameResponse> getHosts() {
         return this.hosts == null ? List.of() : this.hosts;
     }

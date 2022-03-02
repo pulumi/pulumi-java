@@ -33,7 +33,7 @@ public final class KeyVaultPropertiesResponse {
      *  The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
      *  The KeyVault has soft-delete and purge protection enabled
      * 
-     */
+    */
     public Optional<String> getKeyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }

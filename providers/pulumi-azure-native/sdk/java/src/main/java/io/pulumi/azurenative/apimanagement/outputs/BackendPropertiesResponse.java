@@ -25,7 +25,7 @@ public final class BackendPropertiesResponse {
     /**
      * Backend Service Fabric Cluster Properties
      * 
-     */
+    */
     public Optional<BackendServiceFabricClusterPropertiesResponse> getServiceFabricCluster() {
         return Optional.ofNullable(this.serviceFabricCluster);
     }

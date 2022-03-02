@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetShare {
-/**
- * A share data transfer object.
+    private GetShare() {}
+    public interface BuilderApplicator {
+        public void apply(GetShareArgs.Builder a);
+    }
+    private static GetShareArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetShareArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A share data transfer object.
  * API Version: 2020-09-01.
  * 
- *
- * A share data transfer object.
+     *
+     * A share data transfer object.
  * 
- */
+     */
+    public static CompletableFuture<GetShareResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A share data transfer object.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * A share data transfer object.
+     * 
+     */
     public static CompletableFuture<GetShareResult> invokeAsync(GetShareArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getShare", TypeShape.of(GetShareResult.class), args == null ? GetShareArgs.Empty : args, Utilities.withVersion(options));
     }
