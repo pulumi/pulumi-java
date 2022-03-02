@@ -23,7 +23,7 @@ public final class GrafeasV1beta1DeploymentDetailsResponse {
     /**
      * Deployment history for the resource.
      * 
-     */
+    */
     public DeploymentResponse getDeployment() {
         return this.deployment;
     }

@@ -40,21 +40,21 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse {
     /**
      * Treat the dataset as free-form text and apply the same free text transformation everywhere.
      * 
-     */
+    */
     public GooglePrivacyDlpV2InfoTypeTransformationsResponse getInfoTypeTransformations() {
         return this.infoTypeTransformations;
     }
     /**
      * Treat the dataset as structured. Transformations can be applied to specific locations within structured datasets, such as transforming a column within a table.
      * 
-     */
+    */
     public GooglePrivacyDlpV2RecordTransformationsResponse getRecordTransformations() {
         return this.recordTransformations;
     }
     /**
      * Mode for handling transformation errors. If left unspecified, the default mode is `TransformationErrorHandling.ThrowError`.
      * 
-     */
+    */
     public GooglePrivacyDlpV2TransformationErrorHandlingResponse getTransformationErrorHandling() {
         return this.transformationErrorHandling;
     }

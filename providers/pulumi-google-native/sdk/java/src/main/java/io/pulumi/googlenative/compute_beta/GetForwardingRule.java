@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetForwardingRule {
-/**
- * Returns the specified ForwardingRule resource.
+    private GetForwardingRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetForwardingRuleArgs.Builder a);
+    }
+    private static GetForwardingRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetForwardingRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified ForwardingRule resource.
  * 
- */
+     */
+    public static CompletableFuture<GetForwardingRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified ForwardingRule resource.
+     * 
+     */
     public static CompletableFuture<GetForwardingRuleResult> invokeAsync(GetForwardingRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getForwardingRule", TypeShape.of(GetForwardingRuleResult.class), args == null ? GetForwardingRuleArgs.Empty : args, Utilities.withVersion(options));
     }

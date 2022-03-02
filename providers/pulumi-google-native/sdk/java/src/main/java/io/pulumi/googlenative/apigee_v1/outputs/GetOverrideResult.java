@@ -39,21 +39,21 @@ public final class GetOverrideResult {
     /**
      * ID of the API proxy that will have its trace configuration overridden.
      * 
-     */
+    */
     public String getApiProxy() {
         return this.apiProxy;
     }
     /**
      * ID of the trace configuration override specified as a system-generated UUID.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Trace configuration to override.
      * 
-     */
+    */
     public GoogleCloudApigeeV1TraceSamplingConfigResponse getSamplingConfig() {
         return this.samplingConfig;
     }

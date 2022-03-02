@@ -53,35 +53,35 @@ public final class ExecutionConfigResponse {
     /**
      * Optional. The Cloud KMS key to use for encryption.
      * 
-     */
+    */
     public String getKmsKey() {
         return this.kmsKey;
     }
     /**
      * Optional. Tags used for network traffic control.
      * 
-     */
+    */
     public List<String> getNetworkTags() {
         return this.networkTags;
     }
     /**
      * Optional. Network URI to connect workload to.
      * 
-     */
+    */
     public String getNetworkUri() {
         return this.networkUri;
     }
     /**
      * Optional. Service account that used to execute workload.
      * 
-     */
+    */
     public String getServiceAccount() {
         return this.serviceAccount;
     }
     /**
      * Optional. Subnetwork URI to connect workload to.
      * 
-     */
+    */
     public String getSubnetworkUri() {
         return this.subnetworkUri;
     }

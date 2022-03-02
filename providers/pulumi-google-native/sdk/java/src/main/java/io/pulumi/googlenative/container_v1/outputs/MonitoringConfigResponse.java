@@ -23,7 +23,7 @@ public final class MonitoringConfigResponse {
     /**
      * Monitoring components configuration
      * 
-     */
+    */
     public MonitoringComponentConfigResponse getComponentConfig() {
         return this.componentConfig;
     }

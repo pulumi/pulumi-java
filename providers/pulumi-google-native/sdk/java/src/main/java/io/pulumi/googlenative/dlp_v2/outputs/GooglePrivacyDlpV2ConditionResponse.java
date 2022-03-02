@@ -40,21 +40,21 @@ public final class GooglePrivacyDlpV2ConditionResponse {
     /**
      * Field within the record this condition is evaluated against.
      * 
-     */
+    */
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
     }
     /**
      * Operator used to compare the field or infoType to the value.
      * 
-     */
+    */
     public String getOperator() {
         return this.operator;
     }
     /**
      * Value to compare against. [Mandatory, except for `EXISTS` tests.]
      * 
-     */
+    */
     public GooglePrivacyDlpV2ValueResponse getValue() {
         return this.value;
     }

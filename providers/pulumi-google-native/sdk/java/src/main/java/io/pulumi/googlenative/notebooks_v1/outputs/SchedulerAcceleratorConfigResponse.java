@@ -31,14 +31,14 @@ public final class SchedulerAcceleratorConfigResponse {
     /**
      * Count of cores of this accelerator.
      * 
-     */
+    */
     public String getCoreCount() {
         return this.coreCount;
     }
     /**
      * Type of this accelerator.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

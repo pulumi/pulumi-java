@@ -31,14 +31,14 @@ public final class UrlRewriteResponse {
     /**
      * Before forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be from 1 to 255 characters.
      * 
-     */
+    */
     public String getHostRewrite() {
         return this.hostRewrite;
     }
     /**
      * Before forwarding the request to the selected backend service, the matching portion of the request's path is replaced by pathPrefixRewrite. The value must be from 1 to 1024 characters.
      * 
-     */
+    */
     public String getPathPrefixRewrite() {
         return this.pathPrefixRewrite;
     }

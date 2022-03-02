@@ -23,7 +23,7 @@ public final class LogConfigDataAccessOptionsResponse {
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getLogMode() {
         return this.logMode;
     }

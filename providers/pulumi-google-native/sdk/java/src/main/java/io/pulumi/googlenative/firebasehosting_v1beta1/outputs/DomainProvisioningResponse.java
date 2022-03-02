@@ -76,56 +76,56 @@ public final class DomainProvisioningResponse {
     /**
      * The TXT records (for the certificate challenge) that were found at the last DNS fetch.
      * 
-     */
+    */
     public List<String> getCertChallengeDiscoveredTxt() {
         return this.certChallengeDiscoveredTxt;
     }
     /**
      * The DNS challenge for generating a certificate.
      * 
-     */
+    */
     public CertDnsChallengeResponse getCertChallengeDns() {
         return this.certChallengeDns;
     }
     /**
      * The HTTP challenge for generating a certificate.
      * 
-     */
+    */
     public CertHttpChallengeResponse getCertChallengeHttp() {
         return this.certChallengeHttp;
     }
     /**
      * The certificate provisioning status; updated when Firebase Hosting provisions an SSL certificate for the domain.
      * 
-     */
+    */
     public String getCertStatus() {
         return this.certStatus;
     }
     /**
      * The IPs found at the last DNS fetch.
      * 
-     */
+    */
     public List<String> getDiscoveredIps() {
         return this.discoveredIps;
     }
     /**
      * The time at which the last DNS fetch occurred.
      * 
-     */
+    */
     public String getDnsFetchTime() {
         return this.dnsFetchTime;
     }
     /**
      * The DNS record match status as of the last DNS fetch.
      * 
-     */
+    */
     public String getDnsStatus() {
         return this.dnsStatus;
     }
     /**
      * The list of IPs to which the domain is expected to resolve.
      * 
-     */
+    */
     public List<String> getExpectedIps() {
         return this.expectedIps;
     }

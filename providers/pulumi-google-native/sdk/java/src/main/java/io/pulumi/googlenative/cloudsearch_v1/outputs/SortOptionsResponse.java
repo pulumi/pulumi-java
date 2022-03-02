@@ -31,14 +31,14 @@ public final class SortOptionsResponse {
     /**
      * Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
      * 
-     */
+    */
     public String getOperatorName() {
         return this.operatorName;
     }
     /**
      * Ascending is the default sort order
      * 
-     */
+    */
     public String getSortOrder() {
         return this.sortOrder;
     }

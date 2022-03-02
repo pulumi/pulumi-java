@@ -61,42 +61,42 @@ public final class GitHubEventsConfigResponse {
     /**
      * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
      * 
-     */
+    */
     public String getEnterpriseConfigResourceName() {
         return this.enterpriseConfigResourceName;
     }
     /**
      * The installationID that emits the GitHub event.
      * 
-     */
+    */
     public String getInstallationId() {
         return this.installationId;
     }
     /**
      * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
      * 
-     */
+    */
     public String getOwner() {
         return this.owner;
     }
     /**
      * filter to match changes in pull requests.
      * 
-     */
+    */
     public PullRequestFilterResponse getPullRequest() {
         return this.pullRequest;
     }
     /**
      * filter to match changes in refs like branches, tags.
      * 
-     */
+    */
     public PushFilterResponse getPush() {
         return this.push;
     }

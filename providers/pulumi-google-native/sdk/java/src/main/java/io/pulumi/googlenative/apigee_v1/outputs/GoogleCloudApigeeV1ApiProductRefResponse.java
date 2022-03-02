@@ -31,14 +31,14 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse {
     /**
      * Name of the API product.
      * 
-     */
+    */
     public String getApiproduct() {
         return this.apiproduct;
     }
     /**
      * Status of the API product. Valid values are `approved` or `revoked`.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

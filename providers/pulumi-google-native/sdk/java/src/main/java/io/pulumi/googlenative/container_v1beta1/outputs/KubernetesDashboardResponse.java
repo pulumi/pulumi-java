@@ -23,7 +23,7 @@ public final class KubernetesDashboardResponse {
     /**
      * Whether the Kubernetes Dashboard is enabled for this cluster.
      * 
-     */
+    */
     public Boolean getDisabled() {
         return this.disabled;
     }

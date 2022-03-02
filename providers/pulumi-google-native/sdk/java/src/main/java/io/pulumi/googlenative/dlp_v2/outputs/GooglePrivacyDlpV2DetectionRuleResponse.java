@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2DetectionRuleResponse {
     /**
      * Hotword-based detection rule.
      * 
-     */
+    */
     public GooglePrivacyDlpV2HotwordRuleResponse getHotwordRule() {
         return this.hotwordRule;
     }

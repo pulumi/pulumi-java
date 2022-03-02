@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKey {
-/**
- * Gets details for a consumer key for a developer app, including the key and secret value, associated API products, and other information.
+    private GetKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetKeyArgs.Builder a);
+    }
+    private static GetKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details for a consumer key for a developer app, including the key and secret value, associated API products, and other information.
  * 
- */
+     */
+    public static CompletableFuture<GetKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details for a consumer key for a developer app, including the key and secret value, associated API products, and other information.
+     * 
+     */
     public static CompletableFuture<GetKeyResult> invokeAsync(GetKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getKey", TypeShape.of(GetKeyResult.class), args == null ? GetKeyArgs.Empty : args, Utilities.withVersion(options));
     }

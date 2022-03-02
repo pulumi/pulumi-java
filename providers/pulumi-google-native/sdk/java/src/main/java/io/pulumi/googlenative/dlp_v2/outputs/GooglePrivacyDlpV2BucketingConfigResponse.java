@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2BucketingConfigResponse {
     /**
      * Set of buckets. Ranges must be non-overlapping.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2BucketResponse> getBuckets() {
         return this.buckets;
     }

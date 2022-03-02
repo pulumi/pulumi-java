@@ -31,14 +31,14 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse {
     /**
      * The alias kind.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The alias name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

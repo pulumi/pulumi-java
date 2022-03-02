@@ -52,35 +52,35 @@ public final class RepoSourceResponse {
     /**
      * Name of the branch to build.
      * 
-     */
+    */
     public String getBranchName() {
         return this.branchName;
     }
     /**
      * Explicit commit SHA to build.
      * 
-     */
+    */
     public String getCommitSha() {
         return this.commitSha;
     }
     /**
      * ID of the project that owns the repo.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * Name of the repo.
      * 
-     */
+    */
     public String getRepoName() {
         return this.repoName;
     }
     /**
      * Name of the tag to build.
      * 
-     */
+    */
     public String getTagName() {
         return this.tagName;
     }

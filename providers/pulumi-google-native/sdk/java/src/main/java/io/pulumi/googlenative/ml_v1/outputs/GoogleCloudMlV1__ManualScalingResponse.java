@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__ManualScalingResponse {
     /**
      * The number of nodes to allocate for this model. These nodes are always up, starting from the time the model is deployed, so the cost of operating this model will be proportional to `nodes` * number of hours since last billing cycle plus the cost for each prediction performed.
      * 
-     */
+    */
     public Integer getNodes() {
         return this.nodes;
     }

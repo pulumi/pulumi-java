@@ -24,7 +24,7 @@ public final class StandardSqlTableTypeResponse {
     /**
      * The columns in this table type
      * 
-     */
+    */
     public List<StandardSqlFieldResponse> getColumns() {
         return this.columns;
     }

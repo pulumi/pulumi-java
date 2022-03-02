@@ -69,49 +69,49 @@ public final class RuleResponse {
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public List<ConditionResponse> getConditions() {
         return this.conditions;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public List<String> getIns() {
         return this.ins;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public List<LogConfigResponse> getLogConfigs() {
         return this.logConfigs;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public List<String> getNotIns() {
         return this.notIns;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public List<String> getPermissions() {
         return this.permissions;
     }

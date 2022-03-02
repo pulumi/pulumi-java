@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellRespons
     /**
      * Text in this cell.
      * 
-     */
+    */
     public String getText() {
         return this.text;
     }

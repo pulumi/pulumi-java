@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTrigger {
-/**
- * Get a single trigger.
+    private GetTrigger() {}
+    public interface BuilderApplicator {
+        public void apply(GetTriggerArgs.Builder a);
+    }
+    private static GetTriggerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTriggerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get a single trigger.
  * 
- */
+     */
+    public static CompletableFuture<GetTriggerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get a single trigger.
+     * 
+     */
     public static CompletableFuture<GetTriggerResult> invokeAsync(GetTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:eventarc/v1beta1:getTrigger", TypeShape.of(GetTriggerResult.class), args == null ? GetTriggerArgs.Empty : args, Utilities.withVersion(options));
     }

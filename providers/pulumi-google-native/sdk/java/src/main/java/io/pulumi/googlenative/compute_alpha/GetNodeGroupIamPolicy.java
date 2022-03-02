@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNodeGroupIamPolicy {
-/**
- * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+    private GetNodeGroupIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetNodeGroupIamPolicyArgs.Builder a);
+    }
+    private static GetNodeGroupIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNodeGroupIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
  * 
- */
+     */
+    public static CompletableFuture<GetNodeGroupIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static CompletableFuture<GetNodeGroupIamPolicyResult> invokeAsync(GetNodeGroupIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getNodeGroupIamPolicy", TypeShape.of(GetNodeGroupIamPolicyResult.class), args == null ? GetNodeGroupIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

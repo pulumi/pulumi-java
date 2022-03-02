@@ -79,6 +79,22 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
         return this.streamConfigs;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DicomStoreArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.healthcare_v1beta1.DicomStoreArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.healthcare_v1beta1.DicomStoreArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DicomStore(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

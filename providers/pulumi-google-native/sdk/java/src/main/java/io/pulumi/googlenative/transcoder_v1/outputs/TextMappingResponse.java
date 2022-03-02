@@ -39,21 +39,21 @@ public final class TextMappingResponse {
     /**
      * The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
      * 
-     */
+    */
     public String getAtomKey() {
         return this.atomKey;
     }
     /**
      * The `Input.key` that identifies the input file.
      * 
-     */
+    */
     public String getInputKey() {
         return this.inputKey;
     }
     /**
      * The zero-based index of the track in the input file.
      * 
-     */
+    */
     public Integer getInputTrack() {
         return this.inputTrack;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionNotificationEndpoint {
-/**
- * Returns the specified NotificationEndpoint resource in the given region.
+    private GetRegionNotificationEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionNotificationEndpointArgs.Builder a);
+    }
+    private static GetRegionNotificationEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionNotificationEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified NotificationEndpoint resource in the given region.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionNotificationEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified NotificationEndpoint resource in the given region.
+     * 
+     */
     public static CompletableFuture<GetRegionNotificationEndpointResult> invokeAsync(GetRegionNotificationEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionNotificationEndpoint", TypeShape.of(GetRegionNotificationEndpointResult.class), args == null ? GetRegionNotificationEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

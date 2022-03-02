@@ -46,28 +46,28 @@ public final class CloudSqlPropertiesResponse {
     /**
      * Input only. Cloud SQL credential.
      * 
-     */
+    */
     public CloudSqlCredentialResponse getCredential() {
         return this.credential;
     }
     /**
      * Database name.
      * 
-     */
+    */
     public String getDatabase() {
         return this.database;
     }
     /**
      * Cloud SQL instance ID in the form `project:location:instance`.
      * 
-     */
+    */
     public String getInstanceId() {
         return this.instanceId;
     }
     /**
      * Type of the Cloud SQL database.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

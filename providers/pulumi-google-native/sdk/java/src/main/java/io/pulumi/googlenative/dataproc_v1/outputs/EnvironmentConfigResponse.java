@@ -32,14 +32,14 @@ public final class EnvironmentConfigResponse {
     /**
      * Optional. Execution configuration for a workload.
      * 
-     */
+    */
     public ExecutionConfigResponse getExecutionConfig() {
         return this.executionConfig;
     }
     /**
      * Optional. Peripherals configuration that workload has access to.
      * 
-     */
+    */
     public PeripheralsConfigResponse getPeripheralsConfig() {
         return this.peripheralsConfig;
     }

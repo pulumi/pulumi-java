@@ -23,7 +23,7 @@ public final class SourceScoringConfigResponse {
     /**
      * Importance of the source.
      * 
-     */
+    */
     public String getSourceImportance() {
         return this.sourceImportance;
     }

@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2LDiversityResultResponse {
     /**
      * Histogram of l-diversity equivalence class sensitive value frequencies.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> getSensitiveValueFrequencyHistogramBuckets() {
         return this.sensitiveValueFrequencyHistogramBuckets;
     }

@@ -40,21 +40,21 @@ public final class AuditLogConfigResponse {
     /**
      * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
      * 
-     */
+    */
     public List<String> getExemptedMembers() {
         return this.exemptedMembers;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public Boolean getIgnoreChildExemptions() {
         return this.ignoreChildExemptions;
     }
     /**
      * The log type that this config enables.
      * 
-     */
+    */
     public String getLogType() {
         return this.logType;
     }

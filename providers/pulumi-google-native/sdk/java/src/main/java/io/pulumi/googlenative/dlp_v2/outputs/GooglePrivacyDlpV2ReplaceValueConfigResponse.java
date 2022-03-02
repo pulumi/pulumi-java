@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse {
     /**
      * Value to replace it with.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ValueResponse getNewValue() {
         return this.newValue;
     }

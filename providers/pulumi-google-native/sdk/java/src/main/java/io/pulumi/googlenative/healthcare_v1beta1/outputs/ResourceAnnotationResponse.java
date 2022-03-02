@@ -23,7 +23,7 @@ public final class ResourceAnnotationResponse {
     /**
      * A description of the annotation record.
      * 
-     */
+    */
     public String getLabel() {
         return this.label;
     }

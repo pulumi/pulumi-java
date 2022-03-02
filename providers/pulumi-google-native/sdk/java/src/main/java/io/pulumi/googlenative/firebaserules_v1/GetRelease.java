@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRelease {
-/**
- * Get a `Release` by name.
+    private GetRelease() {}
+    public interface BuilderApplicator {
+        public void apply(GetReleaseArgs.Builder a);
+    }
+    private static GetReleaseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReleaseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get a `Release` by name.
  * 
- */
+     */
+    public static CompletableFuture<GetReleaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get a `Release` by name.
+     * 
+     */
     public static CompletableFuture<GetReleaseResult> invokeAsync(GetReleaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebaserules/v1:getRelease", TypeShape.of(GetReleaseResult.class), args == null ? GetReleaseArgs.Empty : args, Utilities.withVersion(options));
     }

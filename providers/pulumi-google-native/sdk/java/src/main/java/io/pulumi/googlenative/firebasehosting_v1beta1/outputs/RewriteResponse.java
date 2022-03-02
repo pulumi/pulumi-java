@@ -61,42 +61,42 @@ public final class RewriteResponse {
     /**
      * The request will be forwarded to Firebase Dynamic Links.
      * 
-     */
+    */
     public Boolean getDynamicLinks() {
         return this.dynamicLinks;
     }
     /**
      * The function to proxy requests to. Must match the exported function name exactly.
      * 
-     */
+    */
     public String getFunction() {
         return this.function;
     }
     /**
      * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
      * 
-     */
+    */
     public String getGlob() {
         return this.glob;
     }
     /**
      * The URL path to rewrite the request to.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * The user-supplied RE2 regular expression to match against the request URL path.
      * 
-     */
+    */
     public String getRegex() {
         return this.regex;
     }
     /**
      * The request will be forwarded to Cloud Run.
      * 
-     */
+    */
     public CloudRunRewriteResponse getRun() {
         return this.run;
     }

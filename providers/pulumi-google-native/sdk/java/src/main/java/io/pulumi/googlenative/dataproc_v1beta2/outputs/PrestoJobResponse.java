@@ -71,49 +71,49 @@ public final class PrestoJobResponse {
     /**
      * Optional. Presto client tags to attach to this query
      * 
-     */
+    */
     public List<String> getClientTags() {
         return this.clientTags;
     }
     /**
      * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
      * 
-     */
+    */
     public Boolean getContinueOnFailure() {
         return this.continueOnFailure;
     }
     /**
      * Optional. The runtime log config for job execution.
      * 
-     */
+    */
     public LoggingConfigResponse getLoggingConfig() {
         return this.loggingConfig;
     }
     /**
      * Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats
      * 
-     */
+    */
     public String getOutputFormat() {
         return this.outputFormat;
     }
     /**
      * Optional. A mapping of property names to values. Used to set Presto session properties (https://prestodb.io/docs/current/sql/set-session.html) Equivalent to using the --session flag in the Presto CLI
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties;
     }
     /**
      * The HCFS URI of the script that contains SQL queries.
      * 
-     */
+    */
     public String getQueryFileUri() {
         return this.queryFileUri;
     }
     /**
      * A list of queries.
      * 
-     */
+    */
     public QueryListResponse getQueryList() {
         return this.queryList;
     }

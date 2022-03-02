@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBillingAccountIamPolicy {
-/**
- * Gets the access control policy for a billing account. The caller must have the `billing.accounts.getIamPolicy` permission on the account, which is often given to billing account [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
+    private GetBillingAccountIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetBillingAccountIamPolicyArgs.Builder a);
+    }
+    private static GetBillingAccountIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBillingAccountIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a billing account. The caller must have the `billing.accounts.getIamPolicy` permission on the account, which is often given to billing account [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
  * 
- */
+     */
+    public static CompletableFuture<GetBillingAccountIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a billing account. The caller must have the `billing.accounts.getIamPolicy` permission on the account, which is often given to billing account [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
+     * 
+     */
     public static CompletableFuture<GetBillingAccountIamPolicyResult> invokeAsync(GetBillingAccountIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudbilling/v1:getBillingAccountIamPolicy", TypeShape.of(GetBillingAccountIamPolicyResult.class), args == null ? GetBillingAccountIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -23,7 +23,7 @@ public final class UserInfoResponse {
     /**
      * E-mail address of the user.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }

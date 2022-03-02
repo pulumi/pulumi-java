@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkflowTemplate {
-/**
- * Retrieves the latest workflow template.Can retrieve previously instantiated template by specifying optional version parameter.
+    private GetWorkflowTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkflowTemplateArgs.Builder a);
+    }
+    private static GetWorkflowTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkflowTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves the latest workflow template.Can retrieve previously instantiated template by specifying optional version parameter.
  * 
- */
+     */
+    public static CompletableFuture<GetWorkflowTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves the latest workflow template.Can retrieve previously instantiated template by specifying optional version parameter.
+     * 
+     */
     public static CompletableFuture<GetWorkflowTemplateResult> invokeAsync(GetWorkflowTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getWorkflowTemplate", TypeShape.of(GetWorkflowTemplateResult.class), args == null ? GetWorkflowTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

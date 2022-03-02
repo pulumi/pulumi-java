@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse {
     /**
      * The last time the experiment's stats data was updated. Will have default value if stats have never been computed for this experiment.
      * 
-     */
+    */
     public String getLastUpdateTime() {
         return this.lastUpdateTime;
     }
     /**
      * Version variants and metrics.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> getVersionMetrics() {
         return this.versionMetrics;
     }

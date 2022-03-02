@@ -38,21 +38,21 @@ public final class LicenseResourceCommitmentResponse {
     /**
      * The number of licenses purchased.
      * 
-     */
+    */
     public String getAmount() {
         return this.amount;
     }
     /**
      * Specifies the core range of the instance for which this license applies.
      * 
-     */
+    */
     public String getCoresPerLicense() {
         return this.coresPerLicense;
     }
     /**
      * Any applicable license URI.
      * 
-     */
+    */
     public String getLicense() {
         return this.license;
     }

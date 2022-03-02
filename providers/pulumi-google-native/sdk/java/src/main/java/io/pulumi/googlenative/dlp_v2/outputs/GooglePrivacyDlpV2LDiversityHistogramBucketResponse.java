@@ -54,35 +54,35 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse {
     /**
      * Total number of equivalence classes in this bucket.
      * 
-     */
+    */
     public String getBucketSize() {
         return this.bucketSize;
     }
     /**
      * Total number of distinct equivalence classes in this bucket.
      * 
-     */
+    */
     public String getBucketValueCount() {
         return this.bucketValueCount;
     }
     /**
      * Sample of equivalence classes in this bucket. The total number of classes returned per bucket is capped at 20.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> getBucketValues() {
         return this.bucketValues;
     }
     /**
      * Lower bound on the sensitive value frequencies of the equivalence classes in this bucket.
      * 
-     */
+    */
     public String getSensitiveValueFrequencyLowerBound() {
         return this.sensitiveValueFrequencyLowerBound;
     }
     /**
      * Upper bound on the sensitive value frequencies of the equivalence classes in this bucket.
      * 
-     */
+    */
     public String getSensitiveValueFrequencyUpperBound() {
         return this.sensitiveValueFrequencyUpperBound;
     }

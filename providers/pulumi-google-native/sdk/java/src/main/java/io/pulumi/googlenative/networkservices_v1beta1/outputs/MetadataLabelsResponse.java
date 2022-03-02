@@ -31,14 +31,14 @@ public final class MetadataLabelsResponse {
     /**
      * Label name presented as key in xDS Node Metadata.
      * 
-     */
+    */
     public String getLabelName() {
         return this.labelName;
     }
     /**
      * Label value presented as value corresponding to the above key, in xDS Node Metadata.
      * 
-     */
+    */
     public String getLabelValue() {
         return this.labelValue;
     }

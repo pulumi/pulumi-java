@@ -39,21 +39,21 @@ public final class BitbucketServerRepositoryIdResponse {
     /**
      * Identifier for the project storing the repository.
      * 
-     */
+    */
     public String getProjectKey() {
         return this.projectKey;
     }
     /**
      * Identifier for the repository.
      * 
-     */
+    */
     public String getRepoSlug() {
         return this.repoSlug;
     }
     /**
      * The ID of the webhook that was created for receiving events from this repo. We only create and manage a single webhook for each repo.
      * 
-     */
+    */
     public Integer getWebhookId() {
         return this.webhookId;
     }

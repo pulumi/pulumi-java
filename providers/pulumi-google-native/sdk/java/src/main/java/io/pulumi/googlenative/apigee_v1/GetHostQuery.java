@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHostQuery {
-/**
- * Get status of a query submitted at host level. If the query is still in progress, the `state` is set to "running" After the query has completed successfully, `state` is set to "completed"
+    private GetHostQuery() {}
+    public interface BuilderApplicator {
+        public void apply(GetHostQueryArgs.Builder a);
+    }
+    private static GetHostQueryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHostQueryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get status of a query submitted at host level. If the query is still in progress, the `state` is set to "running" After the query has completed successfully, `state` is set to "completed"
  * 
- */
+     */
+    public static CompletableFuture<GetHostQueryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get status of a query submitted at host level. If the query is still in progress, the `state` is set to "running" After the query has completed successfully, `state` is set to "completed"
+     * 
+     */
     public static CompletableFuture<GetHostQueryResult> invokeAsync(GetHostQueryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getHostQuery", TypeShape.of(GetHostQueryResult.class), args == null ? GetHostQueryArgs.Empty : args, Utilities.withVersion(options));
     }

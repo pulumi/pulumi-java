@@ -23,7 +23,7 @@ public final class ResourceIdResponse {
     /**
      * The resource type this id is for. At present, the valid types are: "organization", "folder", and "project".
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

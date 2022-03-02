@@ -24,7 +24,7 @@ public final class MultiClusterRoutingUseAnyResponse {
     /**
      * The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.
      * 
-     */
+    */
     public List<String> getClusterIds() {
         return this.clusterIds;
     }

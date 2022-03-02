@@ -38,21 +38,21 @@ public final class NetworkInfoResponse {
     /**
      * Name of a Compute Engine network.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The IP range that matches the test.
      * 
-     */
+    */
     public String getMatchedIpRange() {
         return this.matchedIpRange;
     }
     /**
      * URI of a Compute Engine network.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }

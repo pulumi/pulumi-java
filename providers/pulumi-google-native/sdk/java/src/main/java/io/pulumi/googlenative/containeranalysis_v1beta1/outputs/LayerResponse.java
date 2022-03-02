@@ -31,14 +31,14 @@ public final class LayerResponse {
     /**
      * The recovered arguments to the Dockerfile directive.
      * 
-     */
+    */
     public String getArguments() {
         return this.arguments;
     }
     /**
      * The recovered Dockerfile directive used to construct this layer.
      * 
-     */
+    */
     public String getDirective() {
         return this.directive;
     }

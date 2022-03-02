@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBillingAccountSink {
-/**
- * Gets a sink.
+    private GetBillingAccountSink() {}
+    public interface BuilderApplicator {
+        public void apply(GetBillingAccountSinkArgs.Builder a);
+    }
+    private static GetBillingAccountSinkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBillingAccountSinkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a sink.
  * 
- */
+     */
+    public static CompletableFuture<GetBillingAccountSinkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a sink.
+     * 
+     */
     public static CompletableFuture<GetBillingAccountSinkResult> invokeAsync(GetBillingAccountSinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:logging/v2:getBillingAccountSink", TypeShape.of(GetBillingAccountSinkResult.class), args == null ? GetBillingAccountSinkArgs.Empty : args, Utilities.withVersion(options));
     }

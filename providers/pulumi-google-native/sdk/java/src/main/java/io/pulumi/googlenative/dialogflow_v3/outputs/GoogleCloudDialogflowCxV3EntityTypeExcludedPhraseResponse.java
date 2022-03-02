@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse {
     /**
      * The word or phrase to be excluded.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

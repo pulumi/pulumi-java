@@ -24,7 +24,7 @@ public final class TimeSeriesTableResponse {
     /**
      * The data displayed in this table.
      * 
-     */
+    */
     public List<TableDataSetResponse> getDataSets() {
         return this.dataSets;
     }

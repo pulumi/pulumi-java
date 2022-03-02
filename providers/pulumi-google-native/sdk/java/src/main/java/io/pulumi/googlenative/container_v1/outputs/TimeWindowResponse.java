@@ -39,21 +39,21 @@ public final class TimeWindowResponse {
     /**
      * The time that the window ends. The end time should take place after the start time.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * MaintenanceExclusionOptions provides maintenance exclusion related options.
      * 
-     */
+    */
     public MaintenanceExclusionOptionsResponse getMaintenanceExclusionOptions() {
         return this.maintenanceExclusionOptions;
     }
     /**
      * The time that the window first starts.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }

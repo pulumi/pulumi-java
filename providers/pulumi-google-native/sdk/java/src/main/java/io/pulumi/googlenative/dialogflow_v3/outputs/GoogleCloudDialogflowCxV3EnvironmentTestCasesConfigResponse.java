@@ -40,21 +40,21 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse {
     /**
      * Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to true, run once a day.
      * 
-     */
+    */
     public Boolean getEnableContinuousRun() {
         return this.enableContinuousRun;
     }
     /**
      * Whether to run test cases in TestCasesConfig.test_cases before deploying a flow version to the environment. Default false.
      * 
-     */
+    */
     public Boolean getEnablePredeploymentRun() {
         return this.enablePredeploymentRun;
     }
     /**
      * A list of test case names to run. They should be under the same agent. Format of each test case name: `projects//locations/ /agents//testCases/`
      * 
-     */
+    */
     public List<String> getTestCases() {
         return this.testCases;
     }

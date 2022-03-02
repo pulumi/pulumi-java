@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkloadIdentityPool {
-/**
- * Gets an individual WorkloadIdentityPool.
+    private GetWorkloadIdentityPool() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkloadIdentityPoolArgs.Builder a);
+    }
+    private static GetWorkloadIdentityPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkloadIdentityPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets an individual WorkloadIdentityPool.
  * 
- */
+     */
+    public static CompletableFuture<GetWorkloadIdentityPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets an individual WorkloadIdentityPool.
+     * 
+     */
     public static CompletableFuture<GetWorkloadIdentityPoolResult> invokeAsync(GetWorkloadIdentityPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getWorkloadIdentityPool", TypeShape.of(GetWorkloadIdentityPoolResult.class), args == null ? GetWorkloadIdentityPoolArgs.Empty : args, Utilities.withVersion(options));
     }

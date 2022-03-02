@@ -23,7 +23,7 @@ public final class OSPolicyResourcePackageResourceZypperResponse {
     /**
      * Package name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

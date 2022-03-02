@@ -31,14 +31,14 @@ public final class LogConfigCounterOptionsCustomFieldResponse {
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

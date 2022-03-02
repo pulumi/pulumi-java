@@ -23,7 +23,7 @@ public final class NetworkConfigResponse {
     /**
      * Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to WorkerPool.project_id on the default network. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number, such as `12345`, and {network} is the name of a VPC network in the project.
      * 
-     */
+    */
     public String getPeeredNetwork() {
         return this.peeredNetwork;
     }

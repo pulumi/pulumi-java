@@ -81,63 +81,63 @@ public final class CertificateAttributesResponse {
     /**
      * The X.509 extension for CertificateTemplate.
      * 
-     */
+    */
     public CertificateTemplateResponse getCertificateTemplate() {
         return this.certificateTemplate;
     }
     /**
      * The encoded certificate fingerprint.
      * 
-     */
+    */
     public String getFingerprint() {
         return this.fingerprint;
     }
     /**
      * The name of the issuer of this certificate.
      * 
-     */
+    */
     public String getIssuer() {
         return this.issuer;
     }
     /**
      * Serial number of the certificate, Example: "123456789".
      * 
-     */
+    */
     public String getSerialNumber() {
         return this.serialNumber;
     }
     /**
      * The subject name of this certificate.
      * 
-     */
+    */
     public String getSubject() {
         return this.subject;
     }
     /**
      * The certificate thumbprint.
      * 
-     */
+    */
     public String getThumbprint() {
         return this.thumbprint;
     }
     /**
      * Validation state of this certificate.
      * 
-     */
+    */
     public String getValidationState() {
         return this.validationState;
     }
     /**
      * Certificate not valid at or after this timestamp.
      * 
-     */
+    */
     public String getValidityExpirationTime() {
         return this.validityExpirationTime;
     }
     /**
      * Certificate not valid before this timestamp.
      * 
-     */
+    */
     public String getValidityStartTime() {
         return this.validityStartTime;
     }

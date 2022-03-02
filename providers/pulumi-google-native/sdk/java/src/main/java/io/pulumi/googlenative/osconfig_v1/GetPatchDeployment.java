@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPatchDeployment {
-/**
- * Get an OS Config patch deployment.
+    private GetPatchDeployment() {}
+    public interface BuilderApplicator {
+        public void apply(GetPatchDeploymentArgs.Builder a);
+    }
+    private static GetPatchDeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPatchDeploymentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get an OS Config patch deployment.
  * 
- */
+     */
+    public static CompletableFuture<GetPatchDeploymentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get an OS Config patch deployment.
+     * 
+     */
     public static CompletableFuture<GetPatchDeploymentResult> invokeAsync(GetPatchDeploymentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:osconfig/v1:getPatchDeployment", TypeShape.of(GetPatchDeploymentResult.class), args == null ? GetPatchDeploymentArgs.Empty : args, Utilities.withVersion(options));
     }

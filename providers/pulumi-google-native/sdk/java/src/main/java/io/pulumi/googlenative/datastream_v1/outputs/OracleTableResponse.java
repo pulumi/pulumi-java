@@ -33,14 +33,14 @@ public final class OracleTableResponse {
     /**
      * Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
      * 
-     */
+    */
     public List<OracleColumnResponse> getOracleColumns() {
         return this.oracleColumns;
     }
     /**
      * Table name.
      * 
-     */
+    */
     public String getTable() {
         return this.table;
     }

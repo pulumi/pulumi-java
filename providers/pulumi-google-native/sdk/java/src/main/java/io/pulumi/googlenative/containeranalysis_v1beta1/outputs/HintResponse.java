@@ -23,7 +23,7 @@ public final class HintResponse {
     /**
      * The human readable name of this attestation authority, for example "qa".
      * 
-     */
+    */
     public String getHumanReadableName() {
         return this.humanReadableName;
     }

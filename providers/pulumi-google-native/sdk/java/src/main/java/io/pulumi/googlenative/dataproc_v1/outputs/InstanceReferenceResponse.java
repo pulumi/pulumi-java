@@ -45,28 +45,28 @@ public final class InstanceReferenceResponse {
     /**
      * The unique identifier of the Compute Engine instance.
      * 
-     */
+    */
     public String getInstanceId() {
         return this.instanceId;
     }
     /**
      * The user-friendly name of the Compute Engine instance.
      * 
-     */
+    */
     public String getInstanceName() {
         return this.instanceName;
     }
     /**
      * The public ECIES key used for sharing data with this instance.
      * 
-     */
+    */
     public String getPublicEciesKey() {
         return this.publicEciesKey;
     }
     /**
      * The public RSA key used for sharing data with this instance.
      * 
-     */
+    */
     public String getPublicKey() {
         return this.publicKey;
     }

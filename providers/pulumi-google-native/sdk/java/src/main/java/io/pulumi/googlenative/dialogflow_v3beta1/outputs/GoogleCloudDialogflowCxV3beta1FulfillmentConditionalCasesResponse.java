@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResp
     /**
      * A list of cascading if-else conditions.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse> getCases() {
         return this.cases;
     }

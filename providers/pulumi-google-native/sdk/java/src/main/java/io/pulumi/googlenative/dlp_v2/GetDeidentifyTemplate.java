@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeidentifyTemplate {
-/**
- * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
+    private GetDeidentifyTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeidentifyTemplateArgs.Builder a);
+    }
+    private static GetDeidentifyTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeidentifyTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
  * 
- */
+     */
+    public static CompletableFuture<GetDeidentifyTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
+     * 
+     */
     public static CompletableFuture<GetDeidentifyTemplateResult> invokeAsync(GetDeidentifyTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dlp/v2:getDeidentifyTemplate", TypeShape.of(GetDeidentifyTemplateResult.class), args == null ? GetDeidentifyTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

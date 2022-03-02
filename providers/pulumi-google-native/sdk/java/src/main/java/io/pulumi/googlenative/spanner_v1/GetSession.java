@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSession {
-/**
- * Gets a session. Returns `NOT_FOUND` if the session does not exist. This is mainly useful for determining whether a session is still alive.
+    private GetSession() {}
+    public interface BuilderApplicator {
+        public void apply(GetSessionArgs.Builder a);
+    }
+    private static GetSessionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSessionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a session. Returns `NOT_FOUND` if the session does not exist. This is mainly useful for determining whether a session is still alive.
  * 
- */
+     */
+    public static CompletableFuture<GetSessionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a session. Returns `NOT_FOUND` if the session does not exist. This is mainly useful for determining whether a session is still alive.
+     * 
+     */
     public static CompletableFuture<GetSessionResult> invokeAsync(GetSessionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:spanner/v1:getSession", TypeShape.of(GetSessionResult.class), args == null ? GetSessionArgs.Empty : args, Utilities.withVersion(options));
     }
