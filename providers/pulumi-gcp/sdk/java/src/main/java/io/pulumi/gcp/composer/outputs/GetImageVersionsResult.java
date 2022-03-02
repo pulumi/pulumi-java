@@ -39,14 +39,14 @@ public final class GetImageVersionsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A list of composer image versions available in the given project and location. Each `image_version` contains:
      * 
-     */
+    */
     public List<GetImageVersionsImageVersion> getImageVersions() {
         return this.imageVersions;
     }

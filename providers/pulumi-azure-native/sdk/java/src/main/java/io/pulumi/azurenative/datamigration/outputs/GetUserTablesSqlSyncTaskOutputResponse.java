@@ -49,28 +49,28 @@ public final class GetUserTablesSqlSyncTaskOutputResponse {
     /**
      * Mapping from database name to list of source tables
      * 
-     */
+    */
     public Map<String,List<DatabaseTableResponse>> getDatabasesToSourceTables() {
         return this.databasesToSourceTables;
     }
     /**
      * Mapping from database name to list of target tables
      * 
-     */
+    */
     public Map<String,List<DatabaseTableResponse>> getDatabasesToTargetTables() {
         return this.databasesToTargetTables;
     }
     /**
      * Mapping from database name to list of validation errors
      * 
-     */
+    */
     public Map<String,List<String>> getTableValidationErrors() {
         return this.tableValidationErrors;
     }
     /**
      * Validation errors
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }

@@ -40,21 +40,21 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplate {
     /**
      * Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
      * 
-     */
+    */
     public Optional<String> getEmailMessage() {
         return Optional.ofNullable(this.emailMessage);
     }
     /**
      * Subject line for the email message template. Conflicts with `email_verification_subject` argument.
      * 
-     */
+    */
     public Optional<String> getEmailSubject() {
         return Optional.ofNullable(this.emailSubject);
     }
     /**
      * SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
      * 
-     */
+    */
     public Optional<String> getSmsMessage() {
         return Optional.ofNullable(this.smsMessage);
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNamedValue {
-/**
- * NamedValue details.
+    private GetNamedValue() {}
+    public interface BuilderApplicator {
+        public void apply(GetNamedValueArgs.Builder a);
+    }
+    private static GetNamedValueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNamedValueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * NamedValue details.
  * API Version: 2020-12-01.
  * 
- *
- * NamedValue details.
+     *
+     * NamedValue details.
  * 
- */
+     */
+    public static CompletableFuture<GetNamedValueResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * NamedValue details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * NamedValue details.
+     * 
+     */
     public static CompletableFuture<GetNamedValueResult> invokeAsync(GetNamedValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getNamedValue", TypeShape.of(GetNamedValueResult.class), args == null ? GetNamedValueArgs.Empty : args, Utilities.withVersion(options));
     }

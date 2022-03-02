@@ -30,7 +30,7 @@ public final class GetScheduleResult {
     /**
      * Schedule cron
      * 
-     */
+    */
     public Optional<String> getCronExpression() {
         return Optional.ofNullable(this.cronExpression);
     }

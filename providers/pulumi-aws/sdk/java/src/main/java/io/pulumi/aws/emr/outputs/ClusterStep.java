@@ -39,21 +39,21 @@ public final class ClusterStep {
     /**
      * Action to take if the step fails. Valid values: `TERMINATE_JOB_FLOW`, `TERMINATE_CLUSTER`, `CANCEL_AND_WAIT`, and `CONTINUE`
      * 
-     */
+    */
     public String getActionOnFailure() {
         return this.actionOnFailure;
     }
     /**
      * JAR file used for the step. See below.
      * 
-     */
+    */
     public ClusterStepHadoopJarStep getHadoopJarStep() {
         return this.hadoopJarStep;
     }
     /**
      * Name of the step.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

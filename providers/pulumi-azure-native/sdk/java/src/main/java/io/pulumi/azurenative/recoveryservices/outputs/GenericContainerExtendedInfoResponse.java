@@ -42,21 +42,21 @@ public final class GenericContainerExtendedInfoResponse {
     /**
      * Container identity information
      * 
-     */
+    */
     public Optional<ContainerIdentityInfoResponse> getContainerIdentityInfo() {
         return Optional.ofNullable(this.containerIdentityInfo);
     }
     /**
      * Public key of container cert
      * 
-     */
+    */
     public Optional<String> getRawCertData() {
         return Optional.ofNullable(this.rawCertData);
     }
     /**
      * Azure Backup Service Endpoints for the container
      * 
-     */
+    */
     public Map<String,String> getServiceEndpoints() {
         return this.serviceEndpoints == null ? Map.of() : this.serviceEndpoints;
     }

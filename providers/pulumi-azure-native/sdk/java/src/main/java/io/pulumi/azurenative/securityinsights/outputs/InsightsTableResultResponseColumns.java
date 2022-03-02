@@ -33,14 +33,14 @@ public final class InsightsTableResultResponseColumns {
     /**
      * the name of the colum
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * the type of the colum
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

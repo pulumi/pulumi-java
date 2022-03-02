@@ -45,28 +45,28 @@ public final class SymptomResponse {
     /**
      * Timestamp when the Symptom is created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Detailed information of the current Symptom.
      * 
-     */
+    */
     public String getDetails() {
         return this.details;
     }
     /**
      * Type of the Symptom.
      * 
-     */
+    */
     public String getSymptomType() {
         return this.symptomType;
     }
     /**
      * A string used to uniquely distinguish a worker within a TPU node.
      * 
-     */
+    */
     public String getWorkerId() {
         return this.workerId;
     }

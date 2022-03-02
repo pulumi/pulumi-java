@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupSelection {
-/**
- * Resource Type definition for AWS::Backup::BackupSelection
+    private GetBackupSelection() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackupSelectionArgs.Builder a);
+    }
+    private static GetBackupSelectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackupSelectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Backup::BackupSelection
  * 
- */
+     */
+    public static CompletableFuture<GetBackupSelectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Backup::BackupSelection
+     * 
+     */
     public static CompletableFuture<GetBackupSelectionResult> invokeAsync(GetBackupSelectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:backup:getBackupSelection", TypeShape.of(GetBackupSelectionResult.class), args == null ? GetBackupSelectionArgs.Empty : args, Utilities.withVersion(options));
     }

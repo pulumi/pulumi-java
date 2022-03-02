@@ -33,14 +33,14 @@ public final class DiskSkuResponse {
     /**
      * The sku name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The sku tier.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }

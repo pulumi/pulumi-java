@@ -30,7 +30,7 @@ public final class DetectorModelLambda {
     /**
      * The ARN of the Lambda function that is executed.
      * 
-     */
+    */
     public String getFunctionArn() {
         return this.functionArn;
     }

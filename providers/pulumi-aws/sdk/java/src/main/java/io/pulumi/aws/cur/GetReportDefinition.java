@@ -13,8 +13,17 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReportDefinition {
-/**
- * Use this data source to get information on an AWS Cost and Usage Report Definition.
+    private GetReportDefinition() {}
+    public interface BuilderApplicator {
+        public void apply(GetReportDefinitionArgs.Builder a);
+    }
+    private static GetReportDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReportDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get information on an AWS Cost and Usage Report Definition.
  * 
  * > *NOTE:* The AWS Cost and Usage Report service is only available in `us-east-1` currently.
  * 
@@ -22,13 +31,32 @@ public class GetReportDefinition {
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getReportDefinition.
+     *
+     * A collection of arguments for invoking getReportDefinition.
  * 
- *
- * A collection of values returned by getReportDefinition.
+     *
+     * A collection of values returned by getReportDefinition.
  * 
- */
+     */
+    public static CompletableFuture<GetReportDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get information on an AWS Cost and Usage Report Definition.
+     * 
+     * > *NOTE:* The AWS Cost and Usage Report service is only available in `us-east-1` currently.
+     * 
+     * > *NOTE:* If AWS Organizations is enabled, only the master account can use this resource.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getReportDefinition.
+     * 
+     *
+         * A collection of values returned by getReportDefinition.
+     * 
+     */
     public static CompletableFuture<GetReportDefinitionResult> invokeAsync(GetReportDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cur/getReportDefinition:getReportDefinition", TypeShape.of(GetReportDefinitionResult.class), args == null ? GetReportDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

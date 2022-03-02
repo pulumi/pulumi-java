@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSigningProfile {
-/**
- * Provides information about a Signer Signing Profile.
+    private GetSigningProfile() {}
+    public interface BuilderApplicator {
+        public void apply(GetSigningProfileArgs.Builder a);
+    }
+    private static GetSigningProfileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSigningProfileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information about a Signer Signing Profile.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getSigningProfile.
+     *
+     * A collection of arguments for invoking getSigningProfile.
  * 
- *
- * A collection of values returned by getSigningProfile.
+     *
+     * A collection of values returned by getSigningProfile.
  * 
- */
+     */
+    public static CompletableFuture<GetSigningProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information about a Signer Signing Profile.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getSigningProfile.
+     * 
+     *
+         * A collection of values returned by getSigningProfile.
+     * 
+     */
     public static CompletableFuture<GetSigningProfileResult> invokeAsync(GetSigningProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:signer/getSigningProfile:getSigningProfile", TypeShape.of(GetSigningProfileResult.class), args == null ? GetSigningProfileArgs.Empty : args, Utilities.withVersion(options));
     }

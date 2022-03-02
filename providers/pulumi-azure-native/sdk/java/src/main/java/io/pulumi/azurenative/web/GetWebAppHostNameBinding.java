@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppHostNameBinding {
-/**
- * A hostname binding object.
+    private GetWebAppHostNameBinding() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppHostNameBindingArgs.Builder a);
+    }
+    private static GetWebAppHostNameBindingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppHostNameBindingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A hostname binding object.
  * API Version: 2020-12-01.
  * 
- *
- * A hostname binding object.
+     *
+     * A hostname binding object.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppHostNameBindingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A hostname binding object.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * A hostname binding object.
+     * 
+     */
     public static CompletableFuture<GetWebAppHostNameBindingResult> invokeAsync(GetWebAppHostNameBindingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppHostNameBinding", TypeShape.of(GetWebAppHostNameBindingResult.class), args == null ? GetWebAppHostNameBindingArgs.Empty : args, Utilities.withVersion(options));
     }

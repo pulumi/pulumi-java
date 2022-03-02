@@ -34,14 +34,14 @@ public final class ExportDatasetResponse {
     /**
      * The export dataset configuration.
      * 
-     */
+    */
     public Optional<ExportDatasetConfigurationResponse> getConfiguration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * The granularity of rows in the export. Currently only 'Daily' is supported.
      * 
-     */
+    */
     public Optional<String> getGranularity() {
         return Optional.ofNullable(this.granularity);
     }

@@ -47,28 +47,28 @@ public final class HttpHeaderActionResponse {
     /**
      * Headers to add to a matching request before forwarding the request to the backendService.
      * 
-     */
+    */
     public List<HttpHeaderOptionResponse> getRequestHeadersToAdd() {
         return this.requestHeadersToAdd;
     }
     /**
      * A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
      * 
-     */
+    */
     public List<String> getRequestHeadersToRemove() {
         return this.requestHeadersToRemove;
     }
     /**
      * Headers to add the response before sending the response back to the client.
      * 
-     */
+    */
     public List<HttpHeaderOptionResponse> getResponseHeadersToAdd() {
         return this.responseHeadersToAdd;
     }
     /**
      * A list of header names for headers that need to be removed from the response before sending the response back to the client.
      * 
-     */
+    */
     public List<String> getResponseHeadersToRemove() {
         return this.responseHeadersToRemove;
     }

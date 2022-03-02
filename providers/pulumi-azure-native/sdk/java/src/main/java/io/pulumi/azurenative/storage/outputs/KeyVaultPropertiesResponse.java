@@ -54,35 +54,35 @@ public final class KeyVaultPropertiesResponse {
     /**
      * The object identifier of the current versioned Key Vault Key in use.
      * 
-     */
+    */
     public String getCurrentVersionedKeyIdentifier() {
         return this.currentVersionedKeyIdentifier;
     }
     /**
      * The name of KeyVault key.
      * 
-     */
+    */
     public Optional<String> getKeyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
      * The Uri of KeyVault.
      * 
-     */
+    */
     public Optional<String> getKeyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
     /**
      * The version of KeyVault key.
      * 
-     */
+    */
     public Optional<String> getKeyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
     /**
      * Timestamp of last rotation of the Key Vault Key.
      * 
-     */
+    */
     public String getLastKeyRotationTimestamp() {
         return this.lastKeyRotationTimestamp;
     }

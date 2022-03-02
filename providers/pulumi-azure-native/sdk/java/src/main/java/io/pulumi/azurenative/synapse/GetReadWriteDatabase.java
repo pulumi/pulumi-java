@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReadWriteDatabase {
-/**
- * Class representing a read write database.
+    private GetReadWriteDatabase() {}
+    public interface BuilderApplicator {
+        public void apply(GetReadWriteDatabaseArgs.Builder a);
+    }
+    private static GetReadWriteDatabaseArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReadWriteDatabaseArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing a read write database.
  * API Version: 2021-04-01-preview.
  * 
- *
- * Class representing a read write database.
+     *
+     * Class representing a read write database.
  * 
- */
+     */
+    public static CompletableFuture<GetReadWriteDatabaseResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing a read write database.
+     * API Version: 2021-04-01-preview.
+     * 
+     *
+         * Class representing a read write database.
+     * 
+     */
     public static CompletableFuture<GetReadWriteDatabaseResult> invokeAsync(GetReadWriteDatabaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getReadWriteDatabase", TypeShape.of(GetReadWriteDatabaseResult.class), args == null ? GetReadWriteDatabaseArgs.Empty : args, Utilities.withVersion(options));
     }

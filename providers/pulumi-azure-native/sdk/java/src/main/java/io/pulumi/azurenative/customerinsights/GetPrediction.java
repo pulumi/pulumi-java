@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrediction {
-/**
- * The prediction resource format.
+    private GetPrediction() {}
+    public interface BuilderApplicator {
+        public void apply(GetPredictionArgs.Builder a);
+    }
+    private static GetPredictionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPredictionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The prediction resource format.
  * API Version: 2017-04-26.
  * 
- *
- * The prediction resource format.
+     *
+     * The prediction resource format.
  * 
- */
+     */
+    public static CompletableFuture<GetPredictionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The prediction resource format.
+     * API Version: 2017-04-26.
+     * 
+     *
+         * The prediction resource format.
+     * 
+     */
     public static CompletableFuture<GetPredictionResult> invokeAsync(GetPredictionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getPrediction", TypeShape.of(GetPredictionResult.class), args == null ? GetPredictionArgs.Empty : args, Utilities.withVersion(options));
     }

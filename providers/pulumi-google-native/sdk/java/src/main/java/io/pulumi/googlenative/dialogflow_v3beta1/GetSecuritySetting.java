@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecuritySetting {
-/**
- * Retrieves the specified SecuritySettings. The returned settings may be stale by up to 1 minute.
+    private GetSecuritySetting() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecuritySettingArgs.Builder a);
+    }
+    private static GetSecuritySettingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecuritySettingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves the specified SecuritySettings. The returned settings may be stale by up to 1 minute.
  * 
- */
+     */
+    public static CompletableFuture<GetSecuritySettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves the specified SecuritySettings. The returned settings may be stale by up to 1 minute.
+     * 
+     */
     public static CompletableFuture<GetSecuritySettingResult> invokeAsync(GetSecuritySettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getSecuritySetting", TypeShape.of(GetSecuritySettingResult.class), args == null ? GetSecuritySettingArgs.Empty : args, Utilities.withVersion(options));
     }

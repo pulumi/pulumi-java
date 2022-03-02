@@ -55,35 +55,35 @@ public final class GetReplicationRecoveryServicesProviderResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource Location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource Name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provider properties.
      * 
-     */
+    */
     public RecoveryServicesProviderPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Resource Type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

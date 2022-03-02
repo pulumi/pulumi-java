@@ -54,35 +54,35 @@ public final class GuestAgentProfileResponse {
     /**
      * The hybrid machine agent full version.
      * 
-     */
+    */
     public String getAgentVersion() {
         return this.agentVersion;
     }
     /**
      * Details about the error state.
      * 
-     */
+    */
     public List<ErrorDetailResponse> getErrorDetails() {
         return this.errorDetails;
     }
     /**
      * The time of the last status change.
      * 
-     */
+    */
     public String getLastStatusChange() {
         return this.lastStatusChange;
     }
     /**
      * The status of the hybrid machine agent.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Specifies the VM's unique SMBIOS ID.
      * 
-     */
+    */
     public String getVmUuid() {
         return this.vmUuid;
     }

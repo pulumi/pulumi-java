@@ -31,14 +31,14 @@ public final class GetProductFilter {
     /**
      * The product attribute name that you want to filter on.
      * 
-     */
+    */
     public String getField() {
         return this.field;
     }
     /**
      * The product attribute value that you want to filter on.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

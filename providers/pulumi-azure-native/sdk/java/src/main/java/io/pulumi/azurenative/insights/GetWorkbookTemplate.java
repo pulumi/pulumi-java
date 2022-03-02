@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkbookTemplate {
-/**
- * An Application Insights workbook template definition.
+    private GetWorkbookTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkbookTemplateArgs.Builder a);
+    }
+    private static GetWorkbookTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkbookTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Application Insights workbook template definition.
  * API Version: 2019-10-17-preview.
  * 
- *
- * An Application Insights workbook template definition.
+     *
+     * An Application Insights workbook template definition.
  * 
- */
+     */
+    public static CompletableFuture<GetWorkbookTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Application Insights workbook template definition.
+     * API Version: 2019-10-17-preview.
+     * 
+     *
+         * An Application Insights workbook template definition.
+     * 
+     */
     public static CompletableFuture<GetWorkbookTemplateResult> invokeAsync(GetWorkbookTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getWorkbookTemplate", TypeShape.of(GetWorkbookTemplateResult.class), args == null ? GetWorkbookTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

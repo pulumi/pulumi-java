@@ -31,14 +31,14 @@ public final class IpSetIpSetDescriptor {
     /**
      * The string like IPV4 or IPV6.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The CIDR notation.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

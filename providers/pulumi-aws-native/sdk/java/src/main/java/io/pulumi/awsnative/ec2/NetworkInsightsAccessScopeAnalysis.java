@@ -84,6 +84,22 @@ public class NetworkInsightsAccessScopeAnalysis extends io.pulumi.resources.Cust
         return this.tags;
     }
 
+    public interface BuilderApplicator {
+        public void apply(NetworkInsightsAccessScopeAnalysisArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.ec2.NetworkInsightsAccessScopeAnalysisArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.ec2.NetworkInsightsAccessScopeAnalysisArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public NetworkInsightsAccessScopeAnalysis(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

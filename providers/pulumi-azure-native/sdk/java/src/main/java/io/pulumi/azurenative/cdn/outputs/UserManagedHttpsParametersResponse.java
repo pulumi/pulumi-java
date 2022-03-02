@@ -50,28 +50,28 @@ public final class UserManagedHttpsParametersResponse {
      * Defines the source of the SSL certificate.
      * Expected value is 'AzureKeyVault'.
      * 
-     */
+    */
     public String getCertificateSource() {
         return this.certificateSource;
     }
     /**
      * Defines the certificate source parameters using user's keyvault certificate for enabling SSL.
      * 
-     */
+    */
     public KeyVaultCertificateSourceParametersResponse getCertificateSourceParameters() {
         return this.certificateSourceParameters;
     }
     /**
      * TLS protocol version that will be used for Https
      * 
-     */
+    */
     public Optional<String> getMinimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
     /**
      * Defines the TLS extension protocol that is used for secure delivery.
      * 
-     */
+    */
     public String getProtocolType() {
         return this.protocolType;
     }

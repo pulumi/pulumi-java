@@ -22,7 +22,7 @@ public final class ProjectSecondarySourceGetArgs extends io.pulumi.resources.Res
     /**
      * Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
      */

@@ -34,14 +34,14 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
      * A day of the week.
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
-     */
+    */
     public String getDayOfWeek() {
         return this.dayOfWeek;
     }
     /**
      * Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
      * 
-     */
+    */
     public Integer getWeekOrdinal() {
         return this.weekOrdinal;
     }

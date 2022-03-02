@@ -84,7 +84,7 @@ public final class GetComputeEnvironmentResult {
     /**
      * The ARN of the compute environment.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
@@ -94,56 +94,56 @@ public final class GetComputeEnvironmentResult {
     /**
      * The ARN of the underlying Amazon ECS cluster used by the compute environment.
      * 
-     */
+    */
     public String getEcsClusterArn() {
         return this.ecsClusterArn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The ARN of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
      * 
-     */
+    */
     public String getServiceRole() {
         return this.serviceRole;
     }
     /**
      * The state of the compute environment (for example, `ENABLED` or `DISABLED`). If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The current status of the compute environment (for example, `CREATING` or `VALID`).
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * A short, human-readable string to provide additional details about the current status of the compute environment.
      * 
-     */
+    */
     public String getStatusReason() {
         return this.statusReason;
     }
     /**
      * Key-value map of resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * The type of the compute environment (for example, `MANAGED` or `UNMANAGED`).
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

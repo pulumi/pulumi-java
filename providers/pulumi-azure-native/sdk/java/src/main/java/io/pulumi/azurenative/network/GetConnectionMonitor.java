@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnectionMonitor {
-/**
- * Information about the connection monitor.
+    private GetConnectionMonitor() {}
+    public interface BuilderApplicator {
+        public void apply(GetConnectionMonitorArgs.Builder a);
+    }
+    private static GetConnectionMonitorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConnectionMonitorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Information about the connection monitor.
  * API Version: 2020-11-01.
  * 
- *
- * Information about the connection monitor.
+     *
+     * Information about the connection monitor.
  * 
- */
+     */
+    public static CompletableFuture<GetConnectionMonitorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Information about the connection monitor.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Information about the connection monitor.
+     * 
+     */
     public static CompletableFuture<GetConnectionMonitorResult> invokeAsync(GetConnectionMonitorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getConnectionMonitor", TypeShape.of(GetConnectionMonitorResult.class), args == null ? GetConnectionMonitorArgs.Empty : args, Utilities.withVersion(options));
     }

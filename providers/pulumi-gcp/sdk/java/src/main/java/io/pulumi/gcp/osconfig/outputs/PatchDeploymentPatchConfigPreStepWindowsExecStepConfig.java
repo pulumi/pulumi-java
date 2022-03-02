@@ -53,7 +53,7 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfig {
     /**
      * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
      * 
-     */
+    */
     public List<Integer> getAllowedSuccessCodes() {
         return this.allowedSuccessCodes == null ? List.of() : this.allowedSuccessCodes;
     }
@@ -61,7 +61,7 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfig {
      * A Cloud Storage object containing the executable.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject> getGcsObject() {
         return Optional.ofNullable(this.gcsObject);
     }
@@ -70,14 +70,14 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfig {
      * be executed directly, which will likely only succeed for scripts with shebang lines.
      * Possible values are `SHELL` and `POWERSHELL`.
      * 
-     */
+    */
     public Optional<String> getInterpreter() {
         return Optional.ofNullable(this.interpreter);
     }
     /**
      * An absolute path to the executable on the VM.
      * 
-     */
+    */
     public Optional<String> getLocalPath() {
         return Optional.ofNullable(this.localPath);
     }

@@ -14,20 +14,20 @@ public final class ProjectSourceAuth {
     /**
      * Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
      */
-    @Deprecated /* Use the aws_codebuild_source_credential resource instead */
+        @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     private final @Nullable String resource;
     /**
      * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
      */
-    @Deprecated /* Use the aws_codebuild_source_credential resource instead */
+        @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     private final String type;
 
     @OutputCustomType.Constructor({"resource","type"})
@@ -41,10 +41,10 @@ public final class ProjectSourceAuth {
     /**
      * Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
-     */
+    */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public Optional<String> getResource() {
         return Optional.ofNullable(this.resource);
@@ -52,10 +52,10 @@ public final class ProjectSourceAuth {
     /**
      * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_codebuild_source_credential resource instead
      * 
-     */
+    */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public String getType() {
         return this.type;

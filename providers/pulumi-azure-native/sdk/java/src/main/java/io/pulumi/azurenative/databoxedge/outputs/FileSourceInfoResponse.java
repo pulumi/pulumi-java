@@ -23,7 +23,7 @@ public final class FileSourceInfoResponse {
     /**
      * File share ID.
      * 
-     */
+    */
     public String getShareId() {
         return this.shareId;
     }

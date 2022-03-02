@@ -33,14 +33,14 @@ public final class ElasticPoolPerDatabaseSettingsResponse {
     /**
      * The maximum capacity any one database can consume.
      * 
-     */
+    */
     public Optional<Double> getMaxCapacity() {
         return Optional.ofNullable(this.maxCapacity);
     }
     /**
      * The minimum capacity all databases are guaranteed.
      * 
-     */
+    */
     public Optional<Double> getMinCapacity() {
         return Optional.ofNullable(this.minCapacity);
     }

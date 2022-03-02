@@ -42,21 +42,21 @@ public final class CrawlerDynamodbTarget {
     /**
      * The path of the Amazon DocumentDB or MongoDB target (database/collection).
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
      * 
-     */
+    */
     public Optional<Boolean> getScanAll() {
         return Optional.ofNullable(this.scanAll);
     }
     /**
      * The percentage of the configured read capacity units to use by the AWS Glue crawler. The valid values are null or a value between 0.1 to 1.5.
      * 
-     */
+    */
     public Optional<Double> getScanRate() {
         return Optional.ofNullable(this.scanRate);
     }

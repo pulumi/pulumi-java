@@ -33,7 +33,7 @@ public final class ContainerPublicDomainName {
     /**
      * An object that describes the configuration for the containers of the deployment.
      * 
-     */
+    */
     public List<String> getDomainNames() {
         return this.domainNames == null ? List.of() : this.domainNames;
     }

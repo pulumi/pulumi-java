@@ -49,14 +49,14 @@ public final class GetQueueResult {
     /**
      * The Amazon Resource Name (ARN) of the queue.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -66,14 +66,14 @@ public final class GetQueueResult {
     /**
      * A map of tags for the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * The URL of the queue.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

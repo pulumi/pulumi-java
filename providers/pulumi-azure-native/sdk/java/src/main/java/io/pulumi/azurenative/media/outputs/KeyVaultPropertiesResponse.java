@@ -33,14 +33,14 @@ public final class KeyVaultPropertiesResponse {
     /**
      * The current key used to encrypt the Media Services account, including the key version.
      * 
-     */
+    */
     public String getCurrentKeyIdentifier() {
         return this.currentKeyIdentifier;
     }
     /**
      * The URL of the Key Vault key used to encrypt the account. The key may either be versioned (for example https://vault/keys/mykey/version1) or reference a key without a version (for example https://vault/keys/mykey).
      * 
-     */
+    */
     public Optional<String> getKeyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }

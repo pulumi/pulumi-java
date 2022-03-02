@@ -32,14 +32,14 @@ public final class CisBenchmarkResponse {
     /**
      * The profile level of this CIS benchmark check.
      * 
-     */
+    */
     public Integer getProfileLevel() {
         return this.profileLevel;
     }
     /**
      * The severity level of this CIS benchmark check.
      * 
-     */
+    */
     public String getSeverity() {
         return this.severity;
     }

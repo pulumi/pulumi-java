@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCloudFrontOriginAccessIdentity {
-/**
- * Resource Type definition for AWS::CloudFront::CloudFrontOriginAccessIdentity
+    private GetCloudFrontOriginAccessIdentity() {}
+    public interface BuilderApplicator {
+        public void apply(GetCloudFrontOriginAccessIdentityArgs.Builder a);
+    }
+    private static GetCloudFrontOriginAccessIdentityArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCloudFrontOriginAccessIdentityArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::CloudFrontOriginAccessIdentity
  * 
- */
+     */
+    public static CompletableFuture<GetCloudFrontOriginAccessIdentityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::CloudFront::CloudFrontOriginAccessIdentity
+     * 
+     */
     public static CompletableFuture<GetCloudFrontOriginAccessIdentityResult> invokeAsync(GetCloudFrontOriginAccessIdentityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getCloudFrontOriginAccessIdentity", TypeShape.of(GetCloudFrontOriginAccessIdentityResult.class), args == null ? GetCloudFrontOriginAccessIdentityArgs.Empty : args, Utilities.withVersion(options));
     }

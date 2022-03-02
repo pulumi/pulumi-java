@@ -51,14 +51,14 @@ public final class GetGlobalAddressResult {
     /**
      * The IP of the created resource.
      * 
-     */
+    */
     public String getAddress() {
         return this.address;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -71,14 +71,14 @@ public final class GetGlobalAddressResult {
     /**
      * The URI of the created resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * Indicates if the address is used. Possible values are: RESERVED or IN_USE.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

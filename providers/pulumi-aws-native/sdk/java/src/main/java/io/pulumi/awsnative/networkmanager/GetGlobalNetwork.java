@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalNetwork {
-/**
- * The AWS::NetworkManager::GlobalNetwork type specifies a global network of the user's account
+    private GetGlobalNetwork() {}
+    public interface BuilderApplicator {
+        public void apply(GetGlobalNetworkArgs.Builder a);
+    }
+    private static GetGlobalNetworkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGlobalNetworkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::NetworkManager::GlobalNetwork type specifies a global network of the user's account
  * 
- */
+     */
+    public static CompletableFuture<GetGlobalNetworkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::NetworkManager::GlobalNetwork type specifies a global network of the user's account
+     * 
+     */
     public static CompletableFuture<GetGlobalNetworkResult> invokeAsync(GetGlobalNetworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getGlobalNetwork", TypeShape.of(GetGlobalNetworkResult.class), args == null ? GetGlobalNetworkArgs.Empty : args, Utilities.withVersion(options));
     }

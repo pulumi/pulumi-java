@@ -18,7 +18,7 @@ public final class GCPolicyMaxAgeGetArgs extends io.pulumi.resources.ResourceArg
     /**
      * Number of days before applying GC policy.
      * 
-     * @deprecated
+     * @Deprecated
      * Deprecated in favor of duration
      * 
      */

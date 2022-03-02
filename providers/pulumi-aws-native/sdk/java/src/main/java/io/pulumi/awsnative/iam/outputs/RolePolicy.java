@@ -31,14 +31,14 @@ public final class RolePolicy {
     /**
      * The policy document.
      * 
-     */
+    */
     public String getPolicyDocument() {
         return this.policyDocument;
     }
     /**
      * The friendly name (not ARN) identifying the policy.
      * 
-     */
+    */
     public String getPolicyName() {
         return this.policyName;
     }

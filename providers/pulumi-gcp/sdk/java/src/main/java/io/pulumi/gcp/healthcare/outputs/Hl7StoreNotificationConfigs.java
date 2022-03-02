@@ -54,7 +54,7 @@ public final class Hl7StoreNotificationConfigs {
      * * PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId("123456", "MRN").
      * * labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
      * 
-     */
+    */
     public Optional<String> getFilter() {
         return Optional.ofNullable(this.filter);
     }
@@ -66,7 +66,7 @@ public final class Hl7StoreNotificationConfigs {
      * project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
      * Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
      * 
-     */
+    */
     public String getPubsubTopic() {
         return this.pubsubTopic;
     }

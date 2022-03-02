@@ -56,7 +56,7 @@ public final class InMagePolicyDetailsResponse {
     /**
      * The app consistent snapshot frequency in minutes.
      * 
-     */
+    */
     public Optional<Integer> getAppConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
@@ -64,28 +64,28 @@ public final class InMagePolicyDetailsResponse {
      * Gets the class type. Overridden in derived classes.
      * Expected value is 'InMage'.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * A value indicating whether multi-VM sync has to be enabled.
      * 
-     */
+    */
     public Optional<String> getMultiVmSyncStatus() {
         return Optional.ofNullable(this.multiVmSyncStatus);
     }
     /**
      * The duration in minutes until which the recovery points need to be stored.
      * 
-     */
+    */
     public Optional<Integer> getRecoveryPointHistory() {
         return Optional.ofNullable(this.recoveryPointHistory);
     }
     /**
      * The recovery point threshold in minutes.
      * 
-     */
+    */
     public Optional<Integer> getRecoveryPointThresholdInMinutes() {
         return Optional.ofNullable(this.recoveryPointThresholdInMinutes);
     }

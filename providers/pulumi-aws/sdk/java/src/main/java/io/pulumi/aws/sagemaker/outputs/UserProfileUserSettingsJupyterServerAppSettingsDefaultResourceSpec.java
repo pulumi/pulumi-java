@@ -47,28 +47,28 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsDefaultResourc
     /**
      * The instance type.
      * 
-     */
+    */
     public Optional<String> getInstanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
      * 
-     */
+    */
     public Optional<String> getLifecycleConfigArn() {
         return Optional.ofNullable(this.lifecycleConfigArn);
     }
     /**
      * The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
      * 
-     */
+    */
     public Optional<String> getSagemakerImageArn() {
         return Optional.ofNullable(this.sagemakerImageArn);
     }
     /**
      * The ARN of the image version created on the instance.
      * 
-     */
+    */
     public Optional<String> getSagemakerImageVersionArn() {
         return Optional.ofNullable(this.sagemakerImageVersionArn);
     }

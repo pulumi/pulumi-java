@@ -35,14 +35,14 @@ public final class NetworkRefResponse {
     /**
      * A list of endpoints that are exposed on this network.
      * 
-     */
+    */
     public List<EndpointRefResponse> getEndpointRefs() {
         return this.endpointRefs == null ? List.of() : this.endpointRefs;
     }
     /**
      * Name of the network
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

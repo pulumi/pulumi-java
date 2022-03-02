@@ -53,11 +53,11 @@ public final class ServiceTemplateSpecContainer {
      * precedence.
      * Structure is documented below.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by Cloud Run fully managed
      * 
      */
-    @Deprecated /* Not supported by Cloud Run fully managed */
+        @Deprecated /* Not supported by Cloud Run fully managed */
     private final @Nullable List<ServiceTemplateSpecContainerEnvFrom> envFroms;
     /**
      * List of environment variables to set in the container.
@@ -102,11 +102,11 @@ public final class ServiceTemplateSpecContainer {
      * If not specified, the container runtime's default will be used, which
      * might be configured in the container image.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by Cloud Run fully managed
      * 
      */
-    @Deprecated /* Not supported by Cloud Run fully managed */
+        @Deprecated /* Not supported by Cloud Run fully managed */
     private final @Nullable String workingDir;
 
     @OutputCustomType.Constructor({"args","commands","envFroms","envs","image","ports","resources","volumeMounts","workingDir"})
@@ -142,7 +142,7 @@ public final class ServiceTemplateSpecContainer {
      * More info:
      * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
-     */
+    */
     public List<String> getArgs() {
         return this.args == null ? List.of() : this.args;
     }
@@ -157,7 +157,7 @@ public final class ServiceTemplateSpecContainer {
      * More info:
      * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
-     */
+    */
     public List<String> getCommands() {
         return this.commands == null ? List.of() : this.commands;
     }
@@ -171,10 +171,10 @@ public final class ServiceTemplateSpecContainer {
      * precedence.
      * Structure is documented below.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by Cloud Run fully managed
      * 
-     */
+    */
     @Deprecated /* Not supported by Cloud Run fully managed */
     public List<ServiceTemplateSpecContainerEnvFrom> getEnvFroms() {
         return this.envFroms == null ? List.of() : this.envFroms;
@@ -183,7 +183,7 @@ public final class ServiceTemplateSpecContainer {
      * List of environment variables to set in the container.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServiceTemplateSpecContainerEnv> getEnvs() {
         return this.envs == null ? List.of() : this.envs;
     }
@@ -192,7 +192,7 @@ public final class ServiceTemplateSpecContainer {
      * in the container registry, such as gcr.io/cloudrun/hello
      * More info: https://kubernetes.io/docs/concepts/containers/images
      * 
-     */
+    */
     public String getImage() {
         return this.image;
     }
@@ -202,7 +202,7 @@ public final class ServiceTemplateSpecContainer {
      * https://cloud.google.com/run/docs/reference/rest/v1/RevisionSpec#ContainerPort
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServiceTemplateSpecContainerPort> getPorts() {
         return this.ports == null ? List.of() : this.ports;
     }
@@ -212,7 +212,7 @@ public final class ServiceTemplateSpecContainer {
      * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServiceTemplateSpecContainerResources> getResources() {
         return Optional.ofNullable(this.resources);
     }
@@ -221,7 +221,7 @@ public final class ServiceTemplateSpecContainer {
      * Only supports SecretVolumeSources.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServiceTemplateSpecContainerVolumeMount> getVolumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
     }
@@ -232,10 +232,10 @@ public final class ServiceTemplateSpecContainer {
      * If not specified, the container runtime's default will be used, which
      * might be configured in the container image.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by Cloud Run fully managed
      * 
-     */
+    */
     @Deprecated /* Not supported by Cloud Run fully managed */
     public Optional<String> getWorkingDir() {
         return Optional.ofNullable(this.workingDir);

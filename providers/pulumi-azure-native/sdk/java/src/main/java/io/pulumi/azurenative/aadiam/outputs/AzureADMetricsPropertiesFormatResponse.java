@@ -23,7 +23,7 @@ public final class AzureADMetricsPropertiesFormatResponse {
     /**
      * The provisioning state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }

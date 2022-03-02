@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRecipe {
-/**
- * Resource schema for AWS::DataBrew::Recipe.
+    private GetRecipe() {}
+    public interface BuilderApplicator {
+        public void apply(GetRecipeArgs.Builder a);
+    }
+    private static GetRecipeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRecipeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::DataBrew::Recipe.
  * 
- */
+     */
+    public static CompletableFuture<GetRecipeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::DataBrew::Recipe.
+     * 
+     */
     public static CompletableFuture<GetRecipeResult> invokeAsync(GetRecipeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:databrew:getRecipe", TypeShape.of(GetRecipeResult.class), args == null ? GetRecipeArgs.Empty : args, Utilities.withVersion(options));
     }

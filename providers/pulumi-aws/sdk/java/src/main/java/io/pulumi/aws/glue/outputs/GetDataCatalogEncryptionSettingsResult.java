@@ -39,14 +39,14 @@ public final class GetDataCatalogEncryptionSettingsResult {
     /**
      * The security configuration to set. see Data Catalog Encryption Settings.
      * 
-     */
+    */
     public List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting> getDataCatalogEncryptionSettings() {
         return this.dataCatalogEncryptionSettings;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

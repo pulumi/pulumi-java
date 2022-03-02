@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSite {
-/**
- * IoT site model
+    private GetSite() {}
+    public interface BuilderApplicator {
+        public void apply(GetSiteArgs.Builder a);
+    }
+    private static GetSiteArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSiteArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * IoT site model
  * API Version: 2021-02-01-preview.
  * 
- *
- * IoT site model
+     *
+     * IoT site model
  * 
- */
+     */
+    public static CompletableFuture<GetSiteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * IoT site model
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * IoT site model
+     * 
+     */
     public static CompletableFuture<GetSiteResult> invokeAsync(GetSiteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotsecurity:getSite", TypeShape.of(GetSiteResult.class), args == null ? GetSiteArgs.Empty : args, Utilities.withVersion(options));
     }

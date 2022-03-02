@@ -67,14 +67,14 @@ public final class StageRouteSetting {
      * Whether data trace logging is enabled for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
      * Defaults to `false`. Supported only for WebSocket APIs.
      * 
-     */
+    */
     public Optional<Boolean> getDataTraceEnabled() {
         return Optional.ofNullable(this.dataTraceEnabled);
     }
     /**
      * Whether detailed metrics are enabled for the route. Defaults to `false`.
      * 
-     */
+    */
     public Optional<Boolean> getDetailedMetricsEnabled() {
         return Optional.ofNullable(this.detailedMetricsEnabled);
     }
@@ -82,28 +82,28 @@ public final class StageRouteSetting {
      * The logging level for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
      * Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
      * 
-     */
+    */
     public Optional<String> getLoggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
     /**
      * Route key.
      * 
-     */
+    */
     public String getRouteKey() {
         return this.routeKey;
     }
     /**
      * The throttling burst limit for the route.
      * 
-     */
+    */
     public Optional<Integer> getThrottlingBurstLimit() {
         return Optional.ofNullable(this.throttlingBurstLimit);
     }
     /**
      * The throttling rate limit for the route.
      * 
-     */
+    */
     public Optional<Double> getThrottlingRateLimit() {
         return Optional.ofNullable(this.throttlingRateLimit);
     }

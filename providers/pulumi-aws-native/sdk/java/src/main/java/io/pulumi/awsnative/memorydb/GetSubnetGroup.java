@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnetGroup {
-/**
- * The AWS::MemoryDB::SubnetGroup resource creates an Amazon MemoryDB Subnet Group.
+    private GetSubnetGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetSubnetGroupArgs.Builder a);
+    }
+    private static GetSubnetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSubnetGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::MemoryDB::SubnetGroup resource creates an Amazon MemoryDB Subnet Group.
  * 
- */
+     */
+    public static CompletableFuture<GetSubnetGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::MemoryDB::SubnetGroup resource creates an Amazon MemoryDB Subnet Group.
+     * 
+     */
     public static CompletableFuture<GetSubnetGroupResult> invokeAsync(GetSubnetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:memorydb:getSubnetGroup", TypeShape.of(GetSubnetGroupResult.class), args == null ? GetSubnetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

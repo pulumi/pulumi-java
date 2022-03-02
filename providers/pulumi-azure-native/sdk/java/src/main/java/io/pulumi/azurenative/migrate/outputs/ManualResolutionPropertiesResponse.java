@@ -25,7 +25,7 @@ public final class ManualResolutionPropertiesResponse {
     /**
      * Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual.
      * 
-     */
+    */
     public Optional<String> getTargetId() {
         return Optional.ofNullable(this.targetId);
     }

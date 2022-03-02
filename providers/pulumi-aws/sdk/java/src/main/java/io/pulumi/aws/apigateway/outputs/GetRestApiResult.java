@@ -101,56 +101,56 @@ public final class GetRestApiResult {
     /**
      * The source of the API key for requests.
      * 
-     */
+    */
     public String getApiKeySource() {
         return this.apiKeySource;
     }
     /**
      * The ARN of the REST API.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The list of binary media types supported by the REST API.
      * 
-     */
+    */
     public List<String> getBinaryMediaTypes() {
         return this.binaryMediaTypes;
     }
     /**
      * The description of the REST API.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The endpoint configuration of this RestApi showing the endpoint types of the API.
      * 
-     */
+    */
     public List<GetRestApiEndpointConfiguration> getEndpointConfigurations() {
         return this.endpointConfigurations;
     }
     /**
      * The execution ARN part to be used in `lambda_permission`'s `source_arn` when allowing API Gateway to invoke a Lambda function, e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be concatenated with allowed stage, method and resource path.
      * 
-     */
+    */
     public String getExecutionArn() {
         return this.executionArn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Minimum response size to compress for the REST API.
      * 
-     */
+    */
     public Integer getMinimumCompressionSize() {
         return this.minimumCompressionSize;
     }
@@ -160,21 +160,21 @@ public final class GetRestApiResult {
     /**
      * JSON formatted policy document that controls access to the API Gateway.
      * 
-     */
+    */
     public String getPolicy() {
         return this.policy;
     }
     /**
      * Set to the ID of the API Gateway Resource on the found REST API where the route matches '/'.
      * 
-     */
+    */
     public String getRootResourceId() {
         return this.rootResourceId;
     }
     /**
      * Key-value map of resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

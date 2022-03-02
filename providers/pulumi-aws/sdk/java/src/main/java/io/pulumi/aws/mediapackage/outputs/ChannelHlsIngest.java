@@ -25,7 +25,7 @@ public final class ChannelHlsIngest {
     /**
      * A list of the ingest endpoints
      * 
-     */
+    */
     public List<ChannelHlsIngestIngestEndpoint> getIngestEndpoints() {
         return this.ingestEndpoints == null ? List.of() : this.ingestEndpoints;
     }

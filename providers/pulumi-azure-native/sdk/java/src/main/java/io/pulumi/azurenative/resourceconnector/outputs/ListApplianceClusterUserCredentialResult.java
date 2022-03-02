@@ -33,14 +33,14 @@ public final class ListApplianceClusterUserCredentialResult {
     /**
      * Contains the REP (rendezvous endpoint) and “Listener” access token from notification service (NS).
      * 
-     */
+    */
     public HybridConnectionConfigResponse getHybridConnectionConfig() {
         return this.hybridConnectionConfig;
     }
     /**
      * The list of appliance kubeconfigs.
      * 
-     */
+    */
     public List<ApplianceCredentialKubeconfigResponse> getKubeconfigs() {
         return this.kubeconfigs;
     }

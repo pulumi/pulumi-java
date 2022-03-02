@@ -31,14 +31,14 @@ public final class GetTestResultDownloadURLResult {
     /**
      * The download URL.
      * 
-     */
+    */
     public String getDownloadUrl() {
         return this.downloadUrl;
     }
     /**
      * Expiry date of the download URL.
      * 
-     */
+    */
     public String getExpirationTime() {
         return this.expirationTime;
     }

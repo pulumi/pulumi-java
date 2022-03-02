@@ -23,7 +23,7 @@ public final class ServiceExternalIPsConfigResponse {
     /**
      * Whether Services with ExternalIPs field are allowed or not.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }

@@ -55,35 +55,35 @@ public final class GetPrivateEndpointConnectionResult {
     /**
      * For optimistic concurrency control.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the private endpoint endpoint connection.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the private endpoint endpoint connection.
      * 
-     */
+    */
     public PrivateEndpointConnectionPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

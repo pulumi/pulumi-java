@@ -33,14 +33,14 @@ public final class OpenAuthenticationPolicyClaimResponse {
     /**
      * The name of the claim.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value of the claim.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

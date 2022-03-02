@@ -56,35 +56,35 @@ public final class AndroidTestResponse {
     /**
      * Information about the application under test.
      * 
-     */
+    */
     public AndroidAppInfoResponse getAndroidAppInfo() {
         return this.androidAppInfo;
     }
     /**
      * An Android instrumentation test.
      * 
-     */
+    */
     public AndroidInstrumentationTestResponse getAndroidInstrumentationTest() {
         return this.androidInstrumentationTest;
     }
     /**
      * An Android robo test.
      * 
-     */
+    */
     public AndroidRoboTestResponse getAndroidRoboTest() {
         return this.androidRoboTest;
     }
     /**
      * An Android test loop.
      * 
-     */
+    */
     public AndroidTestLoopResponse getAndroidTestLoop() {
         return this.androidTestLoop;
     }
     /**
      * Max time a test is allowed to run before it is automatically cancelled.
      * 
-     */
+    */
     public DurationResponse getTestTimeout() {
         return this.testTimeout;
     }

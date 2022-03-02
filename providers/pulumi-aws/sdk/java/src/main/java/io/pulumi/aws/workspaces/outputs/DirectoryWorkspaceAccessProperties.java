@@ -75,56 +75,56 @@ public final class DirectoryWorkspaceAccessProperties {
     /**
      * Indicates whether users can use Android devices to access their WorkSpaces.
      * 
-     */
+    */
     public Optional<String> getDeviceTypeAndroid() {
         return Optional.ofNullable(this.deviceTypeAndroid);
     }
     /**
      * Indicates whether users can use Chromebooks to access their WorkSpaces.
      * 
-     */
+    */
     public Optional<String> getDeviceTypeChromeos() {
         return Optional.ofNullable(this.deviceTypeChromeos);
     }
     /**
      * Indicates whether users can use iOS devices to access their WorkSpaces.
      * 
-     */
+    */
     public Optional<String> getDeviceTypeIos() {
         return Optional.ofNullable(this.deviceTypeIos);
     }
     /**
      * Indicates whether users can use Linux clients to access their WorkSpaces.
      * 
-     */
+    */
     public Optional<String> getDeviceTypeLinux() {
         return Optional.ofNullable(this.deviceTypeLinux);
     }
     /**
      * Indicates whether users can use macOS clients to access their WorkSpaces.
      * 
-     */
+    */
     public Optional<String> getDeviceTypeOsx() {
         return Optional.ofNullable(this.deviceTypeOsx);
     }
     /**
      * Indicates whether users can access their WorkSpaces through a web browser.
      * 
-     */
+    */
     public Optional<String> getDeviceTypeWeb() {
         return Optional.ofNullable(this.deviceTypeWeb);
     }
     /**
      * Indicates whether users can use Windows clients to access their WorkSpaces.
      * 
-     */
+    */
     public Optional<String> getDeviceTypeWindows() {
         return Optional.ofNullable(this.deviceTypeWindows);
     }
     /**
      * Indicates whether users can use zero client devices to access their WorkSpaces.
      * 
-     */
+    */
     public Optional<String> getDeviceTypeZeroclient() {
         return Optional.ofNullable(this.deviceTypeZeroclient);
     }

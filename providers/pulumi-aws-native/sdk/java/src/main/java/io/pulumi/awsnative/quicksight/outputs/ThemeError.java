@@ -30,7 +30,7 @@ public final class ThemeError {
     /**
      * <p>The error message.</p>
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }

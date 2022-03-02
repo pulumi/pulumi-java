@@ -33,14 +33,14 @@ public final class BuildpackBindingLaunchPropertiesResponse {
     /**
      * Non-sensitive properties for launchProperties
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Sensitive properties for launchProperties
      * 
-     */
+    */
     public Map<String,String> getSecrets() {
         return this.secrets == null ? Map.of() : this.secrets;
     }

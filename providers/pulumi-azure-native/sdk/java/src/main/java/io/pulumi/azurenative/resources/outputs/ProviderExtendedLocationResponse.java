@@ -41,21 +41,21 @@ public final class ProviderExtendedLocationResponse {
     /**
      * The extended locations for the azure location.
      * 
-     */
+    */
     public List<String> getExtendedLocations() {
         return this.extendedLocations == null ? List.of() : this.extendedLocations;
     }
     /**
      * The azure location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The extended location type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

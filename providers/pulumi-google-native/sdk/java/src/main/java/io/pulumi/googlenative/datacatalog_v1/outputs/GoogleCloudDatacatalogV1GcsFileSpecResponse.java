@@ -39,21 +39,21 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse {
     /**
      * Full file path. Example: `gs://bucket_name/a/b.txt`.
      * 
-     */
+    */
     public String getFilePath() {
         return this.filePath;
     }
     /**
      * Creation, modification, and expiration timestamps of a Cloud Storage file.
      * 
-     */
+    */
     public GoogleCloudDatacatalogV1SystemTimestampsResponse getGcsTimestamps() {
         return this.gcsTimestamps;
     }
     /**
      * File size in bytes.
      * 
-     */
+    */
     public String getSizeBytes() {
         return this.sizeBytes;
     }

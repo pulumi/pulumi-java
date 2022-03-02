@@ -114,6 +114,22 @@ public class RepositoryPermissionsPolicy extends io.pulumi.resources.CustomResou
         return this.resourceArn;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RepositoryPermissionsPolicyArgs.Builder a);
+    }
+    private static io.pulumi.aws.codeartifact.RepositoryPermissionsPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.codeartifact.RepositoryPermissionsPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RepositoryPermissionsPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

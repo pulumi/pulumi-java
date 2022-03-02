@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:elasticloadbalancingv2/listenerCertificate:ListenerCertificate example arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/test/8e4497da625e2d8a/9ab28ade35828f96/67b3d2d36dd7c26b_arn:aws:iam::123456789012:server-certificate/tf-acc-test-6453083910015726063
  * ```
  * 
- * @deprecated
+ * @Deprecated
  * aws.elasticloadbalancingv2.ListenerCertificate has been deprecated in favor of aws.lb.ListenerCertificate
  * 
  */
@@ -66,6 +66,22 @@ public class ListenerCertificate extends io.pulumi.resources.CustomResource {
         return this.listenerArn;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ListenerCertificateArgs.Builder a);
+    }
+    private static io.pulumi.aws.elasticloadbalancingv2.ListenerCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.elasticloadbalancingv2.ListenerCertificateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ListenerCertificate(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

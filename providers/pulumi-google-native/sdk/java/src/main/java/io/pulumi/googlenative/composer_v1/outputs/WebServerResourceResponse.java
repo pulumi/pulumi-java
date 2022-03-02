@@ -38,21 +38,21 @@ public final class WebServerResourceResponse {
     /**
      * Optional. CPU request and limit for Airflow web server.
      * 
-     */
+    */
     public Double getCpu() {
         return this.cpu;
     }
     /**
      * Optional. Memory (GB) request and limit for Airflow web server.
      * 
-     */
+    */
     public Double getMemoryGb() {
         return this.memoryGb;
     }
     /**
      * Optional. Storage (GB) request and limit for Airflow web server.
      * 
-     */
+    */
     public Double getStorageGb() {
         return this.storageGb;
     }

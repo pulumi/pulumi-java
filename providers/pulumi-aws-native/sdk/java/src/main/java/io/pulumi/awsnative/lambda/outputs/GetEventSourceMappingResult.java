@@ -146,119 +146,119 @@ public final class GetEventSourceMappingResult {
     /**
      * The maximum number of items to retrieve in a single batch.
      * 
-     */
+    */
     public Optional<Integer> getBatchSize() {
         return Optional.ofNullable(this.batchSize);
     }
     /**
      * (Streams) If the function returns an error, split the batch in two and retry.
      * 
-     */
+    */
     public Optional<Boolean> getBisectBatchOnFunctionError() {
         return Optional.ofNullable(this.bisectBatchOnFunctionError);
     }
     /**
      * (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      * 
-     */
+    */
     public Optional<EventSourceMappingDestinationConfig> getDestinationConfig() {
         return Optional.ofNullable(this.destinationConfig);
     }
     /**
      * Disables the event source mapping to pause polling and invocation.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The filter criteria to control event filtering.
      * 
-     */
+    */
     public Optional<FilterCriteriaProperties> getFilterCriteria() {
         return Optional.ofNullable(this.filterCriteria);
     }
     /**
      * The name of the Lambda function.
      * 
-     */
+    */
     public Optional<String> getFunctionName() {
         return Optional.ofNullable(this.functionName);
     }
     /**
      * (Streams) A list of response types supported by the function.
      * 
-     */
+    */
     public List<EventSourceMappingFunctionResponseTypesItem> getFunctionResponseTypes() {
         return this.functionResponseTypes == null ? List.of() : this.functionResponseTypes;
     }
     /**
      * Event Source Mapping Identifier UUID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * (Streams) The maximum amount of time to gather records before invoking the function, in seconds.
      * 
-     */
+    */
     public Optional<Integer> getMaximumBatchingWindowInSeconds() {
         return Optional.ofNullable(this.maximumBatchingWindowInSeconds);
     }
     /**
      * (Streams) The maximum age of a record that Lambda sends to a function for processing.
      * 
-     */
+    */
     public Optional<Integer> getMaximumRecordAgeInSeconds() {
         return Optional.ofNullable(this.maximumRecordAgeInSeconds);
     }
     /**
      * (Streams) The maximum number of times to retry when the function returns an error.
      * 
-     */
+    */
     public Optional<Integer> getMaximumRetryAttempts() {
         return Optional.ofNullable(this.maximumRetryAttempts);
     }
     /**
      * (Streams) The number of batches to process from each shard concurrently.
      * 
-     */
+    */
     public Optional<Integer> getParallelizationFactor() {
         return Optional.ofNullable(this.parallelizationFactor);
     }
     /**
      * (ActiveMQ) A list of ActiveMQ queues.
      * 
-     */
+    */
     public List<String> getQueues() {
         return this.queues == null ? List.of() : this.queues;
     }
     /**
      * A list of SourceAccessConfiguration.
      * 
-     */
+    */
     public List<EventSourceMappingSourceAccessConfiguration> getSourceAccessConfigurations() {
         return this.sourceAccessConfigurations == null ? List.of() : this.sourceAccessConfigurations;
     }
     /**
      * With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
      * 
-     */
+    */
     public Optional<Double> getStartingPositionTimestamp() {
         return Optional.ofNullable(this.startingPositionTimestamp);
     }
     /**
      * (Kafka) A list of Kafka topics.
      * 
-     */
+    */
     public List<String> getTopics() {
         return this.topics == null ? List.of() : this.topics;
     }
     /**
      * (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
      * 
-     */
+    */
     public Optional<Integer> getTumblingWindowInSeconds() {
         return Optional.ofNullable(this.tumblingWindowInSeconds);
     }

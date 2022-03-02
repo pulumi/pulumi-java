@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMetadataImport {
-/**
- * Gets details of a single import.
+    private GetMetadataImport() {}
+    public interface BuilderApplicator {
+        public void apply(GetMetadataImportArgs.Builder a);
+    }
+    private static GetMetadataImportArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMetadataImportArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single import.
  * 
- */
+     */
+    public static CompletableFuture<GetMetadataImportResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single import.
+     * 
+     */
     public static CompletableFuture<GetMetadataImportResult> invokeAsync(GetMetadataImportArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:metastore/v1beta:getMetadataImport", TypeShape.of(GetMetadataImportResult.class), args == null ? GetMetadataImportArgs.Empty : args, Utilities.withVersion(options));
     }

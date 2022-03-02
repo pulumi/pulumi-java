@@ -32,14 +32,14 @@ public final class GlobalParameterSpecificationResponse {
     /**
      * Global Parameter type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Value of parameter.
      * 
-     */
+    */
     public Object getValue() {
         return this.value;
     }

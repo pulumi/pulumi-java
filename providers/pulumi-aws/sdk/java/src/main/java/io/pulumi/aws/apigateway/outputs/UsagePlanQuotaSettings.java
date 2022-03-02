@@ -41,21 +41,21 @@ public final class UsagePlanQuotaSettings {
     /**
      * The maximum number of requests that can be made in a given time period.
      * 
-     */
+    */
     public Integer getLimit() {
         return this.limit;
     }
     /**
      * The number of requests subtracted from the given limit in the initial time period.
      * 
-     */
+    */
     public Optional<Integer> getOffset() {
         return Optional.ofNullable(this.offset);
     }
     /**
      * The time period in which the limit applies. Valid values are "DAY", "WEEK" or "MONTH".
      * 
-     */
+    */
     public String getPeriod() {
         return this.period;
     }

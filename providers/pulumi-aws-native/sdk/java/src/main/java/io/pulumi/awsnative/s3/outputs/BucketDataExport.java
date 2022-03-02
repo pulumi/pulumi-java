@@ -31,7 +31,7 @@ public final class BucketDataExport {
     /**
      * The version of the output schema to use when exporting data.
      * 
-     */
+    */
     public String getOutputSchemaVersion() {
         return this.outputSchemaVersion;
     }

@@ -57,21 +57,21 @@ public final class DataSourceCredentialPair {
      *             null, the <code>DataSourceParameters</code> originally used with these
      *                 <code>Credentials</code> is automatically allowed.</p>
      * 
-     */
+    */
     public List<DataSourceParameters> getAlternateDataSourceParameters() {
         return this.alternateDataSourceParameters == null ? List.of() : this.alternateDataSourceParameters;
     }
     /**
      * <p>Password.</p>
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * <p>User name.</p>
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }

@@ -51,28 +51,28 @@ public final class GetProfilingGroupResult {
     /**
      * The agent permissions attached to this profiling group.
      * 
-     */
+    */
     public Optional<AgentPermissionsProperties> getAgentPermissions() {
         return Optional.ofNullable(this.agentPermissions);
     }
     /**
      * Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
      * 
-     */
+    */
     public List<ProfilingGroupChannel> getAnomalyDetectionNotificationConfiguration() {
         return this.anomalyDetectionNotificationConfiguration == null ? List.of() : this.anomalyDetectionNotificationConfiguration;
     }
     /**
      * The Amazon Resource Name (ARN) of the specified profiling group.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The tags associated with a profiling group.
      * 
-     */
+    */
     public List<ProfilingGroupTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

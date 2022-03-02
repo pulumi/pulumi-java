@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccelerator {
-/**
- * Resource Type definition for AWS::GlobalAccelerator::Accelerator
+    private GetAccelerator() {}
+    public interface BuilderApplicator {
+        public void apply(GetAcceleratorArgs.Builder a);
+    }
+    private static GetAcceleratorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAcceleratorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::GlobalAccelerator::Accelerator
  * 
- */
+     */
+    public static CompletableFuture<GetAcceleratorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::GlobalAccelerator::Accelerator
+     * 
+     */
     public static CompletableFuture<GetAcceleratorResult> invokeAsync(GetAcceleratorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:globalaccelerator:getAccelerator", TypeShape.of(GetAcceleratorResult.class), args == null ? GetAcceleratorArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -63,42 +63,42 @@ public final class ClassifierCsvClassifier {
     /**
      * Enables the processing of files that contain only one column.
      * 
-     */
+    */
     public Optional<Boolean> getAllowSingleColumn() {
         return Optional.ofNullable(this.allowSingleColumn);
     }
     /**
      * Indicates whether the CSV file contains a header. This can be one of "ABSENT", "PRESENT", or "UNKNOWN".
      * 
-     */
+    */
     public Optional<String> getContainsHeader() {
         return Optional.ofNullable(this.containsHeader);
     }
     /**
      * The delimiter used in the Csv to separate columns.
      * 
-     */
+    */
     public Optional<String> getDelimiter() {
         return Optional.ofNullable(this.delimiter);
     }
     /**
      * Specifies whether to trim column values.
      * 
-     */
+    */
     public Optional<Boolean> getDisableValueTrimming() {
         return Optional.ofNullable(this.disableValueTrimming);
     }
     /**
      * A list of strings representing column names.
      * 
-     */
+    */
     public List<String> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
      * A custom symbol to denote what combines content into a single column value. It must be different from the column delimiter.
      * 
-     */
+    */
     public Optional<String> getQuoteSymbol() {
         return Optional.ofNullable(this.quoteSymbol);
     }

@@ -43,21 +43,21 @@ public final class DiskInstanceViewResponse {
     /**
      * Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15
      * 
-     */
+    */
     public List<DiskEncryptionSettingsResponse> getEncryptionSettings() {
         return this.encryptionSettings == null ? List.of() : this.encryptionSettings;
     }
     /**
      * The disk name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The resource status information.
      * 
-     */
+    */
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }

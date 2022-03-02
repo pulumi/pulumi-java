@@ -33,14 +33,14 @@ public final class RoleResponse {
     /**
      * The database name the role is applied.
      * 
-     */
+    */
     public Optional<String> getDb() {
         return Optional.ofNullable(this.db);
     }
     /**
      * The role name.
      * 
-     */
+    */
     public Optional<String> getRole() {
         return Optional.ofNullable(this.role);
     }

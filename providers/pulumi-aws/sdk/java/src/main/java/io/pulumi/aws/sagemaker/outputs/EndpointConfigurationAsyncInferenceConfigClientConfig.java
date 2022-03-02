@@ -25,7 +25,7 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfig {
     /**
      * The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.
      * 
-     */
+    */
     public Optional<Integer> getMaxConcurrentInvocationsPerInstance() {
         return Optional.ofNullable(this.maxConcurrentInvocationsPerInstance);
     }

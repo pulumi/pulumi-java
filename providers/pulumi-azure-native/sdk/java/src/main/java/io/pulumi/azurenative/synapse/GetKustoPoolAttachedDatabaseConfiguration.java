@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKustoPoolAttachedDatabaseConfiguration {
-/**
- * Class representing an attached database configuration.
+    private GetKustoPoolAttachedDatabaseConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetKustoPoolAttachedDatabaseConfigurationArgs.Builder a);
+    }
+    private static GetKustoPoolAttachedDatabaseConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetKustoPoolAttachedDatabaseConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing an attached database configuration.
  * API Version: 2021-06-01-preview.
  * 
- *
- * Class representing an attached database configuration.
+     *
+     * Class representing an attached database configuration.
  * 
- */
+     */
+    public static CompletableFuture<GetKustoPoolAttachedDatabaseConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing an attached database configuration.
+     * API Version: 2021-06-01-preview.
+     * 
+     *
+         * Class representing an attached database configuration.
+     * 
+     */
     public static CompletableFuture<GetKustoPoolAttachedDatabaseConfigurationResult> invokeAsync(GetKustoPoolAttachedDatabaseConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getKustoPoolAttachedDatabaseConfiguration", TypeShape.of(GetKustoPoolAttachedDatabaseConfigurationResult.class), args == null ? GetKustoPoolAttachedDatabaseConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -38,21 +38,21 @@ public final class AssignmentOsTypeResponse {
     /**
      * Targets VM instances with OS Inventory enabled and having the following OS architecture.
      * 
-     */
+    */
     public String getOsArchitecture() {
         return this.osArchitecture;
     }
     /**
      * Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
      * 
-     */
+    */
     public String getOsShortName() {
         return this.osShortName;
     }
     /**
      * Targets VM instances with OS Inventory enabled and having the following following OS version.
      * 
-     */
+    */
     public String getOsVersion() {
         return this.osVersion;
     }

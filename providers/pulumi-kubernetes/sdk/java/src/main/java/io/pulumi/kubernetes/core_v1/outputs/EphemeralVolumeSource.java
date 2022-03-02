@@ -40,7 +40,7 @@ public final class EphemeralVolumeSource {
     /**
      * Specifies a read-only configuration for the volume. Defaults to false (read/write).
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -53,7 +53,7 @@ public final class EphemeralVolumeSource {
      * 
      * Required, must not be nil.
      * 
-     */
+    */
     public Optional<PersistentVolumeClaimTemplate> getVolumeClaimTemplate() {
         return Optional.ofNullable(this.volumeClaimTemplate);
     }

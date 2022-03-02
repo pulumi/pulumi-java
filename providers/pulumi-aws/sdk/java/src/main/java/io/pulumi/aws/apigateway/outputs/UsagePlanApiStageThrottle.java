@@ -42,21 +42,21 @@ public final class UsagePlanApiStageThrottle {
     /**
      * The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
      * 
-     */
+    */
     public Optional<Integer> getBurstLimit() {
         return Optional.ofNullable(this.burstLimit);
     }
     /**
      * The method to apply the throttle settings for. Specfiy the path and method, for example `/test/GET`.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * The API request steady-state rate limit.
      * 
-     */
+    */
     public Optional<Double> getRateLimit() {
         return Optional.ofNullable(this.rateLimit);
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDatabasePrincipalAssignment {
-/**
- * Class representing a database principal assignment.
+    private GetDatabasePrincipalAssignment() {}
+    public interface BuilderApplicator {
+        public void apply(GetDatabasePrincipalAssignmentArgs.Builder a);
+    }
+    private static GetDatabasePrincipalAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDatabasePrincipalAssignmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing a database principal assignment.
  * API Version: 2021-01-01.
  * 
- *
- * Class representing a database principal assignment.
+     *
+     * Class representing a database principal assignment.
  * 
- */
+     */
+    public static CompletableFuture<GetDatabasePrincipalAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing a database principal assignment.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Class representing a database principal assignment.
+     * 
+     */
     public static CompletableFuture<GetDatabasePrincipalAssignmentResult> invokeAsync(GetDatabasePrincipalAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getDatabasePrincipalAssignment", TypeShape.of(GetDatabasePrincipalAssignmentResult.class), args == null ? GetDatabasePrincipalAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

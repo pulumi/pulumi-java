@@ -95,70 +95,70 @@ public final class GetWorkbookTemplateResult {
     /**
      * Information about the author of the workbook template.
      * 
-     */
+    */
     public Optional<String> getAuthor() {
         return Optional.ofNullable(this.author);
     }
     /**
      * Workbook galleries supported by the template.
      * 
-     */
+    */
     public List<WorkbookTemplateGalleryResponse> getGalleries() {
         return this.galleries;
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
      * 
-     */
+    */
     public Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> getLocalized() {
         return this.localized == null ? Map.of() : this.localized;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Azure resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
      * 
-     */
+    */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Valid JSON object containing workbook template payload.
      * 
-     */
+    */
     public Object getTemplateData() {
         return this.templateData;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

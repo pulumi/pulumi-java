@@ -32,14 +32,14 @@ public final class TlsContextResponse {
     /**
      * Defines the mechanism to obtain the client or server certificate.
      * 
-     */
+    */
     public TlsCertificateContextResponse getCertificateContext() {
         return this.certificateContext;
     }
     /**
      * Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.
      * 
-     */
+    */
     public TlsValidationContextResponse getValidationContext() {
         return this.validationContext;
     }

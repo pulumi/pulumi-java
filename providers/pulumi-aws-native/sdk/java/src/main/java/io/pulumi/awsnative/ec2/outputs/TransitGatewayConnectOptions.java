@@ -25,7 +25,7 @@ public final class TransitGatewayConnectOptions {
     /**
      * The tunnel protocol.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }

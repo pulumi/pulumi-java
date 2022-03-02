@@ -34,14 +34,14 @@ public final class SecurityProfileMetricDimension {
     /**
      * A unique identifier for the dimension.
      * 
-     */
+    */
     public String getDimensionName() {
         return this.dimensionName;
     }
     /**
      * Defines how the dimensionValues of a dimension are interpreted.
      * 
-     */
+    */
     public Optional<SecurityProfileMetricDimensionOperator> getOperator() {
         return Optional.ofNullable(this.operator);
     }

@@ -49,28 +49,28 @@ public final class RetentionVolumeResponse {
     /**
      * The volume capacity.
      * 
-     */
+    */
     public Optional<Double> getCapacityInBytes() {
         return Optional.ofNullable(this.capacityInBytes);
     }
     /**
      * The free space available in this volume.
      * 
-     */
+    */
     public Optional<Double> getFreeSpaceInBytes() {
         return Optional.ofNullable(this.freeSpaceInBytes);
     }
     /**
      * The threshold percentage.
      * 
-     */
+    */
     public Optional<Integer> getThresholdPercentage() {
         return Optional.ofNullable(this.thresholdPercentage);
     }
     /**
      * The volume name.
      * 
-     */
+    */
     public Optional<String> getVolumeName() {
         return Optional.ofNullable(this.volumeName);
     }

@@ -25,7 +25,7 @@ public final class VolumeNodeAffinity {
     /**
      * Required specifies hard node constraints that must be met.
      * 
-     */
+    */
     public Optional<NodeSelector> getRequired() {
         return Optional.ofNullable(this.required);
     }

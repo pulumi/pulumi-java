@@ -25,7 +25,7 @@ public final class NameIdentifierResponse {
     /**
      * Name of the object.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

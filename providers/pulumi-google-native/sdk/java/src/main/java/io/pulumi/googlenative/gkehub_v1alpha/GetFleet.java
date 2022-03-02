@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFleet {
-/**
- * Returns the details of a fleet.
+    private GetFleet() {}
+    public interface BuilderApplicator {
+        public void apply(GetFleetArgs.Builder a);
+    }
+    private static GetFleetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFleetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the details of a fleet.
  * 
- */
+     */
+    public static CompletableFuture<GetFleetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the details of a fleet.
+     * 
+     */
     public static CompletableFuture<GetFleetResult> invokeAsync(GetFleetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1alpha:getFleet", TypeShape.of(GetFleetResult.class), args == null ? GetFleetArgs.Empty : args, Utilities.withVersion(options));
     }

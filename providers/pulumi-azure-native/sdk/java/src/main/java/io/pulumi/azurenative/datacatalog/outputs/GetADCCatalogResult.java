@@ -108,84 +108,84 @@ public final class GetADCCatalogResult {
     /**
      * Azure data catalog admin list.
      * 
-     */
+    */
     public List<PrincipalsResponse> getAdmins() {
         return this.admins == null ? List.of() : this.admins;
     }
     /**
      * Automatic unit adjustment enabled or not.
      * 
-     */
+    */
     public Optional<Boolean> getEnableAutomaticUnitAdjustment() {
         return Optional.ofNullable(this.enableAutomaticUnitAdjustment);
     }
     /**
      * Resource etag
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Azure data catalog SKU.
      * 
-     */
+    */
     public Optional<String> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Azure data catalog provision status.
      * 
-     */
+    */
     public Optional<Boolean> getSuccessfullyProvisioned() {
         return Optional.ofNullable(this.successfullyProvisioned);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Azure data catalog units.
      * 
-     */
+    */
     public Optional<Integer> getUnits() {
         return Optional.ofNullable(this.units);
     }
     /**
      * Azure data catalog user list.
      * 
-     */
+    */
     public List<PrincipalsResponse> getUsers() {
         return this.users == null ? List.of() : this.users;
     }

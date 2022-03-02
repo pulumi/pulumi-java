@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnection {
-/**
- * Provides details about CodeStar Connection.
+    private GetConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetConnectionArgs.Builder a);
+    }
+    private static GetConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about CodeStar Connection.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getConnection.
+     *
+     * A collection of arguments for invoking getConnection.
  * 
- *
- * A collection of values returned by getConnection.
+     *
+     * A collection of values returned by getConnection.
  * 
- */
+     */
+    public static CompletableFuture<GetConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about CodeStar Connection.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getConnection.
+     * 
+     *
+         * A collection of values returned by getConnection.
+     * 
+     */
     public static CompletableFuture<GetConnectionResult> invokeAsync(GetConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:codestarconnections/getConnection:getConnection", TypeShape.of(GetConnectionResult.class), args == null ? GetConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

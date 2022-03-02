@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLayerVersion {
-/**
- * Provides information about a Lambda Layer Version.
+    private GetLayerVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetLayerVersionArgs.Builder a);
+    }
+    private static GetLayerVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLayerVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information about a Lambda Layer Version.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getLayerVersion.
+     *
+     * A collection of arguments for invoking getLayerVersion.
  * 
- *
- * A collection of values returned by getLayerVersion.
+     *
+     * A collection of values returned by getLayerVersion.
  * 
- */
+     */
+    public static CompletableFuture<GetLayerVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information about a Lambda Layer Version.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getLayerVersion.
+     * 
+     *
+         * A collection of values returned by getLayerVersion.
+     * 
+     */
     public static CompletableFuture<GetLayerVersionResult> invokeAsync(GetLayerVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lambda/getLayerVersion:getLayerVersion", TypeShape.of(GetLayerVersionResult.class), args == null ? GetLayerVersionArgs.Empty : args, Utilities.withVersion(options));
     }

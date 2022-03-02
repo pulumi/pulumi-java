@@ -25,7 +25,7 @@ public final class PipelineElapsedTimeMetricPolicyResponse {
     /**
      * TimeSpan value, after which an Azure Monitoring Metric is fired.
      * 
-     */
+    */
     public Optional<Object> getDuration() {
         return Optional.ofNullable(this.duration);
     }

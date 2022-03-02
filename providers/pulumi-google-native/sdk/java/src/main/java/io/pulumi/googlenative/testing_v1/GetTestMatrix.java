@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTestMatrix {
-/**
- * Checks the status of a test matrix. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
+    private GetTestMatrix() {}
+    public interface BuilderApplicator {
+        public void apply(GetTestMatrixArgs.Builder a);
+    }
+    private static GetTestMatrixArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTestMatrixArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Checks the status of a test matrix. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
  * 
- */
+     */
+    public static CompletableFuture<GetTestMatrixResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Checks the status of a test matrix. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
+     * 
+     */
     public static CompletableFuture<GetTestMatrixResult> invokeAsync(GetTestMatrixArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:testing/v1:getTestMatrix", TypeShape.of(GetTestMatrixResult.class), args == null ? GetTestMatrixArgs.Empty : args, Utilities.withVersion(options));
     }

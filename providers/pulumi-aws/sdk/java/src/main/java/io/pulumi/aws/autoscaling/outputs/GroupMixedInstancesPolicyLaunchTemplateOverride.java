@@ -41,21 +41,21 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverride {
     /**
      * Override the instance type in the Launch Template.
      * 
-     */
+    */
     public Optional<String> getInstanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * Override the instance launch template specification in the Launch Template.
      * 
-     */
+    */
     public Optional<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification> getLaunchTemplateSpecification() {
         return Optional.ofNullable(this.launchTemplateSpecification);
     }
     /**
      * The number of capacity units, which gives the instance type a proportional weight to other instance types.
      * 
-     */
+    */
     public Optional<String> getWeightedCapacity() {
         return Optional.ofNullable(this.weightedCapacity);
     }

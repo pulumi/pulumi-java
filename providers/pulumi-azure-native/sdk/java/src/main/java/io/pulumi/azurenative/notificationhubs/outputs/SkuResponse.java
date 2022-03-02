@@ -55,35 +55,35 @@ public final class SkuResponse {
     /**
      * The capacity of the resource
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * The Sku Family
      * 
-     */
+    */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
     /**
      * Name of the notification hub sku
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Sku size
      * 
-     */
+    */
     public Optional<String> getSize() {
         return Optional.ofNullable(this.size);
     }
     /**
      * The tier of particular sku
      * 
-     */
+    */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

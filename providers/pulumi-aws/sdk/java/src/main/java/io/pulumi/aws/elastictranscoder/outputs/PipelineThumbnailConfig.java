@@ -33,14 +33,14 @@ public final class PipelineThumbnailConfig {
     /**
      * The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.
      * 
-     */
+    */
     public Optional<String> getBucket() {
         return Optional.ofNullable(this.bucket);
     }
     /**
      * The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.
      * 
-     */
+    */
     public Optional<String> getStorageClass() {
         return Optional.ofNullable(this.storageClass);
     }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePerson
     /**
      * Account number of the LivePerson account to connect. This is the account number you input at the login page.
      * 
-     */
+    */
     public String getAccountNumber() {
         return this.accountNumber;
     }

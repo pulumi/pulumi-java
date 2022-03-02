@@ -47,7 +47,7 @@ public final class DetectorModelState {
     /**
      * The name of the state.
      * 
-     */
+    */
     public String getStateName() {
         return this.stateName;
     }

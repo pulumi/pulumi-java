@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfigurationAggregator {
-/**
- * Resource Type definition for AWS::Config::ConfigurationAggregator
+    private GetConfigurationAggregator() {}
+    public interface BuilderApplicator {
+        public void apply(GetConfigurationAggregatorArgs.Builder a);
+    }
+    private static GetConfigurationAggregatorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConfigurationAggregatorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Config::ConfigurationAggregator
  * 
- */
+     */
+    public static CompletableFuture<GetConfigurationAggregatorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Config::ConfigurationAggregator
+     * 
+     */
     public static CompletableFuture<GetConfigurationAggregatorResult> invokeAsync(GetConfigurationAggregatorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getConfigurationAggregator", TypeShape.of(GetConfigurationAggregatorResult.class), args == null ? GetConfigurationAggregatorArgs.Empty : args, Utilities.withVersion(options));
     }

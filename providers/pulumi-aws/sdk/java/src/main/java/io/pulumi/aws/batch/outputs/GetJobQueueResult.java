@@ -92,7 +92,7 @@ public final class GetJobQueueResult {
     /**
      * The ARN of the job queue.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
@@ -102,14 +102,14 @@ public final class GetJobQueueResult {
      * * `compute_environment_order.#.order` - The order of the compute environment.
      * * `compute_environment_order.#.compute_environment` - The ARN of the compute environment.
      * 
-     */
+    */
     public List<GetJobQueueComputeEnvironmentOrder> getComputeEnvironmentOrders() {
         return this.computeEnvironmentOrders;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -120,28 +120,28 @@ public final class GetJobQueueResult {
      * The priority of the job queue. Job queues with a higher priority are evaluated first when
      * associated with the same compute environment.
      * 
-     */
+    */
     public Integer getPriority() {
         return this.priority;
     }
     /**
      * The ARN of the fair share scheduling policy. If this attribute has a value, the job queue uses a fair share scheduling policy. If this attribute does not have a value, the job queue uses a first in, first out (FIFO) scheduling policy.
      * 
-     */
+    */
     public String getSchedulingPolicyArn() {
         return this.schedulingPolicyArn;
     }
     /**
      * Describes the ability of the queue to accept new jobs (for example, `ENABLED` or `DISABLED`).
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The current status of the job queue (for example, `CREATING` or `VALID`).
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -149,14 +149,14 @@ public final class GetJobQueueResult {
      * A short, human-readable string to provide additional details about the current status
      * of the job queue.
      * 
-     */
+    */
     public String getStatusReason() {
         return this.statusReason;
     }
     /**
      * Key-value map of resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

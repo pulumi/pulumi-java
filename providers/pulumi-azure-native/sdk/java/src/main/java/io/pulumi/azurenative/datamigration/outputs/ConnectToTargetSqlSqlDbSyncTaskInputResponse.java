@@ -31,14 +31,14 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputResponse {
     /**
      * Connection information for source SQL Server
      * 
-     */
+    */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Connection information for target SQL DB
      * 
-     */
+    */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }

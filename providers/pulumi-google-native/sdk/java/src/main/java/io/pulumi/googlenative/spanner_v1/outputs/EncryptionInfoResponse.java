@@ -39,21 +39,21 @@ public final class EncryptionInfoResponse {
     /**
      * If present, the status of a recent encrypt/decrypt call on underlying data for this database or backup. Regardless of status, data is always encrypted at rest.
      * 
-     */
+    */
     public StatusResponse getEncryptionStatus() {
         return this.encryptionStatus;
     }
     /**
      * The type of encryption.
      * 
-     */
+    */
     public String getEncryptionType() {
         return this.encryptionType;
     }
     /**
      * A Cloud KMS key version that is being used to protect the database or backup.
      * 
-     */
+    */
     public String getKmsKeyVersion() {
         return this.kmsKeyVersion;
     }

@@ -23,7 +23,7 @@ public final class ApigatewayGatewayConfigResponse {
     /**
      * Backend settings that are applied to all backends of the Gateway.
      * 
-     */
+    */
     public ApigatewayBackendConfigResponse getBackendConfig() {
         return this.backendConfig;
     }

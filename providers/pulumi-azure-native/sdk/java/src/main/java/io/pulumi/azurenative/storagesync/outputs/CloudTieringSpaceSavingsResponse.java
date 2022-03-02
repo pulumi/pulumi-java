@@ -61,42 +61,42 @@ public final class CloudTieringSpaceSavingsResponse {
     /**
      * Cached content size on the server
      * 
-     */
+    */
     public Double getCachedSizeBytes() {
         return this.cachedSizeBytes;
     }
     /**
      * Last updated timestamp
      * 
-     */
+    */
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
      * Count of bytes saved on the server
      * 
-     */
+    */
     public Double getSpaceSavingsBytes() {
         return this.spaceSavingsBytes;
     }
     /**
      * Percentage of cached size over total size
      * 
-     */
+    */
     public Integer getSpaceSavingsPercent() {
         return this.spaceSavingsPercent;
     }
     /**
      * Total size of content in the azure file share
      * 
-     */
+    */
     public Double getTotalSizeCloudBytes() {
         return this.totalSizeCloudBytes;
     }
     /**
      * Volume size
      * 
-     */
+    */
     public Double getVolumeSizeBytes() {
         return this.volumeSizeBytes;
     }

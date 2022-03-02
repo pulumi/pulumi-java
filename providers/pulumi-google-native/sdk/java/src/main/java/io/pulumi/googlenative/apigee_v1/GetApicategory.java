@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApicategory {
-/**
- * Gets a category on the portal.
+    private GetApicategory() {}
+    public interface BuilderApplicator {
+        public void apply(GetApicategoryArgs.Builder a);
+    }
+    private static GetApicategoryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApicategoryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a category on the portal.
  * 
- */
+     */
+    public static CompletableFuture<GetApicategoryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a category on the portal.
+     * 
+     */
     public static CompletableFuture<GetApicategoryResult> invokeAsync(GetApicategoryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getApicategory", TypeShape.of(GetApicategoryResult.class), args == null ? GetApicategoryArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHistory {
-/**
- * Gets a History. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist
+    private GetHistory() {}
+    public interface BuilderApplicator {
+        public void apply(GetHistoryArgs.Builder a);
+    }
+    private static GetHistoryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHistoryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a History. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist
  * 
- */
+     */
+    public static CompletableFuture<GetHistoryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a History. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist
+     * 
+     */
     public static CompletableFuture<GetHistoryResult> invokeAsync(GetHistoryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:toolresults/v1beta3:getHistory", TypeShape.of(GetHistoryResult.class), args == null ? GetHistoryArgs.Empty : args, Utilities.withVersion(options));
     }

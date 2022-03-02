@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSite {
-/**
- * Gets the specified Hosting Site.
+    private GetSite() {}
+    public interface BuilderApplicator {
+        public void apply(GetSiteArgs.Builder a);
+    }
+    private static GetSiteArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSiteArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified Hosting Site.
  * 
- */
+     */
+    public static CompletableFuture<GetSiteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified Hosting Site.
+     * 
+     */
     public static CompletableFuture<GetSiteResult> invokeAsync(GetSiteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebasehosting/v1beta1:getSite", TypeShape.of(GetSiteResult.class), args == null ? GetSiteArgs.Empty : args, Utilities.withVersion(options));
     }

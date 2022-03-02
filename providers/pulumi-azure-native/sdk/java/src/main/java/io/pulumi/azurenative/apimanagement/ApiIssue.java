@@ -144,6 +144,22 @@ public class ApiIssue extends io.pulumi.resources.CustomResource {
         return this.userId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ApiIssueArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.apimanagement.ApiIssueArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.apimanagement.ApiIssueArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ApiIssue(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

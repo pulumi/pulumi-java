@@ -50,28 +50,28 @@ public final class ContainerInstanceViewResponse {
     /**
      * Current container instance state.
      * 
-     */
+    */
     public Optional<ContainerStateResponse> getCurrentState() {
         return Optional.ofNullable(this.currentState);
     }
     /**
      * The events of this container instance.
      * 
-     */
+    */
     public List<ContainerEventResponse> getEvents() {
         return this.events == null ? List.of() : this.events;
     }
     /**
      * Previous container instance state.
      * 
-     */
+    */
     public Optional<ContainerStateResponse> getPreviousState() {
         return Optional.ofNullable(this.previousState);
     }
     /**
      * The number of times the container has been restarted.
      * 
-     */
+    */
     public Optional<Integer> getRestartCount() {
         return Optional.ofNullable(this.restartCount);
     }

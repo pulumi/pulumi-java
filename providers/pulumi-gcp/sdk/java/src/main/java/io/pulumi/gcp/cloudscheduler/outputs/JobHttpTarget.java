@@ -75,7 +75,7 @@ public final class JobHttpTarget {
      * It is an error to set body on a job with an incompatible HttpMethod.
      * A base64-encoded string.
      * 
-     */
+    */
     public Optional<String> getBody() {
         return Optional.ofNullable(this.body);
     }
@@ -83,14 +83,14 @@ public final class JobHttpTarget {
      * This map contains the header field names and values.
      * Repeated headers are not supported, but a header value can contain commas.
      * 
-     */
+    */
     public Map<String,String> getHeaders() {
         return this.headers == null ? Map.of() : this.headers;
     }
     /**
      * Which HTTP method to use for the request.
      * 
-     */
+    */
     public Optional<String> getHttpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
@@ -99,7 +99,7 @@ public final class JobHttpTarget {
      * This type of authorization should be used when sending requests to a GCP endpoint.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<JobHttpTargetOauthToken> getOauthToken() {
         return Optional.ofNullable(this.oauthToken);
     }
@@ -108,14 +108,14 @@ public final class JobHttpTarget {
      * This type of authorization should be used when sending requests to third party endpoints or Cloud Run.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<JobHttpTargetOidcToken> getOidcToken() {
         return Optional.ofNullable(this.oidcToken);
     }
     /**
      * The full URI path that the request will be sent to.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }

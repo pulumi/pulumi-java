@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSnapshot {
-/**
- * Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes
+    private GetSnapshot() {}
+    public interface BuilderApplicator {
+        public void apply(GetSnapshotArgs.Builder a);
+    }
+    private static GetSnapshotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSnapshotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getSnapshot.
+     *
+     * A collection of arguments for invoking getSnapshot.
  * 
- *
- * A collection of values returned by getSnapshot.
+     *
+     * A collection of values returned by getSnapshot.
  * 
- */
+     */
+    public static CompletableFuture<GetSnapshotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get information about an EBS Snapshot for use when provisioning EBS Volumes
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getSnapshot.
+     * 
+     *
+         * A collection of values returned by getSnapshot.
+     * 
+     */
     public static CompletableFuture<GetSnapshotResult> invokeAsync(@Nullable GetSnapshotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ebs/getSnapshot:getSnapshot", TypeShape.of(GetSnapshotResult.class), args == null ? GetSnapshotArgs.Empty : args, Utilities.withVersion(options));
     }

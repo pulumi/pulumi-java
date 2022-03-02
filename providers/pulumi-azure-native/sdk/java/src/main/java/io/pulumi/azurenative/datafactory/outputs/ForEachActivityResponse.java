@@ -127,49 +127,49 @@ public final class ForEachActivityResponse {
     /**
      * List of activities to execute .
      * 
-     */
+    */
     public List<Object> getActivities() {
         return this.activities;
     }
     /**
      * Batch count to be used for controlling the number of parallel execution (when isSequential is set to false).
      * 
-     */
+    */
     public Optional<Integer> getBatchCount() {
         return Optional.ofNullable(this.batchCount);
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Should the loop be executed in sequence or in parallel (max 50)
      * 
-     */
+    */
     public Optional<Boolean> getIsSequential() {
         return Optional.ofNullable(this.isSequential);
     }
     /**
      * Collection to iterate.
      * 
-     */
+    */
     public ExpressionResponse getItems() {
         return this.items;
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -177,14 +177,14 @@ public final class ForEachActivityResponse {
      * Type of activity.
      * Expected value is 'ForEach'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

@@ -34,14 +34,14 @@ public final class ImageImageTestsConfiguration {
     /**
      * Whether image tests are enabled. Defaults to `true`.
      * 
-     */
+    */
     public Optional<Boolean> getImageTestsEnabled() {
         return Optional.ofNullable(this.imageTestsEnabled);
     }
     /**
      * Number of minutes before image tests time out. Valid values are between `60` and `1440`. Defaults to `720`.
      * 
-     */
+    */
     public Optional<Integer> getTimeoutMinutes() {
         return Optional.ofNullable(this.timeoutMinutes);
     }

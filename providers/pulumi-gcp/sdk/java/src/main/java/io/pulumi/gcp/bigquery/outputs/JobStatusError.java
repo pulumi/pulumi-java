@@ -32,7 +32,7 @@ public final class JobStatusError {
     /**
      * The geographic location of the job. The default value is US.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }

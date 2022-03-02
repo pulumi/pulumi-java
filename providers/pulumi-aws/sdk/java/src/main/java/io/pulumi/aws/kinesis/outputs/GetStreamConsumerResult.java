@@ -50,14 +50,14 @@ public final class GetStreamConsumerResult {
     /**
      * Approximate timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of when the stream consumer was created.
      * 
-     */
+    */
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -67,7 +67,7 @@ public final class GetStreamConsumerResult {
     /**
      * The current status of the stream consumer.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

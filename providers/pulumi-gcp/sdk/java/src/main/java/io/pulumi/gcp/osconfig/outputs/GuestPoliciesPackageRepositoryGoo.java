@@ -37,14 +37,14 @@ public final class GuestPoliciesPackageRepositoryGoo {
      * This means that requests to create multiple recipes with the same name and version are rejected since they
      * could potentially have conflicting assignments.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The url of the repository.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

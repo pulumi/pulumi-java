@@ -37,7 +37,7 @@ public final class SecurityScanConfigAuthentication {
      * Describes authentication configuration that uses a custom account.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SecurityScanConfigAuthenticationCustomAccount> getCustomAccount() {
         return Optional.ofNullable(this.customAccount);
     }
@@ -45,7 +45,7 @@ public final class SecurityScanConfigAuthentication {
      * Describes authentication configuration that uses a Google account.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SecurityScanConfigAuthenticationGoogleAccount> getGoogleAccount() {
         return Optional.ofNullable(this.googleAccount);
     }

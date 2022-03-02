@@ -23,7 +23,7 @@ public final class BinaryAuthorizationResponse {
     /**
      * Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Binary Authorization.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }

@@ -38,21 +38,21 @@ public final class ScaleCapacityResponse {
     /**
      * the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.
      * 
-     */
+    */
     public String get$default() {
         return this.$default;
     }
     /**
      * the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.
      * 
-     */
+    */
     public String getMaximum() {
         return this.maximum;
     }
     /**
      * the minimum number of instances for the resource.
      * 
-     */
+    */
     public String getMinimum() {
         return this.minimum;
     }

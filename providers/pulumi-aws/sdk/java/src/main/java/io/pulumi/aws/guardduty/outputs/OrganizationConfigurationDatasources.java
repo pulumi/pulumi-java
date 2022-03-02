@@ -25,7 +25,7 @@ public final class OrganizationConfigurationDatasources {
     /**
      * Configuration for the builds to store logs to S3.
      * 
-     */
+    */
     public Optional<OrganizationConfigurationDatasourcesS3Logs> getS3Logs() {
         return Optional.ofNullable(this.s3Logs);
     }

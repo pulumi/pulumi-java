@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpnGateway {
-/**
- * The VPN Gateway data source provides details about
+    private GetVpnGateway() {}
+    public interface BuilderApplicator {
+        public void apply(GetVpnGatewayArgs.Builder a);
+    }
+    private static GetVpnGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVpnGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The VPN Gateway data source provides details about
  * a specific VPN gateway.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getVpnGateway.
+     *
+     * A collection of arguments for invoking getVpnGateway.
  * 
- *
- * A collection of values returned by getVpnGateway.
+     *
+     * A collection of values returned by getVpnGateway.
  * 
- */
+     */
+    public static CompletableFuture<GetVpnGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The VPN Gateway data source provides details about
+     * a specific VPN gateway.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getVpnGateway.
+     * 
+     *
+         * A collection of values returned by getVpnGateway.
+     * 
+     */
     public static CompletableFuture<GetVpnGatewayResult> invokeAsync(@Nullable GetVpnGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getVpnGateway:getVpnGateway", TypeShape.of(GetVpnGatewayResult.class), args == null ? GetVpnGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

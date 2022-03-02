@@ -13,16 +13,38 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOutpostInstanceType {
-/**
- * Information about single Outpost Instance Type.
+    private GetOutpostInstanceType() {}
+    public interface BuilderApplicator {
+        public void apply(GetOutpostInstanceTypeArgs.Builder a);
+    }
+    private static GetOutpostInstanceTypeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOutpostInstanceTypeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Information about single Outpost Instance Type.
  * 
- *
- * A collection of arguments for invoking getOutpostInstanceType.
+     *
+     * A collection of arguments for invoking getOutpostInstanceType.
  * 
- *
- * A collection of values returned by getOutpostInstanceType.
+     *
+     * A collection of values returned by getOutpostInstanceType.
  * 
- */
+     */
+    public static CompletableFuture<GetOutpostInstanceTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Information about single Outpost Instance Type.
+     * 
+     *
+         * A collection of arguments for invoking getOutpostInstanceType.
+     * 
+     *
+         * A collection of values returned by getOutpostInstanceType.
+     * 
+     */
     public static CompletableFuture<GetOutpostInstanceTypeResult> invokeAsync(GetOutpostInstanceTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getOutpostInstanceType:getOutpostInstanceType", TypeShape.of(GetOutpostInstanceTypeResult.class), args == null ? GetOutpostInstanceTypeArgs.Empty : args, Utilities.withVersion(options));
     }

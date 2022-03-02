@@ -33,14 +33,14 @@ public final class PipelineRunTargetPropertiesResponse {
     /**
      * The name of the target.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The type of the target.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

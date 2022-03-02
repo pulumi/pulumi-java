@@ -74,14 +74,14 @@ public final class GetPolicyResult {
     /**
      * The description of the policy.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -91,7 +91,7 @@ public final class GetPolicyResult {
     /**
      * The path to the policy.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
@@ -101,21 +101,21 @@ public final class GetPolicyResult {
     /**
      * The policy document of the policy.
      * 
-     */
+    */
     public String getPolicy() {
         return this.policy;
     }
     /**
      * The policy's ID.
      * 
-     */
+    */
     public String getPolicyId() {
         return this.policyId;
     }
     /**
      * Key-value mapping of tags for the IAM Policy.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

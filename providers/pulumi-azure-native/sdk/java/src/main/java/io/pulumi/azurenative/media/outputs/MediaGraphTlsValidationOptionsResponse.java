@@ -31,14 +31,14 @@ public final class MediaGraphTlsValidationOptionsResponse {
     /**
      * Ignore the host name (common name) during validation.
      * 
-     */
+    */
     public Boolean getIgnoreHostname() {
         return this.ignoreHostname;
     }
     /**
      * Ignore the integrity of the certificate chain at the current time.
      * 
-     */
+    */
     public Boolean getIgnoreSignature() {
         return this.ignoreSignature;
     }

@@ -48,28 +48,28 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
     /**
      * Whether sentiment analysis is enabled.
      * 
-     */
+    */
     public Boolean getEnableSentimentAnalysis() {
         return this.enableSentimentAnalysis;
     }
     /**
      * Parameters that need to be injected into the conversation during intent detection.
      * 
-     */
+    */
     public Map<String,String> getInjectedParameters() {
         return this.injectedParameters;
     }
     /**
      * Supports text input, event input, dtmf input in the test case.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3beta1QueryInputResponse getInput() {
         return this.input;
     }
     /**
      * If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.
      * 
-     */
+    */
     public Boolean getIsWebhookEnabled() {
         return this.isWebhookEnabled;
     }

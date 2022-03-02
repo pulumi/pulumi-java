@@ -88,6 +88,22 @@ public class ApiOperationPolicy extends io.pulumi.resources.CustomResource {
         return this.value;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ApiOperationPolicyArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.apimanagement.ApiOperationPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.apimanagement.ApiOperationPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ApiOperationPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

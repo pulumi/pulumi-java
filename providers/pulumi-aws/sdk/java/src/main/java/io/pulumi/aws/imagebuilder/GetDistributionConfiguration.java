@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDistributionConfiguration {
-/**
- * Provides details about an Image Builder Distribution Configuration.
+    private GetDistributionConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetDistributionConfigurationArgs.Builder a);
+    }
+    private static GetDistributionConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDistributionConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about an Image Builder Distribution Configuration.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getDistributionConfiguration.
+     *
+     * A collection of arguments for invoking getDistributionConfiguration.
  * 
- *
- * A collection of values returned by getDistributionConfiguration.
+     *
+     * A collection of values returned by getDistributionConfiguration.
  * 
- */
+     */
+    public static CompletableFuture<GetDistributionConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about an Image Builder Distribution Configuration.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getDistributionConfiguration.
+     * 
+     *
+         * A collection of values returned by getDistributionConfiguration.
+     * 
+     */
     public static CompletableFuture<GetDistributionConfigurationResult> invokeAsync(GetDistributionConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getDistributionConfiguration:getDistributionConfiguration", TypeShape.of(GetDistributionConfigurationResult.class), args == null ? GetDistributionConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -129,7 +129,7 @@ public final class BackendServiceOutlierDetection {
      * 30000ms or 30s.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<BackendServiceOutlierDetectionBaseEjectionTime> getBaseEjectionTime() {
         return Optional.ofNullable(this.baseEjectionTime);
     }
@@ -138,7 +138,7 @@ public final class BackendServiceOutlierDetection {
      * backend host is accessed over HTTP, a 5xx return code qualifies as an error.
      * Defaults to 5.
      * 
-     */
+    */
     public Optional<Integer> getConsecutiveErrors() {
         return Optional.ofNullable(this.consecutiveErrors);
     }
@@ -147,7 +147,7 @@ public final class BackendServiceOutlierDetection {
      * errors that are mapped to one of those status codes) before a consecutive
      * gateway failure ejection occurs. Defaults to 5.
      * 
-     */
+    */
     public Optional<Integer> getConsecutiveGatewayFailure() {
         return Optional.ofNullable(this.consecutiveGatewayFailure);
     }
@@ -156,7 +156,7 @@ public final class BackendServiceOutlierDetection {
      * status is detected through consecutive 5xx. This setting can be used to disable
      * ejection or to ramp it up slowly. Defaults to 100.
      * 
-     */
+    */
     public Optional<Integer> getEnforcingConsecutiveErrors() {
         return Optional.ofNullable(this.enforcingConsecutiveErrors);
     }
@@ -165,7 +165,7 @@ public final class BackendServiceOutlierDetection {
      * status is detected through consecutive gateway failures. This setting can be
      * used to disable ejection or to ramp it up slowly. Defaults to 0.
      * 
-     */
+    */
     public Optional<Integer> getEnforcingConsecutiveGatewayFailure() {
         return Optional.ofNullable(this.enforcingConsecutiveGatewayFailure);
     }
@@ -174,7 +174,7 @@ public final class BackendServiceOutlierDetection {
      * status is detected through success rate statistics. This setting can be used to
      * disable ejection or to ramp it up slowly. Defaults to 100.
      * 
-     */
+    */
     public Optional<Integer> getEnforcingSuccessRate() {
         return Optional.ofNullable(this.enforcingSuccessRate);
     }
@@ -183,7 +183,7 @@ public final class BackendServiceOutlierDetection {
      * ejections as well as hosts being returned to service. Defaults to 10 seconds.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<BackendServiceOutlierDetectionInterval> getInterval() {
         return Optional.ofNullable(this.interval);
     }
@@ -191,7 +191,7 @@ public final class BackendServiceOutlierDetection {
      * Maximum percentage of hosts in the load balancing pool for the backend service
      * that can be ejected. Defaults to 10%.
      * 
-     */
+    */
     public Optional<Integer> getMaxEjectionPercent() {
         return Optional.ofNullable(this.maxEjectionPercent);
     }
@@ -201,7 +201,7 @@ public final class BackendServiceOutlierDetection {
      * detection via success rate statistics is not performed for any host in the
      * cluster. Defaults to 5.
      * 
-     */
+    */
     public Optional<Integer> getSuccessRateMinimumHosts() {
         return Optional.ofNullable(this.successRateMinimumHosts);
     }
@@ -212,7 +212,7 @@ public final class BackendServiceOutlierDetection {
      * detection via success rate statistics is not performed for that host. Defaults
      * to 100.
      * 
-     */
+    */
     public Optional<Integer> getSuccessRateRequestVolume() {
         return Optional.ofNullable(this.successRateRequestVolume);
     }
@@ -224,7 +224,7 @@ public final class BackendServiceOutlierDetection {
      * by a thousand to get a double. That is, if the desired factor is 1.9, the
      * runtime value should be 1900. Defaults to 1900.
      * 
-     */
+    */
     public Optional<Integer> getSuccessRateStdevFactor() {
         return Optional.ofNullable(this.successRateStdevFactor);
     }

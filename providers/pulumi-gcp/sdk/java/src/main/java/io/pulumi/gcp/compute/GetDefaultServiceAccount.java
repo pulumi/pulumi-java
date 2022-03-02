@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDefaultServiceAccount {
-/**
- * Use this data source to retrieve default service account for this project
+    private GetDefaultServiceAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetDefaultServiceAccountArgs.Builder a);
+    }
+    private static GetDefaultServiceAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDefaultServiceAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to retrieve default service account for this project
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getDefaultServiceAccount.
+     *
+     * A collection of arguments for invoking getDefaultServiceAccount.
  * 
- *
- * A collection of values returned by getDefaultServiceAccount.
+     *
+     * A collection of values returned by getDefaultServiceAccount.
  * 
- */
+     */
+    public static CompletableFuture<GetDefaultServiceAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to retrieve default service account for this project
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getDefaultServiceAccount.
+     * 
+     *
+         * A collection of values returned by getDefaultServiceAccount.
+     * 
+     */
     public static CompletableFuture<GetDefaultServiceAccountResult> invokeAsync(@Nullable GetDefaultServiceAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getDefaultServiceAccount:getDefaultServiceAccount", TypeShape.of(GetDefaultServiceAccountResult.class), args == null ? GetDefaultServiceAccountArgs.Empty : args, Utilities.withVersion(options));
     }

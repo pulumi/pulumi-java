@@ -40,7 +40,7 @@ public final class GetServiceResult {
     /**
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
-     */
+    */
     public List<ServiceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

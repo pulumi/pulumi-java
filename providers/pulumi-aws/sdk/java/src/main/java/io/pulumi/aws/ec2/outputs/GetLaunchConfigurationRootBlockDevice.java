@@ -61,42 +61,42 @@ public final class GetLaunchConfigurationRootBlockDevice {
     /**
      * Whether the EBS Volume will be deleted on instance termination.
      * 
-     */
+    */
     public Boolean getDeleteOnTermination() {
         return this.deleteOnTermination;
     }
     /**
      * Whether the volume is Encrypted.
      * 
-     */
+    */
     public Boolean getEncrypted() {
         return this.encrypted;
     }
     /**
      * The provisioned IOPs of the volume.
      * 
-     */
+    */
     public Integer getIops() {
         return this.iops;
     }
     /**
      * The Throughput of the volume.
      * 
-     */
+    */
     public Boolean getThroughput() {
         return this.throughput;
     }
     /**
      * The Size of the volume.
      * 
-     */
+    */
     public Integer getVolumeSize() {
         return this.volumeSize;
     }
     /**
      * The Type of the volume.
      * 
-     */
+    */
     public String getVolumeType() {
         return this.volumeType;
     }

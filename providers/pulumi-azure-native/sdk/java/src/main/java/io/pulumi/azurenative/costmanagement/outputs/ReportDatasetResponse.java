@@ -60,35 +60,35 @@ public final class ReportDatasetResponse {
     /**
      * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
      * 
-     */
+    */
     public Map<String,ReportAggregationResponse> getAggregation() {
         return this.aggregation == null ? Map.of() : this.aggregation;
     }
     /**
      * Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
      * 
-     */
+    */
     public Optional<ReportDatasetConfigurationResponse> getConfiguration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * Has filter expression to use in the report.
      * 
-     */
+    */
     public Optional<ReportFilterResponse> getFilter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The granularity of rows in the report.
      * 
-     */
+    */
     public Optional<String> getGranularity() {
         return Optional.ofNullable(this.granularity);
     }
     /**
      * Array of group by expression to use in the report. Report can have up to 2 group by clauses.
      * 
-     */
+    */
     public List<ReportGroupingResponse> getGrouping() {
         return this.grouping == null ? List.of() : this.grouping;
     }

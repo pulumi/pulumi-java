@@ -47,28 +47,28 @@ public final class FlowAccessControlConfigurationResponse {
     /**
      * The access control configuration for workflow actions.
      * 
-     */
+    */
     public Optional<FlowAccessControlConfigurationPolicyResponse> getActions() {
         return Optional.ofNullable(this.actions);
     }
     /**
      * The access control configuration for accessing workflow run contents.
      * 
-     */
+    */
     public Optional<FlowAccessControlConfigurationPolicyResponse> getContents() {
         return Optional.ofNullable(this.contents);
     }
     /**
      * The access control configuration for invoking workflow triggers.
      * 
-     */
+    */
     public Optional<FlowAccessControlConfigurationPolicyResponse> getTriggers() {
         return Optional.ofNullable(this.triggers);
     }
     /**
      * The access control configuration for workflow management.
      * 
-     */
+    */
     public Optional<FlowAccessControlConfigurationPolicyResponse> getWorkflowManagement() {
         return Optional.ofNullable(this.workflowManagement);
     }

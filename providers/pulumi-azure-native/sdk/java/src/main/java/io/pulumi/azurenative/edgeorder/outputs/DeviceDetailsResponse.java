@@ -38,21 +38,21 @@ public final class DeviceDetailsResponse {
     /**
      * Management Resource Id
      * 
-     */
+    */
     public String getManagementResourceId() {
         return this.managementResourceId;
     }
     /**
      * Management Resource Tenant ID
      * 
-     */
+    */
     public String getManagementResourceTenantId() {
         return this.managementResourceTenantId;
     }
     /**
      * device serial number
      * 
-     */
+    */
     public String getSerialNumber() {
         return this.serialNumber;
     }

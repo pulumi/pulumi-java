@@ -43,21 +43,21 @@ public final class ClusterLogging {
      * The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
      * For more information on the permissions required for the bucket, please read the AWS [documentation](http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging)
      * 
-     */
+    */
     public Optional<String> getBucketName() {
         return Optional.ofNullable(this.bucketName);
     }
     /**
      * Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
      * 
-     */
+    */
     public Boolean getEnable() {
         return this.enable;
     }
     /**
      * The prefix applied to the log file names.
      * 
-     */
+    */
     public Optional<String> getS3KeyPrefix() {
         return Optional.ofNullable(this.s3KeyPrefix);
     }

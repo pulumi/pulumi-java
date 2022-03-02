@@ -31,14 +31,14 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse {
     /**
      * The name of the repository.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The url of the repository.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

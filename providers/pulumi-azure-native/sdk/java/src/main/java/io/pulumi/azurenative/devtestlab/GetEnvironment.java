@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnvironment {
-/**
- * An environment, which is essentially an ARM template deployment.
+    private GetEnvironment() {}
+    public interface BuilderApplicator {
+        public void apply(GetEnvironmentArgs.Builder a);
+    }
+    private static GetEnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEnvironmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An environment, which is essentially an ARM template deployment.
  * API Version: 2018-09-15.
  * 
- *
- * An environment, which is essentially an ARM template deployment.
+     *
+     * An environment, which is essentially an ARM template deployment.
  * 
- */
+     */
+    public static CompletableFuture<GetEnvironmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An environment, which is essentially an ARM template deployment.
+     * API Version: 2018-09-15.
+     * 
+     *
+         * An environment, which is essentially an ARM template deployment.
+     * 
+     */
     public static CompletableFuture<GetEnvironmentResult> invokeAsync(GetEnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getEnvironment", TypeShape.of(GetEnvironmentResult.class), args == null ? GetEnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

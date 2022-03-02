@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBranch {
-/**
- * The AWS::Amplify::Branch resource creates a new branch within an app.
+    private GetBranch() {}
+    public interface BuilderApplicator {
+        public void apply(GetBranchArgs.Builder a);
+    }
+    private static GetBranchArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBranchArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::Amplify::Branch resource creates a new branch within an app.
  * 
- */
+     */
+    public static CompletableFuture<GetBranchResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::Amplify::Branch resource creates a new branch within an app.
+     * 
+     */
     public static CompletableFuture<GetBranchResult> invokeAsync(GetBranchArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplify:getBranch", TypeShape.of(GetBranchResult.class), args == null ? GetBranchArgs.Empty : args, Utilities.withVersion(options));
     }

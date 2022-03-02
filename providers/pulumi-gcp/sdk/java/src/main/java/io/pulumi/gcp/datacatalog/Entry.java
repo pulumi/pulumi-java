@@ -283,6 +283,22 @@ public class Entry extends io.pulumi.resources.CustomResource {
         return this.userSpecifiedType;
     }
 
+    public interface BuilderApplicator {
+        public void apply(EntryArgs.Builder a);
+    }
+    private static io.pulumi.gcp.datacatalog.EntryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.datacatalog.EntryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Entry(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

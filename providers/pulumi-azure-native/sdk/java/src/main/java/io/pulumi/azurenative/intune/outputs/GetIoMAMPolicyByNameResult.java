@@ -155,7 +155,7 @@ public final class GetIoMAMPolicyByNameResult {
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -165,7 +165,7 @@ public final class GetIoMAMPolicyByNameResult {
     /**
      * Resource Location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
@@ -175,7 +175,7 @@ public final class GetIoMAMPolicyByNameResult {
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -194,7 +194,7 @@ public final class GetIoMAMPolicyByNameResult {
     /**
      * Resource Tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
@@ -204,7 +204,7 @@ public final class GetIoMAMPolicyByNameResult {
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

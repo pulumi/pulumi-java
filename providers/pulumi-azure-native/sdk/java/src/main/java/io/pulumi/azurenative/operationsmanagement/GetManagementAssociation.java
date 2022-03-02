@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagementAssociation {
-/**
- * The container for solution.
+    private GetManagementAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagementAssociationArgs.Builder a);
+    }
+    private static GetManagementAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagementAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The container for solution.
  * API Version: 2015-11-01-preview.
  * 
- *
- * The container for solution.
+     *
+     * The container for solution.
  * 
- */
+     */
+    public static CompletableFuture<GetManagementAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The container for solution.
+     * API Version: 2015-11-01-preview.
+     * 
+     *
+         * The container for solution.
+     * 
+     */
     public static CompletableFuture<GetManagementAssociationResult> invokeAsync(GetManagementAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationsmanagement:getManagementAssociation", TypeShape.of(GetManagementAssociationResult.class), args == null ? GetManagementAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

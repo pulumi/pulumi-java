@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerCommunicationLink {
-/**
- * Server communication link.
+    private GetServerCommunicationLink() {}
+    public interface BuilderApplicator {
+        public void apply(GetServerCommunicationLinkArgs.Builder a);
+    }
+    private static GetServerCommunicationLinkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServerCommunicationLinkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Server communication link.
  * API Version: 2014-04-01.
  * 
- *
- * Server communication link.
+     *
+     * Server communication link.
  * 
- */
+     */
+    public static CompletableFuture<GetServerCommunicationLinkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Server communication link.
+     * API Version: 2014-04-01.
+     * 
+     *
+         * Server communication link.
+     * 
+     */
     public static CompletableFuture<GetServerCommunicationLinkResult> invokeAsync(GetServerCommunicationLinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerCommunicationLink", TypeShape.of(GetServerCommunicationLinkResult.class), args == null ? GetServerCommunicationLinkArgs.Empty : args, Utilities.withVersion(options));
     }

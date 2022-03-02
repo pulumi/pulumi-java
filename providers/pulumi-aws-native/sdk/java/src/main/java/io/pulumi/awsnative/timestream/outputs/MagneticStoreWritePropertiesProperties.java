@@ -34,14 +34,14 @@ public final class MagneticStoreWritePropertiesProperties {
     /**
      * Boolean flag indicating whether magnetic store writes are enabled.
      * 
-     */
+    */
     public Boolean getEnableMagneticStoreWrites() {
         return this.enableMagneticStoreWrites;
     }
     /**
      * Location to store information about records that were asynchronously rejected during magnetic store writes.
      * 
-     */
+    */
     public Optional<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties> getMagneticStoreRejectedDataLocation() {
         return Optional.ofNullable(this.magneticStoreRejectedDataLocation);
     }

@@ -67,49 +67,49 @@ public final class EdifactValidationOverrideResponse {
     /**
      * The value indicating whether to allow leading and trailing spaces and zeroes.
      * 
-     */
+    */
     public Boolean getAllowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
     /**
      * The value indicating whether to validate character Set.
      * 
-     */
+    */
     public Boolean getEnforceCharacterSet() {
         return this.enforceCharacterSet;
     }
     /**
      * The message id on which the validation settings has to be applied.
      * 
-     */
+    */
     public String getMessageId() {
         return this.messageId;
     }
     /**
      * The trailing separator policy.
      * 
-     */
+    */
     public String getTrailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
     /**
      * The value indicating whether to trim leading and trailing spaces and zeroes.
      * 
-     */
+    */
     public Boolean getTrimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
     /**
      * The value indicating whether to validate EDI types.
      * 
-     */
+    */
     public Boolean getValidateEDITypes() {
         return this.validateEDITypes;
     }
     /**
      * The value indicating whether to validate XSD types.
      * 
-     */
+    */
     public Boolean getValidateXSDTypes() {
         return this.validateXSDTypes;
     }

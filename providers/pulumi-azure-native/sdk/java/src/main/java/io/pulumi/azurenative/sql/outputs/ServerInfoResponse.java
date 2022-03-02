@@ -23,7 +23,7 @@ public final class ServerInfoResponse {
     /**
      * Server Id.
      * 
-     */
+    */
     public String getServerId() {
         return this.serverId;
     }

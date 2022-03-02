@@ -34,14 +34,14 @@ public final class DeliveryRuleRequestHeaderConditionResponse {
      * The name of the condition for the delivery rule.
      * Expected value is 'RequestHeader'.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Defines the parameters for the condition.
      * 
-     */
+    */
     public RequestHeaderMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

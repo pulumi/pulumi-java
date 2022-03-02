@@ -37,14 +37,14 @@ public final class GetSecretsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Map containing each `secret` `name` as the key with its decrypted plaintext value
      * 
-     */
+    */
     public Map<String,String> getPlaintext() {
         return this.plaintext;
     }

@@ -43,21 +43,21 @@ public final class IngressBackend {
     /**
      * Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.
      * 
-     */
+    */
     public Optional<TypedLocalObjectReference> getResource() {
         return Optional.ofNullable(this.resource);
     }
     /**
      * Specifies the name of the referenced service.
      * 
-     */
+    */
     public String getServiceName() {
         return this.serviceName;
     }
     /**
      * Specifies the port of the referenced service.
      * 
-     */
+    */
     public Either<Integer,String> getServicePort() {
         return this.servicePort;
     }

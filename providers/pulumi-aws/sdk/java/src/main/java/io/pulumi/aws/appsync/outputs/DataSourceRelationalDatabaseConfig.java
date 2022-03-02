@@ -34,14 +34,14 @@ public final class DataSourceRelationalDatabaseConfig {
     /**
      * The Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.
      * 
-     */
+    */
     public Optional<DataSourceRelationalDatabaseConfigHttpEndpointConfig> getHttpEndpointConfig() {
         return Optional.ofNullable(this.httpEndpointConfig);
     }
     /**
      * Source type for the relational database. Valid values: `RDS_HTTP_ENDPOINT`.
      * 
-     */
+    */
     public Optional<String> getSourceType() {
         return Optional.ofNullable(this.sourceType);
     }

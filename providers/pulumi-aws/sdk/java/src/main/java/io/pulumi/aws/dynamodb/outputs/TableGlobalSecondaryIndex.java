@@ -78,14 +78,14 @@ public final class TableGlobalSecondaryIndex {
      * The name of the hash key in the index; must be
      * defined as an attribute in the resource.
      * 
-     */
+    */
     public String getHashKey() {
         return this.hashKey;
     }
     /**
      * The name of the index
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -94,7 +94,7 @@ public final class TableGlobalSecondaryIndex {
      * projection type; a list of attributes to project into the index. These
      * do not need to be defined as attributes on the table.
      * 
-     */
+    */
     public List<String> getNonKeyAttributes() {
         return this.nonKeyAttributes == null ? List.of() : this.nonKeyAttributes;
     }
@@ -105,28 +105,28 @@ public final class TableGlobalSecondaryIndex {
      * projects only the keys specified in the _non_key_attributes_
      * parameter.
      * 
-     */
+    */
     public String getProjectionType() {
         return this.projectionType;
     }
     /**
      * The name of the range key; must be defined
      * 
-     */
+    */
     public Optional<String> getRangeKey() {
         return Optional.ofNullable(this.rangeKey);
     }
     /**
      * The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
      * 
-     */
+    */
     public Optional<Integer> getReadCapacity() {
         return Optional.ofNullable(this.readCapacity);
     }
     /**
      * The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
      * 
-     */
+    */
     public Optional<Integer> getWriteCapacity() {
         return Optional.ofNullable(this.writeCapacity);
     }

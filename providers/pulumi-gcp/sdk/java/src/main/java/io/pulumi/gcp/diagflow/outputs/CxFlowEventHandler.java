@@ -59,7 +59,7 @@ public final class CxFlowEventHandler {
     /**
      * The name of the event to handle.
      * 
-     */
+    */
     public Optional<String> getEvent() {
         return Optional.ofNullable(this.event);
     }
@@ -67,7 +67,7 @@ public final class CxFlowEventHandler {
      * - 
      * The unique identifier of this event handler.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -75,7 +75,7 @@ public final class CxFlowEventHandler {
      * The target flow to transition to.
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
      * 
-     */
+    */
     public Optional<String> getTargetFlow() {
         return Optional.ofNullable(this.targetFlow);
     }
@@ -83,7 +83,7 @@ public final class CxFlowEventHandler {
      * The target page to transition to.
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
      * 
-     */
+    */
     public Optional<String> getTargetPage() {
         return Optional.ofNullable(this.targetPage);
     }
@@ -91,7 +91,7 @@ public final class CxFlowEventHandler {
      * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<CxFlowEventHandlerTriggerFulfillment> getTriggerFulfillment() {
         return Optional.ofNullable(this.triggerFulfillment);
     }

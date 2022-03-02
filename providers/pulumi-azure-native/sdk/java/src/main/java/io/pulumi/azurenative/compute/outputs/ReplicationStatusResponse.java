@@ -33,14 +33,14 @@ public final class ReplicationStatusResponse {
     /**
      * This is the aggregated replication status based on all the regional replication status flags.
      * 
-     */
+    */
     public String getAggregatedState() {
         return this.aggregatedState;
     }
     /**
      * This is a summary of replication status for each region.
      * 
-     */
+    */
     public List<RegionalReplicationStatusResponse> getSummary() {
         return this.summary;
     }

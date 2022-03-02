@@ -50,28 +50,28 @@ public final class VirtualApplicationResponse {
     /**
      * Physical path.
      * 
-     */
+    */
     public Optional<String> getPhysicalPath() {
         return Optional.ofNullable(this.physicalPath);
     }
     /**
      * <code>true</code> if preloading is enabled; otherwise, <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getPreloadEnabled() {
         return Optional.ofNullable(this.preloadEnabled);
     }
     /**
      * Virtual directories for virtual application.
      * 
-     */
+    */
     public List<VirtualDirectoryResponse> getVirtualDirectories() {
         return this.virtualDirectories == null ? List.of() : this.virtualDirectories;
     }
     /**
      * Virtual path.
      * 
-     */
+    */
     public Optional<String> getVirtualPath() {
         return Optional.ofNullable(this.virtualPath);
     }

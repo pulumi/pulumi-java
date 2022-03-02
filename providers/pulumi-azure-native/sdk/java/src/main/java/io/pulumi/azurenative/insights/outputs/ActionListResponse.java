@@ -25,7 +25,7 @@ public final class ActionListResponse {
     /**
      * The list of the Action Groups.
      * 
-     */
+    */
     public List<ActionGroupResponse> getActionGroups() {
         return this.actionGroups == null ? List.of() : this.actionGroups;
     }

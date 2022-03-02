@@ -45,28 +45,28 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
     /**
      * The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
      * 
-     */
+    */
     public String getDialogflowParticipantName() {
         return this.dialogflowParticipantName;
     }
     /**
      * Obfuscated user ID from Dialogflow.
      * 
-     */
+    */
     public String getObfuscatedExternalUserId() {
         return this.obfuscatedExternalUserId;
     }
     /**
      * The role of the participant.
      * 
-     */
+    */
     public String getRole() {
         return this.role;
     }
     /**
      * A user-specified ID representing the participant.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }

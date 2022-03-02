@@ -33,14 +33,14 @@ public final class WebServiceKeysResponse {
     /**
      * The primary access key.
      * 
-     */
+    */
     public Optional<String> getPrimary() {
         return Optional.ofNullable(this.primary);
     }
     /**
      * The secondary access key.
      * 
-     */
+    */
     public Optional<String> getSecondary() {
         return Optional.ofNullable(this.secondary);
     }

@@ -41,21 +41,21 @@ public final class CatalogTableStorageDescriptorSerDeInfo {
     /**
      * Name of the target table.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Map of initialization parameters for the SerDe, in key-value form.
      * 
-     */
+    */
     public Map<String,String> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Usually the class that implements the SerDe. An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe`.
      * 
-     */
+    */
     public Optional<String> getSerializationLibrary() {
         return Optional.ofNullable(this.serializationLibrary);
     }

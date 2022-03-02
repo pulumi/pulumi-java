@@ -38,7 +38,7 @@ public final class ReservationShareSettings {
      * A map of project number and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ReservationShareSettingsProjectMap> getProjectMaps() {
         return this.projectMaps == null ? List.of() : this.projectMaps;
     }
@@ -46,7 +46,7 @@ public final class ReservationShareSettings {
      * Type of sharing for this shared-reservation
      * Possible values are `LOCAL` and `SPECIFIC_PROJECTS`.
      * 
-     */
+    */
     public Optional<String> getShareType() {
         return Optional.ofNullable(this.shareType);
     }

@@ -31,14 +31,14 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse 
     /**
      * The ID of the project.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }
     /**
      * The name of the repo. Leave empty for the default repo.
      * 
-     */
+    */
     public String getRepoName() {
         return this.repoName;
     }

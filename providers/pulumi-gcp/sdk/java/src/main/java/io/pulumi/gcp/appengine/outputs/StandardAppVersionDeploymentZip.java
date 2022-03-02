@@ -34,14 +34,14 @@ public final class StandardAppVersionDeploymentZip {
     /**
      * files count
      * 
-     */
+    */
     public Optional<Integer> getFilesCount() {
         return Optional.ofNullable(this.filesCount);
     }
     /**
      * Source URL
      * 
-     */
+    */
     public String getSourceUrl() {
         return this.sourceUrl;
     }

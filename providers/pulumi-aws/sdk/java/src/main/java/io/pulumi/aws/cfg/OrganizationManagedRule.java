@@ -189,6 +189,22 @@ public class OrganizationManagedRule extends io.pulumi.resources.CustomResource 
         return this.tagValueScope;
     }
 
+    public interface BuilderApplicator {
+        public void apply(OrganizationManagedRuleArgs.Builder a);
+    }
+    private static io.pulumi.aws.cfg.OrganizationManagedRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.cfg.OrganizationManagedRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public OrganizationManagedRule(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

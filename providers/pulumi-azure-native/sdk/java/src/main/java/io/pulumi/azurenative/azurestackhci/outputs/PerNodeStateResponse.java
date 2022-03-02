@@ -38,21 +38,21 @@ public final class PerNodeStateResponse {
     /**
      * Fully qualified resource ID for the Arc agent of this node.
      * 
-     */
+    */
     public String getArcInstance() {
         return this.arcInstance;
     }
     /**
      * Name of the Node in HCI Cluster
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * State of Arc agent in this node.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }

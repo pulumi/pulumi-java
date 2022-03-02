@@ -40,21 +40,21 @@ public final class VolumeProviderParametersAzureFileResponse {
     /**
      * Access key of the Azure storage account for the File Share.
      * 
-     */
+    */
     public Optional<String> getAccountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
      * Name of the Azure storage account for the File Share.
      * 
-     */
+    */
     public String getAccountName() {
         return this.accountName;
     }
     /**
      * Name of the Azure Files file share that provides storage for the volume.
      * 
-     */
+    */
     public String getShareName() {
         return this.shareName;
     }

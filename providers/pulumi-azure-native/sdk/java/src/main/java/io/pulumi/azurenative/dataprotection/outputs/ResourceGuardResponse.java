@@ -55,35 +55,35 @@ public final class ResourceGuardResponse {
     /**
      * This flag indicates whether auto approval is allowed or not.
      * 
-     */
+    */
     public Boolean getAllowAutoApprovals() {
         return this.allowAutoApprovals;
     }
     /**
      * Description about the pre-req steps to perform all the critical operations.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Provisioning state of the BackupVault resource
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * {readonly} List of operation details those are protected by the ResourceGuard resource
      * 
-     */
+    */
     public List<ResourceGuardOperationResponse> getResourceGuardOperations() {
         return this.resourceGuardOperations;
     }
     /**
      * List of critical operations which are not protected by this resourceGuard
      * 
-     */
+    */
     public List<String> getVaultCriticalOperationExclusionList() {
         return this.vaultCriticalOperationExclusionList;
     }

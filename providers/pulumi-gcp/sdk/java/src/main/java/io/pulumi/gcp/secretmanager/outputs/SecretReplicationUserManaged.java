@@ -26,7 +26,7 @@ public final class SecretReplicationUserManaged {
      * The list of Replicas for this Secret. Cannot be empty.
      * Structure is documented below.
      * 
-     */
+    */
     public List<SecretReplicationUserManagedReplica> getReplicas() {
         return this.replicas;
     }

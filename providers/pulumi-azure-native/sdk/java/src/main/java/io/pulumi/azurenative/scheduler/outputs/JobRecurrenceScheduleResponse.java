@@ -56,35 +56,35 @@ public final class JobRecurrenceScheduleResponse {
     /**
      * Gets or sets the hours of the day that the job should execute at.
      * 
-     */
+    */
     public List<Integer> getHours() {
         return this.hours == null ? List.of() : this.hours;
     }
     /**
      * Gets or sets the minutes of the hour that the job should execute at.
      * 
-     */
+    */
     public List<Integer> getMinutes() {
         return this.minutes == null ? List.of() : this.minutes;
     }
     /**
      * Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
      * 
-     */
+    */
     public List<Integer> getMonthDays() {
         return this.monthDays == null ? List.of() : this.monthDays;
     }
     /**
      * Gets or sets the occurrences of days within a month.
      * 
-     */
+    */
     public List<JobRecurrenceScheduleMonthlyOccurrenceResponse> getMonthlyOccurrences() {
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
     }
     /**
      * Gets or sets the days of the week that the job should execute on.
      * 
-     */
+    */
     public List<String> getWeekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
     }

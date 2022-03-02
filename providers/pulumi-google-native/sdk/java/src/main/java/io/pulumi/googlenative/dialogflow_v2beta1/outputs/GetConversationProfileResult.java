@@ -121,98 +121,98 @@ public final class GetConversationProfileResult {
     /**
      * Configuration for an automated agent to use with this profile.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse getAutomatedAgentConfig() {
         return this.automatedAgentConfig;
     }
     /**
      * Create time of the conversation profile.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Human readable name for this profile. Max length 1024 bytes.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Configuration for agent assistance to use with this profile.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse getHumanAgentAssistantConfig() {
         return this.humanAgentAssistantConfig;
     }
     /**
      * Configuration for connecting to a live agent. Currently, this feature is not general available, please contact Google to get access.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse getHumanAgentHandoffConfig() {
         return this.humanAgentHandoffConfig;
     }
     /**
      * Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
      * 
-     */
+    */
     public String getLanguageCode() {
         return this.languageCode;
     }
     /**
      * Configuration for logging conversation lifecycle events.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1LoggingConfigResponse getLoggingConfig() {
         return this.loggingConfig;
     }
     /**
      * The unique identifier of this conversation profile. Format: `projects//locations//conversationProfiles/`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Configuration for publishing new message events. Event will be sent in format of ConversationEvent
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1NotificationConfigResponse getNewMessageEventNotificationConfig() {
         return this.newMessageEventNotificationConfig;
     }
     /**
      * Configuration for publishing conversation lifecycle events.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1NotificationConfigResponse getNotificationConfig() {
         return this.notificationConfig;
     }
     /**
      * Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
      * 
-     */
+    */
     public String getSecuritySettings() {
         return this.securitySettings;
     }
     /**
      * Settings for speech transcription.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse getSttConfig() {
         return this.sttConfig;
     }
     /**
      * The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.
      * 
-     */
+    */
     public String getTimeZone() {
         return this.timeZone;
     }
     /**
      * Update time of the conversation profile.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }

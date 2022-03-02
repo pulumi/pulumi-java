@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVendorSkuPreview {
-/**
- * Customer subscription which can use a sku.
+    private GetVendorSkuPreview() {}
+    public interface BuilderApplicator {
+        public void apply(GetVendorSkuPreviewArgs.Builder a);
+    }
+    private static GetVendorSkuPreviewArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVendorSkuPreviewArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Customer subscription which can use a sku.
  * API Version: 2020-01-01-preview.
  * 
- *
- * Customer subscription which can use a sku.
+     *
+     * Customer subscription which can use a sku.
  * 
- */
+     */
+    public static CompletableFuture<GetVendorSkuPreviewResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Customer subscription which can use a sku.
+     * API Version: 2020-01-01-preview.
+     * 
+     *
+         * Customer subscription which can use a sku.
+     * 
+     */
     public static CompletableFuture<GetVendorSkuPreviewResult> invokeAsync(GetVendorSkuPreviewArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getVendorSkuPreview", TypeShape.of(GetVendorSkuPreviewResult.class), args == null ? GetVendorSkuPreviewArgs.Empty : args, Utilities.withVersion(options));
     }

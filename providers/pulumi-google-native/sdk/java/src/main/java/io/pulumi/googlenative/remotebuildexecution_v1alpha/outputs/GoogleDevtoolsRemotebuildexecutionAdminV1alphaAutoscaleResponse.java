@@ -31,14 +31,14 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
     /**
      * The maximal number of workers. Must be equal to or greater than min_size.
      * 
-     */
+    */
     public String getMaxSize() {
         return this.maxSize;
     }
     /**
      * The minimal number of workers. Must be greater than 0.
      * 
-     */
+    */
     public String getMinSize() {
         return this.minSize;
     }

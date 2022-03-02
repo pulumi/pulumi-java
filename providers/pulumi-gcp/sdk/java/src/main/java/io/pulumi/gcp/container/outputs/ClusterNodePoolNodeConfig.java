@@ -240,7 +240,7 @@ public final class ClusterNodePoolNodeConfig {
     /**
      * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <https://cloud.google.com/compute/docs/disks/customer-managed-encryption>
      * 
-     */
+    */
     public Optional<String> getBootDiskKmsKey() {
         return Optional.ofNullable(this.bootDiskKmsKey);
     }
@@ -248,7 +248,7 @@ public final class ClusterNodePoolNodeConfig {
      * Size of the disk attached to each node, specified
      * in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
      * 
-     */
+    */
     public Optional<Integer> getDiskSizeGb() {
         return Optional.ofNullable(this.diskSizeGb);
     }
@@ -256,14 +256,14 @@ public final class ClusterNodePoolNodeConfig {
      * Type of the disk attached to each node
      * (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
      * 
-     */
+    */
     public Optional<String> getDiskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
      * Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
      * 
-     */
+    */
     public Optional<ClusterNodePoolNodeConfigEphemeralStorageConfig> getEphemeralStorageConfig() {
         return Optional.ofNullable(this.ephemeralStorageConfig);
     }
@@ -275,7 +275,7 @@ public final class ClusterNodePoolNodeConfig {
      * GCFS must be enabled in order to use [image streaming](https://cloud.google.com/kubernetes-engine/docs/how-to/image-streaming).
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ClusterNodePoolNodeConfigGcfsConfig> getGcfsConfig() {
         return Optional.ofNullable(this.gcfsConfig);
     }
@@ -283,7 +283,7 @@ public final class ClusterNodePoolNodeConfig {
      * List of the type and count of accelerator cards attached to the instance.
      * Structure documented below.
      * 
-     */
+    */
     public List<ClusterNodePoolNodeConfigGuestAccelerator> getGuestAccelerators() {
         return this.guestAccelerators == null ? List.of() : this.guestAccelerators;
     }
@@ -291,7 +291,7 @@ public final class ClusterNodePoolNodeConfig {
      * The image type to use for this node. Note that changing the image type
      * will delete and recreate all nodes in the node pool.
      * 
-     */
+    */
     public Optional<String> getImageType() {
         return Optional.ofNullable(this.imageType);
     }
@@ -299,7 +299,7 @@ public final class ClusterNodePoolNodeConfig {
      * Kubelet configuration, currently supported attributes can be found [here](https://cloud.google.com/sdk/gcloud/reference/beta/container/node-pools/create#--system-config-from-file).
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ClusterNodePoolNodeConfigKubeletConfig> getKubeletConfig() {
         return Optional.ofNullable(this.kubeletConfig);
     }
@@ -307,7 +307,7 @@ public final class ClusterNodePoolNodeConfig {
      * The Kubernetes labels (key/value pairs) to be applied to each node. The kubernetes.io/ and k8s.io/ prefixes are
      * reserved by Kubernetes Core components and cannot be specified.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
@@ -316,14 +316,14 @@ public final class ClusterNodePoolNodeConfig {
      * Note that validations happen all server side. All attributes are optional.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ClusterNodePoolNodeConfigLinuxNodeConfig> getLinuxNodeConfig() {
         return Optional.ofNullable(this.linuxNodeConfig);
     }
     /**
      * Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
      * 
-     */
+    */
     public Optional<Integer> getLocalSsdCount() {
         return Optional.ofNullable(this.localSsdCount);
     }
@@ -332,7 +332,7 @@ public final class ClusterNodePoolNodeConfig {
      * Defaults to `e2-medium`. To create a custom machine type, value should be set as specified
      * [here](https://cloud.google.com/compute/docs/reference/latest/instances#machineType).
      * 
-     */
+    */
     public Optional<String> getMachineType() {
         return Optional.ofNullable(this.machineType);
     }
@@ -343,7 +343,7 @@ public final class ClusterNodePoolNodeConfig {
      * included, the provider will attempt to unset the value. To avoid this, set the
      * value in your config.
      * 
-     */
+    */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
@@ -354,14 +354,14 @@ public final class ClusterNodePoolNodeConfig {
      * [official documentation](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
      * for more information.
      * 
-     */
+    */
     public Optional<String> getMinCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
     /**
      * Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
      * 
-     */
+    */
     public Optional<String> getNodeGroup() {
         return Optional.ofNullable(this.nodeGroup);
     }
@@ -370,7 +370,7 @@ public final class ClusterNodePoolNodeConfig {
      * on all of the node VMs under the "default" service account.
      * Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
      * 
-     */
+    */
     public List<String> getOauthScopes() {
         return this.oauthScopes == null ? List.of() : this.oauthScopes;
     }
@@ -379,7 +379,7 @@ public final class ClusterNodePoolNodeConfig {
      * are preemptible. See the [official documentation](https://cloud.google.com/container-engine/docs/preemptible-vm)
      * for more information. Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getPreemptible() {
         return Optional.ofNullable(this.preemptible);
     }
@@ -387,7 +387,7 @@ public final class ClusterNodePoolNodeConfig {
      * [GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/how-to/sandbox-pods) configuration. When enabling this feature you must specify `image_type = "COS_CONTAINERD"` and `node_version = "1.12.7-gke.17"` or later to use it.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ClusterNodePoolNodeConfigSandboxConfig> getSandboxConfig() {
         return Optional.ofNullable(this.sandboxConfig);
     }
@@ -395,14 +395,14 @@ public final class ClusterNodePoolNodeConfig {
      * The service account to be used by the Node VMs.
      * If not specified, the "default" service account is used.
      * 
-     */
+    */
     public Optional<String> getServiceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
     /**
      * Shielded Instance options. Structure is documented below.
      * 
-     */
+    */
     public Optional<ClusterNodePoolNodeConfigShieldedInstanceConfig> getShieldedInstanceConfig() {
         return Optional.ofNullable(this.shieldedInstanceConfig);
     }
@@ -411,7 +411,7 @@ public final class ClusterNodePoolNodeConfig {
      * that represents whether the underlying node VMs are spot. See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/spot-vms)
      * for more information. Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getSpot() {
         return Optional.ofNullable(this.spot);
     }
@@ -419,7 +419,7 @@ public final class ClusterNodePoolNodeConfig {
      * The list of instance tags applied to all nodes. Tags are used to identify
      * valid sources or targets for network firewalls.
      * 
-     */
+    */
     public List<String> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
@@ -433,7 +433,7 @@ public final class ClusterNodePoolNodeConfig {
      * this field to manage taints. If you do, `lifecycle.ignore_changes` is
      * recommended. Structure is documented below.
      * 
-     */
+    */
     public List<ClusterNodePoolNodeConfigTaint> getTaints() {
         return this.taints == null ? List.of() : this.taints;
     }
@@ -441,7 +441,7 @@ public final class ClusterNodePoolNodeConfig {
      * Metadata configuration to expose to workloads on the node pool.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ClusterNodePoolNodeConfigWorkloadMetadataConfig> getWorkloadMetadataConfig() {
         return Optional.ofNullable(this.workloadMetadataConfig);
     }

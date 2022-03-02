@@ -45,7 +45,7 @@ public final class ResourceSetResource {
     /**
      * The component identifier of the resource, generated when DNS target resource is used.
      * 
-     */
+    */
     public Optional<String> getComponentId() {
         return Optional.ofNullable(this.componentId);
     }
@@ -55,14 +55,14 @@ public final class ResourceSetResource {
     /**
      * A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
      * 
-     */
+    */
     public List<String> getReadinessScopes() {
         return this.readinessScopes == null ? List.of() : this.readinessScopes;
     }
     /**
      * The Amazon Resource Name (ARN) of the AWS resource.
      * 
-     */
+    */
     public Optional<String> getResourceArn() {
         return Optional.ofNullable(this.resourceArn);
     }

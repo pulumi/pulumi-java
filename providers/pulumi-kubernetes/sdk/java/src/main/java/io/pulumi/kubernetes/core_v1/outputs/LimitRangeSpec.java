@@ -24,7 +24,7 @@ public final class LimitRangeSpec {
     /**
      * Limits is the list of LimitRangeItem objects that are enforced.
      * 
-     */
+    */
     public List<LimitRangeItem> getLimits() {
         return this.limits;
     }

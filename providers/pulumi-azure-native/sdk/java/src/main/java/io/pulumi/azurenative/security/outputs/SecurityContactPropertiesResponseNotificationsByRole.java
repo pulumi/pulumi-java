@@ -34,14 +34,14 @@ public final class SecurityContactPropertiesResponseNotificationsByRole {
     /**
      * Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
      * 
-     */
+    */
     public List<String> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }
     /**
      * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

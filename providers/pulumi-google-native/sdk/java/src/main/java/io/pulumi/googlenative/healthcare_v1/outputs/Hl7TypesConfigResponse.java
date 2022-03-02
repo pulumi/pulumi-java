@@ -33,14 +33,14 @@ public final class Hl7TypesConfigResponse {
     /**
      * The HL7v2 type definitions.
      * 
-     */
+    */
     public List<TypeResponse> getType() {
         return this.type;
     }
     /**
      * The version selectors that this config applies to. A message must match ALL version sources to apply.
      * 
-     */
+    */
     public List<VersionSourceResponse> getVersion() {
         return this.version;
     }

@@ -112,91 +112,91 @@ public final class GetVolumeResult {
     /**
      * The IDs of the access control records, associated with the volume.
      * 
-     */
+    */
     public List<String> getAccessControlRecordIds() {
         return this.accessControlRecordIds;
     }
     /**
      * The IDs of the backup policies, in which this volume is part of.
      * 
-     */
+    */
     public List<String> getBackupPolicyIds() {
         return this.backupPolicyIds;
     }
     /**
      * The backup status of the volume.
      * 
-     */
+    */
     public String getBackupStatus() {
         return this.backupStatus;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The monitoring status of the volume.
      * 
-     */
+    */
     public String getMonitoringStatus() {
         return this.monitoringStatus;
     }
     /**
      * The name of the object.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The operation status on the volume.
      * 
-     */
+    */
     public String getOperationStatus() {
         return this.operationStatus;
     }
     /**
      * The size of the volume in bytes.
      * 
-     */
+    */
     public Double getSizeInBytes() {
         return this.sizeInBytes;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The ID of the volume container, in which this volume is created.
      * 
-     */
+    */
     public String getVolumeContainerId() {
         return this.volumeContainerId;
     }
     /**
      * The volume status.
      * 
-     */
+    */
     public String getVolumeStatus() {
         return this.volumeStatus;
     }
     /**
      * The type of the volume.
      * 
-     */
+    */
     public String getVolumeType() {
         return this.volumeType;
     }

@@ -32,14 +32,14 @@ public final class LocationHdfsNameNode {
     /**
      * The hostname of the NameNode in the HDFS cluster. This value is the IP address or Domain Name Service (DNS) name of the NameNode. An agent that's installed on-premises uses this hostname to communicate with the NameNode in the network.
      * 
-     */
+    */
     public String getHostname() {
         return this.hostname;
     }
     /**
      * The port that the NameNode uses to listen to client requests.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }

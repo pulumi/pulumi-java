@@ -25,7 +25,7 @@ public final class ARecordResponse {
     /**
      * The IPv4 address of this A record.
      * 
-     */
+    */
     public Optional<String> getIpv4Address() {
         return Optional.ofNullable(this.ipv4Address);
     }

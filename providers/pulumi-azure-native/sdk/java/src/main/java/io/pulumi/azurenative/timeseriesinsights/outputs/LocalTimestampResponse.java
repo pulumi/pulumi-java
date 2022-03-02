@@ -34,14 +34,14 @@ public final class LocalTimestampResponse {
     /**
      * An enum that represents the format of the local timestamp property that needs to be set.
      * 
-     */
+    */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
      * 
-     */
+    */
     public Optional<LocalTimestampResponseTimeZoneOffset> getTimeZoneOffset() {
         return Optional.ofNullable(this.timeZoneOffset);
     }

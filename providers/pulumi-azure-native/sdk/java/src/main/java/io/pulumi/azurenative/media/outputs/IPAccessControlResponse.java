@@ -25,7 +25,7 @@ public final class IPAccessControlResponse {
     /**
      * The IP allow list.
      * 
-     */
+    */
     public List<IPRangeResponse> getAllow() {
         return this.allow == null ? List.of() : this.allow;
     }

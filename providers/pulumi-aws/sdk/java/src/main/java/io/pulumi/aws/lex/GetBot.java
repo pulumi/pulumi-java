@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBot {
-/**
- * Provides details about a specific Amazon Lex Bot.
+    private GetBot() {}
+    public interface BuilderApplicator {
+        public void apply(GetBotArgs.Builder a);
+    }
+    private static GetBotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about a specific Amazon Lex Bot.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getBot.
+     *
+     * A collection of arguments for invoking getBot.
  * 
- *
- * A collection of values returned by getBot.
+     *
+     * A collection of values returned by getBot.
  * 
- */
+     */
+    public static CompletableFuture<GetBotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about a specific Amazon Lex Bot.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getBot.
+     * 
+     *
+         * A collection of values returned by getBot.
+     * 
+     */
     public static CompletableFuture<GetBotResult> invokeAsync(GetBotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lex/getBot:getBot", TypeShape.of(GetBotResult.class), args == null ? GetBotArgs.Empty : args, Utilities.withVersion(options));
     }

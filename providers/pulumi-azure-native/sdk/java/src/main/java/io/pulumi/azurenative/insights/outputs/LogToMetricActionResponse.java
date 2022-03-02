@@ -34,7 +34,7 @@ public final class LogToMetricActionResponse {
     /**
      * Criteria of Metric
      * 
-     */
+    */
     public List<CriteriaResponse> getCriteria() {
         return this.criteria;
     }
@@ -42,7 +42,7 @@ public final class LogToMetricActionResponse {
      * Specifies the action. Supported values - AlertingAction, LogToMetricAction
      * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.LogToMetricAction'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }

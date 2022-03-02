@@ -42,7 +42,7 @@ public final class CIFSMountConfigurationResponse {
     /**
      * These are 'net use' options in Windows and 'mount' options in Linux.
      * 
-     */
+    */
     public Optional<String> getMountOptions() {
         return Optional.ofNullable(this.mountOptions);
     }
@@ -52,7 +52,7 @@ public final class CIFSMountConfigurationResponse {
     /**
      * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
      * 
-     */
+    */
     public String getRelativeMountPath() {
         return this.relativeMountPath;
     }

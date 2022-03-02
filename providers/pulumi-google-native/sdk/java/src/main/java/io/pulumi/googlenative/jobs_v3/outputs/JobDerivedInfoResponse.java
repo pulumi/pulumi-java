@@ -33,14 +33,14 @@ public final class JobDerivedInfoResponse {
     /**
      * Job categories derived from Job.title and Job.description.
      * 
-     */
+    */
     public List<String> getJobCategories() {
         return this.jobCategories;
     }
     /**
      * Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.
      * 
-     */
+    */
     public List<LocationResponse> getLocations() {
         return this.locations;
     }

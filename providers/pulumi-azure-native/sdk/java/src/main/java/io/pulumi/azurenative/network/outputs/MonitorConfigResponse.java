@@ -86,63 +86,63 @@ public final class MonitorConfigResponse {
     /**
      * List of custom headers.
      * 
-     */
+    */
     public List<MonitorConfigResponseCustomHeaders> getCustomHeaders() {
         return this.customHeaders == null ? List.of() : this.customHeaders;
     }
     /**
      * List of expected status code ranges.
      * 
-     */
+    */
     public List<MonitorConfigResponseExpectedStatusCodeRanges> getExpectedStatusCodeRanges() {
         return this.expectedStatusCodeRanges == null ? List.of() : this.expectedStatusCodeRanges;
     }
     /**
      * The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.
      * 
-     */
+    */
     public Optional<Double> getIntervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
     /**
      * The path relative to the endpoint domain name used to probe for endpoint health.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The TCP port used to probe for endpoint health.
      * 
-     */
+    */
     public Optional<Double> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The profile-level monitoring status of the Traffic Manager profile.
      * 
-     */
+    */
     public Optional<String> getProfileMonitorStatus() {
         return Optional.ofNullable(this.profileMonitorStatus);
     }
     /**
      * The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.
      * 
-     */
+    */
     public Optional<String> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.
      * 
-     */
+    */
     public Optional<Double> getTimeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
     /**
      * The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.
      * 
-     */
+    */
     public Optional<Double> getToleratedNumberOfFailures() {
         return Optional.ofNullable(this.toleratedNumberOfFailures);
     }

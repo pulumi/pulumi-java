@@ -33,14 +33,14 @@ public final class WebhookAuthenticationConfiguration {
     /**
      * A valid CIDR block for `IP` filtering. Required for `IP`.
      * 
-     */
+    */
     public Optional<String> getAllowedIpRange() {
         return Optional.ofNullable(this.allowedIpRange);
     }
     /**
      * The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`'s `configuration` block. Required for `GITHUB_HMAC`.
      * 
-     */
+    */
     public Optional<String> getSecretToken() {
         return Optional.ofNullable(this.secretToken);
     }

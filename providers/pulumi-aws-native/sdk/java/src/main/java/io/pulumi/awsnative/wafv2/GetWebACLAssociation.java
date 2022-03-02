@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebACLAssociation {
-/**
- * Associates WebACL to Application Load Balancer, CloudFront or API Gateway.
+    private GetWebACLAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebACLAssociationArgs.Builder a);
+    }
+    private static GetWebACLAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebACLAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Associates WebACL to Application Load Balancer, CloudFront or API Gateway.
  * 
- */
+     */
+    public static CompletableFuture<GetWebACLAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Associates WebACL to Application Load Balancer, CloudFront or API Gateway.
+     * 
+     */
     public static CompletableFuture<GetWebACLAssociationResult> invokeAsync(GetWebACLAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:wafv2:getWebACLAssociation", TypeShape.of(GetWebACLAssociationResult.class), args == null ? GetWebACLAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

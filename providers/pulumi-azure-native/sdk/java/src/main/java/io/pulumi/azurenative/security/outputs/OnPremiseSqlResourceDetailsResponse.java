@@ -67,21 +67,21 @@ public final class OnPremiseSqlResourceDetailsResponse {
     /**
      * The Sql database name installed on the machine
      * 
-     */
+    */
     public String getDatabaseName() {
         return this.databaseName;
     }
     /**
      * The name of the machine
      * 
-     */
+    */
     public String getMachineName() {
         return this.machineName;
     }
     /**
      * The Sql server name installed on the machine
      * 
-     */
+    */
     public String getServerName() {
         return this.serverName;
     }
@@ -89,28 +89,28 @@ public final class OnPremiseSqlResourceDetailsResponse {
      * The platform where the assessed resource resides
      * Expected value is 'OnPremiseSql'.
      * 
-     */
+    */
     public String getSource() {
         return this.source;
     }
     /**
      * The oms agent Id installed on the machine
      * 
-     */
+    */
     public String getSourceComputerId() {
         return this.sourceComputerId;
     }
     /**
      * The unique Id of the machine
      * 
-     */
+    */
     public String getVmuuid() {
         return this.vmuuid;
     }
     /**
      * Azure resource Id of the workspace the machine is attached to
      * 
-     */
+    */
     public String getWorkspaceId() {
         return this.workspaceId;
     }

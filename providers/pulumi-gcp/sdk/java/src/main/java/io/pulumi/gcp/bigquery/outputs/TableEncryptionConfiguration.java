@@ -41,14 +41,14 @@ public final class TableEncryptionConfiguration {
      * `gcp.bigquery.getDefaultServiceAccount` datasource and the
      * `gcp.kms.CryptoKeyIAMBinding` resource.
      * 
-     */
+    */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }
     /**
      * The self link or full name of the kms key version used to encrypt this table.
      * 
-     */
+    */
     public Optional<String> getKmsKeyVersion() {
         return Optional.ofNullable(this.kmsKeyVersion);
     }

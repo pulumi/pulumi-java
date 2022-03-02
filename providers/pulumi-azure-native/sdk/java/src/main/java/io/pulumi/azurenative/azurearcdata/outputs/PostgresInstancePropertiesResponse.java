@@ -59,35 +59,35 @@ public final class PostgresInstancePropertiesResponse {
     /**
      * The instance admin
      * 
-     */
+    */
     public Optional<String> getAdmin() {
         return Optional.ofNullable(this.admin);
     }
     /**
      * Username and password for basic authentication.
      * 
-     */
+    */
     public Optional<BasicLoginInformationResponse> getBasicLoginInformation() {
         return Optional.ofNullable(this.basicLoginInformation);
     }
     /**
      * The data controller id
      * 
-     */
+    */
     public Optional<String> getDataControllerId() {
         return Optional.ofNullable(this.dataControllerId);
     }
     /**
      * The raw kubernetes information
      * 
-     */
+    */
     public Optional<Object> getK8sRaw() {
         return Optional.ofNullable(this.k8sRaw);
     }
     /**
      * Last uploaded date from Kubernetes cluster. Defaults to current date time
      * 
-     */
+    */
     public Optional<String> getLastUploadedDate() {
         return Optional.ofNullable(this.lastUploadedDate);
     }

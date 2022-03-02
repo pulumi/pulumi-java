@@ -40,21 +40,21 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     /**
      * Describes whether to use the default CloudWatch logging configuration for an application. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `log_level` or `metrics_level` attribute values to be effective.
      * 
-     */
+    */
     public String getConfigurationType() {
         return this.configurationType;
     }
     /**
      * Describes the verbosity of the CloudWatch Logs for an application. Valid values: `DEBUG`, `ERROR`, `INFO`, `WARN`.
      * 
-     */
+    */
     public Optional<String> getLogLevel() {
         return Optional.ofNullable(this.logLevel);
     }
     /**
      * Describes the granularity of the CloudWatch Logs for an application. Valid values: `APPLICATION`, `OPERATOR`, `PARALLELISM`, `TASK`.
      * 
-     */
+    */
     public Optional<String> getMetricsLevel() {
         return Optional.ofNullable(this.metricsLevel);
     }

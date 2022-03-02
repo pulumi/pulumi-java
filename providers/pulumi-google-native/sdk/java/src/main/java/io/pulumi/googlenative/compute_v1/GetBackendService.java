@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackendService {
-/**
- * Returns the specified BackendService resource. Gets a list of available backend services.
+    private GetBackendService() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackendServiceArgs.Builder a);
+    }
+    private static GetBackendServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackendServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified BackendService resource. Gets a list of available backend services.
  * 
- */
+     */
+    public static CompletableFuture<GetBackendServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified BackendService resource. Gets a list of available backend services.
+     * 
+     */
     public static CompletableFuture<GetBackendServiceResult> invokeAsync(GetBackendServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getBackendService", TypeShape.of(GetBackendServiceResult.class), args == null ? GetBackendServiceArgs.Empty : args, Utilities.withVersion(options));
     }

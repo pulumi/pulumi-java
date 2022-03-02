@@ -34,14 +34,14 @@ public final class CriteriaResponse {
     /**
      * List of Dimensions for creating metric
      * 
-     */
+    */
     public List<DimensionResponse> getDimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
     }
     /**
      * Name of the metric
      * 
-     */
+    */
     public String getMetricName() {
         return this.metricName;
     }

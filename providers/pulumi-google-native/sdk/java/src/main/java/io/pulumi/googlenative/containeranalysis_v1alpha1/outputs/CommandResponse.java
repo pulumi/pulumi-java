@@ -53,35 +53,35 @@ public final class CommandResponse {
     /**
      * Command-line arguments used when executing this Command.
      * 
-     */
+    */
     public List<String> getArgs() {
         return this.args;
     }
     /**
      * Working directory (relative to project source root) used when running this Command.
      * 
-     */
+    */
     public String getDir() {
         return this.dir;
     }
     /**
      * Environment variables set before running this Command.
      * 
-     */
+    */
     public List<String> getEnv() {
         return this.env;
     }
     /**
      * Name of the command, as presented on the command line, or if the command is packaged as a Docker container, as presented to `docker pull`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The ID(s) of the Command(s) that this Command depends on.
      * 
-     */
+    */
     public List<String> getWaitFor() {
         return this.waitFor;
     }

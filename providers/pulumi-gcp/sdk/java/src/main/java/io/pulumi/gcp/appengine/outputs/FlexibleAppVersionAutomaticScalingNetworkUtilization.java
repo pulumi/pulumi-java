@@ -47,28 +47,28 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilization {
     /**
      * Target bytes received per second.
      * 
-     */
+    */
     public Optional<Integer> getTargetReceivedBytesPerSecond() {
         return Optional.ofNullable(this.targetReceivedBytesPerSecond);
     }
     /**
      * Target packets received per second.
      * 
-     */
+    */
     public Optional<Integer> getTargetReceivedPacketsPerSecond() {
         return Optional.ofNullable(this.targetReceivedPacketsPerSecond);
     }
     /**
      * Target bytes sent per second.
      * 
-     */
+    */
     public Optional<Integer> getTargetSentBytesPerSecond() {
         return Optional.ofNullable(this.targetSentBytesPerSecond);
     }
     /**
      * Target packets sent per second.
      * 
-     */
+    */
     public Optional<Integer> getTargetSentPacketsPerSecond() {
         return Optional.ofNullable(this.targetSentPacketsPerSecond);
     }

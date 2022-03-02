@@ -34,14 +34,14 @@ public final class EncryptionDetailsResponse {
     /**
      * Customer Managed Key Details
      * 
-     */
+    */
     public Optional<CustomerManagedKeyDetailsResponse> getCmk() {
         return Optional.ofNullable(this.cmk);
     }
     /**
      * Double Encryption enabled
      * 
-     */
+    */
     public Boolean getDoubleEncryptionEnabled() {
         return this.doubleEncryptionEnabled;
     }

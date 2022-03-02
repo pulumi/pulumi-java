@@ -33,14 +33,14 @@ public final class ManagedInstancePairInfoResponse {
     /**
      * Id of Partner Managed Instance in pair.
      * 
-     */
+    */
     public Optional<String> getPartnerManagedInstanceId() {
         return Optional.ofNullable(this.partnerManagedInstanceId);
     }
     /**
      * Id of Primary Managed Instance in pair.
      * 
-     */
+    */
     public Optional<String> getPrimaryManagedInstanceId() {
         return Optional.ofNullable(this.primaryManagedInstanceId);
     }

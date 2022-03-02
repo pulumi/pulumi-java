@@ -24,7 +24,7 @@ public final class ApplicationApplicationConfigurationEnvironmentProperties {
     /**
      * Describes the execution property groups.
      * 
-     */
+    */
     public List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> getPropertyGroups() {
         return this.propertyGroups;
     }

@@ -23,7 +23,7 @@ public final class WebAclRuleRuleLabel {
     /**
      * The label string.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

@@ -32,14 +32,14 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
     /**
      * List of values allowed at this resource.
      * 
-     */
+    */
     public List<String> getAllowedValues() {
         return this.allowedValues;
     }
     /**
      * List of values denied at this resource.
      * 
-     */
+    */
     public List<String> getDeniedValues() {
         return this.deniedValues;
     }

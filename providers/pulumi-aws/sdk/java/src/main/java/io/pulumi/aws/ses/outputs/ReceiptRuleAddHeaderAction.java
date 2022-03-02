@@ -39,21 +39,21 @@ public final class ReceiptRuleAddHeaderAction {
     /**
      * The name of the header to add
      * 
-     */
+    */
     public String getHeaderName() {
         return this.headerName;
     }
     /**
      * The value of the header to add
      * 
-     */
+    */
     public String getHeaderValue() {
         return this.headerValue;
     }
     /**
      * The position of the action in the receipt rule
      * 
-     */
+    */
     public Integer getPosition() {
         return this.position;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDevice {
-/**
- * The Data Box Edge/Gateway device.
+    private GetDevice() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeviceArgs.Builder a);
+    }
+    private static GetDeviceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeviceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Data Box Edge/Gateway device.
  * API Version: 2020-12-01.
  * 
- *
- * The Data Box Edge/Gateway device.
+     *
+     * The Data Box Edge/Gateway device.
  * 
- */
+     */
+    public static CompletableFuture<GetDeviceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Data Box Edge/Gateway device.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * The Data Box Edge/Gateway device.
+     * 
+     */
     public static CompletableFuture<GetDeviceResult> invokeAsync(GetDeviceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getDevice", TypeShape.of(GetDeviceResult.class), args == null ? GetDeviceArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -38,21 +38,21 @@ public final class SpannerIODetailsResponse {
     /**
      * DatabaseId accessed in the connection.
      * 
-     */
+    */
     public String getDatabaseId() {
         return this.databaseId;
     }
     /**
      * InstanceId accessed in the connection.
      * 
-     */
+    */
     public String getInstanceId() {
         return this.instanceId;
     }
     /**
      * ProjectId accessed in the connection.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }

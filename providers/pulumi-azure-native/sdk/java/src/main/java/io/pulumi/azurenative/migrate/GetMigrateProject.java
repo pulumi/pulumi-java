@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMigrateProject {
-/**
- * Migrate Project REST Resource.
+    private GetMigrateProject() {}
+    public interface BuilderApplicator {
+        public void apply(GetMigrateProjectArgs.Builder a);
+    }
+    private static GetMigrateProjectArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMigrateProjectArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Migrate Project REST Resource.
  * API Version: 2018-09-01-preview.
  * 
- *
- * Migrate Project REST Resource.
+     *
+     * Migrate Project REST Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetMigrateProjectResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Migrate Project REST Resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     *
+         * Migrate Project REST Resource.
+     * 
+     */
     public static CompletableFuture<GetMigrateProjectResult> invokeAsync(GetMigrateProjectArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getMigrateProject", TypeShape.of(GetMigrateProjectResult.class), args == null ? GetMigrateProjectArgs.Empty : args, Utilities.withVersion(options));
     }

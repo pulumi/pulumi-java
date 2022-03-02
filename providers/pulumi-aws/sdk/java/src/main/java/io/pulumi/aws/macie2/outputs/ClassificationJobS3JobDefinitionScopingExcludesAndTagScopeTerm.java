@@ -49,28 +49,28 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
     /**
      * The operator to use in the condition.
      * 
-     */
+    */
     public Optional<String> getComparator() {
         return Optional.ofNullable(this.comparator);
     }
     /**
      * The tag key to use in the condition.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * The tag keys or tag key and value pairs to use in the condition.
      * 
-     */
+    */
     public List<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValue> getTagValues() {
         return this.tagValues == null ? List.of() : this.tagValues;
     }
     /**
      * The type of object to apply the condition to.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

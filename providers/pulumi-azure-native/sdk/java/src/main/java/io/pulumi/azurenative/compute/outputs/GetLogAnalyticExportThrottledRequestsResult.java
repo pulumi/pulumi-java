@@ -23,7 +23,7 @@ public final class GetLogAnalyticExportThrottledRequestsResult {
     /**
      * LogAnalyticsOutput
      * 
-     */
+    */
     public LogAnalyticsOutputResponse getProperties() {
         return this.properties;
     }

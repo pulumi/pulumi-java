@@ -42,21 +42,21 @@ public final class GetLocationFSxWindowsResult {
     /**
      * The Amazon Resource Name (ARN) of the Amazon FSx for Windows file system location that is created.
      * 
-     */
+    */
     public Optional<String> getLocationArn() {
         return Optional.ofNullable(this.locationArn);
     }
     /**
      * The URL of the FSx for Windows location that was described.
      * 
-     */
+    */
     public Optional<String> getLocationUri() {
         return Optional.ofNullable(this.locationUri);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<LocationFSxWindowsTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

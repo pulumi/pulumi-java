@@ -79,7 +79,7 @@ public final class GetWorkspaceResult {
     /**
      * The name of the WorkSpace, as seen by the operating system.
      * 
-     */
+    */
     public String getComputerName() {
         return this.computerName;
     }
@@ -89,14 +89,14 @@ public final class GetWorkspaceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The IP address of the WorkSpace.
      * 
-     */
+    */
     public String getIpAddress() {
         return this.ipAddress;
     }
@@ -106,7 +106,7 @@ public final class GetWorkspaceResult {
     /**
      * The operational state of the WorkSpace.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }

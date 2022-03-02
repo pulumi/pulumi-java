@@ -31,14 +31,14 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
     /**
      * Parameter name. Valid Values: `LambdaArn`, `NumberOfRetries`, `RoleArn`, `BufferSizeInMBs`, `BufferIntervalInSeconds`
      * 
-     */
+    */
     public String getParameterName() {
         return this.parameterName;
     }
     /**
      * Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
      * 
-     */
+    */
     public String getParameterValue() {
         return this.parameterValue;
     }

@@ -23,7 +23,7 @@ public final class GatewayRouteSpecHttpRouteAction {
     /**
      * The target that traffic is routed to when a request matches the gateway route.
      * 
-     */
+    */
     public GatewayRouteSpecHttpRouteActionTarget getTarget() {
         return this.target;
     }

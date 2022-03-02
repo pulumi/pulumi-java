@@ -25,7 +25,7 @@ public final class VideoTrackDescriptorResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.VideoTrackDescriptor'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }

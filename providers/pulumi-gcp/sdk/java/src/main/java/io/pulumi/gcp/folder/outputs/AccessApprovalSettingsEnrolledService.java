@@ -79,7 +79,7 @@ public final class AccessApprovalSettingsEnrolledService {
      * * pubsub.googleapis.com
      * * storage.googleapis.com
      * 
-     */
+    */
     public String getCloudProduct() {
         return this.cloudProduct;
     }
@@ -88,7 +88,7 @@ public final class AccessApprovalSettingsEnrolledService {
      * Default value is `BLOCK_ALL`.
      * Possible values are `BLOCK_ALL`.
      * 
-     */
+    */
     public Optional<String> getEnrollmentLevel() {
         return Optional.ofNullable(this.enrollmentLevel);
     }

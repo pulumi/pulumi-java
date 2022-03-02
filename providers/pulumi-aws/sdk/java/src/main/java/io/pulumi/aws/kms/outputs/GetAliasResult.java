@@ -48,14 +48,14 @@ public final class GetAliasResult {
     /**
      * The Amazon Resource Name(ARN) of the key alias.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -65,14 +65,14 @@ public final class GetAliasResult {
     /**
      * ARN pointed to by the alias.
      * 
-     */
+    */
     public String getTargetKeyArn() {
         return this.targetKeyArn;
     }
     /**
      * Key identifier pointed to by the alias.
      * 
-     */
+    */
     public String getTargetKeyId() {
         return this.targetKeyId;
     }

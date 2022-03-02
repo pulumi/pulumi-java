@@ -60,35 +60,35 @@ public final class DirectoryConnectSettings {
     /**
      * The IP addresses of the AD Connector servers.
      * 
-     */
+    */
     public List<String> getConnectIps() {
         return this.connectIps == null ? List.of() : this.connectIps;
     }
     /**
      * The DNS IP addresses of the domain to connect to.
      * 
-     */
+    */
     public List<String> getCustomerDnsIps() {
         return this.customerDnsIps;
     }
     /**
      * The username corresponding to the password provided.
      * 
-     */
+    */
     public String getCustomerUsername() {
         return this.customerUsername;
     }
     /**
      * The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }
     /**
      * The identifier of the VPC that the directory is in.
      * 
-     */
+    */
     public String getVpcId() {
         return this.vpcId;
     }

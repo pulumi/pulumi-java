@@ -88,63 +88,63 @@ public final class GremlinGraphGetPropertiesResponseResource {
     /**
      * The conflict resolution policy for the graph.
      * 
-     */
+    */
     public Optional<ConflictResolutionPolicyResponse> getConflictResolutionPolicy() {
         return Optional.ofNullable(this.conflictResolutionPolicy);
     }
     /**
      * Default time to live
      * 
-     */
+    */
     public Optional<Integer> getDefaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Name of the Cosmos DB Gremlin graph
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph
      * 
-     */
+    */
     public Optional<IndexingPolicyResponse> getIndexingPolicy() {
         return Optional.ofNullable(this.indexingPolicy);
     }
     /**
      * The configuration of the partition key to be used for partitioning data into multiple partitions
      * 
-     */
+    */
     public Optional<ContainerPartitionKeyResponse> getPartitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
     /**
      * A system generated property. A unique identifier.
      * 
-     */
+    */
     public String getRid() {
         return this.rid;
     }
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
-     */
+    */
     public Double getTs() {
         return this.ts;
     }
     /**
      * The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
      * 
-     */
+    */
     public Optional<UniqueKeyPolicyResponse> getUniqueKeyPolicy() {
         return Optional.ofNullable(this.uniqueKeyPolicy);
     }

@@ -25,7 +25,7 @@ public final class AccessPointVpcConfiguration {
     /**
      * If this field is specified, this access point will only allow connections from the specified VPC ID.
      * 
-     */
+    */
     public Optional<String> getVpcId() {
         return Optional.ofNullable(this.vpcId);
     }

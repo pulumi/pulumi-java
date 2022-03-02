@@ -31,14 +31,14 @@ public final class GitSourceContextResponse {
     /**
      * Git commit hash.
      * 
-     */
+    */
     public String getRevisionId() {
         return this.revisionId;
     }
     /**
      * Git repository URL.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

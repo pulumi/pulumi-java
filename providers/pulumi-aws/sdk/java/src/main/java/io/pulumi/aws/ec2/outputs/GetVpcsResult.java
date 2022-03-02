@@ -44,14 +44,14 @@ public final class GetVpcsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A list of all the VPC Ids found. This data source will fail if none are found.
      * 
-     */
+    */
     public List<String> getIds() {
         return this.ids;
     }

@@ -33,14 +33,14 @@ public final class AzurePlanResponse {
     /**
      * The sku description.
      * 
-     */
+    */
     public String getSkuDescription() {
         return this.skuDescription;
     }
     /**
      * The sku id.
      * 
-     */
+    */
     public Optional<String> getSkuId() {
         return Optional.ofNullable(this.skuId);
     }

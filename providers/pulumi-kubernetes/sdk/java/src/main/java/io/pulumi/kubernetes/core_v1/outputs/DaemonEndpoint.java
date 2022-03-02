@@ -23,7 +23,7 @@ public final class DaemonEndpoint {
     /**
      * Port number of the given endpoint.
      * 
-     */
+    */
     public Integer getPort() {
         return this.Port;
     }

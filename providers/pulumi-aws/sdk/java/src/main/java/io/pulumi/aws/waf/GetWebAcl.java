@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAcl {
-/**
- * `aws.waf.WebAcl` Retrieves a WAF Web ACL Resource Id.
+    private GetWebAcl() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAclArgs.Builder a);
+    }
+    private static GetWebAclArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAclArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `aws.waf.WebAcl` Retrieves a WAF Web ACL Resource Id.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getWebAcl.
+     *
+     * A collection of arguments for invoking getWebAcl.
  * 
- *
- * A collection of values returned by getWebAcl.
+     *
+     * A collection of values returned by getWebAcl.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAclResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `aws.waf.WebAcl` Retrieves a WAF Web ACL Resource Id.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getWebAcl.
+     * 
+     *
+         * A collection of values returned by getWebAcl.
+     * 
+     */
     public static CompletableFuture<GetWebAclResult> invokeAsync(GetWebAclArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:waf/getWebAcl:getWebAcl", TypeShape.of(GetWebAclResult.class), args == null ? GetWebAclArgs.Empty : args, Utilities.withVersion(options));
     }

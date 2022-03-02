@@ -31,14 +31,14 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
     /**
      * The optimization goal of the metric.
      * 
-     */
+    */
     public String getGoal() {
         return this.goal;
     }
     /**
      * The name of the metric.
      * 
-     */
+    */
     public String getMetric() {
         return this.metric;
     }

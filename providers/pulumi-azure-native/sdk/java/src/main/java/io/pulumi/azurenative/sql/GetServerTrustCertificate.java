@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerTrustCertificate {
-/**
- * Server trust certificate imported from box to enable connection between box and Sql Managed Instance.
+    private GetServerTrustCertificate() {}
+    public interface BuilderApplicator {
+        public void apply(GetServerTrustCertificateArgs.Builder a);
+    }
+    private static GetServerTrustCertificateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServerTrustCertificateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Server trust certificate imported from box to enable connection between box and Sql Managed Instance.
  * API Version: 2021-05-01-preview.
  * 
- *
- * Server trust certificate imported from box to enable connection between box and Sql Managed Instance.
+     *
+     * Server trust certificate imported from box to enable connection between box and Sql Managed Instance.
  * 
- */
+     */
+    public static CompletableFuture<GetServerTrustCertificateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Server trust certificate imported from box to enable connection between box and Sql Managed Instance.
+     * API Version: 2021-05-01-preview.
+     * 
+     *
+         * Server trust certificate imported from box to enable connection between box and Sql Managed Instance.
+     * 
+     */
     public static CompletableFuture<GetServerTrustCertificateResult> invokeAsync(GetServerTrustCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerTrustCertificate", TypeShape.of(GetServerTrustCertificateResult.class), args == null ? GetServerTrustCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

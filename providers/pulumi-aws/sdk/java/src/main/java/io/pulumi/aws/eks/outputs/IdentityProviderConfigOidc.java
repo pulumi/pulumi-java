@@ -76,56 +76,56 @@ public final class IdentityProviderConfigOidc {
     /**
      * Client ID for the OpenID Connect identity provider.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The JWT claim that the provider will use to return groups.
      * 
-     */
+    */
     public Optional<String> getGroupsClaim() {
         return Optional.ofNullable(this.groupsClaim);
     }
     /**
      * A prefix that is prepended to group claims e.g., `oidc:`.
      * 
-     */
+    */
     public Optional<String> getGroupsPrefix() {
         return Optional.ofNullable(this.groupsPrefix);
     }
     /**
      * The name of the identity provider config.
      * 
-     */
+    */
     public String getIdentityProviderConfigName() {
         return this.identityProviderConfigName;
     }
     /**
      * Issuer URL for the OpenID Connect identity provider.
      * 
-     */
+    */
     public String getIssuerUrl() {
         return this.issuerUrl;
     }
     /**
      * The key value pairs that describe required claims in the identity token.
      * 
-     */
+    */
     public Map<String,String> getRequiredClaims() {
         return this.requiredClaims == null ? Map.of() : this.requiredClaims;
     }
     /**
      * The JWT claim that the provider will use as the username.
      * 
-     */
+    */
     public Optional<String> getUsernameClaim() {
         return Optional.ofNullable(this.usernameClaim);
     }
     /**
      * A prefix that is prepended to username claims.
      * 
-     */
+    */
     public Optional<String> getUsernamePrefix() {
         return Optional.ofNullable(this.usernamePrefix);
     }

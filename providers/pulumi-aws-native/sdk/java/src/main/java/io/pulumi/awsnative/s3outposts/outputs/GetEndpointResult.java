@@ -60,35 +60,35 @@ public final class GetEndpointResult {
     /**
      * The Amazon Resource Name (ARN) of the endpoint.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The VPC CIDR committed by this endpoint.
      * 
-     */
+    */
     public Optional<String> getCidrBlock() {
         return Optional.ofNullable(this.cidrBlock);
     }
     /**
      * The time the endpoint was created.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The ID of the endpoint.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The network interfaces of the endpoint.
      * 
-     */
+    */
     public List<EndpointNetworkInterface> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }

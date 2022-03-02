@@ -354,6 +354,22 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ExtendedServerBlobAuditingPolicyArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.sql.ExtendedServerBlobAuditingPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.sql.ExtendedServerBlobAuditingPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ExtendedServerBlobAuditingPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -51,14 +51,14 @@ public final class GetKMSSecretResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Contains the result of decrypting the provided ciphertext.
      * 
-     */
+    */
     public String getPlaintext() {
         return this.plaintext;
     }

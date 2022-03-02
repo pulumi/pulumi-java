@@ -48,7 +48,7 @@ public final class GetConnectionResult {
     /**
      * The arn of the connection resource.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -61,14 +61,14 @@ public final class GetConnectionResult {
     /**
      * Description of the connection.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The arn of the secrets manager secret created in the customer account.
      * 
-     */
+    */
     public Optional<String> getSecretArn() {
         return Optional.ofNullable(this.secretArn);
     }

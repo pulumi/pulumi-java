@@ -23,7 +23,7 @@ public final class BotCustomPayload {
     /**
      * The string that is sent to your application.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

@@ -42,7 +42,7 @@ public final class BotFulfillmentUpdatesSpecification {
     /**
      * Determines whether fulfillment updates are sent to the user. When this field is true, updates are sent.
      * 
-     */
+    */
     public Boolean getActive() {
         return this.active;
     }
@@ -52,7 +52,7 @@ public final class BotFulfillmentUpdatesSpecification {
     /**
      * The length of time that the fulfillment Lambda function should run before it times out.
      * 
-     */
+    */
     public Optional<Integer> getTimeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }

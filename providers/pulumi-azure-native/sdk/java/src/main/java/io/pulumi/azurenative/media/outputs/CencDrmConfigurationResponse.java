@@ -34,14 +34,14 @@ public final class CencDrmConfigurationResponse {
     /**
      * PlayReady configurations
      * 
-     */
+    */
     public Optional<StreamingPolicyPlayReadyConfigurationResponse> getPlayReady() {
         return Optional.ofNullable(this.playReady);
     }
     /**
      * Widevine configurations
      * 
-     */
+    */
     public Optional<StreamingPolicyWidevineConfigurationResponse> getWidevine() {
         return Optional.ofNullable(this.widevine);
     }

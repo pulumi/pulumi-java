@@ -47,14 +47,14 @@ public final class GetUsersResult {
     /**
      * Set of ARNs of the matched IAM users.
      * 
-     */
+    */
     public List<String> getArns() {
         return this.arns;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -64,7 +64,7 @@ public final class GetUsersResult {
     /**
      * Set of Names of the matched IAM users.
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }

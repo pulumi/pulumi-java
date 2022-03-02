@@ -77,7 +77,7 @@ public final class GetDataSourceResult {
     /**
      * Tags for labeling the data source
      * 
-     */
+    */
     public List<DataSourceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

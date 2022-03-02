@@ -162,6 +162,22 @@ public class PacketCapture extends io.pulumi.resources.CustomResource {
         return this.totalBytesPerSession;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PacketCaptureArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.network.PacketCaptureArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.network.PacketCaptureArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PacketCapture(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

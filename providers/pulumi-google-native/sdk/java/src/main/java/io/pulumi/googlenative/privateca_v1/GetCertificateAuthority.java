@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCertificateAuthority {
-/**
- * Returns a CertificateAuthority.
+    private GetCertificateAuthority() {}
+    public interface BuilderApplicator {
+        public void apply(GetCertificateAuthorityArgs.Builder a);
+    }
+    private static GetCertificateAuthorityArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCertificateAuthorityArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns a CertificateAuthority.
  * 
- */
+     */
+    public static CompletableFuture<GetCertificateAuthorityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns a CertificateAuthority.
+     * 
+     */
     public static CompletableFuture<GetCertificateAuthorityResult> invokeAsync(GetCertificateAuthorityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1:getCertificateAuthority", TypeShape.of(GetCertificateAuthorityResult.class), args == null ? GetCertificateAuthorityArgs.Empty : args, Utilities.withVersion(options));
     }

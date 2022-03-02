@@ -32,14 +32,14 @@ public final class MetadataIntegrationResponse {
     /**
      * The integration config for the Data Catalog service.
      * 
-     */
+    */
     public DataCatalogConfigResponse getDataCatalogConfig() {
         return this.dataCatalogConfig;
     }
     /**
      * The integration config for the Dataplex service.
      * 
-     */
+    */
     public DataplexConfigResponse getDataplexConfig() {
         return this.dataplexConfig;
     }

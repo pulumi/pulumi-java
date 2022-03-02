@@ -25,7 +25,7 @@ public final class EventSourceMappingDestinationConfig {
     /**
      * The destination configuration for failed invocations.
      * 
-     */
+    */
     public Optional<EventSourceMappingOnFailure> getOnFailure() {
         return Optional.ofNullable(this.onFailure);
     }

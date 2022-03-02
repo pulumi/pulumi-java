@@ -33,14 +33,14 @@ public final class DataMaskingEntityResponse {
     /**
      * Data masking mode.
      * 
-     */
+    */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
     /**
      * The name of an entity to mask (e.g. a name of a header or a query parameter).
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

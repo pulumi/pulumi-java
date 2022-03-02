@@ -194,7 +194,7 @@ public final class DistributionOrderedCacheBehavior {
      * Controls which HTTP methods CloudFront
      * processes and forwards to your Amazon S3 bucket or your custom origin.
      * 
-     */
+    */
     public List<String> getAllowedMethods() {
         return this.allowedMethods;
     }
@@ -202,7 +202,7 @@ public final class DistributionOrderedCacheBehavior {
      * The unique identifier of the cache policy that
      * is attached to the cache behavior.
      * 
-     */
+    */
     public Optional<String> getCachePolicyId() {
         return Optional.ofNullable(this.cachePolicyId);
     }
@@ -210,7 +210,7 @@ public final class DistributionOrderedCacheBehavior {
      * Controls whether CloudFront caches the
      * response to requests using the specified HTTP methods.
      * 
-     */
+    */
     public List<String> getCachedMethods() {
         return this.cachedMethods;
     }
@@ -219,7 +219,7 @@ public final class DistributionOrderedCacheBehavior {
      * compress content for web requests that include `Accept-Encoding: gzip` in
      * the request header (default: `false`).
      * 
-     */
+    */
     public Optional<Boolean> getCompress() {
         return Optional.ofNullable(this.compress);
     }
@@ -228,14 +228,14 @@ public final class DistributionOrderedCacheBehavior {
      * object is in a CloudFront cache before CloudFront forwards another request
      * in the absence of an `Cache-Control max-age` or `Expires` header.
      * 
-     */
+    */
     public Optional<Integer> getDefaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
     /**
      * Field level encryption configuration ID
      * 
-     */
+    */
     public Optional<String> getFieldLevelEncryptionId() {
         return Optional.ofNullable(this.fieldLevelEncryptionId);
     }
@@ -243,7 +243,7 @@ public final class DistributionOrderedCacheBehavior {
      * The forwarded values configuration that specifies how CloudFront
      * handles query strings, cookies and headers (maximum one).
      * 
-     */
+    */
     public Optional<DistributionOrderedCacheBehaviorForwardedValues> getForwardedValues() {
         return Optional.ofNullable(this.forwardedValues);
     }
@@ -251,7 +251,7 @@ public final class DistributionOrderedCacheBehavior {
      * A config block that triggers a cloudfront
      * function with specific actions (maximum 2).
      * 
-     */
+    */
     public List<DistributionOrderedCacheBehaviorFunctionAssociation> getFunctionAssociations() {
         return this.functionAssociations == null ? List.of() : this.functionAssociations;
     }
@@ -259,7 +259,7 @@ public final class DistributionOrderedCacheBehavior {
      * A config block that triggers a lambda
      * function with specific actions (maximum 4).
      * 
-     */
+    */
     public List<DistributionOrderedCacheBehaviorLambdaFunctionAssociation> getLambdaFunctionAssociations() {
         return this.lambdaFunctionAssociations == null ? List.of() : this.lambdaFunctionAssociations;
     }
@@ -270,7 +270,7 @@ public final class DistributionOrderedCacheBehavior {
      * effective in the presence of `Cache-Control max-age`, `Cache-Control
      * s-maxage`, and `Expires` headers.
      * 
-     */
+    */
     public Optional<Integer> getMaxTtl() {
         return Optional.ofNullable(this.maxTtl);
     }
@@ -279,7 +279,7 @@ public final class DistributionOrderedCacheBehavior {
      * stay in CloudFront caches before CloudFront queries your origin to see
      * whether the object has been updated. Defaults to 0 seconds.
      * 
-     */
+    */
     public Optional<Integer> getMinTtl() {
         return Optional.ofNullable(this.minTtl);
     }
@@ -287,7 +287,7 @@ public final class DistributionOrderedCacheBehavior {
      * The unique identifier of the origin request policy
      * that is attached to the behavior.
      * 
-     */
+    */
     public Optional<String> getOriginRequestPolicyId() {
         return Optional.ofNullable(this.originRequestPolicyId);
     }
@@ -295,7 +295,7 @@ public final class DistributionOrderedCacheBehavior {
      * The pattern (for example, `images/*.jpg`) that
      * specifies which requests you want this cache behavior to apply to.
      * 
-     */
+    */
     public String getPathPattern() {
         return this.pathPattern;
     }
@@ -303,14 +303,14 @@ public final class DistributionOrderedCacheBehavior {
      * The ARN of the real-time log configuration
      * that is attached to this cache behavior.
      * 
-     */
+    */
     public Optional<String> getRealtimeLogConfigArn() {
         return Optional.ofNullable(this.realtimeLogConfigArn);
     }
     /**
      * The identifier for a response headers policy.
      * 
-     */
+    */
     public Optional<String> getResponseHeadersPolicyId() {
         return Optional.ofNullable(this.responseHeadersPolicyId);
     }
@@ -319,7 +319,7 @@ public final class DistributionOrderedCacheBehavior {
      * media files in Microsoft Smooth Streaming format using the origin that is
      * associated with this cache behavior.
      * 
-     */
+    */
     public Optional<Boolean> getSmoothStreaming() {
         return Optional.ofNullable(this.smoothStreaming);
     }
@@ -328,7 +328,7 @@ public final class DistributionOrderedCacheBehavior {
      * CloudFront to route requests to when a request matches the path pattern
      * either for a cache behavior or for the default cache behavior.
      * 
-     */
+    */
     public String getTargetOriginId() {
         return this.targetOriginId;
     }
@@ -336,7 +336,7 @@ public final class DistributionOrderedCacheBehavior {
      * A list of key group IDs that CloudFront can use to validate signed URLs or signed cookies.
      * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
      * 
-     */
+    */
     public List<String> getTrustedKeyGroups() {
         return this.trustedKeyGroups == null ? List.of() : this.trustedKeyGroups;
     }
@@ -344,7 +344,7 @@ public final class DistributionOrderedCacheBehavior {
      * List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
      * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
      * 
-     */
+    */
     public List<String> getTrustedSigners() {
         return this.trustedSigners == null ? List.of() : this.trustedSigners;
     }
@@ -354,7 +354,7 @@ public final class DistributionOrderedCacheBehavior {
      * TargetOriginId when a request matches the path pattern in PathPattern. One
      * of `allow-all`, `https-only`, or `redirect-to-https`.
      * 
-     */
+    */
     public String getViewerProtocolPolicy() {
         return this.viewerProtocolPolicy;
     }

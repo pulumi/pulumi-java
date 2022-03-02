@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiManagementServiceSsoToken {
-/**
- * The response of the GetSsoToken operation.
+    private GetApiManagementServiceSsoToken() {}
+    public interface BuilderApplicator {
+        public void apply(GetApiManagementServiceSsoTokenArgs.Builder a);
+    }
+    private static GetApiManagementServiceSsoTokenArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetApiManagementServiceSsoTokenArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The response of the GetSsoToken operation.
  * API Version: 2020-12-01.
  * 
- *
- * The response of the GetSsoToken operation.
+     *
+     * The response of the GetSsoToken operation.
  * 
- */
+     */
+    public static CompletableFuture<GetApiManagementServiceSsoTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The response of the GetSsoToken operation.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * The response of the GetSsoToken operation.
+     * 
+     */
     public static CompletableFuture<GetApiManagementServiceSsoTokenResult> invokeAsync(GetApiManagementServiceSsoTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiManagementServiceSsoToken", TypeShape.of(GetApiManagementServiceSsoTokenResult.class), args == null ? GetApiManagementServiceSsoTokenArgs.Empty : args, Utilities.withVersion(options));
     }

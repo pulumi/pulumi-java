@@ -34,14 +34,14 @@ public final class GroupMixedInstancesPolicyLaunchTemplate {
     /**
      * Override the instance launch template specification in the Launch Template.
      * 
-     */
+    */
     public GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification getLaunchTemplateSpecification() {
         return this.launchTemplateSpecification;
     }
     /**
      * List of nested arguments provides the ability to specify multiple instance types. This will override the same parameter in the launch template. For on-demand instances, Auto Scaling considers the order of preference of instance types to launch based on the order specified in the overrides list. Defined below.
      * 
-     */
+    */
     public List<GroupMixedInstancesPolicyLaunchTemplateOverride> getOverrides() {
         return this.overrides == null ? List.of() : this.overrides;
     }

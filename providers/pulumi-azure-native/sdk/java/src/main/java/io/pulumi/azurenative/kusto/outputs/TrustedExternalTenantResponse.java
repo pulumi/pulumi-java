@@ -25,7 +25,7 @@ public final class TrustedExternalTenantResponse {
     /**
      * GUID representing an external tenant.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

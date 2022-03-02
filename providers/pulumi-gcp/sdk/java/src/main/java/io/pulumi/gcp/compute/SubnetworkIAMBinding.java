@@ -168,6 +168,22 @@ public class SubnetworkIAMBinding extends io.pulumi.resources.CustomResource {
         return this.subnetwork;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SubnetworkIAMBindingArgs.Builder a);
+    }
+    private static io.pulumi.gcp.compute.SubnetworkIAMBindingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.compute.SubnetworkIAMBindingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public SubnetworkIAMBinding(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

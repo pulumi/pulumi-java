@@ -25,7 +25,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * A 128/192/256 bit key.
      * A base64-encoded string.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }

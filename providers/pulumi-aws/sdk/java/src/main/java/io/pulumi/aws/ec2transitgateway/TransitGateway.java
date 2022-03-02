@@ -214,6 +214,22 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
         return this.vpnEcmpSupport;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable TransitGatewayArgs.Builder a);
+    }
+    private static io.pulumi.aws.ec2transitgateway.TransitGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.ec2transitgateway.TransitGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TransitGateway(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

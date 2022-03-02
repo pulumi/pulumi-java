@@ -41,21 +41,21 @@ public final class ExportResponse {
     /**
      * The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root.
      * 
-     */
+    */
     public Optional<String> getBlobListBlobPath() {
         return Optional.ofNullable(this.blobListBlobPath);
     }
     /**
      * A collection of blob-path strings.
      * 
-     */
+    */
     public List<String> getBlobPath() {
         return this.blobPath == null ? List.of() : this.blobPath;
     }
     /**
      * A collection of blob-prefix strings.
      * 
-     */
+    */
     public List<String> getBlobPathPrefix() {
         return this.blobPathPrefix == null ? List.of() : this.blobPathPrefix;
     }

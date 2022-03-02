@@ -69,49 +69,49 @@ public final class GetManagementGroupSubscriptionResult {
     /**
      * The friendly name of the subscription.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The fully qualified ID for the subscription.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000/subscriptions/0000000-0000-0000-0000-000000000001
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The stringified id of the subscription. For example, 00000000-0000-0000-0000-000000000000
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The ID of the parent management group.
      * 
-     */
+    */
     public Optional<DescendantParentGroupInfoResponse> getParent() {
         return Optional.ofNullable(this.parent);
     }
     /**
      * The state of the subscription.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The AAD Tenant ID associated with the subscription. For example, 00000000-0000-0000-0000-000000000000
      * 
-     */
+    */
     public Optional<String> getTenant() {
         return Optional.ofNullable(this.tenant);
     }
     /**
      * The type of the resource.  For example, Microsoft.Management/managementGroups/subscriptions
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

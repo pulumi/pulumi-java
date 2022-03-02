@@ -53,7 +53,7 @@ public final class GetAttributeGroupResult {
     /**
      * The description of the attribute group.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -63,7 +63,7 @@ public final class GetAttributeGroupResult {
     /**
      * The name of the attribute group.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

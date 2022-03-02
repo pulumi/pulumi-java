@@ -25,7 +25,7 @@ public final class IpAddressResponse {
     /**
      * The address.
      * 
-     */
+    */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }

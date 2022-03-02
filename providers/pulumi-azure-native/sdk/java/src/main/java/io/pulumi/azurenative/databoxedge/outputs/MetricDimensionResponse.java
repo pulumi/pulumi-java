@@ -31,14 +31,14 @@ public final class MetricDimensionResponse {
     /**
      * The dimension value.
      * 
-     */
+    */
     public String getSourceName() {
         return this.sourceName;
     }
     /**
      * The dimension type.
      * 
-     */
+    */
     public String getSourceType() {
         return this.sourceType;
     }

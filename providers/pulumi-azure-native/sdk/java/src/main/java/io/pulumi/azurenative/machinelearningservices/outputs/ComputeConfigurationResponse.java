@@ -64,42 +64,42 @@ public final class ComputeConfigurationResponse {
     /**
      * Number of instances or nodes.
      * 
-     */
+    */
     public Optional<Integer> getInstanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
     /**
      * SKU type to run on.
      * 
-     */
+    */
     public Optional<String> getInstanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * Set to true for jobs running on local compute.
      * 
-     */
+    */
     public Optional<Boolean> getIsLocal() {
         return Optional.ofNullable(this.isLocal);
     }
     /**
      * Location for virtual cluster run.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Additional properties.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * ARM resource ID of the compute resource.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

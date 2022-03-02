@@ -51,28 +51,28 @@ public final class ResponseContractResponse {
     /**
      * Operation response description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Collection of operation response headers.
      * 
-     */
+    */
     public List<ParameterContractResponse> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
      * Collection of operation response representations.
      * 
-     */
+    */
     public List<RepresentationContractResponse> getRepresentations() {
         return this.representations == null ? List.of() : this.representations;
     }
     /**
      * Operation response HTTP status code.
      * 
-     */
+    */
     public Integer getStatusCode() {
         return this.statusCode;
     }

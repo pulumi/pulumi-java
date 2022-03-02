@@ -39,14 +39,14 @@ public final class GetVpcCidrBlockAssociation {
     /**
      * The association ID for the the IPv4 CIDR block.
      * 
-     */
+    */
     public String getAssociationId() {
         return this.associationId;
     }
     /**
      * The cidr block of the desired VPC.
      * 
-     */
+    */
     public String getCidrBlock() {
         return this.cidrBlock;
     }
@@ -54,7 +54,7 @@ public final class GetVpcCidrBlockAssociation {
      * The current state of the desired VPC.
      * Can be either `"pending"` or `"available"`.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }

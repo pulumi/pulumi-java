@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSpatialAnchorsAccount {
-/**
- * SpatialAnchorsAccount Response.
+    private GetSpatialAnchorsAccount() {}
+    public interface BuilderApplicator {
+        public void apply(GetSpatialAnchorsAccountArgs.Builder a);
+    }
+    private static GetSpatialAnchorsAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSpatialAnchorsAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * SpatialAnchorsAccount Response.
  * API Version: 2021-01-01.
  * 
- *
- * SpatialAnchorsAccount Response.
+     *
+     * SpatialAnchorsAccount Response.
  * 
- */
+     */
+    public static CompletableFuture<GetSpatialAnchorsAccountResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * SpatialAnchorsAccount Response.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * SpatialAnchorsAccount Response.
+     * 
+     */
     public static CompletableFuture<GetSpatialAnchorsAccountResult> invokeAsync(GetSpatialAnchorsAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mixedreality:getSpatialAnchorsAccount", TypeShape.of(GetSpatialAnchorsAccountResult.class), args == null ? GetSpatialAnchorsAccountArgs.Empty : args, Utilities.withVersion(options));
     }

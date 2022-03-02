@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:kusto:DataConnection KustoClusterRPTest4/KustoDatabase8/DataConnections8 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/Databases/KustoDatabase8/DataConnections/DataConnections8 
  * ```
  * 
- * @deprecated
+ * @Deprecated
  * Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection.
  * 
  */
@@ -92,6 +92,22 @@ public class DataConnection extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DataConnectionArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.kusto.DataConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.kusto.DataConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DataConnection(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

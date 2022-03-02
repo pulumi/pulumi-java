@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFusionAlertRule {
-/**
- * Represents Fusion alert rule.
+    private GetFusionAlertRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetFusionAlertRuleArgs.Builder a);
+    }
+    private static GetFusionAlertRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFusionAlertRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents Fusion alert rule.
  * API Version: 2020-01-01.
  * 
- *
- * Represents Fusion alert rule.
+     *
+     * Represents Fusion alert rule.
  * 
- */
+     */
+    public static CompletableFuture<GetFusionAlertRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents Fusion alert rule.
+     * API Version: 2020-01-01.
+     * 
+     *
+         * Represents Fusion alert rule.
+     * 
+     */
     public static CompletableFuture<GetFusionAlertRuleResult> invokeAsync(GetFusionAlertRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getFusionAlertRule", TypeShape.of(GetFusionAlertRuleResult.class), args == null ? GetFusionAlertRuleArgs.Empty : args, Utilities.withVersion(options));
     }

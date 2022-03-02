@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAutoscalingPolicyIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetAutoscalingPolicyIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetAutoscalingPolicyIamPolicyArgs.Builder a);
+    }
+    private static GetAutoscalingPolicyIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAutoscalingPolicyIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetAutoscalingPolicyIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetAutoscalingPolicyIamPolicyResult> invokeAsync(GetAutoscalingPolicyIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1:getAutoscalingPolicyIamPolicy", TypeShape.of(GetAutoscalingPolicyIamPolicyResult.class), args == null ? GetAutoscalingPolicyIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

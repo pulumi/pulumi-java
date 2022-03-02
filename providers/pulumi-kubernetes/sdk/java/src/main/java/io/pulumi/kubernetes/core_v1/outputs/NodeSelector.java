@@ -24,7 +24,7 @@ public final class NodeSelector {
     /**
      * Required. A list of node selector terms. The terms are ORed.
      * 
-     */
+    */
     public List<NodeSelectorTerm> getNodeSelectorTerms() {
         return this.nodeSelectorTerms;
     }

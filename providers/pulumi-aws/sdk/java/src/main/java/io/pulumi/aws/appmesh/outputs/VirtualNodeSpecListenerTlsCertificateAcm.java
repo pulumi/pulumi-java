@@ -23,7 +23,7 @@ public final class VirtualNodeSpecListenerTlsCertificateAcm {
     /**
      * The Amazon Resource Name (ARN) for the certificate.
      * 
-     */
+    */
     public String getCertificateArn() {
         return this.certificateArn;
     }

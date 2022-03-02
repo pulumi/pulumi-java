@@ -40,21 +40,21 @@ public final class EdgeUsageDataEventHubResponse {
     /**
      * Name of the Event Hub where usage will be reported.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Namespace of the Event Hub where usage will be reported.
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
     /**
      * SAS token needed to interact with Event Hub.
      * 
-     */
+    */
     public Optional<String> getToken() {
         return Optional.ofNullable(this.token);
     }

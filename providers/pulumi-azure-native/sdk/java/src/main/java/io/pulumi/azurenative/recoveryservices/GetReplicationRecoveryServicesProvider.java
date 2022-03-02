@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReplicationRecoveryServicesProvider {
-/**
- * Provider details.
+    private GetReplicationRecoveryServicesProvider() {}
+    public interface BuilderApplicator {
+        public void apply(GetReplicationRecoveryServicesProviderArgs.Builder a);
+    }
+    private static GetReplicationRecoveryServicesProviderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReplicationRecoveryServicesProviderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provider details.
  * API Version: 2018-07-10.
  * 
- *
- * Provider details.
+     *
+     * Provider details.
  * 
- */
+     */
+    public static CompletableFuture<GetReplicationRecoveryServicesProviderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provider details.
+     * API Version: 2018-07-10.
+     * 
+     *
+         * Provider details.
+     * 
+     */
     public static CompletableFuture<GetReplicationRecoveryServicesProviderResult> invokeAsync(GetReplicationRecoveryServicesProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationRecoveryServicesProvider", TypeShape.of(GetReplicationRecoveryServicesProviderResult.class), args == null ? GetReplicationRecoveryServicesProviderArgs.Empty : args, Utilities.withVersion(options));
     }

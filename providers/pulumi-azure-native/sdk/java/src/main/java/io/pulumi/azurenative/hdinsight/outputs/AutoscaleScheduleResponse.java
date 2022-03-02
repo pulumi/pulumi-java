@@ -35,14 +35,14 @@ public final class AutoscaleScheduleResponse {
     /**
      * Days of the week for a schedule-based autoscale rule
      * 
-     */
+    */
     public List<String> getDays() {
         return this.days == null ? List.of() : this.days;
     }
     /**
      * Time and capacity for a schedule-based autoscale rule
      * 
-     */
+    */
     public Optional<AutoscaleTimeAndCapacityResponse> getTimeAndCapacity() {
         return Optional.ofNullable(this.timeAndCapacity);
     }

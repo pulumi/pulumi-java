@@ -25,7 +25,7 @@ public final class FrontendEndpointLinkResponse {
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

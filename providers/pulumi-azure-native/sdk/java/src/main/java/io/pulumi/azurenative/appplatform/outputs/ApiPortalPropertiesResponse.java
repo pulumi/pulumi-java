@@ -87,63 +87,63 @@ public final class ApiPortalPropertiesResponse {
     /**
      * The array of resource Ids of gateway to integrate with API portal.
      * 
-     */
+    */
     public List<String> getGatewayIds() {
         return this.gatewayIds == null ? List.of() : this.gatewayIds;
     }
     /**
      * Indicate if only https is allowed.
      * 
-     */
+    */
     public Optional<Boolean> getHttpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
     /**
      * Collection of instances belong to API portal.
      * 
-     */
+    */
     public List<ApiPortalInstanceResponse> getInstances() {
         return this.instances;
     }
     /**
      * State of the API portal.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Indicates whether the API portal exposes endpoint.
      * 
-     */
+    */
     public Optional<Boolean> get$public() {
         return Optional.ofNullable(this.$public);
     }
     /**
      * The requested resource quantity for required CPU and Memory.
      * 
-     */
+    */
     public ApiPortalResourceRequestsResponse getResourceRequests() {
         return this.resourceRequests;
     }
     /**
      * Collection of OpenAPI source URL locations.
      * 
-     */
+    */
     public List<String> getSourceUrls() {
         return this.sourceUrls == null ? List.of() : this.sourceUrls;
     }
     /**
      * Single sign-on related configuration
      * 
-     */
+    */
     public Optional<SsoPropertiesResponse> getSsoProperties() {
         return Optional.ofNullable(this.ssoProperties);
     }
     /**
      * URL of the API portal, exposed when 'public' is true.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

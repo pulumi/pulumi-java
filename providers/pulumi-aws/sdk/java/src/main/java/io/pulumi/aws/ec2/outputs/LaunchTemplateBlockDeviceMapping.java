@@ -50,21 +50,21 @@ public final class LaunchTemplateBlockDeviceMapping {
     /**
      * The name of the device to mount.
      * 
-     */
+    */
     public Optional<String> getDeviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
      * Configure EBS volume properties.
      * 
-     */
+    */
     public Optional<LaunchTemplateBlockDeviceMappingEbs> getEbs() {
         return Optional.ofNullable(this.ebs);
     }
     /**
      * Suppresses the specified device included in the AMI's block device mapping.
      * 
-     */
+    */
     public Optional<String> getNoDevice() {
         return Optional.ofNullable(this.noDevice);
     }
@@ -73,7 +73,7 @@ public final class LaunchTemplateBlockDeviceMapping {
      * Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
      * (e.g., `"ephemeral0"`).
      * 
-     */
+    */
     public Optional<String> getVirtualName() {
         return Optional.ofNullable(this.virtualName);
     }

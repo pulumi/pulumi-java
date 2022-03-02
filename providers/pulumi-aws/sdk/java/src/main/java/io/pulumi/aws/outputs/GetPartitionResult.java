@@ -45,28 +45,28 @@ public final class GetPartitionResult {
     /**
      * Base DNS domain name for the current partition (e.g., `amazonaws.com` in AWS Commercial, `amazonaws.com.cn` in AWS China).
      * 
-     */
+    */
     public String getDnsSuffix() {
         return this.dnsSuffix;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Identifier of the current partition (e.g., `aws` in AWS Commercial, `aws-cn` in AWS China).
      * 
-     */
+    */
     public String getPartition() {
         return this.partition;
     }
     /**
      * Prefix of service names (e.g., `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
      * 
-     */
+    */
     public String getReverseDnsPrefix() {
         return this.reverseDnsPrefix;
     }

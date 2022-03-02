@@ -106,6 +106,22 @@ public class UserDataMapping extends io.pulumi.resources.CustomResource {
         return this.userId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(UserDataMappingArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.healthcare_v1beta1.UserDataMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.healthcare_v1beta1.UserDataMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public UserDataMapping(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

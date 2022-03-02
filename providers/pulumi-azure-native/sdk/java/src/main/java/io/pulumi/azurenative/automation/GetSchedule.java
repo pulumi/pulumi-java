@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSchedule {
-/**
- * Definition of the schedule.
+    private GetSchedule() {}
+    public interface BuilderApplicator {
+        public void apply(GetScheduleArgs.Builder a);
+    }
+    private static GetScheduleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetScheduleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of the schedule.
  * API Version: 2019-06-01.
  * 
- *
- * Definition of the schedule.
+     *
+     * Definition of the schedule.
  * 
- */
+     */
+    public static CompletableFuture<GetScheduleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of the schedule.
+     * API Version: 2019-06-01.
+     * 
+     *
+         * Definition of the schedule.
+     * 
+     */
     public static CompletableFuture<GetScheduleResult> invokeAsync(GetScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getSchedule", TypeShape.of(GetScheduleResult.class), args == null ? GetScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

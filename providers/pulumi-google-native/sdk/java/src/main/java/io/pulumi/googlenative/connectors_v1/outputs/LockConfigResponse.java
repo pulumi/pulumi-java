@@ -32,14 +32,14 @@ public final class LockConfigResponse {
     /**
      * Indicates whether or not the connection is locked.
      * 
-     */
+    */
     public Boolean getLocked() {
         return this.locked;
     }
     /**
      * Describes why a connection is locked.
      * 
-     */
+    */
     public String getReason() {
         return this.reason;
     }

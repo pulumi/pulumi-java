@@ -33,7 +33,7 @@ import javax.annotation.Nullable;
  *  $ pulumi import aws:applicationloadbalancing/targetGroup:TargetGroup app_front_end arn:aws:elasticloadbalancing:us-west-2:187416307283:targetgroup/app-front-end/20cfe21448b66314
  * ```
  * 
- * @deprecated
+ * @Deprecated
  * aws.applicationloadbalancing.TargetGroup has been deprecated in favor of aws.alb.TargetGroup
  * 
  */
@@ -321,6 +321,22 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
         return this.vpcId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable TargetGroupArgs.Builder a);
+    }
+    private static io.pulumi.aws.applicationloadbalancing.TargetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.applicationloadbalancing.TargetGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TargetGroup(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

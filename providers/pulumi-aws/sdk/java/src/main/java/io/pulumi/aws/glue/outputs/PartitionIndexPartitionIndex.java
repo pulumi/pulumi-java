@@ -37,7 +37,7 @@ public final class PartitionIndexPartitionIndex {
     /**
      * Name of the partition index.
      * 
-     */
+    */
     public Optional<String> getIndexName() {
         return Optional.ofNullable(this.indexName);
     }
@@ -47,7 +47,7 @@ public final class PartitionIndexPartitionIndex {
     /**
      * Keys for the partition index.
      * 
-     */
+    */
     public List<String> getKeys() {
         return this.keys == null ? List.of() : this.keys;
     }

@@ -33,14 +33,14 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
     /**
      * The metric type. Valid values: `ALBRequestCountPerTarget`, `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, `DynamoDBReadCapacityUtilization`, `DynamoDBWriteCapacityUtilization`, `ECSServiceAverageCPUUtilization`, `ECSServiceAverageMemoryUtilization`, `EC2SpotFleetRequestAverageCPUUtilization`, `EC2SpotFleetRequestAverageNetworkIn`, `EC2SpotFleetRequestAverageNetworkOut`, `RDSReaderAverageCPUUtilization`, `RDSReaderAverageDatabaseConnections`.
      * 
-     */
+    */
     public String getPredefinedScalingMetricType() {
         return this.predefinedScalingMetricType;
     }
     /**
      * Identifies the resource associated with the metric type.
      * 
-     */
+    */
     public Optional<String> getResourceLabel() {
         return Optional.ofNullable(this.resourceLabel);
     }

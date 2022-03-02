@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListAuthorizationServerSecrets {
-/**
- * OAuth Server Secrets Contract.
+    private ListAuthorizationServerSecrets() {}
+    public interface BuilderApplicator {
+        public void apply(ListAuthorizationServerSecretsArgs.Builder a);
+    }
+    private static ListAuthorizationServerSecretsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListAuthorizationServerSecretsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * OAuth Server Secrets Contract.
  * API Version: 2020-12-01.
  * 
- *
- * OAuth Server Secrets Contract.
+     *
+     * OAuth Server Secrets Contract.
  * 
- */
+     */
+    public static CompletableFuture<ListAuthorizationServerSecretsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * OAuth Server Secrets Contract.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * OAuth Server Secrets Contract.
+     * 
+     */
     public static CompletableFuture<ListAuthorizationServerSecretsResult> invokeAsync(ListAuthorizationServerSecretsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listAuthorizationServerSecrets", TypeShape.of(ListAuthorizationServerSecretsResult.class), args == null ? ListAuthorizationServerSecretsArgs.Empty : args, Utilities.withVersion(options));
     }

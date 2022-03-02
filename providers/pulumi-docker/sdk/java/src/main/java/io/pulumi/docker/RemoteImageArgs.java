@@ -66,7 +66,7 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
     /**
      * A value which cause an image pull when changed
      * 
-     * @deprecated
+     * @Deprecated
      * Use field pull_triggers instead
      * 
      */

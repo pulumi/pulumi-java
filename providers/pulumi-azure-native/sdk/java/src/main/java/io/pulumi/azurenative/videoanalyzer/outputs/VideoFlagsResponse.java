@@ -38,21 +38,21 @@ public final class VideoFlagsResponse {
     /**
      * Value indicating whether or not the video can be streamed. Only "archive" type videos can be streamed.
      * 
-     */
+    */
     public Boolean getCanStream() {
         return this.canStream;
     }
     /**
      * Value indicating whether or not there has ever been data recorded or uploaded into the video. Newly created videos have this value set to false.
      * 
-     */
+    */
     public Boolean getHasData() {
         return this.hasData;
     }
     /**
      * Value indicating whether or not the video is currently being referenced be an active live pipeline. The fact that is being referenced, doesn't necessarily indicate that data is being received. For example, video recording may be gated on events or camera may not be accessible at the time.
      * 
-     */
+    */
     public Boolean getIsRecording() {
         return this.isRecording;
     }

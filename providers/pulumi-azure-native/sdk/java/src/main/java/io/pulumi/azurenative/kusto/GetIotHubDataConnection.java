@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIotHubDataConnection {
-/**
- * Class representing an iot hub data connection.
+    private GetIotHubDataConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetIotHubDataConnectionArgs.Builder a);
+    }
+    private static GetIotHubDataConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIotHubDataConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing an iot hub data connection.
  * API Version: 2021-01-01.
  * 
- *
- * Class representing an iot hub data connection.
+     *
+     * Class representing an iot hub data connection.
  * 
- */
+     */
+    public static CompletableFuture<GetIotHubDataConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing an iot hub data connection.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Class representing an iot hub data connection.
+     * 
+     */
     public static CompletableFuture<GetIotHubDataConnectionResult> invokeAsync(GetIotHubDataConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getIotHubDataConnection", TypeShape.of(GetIotHubDataConnectionResult.class), args == null ? GetIotHubDataConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

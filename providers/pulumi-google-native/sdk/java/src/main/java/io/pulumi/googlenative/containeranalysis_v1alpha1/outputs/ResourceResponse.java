@@ -39,21 +39,21 @@ public final class ResourceResponse {
     /**
      * The hash of the resource content. E.g., the Docker digest.
      * 
-     */
+    */
     public HashResponse getContentHash() {
         return this.contentHash;
     }
     /**
      * The name of the resource. E.g., the name of a Docker image - "Debian".
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The unique URI of the resource. E.g., "https://gcr.io/project/image@sha256:foo" for a Docker image.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }

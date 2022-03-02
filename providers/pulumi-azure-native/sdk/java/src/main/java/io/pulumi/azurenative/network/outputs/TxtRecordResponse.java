@@ -25,7 +25,7 @@ public final class TxtRecordResponse {
     /**
      * The text value of this TXT record.
      * 
-     */
+    */
     public List<String> getValue() {
         return this.value == null ? List.of() : this.value;
     }

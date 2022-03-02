@@ -31,14 +31,14 @@ public final class SecurityAssessmentPartnerDataResponse {
     /**
      * Name of the company of the partner
      * 
-     */
+    */
     public String getPartnerName() {
         return this.partnerName;
     }
     /**
      * secret to authenticate the partner - write only
      * 
-     */
+    */
     public String getSecret() {
         return this.secret;
     }

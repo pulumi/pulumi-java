@@ -23,7 +23,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
     /**
      * Path to the top-level parent that contains the records.
      * 
-     */
+    */
     public String getRecordRowPath() {
         return this.recordRowPath;
     }

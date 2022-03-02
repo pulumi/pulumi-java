@@ -38,21 +38,21 @@ public final class ClusterNodeConfigTaint {
     /**
      * Effect for taint. Accepted values are `NO_SCHEDULE`, `PREFER_NO_SCHEDULE`, and `NO_EXECUTE`.
      * 
-     */
+    */
     public String getEffect() {
         return this.effect;
     }
     /**
      * Key for taint.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Value for taint.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

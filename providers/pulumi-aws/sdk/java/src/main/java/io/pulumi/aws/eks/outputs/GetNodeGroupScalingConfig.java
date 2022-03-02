@@ -38,21 +38,21 @@ public final class GetNodeGroupScalingConfig {
     /**
      * Desired number of worker nodes.
      * 
-     */
+    */
     public Integer getDesiredSize() {
         return this.desiredSize;
     }
     /**
      * Maximum number of worker nodes.
      * 
-     */
+    */
     public Integer getMaxSize() {
         return this.maxSize;
     }
     /**
      * Minimum number of worker nodes.
      * 
-     */
+    */
     public Integer getMinSize() {
         return this.minSize;
     }

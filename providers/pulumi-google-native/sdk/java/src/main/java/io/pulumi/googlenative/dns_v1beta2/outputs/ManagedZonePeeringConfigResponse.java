@@ -31,7 +31,7 @@ public final class ManagedZonePeeringConfigResponse {
     /**
      * The network with which to peer.
      * 
-     */
+    */
     public ManagedZonePeeringConfigTargetNetworkResponse getTargetNetwork() {
         return this.targetNetwork;
     }

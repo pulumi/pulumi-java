@@ -23,7 +23,7 @@ public final class VirtualMachineImageResponse {
     /**
      * Virtual Machine image path
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

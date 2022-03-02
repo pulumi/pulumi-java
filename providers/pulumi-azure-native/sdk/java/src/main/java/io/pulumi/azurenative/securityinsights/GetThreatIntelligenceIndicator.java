@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetThreatIntelligenceIndicator {
-/**
- * Threat intelligence information object.
+    private GetThreatIntelligenceIndicator() {}
+    public interface BuilderApplicator {
+        public void apply(GetThreatIntelligenceIndicatorArgs.Builder a);
+    }
+    private static GetThreatIntelligenceIndicatorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetThreatIntelligenceIndicatorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Threat intelligence information object.
  * API Version: 2019-01-01-preview.
  * 
- *
- * Threat intelligence information object.
+     *
+     * Threat intelligence information object.
  * 
- */
+     */
+    public static CompletableFuture<GetThreatIntelligenceIndicatorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Threat intelligence information object.
+     * API Version: 2019-01-01-preview.
+     * 
+     *
+         * Threat intelligence information object.
+     * 
+     */
     public static CompletableFuture<GetThreatIntelligenceIndicatorResult> invokeAsync(GetThreatIntelligenceIndicatorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getThreatIntelligenceIndicator", TypeShape.of(GetThreatIntelligenceIndicatorResult.class), args == null ? GetThreatIntelligenceIndicatorArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -34,14 +34,14 @@ public final class AutoHealRulesResponse {
     /**
      * Actions to be executed when a rule is triggered.
      * 
-     */
+    */
     public Optional<AutoHealActionsResponse> getActions() {
         return Optional.ofNullable(this.actions);
     }
     /**
      * Conditions that describe when to execute the auto-heal actions.
      * 
-     */
+    */
     public Optional<AutoHealTriggersResponse> getTriggers() {
         return Optional.ofNullable(this.triggers);
     }

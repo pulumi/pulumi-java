@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedInstancePrivateEndpointConnection {
-/**
- * A private endpoint connection
+    private GetManagedInstancePrivateEndpointConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagedInstancePrivateEndpointConnectionArgs.Builder a);
+    }
+    private static GetManagedInstancePrivateEndpointConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagedInstancePrivateEndpointConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A private endpoint connection
  * API Version: 2020-11-01-preview.
  * 
- *
- * A private endpoint connection
+     *
+     * A private endpoint connection
  * 
- */
+     */
+    public static CompletableFuture<GetManagedInstancePrivateEndpointConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A private endpoint connection
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * A private endpoint connection
+     * 
+     */
     public static CompletableFuture<GetManagedInstancePrivateEndpointConnectionResult> invokeAsync(GetManagedInstancePrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstancePrivateEndpointConnection", TypeShape.of(GetManagedInstancePrivateEndpointConnectionResult.class), args == null ? GetManagedInstancePrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

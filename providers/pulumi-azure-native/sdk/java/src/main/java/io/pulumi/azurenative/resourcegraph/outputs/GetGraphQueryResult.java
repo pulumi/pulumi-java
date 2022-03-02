@@ -90,70 +90,70 @@ public final class GetGraphQueryResult {
     /**
      * The description of a graph query.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * This will be used to handle Optimistic Concurrency. If not present, it will always overwrite the existing resource without checking conflict.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Azure resource name. This is GUID value. The display name should be assigned within properties field.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * KQL query that will be graph.
      * 
-     */
+    */
     public String getQuery() {
         return this.query;
     }
     /**
      * Enum indicating a type of graph query.
      * 
-     */
+    */
     public String getResultKind() {
         return this.resultKind;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Date and time in UTC of the last modification that was made to this graph query definition.
      * 
-     */
+    */
     public String getTimeModified() {
         return this.timeModified;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

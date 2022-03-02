@@ -91,70 +91,70 @@ public final class GetAppResult {
     /**
      * The ID of the application.
      * 
-     */
+    */
     public String getApplicationId() {
         return this.applicationId;
     }
     /**
      * The display name of the application.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The ARM resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The ARM resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A valid instance SKU.
      * 
-     */
+    */
     public AppSkuInfoResponse getSku() {
         return this.sku;
     }
     /**
      * The subdomain of the application.
      * 
-     */
+    */
     public Optional<String> getSubdomain() {
         return Optional.ofNullable(this.subdomain);
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
      * 
-     */
+    */
     public Optional<String> getTemplate() {
         return Optional.ofNullable(this.template);
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

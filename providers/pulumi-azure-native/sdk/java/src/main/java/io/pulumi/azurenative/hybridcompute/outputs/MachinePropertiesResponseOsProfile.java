@@ -23,7 +23,7 @@ public final class MachinePropertiesResponseOsProfile {
     /**
      * Specifies the host OS name of the hybrid machine.
      * 
-     */
+    */
     public String getComputerName() {
         return this.computerName;
     }

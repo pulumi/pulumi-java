@@ -23,7 +23,7 @@ public final class MaintenanceExclusionOptionsResponse {
     /**
      * Scope specifies the upgrade scope which upgrades are blocked by the exclusion.
      * 
-     */
+    */
     public String getScope() {
         return this.scope;
     }

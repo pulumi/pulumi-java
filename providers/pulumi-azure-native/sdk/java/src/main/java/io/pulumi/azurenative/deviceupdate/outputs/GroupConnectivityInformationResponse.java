@@ -62,42 +62,42 @@ public final class GroupConnectivityInformationResponse {
     /**
      * List of customer visible FQDNs.
      * 
-     */
+    */
     public List<String> getCustomerVisibleFqdns() {
         return this.customerVisibleFqdns == null ? List.of() : this.customerVisibleFqdns;
     }
     /**
      * Group ID.
      * 
-     */
+    */
     public String getGroupId() {
         return this.groupId;
     }
     /**
      * Internal FQDN.
      * 
-     */
+    */
     public String getInternalFqdn() {
         return this.internalFqdn;
     }
     /**
      * Member name.
      * 
-     */
+    */
     public String getMemberName() {
         return this.memberName;
     }
     /**
      * PrivateLinkService ARM region.
      * 
-     */
+    */
     public Optional<String> getPrivateLinkServiceArmRegion() {
         return Optional.ofNullable(this.privateLinkServiceArmRegion);
     }
     /**
      * Redirect map ID.
      * 
-     */
+    */
     public Optional<String> getRedirectMapId() {
         return Optional.ofNullable(this.redirectMapId);
     }

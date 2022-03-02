@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppDomainOwnershipIdentifierSlot {
-/**
- * A domain specific resource identifier.
+    private GetWebAppDomainOwnershipIdentifierSlot() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppDomainOwnershipIdentifierSlotArgs.Builder a);
+    }
+    private static GetWebAppDomainOwnershipIdentifierSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppDomainOwnershipIdentifierSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A domain specific resource identifier.
  * API Version: 2020-12-01.
  * 
- *
- * A domain specific resource identifier.
+     *
+     * A domain specific resource identifier.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppDomainOwnershipIdentifierSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A domain specific resource identifier.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * A domain specific resource identifier.
+     * 
+     */
     public static CompletableFuture<GetWebAppDomainOwnershipIdentifierSlotResult> invokeAsync(GetWebAppDomainOwnershipIdentifierSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDomainOwnershipIdentifierSlot", TypeShape.of(GetWebAppDomainOwnershipIdentifierSlotResult.class), args == null ? GetWebAppDomainOwnershipIdentifierSlotArgs.Empty : args, Utilities.withVersion(options));
     }

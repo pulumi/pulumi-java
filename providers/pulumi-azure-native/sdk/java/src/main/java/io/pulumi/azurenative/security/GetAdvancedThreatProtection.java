@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAdvancedThreatProtection {
-/**
- * The Advanced Threat Protection resource.
+    private GetAdvancedThreatProtection() {}
+    public interface BuilderApplicator {
+        public void apply(GetAdvancedThreatProtectionArgs.Builder a);
+    }
+    private static GetAdvancedThreatProtectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAdvancedThreatProtectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Advanced Threat Protection resource.
  * API Version: 2019-01-01.
  * 
- *
- * The Advanced Threat Protection resource.
+     *
+     * The Advanced Threat Protection resource.
  * 
- */
+     */
+    public static CompletableFuture<GetAdvancedThreatProtectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Advanced Threat Protection resource.
+     * API Version: 2019-01-01.
+     * 
+     *
+         * The Advanced Threat Protection resource.
+     * 
+     */
     public static CompletableFuture<GetAdvancedThreatProtectionResult> invokeAsync(GetAdvancedThreatProtectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getAdvancedThreatProtection", TypeShape.of(GetAdvancedThreatProtectionResult.class), args == null ? GetAdvancedThreatProtectionArgs.Empty : args, Utilities.withVersion(options));
     }

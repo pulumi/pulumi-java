@@ -47,7 +47,7 @@ public final class PersistentVolumeStatus {
     /**
      * A human-readable message indicating details about why the volume is in this state.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
@@ -61,14 +61,14 @@ public final class PersistentVolumeStatus {
      *  - `"Pending"` used for PersistentVolumes that are not available
      *  - `"Released"` used for PersistentVolumes where the bound PersistentVolumeClaim was deleted released volumes must be recycled before becoming available again this phase is used by the persistent volume claim binder to signal to another process to reclaim the resource
      * 
-     */
+    */
     public Optional<String> getPhase() {
         return Optional.ofNullable(this.phase);
     }
     /**
      * Reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.
      * 
-     */
+    */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }

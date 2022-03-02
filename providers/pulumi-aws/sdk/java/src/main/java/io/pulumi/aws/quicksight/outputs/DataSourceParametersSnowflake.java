@@ -38,21 +38,21 @@ public final class DataSourceParametersSnowflake {
     /**
      * The database to which to connect.
      * 
-     */
+    */
     public String getDatabase() {
         return this.database;
     }
     /**
      * The host to which to connect.
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * The warehouse to which to connect.
      * 
-     */
+    */
     public String getWarehouse() {
         return this.warehouse;
     }

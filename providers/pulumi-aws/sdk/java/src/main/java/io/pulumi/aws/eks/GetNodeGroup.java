@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNodeGroup {
-/**
- * Retrieve information about an EKS Node Group.
+    private GetNodeGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetNodeGroupArgs.Builder a);
+    }
+    private static GetNodeGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNodeGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieve information about an EKS Node Group.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getNodeGroup.
+     *
+     * A collection of arguments for invoking getNodeGroup.
  * 
- *
- * A collection of values returned by getNodeGroup.
+     *
+     * A collection of values returned by getNodeGroup.
  * 
- */
+     */
+    public static CompletableFuture<GetNodeGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieve information about an EKS Node Group.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getNodeGroup.
+     * 
+     *
+         * A collection of values returned by getNodeGroup.
+     * 
+     */
     public static CompletableFuture<GetNodeGroupResult> invokeAsync(GetNodeGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getNodeGroup:getNodeGroup", TypeShape.of(GetNodeGroupResult.class), args == null ? GetNodeGroupArgs.Empty : args, Utilities.withVersion(options));
     }

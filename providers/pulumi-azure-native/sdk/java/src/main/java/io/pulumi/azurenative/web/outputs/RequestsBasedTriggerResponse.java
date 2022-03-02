@@ -34,14 +34,14 @@ public final class RequestsBasedTriggerResponse {
     /**
      * Request Count.
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
     /**
      * Time interval.
      * 
-     */
+    */
     public Optional<String> getTimeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }

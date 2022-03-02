@@ -25,7 +25,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesResult {
     /**
      * List of gateway routes.
      * 
-     */
+    */
     public List<GatewayRouteResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

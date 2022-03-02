@@ -32,14 +32,14 @@ public final class DataSourceParametersTwitter {
     /**
      * The maximum number of rows to query.
      * 
-     */
+    */
     public Integer getMaxRows() {
         return this.maxRows;
     }
     /**
      * The Twitter query to retrieve the data.
      * 
-     */
+    */
     public String getQuery() {
         return this.query;
     }

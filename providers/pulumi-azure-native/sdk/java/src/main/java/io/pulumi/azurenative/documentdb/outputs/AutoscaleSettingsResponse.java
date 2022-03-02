@@ -25,7 +25,7 @@ public final class AutoscaleSettingsResponse {
     /**
      * Represents maximum throughput, the resource can scale up to.
      * 
-     */
+    */
     public Optional<Integer> getMaxThroughput() {
         return Optional.ofNullable(this.maxThroughput);
     }

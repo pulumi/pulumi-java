@@ -153,126 +153,126 @@ public final class GetExtensionResult {
     /**
      * Flag to note if this instance participates in auto upgrade of minor version, or not.
      * 
-     */
+    */
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
     /**
      * Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
      * 
-     */
+    */
     public Map<String,String> getConfigurationProtectedSettings() {
         return this.configurationProtectedSettings == null ? Map.of() : this.configurationProtectedSettings;
     }
     /**
      * Configuration settings, as name-value pairs for configuring this instance of the extension.
      * 
-     */
+    */
     public Map<String,String> getConfigurationSettings() {
         return this.configurationSettings == null ? Map.of() : this.configurationSettings;
     }
     /**
      * DateLiteral (per ISO8601) noting the time the resource was created by the client (user).
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * Error information from the Agent - e.g. errors during installation.
      * 
-     */
+    */
     public ErrorDefinitionResponse getErrorInfo() {
         return this.errorInfo;
     }
     /**
      * Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
      * 
-     */
+    */
     public Optional<String> getExtensionType() {
         return Optional.ofNullable(this.extensionType);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the configuration.
      * 
-     */
+    */
     public Optional<ConfigurationIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Status of installation of this instance of the extension.
      * 
-     */
+    */
     public String getInstallState() {
         return this.installState;
     }
     /**
      * DateLiteral (per ISO8601) noting the time the resource was modified by the client (user).
      * 
-     */
+    */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * DateLiteral (per ISO8601) noting the time of last status from the agent.
      * 
-     */
+    */
     public String getLastStatusTime() {
         return this.lastStatusTime;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
      * 
-     */
+    */
     public Optional<String> getReleaseTrain() {
         return Optional.ofNullable(this.releaseTrain);
     }
     /**
      * Scope at which the extension instance is installed.
      * 
-     */
+    */
     public Optional<ScopeResponse> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Status from this instance of the extension.
      * 
-     */
+    */
     public List<ExtensionStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
     /**
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
-     */
+    */
     public Optional<SystemDataResponse> getSystemData() {
         return Optional.ofNullable(this.systemData);
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

@@ -23,7 +23,7 @@ public final class GuestPoliciesRecipeUpdateStepDpkgInstallation {
     /**
      * The id of the relevant artifact in the recipe.
      * 
-     */
+    */
     public String getArtifactId() {
         return this.artifactId;
     }

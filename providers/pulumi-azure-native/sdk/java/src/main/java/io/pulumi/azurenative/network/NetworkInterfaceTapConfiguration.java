@@ -103,6 +103,22 @@ public class NetworkInterfaceTapConfiguration extends io.pulumi.resources.Custom
         return this.virtualNetworkTap;
     }
 
+    public interface BuilderApplicator {
+        public void apply(NetworkInterfaceTapConfigurationArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.network.NetworkInterfaceTapConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.network.NetworkInterfaceTapConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public NetworkInterfaceTapConfiguration(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

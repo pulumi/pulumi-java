@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetView {
-/**
- * The view resource format.
+    private GetView() {}
+    public interface BuilderApplicator {
+        public void apply(GetViewArgs.Builder a);
+    }
+    private static GetViewArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetViewArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The view resource format.
  * API Version: 2017-04-26.
  * 
- *
- * The view resource format.
+     *
+     * The view resource format.
  * 
- */
+     */
+    public static CompletableFuture<GetViewResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The view resource format.
+     * API Version: 2017-04-26.
+     * 
+     *
+         * The view resource format.
+     * 
+     */
     public static CompletableFuture<GetViewResult> invokeAsync(GetViewArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getView", TypeShape.of(GetViewResult.class), args == null ? GetViewArgs.Empty : args, Utilities.withVersion(options));
     }

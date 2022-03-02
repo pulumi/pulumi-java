@@ -100,77 +100,77 @@ public final class GetPrivateStoreCollectionResult {
     /**
      * Indicating whether all subscriptions are selected (=true) or not (=false).
      * 
-     */
+    */
     public Optional<Boolean> getAllSubscriptions() {
         return Optional.ofNullable(this.allSubscriptions);
     }
     /**
      * Gets or sets the association with Commercial's Billing Account.
      * 
-     */
+    */
     public Optional<String> getClaim() {
         return Optional.ofNullable(this.claim);
     }
     /**
      * Gets collection Id.
      * 
-     */
+    */
     public String getCollectionId() {
         return this.collectionId;
     }
     /**
      * Gets or sets collection name.
      * 
-     */
+    */
     public Optional<String> getCollectionName() {
         return Optional.ofNullable(this.collectionName);
     }
     /**
      * Indicating whether the collection is enabled or disabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Gets the number of offers associated with the collection.
      * 
-     */
+    */
     public Double getNumberOfOffers() {
         return this.numberOfOffers;
     }
     /**
      * Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
      * 
-     */
+    */
     public List<String> getSubscriptionsList() {
         return this.subscriptionsList == null ? List.of() : this.subscriptionsList;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

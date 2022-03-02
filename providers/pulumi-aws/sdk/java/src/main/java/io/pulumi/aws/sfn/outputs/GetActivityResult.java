@@ -40,14 +40,14 @@ public final class GetActivityResult {
     /**
      * The date the activity was created.
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

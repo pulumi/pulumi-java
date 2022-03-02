@@ -38,14 +38,14 @@ public final class GetDirectoryVpcSetting {
     /**
      * The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }
     /**
      * The ID of the VPC that the connector is in.
      * 
-     */
+    */
     public String getVpcId() {
         return this.vpcId;
     }

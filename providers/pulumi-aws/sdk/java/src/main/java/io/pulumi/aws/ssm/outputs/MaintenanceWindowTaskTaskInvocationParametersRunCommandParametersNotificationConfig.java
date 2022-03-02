@@ -41,21 +41,21 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     /**
      * An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.
      * 
-     */
+    */
     public Optional<String> getNotificationArn() {
         return Optional.ofNullable(this.notificationArn);
     }
     /**
      * The different events for which you can receive notifications. Valid values: `All`, `InProgress`, `Success`, `TimedOut`, `Cancelled`, and `Failed`
      * 
-     */
+    */
     public List<String> getNotificationEvents() {
         return this.notificationEvents == null ? List.of() : this.notificationEvents;
     }
     /**
      * When specified with `Command`, receive notification when the status of a command changes. When specified with `Invocation`, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: `Command` and `Invocation`
      * 
-     */
+    */
     public Optional<String> getNotificationType() {
         return Optional.ofNullable(this.notificationType);
     }

@@ -25,7 +25,7 @@ public final class ManagedInstancePrivateEndpointPropertyResponse {
     /**
      * Resource id of the private endpoint.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

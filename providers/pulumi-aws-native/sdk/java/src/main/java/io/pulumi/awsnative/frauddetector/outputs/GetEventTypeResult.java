@@ -68,21 +68,21 @@ public final class GetEventTypeResult {
     /**
      * The ARN of the event type.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The time when the event type was created.
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * The description of the event type.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -98,14 +98,14 @@ public final class GetEventTypeResult {
     /**
      * The time when the event type was last updated.
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * Tags associated with this event type.
      * 
-     */
+    */
     public List<EventTypeTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

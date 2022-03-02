@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRepositoryEndpoint {
-/**
- * The CodeArtifact Repository Endpoint data source returns the endpoint of a repository for a specific package format.
+    private GetRepositoryEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetRepositoryEndpointArgs.Builder a);
+    }
+    private static GetRepositoryEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRepositoryEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The CodeArtifact Repository Endpoint data source returns the endpoint of a repository for a specific package format.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getRepositoryEndpoint.
+     *
+     * A collection of arguments for invoking getRepositoryEndpoint.
  * 
- *
- * A collection of values returned by getRepositoryEndpoint.
+     *
+     * A collection of values returned by getRepositoryEndpoint.
  * 
- */
+     */
+    public static CompletableFuture<GetRepositoryEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The CodeArtifact Repository Endpoint data source returns the endpoint of a repository for a specific package format.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getRepositoryEndpoint.
+     * 
+     *
+         * A collection of values returned by getRepositoryEndpoint.
+     * 
+     */
     public static CompletableFuture<GetRepositoryEndpointResult> invokeAsync(GetRepositoryEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:codeartifact/getRepositoryEndpoint:getRepositoryEndpoint", TypeShape.of(GetRepositoryEndpointResult.class), args == null ? GetRepositoryEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

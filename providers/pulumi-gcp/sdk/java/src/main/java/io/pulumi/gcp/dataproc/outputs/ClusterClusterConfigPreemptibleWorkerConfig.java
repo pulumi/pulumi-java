@@ -40,7 +40,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
     /**
      * Disk Config
      * 
-     */
+    */
     public Optional<ClusterClusterConfigPreemptibleWorkerConfigDiskConfig> getDiskConfig() {
         return Optional.ofNullable(this.diskConfig);
     }
@@ -51,7 +51,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
      * Specifies the number of preemptible nodes to create.
      * Defaults to 0.
      * 
-     */
+    */
     public Optional<Integer> getNumInstances() {
         return Optional.ofNullable(this.numInstances);
     }

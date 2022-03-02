@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupPolicy {
-/**
- * BaseBackupPolicy resource
+    private GetBackupPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetBackupPolicyArgs.Builder a);
+    }
+    private static GetBackupPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBackupPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * BaseBackupPolicy resource
  * API Version: 2021-01-01.
  * 
- *
- * BaseBackupPolicy resource
+     *
+     * BaseBackupPolicy resource
  * 
- */
+     */
+    public static CompletableFuture<GetBackupPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * BaseBackupPolicy resource
+     * API Version: 2021-01-01.
+     * 
+     *
+         * BaseBackupPolicy resource
+     * 
+     */
     public static CompletableFuture<GetBackupPolicyResult> invokeAsync(GetBackupPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dataprotection:getBackupPolicy", TypeShape.of(GetBackupPolicyResult.class), args == null ? GetBackupPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

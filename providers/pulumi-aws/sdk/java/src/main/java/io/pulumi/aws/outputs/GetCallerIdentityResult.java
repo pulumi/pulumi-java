@@ -45,28 +45,28 @@ public final class GetCallerIdentityResult {
     /**
      * AWS Account ID number of the account that owns or contains the calling entity.
      * 
-     */
+    */
     public String getAccountId() {
         return this.accountId;
     }
     /**
      * ARN associated with the calling entity.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Unique identifier of the calling entity.
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }

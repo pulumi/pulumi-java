@@ -40,21 +40,21 @@ public final class GuestPoliciesAssignmentOsType {
     /**
      * Targets VM instances with OS Inventory enabled and having the following OS architecture.
      * 
-     */
+    */
     public Optional<String> getOsArchitecture() {
         return Optional.ofNullable(this.osArchitecture);
     }
     /**
      * Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
      * 
-     */
+    */
     public Optional<String> getOsShortName() {
         return Optional.ofNullable(this.osShortName);
     }
     /**
      * Targets VM instances with OS Inventory enabled and having the following following OS version.
      * 
-     */
+    */
     public Optional<String> getOsVersion() {
         return Optional.ofNullable(this.osVersion);
     }

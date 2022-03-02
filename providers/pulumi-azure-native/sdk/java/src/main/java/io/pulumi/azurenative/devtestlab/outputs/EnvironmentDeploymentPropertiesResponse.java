@@ -35,14 +35,14 @@ public final class EnvironmentDeploymentPropertiesResponse {
     /**
      * The Azure Resource Manager template's identifier.
      * 
-     */
+    */
     public Optional<String> getArmTemplateId() {
         return Optional.ofNullable(this.armTemplateId);
     }
     /**
      * The parameters of the Azure Resource Manager template.
      * 
-     */
+    */
     public List<ArmTemplateParameterPropertiesResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSystemTopicEventSubscription {
-/**
- * Event Subscription
+    private GetSystemTopicEventSubscription() {}
+    public interface BuilderApplicator {
+        public void apply(GetSystemTopicEventSubscriptionArgs.Builder a);
+    }
+    private static GetSystemTopicEventSubscriptionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSystemTopicEventSubscriptionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Event Subscription
  * API Version: 2020-04-01-preview.
  * 
- *
- * Event Subscription
+     *
+     * Event Subscription
  * 
- */
+     */
+    public static CompletableFuture<GetSystemTopicEventSubscriptionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Event Subscription
+     * API Version: 2020-04-01-preview.
+     * 
+     *
+         * Event Subscription
+     * 
+     */
     public static CompletableFuture<GetSystemTopicEventSubscriptionResult> invokeAsync(GetSystemTopicEventSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getSystemTopicEventSubscription", TypeShape.of(GetSystemTopicEventSubscriptionResult.class), args == null ? GetSystemTopicEventSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

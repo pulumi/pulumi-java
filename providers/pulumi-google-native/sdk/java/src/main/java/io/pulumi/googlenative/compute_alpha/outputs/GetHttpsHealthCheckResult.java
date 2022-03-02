@@ -109,91 +109,91 @@ public final class GetHttpsHealthCheckResult {
     /**
      * How often (in seconds) to send a health check. The default value is 5 seconds.
      * 
-     */
+    */
     public Integer getCheckIntervalSec() {
         return this.checkIntervalSec;
     }
     /**
      * Creation timestamp in RFC3339 text format.
      * 
-     */
+    */
     public String getCreationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
      * 
-     */
+    */
     public Integer getHealthyThreshold() {
         return this.healthyThreshold;
     }
     /**
      * The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The TCP port number for the HTTPS health check request. The default value is 443.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * The request path of the HTTPS health check request. The default value is "/".
      * 
-     */
+    */
     public String getRequestPath() {
         return this.requestPath;
     }
     /**
      * Server-defined URL for the resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * Server-defined URL for this resource with the resource id.
      * 
-     */
+    */
     public String getSelfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
      * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have a greater value than checkIntervalSec.
      * 
-     */
+    */
     public Integer getTimeoutSec() {
         return this.timeoutSec;
     }
     /**
      * A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
      * 
-     */
+    */
     public Integer getUnhealthyThreshold() {
         return this.unhealthyThreshold;
     }

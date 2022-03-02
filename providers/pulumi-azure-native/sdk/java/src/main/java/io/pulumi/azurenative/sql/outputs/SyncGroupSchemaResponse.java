@@ -35,14 +35,14 @@ public final class SyncGroupSchemaResponse {
     /**
      * Name of master sync member where the schema is from.
      * 
-     */
+    */
     public Optional<String> getMasterSyncMemberName() {
         return Optional.ofNullable(this.masterSyncMemberName);
     }
     /**
      * List of tables in sync group schema.
      * 
-     */
+    */
     public List<SyncGroupSchemaTableResponse> getTables() {
         return this.tables == null ? List.of() : this.tables;
     }

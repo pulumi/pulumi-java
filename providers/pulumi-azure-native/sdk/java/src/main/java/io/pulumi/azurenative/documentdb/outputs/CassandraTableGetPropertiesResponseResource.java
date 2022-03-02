@@ -71,49 +71,49 @@ public final class CassandraTableGetPropertiesResponseResource {
     /**
      * Analytical TTL.
      * 
-     */
+    */
     public Optional<Integer> getAnalyticalStorageTtl() {
         return Optional.ofNullable(this.analyticalStorageTtl);
     }
     /**
      * Time to live of the Cosmos DB Cassandra table
      * 
-     */
+    */
     public Optional<Integer> getDefaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Name of the Cosmos DB Cassandra table
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A system generated property. A unique identifier.
      * 
-     */
+    */
     public String getRid() {
         return this.rid;
     }
     /**
      * Schema of the Cosmos DB Cassandra table
      * 
-     */
+    */
     public Optional<CassandraSchemaResponse> getSchema() {
         return Optional.ofNullable(this.schema);
     }
     /**
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
-     */
+    */
     public Double getTs() {
         return this.ts;
     }

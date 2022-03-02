@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBrand {
-/**
- * Retrieves the OAuth brand of the project.
+    private GetBrand() {}
+    public interface BuilderApplicator {
+        public void apply(GetBrandArgs.Builder a);
+    }
+    private static GetBrandArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBrandArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves the OAuth brand of the project.
  * 
- */
+     */
+    public static CompletableFuture<GetBrandResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves the OAuth brand of the project.
+     * 
+     */
     public static CompletableFuture<GetBrandResult> invokeAsync(GetBrandArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iap/v1:getBrand", TypeShape.of(GetBrandResult.class), args == null ? GetBrandArgs.Empty : args, Utilities.withVersion(options));
     }

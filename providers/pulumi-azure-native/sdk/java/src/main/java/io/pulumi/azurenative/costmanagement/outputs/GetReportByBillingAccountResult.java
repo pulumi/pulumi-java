@@ -79,56 +79,56 @@ public final class GetReportByBillingAccountResult {
     /**
      * Has definition for the report.
      * 
-     */
+    */
     public ReportDefinitionResponse getDefinition() {
         return this.definition;
     }
     /**
      * Has delivery information for the report.
      * 
-     */
+    */
     public ReportDeliveryInfoResponse getDeliveryInfo() {
         return this.deliveryInfo;
     }
     /**
      * The format of the report being delivered.
      * 
-     */
+    */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Has schedule information for the report.
      * 
-     */
+    */
     public Optional<ReportScheduleResponse> getSchedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

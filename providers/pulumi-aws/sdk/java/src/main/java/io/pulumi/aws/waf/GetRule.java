@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRule {
-/**
- * `aws.waf.Rule` Retrieves a WAF Rule Resource Id.
+    private GetRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetRuleArgs.Builder a);
+    }
+    private static GetRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * `aws.waf.Rule` Retrieves a WAF Rule Resource Id.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getRule.
+     *
+     * A collection of arguments for invoking getRule.
  * 
- *
- * A collection of values returned by getRule.
+     *
+     * A collection of values returned by getRule.
  * 
- */
+     */
+    public static CompletableFuture<GetRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * `aws.waf.Rule` Retrieves a WAF Rule Resource Id.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getRule.
+     * 
+     *
+         * A collection of values returned by getRule.
+     * 
+     */
     public static CompletableFuture<GetRuleResult> invokeAsync(GetRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:waf/getRule:getRule", TypeShape.of(GetRuleResult.class), args == null ? GetRuleArgs.Empty : args, Utilities.withVersion(options));
     }

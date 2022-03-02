@@ -33,14 +33,14 @@ public final class BotAssociationLexBot {
     /**
      * The Region that the Amazon Lex (V1) bot was created in. Defaults to current region.
      * 
-     */
+    */
     public Optional<String> getLexRegion() {
         return Optional.ofNullable(this.lexRegion);
     }
     /**
      * The name of the Amazon Lex (V1) bot.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

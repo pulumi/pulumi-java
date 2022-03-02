@@ -65,7 +65,7 @@ public final class GetAccountResult {
     /**
      * The display name for the service account.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
@@ -74,21 +74,21 @@ public final class GetAccountResult {
      * should be referenced from any `gcp.organizations.getIAMPolicy` data sources
      * that would grant the service account privileges.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The fully-qualified name of the service account.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -98,7 +98,7 @@ public final class GetAccountResult {
     /**
      * The unique id of the service account.
      * 
-     */
+    */
     public String getUniqueId() {
         return this.uniqueId;
     }

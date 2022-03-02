@@ -42,21 +42,21 @@ public final class GetUserTablesSqlTaskOutputResponse {
     /**
      * Mapping from database name to list of tables
      * 
-     */
+    */
     public Map<String,List<DatabaseTableResponse>> getDatabasesToTables() {
         return this.databasesToTables;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Validation errors
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }

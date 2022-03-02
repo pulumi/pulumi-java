@@ -33,14 +33,14 @@ public final class ListWebAppFunctionSecretsResult {
     /**
      * Secret key.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Trigger URL.
      * 
-     */
+    */
     public Optional<String> getTriggerUrl() {
         return Optional.ofNullable(this.triggerUrl);
     }

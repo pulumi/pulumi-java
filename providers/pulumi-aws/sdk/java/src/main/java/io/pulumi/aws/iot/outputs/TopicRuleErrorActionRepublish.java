@@ -41,21 +41,21 @@ public final class TopicRuleErrorActionRepublish {
     /**
      * The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
      * 
-     */
+    */
     public Optional<Integer> getQos() {
         return Optional.ofNullable(this.qos);
     }
     /**
      * The ARN of the IAM role that grants access.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The name of the MQTT topic the message should be republished to.
      * 
-     */
+    */
     public String getTopic() {
         return this.topic;
     }

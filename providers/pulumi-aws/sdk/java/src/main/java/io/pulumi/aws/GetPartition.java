@@ -12,15 +12,16 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPartition {
-/**
- * Use this data source to lookup current AWS partition in which this provider is working
- * 
- * ## Example Usage
- * 
- *
- * A collection of values returned by getPartition.
- * 
- */
+    private GetPartition() {}
+    /**
+         * Use this data source to lookup current AWS partition in which this provider is working
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of values returned by getPartition.
+     * 
+     */
     public static CompletableFuture<GetPartitionResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:index/getPartition:getPartition", TypeShape.of(GetPartitionResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

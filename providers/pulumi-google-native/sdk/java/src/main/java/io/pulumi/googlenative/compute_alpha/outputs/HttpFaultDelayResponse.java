@@ -32,14 +32,14 @@ public final class HttpFaultDelayResponse {
     /**
      * Specifies the value of the fixed delay interval.
      * 
-     */
+    */
     public DurationResponse getFixedDelay() {
         return this.fixedDelay;
     }
     /**
      * The percentage of traffic for connections, operations, or requests for which a delay is introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
      * 
-     */
+    */
     public Double getPercentage() {
         return this.percentage;
     }

@@ -23,7 +23,7 @@ public final class BucketServerSideEncryptionConfiguration {
     /**
      * A single object for server-side encryption by default configuration. (documented below)
      * 
-     */
+    */
     public BucketServerSideEncryptionConfigurationRule getRule() {
         return this.rule;
     }

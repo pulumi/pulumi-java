@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFarmBeatsModel {
-/**
- * FarmBeats ARM Resource.
+    private GetFarmBeatsModel() {}
+    public interface BuilderApplicator {
+        public void apply(GetFarmBeatsModelArgs.Builder a);
+    }
+    private static GetFarmBeatsModelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFarmBeatsModelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * FarmBeats ARM Resource.
  * API Version: 2020-05-12-preview.
  * 
- *
- * FarmBeats ARM Resource.
+     *
+     * FarmBeats ARM Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetFarmBeatsModelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * FarmBeats ARM Resource.
+     * API Version: 2020-05-12-preview.
+     * 
+     *
+         * FarmBeats ARM Resource.
+     * 
+     */
     public static CompletableFuture<GetFarmBeatsModelResult> invokeAsync(GetFarmBeatsModelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:agfoodplatform:getFarmBeatsModel", TypeShape.of(GetFarmBeatsModelResult.class), args == null ? GetFarmBeatsModelArgs.Empty : args, Utilities.withVersion(options));
     }

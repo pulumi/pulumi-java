@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDatasetIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetDatasetIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetDatasetIamPolicyArgs.Builder a);
+    }
+    private static GetDatasetIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDatasetIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetDatasetIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetDatasetIamPolicyResult> invokeAsync(GetDatasetIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1:getDatasetIamPolicy", TypeShape.of(GetDatasetIamPolicyResult.class), args == null ? GetDatasetIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

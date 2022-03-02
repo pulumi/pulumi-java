@@ -194,7 +194,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * This field denotes whether to enable logging for a particular firewall rule.
      * If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
      * 
-     * @deprecated
+     * @Deprecated
      * Deprecated in favor of log_config
      * 
      */
@@ -465,6 +465,22 @@ public class Firewall extends io.pulumi.resources.CustomResource {
         return this.targetTags;
     }
 
+    public interface BuilderApplicator {
+        public void apply(FirewallArgs.Builder a);
+    }
+    private static io.pulumi.gcp.compute.FirewallArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.compute.FirewallArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Firewall(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

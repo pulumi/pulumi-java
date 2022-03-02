@@ -418,7 +418,7 @@ public final class RecipeParameters {
     /**
      * Input
      * 
-     */
+    */
     public Optional<RecipeParametersInputProperties> getInput() {
         return Optional.ofNullable(this.input);
     }

@@ -62,42 +62,42 @@ public final class GetHierarchySettingResult {
     /**
      * Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup
      * 
-     */
+    */
     public Optional<String> getDefaultManagementGroup() {
         return Optional.ofNullable(this.defaultManagementGroup);
     }
     /**
      * The fully qualified ID for the settings object.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000/settings/default.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the object. In this case, default.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access.
      * 
-     */
+    */
     public Optional<Boolean> getRequireAuthorizationForGroupCreation() {
         return Optional.ofNullable(this.requireAuthorizationForGroupCreation);
     }
     /**
      * The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The type of the resource.  For example, Microsoft.Management/managementGroups/settings.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

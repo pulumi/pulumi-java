@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOriginEndpoint {
-/**
- * Resource schema for AWS::MediaPackage::OriginEndpoint
+    private GetOriginEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetOriginEndpointArgs.Builder a);
+    }
+    private static GetOriginEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOriginEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::MediaPackage::OriginEndpoint
  * 
- */
+     */
+    public static CompletableFuture<GetOriginEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::MediaPackage::OriginEndpoint
+     * 
+     */
     public static CompletableFuture<GetOriginEndpointResult> invokeAsync(GetOriginEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:mediapackage:getOriginEndpoint", TypeShape.of(GetOriginEndpointResult.class), args == null ? GetOriginEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

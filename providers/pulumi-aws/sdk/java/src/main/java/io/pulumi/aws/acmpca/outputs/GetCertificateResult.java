@@ -47,7 +47,7 @@ public final class GetCertificateResult {
     /**
      * The PEM-encoded certificate value.
      * 
-     */
+    */
     public String getCertificate() {
         return this.certificate;
     }
@@ -57,14 +57,14 @@ public final class GetCertificateResult {
     /**
      * The PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA.
      * 
-     */
+    */
     public String getCertificateChain() {
         return this.certificateChain;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

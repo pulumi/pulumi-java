@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEntitlement {
-/**
- * Resource Type definition for AWS::AppStream::Entitlement
+    private GetEntitlement() {}
+    public interface BuilderApplicator {
+        public void apply(GetEntitlementArgs.Builder a);
+    }
+    private static GetEntitlementArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEntitlementArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::AppStream::Entitlement
  * 
- */
+     */
+    public static CompletableFuture<GetEntitlementResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::AppStream::Entitlement
+     * 
+     */
     public static CompletableFuture<GetEntitlementResult> invokeAsync(GetEntitlementArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:appstream:getEntitlement", TypeShape.of(GetEntitlementResult.class), args == null ? GetEntitlementArgs.Empty : args, Utilities.withVersion(options));
     }

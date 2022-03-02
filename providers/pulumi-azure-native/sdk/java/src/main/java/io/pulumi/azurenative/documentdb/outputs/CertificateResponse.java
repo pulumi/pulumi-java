@@ -25,7 +25,7 @@ public final class CertificateResponse {
     /**
      * PEM formatted public key.
      * 
-     */
+    */
     public Optional<String> getPem() {
         return Optional.ofNullable(this.pem);
     }

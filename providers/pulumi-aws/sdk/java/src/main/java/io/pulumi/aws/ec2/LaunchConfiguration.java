@@ -427,6 +427,22 @@ public class LaunchConfiguration extends io.pulumi.resources.CustomResource {
         return this.vpcClassicLinkSecurityGroups;
     }
 
+    public interface BuilderApplicator {
+        public void apply(LaunchConfigurationArgs.Builder a);
+    }
+    private static io.pulumi.aws.ec2.LaunchConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.ec2.LaunchConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public LaunchConfiguration(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

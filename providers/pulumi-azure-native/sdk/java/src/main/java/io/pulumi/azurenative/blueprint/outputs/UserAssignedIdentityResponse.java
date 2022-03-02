@@ -33,14 +33,14 @@ public final class UserAssignedIdentityResponse {
     /**
      * Client App Id associated with this identity.
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * Azure Active Directory principal ID associated with this Identity.
      * 
-     */
+    */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }

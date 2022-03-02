@@ -38,21 +38,21 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinition {
     /**
      * An identifier for an application client. You must create the app client ID using Amazon Cognito.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * An identifier for a user group.
      * 
-     */
+    */
     public String getUserGroup() {
         return this.userGroup;
     }
     /**
      * An identifier for a user pool. The user pool must be in the same region as the service that you are calling.
      * 
-     */
+    */
     public String getUserPool() {
         return this.userPool;
     }

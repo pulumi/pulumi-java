@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListNetworkManagerDeploymentStatus {
-/**
- * A list of Network Manager Deployment Status
+    private ListNetworkManagerDeploymentStatus() {}
+    public interface BuilderApplicator {
+        public void apply(ListNetworkManagerDeploymentStatusArgs.Builder a);
+    }
+    private static ListNetworkManagerDeploymentStatusArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListNetworkManagerDeploymentStatusArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A list of Network Manager Deployment Status
  * API Version: 2021-02-01-preview.
  * 
- *
- * A list of Network Manager Deployment Status
+     *
+     * A list of Network Manager Deployment Status
  * 
- */
+     */
+    public static CompletableFuture<ListNetworkManagerDeploymentStatusResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A list of Network Manager Deployment Status
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * A list of Network Manager Deployment Status
+     * 
+     */
     public static CompletableFuture<ListNetworkManagerDeploymentStatusResult> invokeAsync(ListNetworkManagerDeploymentStatusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listNetworkManagerDeploymentStatus", TypeShape.of(ListNetworkManagerDeploymentStatusResult.class), args == null ? ListNetworkManagerDeploymentStatusArgs.Empty : args, Utilities.withVersion(options));
     }

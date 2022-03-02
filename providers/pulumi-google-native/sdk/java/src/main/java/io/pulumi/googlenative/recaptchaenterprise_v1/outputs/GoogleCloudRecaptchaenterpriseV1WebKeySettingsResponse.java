@@ -54,35 +54,35 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse {
     /**
      * If set to true, it means allowed_domains will not be enforced.
      * 
-     */
+    */
     public Boolean getAllowAllDomains() {
         return this.allowAllDomains;
     }
     /**
      * If set to true, the key can be used on AMP (Accelerated Mobile Pages) websites. This is supported only for the SCORE integration type.
      * 
-     */
+    */
     public Boolean getAllowAmpTraffic() {
         return this.allowAmpTraffic;
     }
     /**
      * Domains or subdomains of websites allowed to use the key. All subdomains of an allowed domain are automatically allowed. A valid domain requires a host and must not include any path, port, query or fragment. Examples: 'example.com' or 'subdomain.example.com'
      * 
-     */
+    */
     public List<String> getAllowedDomains() {
         return this.allowedDomains;
     }
     /**
      * Settings for the frequency and difficulty at which this key triggers captcha challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE.
      * 
-     */
+    */
     public String getChallengeSecurityPreference() {
         return this.challengeSecurityPreference;
     }
     /**
      * Describes how this key is integrated with the website.
      * 
-     */
+    */
     public String getIntegrationType() {
         return this.integrationType;
     }

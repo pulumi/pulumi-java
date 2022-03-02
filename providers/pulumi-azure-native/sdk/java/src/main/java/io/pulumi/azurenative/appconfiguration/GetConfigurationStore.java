@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfigurationStore {
-/**
- * The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.
+    private GetConfigurationStore() {}
+    public interface BuilderApplicator {
+        public void apply(GetConfigurationStoreArgs.Builder a);
+    }
+    private static GetConfigurationStoreArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConfigurationStoreArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.
  * API Version: 2020-06-01.
  * 
- *
- * The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.
+     *
+     * The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.
  * 
- */
+     */
+    public static CompletableFuture<GetConfigurationStoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.
+     * API Version: 2020-06-01.
+     * 
+     *
+         * The configuration store along with all resource properties. The Configuration Store will have all information to begin utilizing it.
+     * 
+     */
     public static CompletableFuture<GetConfigurationStoreResult> invokeAsync(GetConfigurationStoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:getConfigurationStore", TypeShape.of(GetConfigurationStoreResult.class), args == null ? GetConfigurationStoreArgs.Empty : args, Utilities.withVersion(options));
     }

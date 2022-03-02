@@ -35,14 +35,14 @@ public final class PrivilegeResponse {
     /**
      * An array of actions that are allowed.
      * 
-     */
+    */
     public List<String> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * An Azure Cosmos DB Mongo DB Resource.
      * 
-     */
+    */
     public Optional<PrivilegeResponseResource> getResource() {
         return Optional.ofNullable(this.resource);
     }

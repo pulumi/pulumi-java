@@ -42,14 +42,14 @@ public final class GetAnalyzerResult {
     /**
      * Amazon Resource Name (ARN) of the analyzer
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<AnalyzerTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

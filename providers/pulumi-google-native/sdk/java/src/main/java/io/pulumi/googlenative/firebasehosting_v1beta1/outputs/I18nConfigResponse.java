@@ -23,7 +23,7 @@ public final class I18nConfigResponse {
     /**
      * The user-supplied path where country and language specific content will be looked for within the public directory.
      * 
-     */
+    */
     public String getRoot() {
         return this.root;
     }

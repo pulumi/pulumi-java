@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataStore {
-/**
- * Data store.
+    private GetDataStore() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataStoreArgs.Builder a);
+    }
+    private static GetDataStoreArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataStoreArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Data store.
  * API Version: 2019-06-01.
  * 
- *
- * Data store.
+     *
+     * Data store.
  * 
- */
+     */
+    public static CompletableFuture<GetDataStoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Data store.
+     * API Version: 2019-06-01.
+     * 
+     *
+         * Data store.
+     * 
+     */
     public static CompletableFuture<GetDataStoreResult> invokeAsync(GetDataStoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybriddata:getDataStore", TypeShape.of(GetDataStoreResult.class), args == null ? GetDataStoreArgs.Empty : args, Utilities.withVersion(options));
     }

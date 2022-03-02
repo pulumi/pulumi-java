@@ -74,35 +74,35 @@ public final class GetguestDiagnosticsSettingResult {
     /**
      * the array of data source object which are configured to collect and send data
      * 
-     */
+    */
     public List<DataSourceResponse> getDataSources() {
         return this.dataSources == null ? List.of() : this.dataSources;
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Operating system type for the configuration
      * 
-     */
+    */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
@@ -112,14 +112,14 @@ public final class GetguestDiagnosticsSettingResult {
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

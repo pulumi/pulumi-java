@@ -23,7 +23,7 @@ public final class ClusterConfigResponse {
     /**
      * Autoscaling configuration for this cluster.
      * 
-     */
+    */
     public ClusterAutoscalingConfigResponse getClusterAutoscalingConfig() {
         return this.clusterAutoscalingConfig;
     }

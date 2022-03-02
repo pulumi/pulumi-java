@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBudget {
-/**
- * A budget resource.
+    private GetBudget() {}
+    public interface BuilderApplicator {
+        public void apply(GetBudgetArgs.Builder a);
+    }
+    private static GetBudgetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBudgetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A budget resource.
  * API Version: 2019-10-01.
  * 
- *
- * A budget resource.
+     *
+     * A budget resource.
  * 
- */
+     */
+    public static CompletableFuture<GetBudgetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A budget resource.
+     * API Version: 2019-10-01.
+     * 
+     *
+         * A budget resource.
+     * 
+     */
     public static CompletableFuture<GetBudgetResult> invokeAsync(GetBudgetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:consumption:getBudget", TypeShape.of(GetBudgetResult.class), args == null ? GetBudgetArgs.Empty : args, Utilities.withVersion(options));
     }

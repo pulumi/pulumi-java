@@ -33,14 +33,14 @@ public final class CookieExpirationResponse {
     /**
      * The convention used when determining the session cookie's expiration.
      * 
-     */
+    */
     public Optional<String> getConvention() {
         return Optional.ofNullable(this.convention);
     }
     /**
      * The time after the request is made when the session cookie should expire.
      * 
-     */
+    */
     public Optional<String> getTimeToExpiration() {
         return Optional.ofNullable(this.timeToExpiration);
     }

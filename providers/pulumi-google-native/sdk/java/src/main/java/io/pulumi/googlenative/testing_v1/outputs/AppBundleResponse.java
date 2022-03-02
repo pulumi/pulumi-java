@@ -23,7 +23,7 @@ public final class AppBundleResponse {
     /**
      * .aab file representing the app bundle under test.
      * 
-     */
+    */
     public FileReferenceResponse getBundleLocation() {
         return this.bundleLocation;
     }

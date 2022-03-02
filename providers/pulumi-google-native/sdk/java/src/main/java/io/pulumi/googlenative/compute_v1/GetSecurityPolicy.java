@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecurityPolicy {
-/**
- * List all of the ordered rules present in a single specified policy.
+    private GetSecurityPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecurityPolicyArgs.Builder a);
+    }
+    private static GetSecurityPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecurityPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * List all of the ordered rules present in a single specified policy.
  * 
- */
+     */
+    public static CompletableFuture<GetSecurityPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * List all of the ordered rules present in a single specified policy.
+     * 
+     */
     public static CompletableFuture<GetSecurityPolicyResult> invokeAsync(GetSecurityPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getSecurityPolicy", TypeShape.of(GetSecurityPolicyResult.class), args == null ? GetSecurityPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

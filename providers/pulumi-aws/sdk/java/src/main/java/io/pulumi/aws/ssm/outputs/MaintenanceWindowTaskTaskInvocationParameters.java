@@ -50,28 +50,28 @@ public final class MaintenanceWindowTaskTaskInvocationParameters {
     /**
      * The parameters for an AUTOMATION task type. Documented below.
      * 
-     */
+    */
     public Optional<MaintenanceWindowTaskTaskInvocationParametersAutomationParameters> getAutomationParameters() {
         return Optional.ofNullable(this.automationParameters);
     }
     /**
      * The parameters for a LAMBDA task type. Documented below.
      * 
-     */
+    */
     public Optional<MaintenanceWindowTaskTaskInvocationParametersLambdaParameters> getLambdaParameters() {
         return Optional.ofNullable(this.lambdaParameters);
     }
     /**
      * The parameters for a RUN_COMMAND task type. Documented below.
      * 
-     */
+    */
     public Optional<MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters> getRunCommandParameters() {
         return Optional.ofNullable(this.runCommandParameters);
     }
     /**
      * The parameters for a STEP_FUNCTIONS task type. Documented below.
      * 
-     */
+    */
     public Optional<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters> getStepFunctionsParameters() {
         return Optional.ofNullable(this.stepFunctionsParameters);
     }

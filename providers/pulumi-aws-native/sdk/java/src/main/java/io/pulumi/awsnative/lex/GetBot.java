@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBot {
-/**
- * Amazon Lex conversational bot performing automated tasks such as ordering a pizza, booking a hotel, and so on.
+    private GetBot() {}
+    public interface BuilderApplicator {
+        public void apply(GetBotArgs.Builder a);
+    }
+    private static GetBotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Amazon Lex conversational bot performing automated tasks such as ordering a pizza, booking a hotel, and so on.
  * 
- */
+     */
+    public static CompletableFuture<GetBotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Amazon Lex conversational bot performing automated tasks such as ordering a pizza, booking a hotel, and so on.
+     * 
+     */
     public static CompletableFuture<GetBotResult> invokeAsync(GetBotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lex:getBot", TypeShape.of(GetBotResult.class), args == null ? GetBotArgs.Empty : args, Utilities.withVersion(options));
     }

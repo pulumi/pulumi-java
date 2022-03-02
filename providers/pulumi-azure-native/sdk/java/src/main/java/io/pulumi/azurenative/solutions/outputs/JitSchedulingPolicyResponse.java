@@ -37,14 +37,14 @@ public final class JitSchedulingPolicyResponse {
     /**
      * The start time of the request.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The type of JIT schedule.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -34,14 +34,14 @@ public final class CacheDirectorySettingsResponse {
     /**
      * Specifies settings for joining the HPC Cache to an Active Directory domain.
      * 
-     */
+    */
     public Optional<CacheActiveDirectorySettingsResponse> getActiveDirectory() {
         return Optional.ofNullable(this.activeDirectory);
     }
     /**
      * Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.
      * 
-     */
+    */
     public Optional<CacheUsernameDownloadSettingsResponse> getUsernameDownload() {
         return Optional.ofNullable(this.usernameDownload);
     }

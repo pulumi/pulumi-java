@@ -25,7 +25,7 @@ public final class FileSystemApplicationLogsConfigResponse {
     /**
      * Log level.
      * 
-     */
+    */
     public Optional<String> getLevel() {
         return Optional.ofNullable(this.level);
     }

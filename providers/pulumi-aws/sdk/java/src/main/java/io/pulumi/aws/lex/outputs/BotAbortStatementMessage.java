@@ -42,14 +42,14 @@ public final class BotAbortStatementMessage {
     /**
      * The text of the message.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
     /**
      * The content type of the message string.
      * 
-     */
+    */
     public String getContentType() {
         return this.contentType;
     }
@@ -57,7 +57,7 @@ public final class BotAbortStatementMessage {
      * Identifies the message group that the message belongs to. When a group
      * is assigned to a message, Amazon Lex returns one message from each group in the response.
      * 
-     */
+    */
     public Optional<Integer> getGroupNumber() {
         return Optional.ofNullable(this.groupNumber);
     }

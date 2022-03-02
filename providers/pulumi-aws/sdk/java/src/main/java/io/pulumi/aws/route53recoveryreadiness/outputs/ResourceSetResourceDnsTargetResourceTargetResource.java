@@ -34,14 +34,14 @@ public final class ResourceSetResourceDnsTargetResourceTargetResource {
     /**
      * NLB resource a DNS Target Resource points to. Required if `r53_resource` is not set.
      * 
-     */
+    */
     public Optional<ResourceSetResourceDnsTargetResourceTargetResourceNlbResource> getNlbResource() {
         return Optional.ofNullable(this.nlbResource);
     }
     /**
      * Route53 resource a DNS Target Resource record points to.
      * 
-     */
+    */
     public Optional<ResourceSetResourceDnsTargetResourceTargetResourceR53Resource> getR53Resource() {
         return Optional.ofNullable(this.r53Resource);
     }

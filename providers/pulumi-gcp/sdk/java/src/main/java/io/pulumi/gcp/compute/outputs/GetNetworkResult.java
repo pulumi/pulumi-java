@@ -61,21 +61,21 @@ public final class GetNetworkResult {
     /**
      * Description of this network.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The IP address of the gateway.
      * 
-     */
+    */
     public String getGatewayIpv4() {
         return this.gatewayIpv4;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -88,14 +88,14 @@ public final class GetNetworkResult {
     /**
      * The URI of the resource.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * the list of subnetworks which belong to the network
      * 
-     */
+    */
     public List<String> getSubnetworksSelfLinks() {
         return this.subnetworksSelfLinks;
     }

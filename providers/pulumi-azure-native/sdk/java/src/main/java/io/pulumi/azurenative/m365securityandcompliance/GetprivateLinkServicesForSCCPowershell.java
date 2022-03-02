@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetprivateLinkServicesForSCCPowershell {
-/**
- * The description of the service.
+    private GetprivateLinkServicesForSCCPowershell() {}
+    public interface BuilderApplicator {
+        public void apply(GetprivateLinkServicesForSCCPowershellArgs.Builder a);
+    }
+    private static GetprivateLinkServicesForSCCPowershellArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetprivateLinkServicesForSCCPowershellArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The description of the service.
  * API Version: 2021-03-25-preview.
  * 
- *
- * The description of the service.
+     *
+     * The description of the service.
  * 
- */
+     */
+    public static CompletableFuture<GetprivateLinkServicesForSCCPowershellResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The description of the service.
+     * API Version: 2021-03-25-preview.
+     * 
+     *
+         * The description of the service.
+     * 
+     */
     public static CompletableFuture<GetprivateLinkServicesForSCCPowershellResult> invokeAsync(GetprivateLinkServicesForSCCPowershellArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:m365securityandcompliance:getprivateLinkServicesForSCCPowershell", TypeShape.of(GetprivateLinkServicesForSCCPowershellResult.class), args == null ? GetprivateLinkServicesForSCCPowershellArgs.Empty : args, Utilities.withVersion(options));
     }

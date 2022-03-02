@@ -42,14 +42,14 @@ public final class GetProductResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set to the product returned from the API.
      * 
-     */
+    */
     public String getResult() {
         return this.result;
     }

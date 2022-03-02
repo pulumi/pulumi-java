@@ -31,14 +31,14 @@ public final class RuleGroupRuleStatementAndStatementStatementOrStatementStateme
     /**
      * - The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
      * 
-     */
+    */
     public String getFallbackBehavior() {
         return this.fallbackBehavior;
     }
     /**
      * - The name of the HTTP header to use for the IP address.
      * 
-     */
+    */
     public String getHeaderName() {
         return this.headerName;
     }

@@ -126,6 +126,22 @@ public class Build extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(BuildArgs.Builder a);
+    }
+    private static io.pulumi.aws.gamelift.BuildArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.gamelift.BuildArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Build(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

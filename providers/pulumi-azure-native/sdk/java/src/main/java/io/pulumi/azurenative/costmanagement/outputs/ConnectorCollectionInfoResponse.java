@@ -48,28 +48,28 @@ public final class ConnectorCollectionInfoResponse {
     /**
      * Error information of last collection
      * 
-     */
+    */
     public Optional<ConnectorCollectionErrorInfoResponse> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * Last time the data acquisition process initiated connecting to the external provider
      * 
-     */
+    */
     public String getLastChecked() {
         return this.lastChecked;
     }
     /**
      * Last time the external data was updated into Azure
      * 
-     */
+    */
     public String getLastUpdated() {
         return this.lastUpdated;
     }
     /**
      * Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
      * 
-     */
+    */
     public String getSourceLastUpdated() {
         return this.sourceLastUpdated;
     }

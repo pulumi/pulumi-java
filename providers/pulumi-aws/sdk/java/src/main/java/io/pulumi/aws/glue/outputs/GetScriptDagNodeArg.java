@@ -41,21 +41,21 @@ public final class GetScriptDagNodeArg {
     /**
      * The name of the argument or property.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Boolean if the value is used as a parameter. Defaults to `false`.
      * 
-     */
+    */
     public Optional<Boolean> getParam() {
         return Optional.ofNullable(this.param);
     }
     /**
      * The value of the argument or property.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

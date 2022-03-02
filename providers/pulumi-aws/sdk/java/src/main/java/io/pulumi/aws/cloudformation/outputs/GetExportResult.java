@@ -41,14 +41,14 @@ public final class GetExportResult {
     /**
      * The exporting_stack_id (AWS ARNs) equivalent `ExportingStackId` from [list-exports](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html)
      * 
-     */
+    */
     public String getExportingStackId() {
         return this.exportingStackId;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -58,7 +58,7 @@ public final class GetExportResult {
     /**
      * The value from Cloudformation export identified by the export name found from [list-exports](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html)
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfigurationProfilePreference {
-/**
- * Definition of the configuration profile preference.
+    private GetConfigurationProfilePreference() {}
+    public interface BuilderApplicator {
+        public void apply(GetConfigurationProfilePreferenceArgs.Builder a);
+    }
+    private static GetConfigurationProfilePreferenceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConfigurationProfilePreferenceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of the configuration profile preference.
  * API Version: 2020-06-30-preview.
  * 
- *
- * Definition of the configuration profile preference.
+     *
+     * Definition of the configuration profile preference.
  * 
- */
+     */
+    public static CompletableFuture<GetConfigurationProfilePreferenceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of the configuration profile preference.
+     * API Version: 2020-06-30-preview.
+     * 
+     *
+         * Definition of the configuration profile preference.
+     * 
+     */
     public static CompletableFuture<GetConfigurationProfilePreferenceResult> invokeAsync(GetConfigurationProfilePreferenceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automanage:getConfigurationProfilePreference", TypeShape.of(GetConfigurationProfilePreferenceResult.class), args == null ? GetConfigurationProfilePreferenceArgs.Empty : args, Utilities.withVersion(options));
     }

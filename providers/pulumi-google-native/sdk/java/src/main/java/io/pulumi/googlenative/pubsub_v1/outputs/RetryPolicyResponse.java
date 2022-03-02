@@ -31,14 +31,14 @@ public final class RetryPolicyResponse {
     /**
      * The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
      * 
-     */
+    */
     public String getMaximumBackoff() {
         return this.maximumBackoff;
     }
     /**
      * The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
      * 
-     */
+    */
     public String getMinimumBackoff() {
         return this.minimumBackoff;
     }

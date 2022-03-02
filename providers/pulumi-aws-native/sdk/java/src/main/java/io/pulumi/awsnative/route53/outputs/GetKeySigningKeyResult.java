@@ -25,7 +25,7 @@ public final class GetKeySigningKeyResult {
     /**
      * A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
      * 
-     */
+    */
     public Optional<KeySigningKeyStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }

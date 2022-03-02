@@ -48,28 +48,28 @@ public final class ClientCertificateResponse {
     /**
      * Certificate Common name.
      * 
-     */
+    */
     public Optional<String> getCommonName() {
         return Optional.ofNullable(this.commonName);
     }
     /**
      * Whether the certificate is admin or not.
      * 
-     */
+    */
     public Boolean getIsAdmin() {
         return this.isAdmin;
     }
     /**
      * Issuer thumbprint for the certificate. Only used together with CommonName.
      * 
-     */
+    */
     public Optional<String> getIssuerThumbprint() {
         return Optional.ofNullable(this.issuerThumbprint);
     }
     /**
      * Certificate Thumbprint.
      * 
-     */
+    */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }

@@ -50,28 +50,28 @@ public final class GlobalServiceConfigurationResponse {
     /**
      * The auto-scale configuration
      * 
-     */
+    */
     public Optional<AutoScaleConfigurationResponse> getAutoScale() {
         return Optional.ofNullable(this.autoScale);
     }
     /**
      * The configuration ETag for updates.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
      * 
-     */
+    */
     public Optional<ServiceAuthConfigurationResponse> getServiceAuth() {
         return Optional.ofNullable(this.serviceAuth);
     }
     /**
      * The SSL configuration properties
      * 
-     */
+    */
     public Optional<SslConfigurationResponse> getSsl() {
         return Optional.ofNullable(this.ssl);
     }

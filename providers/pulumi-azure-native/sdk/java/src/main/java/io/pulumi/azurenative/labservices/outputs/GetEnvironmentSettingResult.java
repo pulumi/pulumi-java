@@ -127,105 +127,105 @@ public final class GetEnvironmentSettingResult {
     /**
      * Describes the user's progress in configuring their environment setting
      * 
-     */
+    */
     public Optional<String> getConfigurationState() {
         return Optional.ofNullable(this.configurationState);
     }
     /**
      * Describes the environment and its resource settings
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Time when the template VM was last changed.
      * 
-     */
+    */
     public String getLastChanged() {
         return this.lastChanged;
     }
     /**
      * Time when the template VM was last sent for publishing.
      * 
-     */
+    */
     public String getLastPublished() {
         return this.lastPublished;
     }
     /**
      * The details of the latest operation. ex: status, error
      * 
-     */
+    */
     public LatestOperationResultResponse getLatestOperationResult() {
         return this.latestOperationResult;
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * Describes the readiness of this environment setting
      * 
-     */
+    */
     public String getPublishingState() {
         return this.publishingState;
     }
     /**
      * The resource specific settings
      * 
-     */
+    */
     public ResourceSettingsResponse getResourceSettings() {
         return this.resourceSettings;
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Brief title describing the environment and its resource settings
      * 
-     */
+    */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
-     */
+    */
     public Optional<String> getUniqueIdentifier() {
         return Optional.ofNullable(this.uniqueIdentifier);
     }

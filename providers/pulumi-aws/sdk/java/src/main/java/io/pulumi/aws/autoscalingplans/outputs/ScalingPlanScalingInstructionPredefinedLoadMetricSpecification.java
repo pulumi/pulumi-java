@@ -33,14 +33,14 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
     /**
      * The metric type. Valid values: `ALBTargetGroupRequestCount`, `ASGTotalCPUUtilization`, `ASGTotalNetworkIn`, `ASGTotalNetworkOut`.
      * 
-     */
+    */
     public String getPredefinedLoadMetricType() {
         return this.predefinedLoadMetricType;
     }
     /**
      * Identifies the resource associated with the metric type.
      * 
-     */
+    */
     public Optional<String> getResourceLabel() {
         return Optional.ofNullable(this.resourceLabel);
     }

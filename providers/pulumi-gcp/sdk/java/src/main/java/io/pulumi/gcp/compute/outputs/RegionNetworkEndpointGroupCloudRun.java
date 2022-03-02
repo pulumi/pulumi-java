@@ -52,7 +52,7 @@ public final class RegionNetworkEndpointGroupCloudRun {
      * The service name must be 1-63 characters long, and comply with RFC1035.
      * Example value: "default", "my-service".
      * 
-     */
+    */
     public Optional<String> getService() {
         return Optional.ofNullable(this.service);
     }
@@ -62,7 +62,7 @@ public final class RegionNetworkEndpointGroupCloudRun {
      * The tag must be 1-63 characters long, and comply with RFC1035.
      * Example value: "revision-0010".
      * 
-     */
+    */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }
@@ -74,7 +74,7 @@ public final class RegionNetworkEndpointGroupCloudRun {
      * can be backed by the same Serverless NEG with URL mask "/". The URL mask
      * will parse them to { function = "function1" } and { function = "function2" } respectively.
      * 
-     */
+    */
     public Optional<String> getUrlMask() {
         return Optional.ofNullable(this.urlMask);
     }

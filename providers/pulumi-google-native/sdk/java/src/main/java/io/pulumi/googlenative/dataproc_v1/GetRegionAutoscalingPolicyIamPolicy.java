@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionAutoscalingPolicyIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetRegionAutoscalingPolicyIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionAutoscalingPolicyIamPolicyArgs.Builder a);
+    }
+    private static GetRegionAutoscalingPolicyIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionAutoscalingPolicyIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionAutoscalingPolicyIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetRegionAutoscalingPolicyIamPolicyResult> invokeAsync(GetRegionAutoscalingPolicyIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1:getRegionAutoscalingPolicyIamPolicy", TypeShape.of(GetRegionAutoscalingPolicyIamPolicyResult.class), args == null ? GetRegionAutoscalingPolicyIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

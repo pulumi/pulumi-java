@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceProfile {
-/**
- * This data source can be used to fetch information about a specific
+    private GetInstanceProfile() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceProfileArgs.Builder a);
+    }
+    private static GetInstanceProfileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceProfileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This data source can be used to fetch information about a specific
  * IAM instance profile. By using this data source, you can reference IAM
  * instance profile properties without having to hard code ARNs as input.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getInstanceProfile.
+     *
+     * A collection of arguments for invoking getInstanceProfile.
  * 
- *
- * A collection of values returned by getInstanceProfile.
+     *
+     * A collection of values returned by getInstanceProfile.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This data source can be used to fetch information about a specific
+     * IAM instance profile. By using this data source, you can reference IAM
+     * instance profile properties without having to hard code ARNs as input.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getInstanceProfile.
+     * 
+     *
+         * A collection of values returned by getInstanceProfile.
+     * 
+     */
     public static CompletableFuture<GetInstanceProfileResult> invokeAsync(GetInstanceProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getInstanceProfile:getInstanceProfile", TypeShape.of(GetInstanceProfileResult.class), args == null ? GetInstanceProfileArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -38,21 +38,21 @@ public final class EventDestinationCloudwatchDestination {
     /**
      * The default value for the event
      * 
-     */
+    */
     public String getDefaultValue() {
         return this.defaultValue;
     }
     /**
      * The name for the dimension
      * 
-     */
+    */
     public String getDimensionName() {
         return this.dimensionName;
     }
     /**
      * The source for the value. May be any of `"messageTag"`, `"emailHeader"` or `"linkTag"`.
      * 
-     */
+    */
     public String getValueSource() {
         return this.valueSource;
     }

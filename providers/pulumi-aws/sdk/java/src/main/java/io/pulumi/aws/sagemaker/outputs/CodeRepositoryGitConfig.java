@@ -40,21 +40,21 @@ public final class CodeRepositoryGitConfig {
     /**
      * The default branch for the Git repository.
      * 
-     */
+    */
     public Optional<String> getBranch() {
         return Optional.ofNullable(this.branch);
     }
     /**
      * The URL where the Git repository is located.
      * 
-     */
+    */
     public String getRepositoryUrl() {
         return this.repositoryUrl;
     }
     /**
      * The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the credentials used to access the git repository. The secret must have a staging label of AWSCURRENT and must be in the following format: `{"username": UserName, "password": Password}`
      * 
-     */
+    */
     public Optional<String> getSecretArn() {
         return Optional.ofNullable(this.secretArn);
     }

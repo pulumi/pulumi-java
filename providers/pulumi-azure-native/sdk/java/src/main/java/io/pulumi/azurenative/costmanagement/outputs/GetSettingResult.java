@@ -70,49 +70,49 @@ public final class GetSettingResult {
     /**
      * Array of scopes with additional details used by Cost Management in the Azure portal.
      * 
-     */
+    */
     public List<SettingsPropertiesResponseCache> getCache() {
         return this.cache == null ? List.of() : this.cache;
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource kind.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Sets the default scope the current user will see when they sign into Azure Cost Management in the Azure portal.
      * 
-     */
+    */
     public String getScope() {
         return this.scope;
     }
     /**
      * Indicates what scope Cost Management in the Azure portal should default to. Allowed values: LastUsed.
      * 
-     */
+    */
     public Optional<String> getStartOn() {
         return Optional.ofNullable(this.startOn);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

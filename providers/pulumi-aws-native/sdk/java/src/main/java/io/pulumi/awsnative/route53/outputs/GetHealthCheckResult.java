@@ -39,7 +39,7 @@ public final class GetHealthCheckResult {
     /**
      * A complex type that contains information about the health check.
      * 
-     */
+    */
     public Optional<HealthCheckConfigProperties> getHealthCheckConfig() {
         return Optional.ofNullable(this.healthCheckConfig);
     }
@@ -49,7 +49,7 @@ public final class GetHealthCheckResult {
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<HealthCheckTag> getHealthCheckTags() {
         return this.healthCheckTags == null ? List.of() : this.healthCheckTags;
     }

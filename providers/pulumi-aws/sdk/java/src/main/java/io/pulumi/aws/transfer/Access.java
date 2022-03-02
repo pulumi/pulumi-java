@@ -137,6 +137,22 @@ public class Access extends io.pulumi.resources.CustomResource {
         return this.serverId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AccessArgs.Builder a);
+    }
+    private static io.pulumi.aws.transfer.AccessArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.transfer.AccessArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Access(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

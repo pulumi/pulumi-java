@@ -30,7 +30,7 @@ public final class ConnectorProfileSalesforceConnectorProfileProperties {
     /**
      * The location of the Salesforce resource
      * 
-     */
+    */
     public Optional<String> getInstanceUrl() {
         return Optional.ofNullable(this.instanceUrl);
     }

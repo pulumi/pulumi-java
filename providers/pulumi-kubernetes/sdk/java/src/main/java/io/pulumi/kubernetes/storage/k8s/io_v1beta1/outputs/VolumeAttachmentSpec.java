@@ -39,21 +39,21 @@ public final class VolumeAttachmentSpec {
     /**
      * Attacher indicates the name of the volume driver that MUST handle this request. This is the name returned by GetPluginName().
      * 
-     */
+    */
     public String getAttacher() {
         return this.attacher;
     }
     /**
      * The node that the volume should be attached to.
      * 
-     */
+    */
     public String getNodeName() {
         return this.nodeName;
     }
     /**
      * Source represents the volume that should be attached.
      * 
-     */
+    */
     public VolumeAttachmentSource getSource() {
         return this.source;
     }

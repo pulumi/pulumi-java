@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetArchive {
-/**
- * Resource Type definition for AWS::Events::Archive
+    private GetArchive() {}
+    public interface BuilderApplicator {
+        public void apply(GetArchiveArgs.Builder a);
+    }
+    private static GetArchiveArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetArchiveArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Events::Archive
  * 
- */
+     */
+    public static CompletableFuture<GetArchiveResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Events::Archive
+     * 
+     */
     public static CompletableFuture<GetArchiveResult> invokeAsync(GetArchiveArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:events:getArchive", TypeShape.of(GetArchiveResult.class), args == null ? GetArchiveArgs.Empty : args, Utilities.withVersion(options));
     }

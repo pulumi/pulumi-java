@@ -13,16 +13,38 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListTaskDetails {
-/**
- * The task that has the ARM resource and task properties.
+    private ListTaskDetails() {}
+    public interface BuilderApplicator {
+        public void apply(ListTaskDetailsArgs.Builder a);
+    }
+    private static ListTaskDetailsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListTaskDetailsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The task that has the ARM resource and task properties.
  * The task will have all information to schedule a run against it.
  * API Version: 2019-06-01-preview.
  * 
- *
- * The task that has the ARM resource and task properties.
+     *
+     * The task that has the ARM resource and task properties.
  * The task will have all information to schedule a run against it.
  * 
- */
+     */
+    public static CompletableFuture<ListTaskDetailsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The task that has the ARM resource and task properties.
+     * The task will have all information to schedule a run against it.
+     * API Version: 2019-06-01-preview.
+     * 
+     *
+         * The task that has the ARM resource and task properties.
+     * The task will have all information to schedule a run against it.
+     * 
+     */
     public static CompletableFuture<ListTaskDetailsResult> invokeAsync(ListTaskDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listTaskDetails", TypeShape.of(ListTaskDetailsResult.class), args == null ? ListTaskDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

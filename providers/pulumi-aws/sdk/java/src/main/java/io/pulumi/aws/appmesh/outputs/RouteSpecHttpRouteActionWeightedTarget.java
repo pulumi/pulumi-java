@@ -32,14 +32,14 @@ public final class RouteSpecHttpRouteActionWeightedTarget {
     /**
      * The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
      * 
-     */
+    */
     public String getVirtualNode() {
         return this.virtualNode;
     }
     /**
      * The relative weight of the weighted target. An integer between 0 and 100.
      * 
-     */
+    */
     public Integer getWeight() {
         return this.weight;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkExperimentProfile {
-/**
- * Defines an Network Experiment Profile and lists of Experiments
+    private GetNetworkExperimentProfile() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkExperimentProfileArgs.Builder a);
+    }
+    private static GetNetworkExperimentProfileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkExperimentProfileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Defines an Network Experiment Profile and lists of Experiments
  * API Version: 2019-11-01.
  * 
- *
- * Defines an Network Experiment Profile and lists of Experiments
+     *
+     * Defines an Network Experiment Profile and lists of Experiments
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkExperimentProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Defines an Network Experiment Profile and lists of Experiments
+     * API Version: 2019-11-01.
+     * 
+     *
+         * Defines an Network Experiment Profile and lists of Experiments
+     * 
+     */
     public static CompletableFuture<GetNetworkExperimentProfileResult> invokeAsync(GetNetworkExperimentProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkExperimentProfile", TypeShape.of(GetNetworkExperimentProfileResult.class), args == null ? GetNetworkExperimentProfileArgs.Empty : args, Utilities.withVersion(options));
     }

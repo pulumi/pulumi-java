@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWatcher {
-/**
- * Definition of the watcher type.
+    private GetWatcher() {}
+    public interface BuilderApplicator {
+        public void apply(GetWatcherArgs.Builder a);
+    }
+    private static GetWatcherArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWatcherArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of the watcher type.
  * API Version: 2019-06-01.
  * 
- *
- * Definition of the watcher type.
+     *
+     * Definition of the watcher type.
  * 
- */
+     */
+    public static CompletableFuture<GetWatcherResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of the watcher type.
+     * API Version: 2019-06-01.
+     * 
+     *
+         * Definition of the watcher type.
+     * 
+     */
     public static CompletableFuture<GetWatcherResult> invokeAsync(GetWatcherArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getWatcher", TypeShape.of(GetWatcherResult.class), args == null ? GetWatcherArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -25,7 +25,7 @@ public final class AppliancePropertiesResponseInfrastructureConfig {
     /**
      * Information about the connected appliance.
      * 
-     */
+    */
     public Optional<String> getProvider() {
         return Optional.ofNullable(this.provider);
     }

@@ -34,7 +34,7 @@ public final class GetSAMLProviderResult {
     /**
      * Amazon Resource Name (ARN) of the SAML provider
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }

@@ -32,14 +32,14 @@ public final class GetRulesPackagesResult {
     /**
      * A list of the AWS Inspector Rules Packages arns available in the AWS region.
      * 
-     */
+    */
     public List<String> getArns() {
         return this.arns;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

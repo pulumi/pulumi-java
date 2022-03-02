@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventType {
-/**
- * A resource schema for an EventType in Amazon Fraud Detector.
+    private GetEventType() {}
+    public interface BuilderApplicator {
+        public void apply(GetEventTypeArgs.Builder a);
+    }
+    private static GetEventTypeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEventTypeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A resource schema for an EventType in Amazon Fraud Detector.
  * 
- */
+     */
+    public static CompletableFuture<GetEventTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A resource schema for an EventType in Amazon Fraud Detector.
+     * 
+     */
     public static CompletableFuture<GetEventTypeResult> invokeAsync(GetEventTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:frauddetector:getEventType", TypeShape.of(GetEventTypeResult.class), args == null ? GetEventTypeArgs.Empty : args, Utilities.withVersion(options));
     }

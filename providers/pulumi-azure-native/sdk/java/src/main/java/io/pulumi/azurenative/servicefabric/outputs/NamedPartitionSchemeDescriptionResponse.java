@@ -41,14 +41,14 @@ public final class NamedPartitionSchemeDescriptionResponse {
     /**
      * The number of partitions.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * Array of size specified by the ‘count’ parameter, for the names of the partitions.
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }
@@ -56,7 +56,7 @@ public final class NamedPartitionSchemeDescriptionResponse {
      * Enumerates the ways that a service can be partitioned.
      * Expected value is 'Named'.
      * 
-     */
+    */
     public String getPartitionScheme() {
         return this.partitionScheme;
     }

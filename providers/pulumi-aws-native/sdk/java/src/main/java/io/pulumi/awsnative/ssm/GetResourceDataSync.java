@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceDataSync {
-/**
- * Resource Type definition for AWS::SSM::ResourceDataSync
+    private GetResourceDataSync() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourceDataSyncArgs.Builder a);
+    }
+    private static GetResourceDataSyncArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourceDataSyncArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::SSM::ResourceDataSync
  * 
- */
+     */
+    public static CompletableFuture<GetResourceDataSyncResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::SSM::ResourceDataSync
+     * 
+     */
     public static CompletableFuture<GetResourceDataSyncResult> invokeAsync(GetResourceDataSyncArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ssm:getResourceDataSync", TypeShape.of(GetResourceDataSyncResult.class), args == null ? GetResourceDataSyncArgs.Empty : args, Utilities.withVersion(options));
     }

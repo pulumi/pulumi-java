@@ -32,14 +32,14 @@ public final class GetImageImageTestsConfiguration {
     /**
      * Whether image tests are enabled.
      * 
-     */
+    */
     public Boolean getImageTestsEnabled() {
         return this.imageTestsEnabled;
     }
     /**
      * Number of minutes before image tests time out.
      * 
-     */
+    */
     public Integer getTimeoutMinutes() {
         return this.timeoutMinutes;
     }

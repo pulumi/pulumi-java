@@ -40,21 +40,21 @@ public final class MetadataSourceResponse {
     /**
      * Source type of the content
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Name of the content source.  The repo name, solution name, LA workspace name etc.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * ID of the content source.  The solution ID, workspace ID, etc
      * 
-     */
+    */
     public Optional<String> getSourceId() {
         return Optional.ofNullable(this.sourceId);
     }

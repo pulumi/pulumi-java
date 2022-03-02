@@ -33,14 +33,14 @@ public final class SourceResponse {
     /**
      * The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
      * 
-     */
+    */
     public Optional<String> getAddr() {
         return Optional.ofNullable(this.addr);
     }
     /**
      * The running instance of an application. Changes after each restart.
      * 
-     */
+    */
     public Optional<String> getInstanceID() {
         return Optional.ofNullable(this.instanceID);
     }

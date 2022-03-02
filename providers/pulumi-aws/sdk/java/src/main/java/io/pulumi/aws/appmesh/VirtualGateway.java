@@ -174,6 +174,22 @@ public class VirtualGateway extends io.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VirtualGatewayArgs.Builder a);
+    }
+    private static io.pulumi.aws.appmesh.VirtualGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.appmesh.VirtualGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VirtualGateway(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

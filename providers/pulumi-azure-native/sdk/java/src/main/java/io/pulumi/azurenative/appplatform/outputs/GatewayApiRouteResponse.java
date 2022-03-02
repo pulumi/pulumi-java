@@ -85,63 +85,63 @@ public final class GatewayApiRouteResponse {
     /**
      * A description, will be applied to methods in the generated OpenAPI documentation.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * To modify the request before sending it to the target endpoint, or the received response.
      * 
-     */
+    */
     public List<String> getFilters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * Route processing order.
      * 
-     */
+    */
     public Optional<Integer> getOrder() {
         return Optional.ofNullable(this.order);
     }
     /**
      * A number of conditions to evaluate a route for each request. Each predicate may be evaluated against request headers and parameter values. All of the predicates associated with a route must evaluate to true for the route to be matched to the request.
      * 
-     */
+    */
     public List<String> getPredicates() {
         return this.predicates == null ? List.of() : this.predicates;
     }
     /**
      * Enable sso validation.
      * 
-     */
+    */
     public Optional<Boolean> getSsoEnabled() {
         return Optional.ofNullable(this.ssoEnabled);
     }
     /**
      * Classification tags, will be applied to methods in the generated OpenAPI documentation.
      * 
-     */
+    */
     public List<String> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A title, will be applied to methods in the generated OpenAPI documentation.
      * 
-     */
+    */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
     /**
      * Pass currently-authenticated user's identity token to application service, default is 'false'
      * 
-     */
+    */
     public Optional<Boolean> getTokenRelay() {
         return Optional.ofNullable(this.tokenRelay);
     }
     /**
      * Full uri, will override `appName`.
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }

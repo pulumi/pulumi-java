@@ -25,7 +25,7 @@ public final class RollingUpdateStatefulSetStrategy {
     /**
      * Partition indicates the ordinal at which the StatefulSet should be partitioned.
      * 
-     */
+    */
     public Optional<Integer> getPartition() {
         return Optional.ofNullable(this.partition);
     }

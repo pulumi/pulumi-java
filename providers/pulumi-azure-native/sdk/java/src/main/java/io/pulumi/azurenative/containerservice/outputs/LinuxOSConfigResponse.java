@@ -49,28 +49,28 @@ public final class LinuxOSConfigResponse {
     /**
      * SwapFileSizeMB specifies size in MB of a swap file will be created on each node.
      * 
-     */
+    */
     public Optional<Integer> getSwapFileSizeMB() {
         return Optional.ofNullable(this.swapFileSizeMB);
     }
     /**
      * Sysctl settings for Linux agent nodes.
      * 
-     */
+    */
     public Optional<SysctlConfigResponse> getSysctls() {
         return Optional.ofNullable(this.sysctls);
     }
     /**
      * Transparent Huge Page defrag configuration.
      * 
-     */
+    */
     public Optional<String> getTransparentHugePageDefrag() {
         return Optional.ofNullable(this.transparentHugePageDefrag);
     }
     /**
      * Transparent Huge Page enabled configuration.
      * 
-     */
+    */
     public Optional<String> getTransparentHugePageEnabled() {
         return Optional.ofNullable(this.transparentHugePageEnabled);
     }

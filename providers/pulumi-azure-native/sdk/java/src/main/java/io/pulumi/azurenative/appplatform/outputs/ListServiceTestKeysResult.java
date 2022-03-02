@@ -55,35 +55,35 @@ public final class ListServiceTestKeysResult {
     /**
      * Indicates whether the test endpoint feature enabled or not
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Primary key
      * 
-     */
+    */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * Primary test endpoint
      * 
-     */
+    */
     public Optional<String> getPrimaryTestEndpoint() {
         return Optional.ofNullable(this.primaryTestEndpoint);
     }
     /**
      * Secondary key
      * 
-     */
+    */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
     /**
      * Secondary test endpoint
      * 
-     */
+    */
     public Optional<String> getSecondaryTestEndpoint() {
         return Optional.ofNullable(this.secondaryTestEndpoint);
     }

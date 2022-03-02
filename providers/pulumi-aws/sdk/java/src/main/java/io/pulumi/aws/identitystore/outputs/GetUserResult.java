@@ -45,7 +45,7 @@ public final class GetUserResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -58,7 +58,7 @@ public final class GetUserResult {
     /**
      * The user's user name value.
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }

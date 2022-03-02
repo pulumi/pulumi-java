@@ -41,21 +41,21 @@ public final class FunctionImageConfig {
     /**
      * Command.
      * 
-     */
+    */
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;
     }
     /**
      * EntryPoint.
      * 
-     */
+    */
     public List<String> getEntryPoint() {
         return this.entryPoint == null ? List.of() : this.entryPoint;
     }
     /**
      * WorkingDirectory.
      * 
-     */
+    */
     public Optional<String> getWorkingDirectory() {
         return Optional.ofNullable(this.workingDirectory);
     }

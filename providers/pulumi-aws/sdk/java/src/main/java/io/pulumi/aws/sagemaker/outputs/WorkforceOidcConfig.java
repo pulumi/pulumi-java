@@ -73,56 +73,56 @@ public final class WorkforceOidcConfig {
     /**
      * The OIDC IdP authorization endpoint used to configure your private workforce.
      * 
-     */
+    */
     public String getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
     /**
      * The OIDC IdP client ID used to configure your private workforce.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The OIDC IdP client secret used to configure your private workforce.
      * 
-     */
+    */
     public String getClientSecret() {
         return this.clientSecret;
     }
     /**
      * The OIDC IdP issuer used to configure your private workforce.
      * 
-     */
+    */
     public String getIssuer() {
         return this.issuer;
     }
     /**
      * The OIDC IdP JSON Web Key Set (Jwks) URI used to configure your private workforce.
      * 
-     */
+    */
     public String getJwksUri() {
         return this.jwksUri;
     }
     /**
      * The OIDC IdP logout endpoint used to configure your private workforce.
      * 
-     */
+    */
     public String getLogoutEndpoint() {
         return this.logoutEndpoint;
     }
     /**
      * The OIDC IdP token endpoint used to configure your private workforce.
      * 
-     */
+    */
     public String getTokenEndpoint() {
         return this.tokenEndpoint;
     }
     /**
      * The OIDC IdP user information endpoint used to configure your private workforce.
      * 
-     */
+    */
     public String getUserInfoEndpoint() {
         return this.userInfoEndpoint;
     }

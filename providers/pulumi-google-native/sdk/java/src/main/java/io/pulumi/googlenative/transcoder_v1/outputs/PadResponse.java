@@ -45,28 +45,28 @@ public final class PadResponse {
     /**
      * The number of pixels to add to the bottom. The default is 0.
      * 
-     */
+    */
     public Integer getBottomPixels() {
         return this.bottomPixels;
     }
     /**
      * The number of pixels to add to the left. The default is 0.
      * 
-     */
+    */
     public Integer getLeftPixels() {
         return this.leftPixels;
     }
     /**
      * The number of pixels to add to the right. The default is 0.
      * 
-     */
+    */
     public Integer getRightPixels() {
         return this.rightPixels;
     }
     /**
      * The number of pixels to add to the top. The default is 0.
      * 
-     */
+    */
     public Integer getTopPixels() {
         return this.topPixels;
     }

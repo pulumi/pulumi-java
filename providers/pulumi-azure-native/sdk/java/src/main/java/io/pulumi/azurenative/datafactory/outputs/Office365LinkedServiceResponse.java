@@ -98,63 +98,63 @@ public final class Office365LinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
      * Linked service description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
      * Azure tenant ID to which the Office 365 account belongs. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getOffice365TenantId() {
         return this.office365TenantId;
     }
     /**
      * Parameters for linked service.
      * 
-     */
+    */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * Specify the application's client ID. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getServicePrincipalId() {
         return this.servicePrincipalId;
     }
     /**
      * Specify the application's key.
      * 
-     */
+    */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
         return this.servicePrincipalKey;
     }
     /**
      * Specify the tenant information under which your Azure AD web application resides. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getServicePrincipalTenantId() {
         return this.servicePrincipalTenantId;
     }
@@ -162,7 +162,7 @@ public final class Office365LinkedServiceResponse {
      * Type of linked service.
      * Expected value is 'Office365'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -45,28 +45,28 @@ public final class NetworkUtilizationResponse {
     /**
      * Target bytes received per second.
      * 
-     */
+    */
     public Integer getTargetReceivedBytesPerSecond() {
         return this.targetReceivedBytesPerSecond;
     }
     /**
      * Target packets received per second.
      * 
-     */
+    */
     public Integer getTargetReceivedPacketsPerSecond() {
         return this.targetReceivedPacketsPerSecond;
     }
     /**
      * Target bytes sent per second.
      * 
-     */
+    */
     public Integer getTargetSentBytesPerSecond() {
         return this.targetSentBytesPerSecond;
     }
     /**
      * Target packets sent per second.
      * 
-     */
+    */
     public Integer getTargetSentPacketsPerSecond() {
         return this.targetSentPacketsPerSecond;
     }

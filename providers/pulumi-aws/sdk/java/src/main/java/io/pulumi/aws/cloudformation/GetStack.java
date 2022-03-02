@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStack {
-/**
- * The CloudFormation Stack data source allows access to stack
+    private GetStack() {}
+    public interface BuilderApplicator {
+        public void apply(GetStackArgs.Builder a);
+    }
+    private static GetStackArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStackArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The CloudFormation Stack data source allows access to stack
  * outputs and other useful data including the template body.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getStack.
+     *
+     * A collection of arguments for invoking getStack.
  * 
- *
- * A collection of values returned by getStack.
+     *
+     * A collection of values returned by getStack.
  * 
- */
+     */
+    public static CompletableFuture<GetStackResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The CloudFormation Stack data source allows access to stack
+     * outputs and other useful data including the template body.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getStack.
+     * 
+     *
+         * A collection of values returned by getStack.
+     * 
+     */
     public static CompletableFuture<GetStackResult> invokeAsync(GetStackArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudformation/getStack:getStack", TypeShape.of(GetStackResult.class), args == null ? GetStackArgs.Empty : args, Utilities.withVersion(options));
     }

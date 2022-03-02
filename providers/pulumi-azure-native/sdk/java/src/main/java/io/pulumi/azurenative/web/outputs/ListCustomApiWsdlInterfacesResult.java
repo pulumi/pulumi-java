@@ -25,7 +25,7 @@ public final class ListCustomApiWsdlInterfacesResult {
     /**
      * Collection of WSDL interfaces
      * 
-     */
+    */
     public List<WsdlServiceResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

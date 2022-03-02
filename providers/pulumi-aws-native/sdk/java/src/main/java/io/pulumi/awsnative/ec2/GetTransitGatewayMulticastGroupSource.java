@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransitGatewayMulticastGroupSource {
-/**
- * The AWS::EC2::TransitGatewayMulticastGroupSource registers and deregisters members and sources (network interfaces) with the transit gateway multicast group
+    private GetTransitGatewayMulticastGroupSource() {}
+    public interface BuilderApplicator {
+        public void apply(GetTransitGatewayMulticastGroupSourceArgs.Builder a);
+    }
+    private static GetTransitGatewayMulticastGroupSourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTransitGatewayMulticastGroupSourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::EC2::TransitGatewayMulticastGroupSource registers and deregisters members and sources (network interfaces) with the transit gateway multicast group
  * 
- */
+     */
+    public static CompletableFuture<GetTransitGatewayMulticastGroupSourceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::EC2::TransitGatewayMulticastGroupSource registers and deregisters members and sources (network interfaces) with the transit gateway multicast group
+     * 
+     */
     public static CompletableFuture<GetTransitGatewayMulticastGroupSourceResult> invokeAsync(GetTransitGatewayMulticastGroupSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getTransitGatewayMulticastGroupSource", TypeShape.of(GetTransitGatewayMulticastGroupSourceResult.class), args == null ? GetTransitGatewayMulticastGroupSourceArgs.Empty : args, Utilities.withVersion(options));
     }

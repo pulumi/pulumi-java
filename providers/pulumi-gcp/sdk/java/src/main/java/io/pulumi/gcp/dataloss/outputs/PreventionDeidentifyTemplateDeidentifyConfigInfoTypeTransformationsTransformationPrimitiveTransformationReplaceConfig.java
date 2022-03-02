@@ -25,7 +25,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Replace each input value with a given value.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue getNewValue() {
         return this.newValue;
     }

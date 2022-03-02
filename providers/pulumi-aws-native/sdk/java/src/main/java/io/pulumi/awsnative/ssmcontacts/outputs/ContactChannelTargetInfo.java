@@ -32,14 +32,14 @@ public final class ContactChannelTargetInfo {
     /**
      * The Amazon Resource Name (ARN) of the contact channel.
      * 
-     */
+    */
     public String getChannelId() {
         return this.channelId;
     }
     /**
      * The number of minutes to wait to retry sending engagement in the case the engagement initially fails.
      * 
-     */
+    */
     public Integer getRetryIntervalInMinutes() {
         return this.retryIntervalInMinutes;
     }

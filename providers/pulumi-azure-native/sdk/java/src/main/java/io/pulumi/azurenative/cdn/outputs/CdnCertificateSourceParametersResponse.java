@@ -27,7 +27,7 @@ public final class CdnCertificateSourceParametersResponse {
     /**
      * Type of certificate used
      * 
-     */
+    */
     public String getCertificateType() {
         return this.certificateType;
     }

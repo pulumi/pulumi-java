@@ -37,7 +37,7 @@ public final class IntentFulfillmentActivity {
      * A description of the Lambda function that is run to fulfill the intent.
      * Required if type is CodeHook. Attributes are documented under code_hook.
      * 
-     */
+    */
     public Optional<IntentFulfillmentActivityCodeHook> getCodeHook() {
         return Optional.ofNullable(this.codeHook);
     }
@@ -45,7 +45,7 @@ public final class IntentFulfillmentActivity {
      * How the intent should be fulfilled, either by running a Lambda function or by
      * returning the slot data to the client application.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -40,21 +40,21 @@ public final class TunnelInstanceIAMMemberCondition {
     /**
      * An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Textual representation of an expression in Common Expression Language syntax.
      * 
-     */
+    */
     public String getExpression() {
         return this.expression;
     }
     /**
      * A title for the expression, i.e. a short string describing its purpose.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }

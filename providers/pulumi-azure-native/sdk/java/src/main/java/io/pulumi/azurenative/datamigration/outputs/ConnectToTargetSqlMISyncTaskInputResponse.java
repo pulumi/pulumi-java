@@ -32,14 +32,14 @@ public final class ConnectToTargetSqlMISyncTaskInputResponse {
     /**
      * Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
      * 
-     */
+    */
     public AzureActiveDirectoryAppResponse getAzureApp() {
         return this.azureApp;
     }
     /**
      * Connection information for Azure SQL Database Managed Instance
      * 
-     */
+    */
     public MiSqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }

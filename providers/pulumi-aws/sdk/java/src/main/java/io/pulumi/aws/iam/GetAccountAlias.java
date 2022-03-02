@@ -12,16 +12,17 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccountAlias {
-/**
- * The IAM Account Alias data source allows access to the account alias
- * for the effective account in which this provider is working.
- * 
- * ## Example Usage
- * 
- *
- * A collection of values returned by getAccountAlias.
- * 
- */
+    private GetAccountAlias() {}
+    /**
+         * The IAM Account Alias data source allows access to the account alias
+     * for the effective account in which this provider is working.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of values returned by getAccountAlias.
+     * 
+     */
     public static CompletableFuture<GetAccountAliasResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getAccountAlias:getAccountAlias", TypeShape.of(GetAccountAliasResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

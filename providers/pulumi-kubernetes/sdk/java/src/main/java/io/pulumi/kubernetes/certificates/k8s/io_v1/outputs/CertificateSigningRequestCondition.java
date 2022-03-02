@@ -76,35 +76,35 @@ public final class CertificateSigningRequestCondition {
     /**
      * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition's status is changed, the server defaults this to the current time.
      * 
-     */
+    */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * lastUpdateTime is the time of the last update to this condition
      * 
-     */
+    */
     public Optional<String> getLastUpdateTime() {
         return Optional.ofNullable(this.lastUpdateTime);
     }
     /**
      * message contains a human readable message with details about the request state
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * reason indicates a brief reason for the request state
      * 
-     */
+    */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be "False" or "Unknown".
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -126,7 +126,7 @@ public final class CertificateSigningRequestCondition {
      *  - `"Denied"` Denied indicates the request was denied and should not be issued by the signer.
      *  - `"Failed"` Failed indicates the signer failed to issue the certificate.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

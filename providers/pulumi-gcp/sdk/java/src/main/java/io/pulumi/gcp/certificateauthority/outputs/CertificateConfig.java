@@ -44,7 +44,7 @@ public final class CertificateConfig {
      * A PublicKey describes a public key.
      * Structure is documented below.
      * 
-     */
+    */
     public CertificateConfigPublicKey getPublicKey() {
         return this.publicKey;
     }
@@ -52,7 +52,7 @@ public final class CertificateConfig {
      * Specifies some of the values in a certificate that are related to the subject.
      * Structure is documented below.
      * 
-     */
+    */
     public CertificateConfigSubjectConfig getSubjectConfig() {
         return this.subjectConfig;
     }
@@ -60,7 +60,7 @@ public final class CertificateConfig {
      * Describes how some of the technical X.509 fields in a certificate should be populated.
      * Structure is documented below.
      * 
-     */
+    */
     public CertificateConfigX509Config getX509Config() {
         return this.x509Config;
     }

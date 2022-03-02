@@ -66,42 +66,42 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     /**
      * Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
      * 
-     */
+    */
     public List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPort> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
      * Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
      * 
-     */
+    */
     public List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestination> getDestinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
     /**
      * Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA). If not specified, this matches with any protocol.
      * 
-     */
+    */
     public List<Integer> getProtocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
     /**
      * Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
      * 
-     */
+    */
     public List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePort> getSourcePorts() {
         return this.sourcePorts == null ? List.of() : this.sourcePorts;
     }
     /**
      * Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
      * 
-     */
+    */
     public List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSource> getSources() {
         return this.sources == null ? List.of() : this.sources;
     }
     /**
      * Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
      * 
-     */
+    */
     public List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag> getTcpFlags() {
         return this.tcpFlags == null ? List.of() : this.tcpFlags;
     }

@@ -46,28 +46,28 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse {
     /**
      * Must be set if ParameterType is DOUBLE or DISCRETE.
      * 
-     */
+    */
     public Double getFloatValue() {
         return this.floatValue;
     }
     /**
      * Must be set if ParameterType is INTEGER
      * 
-     */
+    */
     public String getIntValue() {
         return this.intValue;
     }
     /**
      * The name of the parameter.
      * 
-     */
+    */
     public String getParameter() {
         return this.parameter;
     }
     /**
      * Must be set if ParameterTypeis CATEGORICAL
      * 
-     */
+    */
     public String getStringValue() {
         return this.stringValue;
     }

@@ -110,91 +110,91 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubject 
     /**
      * Fully qualified domain name (FQDN) associated with the certificate subject. Must be less than or equal to 64 characters in length.
      * 
-     */
+    */
     public Optional<String> getCommonName() {
         return Optional.ofNullable(this.commonName);
     }
     /**
      * Two digit code that specifies the country in which the certificate subject located. Must be less than or equal to 2 characters in length.
      * 
-     */
+    */
     public Optional<String> getCountry() {
         return Optional.ofNullable(this.country);
     }
     /**
      * Disambiguating information for the certificate subject. Must be less than or equal to 64 characters in length.
      * 
-     */
+    */
     public Optional<String> getDistinguishedNameQualifier() {
         return Optional.ofNullable(this.distinguishedNameQualifier);
     }
     /**
      * Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third. Must be less than or equal to 3 characters in length.
      * 
-     */
+    */
     public Optional<String> getGenerationQualifier() {
         return Optional.ofNullable(this.generationQualifier);
     }
     /**
      * First name. Must be less than or equal to 16 characters in length.
      * 
-     */
+    */
     public Optional<String> getGivenName() {
         return Optional.ofNullable(this.givenName);
     }
     /**
      * Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`. Must be less than or equal to 5 characters in length.
      * 
-     */
+    */
     public Optional<String> getInitials() {
         return Optional.ofNullable(this.initials);
     }
     /**
      * The locality (such as a city or town) in which the certificate subject is located. Must be less than or equal to 128 characters in length.
      * 
-     */
+    */
     public Optional<String> getLocality() {
         return Optional.ofNullable(this.locality);
     }
     /**
      * Legal name of the organization with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
      * 
-     */
+    */
     public Optional<String> getOrganization() {
         return Optional.ofNullable(this.organization);
     }
     /**
      * A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
      * 
-     */
+    */
     public Optional<String> getOrganizationalUnit() {
         return Optional.ofNullable(this.organizationalUnit);
     }
     /**
      * Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza. Must be less than or equal to 128 characters in length.
      * 
-     */
+    */
     public Optional<String> getPseudonym() {
         return Optional.ofNullable(this.pseudonym);
     }
     /**
      * State in which the subject of the certificate is located. Must be less than or equal to 128 characters in length.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first. Must be less than or equal to 40 characters in length.
      * 
-     */
+    */
     public Optional<String> getSurname() {
         return Optional.ofNullable(this.surname);
     }
     /**
      * A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject. Must be less than or equal to 64 characters in length.
      * 
-     */
+    */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }

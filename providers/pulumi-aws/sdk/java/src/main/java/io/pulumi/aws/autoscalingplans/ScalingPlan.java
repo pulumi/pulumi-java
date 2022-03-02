@@ -95,6 +95,22 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
         return this.scalingPlanVersion;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ScalingPlanArgs.Builder a);
+    }
+    private static io.pulumi.aws.autoscalingplans.ScalingPlanArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.autoscalingplans.ScalingPlanArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ScalingPlan(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

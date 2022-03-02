@@ -27,7 +27,7 @@ public final class GetDatabaseInstanceSettingDatabaseFlag {
     /**
      * The name of the instance.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

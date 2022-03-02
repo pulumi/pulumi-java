@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfiguration {
-/**
- * Get information on an Amazon MSK Configuration.
+    private GetConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetConfigurationArgs.Builder a);
+    }
+    private static GetConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get information on an Amazon MSK Configuration.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getConfiguration.
+     *
+     * A collection of arguments for invoking getConfiguration.
  * 
- *
- * A collection of values returned by getConfiguration.
+     *
+     * A collection of values returned by getConfiguration.
  * 
- */
+     */
+    public static CompletableFuture<GetConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get information on an Amazon MSK Configuration.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getConfiguration.
+     * 
+     *
+         * A collection of values returned by getConfiguration.
+     * 
+     */
     public static CompletableFuture<GetConfigurationResult> invokeAsync(GetConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:msk/getConfiguration:getConfiguration", TypeShape.of(GetConfigurationResult.class), args == null ? GetConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -74,7 +74,7 @@ public final class GetRuleGroupResult {
     /**
      * Collection of Available Labels.
      * 
-     */
+    */
     public List<RuleGroupLabelSummary> getAvailableLabels() {
         return this.availableLabels == null ? List.of() : this.availableLabels;
     }
@@ -84,7 +84,7 @@ public final class GetRuleGroupResult {
     /**
      * Collection of Consumed Labels.
      * 
-     */
+    */
     public List<RuleGroupLabelSummary> getConsumedLabels() {
         return this.consumedLabels == null ? List.of() : this.consumedLabels;
     }
@@ -103,7 +103,7 @@ public final class GetRuleGroupResult {
     /**
      * Collection of Rules.
      * 
-     */
+    */
     public List<RuleGroupRule> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

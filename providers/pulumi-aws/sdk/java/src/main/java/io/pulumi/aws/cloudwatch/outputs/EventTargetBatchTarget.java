@@ -48,28 +48,28 @@ public final class EventTargetBatchTarget {
     /**
      * The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
      * 
-     */
+    */
     public Optional<Integer> getArraySize() {
         return Optional.ofNullable(this.arraySize);
     }
     /**
      * The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.
      * 
-     */
+    */
     public Optional<Integer> getJobAttempts() {
         return Optional.ofNullable(this.jobAttempts);
     }
     /**
      * The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.
      * 
-     */
+    */
     public String getJobDefinition() {
         return this.jobDefinition;
     }
     /**
      * The name to use for this execution of the job, if the target is an AWS Batch job.
      * 
-     */
+    */
     public String getJobName() {
         return this.jobName;
     }

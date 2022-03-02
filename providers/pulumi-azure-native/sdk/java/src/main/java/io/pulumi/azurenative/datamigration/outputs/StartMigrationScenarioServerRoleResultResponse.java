@@ -40,21 +40,21 @@ public final class StartMigrationScenarioServerRoleResultResponse {
     /**
      * Migration exceptions and warnings.
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Name of server role.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Current state of migration
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }

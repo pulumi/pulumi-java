@@ -31,14 +31,14 @@ public final class ErrorDefinitionResponse {
     /**
      * Service specific error code which serves as the substatus for the HTTP error code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Description of the error.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }

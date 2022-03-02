@@ -123,91 +123,91 @@ public final class GetEventSubscriptionResult {
     /**
      * The DeadLetter destination of the event subscription.
      * 
-     */
+    */
     public Optional<StorageBlobDeadLetterDestinationResponse> getDeadLetterDestination() {
         return Optional.ofNullable(this.deadLetterDestination);
     }
     /**
      * Information about the destination where events have to be delivered for the event subscription.
      * 
-     */
+    */
     public Optional<Object> getDestination() {
         return Optional.ofNullable(this.destination);
     }
     /**
      * The event delivery schema for the event subscription.
      * 
-     */
+    */
     public Optional<String> getEventDeliverySchema() {
         return Optional.ofNullable(this.eventDeliverySchema);
     }
     /**
      * Expiration time of the event subscription.
      * 
-     */
+    */
     public Optional<String> getExpirationTimeUtc() {
         return Optional.ofNullable(this.expirationTimeUtc);
     }
     /**
      * Information about the filter for the event subscription.
      * 
-     */
+    */
     public Optional<EventSubscriptionFilterResponse> getFilter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * Fully qualified identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of user defined labels.
      * 
-     */
+    */
     public List<String> getLabels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * Name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the event subscription.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
      * 
-     */
+    */
     public Optional<RetryPolicyResponse> getRetryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
      * The system metadata relating to Event Subscription resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Name of the topic of the event subscription.
      * 
-     */
+    */
     public String getTopic() {
         return this.topic;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

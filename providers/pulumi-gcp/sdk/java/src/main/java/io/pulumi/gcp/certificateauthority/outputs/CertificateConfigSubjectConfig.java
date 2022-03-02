@@ -37,7 +37,7 @@ public final class CertificateConfigSubjectConfig {
      * Contains distinguished name fields such as the location and organization.
      * Structure is documented below.
      * 
-     */
+    */
     public CertificateConfigSubjectConfigSubject getSubject() {
         return this.subject;
     }
@@ -45,7 +45,7 @@ public final class CertificateConfigSubjectConfig {
      * The subject alternative name fields.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<CertificateConfigSubjectConfigSubjectAltName> getSubjectAltName() {
         return Optional.ofNullable(this.subjectAltName);
     }

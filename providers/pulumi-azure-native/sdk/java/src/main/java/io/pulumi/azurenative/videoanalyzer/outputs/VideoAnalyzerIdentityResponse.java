@@ -34,14 +34,14 @@ public final class VideoAnalyzerIdentityResponse {
     /**
      * The identity type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The User Assigned Managed Identities.
      * 
-     */
+    */
     public Map<String,UserAssignedManagedIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

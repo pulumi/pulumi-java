@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFolder {
-/**
- * Retrieves a folder identified by the supplied resource name. Valid folder resource names have the format `folders/{folder_id}` (for example, `folders/1234`). The caller must have `resourcemanager.folders.get` permission on the identified folder.
+    private GetFolder() {}
+    public interface BuilderApplicator {
+        public void apply(GetFolderArgs.Builder a);
+    }
+    private static GetFolderArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFolderArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves a folder identified by the supplied resource name. Valid folder resource names have the format `folders/{folder_id}` (for example, `folders/1234`). The caller must have `resourcemanager.folders.get` permission on the identified folder.
  * 
- */
+     */
+    public static CompletableFuture<GetFolderResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves a folder identified by the supplied resource name. Valid folder resource names have the format `folders/{folder_id}` (for example, `folders/1234`). The caller must have `resourcemanager.folders.get` permission on the identified folder.
+     * 
+     */
     public static CompletableFuture<GetFolderResult> invokeAsync(GetFolderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getFolder", TypeShape.of(GetFolderResult.class), args == null ? GetFolderArgs.Empty : args, Utilities.withVersion(options));
     }

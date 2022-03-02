@@ -23,7 +23,7 @@ public final class GatewayRouteSpecHttpRouteMatch {
     /**
      * Specifies the path to match requests with. This parameter must always start with `/`, which by itself matches all requests to the virtual service name.
      * 
-     */
+    */
     public String getPrefix() {
         return this.prefix;
     }

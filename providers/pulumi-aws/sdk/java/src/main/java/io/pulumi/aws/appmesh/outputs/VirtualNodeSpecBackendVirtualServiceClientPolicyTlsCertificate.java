@@ -34,14 +34,14 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificat
     /**
      * A local file certificate.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFile> getFile() {
         return Optional.ofNullable(this.file);
     }
     /**
      * A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSds> getSds() {
         return Optional.ofNullable(this.sds);
     }

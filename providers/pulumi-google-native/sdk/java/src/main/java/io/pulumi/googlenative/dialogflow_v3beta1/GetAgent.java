@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAgent {
-/**
- * Retrieves the specified agent.
+    private GetAgent() {}
+    public interface BuilderApplicator {
+        public void apply(GetAgentArgs.Builder a);
+    }
+    private static GetAgentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAgentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves the specified agent.
  * 
- */
+     */
+    public static CompletableFuture<GetAgentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves the specified agent.
+     * 
+     */
     public static CompletableFuture<GetAgentResult> invokeAsync(GetAgentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3beta1:getAgent", TypeShape.of(GetAgentResult.class), args == null ? GetAgentArgs.Empty : args, Utilities.withVersion(options));
     }

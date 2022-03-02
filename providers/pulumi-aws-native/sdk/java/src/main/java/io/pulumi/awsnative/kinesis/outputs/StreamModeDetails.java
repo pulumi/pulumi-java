@@ -23,7 +23,7 @@ public final class StreamModeDetails {
     /**
      * The mode of the stream
      * 
-     */
+    */
     public StreamModeDetailsStreamMode getStreamMode() {
         return this.streamMode;
     }

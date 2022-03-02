@@ -32,14 +32,14 @@ public final class BasisResponse {
     /**
      * Immutable. The fingerprint of the base image.
      * 
-     */
+    */
     public FingerprintResponse getFingerprint() {
         return this.fingerprint;
     }
     /**
      * Immutable. The resource_url for the resource representing the basis of associated occurrence images.
      * 
-     */
+    */
     public String getResourceUrl() {
         return this.resourceUrl;
     }

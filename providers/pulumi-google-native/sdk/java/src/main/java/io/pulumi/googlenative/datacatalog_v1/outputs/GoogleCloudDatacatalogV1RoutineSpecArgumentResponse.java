@@ -38,21 +38,21 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse {
     /**
      * Specifies whether the argument is input or output.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
     /**
      * The name of the argument. A return argument of a function might not have a name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Type of the argument. The exact value depends on the source system and the language.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

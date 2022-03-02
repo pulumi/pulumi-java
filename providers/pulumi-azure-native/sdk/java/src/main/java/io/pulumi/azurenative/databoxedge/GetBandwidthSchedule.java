@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBandwidthSchedule {
-/**
- * The bandwidth schedule details.
+    private GetBandwidthSchedule() {}
+    public interface BuilderApplicator {
+        public void apply(GetBandwidthScheduleArgs.Builder a);
+    }
+    private static GetBandwidthScheduleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBandwidthScheduleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The bandwidth schedule details.
  * API Version: 2020-12-01.
  * 
- *
- * The bandwidth schedule details.
+     *
+     * The bandwidth schedule details.
  * 
- */
+     */
+    public static CompletableFuture<GetBandwidthScheduleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The bandwidth schedule details.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * The bandwidth schedule details.
+     * 
+     */
     public static CompletableFuture<GetBandwidthScheduleResult> invokeAsync(GetBandwidthScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getBandwidthSchedule", TypeShape.of(GetBandwidthScheduleResult.class), args == null ? GetBandwidthScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

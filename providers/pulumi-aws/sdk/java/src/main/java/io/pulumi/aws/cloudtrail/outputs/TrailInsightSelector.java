@@ -23,7 +23,7 @@ public final class TrailInsightSelector {
     /**
      * Type of insights to log on a trail. The valid value is `ApiCallRateInsight`.
      * 
-     */
+    */
     public String getInsightType() {
         return this.insightType;
     }

@@ -34,14 +34,14 @@ public final class OpenIdConnectLoginResponse {
     /**
      * The name of the claim that contains the users name.
      * 
-     */
+    */
     public Optional<String> getNameClaimType() {
         return Optional.ofNullable(this.nameClaimType);
     }
     /**
      * A list of the scopes that should be requested while authenticating.
      * 
-     */
+    */
     public List<String> getScopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }

@@ -39,21 +39,21 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse {
     /**
      * Commitment end timestamp.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Optional. Renewal settings applicable for a commitment-based Offer.
      * 
-     */
+    */
     public GoogleCloudChannelV1RenewalSettingsResponse getRenewalSettings() {
         return this.renewalSettings;
     }
     /**
      * Commitment start timestamp.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }

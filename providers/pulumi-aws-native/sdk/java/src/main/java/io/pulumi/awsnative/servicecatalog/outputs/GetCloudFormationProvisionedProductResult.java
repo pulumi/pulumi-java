@@ -77,7 +77,7 @@ public final class GetCloudFormationProvisionedProductResult {
     /**
      * List of key-value pair outputs.
      * 
-     */
+    */
     public Optional<Object> getOutputs() {
         return Optional.ofNullable(this.outputs);
     }

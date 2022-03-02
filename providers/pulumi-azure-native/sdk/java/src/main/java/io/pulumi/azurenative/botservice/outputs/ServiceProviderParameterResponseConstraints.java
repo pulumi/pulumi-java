@@ -25,7 +25,7 @@ public final class ServiceProviderParameterResponseConstraints {
     /**
      * Whether required the constraints of the bot meta data.
      * 
-     */
+    */
     public Optional<Boolean> getRequired() {
         return Optional.ofNullable(this.required);
     }

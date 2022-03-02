@@ -34,14 +34,14 @@ public final class SimulationApplicationRobotSoftwareSuite {
     /**
      * The name of the robot software suite.
      * 
-     */
+    */
     public SimulationApplicationRobotSoftwareSuiteName getName() {
         return this.name;
     }
     /**
      * The version of the robot software suite.
      * 
-     */
+    */
     public Optional<SimulationApplicationRobotSoftwareSuiteVersion> getVersion() {
         return Optional.ofNullable(this.version);
     }

@@ -46,7 +46,7 @@ public final class GetApplicationResult {
     /**
      * The description of the application.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -56,7 +56,7 @@ public final class GetApplicationResult {
     /**
      * The name of the application.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

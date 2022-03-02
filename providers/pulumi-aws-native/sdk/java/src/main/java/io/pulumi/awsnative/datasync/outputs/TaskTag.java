@@ -31,14 +31,14 @@ public final class TaskTag {
     /**
      * The key for an AWS resource tag.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The value for an AWS resource tag.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

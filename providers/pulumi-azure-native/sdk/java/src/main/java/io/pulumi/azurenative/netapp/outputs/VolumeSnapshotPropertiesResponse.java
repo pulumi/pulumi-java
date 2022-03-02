@@ -25,7 +25,7 @@ public final class VolumeSnapshotPropertiesResponse {
     /**
      * Snapshot Policy ResourceId
      * 
-     */
+    */
     public Optional<String> getSnapshotPolicyId() {
         return Optional.ofNullable(this.snapshotPolicyId);
     }

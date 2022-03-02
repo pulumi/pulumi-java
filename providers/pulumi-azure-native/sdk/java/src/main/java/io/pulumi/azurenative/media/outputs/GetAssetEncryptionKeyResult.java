@@ -35,14 +35,14 @@ public final class GetAssetEncryptionKeyResult {
     /**
      * Asset File encryption metadata.
      * 
-     */
+    */
     public List<AssetFileEncryptionMetadataResponse> getAssetFileEncryptionMetadata() {
         return this.assetFileEncryptionMetadata == null ? List.of() : this.assetFileEncryptionMetadata;
     }
     /**
      * The Asset File storage encryption key.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }

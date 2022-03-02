@@ -35,7 +35,7 @@ public final class GetResourceTagsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -45,7 +45,7 @@ public final class GetResourceTagsResult {
     /**
      * Map of key=value pairs for each tag set on the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

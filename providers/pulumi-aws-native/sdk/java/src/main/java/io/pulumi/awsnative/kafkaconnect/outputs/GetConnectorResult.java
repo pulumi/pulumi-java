@@ -33,7 +33,7 @@ public final class GetConnectorResult {
     /**
      * Amazon Resource Name for the created Connector.
      * 
-     */
+    */
     public Optional<String> getConnectorArn() {
         return Optional.ofNullable(this.connectorArn);
     }

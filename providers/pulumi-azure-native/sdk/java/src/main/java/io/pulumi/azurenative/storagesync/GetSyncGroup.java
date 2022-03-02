@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSyncGroup {
-/**
- * Sync Group object.
+    private GetSyncGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetSyncGroupArgs.Builder a);
+    }
+    private static GetSyncGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSyncGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Sync Group object.
  * API Version: 2020-03-01.
  * 
- *
- * Sync Group object.
+     *
+     * Sync Group object.
  * 
- */
+     */
+    public static CompletableFuture<GetSyncGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Sync Group object.
+     * API Version: 2020-03-01.
+     * 
+     *
+         * Sync Group object.
+     * 
+     */
     public static CompletableFuture<GetSyncGroupResult> invokeAsync(GetSyncGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagesync:getSyncGroup", TypeShape.of(GetSyncGroupResult.class), args == null ? GetSyncGroupArgs.Empty : args, Utilities.withVersion(options));
     }

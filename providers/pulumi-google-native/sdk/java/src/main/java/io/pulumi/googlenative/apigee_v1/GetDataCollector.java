@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataCollector {
-/**
- * Gets a data collector.
+    private GetDataCollector() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataCollectorArgs.Builder a);
+    }
+    private static GetDataCollectorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataCollectorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a data collector.
  * 
- */
+     */
+    public static CompletableFuture<GetDataCollectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a data collector.
+     * 
+     */
     public static CompletableFuture<GetDataCollectorResult> invokeAsync(GetDataCollectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getDataCollector", TypeShape.of(GetDataCollectorResult.class), args == null ? GetDataCollectorArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -42,14 +42,14 @@ public final class BucketWebsiteConfiguration {
     /**
      * The name of the error document for the website.
      * 
-     */
+    */
     public Optional<String> getErrorDocument() {
         return Optional.ofNullable(this.errorDocument);
     }
     /**
      * The name of the index document for the website.
      * 
-     */
+    */
     public Optional<String> getIndexDocument() {
         return Optional.ofNullable(this.indexDocument);
     }

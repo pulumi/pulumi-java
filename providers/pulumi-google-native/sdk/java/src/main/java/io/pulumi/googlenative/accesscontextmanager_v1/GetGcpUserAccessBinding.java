@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGcpUserAccessBinding {
-/**
- * Gets the GcpUserAccessBinding with the given name.
+    private GetGcpUserAccessBinding() {}
+    public interface BuilderApplicator {
+        public void apply(GetGcpUserAccessBindingArgs.Builder a);
+    }
+    private static GetGcpUserAccessBindingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGcpUserAccessBindingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the GcpUserAccessBinding with the given name.
  * 
- */
+     */
+    public static CompletableFuture<GetGcpUserAccessBindingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the GcpUserAccessBinding with the given name.
+     * 
+     */
     public static CompletableFuture<GetGcpUserAccessBindingResult> invokeAsync(GetGcpUserAccessBindingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getGcpUserAccessBinding", TypeShape.of(GetGcpUserAccessBindingResult.class), args == null ? GetGcpUserAccessBindingArgs.Empty : args, Utilities.withVersion(options));
     }

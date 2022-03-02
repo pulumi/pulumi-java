@@ -79,7 +79,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      * (and potentially interrupting jobs). Only applicable to downscaling operations.
      * Bounds: [0s, 1d].
      * 
-     */
+    */
     public String getGracefulDecommissionTimeout() {
         return this.gracefulDecommissionTimeout;
     }
@@ -91,7 +91,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      * autoscaling a single job.
      * Bounds: [0.0, 1.0].
      * 
-     */
+    */
     public Double getScaleDownFactor() {
         return this.scaleDownFactor;
     }
@@ -102,7 +102,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      * means the autoscaler will scale down on any recommended change.
      * Bounds: [0.0, 1.0]. Default: 0.0.
      * 
-     */
+    */
     public Optional<Double> getScaleDownMinWorkerFraction() {
         return Optional.ofNullable(this.scaleDownMinWorkerFraction);
     }
@@ -114,7 +114,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      * (less aggressive scaling).
      * Bounds: [0.0, 1.0].
      * 
-     */
+    */
     public Double getScaleUpFactor() {
         return this.scaleUpFactor;
     }
@@ -125,7 +125,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      * 0 means the autoscaler will scale up on any recommended change.
      * Bounds: [0.0, 1.0]. Default: 0.0.
      * 
-     */
+    */
     public Optional<Double> getScaleUpMinWorkerFraction() {
         return Optional.ofNullable(this.scaleUpMinWorkerFraction);
     }

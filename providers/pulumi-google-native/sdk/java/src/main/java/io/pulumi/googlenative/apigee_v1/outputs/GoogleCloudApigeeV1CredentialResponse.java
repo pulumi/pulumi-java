@@ -76,56 +76,56 @@ public final class GoogleCloudApigeeV1CredentialResponse {
     /**
      * List of API products this credential can be used for.
      * 
-     */
+    */
     public List<GoogleCloudApigeeV1ApiProductRefResponse> getApiProducts() {
         return this.apiProducts;
     }
     /**
      * List of attributes associated with this credential.
      * 
-     */
+    */
     public List<GoogleCloudApigeeV1AttributeResponse> getAttributes() {
         return this.attributes;
     }
     /**
      * Consumer key.
      * 
-     */
+    */
     public String getConsumerKey() {
         return this.consumerKey;
     }
     /**
      * Secret key.
      * 
-     */
+    */
     public String getConsumerSecret() {
         return this.consumerSecret;
     }
     /**
      * Time the credential will expire in milliseconds since epoch.
      * 
-     */
+    */
     public String getExpiresAt() {
         return this.expiresAt;
     }
     /**
      * Time the credential was issued in milliseconds since epoch.
      * 
-     */
+    */
     public String getIssuedAt() {
         return this.issuedAt;
     }
     /**
      * List of scopes to apply to the app. Specified scopes must already exist on the API product that you associate with the app.
      * 
-     */
+    */
     public List<String> getScopes() {
         return this.scopes;
     }
     /**
      * Status of the credential. Valid values include `approved` or `revoked`.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

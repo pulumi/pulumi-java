@@ -25,7 +25,7 @@ public final class PartnerContentResponse {
     /**
      * The B2B partner content.
      * 
-     */
+    */
     public Optional<B2BPartnerContentResponse> getB2b() {
         return Optional.ofNullable(this.b2b);
     }

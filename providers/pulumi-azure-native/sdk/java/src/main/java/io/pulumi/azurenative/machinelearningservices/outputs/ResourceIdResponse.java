@@ -23,7 +23,7 @@ public final class ResourceIdResponse {
     /**
      * The ID of the resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

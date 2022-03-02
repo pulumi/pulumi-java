@@ -12,15 +12,16 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClientConfig {
-/**
- * Use this data source to access the configuration of the Google Cloud provider.
- * 
- * ## Example Usage
- * 
- *
- * A collection of values returned by getClientConfig.
- * 
- */
+    private GetClientConfig() {}
+    /**
+         * Use this data source to access the configuration of the Google Cloud provider.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of values returned by getClientConfig.
+     * 
+     */
     public static CompletableFuture<GetClientConfigResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:organizations/getClientConfig:getClientConfig", TypeShape.of(GetClientConfigResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

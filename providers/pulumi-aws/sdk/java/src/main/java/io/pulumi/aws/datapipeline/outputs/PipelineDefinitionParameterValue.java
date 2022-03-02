@@ -31,14 +31,14 @@ public final class PipelineDefinitionParameterValue {
     /**
      * ID of the parameter value.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Field value, expressed as a String.
      * 
-     */
+    */
     public String getStringValue() {
         return this.stringValue;
     }

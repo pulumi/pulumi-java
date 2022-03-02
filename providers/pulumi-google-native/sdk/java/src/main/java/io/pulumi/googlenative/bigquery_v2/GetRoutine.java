@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoutine {
-/**
- * Gets the specified routine resource by routine ID.
+    private GetRoutine() {}
+    public interface BuilderApplicator {
+        public void apply(GetRoutineArgs.Builder a);
+    }
+    private static GetRoutineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRoutineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified routine resource by routine ID.
  * 
- */
+     */
+    public static CompletableFuture<GetRoutineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified routine resource by routine ID.
+     * 
+     */
     public static CompletableFuture<GetRoutineResult> invokeAsync(GetRoutineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigquery/v2:getRoutine", TypeShape.of(GetRoutineResult.class), args == null ? GetRoutineArgs.Empty : args, Utilities.withVersion(options));
     }

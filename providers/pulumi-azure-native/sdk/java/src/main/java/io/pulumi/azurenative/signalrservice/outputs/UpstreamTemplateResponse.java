@@ -64,7 +64,7 @@ public final class UpstreamTemplateResponse {
      *     2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and "messages"
      *     3. The single category name, for example, "connections", it matches the category "connections"
      * 
-     */
+    */
     public Optional<String> getCategoryPattern() {
         return Optional.ofNullable(this.categoryPattern);
     }
@@ -75,7 +75,7 @@ public final class UpstreamTemplateResponse {
      *     2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect"
      *     3. The single event name, for example, "connect", it matches "connect"
      * 
-     */
+    */
     public Optional<String> getEventPattern() {
         return Optional.ofNullable(this.eventPattern);
     }
@@ -86,7 +86,7 @@ public final class UpstreamTemplateResponse {
      *     2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2"
      *     3. The single hub name, for example, "hub1", it matches "hub1"
      * 
-     */
+    */
     public Optional<String> getHubPattern() {
         return Optional.ofNullable(this.hubPattern);
     }
@@ -94,7 +94,7 @@ public final class UpstreamTemplateResponse {
      * Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
      * For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.
      * 
-     */
+    */
     public String getUrlTemplate() {
         return this.urlTemplate;
     }

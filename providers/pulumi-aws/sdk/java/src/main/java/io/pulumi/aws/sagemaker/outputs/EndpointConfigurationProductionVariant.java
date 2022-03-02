@@ -63,42 +63,42 @@ public final class EndpointConfigurationProductionVariant {
     /**
      * The size of the Elastic Inference (EI) instance to use for the production variant.
      * 
-     */
+    */
     public Optional<String> getAcceleratorType() {
         return Optional.ofNullable(this.acceleratorType);
     }
     /**
      * Initial number of instances used for auto-scaling.
      * 
-     */
+    */
     public Integer getInitialInstanceCount() {
         return this.initialInstanceCount;
     }
     /**
      * Determines initial traffic distribution among all of the models that you specify in the endpoint configuration. If unspecified, it defaults to 1.0.
      * 
-     */
+    */
     public Optional<Double> getInitialVariantWeight() {
         return Optional.ofNullable(this.initialVariantWeight);
     }
     /**
      * The type of instance to start.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The name of the model to use.
      * 
-     */
+    */
     public String getModelName() {
         return this.modelName;
     }
     /**
      * The name of the variant. If omitted, this provider will assign a random, unique name.
      * 
-     */
+    */
     public Optional<String> getVariantName() {
         return Optional.ofNullable(this.variantName);
     }

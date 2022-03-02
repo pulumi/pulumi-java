@@ -42,7 +42,7 @@ public final class ThemeDataColorPalette {
     /**
      * <p>The hexadecimal codes for the colors.</p>
      * 
-     */
+    */
     public List<String> getColors() {
         return this.colors == null ? List.of() : this.colors;
     }
@@ -50,14 +50,14 @@ public final class ThemeDataColorPalette {
      * <p>The hexadecimal code of a color that applies to charts where a lack of data is
      *             highlighted.</p>
      * 
-     */
+    */
     public Optional<String> getEmptyFillColor() {
         return Optional.ofNullable(this.emptyFillColor);
     }
     /**
      * <p>The minimum and maximum hexadecimal codes that describe a color gradient. </p>
      * 
-     */
+    */
     public List<String> getMinMaxGradient() {
         return this.minMaxGradient == null ? List.of() : this.minMaxGradient;
     }

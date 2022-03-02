@@ -40,21 +40,21 @@ public final class EffectiveVirtualNetworkResponse {
     /**
      * Effective vnet Id.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Location of vnet.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Membership Type.
      * 
-     */
+    */
     public Optional<String> getMembershipType() {
         return Optional.ofNullable(this.membershipType);
     }

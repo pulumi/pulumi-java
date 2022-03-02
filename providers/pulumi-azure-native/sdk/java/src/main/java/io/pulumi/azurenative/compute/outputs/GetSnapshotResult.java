@@ -197,168 +197,168 @@ public final class GetSnapshotResult {
     /**
      * Disk source information. CreationData information cannot be changed after the disk has been created.
      * 
-     */
+    */
     public CreationDataResponse getCreationData() {
         return this.creationData;
     }
     /**
      * ARM id of the DiskAccess resource for using private endpoints on disks.
      * 
-     */
+    */
     public Optional<String> getDiskAccessId() {
         return Optional.ofNullable(this.diskAccessId);
     }
     /**
      * The size of the disk in bytes. This field is read only.
      * 
-     */
+    */
     public Double getDiskSizeBytes() {
         return this.diskSizeBytes;
     }
     /**
      * If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
      * 
-     */
+    */
     public Optional<Integer> getDiskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
      * The state of the snapshot.
      * 
-     */
+    */
     public String getDiskState() {
         return this.diskState;
     }
     /**
      * Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
      * 
-     */
+    */
     public Optional<EncryptionResponse> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
      * 
-     */
+    */
     public Optional<EncryptionSettingsCollectionResponse> getEncryptionSettingsCollection() {
         return Optional.ofNullable(this.encryptionSettingsCollection);
     }
     /**
      * The extended location where the snapshot will be created. Extended location cannot be changed.
      * 
-     */
+    */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
      * 
-     */
+    */
     public Optional<String> getHyperVGeneration() {
         return Optional.ofNullable(this.hyperVGeneration);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
      * 
-     */
+    */
     public Optional<Boolean> getIncremental() {
         return Optional.ofNullable(this.incremental);
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Unused. Always Null.
      * 
-     */
+    */
     public String getManagedBy() {
         return this.managedBy;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Policy for accessing the disk via network.
      * 
-     */
+    */
     public Optional<String> getNetworkAccessPolicy() {
         return Optional.ofNullable(this.networkAccessPolicy);
     }
     /**
      * The Operating System type.
      * 
-     */
+    */
     public Optional<String> getOsType() {
         return Optional.ofNullable(this.osType);
     }
     /**
      * The disk provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Purchase plan information for the image from which the source disk for the snapshot was originally created.
      * 
-     */
+    */
     public Optional<PurchasePlanResponse> getPurchasePlan() {
         return Optional.ofNullable(this.purchasePlan);
     }
     /**
      * The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
      * 
-     */
+    */
     public Optional<SnapshotSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Indicates the OS on a snapshot supports hibernation.
      * 
-     */
+    */
     public Optional<Boolean> getSupportsHibernation() {
         return Optional.ofNullable(this.supportsHibernation);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The time when the snapshot was created.
      * 
-     */
+    */
     public String getTimeCreated() {
         return this.timeCreated;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Unique Guid identifying the resource.
      * 
-     */
+    */
     public String getUniqueId() {
         return this.uniqueId;
     }

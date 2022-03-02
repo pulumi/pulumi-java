@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInventoryItem {
-/**
- * Defines the inventory item.
+    private GetInventoryItem() {}
+    public interface BuilderApplicator {
+        public void apply(GetInventoryItemArgs.Builder a);
+    }
+    private static GetInventoryItemArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInventoryItemArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Defines the inventory item.
  * API Version: 2020-10-01-preview.
  * 
- *
- * Defines the inventory item.
+     *
+     * Defines the inventory item.
  * 
- */
+     */
+    public static CompletableFuture<GetInventoryItemResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Defines the inventory item.
+     * API Version: 2020-10-01-preview.
+     * 
+     *
+         * Defines the inventory item.
+     * 
+     */
     public static CompletableFuture<GetInventoryItemResult> invokeAsync(GetInventoryItemArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getInventoryItem", TypeShape.of(GetInventoryItemResult.class), args == null ? GetInventoryItemArgs.Empty : args, Utilities.withVersion(options));
     }

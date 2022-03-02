@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScheduledQueryRule {
-/**
- * The Log Search Rule resource.
+    private GetScheduledQueryRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetScheduledQueryRuleArgs.Builder a);
+    }
+    private static GetScheduledQueryRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetScheduledQueryRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Log Search Rule resource.
  * API Version: 2018-04-16.
  * 
- *
- * The Log Search Rule resource.
+     *
+     * The Log Search Rule resource.
  * 
- */
+     */
+    public static CompletableFuture<GetScheduledQueryRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Log Search Rule resource.
+     * API Version: 2018-04-16.
+     * 
+     *
+         * The Log Search Rule resource.
+     * 
+     */
     public static CompletableFuture<GetScheduledQueryRuleResult> invokeAsync(GetScheduledQueryRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getScheduledQueryRule", TypeShape.of(GetScheduledQueryRuleResult.class), args == null ? GetScheduledQueryRuleArgs.Empty : args, Utilities.withVersion(options));
     }

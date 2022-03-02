@@ -33,14 +33,14 @@ public final class ProxyServerPropertiesResponse {
     /**
      * Proxy server IP
      * 
-     */
+    */
     public Optional<String> getIp() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * Proxy server port
      * 
-     */
+    */
     public Optional<String> getPort() {
         return Optional.ofNullable(this.port);
     }

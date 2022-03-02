@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoles {
-/**
- * Use this data source to get the ARNs and Names of IAM Roles.
+    private GetRoles() {}
+    public interface BuilderApplicator {
+        public void apply(GetRolesArgs.Builder a);
+    }
+    private static GetRolesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRolesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get the ARNs and Names of IAM Roles.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getRoles.
+     *
+     * A collection of arguments for invoking getRoles.
  * 
- *
- * A collection of values returned by getRoles.
+     *
+     * A collection of values returned by getRoles.
  * 
- */
+     */
+    public static CompletableFuture<GetRolesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get the ARNs and Names of IAM Roles.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getRoles.
+     * 
+     *
+         * A collection of values returned by getRoles.
+     * 
+     */
     public static CompletableFuture<GetRolesResult> invokeAsync(@Nullable GetRolesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getRoles:getRoles", TypeShape.of(GetRolesResult.class), args == null ? GetRolesArgs.Empty : args, Utilities.withVersion(options));
     }

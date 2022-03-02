@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetObjectAccessControl {
-/**
- * Returns the ACL entry for the specified entity on the specified object.
+    private GetObjectAccessControl() {}
+    public interface BuilderApplicator {
+        public void apply(GetObjectAccessControlArgs.Builder a);
+    }
+    private static GetObjectAccessControlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetObjectAccessControlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the ACL entry for the specified entity on the specified object.
  * 
- */
+     */
+    public static CompletableFuture<GetObjectAccessControlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the ACL entry for the specified entity on the specified object.
+     * 
+     */
     public static CompletableFuture<GetObjectAccessControlResult> invokeAsync(GetObjectAccessControlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getObjectAccessControl", TypeShape.of(GetObjectAccessControlResult.class), args == null ? GetObjectAccessControlArgs.Empty : args, Utilities.withVersion(options));
     }

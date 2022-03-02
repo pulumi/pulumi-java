@@ -12,17 +12,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRulesPackages {
-/**
- * The AWS Inspector Rules Packages data source allows access to the list of AWS
- * Inspector Rules Packages which can be used by AWS Inspector within the region
- * configured in the provider.
- * 
- * ## Example Usage
- * 
- *
- * A collection of values returned by getRulesPackages.
- * 
- */
+    private GetRulesPackages() {}
+    /**
+         * The AWS Inspector Rules Packages data source allows access to the list of AWS
+     * Inspector Rules Packages which can be used by AWS Inspector within the region
+     * configured in the provider.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of values returned by getRulesPackages.
+     * 
+     */
     public static CompletableFuture<GetRulesPackagesResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:inspector/getRulesPackages:getRulesPackages", TypeShape.of(GetRulesPackagesResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

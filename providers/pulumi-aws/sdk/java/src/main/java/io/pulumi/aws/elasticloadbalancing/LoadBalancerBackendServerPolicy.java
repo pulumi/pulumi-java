@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
- * @deprecated
+ * @Deprecated
  * aws.elasticloadbalancing.LoadBalancerBackendServerPolicy has been deprecated in favor of aws.elb.LoadBalancerBackendServerPolicy
  * 
  */
@@ -70,6 +70,22 @@ public class LoadBalancerBackendServerPolicy extends io.pulumi.resources.CustomR
         return this.policyNames;
     }
 
+    public interface BuilderApplicator {
+        public void apply(LoadBalancerBackendServerPolicyArgs.Builder a);
+    }
+    private static io.pulumi.aws.elasticloadbalancing.LoadBalancerBackendServerPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.elasticloadbalancing.LoadBalancerBackendServerPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public LoadBalancerBackendServerPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

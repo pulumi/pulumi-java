@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListGlobalUserLabs {
-/**
- * Lists the labs owned by a user
+    private ListGlobalUserLabs() {}
+    public interface BuilderApplicator {
+        public void apply(ListGlobalUserLabsArgs.Builder a);
+    }
+    private static ListGlobalUserLabsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListGlobalUserLabsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Lists the labs owned by a user
  * API Version: 2018-10-15.
  * 
- *
- * Lists the labs owned by a user
+     *
+     * Lists the labs owned by a user
  * 
- */
+     */
+    public static CompletableFuture<ListGlobalUserLabsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Lists the labs owned by a user
+     * API Version: 2018-10-15.
+     * 
+     *
+         * Lists the labs owned by a user
+     * 
+     */
     public static CompletableFuture<ListGlobalUserLabsResult> invokeAsync(ListGlobalUserLabsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:listGlobalUserLabs", TypeShape.of(ListGlobalUserLabsResult.class), args == null ? ListGlobalUserLabsArgs.Empty : args, Utilities.withVersion(options));
     }

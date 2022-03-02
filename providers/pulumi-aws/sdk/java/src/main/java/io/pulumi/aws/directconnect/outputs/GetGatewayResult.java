@@ -41,14 +41,14 @@ public final class GetGatewayResult {
     /**
      * The ASN on the Amazon side of the connection.
      * 
-     */
+    */
     public String getAmazonSideAsn() {
         return this.amazonSideAsn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -58,7 +58,7 @@ public final class GetGatewayResult {
     /**
      * AWS Account ID of the gateway.
      * 
-     */
+    */
     public String getOwnerAccountId() {
         return this.ownerAccountId;
     }

@@ -46,28 +46,28 @@ public final class GetDomainCognitoOption {
     /**
      * Whether node to node encryption is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The Cognito Identity pool used by the domain.
      * 
-     */
+    */
     public String getIdentityPoolId() {
         return this.identityPoolId;
     }
     /**
      * The IAM Role with the AmazonESCognitoAccess policy attached.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The Cognito User pool used by the domain.
      * 
-     */
+    */
     public String getUserPoolId() {
         return this.userPoolId;
     }

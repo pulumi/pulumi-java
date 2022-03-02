@@ -33,14 +33,14 @@ public final class BucketRoutingRuleCondition {
     /**
      * The HTTP error code when the redirect is applied.
      * 
-     */
+    */
     public Optional<String> getHttpErrorCodeReturnedEquals() {
         return Optional.ofNullable(this.httpErrorCodeReturnedEquals);
     }
     /**
      * The object key name prefix when the redirect is applied.
      * 
-     */
+    */
     public Optional<String> getKeyPrefixEquals() {
         return Optional.ofNullable(this.keyPrefixEquals);
     }

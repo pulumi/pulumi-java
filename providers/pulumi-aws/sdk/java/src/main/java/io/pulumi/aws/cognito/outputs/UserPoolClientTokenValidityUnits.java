@@ -40,21 +40,21 @@ public final class UserPoolClientTokenValidityUnits {
     /**
      * Time unit in for the value in `access_token_validity`, defaults to `hours`.
      * 
-     */
+    */
     public Optional<String> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * Time unit in for the value in `id_token_validity`, defaults to `hours`.
      * 
-     */
+    */
     public Optional<String> getIdToken() {
         return Optional.ofNullable(this.idToken);
     }
     /**
      * Time unit in for the value in `refresh_token_validity`, defaults to `days`.
      * 
-     */
+    */
     public Optional<String> getRefreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }

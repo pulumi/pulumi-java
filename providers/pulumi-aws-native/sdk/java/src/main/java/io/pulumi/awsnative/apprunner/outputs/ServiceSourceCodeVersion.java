@@ -32,14 +32,14 @@ public final class ServiceSourceCodeVersion {
     /**
      * Source Code Version Type
      * 
-     */
+    */
     public ServiceSourceCodeVersionType getType() {
         return this.type;
     }
     /**
      * Source Code Version Value
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

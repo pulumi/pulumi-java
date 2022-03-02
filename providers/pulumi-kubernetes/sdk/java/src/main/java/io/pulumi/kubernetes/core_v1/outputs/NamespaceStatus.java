@@ -39,7 +39,7 @@ public final class NamespaceStatus {
     /**
      * Represents the latest available observations of a namespace's current state.
      * 
-     */
+    */
     public List<NamespaceCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
@@ -50,7 +50,7 @@ public final class NamespaceStatus {
      *  - `"Active"` means the namespace is available for use in the system
      *  - `"Terminating"` means the namespace is undergoing graceful termination
      * 
-     */
+    */
     public Optional<String> getPhase() {
         return Optional.ofNullable(this.phase);
     }

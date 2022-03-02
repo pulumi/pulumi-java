@@ -23,7 +23,7 @@ public final class LoggingConfigResponse {
     /**
      * Logging components configuration
      * 
-     */
+    */
     public LoggingComponentConfigResponse getComponentConfig() {
         return this.componentConfig;
     }

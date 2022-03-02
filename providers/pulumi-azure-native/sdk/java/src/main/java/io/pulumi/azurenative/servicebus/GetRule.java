@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRule {
-/**
- * Description of Rule Resource.
+    private GetRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetRuleArgs.Builder a);
+    }
+    private static GetRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Description of Rule Resource.
  * API Version: 2017-04-01.
  * 
- *
- * Description of Rule Resource.
+     *
+     * Description of Rule Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Description of Rule Resource.
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Description of Rule Resource.
+     * 
+     */
     public static CompletableFuture<GetRuleResult> invokeAsync(GetRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getRule", TypeShape.of(GetRuleResult.class), args == null ? GetRuleArgs.Empty : args, Utilities.withVersion(options));
     }

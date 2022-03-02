@@ -38,7 +38,7 @@ public final class GetGroupMembershipsMembershipMemberKey {
      * group or user. For external-identity-mapped entities, the id is a string conforming
      * to the Identity Source's requirements.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -48,7 +48,7 @@ public final class GetGroupMembershipsMembershipMemberKey {
      * such as a Google user or a Google Group.
      * If populated, the EntityKey represents an external-identity-mapped group.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }

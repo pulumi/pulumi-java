@@ -38,21 +38,21 @@ public final class GooglePrivacyDlpV2BucketResponse {
     /**
      * Upper bound of the range, exclusive; type must match min.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ValueResponse getMax() {
         return this.max;
     }
     /**
      * Lower bound of the range, inclusive. Type should be the same as max if used.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ValueResponse getMin() {
         return this.min;
     }
     /**
      * Replacement value for this bucket.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ValueResponse getReplacementValue() {
         return this.replacementValue;
     }

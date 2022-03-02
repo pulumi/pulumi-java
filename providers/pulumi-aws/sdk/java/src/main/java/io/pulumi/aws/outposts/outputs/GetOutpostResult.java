@@ -60,21 +60,21 @@ public final class GetOutpostResult {
     /**
      * Availability Zone name.
      * 
-     */
+    */
     public String getAvailabilityZone() {
         return this.availabilityZone;
     }
     /**
      * Availability Zone identifier.
      * 
-     */
+    */
     public String getAvailabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
      * Description.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
@@ -90,7 +90,7 @@ public final class GetOutpostResult {
     /**
      * Site identifier.
      * 
-     */
+    */
     public String getSiteId() {
         return this.siteId;
     }

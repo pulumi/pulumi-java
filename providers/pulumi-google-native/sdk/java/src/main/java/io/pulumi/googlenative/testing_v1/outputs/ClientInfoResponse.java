@@ -33,14 +33,14 @@ public final class ClientInfoResponse {
     /**
      * The list of detailed information about client.
      * 
-     */
+    */
     public List<ClientInfoDetailResponse> getClientInfoDetails() {
         return this.clientInfoDetails;
     }
     /**
      * Client name, such as gcloud.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

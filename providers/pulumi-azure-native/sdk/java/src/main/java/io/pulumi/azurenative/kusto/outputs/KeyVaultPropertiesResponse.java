@@ -47,28 +47,28 @@ public final class KeyVaultPropertiesResponse {
     /**
      * The name of the key vault key.
      * 
-     */
+    */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * The Uri of the key vault.
      * 
-     */
+    */
     public String getKeyVaultUri() {
         return this.keyVaultUri;
     }
     /**
      * The version of the key vault key.
      * 
-     */
+    */
     public Optional<String> getKeyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
     /**
      * The user assigned identity (ARM resource id) that has access to the key.
      * 
-     */
+    */
     public Optional<String> getUserIdentity() {
         return Optional.ofNullable(this.userIdentity);
     }

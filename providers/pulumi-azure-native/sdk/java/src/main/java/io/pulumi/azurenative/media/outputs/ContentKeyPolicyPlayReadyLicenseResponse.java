@@ -94,70 +94,70 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse {
     /**
      * A flag indicating whether test devices can use the license.
      * 
-     */
+    */
     public Boolean getAllowTestDevices() {
         return this.allowTestDevices;
     }
     /**
      * The begin date of license
      * 
-     */
+    */
     public Optional<String> getBeginDate() {
         return Optional.ofNullable(this.beginDate);
     }
     /**
      * The content key location.
      * 
-     */
+    */
     public Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> getContentKeyLocation() {
         return this.contentKeyLocation;
     }
     /**
      * The PlayReady content type.
      * 
-     */
+    */
     public String getContentType() {
         return this.contentType;
     }
     /**
      * The expiration date of license.
      * 
-     */
+    */
     public Optional<String> getExpirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
     /**
      * The grace period of license.
      * 
-     */
+    */
     public Optional<String> getGracePeriod() {
         return Optional.ofNullable(this.gracePeriod);
     }
     /**
      * The license type.
      * 
-     */
+    */
     public String getLicenseType() {
         return this.licenseType;
     }
     /**
      * The license PlayRight
      * 
-     */
+    */
     public Optional<ContentKeyPolicyPlayReadyPlayRightResponse> getPlayRight() {
         return Optional.ofNullable(this.playRight);
     }
     /**
      * The relative begin date of license.
      * 
-     */
+    */
     public Optional<String> getRelativeBeginDate() {
         return Optional.ofNullable(this.relativeBeginDate);
     }
     /**
      * The relative expiration date of license.
      * 
-     */
+    */
     public Optional<String> getRelativeExpirationDate() {
         return Optional.ofNullable(this.relativeExpirationDate);
     }

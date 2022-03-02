@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomainIdentity {
-/**
- * Retrieve the SES domain identity
+    private GetDomainIdentity() {}
+    public interface BuilderApplicator {
+        public void apply(GetDomainIdentityArgs.Builder a);
+    }
+    private static GetDomainIdentityArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDomainIdentityArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieve the SES domain identity
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getDomainIdentity.
+     *
+     * A collection of arguments for invoking getDomainIdentity.
  * 
- *
- * A collection of values returned by getDomainIdentity.
+     *
+     * A collection of values returned by getDomainIdentity.
  * 
- */
+     */
+    public static CompletableFuture<GetDomainIdentityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieve the SES domain identity
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getDomainIdentity.
+     * 
+     *
+         * A collection of values returned by getDomainIdentity.
+     * 
+     */
     public static CompletableFuture<GetDomainIdentityResult> invokeAsync(GetDomainIdentityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ses/getDomainIdentity:getDomainIdentity", TypeShape.of(GetDomainIdentityResult.class), args == null ? GetDomainIdentityArgs.Empty : args, Utilities.withVersion(options));
     }

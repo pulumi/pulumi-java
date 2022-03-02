@@ -97,77 +97,77 @@ public final class GetWorkspaceResult {
     /**
      * The immutable id of the team account which contains this workspace.
      * 
-     */
+    */
     public String getAccountId() {
         return this.accountId;
     }
     /**
      * The creation date of the machine learning workspace in ISO8601 format.
      * 
-     */
+    */
     public String getCreationDate() {
         return this.creationDate;
     }
     /**
      * The description of this workspace.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
      * 
-     */
+    */
     public String getFriendlyName() {
         return this.friendlyName;
     }
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current deployment state of team account workspace resource. The provisioningState is to indicate states for resource provisioning.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The immutable id of this workspace.
      * 
-     */
+    */
     public String getWorkspaceId() {
         return this.workspaceId;
     }

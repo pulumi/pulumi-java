@@ -53,35 +53,35 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse {
     /**
      * The name of the event to handle.
      * 
-     */
+    */
     public String getEvent() {
         return this.event;
     }
     /**
      * The unique identifier of this event handler.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The target flow to transition to. Format: `projects//locations//agents//flows/`.
      * 
-     */
+    */
     public String getTargetFlow() {
         return this.targetFlow;
     }
     /**
      * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
      * 
-     */
+    */
     public String getTargetPage() {
         return this.targetPage;
     }
     /**
      * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3beta1FulfillmentResponse getTriggerFulfillment() {
         return this.triggerFulfillment;
     }

@@ -35,14 +35,14 @@ public final class GetDeviceResult {
     /**
      * The Edge Device you want to register against a device fleet
      * 
-     */
+    */
     public Optional<Device> getDevice() {
         return Optional.ofNullable(this.device);
     }
     /**
      * Associate tags with the resource
      * 
-     */
+    */
     public List<DeviceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

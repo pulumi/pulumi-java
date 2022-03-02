@@ -41,21 +41,21 @@ public final class GetResourcesResourceTagMappingList {
     /**
      * List of objects with information that shows whether a resource is compliant with the effective tag policy, including details on any noncompliant tag keys.
      * 
-     */
+    */
     public List<GetResourcesResourceTagMappingListComplianceDetail> getComplianceDetails() {
         return this.complianceDetails;
     }
     /**
      * ARN of the resource.
      * 
-     */
+    */
     public String getResourceArn() {
         return this.resourceArn;
     }
     /**
      * Map of tags assigned to the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

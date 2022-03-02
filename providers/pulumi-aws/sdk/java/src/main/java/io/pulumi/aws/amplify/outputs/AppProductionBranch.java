@@ -47,28 +47,28 @@ public final class AppProductionBranch {
     /**
      * The branch name for the production branch.
      * 
-     */
+    */
     public Optional<String> getBranchName() {
         return Optional.ofNullable(this.branchName);
     }
     /**
      * The last deploy time of the production branch.
      * 
-     */
+    */
     public Optional<String> getLastDeployTime() {
         return Optional.ofNullable(this.lastDeployTime);
     }
     /**
      * The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The thumbnail URL for the production branch.
      * 
-     */
+    */
     public Optional<String> getThumbnailUrl() {
         return Optional.ofNullable(this.thumbnailUrl);
     }

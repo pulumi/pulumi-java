@@ -13,16 +13,38 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSdk {
-/**
- * ## Example Usage
+    private GetSdk() {}
+    public interface BuilderApplicator {
+        public void apply(GetSdkArgs.Builder a);
+    }
+    private static GetSdkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSdkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getSdk.
+     *
+     * A collection of arguments for invoking getSdk.
  * 
- *
- * A collection of values returned by getSdk.
+     *
+     * A collection of values returned by getSdk.
  * 
- */
+     */
+    public static CompletableFuture<GetSdkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getSdk.
+     * 
+     *
+         * A collection of values returned by getSdk.
+     * 
+     */
     public static CompletableFuture<GetSdkResult> invokeAsync(GetSdkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:apigateway/getSdk:getSdk", TypeShape.of(GetSdkResult.class), args == null ? GetSdkArgs.Empty : args, Utilities.withVersion(options));
     }

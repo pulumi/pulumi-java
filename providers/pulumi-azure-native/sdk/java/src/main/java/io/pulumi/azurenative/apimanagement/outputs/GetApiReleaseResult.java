@@ -68,49 +68,49 @@ public final class GetApiReleaseResult {
     /**
      * Identifier of the API the release belongs to.
      * 
-     */
+    */
     public Optional<String> getApiId() {
         return Optional.ofNullable(this.apiId);
     }
     /**
      * The time the API was released. The date conforms to the following format: yyyy-MM-ddTHH:mm:ssZ as specified by the ISO 8601 standard.
      * 
-     */
+    */
     public String getCreatedDateTime() {
         return this.createdDateTime;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Release Notes
      * 
-     */
+    */
     public Optional<String> getNotes() {
         return Optional.ofNullable(this.notes);
     }
     /**
      * Resource type for API Management resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The time the API release was updated.
      * 
-     */
+    */
     public String getUpdatedDateTime() {
         return this.updatedDateTime;
     }

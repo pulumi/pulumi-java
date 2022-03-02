@@ -62,42 +62,42 @@ public final class GetLifecycleHookResult {
     /**
      * The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs. The valid values are CONTINUE and ABANDON (default).
      * 
-     */
+    */
     public Optional<String> getDefaultResult() {
         return Optional.ofNullable(this.defaultResult);
     }
     /**
      * The maximum time, in seconds, that can elapse before the lifecycle hook times out. The range is from 30 to 7200 seconds. The default value is 3600 seconds (1 hour). If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the DefaultResult property.
      * 
-     */
+    */
     public Optional<Integer> getHeartbeatTimeout() {
         return Optional.ofNullable(this.heartbeatTimeout);
     }
     /**
      * The instance state to which you want to attach the lifecycle hook.
      * 
-     */
+    */
     public Optional<String> getLifecycleTransition() {
         return Optional.ofNullable(this.lifecycleTransition);
     }
     /**
      * Additional information that is included any time Amazon EC2 Auto Scaling sends a message to the notification target.
      * 
-     */
+    */
     public Optional<String> getNotificationMetadata() {
         return Optional.ofNullable(this.notificationMetadata);
     }
     /**
      * The Amazon Resource Name (ARN) of the notification target that Amazon EC2 Auto Scaling uses to notify you when an instance is in the transition state for the lifecycle hook. You can specify an Amazon SQS queue or an Amazon SNS topic. The notification message includes the following information: lifecycle action token, user account ID, Auto Scaling group name, lifecycle hook name, instance ID, lifecycle transition, and notification metadata.
      * 
-     */
+    */
     public Optional<String> getNotificationTargetARN() {
         return Optional.ofNullable(this.notificationTargetARN);
     }
     /**
      * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target, for example, an Amazon SNS topic or an Amazon SQS queue.
      * 
-     */
+    */
     public Optional<String> getRoleARN() {
         return Optional.ofNullable(this.roleARN);
     }

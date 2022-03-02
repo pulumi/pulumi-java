@@ -47,28 +47,28 @@ public final class ListIotHubResourceKeysForKeyNameResult {
     /**
      * The name of the shared access policy.
      * 
-     */
+    */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * The primary key.
      * 
-     */
+    */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
     /**
      * The permissions assigned to the shared access policy.
      * 
-     */
+    */
     public String getRights() {
         return this.rights;
     }
     /**
      * The secondary key.
      * 
-     */
+    */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }

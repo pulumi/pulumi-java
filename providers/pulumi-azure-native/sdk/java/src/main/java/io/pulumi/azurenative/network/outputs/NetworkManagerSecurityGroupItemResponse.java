@@ -25,7 +25,7 @@ public final class NetworkManagerSecurityGroupItemResponse {
     /**
      * Network manager group Id.
      * 
-     */
+    */
     public Optional<String> getNetworkGroupId() {
         return Optional.ofNullable(this.networkGroupId);
     }

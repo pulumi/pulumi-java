@@ -152,133 +152,133 @@ public final class GetExportConfigurationResult {
     /**
      * The name of the Application Insights component.
      * 
-     */
+    */
     public String getApplicationName() {
         return this.applicationName;
     }
     /**
      * The name of the destination storage container.
      * 
-     */
+    */
     public String getContainerName() {
         return this.containerName;
     }
     /**
      * The name of destination account.
      * 
-     */
+    */
     public String getDestinationAccountId() {
         return this.destinationAccountId;
     }
     /**
      * The destination account location ID.
      * 
-     */
+    */
     public String getDestinationStorageLocationId() {
         return this.destinationStorageLocationId;
     }
     /**
      * The destination storage account subscription ID.
      * 
-     */
+    */
     public String getDestinationStorageSubscriptionId() {
         return this.destinationStorageSubscriptionId;
     }
     /**
      * The destination type.
      * 
-     */
+    */
     public String getDestinationType() {
         return this.destinationType;
     }
     /**
      * The unique ID of the export configuration inside an Application Insights component. It is auto generated when the Continuous Export configuration is created.
      * 
-     */
+    */
     public String getExportId() {
         return this.exportId;
     }
     /**
      * This indicates current Continuous Export configuration status. The possible values are 'Preparing', 'Success', 'Failure'.
      * 
-     */
+    */
     public String getExportStatus() {
         return this.exportStatus;
     }
     /**
      * The instrumentation key of the Application Insights component.
      * 
-     */
+    */
     public String getInstrumentationKey() {
         return this.instrumentationKey;
     }
     /**
      * This will be 'true' if the Continuous Export configuration is enabled, otherwise it will be 'false'.
      * 
-     */
+    */
     public String getIsUserEnabled() {
         return this.isUserEnabled;
     }
     /**
      * The last time the Continuous Export configuration started failing.
      * 
-     */
+    */
     public String getLastGapTime() {
         return this.lastGapTime;
     }
     /**
      * The last time data was successfully delivered to the destination storage container for this Continuous Export configuration.
      * 
-     */
+    */
     public String getLastSuccessTime() {
         return this.lastSuccessTime;
     }
     /**
      * Last time the Continuous Export configuration was updated.
      * 
-     */
+    */
     public String getLastUserUpdate() {
         return this.lastUserUpdate;
     }
     /**
      * Deprecated
      * 
-     */
+    */
     public Optional<String> getNotificationQueueEnabled() {
         return Optional.ofNullable(this.notificationQueueEnabled);
     }
     /**
      * This is the reason the Continuous Export configuration started failing. It can be 'AzureStorageNotFound' or 'AzureStorageAccessDenied'.
      * 
-     */
+    */
     public String getPermanentErrorReason() {
         return this.permanentErrorReason;
     }
     /**
      * This comma separated list of document types that will be exported. The possible values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.
      * 
-     */
+    */
     public Optional<String> getRecordTypes() {
         return Optional.ofNullable(this.recordTypes);
     }
     /**
      * The resource group of the Application Insights component.
      * 
-     */
+    */
     public String getResourceGroup() {
         return this.resourceGroup;
     }
     /**
      * The name of the destination storage account.
      * 
-     */
+    */
     public String getStorageName() {
         return this.storageName;
     }
     /**
      * The subscription of the Application Insights component.
      * 
-     */
+    */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }

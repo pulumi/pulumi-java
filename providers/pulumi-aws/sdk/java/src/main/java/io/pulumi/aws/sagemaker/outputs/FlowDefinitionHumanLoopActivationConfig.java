@@ -25,7 +25,7 @@ public final class FlowDefinitionHumanLoopActivationConfig {
     /**
      * defines under what conditions SageMaker creates a human loop. See Human Loop Activation Conditions Config details below.
      * 
-     */
+    */
     public Optional<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig> getHumanLoopActivationConditionsConfig() {
         return Optional.ofNullable(this.humanLoopActivationConditionsConfig);
     }

@@ -160,7 +160,7 @@ public final class GetOrderableDbInstanceResult {
     /**
      * Availability zones where the instance is available.
      * 
-     */
+    */
     public List<String> getAvailabilityZones() {
         return this.availabilityZones;
     }
@@ -173,7 +173,7 @@ public final class GetOrderableDbInstanceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -186,56 +186,56 @@ public final class GetOrderableDbInstanceResult {
     /**
      * Maximum total provisioned IOPS for a DB instance.
      * 
-     */
+    */
     public Integer getMaxIopsPerDbInstance() {
         return this.maxIopsPerDbInstance;
     }
     /**
      * Maximum provisioned IOPS per GiB for a DB instance.
      * 
-     */
+    */
     public Double getMaxIopsPerGib() {
         return this.maxIopsPerGib;
     }
     /**
      * Maximum storage size for a DB instance.
      * 
-     */
+    */
     public Integer getMaxStorageSize() {
         return this.maxStorageSize;
     }
     /**
      * Minimum total provisioned IOPS for a DB instance.
      * 
-     */
+    */
     public Integer getMinIopsPerDbInstance() {
         return this.minIopsPerDbInstance;
     }
     /**
      * Minimum provisioned IOPS per GiB for a DB instance.
      * 
-     */
+    */
     public Double getMinIopsPerGib() {
         return this.minIopsPerGib;
     }
     /**
      * Minimum storage size for a DB instance.
      * 
-     */
+    */
     public Integer getMinStorageSize() {
         return this.minStorageSize;
     }
     /**
      * Whether a DB instance is Multi-AZ capable.
      * 
-     */
+    */
     public Boolean getMultiAzCapable() {
         return this.multiAzCapable;
     }
     /**
      * Whether a DB instance supports RDS on Outposts.
      * 
-     */
+    */
     public Boolean getOutpostCapable() {
         return this.outpostCapable;
     }
@@ -248,7 +248,7 @@ public final class GetOrderableDbInstanceResult {
     /**
      * Whether a DB instance can have a read replica.
      * 
-     */
+    */
     public Boolean getReadReplicaCapable() {
         return this.readReplicaCapable;
     }
@@ -258,7 +258,7 @@ public final class GetOrderableDbInstanceResult {
     /**
      * A list of the supported DB engine modes.
      * 
-     */
+    */
     public List<String> getSupportedEngineModes() {
         return this.supportedEngineModes;
     }

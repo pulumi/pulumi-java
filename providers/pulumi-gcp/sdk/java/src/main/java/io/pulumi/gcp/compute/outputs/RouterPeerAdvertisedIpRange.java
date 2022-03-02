@@ -34,7 +34,7 @@ public final class RouterPeerAdvertisedIpRange {
     /**
      * User-specified description for the IP range.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -42,7 +42,7 @@ public final class RouterPeerAdvertisedIpRange {
      * The IP range to advertise. The value must be a
      * CIDR-formatted string.
      * 
-     */
+    */
     public String getRange() {
         return this.range;
     }

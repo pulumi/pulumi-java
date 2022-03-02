@@ -49,28 +49,28 @@ public final class MetricCounterResponse {
     /**
      * The additional dimensions to be added to metric.
      * 
-     */
+    */
     public List<MetricDimensionResponse> getAdditionalDimensions() {
         return this.additionalDimensions == null ? List.of() : this.additionalDimensions;
     }
     /**
      * The dimension filter.
      * 
-     */
+    */
     public List<MetricDimensionResponse> getDimensionFilter() {
         return this.dimensionFilter == null ? List.of() : this.dimensionFilter;
     }
     /**
      * The instance from which counter should be collected.
      * 
-     */
+    */
     public Optional<String> getInstance() {
         return Optional.ofNullable(this.instance);
     }
     /**
      * The counter name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

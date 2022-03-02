@@ -42,7 +42,7 @@ public final class GetAccessPointsResult {
     /**
      * Set of Amazon Resource Names (ARNs).
      * 
-     */
+    */
     public List<String> getArns() {
         return this.arns;
     }
@@ -52,14 +52,14 @@ public final class GetAccessPointsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set of identifiers.
      * 
-     */
+    */
     public List<String> getIds() {
         return this.ids;
     }

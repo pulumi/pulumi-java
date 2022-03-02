@@ -25,7 +25,7 @@ public final class NoteAttestationAuthorityHint {
      * The human readable name of this Attestation Authority, for
      * example "qa".
      * 
-     */
+    */
     public String getHumanReadableName() {
         return this.humanReadableName;
     }

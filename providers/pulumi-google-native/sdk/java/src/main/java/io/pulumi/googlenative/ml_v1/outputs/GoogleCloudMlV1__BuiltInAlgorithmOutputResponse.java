@@ -45,28 +45,28 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
     /**
      * Framework on which the built-in algorithm was trained.
      * 
-     */
+    */
     public String getFramework() {
         return this.framework;
     }
     /**
      * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don't use hyperparameter tuning.
      * 
-     */
+    */
     public String getModelPath() {
         return this.modelPath;
     }
     /**
      * Python version on which the built-in algorithm was trained.
      * 
-     */
+    */
     public String getPythonVersion() {
         return this.pythonVersion;
     }
     /**
      * AI Platform runtime version on which the built-in algorithm was trained.
      * 
-     */
+    */
     public String getRuntimeVersion() {
         return this.runtimeVersion;
     }

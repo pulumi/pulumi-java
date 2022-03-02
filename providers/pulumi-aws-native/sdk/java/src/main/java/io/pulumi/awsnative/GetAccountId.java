@@ -12,6 +12,7 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccountId {
+    private GetAccountId() {}
     public static CompletableFuture<GetAccountIdResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:getAccountId", TypeShape.of(GetAccountIdResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

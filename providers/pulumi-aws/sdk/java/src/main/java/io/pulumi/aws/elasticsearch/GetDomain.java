@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomain {
-/**
- * Use this data source to get information about an Elasticsearch Domain
+    private GetDomain() {}
+    public interface BuilderApplicator {
+        public void apply(GetDomainArgs.Builder a);
+    }
+    private static GetDomainArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDomainArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get information about an Elasticsearch Domain
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getDomain.
+     *
+     * A collection of arguments for invoking getDomain.
  * 
- *
- * A collection of values returned by getDomain.
+     *
+     * A collection of values returned by getDomain.
  * 
- */
+     */
+    public static CompletableFuture<GetDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get information about an Elasticsearch Domain
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getDomain.
+     * 
+     *
+         * A collection of values returned by getDomain.
+     * 
+     */
     public static CompletableFuture<GetDomainResult> invokeAsync(GetDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticsearch/getDomain:getDomain", TypeShape.of(GetDomainResult.class), args == null ? GetDomainArgs.Empty : args, Utilities.withVersion(options));
     }

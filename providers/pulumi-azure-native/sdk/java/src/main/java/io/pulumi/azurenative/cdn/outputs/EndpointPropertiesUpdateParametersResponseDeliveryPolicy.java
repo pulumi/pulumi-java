@@ -35,14 +35,14 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy {
     /**
      * User-friendly description of the policy.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * A list of the delivery rules.
      * 
-     */
+    */
     public List<DeliveryRuleResponse> getRules() {
         return this.rules;
     }

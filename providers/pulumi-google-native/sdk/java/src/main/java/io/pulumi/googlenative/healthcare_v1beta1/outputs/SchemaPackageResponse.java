@@ -56,35 +56,35 @@ public final class SchemaPackageResponse {
     /**
      * Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.
      * 
-     */
+    */
     public Boolean getIgnoreMinOccurs() {
         return this.ignoreMinOccurs;
     }
     /**
      * Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.
      * 
-     */
+    */
     public List<Hl7SchemaConfigResponse> getSchemas() {
         return this.schemas;
     }
     /**
      * Determines how messages that fail to parse are handled.
      * 
-     */
+    */
     public String getSchematizedParsingType() {
         return this.schematizedParsingType;
     }
     /**
      * Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.
      * 
-     */
+    */
     public List<Hl7TypesConfigResponse> getTypes() {
         return this.types;
     }
     /**
      * Determines how unexpected segments (segments not matched to the schema) are handled.
      * 
-     */
+    */
     public String getUnexpectedSegmentHandling() {
         return this.unexpectedSegmentHandling;
     }

@@ -50,28 +50,28 @@ public final class GetScriptDagNode {
     /**
      * Nested configuration an argument or property of a node. Defined below.
      * 
-     */
+    */
     public List<GetScriptDagNodeArg> getArgs() {
         return this.args;
     }
     /**
      * A node identifier that is unique within the node's graph.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The line number of the node.
      * 
-     */
+    */
     public Optional<Integer> getLineNumber() {
         return Optional.ofNullable(this.lineNumber);
     }
     /**
      * The type of node this is.
      * 
-     */
+    */
     public String getNodeType() {
         return this.nodeType;
     }

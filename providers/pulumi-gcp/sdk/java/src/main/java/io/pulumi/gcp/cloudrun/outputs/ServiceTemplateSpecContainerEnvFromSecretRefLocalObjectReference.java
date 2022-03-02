@@ -23,7 +23,7 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectRefere
     /**
      * Volume's name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
