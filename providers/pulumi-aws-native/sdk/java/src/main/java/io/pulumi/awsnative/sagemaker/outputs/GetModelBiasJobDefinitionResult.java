@@ -33,14 +33,14 @@ public final class GetModelBiasJobDefinitionResult {
     /**
      * The time at which the job definition was created.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The Amazon Resource Name (ARN) of job definition.
      * 
-     */
+    */
     public Optional<String> getJobDefinitionArn() {
         return Optional.ofNullable(this.jobDefinitionArn);
     }

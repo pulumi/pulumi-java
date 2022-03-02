@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTable {
-/**
- * Resource schema for AWS::Cassandra::Table
+    private GetTable() {}
+    public interface BuilderApplicator {
+        public void apply(GetTableArgs.Builder a);
+    }
+    private static GetTableArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTableArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::Cassandra::Table
  * 
- */
+     */
+    public static CompletableFuture<GetTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::Cassandra::Table
+     * 
+     */
     public static CompletableFuture<GetTableResult> invokeAsync(GetTableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cassandra:getTable", TypeShape.of(GetTableResult.class), args == null ? GetTableArgs.Empty : args, Utilities.withVersion(options));
     }

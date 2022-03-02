@@ -107,21 +107,21 @@ public final class GetDataSourceResult {
      *             the <code>Credentials</code> originally used with this <code>DataSourceParameters</code>
      *             are automatically allowed.</p>
      * 
-     */
+    */
     public List<DataSourceParameters> getAlternateDataSourceParameters() {
         return this.alternateDataSourceParameters == null ? List.of() : this.alternateDataSourceParameters;
     }
     /**
      * <p>The Amazon Resource Name (ARN) of the data source.</p>
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>The time that this data source was created.</p>
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -134,21 +134,21 @@ public final class GetDataSourceResult {
     /**
      * <p>The last time that this data source was updated.</p>
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * <p>A display name for the data source.</p>
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * <p>A list of resource permissions on the data source.</p>
      * 
-     */
+    */
     public List<DataSourceResourcePermission> getPermissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
@@ -161,7 +161,7 @@ public final class GetDataSourceResult {
     /**
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.</p>
      * 
-     */
+    */
     public List<DataSourceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

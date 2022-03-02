@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFleet {
-/**
- * The AWS::GameLift::Fleet resource creates an Amazon GameLift (GameLift) fleet to host game servers.  A fleet is a set of EC2 instances, each of which can host multiple game sessions.
+    private GetFleet() {}
+    public interface BuilderApplicator {
+        public void apply(GetFleetArgs.Builder a);
+    }
+    private static GetFleetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFleetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::GameLift::Fleet resource creates an Amazon GameLift (GameLift) fleet to host game servers.  A fleet is a set of EC2 instances, each of which can host multiple game sessions.
  * 
- */
+     */
+    public static CompletableFuture<GetFleetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::GameLift::Fleet resource creates an Amazon GameLift (GameLift) fleet to host game servers.  A fleet is a set of EC2 instances, each of which can host multiple game sessions.
+     * 
+     */
     public static CompletableFuture<GetFleetResult> invokeAsync(GetFleetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:gamelift:getFleet", TypeShape.of(GetFleetResult.class), args == null ? GetFleetArgs.Empty : args, Utilities.withVersion(options));
     }

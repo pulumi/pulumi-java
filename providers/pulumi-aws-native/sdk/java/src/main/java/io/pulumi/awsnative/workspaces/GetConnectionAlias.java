@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnectionAlias {
-/**
- * Resource Type definition for AWS::WorkSpaces::ConnectionAlias
+    private GetConnectionAlias() {}
+    public interface BuilderApplicator {
+        public void apply(GetConnectionAliasArgs.Builder a);
+    }
+    private static GetConnectionAliasArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConnectionAliasArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::WorkSpaces::ConnectionAlias
  * 
- */
+     */
+    public static CompletableFuture<GetConnectionAliasResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::WorkSpaces::ConnectionAlias
+     * 
+     */
     public static CompletableFuture<GetConnectionAliasResult> invokeAsync(GetConnectionAliasArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:workspaces:getConnectionAlias", TypeShape.of(GetConnectionAliasResult.class), args == null ? GetConnectionAliasArgs.Empty : args, Utilities.withVersion(options));
     }

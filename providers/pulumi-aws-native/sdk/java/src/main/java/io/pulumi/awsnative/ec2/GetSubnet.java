@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnet {
-/**
- * Resource Type definition for AWS::EC2::Subnet
+    private GetSubnet() {}
+    public interface BuilderApplicator {
+        public void apply(GetSubnetArgs.Builder a);
+    }
+    private static GetSubnetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSubnetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::EC2::Subnet
  * 
- */
+     */
+    public static CompletableFuture<GetSubnetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::EC2::Subnet
+     * 
+     */
     public static CompletableFuture<GetSubnetResult> invokeAsync(GetSubnetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getSubnet", TypeShape.of(GetSubnetResult.class), args == null ? GetSubnetArgs.Empty : args, Utilities.withVersion(options));
     }

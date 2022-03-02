@@ -23,7 +23,7 @@ public final class MonitoringScheduleStoppingCondition {
     /**
      * The maximum runtime allowed in seconds.
      * 
-     */
+    */
     public Integer getMaxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }

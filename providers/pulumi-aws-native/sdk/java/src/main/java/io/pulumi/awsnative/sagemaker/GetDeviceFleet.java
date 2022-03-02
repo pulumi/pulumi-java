@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeviceFleet {
-/**
- * Resource schema for AWS::SageMaker::DeviceFleet
+    private GetDeviceFleet() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeviceFleetArgs.Builder a);
+    }
+    private static GetDeviceFleetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeviceFleetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::SageMaker::DeviceFleet
  * 
- */
+     */
+    public static CompletableFuture<GetDeviceFleetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::SageMaker::DeviceFleet
+     * 
+     */
     public static CompletableFuture<GetDeviceFleetResult> invokeAsync(GetDeviceFleetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getDeviceFleet", TypeShape.of(GetDeviceFleetResult.class), args == null ? GetDeviceFleetArgs.Empty : args, Utilities.withVersion(options));
     }

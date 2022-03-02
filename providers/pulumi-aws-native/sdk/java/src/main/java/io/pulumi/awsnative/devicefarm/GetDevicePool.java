@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDevicePool {
-/**
- * AWS::DeviceFarm::DevicePool creates a new Device Pool for a given DF Project
+    private GetDevicePool() {}
+    public interface BuilderApplicator {
+        public void apply(GetDevicePoolArgs.Builder a);
+    }
+    private static GetDevicePoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDevicePoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * AWS::DeviceFarm::DevicePool creates a new Device Pool for a given DF Project
  * 
- */
+     */
+    public static CompletableFuture<GetDevicePoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * AWS::DeviceFarm::DevicePool creates a new Device Pool for a given DF Project
+     * 
+     */
     public static CompletableFuture<GetDevicePoolResult> invokeAsync(GetDevicePoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:devicefarm:getDevicePool", TypeShape.of(GetDevicePoolResult.class), args == null ? GetDevicePoolArgs.Empty : args, Utilities.withVersion(options));
     }

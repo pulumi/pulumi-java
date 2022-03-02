@@ -50,28 +50,28 @@ public final class FlowSourceFlowConfig {
     /**
      * Name of source connector profile
      * 
-     */
+    */
     public Optional<String> getConnectorProfileName() {
         return Optional.ofNullable(this.connectorProfileName);
     }
     /**
      * Type of source connector
      * 
-     */
+    */
     public FlowConnectorType getConnectorType() {
         return this.connectorType;
     }
     /**
      * Configuration for scheduled incremental data pull
      * 
-     */
+    */
     public Optional<FlowIncrementalPullConfig> getIncrementalPullConfig() {
         return Optional.ofNullable(this.incrementalPullConfig);
     }
     /**
      * Source connector details required to query a connector
      * 
-     */
+    */
     public FlowSourceConnectorProperties getSourceConnectorProperties() {
         return this.sourceConnectorProperties;
     }

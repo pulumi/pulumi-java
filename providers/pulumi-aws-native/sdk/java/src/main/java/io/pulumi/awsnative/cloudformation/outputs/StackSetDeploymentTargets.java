@@ -33,14 +33,14 @@ public final class StackSetDeploymentTargets {
     /**
      * AWS accounts that you want to create stack instances in the specified Region(s) for.
      * 
-     */
+    */
     public List<String> getAccounts() {
         return this.accounts == null ? List.of() : this.accounts;
     }
     /**
      * The organization root ID or organizational unit (OU) IDs to which StackSets deploys.
      * 
-     */
+    */
     public List<String> getOrganizationalUnitIds() {
         return this.organizationalUnitIds == null ? List.of() : this.organizationalUnitIds;
     }

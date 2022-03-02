@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPipeline {
-/**
- * Resource Type definition for AWS::SageMaker::Pipeline
+    private GetPipeline() {}
+    public interface BuilderApplicator {
+        public void apply(GetPipelineArgs.Builder a);
+    }
+    private static GetPipelineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPipelineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::Pipeline
  * 
- */
+     */
+    public static CompletableFuture<GetPipelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::SageMaker::Pipeline
+     * 
+     */
     public static CompletableFuture<GetPipelineResult> invokeAsync(GetPipelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getPipeline", TypeShape.of(GetPipelineResult.class), args == null ? GetPipelineArgs.Empty : args, Utilities.withVersion(options));
     }

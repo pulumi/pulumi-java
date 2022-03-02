@@ -60,14 +60,14 @@ public final class StorageLensS3BucketDestination {
     /**
      * The AWS account ID that owns the destination S3 bucket.
      * 
-     */
+    */
     public String getAccountId() {
         return this.accountId;
     }
     /**
      * The ARN of the bucket to which Amazon S3 Storage Lens exports will be placed.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
@@ -77,21 +77,21 @@ public final class StorageLensS3BucketDestination {
     /**
      * Specifies the file format to use when exporting Amazon S3 Storage Lens metrics export.
      * 
-     */
+    */
     public StorageLensS3BucketDestinationFormat getFormat() {
         return this.format;
     }
     /**
      * The version of the output schema to use when exporting Amazon S3 Storage Lens metrics.
      * 
-     */
+    */
     public StorageLensS3BucketDestinationOutputSchemaVersion getOutputSchemaVersion() {
         return this.outputSchemaVersion;
     }
     /**
      * The prefix to use for Amazon S3 Storage Lens export.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }

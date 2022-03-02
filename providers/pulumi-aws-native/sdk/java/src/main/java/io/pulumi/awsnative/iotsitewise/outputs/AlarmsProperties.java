@@ -33,14 +33,14 @@ public final class AlarmsProperties {
     /**
      * The ARN of the IAM role that allows the alarm to perform actions and access AWS resources and services, such as AWS IoT Events.
      * 
-     */
+    */
     public Optional<String> getAlarmRoleArn() {
         return Optional.ofNullable(this.alarmRoleArn);
     }
     /**
      * The ARN of the AWS Lambda function that manages alarm notifications. For more information, see Managing alarm notifications in the AWS IoT Events Developer Guide.
      * 
-     */
+    */
     public Optional<String> getNotificationLambdaArn() {
         return Optional.ofNullable(this.notificationLambdaArn);
     }

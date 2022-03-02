@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetComponent {
-/**
- * Definition of AWS::AmplifyUIBuilder::Component Resource Type
+    private GetComponent() {}
+    public interface BuilderApplicator {
+        public void apply(GetComponentArgs.Builder a);
+    }
+    private static GetComponentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetComponentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of AWS::AmplifyUIBuilder::Component Resource Type
  * 
- */
+     */
+    public static CompletableFuture<GetComponentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of AWS::AmplifyUIBuilder::Component Resource Type
+     * 
+     */
     public static CompletableFuture<GetComponentResult> invokeAsync(GetComponentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:amplifyuibuilder:getComponent", TypeShape.of(GetComponentResult.class), args == null ? GetComponentArgs.Empty : args, Utilities.withVersion(options));
     }

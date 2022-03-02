@@ -32,14 +32,14 @@ public final class AssetModelExpressionVariable {
     /**
      * The friendly name of the variable to be used in the expression.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The variable that identifies an asset property from which to use values.
      * 
-     */
+    */
     public AssetModelVariableValue getValue() {
         return this.value;
     }

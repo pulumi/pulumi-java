@@ -39,14 +39,14 @@ public final class BotFulfillmentStartResponseSpecification {
     /**
      * Determines whether the user can interrupt the start message while it is playing.
      * 
-     */
+    */
     public Optional<Boolean> getAllowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);
     }
     /**
      * The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn't played.
      * 
-     */
+    */
     public Integer getDelayInSeconds() {
         return this.delayInSeconds;
     }

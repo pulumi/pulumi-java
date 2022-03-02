@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHealthCheck {
-/**
- * Resource schema for AWS::Route53::HealthCheck.
+    private GetHealthCheck() {}
+    public interface BuilderApplicator {
+        public void apply(GetHealthCheckArgs.Builder a);
+    }
+    private static GetHealthCheckArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHealthCheckArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::Route53::HealthCheck.
  * 
- */
+     */
+    public static CompletableFuture<GetHealthCheckResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::Route53::HealthCheck.
+     * 
+     */
     public static CompletableFuture<GetHealthCheckResult> invokeAsync(GetHealthCheckArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getHealthCheck", TypeShape.of(GetHealthCheckResult.class), args == null ? GetHealthCheckArgs.Empty : args, Utilities.withVersion(options));
     }

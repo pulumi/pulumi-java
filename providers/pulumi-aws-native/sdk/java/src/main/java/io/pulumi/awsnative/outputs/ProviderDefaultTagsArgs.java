@@ -26,7 +26,7 @@ public final class ProviderDefaultTagsArgs {
     /**
      * A group of tags to set across all resources.
      * 
-     */
+    */
     public @Nullable Input<Map<String,String>> getTags() {
         return this.tags;
     }

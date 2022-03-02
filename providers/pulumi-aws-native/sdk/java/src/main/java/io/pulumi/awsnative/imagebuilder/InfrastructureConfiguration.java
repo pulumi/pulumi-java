@@ -220,6 +220,22 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
         return this.terminateInstanceOnFailure;
     }
 
+    public interface BuilderApplicator {
+        public void apply(InfrastructureConfigurationArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.imagebuilder.InfrastructureConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.imagebuilder.InfrastructureConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public InfrastructureConfiguration(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

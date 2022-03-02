@@ -49,7 +49,7 @@ public final class GetGroupResult {
     /**
      * The Resource Group ARN.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -59,7 +59,7 @@ public final class GetGroupResult {
     /**
      * The description of the resource group
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }

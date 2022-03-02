@@ -24,7 +24,7 @@ public final class BucketEncryption {
     /**
      * Specifies the default server-side-encryption configuration.
      * 
-     */
+    */
     public List<BucketServerSideEncryptionRule> getServerSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }

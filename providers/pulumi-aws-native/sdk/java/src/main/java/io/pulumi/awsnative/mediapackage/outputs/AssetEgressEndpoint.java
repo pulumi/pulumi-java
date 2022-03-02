@@ -31,14 +31,14 @@ public final class AssetEgressEndpoint {
     /**
      * The ID of the PackagingConfiguration being applied to the Asset.
      * 
-     */
+    */
     public String getPackagingConfigurationId() {
         return this.packagingConfigurationId;
     }
     /**
      * The URL of the parent manifest for the repackaged Asset.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

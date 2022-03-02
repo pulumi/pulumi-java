@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMethod {
-/**
- * Resource Type definition for AWS::ApiGateway::Method
+    private GetMethod() {}
+    public interface BuilderApplicator {
+        public void apply(GetMethodArgs.Builder a);
+    }
+    private static GetMethodArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMethodArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::ApiGateway::Method
  * 
- */
+     */
+    public static CompletableFuture<GetMethodResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::ApiGateway::Method
+     * 
+     */
     public static CompletableFuture<GetMethodResult> invokeAsync(GetMethodArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:apigateway:getMethod", TypeShape.of(GetMethodResult.class), args == null ? GetMethodArgs.Empty : args, Utilities.withVersion(options));
     }

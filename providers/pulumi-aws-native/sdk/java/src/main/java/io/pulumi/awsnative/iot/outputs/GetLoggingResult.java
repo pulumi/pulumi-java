@@ -34,14 +34,14 @@ public final class GetLoggingResult {
     /**
      * The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
      * 
-     */
+    */
     public Optional<LoggingDefaultLogLevel> getDefaultLogLevel() {
         return Optional.ofNullable(this.defaultLogLevel);
     }
     /**
      * The ARN of the role that allows IoT to write to Cloudwatch logs.
      * 
-     */
+    */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }

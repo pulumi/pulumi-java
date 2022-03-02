@@ -42,21 +42,21 @@ public final class ApplicationSubComponentConfigurationDetails {
     /**
      * A list of metrics to monitor for the component.
      * 
-     */
+    */
     public List<ApplicationAlarmMetric> getAlarmMetrics() {
         return this.alarmMetrics == null ? List.of() : this.alarmMetrics;
     }
     /**
      * A list of logs to monitor for the component.
      * 
-     */
+    */
     public List<ApplicationLog> getLogs() {
         return this.logs == null ? List.of() : this.logs;
     }
     /**
      * A list of Windows Events to log.
      * 
-     */
+    */
     public List<ApplicationWindowsEvent> getWindowsEvents() {
         return this.windowsEvents == null ? List.of() : this.windowsEvents;
     }

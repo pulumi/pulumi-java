@@ -25,7 +25,7 @@ public final class GetResourcePolicyResult {
     /**
      * The policy document
      * 
-     */
+    */
     public Optional<String> getPolicyDocument() {
         return Optional.ofNullable(this.policyDocument);
     }

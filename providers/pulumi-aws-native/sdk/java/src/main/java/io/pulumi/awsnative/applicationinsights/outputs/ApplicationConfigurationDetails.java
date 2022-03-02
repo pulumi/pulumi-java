@@ -75,49 +75,49 @@ public final class ApplicationConfigurationDetails {
     /**
      * A list of metrics to monitor for the component.
      * 
-     */
+    */
     public List<ApplicationAlarmMetric> getAlarmMetrics() {
         return this.alarmMetrics == null ? List.of() : this.alarmMetrics;
     }
     /**
      * A list of alarms to monitor for the component.
      * 
-     */
+    */
     public List<ApplicationAlarm> getAlarms() {
         return this.alarms == null ? List.of() : this.alarms;
     }
     /**
      * The HA cluster Prometheus Exporter settings.
      * 
-     */
+    */
     public Optional<ApplicationHAClusterPrometheusExporter> getHAClusterPrometheusExporter() {
         return Optional.ofNullable(this.hAClusterPrometheusExporter);
     }
     /**
      * The HANA DB Prometheus Exporter settings.
      * 
-     */
+    */
     public Optional<ApplicationHANAPrometheusExporter> getHANAPrometheusExporter() {
         return Optional.ofNullable(this.hANAPrometheusExporter);
     }
     /**
      * The JMX Prometheus Exporter settings.
      * 
-     */
+    */
     public Optional<ApplicationJMXPrometheusExporter> getJMXPrometheusExporter() {
         return Optional.ofNullable(this.jMXPrometheusExporter);
     }
     /**
      * A list of logs to monitor for the component.
      * 
-     */
+    */
     public List<ApplicationLog> getLogs() {
         return this.logs == null ? List.of() : this.logs;
     }
     /**
      * A list of Windows Events to log.
      * 
-     */
+    */
     public List<ApplicationWindowsEvent> getWindowsEvents() {
         return this.windowsEvents == null ? List.of() : this.windowsEvents;
     }

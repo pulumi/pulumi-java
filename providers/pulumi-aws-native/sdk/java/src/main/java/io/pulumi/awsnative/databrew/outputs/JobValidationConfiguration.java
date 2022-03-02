@@ -30,7 +30,7 @@ public final class JobValidationConfiguration {
     /**
      * Arn of the Ruleset
      * 
-     */
+    */
     public String getRulesetArn() {
         return this.rulesetArn;
     }

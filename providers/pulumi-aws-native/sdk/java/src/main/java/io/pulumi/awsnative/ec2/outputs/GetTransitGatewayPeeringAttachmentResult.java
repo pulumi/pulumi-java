@@ -57,35 +57,35 @@ public final class GetTransitGatewayPeeringAttachmentResult {
     /**
      * The time the transit gateway peering attachment was created.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The state of the transit gateway peering attachment. Note that the initiating state has been deprecated.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The status of the transit gateway peering attachment.
      * 
-     */
+    */
     public Optional<TransitGatewayPeeringAttachmentPeeringAttachmentStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The tags for the transit gateway peering attachment.
      * 
-     */
+    */
     public List<TransitGatewayPeeringAttachmentTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The ID of the transit gateway peering attachment.
      * 
-     */
+    */
     public Optional<String> getTransitGatewayAttachmentId() {
         return Optional.ofNullable(this.transitGatewayAttachmentId);
     }

@@ -55,35 +55,35 @@ public final class BucketRedirectRule {
     /**
      * The host name to use in the redirect request.
      * 
-     */
+    */
     public Optional<String> getHostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
      * The HTTP redirect code to use on the response. Not required if one of the siblings is present.
      * 
-     */
+    */
     public Optional<String> getHttpRedirectCode() {
         return Optional.ofNullable(this.httpRedirectCode);
     }
     /**
      * Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
      * 
-     */
+    */
     public Optional<BucketRedirectRuleProtocol> getProtocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
      * The object key prefix to use in the redirect request.
      * 
-     */
+    */
     public Optional<String> getReplaceKeyPrefixWith() {
         return Optional.ofNullable(this.replaceKeyPrefixWith);
     }
     /**
      * The specific object key to use in the redirect request.d
      * 
-     */
+    */
     public Optional<String> getReplaceKeyWith() {
         return Optional.ofNullable(this.replaceKeyWith);
     }

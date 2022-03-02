@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransitGatewayVpcAttachment {
-/**
- * Resource Type definition for AWS::EC2::TransitGatewayVpcAttachment
+    private GetTransitGatewayVpcAttachment() {}
+    public interface BuilderApplicator {
+        public void apply(GetTransitGatewayVpcAttachmentArgs.Builder a);
+    }
+    private static GetTransitGatewayVpcAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTransitGatewayVpcAttachmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::EC2::TransitGatewayVpcAttachment
  * 
- */
+     */
+    public static CompletableFuture<GetTransitGatewayVpcAttachmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::EC2::TransitGatewayVpcAttachment
+     * 
+     */
     public static CompletableFuture<GetTransitGatewayVpcAttachmentResult> invokeAsync(GetTransitGatewayVpcAttachmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getTransitGatewayVpcAttachment", TypeShape.of(GetTransitGatewayVpcAttachmentResult.class), args == null ? GetTransitGatewayVpcAttachmentArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -46,7 +46,7 @@ public final class GetConfigurationAggregatorResult {
     /**
      * The Amazon Resource Name (ARN) of the aggregator.
      * 
-     */
+    */
     public Optional<String> getConfigurationAggregatorArn() {
         return Optional.ofNullable(this.configurationAggregatorArn);
     }
@@ -56,7 +56,7 @@ public final class GetConfigurationAggregatorResult {
     /**
      * The tags for the configuration aggregator.
      * 
-     */
+    */
     public List<ConfigurationAggregatorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

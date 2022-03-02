@@ -39,7 +39,7 @@ public final class GetReplicationSetResult {
     /**
      * The ARN of the ReplicationSet.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -49,7 +49,7 @@ public final class GetReplicationSetResult {
     /**
      * The ReplicationSet configuration.
      * 
-     */
+    */
     public List<ReplicationSetReplicationRegion> getRegions() {
         return this.regions == null ? List.of() : this.regions;
     }

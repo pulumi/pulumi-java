@@ -75,6 +75,22 @@ public class Resource extends io.pulumi.resources.CustomResource {
         return this.restApiId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ResourceArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.apigateway.ResourceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.apigateway.ResourceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Resource(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

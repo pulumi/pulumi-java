@@ -30,7 +30,7 @@ public final class DataSourceErrorInfo {
     /**
      * <p>Error message.</p>
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }

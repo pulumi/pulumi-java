@@ -23,7 +23,7 @@ public final class ConnectorProfileServiceNowConnectorProfileProperties {
     /**
      * The location of the ServiceNow resource
      * 
-     */
+    */
     public String getInstanceUrl() {
         return this.instanceUrl;
     }

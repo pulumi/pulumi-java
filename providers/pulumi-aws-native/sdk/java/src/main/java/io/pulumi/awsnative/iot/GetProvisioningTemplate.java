@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProvisioningTemplate {
-/**
- * Creates a fleet provisioning template.
+    private GetProvisioningTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetProvisioningTemplateArgs.Builder a);
+    }
+    private static GetProvisioningTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProvisioningTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Creates a fleet provisioning template.
  * 
- */
+     */
+    public static CompletableFuture<GetProvisioningTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Creates a fleet provisioning template.
+     * 
+     */
     public static CompletableFuture<GetProvisioningTemplateResult> invokeAsync(GetProvisioningTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getProvisioningTemplate", TypeShape.of(GetProvisioningTemplateResult.class), args == null ? GetProvisioningTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

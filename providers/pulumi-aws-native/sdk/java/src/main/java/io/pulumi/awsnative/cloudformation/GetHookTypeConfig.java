@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHookTypeConfig {
-/**
- * Specifies the configuration data for a registered hook in CloudFormation Registry.
+    private GetHookTypeConfig() {}
+    public interface BuilderApplicator {
+        public void apply(GetHookTypeConfigArgs.Builder a);
+    }
+    private static GetHookTypeConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHookTypeConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Specifies the configuration data for a registered hook in CloudFormation Registry.
  * 
- */
+     */
+    public static CompletableFuture<GetHookTypeConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Specifies the configuration data for a registered hook in CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetHookTypeConfigResult> invokeAsync(GetHookTypeConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getHookTypeConfig", TypeShape.of(GetHookTypeConfigResult.class), args == null ? GetHookTypeConfigArgs.Empty : args, Utilities.withVersion(options));
     }

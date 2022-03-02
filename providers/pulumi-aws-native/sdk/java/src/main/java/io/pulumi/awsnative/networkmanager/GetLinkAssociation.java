@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLinkAssociation {
-/**
- * The AWS::NetworkManager::LinkAssociation type associates a link to a device. The device and link must be in the same global network and the same site.
+    private GetLinkAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetLinkAssociationArgs.Builder a);
+    }
+    private static GetLinkAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLinkAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::NetworkManager::LinkAssociation type associates a link to a device. The device and link must be in the same global network and the same site.
  * 
- */
+     */
+    public static CompletableFuture<GetLinkAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::NetworkManager::LinkAssociation type associates a link to a device. The device and link must be in the same global network and the same site.
+     * 
+     */
     public static CompletableFuture<GetLinkAssociationResult> invokeAsync(GetLinkAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkmanager:getLinkAssociation", TypeShape.of(GetLinkAssociationResult.class), args == null ? GetLinkAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

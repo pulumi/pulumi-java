@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFargateProfile {
-/**
- * Resource Schema for AWS::EKS::FargateProfile
+    private GetFargateProfile() {}
+    public interface BuilderApplicator {
+        public void apply(GetFargateProfileArgs.Builder a);
+    }
+    private static GetFargateProfileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFargateProfileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Schema for AWS::EKS::FargateProfile
  * 
- */
+     */
+    public static CompletableFuture<GetFargateProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Schema for AWS::EKS::FargateProfile
+     * 
+     */
     public static CompletableFuture<GetFargateProfileResult> invokeAsync(GetFargateProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:eks:getFargateProfile", TypeShape.of(GetFargateProfileResult.class), args == null ? GetFargateProfileArgs.Empty : args, Utilities.withVersion(options));
     }

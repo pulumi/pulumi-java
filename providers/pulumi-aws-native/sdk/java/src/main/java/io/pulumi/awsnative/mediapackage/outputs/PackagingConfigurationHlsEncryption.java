@@ -38,14 +38,14 @@ public final class PackagingConfigurationHlsEncryption {
     /**
      * An HTTP Live Streaming (HLS) encryption configuration.
      * 
-     */
+    */
     public Optional<String> getConstantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
     /**
      * The encryption method to use.
      * 
-     */
+    */
     public Optional<PackagingConfigurationHlsEncryptionEncryptionMethod> getEncryptionMethod() {
         return Optional.ofNullable(this.encryptionMethod);
     }

@@ -12,6 +12,7 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPartition {
+    private GetPartition() {}
     public static CompletableFuture<GetPartitionResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:getPartition", TypeShape.of(GetPartitionResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

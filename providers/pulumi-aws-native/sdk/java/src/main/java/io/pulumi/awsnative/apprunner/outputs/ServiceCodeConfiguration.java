@@ -33,7 +33,7 @@ public final class ServiceCodeConfiguration {
     /**
      * Configuration Source
      * 
-     */
+    */
     public ServiceCodeConfigurationConfigurationSource getConfigurationSource() {
         return this.configurationSource;
     }

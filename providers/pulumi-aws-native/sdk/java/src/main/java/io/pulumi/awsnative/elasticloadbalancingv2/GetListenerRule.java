@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetListenerRule {
-/**
- * Resource Type definition for AWS::ElasticLoadBalancingV2::ListenerRule
+    private GetListenerRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetListenerRuleArgs.Builder a);
+    }
+    private static GetListenerRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetListenerRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::ElasticLoadBalancingV2::ListenerRule
  * 
- */
+     */
+    public static CompletableFuture<GetListenerRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::ElasticLoadBalancingV2::ListenerRule
+     * 
+     */
     public static CompletableFuture<GetListenerRuleResult> invokeAsync(GetListenerRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:elasticloadbalancingv2:getListenerRule", TypeShape.of(GetListenerRuleResult.class), args == null ? GetListenerRuleArgs.Empty : args, Utilities.withVersion(options));
     }

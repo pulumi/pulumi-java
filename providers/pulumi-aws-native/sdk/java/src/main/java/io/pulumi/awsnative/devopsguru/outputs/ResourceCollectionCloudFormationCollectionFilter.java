@@ -25,7 +25,7 @@ public final class ResourceCollectionCloudFormationCollectionFilter {
     /**
      * An array of CloudFormation stack names.
      * 
-     */
+    */
     public List<String> getStackNames() {
         return this.stackNames == null ? List.of() : this.stackNames;
     }

@@ -32,14 +32,14 @@ public final class FHIRDatastoreCreatedAt {
     /**
      * Nanoseconds.
      * 
-     */
+    */
     public Integer getNanos() {
         return this.nanos;
     }
     /**
      * Seconds since epoch.
      * 
-     */
+    */
     public String getSeconds() {
         return this.seconds;
     }

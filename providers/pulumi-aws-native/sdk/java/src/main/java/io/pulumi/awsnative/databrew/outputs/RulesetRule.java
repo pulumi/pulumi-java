@@ -55,7 +55,7 @@ public final class RulesetRule {
     /**
      * Name of the rule
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

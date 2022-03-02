@@ -25,7 +25,7 @@ public final class FunctionTracingConfig {
     /**
      * The tracing mode.
      * 
-     */
+    */
     public Optional<FunctionTracingConfigMode> getMode() {
         return Optional.ofNullable(this.mode);
     }

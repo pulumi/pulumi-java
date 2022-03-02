@@ -35,14 +35,14 @@ public final class GetAggregationAuthorizationResult {
     /**
      * The ARN of the AggregationAuthorization.
      * 
-     */
+    */
     public Optional<String> getAggregationAuthorizationArn() {
         return Optional.ofNullable(this.aggregationAuthorizationArn);
     }
     /**
      * The tags for the AggregationAuthorization.
      * 
-     */
+    */
     public List<AggregationAuthorizationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

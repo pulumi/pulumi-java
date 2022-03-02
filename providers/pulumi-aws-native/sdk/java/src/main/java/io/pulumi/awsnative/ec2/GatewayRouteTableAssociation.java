@@ -61,6 +61,22 @@ public class GatewayRouteTableAssociation extends io.pulumi.resources.CustomReso
         return this.routeTableId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(GatewayRouteTableAssociationArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.ec2.GatewayRouteTableAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.ec2.GatewayRouteTableAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public GatewayRouteTableAssociation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

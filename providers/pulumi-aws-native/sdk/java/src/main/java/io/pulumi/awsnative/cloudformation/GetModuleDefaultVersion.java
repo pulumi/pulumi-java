@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetModuleDefaultVersion {
-/**
- * A module that has been registered in the CloudFormation registry as the default version
+    private GetModuleDefaultVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetModuleDefaultVersionArgs.Builder a);
+    }
+    private static GetModuleDefaultVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetModuleDefaultVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A module that has been registered in the CloudFormation registry as the default version
  * 
- */
+     */
+    public static CompletableFuture<GetModuleDefaultVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A module that has been registered in the CloudFormation registry as the default version
+     * 
+     */
     public static CompletableFuture<GetModuleDefaultVersionResult> invokeAsync(GetModuleDefaultVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getModuleDefaultVersion", TypeShape.of(GetModuleDefaultVersionResult.class), args == null ? GetModuleDefaultVersionArgs.Empty : args, Utilities.withVersion(options));
     }

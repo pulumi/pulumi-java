@@ -48,28 +48,28 @@ public final class GetQueryDefinitionResult {
     /**
      * Optionally define specific log groups as part of your query definition
      * 
-     */
+    */
     public List<String> getLogGroupNames() {
         return this.logGroupNames == null ? List.of() : this.logGroupNames;
     }
     /**
      * A name for the saved query definition
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Unique identifier of a query definition
      * 
-     */
+    */
     public Optional<String> getQueryDefinitionId() {
         return Optional.ofNullable(this.queryDefinitionId);
     }
     /**
      * The query string to use for this definition
      * 
-     */
+    */
     public Optional<String> getQueryString() {
         return Optional.ofNullable(this.queryString);
     }

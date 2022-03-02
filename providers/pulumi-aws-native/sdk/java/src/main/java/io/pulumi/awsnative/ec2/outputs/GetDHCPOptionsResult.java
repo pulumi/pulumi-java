@@ -34,7 +34,7 @@ public final class GetDHCPOptionsResult {
     /**
      * Any tags assigned to the DHCP options set.
      * 
-     */
+    */
     public List<DHCPOptionsTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -209,6 +209,22 @@ public class Analysis extends io.pulumi.resources.CustomResource {
         return this.themeArn;
     }
 
+    public interface BuilderApplicator {
+        public void apply(AnalysisArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.quicksight.AnalysisArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.quicksight.AnalysisArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Analysis(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

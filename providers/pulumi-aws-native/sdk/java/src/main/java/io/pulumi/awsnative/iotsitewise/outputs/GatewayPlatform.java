@@ -34,14 +34,14 @@ public final class GatewayPlatform {
     /**
      * A gateway that runs on AWS IoT Greengrass V1.
      * 
-     */
+    */
     public Optional<GatewayGreengrass> getGreengrass() {
         return Optional.ofNullable(this.greengrass);
     }
     /**
      * A gateway that runs on AWS IoT Greengrass V2.
      * 
-     */
+    */
     public Optional<GatewayGreengrassV2> getGreengrassV2() {
         return Optional.ofNullable(this.greengrassV2);
     }

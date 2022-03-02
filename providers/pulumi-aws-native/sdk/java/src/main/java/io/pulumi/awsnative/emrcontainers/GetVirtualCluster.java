@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualCluster {
-/**
- * Resource Schema of AWS::EMRContainers::VirtualCluster Type
+    private GetVirtualCluster() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualClusterArgs.Builder a);
+    }
+    private static GetVirtualClusterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualClusterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Schema of AWS::EMRContainers::VirtualCluster Type
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Schema of AWS::EMRContainers::VirtualCluster Type
+     * 
+     */
     public static CompletableFuture<GetVirtualClusterResult> invokeAsync(GetVirtualClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:emrcontainers:getVirtualCluster", TypeShape.of(GetVirtualClusterResult.class), args == null ? GetVirtualClusterArgs.Empty : args, Utilities.withVersion(options));
     }

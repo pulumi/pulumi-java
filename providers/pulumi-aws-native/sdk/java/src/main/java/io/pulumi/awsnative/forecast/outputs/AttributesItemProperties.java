@@ -34,14 +34,14 @@ public final class AttributesItemProperties {
     /**
      * Name of the dataset field
      * 
-     */
+    */
     public Optional<String> getAttributeName() {
         return Optional.ofNullable(this.attributeName);
     }
     /**
      * Data type of the field
      * 
-     */
+    */
     public Optional<DatasetAttributesItemPropertiesAttributeType> getAttributeType() {
         return Optional.ofNullable(this.attributeType);
     }

@@ -27,7 +27,7 @@ public final class ThemeGutterStyle {
      * <p>This Boolean value controls whether to display a gutter space between sheet tiles.
      *         </p>
      * 
-     */
+    */
     public Optional<Boolean> getShow() {
         return Optional.ofNullable(this.show);
     }

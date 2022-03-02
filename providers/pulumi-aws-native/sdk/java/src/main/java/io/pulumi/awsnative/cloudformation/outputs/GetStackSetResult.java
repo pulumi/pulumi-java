@@ -103,77 +103,77 @@ public final class GetStackSetResult {
     /**
      * The Amazon Resource Number (ARN) of the IAM role to use to create this stack set. Specify an IAM role only if you are using customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account.
      * 
-     */
+    */
     public Optional<String> getAdministrationRoleARN() {
         return Optional.ofNullable(this.administrationRoleARN);
     }
     /**
      * Describes whether StackSets automatically deploys to AWS Organizations accounts that are added to the target organization or organizational unit (OU). Specify only if PermissionModel is SERVICE_MANAGED.
      * 
-     */
+    */
     public Optional<StackSetAutoDeployment> getAutoDeployment() {
         return Optional.ofNullable(this.autoDeployment);
     }
     /**
      * In some cases, you must explicitly acknowledge that your stack set template contains certain capabilities in order for AWS CloudFormation to create the stack set and related stack instances.
      * 
-     */
+    */
     public List<StackSetCapability> getCapabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
     /**
      * A description of the stack set. You can use the description to identify the stack set's purpose or other important information.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The name of the IAM execution role to use to create the stack set. If you do not specify an execution role, AWS CloudFormation uses the AWSCloudFormationStackSetExecutionRole role for the stack set operation.
      * 
-     */
+    */
     public Optional<String> getExecutionRoleName() {
         return Optional.ofNullable(this.executionRoleName);
     }
     /**
      * Describes whether StackSets performs non-conflicting operations concurrently and queues conflicting operations.
      * 
-     */
+    */
     public Optional<ManagedExecutionProperties> getManagedExecution() {
         return Optional.ofNullable(this.managedExecution);
     }
     /**
      * The input parameters for the stack set template.
      * 
-     */
+    */
     public List<StackSetParameter> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * A group of stack instances with parameters in some specific accounts and regions.
      * 
-     */
+    */
     public List<StackSetStackInstances> getStackInstancesGroup() {
         return this.stackInstancesGroup == null ? List.of() : this.stackInstancesGroup;
     }
     /**
      * The ID of the stack set that you're creating.
      * 
-     */
+    */
     public Optional<String> getStackSetId() {
         return Optional.ofNullable(this.stackSetId);
     }
     /**
      * The key-value pairs to associate with this stack set and the stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the stacks. A maximum number of 50 tags can be specified.
      * 
-     */
+    */
     public List<StackSetTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The structure that contains the template body, with a minimum length of 1 byte and a maximum length of 51,200 bytes.
      * 
-     */
+    */
     public Optional<String> getTemplateBody() {
         return Optional.ofNullable(this.templateBody);
     }

@@ -41,21 +41,21 @@ public final class GetRoutingControlResult {
     /**
      * The name of the routing control. You can use any non-white space character in the name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The Amazon Resource Name (ARN) of the routing control.
      * 
-     */
+    */
     public Optional<String> getRoutingControlArn() {
         return Optional.ofNullable(this.routingControlArn);
     }
     /**
      * The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
      * 
-     */
+    */
     public Optional<RoutingControlStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }

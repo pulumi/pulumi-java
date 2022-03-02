@@ -42,21 +42,21 @@ public final class GetConformancePackResult {
     /**
      * A list of ConformancePackInputParameter objects.
      * 
-     */
+    */
     public List<ConformancePackInputParameter> getConformancePackInputParameters() {
         return this.conformancePackInputParameters == null ? List.of() : this.conformancePackInputParameters;
     }
     /**
      * AWS Config stores intermediate files while processing conformance pack template.
      * 
-     */
+    */
     public Optional<String> getDeliveryS3Bucket() {
         return Optional.ofNullable(this.deliveryS3Bucket);
     }
     /**
      * The prefix for delivery S3 bucket.
      * 
-     */
+    */
     public Optional<String> getDeliveryS3KeyPrefix() {
         return Optional.ofNullable(this.deliveryS3KeyPrefix);
     }

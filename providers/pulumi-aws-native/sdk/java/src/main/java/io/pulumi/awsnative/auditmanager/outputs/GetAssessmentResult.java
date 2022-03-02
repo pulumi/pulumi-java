@@ -78,14 +78,14 @@ public final class GetAssessmentResult {
     /**
      * The list of delegations.
      * 
-     */
+    */
     public List<AssessmentDelegation> getDelegations() {
         return this.delegations == null ? List.of() : this.delegations;
     }
     /**
      * The list of roles for the specified assessment.
      * 
-     */
+    */
     public List<AssessmentRole> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }
@@ -98,7 +98,7 @@ public final class GetAssessmentResult {
     /**
      * The tags associated with the assessment.
      * 
-     */
+    */
     public List<AssessmentTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

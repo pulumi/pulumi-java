@@ -38,7 +38,7 @@ public final class DiskAddOn {
     /**
      * The add-on type
      * 
-     */
+    */
     public String getAddOnType() {
         return this.addOnType;
     }
@@ -48,7 +48,7 @@ public final class DiskAddOn {
     /**
      * Status of the Addon
      * 
-     */
+    */
     public Optional<DiskAddOnStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
