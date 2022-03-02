@@ -25,7 +25,7 @@ public final class AssignmentPropertiesResponseAdditionalData {
     /**
      * Exemption category of this assignment
      * 
-     */
+    */
     public Optional<String> getExemptionCategory() {
         return Optional.ofNullable(this.exemptionCategory);
     }

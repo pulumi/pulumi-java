@@ -40,21 +40,21 @@ public final class SoftwareRecipeStepInstallMsiResponse {
     /**
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
-     */
+    */
     public List<Integer> getAllowedExitCodes() {
         return this.allowedExitCodes;
     }
     /**
      * The id of the relevant artifact in the recipe.
      * 
-     */
+    */
     public String getArtifactId() {
         return this.artifactId;
     }
     /**
      * The flags to use when installing the MSI defaults to ["/i"] (i.e. the install flag).
      * 
-     */
+    */
     public List<String> getFlags() {
         return this.flags;
     }

@@ -66,21 +66,21 @@ public final class DistributionOriginCustomOriginConfig {
     /**
      * The HTTP port the custom origin listens on.
      * 
-     */
+    */
     public Integer getHttpPort() {
         return this.httpPort;
     }
     /**
      * The HTTPS port the custom origin listens on.
      * 
-     */
+    */
     public Integer getHttpsPort() {
         return this.httpsPort;
     }
     /**
      * The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
      * 
-     */
+    */
     public Optional<Integer> getOriginKeepaliveTimeout() {
         return Optional.ofNullable(this.originKeepaliveTimeout);
     }
@@ -88,14 +88,14 @@ public final class DistributionOriginCustomOriginConfig {
      * The origin protocol policy to apply to
      * your origin. One of `http-only`, `https-only`, or `match-viewer`.
      * 
-     */
+    */
     public String getOriginProtocolPolicy() {
         return this.originProtocolPolicy;
     }
     /**
      * The Custom Read timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
      * 
-     */
+    */
     public Optional<Integer> getOriginReadTimeout() {
         return Optional.ofNullable(this.originReadTimeout);
     }
@@ -104,7 +104,7 @@ public final class DistributionOriginCustomOriginConfig {
      * CloudFront to use when communicating with your origin over HTTPS. A list of
      * one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
      * 
-     */
+    */
     public List<String> getOriginSslProtocols() {
         return this.originSslProtocols;
     }

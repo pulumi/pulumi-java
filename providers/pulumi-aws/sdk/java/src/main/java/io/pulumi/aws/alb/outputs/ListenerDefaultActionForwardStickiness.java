@@ -34,14 +34,14 @@ public final class ListenerDefaultActionForwardStickiness {
     /**
      * Time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
      * 
-     */
+    */
     public Integer getDuration() {
         return this.duration;
     }
     /**
      * Whether target group stickiness is enabled. Default is `false`.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }

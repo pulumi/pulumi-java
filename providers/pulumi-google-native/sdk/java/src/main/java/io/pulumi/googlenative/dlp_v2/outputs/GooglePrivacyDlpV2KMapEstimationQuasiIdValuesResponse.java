@@ -33,14 +33,14 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse {
     /**
      * The estimated anonymity for these quasi-identifier values.
      * 
-     */
+    */
     public String getEstimatedAnonymity() {
         return this.estimatedAnonymity;
     }
     /**
      * The quasi-identifier values.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {
         return this.quasiIdsValues;
     }

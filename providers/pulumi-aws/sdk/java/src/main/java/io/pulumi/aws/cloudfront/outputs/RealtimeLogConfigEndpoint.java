@@ -32,14 +32,14 @@ public final class RealtimeLogConfigEndpoint {
     /**
      * The Amazon Kinesis data stream configuration.
      * 
-     */
+    */
     public RealtimeLogConfigEndpointKinesisStreamConfig getKinesisStreamConfig() {
         return this.kinesisStreamConfig;
     }
     /**
      * The type of data stream where real-time log data is sent. The only valid value is `Kinesis`.
      * 
-     */
+    */
     public String getStreamType() {
         return this.streamType;
     }

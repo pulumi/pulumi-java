@@ -23,7 +23,7 @@ public final class ConfigurationProfileAssignmentComplianceResponse {
     /**
      * The state of compliance, which only appears in the response.
      * 
-     */
+    */
     public String getUpdateStatus() {
         return this.updateStatus;
     }

@@ -25,7 +25,7 @@ public final class WebPubSubTlsSettingsResponse {
     /**
      * Request client certificate during TLS handshake if enabled
      * 
-     */
+    */
     public Optional<Boolean> getClientCertEnabled() {
         return Optional.ofNullable(this.clientCertEnabled);
     }

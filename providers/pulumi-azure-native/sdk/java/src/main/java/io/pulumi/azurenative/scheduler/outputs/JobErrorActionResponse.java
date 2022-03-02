@@ -66,42 +66,42 @@ public final class JobErrorActionResponse {
     /**
      * Gets or sets the storage queue message.
      * 
-     */
+    */
     public Optional<StorageQueueMessageResponse> getQueueMessage() {
         return Optional.ofNullable(this.queueMessage);
     }
     /**
      * Gets or sets the http requests.
      * 
-     */
+    */
     public Optional<HttpRequestResponse> getRequest() {
         return Optional.ofNullable(this.request);
     }
     /**
      * Gets or sets the retry policy.
      * 
-     */
+    */
     public Optional<RetryPolicyResponse> getRetryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
      * Gets or sets the service bus queue message.
      * 
-     */
+    */
     public Optional<ServiceBusQueueMessageResponse> getServiceBusQueueMessage() {
         return Optional.ofNullable(this.serviceBusQueueMessage);
     }
     /**
      * Gets or sets the service bus topic message.
      * 
-     */
+    */
     public Optional<ServiceBusTopicMessageResponse> getServiceBusTopicMessage() {
         return Optional.ofNullable(this.serviceBusTopicMessage);
     }
     /**
      * Gets or sets the job error action type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

@@ -43,7 +43,7 @@ public final class GetInstanceTemplateNetworkInterfaceIpv6AccessConfig {
      * this instance template. This field can take the following values: PREMIUM or
      * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
      * 
-     */
+    */
     public String getNetworkTier() {
         return this.networkTier;
     }

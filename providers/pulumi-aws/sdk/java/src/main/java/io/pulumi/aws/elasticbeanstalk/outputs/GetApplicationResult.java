@@ -48,21 +48,21 @@ public final class GetApplicationResult {
     /**
      * The Amazon Resource Name (ARN) of the application.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Short description of the application
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

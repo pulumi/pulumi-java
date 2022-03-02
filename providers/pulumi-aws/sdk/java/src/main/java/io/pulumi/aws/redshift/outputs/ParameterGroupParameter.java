@@ -31,14 +31,14 @@ public final class ParameterGroupParameter {
     /**
      * The name of the Redshift parameter.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The value of the Redshift parameter.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

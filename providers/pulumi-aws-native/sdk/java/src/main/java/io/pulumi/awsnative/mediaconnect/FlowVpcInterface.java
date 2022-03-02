@@ -104,6 +104,22 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
         return this.subnetId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(FlowVpcInterfaceArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.mediaconnect.FlowVpcInterfaceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.mediaconnect.FlowVpcInterfaceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public FlowVpcInterface(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

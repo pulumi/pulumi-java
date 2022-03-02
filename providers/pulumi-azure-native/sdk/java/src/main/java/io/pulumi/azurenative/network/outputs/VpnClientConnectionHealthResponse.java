@@ -50,28 +50,28 @@ public final class VpnClientConnectionHealthResponse {
     /**
      * List of allocated ip addresses to the connected p2s vpn clients.
      * 
-     */
+    */
     public List<String> getAllocatedIpAddresses() {
         return this.allocatedIpAddresses == null ? List.of() : this.allocatedIpAddresses;
     }
     /**
      * Total of the Egress Bytes Transferred in this connection.
      * 
-     */
+    */
     public Double getTotalEgressBytesTransferred() {
         return this.totalEgressBytesTransferred;
     }
     /**
      * Total of the Ingress Bytes Transferred in this P2S Vpn connection.
      * 
-     */
+    */
     public Double getTotalIngressBytesTransferred() {
         return this.totalIngressBytesTransferred;
     }
     /**
      * The total of p2s vpn clients connected at this time to this P2SVpnGateway.
      * 
-     */
+    */
     public Optional<Integer> getVpnClientConnectionsCount() {
         return Optional.ofNullable(this.vpnClientConnectionsCount);
     }

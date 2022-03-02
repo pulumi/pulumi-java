@@ -39,7 +39,7 @@ public final class CorsSettingsResponse {
      * Gets or sets the list of origins that should be allowed to make cross-origin
      * calls (for example: http://example.com:12345). Use "*" to allow all.
      * 
-     */
+    */
     public List<String> getAllowedOrigins() {
         return this.allowedOrigins == null ? List.of() : this.allowedOrigins;
     }
@@ -48,7 +48,7 @@ public final class CorsSettingsResponse {
      * https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Requests_with_credentials
      * for more details.
      * 
-     */
+    */
     public Optional<Boolean> getSupportCredentials() {
         return Optional.ofNullable(this.supportCredentials);
     }

@@ -23,7 +23,7 @@ public final class WeeklyScheduleResponse {
     /**
      * Day of the week.
      * 
-     */
+    */
     public String getDayOfWeek() {
         return this.dayOfWeek;
     }

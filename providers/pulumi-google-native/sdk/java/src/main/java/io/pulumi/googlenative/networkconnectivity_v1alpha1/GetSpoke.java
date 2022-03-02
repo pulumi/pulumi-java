@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSpoke {
-/**
- * Gets details of a single Spoke.
+    private GetSpoke() {}
+    public interface BuilderApplicator {
+        public void apply(GetSpokeArgs.Builder a);
+    }
+    private static GetSpokeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSpokeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single Spoke.
  * 
- */
+     */
+    public static CompletableFuture<GetSpokeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single Spoke.
+     * 
+     */
     public static CompletableFuture<GetSpokeResult> invokeAsync(GetSpokeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1alpha1:getSpoke", TypeShape.of(GetSpokeResult.class), args == null ? GetSpokeArgs.Empty : args, Utilities.withVersion(options));
     }

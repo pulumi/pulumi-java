@@ -41,21 +41,21 @@ public final class KpiPropertiesResponse {
     /**
      * show the KPI in the UI?
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * ID of resource related to metric (budget).
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * KPI type (Forecast, Budget).
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

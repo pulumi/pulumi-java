@@ -65,28 +65,28 @@ public final class DataBoxDiskJobSecretsResponse {
     /**
      * Dc Access Security Code for Customer Managed Shipping
      * 
-     */
+    */
     public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
     /**
      * Contains the list of secrets object for that device.
      * 
-     */
+    */
     public List<DiskSecretResponse> getDiskSecrets() {
         return this.diskSecrets;
     }
     /**
      * Error while fetching the secrets.
      * 
-     */
+    */
     public CloudErrorResponse getError() {
         return this.error;
     }
     /**
      * Whether passkey was provided by user.
      * 
-     */
+    */
     public Boolean getIsPasskeyUserDefined() {
         return this.isPasskeyUserDefined;
     }
@@ -94,14 +94,14 @@ public final class DataBoxDiskJobSecretsResponse {
      * Used to indicate what type of job secrets object.
      * Expected value is 'DataBoxDisk'.
      * 
-     */
+    */
     public String getJobSecretsType() {
         return this.jobSecretsType;
     }
     /**
      * PassKey for the disk Job.
      * 
-     */
+    */
     public String getPassKey() {
         return this.passKey;
     }

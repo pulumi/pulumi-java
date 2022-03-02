@@ -33,14 +33,14 @@ public final class AccessReviewReviewerResponse {
     /**
      * The id of the reviewer(user/servicePrincipal)
      * 
-     */
+    */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
     /**
      * The identity type : user/servicePrincipal
      * 
-     */
+    */
     public String getPrincipalType() {
         return this.principalType;
     }

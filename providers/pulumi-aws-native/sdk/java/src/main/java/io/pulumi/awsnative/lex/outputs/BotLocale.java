@@ -53,7 +53,7 @@ public final class BotLocale {
     /**
      * List of intents
      * 
-     */
+    */
     public List<BotIntent> getIntents() {
         return this.intents == null ? List.of() : this.intents;
     }
@@ -66,7 +66,7 @@ public final class BotLocale {
     /**
      * List of SlotTypes
      * 
-     */
+    */
     public List<BotSlotType> getSlotTypes() {
         return this.slotTypes == null ? List.of() : this.slotTypes;
     }

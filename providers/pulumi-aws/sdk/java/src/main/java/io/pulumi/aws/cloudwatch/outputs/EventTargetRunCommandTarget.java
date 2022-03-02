@@ -32,14 +32,14 @@ public final class EventTargetRunCommandTarget {
     /**
      * Can be either `tag:tag-key` or `InstanceIds`.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * If Key is `tag:tag-key`, Values is a list of tag values. If Key is `InstanceIds`, Values is a list of Amazon EC2 instance IDs.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }

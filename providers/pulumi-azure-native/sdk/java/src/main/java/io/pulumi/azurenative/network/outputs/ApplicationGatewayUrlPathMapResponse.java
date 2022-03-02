@@ -92,70 +92,70 @@ public final class ApplicationGatewayUrlPathMapResponse {
     /**
      * Default backend address pool resource of URL path map.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getDefaultBackendAddressPool() {
         return Optional.ofNullable(this.defaultBackendAddressPool);
     }
     /**
      * Default backend http settings resource of URL path map.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getDefaultBackendHttpSettings() {
         return Optional.ofNullable(this.defaultBackendHttpSettings);
     }
     /**
      * Default redirect configuration resource of URL path map.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getDefaultRedirectConfiguration() {
         return Optional.ofNullable(this.defaultRedirectConfiguration);
     }
     /**
      * Default Rewrite rule set resource of URL path map.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getDefaultRewriteRuleSet() {
         return Optional.ofNullable(this.defaultRewriteRuleSet);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the URL path map that is unique within an Application Gateway.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Path rule of URL path map resource.
      * 
-     */
+    */
     public List<ApplicationGatewayPathRuleResponse> getPathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
     }
     /**
      * The provisioning state of the URL path map resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

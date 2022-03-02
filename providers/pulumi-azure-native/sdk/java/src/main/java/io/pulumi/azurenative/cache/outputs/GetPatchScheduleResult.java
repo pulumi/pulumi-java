@@ -47,28 +47,28 @@ public final class GetPatchScheduleResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of patch schedules for a Redis cache.
      * 
-     */
+    */
     public List<ScheduleEntryResponse> getScheduleEntries() {
         return this.scheduleEntries;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

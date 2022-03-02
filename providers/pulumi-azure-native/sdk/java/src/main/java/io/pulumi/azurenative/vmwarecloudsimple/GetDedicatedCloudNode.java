@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDedicatedCloudNode {
-/**
- * Dedicated cloud node model
+    private GetDedicatedCloudNode() {}
+    public interface BuilderApplicator {
+        public void apply(GetDedicatedCloudNodeArgs.Builder a);
+    }
+    private static GetDedicatedCloudNodeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDedicatedCloudNodeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Dedicated cloud node model
  * API Version: 2019-04-01.
  * 
- *
- * Dedicated cloud node model
+     *
+     * Dedicated cloud node model
  * 
- */
+     */
+    public static CompletableFuture<GetDedicatedCloudNodeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Dedicated cloud node model
+     * API Version: 2019-04-01.
+     * 
+     *
+         * Dedicated cloud node model
+     * 
+     */
     public static CompletableFuture<GetDedicatedCloudNodeResult> invokeAsync(GetDedicatedCloudNodeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:vmwarecloudsimple:getDedicatedCloudNode", TypeShape.of(GetDedicatedCloudNodeResult.class), args == null ? GetDedicatedCloudNodeArgs.Empty : args, Utilities.withVersion(options));
     }

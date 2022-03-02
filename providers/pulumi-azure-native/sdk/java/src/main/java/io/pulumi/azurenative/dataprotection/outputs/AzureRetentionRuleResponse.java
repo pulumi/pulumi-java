@@ -47,7 +47,7 @@ public final class AzureRetentionRuleResponse {
     /**
      * Expected value is 'AzureRetentionRule'.
      * 
-     */
+    */
     public String getObjectType() {
         return this.objectType;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionWorkflowTemplateIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetRegionWorkflowTemplateIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionWorkflowTemplateIamPolicyArgs.Builder a);
+    }
+    private static GetRegionWorkflowTemplateIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionWorkflowTemplateIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionWorkflowTemplateIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetRegionWorkflowTemplateIamPolicyResult> invokeAsync(GetRegionWorkflowTemplateIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1:getRegionWorkflowTemplateIamPolicy", TypeShape.of(GetRegionWorkflowTemplateIamPolicyResult.class), args == null ? GetRegionWorkflowTemplateIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

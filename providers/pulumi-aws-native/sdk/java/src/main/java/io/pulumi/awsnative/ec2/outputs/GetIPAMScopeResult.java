@@ -76,7 +76,7 @@ public final class GetIPAMScopeResult {
     /**
      * The Amazon Resource Name (ARN) of the IPAM scope.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -86,42 +86,42 @@ public final class GetIPAMScopeResult {
     /**
      * The Amazon Resource Name (ARN) of the IPAM this scope is a part of.
      * 
-     */
+    */
     public Optional<String> getIpamArn() {
         return Optional.ofNullable(this.ipamArn);
     }
     /**
      * Id of the IPAM scope.
      * 
-     */
+    */
     public Optional<String> getIpamScopeId() {
         return Optional.ofNullable(this.ipamScopeId);
     }
     /**
      * Determines whether this scope contains publicly routable space or space for a private network
      * 
-     */
+    */
     public Optional<IPAMScopeIpamScopeType> getIpamScopeType() {
         return Optional.ofNullable(this.ipamScopeType);
     }
     /**
      * Is this one of the default scopes created with the IPAM.
      * 
-     */
+    */
     public Optional<Boolean> getIsDefault() {
         return Optional.ofNullable(this.isDefault);
     }
     /**
      * The number of pools that currently exist in this scope.
      * 
-     */
+    */
     public Optional<Integer> getPoolCount() {
         return Optional.ofNullable(this.poolCount);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<IPAMScopeTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

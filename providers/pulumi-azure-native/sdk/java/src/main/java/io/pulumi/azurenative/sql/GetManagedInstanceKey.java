@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedInstanceKey {
-/**
- * A managed instance key.
+    private GetManagedInstanceKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagedInstanceKeyArgs.Builder a);
+    }
+    private static GetManagedInstanceKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagedInstanceKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A managed instance key.
  * API Version: 2020-11-01-preview.
  * 
- *
- * A managed instance key.
+     *
+     * A managed instance key.
  * 
- */
+     */
+    public static CompletableFuture<GetManagedInstanceKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A managed instance key.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * A managed instance key.
+     * 
+     */
     public static CompletableFuture<GetManagedInstanceKeyResult> invokeAsync(GetManagedInstanceKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstanceKey", TypeShape.of(GetManagedInstanceKeyResult.class), args == null ? GetManagedInstanceKeyArgs.Empty : args, Utilities.withVersion(options));
     }

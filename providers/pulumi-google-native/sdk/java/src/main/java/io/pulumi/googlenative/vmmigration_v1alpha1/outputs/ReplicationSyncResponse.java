@@ -23,7 +23,7 @@ public final class ReplicationSyncResponse {
     /**
      * The most updated snapshot created time in the source that finished replication.
      * 
-     */
+    */
     public String getLastSyncTime() {
         return this.lastSyncTime;
     }

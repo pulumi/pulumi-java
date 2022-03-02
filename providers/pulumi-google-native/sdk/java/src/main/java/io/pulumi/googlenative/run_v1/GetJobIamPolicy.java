@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobIamPolicy {
-/**
- * Get the IAM Access Control policy currently in effect for the given job. This result does not include any inherited policies.
+    private GetJobIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetJobIamPolicyArgs.Builder a);
+    }
+    private static GetJobIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetJobIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get the IAM Access Control policy currently in effect for the given job. This result does not include any inherited policies.
  * 
- */
+     */
+    public static CompletableFuture<GetJobIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get the IAM Access Control policy currently in effect for the given job. This result does not include any inherited policies.
+     * 
+     */
     public static CompletableFuture<GetJobIamPolicyResult> invokeAsync(GetJobIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:run/v1:getJobIamPolicy", TypeShape.of(GetJobIamPolicyResult.class), args == null ? GetJobIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

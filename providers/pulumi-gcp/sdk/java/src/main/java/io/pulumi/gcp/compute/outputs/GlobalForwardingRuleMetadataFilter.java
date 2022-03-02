@@ -45,7 +45,7 @@ public final class GlobalForwardingRuleMetadataFilter {
      * This list must not be empty and can have at the most 64 entries.
      * Structure is documented below.
      * 
-     */
+    */
     public List<GlobalForwardingRuleMetadataFilterFilterLabel> getFilterLabels() {
         return this.filterLabels;
     }
@@ -58,7 +58,7 @@ public final class GlobalForwardingRuleMetadataFilter {
      * provided metadata.
      * Possible values are `MATCH_ANY` and `MATCH_ALL`.
      * 
-     */
+    */
     public String getFilterMatchCriteria() {
         return this.filterMatchCriteria;
     }

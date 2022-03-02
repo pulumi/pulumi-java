@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListDatabaseAccountConnectionStrings {
-/**
- * The connection strings for the given database account.
+    private ListDatabaseAccountConnectionStrings() {}
+    public interface BuilderApplicator {
+        public void apply(ListDatabaseAccountConnectionStringsArgs.Builder a);
+    }
+    private static ListDatabaseAccountConnectionStringsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListDatabaseAccountConnectionStringsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The connection strings for the given database account.
  * API Version: 2021-03-15.
  * 
- *
- * The connection strings for the given database account.
+     *
+     * The connection strings for the given database account.
  * 
- */
+     */
+    public static CompletableFuture<ListDatabaseAccountConnectionStringsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The connection strings for the given database account.
+     * API Version: 2021-03-15.
+     * 
+     *
+         * The connection strings for the given database account.
+     * 
+     */
     public static CompletableFuture<ListDatabaseAccountConnectionStringsResult> invokeAsync(ListDatabaseAccountConnectionStringsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:listDatabaseAccountConnectionStrings", TypeShape.of(ListDatabaseAccountConnectionStringsResult.class), args == null ? ListDatabaseAccountConnectionStringsArgs.Empty : args, Utilities.withVersion(options));
     }

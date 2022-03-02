@@ -31,14 +31,14 @@ public final class UserAssignedIdentityResponse {
     /**
      * Client Id of user assigned identity
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * Principal Id of user assigned identity
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }

@@ -31,14 +31,14 @@ public final class StatusResponse {
     /**
      * Code specifies AppDevExperienceFeature's subcomponent ready state.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Description is populated if Code is Failed, explaining why it has failed.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }

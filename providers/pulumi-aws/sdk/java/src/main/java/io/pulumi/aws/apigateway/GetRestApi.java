@@ -13,21 +13,48 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRestApi {
-/**
- * Use this data source to get the id and root_resource_id of a REST API in
+    private GetRestApi() {}
+    public interface BuilderApplicator {
+        public void apply(GetRestApiArgs.Builder a);
+    }
+    private static GetRestApiArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRestApiArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get the id and root_resource_id of a REST API in
  * API Gateway. To fetch the REST API you must provide a name to match against.
  * As there is no unique name constraint on REST APIs this data source will
  * error if there is more than one match.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getRestApi.
+     *
+     * A collection of arguments for invoking getRestApi.
  * 
- *
- * A collection of values returned by getRestApi.
+     *
+     * A collection of values returned by getRestApi.
  * 
- */
+     */
+    public static CompletableFuture<GetRestApiResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get the id and root_resource_id of a REST API in
+     * API Gateway. To fetch the REST API you must provide a name to match against.
+     * As there is no unique name constraint on REST APIs this data source will
+     * error if there is more than one match.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getRestApi.
+     * 
+     *
+         * A collection of values returned by getRestApi.
+     * 
+     */
     public static CompletableFuture<GetRestApiResult> invokeAsync(GetRestApiArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:apigateway/getRestApi:getRestApi", TypeShape.of(GetRestApiResult.class), args == null ? GetRestApiArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -40,21 +40,21 @@ public final class ApplicationClientDetailsResponse {
     /**
      * The client application Id.
      * 
-     */
+    */
     public Optional<String> getApplicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
      * The client Oid.
      * 
-     */
+    */
     public Optional<String> getOid() {
         return Optional.ofNullable(this.oid);
     }
     /**
      * The client Puid
      * 
-     */
+    */
     public Optional<String> getPuid() {
         return Optional.ofNullable(this.puid);
     }

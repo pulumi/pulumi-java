@@ -63,42 +63,42 @@ public final class GetPrivateEndpointConnectionResult {
     /**
      * The ID of the private endpoint connection.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the private endpoint connection.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource of private endpoint.
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * A collection of information about the state of the connection between service consumer and provider.
      * 
-     */
+    */
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
     /**
      * The current provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

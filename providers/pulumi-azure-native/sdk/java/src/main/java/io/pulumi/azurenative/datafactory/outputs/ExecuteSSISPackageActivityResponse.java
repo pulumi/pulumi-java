@@ -166,119 +166,119 @@ public final class ExecuteSSISPackageActivityResponse {
     /**
      * The integration runtime reference.
      * 
-     */
+    */
     public IntegrationRuntimeReferenceResponse getConnectVia() {
         return this.connectVia;
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The environment path to execute the SSIS package. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getEnvironmentPath() {
         return Optional.ofNullable(this.environmentPath);
     }
     /**
      * The package execution credential.
      * 
-     */
+    */
     public Optional<SSISExecutionCredentialResponse> getExecutionCredential() {
         return Optional.ofNullable(this.executionCredential);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * SSIS package execution log location.
      * 
-     */
+    */
     public Optional<SSISLogLocationResponse> getLogLocation() {
         return Optional.ofNullable(this.logLocation);
     }
     /**
      * The logging level of SSIS package execution. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getLoggingLevel() {
         return Optional.ofNullable(this.loggingLevel);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The package level connection managers to execute the SSIS package.
      * 
-     */
+    */
     public Map<String,Map<String,SSISExecutionParameterResponse>> getPackageConnectionManagers() {
         return this.packageConnectionManagers == null ? Map.of() : this.packageConnectionManagers;
     }
     /**
      * SSIS package location.
      * 
-     */
+    */
     public SSISPackageLocationResponse getPackageLocation() {
         return this.packageLocation;
     }
     /**
      * The package level parameters to execute the SSIS package.
      * 
-     */
+    */
     public Map<String,SSISExecutionParameterResponse> getPackageParameters() {
         return this.packageParameters == null ? Map.of() : this.packageParameters;
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * The project level connection managers to execute the SSIS package.
      * 
-     */
+    */
     public Map<String,Map<String,SSISExecutionParameterResponse>> getProjectConnectionManagers() {
         return this.projectConnectionManagers == null ? Map.of() : this.projectConnectionManagers;
     }
     /**
      * The project level parameters to execute the SSIS package.
      * 
-     */
+    */
     public Map<String,SSISExecutionParameterResponse> getProjectParameters() {
         return this.projectParameters == null ? Map.of() : this.projectParameters;
     }
     /**
      * The property overrides to execute the SSIS package.
      * 
-     */
+    */
     public Map<String,SSISPropertyOverrideResponse> getPropertyOverrides() {
         return this.propertyOverrides == null ? Map.of() : this.propertyOverrides;
     }
     /**
      * Specifies the runtime to execute SSIS package. The value should be "x86" or "x64". Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getRuntime() {
         return Optional.ofNullable(this.runtime);
     }
@@ -286,14 +286,14 @@ public final class ExecuteSSISPackageActivityResponse {
      * Type of activity.
      * Expected value is 'ExecuteSSISPackage'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

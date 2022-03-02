@@ -130,21 +130,21 @@ public final class ManagedOnlineDeploymentResponse {
     /**
      * If true, enables Application Insights logging.
      * 
-     */
+    */
     public Optional<Boolean> getAppInsightsEnabled() {
         return Optional.ofNullable(this.appInsightsEnabled);
     }
     /**
      * Code configuration for the endpoint deployment.
      * 
-     */
+    */
     public Optional<CodeConfigurationResponse> getCodeConfiguration() {
         return Optional.ofNullable(this.codeConfiguration);
     }
     /**
      * Description of the endpoint deployment.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -152,77 +152,77 @@ public final class ManagedOnlineDeploymentResponse {
      * Enum to determine endpoint compute type.
      * Expected value is 'Managed'.
      * 
-     */
+    */
     public String getEndpointComputeType() {
         return this.endpointComputeType;
     }
     /**
      * ARM resource ID of the environment specification for the endpoint deployment.
      * 
-     */
+    */
     public Optional<String> getEnvironmentId() {
         return Optional.ofNullable(this.environmentId);
     }
     /**
      * Environment variables configuration for the deployment.
      * 
-     */
+    */
     public Map<String,String> getEnvironmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
      * Compute instance type.
      * 
-     */
+    */
     public Optional<String> getInstanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * Deployment container liveness/readiness probe configuration.
      * 
-     */
+    */
     public Optional<ProbeSettingsResponse> getLivenessProbe() {
         return Optional.ofNullable(this.livenessProbe);
     }
     /**
      * Reference to the model asset for the endpoint deployment.
      * 
-     */
+    */
     public Optional<Object> getModel() {
         return Optional.ofNullable(this.model);
     }
     /**
      * Property dictionary. Properties can be added, but not removed or altered.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Provisioning state for the endpoint deployment.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Deployment container liveness/readiness probe configuration.
      * 
-     */
+    */
     public Optional<ProbeSettingsResponse> getReadinessProbe() {
         return Optional.ofNullable(this.readinessProbe);
     }
     /**
      * Online deployment scoring requests configuration.
      * 
-     */
+    */
     public Optional<OnlineRequestSettingsResponse> getRequestSettings() {
         return Optional.ofNullable(this.requestSettings);
     }
     /**
      * Online deployment scaling configuration.
      * 
-     */
+    */
     public Optional<Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse>> getScaleSettings() {
         return Optional.ofNullable(this.scaleSettings);
     }

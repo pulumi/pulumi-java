@@ -31,7 +31,7 @@ public final class GetLaunchTemplateTagSpecification {
     /**
      * A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

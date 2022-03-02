@@ -34,14 +34,14 @@ public final class DeploymentScaleSettingsResponse {
     /**
      * Deployment capacity.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Deployment scale type.
      * 
-     */
+    */
     public Optional<String> getScaleType() {
         return Optional.ofNullable(this.scaleType);
     }

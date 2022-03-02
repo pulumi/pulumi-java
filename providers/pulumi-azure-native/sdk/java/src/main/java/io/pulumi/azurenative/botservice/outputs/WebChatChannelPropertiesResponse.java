@@ -34,14 +34,14 @@ public final class WebChatChannelPropertiesResponse {
     /**
      * The list of Web Chat sites
      * 
-     */
+    */
     public List<WebChatSiteResponse> getSites() {
         return this.sites == null ? List.of() : this.sites;
     }
     /**
      * Web chat control embed code
      * 
-     */
+    */
     public String getWebChatEmbedCode() {
         return this.webChatEmbedCode;
     }

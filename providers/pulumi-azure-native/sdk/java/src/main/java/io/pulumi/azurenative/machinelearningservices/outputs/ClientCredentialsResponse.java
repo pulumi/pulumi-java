@@ -97,77 +97,77 @@ public final class ClientCredentialsResponse {
     /**
      * The authority URL used for authentication.
      * 
-     */
+    */
     public Optional<String> getAuthorityUrl() {
         return Optional.ofNullable(this.authorityUrl);
     }
     /**
      * The content of the certificate used for authentication.
      * 
-     */
+    */
     public Optional<String> getCertificate() {
         return Optional.ofNullable(this.certificate);
     }
     /**
      * The Client ID/Application ID
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The client secret.
      * 
-     */
+    */
     public Optional<String> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
      *  Is it using certificate to authenticate. If false then use client secret.
      * 
-     */
+    */
     public Optional<Boolean> getIsCertAuth() {
         return Optional.ofNullable(this.isCertAuth);
     }
     /**
      * Resource Group.
      * 
-     */
+    */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * The resource the service principal/app has access to.
      * 
-     */
+    */
     public Optional<String> getResourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
     /**
      * Indicates which identity to use to authenticate service data access to customer's storage.
      * 
-     */
+    */
     public Optional<String> getServiceDataAccessAuthIdentity() {
         return Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
     /**
      * Subscription ID.
      * 
-     */
+    */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
     /**
      * The ID of the tenant the service principal/app belongs to.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The thumbprint of the certificate above.
      * 
-     */
+    */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }

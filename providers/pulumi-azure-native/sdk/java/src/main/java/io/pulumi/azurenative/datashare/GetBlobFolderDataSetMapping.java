@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBlobFolderDataSetMapping {
-/**
- * A Blob folder data set mapping.
+    private GetBlobFolderDataSetMapping() {}
+    public interface BuilderApplicator {
+        public void apply(GetBlobFolderDataSetMappingArgs.Builder a);
+    }
+    private static GetBlobFolderDataSetMappingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBlobFolderDataSetMappingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Blob folder data set mapping.
  * API Version: 2020-09-01.
  * 
- *
- * A Blob folder data set mapping.
+     *
+     * A Blob folder data set mapping.
  * 
- */
+     */
+    public static CompletableFuture<GetBlobFolderDataSetMappingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Blob folder data set mapping.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * A Blob folder data set mapping.
+     * 
+     */
     public static CompletableFuture<GetBlobFolderDataSetMappingResult> invokeAsync(GetBlobFolderDataSetMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getBlobFolderDataSetMapping", TypeShape.of(GetBlobFolderDataSetMappingResult.class), args == null ? GetBlobFolderDataSetMappingArgs.Empty : args, Utilities.withVersion(options));
     }

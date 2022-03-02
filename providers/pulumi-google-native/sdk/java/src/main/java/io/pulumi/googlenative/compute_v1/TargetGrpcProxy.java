@@ -146,6 +146,22 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
         return this.validateForProxyless;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable TargetGrpcProxyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.compute_v1.TargetGrpcProxyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.compute_v1.TargetGrpcProxyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public TargetGrpcProxy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

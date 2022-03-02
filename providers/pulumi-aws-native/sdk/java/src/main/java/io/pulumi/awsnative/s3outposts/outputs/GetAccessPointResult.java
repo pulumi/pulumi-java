@@ -34,14 +34,14 @@ public final class GetAccessPointResult {
     /**
      * The Amazon Resource Name (ARN) of the specified AccessPoint.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The access point policy associated with this access point.
      * 
-     */
+    */
     public Optional<Object> getPolicy() {
         return Optional.ofNullable(this.policy);
     }

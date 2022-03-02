@@ -34,14 +34,14 @@ public final class FunctionEventInvokeConfigDestinationConfig {
     /**
      * Configuration block with destination configuration for failed asynchronous invocations. See below for details.
      * 
-     */
+    */
     public Optional<FunctionEventInvokeConfigDestinationConfigOnFailure> getOnFailure() {
         return Optional.ofNullable(this.onFailure);
     }
     /**
      * Configuration block with destination configuration for successful asynchronous invocations. See below for details.
      * 
-     */
+    */
     public Optional<FunctionEventInvokeConfigDestinationConfigOnSuccess> getOnSuccess() {
         return Optional.ofNullable(this.onSuccess);
     }

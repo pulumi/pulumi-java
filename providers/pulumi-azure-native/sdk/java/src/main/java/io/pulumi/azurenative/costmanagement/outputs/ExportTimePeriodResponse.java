@@ -31,14 +31,14 @@ public final class ExportTimePeriodResponse {
     /**
      * The start date for export data.
      * 
-     */
+    */
     public String getFrom() {
         return this.from;
     }
     /**
      * The end date for export data.
      * 
-     */
+    */
     public String getTo() {
         return this.to;
     }

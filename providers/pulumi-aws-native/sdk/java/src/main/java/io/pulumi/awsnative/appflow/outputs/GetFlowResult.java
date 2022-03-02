@@ -74,49 +74,49 @@ public final class GetFlowResult {
     /**
      * Description of the flow.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of Destination connectors of the flow.
      * 
-     */
+    */
     public List<FlowDestinationFlowConfig> getDestinationFlowConfigList() {
         return this.destinationFlowConfigList == null ? List.of() : this.destinationFlowConfigList;
     }
     /**
      * ARN identifier of the flow.
      * 
-     */
+    */
     public Optional<String> getFlowArn() {
         return Optional.ofNullable(this.flowArn);
     }
     /**
      * Configurations of Source connector of the flow.
      * 
-     */
+    */
     public Optional<FlowSourceFlowConfig> getSourceFlowConfig() {
         return Optional.ofNullable(this.sourceFlowConfig);
     }
     /**
      * List of Tags.
      * 
-     */
+    */
     public List<FlowTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * List of tasks for the flow.
      * 
-     */
+    */
     public List<FlowTask> getTasks() {
         return this.tasks == null ? List.of() : this.tasks;
     }
     /**
      * Trigger settings of the flow.
      * 
-     */
+    */
     public Optional<FlowTriggerConfig> getTriggerConfig() {
         return Optional.ofNullable(this.triggerConfig);
     }

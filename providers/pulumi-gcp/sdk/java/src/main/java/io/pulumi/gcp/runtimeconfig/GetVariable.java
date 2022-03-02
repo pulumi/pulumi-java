@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVariable {
+    private GetVariable() {}
+    public interface BuilderApplicator {
+        public void apply(GetVariableArgs.Builder a);
+    }
+    private static GetVariableArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVariableArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    public static CompletableFuture<GetVariableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
     public static CompletableFuture<GetVariableResult> invokeAsync(GetVariableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:runtimeconfig/getVariable:getVariable", TypeShape.of(GetVariableResult.class), args == null ? GetVariableArgs.Empty : args, Utilities.withVersion(options));
     }

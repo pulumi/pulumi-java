@@ -32,14 +32,14 @@ public final class ValidationCAResponse {
     /**
      * The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
      * 
-     */
+    */
     public CertificateProviderInstanceResponse getCertificateProviderInstance() {
         return this.certificateProviderInstance;
     }
     /**
      * gRPC specific configuration to access the gRPC server to obtain the CA certificate.
      * 
-     */
+    */
     public GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse getGrpcEndpoint() {
         return this.grpcEndpoint;
     }

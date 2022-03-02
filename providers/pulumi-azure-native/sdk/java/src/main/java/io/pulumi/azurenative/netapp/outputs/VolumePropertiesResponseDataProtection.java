@@ -42,21 +42,21 @@ public final class VolumePropertiesResponseDataProtection {
     /**
      * Backup Properties
      * 
-     */
+    */
     public Optional<VolumeBackupPropertiesResponse> getBackup() {
         return Optional.ofNullable(this.backup);
     }
     /**
      * Replication properties
      * 
-     */
+    */
     public Optional<ReplicationObjectResponse> getReplication() {
         return Optional.ofNullable(this.replication);
     }
     /**
      * Snapshot properties.
      * 
-     */
+    */
     public Optional<VolumeSnapshotPropertiesResponse> getSnapshot() {
         return Optional.ofNullable(this.snapshot);
     }

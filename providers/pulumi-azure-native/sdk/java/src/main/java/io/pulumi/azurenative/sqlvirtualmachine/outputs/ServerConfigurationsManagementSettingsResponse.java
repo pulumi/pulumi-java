@@ -50,28 +50,28 @@ public final class ServerConfigurationsManagementSettingsResponse {
     /**
      * Additional SQL feature settings.
      * 
-     */
+    */
     public Optional<AdditionalFeaturesServerConfigurationsResponse> getAdditionalFeaturesServerConfigurations() {
         return Optional.ofNullable(this.additionalFeaturesServerConfigurations);
     }
     /**
      * SQL connectivity type settings.
      * 
-     */
+    */
     public Optional<SqlConnectivityUpdateSettingsResponse> getSqlConnectivityUpdateSettings() {
         return Optional.ofNullable(this.sqlConnectivityUpdateSettings);
     }
     /**
      * SQL storage update settings.
      * 
-     */
+    */
     public Optional<SqlStorageUpdateSettingsResponse> getSqlStorageUpdateSettings() {
         return Optional.ofNullable(this.sqlStorageUpdateSettings);
     }
     /**
      * SQL workload type settings.
      * 
-     */
+    */
     public Optional<SqlWorkloadTypeUpdateSettingsResponse> getSqlWorkloadTypeUpdateSettings() {
         return Optional.ofNullable(this.sqlWorkloadTypeUpdateSettings);
     }

@@ -93,21 +93,21 @@ public final class IdentityProvidersResponse {
     /**
      * The configuration settings of the Apple provider.
      * 
-     */
+    */
     public Optional<AppleResponse> getApple() {
         return Optional.ofNullable(this.apple);
     }
     /**
      * The configuration settings of the Azure Active directory provider.
      * 
-     */
+    */
     public Optional<AzureActiveDirectoryResponse> getAzureActiveDirectory() {
         return Optional.ofNullable(this.azureActiveDirectory);
     }
     /**
      * The configuration settings of the Azure Static Web Apps provider.
      * 
-     */
+    */
     public Optional<AzureStaticWebAppsResponse> getAzureStaticWebApps() {
         return Optional.ofNullable(this.azureStaticWebApps);
     }
@@ -115,42 +115,42 @@ public final class IdentityProvidersResponse {
      * The map of the name of the alias of each custom Open ID Connect provider to the
      * configuration settings of the custom Open ID Connect provider.
      * 
-     */
+    */
     public Map<String,CustomOpenIdConnectProviderResponse> getCustomOpenIdConnectProviders() {
         return this.customOpenIdConnectProviders == null ? Map.of() : this.customOpenIdConnectProviders;
     }
     /**
      * The configuration settings of the Facebook provider.
      * 
-     */
+    */
     public Optional<FacebookResponse> getFacebook() {
         return Optional.ofNullable(this.facebook);
     }
     /**
      * The configuration settings of the GitHub provider.
      * 
-     */
+    */
     public Optional<GitHubResponse> getGitHub() {
         return Optional.ofNullable(this.gitHub);
     }
     /**
      * The configuration settings of the Google provider.
      * 
-     */
+    */
     public Optional<GoogleResponse> getGoogle() {
         return Optional.ofNullable(this.google);
     }
     /**
      * The configuration settings of the legacy Microsoft Account provider.
      * 
-     */
+    */
     public Optional<LegacyMicrosoftAccountResponse> getLegacyMicrosoftAccount() {
         return Optional.ofNullable(this.legacyMicrosoftAccount);
     }
     /**
      * The configuration settings of the Twitter provider.
      * 
-     */
+    */
     public Optional<TwitterResponse> getTwitter() {
         return Optional.ofNullable(this.twitter);
     }

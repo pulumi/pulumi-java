@@ -72,7 +72,7 @@ public final class DistributionViewerCertificate {
      * `cloudfront_default_certificate`, or `iam_certificate_id`.  The ACM
      * certificate must be in  US-EAST-1.
      * 
-     */
+    */
     public Optional<String> getAcmCertificateArn() {
         return Optional.ofNullable(this.acmCertificateArn);
     }
@@ -81,7 +81,7 @@ public final class DistributionViewerCertificate {
      * to request your objects and you're using the CloudFront domain name for your
      * distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
      * 
-     */
+    */
     public Optional<Boolean> getCloudfrontDefaultCertificate() {
         return Optional.ofNullable(this.cloudfrontDefaultCertificate);
     }
@@ -90,7 +90,7 @@ public final class DistributionViewerCertificate {
      * certificate for this distribution if you are using a custom domain. Specify
      * this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
      * 
-     */
+    */
     public Optional<String> getIamCertificateId() {
         return Optional.ofNullable(this.iamCertificateId);
     }
@@ -108,7 +108,7 @@ public final class DistributionViewerCertificate {
      * specified. If you have specified `cloudfront_default_certificate`, `TLSv1`
      * must be specified.
      * 
-     */
+    */
     public Optional<String> getMinimumProtocolVersion() {
         return Optional.ofNullable(this.minimumProtocolVersion);
     }

@@ -42,7 +42,7 @@ public final class NumberGreaterThanAdvancedFilterResponse {
     /**
      * The field/property in the event based on which you want to filter.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
@@ -50,14 +50,14 @@ public final class NumberGreaterThanAdvancedFilterResponse {
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'NumberGreaterThan'.
      * 
-     */
+    */
     public String getOperatorType() {
         return this.operatorType;
     }
     /**
      * The filter value.
      * 
-     */
+    */
     public Optional<Double> getValue() {
         return Optional.ofNullable(this.value);
     }

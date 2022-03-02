@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataset {
-/**
- * Dataset resource type.
+    private GetDataset() {}
+    public interface BuilderApplicator {
+        public void apply(GetDatasetArgs.Builder a);
+    }
+    private static GetDatasetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDatasetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Dataset resource type.
  * API Version: 2018-06-01.
  * 
- *
- * Dataset resource type.
+     *
+     * Dataset resource type.
  * 
- */
+     */
+    public static CompletableFuture<GetDatasetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Dataset resource type.
+     * API Version: 2018-06-01.
+     * 
+     *
+         * Dataset resource type.
+     * 
+     */
     public static CompletableFuture<GetDatasetResult> invokeAsync(GetDatasetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getDataset", TypeShape.of(GetDatasetResult.class), args == null ? GetDatasetArgs.Empty : args, Utilities.withVersion(options));
     }

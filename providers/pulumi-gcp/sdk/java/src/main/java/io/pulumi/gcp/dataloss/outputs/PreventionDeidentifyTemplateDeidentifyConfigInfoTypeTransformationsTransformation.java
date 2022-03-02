@@ -39,7 +39,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * all findings that correspond to infoTypes that were requested in InspectConfig.
      * Structure is documented below.
      * 
-     */
+    */
     public List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoType> getInfoTypes() {
         return this.infoTypes == null ? List.of() : this.infoTypes;
     }
@@ -47,7 +47,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Primitive transformation to apply to the infoType.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformation getPrimitiveTransformation() {
         return this.primitiveTransformation;
     }

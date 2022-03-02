@@ -98,49 +98,49 @@ public final class SamplingRuleUpdate {
     /**
      * Matches attributes derived from the request.
      * 
-     */
+    */
     public Optional<Object> getAttributes() {
         return Optional.ofNullable(this.attributes);
     }
     /**
      * The percentage of matching requests to instrument, after the reservoir is exhausted.
      * 
-     */
+    */
     public Optional<Double> getFixedRate() {
         return Optional.ofNullable(this.fixedRate);
     }
     /**
      * Matches the HTTP method from a request URL.
      * 
-     */
+    */
     public Optional<String> getHTTPMethod() {
         return Optional.ofNullable(this.hTTPMethod);
     }
     /**
      * Matches the hostname from a request URL.
      * 
-     */
+    */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
     /**
      * The priority of the sampling rule.
      * 
-     */
+    */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
      * 
-     */
+    */
     public Optional<Integer> getReservoirSize() {
         return Optional.ofNullable(this.reservoirSize);
     }
     /**
      * Matches the ARN of the AWS resource on which the service runs.
      * 
-     */
+    */
     public Optional<String> getResourceARN() {
         return Optional.ofNullable(this.resourceARN);
     }
@@ -153,21 +153,21 @@ public final class SamplingRuleUpdate {
     /**
      * Matches the name that the service uses to identify itself in segments.
      * 
-     */
+    */
     public Optional<String> getServiceName() {
         return Optional.ofNullable(this.serviceName);
     }
     /**
      * Matches the origin that the service uses to identify its type in segments.
      * 
-     */
+    */
     public Optional<String> getServiceType() {
         return Optional.ofNullable(this.serviceType);
     }
     /**
      * Matches the path from a request URL.
      * 
-     */
+    */
     public Optional<String> getURLPath() {
         return Optional.ofNullable(this.uRLPath);
     }

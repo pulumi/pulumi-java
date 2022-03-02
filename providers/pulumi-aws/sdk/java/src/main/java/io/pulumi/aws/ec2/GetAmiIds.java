@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAmiIds {
-/**
- * Use this data source to get a list of AMI IDs matching the specified criteria.
+    private GetAmiIds() {}
+    public interface BuilderApplicator {
+        public void apply(GetAmiIdsArgs.Builder a);
+    }
+    private static GetAmiIdsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAmiIdsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get a list of AMI IDs matching the specified criteria.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getAmiIds.
+     *
+     * A collection of arguments for invoking getAmiIds.
  * 
- *
- * A collection of values returned by getAmiIds.
+     *
+     * A collection of values returned by getAmiIds.
  * 
- */
+     */
+    public static CompletableFuture<GetAmiIdsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get a list of AMI IDs matching the specified criteria.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getAmiIds.
+     * 
+     *
+         * A collection of values returned by getAmiIds.
+     * 
+     */
     public static CompletableFuture<GetAmiIdsResult> invokeAsync(GetAmiIdsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getAmiIds:getAmiIds", TypeShape.of(GetAmiIdsResult.class), args == null ? GetAmiIdsArgs.Empty : args, Utilities.withVersion(options));
     }

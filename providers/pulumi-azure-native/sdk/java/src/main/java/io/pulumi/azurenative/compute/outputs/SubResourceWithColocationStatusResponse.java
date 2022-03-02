@@ -34,14 +34,14 @@ public final class SubResourceWithColocationStatusResponse {
     /**
      * Describes colocation status of a resource in the Proximity Placement Group.
      * 
-     */
+    */
     public Optional<InstanceViewStatusResponse> getColocationStatus() {
         return Optional.ofNullable(this.colocationStatus);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

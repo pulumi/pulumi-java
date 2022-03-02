@@ -23,7 +23,7 @@ public final class ExpiryDetailResponse {
     /**
      * The time at which the `MembershipRole` will expire.
      * 
-     */
+    */
     public String getExpireTime() {
         return this.expireTime;
     }

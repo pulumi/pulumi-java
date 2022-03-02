@@ -58,7 +58,7 @@ public final class LoadBalancerListener {
     /**
      * The port on the instance to route to
      * 
-     */
+    */
     public Integer getInstancePort() {
         return this.instancePort;
     }
@@ -66,14 +66,14 @@ public final class LoadBalancerListener {
      * The protocol to use to the instance. Valid
      * values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
      * 
-     */
+    */
     public String getInstanceProtocol() {
         return this.instanceProtocol;
     }
     /**
      * The port to listen on for the load balancer
      * 
-     */
+    */
     public Integer getLbPort() {
         return this.lbPort;
     }
@@ -81,7 +81,7 @@ public final class LoadBalancerListener {
      * The protocol to listen on. Valid values are `HTTP`,
      * `HTTPS`, `TCP`, or `SSL`
      * 
-     */
+    */
     public String getLbProtocol() {
         return this.lbProtocol;
     }
@@ -89,7 +89,7 @@ public final class LoadBalancerListener {
      * The ARN of an SSL certificate you have
      * uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when `lb_protocol` is either HTTPS or SSL**
      * 
-     */
+    */
     public Optional<String> getSslCertificateId() {
         return Optional.ofNullable(this.sslCertificateId);
     }

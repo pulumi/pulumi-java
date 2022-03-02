@@ -46,28 +46,28 @@ public final class TransferOptionsResponse {
     /**
      * Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
      * 
-     */
+    */
     public Boolean getDeleteObjectsFromSourceAfterTransfer() {
         return this.deleteObjectsFromSourceAfterTransfer;
     }
     /**
      * Whether objects that exist only in the sink should be deleted. **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.
      * 
-     */
+    */
     public Boolean getDeleteObjectsUniqueInSink() {
         return this.deleteObjectsUniqueInSink;
     }
     /**
      * Represents the selected metadata options for a transfer job.
      * 
-     */
+    */
     public MetadataOptionsResponse getMetadataOptions() {
         return this.metadataOptions;
     }
     /**
      * When to overwrite objects that already exist in the sink. The default is that only objects that are different from the source are ovewritten. If true, all objects in the sink whose name matches an object in the source are overwritten with the source object.
      * 
-     */
+    */
     public Boolean getOverwriteObjectsAlreadyExistingInSink() {
         return this.overwriteObjectsAlreadyExistingInSink;
     }

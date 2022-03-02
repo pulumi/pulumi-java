@@ -50,28 +50,28 @@ public final class VirtualNodeSpecListenerConnectionPool {
     /**
      * Connection pool information for gRPC listeners.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerConnectionPoolGrpc> getGrpc() {
         return Optional.ofNullable(this.grpc);
     }
     /**
      * Connection pool information for HTTP listeners.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerConnectionPoolHttp> getHttp() {
         return Optional.ofNullable(this.http);
     }
     /**
      * Connection pool information for HTTP2 listeners.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerConnectionPoolHttp2> getHttp2() {
         return Optional.ofNullable(this.http2);
     }
     /**
      * Connection pool information for TCP listeners.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerConnectionPoolTcp> getTcp() {
         return Optional.ofNullable(this.tcp);
     }

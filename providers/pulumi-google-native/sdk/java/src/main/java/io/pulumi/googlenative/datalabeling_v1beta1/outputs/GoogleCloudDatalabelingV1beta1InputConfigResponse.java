@@ -63,42 +63,42 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse {
     /**
      * Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.
      * 
-     */
+    */
     public String getAnnotationType() {
         return this.annotationType;
     }
     /**
      * Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.
      * 
-     */
+    */
     public GoogleCloudDatalabelingV1beta1BigQuerySourceResponse getBigquerySource() {
         return this.bigquerySource;
     }
     /**
      * Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.
      * 
-     */
+    */
     public GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse getClassificationMetadata() {
         return this.classificationMetadata;
     }
     /**
      * Data type must be specifed when user tries to import data.
      * 
-     */
+    */
     public String getDataType() {
         return this.dataType;
     }
     /**
      * Source located in Cloud Storage.
      * 
-     */
+    */
     public GoogleCloudDatalabelingV1beta1GcsSourceResponse getGcsSource() {
         return this.gcsSource;
     }
     /**
      * Required for text import, as language code must be specified.
      * 
-     */
+    */
     public GoogleCloudDatalabelingV1beta1TextMetadataResponse getTextMetadata() {
         return this.textMetadata;
     }

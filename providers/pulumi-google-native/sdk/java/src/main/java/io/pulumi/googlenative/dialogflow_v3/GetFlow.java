@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFlow {
-/**
- * Retrieves the specified flow.
+    private GetFlow() {}
+    public interface BuilderApplicator {
+        public void apply(GetFlowArgs.Builder a);
+    }
+    private static GetFlowArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFlowArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves the specified flow.
  * 
- */
+     */
+    public static CompletableFuture<GetFlowResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves the specified flow.
+     * 
+     */
     public static CompletableFuture<GetFlowResult> invokeAsync(GetFlowArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getFlow", TypeShape.of(GetFlowResult.class), args == null ? GetFlowArgs.Empty : args, Utilities.withVersion(options));
     }

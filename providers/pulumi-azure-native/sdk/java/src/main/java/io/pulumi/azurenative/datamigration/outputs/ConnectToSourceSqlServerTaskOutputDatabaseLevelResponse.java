@@ -70,35 +70,35 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
     /**
      * SQL Server compatibility level of database
      * 
-     */
+    */
     public String getCompatibilityLevel() {
         return this.compatibilityLevel;
     }
     /**
      * The list of database files
      * 
-     */
+    */
     public List<DatabaseFileInfoResponse> getDatabaseFiles() {
         return this.databaseFiles;
     }
     /**
      * State of the database
      * 
-     */
+    */
     public String getDatabaseState() {
         return this.databaseState;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Database name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -106,14 +106,14 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
      * Type of result - database level or task level
      * Expected value is 'DatabaseLevelOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
     /**
      * Size of the file in megabytes
      * 
-     */
+    */
     public Double getSizeMB() {
         return this.sizeMB;
     }

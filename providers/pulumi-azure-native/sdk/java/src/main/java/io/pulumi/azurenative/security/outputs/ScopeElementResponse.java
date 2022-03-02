@@ -25,7 +25,7 @@ public final class ScopeElementResponse {
     /**
      * The alert entity type to suppress by.
      * 
-     */
+    */
     public Optional<String> getField() {
         return Optional.ofNullable(this.field);
     }

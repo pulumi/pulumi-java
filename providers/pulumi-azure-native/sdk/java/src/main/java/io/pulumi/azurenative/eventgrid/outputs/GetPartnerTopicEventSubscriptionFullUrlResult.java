@@ -25,7 +25,7 @@ public final class GetPartnerTopicEventSubscriptionFullUrlResult {
     /**
      * The URL that represents the endpoint of the destination of an event subscription.
      * 
-     */
+    */
     public Optional<String> getEndpointUrl() {
         return Optional.ofNullable(this.endpointUrl);
     }

@@ -56,7 +56,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse {
     /**
      * Gets or sets the frontend IP configuration name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -64,28 +64,28 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse {
      * Gets or sets the IP address of the Load Balancer.This is only specified if a specific
      * private IP address shall be allocated from the subnet specified in subnetRef.
      * 
-     */
+    */
     public Optional<String> getPrivateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
      * Gets or sets PrivateIP allocation method (Static/Dynamic).
      * 
-     */
+    */
     public Optional<String> getPrivateIpAllocationMethod() {
         return Optional.ofNullable(this.privateIpAllocationMethod);
     }
     /**
      * Defines reference to subnet.
      * 
-     */
+    */
     public Optional<SubnetReferenceResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
      * Gets or sets the csv list of zones.
      * 
-     */
+    */
     public Optional<String> getZones() {
         return Optional.ofNullable(this.zones);
     }

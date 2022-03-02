@@ -60,42 +60,42 @@ public final class VirtualNetworkResponse {
     /**
      * can be used in vm creation/deletion
      * 
-     */
+    */
     public Boolean getAssignable() {
         return this.assignable;
     }
     /**
      * virtual network id (privateCloudId:vsphereId)
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Azure region
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * {VirtualNetworkName}
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Private Cloud id
      * 
-     */
+    */
     public String getPrivateCloudId() {
         return this.privateCloudId;
     }
     /**
      * {resourceProviderNamespace}/{resourceType}
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

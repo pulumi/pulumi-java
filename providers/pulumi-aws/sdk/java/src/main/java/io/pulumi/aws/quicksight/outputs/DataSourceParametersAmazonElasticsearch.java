@@ -23,7 +23,7 @@ public final class DataSourceParametersAmazonElasticsearch {
     /**
      * The OpenSearch domain.
      * 
-     */
+    */
     public String getDomain() {
         return this.domain;
     }

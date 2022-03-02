@@ -40,21 +40,21 @@ public final class SqlUpsertSettingsResponse {
     /**
      * Schema name for interim table. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getInterimSchemaName() {
         return Optional.ofNullable(this.interimSchemaName);
     }
     /**
      * Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
      * 
-     */
+    */
     public Optional<Object> getKeys() {
         return Optional.ofNullable(this.keys);
     }
     /**
      * Specifies whether to use temp db for upsert interim table. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getUseTempDB() {
         return Optional.ofNullable(this.useTempDB);
     }

@@ -67,42 +67,42 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
     /**
      * Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
      * 
-     */
+    */
     public Optional<Boolean> getCopyTags() {
         return Optional.ofNullable(this.copyTags);
     }
     /**
      * See the `create_rule` block. Max of 1 per schedule.
      * 
-     */
+    */
     public LifecyclePolicyPolicyDetailsScheduleCreateRule getCreateRule() {
         return this.createRule;
     }
     /**
      * See the `cross_region_copy_rule` block. Max of 3 per schedule.
      * 
-     */
+    */
     public List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> getCrossRegionCopyRules() {
         return this.crossRegionCopyRules == null ? List.of() : this.crossRegionCopyRules;
     }
     /**
      * A name for the schedule.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The retention rule that indicates how long snapshot copies are to be retained in the destination Region. See the `retain_rule` block. Max of 1 per schedule.
      * 
-     */
+    */
     public LifecyclePolicyPolicyDetailsScheduleRetainRule getRetainRule() {
         return this.retainRule;
     }
     /**
      * A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
      * 
-     */
+    */
     public Map<String,String> getTagsToAdd() {
         return this.tagsToAdd == null ? Map.of() : this.tagsToAdd;
     }

@@ -39,14 +39,14 @@ public final class GetDelegatedServicesResult {
     /**
      * The services for which the account is a delegated administrator, which have the following attributes:
      * 
-     */
+    */
     public List<GetDelegatedServicesDelegatedService> getDelegatedServices() {
         return this.delegatedServices;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

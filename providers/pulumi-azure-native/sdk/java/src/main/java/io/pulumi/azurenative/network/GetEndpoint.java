@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEndpoint {
-/**
- * Class representing a Traffic Manager endpoint.
+    private GetEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetEndpointArgs.Builder a);
+    }
+    private static GetEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Class representing a Traffic Manager endpoint.
  * API Version: 2018-08-01.
  * 
- *
- * Class representing a Traffic Manager endpoint.
+     *
+     * Class representing a Traffic Manager endpoint.
  * 
- */
+     */
+    public static CompletableFuture<GetEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Class representing a Traffic Manager endpoint.
+     * API Version: 2018-08-01.
+     * 
+     *
+         * Class representing a Traffic Manager endpoint.
+     * 
+     */
     public static CompletableFuture<GetEndpointResult> invokeAsync(GetEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getEndpoint", TypeShape.of(GetEndpointResult.class), args == null ? GetEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

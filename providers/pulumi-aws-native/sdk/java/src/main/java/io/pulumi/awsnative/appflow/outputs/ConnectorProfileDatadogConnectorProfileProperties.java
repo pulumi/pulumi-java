@@ -23,7 +23,7 @@ public final class ConnectorProfileDatadogConnectorProfileProperties {
     /**
      * The location of the Datadog resource
      * 
-     */
+    */
     public String getInstanceUrl() {
         return this.instanceUrl;
     }

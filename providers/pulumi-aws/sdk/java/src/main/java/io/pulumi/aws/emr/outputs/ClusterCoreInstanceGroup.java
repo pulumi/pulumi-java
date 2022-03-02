@@ -71,49 +71,49 @@ public final class ClusterCoreInstanceGroup {
     /**
      * String containing the [EMR Auto Scaling Policy](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html) JSON.
      * 
-     */
+    */
     public Optional<String> getAutoscalingPolicy() {
         return Optional.ofNullable(this.autoscalingPolicy);
     }
     /**
      * Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
      * 
-     */
+    */
     public Optional<String> getBidPrice() {
         return Optional.ofNullable(this.bidPrice);
     }
     /**
      * Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
      * 
-     */
+    */
     public List<ClusterCoreInstanceGroupEbsConfig> getEbsConfigs() {
         return this.ebsConfigs == null ? List.of() : this.ebsConfigs;
     }
     /**
      * ID of the cluster.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Target number of instances for the instance group. Must be 1 or 3. Defaults to 1. Launching with multiple master nodes is only supported in EMR version 5.23.0+, and requires this resource's `core_instance_group` to be configured. Public (Internet accessible) instances must be created in VPC subnets that have map public IP on launch enabled. Termination protection is automatically enabled when launched with multiple master nodes and this provider must have the `termination_protection = false` configuration applied before destroying this resource.
      * 
-     */
+    */
     public Optional<Integer> getInstanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
     /**
      * EC2 instance type for all instances in the instance group.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * Name of the step.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

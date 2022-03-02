@@ -25,7 +25,7 @@ public final class EndpointNetworkInterface {
     /**
      * Identifier of the Elastic Network Interface (ENI).
      * 
-     */
+    */
     public Optional<String> getNetworkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }

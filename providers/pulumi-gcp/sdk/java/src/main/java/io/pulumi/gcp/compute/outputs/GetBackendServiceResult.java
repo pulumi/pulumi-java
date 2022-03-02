@@ -165,7 +165,7 @@ public final class GetBackendServiceResult {
     /**
      * The set of backends that serve this Backend Service.
      * 
-     */
+    */
     public List<GetBackendServiceBackend> getBackends() {
         return this.backends;
     }
@@ -178,7 +178,7 @@ public final class GetBackendServiceResult {
     /**
      * Time for which instance will be drained (not accept new connections, but still work to finish started ones).
      * 
-     */
+    */
     public Integer getConnectionDrainingTimeoutSec() {
         return this.connectionDrainingTimeoutSec;
     }
@@ -197,28 +197,28 @@ public final class GetBackendServiceResult {
     /**
      * Textual description for the Backend Service.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Whether or not Cloud CDN is enabled on the Backend Service.
      * 
-     */
+    */
     public Boolean getEnableCdn() {
         return this.enableCdn;
     }
     /**
      * The fingerprint of the Backend Service.
      * 
-     */
+    */
     public String getFingerprint() {
         return this.fingerprint;
     }
     /**
      * The set of HTTP/HTTPS health checks used by the Backend Service.
      * 
-     */
+    */
     public List<String> getHealthChecks() {
         return this.healthChecks;
     }
@@ -228,7 +228,7 @@ public final class GetBackendServiceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -250,7 +250,7 @@ public final class GetBackendServiceResult {
     /**
      * The name of a service that has been added to an instance group in this backend.
      * 
-     */
+    */
     public String getPortName() {
         return this.portName;
     }
@@ -260,7 +260,7 @@ public final class GetBackendServiceResult {
     /**
      * The protocol for incoming requests.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
@@ -273,21 +273,21 @@ public final class GetBackendServiceResult {
     /**
      * The URI of the Backend Service.
      * 
-     */
+    */
     public String getSelfLink() {
         return this.selfLink;
     }
     /**
      * The Backend Service session stickiness configuration.
      * 
-     */
+    */
     public String getSessionAffinity() {
         return this.sessionAffinity;
     }
     /**
      * The number of seconds to wait for a backend to respond to a request before considering the request failed.
      * 
-     */
+    */
     public Integer getTimeoutSec() {
         return this.timeoutSec;
     }

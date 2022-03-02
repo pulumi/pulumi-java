@@ -33,14 +33,14 @@ public final class FargateProfileSelector {
     /**
      * Key-value map of Kubernetes labels for selection.
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
      * Kubernetes namespace for selection.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }

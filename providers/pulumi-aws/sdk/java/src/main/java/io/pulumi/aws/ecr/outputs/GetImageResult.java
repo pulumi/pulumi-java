@@ -61,7 +61,7 @@ public final class GetImageResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -71,14 +71,14 @@ public final class GetImageResult {
     /**
      * The date and time, expressed as a unix timestamp, at which the current image was pushed to the repository.
      * 
-     */
+    */
     public Integer getImagePushedAt() {
         return this.imagePushedAt;
     }
     /**
      * The size, in bytes, of the image in the repository.
      * 
-     */
+    */
     public Integer getImageSizeInBytes() {
         return this.imageSizeInBytes;
     }
@@ -88,7 +88,7 @@ public final class GetImageResult {
     /**
      * The list of tags associated with this image.
      * 
-     */
+    */
     public List<String> getImageTags() {
         return this.imageTags;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAzureCliScript {
-/**
- * Object model for the Azure CLI script.
+    private GetAzureCliScript() {}
+    public interface BuilderApplicator {
+        public void apply(GetAzureCliScriptArgs.Builder a);
+    }
+    private static GetAzureCliScriptArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAzureCliScriptArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Object model for the Azure CLI script.
  * API Version: 2020-10-01.
  * 
- *
- * Object model for the Azure CLI script.
+     *
+     * Object model for the Azure CLI script.
  * 
- */
+     */
+    public static CompletableFuture<GetAzureCliScriptResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Object model for the Azure CLI script.
+     * API Version: 2020-10-01.
+     * 
+     *
+         * Object model for the Azure CLI script.
+     * 
+     */
     public static CompletableFuture<GetAzureCliScriptResult> invokeAsync(GetAzureCliScriptArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getAzureCliScript", TypeShape.of(GetAzureCliScriptResult.class), args == null ? GetAzureCliScriptArgs.Empty : args, Utilities.withVersion(options));
     }

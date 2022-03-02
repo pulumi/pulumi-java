@@ -132,6 +132,22 @@ public class Bucket extends io.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
 
+    public interface BuilderApplicator {
+        public void apply(BucketArgs.Builder a);
+    }
+    private static io.pulumi.aws.s3control.BucketArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.s3control.BucketArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Bucket(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

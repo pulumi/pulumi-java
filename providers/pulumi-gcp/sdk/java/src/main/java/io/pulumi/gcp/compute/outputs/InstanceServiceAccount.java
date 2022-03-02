@@ -41,7 +41,7 @@ public final class InstanceServiceAccount {
      * default Google Compute Engine service account is used.
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
-     */
+    */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
@@ -51,7 +51,7 @@ public final class InstanceServiceAccount {
      * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
-     */
+    */
     public List<String> getScopes() {
         return this.scopes;
     }

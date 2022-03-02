@@ -38,21 +38,21 @@ public final class GetPipelineDefinitionPipelineObjectField {
     /**
      * Field identifier.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Field value, expressed as the identifier of another object
      * 
-     */
+    */
     public String getRefValue() {
         return this.refValue;
     }
     /**
      * Field value, expressed as a String.
      * 
-     */
+    */
     public String getStringValue() {
         return this.stringValue;
     }

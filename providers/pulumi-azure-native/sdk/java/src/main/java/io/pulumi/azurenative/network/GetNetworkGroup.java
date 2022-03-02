@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkGroup {
-/**
- * The network group resource
+    private GetNetworkGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkGroupArgs.Builder a);
+    }
+    private static GetNetworkGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The network group resource
  * API Version: 2021-02-01-preview.
  * 
- *
- * The network group resource
+     *
+     * The network group resource
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The network group resource
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * The network group resource
+     * 
+     */
     public static CompletableFuture<GetNetworkGroupResult> invokeAsync(GetNetworkGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkGroup", TypeShape.of(GetNetworkGroupResult.class), args == null ? GetNetworkGroupArgs.Empty : args, Utilities.withVersion(options));
     }

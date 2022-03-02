@@ -62,7 +62,7 @@ public final class CVSSv3Response {
     /**
      * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
      * 
-     */
+    */
     public String getAttackVector() {
         return this.attackVector;
     }
@@ -72,7 +72,7 @@ public final class CVSSv3Response {
     /**
      * The base score is a function of the base metric scores.
      * 
-     */
+    */
     public Double getBaseScore() {
         return this.baseScore;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOutboundFirewallRule {
-/**
- * An Azure SQL DB Server Outbound Firewall Rule.
+    private GetOutboundFirewallRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetOutboundFirewallRuleArgs.Builder a);
+    }
+    private static GetOutboundFirewallRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOutboundFirewallRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An Azure SQL DB Server Outbound Firewall Rule.
  * API Version: 2021-02-01-preview.
  * 
- *
- * An Azure SQL DB Server Outbound Firewall Rule.
+     *
+     * An Azure SQL DB Server Outbound Firewall Rule.
  * 
- */
+     */
+    public static CompletableFuture<GetOutboundFirewallRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An Azure SQL DB Server Outbound Firewall Rule.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * An Azure SQL DB Server Outbound Firewall Rule.
+     * 
+     */
     public static CompletableFuture<GetOutboundFirewallRuleResult> invokeAsync(GetOutboundFirewallRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getOutboundFirewallRule", TypeShape.of(GetOutboundFirewallRuleResult.class), args == null ? GetOutboundFirewallRuleArgs.Empty : args, Utilities.withVersion(options));
     }

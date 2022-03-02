@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPipeline {
-/**
- * Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
+    private GetPipeline() {}
+    public interface BuilderApplicator {
+        public void apply(GetPipelineArgs.Builder a);
+    }
+    private static GetPipelineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPipelineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
  * API Version: 2020-07-13-preview.
  * 
- *
- * Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
+     *
+     * Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
  * 
- */
+     */
+    public static CompletableFuture<GetPipelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
+     * API Version: 2020-07-13-preview.
+     * 
+     *
+         * Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
+     * 
+     */
     public static CompletableFuture<GetPipelineResult> invokeAsync(GetPipelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devops:getPipeline", TypeShape.of(GetPipelineResult.class), args == null ? GetPipelineArgs.Empty : args, Utilities.withVersion(options));
     }

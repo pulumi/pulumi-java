@@ -40,21 +40,21 @@ public final class RosettaNetPipBusinessDocumentResponse {
     /**
      * The business document description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The business document name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The business document version.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

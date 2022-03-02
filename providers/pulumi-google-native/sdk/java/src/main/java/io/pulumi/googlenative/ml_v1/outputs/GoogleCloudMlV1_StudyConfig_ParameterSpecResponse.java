@@ -90,42 +90,42 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse {
     /**
      * The value spec for a 'CATEGORICAL' parameter.
      * 
-     */
+    */
     public GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse getCategoricalValueSpec() {
         return this.categoricalValueSpec;
     }
     /**
      * A child node is active if the parameter's value matches the child node's matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
      * 
-     */
+    */
     public List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> getChildParameterSpecs() {
         return this.childParameterSpecs;
     }
     /**
      * The value spec for a 'DISCRETE' parameter.
      * 
-     */
+    */
     public GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse getDiscreteValueSpec() {
         return this.discreteValueSpec;
     }
     /**
      * The value spec for a 'DOUBLE' parameter.
      * 
-     */
+    */
     public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse getDoubleValueSpec() {
         return this.doubleValueSpec;
     }
     /**
      * The value spec for an 'INTEGER' parameter.
      * 
-     */
+    */
     public GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse getIntegerValueSpec() {
         return this.integerValueSpec;
     }
     /**
      * The parameter name must be unique amongst all ParameterSpecs.
      * 
-     */
+    */
     public String getParameter() {
         return this.parameter;
     }
@@ -141,14 +141,14 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse {
     /**
      * How the parameter should be scaled. Leave unset for categorical parameters.
      * 
-     */
+    */
     public String getScaleType() {
         return this.scaleType;
     }
     /**
      * The type of the parameter.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

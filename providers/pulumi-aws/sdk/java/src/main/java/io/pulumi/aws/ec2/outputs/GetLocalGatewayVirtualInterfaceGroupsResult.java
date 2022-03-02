@@ -51,21 +51,21 @@ public final class GetLocalGatewayVirtualInterfaceGroupsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set of EC2 Local Gateway Virtual Interface Group identifiers.
      * 
-     */
+    */
     public List<String> getIds() {
         return this.ids;
     }
     /**
      * Set of EC2 Local Gateway Virtual Interface identifiers.
      * 
-     */
+    */
     public List<String> getLocalGatewayVirtualInterfaceIds() {
         return this.localGatewayVirtualInterfaceIds;
     }

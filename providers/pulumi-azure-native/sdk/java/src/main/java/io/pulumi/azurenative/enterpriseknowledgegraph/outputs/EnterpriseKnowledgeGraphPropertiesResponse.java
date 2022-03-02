@@ -41,21 +41,21 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse {
     /**
      * The description of the EnterpriseKnowledgeGraph
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Specifies the metadata  of the resource.
      * 
-     */
+    */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * The state of EnterpriseKnowledgeGraph provisioning
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }

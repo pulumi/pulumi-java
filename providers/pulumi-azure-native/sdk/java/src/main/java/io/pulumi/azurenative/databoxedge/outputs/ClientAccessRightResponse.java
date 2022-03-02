@@ -31,14 +31,14 @@ public final class ClientAccessRightResponse {
     /**
      * Type of access to be allowed for the client.
      * 
-     */
+    */
     public String getAccessPermission() {
         return this.accessPermission;
     }
     /**
      * IP of the client.
      * 
-     */
+    */
     public String getClient() {
         return this.client;
     }

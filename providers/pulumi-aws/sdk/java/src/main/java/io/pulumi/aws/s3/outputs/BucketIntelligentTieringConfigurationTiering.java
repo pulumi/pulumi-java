@@ -32,14 +32,14 @@ public final class BucketIntelligentTieringConfigurationTiering {
     /**
      * S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_CONFIGURATION`, `DEEP_ARCHIVE_CONFIGURATION`.
      * 
-     */
+    */
     public String getAccessTier() {
         return this.accessTier;
     }
     /**
      * The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier.
      * 
-     */
+    */
     public Integer getDays() {
         return this.days;
     }

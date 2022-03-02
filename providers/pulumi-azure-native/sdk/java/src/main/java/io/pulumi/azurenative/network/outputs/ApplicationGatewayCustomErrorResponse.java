@@ -33,14 +33,14 @@ public final class ApplicationGatewayCustomErrorResponse {
     /**
      * Error page URL of the application gateway customer error.
      * 
-     */
+    */
     public Optional<String> getCustomErrorPageUrl() {
         return Optional.ofNullable(this.customErrorPageUrl);
     }
     /**
      * Status code of the application gateway customer error.
      * 
-     */
+    */
     public Optional<String> getStatusCode() {
         return Optional.ofNullable(this.statusCode);
     }

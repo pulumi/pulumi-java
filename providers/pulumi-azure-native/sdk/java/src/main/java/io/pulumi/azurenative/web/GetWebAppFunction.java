@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppFunction {
-/**
- * Function information.
+    private GetWebAppFunction() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppFunctionArgs.Builder a);
+    }
+    private static GetWebAppFunctionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppFunctionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Function information.
  * API Version: 2020-12-01.
  * 
- *
- * Function information.
+     *
+     * Function information.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppFunctionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Function information.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Function information.
+     * 
+     */
     public static CompletableFuture<GetWebAppFunctionResult> invokeAsync(GetWebAppFunctionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppFunction", TypeShape.of(GetWebAppFunctionResult.class), args == null ? GetWebAppFunctionArgs.Empty : args, Utilities.withVersion(options));
     }

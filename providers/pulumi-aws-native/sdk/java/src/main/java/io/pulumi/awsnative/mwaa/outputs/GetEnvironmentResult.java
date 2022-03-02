@@ -108,7 +108,7 @@ public final class GetEnvironmentResult {
      *     
      *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
      * 
-     */
+    */
     public Optional<Object> getAirflowConfigurationOptions() {
         return Optional.ofNullable(this.airflowConfigurationOptions);
     }
@@ -160,7 +160,7 @@ public final class GetEnvironmentResult {
     /**
      * A map of tags for the environment.
      * 
-     */
+    */
     public Optional<Object> getTags() {
         return Optional.ofNullable(this.tags);
     }

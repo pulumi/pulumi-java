@@ -31,14 +31,14 @@ public final class StatusConditionResponse {
     /**
      * Canonical code of the condition.
      * 
-     */
+    */
     public String getCanonicalCode() {
         return this.canonicalCode;
     }
     /**
      * Human-friendly representation of the condition
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }

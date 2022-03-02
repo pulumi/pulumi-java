@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConversation {
-/**
- * Retrieves the specific conversation.
+    private GetConversation() {}
+    public interface BuilderApplicator {
+        public void apply(GetConversationArgs.Builder a);
+    }
+    private static GetConversationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConversationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves the specific conversation.
  * 
- */
+     */
+    public static CompletableFuture<GetConversationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves the specific conversation.
+     * 
+     */
     public static CompletableFuture<GetConversationResult> invokeAsync(GetConversationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2:getConversation", TypeShape.of(GetConversationResult.class), args == null ? GetConversationArgs.Empty : args, Utilities.withVersion(options));
     }

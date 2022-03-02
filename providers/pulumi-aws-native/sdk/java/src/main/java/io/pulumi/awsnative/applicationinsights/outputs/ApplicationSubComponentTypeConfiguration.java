@@ -32,14 +32,14 @@ public final class ApplicationSubComponentTypeConfiguration {
     /**
      * The configuration settings of sub components.
      * 
-     */
+    */
     public ApplicationSubComponentConfigurationDetails getSubComponentConfigurationDetails() {
         return this.subComponentConfigurationDetails;
     }
     /**
      * The sub component type.
      * 
-     */
+    */
     public ApplicationSubComponentTypeConfigurationSubComponentType getSubComponentType() {
         return this.subComponentType;
     }

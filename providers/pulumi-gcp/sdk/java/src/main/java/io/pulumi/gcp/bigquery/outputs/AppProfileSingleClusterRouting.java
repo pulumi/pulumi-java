@@ -36,14 +36,14 @@ public final class AppProfileSingleClusterRouting {
      * If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
      * It is unsafe to send these requests to the same table/row/column in multiple clusters.
      * 
-     */
+    */
     public Optional<Boolean> getAllowTransactionalWrites() {
         return Optional.ofNullable(this.allowTransactionalWrites);
     }
     /**
      * The cluster to which read/write requests should be routed.
      * 
-     */
+    */
     public String getClusterId() {
         return this.clusterId;
     }

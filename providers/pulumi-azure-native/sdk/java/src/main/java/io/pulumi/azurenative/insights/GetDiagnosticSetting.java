@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDiagnosticSetting {
-/**
- * The diagnostic setting resource.
+    private GetDiagnosticSetting() {}
+    public interface BuilderApplicator {
+        public void apply(GetDiagnosticSettingArgs.Builder a);
+    }
+    private static GetDiagnosticSettingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDiagnosticSettingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The diagnostic setting resource.
  * API Version: 2017-05-01-preview.
  * 
- *
- * The diagnostic setting resource.
+     *
+     * The diagnostic setting resource.
  * 
- */
+     */
+    public static CompletableFuture<GetDiagnosticSettingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The diagnostic setting resource.
+     * API Version: 2017-05-01-preview.
+     * 
+     *
+         * The diagnostic setting resource.
+     * 
+     */
     public static CompletableFuture<GetDiagnosticSettingResult> invokeAsync(GetDiagnosticSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getDiagnosticSetting", TypeShape.of(GetDiagnosticSettingResult.class), args == null ? GetDiagnosticSettingArgs.Empty : args, Utilities.withVersion(options));
     }

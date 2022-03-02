@@ -64,21 +64,21 @@ public final class GetSecretVersionResult {
     /**
      * The ARN of the secret.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
      * 
-     */
+    */
     public String getSecretBinary() {
         return this.secretBinary;
     }
@@ -88,14 +88,14 @@ public final class GetSecretVersionResult {
     /**
      * The decrypted part of the protected secret information that was originally provided as a string.
      * 
-     */
+    */
     public String getSecretString() {
         return this.secretString;
     }
     /**
      * The unique identifier of this version of the secret.
      * 
-     */
+    */
     public String getVersionId() {
         return this.versionId;
     }

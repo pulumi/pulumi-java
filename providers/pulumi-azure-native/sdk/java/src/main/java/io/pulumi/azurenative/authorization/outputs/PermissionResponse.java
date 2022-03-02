@@ -47,28 +47,28 @@ public final class PermissionResponse {
     /**
      * Allowed actions.
      * 
-     */
+    */
     public List<String> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * Allowed Data actions.
      * 
-     */
+    */
     public List<String> getDataActions() {
         return this.dataActions == null ? List.of() : this.dataActions;
     }
     /**
      * Denied actions.
      * 
-     */
+    */
     public List<String> getNotActions() {
         return this.notActions == null ? List.of() : this.notActions;
     }
     /**
      * Denied Data actions.
      * 
-     */
+    */
     public List<String> getNotDataActions() {
         return this.notDataActions == null ? List.of() : this.notDataActions;
     }

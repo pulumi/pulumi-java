@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecurityGroups {
-/**
- * Use this data source to get IDs and VPC membership of Security Groups that are created
+    private GetSecurityGroups() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecurityGroupsArgs.Builder a);
+    }
+    private static GetSecurityGroupsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecurityGroupsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get IDs and VPC membership of Security Groups that are created
  * outside of this provider.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getSecurityGroups.
+     *
+     * A collection of arguments for invoking getSecurityGroups.
  * 
- *
- * A collection of values returned by getSecurityGroups.
+     *
+     * A collection of values returned by getSecurityGroups.
  * 
- */
+     */
+    public static CompletableFuture<GetSecurityGroupsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get IDs and VPC membership of Security Groups that are created
+     * outside of this provider.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getSecurityGroups.
+     * 
+     *
+         * A collection of values returned by getSecurityGroups.
+     * 
+     */
     public static CompletableFuture<GetSecurityGroupsResult> invokeAsync(@Nullable GetSecurityGroupsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getSecurityGroups:getSecurityGroups", TypeShape.of(GetSecurityGroupsResult.class), args == null ? GetSecurityGroupsArgs.Empty : args, Utilities.withVersion(options));
     }

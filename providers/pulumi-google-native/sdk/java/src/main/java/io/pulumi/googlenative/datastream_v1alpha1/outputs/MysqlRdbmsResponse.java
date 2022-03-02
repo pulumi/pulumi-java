@@ -24,7 +24,7 @@ public final class MysqlRdbmsResponse {
     /**
      * Mysql databases on the server
      * 
-     */
+    */
     public List<MysqlDatabaseResponse> getMysqlDatabases() {
         return this.mysqlDatabases;
     }

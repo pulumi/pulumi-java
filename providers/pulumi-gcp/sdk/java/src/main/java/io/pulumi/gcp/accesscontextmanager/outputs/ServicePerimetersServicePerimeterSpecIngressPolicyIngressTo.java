@@ -42,7 +42,7 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo {
      * if it contains an operation/service in this list.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperation> getOperations() {
         return this.operations == null ? List.of() : this.operations;
     }
@@ -53,7 +53,7 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo {
      * then this `EgressTo` rule will authorize access to all resources outside
      * the perimeter.
      * 
-     */
+    */
     public List<String> getResources() {
         return this.resources == null ? List.of() : this.resources;
     }

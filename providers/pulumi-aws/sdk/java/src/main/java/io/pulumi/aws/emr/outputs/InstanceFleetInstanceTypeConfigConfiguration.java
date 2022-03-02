@@ -35,14 +35,14 @@ public final class InstanceFleetInstanceTypeConfigConfiguration {
     /**
      * The classification within a configuration.
      * 
-     */
+    */
     public Optional<String> getClassification() {
         return Optional.ofNullable(this.classification);
     }
     /**
      * A map of properties specified within a configuration classification
      * 
-     */
+    */
     public Map<String,Object> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }

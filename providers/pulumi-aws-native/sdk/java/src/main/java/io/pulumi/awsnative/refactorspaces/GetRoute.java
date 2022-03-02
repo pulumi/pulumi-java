@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoute {
-/**
- * Definition of AWS::RefactorSpaces::Route Resource Type
+    private GetRoute() {}
+    public interface BuilderApplicator {
+        public void apply(GetRouteArgs.Builder a);
+    }
+    private static GetRouteArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRouteArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of AWS::RefactorSpaces::Route Resource Type
  * 
- */
+     */
+    public static CompletableFuture<GetRouteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of AWS::RefactorSpaces::Route Resource Type
+     * 
+     */
     public static CompletableFuture<GetRouteResult> invokeAsync(GetRouteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:refactorspaces:getRoute", TypeShape.of(GetRouteResult.class), args == null ? GetRouteArgs.Empty : args, Utilities.withVersion(options));
     }

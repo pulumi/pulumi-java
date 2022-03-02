@@ -31,14 +31,14 @@ public final class BucketOwnerResponse {
     /**
      * The entity, in the form project-owner-projectId.
      * 
-     */
+    */
     public String getEntity() {
         return this.entity;
     }
     /**
      * The ID for the entity.
      * 
-     */
+    */
     public String getEntityId() {
         return this.entityId;
     }

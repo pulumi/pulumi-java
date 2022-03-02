@@ -41,7 +41,7 @@ public final class BotAbortStatement {
      * can specify the message string in plain text or in Speech Synthesis Markup Language (SSML). Attributes
      * are documented under message.
      * 
-     */
+    */
     public List<BotAbortStatementMessage> getMessages() {
         return this.messages;
     }
@@ -50,7 +50,7 @@ public final class BotAbortStatement {
      * slot values into the response card. For more information, see
      * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
      * 
-     */
+    */
     public Optional<String> getResponseCard() {
         return Optional.ofNullable(this.responseCard);
     }

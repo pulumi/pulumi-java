@@ -41,7 +41,7 @@ public final class ServiceSourceConfiguration {
     /**
      * Auto Deployment enabled
      * 
-     */
+    */
     public Optional<Boolean> getAutoDeploymentsEnabled() {
         return Optional.ofNullable(this.autoDeploymentsEnabled);
     }

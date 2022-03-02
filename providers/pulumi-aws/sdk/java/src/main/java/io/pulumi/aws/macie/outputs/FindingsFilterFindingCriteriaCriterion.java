@@ -76,56 +76,56 @@ public final class FindingsFilterFindingCriteriaCriterion {
     /**
      * The value for the property exclusively matches (equals an exact match for) all the specified values. If you specify multiple values, Amazon Macie uses AND logic to join the values.
      * 
-     */
+    */
     public List<String> getEqExactMatches() {
         return this.eqExactMatches == null ? List.of() : this.eqExactMatches;
     }
     /**
      * The value for the property matches (equals) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.
      * 
-     */
+    */
     public List<String> getEqs() {
         return this.eqs == null ? List.of() : this.eqs;
     }
     /**
      * The name of the field to be evaluated.
      * 
-     */
+    */
     public String getField() {
         return this.field;
     }
     /**
      * The value for the property is greater than the specified value.
      * 
-     */
+    */
     public Optional<String> getGt() {
         return Optional.ofNullable(this.gt);
     }
     /**
      * The value for the property is greater than or equal to the specified value.
      * 
-     */
+    */
     public Optional<String> getGte() {
         return Optional.ofNullable(this.gte);
     }
     /**
      * The value for the property is less than the specified value.
      * 
-     */
+    */
     public Optional<String> getLt() {
         return Optional.ofNullable(this.lt);
     }
     /**
      * The value for the property is less than or equal to the specified value.
      * 
-     */
+    */
     public Optional<String> getLte() {
         return Optional.ofNullable(this.lte);
     }
     /**
      * The value for the property doesn't match (doesn't equal) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.
      * 
-     */
+    */
     public List<String> getNeqs() {
         return this.neqs == null ? List.of() : this.neqs;
     }

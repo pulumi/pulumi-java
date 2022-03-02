@@ -28,7 +28,7 @@ public final class GetInstanceGroupNamedPort {
     /**
      * The name of the instance group. Either `name` or `self_link` must be provided.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

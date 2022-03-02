@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLoggingConfiguration {
-/**
- * Resource type definition for AWS::NetworkFirewall::LoggingConfiguration
+    private GetLoggingConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetLoggingConfigurationArgs.Builder a);
+    }
+    private static GetLoggingConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLoggingConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource type definition for AWS::NetworkFirewall::LoggingConfiguration
  * 
- */
+     */
+    public static CompletableFuture<GetLoggingConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource type definition for AWS::NetworkFirewall::LoggingConfiguration
+     * 
+     */
     public static CompletableFuture<GetLoggingConfigurationResult> invokeAsync(GetLoggingConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkfirewall:getLoggingConfiguration", TypeShape.of(GetLoggingConfigurationResult.class), args == null ? GetLoggingConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

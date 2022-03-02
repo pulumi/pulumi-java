@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEntityAnalytics {
-/**
- * Settings with single toggle.
+    private GetEntityAnalytics() {}
+    public interface BuilderApplicator {
+        public void apply(GetEntityAnalyticsArgs.Builder a);
+    }
+    private static GetEntityAnalyticsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEntityAnalyticsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Settings with single toggle.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Settings with single toggle.
+     *
+     * Settings with single toggle.
  * 
- */
+     */
+    public static CompletableFuture<GetEntityAnalyticsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Settings with single toggle.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Settings with single toggle.
+     * 
+     */
     public static CompletableFuture<GetEntityAnalyticsResult> invokeAsync(GetEntityAnalyticsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEntityAnalytics", TypeShape.of(GetEntityAnalyticsResult.class), args == null ? GetEntityAnalyticsArgs.Empty : args, Utilities.withVersion(options));
     }

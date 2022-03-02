@@ -33,14 +33,14 @@ public final class ObjectReferenceDefinitionResponse {
     /**
      * Name of the object
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Namespace of the object
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }

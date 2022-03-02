@@ -52,35 +52,35 @@ public final class DeploymentInstanceResponse {
     /**
      * Discovery status of the deployment instance
      * 
-     */
+    */
     public String getDiscoveryStatus() {
         return this.discoveryStatus;
     }
     /**
      * Name of the deployment instance
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Failed reason of the deployment instance
      * 
-     */
+    */
     public String getReason() {
         return this.reason;
     }
     /**
      * Start time of the deployment instance
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * Status of the deployment instance
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

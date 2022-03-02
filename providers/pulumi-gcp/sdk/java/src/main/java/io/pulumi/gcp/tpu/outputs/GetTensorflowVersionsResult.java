@@ -38,7 +38,7 @@ public final class GetTensorflowVersionsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -48,7 +48,7 @@ public final class GetTensorflowVersionsResult {
     /**
      * The list of TensorFlow versions available for the given project and zone.
      * 
-     */
+    */
     public List<String> getVersions() {
         return this.versions;
     }

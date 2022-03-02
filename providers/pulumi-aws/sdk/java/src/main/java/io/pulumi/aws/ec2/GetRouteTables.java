@@ -13,16 +13,38 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRouteTables {
-/**
- * This resource can be useful for getting back a list of route table ids to be referenced elsewhere.
+    private GetRouteTables() {}
+    public interface BuilderApplicator {
+        public void apply(GetRouteTablesArgs.Builder a);
+    }
+    private static GetRouteTablesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRouteTablesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This resource can be useful for getting back a list of route table ids to be referenced elsewhere.
  * 
- *
- * A collection of arguments for invoking getRouteTables.
+     *
+     * A collection of arguments for invoking getRouteTables.
  * 
- *
- * A collection of values returned by getRouteTables.
+     *
+     * A collection of values returned by getRouteTables.
  * 
- */
+     */
+    public static CompletableFuture<GetRouteTablesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This resource can be useful for getting back a list of route table ids to be referenced elsewhere.
+     * 
+     *
+         * A collection of arguments for invoking getRouteTables.
+     * 
+     *
+         * A collection of values returned by getRouteTables.
+     * 
+     */
     public static CompletableFuture<GetRouteTablesResult> invokeAsync(@Nullable GetRouteTablesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getRouteTables:getRouteTables", TypeShape.of(GetRouteTablesResult.class), args == null ? GetRouteTablesArgs.Empty : args, Utilities.withVersion(options));
     }

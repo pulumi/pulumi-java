@@ -23,7 +23,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     /**
      * Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
      * 
-     */
+    */
     public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor getInputLambdaProcessor() {
         return this.inputLambdaProcessor;
     }

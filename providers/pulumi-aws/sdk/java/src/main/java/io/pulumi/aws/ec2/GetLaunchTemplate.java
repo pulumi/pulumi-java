@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLaunchTemplate {
-/**
- * Provides information about a Launch Template.
+    private GetLaunchTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetLaunchTemplateArgs.Builder a);
+    }
+    private static GetLaunchTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLaunchTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information about a Launch Template.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getLaunchTemplate.
+     *
+     * A collection of arguments for invoking getLaunchTemplate.
  * 
- *
- * A collection of values returned by getLaunchTemplate.
+     *
+     * A collection of values returned by getLaunchTemplate.
  * 
- */
+     */
+    public static CompletableFuture<GetLaunchTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information about a Launch Template.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getLaunchTemplate.
+     * 
+     *
+         * A collection of values returned by getLaunchTemplate.
+     * 
+     */
     public static CompletableFuture<GetLaunchTemplateResult> invokeAsync(@Nullable GetLaunchTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getLaunchTemplate:getLaunchTemplate", TypeShape.of(GetLaunchTemplateResult.class), args == null ? GetLaunchTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

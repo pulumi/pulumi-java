@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomAssessmentAutomation {
-/**
- * Custom Assessment Automation
+    private GetCustomAssessmentAutomation() {}
+    public interface BuilderApplicator {
+        public void apply(GetCustomAssessmentAutomationArgs.Builder a);
+    }
+    private static GetCustomAssessmentAutomationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCustomAssessmentAutomationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Custom Assessment Automation
  * API Version: 2021-07-01-preview.
  * 
- *
- * Custom Assessment Automation
+     *
+     * Custom Assessment Automation
  * 
- */
+     */
+    public static CompletableFuture<GetCustomAssessmentAutomationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Custom Assessment Automation
+     * API Version: 2021-07-01-preview.
+     * 
+     *
+         * Custom Assessment Automation
+     * 
+     */
     public static CompletableFuture<GetCustomAssessmentAutomationResult> invokeAsync(GetCustomAssessmentAutomationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getCustomAssessmentAutomation", TypeShape.of(GetCustomAssessmentAutomationResult.class), args == null ? GetCustomAssessmentAutomationArgs.Empty : args, Utilities.withVersion(options));
     }

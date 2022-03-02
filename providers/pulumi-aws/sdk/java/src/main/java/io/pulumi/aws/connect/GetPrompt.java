@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrompt {
-/**
- * Provides details about a specific Amazon Connect Prompt.
+    private GetPrompt() {}
+    public interface BuilderApplicator {
+        public void apply(GetPromptArgs.Builder a);
+    }
+    private static GetPromptArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPromptArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about a specific Amazon Connect Prompt.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getPrompt.
+     *
+     * A collection of arguments for invoking getPrompt.
  * 
- *
- * A collection of values returned by getPrompt.
+     *
+     * A collection of values returned by getPrompt.
  * 
- */
+     */
+    public static CompletableFuture<GetPromptResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about a specific Amazon Connect Prompt.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getPrompt.
+     * 
+     *
+         * A collection of values returned by getPrompt.
+     * 
+     */
     public static CompletableFuture<GetPromptResult> invokeAsync(GetPromptArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:connect/getPrompt:getPrompt", TypeShape.of(GetPromptResult.class), args == null ? GetPromptArgs.Empty : args, Utilities.withVersion(options));
     }

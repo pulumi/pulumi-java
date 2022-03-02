@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConformancePack {
-/**
- * A conformance pack is a collection of AWS Config rules and remediation actions that can be easily deployed as a single entity in an account and a region or across an entire AWS Organization.
+    private GetConformancePack() {}
+    public interface BuilderApplicator {
+        public void apply(GetConformancePackArgs.Builder a);
+    }
+    private static GetConformancePackArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConformancePackArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A conformance pack is a collection of AWS Config rules and remediation actions that can be easily deployed as a single entity in an account and a region or across an entire AWS Organization.
  * 
- */
+     */
+    public static CompletableFuture<GetConformancePackResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A conformance pack is a collection of AWS Config rules and remediation actions that can be easily deployed as a single entity in an account and a region or across an entire AWS Organization.
+     * 
+     */
     public static CompletableFuture<GetConformancePackResult> invokeAsync(GetConformancePackArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:configuration:getConformancePack", TypeShape.of(GetConformancePackResult.class), args == null ? GetConformancePackArgs.Empty : args, Utilities.withVersion(options));
     }

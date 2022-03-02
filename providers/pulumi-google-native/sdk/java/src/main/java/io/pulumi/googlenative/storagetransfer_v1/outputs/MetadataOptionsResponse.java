@@ -73,56 +73,56 @@ public final class MetadataOptionsResponse {
     /**
      * Specifies how each object's ACLs should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
      * 
-     */
+    */
     public String getAcl() {
         return this.acl;
     }
     /**
      * Specifies how each file's GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
      * 
-     */
+    */
     public String getGid() {
         return this.gid;
     }
     /**
      * Specifies how each object's Cloud KMS customer-managed encryption key (CMEK) is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as KMS_KEY_DESTINATION_BUCKET_DEFAULT.
      * 
-     */
+    */
     public String getKmsKey() {
         return this.kmsKey;
     }
     /**
      * Specifies how each file's mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
     /**
      * Specifies the storage class to set on objects being transferred to Google Cloud Storage buckets. If unspecified, the default behavior is the same as STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT.
      * 
-     */
+    */
     public String getStorageClass() {
         return this.storageClass;
     }
     /**
      * Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
      * 
-     */
+    */
     public String getSymlink() {
         return this.symlink;
     }
     /**
      * Specifies how each object's temporary hold status should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TEMPORARY_HOLD_PRESERVE.
      * 
-     */
+    */
     public String getTemporaryHold() {
         return this.temporaryHold;
     }
     /**
      * Specifies how each file's UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
      * 
-     */
+    */
     public String getUid() {
         return this.uid;
     }

@@ -33,14 +33,14 @@ public final class ArmTemplateParameterResponse {
     /**
      * name of the parameter.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * value for the parameter. In Jtoken
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

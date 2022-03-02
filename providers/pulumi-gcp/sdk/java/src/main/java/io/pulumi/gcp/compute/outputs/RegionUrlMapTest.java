@@ -47,28 +47,28 @@ public final class RegionUrlMapTest {
     /**
      * Description of this test case.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Host portion of the URL.
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * Path portion of the URL.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }
     /**
      * A reference to expected RegionBackendService resource the given URL should be mapped to.
      * 
-     */
+    */
     public String getService() {
         return this.service;
     }

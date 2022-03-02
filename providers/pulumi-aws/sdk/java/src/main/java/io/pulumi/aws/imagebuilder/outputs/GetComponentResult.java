@@ -124,98 +124,98 @@ public final class GetComponentResult {
     /**
      * Change description of the component.
      * 
-     */
+    */
     public String getChangeDescription() {
         return this.changeDescription;
     }
     /**
      * Data of the component.
      * 
-     */
+    */
     public String getData() {
         return this.data;
     }
     /**
      * Date the component was created.
      * 
-     */
+    */
     public String getDateCreated() {
         return this.dateCreated;
     }
     /**
      * Description of the component.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Encryption status of the component.
      * 
-     */
+    */
     public Boolean getEncrypted() {
         return this.encrypted;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encrypt the component.
      * 
-     */
+    */
     public String getKmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * Name of the component.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Owner of the component.
      * 
-     */
+    */
     public String getOwner() {
         return this.owner;
     }
     /**
      * Platform of the component.
      * 
-     */
+    */
     public String getPlatform() {
         return this.platform;
     }
     /**
      * Operating Systems (OSes) supported by the component.
      * 
-     */
+    */
     public List<String> getSupportedOsVersions() {
         return this.supportedOsVersions;
     }
     /**
      * Key-value map of resource tags for the component.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * Type of the component.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Version of the component.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

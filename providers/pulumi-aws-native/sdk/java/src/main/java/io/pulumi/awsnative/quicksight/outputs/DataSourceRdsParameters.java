@@ -31,14 +31,14 @@ public final class DataSourceRdsParameters {
     /**
      * <p>Database.</p>
      * 
-     */
+    */
     public String getDatabase() {
         return this.database;
     }
     /**
      * <p>Instance ID.</p>
      * 
-     */
+    */
     public String getInstanceId() {
         return this.instanceId;
     }

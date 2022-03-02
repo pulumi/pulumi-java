@@ -44,14 +44,14 @@ public final class GetResourceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set to the ID of the parent Resource.
      * 
-     */
+    */
     public String getParentId() {
         return this.parentId;
     }
@@ -61,7 +61,7 @@ public final class GetResourceResult {
     /**
      * Set to the path relative to the parent Resource.
      * 
-     */
+    */
     public String getPathPart() {
         return this.pathPart;
     }

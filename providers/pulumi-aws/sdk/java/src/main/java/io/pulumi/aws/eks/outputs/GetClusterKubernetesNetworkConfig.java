@@ -30,7 +30,7 @@ public final class GetClusterKubernetesNetworkConfig {
     /**
      * The CIDR block to assign Kubernetes service IP addresses from.
      * 
-     */
+    */
     public String getServiceIpv4Cidr() {
         return this.serviceIpv4Cidr;
     }

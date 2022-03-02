@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse
     /**
      * Optional. List of cells that make up this row.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> getCells() {
         return this.cells;
     }
     /**
      * Optional. Whether to add a visual divider after this row.
      * 
-     */
+    */
     public Boolean getDividerAfter() {
         return this.dividerAfter;
     }

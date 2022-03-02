@@ -41,21 +41,21 @@ public final class ConnectionStatusDefinitionResponse {
     /**
      * Connection error
      * 
-     */
+    */
     public Optional<ConnectionErrorResponse> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * The gateway status
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * Target of the error
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

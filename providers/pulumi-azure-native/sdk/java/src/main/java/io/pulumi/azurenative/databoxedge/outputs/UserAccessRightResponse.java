@@ -31,14 +31,14 @@ public final class UserAccessRightResponse {
     /**
      * Type of access to be allowed for the user.
      * 
-     */
+    */
     public String getAccessType() {
         return this.accessType;
     }
     /**
      * User ID (already existing in the device).
      * 
-     */
+    */
     public String getUserId() {
         return this.userId;
     }

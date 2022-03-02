@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMigrationJobIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetMigrationJobIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetMigrationJobIamPolicyArgs.Builder a);
+    }
+    private static GetMigrationJobIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMigrationJobIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetMigrationJobIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetMigrationJobIamPolicyResult> invokeAsync(GetMigrationJobIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datamigration/v1beta1:getMigrationJobIamPolicy", TypeShape.of(GetMigrationJobIamPolicyResult.class), args == null ? GetMigrationJobIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

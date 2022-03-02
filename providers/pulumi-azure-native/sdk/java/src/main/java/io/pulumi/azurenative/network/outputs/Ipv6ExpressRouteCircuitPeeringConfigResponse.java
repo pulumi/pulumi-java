@@ -56,35 +56,35 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse {
     /**
      * The Microsoft peering configuration.
      * 
-     */
+    */
     public Optional<ExpressRouteCircuitPeeringConfigResponse> getMicrosoftPeeringConfig() {
         return Optional.ofNullable(this.microsoftPeeringConfig);
     }
     /**
      * The primary address prefix.
      * 
-     */
+    */
     public Optional<String> getPrimaryPeerAddressPrefix() {
         return Optional.ofNullable(this.primaryPeerAddressPrefix);
     }
     /**
      * The reference to the RouteFilter resource.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getRouteFilter() {
         return Optional.ofNullable(this.routeFilter);
     }
     /**
      * The secondary address prefix.
      * 
-     */
+    */
     public Optional<String> getSecondaryPeerAddressPrefix() {
         return Optional.ofNullable(this.secondaryPeerAddressPrefix);
     }
     /**
      * The state of peering.
      * 
-     */
+    */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

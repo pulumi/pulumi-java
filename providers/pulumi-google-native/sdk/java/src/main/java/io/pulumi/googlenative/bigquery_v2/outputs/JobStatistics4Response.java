@@ -32,14 +32,14 @@ public final class JobStatistics4Response {
     /**
      * Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the 'destinationUris' field.
      * 
-     */
+    */
     public List<String> getDestinationUriFileCounts() {
         return this.destinationUriFileCounts;
     }
     /**
      * Number of user bytes extracted into the result. This is the byte count as computed by BigQuery for billing purposes.
      * 
-     */
+    */
     public String getInputBytes() {
         return this.inputBytes;
     }

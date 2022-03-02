@@ -23,7 +23,7 @@ public final class LaunchTemplateHibernationOptions {
     /**
      * If set to `true`, the launched EC2 instance will hibernation enabled.
      * 
-     */
+    */
     public Boolean getConfigured() {
         return this.configured;
     }

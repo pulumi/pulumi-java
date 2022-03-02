@@ -38,14 +38,14 @@ public final class GetNodeGroupsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A set of all node group names in an EKS Cluster.
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }

@@ -57,14 +57,14 @@ public final class GetBillingAccountResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -74,7 +74,7 @@ public final class GetBillingAccountResult {
     /**
      * The IDs of any projects associated with the billing account.
      * 
-     */
+    */
     public List<String> getProjectIds() {
         return this.projectIds;
     }

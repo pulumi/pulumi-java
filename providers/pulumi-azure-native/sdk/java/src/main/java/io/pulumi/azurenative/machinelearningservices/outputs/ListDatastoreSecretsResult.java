@@ -23,7 +23,7 @@ public final class ListDatastoreSecretsResult {
     /**
      * Credential type used to authentication with storage.
      * 
-     */
+    */
     public String getSecretsType() {
         return this.secretsType;
     }

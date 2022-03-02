@@ -38,21 +38,21 @@ public final class ErrorHandlerResponse {
     /**
      * Error condition this handler applies to.
      * 
-     */
+    */
     public String getErrorCode() {
         return this.errorCode;
     }
     /**
      * MIME type of file. Defaults to text/html.
      * 
-     */
+    */
     public String getMimeType() {
         return this.mimeType;
     }
     /**
      * Static file content to be served for this error.
      * 
-     */
+    */
     public String getStaticFile() {
         return this.staticFile;
     }

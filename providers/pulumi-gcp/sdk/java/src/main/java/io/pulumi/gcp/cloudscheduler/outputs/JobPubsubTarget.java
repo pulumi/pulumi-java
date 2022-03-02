@@ -48,7 +48,7 @@ public final class JobPubsubTarget {
      * Attributes for PubsubMessage.
      * Pubsub message must contain either non-empty data, or at least one attribute.
      * 
-     */
+    */
     public Map<String,String> getAttributes() {
         return this.attributes == null ? Map.of() : this.attributes;
     }
@@ -57,7 +57,7 @@ public final class JobPubsubTarget {
      * Pubsub message must contain either non-empty data, or at least one attribute.
      * A base64-encoded string.
      * 
-     */
+    */
     public Optional<String> getData() {
         return Optional.ofNullable(this.data);
     }
@@ -67,7 +67,7 @@ public final class JobPubsubTarget {
      * The topic name must be in the same format as required by PubSub's
      * PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
      * 
-     */
+    */
     public String getTopicName() {
         return this.topicName;
     }

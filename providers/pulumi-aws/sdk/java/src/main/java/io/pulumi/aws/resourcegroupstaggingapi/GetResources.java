@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResources {
-/**
- * Provides details about resource tagging.
+    private GetResources() {}
+    public interface BuilderApplicator {
+        public void apply(GetResourcesArgs.Builder a);
+    }
+    private static GetResourcesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResourcesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about resource tagging.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getResources.
+     *
+     * A collection of arguments for invoking getResources.
  * 
- *
- * A collection of values returned by getResources.
+     *
+     * A collection of values returned by getResources.
  * 
- */
+     */
+    public static CompletableFuture<GetResourcesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about resource tagging.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getResources.
+     * 
+     *
+         * A collection of values returned by getResources.
+     * 
+     */
     public static CompletableFuture<GetResourcesResult> invokeAsync(@Nullable GetResourcesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:resourcegroupstaggingapi/getResources:getResources", TypeShape.of(GetResourcesResult.class), args == null ? GetResourcesArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -33,14 +33,14 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse {
     /**
      * Issue model that generates the result. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
      * 
-     */
+    */
     public String getIssueModel() {
         return this.issueModel;
     }
     /**
      * All the matched issues.
      * 
-     */
+    */
     public List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> getIssues() {
         return this.issues;
     }

@@ -32,14 +32,14 @@ public final class VirtualGatewaySpecListenerPortMapping {
     /**
      * The port used for the port mapping.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }

@@ -25,7 +25,7 @@ public final class RegistryCredential {
     /**
      * A public key certificate format and data.
      * 
-     */
+    */
     public Map<String,Object> getPublicKeyCertificate() {
         return this.publicKeyCertificate;
     }

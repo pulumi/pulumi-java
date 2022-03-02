@@ -67,7 +67,7 @@ public final class GetMonitorResult {
     /**
      * ARM id of the monitor resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -80,21 +80,21 @@ public final class GetMonitorResult {
     /**
      * Name of the monitor resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties specific to the monitor resource.
      * 
-     */
+    */
     public MonitorPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The system metadata relating to this resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
@@ -104,7 +104,7 @@ public final class GetMonitorResult {
     /**
      * The type of the monitor resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

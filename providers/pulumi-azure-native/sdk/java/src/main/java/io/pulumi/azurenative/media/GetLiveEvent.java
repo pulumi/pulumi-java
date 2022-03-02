@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLiveEvent {
-/**
- * The live event.
+    private GetLiveEvent() {}
+    public interface BuilderApplicator {
+        public void apply(GetLiveEventArgs.Builder a);
+    }
+    private static GetLiveEventArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLiveEventArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The live event.
  * API Version: 2020-05-01.
  * 
- *
- * The live event.
+     *
+     * The live event.
  * 
- */
+     */
+    public static CompletableFuture<GetLiveEventResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The live event.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * The live event.
+     * 
+     */
     public static CompletableFuture<GetLiveEventResult> invokeAsync(GetLiveEventArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getLiveEvent", TypeShape.of(GetLiveEventResult.class), args == null ? GetLiveEventArgs.Empty : args, Utilities.withVersion(options));
     }

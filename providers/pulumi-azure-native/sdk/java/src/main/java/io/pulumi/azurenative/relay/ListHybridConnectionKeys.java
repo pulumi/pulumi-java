@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListHybridConnectionKeys {
-/**
- * Namespace/Relay Connection String
+    private ListHybridConnectionKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListHybridConnectionKeysArgs.Builder a);
+    }
+    private static ListHybridConnectionKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListHybridConnectionKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Namespace/Relay Connection String
  * API Version: 2017-04-01.
  * 
- *
- * Namespace/Relay Connection String
+     *
+     * Namespace/Relay Connection String
  * 
- */
+     */
+    public static CompletableFuture<ListHybridConnectionKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Namespace/Relay Connection String
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Namespace/Relay Connection String
+     * 
+     */
     public static CompletableFuture<ListHybridConnectionKeysResult> invokeAsync(ListHybridConnectionKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:listHybridConnectionKeys", TypeShape.of(ListHybridConnectionKeysResult.class), args == null ? ListHybridConnectionKeysArgs.Empty : args, Utilities.withVersion(options));
     }

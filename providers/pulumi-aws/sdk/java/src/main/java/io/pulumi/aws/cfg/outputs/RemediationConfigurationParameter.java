@@ -40,21 +40,21 @@ public final class RemediationConfigurationParameter {
     /**
      * Name of the attribute.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Value is dynamic and changes at run-time.
      * 
-     */
+    */
     public Optional<String> getResourceValue() {
         return Optional.ofNullable(this.resourceValue);
     }
     /**
      * Value is static and does not change at run-time.
      * 
-     */
+    */
     public Optional<String> getStaticValue() {
         return Optional.ofNullable(this.staticValue);
     }

@@ -28,7 +28,7 @@ public final class GetAmiFilter {
     /**
      * The name of the AMI that was provided during image creation.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

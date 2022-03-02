@@ -67,7 +67,7 @@ public final class BucketReplicationDestination {
     /**
      * The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.
      * 
-     */
+    */
     public Optional<BucketReplicationDestinationStorageClass> getStorageClass() {
         return Optional.ofNullable(this.storageClass);
     }

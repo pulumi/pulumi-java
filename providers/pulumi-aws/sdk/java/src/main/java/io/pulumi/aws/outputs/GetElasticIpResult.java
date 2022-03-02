@@ -129,35 +129,35 @@ public final class GetElasticIpResult {
     /**
      * The ID representing the association of the address with an instance in a VPC.
      * 
-     */
+    */
     public String getAssociationId() {
         return this.associationId;
     }
     /**
      * The carrier IP address.
      * 
-     */
+    */
     public String getCarrierIp() {
         return this.carrierIp;
     }
     /**
      * Customer Owned IP.
      * 
-     */
+    */
     public String getCustomerOwnedIp() {
         return this.customerOwnedIp;
     }
     /**
      * The ID of a Customer Owned IP Pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
      * 
-     */
+    */
     public String getCustomerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool;
     }
     /**
      * Indicates whether the address is for use in EC2-Classic (standard) or in a VPC (vpc).
      * 
-     */
+    */
     public String getDomain() {
         return this.domain;
     }
@@ -167,70 +167,70 @@ public final class GetElasticIpResult {
     /**
      * If VPC Elastic IP, the allocation identifier. If EC2-Classic Elastic IP, the public IP address.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The ID of the instance that the address is associated with (if any).
      * 
-     */
+    */
     public String getInstanceId() {
         return this.instanceId;
     }
     /**
      * The ID of the network interface.
      * 
-     */
+    */
     public String getNetworkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
      * The ID of the AWS account that owns the network interface.
      * 
-     */
+    */
     public String getNetworkInterfaceOwnerId() {
         return this.networkInterfaceOwnerId;
     }
     /**
      * The Private DNS associated with the Elastic IP address.
      * 
-     */
+    */
     public String getPrivateDns() {
         return this.privateDns;
     }
     /**
      * The private IP address associated with the Elastic IP address.
      * 
-     */
+    */
     public String getPrivateIp() {
         return this.privateIp;
     }
     /**
      * Public DNS associated with the Elastic IP address.
      * 
-     */
+    */
     public String getPublicDns() {
         return this.publicDns;
     }
     /**
      * Public IP address of Elastic IP.
      * 
-     */
+    */
     public String getPublicIp() {
         return this.publicIp;
     }
     /**
      * The ID of an address pool.
      * 
-     */
+    */
     public String getPublicIpv4Pool() {
         return this.publicIpv4Pool;
     }
     /**
      * Key-value map of tags associated with Elastic IP.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

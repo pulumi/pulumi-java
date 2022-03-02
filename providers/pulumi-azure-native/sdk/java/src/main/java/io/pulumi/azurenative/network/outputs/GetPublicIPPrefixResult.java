@@ -161,133 +161,133 @@ public final class GetPublicIPPrefixResult {
     /**
      * The customIpPrefix that this prefix is associated with.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getCustomIPPrefix() {
         return Optional.ofNullable(this.customIPPrefix);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The extended location of the public ip address.
      * 
-     */
+    */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The allocated Prefix.
      * 
-     */
+    */
     public String getIpPrefix() {
         return this.ipPrefix;
     }
     /**
      * The list of tags associated with the public IP prefix.
      * 
-     */
+    */
     public List<IpTagResponse> getIpTags() {
         return this.ipTags == null ? List.of() : this.ipTags;
     }
     /**
      * The reference to load balancer frontend IP configuration associated with the public IP prefix.
      * 
-     */
+    */
     public SubResourceResponse getLoadBalancerFrontendIpConfiguration() {
         return this.loadBalancerFrontendIpConfiguration;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * NatGateway of Public IP Prefix.
      * 
-     */
+    */
     public Optional<NatGatewayResponse> getNatGateway() {
         return Optional.ofNullable(this.natGateway);
     }
     /**
      * The Length of the Public IP Prefix.
      * 
-     */
+    */
     public Optional<Integer> getPrefixLength() {
         return Optional.ofNullable(this.prefixLength);
     }
     /**
      * The provisioning state of the public IP prefix resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The public IP address version.
      * 
-     */
+    */
     public Optional<String> getPublicIPAddressVersion() {
         return Optional.ofNullable(this.publicIPAddressVersion);
     }
     /**
      * The list of all referenced PublicIPAddresses.
      * 
-     */
+    */
     public List<ReferencedPublicIpAddressResponse> getPublicIPAddresses() {
         return this.publicIPAddresses;
     }
     /**
      * The resource GUID property of the public IP prefix resource.
      * 
-     */
+    */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
     /**
      * The public IP prefix SKU.
      * 
-     */
+    */
     public Optional<PublicIPPrefixSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
-     */
+    */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

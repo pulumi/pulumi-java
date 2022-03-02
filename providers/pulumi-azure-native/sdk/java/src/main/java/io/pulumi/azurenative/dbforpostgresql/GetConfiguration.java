@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfiguration {
-/**
- * Represents a Configuration.
+    private GetConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetConfigurationArgs.Builder a);
+    }
+    private static GetConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a Configuration.
  * API Version: 2017-12-01.
  * 
- *
- * Represents a Configuration.
+     *
+     * Represents a Configuration.
  * 
- */
+     */
+    public static CompletableFuture<GetConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a Configuration.
+     * API Version: 2017-12-01.
+     * 
+     *
+         * Represents a Configuration.
+     * 
+     */
     public static CompletableFuture<GetConfigurationResult> invokeAsync(GetConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbforpostgresql:getConfiguration", TypeShape.of(GetConfigurationResult.class), args == null ? GetConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

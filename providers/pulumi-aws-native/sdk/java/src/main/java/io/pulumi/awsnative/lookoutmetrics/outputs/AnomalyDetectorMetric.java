@@ -33,7 +33,7 @@ public final class AnomalyDetectorMetric {
     /**
      * Operator used to aggregate metric values
      * 
-     */
+    */
     public AnomalyDetectorMetricAggregationFunction getAggregationFunction() {
         return this.aggregationFunction;
     }

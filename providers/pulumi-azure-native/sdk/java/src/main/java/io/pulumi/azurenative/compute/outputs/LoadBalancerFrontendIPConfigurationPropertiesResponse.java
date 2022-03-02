@@ -41,21 +41,21 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse {
     /**
      * The virtual network private IP address of the IP configuration.
      * 
-     */
+    */
     public Optional<String> getPrivateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
      * The reference to the public ip address resource.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getPublicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
     /**
      * The reference to the virtual network subnet resource.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }

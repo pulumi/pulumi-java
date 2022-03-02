@@ -31,14 +31,14 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse {
     /**
      * A text description of the image to be used for accessibility, e.g., screen readers. Required if image_uri is set for CarouselSelect.
      * 
-     */
+    */
     public String getAccessibilityText() {
         return this.accessibilityText;
     }
     /**
      * Optional. The public URI to an image file.
      * 
-     */
+    */
     public String getImageUri() {
         return this.imageUri;
     }

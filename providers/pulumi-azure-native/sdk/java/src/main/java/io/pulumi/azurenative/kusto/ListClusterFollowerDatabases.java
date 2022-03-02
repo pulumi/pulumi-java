@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListClusterFollowerDatabases {
-/**
- * The list Kusto database principals operation response.
+    private ListClusterFollowerDatabases() {}
+    public interface BuilderApplicator {
+        public void apply(ListClusterFollowerDatabasesArgs.Builder a);
+    }
+    private static ListClusterFollowerDatabasesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListClusterFollowerDatabasesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The list Kusto database principals operation response.
  * API Version: 2021-01-01.
  * 
- *
- * The list Kusto database principals operation response.
+     *
+     * The list Kusto database principals operation response.
  * 
- */
+     */
+    public static CompletableFuture<ListClusterFollowerDatabasesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The list Kusto database principals operation response.
+     * API Version: 2021-01-01.
+     * 
+     *
+         * The list Kusto database principals operation response.
+     * 
+     */
     public static CompletableFuture<ListClusterFollowerDatabasesResult> invokeAsync(ListClusterFollowerDatabasesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:listClusterFollowerDatabases", TypeShape.of(ListClusterFollowerDatabasesResult.class), args == null ? ListClusterFollowerDatabasesArgs.Empty : args, Utilities.withVersion(options));
     }

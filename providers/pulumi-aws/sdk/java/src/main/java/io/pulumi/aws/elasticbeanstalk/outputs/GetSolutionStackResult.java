@@ -40,7 +40,7 @@ public final class GetSolutionStackResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -50,7 +50,7 @@ public final class GetSolutionStackResult {
     /**
      * The name of the solution stack.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

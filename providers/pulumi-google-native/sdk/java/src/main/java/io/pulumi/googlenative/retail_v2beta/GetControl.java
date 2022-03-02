@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetControl {
-/**
- * Gets a Control.
+    private GetControl() {}
+    public interface BuilderApplicator {
+        public void apply(GetControlArgs.Builder a);
+    }
+    private static GetControlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetControlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a Control.
  * 
- */
+     */
+    public static CompletableFuture<GetControlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a Control.
+     * 
+     */
     public static CompletableFuture<GetControlResult> invokeAsync(GetControlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:retail/v2beta:getControl", TypeShape.of(GetControlResult.class), args == null ? GetControlArgs.Empty : args, Utilities.withVersion(options));
     }

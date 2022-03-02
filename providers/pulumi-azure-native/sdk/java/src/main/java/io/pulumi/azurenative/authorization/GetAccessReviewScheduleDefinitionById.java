@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessReviewScheduleDefinitionById {
-/**
- * Access Review Schedule Definition.
+    private GetAccessReviewScheduleDefinitionById() {}
+    public interface BuilderApplicator {
+        public void apply(GetAccessReviewScheduleDefinitionByIdArgs.Builder a);
+    }
+    private static GetAccessReviewScheduleDefinitionByIdArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAccessReviewScheduleDefinitionByIdArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Access Review Schedule Definition.
  * API Version: 2021-03-01-preview.
  * 
- *
- * Access Review Schedule Definition.
+     *
+     * Access Review Schedule Definition.
  * 
- */
+     */
+    public static CompletableFuture<GetAccessReviewScheduleDefinitionByIdResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Access Review Schedule Definition.
+     * API Version: 2021-03-01-preview.
+     * 
+     *
+         * Access Review Schedule Definition.
+     * 
+     */
     public static CompletableFuture<GetAccessReviewScheduleDefinitionByIdResult> invokeAsync(GetAccessReviewScheduleDefinitionByIdArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getAccessReviewScheduleDefinitionById", TypeShape.of(GetAccessReviewScheduleDefinitionByIdResult.class), args == null ? GetAccessReviewScheduleDefinitionByIdArgs.Empty : args, Utilities.withVersion(options));
     }

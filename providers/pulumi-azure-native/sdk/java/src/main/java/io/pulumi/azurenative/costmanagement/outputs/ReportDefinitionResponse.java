@@ -49,28 +49,28 @@ public final class ReportDefinitionResponse {
     /**
      * Has definition for data in this report.
      * 
-     */
+    */
     public Optional<ReportDatasetResponse> getDataset() {
         return Optional.ofNullable(this.dataset);
     }
     /**
      * Has time period for pulling data for the report.
      * 
-     */
+    */
     public Optional<ReportTimePeriodResponse> getTimePeriod() {
         return Optional.ofNullable(this.timePeriod);
     }
     /**
      * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
      * 
-     */
+    */
     public String getTimeframe() {
         return this.timeframe;
     }
     /**
      * The type of the report.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

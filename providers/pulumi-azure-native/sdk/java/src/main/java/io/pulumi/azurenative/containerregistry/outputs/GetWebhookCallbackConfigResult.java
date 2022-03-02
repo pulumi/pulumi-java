@@ -33,14 +33,14 @@ public final class GetWebhookCallbackConfigResult {
     /**
      * Custom headers that will be added to the webhook notifications.
      * 
-     */
+    */
     public Map<String,String> getCustomHeaders() {
         return this.customHeaders == null ? Map.of() : this.customHeaders;
     }
     /**
      * The service URI for the webhook to post notifications.
      * 
-     */
+    */
     public String getServiceUri() {
         return this.serviceUri;
     }

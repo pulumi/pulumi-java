@@ -31,14 +31,14 @@ public final class DeploymentUpdateLabelEntryResponse {
     /**
      * Key of the label
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Value of the label
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

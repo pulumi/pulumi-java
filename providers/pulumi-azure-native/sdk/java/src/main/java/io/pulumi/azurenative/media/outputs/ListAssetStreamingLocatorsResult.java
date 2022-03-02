@@ -24,7 +24,7 @@ public final class ListAssetStreamingLocatorsResult {
     /**
      * The list of Streaming Locators.
      * 
-     */
+    */
     public List<AssetStreamingLocatorResponse> getStreamingLocators() {
         return this.streamingLocators;
     }

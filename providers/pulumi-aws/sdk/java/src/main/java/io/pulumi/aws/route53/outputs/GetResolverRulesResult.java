@@ -46,7 +46,7 @@ public final class GetResolverRulesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -59,7 +59,7 @@ public final class GetResolverRulesResult {
     /**
      * The IDs of the matched resolver rules.
      * 
-     */
+    */
     public List<String> getResolverRuleIds() {
         return this.resolverRuleIds;
     }

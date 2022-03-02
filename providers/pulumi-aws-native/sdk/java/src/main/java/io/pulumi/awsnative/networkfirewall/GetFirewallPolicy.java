@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFirewallPolicy {
-/**
- * Resource type definition for AWS::NetworkFirewall::FirewallPolicy
+    private GetFirewallPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetFirewallPolicyArgs.Builder a);
+    }
+    private static GetFirewallPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFirewallPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource type definition for AWS::NetworkFirewall::FirewallPolicy
  * 
- */
+     */
+    public static CompletableFuture<GetFirewallPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource type definition for AWS::NetworkFirewall::FirewallPolicy
+     * 
+     */
     public static CompletableFuture<GetFirewallPolicyResult> invokeAsync(GetFirewallPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:networkfirewall:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args == null ? GetFirewallPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -25,7 +25,7 @@ public final class GetDiagnosticServiceTokenReadOnlyResult {
     /**
      * JWT token for accessing application insights diagnostic service data.
      * 
-     */
+    */
     public Optional<String> getToken() {
         return Optional.ofNullable(this.token);
     }

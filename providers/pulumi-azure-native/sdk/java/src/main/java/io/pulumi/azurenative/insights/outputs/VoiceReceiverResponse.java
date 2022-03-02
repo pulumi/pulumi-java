@@ -38,21 +38,21 @@ public final class VoiceReceiverResponse {
     /**
      * The country code of the voice receiver.
      * 
-     */
+    */
     public String getCountryCode() {
         return this.countryCode;
     }
     /**
      * The name of the voice receiver. Names must be unique across all receivers within an action group.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The phone number of the voice receiver.
      * 
-     */
+    */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }

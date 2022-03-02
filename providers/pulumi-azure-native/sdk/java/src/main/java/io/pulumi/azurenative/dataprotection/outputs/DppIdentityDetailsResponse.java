@@ -40,21 +40,21 @@ public final class DppIdentityDetailsResponse {
     /**
      * The object ID of the service principal object for the managed identity that is used to grant role-based access to an Azure resource.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * A Globally Unique Identifier (GUID) that represents the Azure AD tenant where the resource is now a member.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }
     /**
      * The identityType which can be either SystemAssigned or None
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

@@ -55,7 +55,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
     /**
      * The ID of the image in the form of `sha256:<hash>` image digest. Do not confuse it with the default `latest` tag.
      * 
-     * @deprecated
+     * @Deprecated
      * Use repo_digest instead
      * 
      */
@@ -80,7 +80,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * @deprecated
+     * @Deprecated
      * Is unused and will be removed.
      * 
      */
@@ -96,7 +96,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
     /**
      * A value which cause an image pull when changed
      * 
-     * @deprecated
+     * @Deprecated
      * Use field pull_triggers instead
      * 
      */

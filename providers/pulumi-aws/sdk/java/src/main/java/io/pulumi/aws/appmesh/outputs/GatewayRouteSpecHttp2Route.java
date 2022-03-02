@@ -32,14 +32,14 @@ public final class GatewayRouteSpecHttp2Route {
     /**
      * The action to take if a match is determined.
      * 
-     */
+    */
     public GatewayRouteSpecHttp2RouteAction getAction() {
         return this.action;
     }
     /**
      * The criteria for determining a request match.
      * 
-     */
+    */
     public GatewayRouteSpecHttp2RouteMatch getMatch() {
         return this.match;
     }

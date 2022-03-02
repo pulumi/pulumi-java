@@ -13,16 +13,38 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkAcls {
-/**
- * ## Example Usage
+    private GetNetworkAcls() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkAclsArgs.Builder a);
+    }
+    private static GetNetworkAclsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkAclsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getNetworkAcls.
+     *
+     * A collection of arguments for invoking getNetworkAcls.
  * 
- *
- * A collection of values returned by getNetworkAcls.
+     *
+     * A collection of values returned by getNetworkAcls.
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkAclsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getNetworkAcls.
+     * 
+     *
+         * A collection of values returned by getNetworkAcls.
+     * 
+     */
     public static CompletableFuture<GetNetworkAclsResult> invokeAsync(@Nullable GetNetworkAclsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getNetworkAcls:getNetworkAcls", TypeShape.of(GetNetworkAclsResult.class), args == null ? GetNetworkAclsArgs.Empty : args, Utilities.withVersion(options));
     }

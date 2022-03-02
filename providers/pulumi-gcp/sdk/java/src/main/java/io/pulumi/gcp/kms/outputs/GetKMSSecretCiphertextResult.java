@@ -37,7 +37,7 @@ public final class GetKMSSecretCiphertextResult {
     /**
      * Contains the result of encrypting the provided plaintext, encoded in base64.
      * 
-     */
+    */
     public String getCiphertext() {
         return this.ciphertext;
     }
@@ -47,7 +47,7 @@ public final class GetKMSSecretCiphertextResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

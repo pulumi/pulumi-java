@@ -40,21 +40,21 @@ public final class AssetFileEncryptionMetadataResponse {
     /**
      * The Asset File Id.
      * 
-     */
+    */
     public String getAssetFileId() {
         return this.assetFileId;
     }
     /**
      * The Asset File name.
      * 
-     */
+    */
     public Optional<String> getAssetFileName() {
         return Optional.ofNullable(this.assetFileName);
     }
     /**
      * The Asset File initialization vector.
      * 
-     */
+    */
     public Optional<String> getInitializationVector() {
         return Optional.ofNullable(this.initializationVector);
     }

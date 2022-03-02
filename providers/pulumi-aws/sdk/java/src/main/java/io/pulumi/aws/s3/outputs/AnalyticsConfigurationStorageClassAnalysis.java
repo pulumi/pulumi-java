@@ -23,7 +23,7 @@ public final class AnalyticsConfigurationStorageClassAnalysis {
     /**
      * Data export configuration (documented below).
      * 
-     */
+    */
     public AnalyticsConfigurationStorageClassAnalysisDataExport getDataExport() {
         return this.dataExport;
     }

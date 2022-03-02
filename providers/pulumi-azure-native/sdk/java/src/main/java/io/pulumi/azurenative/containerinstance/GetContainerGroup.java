@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContainerGroup {
-/**
- * A container group.
+    private GetContainerGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetContainerGroupArgs.Builder a);
+    }
+    private static GetContainerGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetContainerGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A container group.
  * API Version: 2021-03-01.
  * 
- *
- * A container group.
+     *
+     * A container group.
  * 
- */
+     */
+    public static CompletableFuture<GetContainerGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A container group.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * A container group.
+     * 
+     */
     public static CompletableFuture<GetContainerGroupResult> invokeAsync(GetContainerGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerinstance:getContainerGroup", TypeShape.of(GetContainerGroupResult.class), args == null ? GetContainerGroupArgs.Empty : args, Utilities.withVersion(options));
     }

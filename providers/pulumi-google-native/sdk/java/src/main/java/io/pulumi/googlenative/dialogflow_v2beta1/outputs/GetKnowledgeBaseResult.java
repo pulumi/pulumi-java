@@ -38,21 +38,21 @@ public final class GetKnowledgeBaseResult {
     /**
      * The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, this is populated for all non en-us languages. If not populated, the default language en-us applies.
      * 
-     */
+    */
     public String getLanguageCode() {
         return this.languageCode;
     }
     /**
      * The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

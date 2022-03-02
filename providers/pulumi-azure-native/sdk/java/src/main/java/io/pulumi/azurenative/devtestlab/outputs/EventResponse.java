@@ -25,7 +25,7 @@ public final class EventResponse {
     /**
      * The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
      * 
-     */
+    */
     public Optional<String> getEventName() {
         return Optional.ofNullable(this.eventName);
     }

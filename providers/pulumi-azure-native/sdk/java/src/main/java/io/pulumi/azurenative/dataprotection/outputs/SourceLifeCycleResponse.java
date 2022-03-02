@@ -38,14 +38,14 @@ public final class SourceLifeCycleResponse {
     /**
      * Delete Option
      * 
-     */
+    */
     public AbsoluteDeleteOptionResponse getDeleteAfter() {
         return this.deleteAfter;
     }
     /**
      * DataStoreInfo base
      * 
-     */
+    */
     public DataStoreInfoBaseResponse getSourceDataStore() {
         return this.sourceDataStore;
     }

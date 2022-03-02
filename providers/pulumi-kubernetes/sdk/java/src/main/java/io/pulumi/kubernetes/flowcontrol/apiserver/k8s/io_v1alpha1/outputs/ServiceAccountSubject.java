@@ -31,14 +31,14 @@ public final class ServiceAccountSubject {
     /**
      * `name` is the name of matching ServiceAccount objects, or "*" to match regardless of name. Required.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * `namespace` is the namespace of matching ServiceAccount objects. Required.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }

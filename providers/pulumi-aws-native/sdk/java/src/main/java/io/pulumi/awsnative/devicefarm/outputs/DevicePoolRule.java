@@ -42,21 +42,21 @@ public final class DevicePoolRule {
     /**
      * The rule's stringified attribute.
      * 
-     */
+    */
     public Optional<DevicePoolRuleAttribute> getAttribute() {
         return Optional.ofNullable(this.attribute);
     }
     /**
      * Specifies how Device Farm compares the rule's attribute to the value.
      * 
-     */
+    */
     public Optional<DevicePoolRuleOperator> getOperator() {
         return Optional.ofNullable(this.operator);
     }
     /**
      * The rule's value.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCanary {
-/**
- * Resource Type definition for AWS::Synthetics::Canary
+    private GetCanary() {}
+    public interface BuilderApplicator {
+        public void apply(GetCanaryArgs.Builder a);
+    }
+    private static GetCanaryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCanaryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Synthetics::Canary
  * 
- */
+     */
+    public static CompletableFuture<GetCanaryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Synthetics::Canary
+     * 
+     */
     public static CompletableFuture<GetCanaryResult> invokeAsync(GetCanaryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:synthetics:getCanary", TypeShape.of(GetCanaryResult.class), args == null ? GetCanaryArgs.Empty : args, Utilities.withVersion(options));
     }

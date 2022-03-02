@@ -89,56 +89,56 @@ public final class FlowletResponse {
     /**
      * List of tags that can be used for describing the data flow.
      * 
-     */
+    */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
      * The description of the data flow.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
      * 
-     */
+    */
     public Optional<DataFlowResponseFolder> getFolder() {
         return Optional.ofNullable(this.folder);
     }
     /**
      * Flowlet script.
      * 
-     */
+    */
     public Optional<String> getScript() {
         return Optional.ofNullable(this.script);
     }
     /**
      * Flowlet script lines.
      * 
-     */
+    */
     public List<String> getScriptLines() {
         return this.scriptLines == null ? List.of() : this.scriptLines;
     }
     /**
      * List of sinks in Flowlet.
      * 
-     */
+    */
     public List<DataFlowSinkResponse> getSinks() {
         return this.sinks == null ? List.of() : this.sinks;
     }
     /**
      * List of sources in Flowlet.
      * 
-     */
+    */
     public List<DataFlowSourceResponse> getSources() {
         return this.sources == null ? List.of() : this.sources;
     }
     /**
      * List of transformations in Flowlet.
      * 
-     */
+    */
     public List<TransformationResponse> getTransformations() {
         return this.transformations == null ? List.of() : this.transformations;
     }
@@ -146,7 +146,7 @@ public final class FlowletResponse {
      * Type of data flow.
      * Expected value is 'Flowlet'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

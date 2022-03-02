@@ -33,14 +33,14 @@ public final class BucketVersioning {
     /**
      * Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Enable MFA delete for either `Change the versioning state of your bucket` or `Permanently delete an object version`. Default is `false`. This cannot be used to toggle this setting but is available to allow managed buckets to reflect the state in AWS
      * 
-     */
+    */
     public Optional<Boolean> getMfaDelete() {
         return Optional.ofNullable(this.mfaDelete);
     }

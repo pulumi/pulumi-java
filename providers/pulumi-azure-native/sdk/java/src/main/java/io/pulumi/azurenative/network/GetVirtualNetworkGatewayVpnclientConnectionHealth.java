@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGatewayVpnclientConnectionHealth {
-/**
- * List of virtual network gateway vpn client connection health.
+    private GetVirtualNetworkGatewayVpnclientConnectionHealth() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualNetworkGatewayVpnclientConnectionHealthArgs.Builder a);
+    }
+    private static GetVirtualNetworkGatewayVpnclientConnectionHealthArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualNetworkGatewayVpnclientConnectionHealthArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * List of virtual network gateway vpn client connection health.
  * API Version: 2020-11-01.
  * 
- *
- * List of virtual network gateway vpn client connection health.
+     *
+     * List of virtual network gateway vpn client connection health.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualNetworkGatewayVpnclientConnectionHealthResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * List of virtual network gateway vpn client connection health.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * List of virtual network gateway vpn client connection health.
+     * 
+     */
     public static CompletableFuture<GetVirtualNetworkGatewayVpnclientConnectionHealthResult> invokeAsync(GetVirtualNetworkGatewayVpnclientConnectionHealthArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayVpnclientConnectionHealth", TypeShape.of(GetVirtualNetworkGatewayVpnclientConnectionHealthResult.class), args == null ? GetVirtualNetworkGatewayVpnclientConnectionHealthArgs.Empty : args, Utilities.withVersion(options));
     }

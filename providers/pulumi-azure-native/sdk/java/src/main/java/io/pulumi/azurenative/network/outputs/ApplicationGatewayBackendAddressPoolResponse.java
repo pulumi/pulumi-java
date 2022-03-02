@@ -71,49 +71,49 @@ public final class ApplicationGatewayBackendAddressPoolResponse {
     /**
      * Backend addresses.
      * 
-     */
+    */
     public List<ApplicationGatewayBackendAddressResponse> getBackendAddresses() {
         return this.backendAddresses == null ? List.of() : this.backendAddresses;
     }
     /**
      * Collection of references to IPs defined in network interfaces.
      * 
-     */
+    */
     public List<NetworkInterfaceIPConfigurationResponse> getBackendIPConfigurations() {
         return this.backendIPConfigurations;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the backend address pool that is unique within an Application Gateway.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the backend address pool resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

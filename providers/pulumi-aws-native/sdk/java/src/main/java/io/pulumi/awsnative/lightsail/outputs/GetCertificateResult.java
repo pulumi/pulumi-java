@@ -41,14 +41,14 @@ public final class GetCertificateResult {
     /**
      * The validation status of the certificate.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<CertificateTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

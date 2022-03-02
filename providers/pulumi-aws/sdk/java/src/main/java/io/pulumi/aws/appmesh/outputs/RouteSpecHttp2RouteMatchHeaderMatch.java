@@ -56,7 +56,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatch {
     /**
      * The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
      * 
-     */
+    */
     public Optional<String> getExact() {
         return Optional.ofNullable(this.exact);
     }
@@ -64,28 +64,28 @@ public final class RouteSpecHttp2RouteMatchHeaderMatch {
      * The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
      * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * The object that specifies the range of numbers that the value sent by the client must be included in.
      * 
-     */
+    */
     public Optional<RouteSpecHttp2RouteMatchHeaderMatchRange> getRange() {
         return Optional.ofNullable(this.range);
     }
     /**
      * The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
      * 
-     */
+    */
     public Optional<String> getRegex() {
         return Optional.ofNullable(this.regex);
     }
     /**
      * The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
      * 
-     */
+    */
     public Optional<String> getSuffix() {
         return Optional.ofNullable(this.suffix);
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssignment {
-/**
- * Security Assignment on a resource group over a given scope
+    private GetAssignment() {}
+    public interface BuilderApplicator {
+        public void apply(GetAssignmentArgs.Builder a);
+    }
+    private static GetAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAssignmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Security Assignment on a resource group over a given scope
  * API Version: 2021-08-01-preview.
  * 
- *
- * Security Assignment on a resource group over a given scope
+     *
+     * Security Assignment on a resource group over a given scope
  * 
- */
+     */
+    public static CompletableFuture<GetAssignmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Security Assignment on a resource group over a given scope
+     * API Version: 2021-08-01-preview.
+     * 
+     *
+         * Security Assignment on a resource group over a given scope
+     * 
+     */
     public static CompletableFuture<GetAssignmentResult> invokeAsync(GetAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getAssignment", TypeShape.of(GetAssignmentResult.class), args == null ? GetAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

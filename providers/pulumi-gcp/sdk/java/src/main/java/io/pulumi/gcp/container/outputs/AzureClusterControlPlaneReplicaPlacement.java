@@ -31,14 +31,14 @@ public final class AzureClusterControlPlaneReplicaPlacement {
     /**
      * For a given replica, the Azure availability zone where to provision the control plane VM and the ETCD disk.
      * 
-     */
+    */
     public String getAzureAvailabilityZone() {
         return this.azureAvailabilityZone;
     }
     /**
      * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it's a subnet under the virtual network in the cluster configuration.
      * 
-     */
+    */
     public String getSubnetId() {
         return this.subnetId;
     }

@@ -86,21 +86,21 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicy {
      * actual request can include user credentials. This translates to the Access-
      * Control-Allow-Credentials header. Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getAllowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
     /**
      * Specifies the content for the Access-Control-Allow-Headers header.
      * 
-     */
+    */
     public List<String> getAllowHeaders() {
         return this.allowHeaders == null ? List.of() : this.allowHeaders;
     }
     /**
      * Specifies the content for the Access-Control-Allow-Methods header.
      * 
-     */
+    */
     public List<String> getAllowMethods() {
         return this.allowMethods == null ? List.of() : this.allowMethods;
     }
@@ -109,7 +109,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicy {
      * regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript
      * An origin is allowed if it matches either allow_origins or allow_origin_regex.
      * 
-     */
+    */
     public List<String> getAllowOriginRegexes() {
         return this.allowOriginRegexes == null ? List.of() : this.allowOriginRegexes;
     }
@@ -117,21 +117,21 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicy {
      * Specifies the list of origins that will be allowed to do CORS requests. An
      * origin is allowed if it matches either allow_origins or allow_origin_regex.
      * 
-     */
+    */
     public List<String> getAllowOrigins() {
         return this.allowOrigins == null ? List.of() : this.allowOrigins;
     }
     /**
      * If true, specifies the CORS policy is disabled.
      * 
-     */
+    */
     public Optional<Boolean> getDisabled() {
         return Optional.ofNullable(this.disabled);
     }
     /**
      * Specifies the content for the Access-Control-Expose-Headers header.
      * 
-     */
+    */
     public List<String> getExposeHeaders() {
         return this.exposeHeaders == null ? List.of() : this.exposeHeaders;
     }
@@ -139,7 +139,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicy {
      * Specifies how long the results of a preflight request can be cached. This
      * translates to the content for the Access-Control-Max-Age header.
      * 
-     */
+    */
     public Optional<Integer> getMaxAge() {
         return Optional.ofNullable(this.maxAge);
     }

@@ -35,14 +35,14 @@ public final class CloudServiceVaultSecretGroupResponse {
     /**
      * The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getSourceVault() {
         return Optional.ofNullable(this.sourceVault);
     }
     /**
      * The list of key vault references in SourceVault which contain certificates.
      * 
-     */
+    */
     public List<CloudServiceVaultCertificateResponse> getVaultCertificates() {
         return this.vaultCertificates == null ? List.of() : this.vaultCertificates;
     }

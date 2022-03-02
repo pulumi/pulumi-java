@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetComponent {
-/**
- * Provides details about an Image Builder Component.
+    private GetComponent() {}
+    public interface BuilderApplicator {
+        public void apply(GetComponentArgs.Builder a);
+    }
+    private static GetComponentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetComponentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about an Image Builder Component.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getComponent.
+     *
+     * A collection of arguments for invoking getComponent.
  * 
- *
- * A collection of values returned by getComponent.
+     *
+     * A collection of values returned by getComponent.
  * 
- */
+     */
+    public static CompletableFuture<GetComponentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about an Image Builder Component.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getComponent.
+     * 
+     *
+         * A collection of values returned by getComponent.
+     * 
+     */
     public static CompletableFuture<GetComponentResult> invokeAsync(GetComponentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getComponent:getComponent", TypeShape.of(GetComponentResult.class), args == null ? GetComponentArgs.Empty : args, Utilities.withVersion(options));
     }

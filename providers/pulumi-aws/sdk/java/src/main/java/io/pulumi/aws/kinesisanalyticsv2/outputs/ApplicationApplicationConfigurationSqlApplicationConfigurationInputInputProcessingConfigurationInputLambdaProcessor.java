@@ -23,7 +23,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     /**
      * The ARN of the Lambda function that operates on records in the stream.
      * 
-     */
+    */
     public String getResourceArn() {
         return this.resourceArn;
     }

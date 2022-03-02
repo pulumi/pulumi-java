@@ -25,7 +25,7 @@ public final class VICredentialResponse {
     /**
      * Gets or sets username to connect with the vCenter.
      * 
-     */
+    */
     public Optional<String> getUsername() {
         return Optional.ofNullable(this.username);
     }

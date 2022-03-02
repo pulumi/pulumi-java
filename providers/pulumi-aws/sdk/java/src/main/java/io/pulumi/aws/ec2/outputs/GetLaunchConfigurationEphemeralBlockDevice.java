@@ -31,14 +31,14 @@ public final class GetLaunchConfigurationEphemeralBlockDevice {
     /**
      * The Name of the device.
      * 
-     */
+    */
     public String getDeviceName() {
         return this.deviceName;
     }
     /**
      * The Virtual Name of the device.
      * 
-     */
+    */
     public String getVirtualName() {
         return this.virtualName;
     }

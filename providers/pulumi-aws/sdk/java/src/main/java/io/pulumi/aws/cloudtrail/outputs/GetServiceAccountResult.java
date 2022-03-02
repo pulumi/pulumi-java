@@ -36,14 +36,14 @@ public final class GetServiceAccountResult {
     /**
      * The ARN of the AWS CloudTrail service account in the selected region.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

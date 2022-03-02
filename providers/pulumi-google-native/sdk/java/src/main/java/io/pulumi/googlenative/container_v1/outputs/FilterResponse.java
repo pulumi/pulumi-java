@@ -24,7 +24,7 @@ public final class FilterResponse {
     /**
      * Event types to allowlist.
      * 
-     */
+    */
     public List<String> getEventType() {
         return this.eventType;
     }

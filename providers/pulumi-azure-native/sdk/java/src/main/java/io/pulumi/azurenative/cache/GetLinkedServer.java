@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLinkedServer {
-/**
- * Response to put/get linked server (with properties) for Redis cache.
+    private GetLinkedServer() {}
+    public interface BuilderApplicator {
+        public void apply(GetLinkedServerArgs.Builder a);
+    }
+    private static GetLinkedServerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLinkedServerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Response to put/get linked server (with properties) for Redis cache.
  * API Version: 2020-06-01.
  * 
- *
- * Response to put/get linked server (with properties) for Redis cache.
+     *
+     * Response to put/get linked server (with properties) for Redis cache.
  * 
- */
+     */
+    public static CompletableFuture<GetLinkedServerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Response to put/get linked server (with properties) for Redis cache.
+     * API Version: 2020-06-01.
+     * 
+     *
+         * Response to put/get linked server (with properties) for Redis cache.
+     * 
+     */
     public static CompletableFuture<GetLinkedServerResult> invokeAsync(GetLinkedServerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:getLinkedServer", TypeShape.of(GetLinkedServerResult.class), args == null ? GetLinkedServerArgs.Empty : args, Utilities.withVersion(options));
     }

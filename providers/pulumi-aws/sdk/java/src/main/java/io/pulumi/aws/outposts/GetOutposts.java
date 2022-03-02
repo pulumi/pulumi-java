@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOutposts {
-/**
- * Provides details about multiple Outposts.
+    private GetOutposts() {}
+    public interface BuilderApplicator {
+        public void apply(GetOutpostsArgs.Builder a);
+    }
+    private static GetOutpostsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetOutpostsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about multiple Outposts.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getOutposts.
+     *
+     * A collection of arguments for invoking getOutposts.
  * 
- *
- * A collection of values returned by getOutposts.
+     *
+     * A collection of values returned by getOutposts.
  * 
- */
+     */
+    public static CompletableFuture<GetOutpostsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about multiple Outposts.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getOutposts.
+     * 
+     *
+         * A collection of values returned by getOutposts.
+     * 
+     */
     public static CompletableFuture<GetOutpostsResult> invokeAsync(@Nullable GetOutpostsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:outposts/getOutposts:getOutposts", TypeShape.of(GetOutpostsResult.class), args == null ? GetOutpostsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -23,7 +23,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     /**
      * The ARN of the destination Lambda function to write to.
      * 
-     */
+    */
     public String getResourceArn() {
         return this.resourceArn;
     }

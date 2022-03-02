@@ -40,21 +40,21 @@ public final class ClusterParameterGroupParameter {
     /**
      * Valid values are `immediate` and `pending-reboot`. Defaults to `pending-reboot`.
      * 
-     */
+    */
     public Optional<String> getApplyMethod() {
         return Optional.ofNullable(this.applyMethod);
     }
     /**
      * The name of the documentDB parameter.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The value of the documentDB parameter.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

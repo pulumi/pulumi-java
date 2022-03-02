@@ -55,35 +55,35 @@ public final class CostAllocationRulePropertiesResponse {
     /**
      * Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * Description of a cost allocation rule.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource information for the cost allocation rule
      * 
-     */
+    */
     public CostAllocationRuleDetailsResponse getDetails() {
         return this.details;
     }
     /**
      * Status of the rule
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Time at which the rule was last updated.
      * 
-     */
+    */
     public String getUpdatedDate() {
         return this.updatedDate;
     }

@@ -41,21 +41,21 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfig {
     /**
      * The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
      * 
-     */
+    */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * Specifies the configuration for notifications of inference results for asynchronous inference.
      * 
-     */
+    */
     public Optional<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig> getNotificationConfig() {
         return Optional.ofNullable(this.notificationConfig);
     }
     /**
      * The Amazon S3 location to upload inference responses to.
      * 
-     */
+    */
     public String getS3OutputPath() {
         return this.s3OutputPath;
     }

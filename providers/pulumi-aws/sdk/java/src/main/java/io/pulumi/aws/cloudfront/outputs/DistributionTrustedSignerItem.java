@@ -34,14 +34,14 @@ public final class DistributionTrustedSignerItem {
     /**
      * AWS account ID or `self`
      * 
-     */
+    */
     public Optional<String> getAwsAccountNumber() {
         return Optional.ofNullable(this.awsAccountNumber);
     }
     /**
      * Set of active CloudFront key pairs associated with the signer account
      * 
-     */
+    */
     public List<String> getKeyPairIds() {
         return this.keyPairIds == null ? List.of() : this.keyPairIds;
     }

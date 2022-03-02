@@ -70,49 +70,49 @@ public final class GetGlossaryResult {
     /**
      * When the glossary creation was finished.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * The number of entries defined in the glossary.
      * 
-     */
+    */
     public Integer getEntryCount() {
         return this.entryCount;
     }
     /**
      * Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.
      * 
-     */
+    */
     public GlossaryInputConfigResponse getInputConfig() {
         return this.inputConfig;
     }
     /**
      * Used with equivalent term set glossaries.
      * 
-     */
+    */
     public LanguageCodesSetResponse getLanguageCodesSet() {
         return this.languageCodesSet;
     }
     /**
      * Used with unidirectional glossaries.
      * 
-     */
+    */
     public LanguageCodePairResponse getLanguagePair() {
         return this.languagePair;
     }
     /**
      * The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * When CreateGlossary was called.
      * 
-     */
+    */
     public String getSubmitTime() {
         return this.submitTime;
     }

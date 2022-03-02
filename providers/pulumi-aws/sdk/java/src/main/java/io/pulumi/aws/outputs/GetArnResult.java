@@ -64,7 +64,7 @@ public final class GetArnResult {
     /**
      * The [ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) of the AWS account that owns the resource, without the hyphens.
      * 
-     */
+    */
     public String getAccount() {
         return this.account;
     }
@@ -74,14 +74,14 @@ public final class GetArnResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The partition that the resource is in.
      * 
-     */
+    */
     public String getPartition() {
         return this.partition;
     }
@@ -89,7 +89,7 @@ public final class GetArnResult {
      * The region the resource resides in.
      * Note that the ARNs for some resources do not require a region, so this component might be omitted.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
@@ -97,14 +97,14 @@ public final class GetArnResult {
      * The content of this part of the ARN varies by service.
      * It often includes an indicator of the type of resource—for example, an IAM user or Amazon RDS database —followed by a slash (/) or a colon (:), followed by the resource name itself.
      * 
-     */
+    */
     public String getResource() {
         return this.resource;
     }
     /**
      * The [service namespace](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces) that identifies the AWS product.
      * 
-     */
+    */
     public String getService() {
         return this.service;
     }

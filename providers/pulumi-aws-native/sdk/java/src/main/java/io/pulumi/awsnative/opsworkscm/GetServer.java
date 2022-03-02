@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServer {
-/**
- * Resource Type definition for AWS::OpsWorksCM::Server
+    private GetServer() {}
+    public interface BuilderApplicator {
+        public void apply(GetServerArgs.Builder a);
+    }
+    private static GetServerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::OpsWorksCM::Server
  * 
- */
+     */
+    public static CompletableFuture<GetServerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::OpsWorksCM::Server
+     * 
+     */
     public static CompletableFuture<GetServerResult> invokeAsync(GetServerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:opsworkscm:getServer", TypeShape.of(GetServerResult.class), args == null ? GetServerArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeviceProfile {
-/**
- * Device Profile's resource schema demonstrating some basic constructs and validation rules.
+    private GetDeviceProfile() {}
+    public interface BuilderApplicator {
+        public void apply(GetDeviceProfileArgs.Builder a);
+    }
+    private static GetDeviceProfileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDeviceProfileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Device Profile's resource schema demonstrating some basic constructs and validation rules.
  * 
- */
+     */
+    public static CompletableFuture<GetDeviceProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Device Profile's resource schema demonstrating some basic constructs and validation rules.
+     * 
+     */
     public static CompletableFuture<GetDeviceProfileResult> invokeAsync(GetDeviceProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iotwireless:getDeviceProfile", TypeShape.of(GetDeviceProfileResult.class), args == null ? GetDeviceProfileArgs.Empty : args, Utilities.withVersion(options));
     }

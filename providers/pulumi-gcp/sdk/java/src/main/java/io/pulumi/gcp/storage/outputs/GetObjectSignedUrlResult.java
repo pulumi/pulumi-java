@@ -79,7 +79,7 @@ public final class GetObjectSignedUrlResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -89,7 +89,7 @@ public final class GetObjectSignedUrlResult {
     /**
      * The signed URL that can be used to access the storage object without authentication.
      * 
-     */
+    */
     public String getSignedUrl() {
         return this.signedUrl;
     }

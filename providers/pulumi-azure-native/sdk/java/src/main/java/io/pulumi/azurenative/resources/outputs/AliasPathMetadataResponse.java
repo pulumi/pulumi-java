@@ -31,14 +31,14 @@ public final class AliasPathMetadataResponse {
     /**
      * The attributes of the token that the alias path is referring to.
      * 
-     */
+    */
     public String getAttributes() {
         return this.attributes;
     }
     /**
      * The type of the token that the alias path is referring to.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

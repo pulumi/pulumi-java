@@ -33,14 +33,14 @@ public final class EnvironmentImageResponseResponseEnvironmentReference {
     /**
      * Name of the environment.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Version of the environment.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

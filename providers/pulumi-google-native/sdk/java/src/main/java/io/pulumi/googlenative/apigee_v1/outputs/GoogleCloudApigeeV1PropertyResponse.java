@@ -31,14 +31,14 @@ public final class GoogleCloudApigeeV1PropertyResponse {
     /**
      * The property key
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The property value
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

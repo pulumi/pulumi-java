@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionResponse {
     /**
      * The text shown the in the suggestion chip.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }

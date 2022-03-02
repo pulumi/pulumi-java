@@ -44,7 +44,7 @@ public final class GetIPSetResult {
     /**
      * List of IPAddresses.
      * 
-     */
+    */
     public List<String> getAddresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }

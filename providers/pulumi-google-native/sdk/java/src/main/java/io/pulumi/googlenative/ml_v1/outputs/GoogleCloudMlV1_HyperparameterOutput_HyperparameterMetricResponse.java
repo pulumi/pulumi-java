@@ -32,14 +32,14 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
     /**
      * The objective value at this training step.
      * 
-     */
+    */
     public Double getObjectiveValue() {
         return this.objectiveValue;
     }
     /**
      * The global training step for this metric.
      * 
-     */
+    */
     public String getTrainingStep() {
         return this.trainingStep;
     }

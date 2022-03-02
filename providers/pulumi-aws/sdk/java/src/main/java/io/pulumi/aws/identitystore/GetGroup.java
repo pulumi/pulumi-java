@@ -13,16 +13,38 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGroup {
-/**
- * Use this data source to get an Identity Store Group.
+    private GetGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetGroupArgs.Builder a);
+    }
+    private static GetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get an Identity Store Group.
  * 
- *
- * A collection of arguments for invoking getGroup.
+     *
+     * A collection of arguments for invoking getGroup.
  * 
- *
- * A collection of values returned by getGroup.
+     *
+     * A collection of values returned by getGroup.
  * 
- */
+     */
+    public static CompletableFuture<GetGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get an Identity Store Group.
+     * 
+     *
+         * A collection of arguments for invoking getGroup.
+     * 
+     *
+         * A collection of values returned by getGroup.
+     * 
+     */
     public static CompletableFuture<GetGroupResult> invokeAsync(GetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:identitystore/getGroup:getGroup", TypeShape.of(GetGroupResult.class), args == null ? GetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

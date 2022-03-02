@@ -47,28 +47,28 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse {
     /**
      * Optional. The collection of card buttons.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> getButtons() {
         return this.buttons;
     }
     /**
      * Optional. The public URI to an image file for the card.
      * 
-     */
+    */
     public String getImageUri() {
         return this.imageUri;
     }
     /**
      * Optional. The subtitle of the card.
      * 
-     */
+    */
     public String getSubtitle() {
         return this.subtitle;
     }
     /**
      * Optional. The title of the card.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }

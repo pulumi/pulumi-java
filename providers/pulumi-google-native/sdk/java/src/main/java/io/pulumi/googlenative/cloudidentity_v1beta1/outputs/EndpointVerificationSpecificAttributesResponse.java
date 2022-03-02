@@ -24,7 +24,7 @@ public final class EndpointVerificationSpecificAttributesResponse {
     /**
      * Details of certificates.
      * 
-     */
+    */
     public List<CertificateAttributesResponse> getCertificateAttributes() {
         return this.certificateAttributes;
     }

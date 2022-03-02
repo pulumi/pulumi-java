@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResponseHeadersPolicy {
-/**
- * Use this data source to retrieve information about a CloudFront cache policy.
+    private GetResponseHeadersPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetResponseHeadersPolicyArgs.Builder a);
+    }
+    private static GetResponseHeadersPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResponseHeadersPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to retrieve information about a CloudFront cache policy.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getResponseHeadersPolicy.
+     *
+     * A collection of arguments for invoking getResponseHeadersPolicy.
  * 
- *
- * A collection of values returned by getResponseHeadersPolicy.
+     *
+     * A collection of values returned by getResponseHeadersPolicy.
  * 
- */
+     */
+    public static CompletableFuture<GetResponseHeadersPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to retrieve information about a CloudFront cache policy.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getResponseHeadersPolicy.
+     * 
+     *
+         * A collection of values returned by getResponseHeadersPolicy.
+     * 
+     */
     public static CompletableFuture<GetResponseHeadersPolicyResult> invokeAsync(@Nullable GetResponseHeadersPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudfront/getResponseHeadersPolicy:getResponseHeadersPolicy", TypeShape.of(GetResponseHeadersPolicyResult.class), args == null ? GetResponseHeadersPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

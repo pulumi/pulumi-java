@@ -52,35 +52,35 @@ public final class GetFirewallRuleResult {
     /**
      * The end IP address of the server firewall rule. Must be IPv4 format.
      * 
-     */
+    */
     public String getEndIpAddress() {
         return this.endIpAddress;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The start IP address of the server firewall rule. Must be IPv4 format.
      * 
-     */
+    */
     public String getStartIpAddress() {
         return this.startIpAddress;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

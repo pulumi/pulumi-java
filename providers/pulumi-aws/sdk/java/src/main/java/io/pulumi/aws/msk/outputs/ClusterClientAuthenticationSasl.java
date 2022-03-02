@@ -33,14 +33,14 @@ public final class ClusterClientAuthenticationSasl {
     /**
      * Enables IAM client authentication. Defaults to `false`.
      * 
-     */
+    */
     public Optional<Boolean> getIam() {
         return Optional.ofNullable(this.iam);
     }
     /**
      * Enables SCRAM client authentication via AWS Secrets Manager. Defaults to `false`.
      * 
-     */
+    */
     public Optional<Boolean> getScram() {
         return Optional.ofNullable(this.scram);
     }

@@ -41,14 +41,14 @@ public final class WorkflowStepCopyStepDetailsProperties {
     /**
      * The name of the step, used as an identifier.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A flag that indicates whether or not to overwrite an existing file of the same name. The default is FALSE.
      * 
-     */
+    */
     public Optional<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> getOverwriteExisting() {
         return Optional.ofNullable(this.overwriteExisting);
     }

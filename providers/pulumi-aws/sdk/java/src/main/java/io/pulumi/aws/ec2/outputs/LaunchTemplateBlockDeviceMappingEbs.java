@@ -80,7 +80,7 @@ public final class LaunchTemplateBlockDeviceMappingEbs {
     /**
      * Whether the volume should be destroyed on instance termination. Defaults to `false` if not set. See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
      * 
-     */
+    */
     public Optional<String> getDeleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
@@ -88,7 +88,7 @@ public final class LaunchTemplateBlockDeviceMappingEbs {
      * Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
      * on the volume (Default: `false`). Cannot be used with `snapshot_id`.
      * 
-     */
+    */
     public Optional<String> getEncrypted() {
         return Optional.ofNullable(this.encrypted);
     }
@@ -97,7 +97,7 @@ public final class LaunchTemplateBlockDeviceMappingEbs {
      * [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
      * This must be set with a `volume_type` of `"io1/io2"`.
      * 
-     */
+    */
     public Optional<Integer> getIops() {
         return Optional.ofNullable(this.iops);
     }
@@ -105,35 +105,35 @@ public final class LaunchTemplateBlockDeviceMappingEbs {
      * The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
      * `encrypted` must be set to `true` when this is set.
      * 
-     */
+    */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * The Snapshot ID to mount.
      * 
-     */
+    */
     public Optional<String> getSnapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
     /**
      * The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g., 500), with a maximum of 1,000 MiB/s.
      * 
-     */
+    */
     public Optional<Integer> getThroughput() {
         return Optional.ofNullable(this.throughput);
     }
     /**
      * The size of the volume in gigabytes.
      * 
-     */
+    */
     public Optional<Integer> getVolumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
     /**
      * The volume type. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
      * 
-     */
+    */
     public Optional<String> getVolumeType() {
         return Optional.ofNullable(this.volumeType);
     }

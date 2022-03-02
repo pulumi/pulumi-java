@@ -32,14 +32,14 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     /**
      * Set of EC2 launch permission user groups.
      * 
-     */
+    */
     public List<String> getUserGroups() {
         return this.userGroups;
     }
     /**
      * Set of AWS Account identifiers.
      * 
-     */
+    */
     public List<String> getUserIds() {
         return this.userIds;
     }

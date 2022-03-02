@@ -39,14 +39,14 @@ public final class GetGroupMembershipsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The list of memberships under the given group. Structure is documented below.
      * 
-     */
+    */
     public List<GetGroupMembershipsMembership> getMemberships() {
         return this.memberships;
     }

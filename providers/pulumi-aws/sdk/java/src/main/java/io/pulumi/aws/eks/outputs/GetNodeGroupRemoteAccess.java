@@ -32,14 +32,14 @@ public final class GetNodeGroupRemoteAccess {
     /**
      * EC2 Key Pair name that provides access for SSH communication with the worker nodes in the EKS Node Group.
      * 
-     */
+    */
     public String getEc2SshKey() {
         return this.ec2SshKey;
     }
     /**
      * Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker nodes.
      * 
-     */
+    */
     public List<String> getSourceSecurityGroupIds() {
         return this.sourceSecurityGroupIds;
     }

@@ -67,7 +67,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
      * A nested object resource
      * Structure is documented below.
      * 
-     * @deprecated
+     * @Deprecated
      * This field has been replaced by notificationConfigs
      * 
      */

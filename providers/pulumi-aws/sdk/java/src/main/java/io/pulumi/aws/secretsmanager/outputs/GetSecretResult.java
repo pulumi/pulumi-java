@@ -42,29 +42,29 @@ public final class GetSecretResult {
     /**
      * Whether rotation is enabled or not.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
      */
-    @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
+        @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     private final Boolean rotationEnabled;
     /**
      * Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
      */
-    @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
+        @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     private final String rotationLambdaArn;
     /**
      * Rotation rules if rotation is enabled.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
      */
-    @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
+        @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     private final List<GetSecretRotationRule> rotationRules;
     /**
      * Tags of the secret.
@@ -99,28 +99,28 @@ public final class GetSecretResult {
     /**
      * The Amazon Resource Name (ARN) of the secret.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * A description of the secret.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Key Management Service (KMS) Customer Master Key (CMK) associated with the secret.
      * 
-     */
+    */
     public String getKmsKeyId() {
         return this.kmsKeyId;
     }
@@ -130,17 +130,17 @@ public final class GetSecretResult {
     /**
      * The resource-based policy document that's attached to the secret.
      * 
-     */
+    */
     public String getPolicy() {
         return this.policy;
     }
     /**
      * Whether rotation is enabled or not.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
-     */
+    */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     public Boolean getRotationEnabled() {
         return this.rotationEnabled;
@@ -148,10 +148,10 @@ public final class GetSecretResult {
     /**
      * Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
-     */
+    */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     public String getRotationLambdaArn() {
         return this.rotationLambdaArn;
@@ -159,10 +159,10 @@ public final class GetSecretResult {
     /**
      * Rotation rules if rotation is enabled.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_secretsmanager_secret_rotation data source instead
      * 
-     */
+    */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation data source instead */
     public List<GetSecretRotationRule> getRotationRules() {
         return this.rotationRules;
@@ -170,7 +170,7 @@ public final class GetSecretResult {
     /**
      * Tags of the secret.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

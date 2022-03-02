@@ -40,21 +40,21 @@ public final class AzureResourceErrorInfoResponse {
     /**
      * The error code.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * The error details.
      * 
-     */
+    */
     public List<AzureResourceErrorInfoResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
     /**
      * The error message.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }

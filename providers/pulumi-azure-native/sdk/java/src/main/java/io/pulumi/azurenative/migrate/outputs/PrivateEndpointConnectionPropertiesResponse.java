@@ -42,21 +42,21 @@ public final class PrivateEndpointConnectionPropertiesResponse {
     /**
      * ARM id for the private endpoint resource corresponding to the connection.
      * 
-     */
+    */
     public ResourceIdResponse getPrivateEndpoint() {
         return this.privateEndpoint;
     }
     /**
      * State of the private endpoint connection.
      * 
-     */
+    */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
      * Indicates whether there is an ongoing operation on the private endpoint.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }

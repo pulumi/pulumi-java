@@ -26,7 +26,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule {
      * May contain up to seven (one for each day of the week) snapshot times.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> getDayOfWeeks() {
         return this.dayOfWeeks;
     }

@@ -32,14 +32,14 @@ public final class FluidRelayEndpointsResponse {
     /**
      * The Fluid Relay Orderer endpoints.
      * 
-     */
+    */
     public List<String> getOrdererEndpoints() {
         return this.ordererEndpoints;
     }
     /**
      * The Fluid Relay storage endpoints.
      * 
-     */
+    */
     public List<String> getStorageEndpoints() {
         return this.storageEndpoints;
     }

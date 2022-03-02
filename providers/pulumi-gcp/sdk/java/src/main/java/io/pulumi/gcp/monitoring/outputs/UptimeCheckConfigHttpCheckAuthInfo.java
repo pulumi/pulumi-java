@@ -33,14 +33,14 @@ public final class UptimeCheckConfigHttpCheckAuthInfo {
      * The password to authenticate.
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * The username to authenticate.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }

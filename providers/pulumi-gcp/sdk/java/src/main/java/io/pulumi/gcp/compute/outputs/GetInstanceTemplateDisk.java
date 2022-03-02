@@ -138,14 +138,14 @@ public final class GetInstanceTemplateDisk {
      * Whether or not the disk should be auto-deleted.
      * This defaults to true.
      * 
-     */
+    */
     public Boolean getAutoDelete() {
         return this.autoDelete;
     }
     /**
      * Indicates that this is a boot disk.
      * 
-     */
+    */
     public Boolean getBoot() {
         return this.boot;
     }
@@ -154,14 +154,14 @@ public final class GetInstanceTemplateDisk {
      * /dev/  tree of a Linux operating system running within the instance. If not
      * specified, the server chooses a default device name to apply to this disk.
      * 
-     */
+    */
     public String getDeviceName() {
         return this.deviceName;
     }
     /**
      * Encrypts or decrypts a disk using a customer-supplied encryption key.
      * 
-     */
+    */
     public List<GetInstanceTemplateDiskDiskEncryptionKey> getDiskEncryptionKeys() {
         return this.diskEncryptionKeys;
     }
@@ -169,7 +169,7 @@ public final class GetInstanceTemplateDisk {
      * Name of the disk. When not provided, this defaults
      * to the name of the instance.
      * 
-     */
+    */
     public String getDiskName() {
         return this.diskName;
     }
@@ -178,7 +178,7 @@ public final class GetInstanceTemplateDisk {
      * specified, it will inherit the size of its base image. For SCRATCH disks,
      * the size must be exactly 375GB.
      * 
-     */
+    */
     public Integer getDiskSizeGb() {
         return this.diskSizeGb;
     }
@@ -186,7 +186,7 @@ public final class GetInstanceTemplateDisk {
      * The GCE disk type. Can be either `"pd-ssd"`,
      * `"local-ssd"`, `"pd-balanced"` or `"pd-standard"`.
      * 
-     */
+    */
     public String getDiskType() {
         return this.diskType;
     }
@@ -196,7 +196,7 @@ public final class GetInstanceTemplateDisk {
      * and the request will fail if you attempt to attach a persistent disk in any other format
      * than SCSI. Local SSDs can use either NVME or SCSI.
      * 
-     */
+    */
     public String get$interface() {
         return this.$interface;
     }
@@ -204,7 +204,7 @@ public final class GetInstanceTemplateDisk {
      * (Optional) A set of ket/value label pairs to assign to disk created from
      * this template
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels;
     }
@@ -213,7 +213,7 @@ public final class GetInstanceTemplateDisk {
      * or READ_ONLY. If you are attaching or creating a boot disk, this must
      * read-write mode.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }
@@ -225,7 +225,7 @@ public final class GetInstanceTemplateDisk {
      * of the disk (such as those managed by `gcp.compute.Disk`) to attach.
      * > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
-     */
+    */
     public String getSource() {
         return this.source;
     }
@@ -238,14 +238,14 @@ public final class GetInstanceTemplateDisk {
      * `{project}/{image}`, `{family}`, or `{image}`.
      * > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
-     */
+    */
     public String getSourceImage() {
         return this.sourceImage;
     }
     /**
      * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

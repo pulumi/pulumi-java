@@ -33,14 +33,14 @@ public final class BasicLevelResponse {
     /**
      * How the `conditions` list should be combined to determine if a request is granted this `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be satisfied for the `AccessLevel` to be applied. Default behavior is AND.
      * 
-     */
+    */
     public String getCombiningFunction() {
         return this.combiningFunction;
     }
     /**
      * A list of requirements for the `AccessLevel` to be granted.
      * 
-     */
+    */
     public List<ConditionResponse> getConditions() {
         return this.conditions;
     }

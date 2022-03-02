@@ -25,7 +25,7 @@ public final class FleetOnDemandOptions {
     /**
      * How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
      * 
-     */
+    */
     public Optional<String> getAllocationStrategy() {
         return Optional.ofNullable(this.allocationStrategy);
     }

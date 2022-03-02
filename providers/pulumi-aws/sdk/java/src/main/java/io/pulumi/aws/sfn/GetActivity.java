@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetActivity {
-/**
- * Provides a Step Functions Activity data source
+    private GetActivity() {}
+    public interface BuilderApplicator {
+        public void apply(GetActivityArgs.Builder a);
+    }
+    private static GetActivityArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetActivityArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides a Step Functions Activity data source
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getActivity.
+     *
+     * A collection of arguments for invoking getActivity.
  * 
- *
- * A collection of values returned by getActivity.
+     *
+     * A collection of values returned by getActivity.
  * 
- */
+     */
+    public static CompletableFuture<GetActivityResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides a Step Functions Activity data source
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getActivity.
+     * 
+     *
+         * A collection of values returned by getActivity.
+     * 
+     */
     public static CompletableFuture<GetActivityResult> invokeAsync(@Nullable GetActivityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:sfn/getActivity:getActivity", TypeShape.of(GetActivityResult.class), args == null ? GetActivityArgs.Empty : args, Utilities.withVersion(options));
     }

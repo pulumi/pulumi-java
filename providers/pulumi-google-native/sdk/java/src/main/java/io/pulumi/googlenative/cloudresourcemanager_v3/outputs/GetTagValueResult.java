@@ -73,56 +73,56 @@ public final class GetTagValueResult {
     /**
      * Creation time.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. User-assigned description of the TagValue. Must not exceed 256 characters. Read-write.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagValueRequest for details.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Immutable. Resource name for TagValue in the format `tagValues/456`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Namespaced name of the TagValue. Must be in the format `{organization_id}/{tag_key_short_name}/{short_name}`.
      * 
-     */
+    */
     public String getNamespacedName() {
         return this.namespacedName;
     }
     /**
      * Immutable. The resource name of the new TagValue's parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
      * 
-     */
+    */
     public String getParent() {
         return this.parent;
     }
     /**
      * Immutable. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
-     */
+    */
     public String getShortName() {
         return this.shortName;
     }
     /**
      * Update time.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }

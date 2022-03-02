@@ -31,14 +31,14 @@ public final class DataIntegrationTag {
     /**
      * A key to identify the tag.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Corresponding tag value for the key.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

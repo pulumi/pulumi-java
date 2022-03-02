@@ -33,14 +33,14 @@ public final class HttpHostConfigResponse {
     /**
      * http hostname config name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.
      * 
-     */
+    */
     public List<HttpRouteConfigResponse> getRoutes() {
         return this.routes;
     }

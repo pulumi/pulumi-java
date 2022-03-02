@@ -25,7 +25,7 @@ public final class ListKeyByAutomationAccountResult {
     /**
      * Lists the automation keys.
      * 
-     */
+    */
     public List<KeyResponse> getKeys() {
         return this.keys == null ? List.of() : this.keys;
     }

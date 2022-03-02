@@ -40,21 +40,21 @@ public final class ObjectMetricStatus {
     /**
      * current contains the current value for the given metric
      * 
-     */
+    */
     public MetricValueStatus getCurrent() {
         return this.current;
     }
     /**
      * DescribedObject specifies the descriptions of a object,such as kind,name apiVersion
      * 
-     */
+    */
     public CrossVersionObjectReference getDescribedObject() {
         return this.describedObject;
     }
     /**
      * metric identifies the target metric by name and selector
      * 
-     */
+    */
     public MetricIdentifier getMetric() {
         return this.metric;
     }

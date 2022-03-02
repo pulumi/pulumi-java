@@ -186,7 +186,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
     /**
      * Optional. Used to perform a consistent read-modify-write. This field should be left blank for a `CreateWorkflowTemplate` request. It is required for an `UpdateWorkflowTemplate` request, and must match the current server version. A typical update template flow would fetch the current template with a `GetWorkflowTemplate` request, which will return the current template with the `version` field filled in with the current server version. The user updates other fields in the template, then returns it as part of the `UpdateWorkflowTemplate` request.
      * 
-     * @deprecated
+     * @Deprecated
      * version is not useful as a configurable field, and will be removed in the future.
      * 
      */
@@ -202,6 +202,22 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WorkflowTemplateArgs.Builder a);
+    }
+    private static io.pulumi.gcp.dataproc.WorkflowTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.dataproc.WorkflowTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public WorkflowTemplate(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

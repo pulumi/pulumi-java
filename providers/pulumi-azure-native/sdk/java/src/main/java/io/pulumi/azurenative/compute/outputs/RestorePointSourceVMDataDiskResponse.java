@@ -64,42 +64,42 @@ public final class RestorePointSourceVMDataDiskResponse {
     /**
      * Gets the caching type.
      * 
-     */
+    */
     public Optional<String> getCaching() {
         return Optional.ofNullable(this.caching);
     }
     /**
      * Gets the disk restore point Id.
      * 
-     */
+    */
     public Optional<ApiEntityReferenceResponse> getDiskRestorePoint() {
         return Optional.ofNullable(this.diskRestorePoint);
     }
     /**
      * Gets the initial disk size in GB for blank data disks, and the new desired size for existing OS and Data disks.
      * 
-     */
+    */
     public Optional<Integer> getDiskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
      * Gets the logical unit number.
      * 
-     */
+    */
     public Optional<Integer> getLun() {
         return Optional.ofNullable(this.lun);
     }
     /**
      * Gets the managed disk details
      * 
-     */
+    */
     public Optional<ManagedDiskParametersResponse> getManagedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
     /**
      * Gets the disk name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

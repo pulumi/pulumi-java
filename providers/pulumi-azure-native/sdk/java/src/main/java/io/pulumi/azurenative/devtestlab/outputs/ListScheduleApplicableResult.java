@@ -35,14 +35,14 @@ public final class ListScheduleApplicableResult {
     /**
      * Link for next set of results.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Results of the list operation.
      * 
-     */
+    */
     public List<ScheduleResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

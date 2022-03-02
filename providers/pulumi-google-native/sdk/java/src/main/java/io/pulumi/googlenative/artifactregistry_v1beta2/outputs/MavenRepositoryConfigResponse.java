@@ -32,14 +32,14 @@ public final class MavenRepositoryConfigResponse {
     /**
      * The repository with this flag will allow publishing the same snapshot versions.
      * 
-     */
+    */
     public Boolean getAllowSnapshotOverwrites() {
         return this.allowSnapshotOverwrites;
     }
     /**
      * Version policy defines the versions that the registry will accept.
      * 
-     */
+    */
     public String getVersionPolicy() {
         return this.versionPolicy;
     }

@@ -52,7 +52,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * Example `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.`
      * If * is specified, then all IngressSources will be allowed.
      * 
-     */
+    */
     public Optional<String> getAccessLevel() {
         return Optional.ofNullable(this.accessLevel);
     }
@@ -64,7 +64,7 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * organization that the perimeter is defined in. `*` is not allowed, the case
      * of allowing all Google Cloud resources only is not supported.
      * 
-     */
+    */
     public Optional<String> getResource() {
         return Optional.ofNullable(this.resource);
     }

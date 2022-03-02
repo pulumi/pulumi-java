@@ -220,6 +220,22 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
         return this.virtualMachines;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DedicatedHostArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.compute.DedicatedHostArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.compute.DedicatedHostArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DedicatedHost(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

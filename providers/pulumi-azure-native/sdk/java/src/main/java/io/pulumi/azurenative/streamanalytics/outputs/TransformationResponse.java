@@ -62,42 +62,42 @@ public final class TransformationResponse {
     /**
      * The current entity tag for the transformation. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getQuery() {
         return Optional.ofNullable(this.query);
     }
     /**
      * Specifies the number of streaming units that the streaming job uses.
      * 
-     */
+    */
     public Optional<Integer> getStreamingUnits() {
         return Optional.ofNullable(this.streamingUnits);
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

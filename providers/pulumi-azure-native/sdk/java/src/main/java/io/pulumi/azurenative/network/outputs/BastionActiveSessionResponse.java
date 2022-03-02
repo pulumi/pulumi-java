@@ -96,77 +96,77 @@ public final class BastionActiveSessionResponse {
     /**
      * The protocol used to connect to the target.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getPropResourceType() {
         return this.resourceType;
     }
     /**
      * Duration in mins the session has been active.
      * 
-     */
+    */
     public Double getSessionDurationInMins() {
         return this.sessionDurationInMins;
     }
     /**
      * A unique id for the session.
      * 
-     */
+    */
     public String getSessionId() {
         return this.sessionId;
     }
     /**
      * The time when the session started.
      * 
-     */
+    */
     public Object getStartTime() {
         return this.startTime;
     }
     /**
      * The host name of the target.
      * 
-     */
+    */
     public String getTargetHostName() {
         return this.targetHostName;
     }
     /**
      * The IP Address of the target.
      * 
-     */
+    */
     public String getTargetIpAddress() {
         return this.targetIpAddress;
     }
     /**
      * The resource group of the target.
      * 
-     */
+    */
     public String getTargetResourceGroup() {
         return this.targetResourceGroup;
     }
     /**
      * The resource id of the target.
      * 
-     */
+    */
     public String getTargetResourceId() {
         return this.targetResourceId;
     }
     /**
      * The subscription id for the target virtual machine.
      * 
-     */
+    */
     public String getTargetSubscriptionId() {
         return this.targetSubscriptionId;
     }
     /**
      * The user name who is active on this session.
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }

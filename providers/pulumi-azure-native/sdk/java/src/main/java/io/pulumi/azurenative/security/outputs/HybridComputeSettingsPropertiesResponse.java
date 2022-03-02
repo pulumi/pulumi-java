@@ -63,42 +63,42 @@ public final class HybridComputeSettingsPropertiesResponse {
     /**
      * Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
      * 
-     */
+    */
     public String getAutoProvision() {
         return this.autoProvision;
     }
     /**
      * State of the service principal and its secret
      * 
-     */
+    */
     public String getHybridComputeProvisioningState() {
         return this.hybridComputeProvisioningState;
     }
     /**
      * For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
      * 
-     */
+    */
     public Optional<ProxyServerPropertiesResponse> getProxyServer() {
         return Optional.ofNullable(this.proxyServer);
     }
     /**
      * The location where the metadata of machines will be stored
      * 
-     */
+    */
     public Optional<String> getRegion() {
         return Optional.ofNullable(this.region);
     }
     /**
      * The name of the resource group where Arc (Hybrid Compute) connectors are connected.
      * 
-     */
+    */
     public Optional<String> getResourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
     /**
      * An object to access resources that are secured by an Azure AD tenant.
      * 
-     */
+    */
     public Optional<ServicePrincipalPropertiesResponse> getServicePrincipal() {
         return Optional.ofNullable(this.servicePrincipal);
     }

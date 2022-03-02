@@ -87,7 +87,7 @@ public final class ClusterPrivateClusterConfig {
      * is disabled. When `false`, either endpoint can be used. This field only applies
      * to private clusters, when `enable_private_nodes` is `true`.
      * 
-     */
+    */
     public Boolean getEnablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
@@ -97,7 +97,7 @@ public final class ClusterPrivateClusterConfig {
      * have RFC 1918 private addresses and communicate with the master's private
      * endpoint via private networking.
      * 
-     */
+    */
     public Optional<Boolean> getEnablePrivateNodes() {
         return Optional.ofNullable(this.enablePrivateNodes);
     }
@@ -106,7 +106,7 @@ public final class ClusterPrivateClusterConfig {
      * access settings. If unset, the provider will no longer manage this field and will
      * not modify the previously-set value. Structure is documented below.
      * 
-     */
+    */
     public Optional<ClusterPrivateClusterConfigMasterGlobalAccessConfig> getMasterGlobalAccessConfig() {
         return Optional.ofNullable(this.masterGlobalAccessConfig);
     }
@@ -119,28 +119,28 @@ public final class ClusterPrivateClusterConfig {
      * for more details. This field only applies to private clusters, when
      * `enable_private_nodes` is `true`.
      * 
-     */
+    */
     public Optional<String> getMasterIpv4CidrBlock() {
         return Optional.ofNullable(this.masterIpv4CidrBlock);
     }
     /**
      * The name of the peering between this cluster and the Google owned VPC.
      * 
-     */
+    */
     public Optional<String> getPeeringName() {
         return Optional.ofNullable(this.peeringName);
     }
     /**
      * The internal IP address of this cluster's master endpoint.
      * 
-     */
+    */
     public Optional<String> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * The external IP address of this cluster's master endpoint.
      * 
-     */
+    */
     public Optional<String> getPublicEndpoint() {
         return Optional.ofNullable(this.publicEndpoint);
     }

@@ -39,7 +39,7 @@ public final class InstanceTemplateNetworkInterfaceAccessConfig {
      * The IP address that will be 1:1 mapped to the instance's
      * network ip. If not given, one will be generated.
      * 
-     */
+    */
     public Optional<String> getNatIp() {
         return Optional.ofNullable(this.natIp);
     }
@@ -47,7 +47,7 @@ public final class InstanceTemplateNetworkInterfaceAccessConfig {
      * The service-level to be provided for IPv6 traffic when the
      * subnet has an external subnet. Only PREMIUM tier is valid for IPv6.
      * 
-     */
+    */
     public Optional<String> getNetworkTier() {
         return Optional.ofNullable(this.networkTier);
     }

@@ -38,21 +38,21 @@ public final class UserAssignedIdentityResponse {
     /**
      * The clientId(aka appId) of the user assigned identity.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The principal ID of the user assigned identity.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The tenant ID of the user assigned identity.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }

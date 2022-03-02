@@ -31,14 +31,14 @@ public final class AwsClusterControlPlaneProxyConfig {
     /**
      * The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
      * 
-     */
+    */
     public String getSecretArn() {
         return this.secretArn;
     }
     /**
      * The version string of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
      * 
-     */
+    */
     public String getSecretVersion() {
         return this.secretVersion;
     }

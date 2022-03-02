@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkerConfiguration {
-/**
- * Get information on an Amazon MSK Connect Worker Configuration.
+    private GetWorkerConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetWorkerConfigurationArgs.Builder a);
+    }
+    private static GetWorkerConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWorkerConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get information on an Amazon MSK Connect Worker Configuration.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getWorkerConfiguration.
+     *
+     * A collection of arguments for invoking getWorkerConfiguration.
  * 
- *
- * A collection of values returned by getWorkerConfiguration.
+     *
+     * A collection of values returned by getWorkerConfiguration.
  * 
- */
+     */
+    public static CompletableFuture<GetWorkerConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get information on an Amazon MSK Connect Worker Configuration.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getWorkerConfiguration.
+     * 
+     *
+         * A collection of values returned by getWorkerConfiguration.
+     * 
+     */
     public static CompletableFuture<GetWorkerConfigurationResult> invokeAsync(GetWorkerConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:mskconnect/getWorkerConfiguration:getWorkerConfiguration", TypeShape.of(GetWorkerConfigurationResult.class), args == null ? GetWorkerConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -109,84 +109,84 @@ public final class GetFirewallRuleGroupResult {
     /**
      * Arn
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Rfc3339TimeString
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The id of the creator request.
      * 
-     */
+    */
     public Optional<String> getCreatorRequestId() {
         return Optional.ofNullable(this.creatorRequestId);
     }
     /**
      * FirewallRules
      * 
-     */
+    */
     public List<FirewallRuleGroupFirewallRule> getFirewallRules() {
         return this.firewallRules == null ? List.of() : this.firewallRules;
     }
     /**
      * ResourceId
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Rfc3339TimeString
      * 
-     */
+    */
     public Optional<String> getModificationTime() {
         return Optional.ofNullable(this.modificationTime);
     }
     /**
      * AccountId
      * 
-     */
+    */
     public Optional<String> getOwnerId() {
         return Optional.ofNullable(this.ownerId);
     }
     /**
      * Count
      * 
-     */
+    */
     public Optional<Integer> getRuleCount() {
         return Optional.ofNullable(this.ruleCount);
     }
     /**
      * ShareStatus, possible values are NOT_SHARED, SHARED_WITH_ME, SHARED_BY_ME.
      * 
-     */
+    */
     public Optional<FirewallRuleGroupShareStatus> getShareStatus() {
         return Optional.ofNullable(this.shareStatus);
     }
     /**
      * ResolverFirewallRuleGroupAssociation, possible values are COMPLETE, DELETING, UPDATING, and INACTIVE_OWNER_ACCOUNT_CLOSED.
      * 
-     */
+    */
     public Optional<FirewallRuleGroupStatus> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * FirewallRuleGroupStatus
      * 
-     */
+    */
     public Optional<String> getStatusMessage() {
         return Optional.ofNullable(this.statusMessage);
     }
     /**
      * Tags
      * 
-     */
+    */
     public List<FirewallRuleGroupTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -124,98 +124,98 @@ public final class GetFactoryResult {
     /**
      * Time the factory was created in ISO8601 format.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Etag identifies change in the resource.
      * 
-     */
+    */
     public String getETag() {
         return this.eTag;
     }
     /**
      * Properties to enable Customer Managed Key for the factory.
      * 
-     */
+    */
     public Optional<EncryptionConfigurationResponse> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
      * List of parameters for factory.
      * 
-     */
+    */
     public Map<String,GlobalParameterSpecificationResponse> getGlobalParameters() {
         return this.globalParameters == null ? Map.of() : this.globalParameters;
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Managed service identity of the factory.
      * 
-     */
+    */
     public Optional<FactoryIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Factory provisioning state, example Succeeded.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether or not public network access is allowed for the data factory.
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * Git repo information of the factory.
      * 
-     */
+    */
     public Optional<Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse>> getRepoConfiguration() {
         return Optional.ofNullable(this.repoConfiguration);
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Version of the factory.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

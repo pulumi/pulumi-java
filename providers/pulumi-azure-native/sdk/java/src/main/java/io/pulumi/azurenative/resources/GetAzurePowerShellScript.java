@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAzurePowerShellScript {
-/**
- * Object model for the Azure PowerShell script.
+    private GetAzurePowerShellScript() {}
+    public interface BuilderApplicator {
+        public void apply(GetAzurePowerShellScriptArgs.Builder a);
+    }
+    private static GetAzurePowerShellScriptArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAzurePowerShellScriptArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Object model for the Azure PowerShell script.
  * API Version: 2020-10-01.
  * 
- *
- * Object model for the Azure PowerShell script.
+     *
+     * Object model for the Azure PowerShell script.
  * 
- */
+     */
+    public static CompletableFuture<GetAzurePowerShellScriptResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Object model for the Azure PowerShell script.
+     * API Version: 2020-10-01.
+     * 
+     *
+         * Object model for the Azure PowerShell script.
+     * 
+     */
     public static CompletableFuture<GetAzurePowerShellScriptResult> invokeAsync(GetAzurePowerShellScriptArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getAzurePowerShellScript", TypeShape.of(GetAzurePowerShellScriptResult.class), args == null ? GetAzurePowerShellScriptArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -85,6 +85,22 @@ public class WebAppDomainOwnershipIdentifier extends io.pulumi.resources.CustomR
         return this.value;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WebAppDomainOwnershipIdentifierArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.web.WebAppDomainOwnershipIdentifierArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.web.WebAppDomainOwnershipIdentifierArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public WebAppDomainOwnershipIdentifier(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

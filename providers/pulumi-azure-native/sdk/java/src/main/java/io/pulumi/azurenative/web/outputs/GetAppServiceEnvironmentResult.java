@@ -173,112 +173,112 @@ public final class GetAppServiceEnvironmentResult {
     /**
      * Custom settings for changing the behavior of the App Service Environment.
      * 
-     */
+    */
     public List<NameValuePairResponse> getClusterSettings() {
         return this.clusterSettings == null ? List.of() : this.clusterSettings;
     }
     /**
      * Dedicated Host Count
      * 
-     */
+    */
     public Integer getDedicatedHostCount() {
         return this.dedicatedHostCount;
     }
     /**
      * DNS suffix of the App Service Environment.
      * 
-     */
+    */
     public Optional<String> getDnsSuffix() {
         return Optional.ofNullable(this.dnsSuffix);
     }
     /**
      * Scale factor for front-ends.
      * 
-     */
+    */
     public Optional<Integer> getFrontEndScaleFactor() {
         return Optional.ofNullable(this.frontEndScaleFactor);
     }
     /**
      * Flag that displays whether an ASE has linux workers or not
      * 
-     */
+    */
     public Boolean getHasLinuxWorkers() {
         return this.hasLinuxWorkers;
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
      * 
-     */
+    */
     public Optional<String> getInternalLoadBalancingMode() {
         return Optional.ofNullable(this.internalLoadBalancingMode);
     }
     /**
      * Number of IP SSL addresses reserved for the App Service Environment.
      * 
-     */
+    */
     public Optional<Integer> getIpsslAddressCount() {
         return Optional.ofNullable(this.ipsslAddressCount);
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Maximum number of VMs in the App Service Environment.
      * 
-     */
+    */
     public Integer getMaximumNumberOfMachines() {
         return this.maximumNumberOfMachines;
     }
     /**
      * Number of front-end instances.
      * 
-     */
+    */
     public Integer getMultiRoleCount() {
         return this.multiRoleCount;
     }
     /**
      * Front-end VM size, e.g. "Medium", "Large".
      * 
-     */
+    */
     public Optional<String> getMultiSize() {
         return Optional.ofNullable(this.multiSize);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the App Service Environment.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Current status of the App Service Environment.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
@@ -286,35 +286,35 @@ public final class GetAppServiceEnvironmentResult {
      * <code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available
      *  (most likely because NSG blocked the incoming traffic).
      * 
-     */
+    */
     public Boolean getSuspended() {
         return this.suspended;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * User added ip ranges to whitelist on ASE db
      * 
-     */
+    */
     public List<String> getUserWhitelistedIpRanges() {
         return this.userWhitelistedIpRanges == null ? List.of() : this.userWhitelistedIpRanges;
     }
     /**
      * Description of the Virtual Network.
      * 
-     */
+    */
     public VirtualNetworkProfileResponse getVirtualNetwork() {
         return this.virtualNetwork;
     }

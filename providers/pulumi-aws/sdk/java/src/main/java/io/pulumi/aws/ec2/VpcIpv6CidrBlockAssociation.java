@@ -89,6 +89,22 @@ public class VpcIpv6CidrBlockAssociation extends io.pulumi.resources.CustomResou
         return this.vpcId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VpcIpv6CidrBlockAssociationArgs.Builder a);
+    }
+    private static io.pulumi.aws.ec2.VpcIpv6CidrBlockAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.ec2.VpcIpv6CidrBlockAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public VpcIpv6CidrBlockAssociation(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

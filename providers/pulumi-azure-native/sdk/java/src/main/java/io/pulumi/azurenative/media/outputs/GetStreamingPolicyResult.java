@@ -94,70 +94,70 @@ public final class GetStreamingPolicyResult {
     /**
      * Configuration of CommonEncryptionCbcs
      * 
-     */
+    */
     public Optional<CommonEncryptionCbcsResponse> getCommonEncryptionCbcs() {
         return Optional.ofNullable(this.commonEncryptionCbcs);
     }
     /**
      * Configuration of CommonEncryptionCenc
      * 
-     */
+    */
     public Optional<CommonEncryptionCencResponse> getCommonEncryptionCenc() {
         return Optional.ofNullable(this.commonEncryptionCenc);
     }
     /**
      * Creation time of Streaming Policy
      * 
-     */
+    */
     public String getCreated() {
         return this.created;
     }
     /**
      * Default ContentKey used by current Streaming Policy
      * 
-     */
+    */
     public Optional<String> getDefaultContentKeyPolicyName() {
         return Optional.ofNullable(this.defaultContentKeyPolicyName);
     }
     /**
      * Configuration of EnvelopeEncryption
      * 
-     */
+    */
     public Optional<EnvelopeEncryptionResponse> getEnvelopeEncryption() {
         return Optional.ofNullable(this.envelopeEncryption);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Configurations of NoEncryption
      * 
-     */
+    */
     public Optional<NoEncryptionResponse> getNoEncryption() {
         return Optional.ofNullable(this.noEncryption);
     }
     /**
      * The system metadata relating to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

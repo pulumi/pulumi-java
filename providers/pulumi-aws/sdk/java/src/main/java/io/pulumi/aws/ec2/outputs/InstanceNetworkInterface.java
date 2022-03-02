@@ -42,21 +42,21 @@ public final class InstanceNetworkInterface {
     /**
      * Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
      * 
-     */
+    */
     public Optional<Boolean> getDeleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
     /**
      * Integer index of the network interface attachment. Limited by instance type.
      * 
-     */
+    */
     public Integer getDeviceIndex() {
         return this.deviceIndex;
     }
     /**
      * ID of the network interface to attach.
      * 
-     */
+    */
     public String getNetworkInterfaceId() {
         return this.networkInterfaceId;
     }

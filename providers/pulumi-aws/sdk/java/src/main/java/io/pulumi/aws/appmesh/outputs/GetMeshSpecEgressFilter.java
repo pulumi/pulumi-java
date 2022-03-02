@@ -23,7 +23,7 @@ public final class GetMeshSpecEgressFilter {
     /**
      * The egress filter type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

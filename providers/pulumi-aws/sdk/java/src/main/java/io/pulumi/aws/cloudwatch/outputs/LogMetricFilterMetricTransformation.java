@@ -62,42 +62,42 @@ public final class LogMetricFilterMetricTransformation {
     /**
      * The value to emit when a filter pattern does not match a log event. Conflicts with `dimensions`.
      * 
-     */
+    */
     public Optional<String> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
      * Map of fields to use as dimensions for the metric. Up to 3 dimensions are allowed. Conflicts with `default_value`.
      * 
-     */
+    */
     public Map<String,String> getDimensions() {
         return this.dimensions == null ? Map.of() : this.dimensions;
     }
     /**
      * The name of the CloudWatch metric to which the monitored log information should be published (e.g., `ErrorCount`)
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The destination namespace of the CloudWatch metric.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }
     /**
      * The unit to assign to the metric. If you omit this, the unit is set as `None`.
      * 
-     */
+    */
     public Optional<String> getUnit() {
         return Optional.ofNullable(this.unit);
     }
     /**
      * What to publish to the metric. For example, if you're counting the occurrences of a particular term like "Error", the value will be "1" for each occurrence. If you're counting the bytes transferred the published value will be the value in the log event.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

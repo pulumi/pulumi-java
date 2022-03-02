@@ -34,14 +34,14 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse {
     /**
      * The name of the rule group that will be disabled.
      * 
-     */
+    */
     public String getRuleGroupName() {
         return this.ruleGroupName;
     }
     /**
      * The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
      * 
-     */
+    */
     public List<Integer> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

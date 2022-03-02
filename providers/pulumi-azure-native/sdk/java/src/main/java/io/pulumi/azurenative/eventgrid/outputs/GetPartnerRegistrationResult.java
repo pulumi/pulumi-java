@@ -166,35 +166,35 @@ public final class GetPartnerRegistrationResult {
      * partner namespaces is always permitted under the same Azure subscription as the one used
      * for creating the partner registration.
      * 
-     */
+    */
     public List<String> getAuthorizedAzureSubscriptionIds() {
         return this.authorizedAzureSubscriptionIds == null ? List.of() : this.authorizedAzureSubscriptionIds;
     }
     /**
      * The extension of the customer service URI of the publisher.
      * 
-     */
+    */
     public Optional<String> getCustomerServiceUri() {
         return Optional.ofNullable(this.customerServiceUri);
     }
     /**
      * Fully qualified identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Location of the resource.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * URI of the logo.
      * 
-     */
+    */
     public Optional<String> getLogoUri() {
         return Optional.ofNullable(this.logoUri);
     }
@@ -202,21 +202,21 @@ public final class GetPartnerRegistrationResult {
      * Long description for the custom scenarios and integration to be displayed in the portal if needed.
      * Length of this description should not exceed 2048 characters.
      * 
-     */
+    */
     public Optional<String> getLongDescription() {
         return Optional.ofNullable(this.longDescription);
     }
     /**
      * Name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.
      * 
-     */
+    */
     public Optional<String> getPartnerCustomerServiceExtension() {
         return Optional.ofNullable(this.partnerCustomerServiceExtension);
     }
@@ -226,42 +226,42 @@ public final class GetPartnerRegistrationResult {
      * length cannot exceed 16 digits including country code. Examples of valid phone numbers are: +1 515 123 4567 and
      * +966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43
      * 
-     */
+    */
     public Optional<String> getPartnerCustomerServiceNumber() {
         return Optional.ofNullable(this.partnerCustomerServiceNumber);
     }
     /**
      * Official name of the partner name. For example: "Contoso".
      * 
-     */
+    */
     public Optional<String> getPartnerName() {
         return Optional.ofNullable(this.partnerName);
     }
     /**
      * Short description of the partner resource type. The length of this description should not exceed 256 characters.
      * 
-     */
+    */
     public Optional<String> getPartnerResourceTypeDescription() {
         return Optional.ofNullable(this.partnerResourceTypeDescription);
     }
     /**
      * Display name of the partner resource type.
      * 
-     */
+    */
     public Optional<String> getPartnerResourceTypeDisplayName() {
         return Optional.ofNullable(this.partnerResourceTypeDisplayName);
     }
     /**
      * Name of the partner resource type.
      * 
-     */
+    */
     public Optional<String> getPartnerResourceTypeName() {
         return Optional.ofNullable(this.partnerResourceTypeName);
     }
     /**
      * Provisioning state of the partner registration.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -269,35 +269,35 @@ public final class GetPartnerRegistrationResult {
      * URI of the partner website that can be used by Azure customers to setup Event Grid
      * integration on an event source.
      * 
-     */
+    */
     public Optional<String> getSetupUri() {
         return Optional.ofNullable(this.setupUri);
     }
     /**
      * The system metadata relating to Partner Registration resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Visibility state of the partner registration.
      * 
-     */
+    */
     public Optional<String> getVisibilityState() {
         return Optional.ofNullable(this.visibilityState);
     }

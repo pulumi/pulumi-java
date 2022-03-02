@@ -24,7 +24,7 @@ public final class CapacityReservationUtilizationResponse {
     /**
      * A list of all virtual machines resource ids allocated against the capacity reservation.
      * 
-     */
+    */
     public List<SubResourceReadOnlyResponse> getVirtualMachinesAllocated() {
         return this.virtualMachinesAllocated;
     }

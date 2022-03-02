@@ -56,35 +56,35 @@ public final class TestBaseAccountSKUResponse {
     /**
      * The capabilities of a SKU.
      * 
-     */
+    */
     public List<TestBaseAccountSKUCapabilityResponse> getCapabilities() {
         return this.capabilities;
     }
     /**
      * The locations that the SKU is available.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
      * The name of the SKU. This is typically a letter + number code, such as B0 or S0.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of resource the SKU applies to.
      * 
-     */
+    */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
     /**
      * The tier of this particular SKU.
      * 
-     */
+    */
     public String getTier() {
         return this.tier;
     }

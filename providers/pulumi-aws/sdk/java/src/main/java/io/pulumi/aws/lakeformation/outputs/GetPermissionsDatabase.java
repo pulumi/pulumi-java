@@ -31,14 +31,14 @@ public final class GetPermissionsDatabase {
     /**
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
-     */
+    */
     public String getCatalogId() {
         return this.catalogId;
     }
     /**
      * Name of the table resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

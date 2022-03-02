@@ -31,14 +31,14 @@ public final class TopicRuleIotAnalytic {
     /**
      * Name of AWS IOT Analytics channel.
      * 
-     */
+    */
     public String getChannelName() {
         return this.channelName;
     }
     /**
      * The ARN of the IAM role that grants access.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }

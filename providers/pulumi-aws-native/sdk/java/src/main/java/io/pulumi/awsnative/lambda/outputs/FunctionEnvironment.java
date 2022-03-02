@@ -25,7 +25,7 @@ public final class FunctionEnvironment {
     /**
      * Environment variable key-value pairs.
      * 
-     */
+    */
     public Optional<Object> getVariables() {
         return Optional.ofNullable(this.variables);
     }

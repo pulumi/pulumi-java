@@ -31,14 +31,14 @@ public final class CustomHttpPatternResponse {
     /**
      * The name of this custom HTTP verb.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The path matched by this custom verb.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }

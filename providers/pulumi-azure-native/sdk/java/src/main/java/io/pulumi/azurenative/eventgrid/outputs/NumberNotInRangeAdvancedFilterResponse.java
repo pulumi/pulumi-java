@@ -43,7 +43,7 @@ public final class NumberNotInRangeAdvancedFilterResponse {
     /**
      * The field/property in the event based on which you want to filter.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
@@ -51,14 +51,14 @@ public final class NumberNotInRangeAdvancedFilterResponse {
      * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
      * Expected value is 'NumberNotInRange'.
      * 
-     */
+    */
     public String getOperatorType() {
         return this.operatorType;
     }
     /**
      * The set of filter values.
      * 
-     */
+    */
     public List<List<Double>> getValues() {
         return this.values == null ? List.of() : this.values;
     }

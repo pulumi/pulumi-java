@@ -77,56 +77,56 @@ public final class ListenerDefaultActionAuthenticateCognito {
     /**
      * Query parameters to include in the redirect request to the authorization endpoint. Max: 10.
      * 
-     */
+    */
     public Map<String,String> getAuthenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Map.of() : this.authenticationRequestExtraParams;
     }
     /**
      * Behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
      * 
-     */
+    */
     public Optional<String> getOnUnauthenticatedRequest() {
         return Optional.ofNullable(this.onUnauthenticatedRequest);
     }
     /**
      * Set of user claims to be requested from the IdP.
      * 
-     */
+    */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * Name of the cookie used to maintain session information.
      * 
-     */
+    */
     public Optional<String> getSessionCookieName() {
         return Optional.ofNullable(this.sessionCookieName);
     }
     /**
      * Maximum duration of the authentication session, in seconds.
      * 
-     */
+    */
     public Optional<Integer> getSessionTimeout() {
         return Optional.ofNullable(this.sessionTimeout);
     }
     /**
      * ARN of the Cognito user pool.
      * 
-     */
+    */
     public String getUserPoolArn() {
         return this.userPoolArn;
     }
     /**
      * ID of the Cognito user pool client.
      * 
-     */
+    */
     public String getUserPoolClientId() {
         return this.userPoolClientId;
     }
     /**
      * Domain prefix or fully-qualified domain name of the Cognito user pool.
      * 
-     */
+    */
     public String getUserPoolDomain() {
         return this.userPoolDomain;
     }

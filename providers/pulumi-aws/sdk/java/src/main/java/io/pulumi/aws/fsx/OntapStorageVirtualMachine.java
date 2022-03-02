@@ -195,6 +195,22 @@ public class OntapStorageVirtualMachine extends io.pulumi.resources.CustomResour
         return this.uuid;
     }
 
+    public interface BuilderApplicator {
+        public void apply(OntapStorageVirtualMachineArgs.Builder a);
+    }
+    private static io.pulumi.aws.fsx.OntapStorageVirtualMachineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.fsx.OntapStorageVirtualMachineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public OntapStorageVirtualMachine(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

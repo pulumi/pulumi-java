@@ -23,7 +23,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     /**
      * A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }

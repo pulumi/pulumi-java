@@ -45,28 +45,28 @@ public final class TrustedIdProviderResponse {
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The URL of this trusted identity provider.
      * 
-     */
+    */
     public String getIdProvider() {
         return this.idProvider;
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

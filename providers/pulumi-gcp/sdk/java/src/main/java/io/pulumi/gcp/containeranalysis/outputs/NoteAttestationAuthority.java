@@ -39,7 +39,7 @@ public final class NoteAttestationAuthority {
      * Attestations to verify.
      * Structure is documented below.
      * 
-     */
+    */
     public NoteAttestationAuthorityHint getHint() {
         return this.hint;
     }

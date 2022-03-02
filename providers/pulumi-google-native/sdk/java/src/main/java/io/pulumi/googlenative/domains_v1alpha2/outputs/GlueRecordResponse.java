@@ -39,21 +39,21 @@ public final class GlueRecordResponse {
     /**
      * Domain name of the host in Punycode format.
      * 
-     */
+    */
     public String getHostName() {
         return this.hostName;
     }
     /**
      * List of IPv4 addresses corresponding to this host in the standard decimal format (e.g. `198.51.100.1`). At least one of `ipv4_address` and `ipv6_address` must be set.
      * 
-     */
+    */
     public List<String> getIpv4Addresses() {
         return this.ipv4Addresses;
     }
     /**
      * List of IPv6 addresses corresponding to this host in the standard hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and `ipv6_address` must be set.
      * 
-     */
+    */
     public List<String> getIpv6Addresses() {
         return this.ipv6Addresses;
     }

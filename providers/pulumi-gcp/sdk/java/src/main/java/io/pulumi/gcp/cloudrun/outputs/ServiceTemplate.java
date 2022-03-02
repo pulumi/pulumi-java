@@ -39,7 +39,7 @@ public final class ServiceTemplate {
      * and annotations.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServiceTemplateMetadata> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -47,7 +47,7 @@ public final class ServiceTemplate {
      * RevisionSpec holds the desired state of the Revision (from the client).
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<ServiceTemplateSpec> getSpec() {
         return Optional.ofNullable(this.spec);
     }

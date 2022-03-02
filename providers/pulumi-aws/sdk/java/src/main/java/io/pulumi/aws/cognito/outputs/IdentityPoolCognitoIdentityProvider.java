@@ -41,21 +41,21 @@ public final class IdentityPoolCognitoIdentityProvider {
     /**
      * The client ID for the Amazon Cognito Identity User Pool.
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The provider name for an Amazon Cognito Identity User Pool.
      * 
-     */
+    */
     public Optional<String> getProviderName() {
         return Optional.ofNullable(this.providerName);
     }
     /**
      * Whether server-side token validation is enabled for the identity provider’s token or not.
      * 
-     */
+    */
     public Optional<Boolean> getServerSideTokenCheck() {
         return Optional.ofNullable(this.serverSideTokenCheck);
     }

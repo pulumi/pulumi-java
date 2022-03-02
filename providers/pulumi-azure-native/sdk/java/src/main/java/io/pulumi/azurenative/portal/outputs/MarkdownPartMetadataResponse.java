@@ -44,14 +44,14 @@ public final class MarkdownPartMetadataResponse {
     /**
      * Input to dashboard part.
      * 
-     */
+    */
     public List<Object> getInputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }
     /**
      * Markdown part settings.
      * 
-     */
+    */
     public Optional<MarkdownPartMetadataResponseSettings> getSettings() {
         return Optional.ofNullable(this.settings);
     }
@@ -59,7 +59,7 @@ public final class MarkdownPartMetadataResponse {
      * The type of dashboard part.
      * Expected value is 'Extension/HubsExtension/PartType/MarkdownPart'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

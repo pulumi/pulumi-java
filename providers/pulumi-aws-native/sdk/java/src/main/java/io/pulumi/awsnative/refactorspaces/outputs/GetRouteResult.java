@@ -46,7 +46,7 @@ public final class GetRouteResult {
     /**
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
-     */
+    */
     public List<RouteTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGameServerDeployment {
-/**
- * Gets details of a single game server deployment.
+    private GetGameServerDeployment() {}
+    public interface BuilderApplicator {
+        public void apply(GetGameServerDeploymentArgs.Builder a);
+    }
+    private static GetGameServerDeploymentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGameServerDeploymentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single game server deployment.
  * 
- */
+     */
+    public static CompletableFuture<GetGameServerDeploymentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single game server deployment.
+     * 
+     */
     public static CompletableFuture<GetGameServerDeploymentResult> invokeAsync(GetGameServerDeploymentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gameservices/v1beta:getGameServerDeployment", TypeShape.of(GetGameServerDeploymentResult.class), args == null ? GetGameServerDeploymentArgs.Empty : args, Utilities.withVersion(options));
     }

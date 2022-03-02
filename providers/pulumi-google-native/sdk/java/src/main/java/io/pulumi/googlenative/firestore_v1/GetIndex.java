@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIndex {
-/**
- * Gets a composite index.
+    private GetIndex() {}
+    public interface BuilderApplicator {
+        public void apply(GetIndexArgs.Builder a);
+    }
+    private static GetIndexArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIndexArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a composite index.
  * 
- */
+     */
+    public static CompletableFuture<GetIndexResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a composite index.
+     * 
+     */
     public static CompletableFuture<GetIndexResult> invokeAsync(GetIndexArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firestore/v1:getIndex", TypeShape.of(GetIndexResult.class), args == null ? GetIndexArgs.Empty : args, Utilities.withVersion(options));
     }

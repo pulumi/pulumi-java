@@ -85,7 +85,7 @@ public final class RegionUrlMapPathMatcher {
      * none of the pathRules defined by this PathMatcher is matched by
      * the URL's path portion.
      * 
-     */
+    */
     public Optional<String> getDefaultService() {
         return Optional.ofNullable(this.defaultService);
     }
@@ -95,14 +95,14 @@ public final class RegionUrlMapPathMatcher {
      * defaultRouteAction must not be set.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherDefaultUrlRedirect> getDefaultUrlRedirect() {
         return Optional.ofNullable(this.defaultUrlRedirect);
     }
     /**
      * Description of this test case.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -110,7 +110,7 @@ public final class RegionUrlMapPathMatcher {
      * The name of the query parameter to match. The query parameter must exist in the
      * request, in the absence of which the request match fails.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -123,7 +123,7 @@ public final class RegionUrlMapPathMatcher {
      * given pathMatcher, only one of pathRules or routeRules must be set.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RegionUrlMapPathMatcherPathRule> getPathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
     }
@@ -136,7 +136,7 @@ public final class RegionUrlMapPathMatcher {
      * External load balancers.
      * Structure is documented below.
      * 
-     */
+    */
     public List<RegionUrlMapPathMatcherRouteRule> getRouteRules() {
         return this.routeRules == null ? List.of() : this.routeRules;
     }

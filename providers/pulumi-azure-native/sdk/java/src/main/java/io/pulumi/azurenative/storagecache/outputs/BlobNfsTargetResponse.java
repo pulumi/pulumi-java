@@ -33,14 +33,14 @@ public final class BlobNfsTargetResponse {
     /**
      * Resource ID of the storage container.
      * 
-     */
+    */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
     /**
      * Identifies the StorageCache usage model to be used for this storage target.
      * 
-     */
+    */
     public Optional<String> getUsageModel() {
         return Optional.ofNullable(this.usageModel);
     }

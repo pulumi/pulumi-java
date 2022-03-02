@@ -41,21 +41,21 @@ public final class AttachNewDataDiskOptionsResponse {
     /**
      * The name of the disk to be attached.
      * 
-     */
+    */
     public Optional<String> getDiskName() {
         return Optional.ofNullable(this.diskName);
     }
     /**
      * Size of the disk to be attached in Gibibytes.
      * 
-     */
+    */
     public Optional<Integer> getDiskSizeGiB() {
         return Optional.ofNullable(this.diskSizeGiB);
     }
     /**
      * The storage type for the disk (i.e. Standard, Premium).
      * 
-     */
+    */
     public Optional<String> getDiskType() {
         return Optional.ofNullable(this.diskType);
     }

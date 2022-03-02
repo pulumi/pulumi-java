@@ -40,14 +40,14 @@ public final class ApplicationApplicationConfigurationVpcConfiguration {
     /**
      * The Security Group IDs used by the VPC configuration.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * The Subnet IDs used by the VPC configuration.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }

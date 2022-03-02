@@ -68,49 +68,49 @@ public final class WsfcDomainProfileResponse {
     /**
      * Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).
      * 
-     */
+    */
     public Optional<String> getClusterBootstrapAccount() {
         return Optional.ofNullable(this.clusterBootstrapAccount);
     }
     /**
      * Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.
      * 
-     */
+    */
     public Optional<String> getClusterOperatorAccount() {
         return Optional.ofNullable(this.clusterOperatorAccount);
     }
     /**
      * Fully qualified name of the domain.
      * 
-     */
+    */
     public Optional<String> getDomainFqdn() {
         return Optional.ofNullable(this.domainFqdn);
     }
     /**
      * Optional path for fileshare witness.
      * 
-     */
+    */
     public Optional<String> getFileShareWitnessPath() {
         return Optional.ofNullable(this.fileShareWitnessPath);
     }
     /**
      * Organizational Unit path in which the nodes and cluster will be present.
      * 
-     */
+    */
     public Optional<String> getOuPath() {
         return Optional.ofNullable(this.ouPath);
     }
     /**
      * Account name under which SQL service will run on all participating SQL virtual machines in the cluster.
      * 
-     */
+    */
     public Optional<String> getSqlServiceAccount() {
         return Optional.ofNullable(this.sqlServiceAccount);
     }
     /**
      * Fully qualified ARM resource id of the witness storage account.
      * 
-     */
+    */
     public Optional<String> getStorageAccountUrl() {
         return Optional.ofNullable(this.storageAccountUrl);
     }

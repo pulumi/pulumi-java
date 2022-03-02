@@ -49,7 +49,7 @@ public final class ClusterClusterConfigWorkerConfigDiskConfig {
      * computed value if not set (currently 500GB). Note: If SSDs are not
      * attached, it also contains the HDFS data blocks and Hadoop working directories.
      * 
-     */
+    */
     public Optional<Integer> getBootDiskSizeGb() {
         return Optional.ofNullable(this.bootDiskSizeGb);
     }
@@ -57,7 +57,7 @@ public final class ClusterClusterConfigWorkerConfigDiskConfig {
      * The disk type of the primary disk attached to each preemptible worker node.
      * One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
      * 
-     */
+    */
     public Optional<String> getBootDiskType() {
         return Optional.ofNullable(this.bootDiskType);
     }
@@ -65,7 +65,7 @@ public final class ClusterClusterConfigWorkerConfigDiskConfig {
      * The amount of local SSD disks that will be
      * attached to each preemptible worker node. Defaults to 0.
      * 
-     */
+    */
     public Optional<Integer> getNumLocalSsds() {
         return Optional.ofNullable(this.numLocalSsds);
     }

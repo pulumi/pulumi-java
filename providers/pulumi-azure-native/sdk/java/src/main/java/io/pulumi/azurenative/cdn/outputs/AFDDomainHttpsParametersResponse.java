@@ -41,21 +41,21 @@ public final class AFDDomainHttpsParametersResponse {
     /**
      * Defines the source of the SSL certificate.
      * 
-     */
+    */
     public String getCertificateType() {
         return this.certificateType;
     }
     /**
      * TLS protocol version that will be used for Https
      * 
-     */
+    */
     public Optional<String> getMinimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
     /**
      * Resource reference to the secret. ie. subs/rg/profile/secret
      * 
-     */
+    */
     public Optional<ResourceReferenceResponse> getSecret() {
         return Optional.ofNullable(this.secret);
     }

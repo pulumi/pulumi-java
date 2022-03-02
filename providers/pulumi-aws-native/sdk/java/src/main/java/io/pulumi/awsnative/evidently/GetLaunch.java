@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLaunch {
-/**
- * Resource Type definition for AWS::Evidently::Launch.
+    private GetLaunch() {}
+    public interface BuilderApplicator {
+        public void apply(GetLaunchArgs.Builder a);
+    }
+    private static GetLaunchArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLaunchArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::Evidently::Launch.
  * 
- */
+     */
+    public static CompletableFuture<GetLaunchResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::Evidently::Launch.
+     * 
+     */
     public static CompletableFuture<GetLaunchResult> invokeAsync(GetLaunchArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:evidently:getLaunch", TypeShape.of(GetLaunchResult.class), args == null ? GetLaunchArgs.Empty : args, Utilities.withVersion(options));
     }

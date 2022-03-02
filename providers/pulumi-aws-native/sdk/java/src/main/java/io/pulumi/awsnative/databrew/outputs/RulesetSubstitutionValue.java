@@ -31,14 +31,14 @@ public final class RulesetSubstitutionValue {
     /**
      * Value or column name
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }
     /**
      * Variable name
      * 
-     */
+    */
     public String getValueReference() {
         return this.valueReference;
     }

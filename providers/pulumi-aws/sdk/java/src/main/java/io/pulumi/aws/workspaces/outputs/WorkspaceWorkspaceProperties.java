@@ -55,35 +55,35 @@ public final class WorkspaceWorkspaceProperties {
     /**
      * The compute type. For more information, see [Amazon WorkSpaces Bundles](http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles). Valid values are `VALUE`, `STANDARD`, `PERFORMANCE`, `POWER`, `GRAPHICS`, `POWERPRO` and `GRAPHICSPRO`.
      * 
-     */
+    */
     public Optional<String> getComputeTypeName() {
         return Optional.ofNullable(this.computeTypeName);
     }
     /**
      * The size of the root volume.
      * 
-     */
+    */
     public Optional<Integer> getRootVolumeSizeGib() {
         return Optional.ofNullable(this.rootVolumeSizeGib);
     }
     /**
      * The running mode. For more information, see [Manage the WorkSpace Running Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html). Valid values are `AUTO_STOP` and `ALWAYS_ON`.
      * 
-     */
+    */
     public Optional<String> getRunningMode() {
         return Optional.ofNullable(this.runningMode);
     }
     /**
      * The time after a user logs off when WorkSpaces are automatically stopped. Configured in 60-minute intervals.
      * 
-     */
+    */
     public Optional<Integer> getRunningModeAutoStopTimeoutInMinutes() {
         return Optional.ofNullable(this.runningModeAutoStopTimeoutInMinutes);
     }
     /**
      * The size of the user storage.
      * 
-     */
+    */
     public Optional<Integer> getUserVolumeSizeGib() {
         return Optional.ofNullable(this.userVolumeSizeGib);
     }

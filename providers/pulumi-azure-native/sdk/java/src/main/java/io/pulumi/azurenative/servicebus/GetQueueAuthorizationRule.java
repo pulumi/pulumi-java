@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetQueueAuthorizationRule {
-/**
- * Description of a namespace authorization rule.
+    private GetQueueAuthorizationRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetQueueAuthorizationRuleArgs.Builder a);
+    }
+    private static GetQueueAuthorizationRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetQueueAuthorizationRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Description of a namespace authorization rule.
  * API Version: 2017-04-01.
  * 
- *
- * Description of a namespace authorization rule.
+     *
+     * Description of a namespace authorization rule.
  * 
- */
+     */
+    public static CompletableFuture<GetQueueAuthorizationRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Description of a namespace authorization rule.
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Description of a namespace authorization rule.
+     * 
+     */
     public static CompletableFuture<GetQueueAuthorizationRuleResult> invokeAsync(GetQueueAuthorizationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getQueueAuthorizationRule", TypeShape.of(GetQueueAuthorizationRuleResult.class), args == null ? GetQueueAuthorizationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

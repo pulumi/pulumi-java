@@ -37,7 +37,7 @@ public final class GameServerClusterConnectionInfoGkeClusterReference {
      *   GameServerCluster resource are used to generate the full name of the
      *   GKE cluster.
      * 
-     */
+    */
     public String getCluster() {
         return this.cluster;
     }

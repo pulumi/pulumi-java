@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetModelPackageGroup {
-/**
- * Resource Type definition for AWS::SageMaker::ModelPackageGroup
+    private GetModelPackageGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetModelPackageGroupArgs.Builder a);
+    }
+    private static GetModelPackageGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetModelPackageGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::ModelPackageGroup
  * 
- */
+     */
+    public static CompletableFuture<GetModelPackageGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::SageMaker::ModelPackageGroup
+     * 
+     */
     public static CompletableFuture<GetModelPackageGroupResult> invokeAsync(GetModelPackageGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getModelPackageGroup", TypeShape.of(GetModelPackageGroupResult.class), args == null ? GetModelPackageGroupArgs.Empty : args, Utilities.withVersion(options));
     }

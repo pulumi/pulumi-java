@@ -40,7 +40,7 @@ public final class EnvironmentLastUpdated {
      * The Created At date of the MWAA Environment
      * * `logging_configuration[0].<LOG_CONFIGURATION_TYPE>[0].cloud_watch_log_group_arn` - Provides the ARN for the CloudWatch group where the logs will be published
      * 
-     */
+    */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
@@ -50,7 +50,7 @@ public final class EnvironmentLastUpdated {
     /**
      * The status of the Amazon MWAA Environment
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

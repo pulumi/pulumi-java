@@ -74,28 +74,28 @@ public final class JobHadoopConfig {
     /**
      * HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
-     */
+    */
     public List<String> getArchiveUris() {
         return this.archiveUris == null ? List.of() : this.archiveUris;
     }
     /**
      * The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
      * 
-     */
+    */
     public List<String> getArgs() {
         return this.args == null ? List.of() : this.args;
     }
     /**
      * HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
      * 
-     */
+    */
     public List<String> getFileUris() {
         return this.fileUris == null ? List.of() : this.fileUris;
     }
     /**
      * HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
-     */
+    */
     public List<String> getJarFileUris() {
         return this.jarFileUris == null ? List.of() : this.jarFileUris;
     }
@@ -105,21 +105,21 @@ public final class JobHadoopConfig {
     /**
      * The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
      * 
-     */
+    */
     public Optional<String> getMainClass() {
         return Optional.ofNullable(this.mainClass);
     }
     /**
      * The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
      * 
-     */
+    */
     public Optional<String> getMainJarFileUri() {
         return Optional.ofNullable(this.mainJarFileUri);
     }
     /**
      * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
      * 
-     */
+    */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }

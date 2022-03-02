@@ -247,6 +247,22 @@ public class GlobalSchedule extends io.pulumi.resources.CustomResource {
         return this.weeklyRecurrence;
     }
 
+    public interface BuilderApplicator {
+        public void apply(GlobalScheduleArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.devtestlab.GlobalScheduleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.devtestlab.GlobalScheduleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public GlobalSchedule(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

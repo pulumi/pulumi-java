@@ -48,28 +48,28 @@ public final class OSPolicyResourceResponse {
     /**
      * Exec resource
      * 
-     */
+    */
     public OSPolicyResourceExecResourceResponse getExec() {
         return this.exec;
     }
     /**
      * File resource
      * 
-     */
+    */
     public OSPolicyResourceFileResourceResponse getFile() {
         return this.file;
     }
     /**
      * Package resource
      * 
-     */
+    */
     public OSPolicyResourcePackageResourceResponse getPkg() {
         return this.pkg;
     }
     /**
      * Package repository resource
      * 
-     */
+    */
     public OSPolicyResourceRepositoryResourceResponse getRepository() {
         return this.repository;
     }

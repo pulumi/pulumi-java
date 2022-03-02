@@ -90,70 +90,70 @@ public final class VirtualDiskResponse {
     /**
      * Gets or sets the controller id.
      * 
-     */
+    */
     public Optional<Integer> getControllerKey() {
         return Optional.ofNullable(this.controllerKey);
     }
     /**
      * Gets or sets the device key value.
      * 
-     */
+    */
     public Optional<Integer> getDeviceKey() {
         return Optional.ofNullable(this.deviceKey);
     }
     /**
      * Gets or sets the device name.
      * 
-     */
+    */
     public Optional<String> getDeviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
      * Gets or sets the disk mode.
      * 
-     */
+    */
     public Optional<String> getDiskMode() {
         return Optional.ofNullable(this.diskMode);
     }
     /**
      * Gets or sets the disk object id.
      * 
-     */
+    */
     public String getDiskObjectId() {
         return this.diskObjectId;
     }
     /**
      * Gets or sets the disk total size.
      * 
-     */
+    */
     public Optional<Integer> getDiskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
     /**
      * Gets or sets the disk backing type.
      * 
-     */
+    */
     public Optional<String> getDiskType() {
         return Optional.ofNullable(this.diskType);
     }
     /**
      * Gets or sets the label of the virtual disk in vCenter.
      * 
-     */
+    */
     public String getLabel() {
         return this.label;
     }
     /**
      * Gets or sets the name of the virtual disk.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Gets or sets the unit number of the disk on the controller.
      * 
-     */
+    */
     public Optional<Integer> getUnitNumber() {
         return Optional.ofNullable(this.unitNumber);
     }

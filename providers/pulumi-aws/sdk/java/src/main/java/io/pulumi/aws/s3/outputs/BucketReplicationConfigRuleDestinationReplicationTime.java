@@ -32,14 +32,14 @@ public final class BucketReplicationConfigRuleDestinationReplicationTime {
     /**
      * The status of the Replication Time Control. Either `"Enabled"` or `"Disabled"`.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * A configuration block specifying the time by which replication should be complete for all objects and operations on objects documented below.
      * 
-     */
+    */
     public BucketReplicationConfigRuleDestinationReplicationTimeTime getTime() {
         return this.time;
     }

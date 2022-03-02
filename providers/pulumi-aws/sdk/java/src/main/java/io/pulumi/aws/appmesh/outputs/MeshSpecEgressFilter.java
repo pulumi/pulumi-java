@@ -27,7 +27,7 @@ public final class MeshSpecEgressFilter {
      * The egress filter type. By default, the type is `DROP_ALL`.
      * Valid values are `ALLOW_ALL` and `DROP_ALL`.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

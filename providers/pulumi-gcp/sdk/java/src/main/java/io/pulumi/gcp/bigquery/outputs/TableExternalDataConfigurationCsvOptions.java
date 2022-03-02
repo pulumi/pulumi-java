@@ -76,7 +76,7 @@ public final class TableExternalDataConfigurationCsvOptions {
      * Indicates if BigQuery should accept rows
      * that are missing trailing optional columns.
      * 
-     */
+    */
     public Optional<Boolean> getAllowJaggedRows() {
         return Optional.ofNullable(this.allowJaggedRows);
     }
@@ -85,7 +85,7 @@ public final class TableExternalDataConfigurationCsvOptions {
      * quoted data sections that contain newline characters in a CSV file.
      * The default value is false.
      * 
-     */
+    */
     public Optional<Boolean> getAllowQuotedNewlines() {
         return Optional.ofNullable(this.allowQuotedNewlines);
     }
@@ -93,14 +93,14 @@ public final class TableExternalDataConfigurationCsvOptions {
      * The character encoding of the data. The supported
      * values are UTF-8 or ISO-8859-1.
      * 
-     */
+    */
     public Optional<String> getEncoding() {
         return Optional.ofNullable(this.encoding);
     }
     /**
      * The separator for fields in a CSV file.
      * 
-     */
+    */
     public Optional<String> getFieldDelimiter() {
         return Optional.ofNullable(this.fieldDelimiter);
     }
@@ -113,7 +113,7 @@ public final class TableExternalDataConfigurationCsvOptions {
      * limitations with default values, this value is required to be
      * explicitly set.
      * 
-     */
+    */
     public String getQuote() {
         return this.quote;
     }
@@ -122,7 +122,7 @@ public final class TableExternalDataConfigurationCsvOptions {
      * that BigQuery will skip when reading the data. At least one of `range` or
      * `skip_leading_rows` must be set.
      * 
-     */
+    */
     public Optional<Integer> getSkipLeadingRows() {
         return Optional.ofNullable(this.skipLeadingRows);
     }

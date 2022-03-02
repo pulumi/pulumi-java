@@ -41,21 +41,21 @@ public final class GetImageUploadUrlForDataResult {
     /**
      * Content URL for the image blob.
      * 
-     */
+    */
     public Optional<String> getContentUrl() {
         return Optional.ofNullable(this.contentUrl);
     }
     /**
      * Whether image exists already.
      * 
-     */
+    */
     public Optional<Boolean> getImageExists() {
         return Optional.ofNullable(this.imageExists);
     }
     /**
      * Relative path of the image.
      * 
-     */
+    */
     public Optional<String> getRelativePath() {
         return Optional.ofNullable(this.relativePath);
     }

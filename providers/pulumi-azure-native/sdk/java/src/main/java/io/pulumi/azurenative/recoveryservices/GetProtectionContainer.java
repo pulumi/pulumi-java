@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProtectionContainer {
-/**
- * Base class for container with backup items. Containers with specific workloads are derived from this class.
+    private GetProtectionContainer() {}
+    public interface BuilderApplicator {
+        public void apply(GetProtectionContainerArgs.Builder a);
+    }
+    private static GetProtectionContainerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProtectionContainerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Base class for container with backup items. Containers with specific workloads are derived from this class.
  * API Version: 2021-02-01.
  * 
- *
- * Base class for container with backup items. Containers with specific workloads are derived from this class.
+     *
+     * Base class for container with backup items. Containers with specific workloads are derived from this class.
  * 
- */
+     */
+    public static CompletableFuture<GetProtectionContainerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Base class for container with backup items. Containers with specific workloads are derived from this class.
+     * API Version: 2021-02-01.
+     * 
+     *
+         * Base class for container with backup items. Containers with specific workloads are derived from this class.
+     * 
+     */
     public static CompletableFuture<GetProtectionContainerResult> invokeAsync(GetProtectionContainerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getProtectionContainer", TypeShape.of(GetProtectionContainerResult.class), args == null ? GetProtectionContainerArgs.Empty : args, Utilities.withVersion(options));
     }

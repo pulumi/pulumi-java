@@ -40,21 +40,21 @@ public final class CrawlerDeltaTarget {
     /**
      * The name of the connection to use to connect to the Delta table target.
      * 
-     */
+    */
     public String getConnectionName() {
         return this.connectionName;
     }
     /**
      * A list of the Amazon S3 paths to the Delta tables.
      * 
-     */
+    */
     public List<String> getDeltaTables() {
         return this.deltaTables;
     }
     /**
      * Specifies whether to write the manifest files to the Delta table path.
      * 
-     */
+    */
     public Boolean getWriteManifest() {
         return this.writeManifest;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLink {
-/**
- * The link resource format.
+    private GetLink() {}
+    public interface BuilderApplicator {
+        public void apply(GetLinkArgs.Builder a);
+    }
+    private static GetLinkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLinkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The link resource format.
  * API Version: 2017-04-26.
  * 
- *
- * The link resource format.
+     *
+     * The link resource format.
  * 
- */
+     */
+    public static CompletableFuture<GetLinkResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The link resource format.
+     * API Version: 2017-04-26.
+     * 
+     *
+         * The link resource format.
+     * 
+     */
     public static CompletableFuture<GetLinkResult> invokeAsync(GetLinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getLink", TypeShape.of(GetLinkResult.class), args == null ? GetLinkArgs.Empty : args, Utilities.withVersion(options));
     }

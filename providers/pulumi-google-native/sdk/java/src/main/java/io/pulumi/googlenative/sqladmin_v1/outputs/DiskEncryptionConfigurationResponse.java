@@ -31,14 +31,14 @@ public final class DiskEncryptionConfigurationResponse {
     /**
      * This is always `sql#diskEncryptionConfiguration`.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource name of KMS key for disk encryption
      * 
-     */
+    */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }

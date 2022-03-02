@@ -46,28 +46,28 @@ public final class ReverseSshConnectivityResponse {
     /**
      * The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
      * 
-     */
+    */
     public String getVm() {
         return this.vm;
     }
     /**
      * The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
      * 
-     */
+    */
     public String getVmIp() {
         return this.vmIp;
     }
     /**
      * The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
      * 
-     */
+    */
     public Integer getVmPort() {
         return this.vmPort;
     }
     /**
      * The name of the VPC to peer with the Cloud SQL private network.
      * 
-     */
+    */
     public String getVpc() {
         return this.vpc;
     }

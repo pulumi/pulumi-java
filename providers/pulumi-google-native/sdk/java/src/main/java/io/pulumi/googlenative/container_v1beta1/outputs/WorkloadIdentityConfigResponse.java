@@ -38,21 +38,21 @@ public final class WorkloadIdentityConfigResponse {
     /**
      * IAM Identity Namespace to attach all Kubernetes Service Accounts to.
      * 
-     */
+    */
     public String getIdentityNamespace() {
         return this.identityNamespace;
     }
     /**
      * identity provider is the third party identity provider.
      * 
-     */
+    */
     public String getIdentityProvider() {
         return this.identityProvider;
     }
     /**
      * The workload pool to attach all Kubernetes service accounts to.
      * 
-     */
+    */
     public String getWorkloadPool() {
         return this.workloadPool;
     }

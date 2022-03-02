@@ -36,7 +36,7 @@ public final class JobHttpTargetOidcToken {
      * Audience to be used when generating OIDC token. If not specified,
      * the URI specified in target will be used.
      * 
-     */
+    */
     public Optional<String> getAudience() {
         return Optional.ofNullable(this.audience);
     }
@@ -44,7 +44,7 @@ public final class JobHttpTargetOidcToken {
      * Service account email to be used for generating OAuth token.
      * The service account must be within the same project as the job.
      * 
-     */
+    */
     public String getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }

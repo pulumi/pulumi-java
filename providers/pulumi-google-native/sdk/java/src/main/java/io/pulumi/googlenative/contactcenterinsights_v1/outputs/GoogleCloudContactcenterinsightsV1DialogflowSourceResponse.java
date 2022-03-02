@@ -31,14 +31,14 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse {
     /**
      * Cloud Storage URI that points to a file that contains the conversation audio.
      * 
-     */
+    */
     public String getAudioUri() {
         return this.audioUri;
     }
     /**
      * The name of the Dialogflow conversation that this conversation resource is derived from. Format: projects/{project}/locations/{location}/conversations/{conversation}
      * 
-     */
+    */
     public String getDialogflowConversation() {
         return this.dialogflowConversation;
     }

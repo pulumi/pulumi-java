@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHostPool {
-/**
- * Represents a HostPool definition.
+    private GetHostPool() {}
+    public interface BuilderApplicator {
+        public void apply(GetHostPoolArgs.Builder a);
+    }
+    private static GetHostPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHostPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a HostPool definition.
  * API Version: 2021-02-01-preview.
  * 
- *
- * Represents a HostPool definition.
+     *
+     * Represents a HostPool definition.
  * 
- */
+     */
+    public static CompletableFuture<GetHostPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a HostPool definition.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Represents a HostPool definition.
+     * 
+     */
     public static CompletableFuture<GetHostPoolResult> invokeAsync(GetHostPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getHostPool", TypeShape.of(GetHostPoolResult.class), args == null ? GetHostPoolArgs.Empty : args, Utilities.withVersion(options));
     }

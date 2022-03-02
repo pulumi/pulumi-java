@@ -34,14 +34,14 @@ public final class BucketServerSideEncryptionConfigurationRule {
     /**
      * A single object for setting server-side encryption by default. (documented below)
      * 
-     */
+    */
     public BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault getApplyServerSideEncryptionByDefault() {
         return this.applyServerSideEncryptionByDefault;
     }
     /**
      * Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
      * 
-     */
+    */
     public Optional<Boolean> getBucketKeyEnabled() {
         return Optional.ofNullable(this.bucketKeyEnabled);
     }

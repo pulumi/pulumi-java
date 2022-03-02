@@ -42,21 +42,21 @@ public final class AppleResponse {
     /**
      * <code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The configuration settings of the login flow.
      * 
-     */
+    */
     public Optional<LoginScopesResponse> getLogin() {
         return Optional.ofNullable(this.login);
     }
     /**
      * The configuration settings of the Apple registration.
      * 
-     */
+    */
     public Optional<AppleRegistrationResponse> getRegistration() {
         return Optional.ofNullable(this.registration);
     }

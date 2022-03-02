@@ -54,35 +54,35 @@ public final class EndpointAuthenticationOption {
     /**
      * The ID of the Active Directory to be used for authentication if type is `directory-service-authentication`.
      * 
-     */
+    */
     public Optional<String> getActiveDirectoryId() {
         return Optional.ofNullable(this.activeDirectoryId);
     }
     /**
      * The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to `certificate-authentication`.
      * 
-     */
+    */
     public Optional<String> getRootCertificateChainArn() {
         return Optional.ofNullable(this.rootCertificateChainArn);
     }
     /**
      * The ARN of the IAM SAML identity provider if type is `federated-authentication`.
      * 
-     */
+    */
     public Optional<String> getSamlProviderArn() {
         return Optional.ofNullable(this.samlProviderArn);
     }
     /**
      * The ARN of the IAM SAML identity provider for the self service portal if type is `federated-authentication`.
      * 
-     */
+    */
     public Optional<String> getSelfServiceSamlProviderArn() {
         return Optional.ofNullable(this.selfServiceSamlProviderArn);
     }
     /**
      * The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, `directory-service-authentication` to use Active Directory authentication, or `federated-authentication` to use Federated Authentication via SAML 2.0.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

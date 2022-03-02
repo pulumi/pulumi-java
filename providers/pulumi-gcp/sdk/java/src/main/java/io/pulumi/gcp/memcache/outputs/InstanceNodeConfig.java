@@ -31,14 +31,14 @@ public final class InstanceNodeConfig {
     /**
      * Number of CPUs per node.
      * 
-     */
+    */
     public Integer getCpuCount() {
         return this.cpuCount;
     }
     /**
      * Memory size in Mebibytes for each memcache node.
      * 
-     */
+    */
     public Integer getMemorySizeMb() {
         return this.memorySizeMb;
     }

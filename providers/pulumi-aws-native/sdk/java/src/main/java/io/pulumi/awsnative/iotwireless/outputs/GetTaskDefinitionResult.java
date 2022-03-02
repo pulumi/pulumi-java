@@ -81,56 +81,56 @@ public final class GetTaskDefinitionResult {
     /**
      * TaskDefinition arn. Returned after successful create.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Whether to automatically create tasks using this task definition for all gateways with the specified current version. If false, the task must me created by calling CreateWirelessGatewayTask.
      * 
-     */
+    */
     public Optional<Boolean> getAutoCreateTasks() {
         return Optional.ofNullable(this.autoCreateTasks);
     }
     /**
      * The ID of the new wireless gateway task definition
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * The list of task definitions.
      * 
-     */
+    */
     public Optional<TaskDefinitionLoRaWANUpdateGatewayTaskEntry> getLoRaWANUpdateGatewayTaskEntry() {
         return Optional.ofNullable(this.loRaWANUpdateGatewayTaskEntry);
     }
     /**
      * The name of the new resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A list of key-value pairs that contain metadata for the destination.
      * 
-     */
+    */
     public List<TaskDefinitionTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A filter to list only the wireless gateway task definitions that use this task definition type
      * 
-     */
+    */
     public Optional<TaskDefinitionType> getTaskDefinitionType() {
         return Optional.ofNullable(this.taskDefinitionType);
     }
     /**
      * Information about the gateways to update.
      * 
-     */
+    */
     public Optional<TaskDefinitionUpdateWirelessGatewayTaskCreate> getUpdate() {
         return Optional.ofNullable(this.update);
     }

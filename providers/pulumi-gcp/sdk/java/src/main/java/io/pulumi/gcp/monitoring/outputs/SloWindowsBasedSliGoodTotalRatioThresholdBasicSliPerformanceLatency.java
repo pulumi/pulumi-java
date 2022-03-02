@@ -27,7 +27,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceL
      * Good service is defined to be the count of requests made to
      * this service that return in no more than threshold.
      * 
-     */
+    */
     public String getThreshold() {
         return this.threshold;
     }

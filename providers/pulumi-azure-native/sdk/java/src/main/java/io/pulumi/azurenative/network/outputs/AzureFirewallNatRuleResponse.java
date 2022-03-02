@@ -90,70 +90,70 @@ public final class AzureFirewallNatRuleResponse {
     /**
      * Description of the rule.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * List of destination IP addresses for this rule. Supports IP ranges, prefixes, and service tags.
      * 
-     */
+    */
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
     /**
      * List of destination ports.
      * 
-     */
+    */
     public List<String> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
     /**
      * Name of the NAT rule.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Array of AzureFirewallNetworkRuleProtocols applicable to this NAT rule.
      * 
-     */
+    */
     public List<String> getProtocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
     /**
      * List of source IP addresses for this rule.
      * 
-     */
+    */
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
     /**
      * List of source IpGroups for this rule.
      * 
-     */
+    */
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
     /**
      * The translated address for this NAT rule.
      * 
-     */
+    */
     public Optional<String> getTranslatedAddress() {
         return Optional.ofNullable(this.translatedAddress);
     }
     /**
      * The translated FQDN for this NAT rule.
      * 
-     */
+    */
     public Optional<String> getTranslatedFqdn() {
         return Optional.ofNullable(this.translatedFqdn);
     }
     /**
      * The translated port for this NAT rule.
      * 
-     */
+    */
     public Optional<String> getTranslatedPort() {
         return Optional.ofNullable(this.translatedPort);
     }

@@ -164,6 +164,22 @@ public class Variable extends io.pulumi.resources.CustomResource {
         return this.variableType;
     }
 
+    public interface BuilderApplicator {
+        public void apply(VariableArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.frauddetector.VariableArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.frauddetector.VariableArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Variable(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

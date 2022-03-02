@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPublishedBlueprint {
-/**
- * Represents a published blueprint.
+    private GetPublishedBlueprint() {}
+    public interface BuilderApplicator {
+        public void apply(GetPublishedBlueprintArgs.Builder a);
+    }
+    private static GetPublishedBlueprintArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPublishedBlueprintArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a published blueprint.
  * API Version: 2018-11-01-preview.
  * 
- *
- * Represents a published blueprint.
+     *
+     * Represents a published blueprint.
  * 
- */
+     */
+    public static CompletableFuture<GetPublishedBlueprintResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a published blueprint.
+     * API Version: 2018-11-01-preview.
+     * 
+     *
+         * Represents a published blueprint.
+     * 
+     */
     public static CompletableFuture<GetPublishedBlueprintResult> invokeAsync(GetPublishedBlueprintArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getPublishedBlueprint", TypeShape.of(GetPublishedBlueprintResult.class), args == null ? GetPublishedBlueprintArgs.Empty : args, Utilities.withVersion(options));
     }

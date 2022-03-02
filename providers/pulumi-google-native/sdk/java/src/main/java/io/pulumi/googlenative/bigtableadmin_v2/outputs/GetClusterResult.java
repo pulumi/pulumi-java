@@ -69,49 +69,49 @@ public final class GetClusterResult {
     /**
      * Configuration for this cluster.
      * 
-     */
+    */
     public ClusterConfigResponse getClusterConfig() {
         return this.clusterConfig;
     }
     /**
      * Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
      * 
-     */
+    */
     public String getDefaultStorageType() {
         return this.defaultStorageType;
     }
     /**
      * Immutable. The encryption configuration for CMEK-protected clusters.
      * 
-     */
+    */
     public EncryptionConfigResponse getEncryptionConfig() {
         return this.encryptionConfig;
     }
     /**
      * Immutable. The location where this cluster's nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
      * 
-     */
+    */
     public Integer getServeNodes() {
         return this.serveNodes;
     }
     /**
      * The current state of the cluster.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }

@@ -37,14 +37,14 @@ public final class DataSetOutputColumn {
     /**
      * <p>A description for a column.</p>
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * <p>A display name for the dataset.</p>
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

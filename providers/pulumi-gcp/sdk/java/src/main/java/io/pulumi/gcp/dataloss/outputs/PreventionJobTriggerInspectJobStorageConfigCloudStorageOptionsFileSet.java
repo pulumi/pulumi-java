@@ -40,7 +40,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * The regex-filtered set of files to scan.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet> getRegexFileSet() {
         return Optional.ofNullable(this.regexFileSet);
     }
@@ -51,7 +51,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is
      * equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }

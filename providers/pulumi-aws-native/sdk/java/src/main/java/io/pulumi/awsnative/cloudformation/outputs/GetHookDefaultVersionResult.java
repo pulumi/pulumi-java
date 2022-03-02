@@ -49,7 +49,7 @@ public final class GetHookDefaultVersionResult {
     /**
      * The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a HookDefaultVersion
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -58,21 +58,21 @@ public final class GetHookDefaultVersionResult {
      * 
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
-     */
+    */
     public Optional<String> getTypeName() {
         return Optional.ofNullable(this.typeName);
     }
     /**
      * The Amazon Resource Name (ARN) of the type version.
      * 
-     */
+    */
     public Optional<String> getTypeVersionArn() {
         return Optional.ofNullable(this.typeVersionArn);
     }
     /**
      * The ID of an existing version of the hook to set as the default.
      * 
-     */
+    */
     public Optional<String> getVersionId() {
         return Optional.ofNullable(this.versionId);
     }

@@ -38,21 +38,21 @@ public final class OwaspCrsExclusionEntryResponse {
     /**
      * The variable to be excluded.
      * 
-     */
+    */
     public String getMatchVariable() {
         return this.matchVariable;
     }
     /**
      * When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
      * 
-     */
+    */
     public String getSelector() {
         return this.selector;
     }
     /**
      * When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
      * 
-     */
+    */
     public String getSelectorMatchOperator() {
         return this.selectorMatchOperator;
     }

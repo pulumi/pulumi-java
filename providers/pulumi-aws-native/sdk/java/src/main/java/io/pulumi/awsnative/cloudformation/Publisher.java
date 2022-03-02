@@ -106,6 +106,22 @@ public class Publisher extends io.pulumi.resources.CustomResource {
         return this.publisherStatus;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PublisherArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.cloudformation.PublisherArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.cloudformation.PublisherArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Publisher(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

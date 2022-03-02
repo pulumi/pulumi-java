@@ -62,42 +62,42 @@ public final class ReportConfigFilterResponse {
     /**
      * The logical "AND" expression. Must have at least 2 items.
      * 
-     */
+    */
     public List<ReportConfigFilterResponse> getAnd() {
         return this.and == null ? List.of() : this.and;
     }
     /**
      * Has comparison expression for a dimension
      * 
-     */
+    */
     public Optional<ReportConfigComparisonExpressionResponse> getDimensions() {
         return Optional.ofNullable(this.dimensions);
     }
     /**
      * The logical "OR" expression. Must have at least 2 items.
      * 
-     */
+    */
     public List<ReportConfigFilterResponse> getOr() {
         return this.or == null ? List.of() : this.or;
     }
     /**
      * Has comparison expression for a tag key
      * 
-     */
+    */
     public Optional<ReportConfigComparisonExpressionResponse> getTagKey() {
         return Optional.ofNullable(this.tagKey);
     }
     /**
      * Has comparison expression for a tag value
      * 
-     */
+    */
     public Optional<ReportConfigComparisonExpressionResponse> getTagValue() {
         return Optional.ofNullable(this.tagValue);
     }
     /**
      * Has comparison expression for a tag
      * 
-     */
+    */
     public Optional<ReportConfigComparisonExpressionResponse> getTags() {
         return Optional.ofNullable(this.tags);
     }

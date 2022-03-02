@@ -31,14 +31,14 @@ public final class BucketObjectCustomerEncryptionResponse {
     /**
      * The encryption algorithm.
      * 
-     */
+    */
     public String getEncryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
     /**
      * SHA256 hash value of the encryption key.
      * 
-     */
+    */
     public String getKeySha256() {
         return this.keySha256;
     }

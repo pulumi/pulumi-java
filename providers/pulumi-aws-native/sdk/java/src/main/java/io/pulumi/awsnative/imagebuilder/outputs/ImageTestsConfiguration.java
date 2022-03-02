@@ -34,14 +34,14 @@ public final class ImageTestsConfiguration {
     /**
      * ImageTestsEnabled
      * 
-     */
+    */
     public Optional<Boolean> getImageTestsEnabled() {
         return Optional.ofNullable(this.imageTestsEnabled);
     }
     /**
      * TimeoutMinutes
      * 
-     */
+    */
     public Optional<Integer> getTimeoutMinutes() {
         return Optional.ofNullable(this.timeoutMinutes);
     }

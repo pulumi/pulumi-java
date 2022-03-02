@@ -23,7 +23,7 @@ public final class MachineLearningWorkspaceResponse {
     /**
      * Specifies the workspace ID of the machine learning workspace associated with the web service
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

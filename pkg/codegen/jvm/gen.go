@@ -484,7 +484,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		}
 	}
 
-	indent := "    "
+	const indent = "    "
 
 	if prop.Comment != "" || prop.DeprecationMessage != "" {
 		fprintf(w, "    /**\n")
@@ -493,7 +493,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		}
 
 		if prop.DeprecationMessage != "" {
-			fprintf(w, "     * @deprecated\n")
+			fprintf(w, "     * @Deprecated\n")
 			fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
 
 		}
@@ -924,7 +924,7 @@ func (pt *plainType) genOutputType(ctx *classFileContext) error {
 func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 	// generates a class for Outputs where pt.properties >= 250
 	w := ctx.writer
-	indent := ""
+	const indent = "    "
 
 	props := pt.properties
 
@@ -946,19 +946,19 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			false, // inputless overload
 		)
 		if prop.Comment != "" || prop.DeprecationMessage != "" {
-			fprintf(w, "%s    /**\n", indent)
+			fprintf(w, "    /**\n")
 			if prop.Comment != "" {
-				fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent+"    "))
+				fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent))
 			}
 			if prop.DeprecationMessage != "" {
-				fprintf(w, "%s     * @deprecated\n", indent)
-				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent+"    "))
+				fprintf(w, "     * @Deprecated\n")
+				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
 
 			}
-			fprintf(w, "%s     */\n", indent)
+			fprintf(w, "     */\n")
 		}
-		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent+"    ")
-		fprintf(w, "%s    private %s %s;\n", indent, fieldType.ToCode(ctx.imports), fieldName)
+		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
+		fprintf(w, "    private %s %s;\n", fieldType.ToCode(ctx.imports), fieldName)
 	}
 	if len(props) > 0 {
 		fprintf(w, "\n")
@@ -978,8 +978,8 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 
 	// Generate an appropriately-attributed constructor that will set this types' fields.
 	fprintf(w,
-		"%s    @%s.Constructor(%s)\n",
-		indent, ctx.ref(names.OutputCustomType), paramNamesStringBuilder.String())
+		"    @%s.Constructor(%s)\n",
+		ctx.ref(names.OutputCustomType), paramNamesStringBuilder.String())
 	// Generate empty constructor, not that the instance created
 	// with this constructor may not be valid if there are 'required' fields.
 	if len(props) > 0 {
@@ -996,17 +996,17 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 	// Generate getters
 	for _, prop := range props {
 		if prop.Comment != "" || prop.DeprecationMessage != "" {
-			fprintf(w, "%s    /**\n", indent)
+			fprintf(w, "    /**\n")
 			if prop.Comment != "" {
-				fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent+"    "))
+				fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent))
 			}
 
 			if prop.DeprecationMessage != "" {
-				fprintf(w, "%s     * @deprecated\n", indent)
-				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent+"    "))
+				fprintf(w, "     * @Deprecated\n")
+				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
 
 			}
-			fprintf(w, "%s     */\n", indent)
+			fprintf(w, "     */\n")
 		}
 		paramName := names.Ident(prop.Name)
 		getterName := names.Ident(prop.Name).AsProperty().Getter()
@@ -1051,9 +1051,9 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 			}
 		}
 
-		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent+"    ")
+		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
 		if err := getterTemplate.Execute(w, getterTemplateContext{
-			Indent:          "    ",
+			Indent:          indent,
 			GetterType:      getterType.ToCode(ctx.imports),
 			GetterName:      getterName,
 			ReturnStatement: returnStatement,
@@ -1105,7 +1105,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 
 	fprintf(w, "\n")
 	if err := builderTemplate.Execute(w, builderTemplateContext{
-		Indent:     "    ",
+		Indent:     indent,
 		Name:       "Builder",
 		IsFinal:    true,
 		IsJumbo:    true,
@@ -1119,19 +1119,19 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 	fprintf(w, "\n")
 
 	// Close the class.
-	fprintf(w, "%s}\n", indent)
+	fprintf(w, "}\n")
 	return nil
 }
 
 func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 	w := ctx.writer
-	indent := ""
+	const indent = "    "
 
 	props := pt.properties
 
 	// Open the class and annotate it appropriately.
-	fprintf(w, "%s@%s\n", indent, ctx.ref(names.OutputCustomType))
-	fprintf(w, "%spublic final class %s {\n", indent, pt.name)
+	fprintf(w, "@%s\n", ctx.ref(names.OutputCustomType))
+	fprintf(w, "public final class %s {\n", pt.name)
 
 	// Generate each output field.
 	for _, prop := range props {
@@ -1147,19 +1147,19 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			false, // inputless overload
 		)
 		if prop.Comment != "" || prop.DeprecationMessage != "" {
-			fprintf(w, "%s    /**\n", indent)
+			fprintf(w, "    /**\n")
 			if prop.Comment != "" {
-				fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent+"    "))
+				fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent))
 			}
 			if prop.DeprecationMessage != "" {
-				fprintf(w, "%s     * @deprecated\n", indent)
-				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent+"    "))
+				fprintf(w, "     * @Deprecated\n")
+				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
 
 			}
-			fprintf(w, "%s     */\n", indent)
+			fprintf(w, "     */\n")
 		}
 		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent+"    ")
-		fprintf(w, "%s    private final %s %s;\n", indent, fieldType.ToCode(ctx.imports), fieldName)
+		fprintf(w, "    private final %s %s;\n", fieldType.ToCode(ctx.imports), fieldName)
 	}
 	if len(props) > 0 {
 		fprintf(w, "\n")
@@ -1179,9 +1179,9 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 
 	// Generate an appropriately-attributed constructor that will set this types' fields.
 	fprintf(w,
-		"%s    @%s.Constructor(%s)\n",
-		indent, ctx.ref(names.OutputCustomType), paramNamesStringBuilder.String())
-	fprintf(w, "%s    private %s(", indent, pt.name)
+		"    @%s.Constructor(%s)\n",
+		ctx.ref(names.OutputCustomType), paramNamesStringBuilder.String())
+	fprintf(w, "    private %s(", pt.name)
 
 	// Generate the constructor parameters.
 	for i, prop := range props {
@@ -1210,7 +1210,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 		paramDef := fmt.Sprintf("%s %s%s",
 			paramType.ToCode(ctx.imports), paramName, terminator)
 		if len(props) > 1 {
-			paramDef = fmt.Sprintf("%s        %s", indent, paramDef)
+			paramDef = fmt.Sprintf("        %s", paramDef)
 		}
 		fprintf(w, "%s", paramDef)
 	}
@@ -1222,29 +1222,29 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 		paramName := names.Ident(prop.Name)
 		fieldName := names.Ident(pt.mod.propertyName(prop))
 		if prop.IsRequired() {
-			fprintf(w, "%s        this.%s = %s.requireNonNull(%s);\n",
-				indent, fieldName, ctx.ref(names.Objects), paramName)
+			fprintf(w, "        this.%s = %s.requireNonNull(%s);\n",
+				fieldName, ctx.ref(names.Objects), paramName)
 		} else {
-			fprintf(w, "%s        this.%s = %s;\n", indent, fieldName, paramName)
+			fprintf(w, "        this.%s = %s;\n", fieldName, paramName)
 		}
 	}
-	fprintf(w, "%s    }\n", indent)
+	fprintf(w, "    }\n")
 	fprintf(w, "\n")
 
 	// Generate getters
 	for _, prop := range props {
 		if prop.Comment != "" || prop.DeprecationMessage != "" {
-			fprintf(w, "%s    /**\n", indent)
+			fprintf(w, "    /**\n")
 			if prop.Comment != "" {
-				fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent+"    "))
+				fprintf(w, "%s\n", formatBlockComment(prop.Comment, indent))
 			}
 
 			if prop.DeprecationMessage != "" {
-				fprintf(w, "%s     * @deprecated\n", indent)
-				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent+"    "))
+				fprintf(w, "     * @Deprecated\n")
+				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, indent))
 
 			}
-			fprintf(w, "%s     */\n", indent)
+			fprintf(w, "    */\n")
 		}
 		paramName := names.Ident(prop.Name)
 		getterName := names.Ident(prop.Name).AsProperty().Getter()
@@ -1289,9 +1289,9 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			}
 		}
 
-		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent+"    ")
+		printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
 		if err := getterTemplate.Execute(w, getterTemplateContext{
-			Indent:          "    ",
+			Indent:          indent,
 			GetterType:      getterType.ToCode(ctx.imports),
 			GetterName:      getterName,
 			ReturnStatement: returnStatement,
@@ -1343,7 +1343,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 
 	fprintf(w, "\n")
 	if err := builderTemplate.Execute(w, builderTemplateContext{
-		Indent:     "    ",
+		Indent:     indent,
 		Name:       "Builder",
 		IsFinal:    true,
 		Fields:     builderFields,
@@ -1356,7 +1356,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 	fprintf(w, "\n")
 
 	// Close the class.
-	fprintf(w, "%s}\n", indent)
+	fprintf(w, "}\n")
 	return nil
 }
 
@@ -1485,7 +1485,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		}
 
 		if r.DeprecationMessage != "" {
-			fprintf(w, " * @deprecated\n")
+			fprintf(w, " * @Deprecated\n")
 			fprintf(w, "%s\n", formatBlockComment(r.DeprecationMessage, ""))
 
 		}
@@ -1541,7 +1541,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 			}
 
 			if prop.DeprecationMessage != "" {
-				fprintf(w, "     * @deprecated\n")
+				fprintf(w, "     * @Deprecated\n")
 				fprintf(w, "%s\n", formatBlockComment(prop.DeprecationMessage, "    "))
 
 			}
@@ -1616,6 +1616,30 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	if hasConstInputs {
 		argsOverride = "makeArgs(args)"
 	}
+
+	// Name+Args builder constructor
+
+	// define builder mutator
+	fprintf(w, "    public interface BuilderApplicator {\n")
+	fprintf(w, "        public void apply(%s.Builder a);\n", argsType)
+	fprintf(w, "    }\n")
+
+	// define args builder
+	fprintf(w, "    private static %s buildArgs(BuilderApplicator argsBuilder) {\n", argsFQN)
+	fprintf(w, "        final var builder = %s.builder();\n", argsFQN)
+	fprintf(w, "        argsBuilder.apply(builder);\n")
+	fprintf(w, "        return builder.build();\n")
+	fprintf(w, "    }\n")
+
+	// define constructor
+	fprintf(w, "    /**\n")
+	fprintf(w, "     *\n")
+	fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
+	fprintf(w, "     * @param argsBuilder A function that configures a passed builder.\n")
+	fprintf(w, "     */\n")
+	fprintf(w, "    public %s(String name, BuilderApplicator argsBuilder) {\n", className)
+	fprintf(w, "        this(name, buildArgs(argsBuilder), null);\n")
+	fprintf(w, "    }\n")
 
 	// Name only constructor
 	fprintf(w, "    /**\n")
@@ -1796,22 +1820,67 @@ func (mod *modContext) genFunction(ctx *classFileContext, fun *schema.Function, 
 	// Open the class we'll use for datasources.
 	fprintf(w, "public class %s {\n", className)
 
+	// [pulumi/pulumi-java#197]
+	fprintf(w, "    private %s() {}\n", className)
+
+	if argsParamDef != "" {
+		// Args builder
+		// define builder mutator
+		fprintf(w, "    public interface BuilderApplicator {\n")
+		fprintf(w, "        public void apply(%s.Builder a);\n", ctx.ref(argsFQN))
+		fprintf(w, "    }\n")
+
+		// define args builder
+		fprintf(w, "    private static %s buildArgs(BuilderApplicator argsBuilder) {\n", ctx.ref(argsFQN))
+		fprintf(w, "        final var builder = %s.builder();\n", ctx.ref(argsFQN))
+		fprintf(w, "        argsBuilder.apply(builder);\n")
+		fprintf(w, "        return builder.build();\n")
+		fprintf(w, "    }\n")
+
+		// Emit javadoc
+		if fun.Comment != "" || fun.DeprecationMessage != "" {
+			fprintf(w, "    /**\n")
+			fprintf(w, "    %s\n", formatBlockComment(fun.Comment, ""))
+			if fun.Inputs != nil && fun.Inputs.Comment != "" {
+				fprintf(w, "     *\n")
+				fprintf(w, "    %s\n", formatBlockComment(fun.Inputs.Comment, ""))
+			}
+			if fun.Outputs != nil && fun.Outputs.Comment != "" {
+				fprintf(w, "     *\n")
+				fprintf(w, "    %s\n", formatBlockComment(fun.Outputs.Comment, ""))
+			}
+			if fun.DeprecationMessage != "" {
+				fprintf(w, "     * @Deprecated\n")
+				fprintf(w, "    %s\n", formatBlockComment(fun.DeprecationMessage, ""))
+			}
+			fprintf(w, "     */\n")
+		}
+
+		fprintf(w, "    public static %s<%s> invokeAsync(BuilderApplicator argsBuilder, @%s %s options) {\n",
+			ctx.ref(names.CompletableFuture), typeParameter, ctx.ref(names.Nullable), ctx.ref(names.InvokeOptions))
+		fprintf(w, "        return invokeAsync(buildArgs(argsBuilder), %s.withVersion(options));\n", mod.utilitiesRef(ctx))
+		fprintf(w, "    }\n")
+
+	}
+
+	indent := "    "
+	// Emit javadoc
 	if fun.Comment != "" || fun.DeprecationMessage != "" {
-		fprintf(w, "/**\n")
-		fprintf(w, "%s\n", formatBlockComment(fun.Comment, ""))
+		fprintf(w, "    /**\n")
+		fprintf(w, "    %s\n", formatBlockComment(fun.Comment, indent))
 		if fun.Inputs != nil && fun.Inputs.Comment != "" {
-			fprintf(w, " *\n")
-			fprintf(w, "%s\n", formatBlockComment(fun.Inputs.Comment, ""))
+			fprintf(w, "     *\n")
+			fprintf(w, "    %s\n", formatBlockComment(fun.Inputs.Comment, indent))
 		}
 		if fun.Outputs != nil && fun.Outputs.Comment != "" {
-			fprintf(w, " *\n")
-			fprintf(w, "%s\n", formatBlockComment(fun.Outputs.Comment, ""))
+			fprintf(w, "     *\n")
+			fprintf(w, "    %s\n", formatBlockComment(fun.Outputs.Comment, indent))
 		}
 		if fun.DeprecationMessage != "" {
-			fprintf(w, " * @deprecated\n")
-			fprintf(w, "%s\n", formatBlockComment(fun.DeprecationMessage, ""))
+			fprintf(w, "     * @Deprecated\n")
+			fprintf(w, "    %s\n", formatBlockComment(fun.DeprecationMessage, indent))
 		}
-		fprintf(w, " */\n")
+		fprintf(w, "     */\n")
 	}
 
 	// Emit the datasource method.
@@ -1889,7 +1958,7 @@ func (mod *modContext) genEnum(ctx *classFileContext, qualifier string, enum *sc
 				}
 
 				if e.DeprecationMessage != "" {
-					fprintf(w, "%s * @deprecated\n", indent)
+					fprintf(w, "%s * @Deprecated\n", indent)
 					fprintf(w, "%s * %s\n", indent, e.DeprecationMessage)
 				}
 				fprintf(w, "%s */\n", indent)

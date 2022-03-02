@@ -54,14 +54,14 @@ public final class GuestPoliciesRecipeInstallStepFileCopy {
     /**
      * The id of the relevant artifact in the recipe.
      * 
-     */
+    */
     public String getArtifactId() {
         return this.artifactId;
     }
     /**
      * Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
      * 
-     */
+    */
     public String getDestination() {
         return this.destination;
     }
@@ -69,7 +69,7 @@ public final class GuestPoliciesRecipeInstallStepFileCopy {
      * Whether to allow this step to overwrite existing files.If this is false and the file already exists the file
      * is not overwritten and the step is considered a success. Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getOverwrite() {
         return Optional.ofNullable(this.overwrite);
     }
@@ -81,7 +81,7 @@ public final class GuestPoliciesRecipeInstallStepFileCopy {
      * Below are some examples of permissions and their associated values:
      * read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
      * 
-     */
+    */
     public Optional<String> getPermissions() {
         return Optional.ofNullable(this.permissions);
     }

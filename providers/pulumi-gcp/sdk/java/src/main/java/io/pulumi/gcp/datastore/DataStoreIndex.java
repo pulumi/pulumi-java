@@ -130,6 +130,22 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
         return this.properties;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DataStoreIndexArgs.Builder a);
+    }
+    private static io.pulumi.gcp.datastore.DataStoreIndexArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.datastore.DataStoreIndexArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DataStoreIndex(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

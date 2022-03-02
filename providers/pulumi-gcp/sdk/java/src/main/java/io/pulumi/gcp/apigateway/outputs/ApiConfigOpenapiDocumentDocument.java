@@ -31,14 +31,14 @@ public final class ApiConfigOpenapiDocumentDocument {
     /**
      * Base64 encoded content of the file.
      * 
-     */
+    */
     public String getContents() {
         return this.contents;
     }
     /**
      * The file path (full or relative path). This is typically the path of the file when it is uploaded.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }

@@ -12,6 +12,7 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegion {
+    private GetRegion() {}
     public static CompletableFuture<GetRegionResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:index:getRegion", TypeShape.of(GetRegionResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

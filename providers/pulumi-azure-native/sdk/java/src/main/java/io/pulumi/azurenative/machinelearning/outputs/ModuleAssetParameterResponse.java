@@ -42,21 +42,21 @@ public final class ModuleAssetParameterResponse {
     /**
      * Definitions for nested interface parameters if this is a complex module parameter.
      * 
-     */
+    */
     public Map<String,ModeValueInfoResponse> getModeValuesInfo() {
         return this.modeValuesInfo == null ? Map.of() : this.modeValuesInfo;
     }
     /**
      * Parameter name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Parameter type.
      * 
-     */
+    */
     public Optional<String> getParameterType() {
         return Optional.ofNullable(this.parameterType);
     }

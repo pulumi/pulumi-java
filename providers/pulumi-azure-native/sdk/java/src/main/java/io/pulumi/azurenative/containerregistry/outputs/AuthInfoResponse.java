@@ -55,35 +55,35 @@ public final class AuthInfoResponse {
     /**
      * Time in seconds that the token remains valid
      * 
-     */
+    */
     public Optional<Integer> getExpiresIn() {
         return Optional.ofNullable(this.expiresIn);
     }
     /**
      * The refresh token used to refresh the access token.
      * 
-     */
+    */
     public Optional<String> getRefreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
     /**
      * The scope of the access token.
      * 
-     */
+    */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * The access token used to access the source control provider.
      * 
-     */
+    */
     public String getToken() {
         return this.token;
     }
     /**
      * The type of Auth token.
      * 
-     */
+    */
     public String getTokenType() {
         return this.tokenType;
     }

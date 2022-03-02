@@ -100,77 +100,77 @@ public final class GetLoadBalancerBackendAddressPoolResult {
     /**
      * An array of references to IP addresses defined in network interfaces.
      * 
-     */
+    */
     public List<NetworkInterfaceIPConfigurationResponse> getBackendIPConfigurations() {
         return this.backendIPConfigurations;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * An array of backend addresses.
      * 
-     */
+    */
     public List<LoadBalancerBackendAddressResponse> getLoadBalancerBackendAddresses() {
         return this.loadBalancerBackendAddresses == null ? List.of() : this.loadBalancerBackendAddresses;
     }
     /**
      * An array of references to load balancing rules that use this backend address pool.
      * 
-     */
+    */
     public List<SubResourceResponse> getLoadBalancingRules() {
         return this.loadBalancingRules;
     }
     /**
      * The location of the backend address pool.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A reference to an outbound rule that uses this backend address pool.
      * 
-     */
+    */
     public SubResourceResponse getOutboundRule() {
         return this.outboundRule;
     }
     /**
      * An array of references to outbound rules that use this backend address pool.
      * 
-     */
+    */
     public List<SubResourceResponse> getOutboundRules() {
         return this.outboundRules;
     }
     /**
      * The provisioning state of the backend address pool resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

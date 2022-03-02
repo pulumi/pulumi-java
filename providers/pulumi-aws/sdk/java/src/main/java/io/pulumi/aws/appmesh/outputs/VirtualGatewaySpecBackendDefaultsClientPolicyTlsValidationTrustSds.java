@@ -23,7 +23,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
     /**
      * The name of the secret for a virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
      * 
-     */
+    */
     public String getSecretName() {
         return this.secretName;
     }

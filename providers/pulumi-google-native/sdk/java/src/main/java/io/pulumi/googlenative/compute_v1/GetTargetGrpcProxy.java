@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTargetGrpcProxy {
-/**
- * Returns the specified TargetGrpcProxy resource in the given scope.
+    private GetTargetGrpcProxy() {}
+    public interface BuilderApplicator {
+        public void apply(GetTargetGrpcProxyArgs.Builder a);
+    }
+    private static GetTargetGrpcProxyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTargetGrpcProxyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified TargetGrpcProxy resource in the given scope.
  * 
- */
+     */
+    public static CompletableFuture<GetTargetGrpcProxyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified TargetGrpcProxy resource in the given scope.
+     * 
+     */
     public static CompletableFuture<GetTargetGrpcProxyResult> invokeAsync(GetTargetGrpcProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getTargetGrpcProxy", TypeShape.of(GetTargetGrpcProxyResult.class), args == null ? GetTargetGrpcProxyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -34,14 +34,14 @@ public final class EncryptionPropertiesResponse {
     /**
      * Type of the key source.
      * 
-     */
+    */
     public Optional<String> getKeySource() {
         return Optional.ofNullable(this.keySource);
     }
     /**
      * Additional details when using Microsoft.KeyVault
      * 
-     */
+    */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }

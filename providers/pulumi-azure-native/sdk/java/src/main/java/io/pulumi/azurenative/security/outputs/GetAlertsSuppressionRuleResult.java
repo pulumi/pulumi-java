@@ -90,70 +90,70 @@ public final class GetAlertsSuppressionRuleResult {
     /**
      * Type of the alert to automatically suppress. For all alert types, use '*'
      * 
-     */
+    */
     public String getAlertType() {
         return this.alertType;
     }
     /**
      * Any comment regarding the rule
      * 
-     */
+    */
     public Optional<String> getComment() {
         return Optional.ofNullable(this.comment);
     }
     /**
      * Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
      * 
-     */
+    */
     public Optional<String> getExpirationDateUtc() {
         return Optional.ofNullable(this.expirationDateUtc);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The last time this rule was modified
      * 
-     */
+    */
     public String getLastModifiedUtc() {
         return this.lastModifiedUtc;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The reason for dismissing the alert
      * 
-     */
+    */
     public String getReason() {
         return this.reason;
     }
     /**
      * Possible states of the rule
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * The suppression conditions
      * 
-     */
+    */
     public Optional<SuppressionAlertsScopeResponse> getSuppressionAlertsScope() {
         return Optional.ofNullable(this.suppressionAlertsScope);
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

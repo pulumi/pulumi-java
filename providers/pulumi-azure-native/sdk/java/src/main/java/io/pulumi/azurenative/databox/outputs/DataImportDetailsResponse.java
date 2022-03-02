@@ -25,7 +25,7 @@ public final class DataImportDetailsResponse {
     /**
      * Account details of the data to be transferred
      * 
-     */
+    */
     public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> getAccountDetails() {
         return this.accountDetails;
     }

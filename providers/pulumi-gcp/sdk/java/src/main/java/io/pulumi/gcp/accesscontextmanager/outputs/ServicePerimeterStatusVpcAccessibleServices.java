@@ -38,7 +38,7 @@ public final class ServicePerimeterStatusVpcAccessibleServices {
      * The list of APIs usable within the Service Perimeter.
      * Must be empty unless `enableRestriction` is True.
      * 
-     */
+    */
     public List<String> getAllowedServices() {
         return this.allowedServices == null ? List.of() : this.allowedServices;
     }
@@ -46,7 +46,7 @@ public final class ServicePerimeterStatusVpcAccessibleServices {
      * Whether to restrict API calls within the Service Perimeter to the
      * list of APIs specified in 'allowedServices'.
      * 
-     */
+    */
     public Optional<Boolean> getEnableRestriction() {
         return Optional.ofNullable(this.enableRestriction);
     }

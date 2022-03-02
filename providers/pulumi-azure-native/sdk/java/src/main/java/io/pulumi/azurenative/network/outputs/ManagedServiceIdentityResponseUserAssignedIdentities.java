@@ -31,14 +31,14 @@ public final class ManagedServiceIdentityResponseUserAssignedIdentities {
     /**
      * The client id of user assigned identity.
      * 
-     */
+    */
     public String getClientId() {
         return this.clientId;
     }
     /**
      * The principal id of user assigned identity.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }

@@ -32,14 +32,14 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse {
     /**
      * The status of a reload attempt or the initial load.
      * 
-     */
+    */
     public GoogleRpcStatusResponse getStatus() {
         return this.status;
     }
     /**
      * The time of a reload attempt. This reload may have been triggered automatically or manually and may not have succeeded.
      * 
-     */
+    */
     public String getTime() {
         return this.time;
     }

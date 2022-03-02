@@ -31,14 +31,14 @@ public final class LicenseValidityDateFormat {
     /**
      * Validity begin date for the license.
      * 
-     */
+    */
     public String getBegin() {
         return this.begin;
     }
     /**
      * Validity begin date for the license.
      * 
-     */
+    */
     public String getEnd() {
         return this.end;
     }

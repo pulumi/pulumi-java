@@ -85,63 +85,63 @@ public final class GetGalleryResult {
     /**
      * The description of this Shared Image Gallery resource. This property is updatable.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Describes the gallery unique name.
      * 
-     */
+    */
     public Optional<GalleryIdentifierResponse> getIdentifier() {
         return Optional.ofNullable(this.identifier);
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state, which only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Profile for gallery sharing to subscription or tenant
      * 
-     */
+    */
     public Optional<SharingProfileResponse> getSharingProfile() {
         return Optional.ofNullable(this.sharingProfile);
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

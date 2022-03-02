@@ -40,21 +40,21 @@ public final class NetezzaPartitionSettingsResponse {
     /**
      * The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPartitionColumnName() {
         return Optional.ofNullable(this.partitionColumnName);
     }
     /**
      * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPartitionLowerBound() {
         return Optional.ofNullable(this.partitionLowerBound);
     }
     /**
      * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getPartitionUpperBound() {
         return Optional.ofNullable(this.partitionUpperBound);
     }

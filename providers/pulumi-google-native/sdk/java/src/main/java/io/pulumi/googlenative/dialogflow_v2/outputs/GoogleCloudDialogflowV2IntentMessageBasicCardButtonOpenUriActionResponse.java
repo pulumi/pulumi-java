@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
     /**
      * The HTTP or HTTPS scheme URI.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }

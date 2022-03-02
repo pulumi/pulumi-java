@@ -204,175 +204,175 @@ public final class GetRedisResult {
     /**
      * The keys of the Redis cache - not set if this object is not the response to Create or Update redis cache
      * 
-     */
+    */
     public RedisAccessKeysResponse getAccessKeys() {
         return this.accessKeys;
     }
     /**
      * Specifies whether the non-ssl Redis server port (6379) is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnableNonSslPort() {
         return Optional.ofNullable(this.enableNonSslPort);
     }
     /**
      * Redis host name.
      * 
-     */
+    */
     public String getHostName() {
         return this.hostName;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * List of the Redis instances associated with the cache
      * 
-     */
+    */
     public List<RedisInstanceDetailsResponse> getInstances() {
         return this.instances;
     }
     /**
      * List of the linked servers associated with the cache
      * 
-     */
+    */
     public List<RedisLinkedServerResponse> getLinkedServers() {
         return this.linkedServers;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Optional: requires clients to use a specified TLS version (or higher) to connect (e,g, '1.0', '1.1', '1.2')
      * 
-     */
+    */
     public Optional<String> getMinimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Redis non-SSL port.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * List of private endpoint connection associated with the specified redis cache
      * 
-     */
+    */
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Redis instance provisioning status.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access method. Default value is 'Enabled'
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.
      * 
-     */
+    */
     public Optional<RedisCommonPropertiesResponseRedisConfiguration> getRedisConfiguration() {
         return Optional.ofNullable(this.redisConfiguration);
     }
     /**
      * Redis version.
      * 
-     */
+    */
     public String getRedisVersion() {
         return this.redisVersion;
     }
     /**
      * The number of replicas to be created per master.
      * 
-     */
+    */
     public Optional<Integer> getReplicasPerMaster() {
         return Optional.ofNullable(this.replicasPerMaster);
     }
     /**
      * The number of shards to be created on a Premium Cluster Cache.
      * 
-     */
+    */
     public Optional<Integer> getShardCount() {
         return Optional.ofNullable(this.shardCount);
     }
     /**
      * The SKU of the Redis cache to deploy.
      * 
-     */
+    */
     public SkuResponse getSku() {
         return this.sku;
     }
     /**
      * Redis SSL port.
      * 
-     */
+    */
     public Integer getSslPort() {
         return this.sslPort;
     }
     /**
      * Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.
      * 
-     */
+    */
     public Optional<String> getStaticIP() {
         return Optional.ofNullable(this.staticIP);
     }
     /**
      * The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * A dictionary of tenant settings
      * 
-     */
+    */
     public Map<String,String> getTenantSettings() {
         return this.tenantSettings == null ? Map.of() : this.tenantSettings;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * A list of availability zones denoting where the resource needs to come from.
      * 
-     */
+    */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

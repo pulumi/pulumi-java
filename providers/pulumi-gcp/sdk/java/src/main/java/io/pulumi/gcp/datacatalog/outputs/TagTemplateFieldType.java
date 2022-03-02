@@ -40,7 +40,7 @@ public final class TagTemplateFieldType {
      * Exactly one of `primitive_type` or `enum_type` must be set
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<TagTemplateFieldTypeEnumType> getEnumType() {
         return Optional.ofNullable(this.enumType);
     }
@@ -49,7 +49,7 @@ public final class TagTemplateFieldType {
      * Exactly one of `primitive_type` or `enum_type` must be set
      * Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
      * 
-     */
+    */
     public Optional<String> getPrimitiveType() {
         return Optional.ofNullable(this.primitiveType);
     }

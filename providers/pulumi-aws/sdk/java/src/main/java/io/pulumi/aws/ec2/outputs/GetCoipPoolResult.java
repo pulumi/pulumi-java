@@ -54,7 +54,7 @@ public final class GetCoipPoolResult {
     /**
      * ARN of the COIP pool
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
@@ -64,7 +64,7 @@ public final class GetCoipPoolResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -74,7 +74,7 @@ public final class GetCoipPoolResult {
     /**
      * Set of CIDR blocks in pool
      * 
-     */
+    */
     public List<String> getPoolCidrs() {
         return this.poolCidrs;
     }

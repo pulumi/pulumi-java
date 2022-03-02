@@ -12,13 +12,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClusters {
-/**
- * Retrieve EKS Clusters list
- * 
- *
- * A collection of values returned by getClusters.
- * 
- */
+    private GetClusters() {}
+    /**
+         * Retrieve EKS Clusters list
+     * 
+     *
+         * A collection of values returned by getClusters.
+     * 
+     */
     public static CompletableFuture<GetClustersResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:eks/getClusters:getClusters", TypeShape.of(GetClustersResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

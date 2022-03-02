@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRecordSet {
-/**
- * Describes a DNS record set (a collection of DNS records with the same name and type).
+    private GetRecordSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetRecordSetArgs.Builder a);
+    }
+    private static GetRecordSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRecordSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a DNS record set (a collection of DNS records with the same name and type).
  * API Version: 2018-05-01.
  * 
- *
- * Describes a DNS record set (a collection of DNS records with the same name and type).
+     *
+     * Describes a DNS record set (a collection of DNS records with the same name and type).
  * 
- */
+     */
+    public static CompletableFuture<GetRecordSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a DNS record set (a collection of DNS records with the same name and type).
+     * API Version: 2018-05-01.
+     * 
+     *
+         * Describes a DNS record set (a collection of DNS records with the same name and type).
+     * 
+     */
     public static CompletableFuture<GetRecordSetResult> invokeAsync(GetRecordSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRecordSet", TypeShape.of(GetRecordSetResult.class), args == null ? GetRecordSetArgs.Empty : args, Utilities.withVersion(options));
     }

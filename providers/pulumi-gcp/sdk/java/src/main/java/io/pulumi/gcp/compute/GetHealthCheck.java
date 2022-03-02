@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHealthCheck {
-/**
- * Get information about a HealthCheck.
+    private GetHealthCheck() {}
+    public interface BuilderApplicator {
+        public void apply(GetHealthCheckArgs.Builder a);
+    }
+    private static GetHealthCheckArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHealthCheckArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Get information about a HealthCheck.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getHealthCheck.
+     *
+     * A collection of arguments for invoking getHealthCheck.
  * 
- *
- * A collection of values returned by getHealthCheck.
+     *
+     * A collection of values returned by getHealthCheck.
  * 
- */
+     */
+    public static CompletableFuture<GetHealthCheckResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Get information about a HealthCheck.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getHealthCheck.
+     * 
+     *
+         * A collection of values returned by getHealthCheck.
+     * 
+     */
     public static CompletableFuture<GetHealthCheckResult> invokeAsync(GetHealthCheckArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getHealthCheck:getHealthCheck", TypeShape.of(GetHealthCheckResult.class), args == null ? GetHealthCheckArgs.Empty : args, Utilities.withVersion(options));
     }

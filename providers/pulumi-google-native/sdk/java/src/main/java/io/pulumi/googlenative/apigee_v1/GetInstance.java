@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstance {
-/**
- * Gets the details for an Apigee runtime instance. **Note:** Not supported for Apigee hybrid.
+    private GetInstance() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceArgs.Builder a);
+    }
+    private static GetInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the details for an Apigee runtime instance. **Note:** Not supported for Apigee hybrid.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the details for an Apigee runtime instance. **Note:** Not supported for Apigee hybrid.
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> invokeAsync(GetInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getInstance", TypeShape.of(GetInstanceResult.class), args == null ? GetInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

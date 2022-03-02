@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceTypeOffering {
-/**
- * Information about single EC2 Instance Type Offering.
+    private GetInstanceTypeOffering() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceTypeOfferingArgs.Builder a);
+    }
+    private static GetInstanceTypeOfferingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceTypeOfferingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Information about single EC2 Instance Type Offering.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getInstanceTypeOffering.
+     *
+     * A collection of arguments for invoking getInstanceTypeOffering.
  * 
- *
- * A collection of values returned by getInstanceTypeOffering.
+     *
+     * A collection of values returned by getInstanceTypeOffering.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceTypeOfferingResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Information about single EC2 Instance Type Offering.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getInstanceTypeOffering.
+     * 
+     *
+         * A collection of values returned by getInstanceTypeOffering.
+     * 
+     */
     public static CompletableFuture<GetInstanceTypeOfferingResult> invokeAsync(@Nullable GetInstanceTypeOfferingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ec2/getInstanceTypeOffering:getInstanceTypeOffering", TypeShape.of(GetInstanceTypeOfferingResult.class), args == null ? GetInstanceTypeOfferingArgs.Empty : args, Utilities.withVersion(options));
     }

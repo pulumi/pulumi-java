@@ -23,7 +23,7 @@ public final class DistributionOriginGroupMember {
     /**
      * The unique identifier of the member origin
      * 
-     */
+    */
     public String getOriginId() {
         return this.originId;
     }

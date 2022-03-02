@@ -48,14 +48,14 @@ public final class VirtualNodeSpecListenerOutlierDetection {
     /**
      * The base amount of time for which a host is ejected.
      * 
-     */
+    */
     public VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration getBaseEjectionDuration() {
         return this.baseEjectionDuration;
     }
     /**
      * The time interval between ejection sweep analysis.
      * 
-     */
+    */
     public VirtualNodeSpecListenerOutlierDetectionInterval getInterval() {
         return this.interval;
     }
@@ -63,14 +63,14 @@ public final class VirtualNodeSpecListenerOutlierDetection {
      * Maximum percentage of hosts in load balancing pool for upstream service that can be ejected. Will eject at least one host regardless of the value.
      * Minimum value of `0`. Maximum value of `100`.
      * 
-     */
+    */
     public Integer getMaxEjectionPercent() {
         return this.maxEjectionPercent;
     }
     /**
      * Number of consecutive `5xx` errors required for ejection. Minimum value of `1`.
      * 
-     */
+    */
     public Integer getMaxServerErrors() {
         return this.maxServerErrors;
     }

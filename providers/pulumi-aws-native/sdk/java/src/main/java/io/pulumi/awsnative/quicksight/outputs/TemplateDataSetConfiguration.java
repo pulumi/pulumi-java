@@ -39,7 +39,7 @@ public final class TemplateDataSetConfiguration {
     /**
      * <p>A structure containing the list of column group schemas.</p>
      * 
-     */
+    */
     public List<TemplateColumnGroupSchema> getColumnGroupSchemaList() {
         return this.columnGroupSchemaList == null ? List.of() : this.columnGroupSchemaList;
     }
@@ -49,7 +49,7 @@ public final class TemplateDataSetConfiguration {
     /**
      * <p>Placeholder.</p>
      * 
-     */
+    */
     public Optional<String> getPlaceholder() {
         return Optional.ofNullable(this.placeholder);
     }

@@ -31,14 +31,14 @@ public final class EventConnectionAuthParametersApiKey {
     /**
      * Header Name.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Header Value. Created and stored in AWS Secrets Manager.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

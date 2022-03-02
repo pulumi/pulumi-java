@@ -24,7 +24,7 @@ public final class WebAclLoggingConfigurationRedactedFields {
     /**
      * Set of configuration blocks for fields to redact. Detailed below.
      * 
-     */
+    */
     public List<WebAclLoggingConfigurationRedactedFieldsFieldToMatch> getFieldToMatches() {
         return this.fieldToMatches;
     }

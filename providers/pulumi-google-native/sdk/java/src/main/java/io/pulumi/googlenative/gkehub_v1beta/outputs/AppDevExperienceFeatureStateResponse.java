@@ -23,7 +23,7 @@ public final class AppDevExperienceFeatureStateResponse {
     /**
      * Status of subcomponent that detects configured Service Mesh resources.
      * 
-     */
+    */
     public StatusResponse getNetworkingInstallSucceeded() {
         return this.networkingInstallSucceeded;
     }

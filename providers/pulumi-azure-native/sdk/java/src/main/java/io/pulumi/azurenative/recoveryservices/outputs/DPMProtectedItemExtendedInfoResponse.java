@@ -120,98 +120,98 @@ public final class DPMProtectedItemExtendedInfoResponse {
     /**
      * Used Disk storage in bytes.
      * 
-     */
+    */
     public Optional<String> getDiskStorageUsedInBytes() {
         return Optional.ofNullable(this.diskStorageUsedInBytes);
     }
     /**
      * To check if backup item is collocated.
      * 
-     */
+    */
     public Optional<Boolean> getIsCollocated() {
         return Optional.ofNullable(this.isCollocated);
     }
     /**
      * To check if backup item is cloud protected.
      * 
-     */
+    */
     public Optional<Boolean> getIsPresentOnCloud() {
         return Optional.ofNullable(this.isPresentOnCloud);
     }
     /**
      * Last backup status information on backup item.
      * 
-     */
+    */
     public Optional<String> getLastBackupStatus() {
         return Optional.ofNullable(this.lastBackupStatus);
     }
     /**
      * Last refresh time on backup item.
      * 
-     */
+    */
     public Optional<String> getLastRefreshedAt() {
         return Optional.ofNullable(this.lastRefreshedAt);
     }
     /**
      * Oldest cloud recovery point time.
      * 
-     */
+    */
     public Optional<String> getOldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
     /**
      * latest disk recovery point time.
      * 
-     */
+    */
     public Optional<String> getOnPremiseLatestRecoveryPoint() {
         return Optional.ofNullable(this.onPremiseLatestRecoveryPoint);
     }
     /**
      * Oldest disk recovery point time.
      * 
-     */
+    */
     public Optional<String> getOnPremiseOldestRecoveryPoint() {
         return Optional.ofNullable(this.onPremiseOldestRecoveryPoint);
     }
     /**
      * disk recovery point count.
      * 
-     */
+    */
     public Optional<Integer> getOnPremiseRecoveryPointCount() {
         return Optional.ofNullable(this.onPremiseRecoveryPointCount);
     }
     /**
      * Attribute to provide information on various DBs.
      * 
-     */
+    */
     public Map<String,String> getProtectableObjectLoadPath() {
         return this.protectableObjectLoadPath == null ? Map.of() : this.protectableObjectLoadPath;
     }
     /**
      * To check if backup item is disk protected.
      * 
-     */
+    */
     public Optional<Boolean> get$protected() {
         return Optional.ofNullable(this.$protected);
     }
     /**
      * Protection group name of the backup item.
      * 
-     */
+    */
     public Optional<String> getProtectionGroupName() {
         return Optional.ofNullable(this.protectionGroupName);
     }
     /**
      * cloud recovery point count.
      * 
-     */
+    */
     public Optional<Integer> getRecoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }
     /**
      * total Disk storage in bytes.
      * 
-     */
+    */
     public Optional<String> getTotalDiskStorageSizeInBytes() {
         return Optional.ofNullable(this.totalDiskStorageSizeInBytes);
     }

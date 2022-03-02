@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListShareSynchronizationDetails {
-/**
- * details of synchronization
+    private ListShareSynchronizationDetails() {}
+    public interface BuilderApplicator {
+        public void apply(ListShareSynchronizationDetailsArgs.Builder a);
+    }
+    private static ListShareSynchronizationDetailsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListShareSynchronizationDetailsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * details of synchronization
  * API Version: 2020-09-01.
  * 
- *
- * details of synchronization
+     *
+     * details of synchronization
  * 
- */
+     */
+    public static CompletableFuture<ListShareSynchronizationDetailsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * details of synchronization
+     * API Version: 2020-09-01.
+     * 
+     *
+         * details of synchronization
+     * 
+     */
     public static CompletableFuture<ListShareSynchronizationDetailsResult> invokeAsync(ListShareSynchronizationDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:listShareSynchronizationDetails", TypeShape.of(ListShareSynchronizationDetailsResult.class), args == null ? ListShareSynchronizationDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

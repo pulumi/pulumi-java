@@ -40,21 +40,21 @@ public final class JobTemplateExponentialRolloutRate {
     /**
      * The minimum number of things that will be notified of a pending job, per minute at the start of job rollout. This parameter allows you to define the initial rate of rollout.
      * 
-     */
+    */
     public Integer getBaseRatePerMinute() {
         return this.baseRatePerMinute;
     }
     /**
      * The exponential factor to increase the rate of rollout for a job.
      * 
-     */
+    */
     public Double getIncrementFactor() {
         return this.incrementFactor;
     }
     /**
      * The criteria to initiate the increase in rate of rollout for a job.
      * 
-     */
+    */
     public JobTemplateRateIncreaseCriteria getRateIncreaseCriteria() {
         return this.rateIncreaseCriteria;
     }

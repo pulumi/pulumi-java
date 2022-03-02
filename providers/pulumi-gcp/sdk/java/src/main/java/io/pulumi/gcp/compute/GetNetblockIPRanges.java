@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetblockIPRanges {
-/**
- * Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.
+    private GetNetblockIPRanges() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetblockIPRangesArgs.Builder a);
+    }
+    private static GetNetblockIPRangesArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetblockIPRangesArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getNetblockIPRanges.
+     *
+     * A collection of arguments for invoking getNetblockIPRanges.
  * 
- *
- * A collection of values returned by getNetblockIPRanges.
+     *
+     * A collection of values returned by getNetblockIPRanges.
  * 
- */
+     */
+    public static CompletableFuture<GetNetblockIPRangesResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getNetblockIPRanges.
+     * 
+     *
+         * A collection of values returned by getNetblockIPRanges.
+     * 
+     */
     public static CompletableFuture<GetNetblockIPRangesResult> invokeAsync(@Nullable GetNetblockIPRangesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("gcp:compute/getNetblockIPRanges:getNetblockIPRanges", TypeShape.of(GetNetblockIPRangesResult.class), args == null ? GetNetblockIPRangesArgs.Empty : args, Utilities.withVersion(options));
     }

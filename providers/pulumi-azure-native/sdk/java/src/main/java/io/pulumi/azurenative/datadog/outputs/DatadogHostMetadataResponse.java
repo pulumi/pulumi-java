@@ -34,7 +34,7 @@ public final class DatadogHostMetadataResponse {
     /**
      * The agent version.
      * 
-     */
+    */
     public Optional<String> getAgentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }

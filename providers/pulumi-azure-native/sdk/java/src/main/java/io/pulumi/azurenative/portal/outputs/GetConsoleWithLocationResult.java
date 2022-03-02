@@ -23,7 +23,7 @@ public final class GetConsoleWithLocationResult {
     /**
      * Cloud shell console properties.
      * 
-     */
+    */
     public ConsolePropertiesResponse getProperties() {
         return this.properties;
     }

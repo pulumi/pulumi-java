@@ -25,7 +25,7 @@ public final class HostedZoneConfig {
     /**
      * Any comments that you want to include about the hosted zone.
      * 
-     */
+    */
     public Optional<String> getComment() {
         return Optional.ofNullable(this.comment);
     }

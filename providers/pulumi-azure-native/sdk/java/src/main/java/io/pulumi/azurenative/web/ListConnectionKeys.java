@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListConnectionKeys {
-/**
- * API Version: 2015-08-01-preview.
+    private ListConnectionKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListConnectionKeysArgs.Builder a);
+    }
+    private static ListConnectionKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListConnectionKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2015-08-01-preview.
  * 
- */
+     */
+    public static CompletableFuture<ListConnectionKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2015-08-01-preview.
+     * 
+     */
     public static CompletableFuture<ListConnectionKeysResult> invokeAsync(ListConnectionKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listConnectionKeys", TypeShape.of(ListConnectionKeysResult.class), args == null ? ListConnectionKeysArgs.Empty : args, Utilities.withVersion(options));
     }

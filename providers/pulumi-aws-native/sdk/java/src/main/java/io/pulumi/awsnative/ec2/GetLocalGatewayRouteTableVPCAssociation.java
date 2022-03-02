@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocalGatewayRouteTableVPCAssociation {
-/**
- * Describes an association between a local gateway route table and a VPC.
+    private GetLocalGatewayRouteTableVPCAssociation() {}
+    public interface BuilderApplicator {
+        public void apply(GetLocalGatewayRouteTableVPCAssociationArgs.Builder a);
+    }
+    private static GetLocalGatewayRouteTableVPCAssociationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLocalGatewayRouteTableVPCAssociationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes an association between a local gateway route table and a VPC.
  * 
- */
+     */
+    public static CompletableFuture<GetLocalGatewayRouteTableVPCAssociationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes an association between a local gateway route table and a VPC.
+     * 
+     */
     public static CompletableFuture<GetLocalGatewayRouteTableVPCAssociationResult> invokeAsync(GetLocalGatewayRouteTableVPCAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getLocalGatewayRouteTableVPCAssociation", TypeShape.of(GetLocalGatewayRouteTableVPCAssociationResult.class), args == null ? GetLocalGatewayRouteTableVPCAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

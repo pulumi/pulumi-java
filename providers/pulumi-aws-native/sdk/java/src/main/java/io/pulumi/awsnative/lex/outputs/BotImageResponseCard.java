@@ -49,28 +49,28 @@ public final class BotImageResponseCard {
     /**
      * A list of buttons that should be displayed on the response card.
      * 
-     */
+    */
     public List<BotButton> getButtons() {
         return this.buttons == null ? List.of() : this.buttons;
     }
     /**
      * The URL of an image to display on the response card.
      * 
-     */
+    */
     public Optional<String> getImageUrl() {
         return Optional.ofNullable(this.imageUrl);
     }
     /**
      * The subtitle to display on the response card.
      * 
-     */
+    */
     public Optional<String> getSubtitle() {
         return Optional.ofNullable(this.subtitle);
     }
     /**
      * The title to display on the response card.
      * 
-     */
+    */
     public String getTitle() {
         return this.title;
     }

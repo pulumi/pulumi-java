@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerCollector {
-/**
- * API Version: 2019-10-01.
+    private GetServerCollector() {}
+    public interface BuilderApplicator {
+        public void apply(GetServerCollectorArgs.Builder a);
+    }
+    private static GetServerCollectorArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServerCollectorArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * API Version: 2019-10-01.
  * 
- */
+     */
+    public static CompletableFuture<GetServerCollectorResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * API Version: 2019-10-01.
+     * 
+     */
     public static CompletableFuture<GetServerCollectorResult> invokeAsync(GetServerCollectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getServerCollector", TypeShape.of(GetServerCollectorResult.class), args == null ? GetServerCollectorArgs.Empty : args, Utilities.withVersion(options));
     }

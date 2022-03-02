@@ -56,7 +56,7 @@ public final class BackendServiceConsistentHash {
      * This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<BackendServiceConsistentHashHttpCookie> getHttpCookie() {
         return Optional.ofNullable(this.httpCookie);
     }
@@ -64,7 +64,7 @@ public final class BackendServiceConsistentHash {
      * The hash based on the value of the specified header field.
      * This field is applicable if the sessionAffinity is set to HEADER_FIELD.
      * 
-     */
+    */
     public Optional<String> getHttpHeaderName() {
         return Optional.ofNullable(this.httpHeaderName);
     }
@@ -76,7 +76,7 @@ public final class BackendServiceConsistentHash {
      * virtual node.
      * Defaults to 1024.
      * 
-     */
+    */
     public Optional<Integer> getMinimumRingSize() {
         return Optional.ofNullable(this.minimumRingSize);
     }

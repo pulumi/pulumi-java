@@ -23,7 +23,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
     /**
      * The action setting that a log record must contain in order to meet the condition. Valid values: `ALLOW`, `BLOCK`, `COUNT`.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }

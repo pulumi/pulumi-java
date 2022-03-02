@@ -64,28 +64,28 @@ public final class GetLogGroupResult {
     /**
      * The ARN of the Cloudwatch log group
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The creation time of the log group, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.
      * 
-     */
+    */
     public Integer getCreationTime() {
         return this.creationTime;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The ARN of the KMS Key to use when encrypting log data.
      * 
-     */
+    */
     public String getKmsKeyId() {
         return this.kmsKeyId;
     }
@@ -95,14 +95,14 @@ public final class GetLogGroupResult {
     /**
      * The number of days log events retained in the specified log group.
      * 
-     */
+    */
     public Integer getRetentionInDays() {
         return this.retentionInDays;
     }
     /**
      * A map of tags to assign to the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

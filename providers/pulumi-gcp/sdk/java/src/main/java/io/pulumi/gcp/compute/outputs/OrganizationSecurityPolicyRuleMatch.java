@@ -46,14 +46,14 @@ public final class OrganizationSecurityPolicyRuleMatch {
      * The configuration options for matching the rule.
      * Structure is documented below.
      * 
-     */
+    */
     public OrganizationSecurityPolicyRuleMatchConfig getConfig() {
         return this.config;
     }
     /**
      * A description of the rule.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
@@ -63,7 +63,7 @@ public final class OrganizationSecurityPolicyRuleMatch {
      * Default value is `FIREWALL`.
      * Possible values are `FIREWALL`.
      * 
-     */
+    */
     public Optional<String> getVersionedExpr() {
         return Optional.ofNullable(this.versionedExpr);
     }

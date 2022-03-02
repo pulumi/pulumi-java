@@ -23,7 +23,7 @@ public final class MachineLearningServiceErrorResponse {
     /**
      * The error response.
      * 
-     */
+    */
     public ErrorResponseResponse getError() {
         return this.error;
     }

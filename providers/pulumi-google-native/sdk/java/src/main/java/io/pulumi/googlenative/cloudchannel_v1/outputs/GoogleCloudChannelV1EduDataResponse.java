@@ -38,21 +38,21 @@ public final class GoogleCloudChannelV1EduDataResponse {
     /**
      * Size of the institute.
      * 
-     */
+    */
     public String getInstituteSize() {
         return this.instituteSize;
     }
     /**
      * Designated institute type of customer.
      * 
-     */
+    */
     public String getInstituteType() {
         return this.instituteType;
     }
     /**
      * Web address for the edu customer's institution.
      * 
-     */
+    */
     public String getWebsite() {
         return this.website;
     }

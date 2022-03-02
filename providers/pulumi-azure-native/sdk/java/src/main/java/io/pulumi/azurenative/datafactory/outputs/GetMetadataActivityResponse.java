@@ -121,63 +121,63 @@ public final class GetMetadataActivityResponse {
     /**
      * GetMetadata activity dataset reference.
      * 
-     */
+    */
     public DatasetReferenceResponse getDataset() {
         return this.dataset;
     }
     /**
      * Activity depends on condition.
      * 
-     */
+    */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
      * Activity description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Fields of metadata to get from dataset.
      * 
-     */
+    */
     public List<Object> getFieldList() {
         return this.fieldList == null ? List.of() : this.fieldList;
     }
     /**
      * GetMetadata activity format settings.
      * 
-     */
+    */
     public Optional<Object> getFormatSettings() {
         return Optional.ofNullable(this.formatSettings);
     }
     /**
      * Linked service reference.
      * 
-     */
+    */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
      * Activity name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Activity policy.
      * 
-     */
+    */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
     /**
      * GetMetadata activity store settings.
      * 
-     */
+    */
     public Optional<Object> getStoreSettings() {
         return Optional.ofNullable(this.storeSettings);
     }
@@ -185,14 +185,14 @@ public final class GetMetadataActivityResponse {
      * Type of activity.
      * Expected value is 'GetMetadata'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Activity user properties.
      * 
-     */
+    */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

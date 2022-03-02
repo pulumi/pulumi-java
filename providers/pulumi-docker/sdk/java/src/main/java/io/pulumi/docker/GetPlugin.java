@@ -13,8 +13,17 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPlugin {
-/**
- * Reads the local Docker plugin. The plugin must be installed locally.
+    private GetPlugin() {}
+    public interface BuilderApplicator {
+        public void apply(GetPluginArgs.Builder a);
+    }
+    private static GetPluginArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPluginArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Reads the local Docker plugin. The plugin must be installed locally.
  * 
  * ## Example Usage
  * 
@@ -37,13 +46,47 @@ public class GetPlugin {
  * - **name** (String) The plugin name. If the tag is omitted, `:latest` is complemented to the attribute value.
  * - **plugin_reference** (String) The Docker Plugin Reference
  * 
- *
- * A collection of arguments for invoking getPlugin.
+     *
+     * A collection of arguments for invoking getPlugin.
  * 
- *
- * A collection of values returned by getPlugin.
+     *
+     * A collection of values returned by getPlugin.
  * 
- */
+     */
+    public static CompletableFuture<GetPluginResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Reads the local Docker plugin. The plugin must be installed locally.
+     * 
+     * ## Example Usage
+     * 
+     * ### With alias
+     * data "docker.Plugin" "by_alias" {
+     *   alias = "sample-volume-plugin:latest"
+     * }
+     * ## Schema
+     * 
+     * ### Optional
+     * 
+     * - **alias** (String) The alias of the Docker plugin. If the tag is omitted, `:latest` is complemented to the attribute value.
+     * - **id** (String) The ID of the plugin, which has precedence over the `alias` of both are given
+     * 
+     * ### Read-Only
+     * 
+     * - **enabled** (Boolean) If `true` the plugin is enabled
+     * - **env** (Set of String) The environment variables in the form of `KEY=VALUE`, e.g. `DEBUG=0`
+     * - **grant_all_permissions** (Boolean) If true, grant all permissions necessary to run the plugin
+     * - **name** (String) The plugin name. If the tag is omitted, `:latest` is complemented to the attribute value.
+     * - **plugin_reference** (String) The Docker Plugin Reference
+     * 
+     *
+         * A collection of arguments for invoking getPlugin.
+     * 
+     *
+         * A collection of values returned by getPlugin.
+     * 
+     */
     public static CompletableFuture<GetPluginResult> invokeAsync(@Nullable GetPluginArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("docker:index/getPlugin:getPlugin", TypeShape.of(GetPluginResult.class), args == null ? GetPluginArgs.Empty : args, Utilities.withVersion(options));
     }

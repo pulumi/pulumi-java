@@ -240,56 +240,56 @@ public final class GetHostPoolResult {
     /**
      * List of applicationGroup links.
      * 
-     */
+    */
     public List<String> getApplicationGroupReferences() {
         return this.applicationGroupReferences;
     }
     /**
      * Is cloud pc resource.
      * 
-     */
+    */
     public Boolean getCloudPcResource() {
         return this.cloudPcResource;
     }
     /**
      * Custom rdp property of HostPool.
      * 
-     */
+    */
     public Optional<String> getCustomRdpProperty() {
         return Optional.ofNullable(this.customRdpProperty);
     }
     /**
      * Description of HostPool.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Friendly name of HostPool.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * HostPool type for desktop.
      * 
-     */
+    */
     public String getHostPoolType() {
         return this.hostPoolType;
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -299,63 +299,63 @@ public final class GetHostPoolResult {
     /**
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The type of the load balancer.
      * 
-     */
+    */
     public String getLoadBalancerType() {
         return this.loadBalancerType;
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
      * 
-     */
+    */
     public Optional<String> getManagedBy() {
         return Optional.ofNullable(this.managedBy);
     }
     /**
      * The max session limit of HostPool.
      * 
-     */
+    */
     public Optional<Integer> getMaxSessionLimit() {
         return Optional.ofNullable(this.maxSessionLimit);
     }
     /**
      * The registration info of HostPool.
      * 
-     */
+    */
     public Optional<MigrationRequestPropertiesResponse> getMigrationRequest() {
         return Optional.ofNullable(this.migrationRequest);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * ObjectId of HostPool. (internal use)
      * 
-     */
+    */
     public String getObjectId() {
         return this.objectId;
     }
     /**
      * PersonalDesktopAssignment type for HostPool.
      * 
-     */
+    */
     public Optional<String> getPersonalDesktopAssignmentType() {
         return Optional.ofNullable(this.personalDesktopAssignmentType);
     }
@@ -365,21 +365,21 @@ public final class GetHostPoolResult {
     /**
      * The type of preferred application group type, default to Desktop Application Group
      * 
-     */
+    */
     public String getPreferredAppGroupType() {
         return this.preferredAppGroupType;
     }
     /**
      * The registration info of HostPool.
      * 
-     */
+    */
     public Optional<RegistrationInfoResponse> getRegistrationInfo() {
         return Optional.ofNullable(this.registrationInfo);
     }
     /**
      * The ring number of HostPool.
      * 
-     */
+    */
     public Optional<Integer> getRing() {
         return Optional.ofNullable(this.ring);
     }
@@ -389,63 +389,63 @@ public final class GetHostPoolResult {
     /**
      * ClientId for the registered Relying Party used to issue WVD SSO certificates.
      * 
-     */
+    */
     public Optional<String> getSsoClientId() {
         return Optional.ofNullable(this.ssoClientId);
     }
     /**
      * Path to Azure KeyVault storing the secret used for communication to ADFS.
      * 
-     */
+    */
     public Optional<String> getSsoClientSecretKeyVaultPath() {
         return Optional.ofNullable(this.ssoClientSecretKeyVaultPath);
     }
     /**
      * The type of single sign on Secret Type.
      * 
-     */
+    */
     public Optional<String> getSsoSecretType() {
         return Optional.ofNullable(this.ssoSecretType);
     }
     /**
      * URL to customer ADFS server for signing WVD SSO certificates.
      * 
-     */
+    */
     public Optional<String> getSsoadfsAuthority() {
         return Optional.ofNullable(this.ssoadfsAuthority);
     }
     /**
      * The flag to turn on/off StartVMOnConnect feature.
      * 
-     */
+    */
     public Optional<Boolean> getStartVMOnConnect() {
         return Optional.ofNullable(this.startVMOnConnect);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Is validation environment.
      * 
-     */
+    */
     public Optional<Boolean> getValidationEnvironment() {
         return Optional.ofNullable(this.validationEnvironment);
     }
     /**
      * VM template for sessionhosts configuration within hostpool.
      * 
-     */
+    */
     public Optional<String> getVmTemplate() {
         return Optional.ofNullable(this.vmTemplate);
     }

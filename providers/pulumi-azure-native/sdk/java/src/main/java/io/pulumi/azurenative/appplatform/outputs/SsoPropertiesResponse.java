@@ -48,28 +48,28 @@ public final class SsoPropertiesResponse {
     /**
      * The public identifier for the application
      * 
-     */
+    */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
      * The secret known only to the application and the authorization server
      * 
-     */
+    */
     public Optional<String> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
      * The URI of Issuer Identifier
      * 
-     */
+    */
     public Optional<String> getIssuerUri() {
         return Optional.ofNullable(this.issuerUri);
     }
     /**
      * It defines the specific actions applications can be allowed to do on a user's behalf
      * 
-     */
+    */
     public List<String> getScope() {
         return this.scope == null ? List.of() : this.scope;
     }

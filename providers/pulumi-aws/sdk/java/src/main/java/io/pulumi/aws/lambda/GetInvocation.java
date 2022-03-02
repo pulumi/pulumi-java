@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInvocation {
-/**
- * Use this data source to invoke custom lambda functions as data source.
+    private GetInvocation() {}
+    public interface BuilderApplicator {
+        public void apply(GetInvocationArgs.Builder a);
+    }
+    private static GetInvocationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInvocationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to invoke custom lambda functions as data source.
  * The lambda function is invoked with [RequestResponse](https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_RequestSyntax)
  * invocation type.
  * 
- *
- * A collection of arguments for invoking getInvocation.
+     *
+     * A collection of arguments for invoking getInvocation.
  * 
- *
- * A collection of values returned by getInvocation.
+     *
+     * A collection of values returned by getInvocation.
  * 
- */
+     */
+    public static CompletableFuture<GetInvocationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to invoke custom lambda functions as data source.
+     * The lambda function is invoked with [RequestResponse](https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_RequestSyntax)
+     * invocation type.
+     * 
+     *
+         * A collection of arguments for invoking getInvocation.
+     * 
+     *
+         * A collection of values returned by getInvocation.
+     * 
+     */
     public static CompletableFuture<GetInvocationResult> invokeAsync(GetInvocationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:lambda/getInvocation:getInvocation", TypeShape.of(GetInvocationResult.class), args == null ? GetInvocationArgs.Empty : args, Utilities.withVersion(options));
     }

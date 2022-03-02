@@ -39,14 +39,14 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
     /**
      * The RSA Parameter exponent
      * 
-     */
+    */
     public String getExponent() {
         return this.exponent;
     }
     /**
      * The RSA Parameter modulus
      * 
-     */
+    */
     public String getModulus() {
         return this.modulus;
     }
@@ -54,7 +54,7 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }

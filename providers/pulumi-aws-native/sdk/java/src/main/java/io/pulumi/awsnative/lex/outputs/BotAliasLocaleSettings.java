@@ -33,7 +33,7 @@ public final class BotAliasLocaleSettings {
     /**
      * Whether the Lambda code hook is enabled
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }

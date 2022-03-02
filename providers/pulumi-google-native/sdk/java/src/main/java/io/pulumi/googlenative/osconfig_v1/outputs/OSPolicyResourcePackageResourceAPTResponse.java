@@ -23,7 +23,7 @@ public final class OSPolicyResourcePackageResourceAPTResponse {
     /**
      * Package name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

@@ -64,21 +64,21 @@ public final class GetPeeringAttachmentResult {
     /**
      * Identifier of the peer AWS account
      * 
-     */
+    */
     public String getPeerAccountId() {
         return this.peerAccountId;
     }
     /**
      * Identifier of the peer AWS region
      * 
-     */
+    */
     public String getPeerRegion() {
         return this.peerRegion;
     }
     /**
      * Identifier of the peer EC2 Transit Gateway
      * 
-     */
+    */
     public String getPeerTransitGatewayId() {
         return this.peerTransitGatewayId;
     }
@@ -88,7 +88,7 @@ public final class GetPeeringAttachmentResult {
     /**
      * Identifier of the local EC2 Transit Gateway
      * 
-     */
+    */
     public String getTransitGatewayId() {
         return this.transitGatewayId;
     }

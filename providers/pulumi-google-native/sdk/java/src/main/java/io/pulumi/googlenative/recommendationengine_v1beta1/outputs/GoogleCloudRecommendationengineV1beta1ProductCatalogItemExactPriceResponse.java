@@ -31,14 +31,14 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
     /**
      * Optional. Display price of the product.
      * 
-     */
+    */
     public Double getDisplayPrice() {
         return this.displayPrice;
     }
     /**
      * Optional. Price of the product without any discount. If zero, by default set to be the 'displayPrice'.
      * 
-     */
+    */
     public Double getOriginalPrice() {
         return this.originalPrice;
     }

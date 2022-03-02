@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRemediationAtManagementGroup {
-/**
- * The remediation definition.
+    private GetRemediationAtManagementGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetRemediationAtManagementGroupArgs.Builder a);
+    }
+    private static GetRemediationAtManagementGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRemediationAtManagementGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The remediation definition.
  * API Version: 2019-07-01.
  * 
- *
- * The remediation definition.
+     *
+     * The remediation definition.
  * 
- */
+     */
+    public static CompletableFuture<GetRemediationAtManagementGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The remediation definition.
+     * API Version: 2019-07-01.
+     * 
+     *
+         * The remediation definition.
+     * 
+     */
     public static CompletableFuture<GetRemediationAtManagementGroupResult> invokeAsync(GetRemediationAtManagementGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:policyinsights:getRemediationAtManagementGroup", TypeShape.of(GetRemediationAtManagementGroupResult.class), args == null ? GetRemediationAtManagementGroupArgs.Empty : args, Utilities.withVersion(options));
     }

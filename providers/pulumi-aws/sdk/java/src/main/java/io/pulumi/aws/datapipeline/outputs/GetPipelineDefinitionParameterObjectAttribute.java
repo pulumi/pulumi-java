@@ -31,14 +31,14 @@ public final class GetPipelineDefinitionParameterObjectAttribute {
     /**
      * Field identifier.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Field value, expressed as a String.
      * 
-     */
+    */
     public String getStringValue() {
         return this.stringValue;
     }

@@ -25,7 +25,7 @@ public final class SkuResponse {
     /**
      * Gets or set the SKU.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

@@ -23,7 +23,7 @@ public final class NotificationRateLimitResponse {
     /**
      * Not more than one notification per period.
      * 
-     */
+    */
     public String getPeriod() {
         return this.period;
     }

@@ -38,21 +38,21 @@ public final class ModelReferenceResponse {
     /**
      * [Required] The ID of the dataset containing this model.
      * 
-     */
+    */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
      * 
-     */
+    */
     public String getModelId() {
         return this.modelId;
     }
     /**
      * [Required] The ID of the project containing this model.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }

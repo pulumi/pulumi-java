@@ -38,7 +38,7 @@ public final class AuthorityKeySpec {
      * experience. All managed keys will be have their ProtectionLevel as HSM.
      * Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `RSA_PSS_3072_SHA256`, `RSA_PSS_4096_SHA256`, `RSA_PKCS1_2048_SHA256`, `RSA_PKCS1_3072_SHA256`, `RSA_PKCS1_4096_SHA256`, `EC_P256_SHA256`, and `EC_P384_SHA384`.
      * 
-     */
+    */
     public Optional<String> getAlgorithm() {
         return Optional.ofNullable(this.algorithm);
     }
@@ -46,7 +46,7 @@ public final class AuthorityKeySpec {
      * The resource name for an existing Cloud KMS CryptoKeyVersion in the format
      * `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
      * 
-     */
+    */
     public Optional<String> getCloudKmsKeyVersion() {
         return Optional.ofNullable(this.cloudKmsKeyVersion);
     }

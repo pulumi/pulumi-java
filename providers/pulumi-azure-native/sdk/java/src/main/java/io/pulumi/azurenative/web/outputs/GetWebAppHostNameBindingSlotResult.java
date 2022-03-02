@@ -110,91 +110,91 @@ public final class GetWebAppHostNameBindingSlotResult {
     /**
      * Azure resource name.
      * 
-     */
+    */
     public Optional<String> getAzureResourceName() {
         return Optional.ofNullable(this.azureResourceName);
     }
     /**
      * Azure resource type.
      * 
-     */
+    */
     public Optional<String> getAzureResourceType() {
         return Optional.ofNullable(this.azureResourceType);
     }
     /**
      * Custom DNS record type.
      * 
-     */
+    */
     public Optional<String> getCustomHostNameDnsRecordType() {
         return Optional.ofNullable(this.customHostNameDnsRecordType);
     }
     /**
      * Fully qualified ARM domain resource URI.
      * 
-     */
+    */
     public Optional<String> getDomainId() {
         return Optional.ofNullable(this.domainId);
     }
     /**
      * Hostname type.
      * 
-     */
+    */
     public Optional<String> getHostNameType() {
         return Optional.ofNullable(this.hostNameType);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * App Service app name.
      * 
-     */
+    */
     public Optional<String> getSiteName() {
         return Optional.ofNullable(this.siteName);
     }
     /**
      * SSL type
      * 
-     */
+    */
     public Optional<String> getSslState() {
         return Optional.ofNullable(this.sslState);
     }
     /**
      * SSL certificate thumbprint
      * 
-     */
+    */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Virtual IP address assigned to the hostname if IP based SSL is enabled.
      * 
-     */
+    */
     public String getVirtualIP() {
         return this.virtualIP;
     }

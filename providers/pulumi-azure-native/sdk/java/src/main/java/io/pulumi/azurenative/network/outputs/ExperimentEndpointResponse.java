@@ -33,14 +33,14 @@ public final class ExperimentEndpointResponse {
     /**
      * The endpoint URL
      * 
-     */
+    */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
     /**
      * The name of the endpoint
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

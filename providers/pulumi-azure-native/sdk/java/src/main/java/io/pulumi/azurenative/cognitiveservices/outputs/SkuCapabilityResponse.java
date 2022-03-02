@@ -33,14 +33,14 @@ public final class SkuCapabilityResponse {
     /**
      * The name of the SkuCapability.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value of the SkuCapability.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

@@ -44,7 +44,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      * Must have ValueType = DISTRIBUTION and
      * MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-     */
+    */
     public String getDistributionFilter() {
         return this.distributionFilter;
     }
@@ -57,7 +57,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      * `range.min <= X <= range.max` for a good window.
      * Structure is documented below.
      * 
-     */
+    */
     public SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange getRange() {
         return this.range;
     }

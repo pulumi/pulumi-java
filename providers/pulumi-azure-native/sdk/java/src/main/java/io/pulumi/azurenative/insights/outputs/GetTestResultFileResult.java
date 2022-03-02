@@ -33,14 +33,14 @@ public final class GetTestResultFileResult {
     /**
      * File contents.
      * 
-     */
+    */
     public Optional<String> getData() {
         return Optional.ofNullable(this.data);
     }
     /**
      * The URI that can be used to request the next section of the result file in the event the file is too large for a single request.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }

@@ -23,7 +23,7 @@ public final class ConfidentialNodesResponse {
     /**
      * Whether Confidential Nodes feature is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }

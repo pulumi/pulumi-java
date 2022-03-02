@@ -31,14 +31,14 @@ public final class SqlActiveDirectoryConfigResponse {
     /**
      * The name of the domain (e.g., mydomain.com).
      * 
-     */
+    */
     public String getDomain() {
         return this.domain;
     }
     /**
      * This is always sql#activeDirectoryConfig.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSourceControl {
-/**
- * Definition of the source control.
+    private GetSourceControl() {}
+    public interface BuilderApplicator {
+        public void apply(GetSourceControlArgs.Builder a);
+    }
+    private static GetSourceControlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSourceControlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Definition of the source control.
  * API Version: 2019-06-01.
  * 
- *
- * Definition of the source control.
+     *
+     * Definition of the source control.
  * 
- */
+     */
+    public static CompletableFuture<GetSourceControlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Definition of the source control.
+     * API Version: 2019-06-01.
+     * 
+     *
+         * Definition of the source control.
+     * 
+     */
     public static CompletableFuture<GetSourceControlResult> invokeAsync(GetSourceControlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getSourceControl", TypeShape.of(GetSourceControlResult.class), args == null ? GetSourceControlArgs.Empty : args, Utilities.withVersion(options));
     }

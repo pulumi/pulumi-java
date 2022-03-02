@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConsentArtifact {
-/**
- * Gets the specified Consent artifact.
+    private GetConsentArtifact() {}
+    public interface BuilderApplicator {
+        public void apply(GetConsentArtifactArgs.Builder a);
+    }
+    private static GetConsentArtifactArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConsentArtifactArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified Consent artifact.
  * 
- */
+     */
+    public static CompletableFuture<GetConsentArtifactResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified Consent artifact.
+     * 
+     */
     public static CompletableFuture<GetConsentArtifactResult> invokeAsync(GetConsentArtifactArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1:getConsentArtifact", TypeShape.of(GetConsentArtifactResult.class), args == null ? GetConsentArtifactArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -83,63 +83,63 @@ public final class GetApplicationTypeVersionResult {
     /**
      * The URL to the application package
      * 
-     */
+    */
     public String getAppPackageUrl() {
         return this.appPackageUrl;
     }
     /**
      * List of application type parameters that can be overridden when creating or updating the application.
      * 
-     */
+    */
     public Map<String,String> getDefaultParameterList() {
         return this.defaultParameterList;
     }
     /**
      * Azure resource etag.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Azure resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * It will be deprecated in New API, resource location depends on the parent resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Azure resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The current deployment or provisioning state, which only appears in the response
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Azure resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Azure resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

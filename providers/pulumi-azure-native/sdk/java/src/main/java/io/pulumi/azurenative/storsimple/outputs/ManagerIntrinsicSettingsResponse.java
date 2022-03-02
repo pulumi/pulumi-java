@@ -23,7 +23,7 @@ public final class ManagerIntrinsicSettingsResponse {
     /**
      * The type of StorSimple Manager.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

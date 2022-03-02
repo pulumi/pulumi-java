@@ -45,7 +45,7 @@ public final class NetworkPolicyPeer {
     /**
      * IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be.
      * 
-     */
+    */
     public Optional<IPBlock> getIpBlock() {
         return Optional.ofNullable(this.ipBlock);
     }
@@ -54,7 +54,7 @@ public final class NetworkPolicyPeer {
      * 
      * If PodSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects all Pods in the Namespaces selected by NamespaceSelector.
      * 
-     */
+    */
     public Optional<LabelSelector> getNamespaceSelector() {
         return Optional.ofNullable(this.namespaceSelector);
     }
@@ -63,7 +63,7 @@ public final class NetworkPolicyPeer {
      * 
      * If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects the Pods matching PodSelector in the policy's own Namespace.
      * 
-     */
+    */
     public Optional<LabelSelector> getPodSelector() {
         return Optional.ofNullable(this.podSelector);
     }

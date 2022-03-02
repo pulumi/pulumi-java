@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse {
     /**
      * The id of the matched intent. Can be used to retrieve the corresponding intent information.
      * 
-     */
+    */
     public String getIntentUniqueId() {
         return this.intentUniqueId;
     }

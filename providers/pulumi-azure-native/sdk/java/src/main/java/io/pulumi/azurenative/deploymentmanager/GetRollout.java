@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRollout {
-/**
- * Defines the PUT rollout request body.
+    private GetRollout() {}
+    public interface BuilderApplicator {
+        public void apply(GetRolloutArgs.Builder a);
+    }
+    private static GetRolloutArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRolloutArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Defines the PUT rollout request body.
  * API Version: 2019-11-01-preview.
  * 
- *
- * Defines the rollout.
+     *
+     * Defines the rollout.
  * 
- */
+     */
+    public static CompletableFuture<GetRolloutResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Defines the PUT rollout request body.
+     * API Version: 2019-11-01-preview.
+     * 
+     *
+         * Defines the rollout.
+     * 
+     */
     public static CompletableFuture<GetRolloutResult> invokeAsync(GetRolloutArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getRollout", TypeShape.of(GetRolloutResult.class), args == null ? GetRolloutArgs.Empty : args, Utilities.withVersion(options));
     }

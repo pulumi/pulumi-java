@@ -46,7 +46,7 @@ public final class ClusterResourceUsageExportConfig {
     /**
      * Parameters for using BigQuery as the destination of resource usage export.
      * 
-     */
+    */
     public ClusterResourceUsageExportConfigBigqueryDestination getBigqueryDestination() {
         return this.bigqueryDestination;
     }
@@ -54,7 +54,7 @@ public final class ClusterResourceUsageExportConfig {
      * Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created
      * in the cluster to meter network egress traffic.
      * 
-     */
+    */
     public Optional<Boolean> getEnableNetworkEgressMetering() {
         return Optional.ofNullable(this.enableNetworkEgressMetering);
     }
@@ -65,7 +65,7 @@ public final class ClusterResourceUsageExportConfig {
      * resulting table can be joined with the resource usage table or with BigQuery
      * billing export. Defaults to `true`.
      * 
-     */
+    */
     public Optional<Boolean> getEnableResourceConsumptionMetering() {
         return Optional.ofNullable(this.enableResourceConsumptionMetering);
     }

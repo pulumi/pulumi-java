@@ -241,7 +241,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
     /**
      * Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`. Use the argument `instance_interruption_behavior` instead.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the parameter "instance_interruption_behavior" instead.
      * 
      */

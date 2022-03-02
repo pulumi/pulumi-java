@@ -32,14 +32,14 @@ public final class UserPoolAccountRecoverySettingRecoveryMechanism {
     /**
      * Name of the attribute.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Positive integer specifying priority of a method with 1 being the highest priority.
      * 
-     */
+    */
     public Integer getPriority() {
         return this.priority;
     }

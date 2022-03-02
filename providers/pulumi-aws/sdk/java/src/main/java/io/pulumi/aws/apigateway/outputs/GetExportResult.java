@@ -66,21 +66,21 @@ public final class GetExportResult {
     /**
      * The API Spec.
      * 
-     */
+    */
     public String getBody() {
         return this.body;
     }
     /**
      * The content-disposition header value in the HTTP response.
      * 
-     */
+    */
     public String getContentDisposition() {
         return this.contentDisposition;
     }
     /**
      * The content-type header value in the HTTP response.
      * 
-     */
+    */
     public String getContentType() {
         return this.contentType;
     }
@@ -90,7 +90,7 @@ public final class GetExportResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

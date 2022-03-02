@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVCenter {
-/**
- * Defines the vCenter.
+    private GetVCenter() {}
+    public interface BuilderApplicator {
+        public void apply(GetVCenterArgs.Builder a);
+    }
+    private static GetVCenterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVCenterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Defines the vCenter.
  * API Version: 2020-10-01-preview.
  * 
- *
- * Defines the vCenter.
+     *
+     * Defines the vCenter.
  * 
- */
+     */
+    public static CompletableFuture<GetVCenterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Defines the vCenter.
+     * API Version: 2020-10-01-preview.
+     * 
+     *
+         * Defines the vCenter.
+     * 
+     */
     public static CompletableFuture<GetVCenterResult> invokeAsync(GetVCenterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getVCenter", TypeShape.of(GetVCenterResult.class), args == null ? GetVCenterArgs.Empty : args, Utilities.withVersion(options));
     }

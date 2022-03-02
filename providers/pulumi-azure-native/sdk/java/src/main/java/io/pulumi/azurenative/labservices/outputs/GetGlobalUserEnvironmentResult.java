@@ -23,7 +23,7 @@ public final class GetGlobalUserEnvironmentResult {
     /**
      * Details of the environment
      * 
-     */
+    */
     public EnvironmentDetailsResponse getEnvironment() {
         return this.environment;
     }

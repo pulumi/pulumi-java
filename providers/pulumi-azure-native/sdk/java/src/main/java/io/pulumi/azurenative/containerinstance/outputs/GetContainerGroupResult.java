@@ -175,105 +175,105 @@ public final class GetContainerGroupResult {
     /**
      * The containers within the container group.
      * 
-     */
+    */
     public List<ContainerResponse> getContainers() {
         return this.containers;
     }
     /**
      * The diagnostic information for a container group.
      * 
-     */
+    */
     public Optional<ContainerGroupDiagnosticsResponse> getDiagnostics() {
         return Optional.ofNullable(this.diagnostics);
     }
     /**
      * The DNS config information for a container group.
      * 
-     */
+    */
     public Optional<DnsConfigurationResponse> getDnsConfig() {
         return Optional.ofNullable(this.dnsConfig);
     }
     /**
      * The encryption properties for a container group.
      * 
-     */
+    */
     public Optional<EncryptionPropertiesResponse> getEncryptionProperties() {
         return Optional.ofNullable(this.encryptionProperties);
     }
     /**
      * The resource id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The identity of the container group, if configured.
      * 
-     */
+    */
     public Optional<ContainerGroupIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The image registry credentials by which the container group is created from.
      * 
-     */
+    */
     public List<ImageRegistryCredentialResponse> getImageRegistryCredentials() {
         return this.imageRegistryCredentials == null ? List.of() : this.imageRegistryCredentials;
     }
     /**
      * The init containers for a container group.
      * 
-     */
+    */
     public List<InitContainerDefinitionResponse> getInitContainers() {
         return this.initContainers == null ? List.of() : this.initContainers;
     }
     /**
      * The instance view of the container group. Only valid in response.
      * 
-     */
+    */
     public ContainerGroupResponseInstanceView getInstanceView() {
         return this.instanceView;
     }
     /**
      * The IP address type of the container group.
      * 
-     */
+    */
     public Optional<IpAddressResponse> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The network profile information for a container group.
      * 
-     */
+    */
     public Optional<ContainerGroupNetworkProfileResponse> getNetworkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * The operating system type required by the containers in the container group.
      * 
-     */
+    */
     public String getOsType() {
         return this.osType;
     }
     /**
      * The provisioning state of the container group. This only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
@@ -283,35 +283,35 @@ public final class GetContainerGroupResult {
      * - `OnFailure` Restart on failure
      * - `Never` Never restart
      * 
-     */
+    */
     public Optional<String> getRestartPolicy() {
         return Optional.ofNullable(this.restartPolicy);
     }
     /**
      * The SKU for a container group.
      * 
-     */
+    */
     public Optional<String> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The list of volumes that can be mounted by containers in this container group.
      * 
-     */
+    */
     public List<VolumeResponse> getVolumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }

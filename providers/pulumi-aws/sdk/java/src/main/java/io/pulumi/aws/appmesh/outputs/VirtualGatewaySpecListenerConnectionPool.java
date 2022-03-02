@@ -42,21 +42,21 @@ public final class VirtualGatewaySpecListenerConnectionPool {
     /**
      * Connection pool information for gRPC listeners.
      * 
-     */
+    */
     public Optional<VirtualGatewaySpecListenerConnectionPoolGrpc> getGrpc() {
         return Optional.ofNullable(this.grpc);
     }
     /**
      * Connection pool information for HTTP listeners.
      * 
-     */
+    */
     public Optional<VirtualGatewaySpecListenerConnectionPoolHttp> getHttp() {
         return Optional.ofNullable(this.http);
     }
     /**
      * Connection pool information for HTTP2 listeners.
      * 
-     */
+    */
     public Optional<VirtualGatewaySpecListenerConnectionPoolHttp2> getHttp2() {
         return Optional.ofNullable(this.http2);
     }

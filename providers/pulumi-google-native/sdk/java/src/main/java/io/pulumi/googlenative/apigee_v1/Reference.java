@@ -75,6 +75,22 @@ public class Reference extends io.pulumi.resources.CustomResource {
         return this.resourceType;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ReferenceArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.apigee_v1.ReferenceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.apigee_v1.ReferenceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Reference(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

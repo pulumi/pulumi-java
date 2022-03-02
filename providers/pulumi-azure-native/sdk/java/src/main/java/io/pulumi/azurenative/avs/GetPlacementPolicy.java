@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPlacementPolicy {
-/**
- * A vSphere Distributed Resource Scheduler (DRS) placement policy
+    private GetPlacementPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetPlacementPolicyArgs.Builder a);
+    }
+    private static GetPlacementPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPlacementPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A vSphere Distributed Resource Scheduler (DRS) placement policy
  * API Version: 2021-12-01.
  * 
- *
- * A vSphere Distributed Resource Scheduler (DRS) placement policy
+     *
+     * A vSphere Distributed Resource Scheduler (DRS) placement policy
  * 
- */
+     */
+    public static CompletableFuture<GetPlacementPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A vSphere Distributed Resource Scheduler (DRS) placement policy
+     * API Version: 2021-12-01.
+     * 
+     *
+         * A vSphere Distributed Resource Scheduler (DRS) placement policy
+     * 
+     */
     public static CompletableFuture<GetPlacementPolicyResult> invokeAsync(GetPlacementPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getPlacementPolicy", TypeShape.of(GetPlacementPolicyResult.class), args == null ? GetPlacementPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

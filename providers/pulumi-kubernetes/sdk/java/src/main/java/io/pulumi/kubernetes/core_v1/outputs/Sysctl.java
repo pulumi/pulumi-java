@@ -31,14 +31,14 @@ public final class Sysctl {
     /**
      * Name of a property to set
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Value of a property to set
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

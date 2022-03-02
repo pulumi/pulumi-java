@@ -54,35 +54,35 @@ public final class PresetAudio {
     /**
      * The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.
      * 
-     */
+    */
     public Optional<String> getAudioPackingMode() {
         return Optional.ofNullable(this.audioPackingMode);
     }
     /**
      * The bit rate of the audio stream in the output file, in kilobits/second. Enter an integer between 64 and 320, inclusive.
      * 
-     */
+    */
     public Optional<String> getBitRate() {
         return Optional.ofNullable(this.bitRate);
     }
     /**
      * The number of audio channels in the output file
      * 
-     */
+    */
     public Optional<String> getChannels() {
         return Optional.ofNullable(this.channels);
     }
     /**
      * The audio codec for the output file. Valid values are `AAC`, `flac`, `mp2`, `mp3`, `pcm`, and `vorbis`.
      * 
-     */
+    */
     public Optional<String> getCodec() {
         return Optional.ofNullable(this.codec);
     }
     /**
      * The sample rate of the audio stream in the output file, in hertz. Valid values are: `auto`, `22050`, `32000`, `44100`, `48000`, `96000`
      * 
-     */
+    */
     public Optional<String> getSampleRate() {
         return Optional.ofNullable(this.sampleRate);
     }

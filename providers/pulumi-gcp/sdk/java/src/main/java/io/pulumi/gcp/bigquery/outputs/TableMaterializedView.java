@@ -45,14 +45,14 @@ public final class TableMaterializedView {
      * Specifies whether to use BigQuery's automatic refresh for this materialized view when the base table is updated.
      * The default value is true.
      * 
-     */
+    */
     public Optional<Boolean> getEnableRefresh() {
         return Optional.ofNullable(this.enableRefresh);
     }
     /**
      * A query whose result is persisted.
      * 
-     */
+    */
     public String getQuery() {
         return this.query;
     }
@@ -60,7 +60,7 @@ public final class TableMaterializedView {
      * The maximum frequency at which this materialized view will be refreshed.
      * The default value is 1800000
      * 
-     */
+    */
     public Optional<Integer> getRefreshIntervalMs() {
         return Optional.ofNullable(this.refreshIntervalMs);
     }

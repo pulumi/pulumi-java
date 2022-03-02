@@ -25,7 +25,7 @@ public final class LocationSMBMountOptions {
     /**
      * The specific SMB version that you want DataSync to use to mount your SMB share.
      * 
-     */
+    */
     public Optional<LocationSMBMountOptionsVersion> getVersion() {
         return Optional.ofNullable(this.version);
     }

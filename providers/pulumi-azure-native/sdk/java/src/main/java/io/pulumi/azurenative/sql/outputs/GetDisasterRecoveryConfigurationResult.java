@@ -94,77 +94,77 @@ public final class GetDisasterRecoveryConfigurationResult {
     /**
      * Whether or not failover can be done automatically.
      * 
-     */
+    */
     public String getAutoFailover() {
         return this.autoFailover;
     }
     /**
      * How aggressive the automatic failover should be.
      * 
-     */
+    */
     public String getFailoverPolicy() {
         return this.failoverPolicy;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Location of the server that contains this disaster recovery configuration.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Logical name of the server.
      * 
-     */
+    */
     public String getLogicalServerName() {
         return this.logicalServerName;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Logical name of the partner server.
      * 
-     */
+    */
     public String getPartnerLogicalServerName() {
         return this.partnerLogicalServerName;
     }
     /**
      * Id of the partner server.
      * 
-     */
+    */
     public String getPartnerServerId() {
         return this.partnerServerId;
     }
     /**
      * The role of the current server in the disaster recovery configuration.
      * 
-     */
+    */
     public String getRole() {
         return this.role;
     }
     /**
      * The status of the disaster recovery configuration.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

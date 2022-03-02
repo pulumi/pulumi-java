@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse {
     /**
      * A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
      * 
-     */
+    */
     public GooglePrivacyDlpV2RecordConditionResponse getCondition() {
         return this.condition;
     }

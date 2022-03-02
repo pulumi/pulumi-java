@@ -31,14 +31,14 @@ public final class ParameterGroupParameter {
     /**
      * The name of the parameter.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The value for the parameter.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

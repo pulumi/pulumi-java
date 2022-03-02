@@ -25,7 +25,7 @@ public final class SubnetPropertiesResponse {
     /**
      * Subnet name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

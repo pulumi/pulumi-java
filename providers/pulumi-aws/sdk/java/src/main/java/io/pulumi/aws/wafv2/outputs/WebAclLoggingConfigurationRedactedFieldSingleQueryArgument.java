@@ -12,11 +12,11 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgument {
     /**
      * The name of the query header to redact. This setting must be provided as lower case characters.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by WAFv2 API
      * 
      */
-    @Deprecated /* Not supported by WAFv2 API */
+        @Deprecated /* Not supported by WAFv2 API */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -27,10 +27,10 @@ public final class WebAclLoggingConfigurationRedactedFieldSingleQueryArgument {
     /**
      * The name of the query header to redact. This setting must be provided as lower case characters.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by WAFv2 API
      * 
-     */
+    */
     @Deprecated /* Not supported by WAFv2 API */
     public String getName() {
         return this.name;

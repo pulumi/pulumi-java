@@ -34,14 +34,14 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExport {
     /**
      * Specifies the destination for the exported analytics data (documented below).
      * 
-     */
+    */
     public AnalyticsConfigurationStorageClassAnalysisDataExportDestination getDestination() {
         return this.destination;
     }
     /**
      * The schema version of exported analytics data. Allowed values: `V_1`. Default value: `V_1`.
      * 
-     */
+    */
     public Optional<String> getOutputSchemaVersion() {
         return Optional.ofNullable(this.outputSchemaVersion);
     }

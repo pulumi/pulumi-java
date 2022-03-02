@@ -123,7 +123,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Defines the request parameters that contribute to the cache key.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy> getCacheKeyPolicy() {
         return Optional.ofNullable(this.cacheKeyPolicy);
     }
@@ -132,7 +132,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * For all cache modes, Cache-Control headers will be passed to the client. Use clientTtl to override what is sent to the client.
      * Possible values are `CACHE_ALL_STATIC`, `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `BYPASS_CACHE`.
      * 
-     */
+    */
     public Optional<String> getCacheMode() {
         return Optional.ofNullable(this.cacheMode);
     }
@@ -145,7 +145,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   When the cache mode is set to "USE_ORIGIN_HEADERS" or "BYPASS_CACHE", you must omit this field.
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
-     */
+    */
     public Optional<String> getClientTtl() {
         return Optional.ofNullable(this.clientTtl);
     }
@@ -161,7 +161,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   When the cache mode is set to "USE_ORIGIN_HEADERS" or "BYPASS_CACHE", you must omit this field.
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
-     */
+    */
     public Optional<String> getDefaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
@@ -176,7 +176,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * - When the cache mode is set to "USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", or "BYPASS_CACHE", you must omit this field.
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
-     */
+    */
     public Optional<String> getMaxTtl() {
         return Optional.ofNullable(this.maxTtl);
     }
@@ -188,7 +188,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * - HTTP 405 (Method Not Found), 414 (URI Too Long), 501 (Not Implemented): 60s
      *   These defaults can be overridden in negativeCachingPolicy
      * 
-     */
+    */
     public Optional<Boolean> getNegativeCaching() {
         return Optional.ofNullable(this.negativeCaching);
     }
@@ -198,14 +198,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * - TTLs must be >= 0 (where 0 is "always revalidate") and <= 86400s (1 day)
      *   Note that when specifying an explicit negativeCachingPolicy, you should take care to specify a cache TTL for all response codes that you wish to cache. The CDNPolicy will not apply any default negative caching when a policy exists.
      * 
-     */
+    */
     public Map<String,String> getNegativeCachingPolicy() {
         return this.negativeCachingPolicy == null ? Map.of() : this.negativeCachingPolicy;
     }
     /**
      * The EdgeCacheKeyset containing the set of public keys used to validate signed requests at the edge.
      * 
-     */
+    */
     public Optional<String> getSignedRequestKeyset() {
         return Optional.ofNullable(this.signedRequestKeyset);
     }
@@ -215,7 +215,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * When set to REQUIRE_SIGNATURES, all matching requests will have their signature validated. Requests that were not signed with the corresponding private key, or that are otherwise invalid (expired, do not match the signature, IP address, or header) will be rejected with a HTTP 403 and (if enabled) logged.
      * Possible values are `DISABLED` and `REQUIRE_SIGNATURES`.
      * 
-     */
+    */
     public Optional<String> getSignedRequestMode() {
         return Optional.ofNullable(this.signedRequestMode);
     }

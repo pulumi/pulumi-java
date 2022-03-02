@@ -34,14 +34,14 @@ public final class SimulationApplicationSimulationSoftwareSuite {
     /**
      * The name of the simulation software suite.
      * 
-     */
+    */
     public SimulationApplicationSimulationSoftwareSuiteName getName() {
         return this.name;
     }
     /**
      * The version of the simulation software suite.
      * 
-     */
+    */
     public Optional<SimulationApplicationSimulationSoftwareSuiteVersion> getVersion() {
         return Optional.ofNullable(this.version);
     }

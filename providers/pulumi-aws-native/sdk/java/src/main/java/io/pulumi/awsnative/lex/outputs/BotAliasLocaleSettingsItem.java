@@ -31,7 +31,7 @@ public final class BotAliasLocaleSettingsItem {
     /**
      * A string used to identify the locale
      * 
-     */
+    */
     public String getLocaleId() {
         return this.localeId;
     }

@@ -44,14 +44,14 @@ public final class GetLocalGatewaysResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Set of all the Local Gateway identifiers
      * 
-     */
+    */
     public List<String> getIds() {
         return this.ids;
     }

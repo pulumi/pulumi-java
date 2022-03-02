@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConfig {
-/**
- * Gets a service configuration (version) for a managed service.
+    private GetConfig() {}
+    public interface BuilderApplicator {
+        public void apply(GetConfigArgs.Builder a);
+    }
+    private static GetConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a service configuration (version) for a managed service.
  * 
- */
+     */
+    public static CompletableFuture<GetConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a service configuration (version) for a managed service.
+     * 
+     */
     public static CompletableFuture<GetConfigResult> invokeAsync(GetConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:servicemanagement/v1:getConfig", TypeShape.of(GetConfigResult.class), args == null ? GetConfigArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -31,14 +31,14 @@ public final class EventConnectionAuthParametersBasic {
     /**
      * A password for the authorization. Created and stored in AWS Secrets Manager.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * A username for the authorization.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }

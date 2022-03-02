@@ -56,28 +56,28 @@ public final class DelimitedTextWriteSettingsResponse {
     /**
      * The file extension used to create the files. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Object getFileExtension() {
         return this.fileExtension;
     }
     /**
      * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getFileNamePrefix() {
         return Optional.ofNullable(this.fileNamePrefix);
     }
     /**
      * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxRowsPerFile() {
         return Optional.ofNullable(this.maxRowsPerFile);
     }
     /**
      * Indicates whether string values should always be enclosed with quotes. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getQuoteAllText() {
         return Optional.ofNullable(this.quoteAllText);
     }
@@ -85,7 +85,7 @@ public final class DelimitedTextWriteSettingsResponse {
      * The write setting type.
      * Expected value is 'DelimitedTextWriteSettings'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

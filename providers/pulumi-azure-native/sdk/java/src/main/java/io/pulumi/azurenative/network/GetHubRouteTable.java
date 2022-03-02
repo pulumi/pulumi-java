@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHubRouteTable {
-/**
- * RouteTable resource in a virtual hub.
+    private GetHubRouteTable() {}
+    public interface BuilderApplicator {
+        public void apply(GetHubRouteTableArgs.Builder a);
+    }
+    private static GetHubRouteTableArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHubRouteTableArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * RouteTable resource in a virtual hub.
  * API Version: 2020-11-01.
  * 
- *
- * RouteTable resource in a virtual hub.
+     *
+     * RouteTable resource in a virtual hub.
  * 
- */
+     */
+    public static CompletableFuture<GetHubRouteTableResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * RouteTable resource in a virtual hub.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * RouteTable resource in a virtual hub.
+     * 
+     */
     public static CompletableFuture<GetHubRouteTableResult> invokeAsync(GetHubRouteTableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getHubRouteTable", TypeShape.of(GetHubRouteTableResult.class), args == null ? GetHubRouteTableArgs.Empty : args, Utilities.withVersion(options));
     }

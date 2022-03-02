@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReusableConfigIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetReusableConfigIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetReusableConfigIamPolicyArgs.Builder a);
+    }
+    private static GetReusableConfigIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReusableConfigIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetReusableConfigIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetReusableConfigIamPolicyResult> invokeAsync(GetReusableConfigIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1beta1:getReusableConfigIamPolicy", TypeShape.of(GetReusableConfigIamPolicyResult.class), args == null ? GetReusableConfigIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

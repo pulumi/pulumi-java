@@ -23,7 +23,7 @@ public final class InventoryDestinationBucketEncryptionSseKms {
     /**
      * The ARN of the KMS customer master key (CMK) used to encrypt the inventory file.
      * 
-     */
+    */
     public String getKeyId() {
         return this.keyId;
     }

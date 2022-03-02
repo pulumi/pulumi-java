@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMaintenanceConfiguration {
-/**
- * maintenance configuration.
+    private GetMaintenanceConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetMaintenanceConfigurationArgs.Builder a);
+    }
+    private static GetMaintenanceConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMaintenanceConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * maintenance configuration.
  * API Version: 2021-03-01.
  * 
- *
- * maintenance configuration.
+     *
+     * maintenance configuration.
  * 
- */
+     */
+    public static CompletableFuture<GetMaintenanceConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * maintenance configuration.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * maintenance configuration.
+     * 
+     */
     public static CompletableFuture<GetMaintenanceConfigurationResult> invokeAsync(GetMaintenanceConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerservice:getMaintenanceConfiguration", TypeShape.of(GetMaintenanceConfigurationResult.class), args == null ? GetMaintenanceConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

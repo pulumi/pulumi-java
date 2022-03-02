@@ -48,28 +48,28 @@ public final class GuestPoliciesRecipeInstallStepFileExec {
     /**
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
-     */
+    */
     public Optional<String> getAllowedExitCodes() {
         return Optional.ofNullable(this.allowedExitCodes);
     }
     /**
      * Arguments to be passed to the provided executable.
      * 
-     */
+    */
     public List<String> getArgs() {
         return this.args == null ? List.of() : this.args;
     }
     /**
      * The id of the relevant artifact in the recipe.
      * 
-     */
+    */
     public Optional<String> getArtifactId() {
         return Optional.ofNullable(this.artifactId);
     }
     /**
      * The absolute path of the file on the local filesystem.
      * 
-     */
+    */
     public Optional<String> getLocalPath() {
         return Optional.ofNullable(this.localPath);
     }

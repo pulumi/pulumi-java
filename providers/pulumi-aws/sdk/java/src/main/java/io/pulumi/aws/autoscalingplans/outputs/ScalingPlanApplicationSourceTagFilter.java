@@ -33,14 +33,14 @@ public final class ScalingPlanApplicationSourceTagFilter {
     /**
      * The tag key.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * The tag values.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }

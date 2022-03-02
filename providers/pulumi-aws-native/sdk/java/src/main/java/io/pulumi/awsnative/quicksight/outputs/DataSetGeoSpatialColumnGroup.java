@@ -38,7 +38,7 @@ public final class DataSetGeoSpatialColumnGroup {
     /**
      * <p>Columns in this hierarchy.</p>
      * 
-     */
+    */
     public List<String> getColumns() {
         return this.columns;
     }
@@ -48,7 +48,7 @@ public final class DataSetGeoSpatialColumnGroup {
     /**
      * <p>A display name for the hierarchy.</p>
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

@@ -23,7 +23,7 @@ public final class ClusterTelemetryResponse {
     /**
      * Type of the integration.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

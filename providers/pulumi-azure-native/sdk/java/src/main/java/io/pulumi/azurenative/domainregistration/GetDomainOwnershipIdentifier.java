@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomainOwnershipIdentifier {
-/**
- * Domain ownership Identifier.
+    private GetDomainOwnershipIdentifier() {}
+    public interface BuilderApplicator {
+        public void apply(GetDomainOwnershipIdentifierArgs.Builder a);
+    }
+    private static GetDomainOwnershipIdentifierArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDomainOwnershipIdentifierArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Domain ownership Identifier.
  * API Version: 2020-10-01.
  * 
- *
- * Domain ownership Identifier.
+     *
+     * Domain ownership Identifier.
  * 
- */
+     */
+    public static CompletableFuture<GetDomainOwnershipIdentifierResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Domain ownership Identifier.
+     * API Version: 2020-10-01.
+     * 
+     *
+         * Domain ownership Identifier.
+     * 
+     */
     public static CompletableFuture<GetDomainOwnershipIdentifierResult> invokeAsync(GetDomainOwnershipIdentifierArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:domainregistration:getDomainOwnershipIdentifier", TypeShape.of(GetDomainOwnershipIdentifierResult.class), args == null ? GetDomainOwnershipIdentifierArgs.Empty : args, Utilities.withVersion(options));
     }

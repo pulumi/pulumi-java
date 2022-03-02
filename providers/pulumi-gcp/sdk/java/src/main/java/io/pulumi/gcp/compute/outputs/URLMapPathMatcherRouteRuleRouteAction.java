@@ -99,7 +99,7 @@ public final class URLMapPathMatcherRouteRuleRouteAction {
      * [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherRouteRuleRouteActionCorsPolicy> getCorsPolicy() {
         return Optional.ofNullable(this.corsPolicy);
     }
@@ -111,7 +111,7 @@ public final class URLMapPathMatcherRouteRuleRouteAction {
      * timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy> getFaultInjectionPolicy() {
         return Optional.ofNullable(this.faultInjectionPolicy);
     }
@@ -121,7 +121,7 @@ public final class URLMapPathMatcherRouteRuleRouteAction {
      * the host / authority header is suffixed with -shadow.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy> getRequestMirrorPolicy() {
         return Optional.ofNullable(this.requestMirrorPolicy);
     }
@@ -129,7 +129,7 @@ public final class URLMapPathMatcherRouteRuleRouteAction {
      * Specifies the retry policy associated with this route.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherRouteRuleRouteActionRetryPolicy> getRetryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
@@ -139,7 +139,7 @@ public final class URLMapPathMatcherRouteRuleRouteAction {
      * If not specified, will use the largest timeout among all backend services associated with the route.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherRouteRuleRouteActionTimeout> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -147,7 +147,7 @@ public final class URLMapPathMatcherRouteRuleRouteAction {
      * The spec to modify the URL of the request, prior to forwarding the request to the matched service.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<URLMapPathMatcherRouteRuleRouteActionUrlRewrite> getUrlRewrite() {
         return Optional.ofNullable(this.urlRewrite);
     }
@@ -161,7 +161,7 @@ public final class URLMapPathMatcherRouteRuleRouteAction {
      * additional settings specified in this HttpRouteAction.
      * Structure is documented below.
      * 
-     */
+    */
     public List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendService> getWeightedBackendServices() {
         return this.weightedBackendServices == null ? List.of() : this.weightedBackendServices;
     }

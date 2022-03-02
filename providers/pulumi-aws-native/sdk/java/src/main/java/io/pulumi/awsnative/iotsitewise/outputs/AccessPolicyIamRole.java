@@ -25,7 +25,7 @@ public final class AccessPolicyIamRole {
     /**
      * The ARN of the IAM role.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }

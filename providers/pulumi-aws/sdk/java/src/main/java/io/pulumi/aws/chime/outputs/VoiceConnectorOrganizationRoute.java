@@ -55,35 +55,35 @@ public final class VoiceConnectorOrganizationRoute {
     /**
      * The FQDN or IP address to contact for origination traffic.
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * The designated origination route port. Defaults to `5060`.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The priority associated with the host, with 1 being the highest priority. Higher priority hosts are attempted first.
      * 
-     */
+    */
     public Integer getPriority() {
         return this.priority;
     }
     /**
      * The protocol to use for the origination route. Encryption-enabled Amazon Chime Voice Connectors use TCP protocol by default.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
     /**
      * The weight associated with the host. If hosts are equal in priority, calls are redistributed among them based on their relative weight.
      * 
-     */
+    */
     public Integer getWeight() {
         return this.weight;
     }

@@ -77,28 +77,28 @@ public final class ListenerRuleAction {
     /**
      * Information for creating an authenticate action using Cognito. Required if `type` is `authenticate-cognito`.
      * 
-     */
+    */
     public Optional<ListenerRuleActionAuthenticateCognito> getAuthenticateCognito() {
         return Optional.ofNullable(this.authenticateCognito);
     }
     /**
      * Information for creating an authenticate action using OIDC. Required if `type` is `authenticate-oidc`.
      * 
-     */
+    */
     public Optional<ListenerRuleActionAuthenticateOidc> getAuthenticateOidc() {
         return Optional.ofNullable(this.authenticateOidc);
     }
     /**
      * Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
      * 
-     */
+    */
     public Optional<ListenerRuleActionFixedResponse> getFixedResponse() {
         return Optional.ofNullable(this.fixedResponse);
     }
     /**
      * Information for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`.
      * 
-     */
+    */
     public Optional<ListenerRuleActionForward> getForward() {
         return Optional.ofNullable(this.forward);
     }
@@ -108,21 +108,21 @@ public final class ListenerRuleAction {
     /**
      * Information for creating a redirect action. Required if `type` is `redirect`.
      * 
-     */
+    */
     public Optional<ListenerRuleActionRedirect> getRedirect() {
         return Optional.ofNullable(this.redirect);
     }
     /**
      * The ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
      * 
-     */
+    */
     public Optional<String> getTargetGroupArn() {
         return Optional.ofNullable(this.targetGroupArn);
     }
     /**
      * The type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

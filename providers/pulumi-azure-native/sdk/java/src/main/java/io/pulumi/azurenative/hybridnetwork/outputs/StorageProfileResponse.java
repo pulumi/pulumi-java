@@ -43,21 +43,21 @@ public final class StorageProfileResponse {
     /**
      * Specifies the parameters that are used to add a data disk to a virtual machine.
      * 
-     */
+    */
     public List<DataDiskResponse> getDataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
     /**
      * The image reference properties.
      * 
-     */
+    */
     public Optional<ImageReferenceResponse> getImageReference() {
         return Optional.ofNullable(this.imageReference);
     }
     /**
      * Specifies information about the operating system disk used by the virtual machine.
      * 
-     */
+    */
     public Optional<OsDiskResponse> getOsDisk() {
         return Optional.ofNullable(this.osDisk);
     }

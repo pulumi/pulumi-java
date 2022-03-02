@@ -40,21 +40,21 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
     /**
      * Key wrapped using Cloud KMS
      * 
-     */
+    */
     public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse getKmsWrapped() {
         return this.kmsWrapped;
     }
     /**
      * Transient crypto key
      * 
-     */
+    */
     public GooglePrivacyDlpV2TransientCryptoKeyResponse get$transient() {
         return this.$transient;
     }
     /**
      * Unwrapped crypto key
      * 
-     */
+    */
     public GooglePrivacyDlpV2UnwrappedCryptoKeyResponse getUnwrapped() {
         return this.unwrapped;
     }

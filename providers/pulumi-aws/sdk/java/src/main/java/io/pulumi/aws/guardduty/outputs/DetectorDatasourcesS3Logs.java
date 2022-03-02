@@ -23,7 +23,7 @@ public final class DetectorDatasourcesS3Logs {
     /**
      * If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
      * 
-     */
+    */
     public Boolean getEnable() {
         return this.enable;
     }

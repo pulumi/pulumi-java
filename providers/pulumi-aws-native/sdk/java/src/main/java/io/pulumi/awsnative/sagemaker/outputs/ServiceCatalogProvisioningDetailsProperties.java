@@ -46,7 +46,7 @@ public final class ServiceCatalogProvisioningDetailsProperties {
     /**
      * Parameters specified by the administrator that are required for provisioning the product.
      * 
-     */
+    */
     public List<ProjectProvisioningParameter> getProvisioningParameters() {
         return this.provisioningParameters == null ? List.of() : this.provisioningParameters;
     }

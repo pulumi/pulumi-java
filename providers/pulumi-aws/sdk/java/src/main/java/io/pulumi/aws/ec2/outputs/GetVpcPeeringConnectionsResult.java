@@ -44,14 +44,14 @@ public final class GetVpcPeeringConnectionsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The IDs of the VPC Peering Connections.
      * 
-     */
+    */
     public List<String> getIds() {
         return this.ids;
     }

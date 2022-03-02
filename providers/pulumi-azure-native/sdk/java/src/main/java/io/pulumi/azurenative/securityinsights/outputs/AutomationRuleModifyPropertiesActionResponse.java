@@ -41,7 +41,7 @@ public final class AutomationRuleModifyPropertiesActionResponse {
     /**
      * The configuration of the modify properties automation rule action
      * 
-     */
+    */
     public AutomationRuleModifyPropertiesActionResponseActionConfiguration getActionConfiguration() {
         return this.actionConfiguration;
     }
@@ -49,14 +49,14 @@ public final class AutomationRuleModifyPropertiesActionResponse {
      * The type of the automation rule action
      * Expected value is 'ModifyProperties'.
      * 
-     */
+    */
     public String getActionType() {
         return this.actionType;
     }
     /**
      * The order of execution of the automation rule action
      * 
-     */
+    */
     public Integer getOrder() {
         return this.order;
     }

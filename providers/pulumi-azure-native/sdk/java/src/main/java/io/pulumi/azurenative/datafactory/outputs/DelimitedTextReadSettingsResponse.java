@@ -45,14 +45,14 @@ public final class DelimitedTextReadSettingsResponse {
     /**
      * Compression settings.
      * 
-     */
+    */
     public Optional<Object> getCompressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
     /**
      * Indicates the number of non-empty rows to skip when reading data from input files. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSkipLineCount() {
         return Optional.ofNullable(this.skipLineCount);
     }
@@ -60,7 +60,7 @@ public final class DelimitedTextReadSettingsResponse {
      * The read setting type.
      * Expected value is 'DelimitedTextReadSettings'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

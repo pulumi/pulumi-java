@@ -89,70 +89,70 @@ public final class ShippingAddressResponse {
     /**
      * Type of address.
      * 
-     */
+    */
     public Optional<String> getAddressType() {
         return Optional.ofNullable(this.addressType);
     }
     /**
      * Name of the City.
      * 
-     */
+    */
     public Optional<String> getCity() {
         return Optional.ofNullable(this.city);
     }
     /**
      * Name of the company.
      * 
-     */
+    */
     public Optional<String> getCompanyName() {
         return Optional.ofNullable(this.companyName);
     }
     /**
      * Name of the Country.
      * 
-     */
+    */
     public String getCountry() {
         return this.country;
     }
     /**
      * Postal code.
      * 
-     */
+    */
     public Optional<String> getPostalCode() {
         return Optional.ofNullable(this.postalCode);
     }
     /**
      * Name of the State or Province.
      * 
-     */
+    */
     public Optional<String> getStateOrProvince() {
         return Optional.ofNullable(this.stateOrProvince);
     }
     /**
      * Street Address line 1.
      * 
-     */
+    */
     public String getStreetAddress1() {
         return this.streetAddress1;
     }
     /**
      * Street Address line 2.
      * 
-     */
+    */
     public Optional<String> getStreetAddress2() {
         return Optional.ofNullable(this.streetAddress2);
     }
     /**
      * Street Address line 3.
      * 
-     */
+    */
     public Optional<String> getStreetAddress3() {
         return Optional.ofNullable(this.streetAddress3);
     }
     /**
      * Extended Zip Code.
      * 
-     */
+    */
     public Optional<String> getZipExtendedCode() {
         return Optional.ofNullable(this.zipExtendedCode);
     }

@@ -164,7 +164,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
     /**
      * Whether automatic rotation is enabled for this secret.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_secretsmanager_secret_rotation resource instead
      * 
      */
@@ -182,7 +182,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
     /**
      * ARN of the Lambda function that can rotate the secret. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_secretsmanager_secret_rotation resource instead
      * 
      */
@@ -200,7 +200,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
     /**
      * Configuration block for the rotation configuration of this secret. Defined below. Use the `aws.secretsmanager.SecretRotation` resource to manage this configuration instead. As of version 2.67.0, removal of this configuration will no longer remove rotation due to supporting the new resource. Either import the new resource and remove the configuration or manually remove rotation.
      * 
-     * @deprecated
+     * @Deprecated
      * Use the aws_secretsmanager_secret_rotation resource instead
      * 
      */
@@ -244,6 +244,22 @@ public class Secret extends io.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable SecretArgs.Builder a);
+    }
+    private static io.pulumi.aws.secretsmanager.SecretArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.secretsmanager.SecretArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Secret(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

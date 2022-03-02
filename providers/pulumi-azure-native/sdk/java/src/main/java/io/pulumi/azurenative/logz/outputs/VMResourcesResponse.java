@@ -33,14 +33,14 @@ public final class VMResourcesResponse {
     /**
      * Version of the Logz agent installed on the VM.
      * 
-     */
+    */
     public Optional<String> getAgentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
      * Request of a list vm host update operation.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

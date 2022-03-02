@@ -92,70 +92,70 @@ public final class DomainClusterConfig {
     /**
      * Number of dedicated main nodes in the cluster.
      * 
-     */
+    */
     public Optional<Integer> getDedicatedMasterCount() {
         return Optional.ofNullable(this.dedicatedMasterCount);
     }
     /**
      * Whether dedicated main nodes are enabled for the cluster.
      * 
-     */
+    */
     public Optional<Boolean> getDedicatedMasterEnabled() {
         return Optional.ofNullable(this.dedicatedMasterEnabled);
     }
     /**
      * Instance type of the dedicated main nodes in the cluster.
      * 
-     */
+    */
     public Optional<String> getDedicatedMasterType() {
         return Optional.ofNullable(this.dedicatedMasterType);
     }
     /**
      * Number of instances in the cluster.
      * 
-     */
+    */
     public Optional<Integer> getInstanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }
     /**
      * Instance type of data nodes in the cluster.
      * 
-     */
+    */
     public Optional<String> getInstanceType() {
         return Optional.ofNullable(this.instanceType);
     }
     /**
      * Number of warm nodes in the cluster. Valid values are between `2` and `150`. `warm_count` can be only and must be set when `warm_enabled` is set to `true`.
      * 
-     */
+    */
     public Optional<Integer> getWarmCount() {
         return Optional.ofNullable(this.warmCount);
     }
     /**
      * Whether to enable warm storage.
      * 
-     */
+    */
     public Optional<Boolean> getWarmEnabled() {
         return Optional.ofNullable(this.warmEnabled);
     }
     /**
      * Instance type for the Elasticsearch cluster's warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
      * 
-     */
+    */
     public Optional<String> getWarmType() {
         return Optional.ofNullable(this.warmType);
     }
     /**
      * Configuration block containing zone awareness settings. Detailed below.
      * 
-     */
+    */
     public Optional<DomainClusterConfigZoneAwarenessConfig> getZoneAwarenessConfig() {
         return Optional.ofNullable(this.zoneAwarenessConfig);
     }
     /**
      * Whether zone awareness is enabled, set to `true` for multi-az deployment. To enable awareness with three Availability Zones, the `availability_zone_count` within the `zone_awareness_config` must be set to `3`.
      * 
-     */
+    */
     public Optional<Boolean> getZoneAwarenessEnabled() {
         return Optional.ofNullable(this.zoneAwarenessEnabled);
     }

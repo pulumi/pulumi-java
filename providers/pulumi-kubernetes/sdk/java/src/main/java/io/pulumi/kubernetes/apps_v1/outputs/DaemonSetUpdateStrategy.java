@@ -38,7 +38,7 @@ public final class DaemonSetUpdateStrategy {
     /**
      * Rolling update config params. Present only if type = "RollingUpdate".
      * 
-     */
+    */
     public Optional<RollingUpdateDaemonSet> getRollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
@@ -49,7 +49,7 @@ public final class DaemonSetUpdateStrategy {
      *  - `"OnDelete"` Replace the old daemons only when it's killed
      *  - `"RollingUpdate"` Replace the old daemons by new ones using rolling update i.e replace them on each node one after the other.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

@@ -25,7 +25,7 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
     /**
      * A collection of text responses.
      * 
-     */
+    */
     public Optional<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText> getText() {
         return Optional.ofNullable(this.text);
     }

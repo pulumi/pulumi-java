@@ -82,21 +82,21 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
     /**
      * A list of alternative verification keys.
      * 
-     */
+    */
     public List<Object> getAlternateVerificationKeys() {
         return this.alternateVerificationKeys == null ? List.of() : this.alternateVerificationKeys;
     }
     /**
      * The audience for the token.
      * 
-     */
+    */
     public String getAudience() {
         return this.audience;
     }
     /**
      * The token issuer.
      * 
-     */
+    */
     public String getIssuer() {
         return this.issuer;
     }
@@ -104,35 +104,35 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.ContentKeyPolicyTokenRestriction'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * The OpenID connect discovery document.
      * 
-     */
+    */
     public Optional<String> getOpenIdConnectDiscoveryDocument() {
         return Optional.ofNullable(this.openIdConnectDiscoveryDocument);
     }
     /**
      * The primary verification key.
      * 
-     */
+    */
     public Object getPrimaryVerificationKey() {
         return this.primaryVerificationKey;
     }
     /**
      * A list of required token claims.
      * 
-     */
+    */
     public List<ContentKeyPolicyTokenClaimResponse> getRequiredClaims() {
         return this.requiredClaims == null ? List.of() : this.requiredClaims;
     }
     /**
      * The type of token.
      * 
-     */
+    */
     public String getRestrictionTokenType() {
         return this.restrictionTokenType;
     }

@@ -78,7 +78,7 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
      * Default value is `DEFAULT_FOR_PROTOCOL`.
      * Possible values are `DEFAULT_FOR_PROTOCOL`, `NEVER_PERSIST`, and `ALWAYS_PERSIST`.
      * 
-     */
+    */
     public Optional<String> getConnectionPersistenceOnUnhealthyBackends() {
         return Optional.ofNullable(this.connectionPersistenceOnUnhealthyBackends);
     }
@@ -88,7 +88,7 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
      * For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours.
      * For NLB the minimum(default) is 60 seconds and the maximum is 16 hours.
      * 
-     */
+    */
     public Optional<Integer> getIdleTimeoutSec() {
         return Optional.ofNullable(this.idleTimeoutSec);
     }
@@ -101,7 +101,7 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
      * Default value is `PER_CONNECTION`.
      * Possible values are `PER_CONNECTION` and `PER_SESSION`.
      * 
-     */
+    */
     public Optional<String> getTrackingMode() {
         return Optional.ofNullable(this.trackingMode);
     }

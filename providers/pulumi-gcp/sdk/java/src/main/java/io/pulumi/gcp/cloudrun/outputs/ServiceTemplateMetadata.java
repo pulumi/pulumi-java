@@ -109,7 +109,7 @@ public final class ServiceTemplateMetadata {
      * - `run.googleapis.com/ingress` sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
      *   for the Service. For example, `"run.googleapis.com/ingress" = "all"`.
      * 
-     */
+    */
     public Map<String,String> getAnnotations() {
         return this.annotations == null ? Map.of() : this.annotations;
     }
@@ -117,7 +117,7 @@ public final class ServiceTemplateMetadata {
      * - 
      * A sequence number representing a specific generation of the desired state.
      * 
-     */
+    */
     public Optional<Integer> getGeneration() {
         return Optional.ofNullable(this.generation);
     }
@@ -127,14 +127,14 @@ public final class ServiceTemplateMetadata {
      * and routes.
      * More info: http://kubernetes.io/docs/user-guide/labels
      * 
-     */
+    */
     public Map<String,String> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
     /**
      * Volume's name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -142,7 +142,7 @@ public final class ServiceTemplateMetadata {
      * In Cloud Run the namespace must be equal to either the
      * project ID or project number.
      * 
-     */
+    */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -156,7 +156,7 @@ public final class ServiceTemplateMetadata {
      * More info:
      * https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
      * 
-     */
+    */
     public Optional<String> getResourceVersion() {
         return Optional.ofNullable(this.resourceVersion);
     }
@@ -164,7 +164,7 @@ public final class ServiceTemplateMetadata {
      * - 
      * SelfLink is a URL representing this object.
      * 
-     */
+    */
     public Optional<String> getSelfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -174,7 +174,7 @@ public final class ServiceTemplateMetadata {
      * allowed to change on PUT operations.
      * More info: http://kubernetes.io/docs/user-guide/identifiers#uids
      * 
-     */
+    */
     public Optional<String> getUid() {
         return Optional.ofNullable(this.uid);
     }

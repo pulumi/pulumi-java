@@ -105,84 +105,84 @@ public final class GetSqlVirtualMachineGroupResult {
     /**
      * Cluster type.
      * 
-     */
+    */
     public String getClusterConfiguration() {
         return this.clusterConfiguration;
     }
     /**
      * Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.
      * 
-     */
+    */
     public String getClusterManagerType() {
         return this.clusterManagerType;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state to track the async operation status.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Scale type.
      * 
-     */
+    */
     public String getScaleType() {
         return this.scaleType;
     }
     /**
      * SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
      * 
-     */
+    */
     public Optional<String> getSqlImageOffer() {
         return Optional.ofNullable(this.sqlImageOffer);
     }
     /**
      * SQL image sku.
      * 
-     */
+    */
     public Optional<String> getSqlImageSku() {
         return Optional.ofNullable(this.sqlImageSku);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Cluster Active Directory domain profile.
      * 
-     */
+    */
     public Optional<WsfcDomainProfileResponse> getWsfcDomainProfile() {
         return Optional.ofNullable(this.wsfcDomainProfile);
     }

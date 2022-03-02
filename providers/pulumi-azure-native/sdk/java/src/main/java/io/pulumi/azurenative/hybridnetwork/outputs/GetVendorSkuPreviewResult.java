@@ -38,21 +38,21 @@ public final class GetVendorSkuPreviewResult {
     /**
      * The ARM ID of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The preview subscription ID.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

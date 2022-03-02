@@ -34,14 +34,14 @@ public final class NotificationEventReceiverResponse {
     /**
      * The type of the notification event receiver.
      * 
-     */
+    */
     public Optional<String> getReceiverType() {
         return Optional.ofNullable(this.receiverType);
     }
     /**
      * The notification event receiver value.
      * 
-     */
+    */
     public Optional<NotificationReceiverValueResponse> getReceiverValue() {
         return Optional.ofNullable(this.receiverValue);
     }

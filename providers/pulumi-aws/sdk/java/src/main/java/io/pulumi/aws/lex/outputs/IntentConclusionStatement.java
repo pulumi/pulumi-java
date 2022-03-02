@@ -41,7 +41,7 @@ public final class IntentConclusionStatement {
      * You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
      * Attributes are documented under message. Must contain between 1 and 15 messages.
      * 
-     */
+    */
     public List<IntentConclusionStatementMessage> getMessages() {
         return this.messages;
     }
@@ -50,7 +50,7 @@ public final class IntentConclusionStatement {
      * slot values into the response card. For more information, see
      * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
      * 
-     */
+    */
     public Optional<String> getResponseCard() {
         return Optional.ofNullable(this.responseCard);
     }

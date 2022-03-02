@@ -33,14 +33,14 @@ public final class InstanceLocation {
     /**
      * The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
      * 
-     */
+    */
     public Optional<String> getAvailabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
      * The Region Name in which to create your instance.
      * 
-     */
+    */
     public Optional<String> getRegionName() {
         return Optional.ofNullable(this.regionName);
     }

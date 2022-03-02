@@ -302,6 +302,22 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
         return this.validatorNodesSku;
     }
 
+    public interface BuilderApplicator {
+        public void apply(BlockchainMemberArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.blockchain.BlockchainMemberArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.blockchain.BlockchainMemberArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public BlockchainMember(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

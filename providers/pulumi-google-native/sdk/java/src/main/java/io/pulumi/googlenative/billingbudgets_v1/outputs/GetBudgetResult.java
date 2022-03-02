@@ -71,49 +71,49 @@ public final class GetBudgetResult {
     /**
      * Budgeted amount.
      * 
-     */
+    */
     public GoogleCloudBillingBudgetsV1BudgetAmountResponse getAmount() {
         return this.amount;
     }
     /**
      * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
      * 
-     */
+    */
     public GoogleCloudBillingBudgetsV1FilterResponse getBudgetFilter() {
         return this.budgetFilter;
     }
     /**
      * User data for display name in UI. The name must be less than or equal to 60 characters.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag causes an update to overwrite other changes.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource name of the budget. The resource name implies the scope of a budget. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Optional. Rules to apply to notifications sent based on budget spend and thresholds.
      * 
-     */
+    */
     public GoogleCloudBillingBudgetsV1NotificationsRuleResponse getNotificationsRule() {
         return this.notificationsRule;
     }
     /**
      * Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications. Required if using email notifications.
      * 
-     */
+    */
     public List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse> getThresholdRules() {
         return this.thresholdRules;
     }

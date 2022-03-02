@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFeatureGroup {
-/**
- * Resource Type definition for AWS::SageMaker::FeatureGroup
+    private GetFeatureGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetFeatureGroupArgs.Builder a);
+    }
+    private static GetFeatureGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFeatureGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::SageMaker::FeatureGroup
  * 
- */
+     */
+    public static CompletableFuture<GetFeatureGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::SageMaker::FeatureGroup
+     * 
+     */
     public static CompletableFuture<GetFeatureGroupResult> invokeAsync(GetFeatureGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:sagemaker:getFeatureGroup", TypeShape.of(GetFeatureGroupResult.class), args == null ? GetFeatureGroupArgs.Empty : args, Utilities.withVersion(options));
     }

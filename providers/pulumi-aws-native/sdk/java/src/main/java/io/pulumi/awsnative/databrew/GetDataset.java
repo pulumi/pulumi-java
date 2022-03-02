@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataset {
-/**
- * Resource schema for AWS::DataBrew::Dataset.
+    private GetDataset() {}
+    public interface BuilderApplicator {
+        public void apply(GetDatasetArgs.Builder a);
+    }
+    private static GetDatasetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDatasetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::DataBrew::Dataset.
  * 
- */
+     */
+    public static CompletableFuture<GetDatasetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::DataBrew::Dataset.
+     * 
+     */
     public static CompletableFuture<GetDatasetResult> invokeAsync(GetDatasetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:databrew:getDataset", TypeShape.of(GetDatasetResult.class), args == null ? GetDatasetArgs.Empty : args, Utilities.withVersion(options));
     }

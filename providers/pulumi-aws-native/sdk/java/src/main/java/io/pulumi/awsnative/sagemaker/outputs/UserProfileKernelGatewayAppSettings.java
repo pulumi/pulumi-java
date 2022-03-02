@@ -35,14 +35,14 @@ public final class UserProfileKernelGatewayAppSettings {
     /**
      * A list of custom SageMaker images that are configured to run as a KernelGateway app.
      * 
-     */
+    */
     public List<UserProfileCustomImage> getCustomImages() {
         return this.customImages == null ? List.of() : this.customImages;
     }
     /**
      * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
      * 
-     */
+    */
     public Optional<UserProfileResourceSpec> getDefaultResourceSpec() {
         return Optional.ofNullable(this.defaultResourceSpec);
     }

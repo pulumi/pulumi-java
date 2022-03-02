@@ -76,56 +76,56 @@ public final class LaunchTemplatePlacement {
     /**
      * The affinity setting for an instance on a Dedicated Host.
      * 
-     */
+    */
     public Optional<String> getAffinity() {
         return Optional.ofNullable(this.affinity);
     }
     /**
      * The Availability Zone for the instance.
      * 
-     */
+    */
     public Optional<String> getAvailabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
      * The name of the placement group for the instance.
      * 
-     */
+    */
     public Optional<String> getGroupName() {
         return Optional.ofNullable(this.groupName);
     }
     /**
      * The ID of the Dedicated Host for the instance.
      * 
-     */
+    */
     public Optional<String> getHostId() {
         return Optional.ofNullable(this.hostId);
     }
     /**
      * The ARN of the Host Resource Group in which to launch instances.
      * 
-     */
+    */
     public Optional<String> getHostResourceGroupArn() {
         return Optional.ofNullable(this.hostResourceGroupArn);
     }
     /**
      * The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
      * 
-     */
+    */
     public Optional<Integer> getPartitionNumber() {
         return Optional.ofNullable(this.partitionNumber);
     }
     /**
      * Reserved for future use.
      * 
-     */
+    */
     public Optional<String> getSpreadDomain() {
         return Optional.ofNullable(this.spreadDomain);
     }
     /**
      * The tenancy of the instance (if the instance is running in a VPC). Can be `default`, `dedicated`, or `host`.
      * 
-     */
+    */
     public Optional<String> getTenancy() {
         return Optional.ofNullable(this.tenancy);
     }

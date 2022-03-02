@@ -78,56 +78,56 @@ public final class CustomRuleResponse {
     /**
      * Describes what action to be applied when rule matches.
      * 
-     */
+    */
     public String getAction() {
         return this.action;
     }
     /**
      * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
      * 
-     */
+    */
     public Optional<String> getEnabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
      * List of match conditions.
      * 
-     */
+    */
     public List<FrontDoorMatchConditionResponse> getMatchConditions() {
         return this.matchConditions;
     }
     /**
      * Describes the name of the rule.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
      * 
-     */
+    */
     public Integer getPriority() {
         return this.priority;
     }
     /**
      * Time window for resetting the rate limit count. Default is 1 minute.
      * 
-     */
+    */
     public Optional<Integer> getRateLimitDurationInMinutes() {
         return Optional.ofNullable(this.rateLimitDurationInMinutes);
     }
     /**
      * Number of allowed requests per client within the time window.
      * 
-     */
+    */
     public Optional<Integer> getRateLimitThreshold() {
         return Optional.ofNullable(this.rateLimitThreshold);
     }
     /**
      * Describes type of rule.
      * 
-     */
+    */
     public String getRuleType() {
         return this.ruleType;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetImportJob {
-/**
- * Returns metadata for a given ImportJob.
+    private GetImportJob() {}
+    public interface BuilderApplicator {
+        public void apply(GetImportJobArgs.Builder a);
+    }
+    private static GetImportJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetImportJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns metadata for a given ImportJob.
  * 
- */
+     */
+    public static CompletableFuture<GetImportJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns metadata for a given ImportJob.
+     * 
+     */
     public static CompletableFuture<GetImportJobResult> invokeAsync(GetImportJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudkms/v1:getImportJob", TypeShape.of(GetImportJobResult.class), args == null ? GetImportJobArgs.Empty : args, Utilities.withVersion(options));
     }

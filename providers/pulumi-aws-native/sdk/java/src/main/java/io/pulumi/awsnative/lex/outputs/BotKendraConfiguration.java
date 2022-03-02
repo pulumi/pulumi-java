@@ -39,7 +39,7 @@ public final class BotKendraConfiguration {
     /**
      * Determines whether the AMAZON.KendraSearchIntent intent uses a custom query string to query the Amazon Kendra index.
      * 
-     */
+    */
     public Optional<Boolean> getQueryFilterStringEnabled() {
         return Optional.ofNullable(this.queryFilterStringEnabled);
     }

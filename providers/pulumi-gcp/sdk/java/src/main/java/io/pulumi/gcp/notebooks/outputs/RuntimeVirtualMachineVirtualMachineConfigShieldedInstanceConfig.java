@@ -55,7 +55,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConf
      * from the implicitly trusted boot image when the instance is
      * created. Enabled by default.
      * 
-     */
+    */
     public Optional<Boolean> getEnableIntegrityMonitoring() {
         return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
@@ -66,7 +66,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConf
      * halting the boot process if signature verification fails.
      * Disabled by default.
      * 
-     */
+    */
     public Optional<Boolean> getEnableSecureBoot() {
         return Optional.ofNullable(this.enableSecureBoot);
     }
@@ -74,7 +74,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConf
      * Defines whether the instance has the vTPM enabled. Enabled by
      * default.
      * 
-     */
+    */
     public Optional<Boolean> getEnableVtpm() {
         return Optional.ofNullable(this.enableVtpm);
     }

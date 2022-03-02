@@ -23,7 +23,7 @@ public final class DataSourceAmazonOpenSearchParameters {
     /**
      * <p>The Amazon OpenSearch Service domain.</p>
      * 
-     */
+    */
     public String getDomain() {
         return this.domain;
     }

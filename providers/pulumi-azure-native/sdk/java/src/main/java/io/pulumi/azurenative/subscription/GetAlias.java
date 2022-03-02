@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAlias {
-/**
- * Subscription Information with the alias.
+    private GetAlias() {}
+    public interface BuilderApplicator {
+        public void apply(GetAliasArgs.Builder a);
+    }
+    private static GetAliasArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAliasArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Subscription Information with the alias.
  * API Version: 2020-09-01.
  * 
- *
- * Subscription Information with the alias.
+     *
+     * Subscription Information with the alias.
  * 
- */
+     */
+    public static CompletableFuture<GetAliasResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Subscription Information with the alias.
+     * API Version: 2020-09-01.
+     * 
+     *
+         * Subscription Information with the alias.
+     * 
+     */
     public static CompletableFuture<GetAliasResult> invokeAsync(GetAliasArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:subscription:getAlias", TypeShape.of(GetAliasResult.class), args == null ? GetAliasArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCertificateAuthorityIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetCertificateAuthorityIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetCertificateAuthorityIamPolicyArgs.Builder a);
+    }
+    private static GetCertificateAuthorityIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCertificateAuthorityIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetCertificateAuthorityIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetCertificateAuthorityIamPolicyResult> invokeAsync(GetCertificateAuthorityIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1beta1:getCertificateAuthorityIamPolicy", TypeShape.of(GetCertificateAuthorityIamPolicyResult.class), args == null ? GetCertificateAuthorityIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

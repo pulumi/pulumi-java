@@ -33,14 +33,14 @@ public final class SigningJobSignedObjectS3 {
     /**
      * Name of the S3 bucket.
      * 
-     */
+    */
     public Optional<String> getBucket() {
         return Optional.ofNullable(this.bucket);
     }
     /**
      * Key name of the bucket object that contains your unsigned code.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }

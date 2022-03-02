@@ -44,14 +44,14 @@ public final class DeploymentGroupAlarmConfiguration {
     /**
      * A list of alarms configured for the deployment group. _A maximum of 10 alarms can be added to a deployment group_.
      * 
-     */
+    */
     public List<String> getAlarms() {
         return this.alarms == null ? List.of() : this.alarms;
     }
     /**
      * Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -60,7 +60,7 @@ public final class DeploymentGroupAlarmConfiguration {
      * * `true`: The deployment will proceed even if alarm status information can't be retrieved.
      * * `false`: The deployment will stop if alarm status information can't be retrieved.
      * 
-     */
+    */
     public Optional<Boolean> getIgnorePollAlarmFailure() {
         return Optional.ofNullable(this.ignorePollAlarmFailure);
     }

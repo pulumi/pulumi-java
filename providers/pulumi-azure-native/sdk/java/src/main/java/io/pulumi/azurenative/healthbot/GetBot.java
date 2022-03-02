@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBot {
-/**
- * HealthBot resource definition
+    private GetBot() {}
+    public interface BuilderApplicator {
+        public void apply(GetBotArgs.Builder a);
+    }
+    private static GetBotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * HealthBot resource definition
  * API Version: 2020-12-08.
  * 
- *
- * HealthBot resource definition
+     *
+     * HealthBot resource definition
  * 
- */
+     */
+    public static CompletableFuture<GetBotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * HealthBot resource definition
+     * API Version: 2020-12-08.
+     * 
+     *
+         * HealthBot resource definition
+     * 
+     */
     public static CompletableFuture<GetBotResult> invokeAsync(GetBotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:healthbot:getBot", TypeShape.of(GetBotResult.class), args == null ? GetBotArgs.Empty : args, Utilities.withVersion(options));
     }

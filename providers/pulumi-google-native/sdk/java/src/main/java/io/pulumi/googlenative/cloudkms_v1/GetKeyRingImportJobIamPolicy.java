@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKeyRingImportJobIamPolicy {
-/**
- * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+    private GetKeyRingImportJobIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetKeyRingImportJobIamPolicyArgs.Builder a);
+    }
+    private static GetKeyRingImportJobIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetKeyRingImportJobIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetKeyRingImportJobIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetKeyRingImportJobIamPolicyResult> invokeAsync(GetKeyRingImportJobIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudkms/v1:getKeyRingImportJobIamPolicy", TypeShape.of(GetKeyRingImportJobIamPolicyResult.class), args == null ? GetKeyRingImportJobIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

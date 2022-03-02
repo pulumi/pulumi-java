@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse {
     /**
      * List of media objects.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> getMediaObjects() {
         return this.mediaObjects;
     }
     /**
      * Optional. What type of media is the content (ie "audio").
      * 
-     */
+    */
     public String getMediaType() {
         return this.mediaType;
     }

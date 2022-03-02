@@ -23,7 +23,7 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryption 
     /**
      * Describes the Cloud KMS encryption key that will be used to protect destination secret.
      * 
-     */
+    */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }

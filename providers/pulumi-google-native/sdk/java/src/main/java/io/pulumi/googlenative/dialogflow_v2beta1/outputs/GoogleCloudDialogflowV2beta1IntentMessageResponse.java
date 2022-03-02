@@ -184,147 +184,147 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse {
     /**
      * Displays a basic card for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse getBasicCard() {
         return this.basicCard;
     }
     /**
      * Browse carousel card for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse getBrowseCarouselCard() {
         return this.browseCarouselCard;
     }
     /**
      * Displays a card.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageCardResponse getCard() {
         return this.card;
     }
     /**
      * Displays a carousel card for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse getCarouselSelect() {
         return this.carouselSelect;
     }
     /**
      * Displays an image.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getImage() {
         return this.image;
     }
     /**
      * Displays a link out suggestion chip for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse getLinkOutSuggestion() {
         return this.linkOutSuggestion;
     }
     /**
      * Displays a list card for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse getListSelect() {
         return this.listSelect;
     }
     /**
      * The media content card for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse getMediaContent() {
         return this.mediaContent;
     }
     /**
      * A custom platform-specific response.
      * 
-     */
+    */
     public Map<String,String> getPayload() {
         return this.payload;
     }
     /**
      * Optional. The platform that this message is intended for.
      * 
-     */
+    */
     public String getPlatform() {
         return this.platform;
     }
     /**
      * Displays quick replies.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse getQuickReplies() {
         return this.quickReplies;
     }
     /**
      * Rich Business Messaging (RBM) carousel rich card response.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse getRbmCarouselRichCard() {
         return this.rbmCarouselRichCard;
     }
     /**
      * Standalone Rich Business Messaging (RBM) rich card response.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse getRbmStandaloneRichCard() {
         return this.rbmStandaloneRichCard;
     }
     /**
      * Rich Business Messaging (RBM) text response. RBM allows businesses to send enriched and branded versions of SMS. See https://jibe.google.com/business-messaging.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse getRbmText() {
         return this.rbmText;
     }
     /**
      * Returns a voice or text-only response for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse getSimpleResponses() {
         return this.simpleResponses;
     }
     /**
      * Displays suggestion chips for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse getSuggestions() {
         return this.suggestions;
     }
     /**
      * Table card for Actions on Google.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse getTableCard() {
         return this.tableCard;
     }
     /**
      * Plays audio from a file in Telephony Gateway.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse getTelephonyPlayAudio() {
         return this.telephonyPlayAudio;
     }
     /**
      * Synthesizes speech in Telephony Gateway.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse getTelephonySynthesizeSpeech() {
         return this.telephonySynthesizeSpeech;
     }
     /**
      * Transfers the call in Telephony Gateway.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse getTelephonyTransferCall() {
         return this.telephonyTransferCall;
     }
     /**
      * Returns a text response.
      * 
-     */
+    */
     public GoogleCloudDialogflowV2beta1IntentMessageTextResponse getText() {
         return this.text;
     }

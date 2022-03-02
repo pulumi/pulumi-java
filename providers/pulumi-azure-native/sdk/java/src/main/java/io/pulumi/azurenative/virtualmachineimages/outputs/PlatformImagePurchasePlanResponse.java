@@ -38,21 +38,21 @@ public final class PlatformImagePurchasePlanResponse {
     /**
      * Name of the purchase plan.
      * 
-     */
+    */
     public String getPlanName() {
         return this.planName;
     }
     /**
      * Product of the purchase plan.
      * 
-     */
+    */
     public String getPlanProduct() {
         return this.planProduct;
     }
     /**
      * Publisher of the purchase plan.
      * 
-     */
+    */
     public String getPlanPublisher() {
         return this.planPublisher;
     }

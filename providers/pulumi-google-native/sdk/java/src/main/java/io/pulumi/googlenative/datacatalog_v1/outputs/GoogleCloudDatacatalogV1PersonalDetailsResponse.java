@@ -32,14 +32,14 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse {
     /**
      * Set if the entry is starred; unset otherwise.
      * 
-     */
+    */
     public String getStarTime() {
         return this.starTime;
     }
     /**
      * True if the entry is starred by the user; false otherwise.
      * 
-     */
+    */
     public Boolean getStarred() {
         return this.starred;
     }

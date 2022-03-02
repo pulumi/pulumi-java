@@ -81,6 +81,22 @@ public class DeliveryPipelineIamPolicy extends io.pulumi.resources.CustomResourc
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DeliveryPipelineIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.clouddeploy_v1.DeliveryPipelineIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.clouddeploy_v1.DeliveryPipelineIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DeliveryPipelineIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

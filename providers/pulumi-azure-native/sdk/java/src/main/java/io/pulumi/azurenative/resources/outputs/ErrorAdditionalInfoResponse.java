@@ -32,14 +32,14 @@ public final class ErrorAdditionalInfoResponse {
     /**
      * The additional info.
      * 
-     */
+    */
     public Object getInfo() {
         return this.info;
     }
     /**
      * The additional info type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -48,21 +48,21 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     /**
      * Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.
      * 
-     */
+    */
     public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema getReferenceSchema() {
         return this.referenceSchema;
     }
     /**
      * Identifies the S3 bucket and object that contains the reference data.
      * 
-     */
+    */
     public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource getS3ReferenceDataSource() {
         return this.s3ReferenceDataSource;
     }
     /**
      * The name of the in-application table to create.
      * 
-     */
+    */
     public String getTableName() {
         return this.tableName;
     }

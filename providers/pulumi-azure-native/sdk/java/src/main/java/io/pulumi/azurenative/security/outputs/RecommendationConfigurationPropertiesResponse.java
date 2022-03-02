@@ -37,14 +37,14 @@ public final class RecommendationConfigurationPropertiesResponse {
     /**
      * The type of IoT Security recommendation.
      * 
-     */
+    */
     public String getRecommendationType() {
         return this.recommendationType;
     }
     /**
      * Recommendation status. When the recommendation status is disabled recommendations are not generated.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

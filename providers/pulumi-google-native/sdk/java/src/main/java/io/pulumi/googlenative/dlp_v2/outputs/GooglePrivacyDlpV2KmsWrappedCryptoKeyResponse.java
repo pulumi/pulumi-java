@@ -31,14 +31,14 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse {
     /**
      * The resource name of the KMS CryptoKey to use for unwrapping.
      * 
-     */
+    */
     public String getCryptoKeyName() {
         return this.cryptoKeyName;
     }
     /**
      * The wrapped data crypto key.
      * 
-     */
+    */
     public String getWrappedKey() {
         return this.wrappedKey;
     }

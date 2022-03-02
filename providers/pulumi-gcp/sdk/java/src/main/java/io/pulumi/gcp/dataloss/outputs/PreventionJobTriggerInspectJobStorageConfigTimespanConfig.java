@@ -54,21 +54,21 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfig {
      * scanning files that have not been modified since the last time the JobTrigger executed. This will
      * be based on the time of the execution of the last run of the JobTrigger.
      * 
-     */
+    */
     public Optional<Boolean> getEnableAutoPopulationOfTimespanConfig() {
         return Optional.ofNullable(this.enableAutoPopulationOfTimespanConfig);
     }
     /**
      * Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * Exclude files or rows older than this value.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -76,7 +76,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfig {
      * Information on where to inspect
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField getTimestampField() {
         return this.timestampField;
     }

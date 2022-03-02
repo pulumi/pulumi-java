@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1AssociationInfoResponse {
     /**
      * The name of the base entitlement, for which this entitlement is an add-on.
      * 
-     */
+    */
     public String getBaseEntitlement() {
         return this.baseEntitlement;
     }

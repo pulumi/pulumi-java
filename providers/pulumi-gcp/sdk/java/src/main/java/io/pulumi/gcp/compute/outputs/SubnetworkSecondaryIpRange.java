@@ -40,7 +40,7 @@ public final class SubnetworkSecondaryIpRange {
      * Ranges must be unique and non-overlapping with all primary and
      * secondary IP ranges within a network. Only IPv4 is supported.
      * 
-     */
+    */
     public String getIpCidrRange() {
         return this.ipCidrRange;
     }
@@ -50,7 +50,7 @@ public final class SubnetworkSecondaryIpRange {
      * be 1-63 characters long, and comply with RFC1035. The name
      * must be unique within the subnetwork.
      * 
-     */
+    */
     public String getRangeName() {
         return this.rangeName;
     }

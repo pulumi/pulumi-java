@@ -38,21 +38,21 @@ public final class InsightFiltersUserDefinedValue {
     /**
      * The condition to apply to a string value when querying for findings. Valid values include: `EQUALS` and `NOT_EQUALS`.
      * 
-     */
+    */
     public String getComparison() {
         return this.comparison;
     }
     /**
      * The key of the map filter. For example, for `ResourceTags`, `Key` identifies the name of the tag. For `UserDefinedFields`, `Key` is the name of the field.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * A date range value for the date filter, provided as an Integer.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

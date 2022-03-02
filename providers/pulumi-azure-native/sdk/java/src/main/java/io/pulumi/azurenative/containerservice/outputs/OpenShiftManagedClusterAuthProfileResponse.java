@@ -25,7 +25,7 @@ public final class OpenShiftManagedClusterAuthProfileResponse {
     /**
      * Type of authentication profile to use.
      * 
-     */
+    */
     public List<OpenShiftManagedClusterIdentityProviderResponse> getIdentityProviders() {
         return this.identityProviders == null ? List.of() : this.identityProviders;
     }

@@ -94,70 +94,70 @@ public final class PipelineRunResponseResponse {
     /**
      * The digest of the tar used to transfer the artifacts.
      * 
-     */
+    */
     public Optional<String> getCatalogDigest() {
         return Optional.ofNullable(this.catalogDigest);
     }
     /**
      * The time the pipeline run finished.
      * 
-     */
+    */
     public Optional<String> getFinishTime() {
         return Optional.ofNullable(this.finishTime);
     }
     /**
      * The artifacts imported in the pipeline run.
      * 
-     */
+    */
     public List<String> getImportedArtifacts() {
         return this.importedArtifacts == null ? List.of() : this.importedArtifacts;
     }
     /**
      * The detailed error message for the pipeline run in the case of failure.
      * 
-     */
+    */
     public Optional<String> getPipelineRunErrorMessage() {
         return Optional.ofNullable(this.pipelineRunErrorMessage);
     }
     /**
      * The current progress of the copy operation.
      * 
-     */
+    */
     public Optional<ProgressPropertiesResponse> getProgress() {
         return Optional.ofNullable(this.progress);
     }
     /**
      * The source of the pipeline run.
      * 
-     */
+    */
     public Optional<ImportPipelineSourcePropertiesResponse> getSource() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The time the pipeline run started.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * The current status of the pipeline run.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The target of the pipeline run.
      * 
-     */
+    */
     public Optional<ExportPipelineTargetPropertiesResponse> getTarget() {
         return Optional.ofNullable(this.target);
     }
     /**
      * The trigger that caused the pipeline run.
      * 
-     */
+    */
     public Optional<PipelineTriggerDescriptorResponse> getTrigger() {
         return Optional.ofNullable(this.trigger);
     }

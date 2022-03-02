@@ -46,14 +46,14 @@ public final class ClusterShardNode {
     /**
      * The Availability Zone in which the node resides.
      * 
-     */
+    */
     public Optional<String> getAvailabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
      * The date and time when the node was created. Example: `2022-01-01T21:00:00Z`.
      * 
-     */
+    */
     public Optional<String> getCreateTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -64,7 +64,7 @@ public final class ClusterShardNode {
      * Name of this node.
      * * `endpoint`
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

@@ -23,7 +23,7 @@ public final class ServiceEncryptionConfiguration {
     /**
      * The KMS Key
      * 
-     */
+    */
     public String getKmsKey() {
         return this.kmsKey;
     }

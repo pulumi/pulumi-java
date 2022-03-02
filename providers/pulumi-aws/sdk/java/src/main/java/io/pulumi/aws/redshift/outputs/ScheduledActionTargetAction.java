@@ -42,21 +42,21 @@ public final class ScheduledActionTargetAction {
     /**
      * An action that runs a `PauseCluster` API operation. Documented below.
      * 
-     */
+    */
     public Optional<ScheduledActionTargetActionPauseCluster> getPauseCluster() {
         return Optional.ofNullable(this.pauseCluster);
     }
     /**
      * An action that runs a `ResizeCluster` API operation. Documented below.
      * 
-     */
+    */
     public Optional<ScheduledActionTargetActionResizeCluster> getResizeCluster() {
         return Optional.ofNullable(this.resizeCluster);
     }
     /**
      * An action that runs a `ResumeCluster` API operation. Documented below.
      * 
-     */
+    */
     public Optional<ScheduledActionTargetActionResumeCluster> getResumeCluster() {
         return Optional.ofNullable(this.resumeCluster);
     }

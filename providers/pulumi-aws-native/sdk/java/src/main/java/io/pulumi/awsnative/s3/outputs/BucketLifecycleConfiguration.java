@@ -24,7 +24,7 @@ public final class BucketLifecycleConfiguration {
     /**
      * A lifecycle rule for individual objects in an Amazon S3 bucket.
      * 
-     */
+    */
     public List<BucketRule> getRules() {
         return this.rules;
     }

@@ -31,14 +31,14 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse {
     /**
      * Annotation spec set resource name.
      * 
-     */
+    */
     public String getAnnotationSpecSet() {
         return this.annotationSpecSet;
     }
     /**
      * Optional. Instruction message showed on contributors UI.
      * 
-     */
+    */
     public String getInstructionMessage() {
         return this.instructionMessage;
     }

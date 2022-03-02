@@ -24,7 +24,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionObjectI
     /**
      * Required. The parts of an OID path. The most significant parts of the path come first.
      * 
-     */
+    */
     public List<Integer> getObjectIdPaths() {
         return this.objectIdPaths;
     }

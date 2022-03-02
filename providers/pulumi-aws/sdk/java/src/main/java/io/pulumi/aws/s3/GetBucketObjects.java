@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBucketObjects {
-/**
- * > **NOTE on `max_keys`:** Retrieving very large numbers of keys can adversely affect this provider's performance.
+    private GetBucketObjects() {}
+    public interface BuilderApplicator {
+        public void apply(GetBucketObjectsArgs.Builder a);
+    }
+    private static GetBucketObjectsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBucketObjectsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * > **NOTE on `max_keys`:** Retrieving very large numbers of keys can adversely affect this provider's performance.
  * 
  * The bucket-objects data source returns keys (i.e., file names) and other metadata about objects in an S3 bucket.
  * 
- *
- * A collection of arguments for invoking getBucketObjects.
+     *
+     * A collection of arguments for invoking getBucketObjects.
  * 
- *
- * A collection of values returned by getBucketObjects.
+     *
+     * A collection of values returned by getBucketObjects.
  * 
- */
+     */
+    public static CompletableFuture<GetBucketObjectsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * > **NOTE on `max_keys`:** Retrieving very large numbers of keys can adversely affect this provider's performance.
+     * 
+     * The bucket-objects data source returns keys (i.e., file names) and other metadata about objects in an S3 bucket.
+     * 
+     *
+         * A collection of arguments for invoking getBucketObjects.
+     * 
+     *
+         * A collection of values returned by getBucketObjects.
+     * 
+     */
     public static CompletableFuture<GetBucketObjectsResult> invokeAsync(GetBucketObjectsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:s3/getBucketObjects:getBucketObjects", TypeShape.of(GetBucketObjectsResult.class), args == null ? GetBucketObjectsArgs.Empty : args, Utilities.withVersion(options));
     }

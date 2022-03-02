@@ -27,7 +27,7 @@ public final class CxPageFormParameterFillBehavior {
      * The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<CxPageFormParameterFillBehaviorInitialPromptFulfillment> getInitialPromptFulfillment() {
         return Optional.ofNullable(this.initialPromptFulfillment);
     }

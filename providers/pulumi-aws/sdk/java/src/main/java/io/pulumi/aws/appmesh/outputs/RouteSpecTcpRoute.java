@@ -34,14 +34,14 @@ public final class RouteSpecTcpRoute {
     /**
      * The action to take if a match is determined.
      * 
-     */
+    */
     public RouteSpecTcpRouteAction getAction() {
         return this.action;
     }
     /**
      * The types of timeouts.
      * 
-     */
+    */
     public Optional<RouteSpecTcpRouteTimeout> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }

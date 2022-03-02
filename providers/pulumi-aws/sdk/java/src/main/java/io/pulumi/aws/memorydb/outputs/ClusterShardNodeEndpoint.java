@@ -34,14 +34,14 @@ public final class ClusterShardNodeEndpoint {
     /**
      * DNS hostname of the node.
      * 
-     */
+    */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
     /**
      * The port number on which each of the nodes accepts connections. Defaults to `6379`.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }

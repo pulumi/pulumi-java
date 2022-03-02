@@ -45,7 +45,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
      * Destination IP address range in CIDR format. Required for
      * EGRESS rules.
      * 
-     */
+    */
     public List<String> getDestIpRanges() {
         return this.destIpRanges == null ? List.of() : this.destIpRanges;
     }
@@ -53,7 +53,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
      * Pairs of IP protocols and ports that the rule should match.
      * Structure is documented below.
      * 
-     */
+    */
     public List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> getLayer4Configs() {
         return this.layer4Configs;
     }
@@ -61,7 +61,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
      * Source IP address range in CIDR format. Required for
      * INGRESS rules.
      * 
-     */
+    */
     public List<String> getSrcIpRanges() {
         return this.srcIpRanges == null ? List.of() : this.srcIpRanges;
     }

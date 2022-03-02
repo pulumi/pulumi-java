@@ -23,7 +23,7 @@ public final class ConnectToTargetSqlMITaskInputResponse {
     /**
      * Connection information for target SQL Server
      * 
-     */
+    */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }

@@ -31,14 +31,14 @@ public final class GetDomainAdvancedSecurityOption {
     /**
      * Whether node to node encryption is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * Whether the internal user database is enabled.
      * 
-     */
+    */
     public Boolean getInternalUserDatabaseEnabled() {
         return this.internalUserDatabaseEnabled;
     }

@@ -25,7 +25,7 @@ public final class JobExecutionProperty {
     /**
      * The maximum number of concurrent runs allowed for a job. The default is 1.
      * 
-     */
+    */
     public Optional<Integer> getMaxConcurrentRuns() {
         return Optional.ofNullable(this.maxConcurrentRuns);
     }

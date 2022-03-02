@@ -23,7 +23,7 @@ public final class InstanceTemplateSpecResponse {
     /**
      * Optional. Specification of the desired behavior of the instance. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status +optional
      * 
-     */
+    */
     public InstanceSpecResponse getSpec() {
         return this.spec;
     }

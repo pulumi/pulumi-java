@@ -124,77 +124,77 @@ public final class GetCloudFormationTypeResult {
     /**
      * Identifier of the CloudFormation Type default version.
      * 
-     */
+    */
     public String getDefaultVersionId() {
         return this.defaultVersionId;
     }
     /**
      * Deprecation status of the CloudFormation Type.
      * 
-     */
+    */
     public String getDeprecatedStatus() {
         return this.deprecatedStatus;
     }
     /**
      * Description of the CloudFormation Type.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * URL of the documentation for the CloudFormation Type.
      * 
-     */
+    */
     public String getDocumentationUrl() {
         return this.documentationUrl;
     }
     /**
      * Amazon Resource Name (ARN) of the IAM Role used to register the CloudFormation Type.
      * 
-     */
+    */
     public String getExecutionRoleArn() {
         return this.executionRoleArn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Whether the CloudFormation Type version is the default version.
      * 
-     */
+    */
     public Boolean getIsDefaultVersion() {
         return this.isDefaultVersion;
     }
     /**
      * List of objects containing logging configuration.
      * 
-     */
+    */
     public List<GetCloudFormationTypeLoggingConfig> getLoggingConfigs() {
         return this.loggingConfigs;
     }
     /**
      * Provisioning behavior of the CloudFormation Type.
      * 
-     */
+    */
     public String getProvisioningType() {
         return this.provisioningType;
     }
     /**
      * JSON document of the CloudFormation Type schema.
      * 
-     */
+    */
     public String getSchema() {
         return this.schema;
     }
     /**
      * URL of the source code for the CloudFormation Type.
      * 
-     */
+    */
     public String getSourceUrl() {
         return this.sourceUrl;
     }
@@ -213,7 +213,7 @@ public final class GetCloudFormationTypeResult {
     /**
      * Scope of the CloudFormation Type.
      * 
-     */
+    */
     public String getVisibility() {
         return this.visibility;
     }

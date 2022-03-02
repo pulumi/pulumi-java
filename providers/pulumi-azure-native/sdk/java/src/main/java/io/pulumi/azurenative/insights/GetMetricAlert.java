@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMetricAlert {
-/**
- * The metric alert resource.
+    private GetMetricAlert() {}
+    public interface BuilderApplicator {
+        public void apply(GetMetricAlertArgs.Builder a);
+    }
+    private static GetMetricAlertArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMetricAlertArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The metric alert resource.
  * API Version: 2018-03-01.
  * 
- *
- * The metric alert resource.
+     *
+     * The metric alert resource.
  * 
- */
+     */
+    public static CompletableFuture<GetMetricAlertResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The metric alert resource.
+     * API Version: 2018-03-01.
+     * 
+     *
+         * The metric alert resource.
+     * 
+     */
     public static CompletableFuture<GetMetricAlertResult> invokeAsync(GetMetricAlertArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getMetricAlert", TypeShape.of(GetMetricAlertResult.class), args == null ? GetMetricAlertArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -72,7 +72,7 @@ public final class GetGroupsGroup {
     /**
      * The parent resource under which to list all Groups. Must be of the form identitysources/{identity_source_id} for external- identity-mapped groups or customers/{customer_id} for Google Groups.
      * 
-     */
+    */
     public String getParent() {
         return this.parent;
     }

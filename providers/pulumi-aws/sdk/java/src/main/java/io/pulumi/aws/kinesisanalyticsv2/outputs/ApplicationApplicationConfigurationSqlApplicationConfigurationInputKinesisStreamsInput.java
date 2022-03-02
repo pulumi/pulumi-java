@@ -23,7 +23,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     /**
      * The ARN of the input Kinesis data stream to read.
      * 
-     */
+    */
     public String getResourceArn() {
         return this.resourceArn;
     }
