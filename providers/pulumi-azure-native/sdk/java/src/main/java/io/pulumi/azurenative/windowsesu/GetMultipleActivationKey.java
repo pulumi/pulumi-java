@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMultipleActivationKey {
-/**
- * MAK key details.
+    private GetMultipleActivationKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetMultipleActivationKeyArgs.Builder a);
+    }
+    private static GetMultipleActivationKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMultipleActivationKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * MAK key details.
  * API Version: 2019-09-16-preview.
  * 
- *
- * MAK key details.
+     *
+     * MAK key details.
  * 
- */
+     */
+    public static CompletableFuture<GetMultipleActivationKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * MAK key details.
+     * API Version: 2019-09-16-preview.
+     * 
+     *
+         * MAK key details.
+     * 
+     */
     public static CompletableFuture<GetMultipleActivationKeyResult> invokeAsync(GetMultipleActivationKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:windowsesu:getMultipleActivationKey", TypeShape.of(GetMultipleActivationKeyResult.class), args == null ? GetMultipleActivationKeyArgs.Empty : args, Utilities.withVersion(options));
     }

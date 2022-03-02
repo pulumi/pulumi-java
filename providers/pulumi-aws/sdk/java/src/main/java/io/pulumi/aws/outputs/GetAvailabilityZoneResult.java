@@ -108,14 +108,14 @@ public final class GetAvailabilityZoneResult {
     /**
      * For Availability Zones, this is the same value as the Region name. For Local Zones, the name of the associated group, for example `us-west-2-lax-1`.
      * 
-     */
+    */
     public String getGroupName() {
         return this.groupName;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -127,42 +127,42 @@ public final class GetAvailabilityZoneResult {
      * For Availability Zones this is usually a single letter, for example `a` for the `us-west-2a` zone.
      * For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz-1` for the `us-west-2-wl1-sfo-wlz-1` zone.
      * 
-     */
+    */
     public String getNameSuffix() {
         return this.nameSuffix;
     }
     /**
      * The name of the location from which the address is advertised.
      * 
-     */
+    */
     public String getNetworkBorderGroup() {
         return this.networkBorderGroup;
     }
     /**
      * For Availability Zones, this always has the value of `opt-in-not-required`. For Local Zones, this is the opt in status. The possible values are `opted-in` and `not-opted-in`.
      * 
-     */
+    */
     public String getOptInStatus() {
         return this.optInStatus;
     }
     /**
      * The ID of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
      * 
-     */
+    */
     public String getParentZoneId() {
         return this.parentZoneId;
     }
     /**
      * The name of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
      * 
-     */
+    */
     public String getParentZoneName() {
         return this.parentZoneName;
     }
     /**
      * The region where the selected availability zone resides. This is always the region selected on the provider, since this data source searches only within that region.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
@@ -175,7 +175,7 @@ public final class GetAvailabilityZoneResult {
     /**
      * The type of zone. Values are `availability-zone`, `local-zone`, and `wavelength-zone`.
      * 
-     */
+    */
     public String getZoneType() {
         return this.zoneType;
     }

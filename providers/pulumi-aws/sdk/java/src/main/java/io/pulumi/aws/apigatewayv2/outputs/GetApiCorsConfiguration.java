@@ -62,42 +62,42 @@ public final class GetApiCorsConfiguration {
     /**
      * Whether credentials are included in the CORS request.
      * 
-     */
+    */
     public Boolean getAllowCredentials() {
         return this.allowCredentials;
     }
     /**
      * The set of allowed HTTP headers.
      * 
-     */
+    */
     public List<String> getAllowHeaders() {
         return this.allowHeaders;
     }
     /**
      * The set of allowed HTTP methods.
      * 
-     */
+    */
     public List<String> getAllowMethods() {
         return this.allowMethods;
     }
     /**
      * The set of allowed origins.
      * 
-     */
+    */
     public List<String> getAllowOrigins() {
         return this.allowOrigins;
     }
     /**
      * The set of exposed HTTP headers.
      * 
-     */
+    */
     public List<String> getExposeHeaders() {
         return this.exposeHeaders;
     }
     /**
      * The number of seconds that the browser should cache preflight request results.
      * 
-     */
+    */
     public Integer getMaxAge() {
         return this.maxAge;
     }

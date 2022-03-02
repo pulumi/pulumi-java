@@ -55,28 +55,28 @@ public final class ImageTemplateManagedImageDistributorResponse {
     /**
      * Tags that will be applied to the artifact once it has been created/updated by the distributor.
      * 
-     */
+    */
     public Map<String,String> getArtifactTags() {
         return this.artifactTags == null ? Map.of() : this.artifactTags;
     }
     /**
      * Resource Id of the Managed Disk Image
      * 
-     */
+    */
     public String getImageId() {
         return this.imageId;
     }
     /**
      * Azure location for the image, should match if image already exists
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name to be used for the associated RunOutput.
      * 
-     */
+    */
     public String getRunOutputName() {
         return this.runOutputName;
     }
@@ -84,7 +84,7 @@ public final class ImageTemplateManagedImageDistributorResponse {
      * Type of distribution.
      * Expected value is 'ManagedImage'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

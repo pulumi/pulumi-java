@@ -40,14 +40,14 @@ public final class DatasetAccessView {
     /**
      * The ID of the dataset containing this table.
      * 
-     */
+    */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * The ID of the project containing this table.
      * 
-     */
+    */
     public String getProjectId() {
         return this.projectId;
     }
@@ -56,7 +56,7 @@ public final class DatasetAccessView {
      * A-Z), numbers (0-9), or underscores (_). The maximum length
      * is 1,024 characters.
      * 
-     */
+    */
     public String getTableId() {
         return this.tableId;
     }

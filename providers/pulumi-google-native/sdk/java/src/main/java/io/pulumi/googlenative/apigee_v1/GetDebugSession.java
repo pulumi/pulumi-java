@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDebugSession {
-/**
- * Retrieves a debug session.
+    private GetDebugSession() {}
+    public interface BuilderApplicator {
+        public void apply(GetDebugSessionArgs.Builder a);
+    }
+    private static GetDebugSessionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDebugSessionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves a debug session.
  * 
- */
+     */
+    public static CompletableFuture<GetDebugSessionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves a debug session.
+     * 
+     */
     public static CompletableFuture<GetDebugSessionResult> invokeAsync(GetDebugSessionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getDebugSession", TypeShape.of(GetDebugSessionResult.class), args == null ? GetDebugSessionArgs.Empty : args, Utilities.withVersion(options));
     }

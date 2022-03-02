@@ -43,7 +43,7 @@ public final class PatchDeploymentRollout {
      * For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
      * Structure is documented below.
      * 
-     */
+    */
     public PatchDeploymentRolloutDisruptionBudget getDisruptionBudget() {
         return this.disruptionBudget;
     }
@@ -51,7 +51,7 @@ public final class PatchDeploymentRollout {
      * Mode of the patch rollout.
      * Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
      * 
-     */
+    */
     public String getMode() {
         return this.mode;
     }

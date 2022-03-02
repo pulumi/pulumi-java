@@ -76,14 +76,14 @@ public final class GetAvailabilityZonesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A list of the Availability Zone names available to the account.
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }
@@ -93,7 +93,7 @@ public final class GetAvailabilityZonesResult {
     /**
      * A list of the Availability Zone IDs available to the account.
      * 
-     */
+    */
     public List<String> getZoneIds() {
         return this.zoneIds;
     }

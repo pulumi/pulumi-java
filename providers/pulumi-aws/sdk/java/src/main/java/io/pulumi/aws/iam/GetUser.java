@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUser {
-/**
- * This data source can be used to fetch information about a specific
+    private GetUser() {}
+    public interface BuilderApplicator {
+        public void apply(GetUserArgs.Builder a);
+    }
+    private static GetUserArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUserArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This data source can be used to fetch information about a specific
  * IAM user. By using this data source, you can reference IAM user
  * properties without having to hard code ARNs or unique IDs as input.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getUser.
+     *
+     * A collection of arguments for invoking getUser.
  * 
- *
- * A collection of values returned by getUser.
+     *
+     * A collection of values returned by getUser.
  * 
- */
+     */
+    public static CompletableFuture<GetUserResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This data source can be used to fetch information about a specific
+     * IAM user. By using this data source, you can reference IAM user
+     * properties without having to hard code ARNs or unique IDs as input.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getUser.
+     * 
+     *
+         * A collection of values returned by getUser.
+     * 
+     */
     public static CompletableFuture<GetUserResult> invokeAsync(GetUserArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getUser:getUser", TypeShape.of(GetUserResult.class), args == null ? GetUserArgs.Empty : args, Utilities.withVersion(options));
     }

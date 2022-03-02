@@ -23,7 +23,7 @@ public final class MembershipRoleRestrictionEvaluationResponse {
     /**
      * The current state of the restriction
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }

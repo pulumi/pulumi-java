@@ -85,63 +85,63 @@ public final class SecurityGroupIngress {
     /**
      * List of CIDR blocks.
      * 
-     */
+    */
     public List<String> getCidrBlocks() {
         return this.cidrBlocks == null ? List.of() : this.cidrBlocks;
     }
     /**
      * Description of this egress rule.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Start port (or ICMP type number if protocol is `icmp`)
      * 
-     */
+    */
     public Integer getFromPort() {
         return this.fromPort;
     }
     /**
      * List of IPv6 CIDR blocks.
      * 
-     */
+    */
     public List<String> getIpv6CidrBlocks() {
         return this.ipv6CidrBlocks == null ? List.of() : this.ipv6CidrBlocks;
     }
     /**
      * List of Prefix List IDs.
      * 
-     */
+    */
     public List<String> getPrefixListIds() {
         return this.prefixListIds == null ? List.of() : this.prefixListIds;
     }
     /**
      * Protocol. If you select a protocol of `-1` (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to 0.  The supported values are defined in the `IpProtocol` argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
     /**
      * List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
      * 
-     */
+    */
     public List<String> getSecurityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
     /**
      * Whether the security group itself will be added as a source to this egress rule.
      * 
-     */
+    */
     public Optional<Boolean> getSelf() {
         return Optional.ofNullable(this.self);
     }
     /**
      * End range port (or ICMP code if protocol is `icmp`).
      * 
-     */
+    */
     public Integer getToPort() {
         return this.toPort;
     }

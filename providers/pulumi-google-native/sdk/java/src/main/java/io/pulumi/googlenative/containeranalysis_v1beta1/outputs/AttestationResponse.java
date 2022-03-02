@@ -31,7 +31,7 @@ public final class AttestationResponse {
     /**
      * A PGP signed attestation.
      * 
-     */
+    */
     public PgpSignedAttestationResponse getPgpSignedAttestation() {
         return this.pgpSignedAttestation;
     }

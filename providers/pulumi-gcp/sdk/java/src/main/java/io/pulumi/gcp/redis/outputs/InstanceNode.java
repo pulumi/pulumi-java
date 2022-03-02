@@ -29,7 +29,7 @@ public final class InstanceNode {
     /**
      * an identifier for the resource with format `projects/{{project}}/locations/{{region}}/instances/{{name}}`
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

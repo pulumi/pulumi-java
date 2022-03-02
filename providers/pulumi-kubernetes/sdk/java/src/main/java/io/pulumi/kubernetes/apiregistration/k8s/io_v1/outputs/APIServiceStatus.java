@@ -25,7 +25,7 @@ public final class APIServiceStatus {
     /**
      * Current service state of apiService.
      * 
-     */
+    */
     public List<APIServiceCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }

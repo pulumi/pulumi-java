@@ -55,35 +55,35 @@ public final class ApplicationGatewaySslPolicyResponse {
     /**
      * Ssl cipher suites to be enabled in the specified order to application gateway.
      * 
-     */
+    */
     public List<String> getCipherSuites() {
         return this.cipherSuites == null ? List.of() : this.cipherSuites;
     }
     /**
      * Ssl protocols to be disabled on application gateway.
      * 
-     */
+    */
     public List<String> getDisabledSslProtocols() {
         return this.disabledSslProtocols == null ? List.of() : this.disabledSslProtocols;
     }
     /**
      * Minimum version of Ssl protocol to be supported on application gateway.
      * 
-     */
+    */
     public Optional<String> getMinProtocolVersion() {
         return Optional.ofNullable(this.minProtocolVersion);
     }
     /**
      * Name of Ssl predefined policy.
      * 
-     */
+    */
     public Optional<String> getPolicyName() {
         return Optional.ofNullable(this.policyName);
     }
     /**
      * Type of Ssl Policy.
      * 
-     */
+    */
     public Optional<String> getPolicyType() {
         return Optional.ofNullable(this.policyType);
     }

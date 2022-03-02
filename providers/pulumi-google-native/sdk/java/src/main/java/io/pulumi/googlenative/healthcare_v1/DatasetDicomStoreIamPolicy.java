@@ -81,6 +81,22 @@ public class DatasetDicomStoreIamPolicy extends io.pulumi.resources.CustomResour
         return this.version;
     }
 
+    public interface BuilderApplicator {
+        public void apply(DatasetDicomStoreIamPolicyArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.healthcare_v1.DatasetDicomStoreIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.healthcare_v1.DatasetDicomStoreIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public DatasetDicomStoreIamPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

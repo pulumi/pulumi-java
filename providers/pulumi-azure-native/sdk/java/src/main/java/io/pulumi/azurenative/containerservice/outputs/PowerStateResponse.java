@@ -25,7 +25,7 @@ public final class PowerStateResponse {
     /**
      * Tells whether the cluster is Running or Stopped
      * 
-     */
+    */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }

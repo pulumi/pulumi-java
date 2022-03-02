@@ -40,21 +40,21 @@ public final class ProjectEnvironmentEnvironmentVariable {
     /**
      * Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Environment variable's value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

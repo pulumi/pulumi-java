@@ -41,21 +41,21 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsR
     /**
      * The metrics and corresponding confidence intervals in the inference result.
      * 
-     */
+    */
     public List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse> getMetrics() {
         return this.metrics;
     }
     /**
      * Number of sessions that were allocated to this version.
      * 
-     */
+    */
     public Integer getSessionCount() {
         return this.sessionCount;
     }
     /**
      * The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

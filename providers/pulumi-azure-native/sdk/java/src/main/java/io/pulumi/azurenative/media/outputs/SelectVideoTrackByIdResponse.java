@@ -34,14 +34,14 @@ public final class SelectVideoTrackByIdResponse {
      * The discriminator for derived types.
      * Expected value is '#Microsoft.Media.SelectVideoTrackById'.
      * 
-     */
+    */
     public String getOdataType() {
         return this.odataType;
     }
     /**
      * Track identifier to select
      * 
-     */
+    */
     public Double getTrackId() {
         return this.trackId;
     }

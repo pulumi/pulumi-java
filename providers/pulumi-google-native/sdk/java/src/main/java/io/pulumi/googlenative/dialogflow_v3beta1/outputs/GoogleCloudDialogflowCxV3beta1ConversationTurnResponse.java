@@ -32,14 +32,14 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse {
     /**
      * The user input.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse getUserInput() {
         return this.userInput;
     }
     /**
      * The virtual agent output.
      * 
-     */
+    */
     public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse getVirtualAgentOutput() {
         return this.virtualAgentOutput;
     }

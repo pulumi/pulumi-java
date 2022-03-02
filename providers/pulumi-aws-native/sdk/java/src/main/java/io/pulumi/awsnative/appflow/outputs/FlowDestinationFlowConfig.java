@@ -42,21 +42,21 @@ public final class FlowDestinationFlowConfig {
     /**
      * Name of destination connector profile
      * 
-     */
+    */
     public Optional<String> getConnectorProfileName() {
         return Optional.ofNullable(this.connectorProfileName);
     }
     /**
      * Destination connector type
      * 
-     */
+    */
     public FlowConnectorType getConnectorType() {
         return this.connectorType;
     }
     /**
      * Destination connector details
      * 
-     */
+    */
     public FlowDestinationConnectorProperties getDestinationConnectorProperties() {
         return this.destinationConnectorProperties;
     }

@@ -64,6 +64,22 @@ public class Context extends io.pulumi.resources.CustomResource {
         return this.parameters;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ContextArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.dialogflow_v2.ContextArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.dialogflow_v2.ContextArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Context(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

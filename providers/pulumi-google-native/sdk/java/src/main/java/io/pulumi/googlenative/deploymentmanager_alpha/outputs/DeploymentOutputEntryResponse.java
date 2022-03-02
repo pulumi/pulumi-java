@@ -31,14 +31,14 @@ public final class DeploymentOutputEntryResponse {
     /**
      * Key of the output
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Value of the label
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

@@ -108,91 +108,91 @@ public final class GetRouteTableRoute {
     /**
      * ID of the Carrier Gateway.
      * 
-     */
+    */
     public String getCarrierGatewayId() {
         return this.carrierGatewayId;
     }
     /**
      * CIDR block of the route.
      * 
-     */
+    */
     public String getCidrBlock() {
         return this.cidrBlock;
     }
     /**
      * The ID of a managed prefix list destination of the route.
      * 
-     */
+    */
     public String getDestinationPrefixListId() {
         return this.destinationPrefixListId;
     }
     /**
      * ID of the Egress Only Internet Gateway.
      * 
-     */
+    */
     public String getEgressOnlyGatewayId() {
         return this.egressOnlyGatewayId;
     }
     /**
      * ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
      * 
-     */
+    */
     public String getGatewayId() {
         return this.gatewayId;
     }
     /**
      * EC2 instance ID.
      * 
-     */
+    */
     public String getInstanceId() {
         return this.instanceId;
     }
     /**
      * IPv6 CIDR block of the route.
      * 
-     */
+    */
     public String getIpv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
     /**
      * Local Gateway ID.
      * 
-     */
+    */
     public String getLocalGatewayId() {
         return this.localGatewayId;
     }
     /**
      * NAT Gateway ID.
      * 
-     */
+    */
     public String getNatGatewayId() {
         return this.natGatewayId;
     }
     /**
      * ID of the elastic network interface (eni) to use.
      * 
-     */
+    */
     public String getNetworkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
      * EC2 Transit Gateway ID.
      * 
-     */
+    */
     public String getTransitGatewayId() {
         return this.transitGatewayId;
     }
     /**
      * VPC Endpoint ID.
      * 
-     */
+    */
     public String getVpcEndpointId() {
         return this.vpcEndpointId;
     }
     /**
      * VPC Peering ID.
      * 
-     */
+    */
     public String getVpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId;
     }

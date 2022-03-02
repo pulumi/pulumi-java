@@ -106,84 +106,84 @@ public final class GetContainerAppResult {
     /**
      * Non versioned Container App configuration properties.
      * 
-     */
+    */
     public Optional<ConfigurationResponse> getConfiguration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource ID of the Container App's KubeEnvironment.
      * 
-     */
+    */
     public Optional<String> getKubeEnvironmentId() {
         return Optional.ofNullable(this.kubeEnvironmentId);
     }
     /**
      * Fully Qualified Domain Name of the latest revision of the Container App.
      * 
-     */
+    */
     public String getLatestRevisionFqdn() {
         return this.latestRevisionFqdn;
     }
     /**
      * Name of the latest revision of the Container App.
      * 
-     */
+    */
     public String getLatestRevisionName() {
         return this.latestRevisionName;
     }
     /**
      * Resource Location.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the Container App.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Container App versioned application definition.
      * 
-     */
+    */
     public Optional<TemplateResponse> getTemplate() {
         return Optional.ofNullable(this.template);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

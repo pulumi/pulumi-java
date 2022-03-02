@@ -95,70 +95,70 @@ public final class GetObjectTypeResult {
     /**
      * Indicates whether a profile should be created when data is received.
      * 
-     */
+    */
     public Optional<Boolean> getAllowProfileCreation() {
         return Optional.ofNullable(this.allowProfileCreation);
     }
     /**
      * The time of this integration got created.
      * 
-     */
+    */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
      * Description of the profile object type.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The default encryption key
      * 
-     */
+    */
     public Optional<String> getEncryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
     /**
      * The default number of days until the data within the domain expires.
      * 
-     */
+    */
     public Optional<Integer> getExpirationDays() {
         return Optional.ofNullable(this.expirationDays);
     }
     /**
      * A list of the name and ObjectType field.
      * 
-     */
+    */
     public List<ObjectTypeFieldMap> getFields() {
         return this.fields == null ? List.of() : this.fields;
     }
     /**
      * A list of unique keys that can be used to map data to the profile.
      * 
-     */
+    */
     public List<ObjectTypeKeyMap> getKeys() {
         return this.keys == null ? List.of() : this.keys;
     }
     /**
      * The time of this integration got last updated at.
      * 
-     */
+    */
     public Optional<String> getLastUpdatedAt() {
         return Optional.ofNullable(this.lastUpdatedAt);
     }
     /**
      * The tags (keys and values) associated with the integration.
      * 
-     */
+    */
     public List<ObjectTypeTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * A unique identifier for the object template.
      * 
-     */
+    */
     public Optional<String> getTemplateId() {
         return Optional.ofNullable(this.templateId);
     }

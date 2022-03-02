@@ -97,77 +97,77 @@ public final class GetGalleryApplicationResult {
     /**
      * The description of this gallery Application Definition resource. This property is updatable.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
      * 
-     */
+    */
     public Optional<String> getEndOfLifeDate() {
         return Optional.ofNullable(this.endOfLifeDate);
     }
     /**
      * The Eula agreement for the gallery Application Definition.
      * 
-     */
+    */
     public Optional<String> getEula() {
         return Optional.ofNullable(this.eula);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource location
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The privacy statement uri.
      * 
-     */
+    */
     public Optional<String> getPrivacyStatementUri() {
         return Optional.ofNullable(this.privacyStatementUri);
     }
     /**
      * The release note uri.
      * 
-     */
+    */
     public Optional<String> getReleaseNoteUri() {
         return Optional.ofNullable(this.releaseNoteUri);
     }
     /**
      * This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
      * 
-     */
+    */
     public String getSupportedOSType() {
         return this.supportedOSType;
     }
     /**
      * Resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

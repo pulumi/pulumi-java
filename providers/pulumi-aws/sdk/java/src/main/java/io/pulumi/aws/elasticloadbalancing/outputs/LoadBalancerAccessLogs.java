@@ -49,28 +49,28 @@ public final class LoadBalancerAccessLogs {
     /**
      * The S3 bucket name to store the logs in.
      * 
-     */
+    */
     public String getBucket() {
         return this.bucket;
     }
     /**
      * The S3 bucket prefix. Logs are stored in the root if not configured.
      * 
-     */
+    */
     public Optional<String> getBucketPrefix() {
         return Optional.ofNullable(this.bucketPrefix);
     }
     /**
      * Boolean to enable / disable `access_logs`. Default is `true`
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The publishing interval in minutes. Default: 60 minutes.
      * 
-     */
+    */
     public Optional<Integer> getInterval() {
         return Optional.ofNullable(this.interval);
     }

@@ -34,14 +34,14 @@ public final class BucketIntelligentTieringConfigurationFilter {
     /**
      * An object key name prefix that identifies the subset of objects to which the configuration applies.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * All of these tags must exist in the object's tag set in order for the configuration to apply.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }

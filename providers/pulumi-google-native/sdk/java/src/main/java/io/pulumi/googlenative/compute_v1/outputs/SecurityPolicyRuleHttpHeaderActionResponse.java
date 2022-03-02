@@ -24,7 +24,7 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse {
     /**
      * The list of request headers to add or overwrite if they're already present.
      * 
-     */
+    */
     public List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> getRequestHeadersToAdds() {
         return this.requestHeadersToAdds;
     }

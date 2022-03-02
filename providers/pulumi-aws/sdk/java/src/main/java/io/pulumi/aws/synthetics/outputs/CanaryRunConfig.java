@@ -41,21 +41,21 @@ public final class CanaryRunConfig {
     /**
      * Whether this canary is to use active AWS X-Ray tracing when it runs. You can enable active tracing only for canaries that use version syn-nodejs-2.0 or later for their canary runtime.
      * 
-     */
+    */
     public Optional<Boolean> getActiveTracing() {
         return Optional.ofNullable(this.activeTracing);
     }
     /**
      * Maximum amount of memory available to the canary while it is running, in MB. The value you specify must be a multiple of 64.
      * 
-     */
+    */
     public Optional<Integer> getMemoryInMb() {
         return Optional.ofNullable(this.memoryInMb);
     }
     /**
      * Number of seconds the canary is allowed to run before it must stop. If you omit this field, the frequency of the canary is used, up to a maximum of 840 (14 minutes).
      * 
-     */
+    */
     public Optional<Integer> getTimeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }

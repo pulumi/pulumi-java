@@ -39,21 +39,21 @@ public final class DataSourceParametersOracle {
     /**
      * The database to which to connect.
      * 
-     */
+    */
     public String getDatabase() {
         return this.database;
     }
     /**
      * The host to which to connect.
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * The port to which to connect.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }

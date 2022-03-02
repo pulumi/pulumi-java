@@ -70,49 +70,49 @@ public final class GetProjectResult {
     /**
      * For optimistic concurrency control.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Path reference to this project /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Azure location in which project is created.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of the project.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Properties of the project.
      * 
-     */
+    */
     public ProjectPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * Tags provided by Azure Tagging service.
      * 
-     */
+    */
     public Optional<Object> getTags() {
         return Optional.ofNullable(this.tags);
     }
     /**
      * Type of the object = [Microsoft.Migrate/assessmentProjects].
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

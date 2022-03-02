@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSchema {
-/**
- * Schema Contract details.
+    private GetSchema() {}
+    public interface BuilderApplicator {
+        public void apply(GetSchemaArgs.Builder a);
+    }
+    private static GetSchemaArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSchemaArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Schema Contract details.
  * API Version: 2021-04-01-preview.
  * 
- *
- * Schema Contract details.
+     *
+     * Schema Contract details.
  * 
- */
+     */
+    public static CompletableFuture<GetSchemaResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Schema Contract details.
+     * API Version: 2021-04-01-preview.
+     * 
+     *
+         * Schema Contract details.
+     * 
+     */
     public static CompletableFuture<GetSchemaResult> invokeAsync(GetSchemaArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getSchema", TypeShape.of(GetSchemaResult.class), args == null ? GetSchemaArgs.Empty : args, Utilities.withVersion(options));
     }

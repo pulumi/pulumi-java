@@ -41,21 +41,21 @@ public final class GetResolverConfigResult {
     /**
      * ResolverAutodefinedReverseStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
      * 
-     */
+    */
     public Optional<ResolverConfigAutodefinedReverse> getAutodefinedReverse() {
         return Optional.ofNullable(this.autodefinedReverse);
     }
     /**
      * Id
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * AccountId
      * 
-     */
+    */
     public Optional<String> getOwnerId() {
         return Optional.ofNullable(this.ownerId);
     }

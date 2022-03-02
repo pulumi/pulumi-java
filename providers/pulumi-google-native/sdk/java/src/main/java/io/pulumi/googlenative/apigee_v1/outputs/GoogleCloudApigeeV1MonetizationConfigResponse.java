@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1MonetizationConfigResponse {
     /**
      * Flag that specifies whether the Monetization add-on is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }

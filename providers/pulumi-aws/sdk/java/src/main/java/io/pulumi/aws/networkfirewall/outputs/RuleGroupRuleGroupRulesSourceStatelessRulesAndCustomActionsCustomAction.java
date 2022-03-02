@@ -32,14 +32,14 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
     /**
      * A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
      * 
-     */
+    */
     public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition getActionDefinition() {
         return this.actionDefinition;
     }
     /**
      * A friendly name of the custom action.
      * 
-     */
+    */
     public String getActionName() {
         return this.actionName;
     }

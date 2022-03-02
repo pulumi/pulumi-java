@@ -48,28 +48,28 @@ public final class AzureFilePersistentVolumeSource {
     /**
      * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
-     */
+    */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
     /**
      * the name of secret that contains Azure Storage Account Name and Key
      * 
-     */
+    */
     public String getSecretName() {
         return this.secretName;
     }
     /**
      * the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
      * 
-     */
+    */
     public Optional<String> getSecretNamespace() {
         return Optional.ofNullable(this.secretNamespace);
     }
     /**
      * Share Name
      * 
-     */
+    */
     public String getShareName() {
         return this.shareName;
     }

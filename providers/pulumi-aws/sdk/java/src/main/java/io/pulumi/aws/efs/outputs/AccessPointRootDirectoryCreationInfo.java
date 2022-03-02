@@ -39,21 +39,21 @@ public final class AccessPointRootDirectoryCreationInfo {
     /**
      * POSIX group ID to apply to the `root_directory`.
      * 
-     */
+    */
     public Integer getOwnerGid() {
         return this.ownerGid;
     }
     /**
      * POSIX user ID to apply to the `root_directory`.
      * 
-     */
+    */
     public Integer getOwnerUid() {
         return this.ownerUid;
     }
     /**
      * POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
      * 
-     */
+    */
     public String getPermissions() {
         return this.permissions;
     }

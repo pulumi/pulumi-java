@@ -37,7 +37,7 @@ public final class CatalogTablePartitionIndex {
     /**
      * Name of the partition index.
      * 
-     */
+    */
     public String getIndexName() {
         return this.indexName;
     }
@@ -47,7 +47,7 @@ public final class CatalogTablePartitionIndex {
     /**
      * Keys for the partition index.
      * 
-     */
+    */
     public List<String> getKeys() {
         return this.keys;
     }

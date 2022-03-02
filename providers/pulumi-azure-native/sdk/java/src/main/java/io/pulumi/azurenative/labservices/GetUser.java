@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUser {
-/**
- * The User registered to a lab
+    private GetUser() {}
+    public interface BuilderApplicator {
+        public void apply(GetUserArgs.Builder a);
+    }
+    private static GetUserArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUserArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The User registered to a lab
  * API Version: 2018-10-15.
  * 
- *
- * The User registered to a lab
+     *
+     * The User registered to a lab
  * 
- */
+     */
+    public static CompletableFuture<GetUserResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The User registered to a lab
+     * API Version: 2018-10-15.
+     * 
+     *
+         * The User registered to a lab
+     * 
+     */
     public static CompletableFuture<GetUserResult> invokeAsync(GetUserArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getUser", TypeShape.of(GetUserResult.class), args == null ? GetUserArgs.Empty : args, Utilities.withVersion(options));
     }

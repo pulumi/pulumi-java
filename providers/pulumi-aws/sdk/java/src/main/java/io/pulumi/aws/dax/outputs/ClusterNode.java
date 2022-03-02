@@ -45,7 +45,7 @@ public final class ClusterNode {
     /**
      * The port used by the configuration endpoint
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }

@@ -73,49 +73,49 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse {
     /**
      * SAS URI of Azure Storage Account Container to be used for storing backup files.
      * 
-     */
+    */
     public BlobShareResponse getBackupBlobShare() {
         return this.backupBlobShare;
     }
     /**
      * Backup file share information for all selected databases.
      * 
-     */
+    */
     public Optional<FileShareResponse> getBackupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
     /**
      * Backup Mode to specify whether to use existing backup or create new backup.
      * 
-     */
+    */
     public Optional<String> getBackupMode() {
         return Optional.ofNullable(this.backupMode);
     }
     /**
      * Databases to migrate
      * 
-     */
+    */
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
     }
     /**
      * Logins to migrate
      * 
-     */
+    */
     public List<String> getSelectedLogins() {
         return this.selectedLogins == null ? List.of() : this.selectedLogins;
     }
     /**
      * Information for connecting to source
      * 
-     */
+    */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Information for connecting to target
      * 
-     */
+    */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }

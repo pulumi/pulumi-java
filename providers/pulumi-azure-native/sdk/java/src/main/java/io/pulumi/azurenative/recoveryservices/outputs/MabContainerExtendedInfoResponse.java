@@ -55,35 +55,35 @@ public final class MabContainerExtendedInfoResponse {
     /**
      * Type of backup items associated with this container.
      * 
-     */
+    */
     public Optional<String> getBackupItemType() {
         return Optional.ofNullable(this.backupItemType);
     }
     /**
      * List of backup items associated with this container.
      * 
-     */
+    */
     public List<String> getBackupItems() {
         return this.backupItems == null ? List.of() : this.backupItems;
     }
     /**
      * Latest backup status of this container.
      * 
-     */
+    */
     public Optional<String> getLastBackupStatus() {
         return Optional.ofNullable(this.lastBackupStatus);
     }
     /**
      * Time stamp when this container was refreshed.
      * 
-     */
+    */
     public Optional<String> getLastRefreshedAt() {
         return Optional.ofNullable(this.lastRefreshedAt);
     }
     /**
      * Backup policy associated with this container.
      * 
-     */
+    */
     public Optional<String> getPolicyName() {
         return Optional.ofNullable(this.policyName);
     }

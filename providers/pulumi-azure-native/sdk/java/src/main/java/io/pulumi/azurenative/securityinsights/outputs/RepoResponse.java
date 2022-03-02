@@ -41,21 +41,21 @@ public final class RepoResponse {
     /**
      * Array of branches.
      * 
-     */
+    */
     public List<String> getBranches() {
         return this.branches == null ? List.of() : this.branches;
     }
     /**
      * The name of the repository.
      * 
-     */
+    */
     public Optional<String> getFullName() {
         return Optional.ofNullable(this.fullName);
     }
     /**
      * The url to access the repository.
      * 
-     */
+    */
     public Optional<String> getUrl() {
         return Optional.ofNullable(this.url);
     }

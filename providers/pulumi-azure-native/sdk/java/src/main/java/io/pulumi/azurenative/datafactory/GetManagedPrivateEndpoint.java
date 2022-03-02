@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedPrivateEndpoint {
-/**
- * Managed private endpoint resource type.
+    private GetManagedPrivateEndpoint() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagedPrivateEndpointArgs.Builder a);
+    }
+    private static GetManagedPrivateEndpointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagedPrivateEndpointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Managed private endpoint resource type.
  * API Version: 2018-06-01.
  * 
- *
- * Managed private endpoint resource type.
+     *
+     * Managed private endpoint resource type.
  * 
- */
+     */
+    public static CompletableFuture<GetManagedPrivateEndpointResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Managed private endpoint resource type.
+     * API Version: 2018-06-01.
+     * 
+     *
+         * Managed private endpoint resource type.
+     * 
+     */
     public static CompletableFuture<GetManagedPrivateEndpointResult> invokeAsync(GetManagedPrivateEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getManagedPrivateEndpoint", TypeShape.of(GetManagedPrivateEndpointResult.class), args == null ? GetManagedPrivateEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

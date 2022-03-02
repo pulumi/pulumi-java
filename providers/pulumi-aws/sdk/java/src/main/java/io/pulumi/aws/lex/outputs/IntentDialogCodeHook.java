@@ -35,14 +35,14 @@ public final class IntentDialogCodeHook {
      * to invoke your Lambda function. For more information, see
      * [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
      * 
-     */
+    */
     public String getMessageVersion() {
         return this.messageVersion;
     }
     /**
      * The Amazon Resource Name (ARN) of the Lambda function.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }

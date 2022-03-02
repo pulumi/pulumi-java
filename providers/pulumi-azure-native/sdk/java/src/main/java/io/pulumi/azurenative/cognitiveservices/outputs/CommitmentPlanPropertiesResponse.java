@@ -63,42 +63,42 @@ public final class CommitmentPlanPropertiesResponse {
     /**
      * AutoRenew commitment plan.
      * 
-     */
+    */
     public Optional<Boolean> getAutoRenew() {
         return Optional.ofNullable(this.autoRenew);
     }
     /**
      * Cognitive Services account commitment period.
      * 
-     */
+    */
     public Optional<CommitmentPeriodResponse> getCurrent() {
         return Optional.ofNullable(this.current);
     }
     /**
      * Account hosting model.
      * 
-     */
+    */
     public Optional<String> getHostingModel() {
         return Optional.ofNullable(this.hostingModel);
     }
     /**
      * Cognitive Services account commitment period.
      * 
-     */
+    */
     public CommitmentPeriodResponse getLast() {
         return this.last;
     }
     /**
      * Cognitive Services account commitment period.
      * 
-     */
+    */
     public Optional<CommitmentPeriodResponse> getNext() {
         return Optional.ofNullable(this.next);
     }
     /**
      * Commitment plan type.
      * 
-     */
+    */
     public Optional<String> getPlanType() {
         return Optional.ofNullable(this.planType);
     }

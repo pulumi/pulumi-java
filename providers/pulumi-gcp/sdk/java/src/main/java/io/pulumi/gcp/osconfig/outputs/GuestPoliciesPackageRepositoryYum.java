@@ -49,21 +49,21 @@ public final class GuestPoliciesPackageRepositoryYum {
     /**
      * The location of the repository directory.
      * 
-     */
+    */
     public String getBaseUrl() {
         return this.baseUrl;
     }
     /**
      * The display name of the repository.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * URIs of GPG keys.
      * 
-     */
+    */
     public List<String> getGpgKeys() {
         return this.gpgKeys == null ? List.of() : this.gpgKeys;
     }
@@ -71,7 +71,7 @@ public final class GuestPoliciesPackageRepositoryYum {
      * Id of the artifact, which the installation and update steps of this recipe can reference.
      * Artifacts in a recipe cannot have the same id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

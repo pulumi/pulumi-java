@@ -99,77 +99,77 @@ public final class GetOrganizationResult {
     /**
      * The creation time of the resource.
      * 
-     */
+    */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The ARM id of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Location of Organization resource
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Confluent offer detail
      * 
-     */
+    */
     public Optional<OrganizationResourcePropertiesResponseOfferDetail> getOfferDetail() {
         return Optional.ofNullable(this.offerDetail);
     }
     /**
      * Id of the Confluent organization.
      * 
-     */
+    */
     public String getOrganizationId() {
         return this.organizationId;
     }
     /**
      * Provision states for confluent RP
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * SSO url for the Confluent organization.
      * 
-     */
+    */
     public String getSsoUrl() {
         return this.ssoUrl;
     }
     /**
      * Organization resource tags
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * Subscriber detail
      * 
-     */
+    */
     public Optional<OrganizationResourcePropertiesResponseUserDetail> getUserDetail() {
         return Optional.ofNullable(this.userDetail);
     }

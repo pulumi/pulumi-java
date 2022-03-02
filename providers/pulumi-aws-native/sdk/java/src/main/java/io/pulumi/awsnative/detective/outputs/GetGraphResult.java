@@ -31,7 +31,7 @@ public final class GetGraphResult {
     /**
      * The Detective graph ARN
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }

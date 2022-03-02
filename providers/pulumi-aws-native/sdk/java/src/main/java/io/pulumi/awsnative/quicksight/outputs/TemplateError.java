@@ -30,7 +30,7 @@ public final class TemplateError {
     /**
      * <p>Description of the error type.</p>
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }

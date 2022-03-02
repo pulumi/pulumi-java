@@ -62,42 +62,42 @@ public final class UserPoolPasswordPolicy {
     /**
      * Minimum length of the password policy that you have set.
      * 
-     */
+    */
     public Optional<Integer> getMinimumLength() {
         return Optional.ofNullable(this.minimumLength);
     }
     /**
      * Whether you have required users to use at least one lowercase letter in their password.
      * 
-     */
+    */
     public Optional<Boolean> getRequireLowercase() {
         return Optional.ofNullable(this.requireLowercase);
     }
     /**
      * Whether you have required users to use at least one number in their password.
      * 
-     */
+    */
     public Optional<Boolean> getRequireNumbers() {
         return Optional.ofNullable(this.requireNumbers);
     }
     /**
      * Whether you have required users to use at least one symbol in their password.
      * 
-     */
+    */
     public Optional<Boolean> getRequireSymbols() {
         return Optional.ofNullable(this.requireSymbols);
     }
     /**
      * Whether you have required users to use at least one uppercase letter in their password.
      * 
-     */
+    */
     public Optional<Boolean> getRequireUppercase() {
         return Optional.ofNullable(this.requireUppercase);
     }
     /**
      * In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
      * 
-     */
+    */
     public Optional<Integer> getTemporaryPasswordValidityDays() {
         return Optional.ofNullable(this.temporaryPasswordValidityDays);
     }

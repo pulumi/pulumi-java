@@ -41,7 +41,7 @@ public final class FlowZendeskDestinationProperties {
     /**
      * List of fields used as ID when performing a write operation.
      * 
-     */
+    */
     public List<String> getIdFieldNames() {
         return this.idFieldNames == null ? List.of() : this.idFieldNames;
     }

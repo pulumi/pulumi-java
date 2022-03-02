@@ -56,35 +56,35 @@ public final class InTotoStatementResponse {
     /**
      * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
      * 
-     */
+    */
     public String getPredicateType() {
         return this.predicateType;
     }
     /**
      * provenance is a predicate of type intotoprovenance
      * 
-     */
+    */
     public InTotoProvenanceResponse getProvenance() {
         return this.provenance;
     }
     /**
      * slsa_provenance is a predicate of type slsaProvenance
      * 
-     */
+    */
     public SlsaProvenanceResponse getSlsaProvenance() {
         return this.slsaProvenance;
     }
     /**
      * subject is the subjects of the intoto statement
      * 
-     */
+    */
     public List<SubjectResponse> getSubject() {
         return this.subject;
     }
     /**
      * Always "https://in-toto.io/Statement/v0.1".
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

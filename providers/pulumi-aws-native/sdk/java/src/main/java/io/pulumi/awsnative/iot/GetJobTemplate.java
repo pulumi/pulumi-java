@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobTemplate {
-/**
- * Job templates enable you to preconfigure jobs so that you can deploy them to multiple sets of target devices.
+    private GetJobTemplate() {}
+    public interface BuilderApplicator {
+        public void apply(GetJobTemplateArgs.Builder a);
+    }
+    private static GetJobTemplateArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetJobTemplateArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Job templates enable you to preconfigure jobs so that you can deploy them to multiple sets of target devices.
  * 
- */
+     */
+    public static CompletableFuture<GetJobTemplateResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Job templates enable you to preconfigure jobs so that you can deploy them to multiple sets of target devices.
+     * 
+     */
     public static CompletableFuture<GetJobTemplateResult> invokeAsync(GetJobTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:iot:getJobTemplate", TypeShape.of(GetJobTemplateResult.class), args == null ? GetJobTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

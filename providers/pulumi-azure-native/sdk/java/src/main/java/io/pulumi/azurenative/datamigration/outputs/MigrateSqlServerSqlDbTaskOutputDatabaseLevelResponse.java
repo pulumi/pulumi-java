@@ -135,77 +135,77 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse {
     /**
      * Name of the item
      * 
-     */
+    */
     public String getDatabaseName() {
         return this.databaseName;
     }
     /**
      * Migration end time
      * 
-     */
+    */
     public String getEndedOn() {
         return this.endedOn;
     }
     /**
      * Number of database/object errors.
      * 
-     */
+    */
     public Double getErrorCount() {
         return this.errorCount;
     }
     /**
      * Wildcard string prefix to use for querying all errors of the item
      * 
-     */
+    */
     public String getErrorPrefix() {
         return this.errorPrefix;
     }
     /**
      * Migration exceptions and warnings.
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Migration progress message
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * Number of objects
      * 
-     */
+    */
     public Double getNumberOfObjects() {
         return this.numberOfObjects;
     }
     /**
      * Number of successfully completed objects
      * 
-     */
+    */
     public Double getNumberOfObjectsCompleted() {
         return this.numberOfObjectsCompleted;
     }
     /**
      * Summary of object results in the migration
      * 
-     */
+    */
     public Map<String,DataItemMigrationSummaryResultResponse> getObjectSummary() {
         return this.objectSummary;
     }
     /**
      * Wildcard string prefix to use for querying all sub-tem results of the item
      * 
-     */
+    */
     public String getResultPrefix() {
         return this.resultPrefix;
     }
@@ -213,35 +213,35 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse {
      * Result type
      * Expected value is 'DatabaseLevelOutput'.
      * 
-     */
+    */
     public String getResultType() {
         return this.resultType;
     }
     /**
      * Migration stage that this database is in
      * 
-     */
+    */
     public String getStage() {
         return this.stage;
     }
     /**
      * Migration start time
      * 
-     */
+    */
     public String getStartedOn() {
         return this.startedOn;
     }
     /**
      * Current state of migration
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * Status message
      * 
-     */
+    */
     public String getStatusMessage() {
         return this.statusMessage;
     }

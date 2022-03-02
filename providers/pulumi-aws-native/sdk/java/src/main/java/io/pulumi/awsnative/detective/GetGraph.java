@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGraph {
-/**
- * Resource schema for AWS::Detective::Graph
+    private GetGraph() {}
+    public interface BuilderApplicator {
+        public void apply(GetGraphArgs.Builder a);
+    }
+    private static GetGraphArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGraphArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::Detective::Graph
  * 
- */
+     */
+    public static CompletableFuture<GetGraphResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::Detective::Graph
+     * 
+     */
     public static CompletableFuture<GetGraphResult> invokeAsync(GetGraphArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:detective:getGraph", TypeShape.of(GetGraphResult.class), args == null ? GetGraphArgs.Empty : args, Utilities.withVersion(options));
     }

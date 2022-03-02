@@ -92,70 +92,70 @@ public final class AutoprovisioningNodePoolDefaultsResponse {
     /**
      *  The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
      * 
-     */
+    */
     public String getBootDiskKmsKey() {
         return this.bootDiskKmsKey;
     }
     /**
      * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
      * 
-     */
+    */
     public Integer getDiskSizeGb() {
         return this.diskSizeGb;
     }
     /**
      * Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or 'pd-balanced') If unspecified, the default disk type is 'pd-standard'
      * 
-     */
+    */
     public String getDiskType() {
         return this.diskType;
     }
     /**
      * The image type to use for NAP created node.
      * 
-     */
+    */
     public String getImageType() {
         return this.imageType;
     }
     /**
      * NodeManagement configuration for this NodePool.
      * 
-     */
+    */
     public NodeManagementResponse getManagement() {
         return this.management;
     }
     /**
      * Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform. Applicable values are the friendly names of CPU platforms, such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more information, read [how to specify min CPU platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform) To unset the min cpu platform field pass "automatic" as field value.
      * 
-     */
+    */
     public String getMinCpuPlatform() {
         return this.minCpuPlatform;
     }
     /**
      * The set of Google API scopes to be made available on all of the node VMs under the "default" service account. The following scopes are recommended, but not required, and by default are not included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will be added.
      * 
-     */
+    */
     public List<String> getOauthScopes() {
         return this.oauthScopes;
     }
     /**
      * The Google Cloud Platform Service Account to be used by the node VMs. Specify the email address of the Service Account; otherwise, if no Service Account is specified, the "default" service account is used.
      * 
-     */
+    */
     public String getServiceAccount() {
         return this.serviceAccount;
     }
     /**
      * Shielded Instance options.
      * 
-     */
+    */
     public ShieldedInstanceConfigResponse getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
     /**
      * Upgrade settings control disruption and speed of the upgrade.
      * 
-     */
+    */
     public UpgradeSettingsResponse getUpgradeSettings() {
         return this.upgradeSettings;
     }

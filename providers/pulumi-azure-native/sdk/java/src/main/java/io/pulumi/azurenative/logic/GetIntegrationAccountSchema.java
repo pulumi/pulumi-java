@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationAccountSchema {
-/**
- * The integration account schema.
+    private GetIntegrationAccountSchema() {}
+    public interface BuilderApplicator {
+        public void apply(GetIntegrationAccountSchemaArgs.Builder a);
+    }
+    private static GetIntegrationAccountSchemaArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIntegrationAccountSchemaArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The integration account schema.
  * API Version: 2019-05-01.
  * 
- *
- * The integration account schema.
+     *
+     * The integration account schema.
  * 
- */
+     */
+    public static CompletableFuture<GetIntegrationAccountSchemaResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The integration account schema.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The integration account schema.
+     * 
+     */
     public static CompletableFuture<GetIntegrationAccountSchemaResult> invokeAsync(GetIntegrationAccountSchemaArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountSchema", TypeShape.of(GetIntegrationAccountSchemaResult.class), args == null ? GetIntegrationAccountSchemaArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -31,14 +31,14 @@ public final class SchemaSettingsResponse {
     /**
      * The encoding of messages validated against `schema`.
      * 
-     */
+    */
     public String getEncoding() {
         return this.encoding;
     }
     /**
      * The name of the schema that messages published should be validated against. Format is `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if the schema has been deleted.
      * 
-     */
+    */
     public String getSchema() {
         return this.schema;
     }

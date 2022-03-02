@@ -45,28 +45,28 @@ public final class NetworkInterfaceResponse {
     /**
      * PrivateIp address of the Compute VM
      * 
-     */
+    */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
     }
     /**
      * Connection information for Windows
      * 
-     */
+    */
     public String getRdpAuthority() {
         return this.rdpAuthority;
     }
     /**
      * Connection information for Linux
      * 
-     */
+    */
     public String getSshAuthority() {
         return this.sshAuthority;
     }
     /**
      * Username of the VM
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }

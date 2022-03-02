@@ -55,14 +55,14 @@ public final class AutoscalingPolicyWorkerConfig {
      * secondary workers. Required for secondary workers if the minimum secondary instances is set.
      * Bounds: [minInstances, ). Defaults to 0.
      * 
-     */
+    */
     public Integer getMaxInstances() {
         return this.maxInstances;
     }
     /**
      * Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
      * 
-     */
+    */
     public Optional<Integer> getMinInstances() {
         return Optional.ofNullable(this.minInstances);
     }
@@ -80,7 +80,7 @@ public final class AutoscalingPolicyWorkerConfig {
      * the cluster will default to zero weight on the unset group. For example if weight is set
      * only on primary workers, the cluster will use primary workers only and no secondary workers.
      * 
-     */
+    */
     public Optional<Integer> getWeight() {
         return Optional.ofNullable(this.weight);
     }

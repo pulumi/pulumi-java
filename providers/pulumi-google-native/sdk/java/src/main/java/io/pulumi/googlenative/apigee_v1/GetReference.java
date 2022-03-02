@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReference {
-/**
- * Gets a Reference resource.
+    private GetReference() {}
+    public interface BuilderApplicator {
+        public void apply(GetReferenceArgs.Builder a);
+    }
+    private static GetReferenceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReferenceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a Reference resource.
  * 
- */
+     */
+    public static CompletableFuture<GetReferenceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a Reference resource.
+     * 
+     */
     public static CompletableFuture<GetReferenceResult> invokeAsync(GetReferenceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getReference", TypeShape.of(GetReferenceResult.class), args == null ? GetReferenceArgs.Empty : args, Utilities.withVersion(options));
     }

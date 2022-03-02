@@ -23,7 +23,7 @@ public final class GetManagerDevicePublicEncryptionKeyResult {
     /**
      * The key.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }

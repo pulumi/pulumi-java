@@ -115,6 +115,22 @@ public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
         return this.status;
     }
 
+    public interface BuilderApplicator {
+        public void apply(MultiRegionAccessPointArgs.Builder a);
+    }
+    private static io.pulumi.aws.s3control.MultiRegionAccessPointArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.s3control.MultiRegionAccessPointArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public MultiRegionAccessPoint(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

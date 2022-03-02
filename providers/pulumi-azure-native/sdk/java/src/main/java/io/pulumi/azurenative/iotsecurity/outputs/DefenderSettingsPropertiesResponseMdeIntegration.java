@@ -23,7 +23,7 @@ public final class DefenderSettingsPropertiesResponseMdeIntegration {
     /**
      * Integration status
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

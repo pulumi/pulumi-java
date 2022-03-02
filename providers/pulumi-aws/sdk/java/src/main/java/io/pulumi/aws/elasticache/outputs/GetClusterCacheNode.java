@@ -42,7 +42,7 @@ public final class GetClusterCacheNode {
     /**
      * The Availability Zone for the cache cluster.
      * 
-     */
+    */
     public String getAvailabilityZone() {
         return this.availabilityZone;
     }
@@ -53,7 +53,7 @@ public final class GetClusterCacheNode {
      * The port number on which each of the cache nodes will
      * accept connections.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }

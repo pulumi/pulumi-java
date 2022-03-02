@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetModel {
-/**
- * Gets information about a model, including its name, the description (if set), and the default version (if at least one version of the model has been deployed).
+    private GetModel() {}
+    public interface BuilderApplicator {
+        public void apply(GetModelArgs.Builder a);
+    }
+    private static GetModelArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetModelArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets information about a model, including its name, the description (if set), and the default version (if at least one version of the model has been deployed).
  * 
- */
+     */
+    public static CompletableFuture<GetModelResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets information about a model, including its name, the description (if set), and the default version (if at least one version of the model has been deployed).
+     * 
+     */
     public static CompletableFuture<GetModelResult> invokeAsync(GetModelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:ml/v1:getModel", TypeShape.of(GetModelResult.class), args == null ? GetModelArgs.Empty : args, Utilities.withVersion(options));
     }

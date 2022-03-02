@@ -50,28 +50,28 @@ public final class GetDatasetResult {
     /**
      * Dataset format
      * 
-     */
+    */
     public Optional<DatasetFormat> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Format options for dataset
      * 
-     */
+    */
     public Optional<DatasetFormatOptions> getFormatOptions() {
         return Optional.ofNullable(this.formatOptions);
     }
     /**
      * Input
      * 
-     */
+    */
     public Optional<DatasetInput> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * PathOptions
      * 
-     */
+    */
     public Optional<DatasetPathOptions> getPathOptions() {
         return Optional.ofNullable(this.pathOptions);
     }

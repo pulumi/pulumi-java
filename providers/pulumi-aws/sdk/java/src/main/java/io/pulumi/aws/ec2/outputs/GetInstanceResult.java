@@ -313,35 +313,35 @@ public final class GetInstanceResult {
     /**
      * The ID of the AMI used to launch the instance.
      * 
-     */
+    */
     public String getAmi() {
         return this.ami;
     }
     /**
      * The ARN of the instance.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Whether or not the Instance is associated with a public IP address or not (Boolean).
      * 
-     */
+    */
     public Boolean getAssociatePublicIpAddress() {
         return this.associatePublicIpAddress;
     }
     /**
      * The availability zone of the Instance.
      * 
-     */
+    */
     public String getAvailabilityZone() {
         return this.availabilityZone;
     }
     /**
      * The credit specification of the Instance.
      * 
-     */
+    */
     public List<GetInstanceCreditSpecification> getCreditSpecifications() {
         return this.creditSpecifications;
     }
@@ -351,28 +351,28 @@ public final class GetInstanceResult {
     /**
      * The EBS block device mappings of the Instance.
      * 
-     */
+    */
     public List<GetInstanceEbsBlockDevice> getEbsBlockDevices() {
         return this.ebsBlockDevices;
     }
     /**
      * Whether the Instance is EBS optimized or not (Boolean).
      * 
-     */
+    */
     public Boolean getEbsOptimized() {
         return this.ebsOptimized;
     }
     /**
      * The enclave options of the Instance.
      * 
-     */
+    */
     public List<GetInstanceEnclaveOption> getEnclaveOptions() {
         return this.enclaveOptions;
     }
     /**
      * The ephemeral block device mappings of the Instance.
      * 
-     */
+    */
     public List<GetInstanceEphemeralBlockDevice> getEphemeralBlockDevices() {
         return this.ephemeralBlockDevices;
     }
@@ -388,21 +388,21 @@ public final class GetInstanceResult {
     /**
      * The Id of the dedicated host the instance will be assigned to.
      * 
-     */
+    */
     public String getHostId() {
         return this.hostId;
     }
     /**
      * The name of the instance profile associated with the Instance.
      * 
-     */
+    */
     public String getIamInstanceProfile() {
         return this.iamInstanceProfile;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -412,7 +412,7 @@ public final class GetInstanceResult {
     /**
      * The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
      * 
-     */
+    */
     public String getInstanceState() {
         return this.instanceState;
     }
@@ -422,49 +422,49 @@ public final class GetInstanceResult {
     /**
      * The type of the Instance.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The IPv6 addresses associated to the Instance, if applicable. **NOTE**: Unlike the IPv4 address, this doesn't change if you attach an EIP to the instance.
      * 
-     */
+    */
     public List<String> getIpv6Addresses() {
         return this.ipv6Addresses;
     }
     /**
      * The key name of the Instance.
      * 
-     */
+    */
     public String getKeyName() {
         return this.keyName;
     }
     /**
      * The metadata options of the Instance.
      * 
-     */
+    */
     public List<GetInstanceMetadataOption> getMetadataOptions() {
         return this.metadataOptions;
     }
     /**
      * Whether detailed monitoring is enabled or disabled for the Instance (Boolean).
      * 
-     */
+    */
     public Boolean getMonitoring() {
         return this.monitoring;
     }
     /**
      * The ID of the network interface that was created with the Instance.
      * 
-     */
+    */
     public String getNetworkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
      * The Amazon Resource Name (ARN) of the Outpost.
      * 
-     */
+    */
     public String getOutpostArn() {
         return this.outpostArn;
     }
@@ -474,21 +474,21 @@ public final class GetInstanceResult {
      * This attribute is only exported if `get_password_data` is true.
      * See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
      * 
-     */
+    */
     public String getPasswordData() {
         return this.passwordData;
     }
     /**
      * The placement group of the Instance.
      * 
-     */
+    */
     public String getPlacementGroup() {
         return this.placementGroup;
     }
     /**
      * The number of the partition the instance is in.
      * 
-     */
+    */
     public Integer getPlacementPartitionNumber() {
         return this.placementPartitionNumber;
     }
@@ -497,14 +497,14 @@ public final class GetInstanceResult {
      * used inside the Amazon EC2, and only available if you've enabled DNS hostnames
      * for your VPC.
      * 
-     */
+    */
     public String getPrivateDns() {
         return this.privateDns;
     }
     /**
      * The private IP address assigned to the Instance.
      * 
-     */
+    */
     public String getPrivateIp() {
         return this.privateIp;
     }
@@ -512,84 +512,84 @@ public final class GetInstanceResult {
      * The public DNS name assigned to the Instance. For EC2-VPC, this
      * is only available if you've enabled DNS hostnames for your VPC.
      * 
-     */
+    */
     public String getPublicDns() {
         return this.publicDns;
     }
     /**
      * The public IP address assigned to the Instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
      * 
-     */
+    */
     public String getPublicIp() {
         return this.publicIp;
     }
     /**
      * The root block device mappings of the Instance
      * 
-     */
+    */
     public List<GetInstanceRootBlockDevice> getRootBlockDevices() {
         return this.rootBlockDevices;
     }
     /**
      * The secondary private IPv4 addresses assigned to the instance's primary network interface (eth0) in a VPC.
      * 
-     */
+    */
     public List<String> getSecondaryPrivateIps() {
         return this.secondaryPrivateIps;
     }
     /**
      * The associated security groups.
      * 
-     */
+    */
     public List<String> getSecurityGroups() {
         return this.securityGroups;
     }
     /**
      * Whether the network interface performs source/destination checking (Boolean).
      * 
-     */
+    */
     public Boolean getSourceDestCheck() {
         return this.sourceDestCheck;
     }
     /**
      * The VPC subnet ID.
      * 
-     */
+    */
     public String getSubnetId() {
         return this.subnetId;
     }
     /**
      * A map of tags assigned to the Instance.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * The tenancy of the instance: `dedicated`, `default`, `host`.
      * 
-     */
+    */
     public String getTenancy() {
         return this.tenancy;
     }
     /**
      * SHA-1 hash of User Data supplied to the Instance.
      * 
-     */
+    */
     public String getUserData() {
         return this.userData;
     }
     /**
      * Base64 encoded contents of User Data supplied to the Instance. This attribute is only exported if `get_user_data` is true.
      * 
-     */
+    */
     public String getUserDataBase64() {
         return this.userDataBase64;
     }
     /**
      * The associated security groups in a non-default VPC.
      * 
-     */
+    */
     public List<String> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }

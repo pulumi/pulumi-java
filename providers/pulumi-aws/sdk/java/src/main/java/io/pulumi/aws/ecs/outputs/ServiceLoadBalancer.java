@@ -48,28 +48,28 @@ public final class ServiceLoadBalancer {
     /**
      * Name of the container to associate with the load balancer (as it appears in a container definition).
      * 
-     */
+    */
     public String getContainerName() {
         return this.containerName;
     }
     /**
      * Port on the container to associate with the load balancer.
      * 
-     */
+    */
     public Integer getContainerPort() {
         return this.containerPort;
     }
     /**
      * Name of the ELB (Classic) to associate with the service.
      * 
-     */
+    */
     public Optional<String> getElbName() {
         return Optional.ofNullable(this.elbName);
     }
     /**
      * ARN of the Load Balancer target group to associate with the service.
      * 
-     */
+    */
     public Optional<String> getTargetGroupArn() {
         return Optional.ofNullable(this.targetGroupArn);
     }

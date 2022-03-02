@@ -133,105 +133,105 @@ public final class GetFhirServiceResult {
     /**
      * Fhir Service access policies.
      * 
-     */
+    */
     public List<FhirServiceAccessPolicyEntryResponse> getAccessPolicies() {
         return this.accessPolicies == null ? List.of() : this.accessPolicies;
     }
     /**
      * Fhir Service Azure container registry configuration.
      * 
-     */
+    */
     public Optional<FhirServiceAcrConfigurationResponse> getAcrConfiguration() {
         return Optional.ofNullable(this.acrConfiguration);
     }
     /**
      * Fhir Service authentication configuration.
      * 
-     */
+    */
     public Optional<FhirServiceAuthenticationConfigurationResponse> getAuthenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
     /**
      * Fhir Service Cors configuration.
      * 
-     */
+    */
     public Optional<FhirServiceCorsConfigurationResponse> getCorsConfiguration() {
         return Optional.ofNullable(this.corsConfiguration);
     }
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Fhir Service export configuration.
      * 
-     */
+    */
     public Optional<FhirServiceExportConfigurationResponse> getExportConfiguration() {
         return Optional.ofNullable(this.exportConfiguration);
     }
     /**
      * The resource identifier.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Setting indicating whether the service has a managed identity associated with it.
      * 
-     */
+    */
     public Optional<ServiceManagedIdentityResponseIdentity> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * The kind of the service.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

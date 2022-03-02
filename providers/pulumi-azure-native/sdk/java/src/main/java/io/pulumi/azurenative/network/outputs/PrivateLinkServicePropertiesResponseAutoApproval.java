@@ -25,7 +25,7 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval {
     /**
      * The list of subscriptions.
      * 
-     */
+    */
     public List<String> getSubscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }

@@ -33,14 +33,14 @@ public final class ImageAnnotationResponse {
     /**
      * The list of polygons outlining the sensitive regions in the image.
      * 
-     */
+    */
     public List<BoundingPolyResponse> getBoundingPolys() {
         return this.boundingPolys;
     }
     /**
      * 0-based index of the image frame. For example, an image frame in a DICOM instance.
      * 
-     */
+    */
     public Integer getFrameIndex() {
         return this.frameIndex;
     }

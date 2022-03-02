@@ -98,77 +98,77 @@ public final class VCenterPropertiesResponse {
     /**
      * The VCenter discovery status.
      * 
-     */
+    */
     public Optional<String> getDiscoveryStatus() {
         return Optional.ofNullable(this.discoveryStatus);
     }
     /**
      * The ARM resource name of the fabric containing this VCenter.
      * 
-     */
+    */
     public Optional<String> getFabricArmResourceName() {
         return Optional.ofNullable(this.fabricArmResourceName);
     }
     /**
      * Friendly name of the vCenter.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * The health errors for this VCenter.
      * 
-     */
+    */
     public List<HealthErrorResponse> getHealthErrors() {
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
     /**
      * The infrastructure Id of vCenter.
      * 
-     */
+    */
     public Optional<String> getInfrastructureId() {
         return Optional.ofNullable(this.infrastructureId);
     }
     /**
      * VCenter internal ID.
      * 
-     */
+    */
     public Optional<String> getInternalId() {
         return Optional.ofNullable(this.internalId);
     }
     /**
      * The IP address of the vCenter.
      * 
-     */
+    */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
      * The time when the last heartbeat was received by vCenter.
      * 
-     */
+    */
     public Optional<String> getLastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
     /**
      * The port number for discovery.
      * 
-     */
+    */
     public Optional<String> getPort() {
         return Optional.ofNullable(this.port);
     }
     /**
      * The process server Id.
      * 
-     */
+    */
     public Optional<String> getProcessServerId() {
         return Optional.ofNullable(this.processServerId);
     }
     /**
      * The account Id which has privileges to discover the vCenter.
      * 
-     */
+    */
     public Optional<String> getRunAsAccountId() {
         return Optional.ofNullable(this.runAsAccountId);
     }

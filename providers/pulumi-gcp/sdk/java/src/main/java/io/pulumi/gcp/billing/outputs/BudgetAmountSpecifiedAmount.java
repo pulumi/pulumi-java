@@ -48,7 +48,7 @@ public final class BudgetAmountSpecifiedAmount {
     /**
      * The 3-letter currency code defined in ISO 4217.
      * 
-     */
+    */
     public Optional<String> getCurrencyCode() {
         return Optional.ofNullable(this.currencyCode);
     }
@@ -61,7 +61,7 @@ public final class BudgetAmountSpecifiedAmount {
      * zero. For example $-1.75 is represented as units=-1 and
      * nanos=-750,000,000.
      * 
-     */
+    */
     public Optional<Integer> getNanos() {
         return Optional.ofNullable(this.nanos);
     }
@@ -69,7 +69,7 @@ public final class BudgetAmountSpecifiedAmount {
      * The whole units of the amount. For example if currencyCode
      * is "USD", then 1 unit is one US dollar.
      * 
-     */
+    */
     public Optional<String> getUnits() {
         return Optional.ofNullable(this.units);
     }

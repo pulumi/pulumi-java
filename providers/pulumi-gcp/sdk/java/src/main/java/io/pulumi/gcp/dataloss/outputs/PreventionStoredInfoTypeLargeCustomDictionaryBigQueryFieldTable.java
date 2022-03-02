@@ -38,21 +38,21 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
     /**
      * The dataset ID of the table.
      * 
-     */
+    */
     public String getDatasetId() {
         return this.datasetId;
     }
     /**
      * The Google Cloud Platform project ID of the project containing the table.
      * 
-     */
+    */
     public String getProjectId() {
         return this.projectId;
     }
     /**
      * The name of the table.
      * 
-     */
+    */
     public String getTableId() {
         return this.tableId;
     }

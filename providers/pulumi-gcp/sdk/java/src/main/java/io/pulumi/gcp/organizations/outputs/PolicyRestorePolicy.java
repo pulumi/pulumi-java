@@ -23,7 +23,7 @@ public final class PolicyRestorePolicy {
     /**
      * May only be set to true. If set, then the default Policy is restored.
      * 
-     */
+    */
     public Boolean get$default() {
         return this.$default;
     }

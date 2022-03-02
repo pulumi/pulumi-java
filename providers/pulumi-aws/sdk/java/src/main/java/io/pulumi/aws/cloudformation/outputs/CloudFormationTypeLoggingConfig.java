@@ -31,14 +31,14 @@ public final class CloudFormationTypeLoggingConfig {
     /**
      * Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type's handlers.
      * 
-     */
+    */
     public String getLogGroupName() {
         return this.logGroupName;
     }
     /**
      * Amazon Resource Name (ARN) of the IAM Role CloudFormation assumes when sending error logging information to CloudWatch Logs.
      * 
-     */
+    */
     public String getLogRoleArn() {
         return this.logRoleArn;
     }

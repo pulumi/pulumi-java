@@ -33,14 +33,14 @@ public final class GetKeysKeySigningKeyDigest {
     /**
      * The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
      * 
-     */
+    */
     public Optional<String> getDigest() {
         return Optional.ofNullable(this.digest);
     }
     /**
      * Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

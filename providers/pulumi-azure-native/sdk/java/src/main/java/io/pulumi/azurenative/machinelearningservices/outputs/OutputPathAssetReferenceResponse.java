@@ -41,14 +41,14 @@ public final class OutputPathAssetReferenceResponse {
     /**
      * ARM resource ID of the job.
      * 
-     */
+    */
     public Optional<String> getJobId() {
         return Optional.ofNullable(this.jobId);
     }
     /**
      * The path of the file/directory in the job output.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
@@ -56,7 +56,7 @@ public final class OutputPathAssetReferenceResponse {
      * Enum to determine which reference method to use for an asset.
      * Expected value is 'OutputPath'.
      * 
-     */
+    */
     public String getReferenceType() {
         return this.referenceType;
     }

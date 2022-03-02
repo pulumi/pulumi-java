@@ -135,6 +135,22 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
         return this.vpcPeeringConfig;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PrivateConnectionArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.datastream_v1.PrivateConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.datastream_v1.PrivateConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PrivateConnection(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

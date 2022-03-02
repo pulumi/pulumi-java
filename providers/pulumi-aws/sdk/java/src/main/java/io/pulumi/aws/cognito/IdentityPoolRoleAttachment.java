@@ -75,6 +75,22 @@ public class IdentityPoolRoleAttachment extends io.pulumi.resources.CustomResour
         return this.roles;
     }
 
+    public interface BuilderApplicator {
+        public void apply(IdentityPoolRoleAttachmentArgs.Builder a);
+    }
+    private static io.pulumi.aws.cognito.IdentityPoolRoleAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.cognito.IdentityPoolRoleAttachmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public IdentityPoolRoleAttachment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

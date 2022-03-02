@@ -32,14 +32,14 @@ public final class ExplainQueryStepResponse {
     /**
      * Machine-readable operation type.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Human-readable stage descriptions.
      * 
-     */
+    */
     public List<String> getSubsteps() {
         return this.substeps;
     }

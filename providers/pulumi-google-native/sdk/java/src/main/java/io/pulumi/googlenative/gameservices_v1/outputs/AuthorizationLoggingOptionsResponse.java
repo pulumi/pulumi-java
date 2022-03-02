@@ -23,7 +23,7 @@ public final class AuthorizationLoggingOptionsResponse {
     /**
      * The type of the permission that was checked.
      * 
-     */
+    */
     public String getPermissionType() {
         return this.permissionType;
     }

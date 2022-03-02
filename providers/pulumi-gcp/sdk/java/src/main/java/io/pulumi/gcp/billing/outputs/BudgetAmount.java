@@ -43,7 +43,7 @@ public final class BudgetAmount {
      * Boolean. Set value to true to use. Do not set to false, instead
      * use the `specified_amount` block.
      * 
-     */
+    */
     public Optional<Boolean> getLastPeriodAmount() {
         return Optional.ofNullable(this.lastPeriodAmount);
     }
@@ -53,7 +53,7 @@ public final class BudgetAmount {
      * billing account. The currencyCode is provided on output.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<BudgetAmountSpecifiedAmount> getSpecifiedAmount() {
         return Optional.ofNullable(this.specifiedAmount);
     }

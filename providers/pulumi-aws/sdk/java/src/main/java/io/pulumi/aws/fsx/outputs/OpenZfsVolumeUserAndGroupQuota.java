@@ -35,14 +35,14 @@ public final class OpenZfsVolumeUserAndGroupQuota {
     /**
      * - The ID of the user or group. Valid values between `0` and `2147483647`
      * 
-     */
+    */
     public Integer getId() {
         return this.id;
     }
     /**
      * - The amount of storage that the user or group can use in gibibytes (GiB). Valid values between `0` and `2147483647`
      * 
-     */
+    */
     public Integer getStorageCapacityQuotaGib() {
         return this.storageCapacityQuotaGib;
     }

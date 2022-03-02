@@ -65,14 +65,14 @@ public final class GetResponsePlanResult {
     /**
      * The list of actions.
      * 
-     */
+    */
     public List<ResponsePlanAction> getActions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
      * The ARN of the response plan.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
@@ -82,14 +82,14 @@ public final class GetResponsePlanResult {
     /**
      * The display name of the response plan.
      * 
-     */
+    */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
      * The list of engagements to use.
      * 
-     */
+    */
     public List<String> getEngagements() {
         return this.engagements == null ? List.of() : this.engagements;
     }
@@ -99,7 +99,7 @@ public final class GetResponsePlanResult {
     /**
      * The tags to apply to the response plan.
      * 
-     */
+    */
     public List<ResponsePlanTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

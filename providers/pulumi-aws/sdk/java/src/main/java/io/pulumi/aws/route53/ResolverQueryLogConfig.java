@@ -135,6 +135,22 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
         return this.tagsAll;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ResolverQueryLogConfigArgs.Builder a);
+    }
+    private static io.pulumi.aws.route53.ResolverQueryLogConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.route53.ResolverQueryLogConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ResolverQueryLogConfig(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

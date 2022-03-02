@@ -60,6 +60,22 @@ public class RestApiPolicy extends io.pulumi.resources.CustomResource {
         return this.restApiId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RestApiPolicyArgs.Builder a);
+    }
+    private static io.pulumi.aws.apigateway.RestApiPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.apigateway.RestApiPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RestApiPolicy(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

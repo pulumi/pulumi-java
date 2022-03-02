@@ -161,14 +161,14 @@ public final class GetSnapshotResult {
     /**
      * Specifies the allocated storage size in gigabytes (GB).
      * 
-     */
+    */
     public Integer getAllocatedStorage() {
         return this.allocatedStorage;
     }
     /**
      * Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
      * 
-     */
+    */
     public String getAvailabilityZone() {
         return this.availabilityZone;
     }
@@ -178,7 +178,7 @@ public final class GetSnapshotResult {
     /**
      * The Amazon Resource Name (ARN) for the DB snapshot.
      * 
-     */
+    */
     public String getDbSnapshotArn() {
         return this.dbSnapshotArn;
     }
@@ -188,28 +188,28 @@ public final class GetSnapshotResult {
     /**
      * Specifies whether the DB snapshot is encrypted.
      * 
-     */
+    */
     public Boolean getEncrypted() {
         return this.encrypted;
     }
     /**
      * Specifies the name of the database engine.
      * 
-     */
+    */
     public String getEngine() {
         return this.engine;
     }
     /**
      * Specifies the version of the database engine.
      * 
-     */
+    */
     public String getEngineVersion() {
         return this.engineVersion;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -222,21 +222,21 @@ public final class GetSnapshotResult {
     /**
      * Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
      * 
-     */
+    */
     public Integer getIops() {
         return this.iops;
     }
     /**
      * The ARN for the KMS encryption key.
      * 
-     */
+    */
     public String getKmsKeyId() {
         return this.kmsKeyId;
     }
     /**
      * License model information for the restored DB instance.
      * 
-     */
+    */
     public String getLicenseModel() {
         return this.licenseModel;
     }
@@ -246,7 +246,7 @@ public final class GetSnapshotResult {
     /**
      * Provides the option group name for the DB snapshot.
      * 
-     */
+    */
     public String getOptionGroupName() {
         return this.optionGroupName;
     }
@@ -256,7 +256,7 @@ public final class GetSnapshotResult {
     /**
      * Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
      * 
-     */
+    */
     public String getSnapshotCreateTime() {
         return this.snapshotCreateTime;
     }
@@ -266,35 +266,35 @@ public final class GetSnapshotResult {
     /**
      * The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
      * 
-     */
+    */
     public String getSourceDbSnapshotIdentifier() {
         return this.sourceDbSnapshotIdentifier;
     }
     /**
      * The region that the DB snapshot was created in or copied from.
      * 
-     */
+    */
     public String getSourceRegion() {
         return this.sourceRegion;
     }
     /**
      * Specifies the status of this DB snapshot.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Specifies the storage type associated with DB snapshot.
      * 
-     */
+    */
     public String getStorageType() {
         return this.storageType;
     }
     /**
      * Specifies the ID of the VPC associated with the DB snapshot.
      * 
-     */
+    */
     public String getVpcId() {
         return this.vpcId;
     }

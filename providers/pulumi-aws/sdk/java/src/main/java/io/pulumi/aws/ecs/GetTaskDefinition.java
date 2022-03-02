@@ -13,19 +13,44 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTaskDefinition {
-/**
- * The ECS task definition data source allows access to details of
+    private GetTaskDefinition() {}
+    public interface BuilderApplicator {
+        public void apply(GetTaskDefinitionArgs.Builder a);
+    }
+    private static GetTaskDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTaskDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The ECS task definition data source allows access to details of
  * a specific AWS ECS task definition.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getTaskDefinition.
+     *
+     * A collection of arguments for invoking getTaskDefinition.
  * 
- *
- * A collection of values returned by getTaskDefinition.
+     *
+     * A collection of values returned by getTaskDefinition.
  * 
- */
+     */
+    public static CompletableFuture<GetTaskDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The ECS task definition data source allows access to details of
+     * a specific AWS ECS task definition.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getTaskDefinition.
+     * 
+     *
+         * A collection of values returned by getTaskDefinition.
+     * 
+     */
     public static CompletableFuture<GetTaskDefinitionResult> invokeAsync(GetTaskDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:ecs/getTaskDefinition:getTaskDefinition", TypeShape.of(GetTaskDefinitionResult.class), args == null ? GetTaskDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -63,42 +63,42 @@ public final class DeploymentSettingsResponse {
     /**
      * Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
      * 
-     */
+    */
     public Optional<Integer> getCpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
      * Collection of environment variables
      * 
-     */
+    */
     public Map<String,String> getEnvironmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
     /**
      * JVM parameter
      * 
-     */
+    */
     public Optional<String> getJvmOptions() {
         return Optional.ofNullable(this.jvmOptions);
     }
     /**
      * Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
      * 
-     */
+    */
     public Optional<Integer> getMemoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }
     /**
      * The path to the .NET executable relative to zip root
      * 
-     */
+    */
     public Optional<String> getNetCoreMainEntryPath() {
         return Optional.ofNullable(this.netCoreMainEntryPath);
     }
     /**
      * Runtime version
      * 
-     */
+    */
     public Optional<String> getRuntimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }

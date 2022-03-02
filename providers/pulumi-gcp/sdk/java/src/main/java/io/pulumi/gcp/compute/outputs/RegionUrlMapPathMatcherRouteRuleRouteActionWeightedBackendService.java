@@ -54,7 +54,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * forwarding the request to backendService, the loadbalancer applies any relevant
      * headerActions specified as part of this backendServiceWeight.
      * 
-     */
+    */
     public String getBackendService() {
         return this.backendService;
     }
@@ -64,7 +64,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderAction> getHeaderAction() {
         return Optional.ofNullable(this.headerAction);
     }
@@ -76,7 +76,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * backendService as determined by the BackendService's session affinity policy.
      * The value must be between 0 and 1000
      * 
-     */
+    */
     public Integer getWeight() {
         return this.weight;
     }

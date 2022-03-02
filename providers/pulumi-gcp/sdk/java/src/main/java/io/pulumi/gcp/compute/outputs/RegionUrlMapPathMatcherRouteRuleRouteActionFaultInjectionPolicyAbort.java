@@ -38,7 +38,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
      * The HTTP status code used to abort the request. The value must be between 200
      * and 599 inclusive.
      * 
-     */
+    */
     public Optional<Integer> getHttpStatus() {
         return Optional.ofNullable(this.httpStatus);
     }
@@ -47,7 +47,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
      * be introduced as part of fault injection. The value must be between 0.0 and
      * 100.0 inclusive.
      * 
-     */
+    */
     public Optional<Double> getPercentage() {
         return Optional.ofNullable(this.percentage);
     }

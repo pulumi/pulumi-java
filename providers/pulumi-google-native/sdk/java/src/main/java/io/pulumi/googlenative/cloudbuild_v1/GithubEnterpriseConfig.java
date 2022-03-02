@@ -146,6 +146,22 @@ public class GithubEnterpriseConfig extends io.pulumi.resources.CustomResource {
         return this.webhookKey;
     }
 
+    public interface BuilderApplicator {
+        public void apply(GithubEnterpriseConfigArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.cloudbuild_v1.GithubEnterpriseConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.cloudbuild_v1.GithubEnterpriseConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public GithubEnterpriseConfig(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

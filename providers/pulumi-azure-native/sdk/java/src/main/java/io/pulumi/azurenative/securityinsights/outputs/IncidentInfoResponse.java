@@ -47,28 +47,28 @@ public final class IncidentInfoResponse {
     /**
      * Incident Id
      * 
-     */
+    */
     public Optional<String> getIncidentId() {
         return Optional.ofNullable(this.incidentId);
     }
     /**
      * Relation Name
      * 
-     */
+    */
     public Optional<String> getRelationName() {
         return Optional.ofNullable(this.relationName);
     }
     /**
      * The severity of the incident
      * 
-     */
+    */
     public Optional<String> getSeverity() {
         return Optional.ofNullable(this.severity);
     }
     /**
      * The title of the incident
      * 
-     */
+    */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }

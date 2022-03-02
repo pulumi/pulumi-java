@@ -39,21 +39,21 @@ public final class TopicRuleErrorActionSqs {
     /**
      * The URL of the Amazon SQS queue.
      * 
-     */
+    */
     public String getQueueUrl() {
         return this.queueUrl;
     }
     /**
      * The ARN of the IAM role that grants access.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * Specifies whether to use Base64 encoding.
      * 
-     */
+    */
     public Boolean getUseBase64() {
         return this.useBase64;
     }

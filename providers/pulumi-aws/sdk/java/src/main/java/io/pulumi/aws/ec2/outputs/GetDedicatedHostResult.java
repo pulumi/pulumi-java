@@ -108,28 +108,28 @@ public final class GetDedicatedHostResult {
     /**
      * The ARN of the Dedicated Host.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Whether auto-placement is on or off.
      * 
-     */
+    */
     public String getAutoPlacement() {
         return this.autoPlacement;
     }
     /**
      * The Availability Zone of the Dedicated Host.
      * 
-     */
+    */
     public String getAvailabilityZone() {
         return this.availabilityZone;
     }
     /**
      * The number of cores on the Dedicated Host.
      * 
-     */
+    */
     public Integer getCores() {
         return this.cores;
     }
@@ -142,42 +142,42 @@ public final class GetDedicatedHostResult {
     /**
      * Indicates whether host recovery is enabled or disabled for the Dedicated Host.
      * 
-     */
+    */
     public String getHostRecovery() {
         return this.hostRecovery;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The instance family supported by the Dedicated Host. For example, "m5".
      * 
-     */
+    */
     public String getInstanceFamily() {
         return this.instanceFamily;
     }
     /**
      * The instance type supported by the Dedicated Host. For example, "m5.large". If the host supports multiple instance types, no instanceType is returned.
      * 
-     */
+    */
     public String getInstanceType() {
         return this.instanceType;
     }
     /**
      * The ID of the AWS account that owns the Dedicated Host.
      * 
-     */
+    */
     public String getOwnerId() {
         return this.ownerId;
     }
     /**
      * The number of sockets on the Dedicated Host.
      * 
-     */
+    */
     public Integer getSockets() {
         return this.sockets;
     }
@@ -187,7 +187,7 @@ public final class GetDedicatedHostResult {
     /**
      * The total number of vCPUs on the Dedicated Host.
      * 
-     */
+    */
     public Integer getTotalVcpus() {
         return this.totalVcpus;
     }

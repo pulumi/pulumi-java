@@ -92,70 +92,70 @@ public final class GetDeviceResult {
     /**
      * The description of the device.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) of the device.
      * 
-     */
+    */
     public Optional<String> getDeviceArn() {
         return Optional.ofNullable(this.deviceArn);
     }
     /**
      * The ID of the device.
      * 
-     */
+    */
     public Optional<String> getDeviceId() {
         return Optional.ofNullable(this.deviceId);
     }
     /**
      * The site location.
      * 
-     */
+    */
     public Optional<DeviceLocation> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The device model
      * 
-     */
+    */
     public Optional<String> getModel() {
         return Optional.ofNullable(this.model);
     }
     /**
      * The device serial number.
      * 
-     */
+    */
     public Optional<String> getSerialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
     /**
      * The site ID.
      * 
-     */
+    */
     public Optional<String> getSiteId() {
         return Optional.ofNullable(this.siteId);
     }
     /**
      * The tags for the device.
      * 
-     */
+    */
     public List<DeviceTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The device type.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
     /**
      * The device vendor.
      * 
-     */
+    */
     public Optional<String> getVendor() {
         return Optional.ofNullable(this.vendor);
     }

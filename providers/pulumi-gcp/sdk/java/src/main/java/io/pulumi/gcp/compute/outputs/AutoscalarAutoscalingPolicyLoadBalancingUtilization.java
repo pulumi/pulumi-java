@@ -27,7 +27,7 @@ public final class AutoscalarAutoscalingPolicyLoadBalancingUtilization {
      * balancing configuration) that autoscaler should maintain. Must
      * be a positive float value. If not defined, the default is 0.8.
      * 
-     */
+    */
     public Double getTarget() {
         return this.target;
     }

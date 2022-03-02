@@ -33,14 +33,14 @@ public final class MosaicLayoutResponse {
     /**
      * The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.
      * 
-     */
+    */
     public Integer getColumns() {
         return this.columns;
     }
     /**
      * The tiles to display.
      * 
-     */
+    */
     public List<TileResponse> getTiles() {
         return this.tiles;
     }

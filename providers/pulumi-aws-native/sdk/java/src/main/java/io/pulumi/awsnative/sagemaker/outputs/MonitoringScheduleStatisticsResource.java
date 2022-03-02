@@ -25,7 +25,7 @@ public final class MonitoringScheduleStatisticsResource {
     /**
      * The Amazon S3 URI for the baseline statistics file in Amazon S3 that the current monitoring job should be validated against.
      * 
-     */
+    */
     public Optional<String> getS3Uri() {
         return Optional.ofNullable(this.s3Uri);
     }

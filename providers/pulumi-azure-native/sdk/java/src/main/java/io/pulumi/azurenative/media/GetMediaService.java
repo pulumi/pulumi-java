@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMediaService {
-/**
- * A Media Services account.
+    private GetMediaService() {}
+    public interface BuilderApplicator {
+        public void apply(GetMediaServiceArgs.Builder a);
+    }
+    private static GetMediaServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMediaServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Media Services account.
  * API Version: 2020-05-01.
  * 
- *
- * A Media Services account.
+     *
+     * A Media Services account.
  * 
- */
+     */
+    public static CompletableFuture<GetMediaServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Media Services account.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * A Media Services account.
+     * 
+     */
     public static CompletableFuture<GetMediaServiceResult> invokeAsync(GetMediaServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getMediaService", TypeShape.of(GetMediaServiceResult.class), args == null ? GetMediaServiceArgs.Empty : args, Utilities.withVersion(options));
     }

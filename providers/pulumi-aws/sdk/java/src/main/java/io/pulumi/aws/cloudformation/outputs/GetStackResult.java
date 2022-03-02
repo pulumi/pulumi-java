@@ -101,35 +101,35 @@ public final class GetStackResult {
     /**
      * A list of capabilities
      * 
-     */
+    */
     public List<String> getCapabilities() {
         return this.capabilities;
     }
     /**
      * Description of the stack
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * Whether the rollback of the stack is disabled when stack creation fails
      * 
-     */
+    */
     public Boolean getDisableRollback() {
         return this.disableRollback;
     }
     /**
      * The ARN of the IAM role used to create the stack.
      * 
-     */
+    */
     public String getIamRoleArn() {
         return this.iamRoleArn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -139,42 +139,42 @@ public final class GetStackResult {
     /**
      * A list of SNS topic ARNs to publish stack related events
      * 
-     */
+    */
     public List<String> getNotificationArns() {
         return this.notificationArns;
     }
     /**
      * A map of outputs from the stack.
      * 
-     */
+    */
     public Map<String,String> getOutputs() {
         return this.outputs;
     }
     /**
      * A map of parameters that specify input parameters for the stack.
      * 
-     */
+    */
     public Map<String,String> getParameters() {
         return this.parameters;
     }
     /**
      * A map of tags associated with this stack.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * Structure containing the template body.
      * 
-     */
+    */
     public String getTemplateBody() {
         return this.templateBody;
     }
     /**
      * The amount of time that can pass before the stack status becomes `CREATE_FAILED`
      * 
-     */
+    */
     public Integer getTimeoutInMinutes() {
         return this.timeoutInMinutes;
     }

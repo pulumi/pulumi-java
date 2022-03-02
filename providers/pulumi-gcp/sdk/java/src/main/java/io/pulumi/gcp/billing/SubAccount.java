@@ -121,6 +121,22 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
         return this.open;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SubAccountArgs.Builder a);
+    }
+    private static io.pulumi.gcp.billing.SubAccountArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.billing.SubAccountArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public SubAccount(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

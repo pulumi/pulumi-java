@@ -63,28 +63,28 @@ public final class GetWorkspaceCollectionResult {
     /**
      * Resource id
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Azure location
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Workspace collection name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Properties
      * 
-     */
+    */
     public Object getProperties() {
         return this.properties;
     }
@@ -97,7 +97,7 @@ public final class GetWorkspaceCollectionResult {
     /**
      * Resource type
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

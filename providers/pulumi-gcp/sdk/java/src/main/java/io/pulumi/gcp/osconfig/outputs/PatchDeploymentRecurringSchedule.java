@@ -91,7 +91,7 @@ public final class PatchDeploymentRecurringSchedule {
      * The end time at which a recurring patch deployment schedule is no longer active.
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -100,7 +100,7 @@ public final class PatchDeploymentRecurringSchedule {
      * The time the last patch job ran successfully.
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
-     */
+    */
     public Optional<String> getLastExecuteTime() {
         return Optional.ofNullable(this.lastExecuteTime);
     }
@@ -108,7 +108,7 @@ public final class PatchDeploymentRecurringSchedule {
      * Schedule with monthly executions.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentRecurringScheduleMonthly> getMonthly() {
         return Optional.ofNullable(this.monthly);
     }
@@ -117,7 +117,7 @@ public final class PatchDeploymentRecurringSchedule {
      * The time the next patch job is scheduled to run.
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
-     */
+    */
     public Optional<String> getNextExecuteTime() {
         return Optional.ofNullable(this.nextExecuteTime);
     }
@@ -125,7 +125,7 @@ public final class PatchDeploymentRecurringSchedule {
      * The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -133,7 +133,7 @@ public final class PatchDeploymentRecurringSchedule {
      * Time of the day to run a recurring deployment.
      * Structure is documented below.
      * 
-     */
+    */
     public PatchDeploymentRecurringScheduleTimeOfDay getTimeOfDay() {
         return this.timeOfDay;
     }
@@ -142,7 +142,7 @@ public final class PatchDeploymentRecurringSchedule {
      * determined by the chosen time zone.
      * Structure is documented below.
      * 
-     */
+    */
     public PatchDeploymentRecurringScheduleTimeZone getTimeZone() {
         return this.timeZone;
     }
@@ -150,7 +150,7 @@ public final class PatchDeploymentRecurringSchedule {
      * Schedule with weekly executions.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<PatchDeploymentRecurringScheduleWeekly> getWeekly() {
         return Optional.ofNullable(this.weekly);
     }

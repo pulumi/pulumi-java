@@ -32,14 +32,14 @@ public final class RestoreInfoResponse {
     /**
      * Information about the backup used to restore the database. The backup may no longer exist.
      * 
-     */
+    */
     public BackupInfoResponse getBackupInfo() {
         return this.backupInfo;
     }
     /**
      * The type of the restore source.
      * 
-     */
+    */
     public String getSourceType() {
         return this.sourceType;
     }

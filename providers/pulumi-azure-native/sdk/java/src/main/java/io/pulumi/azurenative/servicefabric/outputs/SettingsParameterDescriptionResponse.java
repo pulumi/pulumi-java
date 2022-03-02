@@ -31,14 +31,14 @@ public final class SettingsParameterDescriptionResponse {
     /**
      * The parameter name of fabric setting.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The parameter value of fabric setting.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

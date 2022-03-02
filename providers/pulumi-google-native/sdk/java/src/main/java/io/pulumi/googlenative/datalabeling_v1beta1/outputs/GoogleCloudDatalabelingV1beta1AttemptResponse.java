@@ -32,7 +32,7 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse {
     /**
      * Details of errors that occurred.
      * 
-     */
+    */
     public List<GoogleRpcStatusResponse> getPartialFailures() {
         return this.partialFailures;
     }

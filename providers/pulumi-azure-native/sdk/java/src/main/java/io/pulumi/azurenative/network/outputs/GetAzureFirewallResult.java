@@ -169,140 +169,140 @@ public final class GetAzureFirewallResult {
     /**
      * The additional properties used to further config this azure firewall.
      * 
-     */
+    */
     public Map<String,String> getAdditionalProperties() {
         return this.additionalProperties == null ? Map.of() : this.additionalProperties;
     }
     /**
      * Collection of application rule collections used by Azure Firewall.
      * 
-     */
+    */
     public List<AzureFirewallApplicationRuleCollectionResponse> getApplicationRuleCollections() {
         return this.applicationRuleCollections == null ? List.of() : this.applicationRuleCollections;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The firewallPolicy associated with this azure firewall.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getFirewallPolicy() {
         return Optional.ofNullable(this.firewallPolicy);
     }
     /**
      * IP addresses associated with AzureFirewall.
      * 
-     */
+    */
     public Optional<HubIPAddressesResponse> getHubIPAddresses() {
         return Optional.ofNullable(this.hubIPAddresses);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * IP configuration of the Azure Firewall resource.
      * 
-     */
+    */
     public List<AzureFirewallIPConfigurationResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
      * IpGroups associated with AzureFirewall.
      * 
-     */
+    */
     public List<AzureFirewallIpGroupsResponse> getIpGroups() {
         return this.ipGroups;
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * IP configuration of the Azure Firewall used for management traffic.
      * 
-     */
+    */
     public Optional<AzureFirewallIPConfigurationResponse> getManagementIpConfiguration() {
         return Optional.ofNullable(this.managementIpConfiguration);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Collection of NAT rule collections used by Azure Firewall.
      * 
-     */
+    */
     public List<AzureFirewallNatRuleCollectionResponse> getNatRuleCollections() {
         return this.natRuleCollections == null ? List.of() : this.natRuleCollections;
     }
     /**
      * Collection of network rule collections used by Azure Firewall.
      * 
-     */
+    */
     public List<AzureFirewallNetworkRuleCollectionResponse> getNetworkRuleCollections() {
         return this.networkRuleCollections == null ? List.of() : this.networkRuleCollections;
     }
     /**
      * The provisioning state of the Azure firewall resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The Azure Firewall Resource SKU.
      * 
-     */
+    */
     public Optional<AzureFirewallSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The operation mode for Threat Intelligence.
      * 
-     */
+    */
     public Optional<String> getThreatIntelMode() {
         return Optional.ofNullable(this.threatIntelMode);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The virtualHub to which the firewall belongs.
      * 
-     */
+    */
     public Optional<SubResourceResponse> getVirtualHub() {
         return Optional.ofNullable(this.virtualHub);
     }
     /**
      * A list of availability zones denoting where the resource needs to come from.
      * 
-     */
+    */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

@@ -54,28 +54,28 @@ public final class ExpressionRootResponse {
     /**
      * The azure resource error info.
      * 
-     */
+    */
     public Optional<AzureResourceErrorInfoResponse> getError() {
         return Optional.ofNullable(this.error);
     }
     /**
      * The path.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
     /**
      * The sub expressions.
      * 
-     */
+    */
     public List<ExpressionResponse> getSubexpressions() {
         return this.subexpressions == null ? List.of() : this.subexpressions;
     }
     /**
      * The text.
      * 
-     */
+    */
     public Optional<String> getText() {
         return Optional.ofNullable(this.text);
     }

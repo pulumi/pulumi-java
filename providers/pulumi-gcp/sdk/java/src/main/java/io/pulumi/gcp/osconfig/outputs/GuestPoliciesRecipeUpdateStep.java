@@ -82,7 +82,7 @@ public final class GuestPoliciesRecipeUpdateStep {
      * Extracts an archive into the specified directory.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeUpdateStepArchiveExtraction> getArchiveExtraction() {
         return Optional.ofNullable(this.archiveExtraction);
     }
@@ -90,7 +90,7 @@ public final class GuestPoliciesRecipeUpdateStep {
      * Installs a deb file via dpkg.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeUpdateStepDpkgInstallation> getDpkgInstallation() {
         return Optional.ofNullable(this.dpkgInstallation);
     }
@@ -98,7 +98,7 @@ public final class GuestPoliciesRecipeUpdateStep {
      * Copies a file onto the instance.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeUpdateStepFileCopy> getFileCopy() {
         return Optional.ofNullable(this.fileCopy);
     }
@@ -106,7 +106,7 @@ public final class GuestPoliciesRecipeUpdateStep {
      * Executes an artifact or local file.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeUpdateStepFileExec> getFileExec() {
         return Optional.ofNullable(this.fileExec);
     }
@@ -114,7 +114,7 @@ public final class GuestPoliciesRecipeUpdateStep {
      * Installs an MSI file.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeUpdateStepMsiInstallation> getMsiInstallation() {
         return Optional.ofNullable(this.msiInstallation);
     }
@@ -122,7 +122,7 @@ public final class GuestPoliciesRecipeUpdateStep {
      * Installs an rpm file via the rpm utility.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeUpdateStepRpmInstallation> getRpmInstallation() {
         return Optional.ofNullable(this.rpmInstallation);
     }
@@ -130,7 +130,7 @@ public final class GuestPoliciesRecipeUpdateStep {
      * Runs commands in a shell.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GuestPoliciesRecipeUpdateStepScriptRun> getScriptRun() {
         return Optional.ofNullable(this.scriptRun);
     }

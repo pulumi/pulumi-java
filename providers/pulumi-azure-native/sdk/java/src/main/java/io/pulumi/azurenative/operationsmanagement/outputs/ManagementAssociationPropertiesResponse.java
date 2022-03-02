@@ -23,7 +23,7 @@ public final class ManagementAssociationPropertiesResponse {
     /**
      * The applicationId of the appliance for this association.
      * 
-     */
+    */
     public String getApplicationId() {
         return this.applicationId;
     }

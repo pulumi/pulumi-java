@@ -143,7 +143,7 @@ public final class GetDomainResult {
     /**
      * An arbitrary set of tags (key-value pairs) for this Domain.
      * 
-     */
+    */
     public List<DomainTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

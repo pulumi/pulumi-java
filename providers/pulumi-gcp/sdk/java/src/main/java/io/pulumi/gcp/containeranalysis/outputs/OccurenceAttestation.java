@@ -40,7 +40,7 @@ public final class OccurenceAttestation {
      * The serialized payload that is verified by one or
      * more signatures. A base64-encoded string.
      * 
-     */
+    */
     public String getSerializedPayload() {
         return this.serializedPayload;
     }
@@ -52,7 +52,7 @@ public final class OccurenceAttestation {
      * details on signature structure and verification.
      * Structure is documented below.
      * 
-     */
+    */
     public List<OccurenceAttestationSignature> getSignatures() {
         return this.signatures;
     }

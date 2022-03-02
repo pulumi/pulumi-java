@@ -72,7 +72,7 @@ public final class GetClusterResult {
      * * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
      *   The number of available cluster certificates may vary depending on state of the cluster.
      * 
-     */
+    */
     public GetClusterClusterCertificates getClusterCertificates() {
         return this.clusterCertificates;
     }
@@ -85,28 +85,28 @@ public final class GetClusterResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The ID of the security group associated with the CloudHSM cluster.
      * 
-     */
+    */
     public String getSecurityGroupId() {
         return this.securityGroupId;
     }
     /**
      * The IDs of subnets in which cluster operates.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }
     /**
      * The id of the VPC that the CloudHSM cluster resides in.
      * 
-     */
+    */
     public String getVpcId() {
         return this.vpcId;
     }

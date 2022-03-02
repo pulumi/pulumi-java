@@ -130,6 +130,22 @@ public class ApiVersionSet extends io.pulumi.resources.CustomResource {
         return this.versioningScheme;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ApiVersionSetArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.apimanagement.ApiVersionSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.apimanagement.ApiVersionSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ApiVersionSet(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -122,7 +122,7 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
     /**
      * Fingerprint of this resource. This field is used internally during updates of this resource.
      * 
-     * @deprecated
+     * @Deprecated
      * This field is not useful for users, and has been removed as an output.
      * 
      */
@@ -426,6 +426,22 @@ public class Subnetwork extends io.pulumi.resources.CustomResource {
         return this.stackType;
     }
 
+    public interface BuilderApplicator {
+        public void apply(SubnetworkArgs.Builder a);
+    }
+    private static io.pulumi.gcp.compute.SubnetworkArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.compute.SubnetworkArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Subnetwork(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

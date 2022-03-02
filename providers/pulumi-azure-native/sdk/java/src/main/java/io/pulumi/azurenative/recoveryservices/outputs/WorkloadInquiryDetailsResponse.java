@@ -42,21 +42,21 @@ public final class WorkloadInquiryDetailsResponse {
     /**
      * Inquiry validation such as permissions and other backup validations.
      * 
-     */
+    */
     public Optional<InquiryValidationResponse> getInquiryValidation() {
         return Optional.ofNullable(this.inquiryValidation);
     }
     /**
      * Contains the protectable item Count inside this Container.
      * 
-     */
+    */
     public Optional<Double> getItemCount() {
         return Optional.ofNullable(this.itemCount);
     }
     /**
      * Type of the Workload such as SQL, Oracle etc.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

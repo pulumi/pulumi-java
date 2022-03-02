@@ -54,35 +54,35 @@ public final class CustomResourceDefinitionCondition {
     /**
      * lastTransitionTime last time the condition transitioned from one status to another.
      * 
-     */
+    */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
      * message is a human-readable message indicating details about last transition.
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
     /**
      * reason is a unique, one-word, CamelCase reason for the condition's last transition.
      * 
-     */
+    */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
     /**
      * status is the status of the condition. Can be True, False, Unknown.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * type is the type of the condition. Types include Established, NamesAccepted and Terminating.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

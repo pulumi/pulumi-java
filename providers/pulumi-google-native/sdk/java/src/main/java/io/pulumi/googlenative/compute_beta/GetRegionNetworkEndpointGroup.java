@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionNetworkEndpointGroup {
-/**
- * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
+    private GetRegionNetworkEndpointGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionNetworkEndpointGroupArgs.Builder a);
+    }
+    private static GetRegionNetworkEndpointGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionNetworkEndpointGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionNetworkEndpointGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetRegionNetworkEndpointGroupResult> invokeAsync(GetRegionNetworkEndpointGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getRegionNetworkEndpointGroup", TypeShape.of(GetRegionNetworkEndpointGroupResult.class), args == null ? GetRegionNetworkEndpointGroupArgs.Empty : args, Utilities.withVersion(options));
     }

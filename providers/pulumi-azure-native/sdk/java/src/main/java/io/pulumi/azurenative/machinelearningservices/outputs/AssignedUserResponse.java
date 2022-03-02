@@ -31,14 +31,14 @@ public final class AssignedUserResponse {
     /**
      * User’s AAD Object Id.
      * 
-     */
+    */
     public String getObjectId() {
         return this.objectId;
     }
     /**
      * User’s AAD Tenant Id.
      * 
-     */
+    */
     public String getTenantId() {
         return this.tenantId;
     }

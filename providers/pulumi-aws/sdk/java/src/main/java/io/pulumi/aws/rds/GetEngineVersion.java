@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEngineVersion {
-/**
- * Information about an RDS engine version.
+    private GetEngineVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetEngineVersionArgs.Builder a);
+    }
+    private static GetEngineVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEngineVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Information about an RDS engine version.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getEngineVersion.
+     *
+     * A collection of arguments for invoking getEngineVersion.
  * 
- *
- * A collection of values returned by getEngineVersion.
+     *
+     * A collection of values returned by getEngineVersion.
  * 
- */
+     */
+    public static CompletableFuture<GetEngineVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Information about an RDS engine version.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getEngineVersion.
+     * 
+     *
+         * A collection of values returned by getEngineVersion.
+     * 
+     */
     public static CompletableFuture<GetEngineVersionResult> invokeAsync(GetEngineVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getEngineVersion:getEngineVersion", TypeShape.of(GetEngineVersionResult.class), args == null ? GetEngineVersionArgs.Empty : args, Utilities.withVersion(options));
     }

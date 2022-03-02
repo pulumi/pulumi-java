@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse {
     /**
      * Fields specific to BigQuery connections.
      * 
-     */
+    */
     public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse getBigqueryConnectionSpec() {
         return this.bigqueryConnectionSpec;
     }

@@ -31,14 +31,14 @@ public final class GoogleCloudRetailV2betaConditionTimeRangeResponse {
     /**
      * End of time range. Range is inclusive.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Start of time range. Range is inclusive.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }

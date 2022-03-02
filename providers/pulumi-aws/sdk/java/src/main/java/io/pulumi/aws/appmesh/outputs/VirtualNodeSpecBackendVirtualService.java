@@ -34,14 +34,14 @@ public final class VirtualNodeSpecBackendVirtualService {
     /**
      * The client policy for the backend.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecBackendVirtualServiceClientPolicy> getClientPolicy() {
         return Optional.ofNullable(this.clientPolicy);
     }
     /**
      * The name of the virtual service that is acting as a virtual node backend. Must be between 1 and 255 characters in length.
      * 
-     */
+    */
     public String getVirtualServiceName() {
         return this.virtualServiceName;
     }

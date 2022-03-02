@@ -48,28 +48,28 @@ public final class ReferenceVmResponse {
     /**
      * The password of the virtual machine. This will be set to null in GET resource API
      * 
-     */
+    */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
     /**
      * The username of the virtual machine
      * 
-     */
+    */
     public String getUserName() {
         return this.userName;
     }
     /**
      * VM resource Id for the environment
      * 
-     */
+    */
     public String getVmResourceId() {
         return this.vmResourceId;
     }
     /**
      * The state details for the reference virtual machine.
      * 
-     */
+    */
     public VmStateDetailsResponse getVmStateDetails() {
         return this.vmStateDetails;
     }

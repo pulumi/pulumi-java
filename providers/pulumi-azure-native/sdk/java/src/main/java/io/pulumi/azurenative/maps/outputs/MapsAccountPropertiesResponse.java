@@ -25,7 +25,7 @@ public final class MapsAccountPropertiesResponse {
     /**
      * A unique identifier for the maps account
      * 
-     */
+    */
     public Optional<String> getXMsClientId() {
         return Optional.ofNullable(this.xMsClientId);
     }

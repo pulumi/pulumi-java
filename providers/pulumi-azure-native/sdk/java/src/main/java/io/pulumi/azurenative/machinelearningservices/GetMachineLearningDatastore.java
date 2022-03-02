@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMachineLearningDatastore {
-/**
- * Machine Learning datastore object wrapped into ARM resource envelope.
+    private GetMachineLearningDatastore() {}
+    public interface BuilderApplicator {
+        public void apply(GetMachineLearningDatastoreArgs.Builder a);
+    }
+    private static GetMachineLearningDatastoreArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMachineLearningDatastoreArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Machine Learning datastore object wrapped into ARM resource envelope.
  * API Version: 2020-05-01-preview.
  * 
- *
- * Machine Learning datastore object wrapped into ARM resource envelope.
+     *
+     * Machine Learning datastore object wrapped into ARM resource envelope.
  * 
- */
+     */
+    public static CompletableFuture<GetMachineLearningDatastoreResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Machine Learning datastore object wrapped into ARM resource envelope.
+     * API Version: 2020-05-01-preview.
+     * 
+     *
+         * Machine Learning datastore object wrapped into ARM resource envelope.
+     * 
+     */
     public static CompletableFuture<GetMachineLearningDatastoreResult> invokeAsync(GetMachineLearningDatastoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getMachineLearningDatastore", TypeShape.of(GetMachineLearningDatastoreResult.class), args == null ? GetMachineLearningDatastoreArgs.Empty : args, Utilities.withVersion(options));
     }

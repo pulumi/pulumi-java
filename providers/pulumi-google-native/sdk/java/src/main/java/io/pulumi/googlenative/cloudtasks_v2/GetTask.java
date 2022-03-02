@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTask {
-/**
- * Gets a task.
+    private GetTask() {}
+    public interface BuilderApplicator {
+        public void apply(GetTaskArgs.Builder a);
+    }
+    private static GetTaskArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTaskArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a task.
  * 
- */
+     */
+    public static CompletableFuture<GetTaskResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a task.
+     * 
+     */
     public static CompletableFuture<GetTaskResult> invokeAsync(GetTaskArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudtasks/v2:getTask", TypeShape.of(GetTaskResult.class), args == null ? GetTaskArgs.Empty : args, Utilities.withVersion(options));
     }

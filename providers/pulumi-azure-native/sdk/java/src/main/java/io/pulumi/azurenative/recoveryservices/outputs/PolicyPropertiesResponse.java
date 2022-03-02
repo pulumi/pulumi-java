@@ -45,14 +45,14 @@ public final class PolicyPropertiesResponse {
     /**
      * The FriendlyName.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * The ReplicationChannelSetting.
      * 
-     */
+    */
     public Optional<Object> getProviderSpecificDetails() {
         return Optional.ofNullable(this.providerSpecificDetails);
     }

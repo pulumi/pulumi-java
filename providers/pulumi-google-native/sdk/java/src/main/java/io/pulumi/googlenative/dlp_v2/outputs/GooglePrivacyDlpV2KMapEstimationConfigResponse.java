@@ -41,21 +41,21 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse {
     /**
      * Several auxiliary tables can be used in the analysis. Each custom_tag used to tag a quasi-identifiers column must appear in exactly one column of one auxiliary table.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2AuxiliaryTableResponse> getAuxiliaryTables() {
         return this.auxiliaryTables;
     }
     /**
      * Fields considered to be quasi-identifiers. No two columns can have the same tag.
      * 
-     */
+    */
     public List<GooglePrivacyDlpV2TaggedFieldResponse> getQuasiIds() {
         return this.quasiIds;
     }
     /**
      * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Set if no column is tagged with a region-specific InfoType (like US_ZIP_5) or a region code.
      * 
-     */
+    */
     public String getRegionCode() {
         return this.regionCode;
     }

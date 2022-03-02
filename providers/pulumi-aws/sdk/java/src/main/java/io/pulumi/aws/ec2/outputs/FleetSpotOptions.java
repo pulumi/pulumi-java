@@ -49,28 +49,28 @@ public final class FleetSpotOptions {
     /**
      * How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
      * 
-     */
+    */
     public Optional<String> getAllocationStrategy() {
         return Optional.ofNullable(this.allocationStrategy);
     }
     /**
      * Behavior when a Spot Instance is interrupted. Valid values: `hibernate`, `stop`, `terminate`. Default: `terminate`.
      * 
-     */
+    */
     public Optional<String> getInstanceInterruptionBehavior() {
         return Optional.ofNullable(this.instanceInterruptionBehavior);
     }
     /**
      * Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot `allocation_strategy` is set to `lowestPrice`. Default: `1`.
      * 
-     */
+    */
     public Optional<Integer> getInstancePoolsToUseCount() {
         return Optional.ofNullable(this.instancePoolsToUseCount);
     }
     /**
      * Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
      * 
-     */
+    */
     public Optional<FleetSpotOptionsMaintenanceStrategies> getMaintenanceStrategies() {
         return Optional.ofNullable(this.maintenanceStrategies);
     }

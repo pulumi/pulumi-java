@@ -122,98 +122,98 @@ public final class GetFlowLogResult {
     /**
      * Flag to enable/disable flow logging.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Parameters that define the configuration of traffic analytics.
      * 
-     */
+    */
     public Optional<TrafficAnalyticsPropertiesResponse> getFlowAnalyticsConfiguration() {
         return Optional.ofNullable(this.flowAnalyticsConfiguration);
     }
     /**
      * Parameters that define the flow log format.
      * 
-     */
+    */
     public Optional<FlowLogFormatParametersResponse> getFormat() {
         return Optional.ofNullable(this.format);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning state of the flow log.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Parameters that define the retention policy for flow log.
      * 
-     */
+    */
     public Optional<RetentionPolicyParametersResponse> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
      * ID of the storage account which is used to store the flow log.
      * 
-     */
+    */
     public String getStorageId() {
         return this.storageId;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Guid of network security group to which flow log will be applied.
      * 
-     */
+    */
     public String getTargetResourceGuid() {
         return this.targetResourceGuid;
     }
     /**
      * ID of network security group to which flow log will be applied.
      * 
-     */
+    */
     public String getTargetResourceId() {
         return this.targetResourceId;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

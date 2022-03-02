@@ -38,7 +38,7 @@ public final class DeploymentStrategy {
     /**
      * Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
      * 
-     */
+    */
     public Optional<RollingUpdateDeployment> getRollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
@@ -49,7 +49,7 @@ public final class DeploymentStrategy {
      *  - `"Recreate"` Kill all existing pods before creating new ones.
      *  - `"RollingUpdate"` Replace the old ReplicaSets by new one using rolling update i.e gradually scale down the old ReplicaSets and scale up the new one.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

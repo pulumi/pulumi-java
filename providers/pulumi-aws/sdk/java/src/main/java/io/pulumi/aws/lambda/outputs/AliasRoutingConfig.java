@@ -26,7 +26,7 @@ public final class AliasRoutingConfig {
     /**
      * A map that defines the proportion of events that should be sent to different versions of a lambda function.
      * 
-     */
+    */
     public Map<String,Double> getAdditionalVersionWeights() {
         return this.additionalVersionWeights == null ? Map.of() : this.additionalVersionWeights;
     }

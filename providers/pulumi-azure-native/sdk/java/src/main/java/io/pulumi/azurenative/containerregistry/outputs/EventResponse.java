@@ -42,21 +42,21 @@ public final class EventResponse {
     /**
      * The event request message sent to the service URI.
      * 
-     */
+    */
     public Optional<EventRequestMessageResponse> getEventRequestMessage() {
         return Optional.ofNullable(this.eventRequestMessage);
     }
     /**
      * The event response message received from the service URI.
      * 
-     */
+    */
     public Optional<EventResponseMessageResponse> getEventResponseMessage() {
         return Optional.ofNullable(this.eventResponseMessage);
     }
     /**
      * The event ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

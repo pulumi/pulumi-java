@@ -35,7 +35,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverride {
     /**
      * Version of the configuration.
      * 
-     */
+    */
     public Optional<String> getConfigVersion() {
         return Optional.ofNullable(this.configVersion);
     }
@@ -43,7 +43,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverride {
      * Selection by realms.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> getRealmsSelector() {
         return Optional.ofNullable(this.realmsSelector);
     }

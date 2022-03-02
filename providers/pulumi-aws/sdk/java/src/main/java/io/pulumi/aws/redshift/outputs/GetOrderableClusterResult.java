@@ -45,7 +45,7 @@ public final class GetOrderableClusterResult {
     /**
      * List of Availability Zone names where the Redshit Cluster is available.
      * 
-     */
+    */
     public List<String> getAvailabilityZones() {
         return this.availabilityZones;
     }
@@ -58,7 +58,7 @@ public final class GetOrderableClusterResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

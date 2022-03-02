@@ -53,35 +53,35 @@ public final class GetVersionResult {
     /**
      * The creation time of this version. This field is read-only, i.e., it cannot be set by create and update methods.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Optional. The developer-provided description of this version.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The unique identifier of this agent version. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The status of this version. This field is read-only and cannot be set by create and update methods.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * The sequential number of this version. This field is read-only which means it cannot be set by create and update methods.
      * 
-     */
+    */
     public Integer getVersionNumber() {
         return this.versionNumber;
     }

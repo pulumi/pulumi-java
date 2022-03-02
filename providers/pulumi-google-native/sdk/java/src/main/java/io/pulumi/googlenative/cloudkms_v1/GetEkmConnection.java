@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEkmConnection {
-/**
- * Returns metadata for a given EkmConnection.
+    private GetEkmConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetEkmConnectionArgs.Builder a);
+    }
+    private static GetEkmConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEkmConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns metadata for a given EkmConnection.
  * 
- */
+     */
+    public static CompletableFuture<GetEkmConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns metadata for a given EkmConnection.
+     * 
+     */
     public static CompletableFuture<GetEkmConnectionResult> invokeAsync(GetEkmConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudkms/v1:getEkmConnection", TypeShape.of(GetEkmConnectionResult.class), args == null ? GetEkmConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

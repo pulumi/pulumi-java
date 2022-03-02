@@ -304,6 +304,22 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
         return this.vmotionNetwork;
     }
 
+    public interface BuilderApplicator {
+        public void apply(PrivateCloudArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.avs.PrivateCloudArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.avs.PrivateCloudArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public PrivateCloud(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

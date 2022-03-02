@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetImageRecipe {
-/**
- * Resource schema for AWS::ImageBuilder::ImageRecipe
+    private GetImageRecipe() {}
+    public interface BuilderApplicator {
+        public void apply(GetImageRecipeArgs.Builder a);
+    }
+    private static GetImageRecipeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetImageRecipeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::ImageBuilder::ImageRecipe
  * 
- */
+     */
+    public static CompletableFuture<GetImageRecipeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::ImageBuilder::ImageRecipe
+     * 
+     */
     public static CompletableFuture<GetImageRecipeResult> invokeAsync(GetImageRecipeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:imagebuilder:getImageRecipe", TypeShape.of(GetImageRecipeResult.class), args == null ? GetImageRecipeArgs.Empty : args, Utilities.withVersion(options));
     }

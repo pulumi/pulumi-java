@@ -135,56 +135,56 @@ public final class GetDefaultUserRuleResult {
     /**
      * A description for this rule. Restricted to 140 chars.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The destination port ranges.
      * 
-     */
+    */
     public List<String> getDestinationPortRanges() {
         return this.destinationPortRanges;
     }
     /**
      * The destination address prefixes. CIDR or destination IP ranges.
      * 
-     */
+    */
     public List<AddressPrefixItemResponse> getDestinations() {
         return this.destinations;
     }
     /**
      * Indicates if the traffic matched against the rule in inbound or outbound.
      * 
-     */
+    */
     public String getDirection() {
         return this.direction;
     }
     /**
      * A friendly name for the rule.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Default rule flag.
      * 
-     */
+    */
     public Optional<String> getFlag() {
         return Optional.ofNullable(this.flag);
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -192,56 +192,56 @@ public final class GetDefaultUserRuleResult {
      * Whether the rule is custom or default.
      * Expected value is 'Default'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Network protocol this rule applies to.
      * 
-     */
+    */
     public String getProtocol() {
         return this.protocol;
     }
     /**
      * The provisioning state of the security configuration user rule resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The source port ranges.
      * 
-     */
+    */
     public List<String> getSourcePortRanges() {
         return this.sourcePortRanges;
     }
     /**
      * The CIDR or source IP ranges.
      * 
-     */
+    */
     public List<AddressPrefixItemResponse> getSources() {
         return this.sources;
     }
     /**
      * The system metadata related to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

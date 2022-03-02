@@ -23,7 +23,7 @@ public final class ClusterClusterConfigAutoscalingConfig {
     /**
      * The autoscaling policy used by the cluster.
      * 
-     */
+    */
     public String getPolicyUri() {
         return this.policyUri;
     }

@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1PropertiesResponse {
     /**
      * List of all properties in the object
      * 
-     */
+    */
     public List<GoogleCloudApigeeV1PropertyResponse> getProperty() {
         return this.property;
     }

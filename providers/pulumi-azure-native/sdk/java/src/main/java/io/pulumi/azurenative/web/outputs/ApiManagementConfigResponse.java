@@ -25,7 +25,7 @@ public final class ApiManagementConfigResponse {
     /**
      * APIM-Api Identifier.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

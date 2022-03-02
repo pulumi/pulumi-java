@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInterconnectAttachment {
-/**
- * Returns the specified interconnect attachment.
+    private GetInterconnectAttachment() {}
+    public interface BuilderApplicator {
+        public void apply(GetInterconnectAttachmentArgs.Builder a);
+    }
+    private static GetInterconnectAttachmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInterconnectAttachmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified interconnect attachment.
  * 
- */
+     */
+    public static CompletableFuture<GetInterconnectAttachmentResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified interconnect attachment.
+     * 
+     */
     public static CompletableFuture<GetInterconnectAttachmentResult> invokeAsync(GetInterconnectAttachmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInterconnectAttachment", TypeShape.of(GetInterconnectAttachmentResult.class), args == null ? GetInterconnectAttachmentArgs.Empty : args, Utilities.withVersion(options));
     }

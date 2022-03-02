@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionNetworkFirewallPolicy {
-/**
- * Returns the specified network firewall policy.
+    private GetRegionNetworkFirewallPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegionNetworkFirewallPolicyArgs.Builder a);
+    }
+    private static GetRegionNetworkFirewallPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegionNetworkFirewallPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified network firewall policy.
  * 
- */
+     */
+    public static CompletableFuture<GetRegionNetworkFirewallPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified network firewall policy.
+     * 
+     */
     public static CompletableFuture<GetRegionNetworkFirewallPolicyResult> invokeAsync(GetRegionNetworkFirewallPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionNetworkFirewallPolicy", TypeShape.of(GetRegionNetworkFirewallPolicyResult.class), args == null ? GetRegionNetworkFirewallPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

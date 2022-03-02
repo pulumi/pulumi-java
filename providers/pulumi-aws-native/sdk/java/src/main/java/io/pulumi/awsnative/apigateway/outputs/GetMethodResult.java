@@ -95,70 +95,70 @@ public final class GetMethodResult {
     /**
      * Indicates whether the method requires clients to submit a valid API key.
      * 
-     */
+    */
     public Optional<Boolean> getApiKeyRequired() {
         return Optional.ofNullable(this.apiKeyRequired);
     }
     /**
      * A list of authorization scopes configured on the method.
      * 
-     */
+    */
     public List<String> getAuthorizationScopes() {
         return this.authorizationScopes == null ? List.of() : this.authorizationScopes;
     }
     /**
      * The method's authorization type.
      * 
-     */
+    */
     public Optional<MethodAuthorizationType> getAuthorizationType() {
         return Optional.ofNullable(this.authorizationType);
     }
     /**
      * The identifier of the authorizer to use on this method.
      * 
-     */
+    */
     public Optional<String> getAuthorizerId() {
         return Optional.ofNullable(this.authorizerId);
     }
     /**
      * The backend system that the method calls when it receives a request.
      * 
-     */
+    */
     public Optional<MethodIntegration> getIntegration() {
         return Optional.ofNullable(this.integration);
     }
     /**
      * The responses that can be sent to the client who calls the method.
      * 
-     */
+    */
     public List<MethodResponse> getMethodResponses() {
         return this.methodResponses == null ? List.of() : this.methodResponses;
     }
     /**
      * A friendly operation name for the method.
      * 
-     */
+    */
     public Optional<String> getOperationName() {
         return Optional.ofNullable(this.operationName);
     }
     /**
      * The resources that are used for the request's content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
      * 
-     */
+    */
     public Optional<Object> getRequestModels() {
         return Optional.ofNullable(this.requestModels);
     }
     /**
      * The request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean mapping), with a source as the key and a Boolean as the value.
      * 
-     */
+    */
     public Optional<Object> getRequestParameters() {
         return Optional.ofNullable(this.requestParameters);
     }
     /**
      * The ID of the associated request validator.
      * 
-     */
+    */
     public Optional<String> getRequestValidatorId() {
         return Optional.ofNullable(this.requestValidatorId);
     }

@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualService {
-/**
- * The App Mesh Virtual Service data source allows details of an App Mesh Virtual Service to be retrieved by its name, mesh_name, and optionally the mesh_owner.
+    private GetVirtualService() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualServiceArgs.Builder a);
+    }
+    private static GetVirtualServiceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualServiceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The App Mesh Virtual Service data source allows details of an App Mesh Virtual Service to be retrieved by its name, mesh_name, and optionally the mesh_owner.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getVirtualService.
+     *
+     * A collection of arguments for invoking getVirtualService.
  * 
- *
- * A collection of values returned by getVirtualService.
+     *
+     * A collection of values returned by getVirtualService.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualServiceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The App Mesh Virtual Service data source allows details of an App Mesh Virtual Service to be retrieved by its name, mesh_name, and optionally the mesh_owner.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getVirtualService.
+     * 
+     *
+         * A collection of values returned by getVirtualService.
+     * 
+     */
     public static CompletableFuture<GetVirtualServiceResult> invokeAsync(GetVirtualServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:appmesh/getVirtualService:getVirtualService", TypeShape.of(GetVirtualServiceResult.class), args == null ? GetVirtualServiceArgs.Empty : args, Utilities.withVersion(options));
     }

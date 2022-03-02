@@ -35,14 +35,14 @@ public final class ListMonitorLinkedResourcesResult {
     /**
      * Link to the next set of results, if any.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Results of a list operation.
      * 
-     */
+    */
     public List<LinkedResourceResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

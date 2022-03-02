@@ -62,7 +62,7 @@ public final class GetBackupRunResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -72,7 +72,7 @@ public final class GetBackupRunResult {
     /**
      * Location of the backups.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
@@ -83,14 +83,14 @@ public final class GetBackupRunResult {
      * The time the backup operation actually started in UTC timezone in RFC 3339 format, for
      * example 2012-11-15T16:19:00.094Z.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }
     /**
      * The status of this run. Refer to [API reference](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/backupRuns#SqlBackupRunStatus) for possible status values.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

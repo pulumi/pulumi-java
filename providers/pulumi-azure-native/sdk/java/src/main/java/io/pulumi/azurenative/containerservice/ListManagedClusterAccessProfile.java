@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListManagedClusterAccessProfile {
-/**
- * Managed cluster Access Profile.
+    private ListManagedClusterAccessProfile() {}
+    public interface BuilderApplicator {
+        public void apply(ListManagedClusterAccessProfileArgs.Builder a);
+    }
+    private static ListManagedClusterAccessProfileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListManagedClusterAccessProfileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Managed cluster Access Profile.
  * API Version: 2020-03-01.
  * 
- *
- * Managed cluster Access Profile.
+     *
+     * Managed cluster Access Profile.
  * 
- */
+     */
+    public static CompletableFuture<ListManagedClusterAccessProfileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Managed cluster Access Profile.
+     * API Version: 2020-03-01.
+     * 
+     *
+         * Managed cluster Access Profile.
+     * 
+     */
     public static CompletableFuture<ListManagedClusterAccessProfileResult> invokeAsync(ListManagedClusterAccessProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerservice:listManagedClusterAccessProfile", TypeShape.of(ListManagedClusterAccessProfileResult.class), args == null ? ListManagedClusterAccessProfileArgs.Empty : args, Utilities.withVersion(options));
     }

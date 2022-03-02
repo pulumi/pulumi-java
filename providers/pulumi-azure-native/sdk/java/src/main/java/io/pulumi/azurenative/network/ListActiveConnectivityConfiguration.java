@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListActiveConnectivityConfiguration {
-/**
- * Result of the request to list active connectivity configurations. It contains a list of active connectivity configurations and a skiptoken to get the next set of results.
+    private ListActiveConnectivityConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(ListActiveConnectivityConfigurationArgs.Builder a);
+    }
+    private static ListActiveConnectivityConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListActiveConnectivityConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Result of the request to list active connectivity configurations. It contains a list of active connectivity configurations and a skiptoken to get the next set of results.
  * API Version: 2021-02-01-preview.
  * 
- *
- * Result of the request to list active connectivity configurations. It contains a list of active connectivity configurations and a skiptoken to get the next set of results.
+     *
+     * Result of the request to list active connectivity configurations. It contains a list of active connectivity configurations and a skiptoken to get the next set of results.
  * 
- */
+     */
+    public static CompletableFuture<ListActiveConnectivityConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Result of the request to list active connectivity configurations. It contains a list of active connectivity configurations and a skiptoken to get the next set of results.
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * Result of the request to list active connectivity configurations. It contains a list of active connectivity configurations and a skiptoken to get the next set of results.
+     * 
+     */
     public static CompletableFuture<ListActiveConnectivityConfigurationResult> invokeAsync(ListActiveConnectivityConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listActiveConnectivityConfiguration", TypeShape.of(ListActiveConnectivityConfigurationResult.class), args == null ? ListActiveConnectivityConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

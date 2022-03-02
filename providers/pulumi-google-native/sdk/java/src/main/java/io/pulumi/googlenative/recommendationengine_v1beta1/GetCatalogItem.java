@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCatalogItem {
-/**
- * Gets a specific catalog item.
+    private GetCatalogItem() {}
+    public interface BuilderApplicator {
+        public void apply(GetCatalogItemArgs.Builder a);
+    }
+    private static GetCatalogItemArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCatalogItemArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a specific catalog item.
  * 
- */
+     */
+    public static CompletableFuture<GetCatalogItemResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a specific catalog item.
+     * 
+     */
     public static CompletableFuture<GetCatalogItemResult> invokeAsync(GetCatalogItemArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:recommendationengine/v1beta1:getCatalogItem", TypeShape.of(GetCatalogItemResult.class), args == null ? GetCatalogItemArgs.Empty : args, Utilities.withVersion(options));
     }

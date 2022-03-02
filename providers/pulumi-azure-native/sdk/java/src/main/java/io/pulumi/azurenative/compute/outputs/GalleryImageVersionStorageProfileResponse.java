@@ -43,21 +43,21 @@ public final class GalleryImageVersionStorageProfileResponse {
     /**
      * A list of data disk images.
      * 
-     */
+    */
     public List<GalleryDataDiskImageResponse> getDataDiskImages() {
         return this.dataDiskImages == null ? List.of() : this.dataDiskImages;
     }
     /**
      * This is the OS disk image.
      * 
-     */
+    */
     public Optional<GalleryOSDiskImageResponse> getOsDiskImage() {
         return Optional.ofNullable(this.osDiskImage);
     }
     /**
      * The gallery artifact version source.
      * 
-     */
+    */
     public Optional<GalleryArtifactVersionSourceResponse> getSource() {
         return Optional.ofNullable(this.source);
     }

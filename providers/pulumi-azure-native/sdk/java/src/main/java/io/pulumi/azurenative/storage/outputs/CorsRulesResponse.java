@@ -25,7 +25,7 @@ public final class CorsRulesResponse {
     /**
      * The List of CORS rules. You can include up to five CorsRule elements in the request.
      * 
-     */
+    */
     public List<CorsRuleResponse> getCorsRules() {
         return this.corsRules == null ? List.of() : this.corsRules;
     }

@@ -45,7 +45,7 @@ public final class GetResourceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -55,7 +55,7 @@ public final class GetResourceResult {
     /**
      * JSON string matching the CloudFormation resource type schema with current configuration.
      * 
-     */
+    */
     public String getProperties() {
         return this.properties;
     }

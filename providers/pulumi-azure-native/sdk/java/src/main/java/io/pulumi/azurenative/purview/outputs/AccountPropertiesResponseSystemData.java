@@ -59,42 +59,42 @@ public final class AccountPropertiesResponseSystemData {
     /**
      * The timestamp of resource creation (UTC).
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * The identity that created the resource.
      * 
-     */
+    */
     public String getCreatedBy() {
         return this.createdBy;
     }
     /**
      * The type of identity that created the resource.
      * 
-     */
+    */
     public String getCreatedByType() {
         return this.createdByType;
     }
     /**
      * The timestamp of the last modification the resource (UTC).
      * 
-     */
+    */
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * The identity that last modified the resource.
      * 
-     */
+    */
     public String getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
      * The type of identity that last modified the resource.
      * 
-     */
+    */
     public String getLastModifiedByType() {
         return this.lastModifiedByType;
     }

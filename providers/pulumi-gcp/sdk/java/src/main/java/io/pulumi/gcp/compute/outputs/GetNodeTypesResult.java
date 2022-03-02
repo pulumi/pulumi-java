@@ -38,14 +38,14 @@ public final class GetNodeTypesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A list of node types available in the given zone and project.
      * 
-     */
+    */
     public List<String> getNames() {
         return this.names;
     }

@@ -75,7 +75,7 @@ public final class SloBasicSli {
      * Availability based SLI, dervied from count of requests made to this service that return successfully.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloBasicSliAvailability> getAvailability() {
         return Optional.ofNullable(this.availability);
     }
@@ -83,7 +83,7 @@ public final class SloBasicSli {
      * Parameters for a latency threshold SLI.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<SloBasicSliLatency> getLatency() {
         return Optional.ofNullable(this.latency);
     }
@@ -95,7 +95,7 @@ public final class SloBasicSli {
      * that don't support breaking down by location, setting this
      * field will result in an error.
      * 
-     */
+    */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
@@ -107,7 +107,7 @@ public final class SloBasicSli {
      * breaking down by method, setting this field will result in an
      * error.
      * 
-     */
+    */
     public List<String> getMethods() {
         return this.methods == null ? List.of() : this.methods;
     }
@@ -119,7 +119,7 @@ public final class SloBasicSli {
      * that don't support breaking down by version, setting this
      * field will result in an error.
      * 
-     */
+    */
     public List<String> getVersions() {
         return this.versions == null ? List.of() : this.versions;
     }

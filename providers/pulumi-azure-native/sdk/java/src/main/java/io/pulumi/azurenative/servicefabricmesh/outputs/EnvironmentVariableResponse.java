@@ -33,14 +33,14 @@ public final class EnvironmentVariableResponse {
     /**
      * The name of the environment variable.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value of the environment variable.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

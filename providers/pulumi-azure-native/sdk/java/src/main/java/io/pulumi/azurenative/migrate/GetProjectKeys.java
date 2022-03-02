@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProjectKeys {
-/**
- * ID and Key for Migration Project.
+    private GetProjectKeys() {}
+    public interface BuilderApplicator {
+        public void apply(GetProjectKeysArgs.Builder a);
+    }
+    private static GetProjectKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProjectKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * ID and Key for Migration Project.
  * API Version: 2018-02-02.
  * 
- *
- * ID and Key for Migration Project.
+     *
+     * ID and Key for Migration Project.
  * 
- */
+     */
+    public static CompletableFuture<GetProjectKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * ID and Key for Migration Project.
+     * API Version: 2018-02-02.
+     * 
+     *
+         * ID and Key for Migration Project.
+     * 
+     */
     public static CompletableFuture<GetProjectKeysResult> invokeAsync(GetProjectKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getProjectKeys", TypeShape.of(GetProjectKeysResult.class), args == null ? GetProjectKeysArgs.Empty : args, Utilities.withVersion(options));
     }

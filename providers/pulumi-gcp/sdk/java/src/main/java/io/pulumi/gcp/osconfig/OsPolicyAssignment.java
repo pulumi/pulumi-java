@@ -263,6 +263,22 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
         return this.uid;
     }
 
+    public interface BuilderApplicator {
+        public void apply(OsPolicyAssignmentArgs.Builder a);
+    }
+    private static io.pulumi.gcp.osconfig.OsPolicyAssignmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.gcp.osconfig.OsPolicyAssignmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public OsPolicyAssignment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

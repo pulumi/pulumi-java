@@ -41,21 +41,21 @@ public final class GetFactoryDataPlaneAccessResult {
     /**
      * Data Plane read only access token.
      * 
-     */
+    */
     public Optional<String> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
      * Data Plane service base URL.
      * 
-     */
+    */
     public Optional<String> getDataPlaneUrl() {
         return Optional.ofNullable(this.dataPlaneUrl);
     }
     /**
      * The user access policy.
      * 
-     */
+    */
     public Optional<UserAccessPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }

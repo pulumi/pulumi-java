@@ -23,7 +23,7 @@ public final class DiskResponse {
     /**
      * Unique Azure Resource ID of the Managed Disk.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

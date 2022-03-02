@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIPAMAllocation {
-/**
- * Resource Schema of AWS::EC2::IPAMAllocation Type
+    private GetIPAMAllocation() {}
+    public interface BuilderApplicator {
+        public void apply(GetIPAMAllocationArgs.Builder a);
+    }
+    private static GetIPAMAllocationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIPAMAllocationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Schema of AWS::EC2::IPAMAllocation Type
  * 
- */
+     */
+    public static CompletableFuture<GetIPAMAllocationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Schema of AWS::EC2::IPAMAllocation Type
+     * 
+     */
     public static CompletableFuture<GetIPAMAllocationResult> invokeAsync(GetIPAMAllocationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ec2:getIPAMAllocation", TypeShape.of(GetIPAMAllocationResult.class), args == null ? GetIPAMAllocationArgs.Empty : args, Utilities.withVersion(options));
     }

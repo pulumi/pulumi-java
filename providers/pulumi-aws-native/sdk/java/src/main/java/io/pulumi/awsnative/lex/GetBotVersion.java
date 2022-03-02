@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBotVersion {
-/**
- * A version is a numbered snapshot of your work that you can publish for use in different parts of your workflow, such as development, beta deployment, and production.
+    private GetBotVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetBotVersionArgs.Builder a);
+    }
+    private static GetBotVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBotVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A version is a numbered snapshot of your work that you can publish for use in different parts of your workflow, such as development, beta deployment, and production.
  * 
- */
+     */
+    public static CompletableFuture<GetBotVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A version is a numbered snapshot of your work that you can publish for use in different parts of your workflow, such as development, beta deployment, and production.
+     * 
+     */
     public static CompletableFuture<GetBotVersionResult> invokeAsync(GetBotVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:lex:getBotVersion", TypeShape.of(GetBotVersionResult.class), args == null ? GetBotVersionArgs.Empty : args, Utilities.withVersion(options));
     }

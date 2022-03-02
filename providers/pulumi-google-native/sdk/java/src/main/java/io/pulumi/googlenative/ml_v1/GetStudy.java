@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStudy {
-/**
- * Gets a study.
+    private GetStudy() {}
+    public interface BuilderApplicator {
+        public void apply(GetStudyArgs.Builder a);
+    }
+    private static GetStudyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStudyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets a study.
  * 
- */
+     */
+    public static CompletableFuture<GetStudyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets a study.
+     * 
+     */
     public static CompletableFuture<GetStudyResult> invokeAsync(GetStudyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:ml/v1:getStudy", TypeShape.of(GetStudyResult.class), args == null ? GetStudyArgs.Empty : args, Utilities.withVersion(options));
     }

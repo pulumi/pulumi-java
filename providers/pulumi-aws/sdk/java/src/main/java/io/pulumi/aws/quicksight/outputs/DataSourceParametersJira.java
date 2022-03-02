@@ -23,7 +23,7 @@ public final class DataSourceParametersJira {
     /**
      * The base URL of the Jira instance's site to which to connect.
      * 
-     */
+    */
     public String getSiteBaseUrl() {
         return this.siteBaseUrl;
     }

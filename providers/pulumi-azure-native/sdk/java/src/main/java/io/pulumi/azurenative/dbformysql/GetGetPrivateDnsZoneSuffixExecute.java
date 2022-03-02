@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGetPrivateDnsZoneSuffixExecute {
-/**
- * The response of get private dns zone suffix.
+    private GetGetPrivateDnsZoneSuffixExecute() {}
+    public interface BuilderApplicator {
+        public void apply(GetGetPrivateDnsZoneSuffixExecuteArgs.Builder a);
+    }
+    private static GetGetPrivateDnsZoneSuffixExecuteArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGetPrivateDnsZoneSuffixExecuteArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The response of get private dns zone suffix.
  * API Version: 2021-05-01-preview.
  * 
- *
- * The response of get private dns zone suffix.
+     *
+     * The response of get private dns zone suffix.
  * 
- */
+     */
+    public static CompletableFuture<GetGetPrivateDnsZoneSuffixExecuteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The response of get private dns zone suffix.
+     * API Version: 2021-05-01-preview.
+     * 
+     *
+         * The response of get private dns zone suffix.
+     * 
+     */
     public static CompletableFuture<GetGetPrivateDnsZoneSuffixExecuteResult> invokeAsync(@Nullable GetGetPrivateDnsZoneSuffixExecuteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformysql:getGetPrivateDnsZoneSuffixExecute", TypeShape.of(GetGetPrivateDnsZoneSuffixExecuteResult.class), args == null ? GetGetPrivateDnsZoneSuffixExecuteArgs.Empty : args, Utilities.withVersion(options));
     }

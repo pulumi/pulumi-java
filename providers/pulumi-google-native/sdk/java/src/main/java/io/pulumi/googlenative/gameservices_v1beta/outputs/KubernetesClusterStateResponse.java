@@ -59,42 +59,42 @@ public final class KubernetesClusterStateResponse {
     /**
      * The version of Agones currently installed in the registered Kubernetes cluster.
      * 
-     */
+    */
     public String getAgonesVersionInstalled() {
         return this.agonesVersionInstalled;
     }
     /**
      * The version of Agones that is targeted to be installed in the cluster.
      * 
-     */
+    */
     public String getAgonesVersionTargeted() {
         return this.agonesVersionTargeted;
     }
     /**
      * The state for the installed versions of Agones/Kubernetes.
      * 
-     */
+    */
     public String getInstallationState() {
         return this.installationState;
     }
     /**
      * The version of Kubernetes that is currently used in the registered Kubernetes cluster (as detected by the Cloud Game Servers service).
      * 
-     */
+    */
     public String getKubernetesVersionInstalled() {
         return this.kubernetesVersionInstalled;
     }
     /**
      * The cloud provider type reported by the first node's providerID in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the provider type will be empty.
      * 
-     */
+    */
     public String getProvider() {
         return this.provider;
     }
     /**
      * The detailed error message for the installed versions of Agones/Kubernetes.
      * 
-     */
+    */
     public String getVersionInstalledErrorMessage() {
         return this.versionInstalledErrorMessage;
     }

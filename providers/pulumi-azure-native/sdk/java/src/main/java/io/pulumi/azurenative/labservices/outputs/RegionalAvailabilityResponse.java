@@ -35,14 +35,14 @@ public final class RegionalAvailabilityResponse {
     /**
      * Corresponding region
      * 
-     */
+    */
     public Optional<String> getRegion() {
         return Optional.ofNullable(this.region);
     }
     /**
      * List of all the size information for the region
      * 
-     */
+    */
     public List<SizeAvailabilityResponse> getSizeAvailabilities() {
         return this.sizeAvailabilities == null ? List.of() : this.sizeAvailabilities;
     }

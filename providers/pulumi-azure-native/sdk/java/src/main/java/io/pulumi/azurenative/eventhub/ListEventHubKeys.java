@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListEventHubKeys {
-/**
- * Namespace/EventHub Connection String
+    private ListEventHubKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListEventHubKeysArgs.Builder a);
+    }
+    private static ListEventHubKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListEventHubKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Namespace/EventHub Connection String
  * API Version: 2017-04-01.
  * 
- *
- * Namespace/EventHub Connection String
+     *
+     * Namespace/EventHub Connection String
  * 
- */
+     */
+    public static CompletableFuture<ListEventHubKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Namespace/EventHub Connection String
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Namespace/EventHub Connection String
+     * 
+     */
     public static CompletableFuture<ListEventHubKeysResult> invokeAsync(ListEventHubKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:listEventHubKeys", TypeShape.of(ListEventHubKeysResult.class), args == null ? ListEventHubKeysArgs.Empty : args, Utilities.withVersion(options));
     }

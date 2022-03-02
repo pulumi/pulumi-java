@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLocalDisk {
-/**
- * Retrieve information about a Storage Gateway local disk. The disk identifier is useful for adding the disk as a cache or upload buffer to a gateway.
+    private GetLocalDisk() {}
+    public interface BuilderApplicator {
+        public void apply(GetLocalDiskArgs.Builder a);
+    }
+    private static GetLocalDiskArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLocalDiskArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieve information about a Storage Gateway local disk. The disk identifier is useful for adding the disk as a cache or upload buffer to a gateway.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getLocalDisk.
+     *
+     * A collection of arguments for invoking getLocalDisk.
  * 
- *
- * A collection of values returned by getLocalDisk.
+     *
+     * A collection of values returned by getLocalDisk.
  * 
- */
+     */
+    public static CompletableFuture<GetLocalDiskResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieve information about a Storage Gateway local disk. The disk identifier is useful for adding the disk as a cache or upload buffer to a gateway.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getLocalDisk.
+     * 
+     *
+         * A collection of values returned by getLocalDisk.
+     * 
+     */
     public static CompletableFuture<GetLocalDiskResult> invokeAsync(GetLocalDiskArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:storagegateway/getLocalDisk:getLocalDisk", TypeShape.of(GetLocalDiskResult.class), args == null ? GetLocalDiskArgs.Empty : args, Utilities.withVersion(options));
     }

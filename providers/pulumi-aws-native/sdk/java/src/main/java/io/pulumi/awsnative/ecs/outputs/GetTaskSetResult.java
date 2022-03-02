@@ -34,14 +34,14 @@ public final class GetTaskSetResult {
     /**
      * The ID of the task set.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * A floating-point percentage of the desired number of tasks to place and keep running in the task set.
      * 
-     */
+    */
     public Optional<TaskSetScale> getScale() {
         return Optional.ofNullable(this.scale);
     }

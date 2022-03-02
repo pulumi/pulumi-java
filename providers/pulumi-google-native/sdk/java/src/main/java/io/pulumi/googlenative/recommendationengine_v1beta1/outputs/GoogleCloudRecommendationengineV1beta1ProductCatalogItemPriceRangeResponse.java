@@ -31,14 +31,14 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     /**
      * The maximum product price.
      * 
-     */
+    */
     public Double getMax() {
         return this.max;
     }
     /**
      * The minimum product price.
      * 
-     */
+    */
     public Double getMin() {
         return this.min;
     }

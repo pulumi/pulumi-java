@@ -51,14 +51,14 @@ public final class GetApiDestinationResult {
     /**
      * The arn of the api destination.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The arn of the connection.
      * 
-     */
+    */
     public Optional<String> getConnectionArn() {
         return Optional.ofNullable(this.connectionArn);
     }
@@ -71,7 +71,7 @@ public final class GetApiDestinationResult {
     /**
      * Url endpoint to invoke.
      * 
-     */
+    */
     public Optional<String> getInvocationEndpoint() {
         return Optional.ofNullable(this.invocationEndpoint);
     }

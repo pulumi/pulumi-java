@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRealtimeLogConfig {
-/**
- * Resource Type definition for AWS::CloudFront::RealtimeLogConfig
+    private GetRealtimeLogConfig() {}
+    public interface BuilderApplicator {
+        public void apply(GetRealtimeLogConfigArgs.Builder a);
+    }
+    private static GetRealtimeLogConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRealtimeLogConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::CloudFront::RealtimeLogConfig
  * 
- */
+     */
+    public static CompletableFuture<GetRealtimeLogConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::CloudFront::RealtimeLogConfig
+     * 
+     */
     public static CompletableFuture<GetRealtimeLogConfigResult> invokeAsync(GetRealtimeLogConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudfront:getRealtimeLogConfig", TypeShape.of(GetRealtimeLogConfigResult.class), args == null ? GetRealtimeLogConfigArgs.Empty : args, Utilities.withVersion(options));
     }

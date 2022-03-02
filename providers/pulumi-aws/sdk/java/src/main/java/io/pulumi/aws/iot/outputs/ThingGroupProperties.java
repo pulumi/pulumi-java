@@ -34,14 +34,14 @@ public final class ThingGroupProperties {
     /**
      * The Thing Group attributes. Defined below.
      * 
-     */
+    */
     public Optional<ThingGroupPropertiesAttributePayload> getAttributePayload() {
         return Optional.ofNullable(this.attributePayload);
     }
     /**
      * A description of the Thing Group.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }

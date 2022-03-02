@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAgentPool {
-/**
- * Gets an agent pool.
+    private GetAgentPool() {}
+    public interface BuilderApplicator {
+        public void apply(GetAgentPoolArgs.Builder a);
+    }
+    private static GetAgentPoolArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAgentPoolArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets an agent pool.
  * 
- */
+     */
+    public static CompletableFuture<GetAgentPoolResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets an agent pool.
+     * 
+     */
     public static CompletableFuture<GetAgentPoolResult> invokeAsync(GetAgentPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storagetransfer/v1:getAgentPool", TypeShape.of(GetAgentPoolResult.class), args == null ? GetAgentPoolArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -75,7 +75,7 @@ public final class AzureIaaSVMProtectionPolicyResponse {
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is 'AzureIaasVM'.
      * 
-     */
+    */
     public String getBackupManagementType() {
         return this.backupManagementType;
     }
@@ -85,35 +85,35 @@ public final class AzureIaaSVMProtectionPolicyResponse {
     /**
      * Instant RP retention policy range in days
      * 
-     */
+    */
     public Optional<Integer> getInstantRpRetentionRangeInDays() {
         return Optional.ofNullable(this.instantRpRetentionRangeInDays);
     }
     /**
      * Number of items associated with this policy.
      * 
-     */
+    */
     public Optional<Integer> getProtectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
     /**
      * Retention policy with the details on backup copy retention ranges.
      * 
-     */
+    */
     public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
      * Backup schedule specified as part of backup policy.
      * 
-     */
+    */
     public Optional<Object> getSchedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
     /**
      * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
      * 
-     */
+    */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);
     }

@@ -25,7 +25,7 @@ public final class PurviewConfigurationResponse {
     /**
      * Purview Resource ID
      * 
-     */
+    */
     public Optional<String> getPurviewResourceId() {
         return Optional.ofNullable(this.purviewResourceId);
     }

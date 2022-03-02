@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMigratingVm {
-/**
- * Gets details of a single MigratingVm.
+    private GetMigratingVm() {}
+    public interface BuilderApplicator {
+        public void apply(GetMigratingVmArgs.Builder a);
+    }
+    private static GetMigratingVmArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMigratingVmArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single MigratingVm.
  * 
- */
+     */
+    public static CompletableFuture<GetMigratingVmResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single MigratingVm.
+     * 
+     */
     public static CompletableFuture<GetMigratingVmResult> invokeAsync(GetMigratingVmArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vmmigration/v1alpha1:getMigratingVm", TypeShape.of(GetMigratingVmResult.class), args == null ? GetMigratingVmArgs.Empty : args, Utilities.withVersion(options));
     }

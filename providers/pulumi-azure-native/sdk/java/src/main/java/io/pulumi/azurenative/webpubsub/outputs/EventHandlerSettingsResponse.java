@@ -27,7 +27,7 @@ public final class EventHandlerSettingsResponse {
     /**
      * Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.
      * 
-     */
+    */
     public Map<String,List<EventHandlerTemplateResponse>> getItems() {
         return this.items == null ? Map.of() : this.items;
     }

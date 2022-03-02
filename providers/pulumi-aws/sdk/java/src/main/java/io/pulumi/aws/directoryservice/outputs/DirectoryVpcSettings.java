@@ -39,14 +39,14 @@ public final class DirectoryVpcSettings {
     /**
      * The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }
     /**
      * The identifier of the VPC that the directory is in.
      * 
-     */
+    */
     public String getVpcId() {
         return this.vpcId;
     }

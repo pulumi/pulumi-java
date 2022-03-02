@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProducts {
-/**
- * Pageable list of products.
+    private GetProducts() {}
+    public interface BuilderApplicator {
+        public void apply(GetProductsArgs.Builder a);
+    }
+    private static GetProductsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetProductsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Pageable list of products.
  * API Version: 2017-06-01.
  * 
- *
- * Pageable list of products.
+     *
+     * Pageable list of products.
  * 
- */
+     */
+    public static CompletableFuture<GetProductsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Pageable list of products.
+     * API Version: 2017-06-01.
+     * 
+     *
+         * Pageable list of products.
+     * 
+     */
     public static CompletableFuture<GetProductsResult> invokeAsync(GetProductsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurestack:getProducts", TypeShape.of(GetProductsResult.class), args == null ? GetProductsArgs.Empty : args, Utilities.withVersion(options));
     }

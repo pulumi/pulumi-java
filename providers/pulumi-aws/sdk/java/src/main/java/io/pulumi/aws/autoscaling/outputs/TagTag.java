@@ -39,21 +39,21 @@ public final class TagTag {
     /**
      * Tag name.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Whether to propagate the tags to instances launched by the ASG.
      * 
-     */
+    */
     public Boolean getPropagateAtLaunch() {
         return this.propagateAtLaunch;
     }
     /**
      * Tag value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

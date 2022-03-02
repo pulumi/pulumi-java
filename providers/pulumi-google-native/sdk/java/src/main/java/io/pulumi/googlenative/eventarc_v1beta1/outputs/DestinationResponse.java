@@ -23,7 +23,7 @@ public final class DestinationResponse {
     /**
      * Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
      * 
-     */
+    */
     public CloudRunServiceResponse getCloudRunService() {
         return this.cloudRunService;
     }

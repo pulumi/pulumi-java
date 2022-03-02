@@ -32,14 +32,14 @@ public final class GoogleCloudMlV1__DiskConfigResponse {
     /**
      * Size in GB of the boot disk (default is 100GB).
      * 
-     */
+    */
     public Integer getBootDiskSizeGb() {
         return this.bootDiskSizeGb;
     }
     /**
      * Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
      * 
-     */
+    */
     public String getBootDiskType() {
         return this.bootDiskType;
     }

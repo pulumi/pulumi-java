@@ -84,56 +84,56 @@ public final class AzureTableSourceResponse {
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
-     */
+    */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
      * Azure Table source ignore table not found. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getAzureTableSourceIgnoreTableNotFound() {
         return Optional.ofNullable(this.azureTableSourceIgnoreTableNotFound);
     }
     /**
      * Azure Table source query. Type: string (or Expression with resultType string).
      * 
-     */
+    */
     public Optional<Object> getAzureTableSourceQuery() {
         return Optional.ofNullable(this.azureTableSourceQuery);
     }
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-     */
+    */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getQueryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
     /**
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-     */
+    */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -141,7 +141,7 @@ public final class AzureTableSourceResponse {
      * Copy source type.
      * Expected value is 'AzureTableSource'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBucket {
-/**
- * Returns metadata for the specified bucket.
+    private GetBucket() {}
+    public interface BuilderApplicator {
+        public void apply(GetBucketArgs.Builder a);
+    }
+    private static GetBucketArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetBucketArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns metadata for the specified bucket.
  * 
- */
+     */
+    public static CompletableFuture<GetBucketResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns metadata for the specified bucket.
+     * 
+     */
     public static CompletableFuture<GetBucketResult> invokeAsync(GetBucketArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getBucket", TypeShape.of(GetBucketResult.class), args == null ? GetBucketArgs.Empty : args, Utilities.withVersion(options));
     }

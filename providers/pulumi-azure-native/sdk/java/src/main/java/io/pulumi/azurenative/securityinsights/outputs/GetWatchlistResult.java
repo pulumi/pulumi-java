@@ -206,182 +206,182 @@ public final class GetWatchlistResult {
     /**
      * The content type of the raw content. Example : text/csv or text/tsv
      * 
-     */
+    */
     public Optional<String> getContentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
      * The time the watchlist was created
      * 
-     */
+    */
     public Optional<String> getCreated() {
         return Optional.ofNullable(this.created);
     }
     /**
      * Describes a user that created the watchlist
      * 
-     */
+    */
     public Optional<WatchlistUserInfoResponse> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
      * The default duration of a watchlist (in ISO 8601 duration format)
      * 
-     */
+    */
     public Optional<String> getDefaultDuration() {
         return Optional.ofNullable(this.defaultDuration);
     }
     /**
      * A description of the watchlist
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The display name of the watchlist
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Etag of the azure resource
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * Azure resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * A flag that indicates if the watchlist is deleted or not
      * 
-     */
+    */
     public Optional<Boolean> getIsDeleted() {
         return Optional.ofNullable(this.isDeleted);
     }
     /**
      * The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.
      * 
-     */
+    */
     public String getItemsSearchKey() {
         return this.itemsSearchKey;
     }
     /**
      * List of labels relevant to this watchlist
      * 
-     */
+    */
     public List<String> getLabels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
      * Azure resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The number of lines in a csv/tsv content to skip before the header
      * 
-     */
+    */
     public Optional<Integer> getNumberOfLinesToSkip() {
         return Optional.ofNullable(this.numberOfLinesToSkip);
     }
     /**
      * The provider of the watchlist
      * 
-     */
+    */
     public String getProvider() {
         return this.provider;
     }
     /**
      * The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint
      * 
-     */
+    */
     public Optional<String> getRawContent() {
         return Optional.ofNullable(this.rawContent);
     }
     /**
      * The source of the watchlist
      * 
-     */
+    */
     public String getSource() {
         return this.source;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The tenantId where the watchlist belongs to
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Azure resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The last time the watchlist was updated
      * 
-     */
+    */
     public Optional<String> getUpdated() {
         return Optional.ofNullable(this.updated);
     }
     /**
      * Describes a user that updated the watchlist
      * 
-     */
+    */
     public Optional<WatchlistUserInfoResponse> getUpdatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
     /**
      * The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted
      * 
-     */
+    */
     public Optional<String> getUploadStatus() {
         return Optional.ofNullable(this.uploadStatus);
     }
     /**
      * The alias of the watchlist
      * 
-     */
+    */
     public Optional<String> getWatchlistAlias() {
         return Optional.ofNullable(this.watchlistAlias);
     }
     /**
      * The id (a Guid) of the watchlist
      * 
-     */
+    */
     public Optional<String> getWatchlistId() {
         return Optional.ofNullable(this.watchlistId);
     }
     /**
      * The number of Watchlist Items in the Watchlist
      * 
-     */
+    */
     public Optional<Integer> getWatchlistItemsCount() {
         return Optional.ofNullable(this.watchlistItemsCount);
     }
     /**
      * The type of the watchlist
      * 
-     */
+    */
     public Optional<String> getWatchlistType() {
         return Optional.ofNullable(this.watchlistType);
     }

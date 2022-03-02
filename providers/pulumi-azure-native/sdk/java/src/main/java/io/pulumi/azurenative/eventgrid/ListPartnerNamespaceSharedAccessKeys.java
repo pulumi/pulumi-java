@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListPartnerNamespaceSharedAccessKeys {
-/**
- * Shared access keys of the partner namespace.
+    private ListPartnerNamespaceSharedAccessKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListPartnerNamespaceSharedAccessKeysArgs.Builder a);
+    }
+    private static ListPartnerNamespaceSharedAccessKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListPartnerNamespaceSharedAccessKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Shared access keys of the partner namespace.
  * API Version: 2021-06-01-preview.
  * 
- *
- * Shared access keys of the partner namespace.
+     *
+     * Shared access keys of the partner namespace.
  * 
- */
+     */
+    public static CompletableFuture<ListPartnerNamespaceSharedAccessKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Shared access keys of the partner namespace.
+     * API Version: 2021-06-01-preview.
+     * 
+     *
+         * Shared access keys of the partner namespace.
+     * 
+     */
     public static CompletableFuture<ListPartnerNamespaceSharedAccessKeysResult> invokeAsync(ListPartnerNamespaceSharedAccessKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:listPartnerNamespaceSharedAccessKeys", TypeShape.of(ListPartnerNamespaceSharedAccessKeysResult.class), args == null ? ListPartnerNamespaceSharedAccessKeysArgs.Empty : args, Utilities.withVersion(options));
     }

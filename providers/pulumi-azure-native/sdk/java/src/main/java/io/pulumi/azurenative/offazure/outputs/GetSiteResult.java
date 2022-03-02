@@ -66,35 +66,35 @@ public final class GetSiteResult {
     /**
      * eTag for concurrency control.
      * 
-     */
+    */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Azure location in which Sites is created.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Name of the VMware site.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * Nested properties of VMWare site.
      * 
-     */
+    */
     public SitePropertiesResponse getProperties() {
         return this.properties;
     }
@@ -104,7 +104,7 @@ public final class GetSiteResult {
     /**
      * Type of resource. Type = Microsoft.OffAzure/VMWareSites.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

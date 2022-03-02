@@ -77,56 +77,56 @@ public final class GetHybridConnectionResult {
     /**
      * The time the hybrid connection was created.
      * 
-     */
+    */
     public String getCreatedAt() {
         return this.createdAt;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The number of listeners for this hybrid connection. Note that min : 1 and max:25 are supported.
      * 
-     */
+    */
     public Integer getListenerCount() {
         return this.listenerCount;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Returns true if client authorization is needed for this hybrid connection; otherwise, false.
      * 
-     */
+    */
     public Optional<Boolean> getRequiresClientAuthorization() {
         return Optional.ofNullable(this.requiresClientAuthorization);
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The time the namespace was updated.
      * 
-     */
+    */
     public String getUpdatedAt() {
         return this.updatedAt;
     }
     /**
      * The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
      * 
-     */
+    */
     public Optional<String> getUserMetadata() {
         return Optional.ofNullable(this.userMetadata);
     }

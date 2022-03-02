@@ -53,7 +53,7 @@ public final class GetBotResult {
     /**
      * Data privacy setting of the Bot.
      * 
-     */
+    */
     public Optional<DataPrivacyProperties> getDataPrivacy() {
         return Optional.ofNullable(this.dataPrivacy);
     }
@@ -66,7 +66,7 @@ public final class GetBotResult {
     /**
      * IdleSessionTTLInSeconds of the resource
      * 
-     */
+    */
     public Optional<Integer> getIdleSessionTTLInSeconds() {
         return Optional.ofNullable(this.idleSessionTTLInSeconds);
     }

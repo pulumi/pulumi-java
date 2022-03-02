@@ -139,7 +139,7 @@ public final class TriggerBuildStep {
      * entrypoint, the first element in args is used as the entrypoint, and the
      * remainder will be used as arguments.
      * 
-     */
+    */
     public List<String> getArgs() {
         return this.args == null ? List.of() : this.args;
     }
@@ -154,7 +154,7 @@ public final class TriggerBuildStep {
      * which specifies an absolute path, the `RepoSource` `dir` is ignored
      * for the step's execution.
      * 
-     */
+    */
     public Optional<String> getDir() {
         return Optional.ofNullable(this.dir);
     }
@@ -163,7 +163,7 @@ public final class TriggerBuildStep {
      * default entrypoint.
      * If unset, the image's default entrypoint is used
      * 
-     */
+    */
     public Optional<String> getEntrypoint() {
         return Optional.ofNullable(this.entrypoint);
     }
@@ -173,7 +173,7 @@ public final class TriggerBuildStep {
      * the variable will use the build step value.
      * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
      * 
-     */
+    */
     public List<String> getEnvs() {
         return this.envs == null ? List.of() : this.envs;
     }
@@ -181,7 +181,7 @@ public final class TriggerBuildStep {
      * Unique identifier for this build step, used in `wait_for` to
      * reference this build step as a dependency.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
@@ -190,7 +190,7 @@ public final class TriggerBuildStep {
      * Volume names must be unique per build step and must be valid names for Docker volumes.
      * Each named volume must be used by at least two build steps.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -199,7 +199,7 @@ public final class TriggerBuildStep {
      * Service crypto key. These values must be specified in the build's Secret. These variables
      * will be available to all build steps in this build.
      * 
-     */
+    */
     public List<String> getSecretEnvs() {
         return this.secretEnvs == null ? List.of() : this.secretEnvs;
     }
@@ -209,7 +209,7 @@ public final class TriggerBuildStep {
      * time limit and will be allowed to continue to run until either it
      * completes or the build itself times out.
      * 
-     */
+    */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -218,7 +218,7 @@ public final class TriggerBuildStep {
      * Output only. Stores timing information for pushing all artifact objects.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<String> getTiming() {
         return Optional.ofNullable(this.timing);
     }
@@ -231,7 +231,7 @@ public final class TriggerBuildStep {
      * of a build request with an incorrect configuration.
      * Structure is documented below.
      * 
-     */
+    */
     public List<TriggerBuildStepVolume> getVolumes() {
         return this.volumes == null ? List.of() : this.volumes;
     }
@@ -242,7 +242,7 @@ public final class TriggerBuildStep {
      * will start when all previous build steps in the `Build.Steps` list
      * have completed successfully.
      * 
-     */
+    */
     public List<String> getWaitFors() {
         return this.waitFors == null ? List.of() : this.waitFors;
     }

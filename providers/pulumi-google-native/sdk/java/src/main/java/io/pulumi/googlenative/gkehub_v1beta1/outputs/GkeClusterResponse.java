@@ -32,14 +32,14 @@ public final class GkeClusterResponse {
     /**
      * If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.
      * 
-     */
+    */
     public Boolean getClusterMissing() {
         return this.clusterMissing;
     }
     /**
      * Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
      * 
-     */
+    */
     public String getResourceLink() {
         return this.resourceLink;
     }

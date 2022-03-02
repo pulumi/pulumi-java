@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkRule {
-/**
- * A virtual network rule.
+    private GetVirtualNetworkRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualNetworkRuleArgs.Builder a);
+    }
+    private static GetVirtualNetworkRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualNetworkRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A virtual network rule.
  * API Version: 2017-12-01.
  * 
- *
- * A virtual network rule.
+     *
+     * A virtual network rule.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualNetworkRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A virtual network rule.
+     * API Version: 2017-12-01.
+     * 
+     *
+         * A virtual network rule.
+     * 
+     */
     public static CompletableFuture<GetVirtualNetworkRuleResult> invokeAsync(GetVirtualNetworkRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformysql:getVirtualNetworkRule", TypeShape.of(GetVirtualNetworkRuleResult.class), args == null ? GetVirtualNetworkRuleArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -23,7 +23,7 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOption {
     /**
      * Specifies the data to be captured. Should be one of `Input` or `Output`.
      * 
-     */
+    */
     public String getCaptureMode() {
         return this.captureMode;
     }

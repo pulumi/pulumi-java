@@ -67,7 +67,7 @@ public final class RouterPeerBfd {
      * and the transmit interval of the other router. If set, this value
      * must be between 1000 and 30000.
      * 
-     */
+    */
     public Optional<Integer> getMinReceiveInterval() {
         return Optional.ofNullable(this.minReceiveInterval);
     }
@@ -78,7 +78,7 @@ public final class RouterPeerBfd {
      * and the corresponding receive interval of the other router. If set,
      * this value must be between 1000 and 30000.
      * 
-     */
+    */
     public Optional<Integer> getMinTransmitInterval() {
         return Optional.ofNullable(this.minTransmitInterval);
     }
@@ -87,7 +87,7 @@ public final class RouterPeerBfd {
      * BFD declares that a peer is unavailable. If set, the value must
      * be a value between 5 and 16.
      * 
-     */
+    */
     public Optional<Integer> getMultiplier() {
         return Optional.ofNullable(this.multiplier);
     }
@@ -99,7 +99,7 @@ public final class RouterPeerBfd {
      * If set to `DISABLED`, BFD is disabled for this BGP peer.
      * Possible values are `ACTIVE`, `DISABLED`, and `PASSIVE`.
      * 
-     */
+    */
     public String getSessionInitializationMode() {
         return this.sessionInitializationMode;
     }

@@ -111,84 +111,84 @@ public final class GetSecurityConnectorResult {
     /**
      * The multi cloud resource's cloud name.
      * 
-     */
+    */
     public Optional<String> getCloudName() {
         return Optional.ofNullable(this.cloudName);
     }
     /**
      * Entity tag is used for comparing two or more entities from the same requested resource.
      * 
-     */
+    */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * The multi cloud resource identifier (account id in case of AWS connector).
      * 
-     */
+    */
     public Optional<String> getHierarchyIdentifier() {
         return Optional.ofNullable(this.hierarchyIdentifier);
     }
     /**
      * Resource Id
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of the resource
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Location where the resource is stored
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * Resource name
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * A collection of offerings for the security connector.
      * 
-     */
+    */
     public List<Object> getOfferings() {
         return this.offerings == null ? List.of() : this.offerings;
     }
     /**
      * The multi cloud account's organizational data
      * 
-     */
+    */
     public Optional<SecurityConnectorPropertiesResponseOrganizationalData> getOrganizationalData() {
         return Optional.ofNullable(this.organizationalData);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * A list of key value pairs that describe the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

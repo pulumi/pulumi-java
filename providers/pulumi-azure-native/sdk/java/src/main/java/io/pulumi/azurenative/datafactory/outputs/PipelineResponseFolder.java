@@ -25,7 +25,7 @@ public final class PipelineResponseFolder {
     /**
      * The name of the folder that this Pipeline is in.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

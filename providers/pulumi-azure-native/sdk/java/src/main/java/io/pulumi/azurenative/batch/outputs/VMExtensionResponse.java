@@ -58,7 +58,7 @@ public final class VMExtensionResponse {
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
-     */
+    */
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
         return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
@@ -68,14 +68,14 @@ public final class VMExtensionResponse {
     /**
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
-     */
+    */
     public Optional<Object> getProtectedSettings() {
         return Optional.ofNullable(this.protectedSettings);
     }
     /**
      * Collection of extension names after which this extension needs to be provisioned.
      * 
-     */
+    */
     public List<String> getProvisionAfterExtensions() {
         return this.provisionAfterExtensions == null ? List.of() : this.provisionAfterExtensions;
     }

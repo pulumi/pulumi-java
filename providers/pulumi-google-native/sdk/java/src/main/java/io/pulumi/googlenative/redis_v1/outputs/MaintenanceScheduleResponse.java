@@ -46,28 +46,28 @@ public final class MaintenanceScheduleResponse {
     /**
      * If the scheduled maintenance can be rescheduled, default is true.
      * 
-     */
+    */
     public Boolean getCanReschedule() {
         return this.canReschedule;
     }
     /**
      * The end time of any upcoming scheduled maintenance for this instance.
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * The deadline that the maintenance schedule start time can not go beyond, including reschedule.
      * 
-     */
+    */
     public String getScheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
     }
     /**
      * The start time of any upcoming scheduled maintenance for this instance.
      * 
-     */
+    */
     public String getStartTime() {
         return this.startTime;
     }

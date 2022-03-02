@@ -25,7 +25,7 @@ public final class NsRecordResponse {
     /**
      * The name server name for this NS record.
      * 
-     */
+    */
     public Optional<String> getNsdname() {
         return Optional.ofNullable(this.nsdname);
     }

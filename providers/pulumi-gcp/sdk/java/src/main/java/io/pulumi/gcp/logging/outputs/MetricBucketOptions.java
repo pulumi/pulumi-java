@@ -48,7 +48,7 @@ public final class MetricBucketOptions {
      * Specifies a set of buckets with arbitrary widths.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<MetricBucketOptionsExplicitBuckets> getExplicitBuckets() {
         return Optional.ofNullable(this.explicitBuckets);
     }
@@ -57,7 +57,7 @@ public final class MetricBucketOptions {
      * the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<MetricBucketOptionsExponentialBuckets> getExponentialBuckets() {
         return Optional.ofNullable(this.exponentialBuckets);
     }
@@ -66,7 +66,7 @@ public final class MetricBucketOptions {
      * Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
      * Structure is documented below.
      * 
-     */
+    */
     public Optional<MetricBucketOptionsLinearBuckets> getLinearBuckets() {
         return Optional.ofNullable(this.linearBuckets);
     }

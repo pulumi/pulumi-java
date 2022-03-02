@@ -34,7 +34,7 @@ public final class GetInstanceAccessControlAttributeConfigurationResult {
     /**
      * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still supported for backwards compatibility purposes. We recomend that you use  AccessControlAttributes property instead.
      * 
-     */
+    */
     public Optional<InstanceAccessControlAttributeConfigurationProperties> getInstanceAccessControlAttributeConfiguration() {
         return Optional.ofNullable(this.instanceAccessControlAttributeConfiguration);
     }

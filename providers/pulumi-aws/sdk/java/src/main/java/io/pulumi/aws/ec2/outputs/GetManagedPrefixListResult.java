@@ -85,21 +85,21 @@ public final class GetManagedPrefixListResult {
     /**
      * The address family of the prefix list. Valid values are `IPv4` and `IPv6`.
      * 
-     */
+    */
     public String getAddressFamily() {
         return this.addressFamily;
     }
     /**
      * The ARN of the selected prefix list.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The set of entries in this prefix list. Each entry is an object with `cidr` and `description`.
      * 
-     */
+    */
     public List<GetManagedPrefixListEntry> getEntries() {
         return this.entries;
     }
@@ -109,35 +109,35 @@ public final class GetManagedPrefixListResult {
     /**
      * The ID of the selected prefix list.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * When then prefix list is managed, the maximum number of entries it supports, or null otherwise.
      * 
-     */
+    */
     public Integer getMaxEntries() {
         return this.maxEntries;
     }
     /**
      * The name of the selected prefix list.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The Account ID of the owner of a customer-managed prefix list, or `AWS` otherwise.
      * 
-     */
+    */
     public String getOwnerId() {
         return this.ownerId;
     }
     /**
      * A map of tags assigned to the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }

@@ -47,28 +47,28 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     /**
      * The ARN for an Amazon Web Services Organization that you want to share your AMI with.
      * 
-     */
+    */
     public List<String> getOrganizationArns() {
         return this.organizationArns == null ? List.of() : this.organizationArns;
     }
     /**
      * The ARN for an Organizations organizational unit (OU) that you want to share your AMI with.
      * 
-     */
+    */
     public List<String> getOrganizationalUnitArns() {
         return this.organizationalUnitArns == null ? List.of() : this.organizationalUnitArns;
     }
     /**
      * The name of the group.
      * 
-     */
+    */
     public List<String> getUserGroups() {
         return this.userGroups == null ? List.of() : this.userGroups;
     }
     /**
      * The AWS account ID.
      * 
-     */
+    */
     public List<String> getUserIds() {
         return this.userIds == null ? List.of() : this.userIds;
     }

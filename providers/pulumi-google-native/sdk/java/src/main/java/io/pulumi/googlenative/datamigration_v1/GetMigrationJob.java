@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMigrationJob {
-/**
- * Gets details of a single migration job.
+    private GetMigrationJob() {}
+    public interface BuilderApplicator {
+        public void apply(GetMigrationJobArgs.Builder a);
+    }
+    private static GetMigrationJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMigrationJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single migration job.
  * 
- */
+     */
+    public static CompletableFuture<GetMigrationJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single migration job.
+     * 
+     */
     public static CompletableFuture<GetMigrationJobResult> invokeAsync(GetMigrationJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datamigration/v1:getMigrationJob", TypeShape.of(GetMigrationJobResult.class), args == null ? GetMigrationJobArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -83,56 +83,56 @@ public final class AzureDataLakeStoreOutputDataSourceResponse {
     /**
      * The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getAccountName() {
         return Optional.ofNullable(this.accountName);
     }
     /**
      * The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.
      * 
-     */
+    */
     public Optional<String> getDateFormat() {
         return Optional.ofNullable(this.dateFormat);
     }
     /**
      * The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getFilePathPrefix() {
         return Optional.ofNullable(this.filePathPrefix);
     }
     /**
      * A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getRefreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
     /**
      * The tenant id of the user used to obtain the refresh token. Required on PUT (CreateOrReplace) requests.
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The time format. Wherever {time} appears in filePathPrefix, the value of this property is used as the time format instead.
      * 
-     */
+    */
     public Optional<String> getTimeFormat() {
         return Optional.ofNullable(this.timeFormat);
     }
     /**
      * The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
      * 
-     */
+    */
     public Optional<String> getTokenUserDisplayName() {
         return Optional.ofNullable(this.tokenUserDisplayName);
     }
     /**
      * The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
      * 
-     */
+    */
     public Optional<String> getTokenUserPrincipalName() {
         return Optional.ofNullable(this.tokenUserPrincipalName);
     }
@@ -140,7 +140,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse {
      * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is 'Microsoft.DataLake/Accounts'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

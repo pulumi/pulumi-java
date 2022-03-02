@@ -39,14 +39,14 @@ public final class CacheKeyQueryStringActionParametersResponse {
     /**
      * query parameters to include or exclude (comma separated).
      * 
-     */
+    */
     public Optional<String> getQueryParameters() {
         return Optional.ofNullable(this.queryParameters);
     }
     /**
      * Caching behavior for the requests
      * 
-     */
+    */
     public String getQueryStringBehavior() {
         return this.queryStringBehavior;
     }

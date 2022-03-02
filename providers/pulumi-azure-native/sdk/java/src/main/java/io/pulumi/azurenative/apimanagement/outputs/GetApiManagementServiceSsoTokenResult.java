@@ -25,7 +25,7 @@ public final class GetApiManagementServiceSsoTokenResult {
     /**
      * Redirect URL to the Publisher Portal containing the SSO token.
      * 
-     */
+    */
     public Optional<String> getRedirectUri() {
         return Optional.ofNullable(this.redirectUri);
     }

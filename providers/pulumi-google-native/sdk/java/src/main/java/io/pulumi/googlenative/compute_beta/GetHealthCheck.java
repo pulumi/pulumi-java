@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHealthCheck {
-/**
- * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
+    private GetHealthCheck() {}
+    public interface BuilderApplicator {
+        public void apply(GetHealthCheckArgs.Builder a);
+    }
+    private static GetHealthCheckArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHealthCheckArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetHealthCheckResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetHealthCheckResult> invokeAsync(GetHealthCheckArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getHealthCheck", TypeShape.of(GetHealthCheckResult.class), args == null ? GetHealthCheckArgs.Empty : args, Utilities.withVersion(options));
     }

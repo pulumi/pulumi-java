@@ -70,28 +70,28 @@ public final class GetSecretVersionResult {
     /**
      * The time at which the Secret was created.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The time at which the Secret was destroyed. Only present if state is DESTROYED.
      * 
-     */
+    */
     public String getDestroyTime() {
         return this.destroyTime;
     }
     /**
      * True if the current state of the SecretVersion is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -99,7 +99,7 @@ public final class GetSecretVersionResult {
      * The resource name of the SecretVersion. Format:
      * `projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}`
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -112,7 +112,7 @@ public final class GetSecretVersionResult {
     /**
      * The secret data. No larger than 64KiB.
      * 
-     */
+    */
     public String getSecretData() {
         return this.secretData;
     }

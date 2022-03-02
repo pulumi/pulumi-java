@@ -42,7 +42,7 @@ public final class GetCipherTextResult {
     /**
      * Base64 encoded ciphertext
      * 
-     */
+    */
     public String getCiphertextBlob() {
         return this.ciphertextBlob;
     }
@@ -52,7 +52,7 @@ public final class GetCipherTextResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

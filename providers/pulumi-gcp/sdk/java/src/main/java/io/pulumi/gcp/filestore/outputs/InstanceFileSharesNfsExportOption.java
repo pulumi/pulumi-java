@@ -71,7 +71,7 @@ public final class InstanceFileSharesNfsExportOption {
      * Default value is `READ_WRITE`.
      * Possible values are `READ_ONLY` and `READ_WRITE`.
      * 
-     */
+    */
     public Optional<String> getAccessMode() {
         return Optional.ofNullable(this.accessMode);
     }
@@ -80,7 +80,7 @@ public final class InstanceFileSharesNfsExportOption {
      * Anon_gid may only be set with squashMode of ROOT_SQUASH. An error will be returned
      * if this field is specified for other squashMode settings.
      * 
-     */
+    */
     public Optional<Integer> getAnonGid() {
         return Optional.ofNullable(this.anonGid);
     }
@@ -89,7 +89,7 @@ public final class InstanceFileSharesNfsExportOption {
      * Anon_uid may only be set with squashMode of ROOT_SQUASH. An error will be returned
      * if this field is specified for other squashMode settings.
      * 
-     */
+    */
     public Optional<Integer> getAnonUid() {
         return Optional.ofNullable(this.anonUid);
     }
@@ -98,7 +98,7 @@ public final class InstanceFileSharesNfsExportOption {
      * Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned.
      * The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
      * 
-     */
+    */
     public List<String> getIpRanges() {
         return this.ipRanges == null ? List.of() : this.ipRanges;
     }
@@ -108,7 +108,7 @@ public final class InstanceFileSharesNfsExportOption {
      * Default value is `NO_ROOT_SQUASH`.
      * Possible values are `NO_ROOT_SQUASH` and `ROOT_SQUASH`.
      * 
-     */
+    */
     public Optional<String> getSquashMode() {
         return Optional.ofNullable(this.squashMode);
     }

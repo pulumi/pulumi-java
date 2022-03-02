@@ -225,49 +225,49 @@ public final class GetFunctionResult {
     /**
      * The instruction set architecture for the Lambda function.
      * 
-     */
+    */
     public List<String> getArchitectures() {
         return this.architectures;
     }
     /**
      * Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `qualified_arn`.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Amazon Resource Name (ARN) for a Code Signing Configuration.
      * 
-     */
+    */
     public String getCodeSigningConfigArn() {
         return this.codeSigningConfigArn;
     }
     /**
      * Configure the function's *dead letter queue*.
      * 
-     */
+    */
     public GetFunctionDeadLetterConfig getDeadLetterConfig() {
         return this.deadLetterConfig;
     }
     /**
      * Description of what your Lambda Function does.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The Lambda environment's configuration settings.
      * 
-     */
+    */
     public GetFunctionEnvironment getEnvironment() {
         return this.environment;
     }
     /**
      * The connection settings for an Amazon EFS file system.
      * 
-     */
+    */
     public List<GetFunctionFileSystemConfig> getFileSystemConfigs() {
         return this.fileSystemConfigs;
     }
@@ -277,63 +277,63 @@ public final class GetFunctionResult {
     /**
      * The function entrypoint in your code.
      * 
-     */
+    */
     public String getHandler() {
         return this.handler;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The URI of the container image.
      * 
-     */
+    */
     public String getImageUri() {
         return this.imageUri;
     }
     /**
      * The ARN to be used for invoking Lambda Function from API Gateway.
      * 
-     */
+    */
     public String getInvokeArn() {
         return this.invokeArn;
     }
     /**
      * The ARN for the KMS encryption key.
      * 
-     */
+    */
     public String getKmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
      * The date this resource was last modified.
      * 
-     */
+    */
     public String getLastModified() {
         return this.lastModified;
     }
     /**
      * A list of Lambda Layer ARNs attached to your Lambda Function.
      * 
-     */
+    */
     public List<String> getLayers() {
         return this.layers;
     }
     /**
      * Amount of memory in MB your Lambda Function can use at runtime.
      * 
-     */
+    */
     public Integer getMemorySize() {
         return this.memorySize;
     }
     /**
      * Qualified (`:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `arn`.
      * 
-     */
+    */
     public String getQualifiedArn() {
         return this.qualifiedArn;
     }
@@ -343,49 +343,49 @@ public final class GetFunctionResult {
     /**
      * The amount of reserved concurrent executions for this lambda function or `-1` if unreserved.
      * 
-     */
+    */
     public Integer getReservedConcurrentExecutions() {
         return this.reservedConcurrentExecutions;
     }
     /**
      * IAM role attached to the Lambda Function.
      * 
-     */
+    */
     public String getRole() {
         return this.role;
     }
     /**
      * The runtime environment for the Lambda function.
      * 
-     */
+    */
     public String getRuntime() {
         return this.runtime;
     }
     /**
      * The Amazon Resource Name (ARN) of a signing job.
      * 
-     */
+    */
     public String getSigningJobArn() {
         return this.signingJobArn;
     }
     /**
      * The Amazon Resource Name (ARN) for a signing profile version.
      * 
-     */
+    */
     public String getSigningProfileVersionArn() {
         return this.signingProfileVersionArn;
     }
     /**
      * Base64-encoded representation of raw SHA-256 sum of the zip file.
      * 
-     */
+    */
     public String getSourceCodeHash() {
         return this.sourceCodeHash;
     }
     /**
      * The size in bytes of the function .zip file.
      * 
-     */
+    */
     public Integer getSourceCodeSize() {
         return this.sourceCodeSize;
     }
@@ -395,28 +395,28 @@ public final class GetFunctionResult {
     /**
      * The function execution time at which Lambda should terminate the function.
      * 
-     */
+    */
     public Integer getTimeout() {
         return this.timeout;
     }
     /**
      * Tracing settings of the function.
      * 
-     */
+    */
     public GetFunctionTracingConfig getTracingConfig() {
         return this.tracingConfig;
     }
     /**
      * The version of the Lambda function.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }
     /**
      * VPC configuration associated with your Lambda function.
      * 
-     */
+    */
     public GetFunctionVpcConfig getVpcConfig() {
         return this.vpcConfig;
     }

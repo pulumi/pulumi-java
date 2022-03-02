@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReplicationvCenter {
-/**
- * vCenter definition.
+    private GetReplicationvCenter() {}
+    public interface BuilderApplicator {
+        public void apply(GetReplicationvCenterArgs.Builder a);
+    }
+    private static GetReplicationvCenterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReplicationvCenterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * vCenter definition.
  * API Version: 2018-07-10.
  * 
- *
- * vCenter definition.
+     *
+     * vCenter definition.
  * 
- */
+     */
+    public static CompletableFuture<GetReplicationvCenterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * vCenter definition.
+     * API Version: 2018-07-10.
+     * 
+     *
+         * vCenter definition.
+     * 
+     */
     public static CompletableFuture<GetReplicationvCenterResult> invokeAsync(GetReplicationvCenterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationvCenter", TypeShape.of(GetReplicationvCenterResult.class), args == null ? GetReplicationvCenterArgs.Empty : args, Utilities.withVersion(options));
     }

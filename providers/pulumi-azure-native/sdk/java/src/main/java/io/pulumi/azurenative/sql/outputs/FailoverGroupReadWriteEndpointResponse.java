@@ -34,14 +34,14 @@ public final class FailoverGroupReadWriteEndpointResponse {
     /**
      * Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
      * 
-     */
+    */
     public String getFailoverPolicy() {
         return this.failoverPolicy;
     }
     /**
      * Grace period before failover with data loss is attempted for the read-write endpoint. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
      * 
-     */
+    */
     public Optional<Integer> getFailoverWithDataLossGracePeriodMinutes() {
         return Optional.ofNullable(this.failoverWithDataLossGracePeriodMinutes);
     }

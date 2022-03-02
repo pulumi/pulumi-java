@@ -23,7 +23,7 @@ public final class PacketMirroringNetwork {
     /**
      * The URL of the instances where this rule should be active.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

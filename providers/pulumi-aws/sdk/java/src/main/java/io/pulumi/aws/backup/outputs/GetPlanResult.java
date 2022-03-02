@@ -56,21 +56,21 @@ public final class GetPlanResult {
     /**
      * The ARN of the backup plan.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The display name of a backup plan.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -80,14 +80,14 @@ public final class GetPlanResult {
     /**
      * Metadata that you can assign to help organize the plans you create.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags;
     }
     /**
      * Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
      * 
-     */
+    */
     public String getVersion() {
         return this.version;
     }

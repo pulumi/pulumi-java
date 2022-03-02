@@ -57,35 +57,35 @@ public final class ContentLinkResponse {
     /**
      * The content hash.
      * 
-     */
+    */
     public ContentHashResponse getContentHash() {
         return this.contentHash;
     }
     /**
      * The content size.
      * 
-     */
+    */
     public Double getContentSize() {
         return this.contentSize;
     }
     /**
      * The content version.
      * 
-     */
+    */
     public String getContentVersion() {
         return this.contentVersion;
     }
     /**
      * The metadata.
      * 
-     */
+    */
     public Object getMetadata() {
         return this.metadata;
     }
     /**
      * The content link URI.
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }

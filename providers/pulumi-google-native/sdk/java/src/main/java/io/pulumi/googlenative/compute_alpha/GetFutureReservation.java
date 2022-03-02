@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFutureReservation {
-/**
- * Retrieves information about the specified future reservation.
+    private GetFutureReservation() {}
+    public interface BuilderApplicator {
+        public void apply(GetFutureReservationArgs.Builder a);
+    }
+    private static GetFutureReservationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFutureReservationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieves information about the specified future reservation.
  * 
- */
+     */
+    public static CompletableFuture<GetFutureReservationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieves information about the specified future reservation.
+     * 
+     */
     public static CompletableFuture<GetFutureReservationResult> invokeAsync(GetFutureReservationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getFutureReservation", TypeShape.of(GetFutureReservationResult.class), args == null ? GetFutureReservationArgs.Empty : args, Utilities.withVersion(options));
     }

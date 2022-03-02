@@ -115,91 +115,91 @@ public final class GetVirtualNetworkResult {
     /**
      * The allowed subnets of the virtual network.
      * 
-     */
+    */
     public List<SubnetResponse> getAllowedSubnets() {
         return this.allowedSubnets == null ? List.of() : this.allowedSubnets;
     }
     /**
      * The creation date of the virtual network.
      * 
-     */
+    */
     public String getCreatedDate() {
         return this.createdDate;
     }
     /**
      * The description of the virtual network.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The Microsoft.Network resource identifier of the virtual network.
      * 
-     */
+    */
     public Optional<String> getExternalProviderResourceId() {
         return Optional.ofNullable(this.externalProviderResourceId);
     }
     /**
      * The external subnet properties.
      * 
-     */
+    */
     public List<ExternalSubnetResponse> getExternalSubnets() {
         return this.externalSubnets;
     }
     /**
      * The identifier of the resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The location of the resource.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The provisioning status of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * The subnet overrides of the virtual network.
      * 
-     */
+    */
     public List<SubnetOverrideResponse> getSubnetOverrides() {
         return this.subnetOverrides == null ? List.of() : this.subnetOverrides;
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The unique immutable identifier of a resource (Guid).
      * 
-     */
+    */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }

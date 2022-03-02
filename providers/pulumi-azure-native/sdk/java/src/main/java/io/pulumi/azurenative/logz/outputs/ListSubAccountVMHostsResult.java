@@ -35,14 +35,14 @@ public final class ListSubAccountVMHostsResult {
     /**
      * Link to the next set of results, if any.
      * 
-     */
+    */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
      * Response of a list vm host update operation.
      * 
-     */
+    */
     public List<VMResourcesResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

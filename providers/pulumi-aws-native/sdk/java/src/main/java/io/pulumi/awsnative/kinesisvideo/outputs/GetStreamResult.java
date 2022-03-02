@@ -64,42 +64,42 @@ public final class GetStreamResult {
     /**
      * The Amazon Resource Name (ARN) of the Kinesis Video stream.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * The number of hours till which Kinesis Video will retain the data in the stream
      * 
-     */
+    */
     public Optional<Integer> getDataRetentionInHours() {
         return Optional.ofNullable(this.dataRetentionInHours);
     }
     /**
      * The name of the device that is writing to the stream.
      * 
-     */
+    */
     public Optional<String> getDeviceName() {
         return Optional.ofNullable(this.deviceName);
     }
     /**
      * AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
      * 
-     */
+    */
     public Optional<String> getKmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
      * The media type of the stream. Consumers of the stream can use this information when processing the stream.
      * 
-     */
+    */
     public Optional<String> getMediaType() {
         return Optional.ofNullable(this.mediaType);
     }
     /**
      * An array of key-value pairs associated with the Kinesis Video Stream.
      * 
-     */
+    */
     public List<StreamTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

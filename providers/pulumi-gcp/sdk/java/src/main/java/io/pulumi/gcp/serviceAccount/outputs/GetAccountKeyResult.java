@@ -45,7 +45,7 @@ public final class GetAccountKeyResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -61,7 +61,7 @@ public final class GetAccountKeyResult {
     /**
      * The public key, base64 encoded
      * 
-     */
+    */
     public String getPublicKey() {
         return this.publicKey;
     }

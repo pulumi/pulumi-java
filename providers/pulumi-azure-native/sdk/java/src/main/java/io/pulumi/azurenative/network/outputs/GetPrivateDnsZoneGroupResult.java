@@ -56,35 +56,35 @@ public final class GetPrivateDnsZoneGroupResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * Resource ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * A collection of private dns zone configurations of the private dns zone group.
      * 
-     */
+    */
     public List<PrivateDnsZoneConfigResponse> getPrivateDnsZoneConfigs() {
         return this.privateDnsZoneConfigs == null ? List.of() : this.privateDnsZoneConfigs;
     }
     /**
      * The provisioning state of the private dns zone group resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }

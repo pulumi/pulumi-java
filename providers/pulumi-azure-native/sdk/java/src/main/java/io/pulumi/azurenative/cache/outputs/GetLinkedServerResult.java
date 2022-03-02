@@ -66,49 +66,49 @@ public final class GetLinkedServerResult {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Fully qualified resourceId of the linked redis cache.
      * 
-     */
+    */
     public String getLinkedRedisCacheId() {
         return this.linkedRedisCacheId;
     }
     /**
      * Location of the linked redis cache.
      * 
-     */
+    */
     public String getLinkedRedisCacheLocation() {
         return this.linkedRedisCacheLocation;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Terminal state of the link between primary and secondary redis cache.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Role of the linked server.
      * 
-     */
+    */
     public String getServerRole() {
         return this.serverRole;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

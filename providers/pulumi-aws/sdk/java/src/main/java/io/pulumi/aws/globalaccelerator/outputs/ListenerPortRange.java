@@ -33,14 +33,14 @@ public final class ListenerPortRange {
     /**
      * The first port in the range of ports, inclusive.
      * 
-     */
+    */
     public Optional<Integer> getFromPort() {
         return Optional.ofNullable(this.fromPort);
     }
     /**
      * The last port in the range of ports, inclusive.
      * 
-     */
+    */
     public Optional<Integer> getToPort() {
         return Optional.ofNullable(this.toPort);
     }

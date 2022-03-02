@@ -37,7 +37,7 @@ public final class RegistryEventNotificationConfigItem {
     /**
      * PubSub topic name to publish device events.
      * 
-     */
+    */
     public String getPubsubTopicName() {
         return this.pubsubTopicName;
     }
@@ -48,7 +48,7 @@ public final class RegistryEventNotificationConfigItem {
      * value can only be used for the last `event_notification_configs`
      * item.
      * 
-     */
+    */
     public Optional<String> getSubfolderMatches() {
         return Optional.ofNullable(this.subfolderMatches);
     }

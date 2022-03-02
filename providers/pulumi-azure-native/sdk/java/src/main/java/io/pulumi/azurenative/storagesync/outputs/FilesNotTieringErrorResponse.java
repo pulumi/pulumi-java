@@ -32,14 +32,14 @@ public final class FilesNotTieringErrorResponse {
     /**
      * Error code (HResult)
      * 
-     */
+    */
     public Integer getErrorCode() {
         return this.errorCode;
     }
     /**
      * Count of files with this error
      * 
-     */
+    */
     public Double getFileCount() {
         return this.fileCount;
     }

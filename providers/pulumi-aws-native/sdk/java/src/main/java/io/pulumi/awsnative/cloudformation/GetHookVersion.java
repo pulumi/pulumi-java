@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHookVersion {
-/**
- * Publishes new or first hook version to AWS CloudFormation Registry.
+    private GetHookVersion() {}
+    public interface BuilderApplicator {
+        public void apply(GetHookVersionArgs.Builder a);
+    }
+    private static GetHookVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHookVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Publishes new or first hook version to AWS CloudFormation Registry.
  * 
- */
+     */
+    public static CompletableFuture<GetHookVersionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Publishes new or first hook version to AWS CloudFormation Registry.
+     * 
+     */
     public static CompletableFuture<GetHookVersionResult> invokeAsync(GetHookVersionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:cloudformation:getHookVersion", TypeShape.of(GetHookVersionResult.class), args == null ? GetHookVersionArgs.Empty : args, Utilities.withVersion(options));
     }

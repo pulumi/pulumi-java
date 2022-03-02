@@ -56,35 +56,35 @@ public final class EnumResponse {
     /**
      * Enum value definitions.
      * 
-     */
+    */
     public List<EnumValueResponse> getEnumvalue() {
         return this.enumvalue;
     }
     /**
      * Enum type name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Protocol buffer options.
      * 
-     */
+    */
     public List<OptionResponse> getOptions() {
         return this.options;
     }
     /**
      * The source context.
      * 
-     */
+    */
     public SourceContextResponse getSourceContext() {
         return this.sourceContext;
     }
     /**
      * The source syntax.
      * 
-     */
+    */
     public String getSyntax() {
         return this.syntax;
     }

@@ -25,7 +25,7 @@ public final class TriggerTransport {
     /**
      * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
      * 
-     */
+    */
     public List<TriggerTransportPubsub> getPubsubs() {
         return this.pubsubs == null ? List.of() : this.pubsubs;
     }

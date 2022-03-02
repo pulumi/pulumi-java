@@ -33,14 +33,14 @@ public final class IpTagResponse {
     /**
      * The IP tag type. Example: FirstPartyUsage.
      * 
-     */
+    */
     public Optional<String> getIpTagType() {
         return Optional.ofNullable(this.ipTagType);
     }
     /**
      * The value of the IP tag associated with the public IP. Example: SQL.
      * 
-     */
+    */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }

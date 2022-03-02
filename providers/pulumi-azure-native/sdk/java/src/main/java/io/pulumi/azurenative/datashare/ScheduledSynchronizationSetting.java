@@ -161,6 +161,22 @@ public class ScheduledSynchronizationSetting extends io.pulumi.resources.CustomR
         return this.userName;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ScheduledSynchronizationSettingArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.datashare.ScheduledSynchronizationSettingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.datashare.ScheduledSynchronizationSettingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public ScheduledSynchronizationSetting(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

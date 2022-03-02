@@ -40,21 +40,21 @@ public final class TopicRuleErrorActionStepFunctions {
     /**
      * The prefix used to generate, along with a UUID, the unique state machine execution name.
      * 
-     */
+    */
     public Optional<String> getExecutionNamePrefix() {
         return Optional.ofNullable(this.executionNamePrefix);
     }
     /**
      * The ARN of the IAM role that grants access to start execution of the state machine.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }
     /**
      * The name of the Step Functions state machine whose execution will be started.
      * 
-     */
+    */
     public String getStateMachineName() {
         return this.stateMachineName;
     }

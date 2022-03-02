@@ -52,35 +52,35 @@ public final class GetOrganizationAccount {
     /**
      * ARN of the root
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Email of the account
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * Identifier of the root
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the policy type
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The status of the policy type as it relates to the associated root
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

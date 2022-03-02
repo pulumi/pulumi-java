@@ -25,7 +25,7 @@ public final class WorkteamNotificationConfiguration {
     /**
      * The ARN for the SNS topic to which notifications should be published.
      * 
-     */
+    */
     public Optional<String> getNotificationTopicArn() {
         return Optional.ofNullable(this.notificationTopicArn);
     }

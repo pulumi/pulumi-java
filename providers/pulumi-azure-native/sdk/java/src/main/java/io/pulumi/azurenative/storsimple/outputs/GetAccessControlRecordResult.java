@@ -62,42 +62,42 @@ public final class GetAccessControlRecordResult {
     /**
      * The path ID that uniquely identifies the object.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The iSCSI initiator name (IQN).
      * 
-     */
+    */
     public String getInitiatorName() {
         return this.initiatorName;
     }
     /**
      * The Kind of the object. Currently only Series8000 is supported
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * The name of the object.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The hierarchical type of the object.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The number of volumes using the access control record.
      * 
-     */
+    */
     public Integer getVolumeCount() {
         return this.volumeCount;
     }

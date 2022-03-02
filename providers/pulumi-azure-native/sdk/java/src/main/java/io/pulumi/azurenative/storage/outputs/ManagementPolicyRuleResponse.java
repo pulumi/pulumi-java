@@ -49,28 +49,28 @@ public final class ManagementPolicyRuleResponse {
     /**
      * An object that defines the Lifecycle rule.
      * 
-     */
+    */
     public ManagementPolicyDefinitionResponse getDefinition() {
         return this.definition;
     }
     /**
      * Rule is enabled if set to true.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The valid value is Lifecycle
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

@@ -295,7 +295,7 @@ public class Container extends io.pulumi.resources.CustomResource {
     /**
      * The network gateway of the container.
      * 
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The network gateway of the container as read from its NetworkSettings.
      * 
      */
@@ -401,7 +401,7 @@ public class Container extends io.pulumi.resources.CustomResource {
     /**
      * The IP address of the container.
      * 
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The IP address of the container's first network it.
      * 
      */
@@ -419,7 +419,7 @@ public class Container extends io.pulumi.resources.CustomResource {
     /**
      * The IP prefix length of the container.
      * 
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings.
      * 
      */
@@ -467,7 +467,7 @@ public class Container extends io.pulumi.resources.CustomResource {
     /**
      * Set of links for link based connectivity between containers that are running on the same host.
      * 
-     * @deprecated
+     * @Deprecated
      * The --link flag is a legacy feature of Docker. It may eventually be removed.
      * 
      */
@@ -615,7 +615,7 @@ public class Container extends io.pulumi.resources.CustomResource {
     /**
      * Set an alias for the container in all specified networks
      * 
-     * @deprecated
+     * @Deprecated
      * Use networks_advanced instead. Will be removed in v3.0.0
      * 
      */
@@ -661,7 +661,7 @@ public class Container extends io.pulumi.resources.CustomResource {
     /**
      * ID of the networks in which the container is.
      * 
-     * @deprecated
+     * @Deprecated
      * Use networks_advanced instead. Will be removed in v3.0.0
      * 
      */
@@ -1009,6 +1009,22 @@ public class Container extends io.pulumi.resources.CustomResource {
         return this.workingDir;
     }
 
+    public interface BuilderApplicator {
+        public void apply(ContainerArgs.Builder a);
+    }
+    private static io.pulumi.docker.ContainerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.docker.ContainerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Container(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

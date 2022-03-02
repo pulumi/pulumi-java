@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecretRotation {
-/**
- * Retrieve information about a Secrets Manager secret rotation. To retrieve secret metadata, see the `aws.secretsmanager.Secret` data source. To retrieve a secret value, see the `aws.secretsmanager.SecretVersion` data source.
+    private GetSecretRotation() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecretRotationArgs.Builder a);
+    }
+    private static GetSecretRotationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecretRotationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieve information about a Secrets Manager secret rotation. To retrieve secret metadata, see the `aws.secretsmanager.Secret` data source. To retrieve a secret value, see the `aws.secretsmanager.SecretVersion` data source.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getSecretRotation.
+     *
+     * A collection of arguments for invoking getSecretRotation.
  * 
- *
- * A collection of values returned by getSecretRotation.
+     *
+     * A collection of values returned by getSecretRotation.
  * 
- */
+     */
+    public static CompletableFuture<GetSecretRotationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieve information about a Secrets Manager secret rotation. To retrieve secret metadata, see the `aws.secretsmanager.Secret` data source. To retrieve a secret value, see the `aws.secretsmanager.SecretVersion` data source.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getSecretRotation.
+     * 
+     *
+         * A collection of values returned by getSecretRotation.
+     * 
+     */
     public static CompletableFuture<GetSecretRotationResult> invokeAsync(GetSecretRotationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:secretsmanager/getSecretRotation:getSecretRotation", TypeShape.of(GetSecretRotationResult.class), args == null ? GetSecretRotationArgs.Empty : args, Utilities.withVersion(options));
     }

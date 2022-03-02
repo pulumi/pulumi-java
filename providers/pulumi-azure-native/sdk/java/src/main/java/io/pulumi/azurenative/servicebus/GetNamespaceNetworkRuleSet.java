@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNamespaceNetworkRuleSet {
-/**
- * Description of NetworkRuleSet resource.
+    private GetNamespaceNetworkRuleSet() {}
+    public interface BuilderApplicator {
+        public void apply(GetNamespaceNetworkRuleSetArgs.Builder a);
+    }
+    private static GetNamespaceNetworkRuleSetArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNamespaceNetworkRuleSetArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Description of NetworkRuleSet resource.
  * API Version: 2017-04-01.
  * 
- *
- * Description of NetworkRuleSet resource.
+     *
+     * Description of NetworkRuleSet resource.
  * 
- */
+     */
+    public static CompletableFuture<GetNamespaceNetworkRuleSetResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Description of NetworkRuleSet resource.
+     * API Version: 2017-04-01.
+     * 
+     *
+         * Description of NetworkRuleSet resource.
+     * 
+     */
     public static CompletableFuture<GetNamespaceNetworkRuleSetResult> invokeAsync(GetNamespaceNetworkRuleSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getNamespaceNetworkRuleSet", TypeShape.of(GetNamespaceNetworkRuleSetResult.class), args == null ? GetNamespaceNetworkRuleSetArgs.Empty : args, Utilities.withVersion(options));
     }

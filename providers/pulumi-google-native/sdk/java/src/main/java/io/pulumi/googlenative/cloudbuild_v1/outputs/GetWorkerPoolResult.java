@@ -89,70 +89,70 @@ public final class GetWorkerPoolResult {
     /**
      * User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
-     */
+    */
     public Map<String,String> getAnnotations() {
         return this.annotations;
     }
     /**
      * Time at which the request to create the `WorkerPool` was received.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * Time at which the request to delete the `WorkerPool` was received.
      * 
-     */
+    */
     public String getDeleteTime() {
         return this.deleteTime;
     }
     /**
      * A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
     /**
      * The resource name of the `WorkerPool`, with format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. The value of `{worker_pool}` is provided by `worker_pool_id` in `CreateWorkerPool` request and the value of `{location}` is determined by the endpoint accessed.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Legacy Private Pool configuration.
      * 
-     */
+    */
     public PrivatePoolV1ConfigResponse getPrivatePoolV1Config() {
         return this.privatePoolV1Config;
     }
     /**
      * `WorkerPool` state.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
     /**
      * A unique identifier for the `WorkerPool`.
      * 
-     */
+    */
     public String getUid() {
         return this.uid;
     }
     /**
      * Time at which the request to update the `WorkerPool` was received.
      * 
-     */
+    */
     public String getUpdateTime() {
         return this.updateTime;
     }

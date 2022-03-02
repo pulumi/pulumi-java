@@ -23,7 +23,7 @@ public final class RelationshipNoteResponse {
     /**
      * The type of relationship between the source and target SPDX elements
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

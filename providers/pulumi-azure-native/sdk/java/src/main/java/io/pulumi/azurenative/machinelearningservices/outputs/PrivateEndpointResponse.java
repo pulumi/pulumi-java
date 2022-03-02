@@ -31,14 +31,14 @@ public final class PrivateEndpointResponse {
     /**
      * The ARM identifier for Private Endpoint
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The ARM identifier for Subnet resource that private endpoint links to
      * 
-     */
+    */
     public String getSubnetArmId() {
         return this.subnetArmId;
     }

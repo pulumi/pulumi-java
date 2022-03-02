@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  * $ pulumi import azure-native:timeseriesinsights:Environment env1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1 
  * ```
  * 
- * @deprecated
+ * @Deprecated
  * Please use one of the variants: Gen1Environment, Gen2Environment.
  * 
  */
@@ -122,6 +122,22 @@ public class Environment extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    public interface BuilderApplicator {
+        public void apply(EnvironmentArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.timeseriesinsights.EnvironmentArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.timeseriesinsights.EnvironmentArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Environment(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

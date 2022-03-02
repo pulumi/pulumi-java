@@ -46,28 +46,28 @@ public final class MoveResourceErrorBodyResponse {
     /**
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * A list of additional details about the error.
      * 
-     */
+    */
     public List<MoveResourceErrorBodyResponse> getDetails() {
         return this.details;
     }
     /**
      * A message describing the error, intended to be suitable for display in a user interface.
      * 
-     */
+    */
     public String getMessage() {
         return this.message;
     }
     /**
      * The target of the particular error. For example, the name of the property in error.
      * 
-     */
+    */
     public String getTarget() {
         return this.target;
     }

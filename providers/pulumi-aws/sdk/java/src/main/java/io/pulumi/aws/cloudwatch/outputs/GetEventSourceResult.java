@@ -57,28 +57,28 @@ public final class GetEventSourceResult {
     /**
      * The ARN of the partner event source
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The name of the SaaS partner that created the event source
      * 
-     */
+    */
     public String getCreatedBy() {
         return this.createdBy;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the event source
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -88,7 +88,7 @@ public final class GetEventSourceResult {
     /**
      * The state of the event source (`ACTIVE` or `PENDING`)
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }

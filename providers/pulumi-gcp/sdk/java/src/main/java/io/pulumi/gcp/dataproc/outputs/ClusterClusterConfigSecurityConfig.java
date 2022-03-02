@@ -23,7 +23,7 @@ public final class ClusterClusterConfigSecurityConfig {
     /**
      * Kerberos Configuration
      * 
-     */
+    */
     public ClusterClusterConfigSecurityConfigKerberosConfig getKerberosConfig() {
         return this.kerberosConfig;
     }

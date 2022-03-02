@@ -40,21 +40,21 @@ public final class LoggingConfigResponse {
     /**
      * For transfers with a PosixFilesystem source, this option enables the Cloud Storage transfer logs for this transfer.
      * 
-     */
+    */
     public Boolean getEnableOnpremGcsTransferLogs() {
         return this.enableOnpremGcsTransferLogs;
     }
     /**
      * States in which `log_actions` are logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
      * 
-     */
+    */
     public List<String> getLogActionStates() {
         return this.logActionStates;
     }
     /**
      * Specifies the actions to be logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
      * 
-     */
+    */
     public List<String> getLogActions() {
         return this.logActions;
     }

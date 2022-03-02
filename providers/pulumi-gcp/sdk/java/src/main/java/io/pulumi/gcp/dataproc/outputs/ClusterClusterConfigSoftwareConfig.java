@@ -69,7 +69,7 @@ public final class ClusterClusterConfigSoftwareConfig {
      * latest version. For a list of valid versions see
      * [Cloud Dataproc versions](https://cloud.google.com/dataproc/docs/concepts/dataproc-versions)
      * 
-     */
+    */
     public Optional<String> getImageVersion() {
         return Optional.ofNullable(this.imageVersion);
     }
@@ -88,7 +88,7 @@ public final class ClusterClusterConfigSoftwareConfig {
      * * ZEPPELIN
      * * ZOOKEEPER
      * 
-     */
+    */
     public List<String> getOptionalComponents() {
         return this.optionalComponents == null ? List.of() : this.optionalComponents;
     }
@@ -98,7 +98,7 @@ public final class ClusterClusterConfigSoftwareConfig {
      * a cluster. For a list of valid properties please see
      * [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties)
      * 
-     */
+    */
     public Map<String,String> getOverrideProperties() {
         return this.overrideProperties == null ? Map.of() : this.overrideProperties;
     }

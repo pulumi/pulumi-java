@@ -50,28 +50,28 @@ public final class AzureFunctionEventSubscriptionDestinationResponse {
      * Type of the endpoint for the event subscription destination.
      * Expected value is 'AzureFunction'.
      * 
-     */
+    */
     public String getEndpointType() {
         return this.endpointType;
     }
     /**
      * Maximum number of events per batch.
      * 
-     */
+    */
     public Optional<Integer> getMaxEventsPerBatch() {
         return Optional.ofNullable(this.maxEventsPerBatch);
     }
     /**
      * Preferred batch size in Kilobytes.
      * 
-     */
+    */
     public Optional<Integer> getPreferredBatchSizeInKilobytes() {
         return Optional.ofNullable(this.preferredBatchSizeInKilobytes);
     }
     /**
      * The Azure Resource Id that represents the endpoint of the Azure Function destination of an event subscription.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

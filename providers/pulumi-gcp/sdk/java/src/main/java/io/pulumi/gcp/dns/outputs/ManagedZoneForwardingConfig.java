@@ -30,7 +30,7 @@ public final class ManagedZoneForwardingConfig {
      * one target is given.
      * Structure is documented below.
      * 
-     */
+    */
     public List<ManagedZoneForwardingConfigTargetNameServer> getTargetNameServers() {
         return this.targetNameServers;
     }

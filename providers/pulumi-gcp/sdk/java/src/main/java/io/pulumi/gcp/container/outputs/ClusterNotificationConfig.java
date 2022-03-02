@@ -23,7 +23,7 @@ public final class ClusterNotificationConfig {
     /**
      * The pubsub config for the cluster's upgrade notifications.
      * 
-     */
+    */
     public ClusterNotificationConfigPubsub getPubsub() {
         return this.pubsub;
     }

@@ -31,14 +31,14 @@ public final class RouterAdvertisedIpRangeResponse {
     /**
      * User-specified description for the IP range.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The IP range to advertise. The value must be a CIDR-formatted string.
      * 
-     */
+    */
     public String getRange() {
         return this.range;
     }

@@ -33,14 +33,14 @@ public final class ListenerRuleConditionQueryString {
     /**
      * Query string key pattern to match.
      * 
-     */
+    */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
     /**
      * Query string value pattern to match.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

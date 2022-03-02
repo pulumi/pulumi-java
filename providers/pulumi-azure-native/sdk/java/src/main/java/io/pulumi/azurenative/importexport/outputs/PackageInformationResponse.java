@@ -46,28 +46,28 @@ public final class PackageInformationResponse {
     /**
      * The name of the carrier that is used to ship the import or export drives.
      * 
-     */
+    */
     public String getCarrierName() {
         return this.carrierName;
     }
     /**
      * The number of drives included in the package.
      * 
-     */
+    */
     public Double getDriveCount() {
         return this.driveCount;
     }
     /**
      * The date when the package is shipped.
      * 
-     */
+    */
     public String getShipDate() {
         return this.shipDate;
     }
     /**
      * The tracking number of the package.
      * 
-     */
+    */
     public String getTrackingNumber() {
         return this.trackingNumber;
     }

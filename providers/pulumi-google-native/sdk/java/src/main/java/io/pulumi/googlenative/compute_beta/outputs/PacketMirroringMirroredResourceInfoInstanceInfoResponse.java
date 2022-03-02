@@ -31,14 +31,14 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse {
     /**
      * Unique identifier for the instance; defined by the server.
      * 
-     */
+    */
     public String getCanonicalUrl() {
         return this.canonicalUrl;
     }
     /**
      * Resource URL to the virtual machine instance which is being mirrored.
      * 
-     */
+    */
     public String getUrl() {
         return this.url;
     }

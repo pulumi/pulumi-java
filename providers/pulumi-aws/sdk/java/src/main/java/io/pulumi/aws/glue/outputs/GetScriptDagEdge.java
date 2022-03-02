@@ -40,21 +40,21 @@ public final class GetScriptDagEdge {
     /**
      * The ID of the node at which the edge starts.
      * 
-     */
+    */
     public String getSource() {
         return this.source;
     }
     /**
      * The ID of the node at which the edge ends.
      * 
-     */
+    */
     public String getTarget() {
         return this.target;
     }
     /**
      * The target of the edge.
      * 
-     */
+    */
     public Optional<String> getTargetParameter() {
         return Optional.ofNullable(this.targetParameter);
     }

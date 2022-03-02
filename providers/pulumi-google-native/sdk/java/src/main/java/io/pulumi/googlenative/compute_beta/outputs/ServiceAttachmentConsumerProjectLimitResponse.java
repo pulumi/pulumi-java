@@ -32,14 +32,14 @@ public final class ServiceAttachmentConsumerProjectLimitResponse {
     /**
      * The value of the limit to set.
      * 
-     */
+    */
     public Integer getConnectionLimit() {
         return this.connectionLimit;
     }
     /**
      * The project id or number for the project to set the limit for.
      * 
-     */
+    */
     public String getProjectIdOrNum() {
         return this.projectIdOrNum;
     }

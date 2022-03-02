@@ -33,14 +33,14 @@ public final class DatabaseInstanceClone {
     /**
      * The timestamp of the point in time that should be restored.
      * 
-     */
+    */
     public Optional<String> getPointInTime() {
         return Optional.ofNullable(this.pointInTime);
     }
     /**
      * Name of the source instance which will be cloned.
      * 
-     */
+    */
     public String getSourceInstanceName() {
         return this.sourceInstanceName;
     }

@@ -54,35 +54,35 @@ public final class GetMetricsSourceTagRuleResult {
     /**
      * The id of the rule set.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Name of the rule set.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Definition of the properties for a TagRules resource.
      * 
-     */
+    */
     public MetricsTagRulesPropertiesResponse getProperties() {
         return this.properties;
     }
     /**
      * The system metadata relating to this resource
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The type of the rule set.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

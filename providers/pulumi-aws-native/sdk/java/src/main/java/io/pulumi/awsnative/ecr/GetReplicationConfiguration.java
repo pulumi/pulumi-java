@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReplicationConfiguration {
-/**
- * The AWS::ECR::ReplicationConfiguration resource configures the replication destinations for an Amazon Elastic Container Registry (Amazon Private ECR). For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication.html
+    private GetReplicationConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetReplicationConfigurationArgs.Builder a);
+    }
+    private static GetReplicationConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetReplicationConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The AWS::ECR::ReplicationConfiguration resource configures the replication destinations for an Amazon Elastic Container Registry (Amazon Private ECR). For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication.html
  * 
- */
+     */
+    public static CompletableFuture<GetReplicationConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The AWS::ECR::ReplicationConfiguration resource configures the replication destinations for an Amazon Elastic Container Registry (Amazon Private ECR). For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/replication.html
+     * 
+     */
     public static CompletableFuture<GetReplicationConfigurationResult> invokeAsync(GetReplicationConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:ecr:getReplicationConfiguration", TypeShape.of(GetReplicationConfigurationResult.class), args == null ? GetReplicationConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -180,154 +180,154 @@ public final class GetServerResult {
     /**
      * The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
      * 
-     */
+    */
     public Optional<String> getAdministratorLogin() {
         return Optional.ofNullable(this.administratorLogin);
     }
     /**
      * Status showing whether the server data encryption is enabled with customer-managed keys.
      * 
-     */
+    */
     public String getByokEnforcement() {
         return this.byokEnforcement;
     }
     /**
      * Earliest restore point creation time (ISO8601 format)
      * 
-     */
+    */
     public Optional<String> getEarliestRestoreDate() {
         return Optional.ofNullable(this.earliestRestoreDate);
     }
     /**
      * The fully qualified domain name of a server.
      * 
-     */
+    */
     public Optional<String> getFullyQualifiedDomainName() {
         return Optional.ofNullable(this.fullyQualifiedDomainName);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The Azure Active Directory identity of the server.
      * 
-     */
+    */
     public Optional<ResourceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
     /**
      * Status showing whether the server enabled infrastructure encryption.
      * 
-     */
+    */
     public Optional<String> getInfrastructureEncryption() {
         return Optional.ofNullable(this.infrastructureEncryption);
     }
     /**
      * The geo-location where the resource lives
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The master server id of a replica server.
      * 
-     */
+    */
     public Optional<String> getMasterServerId() {
         return Optional.ofNullable(this.masterServerId);
     }
     /**
      * Enforce a minimal Tls version for the server.
      * 
-     */
+    */
     public Optional<String> getMinimalTlsVersion() {
         return Optional.ofNullable(this.minimalTlsVersion);
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of private endpoint connections on a server
      * 
-     */
+    */
     public List<ServerPrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
      * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
      * 
-     */
+    */
     public Optional<String> getPublicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
      * The maximum number of replicas that a master server can have.
      * 
-     */
+    */
     public Optional<Integer> getReplicaCapacity() {
         return Optional.ofNullable(this.replicaCapacity);
     }
     /**
      * The replication role of the server.
      * 
-     */
+    */
     public Optional<String> getReplicationRole() {
         return Optional.ofNullable(this.replicationRole);
     }
     /**
      * The SKU (pricing tier) of the server.
      * 
-     */
+    */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
     /**
      * Enable ssl enforcement or not when connect to server.
      * 
-     */
+    */
     public Optional<String> getSslEnforcement() {
         return Optional.ofNullable(this.sslEnforcement);
     }
     /**
      * Storage profile of a server.
      * 
-     */
+    */
     public Optional<StorageProfileResponse> getStorageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * A state of a server that is visible to user.
      * 
-     */
+    */
     public Optional<String> getUserVisibleState() {
         return Optional.ofNullable(this.userVisibleState);
     }
     /**
      * Server version.
      * 
-     */
+    */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

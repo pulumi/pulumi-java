@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineScaleSetVMExtension {
-/**
- * Describes a VMSS VM Extension.
+    private GetVirtualMachineScaleSetVMExtension() {}
+    public interface BuilderApplicator {
+        public void apply(GetVirtualMachineScaleSetVMExtensionArgs.Builder a);
+    }
+    private static GetVirtualMachineScaleSetVMExtensionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVirtualMachineScaleSetVMExtensionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Describes a VMSS VM Extension.
  * API Version: 2021-03-01.
  * 
- *
- * Describes a VMSS VM Extension.
+     *
+     * Describes a VMSS VM Extension.
  * 
- */
+     */
+    public static CompletableFuture<GetVirtualMachineScaleSetVMExtensionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Describes a VMSS VM Extension.
+     * API Version: 2021-03-01.
+     * 
+     *
+         * Describes a VMSS VM Extension.
+     * 
+     */
     public static CompletableFuture<GetVirtualMachineScaleSetVMExtensionResult> invokeAsync(GetVirtualMachineScaleSetVMExtensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSetVMExtension", TypeShape.of(GetVirtualMachineScaleSetVMExtensionResult.class), args == null ? GetVirtualMachineScaleSetVMExtensionArgs.Empty : args, Utilities.withVersion(options));
     }

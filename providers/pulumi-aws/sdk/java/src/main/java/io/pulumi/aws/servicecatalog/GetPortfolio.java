@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPortfolio {
-/**
- * Provides information for a Service Catalog Portfolio.
+    private GetPortfolio() {}
+    public interface BuilderApplicator {
+        public void apply(GetPortfolioArgs.Builder a);
+    }
+    private static GetPortfolioArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPortfolioArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides information for a Service Catalog Portfolio.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getPortfolio.
+     *
+     * A collection of arguments for invoking getPortfolio.
  * 
- *
- * A collection of values returned by getPortfolio.
+     *
+     * A collection of values returned by getPortfolio.
  * 
- */
+     */
+    public static CompletableFuture<GetPortfolioResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides information for a Service Catalog Portfolio.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getPortfolio.
+     * 
+     *
+         * A collection of values returned by getPortfolio.
+     * 
+     */
     public static CompletableFuture<GetPortfolioResult> invokeAsync(GetPortfolioArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicecatalog/getPortfolio:getPortfolio", TypeShape.of(GetPortfolioResult.class), args == null ? GetPortfolioArgs.Empty : args, Utilities.withVersion(options));
     }

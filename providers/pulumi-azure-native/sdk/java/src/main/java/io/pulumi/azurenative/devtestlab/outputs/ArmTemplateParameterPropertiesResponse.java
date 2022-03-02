@@ -33,14 +33,14 @@ public final class ArmTemplateParameterPropertiesResponse {
     /**
      * The name of the template parameter.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The value of the template parameter.
      * 
-     */
+    */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

@@ -31,14 +31,14 @@ public final class WebAclRuleStatementNotStatementStatementOrStatementStatementA
     /**
      * The string to match against.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Specify whether you want to match using the label name or just the namespace. Valid values are `LABEL` or `NAMESPACE`.
      * 
-     */
+    */
     public String getScope() {
         return this.scope;
     }

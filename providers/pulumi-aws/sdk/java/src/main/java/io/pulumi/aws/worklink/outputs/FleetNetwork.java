@@ -39,21 +39,21 @@ public final class FleetNetwork {
     /**
      * A list of security group IDs associated with access to the provided subnets.
      * 
-     */
+    */
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
     /**
      * A list of subnet IDs used for X-ENI connections from Amazon WorkLink rendering containers.
      * 
-     */
+    */
     public List<String> getSubnetIds() {
         return this.subnetIds;
     }
     /**
      * The VPC ID with connectivity to associated websites.
      * 
-     */
+    */
     public String getVpcId() {
         return this.vpcId;
     }

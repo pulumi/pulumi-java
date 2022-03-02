@@ -35,14 +35,14 @@ public final class ImageRecipeComponentConfiguration {
     /**
      * The Amazon Resource Name (ARN) of the component.
      * 
-     */
+    */
     public Optional<String> getComponentArn() {
         return Optional.ofNullable(this.componentArn);
     }
     /**
      * A group of parameter settings that are used to configure the component for a specific recipe.
      * 
-     */
+    */
     public List<ImageRecipeComponentParameter> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }

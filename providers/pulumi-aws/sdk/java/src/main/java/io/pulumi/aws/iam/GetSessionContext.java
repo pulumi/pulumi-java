@@ -13,6 +13,18 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSessionContext {
+    private GetSessionContext() {}
+    public interface BuilderApplicator {
+        public void apply(GetSessionContextArgs.Builder a);
+    }
+    private static GetSessionContextArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSessionContextArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    public static CompletableFuture<GetSessionContextResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
     public static CompletableFuture<GetSessionContextResult> invokeAsync(GetSessionContextArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:iam/getSessionContext:getSessionContext", TypeShape.of(GetSessionContextResult.class), args == null ? GetSessionContextArgs.Empty : args, Utilities.withVersion(options));
     }

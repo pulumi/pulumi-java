@@ -66,49 +66,49 @@ public final class GetNetworkInterfaceAssociation {
     /**
      * The allocation ID.
      * 
-     */
+    */
     public String getAllocationId() {
         return this.allocationId;
     }
     /**
      * The association ID.
      * 
-     */
+    */
     public String getAssociationId() {
         return this.associationId;
     }
     /**
      * The carrier IP address associated with the network interface. This attribute is only set when the network interface is in a subnet which is associated with a Wavelength Zone.
      * 
-     */
+    */
     public String getCarrierIp() {
         return this.carrierIp;
     }
     /**
      * The customer-owned IP address.
      * 
-     */
+    */
     public String getCustomerOwnedIp() {
         return this.customerOwnedIp;
     }
     /**
      * The ID of the Elastic IP address owner.
      * 
-     */
+    */
     public String getIpOwnerId() {
         return this.ipOwnerId;
     }
     /**
      * The public DNS name.
      * 
-     */
+    */
     public String getPublicDnsName() {
         return this.publicDnsName;
     }
     /**
      * The address of the Elastic IP address bound to the network interface.
      * 
-     */
+    */
     public String getPublicIp() {
         return this.publicIp;
     }

@@ -34,14 +34,14 @@ public final class PrivateEndpointConnectionPropertiesResponse {
     /**
      * The private endpoint property of a private endpoint connection
      * 
-     */
+    */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
      * The current state of a private endpoint connection
      * 
-     */
+    */
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }

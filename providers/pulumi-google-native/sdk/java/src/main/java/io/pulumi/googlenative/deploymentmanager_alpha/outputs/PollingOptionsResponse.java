@@ -54,35 +54,35 @@ public final class PollingOptionsResponse {
     /**
      * An array of diagnostics to be collected by Deployment Manager, these diagnostics will be displayed to the user.
      * 
-     */
+    */
     public List<DiagnosticResponse> getDiagnostics() {
         return this.diagnostics;
     }
     /**
      * JsonPath expression that determines if the request failed.
      * 
-     */
+    */
     public String getFailCondition() {
         return this.failCondition;
     }
     /**
      * JsonPath expression that determines if the request is completed.
      * 
-     */
+    */
     public String getFinishCondition() {
         return this.finishCondition;
     }
     /**
      * JsonPath expression that evaluates to string, it indicates where to poll.
      * 
-     */
+    */
     public String getPollingLink() {
         return this.pollingLink;
     }
     /**
      * JsonPath expression, after polling is completed, indicates where to fetch the resource.
      * 
-     */
+    */
     public String getTargetLink() {
         return this.targetLink;
     }

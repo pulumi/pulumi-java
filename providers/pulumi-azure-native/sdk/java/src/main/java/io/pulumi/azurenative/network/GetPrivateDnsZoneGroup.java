@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateDnsZoneGroup {
-/**
- * Private dns zone group resource.
+    private GetPrivateDnsZoneGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetPrivateDnsZoneGroupArgs.Builder a);
+    }
+    private static GetPrivateDnsZoneGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPrivateDnsZoneGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Private dns zone group resource.
  * API Version: 2020-11-01.
  * 
- *
- * Private dns zone group resource.
+     *
+     * Private dns zone group resource.
  * 
- */
+     */
+    public static CompletableFuture<GetPrivateDnsZoneGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Private dns zone group resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * Private dns zone group resource.
+     * 
+     */
     public static CompletableFuture<GetPrivateDnsZoneGroupResult> invokeAsync(GetPrivateDnsZoneGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateDnsZoneGroup", TypeShape.of(GetPrivateDnsZoneGroupResult.class), args == null ? GetPrivateDnsZoneGroupArgs.Empty : args, Utilities.withVersion(options));
     }

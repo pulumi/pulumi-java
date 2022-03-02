@@ -33,14 +33,14 @@ public final class ServiceTemplateSpecContainerVolumeMount {
      * Path within the container at which the volume should be mounted.  Must
      * not contain ':'.
      * 
-     */
+    */
     public String getMountPath() {
         return this.mountPath;
     }
     /**
      * Volume's name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

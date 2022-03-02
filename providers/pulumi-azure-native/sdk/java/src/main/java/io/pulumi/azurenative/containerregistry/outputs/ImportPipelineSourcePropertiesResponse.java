@@ -42,14 +42,14 @@ public final class ImportPipelineSourcePropertiesResponse {
     /**
      * They key vault secret uri to obtain the source storage SAS token.
      * 
-     */
+    */
     public String getKeyVaultUri() {
         return this.keyVaultUri;
     }
     /**
      * The type of source for the import pipeline.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
@@ -58,7 +58,7 @@ public final class ImportPipelineSourcePropertiesResponse {
      * When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
      * When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"
      * 
-     */
+    */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }

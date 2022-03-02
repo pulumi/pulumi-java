@@ -33,14 +33,14 @@ public final class NetworkProfileResponse {
     /**
      * The CIDR used for OpenShift/Kubernetes Pods (immutable).
      * 
-     */
+    */
     public Optional<String> getPodCidr() {
         return Optional.ofNullable(this.podCidr);
     }
     /**
      * The CIDR used for OpenShift/Kubernetes Services (immutable).
      * 
-     */
+    */
     public Optional<String> getServiceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }

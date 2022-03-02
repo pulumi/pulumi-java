@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppSiteExtensionSlot {
-/**
- * Site Extension Information.
+    private GetWebAppSiteExtensionSlot() {}
+    public interface BuilderApplicator {
+        public void apply(GetWebAppSiteExtensionSlotArgs.Builder a);
+    }
+    private static GetWebAppSiteExtensionSlotArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetWebAppSiteExtensionSlotArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Site Extension Information.
  * API Version: 2020-12-01.
  * 
- *
- * Site Extension Information.
+     *
+     * Site Extension Information.
  * 
- */
+     */
+    public static CompletableFuture<GetWebAppSiteExtensionSlotResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Site Extension Information.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Site Extension Information.
+     * 
+     */
     public static CompletableFuture<GetWebAppSiteExtensionSlotResult> invokeAsync(GetWebAppSiteExtensionSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSiteExtensionSlot", TypeShape.of(GetWebAppSiteExtensionSlotResult.class), args == null ? GetWebAppSiteExtensionSlotArgs.Empty : args, Utilities.withVersion(options));
     }

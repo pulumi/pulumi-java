@@ -23,7 +23,7 @@ public final class AnalyticsApplicationOutputSchema {
     /**
      * The Format Type of the records on the output stream. Can be `CSV` or `JSON`.
      * 
-     */
+    */
     public String getRecordFormatType() {
         return this.recordFormatType;
     }

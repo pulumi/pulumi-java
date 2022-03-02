@@ -31,14 +31,14 @@ public final class ServiceRegistryInstanceResponse {
     /**
      * Name of the Service Registry instance
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Status of the Service Registry instance
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

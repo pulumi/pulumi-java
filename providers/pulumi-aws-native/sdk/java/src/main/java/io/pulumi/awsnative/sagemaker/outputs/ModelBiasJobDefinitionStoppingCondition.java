@@ -23,7 +23,7 @@ public final class ModelBiasJobDefinitionStoppingCondition {
     /**
      * The maximum runtime allowed in seconds.
      * 
-     */
+    */
     public Integer getMaxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }

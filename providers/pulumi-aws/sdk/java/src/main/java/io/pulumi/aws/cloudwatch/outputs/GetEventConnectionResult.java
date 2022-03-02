@@ -52,35 +52,35 @@ public final class GetEventConnectionResult {
     /**
      * The ARN (Amazon Resource Name) for the connection.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * The type of authorization to use to connect. One of `API_KEY`,`BASIC`,`OAUTH_CLIENT_CREDENTIALS`.
      * 
-     */
+    */
     public String getAuthorizationType() {
         return this.authorizationType;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the connection.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The ARN (Amazon Resource Name) for the secret created from the authorization parameters specified for the connection.
      * 
-     */
+    */
     public String getSecretArn() {
         return this.secretArn;
     }

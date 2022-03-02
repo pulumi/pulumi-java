@@ -31,14 +31,14 @@ public final class StorageAccountPropertiesResponse {
     /**
      * The access key to the storage account.
      * 
-     */
+    */
     public String getAccessKey() {
         return this.accessKey;
     }
     /**
      * The fully qualified arm Id of the storage account.
      * 
-     */
+    */
     public String getStorageAccountId() {
         return this.storageAccountId;
     }

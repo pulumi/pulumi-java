@@ -98,14 +98,14 @@ public final class GetDistributionResult {
     /**
      * A list that contains information about CNAMEs (alternate domain names), if any, for this distribution.
      * 
-     */
+    */
     public List<String> getAliases() {
         return this.aliases;
     }
     /**
      * The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
@@ -113,7 +113,7 @@ public final class GetDistributionResult {
      * The domain name corresponding to the distribution. For
      * example: `d604721fxaaqy9.cloudfront.net`.
      * 
-     */
+    */
     public String getDomainName() {
         return this.domainName;
     }
@@ -124,7 +124,7 @@ public final class GetDistributionResult {
      * The current version of the distribution's information. For example:
      * `E2QWRUHAPOMQZL`.
      * 
-     */
+    */
     public String getEtag() {
         return this.etag;
     }
@@ -133,14 +133,14 @@ public final class GetDistributionResult {
      * route an [Alias Resource Record Set][7] to. This attribute is simply an
      * alias for the zone ID `Z2FDTNDATAQYW2`.
      * 
-     */
+    */
     public String getHostedZoneId() {
         return this.hostedZoneId;
     }
     /**
      * The identifier for the distribution. For example: `EDFDVBD632BHDS5`.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -148,14 +148,14 @@ public final class GetDistributionResult {
      * The number of invalidation batches
      * currently in progress.
      * 
-     */
+    */
     public Integer getInProgressValidationBatches() {
         return this.inProgressValidationBatches;
     }
     /**
      * The date and time the distribution was last modified.
      * 
-     */
+    */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
@@ -164,7 +164,7 @@ public final class GetDistributionResult {
      * distribution's information is fully propagated throughout the Amazon
      * CloudFront system.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

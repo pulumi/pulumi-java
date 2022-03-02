@@ -40,21 +40,21 @@ public final class AuditConfigResponse {
     /**
      * The configuration for logging of each type of permission.
      * 
-     */
+    */
     public List<AuditLogConfigResponse> getAuditLogConfigs() {
         return this.auditLogConfigs;
     }
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public List<String> getExemptedMembers() {
         return this.exemptedMembers;
     }
     /**
      * Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
      * 
-     */
+    */
     public String getService() {
         return this.service;
     }

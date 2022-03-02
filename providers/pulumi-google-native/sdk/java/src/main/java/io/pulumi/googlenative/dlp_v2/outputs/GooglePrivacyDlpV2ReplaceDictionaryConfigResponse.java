@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse {
     /**
      * A list of words to select from for random replacement. The [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of dictionaries.
      * 
-     */
+    */
     public GooglePrivacyDlpV2WordListResponse getWordList() {
         return this.wordList;
     }

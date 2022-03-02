@@ -31,7 +31,7 @@ public final class GetRecipeResult {
     /**
      * Description of the recipe
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }

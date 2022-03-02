@@ -52,35 +52,35 @@ public final class GetSnapshotResult {
     /**
      * The creation time of the storage volume snapshot.
      * 
-     */
+    */
     public String getCreateTime() {
         return this.createTime;
     }
     /**
      * The description of the storage volume snapshot.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }
     /**
      * The name of the storage volume snapshot.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The size of the storage volume snapshot, in bytes.
      * 
-     */
+    */
     public String getSizeBytes() {
         return this.sizeBytes;
     }
     /**
      * The storage volume this snapshot belongs to.
      * 
-     */
+    */
     public String getStorageVolume() {
         return this.storageVolume;
     }

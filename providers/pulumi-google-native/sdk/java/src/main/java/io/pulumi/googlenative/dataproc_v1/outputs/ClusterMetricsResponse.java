@@ -32,14 +32,14 @@ public final class ClusterMetricsResponse {
     /**
      * The HDFS metrics.
      * 
-     */
+    */
     public Map<String,String> getHdfsMetrics() {
         return this.hdfsMetrics;
     }
     /**
      * The YARN metrics.
      * 
-     */
+    */
     public Map<String,String> getYarnMetrics() {
         return this.yarnMetrics;
     }

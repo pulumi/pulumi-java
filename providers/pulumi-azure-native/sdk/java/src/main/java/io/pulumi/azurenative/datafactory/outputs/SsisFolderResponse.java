@@ -49,21 +49,21 @@ public final class SsisFolderResponse {
     /**
      * Metadata description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Metadata id.
      * 
-     */
+    */
     public Optional<Double> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Metadata name.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -71,7 +71,7 @@ public final class SsisFolderResponse {
      * The type of SSIS object metadata.
      * Expected value is 'Folder'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

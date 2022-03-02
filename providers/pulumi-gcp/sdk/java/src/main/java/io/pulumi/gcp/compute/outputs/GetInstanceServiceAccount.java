@@ -32,14 +32,14 @@ public final class GetInstanceServiceAccount {
     /**
      * The service account e-mail address.
      * 
-     */
+    */
     public String getEmail() {
         return this.email;
     }
     /**
      * A list of service scopes.
      * 
-     */
+    */
     public List<String> getScopes() {
         return this.scopes;
     }

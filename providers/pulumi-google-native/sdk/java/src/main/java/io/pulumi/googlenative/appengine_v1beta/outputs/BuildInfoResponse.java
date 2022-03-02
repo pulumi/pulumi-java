@@ -23,7 +23,7 @@ public final class BuildInfoResponse {
     /**
      * The Google Cloud Build id. Example: "f966068f-08b2-42c8-bdfe-74137dff2bf9"
      * 
-     */
+    */
     public String getCloudBuildId() {
         return this.cloudBuildId;
     }

@@ -69,49 +69,49 @@ public final class PostgreSqlConnectionProfileResponse {
     /**
      * If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.
      * 
-     */
+    */
     public String getCloudSqlId() {
         return this.cloudSqlId;
     }
     /**
      * The IP or hostname of the source PostgreSQL database.
      * 
-     */
+    */
     public String getHost() {
         return this.host;
     }
     /**
      * Input only. The password for the user that Database Migration Service will be using to connect to the database. This field is not returned on request, and the value is encrypted when stored in Database Migration Service.
      * 
-     */
+    */
     public String getPassword() {
         return this.password;
     }
     /**
      * Indicates If this connection profile password is stored.
      * 
-     */
+    */
     public Boolean getPasswordSet() {
         return this.passwordSet;
     }
     /**
      * The network port of the source PostgreSQL database.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * SSL configuration for the destination to connect to the source database.
      * 
-     */
+    */
     public SslConfigResponse getSsl() {
         return this.ssl;
     }
     /**
      * The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }

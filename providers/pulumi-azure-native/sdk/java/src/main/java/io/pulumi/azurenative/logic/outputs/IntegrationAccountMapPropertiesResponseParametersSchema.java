@@ -25,7 +25,7 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema {
     /**
      * The reference name.
      * 
-     */
+    */
     public Optional<String> getRef() {
         return Optional.ofNullable(this.ref);
     }

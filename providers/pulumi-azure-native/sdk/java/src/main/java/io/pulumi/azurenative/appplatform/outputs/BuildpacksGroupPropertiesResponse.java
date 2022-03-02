@@ -35,14 +35,14 @@ public final class BuildpacksGroupPropertiesResponse {
     /**
      * Buildpacks in the buildpack group
      * 
-     */
+    */
     public List<BuildpackPropertiesResponse> getBuildpacks() {
         return this.buildpacks == null ? List.of() : this.buildpacks;
     }
     /**
      * Buildpack group name
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

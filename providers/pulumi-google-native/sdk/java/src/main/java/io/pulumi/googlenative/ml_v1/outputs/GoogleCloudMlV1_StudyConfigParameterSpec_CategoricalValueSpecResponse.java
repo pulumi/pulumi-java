@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpec
     /**
      * Must be specified if type is `CATEGORICAL`. The list of possible categories.
      * 
-     */
+    */
     public List<String> getValues() {
         return this.values;
     }

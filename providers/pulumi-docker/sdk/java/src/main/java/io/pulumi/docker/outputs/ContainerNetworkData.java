@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class ContainerNetworkData {
     /**
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The network gateway of the container as read from its NetworkSettings.
      * 
      */
-    @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
+        @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
     private final @Nullable String gateway;
     private final @Nullable String globalIpv6Address;
     private final @Nullable Integer globalIpv6PrefixLength;
     /**
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The IP address of the container's first network it.
      * 
      */
-    @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
+        @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
     private final @Nullable String ipAddress;
     /**
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings.
      * 
      */
-    @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
+        @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
     private final @Nullable Integer ipPrefixLength;
     private final @Nullable String ipv6Gateway;
     private final @Nullable String networkName;
@@ -57,10 +57,10 @@ public final class ContainerNetworkData {
     }
 
     /**
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The network gateway of the container as read from its NetworkSettings.
      * 
-     */
+    */
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
     public Optional<String> getGateway() {
         return Optional.ofNullable(this.gateway);
@@ -72,19 +72,19 @@ public final class ContainerNetworkData {
         return Optional.ofNullable(this.globalIpv6PrefixLength);
     }
     /**
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The IP address of the container's first network it.
      * 
-     */
+    */
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * @deprecated
+     * @Deprecated
      * Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings.
      * 
-     */
+    */
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
     public Optional<Integer> getIpPrefixLength() {
         return Optional.ofNullable(this.ipPrefixLength);

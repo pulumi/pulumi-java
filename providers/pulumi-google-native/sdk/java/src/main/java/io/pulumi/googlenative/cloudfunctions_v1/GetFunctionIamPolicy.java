@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFunctionIamPolicy {
-/**
- * Gets the IAM access control policy for a function. Returns an empty policy if the function exists and does not have a policy set.
+    private GetFunctionIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetFunctionIamPolicyArgs.Builder a);
+    }
+    private static GetFunctionIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFunctionIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the IAM access control policy for a function. Returns an empty policy if the function exists and does not have a policy set.
  * 
- */
+     */
+    public static CompletableFuture<GetFunctionIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the IAM access control policy for a function. Returns an empty policy if the function exists and does not have a policy set.
+     * 
+     */
     public static CompletableFuture<GetFunctionIamPolicyResult> invokeAsync(GetFunctionIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudfunctions/v1:getFunctionIamPolicy", TypeShape.of(GetFunctionIamPolicyResult.class), args == null ? GetFunctionIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

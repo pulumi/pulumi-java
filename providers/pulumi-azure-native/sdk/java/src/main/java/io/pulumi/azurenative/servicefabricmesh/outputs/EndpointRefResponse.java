@@ -25,7 +25,7 @@ public final class EndpointRefResponse {
     /**
      * Name of the endpoint.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

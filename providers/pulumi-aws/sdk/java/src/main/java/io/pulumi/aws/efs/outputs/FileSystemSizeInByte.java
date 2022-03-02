@@ -40,21 +40,21 @@ public final class FileSystemSizeInByte {
     /**
      * The latest known metered size (in bytes) of data stored in the file system.
      * 
-     */
+    */
     public Optional<Integer> getValue() {
         return Optional.ofNullable(this.value);
     }
     /**
      * The latest known metered size (in bytes) of data stored in the Infrequent Access storage class.
      * 
-     */
+    */
     public Optional<Integer> getValueInIa() {
         return Optional.ofNullable(this.valueInIa);
     }
     /**
      * The latest known metered size (in bytes) of data stored in the Standard storage class.
      * 
-     */
+    */
     public Optional<Integer> getValueInStandard() {
         return Optional.ofNullable(this.valueInStandard);
     }

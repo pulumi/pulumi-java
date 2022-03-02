@@ -31,14 +31,14 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse {
     /**
      * Connection information for source MySQL server
      * 
-     */
+    */
     public MySqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
      * Connection information for target Azure Database for MySQL server
      * 
-     */
+    */
     public MySqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }

@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSpatialAnchorsAccountKeys {
-/**
- * Developer Keys of account
+    private ListSpatialAnchorsAccountKeys() {}
+    public interface BuilderApplicator {
+        public void apply(ListSpatialAnchorsAccountKeysArgs.Builder a);
+    }
+    private static ListSpatialAnchorsAccountKeysArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListSpatialAnchorsAccountKeysArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Developer Keys of account
  * API Version: 2021-01-01.
  * 
- *
- * Developer Keys of account
+     *
+     * Developer Keys of account
  * 
- */
+     */
+    public static CompletableFuture<ListSpatialAnchorsAccountKeysResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Developer Keys of account
+     * API Version: 2021-01-01.
+     * 
+     *
+         * Developer Keys of account
+     * 
+     */
     public static CompletableFuture<ListSpatialAnchorsAccountKeysResult> invokeAsync(ListSpatialAnchorsAccountKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mixedreality:listSpatialAnchorsAccountKeys", TypeShape.of(ListSpatialAnchorsAccountKeysResult.class), args == null ? ListSpatialAnchorsAccountKeysArgs.Empty : args, Utilities.withVersion(options));
     }

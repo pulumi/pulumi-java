@@ -13,20 +13,46 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceQuota {
-/**
- * Retrieve information about a Service Quota.
+    private GetServiceQuota() {}
+    public interface BuilderApplicator {
+        public void apply(GetServiceQuotaArgs.Builder a);
+    }
+    private static GetServiceQuotaArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServiceQuotaArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Retrieve information about a Service Quota.
  * 
  * > **NOTE:** Global quotas apply to all AWS regions, but can only be accessed in `us-east-1` in the Commercial partition or `us-gov-west-1` in the GovCloud partition. In other regions, the AWS API will return the error `The request failed because the specified service does not exist.`
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getServiceQuota.
+     *
+     * A collection of arguments for invoking getServiceQuota.
  * 
- *
- * A collection of values returned by getServiceQuota.
+     *
+     * A collection of values returned by getServiceQuota.
  * 
- */
+     */
+    public static CompletableFuture<GetServiceQuotaResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Retrieve information about a Service Quota.
+     * 
+     * > **NOTE:** Global quotas apply to all AWS regions, but can only be accessed in `us-east-1` in the Commercial partition or `us-gov-west-1` in the GovCloud partition. In other regions, the AWS API will return the error `The request failed because the specified service does not exist.`
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getServiceQuota.
+     * 
+     *
+         * A collection of values returned by getServiceQuota.
+     * 
+     */
     public static CompletableFuture<GetServiceQuotaResult> invokeAsync(GetServiceQuotaArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:servicequotas/getServiceQuota:getServiceQuota", TypeShape.of(GetServiceQuotaResult.class), args == null ? GetServiceQuotaArgs.Empty : args, Utilities.withVersion(options));
     }

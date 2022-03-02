@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGateway {
-/**
- * This type describes a gateway resource.
+    private GetGateway() {}
+    public interface BuilderApplicator {
+        public void apply(GetGatewayArgs.Builder a);
+    }
+    private static GetGatewayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGatewayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This type describes a gateway resource.
  * API Version: 2018-09-01-preview.
  * 
- *
- * This type describes a gateway resource.
+     *
+     * This type describes a gateway resource.
  * 
- */
+     */
+    public static CompletableFuture<GetGatewayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This type describes a gateway resource.
+     * API Version: 2018-09-01-preview.
+     * 
+     *
+         * This type describes a gateway resource.
+     * 
+     */
     public static CompletableFuture<GetGatewayResult> invokeAsync(GetGatewayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getGateway", TypeShape.of(GetGatewayResult.class), args == null ? GetGatewayArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -36,7 +36,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfig {
     /**
      * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
      * 
-     */
+    */
     public Optional<Boolean> getEnableHttpPortAccess() {
         return Optional.ofNullable(this.enableHttpPortAccess);
     }
@@ -44,7 +44,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfig {
      * - 
      * Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
      * 
-     */
+    */
     public Map<String,String> getHttpPorts() {
         return this.httpPorts == null ? Map.of() : this.httpPorts;
     }

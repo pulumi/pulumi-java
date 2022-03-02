@@ -33,7 +33,7 @@ public final class FhirStoreNotificationConfig {
      * project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
      * Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
      * 
-     */
+    */
     public String getPubsubTopic() {
         return this.pubsubTopic;
     }

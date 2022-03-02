@@ -25,7 +25,7 @@ public final class CertificateAuthorityRevocationConfiguration {
     /**
      * Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
      * 
-     */
+    */
     public Optional<CertificateAuthorityRevocationConfigurationCrlConfiguration> getCrlConfiguration() {
         return Optional.ofNullable(this.crlConfiguration);
     }

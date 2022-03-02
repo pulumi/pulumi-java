@@ -35,14 +35,14 @@ public final class DistributionTrustedKeyGroup {
     /**
      * A flag that specifies whether Origin Shield is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * List of nested attributes for each trusted signer
      * 
-     */
+    */
     public List<DistributionTrustedKeyGroupItem> getItems() {
         return this.items == null ? List.of() : this.items;
     }

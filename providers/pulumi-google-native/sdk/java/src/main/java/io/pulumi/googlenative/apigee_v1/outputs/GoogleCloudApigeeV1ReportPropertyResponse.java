@@ -33,14 +33,14 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse {
     /**
      * name of the property
      * 
-     */
+    */
     public String getProperty() {
         return this.property;
     }
     /**
      * property values
      * 
-     */
+    */
     public List<GoogleCloudApigeeV1AttributeResponse> getValue() {
         return this.value;
     }

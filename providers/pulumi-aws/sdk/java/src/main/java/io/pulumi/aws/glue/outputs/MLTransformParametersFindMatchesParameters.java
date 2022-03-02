@@ -49,28 +49,28 @@ public final class MLTransformParametersFindMatchesParameters {
     /**
      * The value that is selected when tuning your transform for a balance between accuracy and cost.
      * 
-     */
+    */
     public Optional<Double> getAccuracyCostTradeOff() {
         return Optional.ofNullable(this.accuracyCostTradeOff);
     }
     /**
      * The value to switch on or off to force the output to match the provided labels from users.
      * 
-     */
+    */
     public Optional<Boolean> getEnforceProvidedLabels() {
         return Optional.ofNullable(this.enforceProvidedLabels);
     }
     /**
      * The value selected when tuning your transform for a balance between precision and recall.
      * 
-     */
+    */
     public Optional<Double> getPrecisionRecallTradeOff() {
         return Optional.ofNullable(this.precisionRecallTradeOff);
     }
     /**
      * The name of a column that uniquely identifies rows in the source table.
      * 
-     */
+    */
     public Optional<String> getPrimaryKeyColumnName() {
         return Optional.ofNullable(this.primaryKeyColumnName);
     }

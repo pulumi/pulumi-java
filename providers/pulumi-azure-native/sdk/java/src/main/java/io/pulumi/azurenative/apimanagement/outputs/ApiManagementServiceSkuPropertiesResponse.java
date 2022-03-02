@@ -32,14 +32,14 @@ public final class ApiManagementServiceSkuPropertiesResponse {
     /**
      * Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
      * 
-     */
+    */
     public Integer getCapacity() {
         return this.capacity;
     }
     /**
      * Name of the Sku.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

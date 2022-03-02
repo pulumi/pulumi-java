@@ -94,6 +94,22 @@ public class RoleBinding extends io.pulumi.resources.CustomResource {
         return this.subjects;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RoleBindingArgs.Builder a);
+    }
+    private static io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.RoleBindingArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.RoleBindingArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RoleBinding(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

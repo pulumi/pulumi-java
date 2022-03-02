@@ -32,14 +32,14 @@ public final class ClusterConfigurationInfo {
     /**
      * Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * Revision of the MSK Configuration to use in the cluster.
      * 
-     */
+    */
     public Integer getRevision() {
         return this.revision;
     }

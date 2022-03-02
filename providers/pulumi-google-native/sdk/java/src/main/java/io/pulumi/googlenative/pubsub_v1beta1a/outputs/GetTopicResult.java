@@ -23,7 +23,7 @@ public final class GetTopicResult {
     /**
      * Name of the topic.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

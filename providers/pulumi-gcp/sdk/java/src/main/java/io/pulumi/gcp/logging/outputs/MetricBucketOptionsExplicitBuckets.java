@@ -24,7 +24,7 @@ public final class MetricBucketOptionsExplicitBuckets {
     /**
      * The values must be monotonically increasing.
      * 
-     */
+    */
     public List<Double> getBounds() {
         return this.bounds;
     }

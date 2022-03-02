@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKeySigningKey {
-/**
- * Represents a key signing key (KSK) associated with a hosted zone. You can only have two KSKs per hosted zone.
+    private GetKeySigningKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetKeySigningKeyArgs.Builder a);
+    }
+    private static GetKeySigningKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetKeySigningKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a key signing key (KSK) associated with a hosted zone. You can only have two KSKs per hosted zone.
  * 
- */
+     */
+    public static CompletableFuture<GetKeySigningKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a key signing key (KSK) associated with a hosted zone. You can only have two KSKs per hosted zone.
+     * 
+     */
     public static CompletableFuture<GetKeySigningKeyResult> invokeAsync(GetKeySigningKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53:getKeySigningKey", TypeShape.of(GetKeySigningKeyResult.class), args == null ? GetKeySigningKeyArgs.Empty : args, Utilities.withVersion(options));
     }

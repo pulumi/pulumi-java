@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResolverConfig {
-/**
- * Resource schema for AWS::Route53Resolver::ResolverConfig.
+    private GetResolverConfig() {}
+    public interface BuilderApplicator {
+        public void apply(GetResolverConfigArgs.Builder a);
+    }
+    private static GetResolverConfigArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetResolverConfigArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource schema for AWS::Route53Resolver::ResolverConfig.
  * 
- */
+     */
+    public static CompletableFuture<GetResolverConfigResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource schema for AWS::Route53Resolver::ResolverConfig.
+     * 
+     */
     public static CompletableFuture<GetResolverConfigResult> invokeAsync(GetResolverConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:route53resolver:getResolverConfig", TypeShape.of(GetResolverConfigResult.class), args == null ? GetResolverConfigArgs.Empty : args, Utilities.withVersion(options));
     }

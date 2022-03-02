@@ -34,14 +34,14 @@ public final class DataSourceHttpConfigAuthorizationConfig {
     /**
      * The authorization type that the HTTP endpoint requires. Default values is `AWS_IAM`.
      * 
-     */
+    */
     public Optional<String> getAuthorizationType() {
         return Optional.ofNullable(this.authorizationType);
     }
     /**
      * The Identity and Access Management (IAM) settings. See AWS IAM Config.
      * 
-     */
+    */
     public Optional<DataSourceHttpConfigAuthorizationConfigAwsIamConfig> getAwsIamConfig() {
         return Optional.ofNullable(this.awsIamConfig);
     }

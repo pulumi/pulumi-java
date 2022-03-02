@@ -14,8 +14,17 @@ import javax.annotation.Nullable;
 
 @Deprecated /* aws.elasticloadbalancingv2.getLoadBalancer has been deprecated in favor of aws.lb.getLoadBalancer */
 public class GetLoadBalancer {
-/**
- * > **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
+    private GetLoadBalancer() {}
+    public interface BuilderApplicator {
+        public void apply(GetLoadBalancerArgs.Builder a);
+    }
+    private static GetLoadBalancerArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLoadBalancerArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * > **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
  * 
  * Provides information about a Load Balancer.
  * 
@@ -25,16 +34,40 @@ public class GetLoadBalancer {
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getLoadBalancer.
+     *
+     * A collection of arguments for invoking getLoadBalancer.
  * 
- *
- * A collection of values returned by getLoadBalancer.
+     *
+     * A collection of values returned by getLoadBalancer.
  * 
- * @deprecated
- * aws.elasticloadbalancingv2.getLoadBalancer has been deprecated in favor of aws.lb.getLoadBalancer
+     * @Deprecated
+     * aws.elasticloadbalancingv2.getLoadBalancer has been deprecated in favor of aws.lb.getLoadBalancer
  * 
- */
+     */
+    public static CompletableFuture<GetLoadBalancerResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * > **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
+     * 
+     * Provides information about a Load Balancer.
+     * 
+     * This data source can prove useful when a module accepts an LB as an input
+     * variable and needs to, for example, determine the security groups associated
+     * with it, etc.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getLoadBalancer.
+     * 
+     *
+         * A collection of values returned by getLoadBalancer.
+     * 
+     * @Deprecated
+         * aws.elasticloadbalancingv2.getLoadBalancer has been deprecated in favor of aws.lb.getLoadBalancer
+     * 
+     */
     @Deprecated /* aws.elasticloadbalancingv2.getLoadBalancer has been deprecated in favor of aws.lb.getLoadBalancer */
     public static CompletableFuture<GetLoadBalancerResult> invokeAsync(@Nullable GetLoadBalancerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:elasticloadbalancingv2/getLoadBalancer:getLoadBalancer", TypeShape.of(GetLoadBalancerResult.class), args == null ? GetLoadBalancerArgs.Empty : args, Utilities.withVersion(options));

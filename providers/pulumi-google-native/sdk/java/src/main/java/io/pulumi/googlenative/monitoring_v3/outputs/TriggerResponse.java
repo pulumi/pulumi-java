@@ -32,14 +32,14 @@ public final class TriggerResponse {
     /**
      * The absolute number of time series that must fail the predicate for the condition to be triggered.
      * 
-     */
+    */
     public Integer getCount() {
         return this.count;
     }
     /**
      * The percentage of time series that must fail the predicate for the condition to be triggered.
      * 
-     */
+    */
     public Double getPercent() {
         return this.percent;
     }

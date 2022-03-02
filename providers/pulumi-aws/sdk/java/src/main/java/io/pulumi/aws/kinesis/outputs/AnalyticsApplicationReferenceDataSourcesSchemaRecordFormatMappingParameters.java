@@ -37,7 +37,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
      * Mapping information when the record format uses delimiters.
      * See CSV Mapping Parameters below for more details.
      * 
-     */
+    */
     public Optional<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv> getCsv() {
         return Optional.ofNullable(this.csv);
     }
@@ -45,7 +45,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
      * Mapping information when JSON is the record format on the streaming source.
      * See JSON Mapping Parameters below for more details.
      * 
-     */
+    */
     public Optional<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson> getJson() {
         return Optional.ofNullable(this.json);
     }

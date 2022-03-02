@@ -40,21 +40,21 @@ public final class NetworkProfileResponse {
     /**
      * CIDR of the Vnet to peer.
      * 
-     */
+    */
     public Optional<String> getPeerVnetId() {
         return Optional.ofNullable(this.peerVnetId);
     }
     /**
      * CIDR for the OpenShift Vnet.
      * 
-     */
+    */
     public Optional<String> getVnetCidr() {
         return Optional.ofNullable(this.vnetCidr);
     }
     /**
      * ID of the Vnet created for OSA cluster.
      * 
-     */
+    */
     public Optional<String> getVnetId() {
         return Optional.ofNullable(this.vnetId);
     }

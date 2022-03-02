@@ -31,14 +31,14 @@ public final class InputTag {
     /**
      * Key of the Tag.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
     /**
      * Value of the Tag.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

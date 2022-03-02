@@ -34,14 +34,14 @@ public final class TableTtl {
     /**
      * The name of the table attribute to store the TTL timestamp in.
      * 
-     */
+    */
     public String getAttributeName() {
         return this.attributeName;
     }
     /**
      * Indicates whether ttl is enabled (true) or disabled (false).
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }

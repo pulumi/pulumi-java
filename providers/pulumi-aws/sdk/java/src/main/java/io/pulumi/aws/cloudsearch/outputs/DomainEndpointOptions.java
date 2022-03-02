@@ -34,14 +34,14 @@ public final class DomainEndpointOptions {
     /**
      * Enables or disables the requirement that all requests to the domain arrive over HTTPS.
      * 
-     */
+    */
     public Optional<Boolean> getEnforceHttps() {
         return Optional.ofNullable(this.enforceHttps);
     }
     /**
      * The minimum required TLS version. See the [AWS documentation](https://docs.aws.amazon.com/cloudsearch/latest/developerguide/API_DomainEndpointOptions.html) for valid values.
      * 
-     */
+    */
     public Optional<String> getTlsSecurityPolicy() {
         return Optional.ofNullable(this.tlsSecurityPolicy);
     }

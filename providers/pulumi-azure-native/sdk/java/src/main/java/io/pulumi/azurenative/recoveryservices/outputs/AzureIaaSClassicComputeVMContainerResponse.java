@@ -79,7 +79,7 @@ public final class AzureIaaSClassicComputeVMContainerResponse {
     /**
      * Type of backup management for the container.
      * 
-     */
+    */
     public Optional<String> getBackupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -90,49 +90,49 @@ public final class AzureIaaSClassicComputeVMContainerResponse {
      * Backup is VMAppContainer
      * Expected value is 'Microsoft.ClassicCompute/virtualMachines'.
      * 
-     */
+    */
     public String getContainerType() {
         return this.containerType;
     }
     /**
      * Friendly name of the container.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
     /**
      * Status of health of the container.
      * 
-     */
+    */
     public Optional<String> getHealthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
     /**
      * Status of registration of the container with the Recovery Services Vault.
      * 
-     */
+    */
     public Optional<String> getRegistrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
     /**
      * Resource group name of Recovery Services Vault.
      * 
-     */
+    */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
     /**
      * Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.
      * 
-     */
+    */
     public Optional<String> getVirtualMachineId() {
         return Optional.ofNullable(this.virtualMachineId);
     }
     /**
      * Specifies whether the container represents a Classic or an Azure Resource Manager VM.
      * 
-     */
+    */
     public Optional<String> getVirtualMachineVersion() {
         return Optional.ofNullable(this.virtualMachineVersion);
     }

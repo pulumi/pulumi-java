@@ -23,7 +23,7 @@ public final class DetectorModelResetTimer {
     /**
      * The name of the timer to reset.
      * 
-     */
+    */
     public String getTimerName() {
         return this.timerName;
     }

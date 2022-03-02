@@ -32,14 +32,14 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
     /**
      * A KMS key ARN that is used to encrypt the connection password.
      * 
-     */
+    */
     public String getAwsKmsKeyId() {
         return this.awsKmsKeyId;
     }
     /**
      * When set to `true`, passwords remain encrypted in the responses of GetConnection and GetConnections. This encryption takes effect independently of the catalog encryption.
      * 
-     */
+    */
     public Boolean getReturnConnectionPasswordEncrypted() {
         return this.returnConnectionPasswordEncrypted;
     }

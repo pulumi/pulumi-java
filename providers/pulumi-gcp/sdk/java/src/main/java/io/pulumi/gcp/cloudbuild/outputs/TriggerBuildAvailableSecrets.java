@@ -26,7 +26,7 @@ public final class TriggerBuildAvailableSecrets {
      * Pairs a secret environment variable with a SecretVersion in Secret Manager.
      * Structure is documented below.
      * 
-     */
+    */
     public List<TriggerBuildAvailableSecretsSecretManager> getSecretManagers() {
         return this.secretManagers;
     }

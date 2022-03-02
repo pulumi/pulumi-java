@@ -34,14 +34,14 @@ public final class BucketLifecycleRuleNoncurrentVersionTransition {
     /**
      * Specifies the number of days noncurrent object versions transition.
      * 
-     */
+    */
     public Optional<Integer> getDays() {
         return Optional.ofNullable(this.days);
     }
     /**
      * Specifies the Amazon S3 [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Transition.html#AmazonS3-Type-Transition-StorageClass) to which you want the object to transition.
      * 
-     */
+    */
     public String getStorageClass() {
         return this.storageClass;
     }

@@ -33,14 +33,14 @@ public final class MigrateSyncCompleteCommandInputResponse {
     /**
      * Time stamp to complete
      * 
-     */
+    */
     public Optional<String> getCommitTimeStamp() {
         return Optional.ofNullable(this.commitTimeStamp);
     }
     /**
      * Name of database
      * 
-     */
+    */
     public String getDatabaseName() {
         return this.databaseName;
     }

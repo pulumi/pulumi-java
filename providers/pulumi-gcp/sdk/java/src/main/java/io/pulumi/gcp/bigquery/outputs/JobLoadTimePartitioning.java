@@ -43,7 +43,7 @@ public final class JobLoadTimePartitioning {
     /**
      * Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
      * 
-     */
+    */
     public Optional<String> getExpirationMs() {
         return Optional.ofNullable(this.expirationMs);
     }
@@ -52,7 +52,7 @@ public final class JobLoadTimePartitioning {
      * The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
      * A wrapper is used here because an empty string is an invalid value.
      * 
-     */
+    */
     public Optional<String> getField() {
         return Optional.ofNullable(this.field);
     }
@@ -60,7 +60,7 @@ public final class JobLoadTimePartitioning {
      * The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
      * but in OnePlatform the field will be treated as unset.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

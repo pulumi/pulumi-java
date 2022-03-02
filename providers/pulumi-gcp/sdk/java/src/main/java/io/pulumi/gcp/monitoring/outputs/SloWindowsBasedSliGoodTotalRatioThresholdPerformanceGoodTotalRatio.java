@@ -64,7 +64,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
      * Must have ValueType = DOUBLE or ValueType = INT64 and
      * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-     */
+    */
     public Optional<String> getBadServiceFilter() {
         return Optional.ofNullable(this.badServiceFilter);
     }
@@ -76,7 +76,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
      * Must have ValueType = DOUBLE or ValueType = INT64 and
      * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-     */
+    */
     public Optional<String> getGoodServiceFilter() {
         return Optional.ofNullable(this.goodServiceFilter);
     }
@@ -88,7 +88,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
      * Must have ValueType = DOUBLE or ValueType = INT64 and
      * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
-     */
+    */
     public Optional<String> getTotalServiceFilter() {
         return Optional.ofNullable(this.totalServiceFilter);
     }

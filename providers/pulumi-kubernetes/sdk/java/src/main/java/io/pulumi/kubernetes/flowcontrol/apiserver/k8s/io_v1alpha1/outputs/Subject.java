@@ -41,7 +41,7 @@ public final class Subject {
     /**
      * Required
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }

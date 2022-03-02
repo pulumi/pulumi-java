@@ -31,14 +31,14 @@ public final class AssignmentReportResourceComplianceReasonResponse {
     /**
      * Code for the compliance of the guest configuration assignment resource.
      * 
-     */
+    */
     public String getCode() {
         return this.code;
     }
     /**
      * Reason for the compliance of the guest configuration assignment resource.
      * 
-     */
+    */
     public String getPhrase() {
         return this.phrase;
     }

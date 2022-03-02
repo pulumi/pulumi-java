@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistry {
-/**
- * An object that represents a container registry.
+    private GetRegistry() {}
+    public interface BuilderApplicator {
+        public void apply(GetRegistryArgs.Builder a);
+    }
+    private static GetRegistryArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRegistryArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An object that represents a container registry.
  * API Version: 2019-05-01.
  * 
- *
- * An object that represents a container registry.
+     *
+     * An object that represents a container registry.
  * 
- */
+     */
+    public static CompletableFuture<GetRegistryResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An object that represents a container registry.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * An object that represents a container registry.
+     * 
+     */
     public static CompletableFuture<GetRegistryResult> invokeAsync(GetRegistryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getRegistry", TypeShape.of(GetRegistryResult.class), args == null ? GetRegistryArgs.Empty : args, Utilities.withVersion(options));
     }

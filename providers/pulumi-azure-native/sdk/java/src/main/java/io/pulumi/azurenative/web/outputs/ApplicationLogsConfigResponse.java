@@ -42,21 +42,21 @@ public final class ApplicationLogsConfigResponse {
     /**
      * Application logs to blob storage configuration.
      * 
-     */
+    */
     public Optional<AzureBlobStorageApplicationLogsConfigResponse> getAzureBlobStorage() {
         return Optional.ofNullable(this.azureBlobStorage);
     }
     /**
      * Application logs to azure table storage configuration.
      * 
-     */
+    */
     public Optional<AzureTableStorageApplicationLogsConfigResponse> getAzureTableStorage() {
         return Optional.ofNullable(this.azureTableStorage);
     }
     /**
      * Application logs to file system configuration.
      * 
-     */
+    */
     public Optional<FileSystemApplicationLogsConfigResponse> getFileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }

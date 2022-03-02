@@ -53,7 +53,7 @@ public final class ImageRawDisk {
      * Default value is `TAR`.
      * Possible values are `TAR`.
      * 
-     */
+    */
     public Optional<String> getContainerType() {
         return Optional.ofNullable(this.containerType);
     }
@@ -61,7 +61,7 @@ public final class ImageRawDisk {
      * An optional SHA1 checksum of the disk image before unpackaging.
      * This is provided by the client when the disk image is created.
      * 
-     */
+    */
     public Optional<String> getSha1() {
         return Optional.ofNullable(this.sha1);
     }
@@ -70,7 +70,7 @@ public final class ImageRawDisk {
      * You must provide either this property or the sourceDisk property
      * but not both.
      * 
-     */
+    */
     public String getSource() {
         return this.source;
     }

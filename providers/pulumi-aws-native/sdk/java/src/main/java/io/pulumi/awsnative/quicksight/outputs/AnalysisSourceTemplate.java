@@ -33,14 +33,14 @@ public final class AnalysisSourceTemplate {
     /**
      * <p>The Amazon Resource Name (ARN) of the source template of an analysis.</p>
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }
     /**
      * <p>The dataset references of the source template of an analysis.</p>
      * 
-     */
+    */
     public List<AnalysisDataSetReference> getDataSetReferences() {
         return this.dataSetReferences;
     }

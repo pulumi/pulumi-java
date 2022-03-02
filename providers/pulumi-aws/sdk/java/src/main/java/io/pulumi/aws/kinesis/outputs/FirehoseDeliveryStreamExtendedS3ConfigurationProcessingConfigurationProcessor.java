@@ -34,14 +34,14 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
     /**
      * Array of processor parameters. More details are given below
      * 
-     */
+    */
     public List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
     /**
      * The type of processor. Valid Values: `Lambda`
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

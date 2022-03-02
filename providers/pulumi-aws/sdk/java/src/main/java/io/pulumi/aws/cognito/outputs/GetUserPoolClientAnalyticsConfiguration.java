@@ -50,21 +50,21 @@ public final class GetUserPoolClientAnalyticsConfiguration {
     /**
      * (Optional) Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
      * 
-     */
+    */
     public String getApplicationArn() {
         return this.applicationArn;
     }
     /**
      * (Optional) Application ID for an Amazon Pinpoint application.
      * 
-     */
+    */
     public String getApplicationId() {
         return this.applicationId;
     }
     /**
      * (Optional) ID for the Analytics Configuration. Conflicts with `application_arn`.
      * 
-     */
+    */
     public String getExternalId() {
         return this.externalId;
     }
@@ -72,7 +72,7 @@ public final class GetUserPoolClientAnalyticsConfiguration {
      * (Optional) ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
      * * `user_data_shared` (Optional) If set to `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
      * 
-     */
+    */
     public String getRoleArn() {
         return this.roleArn;
     }

@@ -25,7 +25,7 @@ public final class PatchDeploymentRecurringScheduleWeekly {
      * A day of the week.
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
-     */
+    */
     public String getDayOfWeek() {
         return this.dayOfWeek;
     }

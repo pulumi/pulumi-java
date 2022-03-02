@@ -41,21 +41,21 @@ public final class BatchReleaseCriteriaResponse {
     /**
      * The batch size in bytes.
      * 
-     */
+    */
     public Optional<Integer> getBatchSize() {
         return Optional.ofNullable(this.batchSize);
     }
     /**
      * The message count.
      * 
-     */
+    */
     public Optional<Integer> getMessageCount() {
         return Optional.ofNullable(this.messageCount);
     }
     /**
      * The recurrence.
      * 
-     */
+    */
     public Optional<WorkflowTriggerRecurrenceResponse> getRecurrence() {
         return Optional.ofNullable(this.recurrence);
     }

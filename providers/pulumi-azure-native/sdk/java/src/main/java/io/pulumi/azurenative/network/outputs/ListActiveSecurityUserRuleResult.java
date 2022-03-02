@@ -37,14 +37,14 @@ public final class ListActiveSecurityUserRuleResult {
     /**
      * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
      * 
-     */
+    */
     public Optional<String> getSkipToken() {
         return Optional.ofNullable(this.skipToken);
     }
     /**
      * Gets a page of active security user rules.
      * 
-     */
+    */
     public List<Either<ActiveDefaultSecurityUserRuleResponse,ActiveSecurityUserRuleResponse>> getValue() {
         return this.value == null ? List.of() : this.value;
     }

@@ -25,7 +25,7 @@ public final class AdditionalFeaturesServerConfigurationsResponse {
     /**
      * Enable or disable R services (SQL 2016 onwards).
      * 
-     */
+    */
     public Optional<Boolean> getIsRServicesEnabled() {
         return Optional.ofNullable(this.isRServicesEnabled);
     }

@@ -33,14 +33,14 @@ public final class ResourceVersionLoggingConfig {
     /**
      * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type's handlers.
      * 
-     */
+    */
     public Optional<String> getLogGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
     /**
      * The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
      * 
-     */
+    */
     public Optional<String> getLogRoleArn() {
         return Optional.ofNullable(this.logRoleArn);
     }

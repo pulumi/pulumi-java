@@ -79,7 +79,7 @@ public final class GetMonitoringScheduleResult {
     /**
      * The time at which the schedule was created.
      * 
-     */
+    */
     public Optional<String> getCreationTime() {
         return Optional.ofNullable(this.creationTime);
     }
@@ -89,28 +89,28 @@ public final class GetMonitoringScheduleResult {
     /**
      * Contains the reason a monitoring job failed, if it failed.
      * 
-     */
+    */
     public Optional<String> getFailureReason() {
         return Optional.ofNullable(this.failureReason);
     }
     /**
      * A timestamp that indicates the last time the monitoring job was modified.
      * 
-     */
+    */
     public Optional<String> getLastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
     /**
      * Describes metadata on the last execution to run, if there was one.
      * 
-     */
+    */
     public Optional<MonitoringScheduleMonitoringExecutionSummary> getLastMonitoringExecutionSummary() {
         return Optional.ofNullable(this.lastMonitoringExecutionSummary);
     }
     /**
      * The Amazon Resource Name (ARN) of the monitoring schedule.
      * 
-     */
+    */
     public Optional<String> getMonitoringScheduleArn() {
         return Optional.ofNullable(this.monitoringScheduleArn);
     }
@@ -120,14 +120,14 @@ public final class GetMonitoringScheduleResult {
     /**
      * The status of a schedule job.
      * 
-     */
+    */
     public Optional<MonitoringScheduleStatus> getMonitoringScheduleStatus() {
         return Optional.ofNullable(this.monitoringScheduleStatus);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
-     */
+    */
     public List<MonitoringScheduleTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

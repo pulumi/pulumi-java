@@ -67,14 +67,14 @@ public final class InstanceBootDiskInitializeParams {
      * For instance, the image `centos-6-v20180104` includes its family name `centos-6`.
      * These images can be referred by family name here.
      * 
-     */
+    */
     public Optional<String> getImage() {
         return Optional.ofNullable(this.image);
     }
     /**
      * A map of key/value label pairs to assign to the instance.
      * 
-     */
+    */
     public Map<String,Object> getLabels() {
         return this.labels == null ? Map.of() : this.labels;
     }
@@ -82,14 +82,14 @@ public final class InstanceBootDiskInitializeParams {
      * The size of the image in gigabytes. If not specified, it
      * will inherit the size of its base image.
      * 
-     */
+    */
     public Optional<Integer> getSize() {
         return Optional.ofNullable(this.size);
     }
     /**
      * The type of reservation from which this instance can consume resources.
      * 
-     */
+    */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

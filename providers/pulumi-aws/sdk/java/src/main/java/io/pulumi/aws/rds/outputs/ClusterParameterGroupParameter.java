@@ -44,21 +44,21 @@ public final class ClusterParameterGroupParameter {
      * engines can't apply some parameters without a reboot, and you will need to
      * specify "pending-reboot" here.
      * 
-     */
+    */
     public Optional<String> getApplyMethod() {
         return Optional.ofNullable(this.applyMethod);
     }
     /**
      * The name of the DB parameter.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The value of the DB parameter.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

@@ -42,21 +42,21 @@ public final class ServiceDnsConfig {
     /**
      * An array that contains one DnsRecord object for each resource record set.
      * 
-     */
+    */
     public List<ServiceDnsConfigDnsRecord> getDnsRecords() {
         return this.dnsRecords;
     }
     /**
      * The ID of the namespace to use for DNS configuration.
      * 
-     */
+    */
     public String getNamespaceId() {
         return this.namespaceId;
     }
     /**
      * The routing policy that you want to apply to all records that Route 53 creates when you register an instance and specify the service. Valid Values: MULTIVALUE, WEIGHTED
      * 
-     */
+    */
     public Optional<String> getRoutingPolicy() {
         return Optional.ofNullable(this.routingPolicy);
     }

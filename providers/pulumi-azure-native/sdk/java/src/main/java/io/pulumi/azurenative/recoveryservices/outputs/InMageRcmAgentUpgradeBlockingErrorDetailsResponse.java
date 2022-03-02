@@ -60,42 +60,42 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse {
     /**
      * The error code.
      * 
-     */
+    */
     public String getErrorCode() {
         return this.errorCode;
     }
     /**
      * The error message.
      * 
-     */
+    */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * The error message parameters.
      * 
-     */
+    */
     public Map<String,String> getErrorMessageParameters() {
         return this.errorMessageParameters;
     }
     /**
      * The error tags.
      * 
-     */
+    */
     public Map<String,String> getErrorTags() {
         return this.errorTags;
     }
     /**
      * The possible causes.
      * 
-     */
+    */
     public String getPossibleCauses() {
         return this.possibleCauses;
     }
     /**
      * The recommended action.
      * 
-     */
+    */
     public String getRecommendedAction() {
         return this.recommendedAction;
     }

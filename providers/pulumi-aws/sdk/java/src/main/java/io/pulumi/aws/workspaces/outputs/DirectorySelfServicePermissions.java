@@ -54,35 +54,35 @@ public final class DirectorySelfServicePermissions {
     /**
      * Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
      * 
-     */
+    */
     public Optional<Boolean> getChangeComputeType() {
         return Optional.ofNullable(this.changeComputeType);
     }
     /**
      * Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
      * 
-     */
+    */
     public Optional<Boolean> getIncreaseVolumeSize() {
         return Optional.ofNullable(this.increaseVolumeSize);
     }
     /**
      * Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
      * 
-     */
+    */
     public Optional<Boolean> getRebuildWorkspace() {
         return Optional.ofNullable(this.rebuildWorkspace);
     }
     /**
      * Whether WorkSpaces directory users can restart their workspace. Default `true`.
      * 
-     */
+    */
     public Optional<Boolean> getRestartWorkspace() {
         return Optional.ofNullable(this.restartWorkspace);
     }
     /**
      * Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
      * 
-     */
+    */
     public Optional<Boolean> getSwitchRunningMode() {
         return Optional.ofNullable(this.switchRunningMode);
     }

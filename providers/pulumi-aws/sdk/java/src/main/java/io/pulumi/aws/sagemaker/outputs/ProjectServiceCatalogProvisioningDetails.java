@@ -49,28 +49,28 @@ public final class ProjectServiceCatalogProvisioningDetails {
     /**
      * The path identifier of the product. This value is optional if the product has a default path, and required if the product has more than one path.
      * 
-     */
+    */
     public Optional<String> getPathId() {
         return Optional.ofNullable(this.pathId);
     }
     /**
      * The ID of the product to provision.
      * 
-     */
+    */
     public String getProductId() {
         return this.productId;
     }
     /**
      * The ID of the provisioning artifact.
      * 
-     */
+    */
     public Optional<String> getProvisioningArtifactId() {
         return Optional.ofNullable(this.provisioningArtifactId);
     }
     /**
      * A list of key value pairs that you specify when you provision a product. See Provisioning Parameter below.
      * 
-     */
+    */
     public List<ProjectServiceCatalogProvisioningDetailsProvisioningParameter> getProvisioningParameters() {
         return this.provisioningParameters == null ? List.of() : this.provisioningParameters;
     }

@@ -23,7 +23,7 @@ public final class ConfigFileResponse {
     /**
      * The contents of the file.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }

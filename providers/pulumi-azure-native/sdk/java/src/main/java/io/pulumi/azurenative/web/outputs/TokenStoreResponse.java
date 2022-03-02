@@ -52,7 +52,7 @@ public final class TokenStoreResponse {
     /**
      * The configuration settings of the storage of the tokens if blob storage is used.
      * 
-     */
+    */
     public Optional<BlobStorageTokenStoreResponse> getAzureBlobStorage() {
         return Optional.ofNullable(this.azureBlobStorage);
     }
@@ -60,14 +60,14 @@ public final class TokenStoreResponse {
      * <code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
      *  The default is <code>false</code>.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The configuration settings of the storage of the tokens if a file system is used.
      * 
-     */
+    */
     public Optional<FileSystemTokenStoreResponse> getFileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
@@ -75,7 +75,7 @@ public final class TokenStoreResponse {
      * The number of hours after session token expiration that a session token can be used to
      * call the token refresh API. The default is 72 hours.
      * 
-     */
+    */
     public Optional<Double> getTokenRefreshExtensionHours() {
         return Optional.ofNullable(this.tokenRefreshExtensionHours);
     }

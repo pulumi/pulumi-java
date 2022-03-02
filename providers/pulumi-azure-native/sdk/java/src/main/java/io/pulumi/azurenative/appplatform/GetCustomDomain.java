@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomDomain {
-/**
- * Custom domain resource payload.
+    private GetCustomDomain() {}
+    public interface BuilderApplicator {
+        public void apply(GetCustomDomainArgs.Builder a);
+    }
+    private static GetCustomDomainArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCustomDomainArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Custom domain resource payload.
  * API Version: 2020-07-01.
  * 
- *
- * Custom domain resource payload.
+     *
+     * Custom domain resource payload.
  * 
- */
+     */
+    public static CompletableFuture<GetCustomDomainResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Custom domain resource payload.
+     * API Version: 2020-07-01.
+     * 
+     *
+         * Custom domain resource payload.
+     * 
+     */
     public static CompletableFuture<GetCustomDomainResult> invokeAsync(GetCustomDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getCustomDomain", TypeShape.of(GetCustomDomainResult.class), args == null ? GetCustomDomainArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -29,7 +29,7 @@ public final class AnomalyDetectorTimestampColumn {
     /**
      * A timestamp format for the timestamps in the dataset
      * 
-     */
+    */
     public Optional<String> getColumnFormat() {
         return Optional.ofNullable(this.columnFormat);
     }

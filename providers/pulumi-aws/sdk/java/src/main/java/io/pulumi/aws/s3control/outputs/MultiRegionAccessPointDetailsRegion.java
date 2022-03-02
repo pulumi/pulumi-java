@@ -23,7 +23,7 @@ public final class MultiRegionAccessPointDetailsRegion {
     /**
      * The name of the associated bucket for the Region.
      * 
-     */
+    */
     public String getBucket() {
         return this.bucket;
     }

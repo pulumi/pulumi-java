@@ -34,14 +34,14 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse {
     /**
      * List of rules for traffic to bypass.
      * 
-     */
+    */
     public List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> getBypassTrafficSettings() {
         return this.bypassTrafficSettings == null ? List.of() : this.bypassTrafficSettings;
     }
     /**
      * List of specific signatures states.
      * 
-     */
+    */
     public List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> getSignatureOverrides() {
         return this.signatureOverrides == null ? List.of() : this.signatureOverrides;
     }

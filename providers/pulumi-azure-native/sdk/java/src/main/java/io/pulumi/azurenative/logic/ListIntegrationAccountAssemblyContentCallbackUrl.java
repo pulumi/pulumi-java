@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListIntegrationAccountAssemblyContentCallbackUrl {
-/**
- * The workflow trigger callback URL.
+    private ListIntegrationAccountAssemblyContentCallbackUrl() {}
+    public interface BuilderApplicator {
+        public void apply(ListIntegrationAccountAssemblyContentCallbackUrlArgs.Builder a);
+    }
+    private static ListIntegrationAccountAssemblyContentCallbackUrlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListIntegrationAccountAssemblyContentCallbackUrlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The workflow trigger callback URL.
  * API Version: 2019-05-01.
  * 
- *
- * The workflow trigger callback URL.
+     *
+     * The workflow trigger callback URL.
  * 
- */
+     */
+    public static CompletableFuture<ListIntegrationAccountAssemblyContentCallbackUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The workflow trigger callback URL.
+     * API Version: 2019-05-01.
+     * 
+     *
+         * The workflow trigger callback URL.
+     * 
+     */
     public static CompletableFuture<ListIntegrationAccountAssemblyContentCallbackUrlResult> invokeAsync(ListIntegrationAccountAssemblyContentCallbackUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listIntegrationAccountAssemblyContentCallbackUrl", TypeShape.of(ListIntegrationAccountAssemblyContentCallbackUrlResult.class), args == null ? ListIntegrationAccountAssemblyContentCallbackUrlArgs.Empty : args, Utilities.withVersion(options));
     }

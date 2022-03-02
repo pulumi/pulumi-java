@@ -23,7 +23,7 @@ public final class ConnectToTargetSqlDbTaskInputResponse {
     /**
      * Connection information for target SQL DB
      * 
-     */
+    */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }

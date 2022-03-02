@@ -33,14 +33,14 @@ public final class CertBasedSecurityPrincipalResponse {
     /**
      * Base64 encoded public key of the user cert (.pem or .cer)
      * 
-     */
+    */
     public Optional<String> getCert() {
         return Optional.ofNullable(this.cert);
     }
     /**
      * LedgerRole associated with the Security Principal of Ledger
      * 
-     */
+    */
     public Optional<String> getLedgerRoleName() {
         return Optional.ofNullable(this.ledgerRoleName);
     }

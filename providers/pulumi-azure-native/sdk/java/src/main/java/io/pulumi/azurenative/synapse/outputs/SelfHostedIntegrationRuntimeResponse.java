@@ -44,14 +44,14 @@ public final class SelfHostedIntegrationRuntimeResponse {
     /**
      * Integration runtime description.
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Linked integration runtime type from data factory
      * 
-     */
+    */
     public Optional<Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse>> getLinkedInfo() {
         return Optional.ofNullable(this.linkedInfo);
     }
@@ -59,7 +59,7 @@ public final class SelfHostedIntegrationRuntimeResponse {
      * The type of integration runtime.
      * Expected value is 'SelfHosted'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

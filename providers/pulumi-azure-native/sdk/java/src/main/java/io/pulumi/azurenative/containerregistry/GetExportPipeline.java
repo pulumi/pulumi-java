@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExportPipeline {
-/**
- * An object that represents an export pipeline for a container registry.
+    private GetExportPipeline() {}
+    public interface BuilderApplicator {
+        public void apply(GetExportPipelineArgs.Builder a);
+    }
+    private static GetExportPipelineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetExportPipelineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * An object that represents an export pipeline for a container registry.
  * API Version: 2020-11-01-preview.
  * 
- *
- * An object that represents an export pipeline for a container registry.
+     *
+     * An object that represents an export pipeline for a container registry.
  * 
- */
+     */
+    public static CompletableFuture<GetExportPipelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * An object that represents an export pipeline for a container registry.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * An object that represents an export pipeline for a container registry.
+     * 
+     */
     public static CompletableFuture<GetExportPipelineResult> invokeAsync(GetExportPipelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getExportPipeline", TypeShape.of(GetExportPipelineResult.class), args == null ? GetExportPipelineArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -45,28 +45,28 @@ public final class SecurityPolicyAssociationResponse {
     /**
      * The resource that the security policy is attached to.
      * 
-     */
+    */
     public String getAttachmentId() {
         return this.attachmentId;
     }
     /**
      * The display name of the security policy of the association.
      * 
-     */
+    */
     public String getDisplayName() {
         return this.displayName;
     }
     /**
      * The name for an association.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The security policy ID of the association.
      * 
-     */
+    */
     public String getSecurityPolicyId() {
         return this.securityPolicyId;
     }

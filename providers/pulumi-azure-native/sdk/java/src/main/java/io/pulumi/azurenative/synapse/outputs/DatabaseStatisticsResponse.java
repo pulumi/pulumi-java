@@ -25,7 +25,7 @@ public final class DatabaseStatisticsResponse {
     /**
      * The database size - the total size of compressed data and index in bytes.
      * 
-     */
+    */
     public Optional<Double> getSize() {
         return Optional.ofNullable(this.size);
     }

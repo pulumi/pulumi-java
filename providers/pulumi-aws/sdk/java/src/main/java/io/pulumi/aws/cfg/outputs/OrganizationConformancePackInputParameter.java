@@ -31,14 +31,14 @@ public final class OrganizationConformancePackInputParameter {
     /**
      * The input key.
      * 
-     */
+    */
     public String getParameterName() {
         return this.parameterName;
     }
     /**
      * The input value.
      * 
-     */
+    */
     public String getParameterValue() {
         return this.parameterValue;
     }

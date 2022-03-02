@@ -31,14 +31,14 @@ public final class MutationRecordResponse {
     /**
      * When the change occurred.
      * 
-     */
+    */
     public String getMutateTime() {
         return this.mutateTime;
     }
     /**
      * The email address of the user making the change.
      * 
-     */
+    */
     public String getMutatedBy() {
         return this.mutatedBy;
     }

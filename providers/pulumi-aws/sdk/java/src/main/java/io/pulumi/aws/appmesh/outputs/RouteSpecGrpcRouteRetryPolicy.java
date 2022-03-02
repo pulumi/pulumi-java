@@ -60,7 +60,7 @@ public final class RouteSpecGrpcRouteRetryPolicy {
      * List of gRPC retry events.
      * Valid values: `cancelled`, `deadline-exceeded`, `internal`, `resource-exhausted`, `unavailable`.
      * 
-     */
+    */
     public List<String> getGrpcRetryEvents() {
         return this.grpcRetryEvents == null ? List.of() : this.grpcRetryEvents;
     }
@@ -69,28 +69,28 @@ public final class RouteSpecGrpcRouteRetryPolicy {
      * Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
      * Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
      * 
-     */
+    */
     public List<String> getHttpRetryEvents() {
         return this.httpRetryEvents == null ? List.of() : this.httpRetryEvents;
     }
     /**
      * The maximum number of retries.
      * 
-     */
+    */
     public Integer getMaxRetries() {
         return this.maxRetries;
     }
     /**
      * The per-retry timeout.
      * 
-     */
+    */
     public RouteSpecGrpcRouteRetryPolicyPerRetryTimeout getPerRetryTimeout() {
         return this.perRetryTimeout;
     }
     /**
      * List of TCP retry events. The only valid value is `connection-error`.
      * 
-     */
+    */
     public List<String> getTcpRetryEvents() {
         return this.tcpRetryEvents == null ? List.of() : this.tcpRetryEvents;
     }

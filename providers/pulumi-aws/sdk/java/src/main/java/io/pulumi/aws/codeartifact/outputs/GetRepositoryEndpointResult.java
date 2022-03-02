@@ -52,7 +52,7 @@ public final class GetRepositoryEndpointResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -62,7 +62,7 @@ public final class GetRepositoryEndpointResult {
     /**
      * The URL of the returned endpoint.
      * 
-     */
+    */
     public String getRepositoryEndpoint() {
         return this.repositoryEndpoint;
     }

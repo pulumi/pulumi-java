@@ -86,63 +86,63 @@ public final class GetScheduledActionResult {
     /**
      * If true, the schedule is enabled. If false, the scheduled action does not trigger.
      * 
-     */
+    */
     public Optional<Boolean> getEnable() {
         return Optional.ofNullable(this.enable);
     }
     /**
      * The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * The IAM role to assume to run the target action.
      * 
-     */
+    */
     public Optional<String> getIamRole() {
         return Optional.ofNullable(this.iamRole);
     }
     /**
      * List of times when the scheduled action will run.
      * 
-     */
+    */
     public List<String> getNextInvocations() {
         return this.nextInvocations == null ? List.of() : this.nextInvocations;
     }
     /**
      * The schedule in `at( )` or `cron( )` format.
      * 
-     */
+    */
     public Optional<String> getSchedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * The description of the scheduled action.
      * 
-     */
+    */
     public Optional<String> getScheduledActionDescription() {
         return Optional.ofNullable(this.scheduledActionDescription);
     }
     /**
      * The start time in UTC of the scheduled action. Before this time, the scheduled action does not trigger.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * The state of the scheduled action.
      * 
-     */
+    */
     public Optional<ScheduledActionState> getState() {
         return Optional.ofNullable(this.state);
     }
     /**
      * A JSON format string of the Amazon Redshift API operation with input parameters.
      * 
-     */
+    */
     public Optional<ScheduledActionType> getTargetAction() {
         return Optional.ofNullable(this.targetAction);
     }

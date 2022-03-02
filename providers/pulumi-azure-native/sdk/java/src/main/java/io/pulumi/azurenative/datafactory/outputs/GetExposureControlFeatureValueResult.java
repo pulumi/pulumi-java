@@ -31,14 +31,14 @@ public final class GetExposureControlFeatureValueResult {
     /**
      * The feature name.
      * 
-     */
+    */
     public String getFeatureName() {
         return this.featureName;
     }
     /**
      * The feature value.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

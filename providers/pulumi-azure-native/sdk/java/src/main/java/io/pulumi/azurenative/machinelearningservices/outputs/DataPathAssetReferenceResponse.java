@@ -41,14 +41,14 @@ public final class DataPathAssetReferenceResponse {
     /**
      * ARM resource ID of the datastore where the asset is located.
      * 
-     */
+    */
     public Optional<String> getDatastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
     /**
      * The path of the file/directory in the datastore.
      * 
-     */
+    */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
@@ -56,7 +56,7 @@ public final class DataPathAssetReferenceResponse {
      * Enum to determine which reference method to use for an asset.
      * Expected value is 'DataPath'.
      * 
-     */
+    */
     public String getReferenceType() {
         return this.referenceType;
     }

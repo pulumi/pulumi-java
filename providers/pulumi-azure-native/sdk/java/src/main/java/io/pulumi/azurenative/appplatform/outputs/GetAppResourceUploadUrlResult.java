@@ -33,14 +33,14 @@ public final class GetAppResourceUploadUrlResult {
     /**
      * Source relative path
      * 
-     */
+    */
     public Optional<String> getRelativePath() {
         return Optional.ofNullable(this.relativePath);
     }
     /**
      * Upload URL
      * 
-     */
+    */
     public Optional<String> getUploadUrl() {
         return Optional.ofNullable(this.uploadUrl);
     }

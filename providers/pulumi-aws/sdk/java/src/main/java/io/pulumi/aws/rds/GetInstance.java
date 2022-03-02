@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstance {
-/**
- * Use this data source to get information about an RDS instance
+    private GetInstance() {}
+    public interface BuilderApplicator {
+        public void apply(GetInstanceArgs.Builder a);
+    }
+    private static GetInstanceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInstanceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get information about an RDS instance
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getInstance.
+     *
+     * A collection of arguments for invoking getInstance.
  * 
- *
- * A collection of values returned by getInstance.
+     *
+     * A collection of values returned by getInstance.
  * 
- */
+     */
+    public static CompletableFuture<GetInstanceResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get information about an RDS instance
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getInstance.
+     * 
+     *
+         * A collection of values returned by getInstance.
+     * 
+     */
     public static CompletableFuture<GetInstanceResult> invokeAsync(GetInstanceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:rds/getInstance:getInstance", TypeShape.of(GetInstanceResult.class), args == null ? GetInstanceArgs.Empty : args, Utilities.withVersion(options));
     }

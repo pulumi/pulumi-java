@@ -41,21 +41,21 @@ public final class CloudTieringFilesNotTieringResponse {
     /**
      * Array of tiering errors
      * 
-     */
+    */
     public List<FilesNotTieringErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Last updated timestamp
      * 
-     */
+    */
     public String getLastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
     /**
      * Last cloud tiering result (HResult)
      * 
-     */
+    */
     public Double getTotalFileCount() {
         return this.totalFileCount;
     }

@@ -40,21 +40,21 @@ public final class LogConfigResponse {
     /**
      * Cloud audit options.
      * 
-     */
+    */
     public CloudAuditOptionsResponse getCloudAudit() {
         return this.cloudAudit;
     }
     /**
      * Counter options.
      * 
-     */
+    */
     public CounterOptionsResponse getCounter() {
         return this.counter;
     }
     /**
      * Data access options.
      * 
-     */
+    */
     public DataAccessOptionsResponse getDataAccess() {
         return this.dataAccess;
     }

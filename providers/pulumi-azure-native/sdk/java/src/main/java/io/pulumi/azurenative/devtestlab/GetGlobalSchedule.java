@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalSchedule {
-/**
- * A schedule.
+    private GetGlobalSchedule() {}
+    public interface BuilderApplicator {
+        public void apply(GetGlobalScheduleArgs.Builder a);
+    }
+    private static GetGlobalScheduleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetGlobalScheduleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A schedule.
  * API Version: 2018-09-15.
  * 
- *
- * A schedule.
+     *
+     * A schedule.
  * 
- */
+     */
+    public static CompletableFuture<GetGlobalScheduleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A schedule.
+     * API Version: 2018-09-15.
+     * 
+     *
+         * A schedule.
+     * 
+     */
     public static CompletableFuture<GetGlobalScheduleResult> invokeAsync(GetGlobalScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getGlobalSchedule", TypeShape.of(GetGlobalScheduleResult.class), args == null ? GetGlobalScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

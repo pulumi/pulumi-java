@@ -25,7 +25,7 @@ public final class ListOrderDCAccessCodeResult {
     /**
      * DCAccess Code for the Self Managed shipment.
      * 
-     */
+    */
     public Optional<String> getAuthCode() {
         return Optional.ofNullable(this.authCode);
     }

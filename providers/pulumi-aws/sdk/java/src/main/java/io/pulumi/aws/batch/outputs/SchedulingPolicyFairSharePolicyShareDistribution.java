@@ -34,14 +34,14 @@ public final class SchedulingPolicyFairSharePolicyShareDistribution {
     /**
      * A fair share identifier or fair share identifier prefix. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
      * 
-     */
+    */
     public String getShareIdentifier() {
         return this.shareIdentifier;
     }
     /**
      * The weight factor for the fair share identifier. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
      * 
-     */
+    */
     public Optional<Double> getWeightFactor() {
         return Optional.ofNullable(this.weightFactor);
     }

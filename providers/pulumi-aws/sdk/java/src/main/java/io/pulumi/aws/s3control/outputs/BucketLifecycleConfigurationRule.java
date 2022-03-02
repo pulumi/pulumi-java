@@ -57,35 +57,35 @@ public final class BucketLifecycleConfigurationRule {
     /**
      * Configuration block containing settings for abort incomplete multipart upload.
      * 
-     */
+    */
     public Optional<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload> getAbortIncompleteMultipartUpload() {
         return Optional.ofNullable(this.abortIncompleteMultipartUpload);
     }
     /**
      * Configuration block containing settings for expiration of objects.
      * 
-     */
+    */
     public Optional<BucketLifecycleConfigurationRuleExpiration> getExpiration() {
         return Optional.ofNullable(this.expiration);
     }
     /**
      * Configuration block containing settings for filtering.
      * 
-     */
+    */
     public Optional<BucketLifecycleConfigurationRuleFilter> getFilter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * Unique identifier for the rule.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Status of the rule. Valid values: `Enabled` and `Disabled`. Defaults to `Enabled`.
      * 
-     */
+    */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

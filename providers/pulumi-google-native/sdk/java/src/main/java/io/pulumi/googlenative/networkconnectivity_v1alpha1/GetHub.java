@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHub {
-/**
- * Gets details of a single Hub.
+    private GetHub() {}
+    public interface BuilderApplicator {
+        public void apply(GetHubArgs.Builder a);
+    }
+    private static GetHubArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetHubArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets details of a single Hub.
  * 
- */
+     */
+    public static CompletableFuture<GetHubResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets details of a single Hub.
+     * 
+     */
     public static CompletableFuture<GetHubResult> invokeAsync(GetHubArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:networkconnectivity/v1alpha1:getHub", TypeShape.of(GetHubResult.class), args == null ? GetHubArgs.Empty : args, Utilities.withVersion(options));
     }

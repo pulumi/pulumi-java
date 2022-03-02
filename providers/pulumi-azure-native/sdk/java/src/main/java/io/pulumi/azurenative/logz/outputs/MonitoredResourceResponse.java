@@ -63,42 +63,42 @@ public final class MonitoredResourceResponse {
     /**
      * The ARM id of the resource.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Reason for why the resource is sending logs (or why it is not sending).
      * 
-     */
+    */
     public Optional<String> getReasonForLogsStatus() {
         return Optional.ofNullable(this.reasonForLogsStatus);
     }
     /**
      * Reason for why the resource is sending metrics (or why it is not sending).
      * 
-     */
+    */
     public Optional<String> getReasonForMetricsStatus() {
         return Optional.ofNullable(this.reasonForMetricsStatus);
     }
     /**
      * Flag indicating if resource is sending logs to Logz.
      * 
-     */
+    */
     public Optional<Boolean> getSendingLogs() {
         return Optional.ofNullable(this.sendingLogs);
     }
     /**
      * Flag indicating if resource is sending metrics to Logz.
      * 
-     */
+    */
     public Optional<Boolean> getSendingMetrics() {
         return Optional.ofNullable(this.sendingMetrics);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }

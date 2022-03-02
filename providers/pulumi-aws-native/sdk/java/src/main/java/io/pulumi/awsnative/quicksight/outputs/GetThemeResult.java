@@ -74,28 +74,28 @@ public final class GetThemeResult {
     /**
      * <p>The Amazon Resource Name (ARN) of the theme.</p>
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>The date and time that the theme was created.</p>
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
      * <p>The date and time that the theme was last updated.</p>
      * 
-     */
+    */
     public Optional<String> getLastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
     /**
      * <p>A display name for the theme.</p>
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
@@ -103,7 +103,7 @@ public final class GetThemeResult {
      * <p>A valid grouping of resource permissions to apply to the new theme.
      * 			</p>
      * 
-     */
+    */
     public List<ThemeResourcePermission> getPermissions() {
         return this.permissions == null ? List.of() : this.permissions;
     }
@@ -111,7 +111,7 @@ public final class GetThemeResult {
      * <p>A map of the key-value pairs for the resource tag or tags that you want to add to the
      * 			resource.</p>
      * 
-     */
+    */
     public List<ThemeTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

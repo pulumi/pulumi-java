@@ -59,7 +59,7 @@ public final class PackagingConfigurationDashPackage {
     /**
      * A list of DASH manifest configurations.
      * 
-     */
+    */
     public List<PackagingConfigurationDashManifest> getDashManifests() {
         return this.dashManifests;
     }
@@ -69,14 +69,14 @@ public final class PackagingConfigurationDashPackage {
     /**
      * When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder's Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
      * 
-     */
+    */
     public Optional<Boolean> getIncludeEncoderConfigurationInSegments() {
         return Optional.ofNullable(this.includeEncoderConfigurationInSegments);
     }
     /**
      * A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Asset contains SCTE-35 ad markers.
      * 
-     */
+    */
     public List<PackagingConfigurationDashPackagePeriodTriggersItem> getPeriodTriggers() {
         return this.periodTriggers == null ? List.of() : this.periodTriggers;
     }
@@ -86,7 +86,7 @@ public final class PackagingConfigurationDashPackage {
     /**
      * Determines the type of SegmentTemplate included in the Media Presentation Description (MPD). When set to NUMBER_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs. When set to TIME_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs. When set to NUMBER_WITH_DURATION, only a duration is included in each SegmentTemplate, with $Number$ media URLs.
      * 
-     */
+    */
     public Optional<PackagingConfigurationDashPackageSegmentTemplateFormat> getSegmentTemplateFormat() {
         return Optional.ofNullable(this.segmentTemplateFormat);
     }

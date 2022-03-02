@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2RecordConditionResponse {
     /**
      * An expression.
      * 
-     */
+    */
     public GooglePrivacyDlpV2ExpressionsResponse getExpressions() {
         return this.expressions;
     }

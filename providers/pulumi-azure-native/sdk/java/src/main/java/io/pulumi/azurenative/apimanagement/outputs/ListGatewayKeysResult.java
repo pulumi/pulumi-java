@@ -33,14 +33,14 @@ public final class ListGatewayKeysResult {
     /**
      * Primary gateway key.
      * 
-     */
+    */
     public Optional<String> getPrimary() {
         return Optional.ofNullable(this.primary);
     }
     /**
      * Secondary gateway key.
      * 
-     */
+    */
     public Optional<String> getSecondary() {
         return Optional.ofNullable(this.secondary);
     }

@@ -42,14 +42,14 @@ public final class SnowflakeExportCopyCommandResponse {
     /**
      * Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalCopyOptions": { "DATE_FORMAT": "MM/DD/YYYY", "TIME_FORMAT": "'HH24:MI:SS.FF'" }
      * 
-     */
+    */
     public Map<String,Object> getAdditionalCopyOptions() {
         return this.additionalCopyOptions == null ? Map.of() : this.additionalCopyOptions;
     }
     /**
      * Additional format options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalFormatOptions": { "OVERWRITE": "TRUE", "MAX_FILE_SIZE": "'FALSE'" }
      * 
-     */
+    */
     public Map<String,Object> getAdditionalFormatOptions() {
         return this.additionalFormatOptions == null ? Map.of() : this.additionalFormatOptions;
     }
@@ -57,7 +57,7 @@ public final class SnowflakeExportCopyCommandResponse {
      * The export setting type.
      * Expected value is 'SnowflakeExportCopyCommand'.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

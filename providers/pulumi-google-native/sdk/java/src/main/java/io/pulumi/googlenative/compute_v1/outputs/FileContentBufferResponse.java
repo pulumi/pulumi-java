@@ -31,14 +31,14 @@ public final class FileContentBufferResponse {
     /**
      * The raw content in the secure keys file.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
     /**
      * The file type of source file.
      * 
-     */
+    */
     public String getFileType() {
         return this.fileType;
     }

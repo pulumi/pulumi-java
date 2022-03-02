@@ -33,14 +33,14 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes {
     /**
      * List of management groups.
      * 
-     */
+    */
     public List<String> getManagementGroups() {
         return this.managementGroups == null ? List.of() : this.managementGroups;
     }
     /**
      * List of subscriptions.
      * 
-     */
+    */
     public List<String> getSubscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }

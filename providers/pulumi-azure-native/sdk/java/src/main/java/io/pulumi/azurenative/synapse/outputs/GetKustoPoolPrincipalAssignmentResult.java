@@ -97,77 +97,77 @@ public final class GetKustoPoolPrincipalAssignmentResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The name of the resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.
      * 
-     */
+    */
     public String getPrincipalId() {
         return this.principalId;
     }
     /**
      * The principal name
      * 
-     */
+    */
     public String getPrincipalName() {
         return this.principalName;
     }
     /**
      * Principal type.
      * 
-     */
+    */
     public String getPrincipalType() {
         return this.principalType;
     }
     /**
      * The provisioned state of the resource.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Cluster principal role.
      * 
-     */
+    */
     public String getRole() {
         return this.role;
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * The tenant id of the principal
      * 
-     */
+    */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * The tenant name of the principal
      * 
-     */
+    */
     public String getTenantName() {
         return this.tenantName;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

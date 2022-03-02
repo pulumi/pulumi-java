@@ -33,14 +33,14 @@ public final class MLTransformSchema {
     /**
      * The type of data in the column.
      * 
-     */
+    */
     public Optional<String> getDataType() {
         return Optional.ofNullable(this.dataType);
     }
     /**
      * The name you assign to this ML Transform. It must be unique in your account.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

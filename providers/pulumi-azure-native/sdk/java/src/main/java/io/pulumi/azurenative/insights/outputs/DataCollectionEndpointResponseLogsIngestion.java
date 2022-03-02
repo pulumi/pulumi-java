@@ -23,7 +23,7 @@ public final class DataCollectionEndpointResponseLogsIngestion {
     /**
      * The endpoint. This property is READ-ONLY.
      * 
-     */
+    */
     public String getEndpoint() {
         return this.endpoint;
     }

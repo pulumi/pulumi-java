@@ -190,56 +190,56 @@ public final class GetAzurePowerShellScriptResult {
     /**
      * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
      * 
-     */
+    */
     public Optional<String> getArguments() {
         return Optional.ofNullable(this.arguments);
     }
     /**
      * Azure PowerShell module version to be used.
      * 
-     */
+    */
     public String getAzPowerShellVersion() {
         return this.azPowerShellVersion;
     }
     /**
      * The clean up preference when the script execution gets in a terminal state. Default setting is 'Always'.
      * 
-     */
+    */
     public Optional<String> getCleanupPreference() {
         return Optional.ofNullable(this.cleanupPreference);
     }
     /**
      * Container settings.
      * 
-     */
+    */
     public Optional<ContainerConfigurationResponse> getContainerSettings() {
         return Optional.ofNullable(this.containerSettings);
     }
     /**
      * The environment variables to pass over to the script.
      * 
-     */
+    */
     public List<EnvironmentVariableResponse> getEnvironmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
     }
     /**
      * Gets or sets how the deployment script should be forced to execute even if the script resource has not changed. Can be current time stamp or a GUID.
      * 
-     */
+    */
     public Optional<String> getForceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
     /**
      * String Id used to locate any resource on Azure.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
      * 
-     */
+    */
     public Optional<ManagedServiceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
@@ -247,105 +247,105 @@ public final class GetAzurePowerShellScriptResult {
      * Type of the script.
      * Expected value is 'AzurePowerShell'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * The location of the ACI and the storage account for the deployment script.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Name of this resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * List of script outputs.
      * 
-     */
+    */
     public Map<String,Object> getOutputs() {
         return this.outputs;
     }
     /**
      * Uri for the script. This is the entry point for the external script.
      * 
-     */
+    */
     public Optional<String> getPrimaryScriptUri() {
         return Optional.ofNullable(this.primaryScriptUri);
     }
     /**
      * State of the script execution. This only appears in the response.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * Interval for which the service retains the script resource after it reaches a terminal state. Resource will be deleted when this duration expires. Duration is based on ISO 8601 pattern (for example P1D means one day).
      * 
-     */
+    */
     public String getRetentionInterval() {
         return this.retentionInterval;
     }
     /**
      * Script body.
      * 
-     */
+    */
     public Optional<String> getScriptContent() {
         return Optional.ofNullable(this.scriptContent);
     }
     /**
      * Contains the results of script execution.
      * 
-     */
+    */
     public ScriptStatusResponse getStatus() {
         return this.status;
     }
     /**
      * Storage Account settings.
      * 
-     */
+    */
     public Optional<StorageAccountConfigurationResponse> getStorageAccountSettings() {
         return Optional.ofNullable(this.storageAccountSettings);
     }
     /**
      * Supporting files for the external script.
      * 
-     */
+    */
     public List<String> getSupportingScriptUris() {
         return this.supportingScriptUris == null ? List.of() : this.supportingScriptUris;
     }
     /**
      * The system metadata related to this resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Maximum allowed script execution time specified in ISO 8601 format. Default value is P1D
      * 
-     */
+    */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
      * Type of this resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

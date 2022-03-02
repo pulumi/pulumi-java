@@ -31,14 +31,14 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
     /**
      * A Region to replicate to.
      * 
-     */
+    */
     public String getRegion() {
         return this.region;
     }
     /**
      * The account ID of the destination registry to replicate to.
      * 
-     */
+    */
     public String getRegistryId() {
         return this.registryId;
     }

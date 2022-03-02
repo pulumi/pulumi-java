@@ -30,7 +30,7 @@ public final class DashboardError {
     /**
      * <p>Message.</p>
      * 
-     */
+    */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }

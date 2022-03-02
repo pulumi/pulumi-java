@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEvaluationJob {
-/**
- * Gets an evaluation job by resource name.
+    private GetEvaluationJob() {}
+    public interface BuilderApplicator {
+        public void apply(GetEvaluationJobArgs.Builder a);
+    }
+    private static GetEvaluationJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetEvaluationJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets an evaluation job by resource name.
  * 
- */
+     */
+    public static CompletableFuture<GetEvaluationJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets an evaluation job by resource name.
+     * 
+     */
     public static CompletableFuture<GetEvaluationJobResult> invokeAsync(GetEvaluationJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getEvaluationJob", TypeShape.of(GetEvaluationJobResult.class), args == null ? GetEvaluationJobArgs.Empty : args, Utilities.withVersion(options));
     }

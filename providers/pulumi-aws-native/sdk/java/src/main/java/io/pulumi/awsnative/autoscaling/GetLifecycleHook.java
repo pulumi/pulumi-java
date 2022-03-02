@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLifecycleHook {
-/**
- * Resource Type definition for AWS::AutoScaling::LifecycleHook
+    private GetLifecycleHook() {}
+    public interface BuilderApplicator {
+        public void apply(GetLifecycleHookArgs.Builder a);
+    }
+    private static GetLifecycleHookArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLifecycleHookArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource Type definition for AWS::AutoScaling::LifecycleHook
  * 
- */
+     */
+    public static CompletableFuture<GetLifecycleHookResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource Type definition for AWS::AutoScaling::LifecycleHook
+     * 
+     */
     public static CompletableFuture<GetLifecycleHookResult> invokeAsync(GetLifecycleHookArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:autoscaling:getLifecycleHook", TypeShape.of(GetLifecycleHookResult.class), args == null ? GetLifecycleHookArgs.Empty : args, Utilities.withVersion(options));
     }

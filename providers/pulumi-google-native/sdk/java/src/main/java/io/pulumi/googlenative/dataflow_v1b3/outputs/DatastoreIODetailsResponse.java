@@ -31,14 +31,14 @@ public final class DatastoreIODetailsResponse {
     /**
      * Namespace used in the connection.
      * 
-     */
+    */
     public String getNamespace() {
         return this.namespace;
     }
     /**
      * ProjectId accessed in the connection.
      * 
-     */
+    */
     public String getProject() {
         return this.project;
     }

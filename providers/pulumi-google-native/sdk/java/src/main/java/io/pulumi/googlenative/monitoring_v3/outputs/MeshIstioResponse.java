@@ -38,21 +38,21 @@ public final class MeshIstioResponse {
     /**
      * Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.
      * 
-     */
+    */
     public String getMeshUid() {
         return this.meshUid;
     }
     /**
      * The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
      * 
-     */
+    */
     public String getServiceName() {
         return this.serviceName;
     }
     /**
      * The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
      * 
-     */
+    */
     public String getServiceNamespace() {
         return this.serviceNamespace;
     }

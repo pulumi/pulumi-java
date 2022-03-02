@@ -33,14 +33,14 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
     /**
      * Encryption mode to use for job bookmarks data. Valid values: `CSE-KMS`, `DISABLED`. Default value: `DISABLED`.
      * 
-     */
+    */
     public Optional<String> getJobBookmarksEncryptionMode() {
         return Optional.ofNullable(this.jobBookmarksEncryptionMode);
     }
     /**
      * Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
      * 
-     */
+    */
     public Optional<String> getKmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }

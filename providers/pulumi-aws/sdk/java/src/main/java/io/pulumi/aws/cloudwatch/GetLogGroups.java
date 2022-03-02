@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLogGroups {
-/**
- * Use this data source to get a list of AWS Cloudwatch Log Groups
+    private GetLogGroups() {}
+    public interface BuilderApplicator {
+        public void apply(GetLogGroupsArgs.Builder a);
+    }
+    private static GetLogGroupsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLogGroupsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Use this data source to get a list of AWS Cloudwatch Log Groups
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getLogGroups.
+     *
+     * A collection of arguments for invoking getLogGroups.
  * 
- *
- * A collection of values returned by getLogGroups.
+     *
+     * A collection of values returned by getLogGroups.
  * 
- */
+     */
+    public static CompletableFuture<GetLogGroupsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Use this data source to get a list of AWS Cloudwatch Log Groups
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getLogGroups.
+     * 
+     *
+         * A collection of values returned by getLogGroups.
+     * 
+     */
     public static CompletableFuture<GetLogGroupsResult> invokeAsync(GetLogGroupsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cloudwatch/getLogGroups:getLogGroups", TypeShape.of(GetLogGroupsResult.class), args == null ? GetLogGroupsArgs.Empty : args, Utilities.withVersion(options));
     }

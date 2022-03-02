@@ -56,35 +56,35 @@ public final class SitePropertiesResponse {
     /**
      * On-premises agent details.
      * 
-     */
+    */
     public Optional<SiteAgentPropertiesResponse> getAgentDetails() {
         return Optional.ofNullable(this.agentDetails);
     }
     /**
      * Appliance Name.
      * 
-     */
+    */
     public Optional<String> getApplianceName() {
         return Optional.ofNullable(this.applianceName);
     }
     /**
      * ARM ID of migration hub solution for SDS.
      * 
-     */
+    */
     public Optional<String> getDiscoverySolutionId() {
         return Optional.ofNullable(this.discoverySolutionId);
     }
     /**
      * Service endpoint.
      * 
-     */
+    */
     public String getServiceEndpoint() {
         return this.serviceEndpoint;
     }
     /**
      * Service principal identity details used by agent for communication to the service.
      * 
-     */
+    */
     public Optional<SiteSpnPropertiesResponse> getServicePrincipalIdentityDetails() {
         return Optional.ofNullable(this.servicePrincipalIdentityDetails);
     }

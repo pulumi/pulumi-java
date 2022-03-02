@@ -39,21 +39,21 @@ public final class BucketRetentionPolicyResponse {
     /**
      * Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.
      * 
-     */
+    */
     public String getEffectiveTime() {
         return this.effectiveTime;
     }
     /**
      * Once locked, an object retention policy cannot be modified.
      * 
-     */
+    */
     public Boolean getIsLocked() {
         return this.isLocked;
     }
     /**
      * The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.
      * 
-     */
+    */
     public String getRetentionPeriod() {
         return this.retentionPeriod;
     }

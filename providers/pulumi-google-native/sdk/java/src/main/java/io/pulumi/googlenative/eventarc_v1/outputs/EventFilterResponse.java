@@ -31,14 +31,14 @@ public final class EventFilterResponse {
     /**
      * The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
      * 
-     */
+    */
     public String getAttribute() {
         return this.attribute;
     }
     /**
      * The value for the attribute.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

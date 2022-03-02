@@ -34,14 +34,14 @@ public final class SamplingSettingsResponse {
     /**
      * Rate of sampling for fixed-rate sampling.
      * 
-     */
+    */
     public Optional<Double> getPercentage() {
         return Optional.ofNullable(this.percentage);
     }
     /**
      * Sampling type.
      * 
-     */
+    */
     public Optional<String> getSamplingType() {
         return Optional.ofNullable(this.samplingType);
     }

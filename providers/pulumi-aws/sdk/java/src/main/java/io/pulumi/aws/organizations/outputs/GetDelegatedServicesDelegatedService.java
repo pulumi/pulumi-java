@@ -31,14 +31,14 @@ public final class GetDelegatedServicesDelegatedService {
     /**
      * The date that the account became a delegated administrator for this service.
      * 
-     */
+    */
     public String getDelegationEnabledDate() {
         return this.delegationEnabledDate;
     }
     /**
      * The name of an AWS service that can request an operation for the specified service.
      * 
-     */
+    */
     public String getServicePrincipal() {
         return this.servicePrincipal;
     }

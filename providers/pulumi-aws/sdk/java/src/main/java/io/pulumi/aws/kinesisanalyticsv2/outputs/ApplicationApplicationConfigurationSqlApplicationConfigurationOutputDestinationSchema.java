@@ -23,7 +23,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     /**
      * Specifies the format of the records on the output stream. Valid values: `CSV`, `JSON`.
      * 
-     */
+    */
     public String getRecordFormatType() {
         return this.recordFormatType;
     }

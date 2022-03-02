@@ -33,7 +33,7 @@ public final class AutomationRulePropertyValuesConditionResponse {
     /**
      * The configuration of the automation rule condition
      * 
-     */
+    */
     public AutomationRulePropertyValuesConditionResponseConditionProperties getConditionProperties() {
         return this.conditionProperties;
     }
@@ -41,7 +41,7 @@ public final class AutomationRulePropertyValuesConditionResponse {
      * The type of the automation rule condition
      * Expected value is 'Property'.
      * 
-     */
+    */
     public String getConditionType() {
         return this.conditionType;
     }

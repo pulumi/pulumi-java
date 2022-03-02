@@ -32,14 +32,14 @@ public final class ContainerServiceLinuxProfileResponse {
     /**
      * The administrator username to use for Linux VMs.
      * 
-     */
+    */
     public String getAdminUsername() {
         return this.adminUsername;
     }
     /**
      * SSH configuration for Linux-based VMs running on Azure.
      * 
-     */
+    */
     public ContainerServiceSshConfigurationResponse getSsh() {
         return this.ssh;
     }

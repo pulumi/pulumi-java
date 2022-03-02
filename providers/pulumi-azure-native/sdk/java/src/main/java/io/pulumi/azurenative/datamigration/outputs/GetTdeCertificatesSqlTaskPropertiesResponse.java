@@ -69,35 +69,35 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse {
     /**
      * Array of command properties.
      * 
-     */
+    */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
     }
     /**
      * Array of errors. This is ignored if submitted.
      * 
-     */
+    */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
     /**
      * Task input
      * 
-     */
+    */
     public Optional<GetTdeCertificatesSqlTaskInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
     /**
      * Task output. This is ignored if submitted.
      * 
-     */
+    */
     public List<GetTdeCertificatesSqlTaskOutputResponse> getOutput() {
         return this.output;
     }
     /**
      * The state of the task. This is ignored if submitted.
      * 
-     */
+    */
     public String getState() {
         return this.state;
     }
@@ -105,7 +105,7 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse {
      * Task type.
      * Expected value is 'GetTDECertificates.Sql'.
      * 
-     */
+    */
     public String getTaskType() {
         return this.taskType;
     }

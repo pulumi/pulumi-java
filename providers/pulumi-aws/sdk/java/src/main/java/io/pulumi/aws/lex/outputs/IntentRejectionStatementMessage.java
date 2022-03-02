@@ -42,14 +42,14 @@ public final class IntentRejectionStatementMessage {
     /**
      * The text of the message. Must be less than or equal to 1000 characters in length.
      * 
-     */
+    */
     public String getContent() {
         return this.content;
     }
     /**
      * The content type of the message string.
      * 
-     */
+    */
     public String getContentType() {
         return this.contentType;
     }
@@ -57,7 +57,7 @@ public final class IntentRejectionStatementMessage {
      * Identifies the message group that the message belongs to. When a group
      * is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
      * 
-     */
+    */
     public Optional<Integer> getGroupNumber() {
         return Optional.ofNullable(this.groupNumber);
     }

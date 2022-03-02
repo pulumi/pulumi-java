@@ -56,35 +56,35 @@ public final class BucketCorsRule {
     /**
      * Specifies which headers are allowed.
      * 
-     */
+    */
     public List<String> getAllowedHeaders() {
         return this.allowedHeaders == null ? List.of() : this.allowedHeaders;
     }
     /**
      * Specifies which methods are allowed. Can be `GET`, `PUT`, `POST`, `DELETE` or `HEAD`.
      * 
-     */
+    */
     public List<String> getAllowedMethods() {
         return this.allowedMethods;
     }
     /**
      * Specifies which origins are allowed.
      * 
-     */
+    */
     public List<String> getAllowedOrigins() {
         return this.allowedOrigins;
     }
     /**
      * Specifies expose header in the response.
      * 
-     */
+    */
     public List<String> getExposeHeaders() {
         return this.exposeHeaders == null ? List.of() : this.exposeHeaders;
     }
     /**
      * Specifies time in seconds that browser can cache the response for a preflight request.
      * 
-     */
+    */
     public Optional<Integer> getMaxAgeSeconds() {
         return Optional.ofNullable(this.maxAgeSeconds);
     }

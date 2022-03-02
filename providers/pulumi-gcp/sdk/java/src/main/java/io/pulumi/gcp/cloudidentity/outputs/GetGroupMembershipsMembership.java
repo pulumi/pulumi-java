@@ -60,7 +60,7 @@ public final class GetGroupMembershipsMembership {
     /**
      * The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
      * 
-     */
+    */
     public String getGroup() {
         return this.group;
     }
@@ -70,7 +70,7 @@ public final class GetGroupMembershipsMembership {
     /**
      * The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
@@ -80,7 +80,7 @@ public final class GetGroupMembershipsMembership {
     /**
      * The MembershipRoles that apply to the Membership. Structure is documented below.
      * 
-     */
+    */
     public List<GetGroupMembershipsMembershipRole> getRoles() {
         return this.roles;
     }

@@ -25,7 +25,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     /**
      * The number of in-application streams to create.
      * 
-     */
+    */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }

@@ -23,7 +23,7 @@ public final class AuthorizationLoggingOptionsResponse {
     /**
      * This is deprecated and has no effect. Do not use.
      * 
-     */
+    */
     public String getPermissionType() {
         return this.permissionType;
     }

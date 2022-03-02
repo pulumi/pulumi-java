@@ -23,7 +23,7 @@ public final class NodeSchedulingConfig {
     /**
      * Defines whether the TPU instance is preemptible.
      * 
-     */
+    */
     public Boolean getPreemptible() {
         return this.preemptible;
     }

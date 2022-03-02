@@ -25,7 +25,7 @@ public final class UserOwnedStorageResponse {
     /**
      * Full resource id of a Microsoft.Storage resource.
      * 
-     */
+    */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

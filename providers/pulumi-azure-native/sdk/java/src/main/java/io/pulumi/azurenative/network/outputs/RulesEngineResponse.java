@@ -55,35 +55,35 @@ public final class RulesEngineResponse {
     /**
      * Resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Resource status.
      * 
-     */
+    */
     public String getResourceState() {
         return this.resourceState;
     }
     /**
      * A list of rules that define a particular Rules Engine Configuration.
      * 
-     */
+    */
     public List<RulesEngineRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

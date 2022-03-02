@@ -23,7 +23,7 @@ public final class BucketVersioning {
     /**
      * While set to `true`, versioning is fully enabled for this bucket.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }

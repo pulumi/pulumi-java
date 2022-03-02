@@ -59,21 +59,21 @@ public final class GetPipelineResult {
     /**
      * The description of the Pipeline.
      * 
-     */
+    */
     public Optional<String> getPipelineDescription() {
         return Optional.ofNullable(this.pipelineDescription);
     }
     /**
      * The display name of the Pipeline.
      * 
-     */
+    */
     public Optional<String> getPipelineDisplayName() {
         return Optional.ofNullable(this.pipelineDisplayName);
     }
     /**
      * Role Arn
      * 
-     */
+    */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }

@@ -127,6 +127,22 @@ public class Blob extends io.pulumi.resources.CustomResource {
         return this.url;
     }
 
+    public interface BuilderApplicator {
+        public void apply(BlobArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.storage.BlobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.storage.BlobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Blob(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

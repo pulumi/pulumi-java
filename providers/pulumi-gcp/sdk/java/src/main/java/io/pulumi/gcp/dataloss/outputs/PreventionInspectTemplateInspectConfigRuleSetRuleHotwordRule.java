@@ -48,7 +48,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
      * Regular expression pattern defining what qualifies as a hotword.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex getHotwordRegex() {
         return this.hotwordRegex;
     }
@@ -56,7 +56,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
      * Likelihood adjustment to apply to all matching findings.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment getLikelihoodAdjustment() {
         return this.likelihoodAdjustment;
     }
@@ -68,7 +68,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
      * office using the hotword regex `(xxx)`, where `xxx` is the area code in question.
      * Structure is documented below.
      * 
-     */
+    */
     public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity getProximity() {
         return this.proximity;
     }

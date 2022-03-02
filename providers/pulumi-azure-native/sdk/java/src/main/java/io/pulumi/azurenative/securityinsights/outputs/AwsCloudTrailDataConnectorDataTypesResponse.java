@@ -25,7 +25,7 @@ public final class AwsCloudTrailDataConnectorDataTypesResponse {
     /**
      * Logs data type.
      * 
-     */
+    */
     public Optional<AwsCloudTrailDataConnectorDataTypesResponseLogs> getLogs() {
         return Optional.ofNullable(this.logs);
     }

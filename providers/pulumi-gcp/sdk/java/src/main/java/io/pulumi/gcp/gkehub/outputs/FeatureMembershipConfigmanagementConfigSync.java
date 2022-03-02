@@ -36,14 +36,14 @@ public final class FeatureMembershipConfigmanagementConfigSync {
      * - 
      * (Optional) Structure is documented below.
      * 
-     */
+    */
     public Optional<FeatureMembershipConfigmanagementConfigSyncGit> getGit() {
         return Optional.ofNullable(this.git);
     }
     /**
      * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
      * 
-     */
+    */
     public Optional<String> getSourceFormat() {
         return Optional.ofNullable(this.sourceFormat);
     }

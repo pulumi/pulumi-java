@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDatasetGroup {
-/**
- * Represents a dataset group that holds a collection of related datasets
+    private GetDatasetGroup() {}
+    public interface BuilderApplicator {
+        public void apply(GetDatasetGroupArgs.Builder a);
+    }
+    private static GetDatasetGroupArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDatasetGroupArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Represents a dataset group that holds a collection of related datasets
  * 
- */
+     */
+    public static CompletableFuture<GetDatasetGroupResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Represents a dataset group that holds a collection of related datasets
+     * 
+     */
     public static CompletableFuture<GetDatasetGroupResult> invokeAsync(GetDatasetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws-native:forecast:getDatasetGroup", TypeShape.of(GetDatasetGroupResult.class), args == null ? GetDatasetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

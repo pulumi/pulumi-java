@@ -25,7 +25,7 @@ public final class DiskEncryptionConfigurationResponse {
     /**
      * On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
      * 
-     */
+    */
     public List<String> getTargets() {
         return this.targets == null ? List.of() : this.targets;
     }

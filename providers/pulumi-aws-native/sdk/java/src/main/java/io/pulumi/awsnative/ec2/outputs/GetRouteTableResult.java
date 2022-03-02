@@ -35,14 +35,14 @@ public final class GetRouteTableResult {
     /**
      * The route table ID.
      * 
-     */
+    */
     public Optional<String> getRouteTableId() {
         return Optional.ofNullable(this.routeTableId);
     }
     /**
      * Any tags assigned to the route table.
      * 
-     */
+    */
     public List<RouteTableTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

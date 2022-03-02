@@ -82,14 +82,14 @@ public final class GetKustoDatabaseDataSetResult {
     /**
      * Unique id for identifying a data set resource
      * 
-     */
+    */
     public String getDataSetId() {
         return this.dataSetId;
     }
     /**
      * The resource id of the azure resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -97,49 +97,49 @@ public final class GetKustoDatabaseDataSetResult {
      * Kind of data set.
      * Expected value is 'KustoDatabase'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource id of the kusto database.
      * 
-     */
+    */
     public String getKustoDatabaseResourceId() {
         return this.kustoDatabaseResourceId;
     }
     /**
      * Location of the kusto cluster.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Name of the azure resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the kusto database data set.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * System Data of the Azure resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

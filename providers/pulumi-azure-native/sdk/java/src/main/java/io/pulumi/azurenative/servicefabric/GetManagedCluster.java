@@ -13,15 +13,36 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedCluster {
-/**
- * The manged cluster resource
+    private GetManagedCluster() {}
+    public interface BuilderApplicator {
+        public void apply(GetManagedClusterArgs.Builder a);
+    }
+    private static GetManagedClusterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetManagedClusterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The manged cluster resource
  * 
  * API Version: 2020-01-01-preview.
  * 
- *
- * The manged cluster resource
+     *
+     * The manged cluster resource
  * 
- */
+     */
+    public static CompletableFuture<GetManagedClusterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The manged cluster resource
+     * 
+     * API Version: 2020-01-01-preview.
+     * 
+     *
+         * The manged cluster resource
+     * 
+     */
     public static CompletableFuture<GetManagedClusterResult> invokeAsync(GetManagedClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabric:getManagedCluster", TypeShape.of(GetManagedClusterResult.class), args == null ? GetManagedClusterArgs.Empty : args, Utilities.withVersion(options));
     }

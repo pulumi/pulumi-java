@@ -72,6 +72,22 @@ public class RuleGroupNamespace extends io.pulumi.resources.CustomResource {
         return this.workspaceId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(RuleGroupNamespaceArgs.Builder a);
+    }
+    private static io.pulumi.aws.amp.RuleGroupNamespaceArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.aws.amp.RuleGroupNamespaceArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public RuleGroupNamespace(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

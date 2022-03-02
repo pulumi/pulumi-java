@@ -25,7 +25,7 @@ public final class SkuResponse {
     /**
      * Name of the pricing tier.
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

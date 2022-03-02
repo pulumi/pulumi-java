@@ -23,7 +23,7 @@ public final class ClusterOpenMonitoring {
     /**
      * Configuration block for Prometheus settings for open monitoring. See below.
      * 
-     */
+    */
     public ClusterOpenMonitoringPrometheus getPrometheus() {
         return this.prometheus;
     }

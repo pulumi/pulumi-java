@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStaticSiteUserProvidedFunctionAppForStaticSite {
-/**
- * Static Site User Provided Function App ARM resource.
+    private GetStaticSiteUserProvidedFunctionAppForStaticSite() {}
+    public interface BuilderApplicator {
+        public void apply(GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs.Builder a);
+    }
+    private static GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Static Site User Provided Function App ARM resource.
  * API Version: 2020-12-01.
  * 
- *
- * Static Site User Provided Function App ARM resource.
+     *
+     * Static Site User Provided Function App ARM resource.
  * 
- */
+     */
+    public static CompletableFuture<GetStaticSiteUserProvidedFunctionAppForStaticSiteResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Static Site User Provided Function App ARM resource.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Static Site User Provided Function App ARM resource.
+     * 
+     */
     public static CompletableFuture<GetStaticSiteUserProvidedFunctionAppForStaticSiteResult> invokeAsync(GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSiteUserProvidedFunctionAppForStaticSite", TypeShape.of(GetStaticSiteUserProvidedFunctionAppForStaticSiteResult.class), args == null ? GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs.Empty : args, Utilities.withVersion(options));
     }

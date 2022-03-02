@@ -56,14 +56,14 @@ public final class GetRobotApplicationResult {
     /**
      * The revision ID of robot application.
      * 
-     */
+    */
     public Optional<String> getCurrentRevisionId() {
         return Optional.ofNullable(this.currentRevisionId);
     }
     /**
      * The URI of the Docker image for the robot application.
      * 
-     */
+    */
     public Optional<String> getEnvironment() {
         return Optional.ofNullable(this.environment);
     }
@@ -73,7 +73,7 @@ public final class GetRobotApplicationResult {
     /**
      * The sources of the robot application.
      * 
-     */
+    */
     public List<RobotApplicationSourceConfig> getSources() {
         return this.sources == null ? List.of() : this.sources;
     }

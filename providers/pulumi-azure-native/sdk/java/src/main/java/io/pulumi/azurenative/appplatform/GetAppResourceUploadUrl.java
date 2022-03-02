@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAppResourceUploadUrl {
-/**
- * Resource upload definition payload
+    private GetAppResourceUploadUrl() {}
+    public interface BuilderApplicator {
+        public void apply(GetAppResourceUploadUrlArgs.Builder a);
+    }
+    private static GetAppResourceUploadUrlArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetAppResourceUploadUrlArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Resource upload definition payload
  * API Version: 2020-07-01.
  * 
- *
- * Resource upload definition payload
+     *
+     * Resource upload definition payload
  * 
- */
+     */
+    public static CompletableFuture<GetAppResourceUploadUrlResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Resource upload definition payload
+     * API Version: 2020-07-01.
+     * 
+     *
+         * Resource upload definition payload
+     * 
+     */
     public static CompletableFuture<GetAppResourceUploadUrlResult> invokeAsync(GetAppResourceUploadUrlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getAppResourceUploadUrl", TypeShape.of(GetAppResourceUploadUrlResult.class), args == null ? GetAppResourceUploadUrlArgs.Empty : args, Utilities.withVersion(options));
     }

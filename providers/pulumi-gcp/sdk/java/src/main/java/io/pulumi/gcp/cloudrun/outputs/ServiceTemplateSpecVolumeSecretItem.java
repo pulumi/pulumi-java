@@ -49,7 +49,7 @@ public final class ServiceTemplateSpecVolumeSecretItem {
      * The Cloud Secret Manager secret version.
      * Can be 'latest' for the latest value or an integer for a specific version.
      * 
-     */
+    */
     public String getKey() {
         return this.key;
     }
@@ -59,7 +59,7 @@ public final class ServiceTemplateSpecVolumeSecretItem {
      * conflict with other options that affect the file mode, like fsGroup, and
      * the result can be other mode bits set.
      * 
-     */
+    */
     public Optional<Integer> getMode() {
         return Optional.ofNullable(this.mode);
     }
@@ -69,7 +69,7 @@ public final class ServiceTemplateSpecVolumeSecretItem {
      * May not contain the path element '..'.
      * May not start with the string '..'.
      * 
-     */
+    */
     public String getPath() {
         return this.path;
     }

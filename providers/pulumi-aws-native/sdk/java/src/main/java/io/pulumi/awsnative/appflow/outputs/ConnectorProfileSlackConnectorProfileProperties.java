@@ -23,7 +23,7 @@ public final class ConnectorProfileSlackConnectorProfileProperties {
     /**
      * The location of the Slack resource
      * 
-     */
+    */
     public String getInstanceUrl() {
         return this.instanceUrl;
     }

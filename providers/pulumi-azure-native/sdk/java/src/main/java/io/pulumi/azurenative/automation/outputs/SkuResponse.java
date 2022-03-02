@@ -41,21 +41,21 @@ public final class SkuResponse {
     /**
      * Gets or sets the SKU capacity.
      * 
-     */
+    */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
      * Gets or sets the SKU family.
      * 
-     */
+    */
     public Optional<String> getFamily() {
         return Optional.ofNullable(this.family);
     }
     /**
      * Gets or sets the SKU name of the account.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

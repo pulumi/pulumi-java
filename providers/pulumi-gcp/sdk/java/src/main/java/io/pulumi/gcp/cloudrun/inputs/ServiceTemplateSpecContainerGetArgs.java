@@ -68,7 +68,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
      * precedence.
      * Structure is documented below.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by Cloud Run fully managed
      * 
      */
@@ -154,7 +154,7 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
      * If not specified, the container runtime's default will be used, which
      * might be configured in the container image.
      * 
-     * @deprecated
+     * @Deprecated
      * Not supported by Cloud Run fully managed
      * 
      */

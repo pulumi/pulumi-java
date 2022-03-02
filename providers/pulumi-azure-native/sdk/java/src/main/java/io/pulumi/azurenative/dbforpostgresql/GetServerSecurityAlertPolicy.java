@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerSecurityAlertPolicy {
-/**
- * A server security alert policy.
+    private GetServerSecurityAlertPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetServerSecurityAlertPolicyArgs.Builder a);
+    }
+    private static GetServerSecurityAlertPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServerSecurityAlertPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A server security alert policy.
  * API Version: 2017-12-01.
  * 
- *
- * A server security alert policy.
+     *
+     * A server security alert policy.
  * 
- */
+     */
+    public static CompletableFuture<GetServerSecurityAlertPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A server security alert policy.
+     * API Version: 2017-12-01.
+     * 
+     *
+         * A server security alert policy.
+     * 
+     */
     public static CompletableFuture<GetServerSecurityAlertPolicyResult> invokeAsync(GetServerSecurityAlertPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbforpostgresql:getServerSecurityAlertPolicy", TypeShape.of(GetServerSecurityAlertPolicyResult.class), args == null ? GetServerSecurityAlertPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

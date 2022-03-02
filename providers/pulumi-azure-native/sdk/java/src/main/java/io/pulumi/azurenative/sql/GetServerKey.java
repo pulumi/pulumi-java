@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerKey {
-/**
- * A server key.
+    private GetServerKey() {}
+    public interface BuilderApplicator {
+        public void apply(GetServerKeyArgs.Builder a);
+    }
+    private static GetServerKeyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetServerKeyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A server key.
  * API Version: 2020-11-01-preview.
  * 
- *
- * A server key.
+     *
+     * A server key.
  * 
- */
+     */
+    public static CompletableFuture<GetServerKeyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A server key.
+     * API Version: 2020-11-01-preview.
+     * 
+     *
+         * A server key.
+     * 
+     */
     public static CompletableFuture<GetServerKeyResult> invokeAsync(GetServerKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerKey", TypeShape.of(GetServerKeyResult.class), args == null ? GetServerKeyArgs.Empty : args, Utilities.withVersion(options));
     }

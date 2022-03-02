@@ -33,14 +33,14 @@ public final class ParametersLinkResponse {
     /**
      * If included, must match the ContentVersion in the template.
      * 
-     */
+    */
     public Optional<String> getContentVersion() {
         return Optional.ofNullable(this.contentVersion);
     }
     /**
      * The URI of the parameters file.
      * 
-     */
+    */
     public String getUri() {
         return this.uri;
     }

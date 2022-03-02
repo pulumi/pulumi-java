@@ -25,7 +25,7 @@ public final class IntegrationTlsConfig {
     /**
      * If you specify a server name, API Gateway uses it to verify the hostname on the integration's certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
      * 
-     */
+    */
     public Optional<String> getServerNameToVerify() {
         return Optional.ofNullable(this.serverNameToVerify);
     }

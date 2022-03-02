@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCompositeType {
-/**
- * Gets information about a specific composite type.
+    private GetCompositeType() {}
+    public interface BuilderApplicator {
+        public void apply(GetCompositeTypeArgs.Builder a);
+    }
+    private static GetCompositeTypeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetCompositeTypeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets information about a specific composite type.
  * 
- */
+     */
+    public static CompletableFuture<GetCompositeTypeResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets information about a specific composite type.
+     * 
+     */
     public static CompletableFuture<GetCompositeTypeResult> invokeAsync(GetCompositeTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:deploymentmanager/alpha:getCompositeType", TypeShape.of(GetCompositeTypeResult.class), args == null ? GetCompositeTypeArgs.Empty : args, Utilities.withVersion(options));
     }

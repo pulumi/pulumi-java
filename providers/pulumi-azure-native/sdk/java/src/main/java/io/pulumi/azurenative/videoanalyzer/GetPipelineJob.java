@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPipelineJob {
-/**
- * Pipeline job represents a unique instance of a batch topology, used for offline processing of selected portions of archived content.
+    private GetPipelineJob() {}
+    public interface BuilderApplicator {
+        public void apply(GetPipelineJobArgs.Builder a);
+    }
+    private static GetPipelineJobArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPipelineJobArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Pipeline job represents a unique instance of a batch topology, used for offline processing of selected portions of archived content.
  * API Version: 2021-11-01-preview.
  * 
- *
- * Pipeline job represents a unique instance of a batch topology, used for offline processing of selected portions of archived content.
+     *
+     * Pipeline job represents a unique instance of a batch topology, used for offline processing of selected portions of archived content.
  * 
- */
+     */
+    public static CompletableFuture<GetPipelineJobResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Pipeline job represents a unique instance of a batch topology, used for offline processing of selected portions of archived content.
+     * API Version: 2021-11-01-preview.
+     * 
+     *
+         * Pipeline job represents a unique instance of a batch topology, used for offline processing of selected portions of archived content.
+     * 
+     */
     public static CompletableFuture<GetPipelineJobResult> invokeAsync(GetPipelineJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getPipelineJob", TypeShape.of(GetPipelineJobResult.class), args == null ? GetPipelineJobArgs.Empty : args, Utilities.withVersion(options));
     }

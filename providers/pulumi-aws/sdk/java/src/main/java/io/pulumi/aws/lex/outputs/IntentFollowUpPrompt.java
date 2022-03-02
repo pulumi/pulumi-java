@@ -34,7 +34,7 @@ public final class IntentFollowUpPrompt {
     /**
      * Prompts for information from the user. Attributes are documented under prompt.
      * 
-     */
+    */
     public IntentFollowUpPromptPrompt getPrompt() {
         return this.prompt;
     }
@@ -43,7 +43,7 @@ public final class IntentFollowUpPrompt {
      * Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
      * documented below under statement.
      * 
-     */
+    */
     public IntentFollowUpPromptRejectionStatement getRejectionStatement() {
         return this.rejectionStatement;
     }

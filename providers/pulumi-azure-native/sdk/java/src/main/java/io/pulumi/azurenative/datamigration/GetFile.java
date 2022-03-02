@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFile {
-/**
- * A file resource
+    private GetFile() {}
+    public interface BuilderApplicator {
+        public void apply(GetFileArgs.Builder a);
+    }
+    private static GetFileArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFileArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A file resource
  * API Version: 2018-07-15-preview.
  * 
- *
- * A file resource
+     *
+     * A file resource
  * 
- */
+     */
+    public static CompletableFuture<GetFileResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A file resource
+     * API Version: 2018-07-15-preview.
+     * 
+     *
+         * A file resource
+     * 
+     */
     public static CompletableFuture<GetFileResult> invokeAsync(GetFileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getFile", TypeShape.of(GetFileResult.class), args == null ? GetFileArgs.Empty : args, Utilities.withVersion(options));
     }

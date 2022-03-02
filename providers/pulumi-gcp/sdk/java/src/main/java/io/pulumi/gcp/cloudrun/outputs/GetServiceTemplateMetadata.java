@@ -56,7 +56,7 @@ public final class GetServiceTemplateMetadata {
     /**
      * The name of the Cloud Run Service.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }

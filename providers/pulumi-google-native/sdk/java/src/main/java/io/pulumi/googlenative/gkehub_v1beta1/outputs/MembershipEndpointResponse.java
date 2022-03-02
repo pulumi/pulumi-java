@@ -64,42 +64,42 @@ public final class MembershipEndpointResponse {
     /**
      * Optional. Specific information for a Google Edge cluster.
      * 
-     */
+    */
     public EdgeClusterResponse getEdgeCluster() {
         return this.edgeCluster;
     }
     /**
      * Optional. Specific information for a GKE-on-GCP cluster.
      * 
-     */
+    */
     public GkeClusterResponse getGkeCluster() {
         return this.gkeCluster;
     }
     /**
      * Useful Kubernetes-specific metadata.
      * 
-     */
+    */
     public KubernetesMetadataResponse getKubernetesMetadata() {
         return this.kubernetesMetadata;
     }
     /**
      * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.
      * 
-     */
+    */
     public KubernetesResourceResponse getKubernetesResource() {
         return this.kubernetesResource;
     }
     /**
      * Optional. Specific information for a GKE Multi-Cloud cluster.
      * 
-     */
+    */
     public MultiCloudClusterResponse getMultiCloudCluster() {
         return this.multiCloudCluster;
     }
     /**
      * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil "type" instead.
      * 
-     */
+    */
     public OnPremClusterResponse getOnPremCluster() {
         return this.onPremCluster;
     }

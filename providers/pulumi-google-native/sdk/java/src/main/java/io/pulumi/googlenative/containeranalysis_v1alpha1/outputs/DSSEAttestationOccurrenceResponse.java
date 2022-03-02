@@ -28,7 +28,7 @@ public final class DSSEAttestationOccurrenceResponse {
     /**
      * If doing something security critical, make sure to verify the signatures in this metadata.
      * 
-     */
+    */
     public EnvelopeResponse getEnvelope() {
         return this.envelope;
     }

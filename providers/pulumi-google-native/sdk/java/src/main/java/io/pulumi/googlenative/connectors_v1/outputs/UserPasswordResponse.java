@@ -32,14 +32,14 @@ public final class UserPasswordResponse {
     /**
      * Secret version reference containing the password.
      * 
-     */
+    */
     public SecretResponse getPassword() {
         return this.password;
     }
     /**
      * Username.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }

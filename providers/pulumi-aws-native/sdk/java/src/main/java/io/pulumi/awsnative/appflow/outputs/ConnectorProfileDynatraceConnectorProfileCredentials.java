@@ -23,7 +23,7 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentials {
     /**
      * The API tokens used by Dynatrace API to authenticate various API calls.
      * 
-     */
+    */
     public String getApiToken() {
         return this.apiToken;
     }

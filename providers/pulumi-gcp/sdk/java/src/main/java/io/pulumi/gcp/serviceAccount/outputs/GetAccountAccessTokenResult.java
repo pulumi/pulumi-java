@@ -46,7 +46,7 @@ public final class GetAccountAccessTokenResult {
     /**
      * The `access_token` representing the new generated identity.
      * 
-     */
+    */
     public String getAccessToken() {
         return this.accessToken;
     }
@@ -56,7 +56,7 @@ public final class GetAccountAccessTokenResult {
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

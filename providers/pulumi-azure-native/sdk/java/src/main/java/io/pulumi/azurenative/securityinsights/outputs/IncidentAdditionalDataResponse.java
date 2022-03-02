@@ -54,35 +54,35 @@ public final class IncidentAdditionalDataResponse {
     /**
      * List of product names of alerts in the incident
      * 
-     */
+    */
     public List<String> getAlertProductNames() {
         return this.alertProductNames;
     }
     /**
      * The number of alerts in the incident
      * 
-     */
+    */
     public Integer getAlertsCount() {
         return this.alertsCount;
     }
     /**
      * The number of bookmarks in the incident
      * 
-     */
+    */
     public Integer getBookmarksCount() {
         return this.bookmarksCount;
     }
     /**
      * The number of comments in the incident
      * 
-     */
+    */
     public Integer getCommentsCount() {
         return this.commentsCount;
     }
     /**
      * The tactics associated with incident
      * 
-     */
+    */
     public List<String> getTactics() {
         return this.tactics;
     }

@@ -88,7 +88,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     /**
      * Describes the number of in-application streams to create.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism> getInputParallelism() {
         return Optional.ofNullable(this.inputParallelism);
     }
@@ -96,42 +96,42 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The input processing configuration for the input.
      * An input processor transforms records as they are received from the stream, before the application's SQL code executes.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration> getInputProcessingConfiguration() {
         return Optional.ofNullable(this.inputProcessingConfiguration);
     }
     /**
      * Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.
      * 
-     */
+    */
     public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema getInputSchema() {
         return this.inputSchema;
     }
     /**
      * The point at which the application starts processing records from the streaming source.
      * 
-     */
+    */
     public List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration> getInputStartingPositionConfigurations() {
         return this.inputStartingPositionConfigurations == null ? List.of() : this.inputStartingPositionConfigurations;
     }
     /**
      * If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput> getKinesisFirehoseInput() {
         return Optional.ofNullable(this.kinesisFirehoseInput);
     }
     /**
      * If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).
      * 
-     */
+    */
     public Optional<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput> getKinesisStreamsInput() {
         return Optional.ofNullable(this.kinesisStreamsInput);
     }
     /**
      * The name prefix to use when creating an in-application stream.
      * 
-     */
+    */
     public String getNamePrefix() {
         return this.namePrefix;
     }

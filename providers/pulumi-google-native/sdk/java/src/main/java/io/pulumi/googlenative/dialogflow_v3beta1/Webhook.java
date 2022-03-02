@@ -106,6 +106,22 @@ public class Webhook extends io.pulumi.resources.CustomResource {
         return this.timeout;
     }
 
+    public interface BuilderApplicator {
+        public void apply(WebhookArgs.Builder a);
+    }
+    private static io.pulumi.googlenative.dialogflow_v3beta1.WebhookArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.googlenative.dialogflow_v3beta1.WebhookArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public Webhook(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

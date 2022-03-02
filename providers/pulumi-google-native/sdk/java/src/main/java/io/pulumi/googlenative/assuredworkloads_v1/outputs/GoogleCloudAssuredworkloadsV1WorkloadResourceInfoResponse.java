@@ -31,14 +31,14 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse {
     /**
      * Resource identifier. For a project this represents project_number.
      * 
-     */
+    */
     public String getResourceId() {
         return this.resourceId;
     }
     /**
      * Indicates the type of resource.
      * 
-     */
+    */
     public String getPropResourceType() {
         return this.resourceType;
     }

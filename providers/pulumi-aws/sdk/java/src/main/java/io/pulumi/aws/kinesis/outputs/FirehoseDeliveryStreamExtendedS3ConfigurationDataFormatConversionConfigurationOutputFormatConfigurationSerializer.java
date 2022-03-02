@@ -34,14 +34,14 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     /**
      * Nested argument that specifies converting data to the ORC format before storing it in Amazon S3. For more information, see [Apache ORC](https://orc.apache.org/docs/). More details below.
      * 
-     */
+    */
     public Optional<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDe> getOrcSerDe() {
         return Optional.ofNullable(this.orcSerDe);
     }
     /**
      * Nested argument that specifies converting data to the Parquet format before storing it in Amazon S3. For more information, see [Apache Parquet](https://parquet.apache.org/documentation/latest/). More details below.
      * 
-     */
+    */
     public Optional<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDe> getParquetSerDe() {
         return Optional.ofNullable(this.parquetSerDe);
     }

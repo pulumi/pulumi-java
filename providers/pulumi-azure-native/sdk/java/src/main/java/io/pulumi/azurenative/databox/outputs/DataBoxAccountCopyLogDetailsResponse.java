@@ -46,7 +46,7 @@ public final class DataBoxAccountCopyLogDetailsResponse {
     /**
      * Account name.
      * 
-     */
+    */
     public String getAccountName() {
         return this.accountName;
     }
@@ -54,21 +54,21 @@ public final class DataBoxAccountCopyLogDetailsResponse {
      * Indicates the type of job details.
      * Expected value is 'DataBox'.
      * 
-     */
+    */
     public String getCopyLogDetailsType() {
         return this.copyLogDetailsType;
     }
     /**
      * Link for copy logs.
      * 
-     */
+    */
     public String getCopyLogLink() {
         return this.copyLogLink;
     }
     /**
      * Link for copy verbose logs. This will be set only when LogCollectionLevel is set to Verbose.
      * 
-     */
+    */
     public String getCopyVerboseLogLink() {
         return this.copyVerboseLogLink;
     }

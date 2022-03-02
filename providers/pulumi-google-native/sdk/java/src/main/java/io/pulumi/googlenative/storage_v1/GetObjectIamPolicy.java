@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetObjectIamPolicy {
-/**
- * Returns an IAM policy for the specified object.
+    private GetObjectIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetObjectIamPolicyArgs.Builder a);
+    }
+    private static GetObjectIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetObjectIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns an IAM policy for the specified object.
  * 
- */
+     */
+    public static CompletableFuture<GetObjectIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns an IAM policy for the specified object.
+     * 
+     */
     public static CompletableFuture<GetObjectIamPolicyResult> invokeAsync(GetObjectIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:storage/v1:getObjectIamPolicy", TypeShape.of(GetObjectIamPolicyResult.class), args == null ? GetObjectIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

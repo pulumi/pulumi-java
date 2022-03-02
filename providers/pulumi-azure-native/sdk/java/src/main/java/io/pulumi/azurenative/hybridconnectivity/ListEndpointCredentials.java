@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListEndpointCredentials {
-/**
- * The endpoint access for the target resource.
+    private ListEndpointCredentials() {}
+    public interface BuilderApplicator {
+        public void apply(ListEndpointCredentialsArgs.Builder a);
+    }
+    private static ListEndpointCredentialsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListEndpointCredentialsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The endpoint access for the target resource.
  * API Version: 2021-10-06-preview.
  * 
- *
- * The endpoint access for the target resource.
+     *
+     * The endpoint access for the target resource.
  * 
- */
+     */
+    public static CompletableFuture<ListEndpointCredentialsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The endpoint access for the target resource.
+     * API Version: 2021-10-06-preview.
+     * 
+     *
+         * The endpoint access for the target resource.
+     * 
+     */
     public static CompletableFuture<ListEndpointCredentialsResult> invokeAsync(ListEndpointCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridconnectivity:listEndpointCredentials", TypeShape.of(ListEndpointCredentialsResult.class), args == null ? ListEndpointCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

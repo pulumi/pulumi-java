@@ -39,21 +39,21 @@ public final class GetResponseHeadersPolicyCustomHeadersConfigItem {
     /**
      * The HTTP response header name.
      * 
-     */
+    */
     public String getHeader() {
         return this.header;
     }
     /**
      * A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
      * 
-     */
+    */
     public Boolean getOverride() {
         return this.override;
     }
     /**
      * The value for the HTTP response header.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

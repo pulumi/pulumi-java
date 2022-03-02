@@ -63,42 +63,42 @@ public final class WorkflowTriggerRecurrenceResponse {
     /**
      * The end time.
      * 
-     */
+    */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
      * The frequency.
      * 
-     */
+    */
     public Optional<String> getFrequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
      * The interval.
      * 
-     */
+    */
     public Optional<Integer> getInterval() {
         return Optional.ofNullable(this.interval);
     }
     /**
      * The recurrence schedule.
      * 
-     */
+    */
     public Optional<RecurrenceScheduleResponse> getSchedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
      * The start time.
      * 
-     */
+    */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * The time zone.
      * 
-     */
+    */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);
     }

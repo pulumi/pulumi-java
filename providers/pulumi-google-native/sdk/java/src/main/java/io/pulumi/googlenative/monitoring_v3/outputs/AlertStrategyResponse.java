@@ -32,14 +32,14 @@ public final class AlertStrategyResponse {
     /**
      * If an alert policy that was active has no data for this long, any open incidents will close
      * 
-     */
+    */
     public String getAutoClose() {
         return this.autoClose;
     }
     /**
      * Required for alert policies with a LogMatch condition.This limit is not implemented for alert policies that are not log-based.
      * 
-     */
+    */
     public NotificationRateLimitResponse getNotificationRateLimit() {
         return this.notificationRateLimit;
     }

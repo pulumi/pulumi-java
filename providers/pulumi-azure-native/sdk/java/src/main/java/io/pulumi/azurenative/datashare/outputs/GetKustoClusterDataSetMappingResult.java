@@ -89,21 +89,21 @@ public final class GetKustoClusterDataSetMappingResult {
     /**
      * The id of the source data set.
      * 
-     */
+    */
     public String getDataSetId() {
         return this.dataSetId;
     }
     /**
      * Gets the status of the data set mapping.
      * 
-     */
+    */
     public String getDataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
     /**
      * The resource id of the azure resource
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
@@ -111,49 +111,49 @@ public final class GetKustoClusterDataSetMappingResult {
      * Kind of data set mapping.
      * Expected value is 'KustoCluster'.
      * 
-     */
+    */
     public String getKind() {
         return this.kind;
     }
     /**
      * Resource id of the sink kusto cluster.
      * 
-     */
+    */
     public String getKustoClusterResourceId() {
         return this.kustoClusterResourceId;
     }
     /**
      * Location of the sink kusto cluster.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * Name of the azure resource
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Provisioning state of the data set mapping.
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }
     /**
      * System Data of the Azure resource.
      * 
-     */
+    */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
     /**
      * Type of the azure resource
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

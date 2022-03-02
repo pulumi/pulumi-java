@@ -42,21 +42,21 @@ public final class ConnectionMonitorTcpConfigurationResponse {
     /**
      * Destination port behavior.
      * 
-     */
+    */
     public Optional<String> getDestinationPortBehavior() {
         return Optional.ofNullable(this.destinationPortBehavior);
     }
     /**
      * Value indicating whether path evaluation with trace route should be disabled.
      * 
-     */
+    */
     public Optional<Boolean> getDisableTraceRoute() {
         return Optional.ofNullable(this.disableTraceRoute);
     }
     /**
      * The port to connect to.
      * 
-     */
+    */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }

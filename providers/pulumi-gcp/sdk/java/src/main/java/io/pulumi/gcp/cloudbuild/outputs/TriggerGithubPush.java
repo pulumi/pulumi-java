@@ -41,21 +41,21 @@ public final class TriggerGithubPush {
     /**
      * Regex of branches to match.  Specify only one of branch or tag.
      * 
-     */
+    */
     public Optional<String> getBranch() {
         return Optional.ofNullable(this.branch);
     }
     /**
      * Only trigger a build if the revision regex does NOT match the revision regex.
      * 
-     */
+    */
     public Optional<Boolean> getInvertRegex() {
         return Optional.ofNullable(this.invertRegex);
     }
     /**
      * Regex of tags to match.  Specify only one of branch or tag.
      * 
-     */
+    */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }

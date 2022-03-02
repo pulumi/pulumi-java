@@ -45,28 +45,28 @@ public final class SqlAclEntryResponse {
     /**
      * The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.
      * 
-     */
+    */
     public String getExpireTime() {
         return this.expireTime;
     }
     /**
      * A label to identify this entry.
      * 
-     */
+    */
     public String getLabel() {
         return this.label;
     }
     /**
      * Input only. The time-to-leave of this access control entry.
      * 
-     */
+    */
     public String getTtl() {
         return this.ttl;
     }
     /**
      * The allowlisted value for the access control list.
      * 
-     */
+    */
     public String getValue() {
         return this.value;
     }

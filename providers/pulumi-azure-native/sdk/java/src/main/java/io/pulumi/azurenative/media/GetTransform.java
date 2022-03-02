@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransform {
-/**
- * A Transform encapsulates the rules or instructions for generating desired outputs from input media, such as by transcoding or by extracting insights. After the Transform is created, it can be applied to input media by creating Jobs.
+    private GetTransform() {}
+    public interface BuilderApplicator {
+        public void apply(GetTransformArgs.Builder a);
+    }
+    private static GetTransformArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetTransformArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * A Transform encapsulates the rules or instructions for generating desired outputs from input media, such as by transcoding or by extracting insights. After the Transform is created, it can be applied to input media by creating Jobs.
  * API Version: 2020-05-01.
  * 
- *
- * A Transform encapsulates the rules or instructions for generating desired outputs from input media, such as by transcoding or by extracting insights. After the Transform is created, it can be applied to input media by creating Jobs.
+     *
+     * A Transform encapsulates the rules or instructions for generating desired outputs from input media, such as by transcoding or by extracting insights. After the Transform is created, it can be applied to input media by creating Jobs.
  * 
- */
+     */
+    public static CompletableFuture<GetTransformResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * A Transform encapsulates the rules or instructions for generating desired outputs from input media, such as by transcoding or by extracting insights. After the Transform is created, it can be applied to input media by creating Jobs.
+     * API Version: 2020-05-01.
+     * 
+     *
+         * A Transform encapsulates the rules or instructions for generating desired outputs from input media, such as by transcoding or by extracting insights. After the Transform is created, it can be applied to input media by creating Jobs.
+     * 
+     */
     public static CompletableFuture<GetTransformResult> invokeAsync(GetTransformArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getTransform", TypeShape.of(GetTransformResult.class), args == null ? GetTransformArgs.Empty : args, Utilities.withVersion(options));
     }

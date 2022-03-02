@@ -83,28 +83,28 @@ public final class BackupInstanceResponse {
     /**
      * Specifies the current protection state of the resource
      * 
-     */
+    */
     public String getCurrentProtectionState() {
         return this.currentProtectionState;
     }
     /**
      * Gets or sets the data source information.
      * 
-     */
+    */
     public DatasourceResponse getDataSourceInfo() {
         return this.dataSourceInfo;
     }
     /**
      * Gets or sets the data source set information.
      * 
-     */
+    */
     public Optional<DatasourceSetResponse> getDataSourceSetInfo() {
         return Optional.ofNullable(this.dataSourceSetInfo);
     }
     /**
      * Gets or sets the Backup Instance friendly name.
      * 
-     */
+    */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -114,28 +114,28 @@ public final class BackupInstanceResponse {
     /**
      * Gets or sets the policy information.
      * 
-     */
+    */
     public PolicyInfoResponse getPolicyInfo() {
         return this.policyInfo;
     }
     /**
      * Specifies the protection error of the resource
      * 
-     */
+    */
     public UserFacingErrorResponse getProtectionErrorDetails() {
         return this.protectionErrorDetails;
     }
     /**
      * Specifies the protection status of the resource
      * 
-     */
+    */
     public ProtectionStatusDetailsResponse getProtectionStatus() {
         return this.protectionStatus;
     }
     /**
      * Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed
      * 
-     */
+    */
     public String getProvisioningState() {
         return this.provisioningState;
     }

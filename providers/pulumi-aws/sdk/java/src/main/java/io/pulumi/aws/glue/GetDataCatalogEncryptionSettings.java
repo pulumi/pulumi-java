@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataCatalogEncryptionSettings {
-/**
- * This data source can be used to fetch information about AWS Glue Data Catalog Encryption Settings.
+    private GetDataCatalogEncryptionSettings() {}
+    public interface BuilderApplicator {
+        public void apply(GetDataCatalogEncryptionSettingsArgs.Builder a);
+    }
+    private static GetDataCatalogEncryptionSettingsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetDataCatalogEncryptionSettingsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * This data source can be used to fetch information about AWS Glue Data Catalog Encryption Settings.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getDataCatalogEncryptionSettings.
+     *
+     * A collection of arguments for invoking getDataCatalogEncryptionSettings.
  * 
- *
- * A collection of values returned by getDataCatalogEncryptionSettings.
+     *
+     * A collection of values returned by getDataCatalogEncryptionSettings.
  * 
- */
+     */
+    public static CompletableFuture<GetDataCatalogEncryptionSettingsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * This data source can be used to fetch information about AWS Glue Data Catalog Encryption Settings.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getDataCatalogEncryptionSettings.
+     * 
+     *
+         * A collection of values returned by getDataCatalogEncryptionSettings.
+     * 
+     */
     public static CompletableFuture<GetDataCatalogEncryptionSettingsResult> invokeAsync(GetDataCatalogEncryptionSettingsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:glue/getDataCatalogEncryptionSettings:getDataCatalogEncryptionSettings", TypeShape.of(GetDataCatalogEncryptionSettingsResult.class), args == null ? GetDataCatalogEncryptionSettingsArgs.Empty : args, Utilities.withVersion(options));
     }

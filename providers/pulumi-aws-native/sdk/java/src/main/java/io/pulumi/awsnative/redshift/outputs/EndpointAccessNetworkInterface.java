@@ -47,28 +47,28 @@ public final class EndpointAccessNetworkInterface {
     /**
      * The Availability Zone.
      * 
-     */
+    */
     public Optional<String> getAvailabilityZone() {
         return Optional.ofNullable(this.availabilityZone);
     }
     /**
      * The network interface identifier.
      * 
-     */
+    */
     public Optional<String> getNetworkInterfaceId() {
         return Optional.ofNullable(this.networkInterfaceId);
     }
     /**
      * The IPv4 address of the network interface within the subnet.
      * 
-     */
+    */
     public Optional<String> getPrivateIpAddress() {
         return Optional.ofNullable(this.privateIpAddress);
     }
     /**
      * The subnet identifier.
      * 
-     */
+    */
     public Optional<String> getSubnetId() {
         return Optional.ofNullable(this.subnetId);
     }

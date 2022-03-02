@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoleDefinition {
-/**
- * Role definition.
+    private GetRoleDefinition() {}
+    public interface BuilderApplicator {
+        public void apply(GetRoleDefinitionArgs.Builder a);
+    }
+    private static GetRoleDefinitionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetRoleDefinitionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Role definition.
  * API Version: 2018-01-01-preview.
  * 
- *
- * Role definition.
+     *
+     * Role definition.
  * 
- */
+     */
+    public static CompletableFuture<GetRoleDefinitionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Role definition.
+     * API Version: 2018-01-01-preview.
+     * 
+     *
+         * Role definition.
+     * 
+     */
     public static CompletableFuture<GetRoleDefinitionResult> invokeAsync(GetRoleDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getRoleDefinition", TypeShape.of(GetRoleDefinitionResult.class), args == null ? GetRoleDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

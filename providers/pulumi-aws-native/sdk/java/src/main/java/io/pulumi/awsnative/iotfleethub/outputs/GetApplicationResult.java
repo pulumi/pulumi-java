@@ -106,84 +106,84 @@ public final class GetApplicationResult {
     /**
      * The ARN of the application.
      * 
-     */
+    */
     public Optional<String> getApplicationArn() {
         return Optional.ofNullable(this.applicationArn);
     }
     /**
      * When the Application was created
      * 
-     */
+    */
     public Optional<Integer> getApplicationCreationDate() {
         return Optional.ofNullable(this.applicationCreationDate);
     }
     /**
      * Application Description, should be between 1 and 2048 characters.
      * 
-     */
+    */
     public Optional<String> getApplicationDescription() {
         return Optional.ofNullable(this.applicationDescription);
     }
     /**
      * The ID of the application.
      * 
-     */
+    */
     public Optional<String> getApplicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
      * When the Application was last updated
      * 
-     */
+    */
     public Optional<Integer> getApplicationLastUpdateDate() {
         return Optional.ofNullable(this.applicationLastUpdateDate);
     }
     /**
      * Application Name, should be between 1 and 256 characters.
      * 
-     */
+    */
     public Optional<String> getApplicationName() {
         return Optional.ofNullable(this.applicationName);
     }
     /**
      * The current state of the application.
      * 
-     */
+    */
     public Optional<String> getApplicationState() {
         return Optional.ofNullable(this.applicationState);
     }
     /**
      * The URL of the application.
      * 
-     */
+    */
     public Optional<String> getApplicationUrl() {
         return Optional.ofNullable(this.applicationUrl);
     }
     /**
      * A message indicating why Create or Delete Application failed.
      * 
-     */
+    */
     public Optional<String> getErrorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
      * The ARN of the role that the web application assumes when it interacts with AWS IoT Core. For more info on configuring this attribute, see https://docs.aws.amazon.com/iot/latest/apireference/API_iotfleethub_CreateApplication.html#API_iotfleethub_CreateApplication_RequestSyntax
      * 
-     */
+    */
     public Optional<String> getRoleArn() {
         return Optional.ofNullable(this.roleArn);
     }
     /**
      * The AWS SSO application generated client ID (used with AWS SSO APIs).
      * 
-     */
+    */
     public Optional<String> getSsoClientId() {
         return Optional.ofNullable(this.ssoClientId);
     }
     /**
      * A list of key-value pairs that contain metadata for the application.
      * 
-     */
+    */
     public List<ApplicationTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }

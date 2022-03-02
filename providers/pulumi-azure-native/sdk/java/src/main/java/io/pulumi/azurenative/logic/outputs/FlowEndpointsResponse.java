@@ -33,14 +33,14 @@ public final class FlowEndpointsResponse {
     /**
      * The access endpoint ip address.
      * 
-     */
+    */
     public List<IpAddressResponse> getAccessEndpointIpAddresses() {
         return this.accessEndpointIpAddresses == null ? List.of() : this.accessEndpointIpAddresses;
     }
     /**
      * The outgoing ip address.
      * 
-     */
+    */
     public List<IpAddressResponse> getOutgoingIpAddresses() {
         return this.outgoingIpAddresses == null ? List.of() : this.outgoingIpAddresses;
     }

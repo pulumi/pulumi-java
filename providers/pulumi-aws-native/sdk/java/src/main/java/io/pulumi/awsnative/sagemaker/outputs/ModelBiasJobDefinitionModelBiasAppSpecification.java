@@ -41,21 +41,21 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecification {
     /**
      * The S3 URI to an analysis configuration file
      * 
-     */
+    */
     public String getConfigUri() {
         return this.configUri;
     }
     /**
      * Sets the environment variables in the Docker container
      * 
-     */
+    */
     public Optional<Object> getEnvironment() {
         return Optional.ofNullable(this.environment);
     }
     /**
      * The container image to be run by the monitoring job.
      * 
-     */
+    */
     public String getImageUri() {
         return this.imageUri;
     }

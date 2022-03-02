@@ -91,14 +91,14 @@ public final class DashboardVersion {
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * <p>The time that this dashboard version was created.</p>
      * 
-     */
+    */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -106,35 +106,35 @@ public final class DashboardVersion {
      * <p>The Amazon Resource Numbers (ARNs) for the datasets that are associated with this
      *             version of the dashboard.</p>
      * 
-     */
+    */
     public List<String> getDataSetArns() {
         return this.dataSetArns == null ? List.of() : this.dataSetArns;
     }
     /**
      * <p>Description.</p>
      * 
-     */
+    */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
     /**
      * <p>Errors associated with this dashboard version.</p>
      * 
-     */
+    */
     public List<DashboardError> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
     /**
      * <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
      * 
-     */
+    */
     public List<DashboardSheet> getSheets() {
         return this.sheets == null ? List.of() : this.sheets;
     }
     /**
      * <p>Source entity ARN.</p>
      * 
-     */
+    */
     public Optional<String> getSourceEntityArn() {
         return Optional.ofNullable(this.sourceEntityArn);
     }
@@ -144,14 +144,14 @@ public final class DashboardVersion {
     /**
      * <p>The ARN of the theme associated with a version of the dashboard.</p>
      * 
-     */
+    */
     public Optional<String> getThemeArn() {
         return Optional.ofNullable(this.themeArn);
     }
     /**
      * <p>Version number for this version of the dashboard.</p>
      * 
-     */
+    */
     public Optional<Double> getVersionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }

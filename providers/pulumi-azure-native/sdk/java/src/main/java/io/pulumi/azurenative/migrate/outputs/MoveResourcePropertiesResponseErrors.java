@@ -25,7 +25,7 @@ public final class MoveResourcePropertiesResponseErrors {
     /**
      * The move resource error body.
      * 
-     */
+    */
     public Optional<MoveResourceErrorBodyResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }

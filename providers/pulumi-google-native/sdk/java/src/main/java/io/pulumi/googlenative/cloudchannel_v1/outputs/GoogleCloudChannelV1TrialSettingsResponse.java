@@ -32,14 +32,14 @@ public final class GoogleCloudChannelV1TrialSettingsResponse {
     /**
      * Date when the trial ends. The value is in milliseconds using the UNIX Epoch format. See an example [Epoch converter](https://www.epochconverter.com).
      * 
-     */
+    */
     public String getEndTime() {
         return this.endTime;
     }
     /**
      * Determines if the entitlement is in a trial or not: * `true` - The entitlement is in trial. * `false` - The entitlement is not in trial.
      * 
-     */
+    */
     public Boolean getTrial() {
         return this.trial;
     }

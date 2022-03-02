@@ -290,6 +290,22 @@ public class NodeType extends io.pulumi.resources.CustomResource {
         return this.vmSize;
     }
 
+    public interface BuilderApplicator {
+        public void apply(NodeTypeArgs.Builder a);
+    }
+    private static io.pulumi.azurenative.servicefabric.NodeTypeArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.azurenative.servicefabric.NodeTypeArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public NodeType(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

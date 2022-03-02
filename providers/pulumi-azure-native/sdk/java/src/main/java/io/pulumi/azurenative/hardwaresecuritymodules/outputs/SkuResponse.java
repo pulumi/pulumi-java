@@ -25,7 +25,7 @@ public final class SkuResponse {
     /**
      * SKU of the dedicated HSM
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

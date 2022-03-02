@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInterconnectAttachmentIamPolicy {
-/**
- * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+    private GetInterconnectAttachmentIamPolicy() {}
+    public interface BuilderApplicator {
+        public void apply(GetInterconnectAttachmentIamPolicyArgs.Builder a);
+    }
+    private static GetInterconnectAttachmentIamPolicyArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInterconnectAttachmentIamPolicyArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
  * 
- */
+     */
+    public static CompletableFuture<GetInterconnectAttachmentIamPolicyResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     * 
+     */
     public static CompletableFuture<GetInterconnectAttachmentIamPolicyResult> invokeAsync(GetInterconnectAttachmentIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInterconnectAttachmentIamPolicy", TypeShape.of(GetInterconnectAttachmentIamPolicyResult.class), args == null ? GetInterconnectAttachmentIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

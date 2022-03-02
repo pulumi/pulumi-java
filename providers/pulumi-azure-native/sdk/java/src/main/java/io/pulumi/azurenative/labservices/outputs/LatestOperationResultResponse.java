@@ -59,42 +59,42 @@ public final class LatestOperationResultResponse {
     /**
      * Error code on failure.
      * 
-     */
+    */
     public String getErrorCode() {
         return this.errorCode;
     }
     /**
      * The error message.
      * 
-     */
+    */
     public String getErrorMessage() {
         return this.errorMessage;
     }
     /**
      * The HttpMethod - PUT/POST/DELETE for the operation.
      * 
-     */
+    */
     public String getHttpMethod() {
         return this.httpMethod;
     }
     /**
      * The URL to use to check long-running operation status
      * 
-     */
+    */
     public String getOperationUrl() {
         return this.operationUrl;
     }
     /**
      * Request URI of the operation.
      * 
-     */
+    */
     public String getRequestUri() {
         return this.requestUri;
     }
     /**
      * The current status of the operation.
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }

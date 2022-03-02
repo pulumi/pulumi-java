@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFolderReplay {
-/**
- * Gets the specified Replay. Each `Replay` is available for at least 7 days.
+    private GetFolderReplay() {}
+    public interface BuilderApplicator {
+        public void apply(GetFolderReplayArgs.Builder a);
+    }
+    private static GetFolderReplayArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetFolderReplayArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Gets the specified Replay. Each `Replay` is available for at least 7 days.
  * 
- */
+     */
+    public static CompletableFuture<GetFolderReplayResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Gets the specified Replay. Each `Replay` is available for at least 7 days.
+     * 
+     */
     public static CompletableFuture<GetFolderReplayResult> invokeAsync(GetFolderReplayArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:policysimulator/v1beta1:getFolderReplay", TypeShape.of(GetFolderReplayResult.class), args == null ? GetFolderReplayArgs.Empty : args, Utilities.withVersion(options));
     }

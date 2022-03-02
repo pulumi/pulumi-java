@@ -80,7 +80,7 @@ public final class GetLaunchTemplateNetworkInterface {
     /**
      * Description of the launch template.
      * 
-     */
+    */
     public String getDescription() {
         return this.description;
     }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2ConversationPhoneNumberResponse {
     /**
      * The phone number to connect to this conversation.
      * 
-     */
+    */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }

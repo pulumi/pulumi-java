@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1AdvancedApiOpsConfigResponse {
     /**
      * Flag that specifies whether the Advanced API Ops add-on is enabled.
      * 
-     */
+    */
     public Boolean getEnabled() {
         return this.enabled;
     }

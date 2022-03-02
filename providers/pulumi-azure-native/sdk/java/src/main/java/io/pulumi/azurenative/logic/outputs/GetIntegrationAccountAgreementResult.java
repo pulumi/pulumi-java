@@ -121,98 +121,98 @@ public final class GetIntegrationAccountAgreementResult {
     /**
      * The agreement type.
      * 
-     */
+    */
     public String getAgreementType() {
         return this.agreementType;
     }
     /**
      * The changed time.
      * 
-     */
+    */
     public String getChangedTime() {
         return this.changedTime;
     }
     /**
      * The agreement content.
      * 
-     */
+    */
     public AgreementContentResponse getContent() {
         return this.content;
     }
     /**
      * The created time.
      * 
-     */
+    */
     public String getCreatedTime() {
         return this.createdTime;
     }
     /**
      * The business identity of the guest partner.
      * 
-     */
+    */
     public BusinessIdentityResponse getGuestIdentity() {
         return this.guestIdentity;
     }
     /**
      * The integration account partner that is set as guest partner for this agreement.
      * 
-     */
+    */
     public String getGuestPartner() {
         return this.guestPartner;
     }
     /**
      * The business identity of the host partner.
      * 
-     */
+    */
     public BusinessIdentityResponse getHostIdentity() {
         return this.hostIdentity;
     }
     /**
      * The integration account partner that is set as host partner for this agreement.
      * 
-     */
+    */
     public String getHostPartner() {
         return this.hostPartner;
     }
     /**
      * The resource id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The resource location.
      * 
-     */
+    */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
     /**
      * The metadata.
      * 
-     */
+    */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
     /**
      * Gets the resource name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The resource tags.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Gets the resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

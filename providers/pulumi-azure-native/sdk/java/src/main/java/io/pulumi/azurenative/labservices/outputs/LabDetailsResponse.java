@@ -47,28 +47,28 @@ public final class LabDetailsResponse {
     /**
      * The Id of the lab.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the lab
      * 
-     */
+    */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The provisioning state of the lab.
      * 
-     */
+    */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
      * The maximum duration a user can use a VM in this lab.
      * 
-     */
+    */
     public String getUsageQuota() {
         return this.usageQuota;
     }

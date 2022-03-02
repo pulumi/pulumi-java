@@ -46,28 +46,28 @@ public final class GetBrandResult {
     /**
      * Application name displayed on OAuth consent screen.
      * 
-     */
+    */
     public String getApplicationTitle() {
         return this.applicationTitle;
     }
     /**
      * Identifier of the brand. NOTE: GCP project number achieves the same brand identification purpose as only one brand per project can be created.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Whether the brand is only intended for usage inside the G Suite organization only.
      * 
-     */
+    */
     public Boolean getOrgInternalOnly() {
         return this.orgInternalOnly;
     }
     /**
      * Support email displayed on the OAuth consent screen.
      * 
-     */
+    */
     public String getSupportEmail() {
         return this.supportEmail;
     }

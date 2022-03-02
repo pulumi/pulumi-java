@@ -23,7 +23,7 @@ public final class AwsClusterAuthorizationAdminUser {
     /**
      * Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
      * 
-     */
+    */
     public String getUsername() {
         return this.username;
     }

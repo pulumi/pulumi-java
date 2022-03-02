@@ -111,91 +111,91 @@ public final class GetWorkspaceResult {
     /**
      * The creation time for this workspace resource.
      * 
-     */
+    */
     public String getCreationTime() {
         return this.creationTime;
     }
     /**
      * The resource ID.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * The key vault identifier used for encrypted workspaces.
      * 
-     */
+    */
     public Optional<String> getKeyVaultIdentifierId() {
         return Optional.ofNullable(this.keyVaultIdentifierId);
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
      * 
-     */
+    */
     public String getLocation() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The email id of the owner for this workspace.
      * 
-     */
+    */
     public String getOwnerEmail() {
         return this.ownerEmail;
     }
     /**
      * The regional endpoint for the machine learning studio service which hosts this workspace.
      * 
-     */
+    */
     public String getStudioEndpoint() {
         return this.studioEndpoint;
     }
     /**
      * The tags of the resource.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The type of the resource.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The fully qualified arm id of the storage account associated with this workspace.
      * 
-     */
+    */
     public String getUserStorageAccountId() {
         return this.userStorageAccountId;
     }
     /**
      * The immutable id associated with this workspace.
      * 
-     */
+    */
     public String getWorkspaceId() {
         return this.workspaceId;
     }
     /**
      * The current state of workspace resource.
      * 
-     */
+    */
     public String getWorkspaceState() {
         return this.workspaceState;
     }
     /**
      * The type of this workspace.
      * 
-     */
+    */
     public String getWorkspaceType() {
         return this.workspaceType;
     }

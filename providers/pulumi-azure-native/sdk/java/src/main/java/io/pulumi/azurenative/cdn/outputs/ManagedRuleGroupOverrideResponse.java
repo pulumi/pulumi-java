@@ -34,14 +34,14 @@ public final class ManagedRuleGroupOverrideResponse {
     /**
      * Describes the managed rule group within the rule set to override
      * 
-     */
+    */
     public String getRuleGroupName() {
         return this.ruleGroupName;
     }
     /**
      * List of rules that will be disabled. If none specified, all rules in the group will be disabled.
      * 
-     */
+    */
     public List<ManagedRuleOverrideResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

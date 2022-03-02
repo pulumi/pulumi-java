@@ -24,7 +24,7 @@ public final class WorkteamMemberDefinitionOidcMemberDefinition {
     /**
      * A list of comma separated strings that identifies user groups in your OIDC IdP. Each user group is made up of a group of private workers.
      * 
-     */
+    */
     public List<String> getGroups() {
         return this.groups;
     }

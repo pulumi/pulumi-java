@@ -40,21 +40,21 @@ public final class SourceConfigResponse {
     /**
      * MySQL data source configuration
      * 
-     */
+    */
     public MysqlSourceConfigResponse getMysqlSourceConfig() {
         return this.mysqlSourceConfig;
     }
     /**
      * Oracle data source configuration
      * 
-     */
+    */
     public OracleSourceConfigResponse getOracleSourceConfig() {
         return this.oracleSourceConfig;
     }
     /**
      * Source connection profile identifier.
      * 
-     */
+    */
     public String getSourceConnectionProfileName() {
         return this.sourceConnectionProfileName;
     }

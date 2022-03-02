@@ -42,21 +42,21 @@ public final class AgreementContentResponse {
     /**
      * The AS2 agreement content.
      * 
-     */
+    */
     public Optional<AS2AgreementContentResponse> getAS2() {
         return Optional.ofNullable(this.aS2);
     }
     /**
      * The EDIFACT agreement content.
      * 
-     */
+    */
     public Optional<EdifactAgreementContentResponse> getEdifact() {
         return Optional.ofNullable(this.edifact);
     }
     /**
      * The X12 agreement content.
      * 
-     */
+    */
     public Optional<X12AgreementContentResponse> getX12() {
         return Optional.ofNullable(this.x12);
     }

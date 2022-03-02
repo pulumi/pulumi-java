@@ -33,14 +33,14 @@ public final class GatewayResourceRequestsResponse {
     /**
      * Cpu allocated to each Spring Cloud Gateway instance.
      * 
-     */
+    */
     public Optional<String> getCpu() {
         return Optional.ofNullable(this.cpu);
     }
     /**
      * Memory allocated to each Spring Cloud Gateway instance.
      * 
-     */
+    */
     public Optional<String> getMemory() {
         return Optional.ofNullable(this.memory);
     }

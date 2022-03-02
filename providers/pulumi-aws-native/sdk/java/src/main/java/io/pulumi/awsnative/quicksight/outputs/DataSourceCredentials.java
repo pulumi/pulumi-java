@@ -36,7 +36,7 @@ public final class DataSourceCredentials {
      *             data source in the ARN is used as the credentials for the
      *             <code>DataSourceCredentials</code> structure.</p>
      * 
-     */
+    */
     public Optional<String> getCopySourceArn() {
         return Optional.ofNullable(this.copySourceArn);
     }

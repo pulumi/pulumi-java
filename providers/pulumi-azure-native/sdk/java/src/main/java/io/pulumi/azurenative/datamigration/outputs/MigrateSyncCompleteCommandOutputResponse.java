@@ -33,14 +33,14 @@ public final class MigrateSyncCompleteCommandOutputResponse {
     /**
      * List of errors that happened during the command execution
      * 
-     */
+    */
     public List<ReportableExceptionResponse> getErrors() {
         return this.errors;
     }
     /**
      * Result identifier
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }

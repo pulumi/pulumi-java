@@ -63,7 +63,7 @@ public final class RuleGroupRule {
     /**
      * Collection of Rule Labels.
      * 
-     */
+    */
     public List<RuleGroupLabel> getRuleLabels() {
         return this.ruleLabels == null ? List.of() : this.ruleLabels;
     }

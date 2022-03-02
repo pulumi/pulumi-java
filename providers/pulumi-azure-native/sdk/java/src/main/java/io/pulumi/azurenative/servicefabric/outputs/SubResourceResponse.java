@@ -25,7 +25,7 @@ public final class SubResourceResponse {
     /**
      * Azure resource identifier.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUserPoolClient {
-/**
- * Provides a Cognito User Pool Client resource.
+    private GetUserPoolClient() {}
+    public interface BuilderApplicator {
+        public void apply(GetUserPoolClientArgs.Builder a);
+    }
+    private static GetUserPoolClientArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetUserPoolClientArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides a Cognito User Pool Client resource.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getUserPoolClient.
+     *
+     * A collection of arguments for invoking getUserPoolClient.
  * 
- *
- * A collection of values returned by getUserPoolClient.
+     *
+     * A collection of values returned by getUserPoolClient.
  * 
- */
+     */
+    public static CompletableFuture<GetUserPoolClientResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides a Cognito User Pool Client resource.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getUserPoolClient.
+     * 
+     *
+         * A collection of values returned by getUserPoolClient.
+     * 
+     */
     public static CompletableFuture<GetUserPoolClientResult> invokeAsync(GetUserPoolClientArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:cognito/getUserPoolClient:getUserPoolClient", TypeShape.of(GetUserPoolClientResult.class), args == null ? GetUserPoolClientArgs.Empty : args, Utilities.withVersion(options));
     }

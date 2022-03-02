@@ -34,14 +34,14 @@ public final class ReplicationConfigurationReplicationRule {
     /**
      * An array of objects representing the details of a replication destination.
      * 
-     */
+    */
     public List<ReplicationConfigurationReplicationDestination> getDestinations() {
         return this.destinations;
     }
     /**
      * An array of objects representing the details of a repository filter.
      * 
-     */
+    */
     public List<ReplicationConfigurationRepositoryFilter> getRepositoryFilters() {
         return this.repositoryFilters == null ? List.of() : this.repositoryFilters;
     }

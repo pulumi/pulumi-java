@@ -34,14 +34,14 @@ public final class RestResponseResponseRegex {
     /**
      * Indicates whether any or all of the expressions should match with the response content.
      * 
-     */
+    */
     public Optional<String> getMatchQuantifier() {
         return Optional.ofNullable(this.matchQuantifier);
     }
     /**
      * The list of regular expressions.
      * 
-     */
+    */
     public List<String> getMatches() {
         return this.matches == null ? List.of() : this.matches;
     }

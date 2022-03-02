@@ -33,14 +33,14 @@ public final class GetReleaseLabelsFilters {
     /**
      * Optional release label application filter. For example, `Spark@2.1.0` or `Spark`.
      * 
-     */
+    */
     public Optional<String> getApplication() {
         return Optional.ofNullable(this.application);
     }
     /**
      * Optional release label version prefix filter. For example, `emr-5`.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }

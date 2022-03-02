@@ -36,7 +36,7 @@ public final class S3BucketAssociationClassificationType {
      * A string value indicating that Macie perform a one-time classification of all of the existing objects in the bucket.
      * The only valid value is the default value, `FULL`.
      * 
-     */
+    */
     public Optional<String> getContinuous() {
         return Optional.ofNullable(this.continuous);
     }
@@ -44,7 +44,7 @@ public final class S3BucketAssociationClassificationType {
      * A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
      * Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie only classifies objects that are added after the association was created.
      * 
-     */
+    */
     public Optional<String> getOneTime() {
         return Optional.ofNullable(this.oneTime);
     }

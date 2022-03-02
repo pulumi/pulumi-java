@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPublicDelegatedPrefix {
-/**
- * Returns the specified PublicDelegatedPrefix resource in the given region.
+    private GetPublicDelegatedPrefix() {}
+    public interface BuilderApplicator {
+        public void apply(GetPublicDelegatedPrefixArgs.Builder a);
+    }
+    private static GetPublicDelegatedPrefixArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPublicDelegatedPrefixArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified PublicDelegatedPrefix resource in the given region.
  * 
- */
+     */
+    public static CompletableFuture<GetPublicDelegatedPrefixResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified PublicDelegatedPrefix resource in the given region.
+     * 
+     */
     public static CompletableFuture<GetPublicDelegatedPrefixResult> invokeAsync(GetPublicDelegatedPrefixArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getPublicDelegatedPrefix", TypeShape.of(GetPublicDelegatedPrefixResult.class), args == null ? GetPublicDelegatedPrefixArgs.Empty : args, Utilities.withVersion(options));
     }

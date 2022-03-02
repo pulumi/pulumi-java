@@ -47,28 +47,28 @@ public final class TargetCostAllocationResourceResponse {
     /**
      * If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * Method of cost allocation for the rule
      * 
-     */
+    */
     public String getPolicyType() {
         return this.policyType;
     }
     /**
      * Type of resources contained in this cost allocation rule
      * 
-     */
+    */
     public String getPropResourceType() {
         return this.resourceType;
     }
     /**
      * Target resources for cost allocation. This list cannot contain more than 25 values.
      * 
-     */
+    */
     public List<CostAllocationProportionResponse> getValues() {
         return this.values;
     }

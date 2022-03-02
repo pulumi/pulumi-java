@@ -25,7 +25,7 @@ public final class VirtualNodeSpecListenerTimeoutTcp {
     /**
      * The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
      * 
-     */
+    */
     public Optional<VirtualNodeSpecListenerTimeoutTcpIdle> getIdle() {
         return Optional.ofNullable(this.idle);
     }

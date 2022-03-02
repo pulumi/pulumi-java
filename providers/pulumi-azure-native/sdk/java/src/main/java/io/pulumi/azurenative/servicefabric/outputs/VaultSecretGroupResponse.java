@@ -33,14 +33,14 @@ public final class VaultSecretGroupResponse {
     /**
      * The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
      * 
-     */
+    */
     public SubResourceResponse getSourceVault() {
         return this.sourceVault;
     }
     /**
      * The list of key vault references in SourceVault which contain certificates.
      * 
-     */
+    */
     public List<VaultCertificateResponse> getVaultCertificates() {
         return this.vaultCertificates;
     }

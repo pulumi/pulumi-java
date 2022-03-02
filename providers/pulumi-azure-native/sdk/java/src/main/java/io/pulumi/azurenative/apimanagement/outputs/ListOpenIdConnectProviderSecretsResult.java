@@ -25,7 +25,7 @@ public final class ListOpenIdConnectProviderSecretsResult {
     /**
      * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
      * 
-     */
+    */
     public Optional<String> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }

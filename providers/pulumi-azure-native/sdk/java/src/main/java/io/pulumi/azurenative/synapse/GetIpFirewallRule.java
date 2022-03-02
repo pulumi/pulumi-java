@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIpFirewallRule {
-/**
- * IP firewall rule
+    private GetIpFirewallRule() {}
+    public interface BuilderApplicator {
+        public void apply(GetIpFirewallRuleArgs.Builder a);
+    }
+    private static GetIpFirewallRuleArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetIpFirewallRuleArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * IP firewall rule
  * API Version: 2021-03-01.
  * 
- *
- * IP firewall rule
+     *
+     * IP firewall rule
  * 
- */
+     */
+    public static CompletableFuture<GetIpFirewallRuleResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * IP firewall rule
+     * API Version: 2021-03-01.
+     * 
+     *
+         * IP firewall rule
+     * 
+     */
     public static CompletableFuture<GetIpFirewallRuleResult> invokeAsync(GetIpFirewallRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getIpFirewallRule", TypeShape.of(GetIpFirewallRuleResult.class), args == null ? GetIpFirewallRuleArgs.Empty : args, Utilities.withVersion(options));
     }

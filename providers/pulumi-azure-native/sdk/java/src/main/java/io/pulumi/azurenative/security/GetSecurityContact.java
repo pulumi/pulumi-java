@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecurityContact {
-/**
- * Contact details and configurations for notifications coming from Azure Security Center.
+    private GetSecurityContact() {}
+    public interface BuilderApplicator {
+        public void apply(GetSecurityContactArgs.Builder a);
+    }
+    private static GetSecurityContactArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetSecurityContactArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Contact details and configurations for notifications coming from Azure Security Center.
  * API Version: 2020-01-01-preview.
  * 
- *
- * Contact details and configurations for notifications coming from Azure Security Center.
+     *
+     * Contact details and configurations for notifications coming from Azure Security Center.
  * 
- */
+     */
+    public static CompletableFuture<GetSecurityContactResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Contact details and configurations for notifications coming from Azure Security Center.
+     * API Version: 2020-01-01-preview.
+     * 
+     *
+         * Contact details and configurations for notifications coming from Azure Security Center.
+     * 
+     */
     public static CompletableFuture<GetSecurityContactResult> invokeAsync(GetSecurityContactArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getSecurityContact", TypeShape.of(GetSecurityContactResult.class), args == null ? GetSecurityContactArgs.Empty : args, Utilities.withVersion(options));
     }

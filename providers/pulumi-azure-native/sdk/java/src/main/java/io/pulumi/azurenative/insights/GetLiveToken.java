@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLiveToken {
-/**
- * The response to a live token query.
+    private GetLiveToken() {}
+    public interface BuilderApplicator {
+        public void apply(GetLiveTokenArgs.Builder a);
+    }
+    private static GetLiveTokenArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetLiveTokenArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The response to a live token query.
  * API Version: 2020-06-02-preview.
  * 
- *
- * The response to a live token query.
+     *
+     * The response to a live token query.
  * 
- */
+     */
+    public static CompletableFuture<GetLiveTokenResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The response to a live token query.
+     * API Version: 2020-06-02-preview.
+     * 
+     *
+         * The response to a live token query.
+     * 
+     */
     public static CompletableFuture<GetLiveTokenResult> invokeAsync(GetLiveTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getLiveToken", TypeShape.of(GetLiveTokenResult.class), args == null ? GetLiveTokenArgs.Empty : args, Utilities.withVersion(options));
     }

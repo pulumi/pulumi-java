@@ -13,10 +13,26 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMachineImage {
-/**
- * Returns the specified machine image. Gets a list of available machine images by making a list() request.
+    private GetMachineImage() {}
+    public interface BuilderApplicator {
+        public void apply(GetMachineImageArgs.Builder a);
+    }
+    private static GetMachineImageArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetMachineImageArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Returns the specified machine image. Gets a list of available machine images by making a list() request.
  * 
- */
+     */
+    public static CompletableFuture<GetMachineImageResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Returns the specified machine image. Gets a list of available machine images by making a list() request.
+     * 
+     */
     public static CompletableFuture<GetMachineImageResult> invokeAsync(GetMachineImageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getMachineImage", TypeShape.of(GetMachineImageResult.class), args == null ? GetMachineImageArgs.Empty : args, Utilities.withVersion(options));
     }

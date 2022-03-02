@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVpnConnection {
-/**
- * VpnConnection Resource.
+    private GetVpnConnection() {}
+    public interface BuilderApplicator {
+        public void apply(GetVpnConnectionArgs.Builder a);
+    }
+    private static GetVpnConnectionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetVpnConnectionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * VpnConnection Resource.
  * API Version: 2020-11-01.
  * 
- *
- * VpnConnection Resource.
+     *
+     * VpnConnection Resource.
  * 
- */
+     */
+    public static CompletableFuture<GetVpnConnectionResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * VpnConnection Resource.
+     * API Version: 2020-11-01.
+     * 
+     *
+         * VpnConnection Resource.
+     * 
+     */
     public static CompletableFuture<GetVpnConnectionResult> invokeAsync(GetVpnConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVpnConnection", TypeShape.of(GetVpnConnectionResult.class), args == null ? GetVpnConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

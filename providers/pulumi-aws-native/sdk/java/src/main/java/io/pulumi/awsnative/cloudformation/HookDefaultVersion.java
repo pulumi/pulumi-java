@@ -79,6 +79,22 @@ public class HookDefaultVersion extends io.pulumi.resources.CustomResource {
         return this.versionId;
     }
 
+    public interface BuilderApplicator {
+        public void apply(@Nullable HookDefaultVersionArgs.Builder a);
+    }
+    private static io.pulumi.awsnative.cloudformation.HookDefaultVersionArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = io.pulumi.awsnative.cloudformation.HookDefaultVersionArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param argsBuilder A function that configures a passed builder.
+     */
+    public HookDefaultVersion(String name, BuilderApplicator argsBuilder) {
+        this(name, buildArgs(argsBuilder), null);
+    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

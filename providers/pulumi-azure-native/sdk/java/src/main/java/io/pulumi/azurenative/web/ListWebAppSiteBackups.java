@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppSiteBackups {
-/**
- * Collection of backup items.
+    private ListWebAppSiteBackups() {}
+    public interface BuilderApplicator {
+        public void apply(ListWebAppSiteBackupsArgs.Builder a);
+    }
+    private static ListWebAppSiteBackupsArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = ListWebAppSiteBackupsArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Collection of backup items.
  * API Version: 2020-12-01.
  * 
- *
- * Collection of backup items.
+     *
+     * Collection of backup items.
  * 
- */
+     */
+    public static CompletableFuture<ListWebAppSiteBackupsResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Collection of backup items.
+     * API Version: 2020-12-01.
+     * 
+     *
+         * Collection of backup items.
+     * 
+     */
     public static CompletableFuture<ListWebAppSiteBackupsResult> invokeAsync(ListWebAppSiteBackupsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSiteBackups", TypeShape.of(ListWebAppSiteBackupsResult.class), args == null ? ListWebAppSiteBackupsArgs.Empty : args, Utilities.withVersion(options));
     }

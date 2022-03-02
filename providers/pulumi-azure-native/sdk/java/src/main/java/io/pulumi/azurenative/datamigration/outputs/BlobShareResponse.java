@@ -23,7 +23,7 @@ public final class BlobShareResponse {
     /**
      * SAS URI of Azure Storage Account Container.
      * 
-     */
+    */
     public String getSasUri() {
         return this.sasUri;
     }

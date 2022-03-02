@@ -28,7 +28,7 @@ public final class GetListenerDefaultActionForwardTargetGroup {
     /**
      * ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
      * 
-     */
+    */
     public String getArn() {
         return this.arn;
     }

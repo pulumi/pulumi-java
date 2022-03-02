@@ -42,21 +42,21 @@ public final class HttpSettingsResponse {
     /**
      * The configuration settings of a forward proxy used to make the requests.
      * 
-     */
+    */
     public Optional<ForwardProxyResponse> getForwardProxy() {
         return Optional.ofNullable(this.forwardProxy);
     }
     /**
      * <code>false</code> if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, <code>true</code>.
      * 
-     */
+    */
     public Optional<Boolean> getRequireHttps() {
         return Optional.ofNullable(this.requireHttps);
     }
     /**
      * The configuration settings of the paths HTTP requests.
      * 
-     */
+    */
     public Optional<HttpSettingsRoutesResponse> getRoutes() {
         return Optional.ofNullable(this.routes);
     }

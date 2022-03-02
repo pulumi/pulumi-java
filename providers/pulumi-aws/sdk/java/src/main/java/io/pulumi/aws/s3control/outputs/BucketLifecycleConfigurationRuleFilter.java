@@ -34,14 +34,14 @@ public final class BucketLifecycleConfigurationRuleFilter {
     /**
      * Object prefix for rule filtering.
      * 
-     */
+    */
     public Optional<String> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
     /**
      * Key-value map of object tags for rule filtering.
      * 
-     */
+    */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }

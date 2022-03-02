@@ -33,14 +33,14 @@ public final class GetCustomDataIdentifierResult {
     /**
      * Custom data identifier ARN.
      * 
-     */
+    */
     public Optional<String> getArn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Custom data identifier ID.
      * 
-     */
+    */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

@@ -56,7 +56,7 @@ public final class SubnetworkState extends io.pulumi.resources.ResourceArgs {
     /**
      * Fingerprint of this resource. This field is used internally during updates of this resource.
      * 
-     * @deprecated
+     * @Deprecated
      * This field is not useful for users, and has been removed as an output.
      * 
      */

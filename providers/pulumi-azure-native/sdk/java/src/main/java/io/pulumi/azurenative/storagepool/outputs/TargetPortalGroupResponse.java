@@ -64,42 +64,42 @@ public final class TargetPortalGroupResponse {
     /**
      * Access Control List (ACL) for an iSCSI target portal group.
      * 
-     */
+    */
     public List<AclResponse> getAcls() {
         return this.acls;
     }
     /**
      * Attributes of an iSCSI target portal group.
      * 
-     */
+    */
     public AttributesResponse getAttributes() {
         return this.attributes;
     }
     /**
      * List of private IPv4 addresses to connect to the iSCSI target.
      * 
-     */
+    */
     public List<String> getEndpoints() {
         return this.endpoints;
     }
     /**
      * List of LUNs to be exposed through iSCSI target portal group.
      * 
-     */
+    */
     public List<IscsiLunResponse> getLuns() {
         return this.luns;
     }
     /**
      * The port used by iSCSI target portal group.
      * 
-     */
+    */
     public Integer getPort() {
         return this.port;
     }
     /**
      * The tag associated with the iSCSI target portal group.
      * 
-     */
+    */
     public Integer getTag() {
         return this.tag;
     }

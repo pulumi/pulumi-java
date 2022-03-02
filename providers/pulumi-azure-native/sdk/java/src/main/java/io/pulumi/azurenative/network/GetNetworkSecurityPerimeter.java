@@ -13,14 +13,34 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkSecurityPerimeter {
-/**
- * The Network Security Perimeter resource
+    private GetNetworkSecurityPerimeter() {}
+    public interface BuilderApplicator {
+        public void apply(GetNetworkSecurityPerimeterArgs.Builder a);
+    }
+    private static GetNetworkSecurityPerimeterArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetNetworkSecurityPerimeterArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * The Network Security Perimeter resource
  * API Version: 2021-02-01-preview.
  * 
- *
- * The Network Security Perimeter resource
+     *
+     * The Network Security Perimeter resource
  * 
- */
+     */
+    public static CompletableFuture<GetNetworkSecurityPerimeterResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * The Network Security Perimeter resource
+     * API Version: 2021-02-01-preview.
+     * 
+     *
+         * The Network Security Perimeter resource
+     * 
+     */
     public static CompletableFuture<GetNetworkSecurityPerimeterResult> invokeAsync(GetNetworkSecurityPerimeterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkSecurityPerimeter", TypeShape.of(GetNetworkSecurityPerimeterResult.class), args == null ? GetNetworkSecurityPerimeterArgs.Empty : args, Utilities.withVersion(options));
     }

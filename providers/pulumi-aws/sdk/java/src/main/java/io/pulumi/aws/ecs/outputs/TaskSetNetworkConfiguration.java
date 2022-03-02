@@ -42,21 +42,21 @@ public final class TaskSetNetworkConfiguration {
     /**
      * Whether to assign a public IP address to the ENI (`FARGATE` launch type only). Valid values are `true` or `false`. Default `false`.
      * 
-     */
+    */
     public Optional<Boolean> getAssignPublicIp() {
         return Optional.ofNullable(this.assignPublicIp);
     }
     /**
      * The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used. Maximum of 5.
      * 
-     */
+    */
     public List<String> getSecurityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
     /**
      * The subnets associated with the task or service. Maximum of 16.
      * 
-     */
+    */
     public List<String> getSubnets() {
         return this.subnets;
     }

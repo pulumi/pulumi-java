@@ -23,7 +23,7 @@ public final class PlacementPolicyResponse {
     /**
      * The type of placement.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }

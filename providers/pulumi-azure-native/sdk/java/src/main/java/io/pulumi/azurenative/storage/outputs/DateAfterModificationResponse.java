@@ -33,14 +33,14 @@ public final class DateAfterModificationResponse {
     /**
      * Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
      * 
-     */
+    */
     public Optional<Double> getDaysAfterLastAccessTimeGreaterThan() {
         return Optional.ofNullable(this.daysAfterLastAccessTimeGreaterThan);
     }
     /**
      * Value indicating the age in days after last modification
      * 
-     */
+    */
     public Optional<Double> getDaysAfterModificationGreaterThan() {
         return Optional.ofNullable(this.daysAfterModificationGreaterThan);
     }

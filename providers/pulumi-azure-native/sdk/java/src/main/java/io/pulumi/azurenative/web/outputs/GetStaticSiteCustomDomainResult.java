@@ -78,14 +78,14 @@ public final class GetStaticSiteCustomDomainResult {
     /**
      * The date and time on which the custom domain was created for the static site.
      * 
-     */
+    */
     public String getCreatedOn() {
         return this.createdOn;
     }
     /**
      * The domain name for the static site custom domain.
      * 
-     */
+    */
     public String getDomainName() {
         return this.domainName;
     }
@@ -95,42 +95,42 @@ public final class GetStaticSiteCustomDomainResult {
     /**
      * Resource Id.
      * 
-     */
+    */
     public String getId() {
         return this.id;
     }
     /**
      * Kind of resource.
      * 
-     */
+    */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Name.
      * 
-     */
+    */
     public String getName() {
         return this.name;
     }
     /**
      * The status of the custom domain
      * 
-     */
+    */
     public String getStatus() {
         return this.status;
     }
     /**
      * Resource type.
      * 
-     */
+    */
     public String getType() {
         return this.type;
     }
     /**
      * The TXT record validation token
      * 
-     */
+    */
     public String getValidationToken() {
         return this.validationToken;
     }

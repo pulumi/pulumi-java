@@ -33,14 +33,14 @@ public final class StackSetAutoDeployment {
     /**
      * Whether or not auto-deployment is enabled.
      * 
-     */
+    */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Whether or not to retain stacks when the account is removed.
      * 
-     */
+    */
     public Optional<Boolean> getRetainStacksOnAccountRemoval() {
         return Optional.ofNullable(this.retainStacksOnAccountRemoval);
     }

@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPipeline {
-/**
- * Provides details about a specific DataPipeline Pipeline.
+    private GetPipeline() {}
+    public interface BuilderApplicator {
+        public void apply(GetPipelineArgs.Builder a);
+    }
+    private static GetPipelineArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetPipelineArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about a specific DataPipeline Pipeline.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getPipeline.
+     *
+     * A collection of arguments for invoking getPipeline.
  * 
- *
- * A collection of values returned by getPipeline.
+     *
+     * A collection of values returned by getPipeline.
  * 
- */
+     */
+    public static CompletableFuture<GetPipelineResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about a specific DataPipeline Pipeline.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getPipeline.
+     * 
+     *
+         * A collection of values returned by getPipeline.
+     * 
+     */
     public static CompletableFuture<GetPipelineResult> invokeAsync(GetPipelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:datapipeline/getPipeline:getPipeline", TypeShape.of(GetPipelineResult.class), args == null ? GetPipelineArgs.Empty : args, Utilities.withVersion(options));
     }

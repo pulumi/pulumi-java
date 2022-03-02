@@ -13,18 +13,42 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInfrastructureConfiguration {
-/**
- * Provides details about an Image Builder Infrastructure Configuration.
+    private GetInfrastructureConfiguration() {}
+    public interface BuilderApplicator {
+        public void apply(GetInfrastructureConfigurationArgs.Builder a);
+    }
+    private static GetInfrastructureConfigurationArgs buildArgs(BuilderApplicator argsBuilder) {
+        final var builder = GetInfrastructureConfigurationArgs.builder();
+        argsBuilder.apply(builder);
+        return builder.build();
+    }
+    /**
+     * Provides details about an Image Builder Infrastructure Configuration.
  * 
  * ## Example Usage
  * 
- *
- * A collection of arguments for invoking getInfrastructureConfiguration.
+     *
+     * A collection of arguments for invoking getInfrastructureConfiguration.
  * 
- *
- * A collection of values returned by getInfrastructureConfiguration.
+     *
+     * A collection of values returned by getInfrastructureConfiguration.
  * 
- */
+     */
+    public static CompletableFuture<GetInfrastructureConfigurationResult> invokeAsync(BuilderApplicator argsBuilder, @Nullable InvokeOptions options) {
+        return invokeAsync(buildArgs(argsBuilder), Utilities.withVersion(options));
+    }
+    /**
+         * Provides details about an Image Builder Infrastructure Configuration.
+     * 
+     * ## Example Usage
+     * 
+     *
+         * A collection of arguments for invoking getInfrastructureConfiguration.
+     * 
+     *
+         * A collection of values returned by getInfrastructureConfiguration.
+     * 
+     */
     public static CompletableFuture<GetInfrastructureConfigurationResult> invokeAsync(GetInfrastructureConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("aws:imagebuilder/getInfrastructureConfiguration:getInfrastructureConfiguration", TypeShape.of(GetInfrastructureConfigurationResult.class), args == null ? GetInfrastructureConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }
