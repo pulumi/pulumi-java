@@ -150,6 +150,10 @@ repositories {
 dependencies {
     implementation("io.pulumi:pulumi:1.0.0+")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
+
+    implementation("com.google.protobuf:protobuf-java:3.12.0") // make sure we don't clash with grpc deps
+    implementation("com.google.protobuf:protobuf-java-util:3.12.0") // make sure we don't clash with grpc deps
+
     api("com.google.guava:guava:30.1-jre") // FIXME: do we really want to expose this dep?
     api("com.google.code.gson:gson:2.8.6") // make sure we don't clash with grpc deps
 
