@@ -316,7 +316,8 @@
           "description": "Site MachineKey."
         }
       },
-      "type": "object"
+      "type": "object",
+      "required": ["machineKey"]
     },
     "azure-native:web:SiteMachineKeyResponse": {
       "description": "MachineKey of an app.",

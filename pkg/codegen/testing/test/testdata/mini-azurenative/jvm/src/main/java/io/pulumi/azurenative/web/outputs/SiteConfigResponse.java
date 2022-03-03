@@ -16,7 +16,7 @@ public final class SiteConfigResponse {
      * Site MachineKey.
      * 
      */
-    private final @Nullable SiteMachineKeyResponse machineKey;
+    private final SiteMachineKeyResponse machineKey;
     /**
      * .NET Framework version.
      * 
@@ -25,9 +25,9 @@ public final class SiteConfigResponse {
 
     @OutputCustomType.Constructor({"machineKey","netFrameworkVersion"})
     private SiteConfigResponse(
-        @Nullable SiteMachineKeyResponse machineKey,
+        SiteMachineKeyResponse machineKey,
         @Nullable String netFrameworkVersion) {
-        this.machineKey = machineKey;
+        this.machineKey = Objects.requireNonNull(machineKey);
         this.netFrameworkVersion = netFrameworkVersion;
     }
 
@@ -35,8 +35,8 @@ public final class SiteConfigResponse {
      * Site MachineKey.
      * 
     */
-    public Optional<SiteMachineKeyResponse> getMachineKey() {
-        return Optional.ofNullable(this.machineKey);
+    public SiteMachineKeyResponse getMachineKey() {
+        return this.machineKey;
     }
     /**
      * .NET Framework version.
@@ -55,7 +55,7 @@ public final class SiteConfigResponse {
     }
 
     public static final class Builder {
-        private @Nullable SiteMachineKeyResponse machineKey;
+        private SiteMachineKeyResponse machineKey;
         private @Nullable String netFrameworkVersion;
 
         public Builder() {
@@ -68,8 +68,8 @@ public final class SiteConfigResponse {
     	      this.netFrameworkVersion = defaults.netFrameworkVersion;
         }
 
-        public Builder setMachineKey(@Nullable SiteMachineKeyResponse machineKey) {
-            this.machineKey = machineKey;
+        public Builder setMachineKey(SiteMachineKeyResponse machineKey) {
+            this.machineKey = Objects.requireNonNull(machineKey);
             return this;
         }
 

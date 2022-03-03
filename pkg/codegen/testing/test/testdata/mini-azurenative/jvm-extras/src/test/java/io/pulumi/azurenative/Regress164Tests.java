@@ -25,7 +25,7 @@ class Regress164Tests {
                 typeShape,
                 ImmutableSet.of());
         SiteConfigResponse response = responseOutput.getValueOptional().get();
-        assertThat(response.getMachineKey().isEmpty()).isEqualTo(true);
+        assertThat(response.getMachineKey()).isNotNull();
         assertThat(response.getNetFrameworkVersion().get()).isEqualTo("4.5");
     }
 

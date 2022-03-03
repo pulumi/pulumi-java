@@ -23,11 +23,11 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Site MachineKey.
      * 
      */
-    @InputImport(name="machineKey")
-      private final @Nullable SiteMachineKeyResponse machineKey;
+    @InputImport(name="machineKey", required=true)
+      private final SiteMachineKeyResponse machineKey;
 
-    public Optional<SiteMachineKeyResponse> getMachineKey() {
-        return this.machineKey == null ? Optional.empty() : Optional.ofNullable(this.machineKey);
+    public SiteMachineKeyResponse getMachineKey() {
+        return this.machineKey;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     public SiteConfigResponse(
-        @Nullable SiteMachineKeyResponse machineKey,
+        SiteMachineKeyResponse machineKey,
         @Nullable String netFrameworkVersion) {
-        this.machineKey = machineKey;
+        this.machineKey = Objects.requireNonNull(machineKey, "expected parameter 'machineKey' to be non-null");
         this.netFrameworkVersion = netFrameworkVersion == null ? "v4.6" : netFrameworkVersion;
     }
 
@@ -62,7 +62,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     public static final class Builder {
-        private @Nullable SiteMachineKeyResponse machineKey;
+        private SiteMachineKeyResponse machineKey;
         private @Nullable String netFrameworkVersion;
 
         public Builder() {
@@ -75,8 +75,8 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.netFrameworkVersion = defaults.netFrameworkVersion;
         }
 
-        public Builder setMachineKey(@Nullable SiteMachineKeyResponse machineKey) {
-            this.machineKey = machineKey;
+        public Builder setMachineKey(SiteMachineKeyResponse machineKey) {
+            this.machineKey = Objects.requireNonNull(machineKey);
             return this;
         }
 
