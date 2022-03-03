@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
+import io.pulumi.azurenative.web.outputs.SiteMachineKeyResponse;
 import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
@@ -12,16 +13,31 @@ import javax.annotation.Nullable;
 @OutputCustomType
 public final class SiteConfigResponse {
     /**
+     * Site MachineKey.
+     * 
+     */
+    private final @Nullable SiteMachineKeyResponse machineKey;
+    /**
      * .NET Framework version.
      * 
      */
     private final @Nullable String netFrameworkVersion;
 
-    @OutputCustomType.Constructor({"netFrameworkVersion"})
-    private SiteConfigResponse(@Nullable String netFrameworkVersion) {
+    @OutputCustomType.Constructor({"machineKey","netFrameworkVersion"})
+    private SiteConfigResponse(
+        @Nullable SiteMachineKeyResponse machineKey,
+        @Nullable String netFrameworkVersion) {
+        this.machineKey = machineKey;
         this.netFrameworkVersion = netFrameworkVersion;
     }
 
+    /**
+     * Site MachineKey.
+     * 
+    */
+    public Optional<SiteMachineKeyResponse> getMachineKey() {
+        return Optional.ofNullable(this.machineKey);
+    }
     /**
      * .NET Framework version.
      * 
@@ -39,6 +55,7 @@ public final class SiteConfigResponse {
     }
 
     public static final class Builder {
+        private @Nullable SiteMachineKeyResponse machineKey;
         private @Nullable String netFrameworkVersion;
 
         public Builder() {
@@ -47,7 +64,13 @@ public final class SiteConfigResponse {
 
         public Builder(SiteConfigResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.machineKey = defaults.machineKey;
     	      this.netFrameworkVersion = defaults.netFrameworkVersion;
+        }
+
+        public Builder setMachineKey(@Nullable SiteMachineKeyResponse machineKey) {
+            this.machineKey = machineKey;
+            return this;
         }
 
         public Builder setNetFrameworkVersion(@Nullable String netFrameworkVersion) {
@@ -55,7 +78,7 @@ public final class SiteConfigResponse {
             return this;
         }
         public SiteConfigResponse build() {
-            return new SiteConfigResponse(netFrameworkVersion);
+            return new SiteConfigResponse(machineKey, netFrameworkVersion);
         }
     }
 }

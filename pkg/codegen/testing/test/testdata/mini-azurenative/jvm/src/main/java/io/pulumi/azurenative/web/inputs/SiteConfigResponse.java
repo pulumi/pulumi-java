@@ -3,6 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
+import io.pulumi.azurenative.web.inputs.SiteMachineKeyResponse;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,6 +20,17 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     public static final SiteConfigResponse Empty = new SiteConfigResponse();
 
     /**
+     * Site MachineKey.
+     * 
+     */
+    @InputImport(name="machineKey")
+      private final @Nullable SiteMachineKeyResponse machineKey;
+
+    public Optional<SiteMachineKeyResponse> getMachineKey() {
+        return this.machineKey == null ? Optional.empty() : Optional.ofNullable(this.machineKey);
+    }
+
+    /**
      * .NET Framework version.
      * 
      */
@@ -29,11 +41,15 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.netFrameworkVersion == null ? Optional.empty() : Optional.ofNullable(this.netFrameworkVersion);
     }
 
-    public SiteConfigResponse(@Nullable String netFrameworkVersion) {
+    public SiteConfigResponse(
+        @Nullable SiteMachineKeyResponse machineKey,
+        @Nullable String netFrameworkVersion) {
+        this.machineKey = machineKey;
         this.netFrameworkVersion = netFrameworkVersion == null ? "v4.6" : netFrameworkVersion;
     }
 
     private SiteConfigResponse() {
+        this.machineKey = null;
         this.netFrameworkVersion = null;
     }
 
@@ -46,6 +62,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     }
 
     public static final class Builder {
+        private @Nullable SiteMachineKeyResponse machineKey;
         private @Nullable String netFrameworkVersion;
 
         public Builder() {
@@ -54,7 +71,13 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
 
         public Builder(SiteConfigResponse defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.machineKey = defaults.machineKey;
     	      this.netFrameworkVersion = defaults.netFrameworkVersion;
+        }
+
+        public Builder setMachineKey(@Nullable SiteMachineKeyResponse machineKey) {
+            this.machineKey = machineKey;
+            return this;
         }
 
         public Builder setNetFrameworkVersion(@Nullable String netFrameworkVersion) {
@@ -62,7 +85,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
             return this;
         }
         public SiteConfigResponse build() {
-            return new SiteConfigResponse(netFrameworkVersion);
+            return new SiteConfigResponse(machineKey, netFrameworkVersion);
         }
     }
 }

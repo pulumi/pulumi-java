@@ -2,6 +2,20 @@
   "version": "0.0.1",
   "name": "azure-native",
   "resources": {
+    "azure-native:web:WebApp": {
+      "properties": {
+        "siteConfig": {
+          "type": "object",
+          "$ref": "#/types/azure-native:web:SiteConfigResponse",
+          "description": "Configuration of the app."
+        }
+      },
+      "type": "object",
+      "required": [],
+      "inputProperties": {},
+      "requiredInputs": [],
+      "aliases": []
+    },
     "azure-native:web:WebAppRelayServiceConnection": {
       "properties": {
         "resourceType": {
@@ -295,6 +309,21 @@
           "type": "string",
           "description": ".NET Framework version.",
           "default": "v4.6"
+        },
+        "machineKey": {
+          "type": "object",
+          "$ref": "#/types/azure-native:web:SiteMachineKeyResponse",
+          "description": "Site MachineKey."
+        }
+      },
+      "type": "object"
+    },
+    "azure-native:web:SiteMachineKeyResponse": {
+      "description": "MachineKey of an app.",
+      "properties": {
+        "decryption": {
+          "type": "string",
+          "description": "Algorithm used for decryption."
         }
       },
       "type": "object"
